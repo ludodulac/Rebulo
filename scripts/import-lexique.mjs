@@ -4,13 +4,14 @@ import path from 'node:path';
 const input=process.argv[2];
 const output=process.argv[3]||'data/lexique4.compact.json';
 if(!input){
-  console.error('Usage: npm run import:lexique -- <lexique4.csv|tsv> [output.json]');
+  console.error('Usage: npm run import:lexique -- <Lexique4.tsv|csv> [output.json]');
   process.exit(1);
 }
 
 const raw=fs.readFileSync(input,'utf8').replace(/^\uFEFF/,'');
 const firstLine=raw.split(/\r?\n/,1)[0]||'';
-const separator=(firstLine.match(/\t/g)||[]).length>(firstLine.match(/;/g)||[]).length?'\t':';';
+const counts={tab:(firstLine.match(/\t/g)||[]).length,semi:(firstLine.match(/;/g)||[]).length,comma:(firstLine.match(/,/g)||[]).length};
+const separator=counts.tab>=counts.semi&&counts.tab>=counts.comma?'\t':counts.semi>=counts.comma?';':',';
 
 function parseLine(line,sep){
   const cells=[];let cell='';let quoted=false;
@@ -25,9 +26,18 @@ function parseLine(line,sep){
   cells.push(cell);return cells;
 }
 
+function normalizeHeader(value){
+  return value
+    .toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+    .replace(/^\d+[_\s.-]*/,'')
+    .replace(/[^a-z0-9]+/g,'_')
+    .replace(/^_|_$/g,'');
+}
+
 const lines=raw.split(/\r?\n/).filter(Boolean);
 const headers=parseLine(lines.shift(),separator).map(x=>x.trim());
-const normalizedHeaders=headers.map(h=>h.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,''));
+const normalizedHeaders=headers.map(normalizeHeader);
 
 function findColumn(candidates){
   for(const candidate of candidates){
@@ -38,15 +48,17 @@ function findColumn(candidates){
 }
 
 const columns={
-  word:findColumn(['ortho','word','forme','graphie']),
+  word:findColumn(['mot','ortho','word','forme','graphie']),
   lemma:findColumn(['lemme','lemma']),
-  phon:findColumn(['phon','phonologie','phonology','phoneme']),
-  freq:findColumn(['freqlivres','freqfilms2','freq','frequency']),
-  pos:findColumn(['cgram','pos','categorie'])
+  ipa:findColumn(['phono_ipa','phon_ipa','ipa']),
+  phon:findColumn(['phono','phon','phonologie','phonology','phoneme']),
+  freq:findColumn(['freqmot','freq_mot','freqlivres','freqfilms2','freq','frequency']),
+  pos:findColumn(['cgram','pos','categorie','categorie_grammaticale'])
 };
 
-for(const required of ['word','phon']){
-  if(columns[required]<0){
+const phonColumn=columns.ipa>=0?columns.ipa:columns.phon;
+for(const [required,index] of [['word',columns.word],['phonology',phonColumn]]){
+  if(index<0){
     console.error(`Colonne requise introuvable: ${required}. En-têtes: ${headers.join(', ')}`);
     process.exit(2);
   }
@@ -56,7 +68,7 @@ const rows=[];
 for(const line of lines){
   const cells=parseLine(line,separator);
   const word=(cells[columns.word]||'').trim();
-  const phon=(cells[columns.phon]||'').trim();
+  const phon=(cells[phonColumn]||'').trim();
   if(!word||!phon)continue;
   const freqRaw=columns.freq>=0?(cells[columns.freq]||'').replace(',','.'):'';
   rows.push({

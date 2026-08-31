@@ -10,21 +10,8 @@
     ],
     "targetIpa": "/mɛʁsi/",
     "hint": "Nomme ce que tu vois, puis colle les deux sons.",
-    "phoneticConfidence": 1.0
-  },
-  {
-    "id": "tournesol",
-    "answer": "tournesol",
-    "minAge": 7,
-    "difficulty": 2,
-    "pieces": [
-      {"image": "assets/rebus/tour.svg", "reading": "tour", "ipa": "/tuʁ/"},
-      {"image": "assets/rebus/nez.svg", "reading": "nez", "ipa": "/ne/"},
-      {"image": "assets/rebus/sol.svg", "reading": "sol", "ipa": "/sɔl/"}
-    ],
-    "targetIpa": "/tuʁnesɔl/",
-    "hint": "Tour + nez + sol. Dis-les sans faire de pause.",
-    "phoneticConfidence": 1.0
+    "phoneticConfidence": 1.0,
+    "validation": "strict"
   },
   {
     "id": "cinema",
@@ -37,8 +24,9 @@
       {"image": "assets/rebus/mat.svg", "reading": "mât", "ipa": "/ma/"}
     ],
     "targetIpa": "/sinema/",
-    "hint": "Scie + nez + mât. Prononce seulement les sons des mots.",
-    "phoneticConfidence": 1.0
+    "hint": "Scie + nez + mât. Prononce les trois mots sans pause.",
+    "phoneticConfidence": 1.0,
+    "validation": "strict"
   },
   {
     "id": "parapluie",
@@ -51,22 +39,38 @@
       {"image": "assets/rebus/pluie.svg", "reading": "pluie", "ipa": "/plɥi/"}
     ],
     "targetIpa": "/paʁaplɥi/",
-    "hint": "Pas + rat + pluie. Le S et le T ne se prononcent pas.",
-    "phoneticConfidence": 1.0
+    "hint": "Pas + rat + pluie. Prononce les trois mots sans pause.",
+    "phoneticConfidence": 1.0,
+    "validation": "strict"
   },
   {
-    "id": "pyramide",
-    "answer": "pyramide",
-    "minAge": 9,
-    "difficulty": 4,
+    "id": "parasol",
+    "answer": "parasol",
+    "minAge": 7,
+    "difficulty": 2,
     "pieces": [
-      {"image": "assets/rebus/pie.svg", "reading": "pie", "ipa": "/pi/"},
+      {"image": "assets/rebus/pas.svg", "reading": "pas", "ipa": "/pa/"},
       {"image": "assets/rebus/rat.svg", "reading": "rat", "ipa": "/ʁa/"},
-      {"image": "assets/rebus/mie.svg", "reading": "mie", "ipa": "/mi/"},
+      {"image": "assets/rebus/sol.svg", "reading": "sol", "ipa": "/sɔl/"}
+    ],
+    "targetIpa": "/paʁasɔl/",
+    "hint": "Pas + rat + sol. Prononce les trois mots sans pause.",
+    "phoneticConfidence": 1.0,
+    "validation": "strict"
+  },
+  {
+    "id": "parade",
+    "answer": "parade",
+    "minAge": 7,
+    "difficulty": 2,
+    "pieces": [
+      {"image": "assets/rebus/pas.svg", "reading": "pas", "ipa": "/pa/"},
+      {"image": "assets/rebus/rat.svg", "reading": "rat", "ipa": "/ʁa/"},
       {"image": "assets/rebus/de.svg", "reading": "dé", "ipa": "/de/"}
     ],
-    "targetIpa": "/piʁamide/",
-    "hint": "Pie + rat + mie + dé. Prononce les quatre mots sans pause.",
-    "phoneticConfidence": 1.0
+    "targetIpa": "/paʁade/",
+    "hint": "Pas + rat + dé. Prononce les trois mots sans pause.",
+    "phoneticConfidence": 1.0,
+    "validation": "strict"
   }
 ]

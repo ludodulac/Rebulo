@@ -6,8 +6,10 @@ on:
       - '.github/workflows/coverage-analysis.yml'
       - 'scripts/analyze-coverage.mjs'
       - 'scripts/import-lexique.mjs'
+      - 'scripts/simulate-expansion.mjs'
       - 'src/phonetic-engine.js'
       - 'data/lexicon-seed.json'
+      - 'data/pictogram-priorities.json'
   workflow_dispatch:
 
 permissions:
@@ -41,7 +43,10 @@ jobs:
       - name: Run strict coverage analysis
         run: node scripts/analyze-coverage.mjs .cache/lexique4.compact.json data/lexicon-seed.json data/coverage-report.json
 
-      - name: Add provenance and compact summary
+      - name: Simulate curated pictogram expansion
+        run: node scripts/simulate-expansion.mjs .cache/lexique4.compact.json data/lexicon-seed.json data/pictogram-priorities.json data/expansion-simulation.json
+
+      - name: Add provenance and compact summaries
         run: |
           node --input-type=module <<'NODE'
           import fs from 'node:fs';
@@ -61,8 +66,7 @@ jobs:
             return (nouns.length?nouns:any).join(', ')||'—';
           };
           const lines=[
-            '# Rebulo — couverture phonétique Lexique 4',
-            '',
+            '# Rebulo — couverture phonétique Lexique 4','',
             `- Entrées analysées : ${report.lexicalEntryCount}`,
             `- Formes orthographiques uniques : ${report.uniqueWordFormCount}`,
             `- Pictogrammes actifs : ${report.pictogramCount}`,
@@ -71,27 +75,36 @@ jobs:
             `- Entrées en vrais rébus (2+ pièces) : ${report.strictMultiPieceCount}`,
             `- Mots uniques en vrais rébus (2+ pièces) : ${report.strictMultiPieceUniqueWordCount}`,
             `- Couverture brute : ${(report.strictCoverage*100).toFixed(4)} %`,
-            `- Couverture rébus 2+ pièces : ${(report.strictMultiPieceCoverage*100).toFixed(4)} %`,
-            '',
-            '## 30 segments manquants les mieux classés',
-            '',
+            `- Couverture rébus 2+ pièces : ${(report.strictMultiPieceCoverage*100).toFixed(4)} %`,'',
+            '## 30 segments manquants les mieux classés','',
             '| Rang | Segment IPA | Formes débloquées | Gain pondéré | Candidats mot-entier exacts |',
             '|---:|---|---:|---:|---|',
-            ...top.map(x=>`| ${x.rank} | /${x.ipa}/ | ${x.unlockCount} | ${x.weightedGain} | ${candidates(x)} |`),
-            '',
+            ...top.map(x=>`| ${x.rank} | /${x.ipa}/ | ${x.unlockCount} | ${x.weightedGain} | ${candidates(x)} |`),'',
             '> Les candidats mot-entier sont seulement des homophones exacts trouvés dans Lexique 4, avec priorité aux noms. Ils ne sont pas automatiquement imageables ni cliniquement admissibles : la stabilité de dénomination et la reconnaissance visuelle restent obligatoires.'
           ];
           fs.writeFileSync('docs/COVERAGE_ANALYSIS.md',lines.join('\n')+'\n');
+
+          const sim=JSON.parse(fs.readFileSync('data/expansion-simulation.json','utf8'));
+          const simLines=[
+            '# Rebulo — simulation gloutonne d’expansion','',
+            `- Base : ${sim.baseline.multiPieceUniqueWords} mots uniques en rébus de 2+ pièces.`,
+            `- Candidats testés : ${sim.candidatePool.length}.`,'',
+            '| Étape | Brique ajoutée | IPA | Gain marginal de vrais rébus | Total cumulatif |',
+            '|---:|---|---|---:|---:|',
+            ...sim.greedyOrder.map(x=>`| ${x.step} | ${x.addedLabel} | ${x.ipa} | +${x.marginalMultiPieceUniqueWords} | ${x.cumulativeMultiPieceUniqueWords} |`),'',
+            '> L’ordre est recalculé après chaque ajout. Il mesure le potentiel lexical strict, pas la validité clinique finale.'
+          ];
+          fs.writeFileSync('docs/EXPANSION_SIMULATION.md',simLines.join('\n')+'\n');
           NODE
 
       - name: Commit analysis results
         run: |
           git config user.name 'rebulo-analysis-bot'
           git config user.email 'actions@users.noreply.github.com'
-          git add data/coverage-report.json docs/COVERAGE_ANALYSIS.md
+          git add data/coverage-report.json data/expansion-simulation.json docs/COVERAGE_ANALYSIS.md docs/EXPANSION_SIMULATION.md
           if git diff --cached --quiet; then
             echo 'No analysis changes to commit.'
             exit 0
           fi
-          git commit -m 'Refresh full Lexique 4 coverage analysis'
+          git commit -m 'Refresh Lexique 4 coverage and expansion simulation'
           git push

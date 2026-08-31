@@ -16,6 +16,45 @@ function frequencyWeight(entry){
   return Math.log10(1+f)+1;
 }
 
+function candidateLabelScore(entry){
+  const pos=String(entry.pos||'').toUpperCase();
+  const nounBoost=pos.startsWith('NOM')?4:0;
+  const interjectionBoost=pos.startsWith('ONO')?1:0;
+  return nounBoost+interjectionBoost+Math.log10(1+(Number(entry.frequency)||0));
+}
+
+const exactIpaIndex=new Map();
+for(const entry of entries){
+  if(!entry?.word||!entry?.ipa)continue;
+  const ipa=normalizeIPA(entry.ipa);
+  if(!ipa)continue;
+  const bucket=exactIpaIndex.get(ipa)||[];
+  bucket.push(entry);
+  exactIpaIndex.set(ipa,bucket);
+}
+for(const bucket of exactIpaIndex.values()){
+  bucket.sort((a,b)=>candidateLabelScore(b)-candidateLabelScore(a)||String(a.word).localeCompare(String(b.word),'fr'));
+}
+
+function exactWholeWordCandidates(ipa,limit=12){
+  const seen=new Set();
+  const out=[];
+  for(const entry of exactIpaIndex.get(ipa)||[]){
+    const key=String(entry.word).toLowerCase();
+    if(seen.has(key))continue;
+    seen.add(key);
+    out.push({
+      word:entry.word,
+      ipa:entry.ipa,
+      pos:entry.pos||'',
+      frequency:Number(entry.frequency)||0,
+      noun:String(entry.pos||'').toUpperCase().startsWith('NOM')
+    });
+    if(out.length>=limit)break;
+  }
+  return out;
+}
+
 function canSegmentRange(target,start,end,maxPieces=4){
   const memo=new Map();
   function walk(offset,pieces){
@@ -54,6 +93,7 @@ function oneGapCandidates(target,maxPieces=4,maxGapChars=6){
 }
 
 const constructible=[];
+const constructibleMultiPiece=[];
 const gaps=new Map();
 for(const entry of entries){
   if(!entry?.word||!entry?.ipa)continue;
@@ -61,12 +101,15 @@ for(const entry of entries){
   if(!target)continue;
   const decompositions=rankDecompositions(segmentTargetWithLexicon(target,active,4));
   if(decompositions.length){
-    constructible.push({
+    const record={
       word:entry.word,
       ipa:entry.ipa,
       frequency:Number(entry.frequency)||0,
+      pos:entry.pos||'',
       decomposition:decompositions[0].map(x=>x.id||x.label)
-    });
+    };
+    constructible.push(record);
+    if(record.decomposition.length>=2)constructibleMultiPiece.push(record);
     continue;
   }
   const weight=frequencyWeight(entry);
@@ -93,26 +136,50 @@ for(const entry of entries){
 const missingSounds=[...gaps.values()]
   .sort((a,b)=>b.weightedGain-a.weightedGain||b.unlockCount-a.unlockCount)
   .slice(0,100)
-  .map((x,index)=>({...x,rank:index+1,weightedGain:Number(x.weightedGain.toFixed(3))}));
+  .map((x,index)=>{
+    const exactLabels=exactWholeWordCandidates(x.ipa);
+    const nounLabels=exactLabels.filter(label=>label.noun);
+    return {
+      ...x,
+      rank:index+1,
+      weightedGain:Number(x.weightedGain.toFixed(3)),
+      exactWholeWordCandidates:exactLabels,
+      exactNounCandidates:nounLabels,
+      hasExactNounCandidate:nounLabels.length>0
+    };
+  });
 
 constructible.sort((a,b)=>b.frequency-a.frequency||a.word.localeCompare(b.word,'fr'));
+constructibleMultiPiece.sort((a,b)=>b.frequency-a.frequency||a.word.localeCompare(b.word,'fr'));
+const uniqueWordForms=new Set(entries.filter(x=>x?.word).map(x=>String(x.word).toLowerCase()));
+const uniqueConstructible=new Set(constructible.map(x=>String(x.word).toLowerCase()));
+const uniqueMultiPiece=new Set(constructibleMultiPiece.map(x=>String(x.word).toLowerCase()));
+
 const report={
   generatedAt:new Date().toISOString(),
   source:lexique.source||lexiquePath,
   pictogramCount:active.length,
   lexicalEntryCount:entries.length,
+  uniqueWordFormCount:uniqueWordForms.size,
   strictConstructibleCount:constructible.length,
+  strictConstructibleUniqueWordCount:uniqueConstructible.size,
+  strictMultiPieceCount:constructibleMultiPiece.length,
+  strictMultiPieceUniqueWordCount:uniqueMultiPiece.size,
   strictCoverage:entries.length?Number((constructible.length/entries.length).toFixed(6)):0,
+  strictMultiPieceCoverage:entries.length?Number((constructibleMultiPiece.length/entries.length).toFixed(6)):0,
   methodology:{
     strict:'Un mot est constructible uniquement si sa forme phonétique entière est la concaténation de dénominations complètes de pictogrammes actifs.',
+    multiPiece:'La métrique multi-pièces exclut les simples homophones d’un seul pictogramme et correspond mieux à un vrai rébus.',
     missingSoundRanking:'Pour chaque mot non constructible, recherche d’un unique segment sonore manquant entouré de segments déjà constructibles. Le score privilégie les mots fréquents.',
-    caution:'Un segment bien classé n’autorise pas automatiquement un pictogramme. Il doit ensuite être associé à une dénomination française entière, stable, reconnaissable et validée.'
+    wholeWordCandidate:'Pour chaque segment manquant, recherche dans Lexique 4 des formes dont la prononciation entière correspond exactement au segment. Les noms sont priorisés mais doivent encore passer un contrôle d’imageabilité et de stabilité de dénomination.',
+    caution:'Un segment bien classé ou un homophone exact n’autorise pas automatiquement un pictogramme. Il doit être concret, représentable, stable, reconnaissable et validé.'
   },
   constructible:constructible.slice(0,500),
+  constructibleMultiPiece:constructibleMultiPiece.slice(0,500),
   missingSounds
 };
 
 fs.writeFileSync(outputPath,JSON.stringify(report,null,2));
-console.log(`Coverage: ${constructible.length}/${entries.length}`);
+console.log(`Coverage: ${constructible.length}/${entries.length}; multi-piece: ${constructibleMultiPiece.length}`);
 console.log(`Top missing sounds: ${missingSounds.slice(0,10).map(x=>`${x.ipa} (${x.unlockCount})`).join(', ')}`);
 console.log(`Report -> ${outputPath}`);

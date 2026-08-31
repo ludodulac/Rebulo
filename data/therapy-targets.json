@@ -1,0 +1,21 @@
+{
+  "version": "0.1.0",
+  "targets": [
+    {"id":"denomination","label":"Dénomination","unit":"word","description":"Identifier une image et produire sa dénomination cible."},
+    {"id":"syllable-count","label":"Comptage syllabique","unit":"syllable","description":"Compter les syllabes orales d'un mot."},
+    {"id":"syllable-identification","label":"Identification syllabique","unit":"syllable","description":"Repérer une syllabe initiale, médiane ou finale."},
+    {"id":"syllable-segmentation","label":"Segmentation syllabique","unit":"syllable","description":"Découper oralement un mot en syllabes."},
+    {"id":"syllable-blending","label":"Fusion syllabique","unit":"syllable","description":"Fusionner plusieurs unités sonores pour retrouver un mot."},
+    {"id":"rhyme-judgment","label":"Jugement de rimes","unit":"rhyme","description":"Dire si deux mots riment."},
+    {"id":"rhyme-matching","label":"Appariement de rimes","unit":"rhyme","description":"Choisir un mot qui rime avec une cible."},
+    {"id":"phoneme-initial","label":"Phonème initial","unit":"phoneme","description":"Repérer le premier phonème d'un mot."},
+    {"id":"phoneme-final","label":"Phonème final","unit":"phoneme","description":"Repérer le dernier phonème d'un mot."},
+    {"id":"phoneme-segmentation","label":"Segmentation phonémique","unit":"phoneme","description":"Découper un mot en phonèmes."},
+    {"id":"phoneme-blending","label":"Fusion phonémique","unit":"phoneme","description":"Fusionner des phonèmes en un mot."},
+    {"id":"phoneme-deletion","label":"Suppression phonémique","unit":"phoneme","description":"Retirer explicitement un phonème d'une forme sonore."},
+    {"id":"phoneme-substitution","label":"Substitution phonémique","unit":"phoneme","description":"Remplacer explicitement un phonème par un autre."},
+    {"id":"minimal-pairs","label":"Discrimination de sons proches","unit":"phoneme","description":"Discriminer des contrastes phonémiques ciblés."},
+    {"id":"oral-to-written","label":"Du son vers l'écrit","unit":"word","description":"Écouter/reconstituer le mot puis l'écrire."},
+    {"id":"lexical-access","label":"Accès lexical","unit":"word","description":"Travailler évocation, dénomination et accès au lexique à partir des images."}
+  ]
+}

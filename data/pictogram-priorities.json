@@ -1,0 +1,51 @@
+{
+  "version": "0.1.0",
+  "basis": {
+    "lexicalEntries": 189832,
+    "uniqueWordForms": 170756,
+    "activePictograms": 12,
+    "strictMultiPieceUniqueWords": 172,
+    "method": "Classement par gain phonétique brut, puis filtre Rebulo : la représentation doit fournir exactement la prononciation entière attendue et rester naturellement reconnaissable."
+  },
+  "statusLegend": {
+    "priority_pictogram": "Bonne brique visuelle directe à concevoir en priorité.",
+    "candidate_pictogram": "Exact phonétiquement mais nécessite un test de dénomination/imageabilité.",
+    "auxiliary_tile": "À traiter comme carte-lettre, note ou autre tuile explicite, pas comme pictogramme d'objet.",
+    "reject_direct": "Ne pas fabriquer de pictogramme direct pour obtenir ce son."
+  },
+  "items": [
+    {"rawRank":1,"sound":"/te/","unlockCount":96,"proposedLabel":"thé","representation":"pictogram","status":"priority_pictogram","labelStability":"high","imageability":"high","reason":"Mot entier exact, concret et facilement identifiable."},
+    {"rawRank":2,"sound":"/se/","unlockCount":79,"proposedLabel":"C","representation":"letter_tile","status":"auxiliary_tile","labelStability":"high","imageability":"high","reason":"Le son peut être porté explicitement par le nom de la lettre C ; ne pas inventer un objet pour /se/."},
+    {"rawRank":3,"sound":"/ʁ/","unlockCount":66,"proposedLabel":null,"representation":null,"status":"reject_direct","labelStability":"none","imageability":"none","reason":"Aucune dénomination entière, naturelle et concrète suffisamment robuste dans le corpus."},
+    {"rawRank":4,"sound":"/t/","unlockCount":77,"proposedLabel":null,"representation":null,"status":"reject_direct","labelStability":"none","imageability":"none","reason":"Le nom de la lettre T est /te/, pas /t/ ; aucune troncation cachée autorisée."},
+    {"rawRank":5,"sound":"/l/","unlockCount":69,"proposedLabel":null,"representation":null,"status":"reject_direct","labelStability":"none","imageability":"none","reason":"Le nom de la lettre L est /ɛl/, pas /l/ ; aucune troncation cachée autorisée."},
+    {"rawRank":6,"sound":"/a/","unlockCount":54,"proposedLabel":"A","representation":"letter_tile","status":"auxiliary_tile","labelStability":"high","imageability":"high","reason":"Le nom de la lettre A fournit exactement /a/ ; à réserver au système de tuiles explicites."},
+    {"rawRank":7,"sound":"/k/","unlockCount":67,"proposedLabel":null,"representation":null,"status":"reject_direct","labelStability":"none","imageability":"none","reason":"Pas de bonne dénomination visuelle entière pour /k/ ; K se prononce /ka/."},
+    {"rawRank":8,"sound":"/s/","unlockCount":49,"proposedLabel":null,"representation":null,"status":"reject_direct","labelStability":"none","imageability":"none","reason":"Pas de bonne dénomination entière ; S se prononce /ɛs/ et C /se/."},
+    {"rawRank":9,"sound":"/ʁe/","unlockCount":61,"proposedLabel":"ré","representation":"music_note_tile","status":"auxiliary_tile","labelStability":"high","imageability":"high","reason":"Nom exact d'une note de musique ; convient à une tuile-note explicite."},
+    {"rawRank":10,"sound":"/n/","unlockCount":55,"proposedLabel":null,"representation":null,"status":"reject_direct","labelStability":"none","imageability":"none","reason":"N se prononce /ɛn/ ; aucune extraction implicite de /n/."},
+    {"rawRank":11,"sound":"/ʁi/","unlockCount":54,"proposedLabel":"riz","representation":"pictogram","status":"priority_pictogram","labelStability":"high","imageability":"high","reason":"Mot entier exact, concret et très facile à représenter."},
+    {"rawRank":12,"sound":"/d/","unlockCount":43,"proposedLabel":null,"representation":null,"status":"reject_direct","labelStability":"none","imageability":"none","reason":"D se prononce /de/ ; aucune extraction implicite de /d/."},
+    {"rawRank":13,"sound":"/ko/","unlockCount":50,"proposedLabel":"cot","representation":"pictogram","status":"reject_direct","labelStability":"low","imageability":"low","reason":"Le candidat lexical exact est rare/peu stable pour un enfant ; rendement insuffisant pour justifier une image ambiguë."},
+    {"rawRank":14,"sound":"/di/","unlockCount":44,"proposedLabel":"dit","representation":"word_tile","status":"reject_direct","labelStability":"low","imageability":"low","reason":"Candidat principalement verbal/orthographique, pas une dénomination d'objet naturelle."},
+    {"rawRank":15,"sound":"/ta/","unlockCount":49,"proposedLabel":"tas","representation":"pictogram","status":"candidate_pictogram","labelStability":"medium","imageability":"high","reason":"Exact et concret, mais l'image d'un tas peut être spontanément nommée pile ; test de dénomination nécessaire."},
+    {"rawRank":16,"sound":"/ʁə/","unlockCount":36,"proposedLabel":null,"representation":null,"status":"reject_direct","labelStability":"none","imageability":"none","reason":"Aucun bon mot-image entier exact dans le corpus."},
+    {"rawRank":17,"sound":"/pe/","unlockCount":46,"proposedLabel":"P","representation":"letter_tile","status":"auxiliary_tile","labelStability":"high","imageability":"high","reason":"Le nom de la lettre P fournit exactement /pe/."},
+    {"rawRank":18,"sound":"/e/","unlockCount":41,"proposedLabel":"é","representation":"letter_tile","status":"auxiliary_tile","labelStability":"medium","imageability":"high","reason":"À traiter comme symbole/graphème explicite, pas comme objet. Validation d'usage à définir selon l'âge et l'objectif orthophonique."},
+    {"rawRank":19,"sound":"/vi/","unlockCount":40,"proposedLabel":"vie","representation":"pictogram","status":"reject_direct","labelStability":"low","imageability":"low","reason":"Homophone exact mais notion trop abstraite pour obtenir une dénomination visuelle stable."},
+    {"rawRank":20,"sound":"/g/","unlockCount":44,"proposedLabel":null,"representation":null,"status":"reject_direct","labelStability":"none","imageability":"none","reason":"Aucun bon mot-image entier exact ; G se prononce /ʒe/."},
+    {"rawRank":21,"sound":"/ʒ/","unlockCount":37,"proposedLabel":null,"representation":null,"status":"reject_direct","labelStability":"none","imageability":"none","reason":"Aucun bon mot-image entier exact ; J se prononce /ʒi/."},
+    {"rawRank":22,"sound":"/li/","unlockCount":41,"proposedLabel":"lit","representation":"pictogram","status":"priority_pictogram","labelStability":"high","imageability":"high","reason":"Mot entier exact, objet courant et très reconnaissable."},
+    {"rawRank":23,"sound":"/tɛʁ/","unlockCount":34,"proposedLabel":"terre","representation":"pictogram","status":"candidate_pictogram","labelStability":"medium","imageability":"high","reason":"Exact et concret, mais il faut choisir une scène qui déclenche terre plutôt que sol, globe ou planète."},
+    {"rawRank":24,"sound":"/ka/","unlockCount":41,"proposedLabel":"K","representation":"letter_tile","status":"auxiliary_tile","labelStability":"high","imageability":"high","reason":"Le nom de la lettre K fournit exactement /ka/ ; à séparer des pictogrammes d'objets."},
+    {"rawRank":25,"sound":"/ʁje/","unlockCount":27,"proposedLabel":"riez","representation":"word_tile","status":"reject_direct","labelStability":"low","imageability":"low","reason":"Forme verbale, pas de dénomination visuelle naturelle."},
+    {"rawRank":26,"sound":"/kɔʁ/","unlockCount":40,"proposedLabel":"corps","representation":"pictogram","status":"candidate_pictogram","labelStability":"medium","imageability":"medium","reason":"Exact et concret, mais une silhouette peut être nommée personne, homme, corps ; nécessite un test de dénomination."},
+    {"rawRank":27,"sound":"/do/","unlockCount":26,"proposedLabel":"dos","representation":"pictogram","status":"priority_pictogram","labelStability":"high","imageability":"high","reason":"Partie du corps courante, facilement représentable et dénomination très stable si le visuel est clair."},
+    {"rawRank":28,"sound":"/ʒe/","unlockCount":37,"proposedLabel":"G","representation":"letter_tile","status":"auxiliary_tile","labelStability":"high","imageability":"high","reason":"Le nom de la lettre G fournit exactement /ʒe/."},
+    {"rawRank":29,"sound":"/je/","unlockCount":39,"proposedLabel":null,"representation":null,"status":"reject_direct","labelStability":"none","imageability":"none","reason":"Aucun bon mot-image entier exact dans le corpus."},
+    {"rawRank":30,"sound":"/o/","unlockCount":26,"proposedLabel":"eau","representation":"pictogram","status":"priority_pictogram","labelStability":"high","imageability":"high","reason":"Mot entier exact, concept courant et visuellement simple."}
+  ],
+  "recommendedFirstDirectPictograms": ["thé","riz","lit","dos","eau"],
+  "recommendedDirectCandidatesToTest": ["tas","terre","corps"],
+  "recommendedAuxiliaryTiles": ["C","A","ré","P","é","K","G"]
+}

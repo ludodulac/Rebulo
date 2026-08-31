@@ -1,0 +1,10 @@
+{
+  "name": "rebulo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node tests/phonetic-engine.test.mjs",
+    "import:lexique": "node scripts/import-lexique.mjs"
+  }
+}

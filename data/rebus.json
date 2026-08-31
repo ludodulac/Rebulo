@@ -1,0 +1,57 @@
+[
+  {
+    "id": "merci",
+    "answer": "merci",
+    "minAge": 5,
+    "difficulty": 1,
+    "pieces": [
+      {"image": "assets/rebus/mer.svg", "reading": "mer", "ipa": "/mɛʁ/"},
+      {"image": "assets/rebus/scie.svg", "reading": "scie", "ipa": "/si/"}
+    ],
+    "targetIpa": "/mɛʁsi/",
+    "hint": "Nomme ce que tu vois, puis colle les deux sons.",
+    "phoneticConfidence": 1.0
+  },
+  {
+    "id": "tournesol",
+    "answer": "tournesol",
+    "minAge": 7,
+    "difficulty": 2,
+    "pieces": [
+      {"image": "assets/rebus/tour.svg", "reading": "tour", "ipa": "/tuʁ/"},
+      {"image": "assets/rebus/nez.svg", "reading": "nez", "ipa": "/ne/"},
+      {"image": "assets/rebus/sol.svg", "reading": "sol", "ipa": "/sɔl/"}
+    ],
+    "targetIpa": "/tuʁnesɔl/",
+    "hint": "Tour + nez + sol. Dis-les sans faire de pause.",
+    "phoneticConfidence": 1.0
+  },
+  {
+    "id": "cinema",
+    "answer": "cinéma",
+    "minAge": 7,
+    "difficulty": 2,
+    "pieces": [
+      {"image": "assets/rebus/scie.svg", "reading": "scie", "ipa": "/si/"},
+      {"image": "assets/rebus/nez.svg", "reading": "nez", "ipa": "/ne/"},
+      {"image": "assets/rebus/mat.svg", "reading": "mât", "ipa": "/ma/"}
+    ],
+    "targetIpa": "/sinema/",
+    "hint": "Scie + nez + mât. Prononce seulement les sons des mots.",
+    "phoneticConfidence": 1.0
+  },
+  {
+    "id": "parapluie",
+    "answer": "parapluie",
+    "minAge": 8,
+    "difficulty": 3,
+    "pieces": [
+      {"image": "assets/rebus/pas.svg", "reading": "pas", "ipa": "/pa/"},
+      {"image": "assets/rebus/rat.svg", "reading": "rat", "ipa": "/ʁa/"},
+      {"image": "assets/rebus/pluie.svg", "reading": "pluie", "ipa": "/plɥi/"}
+    ],
+    "targetIpa": "/paʁaplɥi/",
+    "hint": "Pas + rat + pluie. Le S et le T ne se prononcent pas.",
+    "phoneticConfidence": 1.0
+  }
+]

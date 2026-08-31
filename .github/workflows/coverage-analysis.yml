@@ -1,0 +1,83 @@
+name: Full Lexique 4 coverage analysis
+
+on:
+  push:
+    paths:
+      - '.github/workflows/coverage-analysis.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Download Lexique 4 mirror
+        run: |
+          mkdir -p .cache
+          curl --fail --location --retry 3 \
+            'https://raw.githubusercontent.com/dorfner/pass_the_bomb/master/Lexique400/Lexique4.tsv' \
+            -o .cache/Lexique4.tsv
+          test "$(wc -l < .cache/Lexique4.tsv)" -gt 180000
+          sha256sum .cache/Lexique4.tsv | tee .cache/Lexique4.sha256
+
+      - name: Import compact lexical data
+        run: node scripts/import-lexique.mjs .cache/Lexique4.tsv .cache/lexique4.compact.json
+
+      - name: Run strict coverage analysis
+        run: node scripts/analyze-coverage.mjs .cache/lexique4.compact.json data/lexicon-seed.json data/coverage-report.json
+
+      - name: Add provenance and compact summary
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const p='data/coverage-report.json';
+          const report=JSON.parse(fs.readFileSync(p,'utf8'));
+          report.provenance={
+            canonicalSource:'https://www.lexique.org/databases/Lexique400/Lexique400.tsv',
+            mirror:'https://github.com/dorfner/pass_the_bomb/blob/master/Lexique400/Lexique4.tsv',
+            sha256:fs.readFileSync('.cache/Lexique4.sha256','utf8').trim().split(/\s+/)[0],
+            license:'CC BY-SA 4.0'
+          };
+          fs.writeFileSync(p,JSON.stringify(report,null,2));
+          const top=report.missingSounds.slice(0,30);
+          const lines=[
+            '# Rebulo — couverture phonétique Lexique 4',
+            '',
+            `- Entrées analysées : ${report.lexicalEntryCount}`,
+            `- Pictogrammes actifs : ${report.pictogramCount}`,
+            `- Formes strictement constructibles : ${report.strictConstructibleCount}`,
+            `- Couverture brute : ${(report.strictCoverage*100).toFixed(4)} %`,
+            '',
+            '## 30 segments manquants les mieux classés',
+            '',
+            '| Rang | Segment IPA | Formes débloquées | Gain pondéré |',
+            '|---:|---|---:|---:|',
+            ...top.map(x=>`| ${x.rank} | /${x.ipa}/ | ${x.unlockCount} | ${x.weightedGain} |`),
+            '',
+            '> Ce classement mesure le rendement phonétique brut. Un segment ne devient jamais automatiquement un pictogramme : il doit correspondre à une dénomination française complète, stable, reconnaissable et cliniquement validée.'
+          ];
+          fs.writeFileSync('docs/COVERAGE_ANALYSIS.md',lines.join('\n')+'\n');
+          NODE
+
+      - name: Commit analysis results
+        run: |
+          git config user.name 'rebulo-analysis-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/coverage-report.json docs/COVERAGE_ANALYSIS.md
+          if git diff --cached --quiet; then
+            echo 'No analysis changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Add full Lexique 4 coverage analysis'
+          git push

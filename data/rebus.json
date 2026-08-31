@@ -53,5 +53,20 @@
     "targetIpa": "/paʁaplɥi/",
     "hint": "Pas + rat + pluie. Le S et le T ne se prononcent pas.",
     "phoneticConfidence": 1.0
+  },
+  {
+    "id": "pyramide",
+    "answer": "pyramide",
+    "minAge": 9,
+    "difficulty": 4,
+    "pieces": [
+      {"image": "assets/rebus/pie.svg", "reading": "pie", "ipa": "/pi/"},
+      {"image": "assets/rebus/rat.svg", "reading": "rat", "ipa": "/ʁa/"},
+      {"image": "assets/rebus/mie.svg", "reading": "mie", "ipa": "/mi/"},
+      {"image": "assets/rebus/de.svg", "reading": "dé", "ipa": "/de/"}
+    ],
+    "targetIpa": "/piʁamide/",
+    "hint": "Pie + rat + mie + dé. Prononce les quatre mots sans pause.",
+    "phoneticConfidence": 1.0
   }
 ]

@@ -57,20 +57,5 @@
     "hint": "Pas + rat + sol. Prononce les trois mots sans pause.",
     "phoneticConfidence": 1.0,
     "validation": "strict"
-  },
-  {
-    "id": "parade",
-    "answer": "parade",
-    "minAge": 7,
-    "difficulty": 2,
-    "pieces": [
-      {"image": "assets/rebus/pas.svg", "reading": "pas", "ipa": "/pa/"},
-      {"image": "assets/rebus/rat.svg", "reading": "rat", "ipa": "/ʁa/"},
-      {"image": "assets/rebus/de.svg", "reading": "dé", "ipa": "/de/"}
-    ],
-    "targetIpa": "/paʁade/",
-    "hint": "Pas + rat + dé. Prononce les trois mots sans pause.",
-    "phoneticConfidence": 1.0,
-    "validation": "strict"
   }
 ]

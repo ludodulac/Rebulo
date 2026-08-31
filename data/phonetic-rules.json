@@ -1,0 +1,44 @@
+{
+  "version": "0.1.0",
+  "principles": [
+    {
+      "id": "whole-reading",
+      "rule": "Un pictogramme fournit par défaut la prononciation complète de sa dénomination validée.",
+      "exampleAllowed": "scie /si/",
+      "exampleForbidden": "vache /vaʃ/ utilisée comme /va/"
+    },
+    {
+      "id": "no-hidden-deletion",
+      "rule": "Aucune suppression de syllabe ou de phonème n'est autorisée sans opérateur visuel explicite."
+    },
+    {
+      "id": "phonology-before-spelling",
+      "rule": "La validation compare les formes sonores, jamais la seule ressemblance orthographique."
+    },
+    {
+      "id": "stable-label",
+      "rule": "La dénomination attendue doit être courante, identifiable et suffisamment stable pour le public ciblé."
+    },
+    {
+      "id": "explicit-operations",
+      "rule": "Suppression, inversion, substitution ou extraction ne seront introduites que par des opérateurs visuels dédiés et à des niveaux avancés."
+    },
+    {
+      "id": "clinical-review",
+      "rule": "Tout item destiné au mode clinique doit être marqué comme validé avant diffusion dans une séance."
+    }
+  ],
+  "validationLevels": {
+    "strict": "Concaténation phonétique directe des dénominations complètes.",
+    "explicit_operation": "Transformation phonologique permise uniquement parce qu'un opérateur visible l'indique.",
+    "experimental": "Candidat non destiné aux séances tant qu'il n'a pas été vérifié."
+  },
+  "forbiddenImplicitOperations": [
+    "suppression de fin de mot",
+    "suppression de début de mot",
+    "changement arbitraire de voyelle",
+    "changement arbitraire de consonne",
+    "réapparition d'une consonne muette",
+    "synonyme inattendu utilisé uniquement pour obtenir le son"
+  ]
+}

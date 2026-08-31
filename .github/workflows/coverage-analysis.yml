@@ -4,6 +4,10 @@ on:
   push:
     paths:
       - '.github/workflows/coverage-analysis.yml'
+      - 'scripts/analyze-coverage.mjs'
+      - 'scripts/import-lexique.mjs'
+      - 'src/phonetic-engine.js'
+      - 'data/lexicon-seed.json'
   workflow_dispatch:
 
 permissions:
@@ -51,21 +55,31 @@ jobs:
           };
           fs.writeFileSync(p,JSON.stringify(report,null,2));
           const top=report.missingSounds.slice(0,30);
+          const candidates=x=>{
+            const nouns=(x.exactNounCandidates||[]).slice(0,4).map(y=>y.word);
+            const any=(x.exactWholeWordCandidates||[]).slice(0,4).map(y=>y.word);
+            return (nouns.length?nouns:any).join(', ')||'—';
+          };
           const lines=[
             '# Rebulo — couverture phonétique Lexique 4',
             '',
             `- Entrées analysées : ${report.lexicalEntryCount}`,
+            `- Formes orthographiques uniques : ${report.uniqueWordFormCount}`,
             `- Pictogrammes actifs : ${report.pictogramCount}`,
-            `- Formes strictement constructibles : ${report.strictConstructibleCount}`,
+            `- Entrées strictement constructibles : ${report.strictConstructibleCount}`,
+            `- Mots uniques strictement constructibles : ${report.strictConstructibleUniqueWordCount}`,
+            `- Entrées en vrais rébus (2+ pièces) : ${report.strictMultiPieceCount}`,
+            `- Mots uniques en vrais rébus (2+ pièces) : ${report.strictMultiPieceUniqueWordCount}`,
             `- Couverture brute : ${(report.strictCoverage*100).toFixed(4)} %`,
+            `- Couverture rébus 2+ pièces : ${(report.strictMultiPieceCoverage*100).toFixed(4)} %`,
             '',
             '## 30 segments manquants les mieux classés',
             '',
-            '| Rang | Segment IPA | Formes débloquées | Gain pondéré |',
-            '|---:|---|---:|---:|',
-            ...top.map(x=>`| ${x.rank} | /${x.ipa}/ | ${x.unlockCount} | ${x.weightedGain} |`),
+            '| Rang | Segment IPA | Formes débloquées | Gain pondéré | Candidats mot-entier exacts |',
+            '|---:|---|---:|---:|---|',
+            ...top.map(x=>`| ${x.rank} | /${x.ipa}/ | ${x.unlockCount} | ${x.weightedGain} | ${candidates(x)} |`),
             '',
-            '> Ce classement mesure le rendement phonétique brut. Un segment ne devient jamais automatiquement un pictogramme : il doit correspondre à une dénomination française complète, stable, reconnaissable et cliniquement validée.'
+            '> Les candidats mot-entier sont seulement des homophones exacts trouvés dans Lexique 4, avec priorité aux noms. Ils ne sont pas automatiquement imageables ni cliniquement admissibles : la stabilité de dénomination et la reconnaissance visuelle restent obligatoires.'
           ];
           fs.writeFileSync('docs/COVERAGE_ANALYSIS.md',lines.join('\n')+'\n');
           NODE
@@ -79,5 +93,5 @@ jobs:
             echo 'No analysis changes to commit.'
             exit 0
           fi
-          git commit -m 'Add full Lexique 4 coverage analysis'
+          git commit -m 'Refresh full Lexique 4 coverage analysis'
           git push

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>Rebulo — Défi Rébus</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">REBUS FRANÇAIS</p>
+        <h1>Rebulo</h1>
+      </div>
+      <div class="score-box" aria-label="Score"><span>⭐</span><strong id="score">0</strong></div>
+    </header>
+
+    <section class="controls" aria-label="Réglages du jeu">
+      <label for="age">Âge du joueur</label>
+      <select id="age">
+        <option value="5">5–6 ans</option>
+        <option value="7" selected>7–8 ans</option>
+        <option value="9">9–11 ans</option>
+        <option value="12">12 ans et +</option>
+      </select>
+      <button id="newRebus" type="button">Nouveau rébus</button>
+    </section>
+
+    <section class="game-card">
+      <div class="game-meta">
+        <span id="difficulty">Niveau 1</span>
+        <span id="streak">🔥 0</span>
+      </div>
+
+      <p class="prompt">Quel mot entends-tu ?</p>
+      <div id="rebus" class="rebus-row" aria-live="polite"></div>
+
+      <form id="answerForm">
+        <label for="answer">Ta réponse</label>
+        <div class="answer-row">
+          <input id="answer" type="text" autocomplete="off" autocapitalize="none" placeholder="Écris le mot…">
+          <button type="submit">Valider</button>
+        </div>
+      </form>
+
+      <div class="secondary-actions">
+        <button id="hint" type="button" class="secondary">💡 Indice</button>
+        <button id="solution" type="button" class="secondary">👀 Solution</button>
+      </div>
+
+      <p id="feedback" class="feedback" aria-live="polite">Les images donnent des sons français.</p>
+    </section>
+
+    <section class="rule-card">
+      <strong>Règle Rebulo</strong>
+      <p>Un rébus n'entre dans le jeu que si ses sons ont été vérifiés. On ne transforme pas « riz » en « ré » pour forcer une réponse.</p>
+    </section>
+  </main>
+  <script src="app.js" defer></script>
+</body>
+</html>

@@ -1,5 +1,13 @@
 export function normalizeLayout(value){const n=Number(value);return [1,2,4].includes(n)?n:1;}
 
+function normalizeKeyPart(value=''){return String(value||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'');}
+
+export function sessionItemKey(item={}){
+  const answer=normalizeKeyPart(item?.answer);
+  const activity=normalizeKeyPart(item?.activity?.id||item?.activity?.label||'');
+  return `${answer}::${activity}`;
+}
+
 export function paginateSession(items=[],perPage=1){
   const size=normalizeLayout(perPage);const pages=[];
   for(let index=0;index<(items||[]).length;index+=size)pages.push(items.slice(index,index+size));

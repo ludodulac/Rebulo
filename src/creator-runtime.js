@@ -1,4 +1,5 @@
 import {rankDecompositions,segmentTargetWithLexicon,validateStrictRebus} from './phonetic-engine.js';
+import {buildStrictConstruction} from './rebus-construction.js';
 import {buildTherapyActivities} from './therapy-activities.js';
 
 export function buildCreatorCandidate(target,lexicon=[],therapyDefinitions=[]){
@@ -14,5 +15,7 @@ export function buildCreatorCandidate(target,lexicon=[],therapyDefinitions=[]){
     pieces:pieces.map(piece=>({...piece,reading:piece.label})),
     therapyActivities:buildTherapyActivities(target,therapyDefinitions)
   };
-  return validateStrictRebus(candidate).ok?candidate:null;
+  if(!validateStrictRebus(candidate).ok)return null;
+  const construction=buildStrictConstruction(candidate.pieces,candidate.targetIpa);
+  return construction?{...candidate,construction}:null;
 }

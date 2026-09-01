@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-31T13:21:20.287Z",
+  "generatedAt": "2026-09-01T07:50:57.449Z",
   "lexicalUniquePronouncedForms": 171476,
   "baseline": {
-    "constructibleUniqueWords": 230,
-    "multiPieceUniqueWords": 172,
-    "weightedMultiPiece": 214.05
+    "constructibleUniqueWords": 331,
+    "multiPieceUniqueWords": 257,
+    "weightedMultiPiece": 316.418
   },
   "candidatePool": [
     {
@@ -62,47 +62,25 @@
       "addedLabel": "thé",
       "ipa": "/te/",
       "status": "priority_pictogram",
-      "marginalMultiPieceUniqueWords": 78,
-      "marginalConstructibleUniqueWords": 84,
-      "cumulativeMultiPieceUniqueWords": 250,
-      "cumulativeConstructibleUniqueWords": 314,
-      "cumulativeWeightedMultiPiece": 307.637
+      "marginalMultiPieceUniqueWords": 100,
+      "marginalConstructibleUniqueWords": 106,
+      "cumulativeMultiPieceUniqueWords": 357,
+      "cumulativeConstructibleUniqueWords": 437,
+      "cumulativeWeightedMultiPiece": 434.774
     },
     {
       "step": 2,
-      "addedLabel": "lit",
-      "ipa": "/li/",
-      "status": "priority_pictogram",
-      "marginalMultiPieceUniqueWords": 61,
-      "marginalConstructibleUniqueWords": 69,
-      "cumulativeMultiPieceUniqueWords": 311,
-      "cumulativeConstructibleUniqueWords": 383,
-      "cumulativeWeightedMultiPiece": 374.96
-    },
-    {
-      "step": 3,
       "addedLabel": "tas",
       "ipa": "/ta/",
       "status": "candidate_pictogram",
-      "marginalMultiPieceUniqueWords": 65,
-      "marginalConstructibleUniqueWords": 67,
-      "cumulativeMultiPieceUniqueWords": 376,
-      "cumulativeConstructibleUniqueWords": 450,
-      "cumulativeWeightedMultiPiece": 444.881
-    },
-    {
-      "step": 4,
-      "addedLabel": "riz",
-      "ipa": "/ʁi/",
-      "status": "priority_pictogram",
-      "marginalMultiPieceUniqueWords": 52,
-      "marginalConstructibleUniqueWords": 60,
+      "marginalMultiPieceUniqueWords": 71,
+      "marginalConstructibleUniqueWords": 73,
       "cumulativeMultiPieceUniqueWords": 428,
       "cumulativeConstructibleUniqueWords": 510,
       "cumulativeWeightedMultiPiece": 510.933
     },
     {
-      "step": 5,
+      "step": 3,
       "addedLabel": "eau",
       "ipa": "/o/",
       "status": "priority_pictogram",
@@ -113,7 +91,7 @@
       "cumulativeWeightedMultiPiece": 564.053
     },
     {
-      "step": 6,
+      "step": 4,
       "addedLabel": "terre",
       "ipa": "/tɛʁ/",
       "status": "candidate_pictogram",
@@ -124,7 +102,7 @@
       "cumulativeWeightedMultiPiece": 614.112
     },
     {
-      "step": 7,
+      "step": 5,
       "addedLabel": "dos",
       "ipa": "/do/",
       "status": "priority_pictogram",
@@ -135,12 +113,34 @@
       "cumulativeWeightedMultiPiece": 666.291
     },
     {
-      "step": 8,
+      "step": 6,
       "addedLabel": "corps",
       "ipa": "/kɔʁ/",
       "status": "candidate_pictogram",
       "marginalMultiPieceUniqueWords": 35,
       "marginalConstructibleUniqueWords": 39,
+      "cumulativeMultiPieceUniqueWords": 574,
+      "cumulativeConstructibleUniqueWords": 679,
+      "cumulativeWeightedMultiPiece": 704.111
+    },
+    {
+      "step": 7,
+      "addedLabel": "riz",
+      "ipa": "/ʁi/",
+      "status": "priority_pictogram",
+      "marginalMultiPieceUniqueWords": 0,
+      "marginalConstructibleUniqueWords": 0,
+      "cumulativeMultiPieceUniqueWords": 574,
+      "cumulativeConstructibleUniqueWords": 679,
+      "cumulativeWeightedMultiPiece": 704.111
+    },
+    {
+      "step": 8,
+      "addedLabel": "lit",
+      "ipa": "/li/",
+      "status": "priority_pictogram",
+      "marginalMultiPieceUniqueWords": 0,
+      "marginalConstructibleUniqueWords": 0,
       "cumulativeMultiPieceUniqueWords": 574,
       "cumulativeConstructibleUniqueWords": 679,
       "cumulativeWeightedMultiPiece": 704.111

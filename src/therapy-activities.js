@@ -1,4 +1,4 @@
-import {firstIPAUnit} from './phonetic-engine.js';
+import {firstIPAUnit,lastIPAUnit} from './phonetic-engine.js';
 
 const TEMPLATES={
   'denomination':{
@@ -16,6 +16,15 @@ const TEMPLATES={
       return expected
         ?`Faire identifier le phonème initial du mot cible sans appui orthographique. Réponse attendue : /${expected}/.`
         :'Faire identifier le phonème initial du mot cible sans appui orthographique.';
+    }
+  },
+  'phoneme-final':{
+    childInstruction:'Dis le mot obtenu. Quel est le tout dernier son que tu entends ?',
+    proInstruction:(target)=>{
+      const expected=lastIPAUnit(target?.targetIpa||'');
+      return expected
+        ?`Faire identifier le phonème final du mot cible sans appui orthographique. Réponse attendue : /${expected}/.`
+        :'Faire identifier le phonème final du mot cible sans appui orthographique.';
     }
   },
   'syllable-blending':{
@@ -41,6 +50,11 @@ export function buildTherapyActivities(target,definitions=[]){
   return (target?.therapy||[]).filter(id=>TEMPLATES[id]&&registry.has(id)).map(id=>{
     const definition=registry.get(id);
     const template=TEMPLATES[id];
+    const expectedResponse=id==='phoneme-initial'
+      ?firstIPAUnit(target?.targetIpa||'')
+      :id==='phoneme-final'
+        ?lastIPAUnit(target?.targetIpa||'')
+        :'';
     return {
       id,
       label:definition.label,
@@ -48,7 +62,7 @@ export function buildTherapyActivities(target,definitions=[]){
       description:definition.description,
       childInstruction:resolveInstruction(template.childInstruction,target),
       proInstruction:resolveInstruction(template.proInstruction,target),
-      expectedResponse:id==='phoneme-initial'?firstIPAUnit(target?.targetIpa||''):''
+      expectedResponse
     };
   });
 }

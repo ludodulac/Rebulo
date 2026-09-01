@@ -27,6 +27,8 @@ const lexicon=[
   {label:'scie',ipa:'/si/',active:true,visualConfidence:0.97,labelStability:0.99},
   {label:'riz',ipa:'/ʁi/',active:true},
   {label:'lit',ipa:'/li/',active:true},
+  {label:'thé',ipa:'/te/',active:false,clinicalStatus:'naming_test_required'},
+  {label:'eau',ipa:'/o/',active:false,clinicalStatus:'naming_test_required'},
   {label:'bus',ipa:'/bys/',active:true},
   {label:'faux-mer',ipa:'/mɛʁ/',active:false,visualConfidence:1,labelStability:1}
 ];
@@ -39,6 +41,9 @@ const pilotExpansion=segmentTargetWithLexicon('/liʁi/',lexicon);
 assert.equal(pilotExpansion.length,1);
 assert.deepEqual(pilotExpansion[0].map(x=>x.label),['lit','riz']);
 assert.equal(validateStrictRebus({targetIpa:'/liʁi/',pieces:pilotExpansion[0]}).ok,true);
+
+assert.equal(segmentTargetWithLexicon('/te/',lexicon).length,0);
+assert.equal(segmentTargetWithLexicon('/o/',lexicon).length,0);
 
 const alternatives=rankDecompositions([
   [{label:'a',ipa:'/a/',visualConfidence:0.4,labelStability:0.4},{label:'b',ipa:'/b/',visualConfidence:0.4,labelStability:0.4}],

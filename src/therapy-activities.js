@@ -1,4 +1,7 @@
-import {firstIPAUnit,lastIPAUnit,splitIPAUnits} from './phonetic-engine.js';
+import {firstIPAUnit,lastIPAUnit,normalizeIPA,splitIPAUnits} from './phonetic-engine.js';
+
+const phonemeSequence=(target)=>splitIPAUnits(target?.targetIpa||'');
+const formatPhonemeSequence=(target)=>phonemeSequence(target).map(unit=>`/${unit}/`).join(' + ');
 
 const TEMPLATES={
   'denomination':{
@@ -30,10 +33,24 @@ const TEMPLATES={
   'phoneme-segmentation':{
     childInstruction:'Dis le mot obtenu, puis sépare-le en petits sons, dans l’ordre.',
     proInstruction:(target)=>{
-      const expected=splitIPAUnits(target?.targetIpa||'');
-      return expected.length
-        ?`Faire segmenter oralement le mot cible en phonèmes, sans appui orthographique. Réponse attendue : ${expected.map(unit=>`/${unit}/`).join(' + ')}.`
+      const expected=formatPhonemeSequence(target);
+      return expected
+        ?`Faire segmenter oralement le mot cible en phonèmes, sans appui orthographique. Réponse attendue : ${expected}.`
         :'Faire segmenter oralement le mot cible en phonèmes, sans appui orthographique.';
+    }
+  },
+  'phoneme-blending':{
+    childInstruction:(target)=>{
+      const sequence=formatPhonemeSequence(target);
+      return sequence
+        ?`Dis ces sons dans l’ordre : ${sequence}. Puis rapproche-les sans en retirer ni en changer. Quel mot obtiens-tu ?`
+        :'Rapproche les sons donnés, dans l’ordre, sans en retirer ni en changer. Quel mot obtiens-tu ?';
+    },
+    proInstruction:(target)=>{
+      const sequence=formatPhonemeSequence(target);
+      return sequence
+        ?`Présenter la séquence phonémique ${sequence}, calculée depuis l’IPA cible, puis demander sa fusion orale sans appui orthographique. Réponse attendue : /${normalizeIPA(target?.targetIpa||'')}/.`
+        :'Présenter la séquence phonémique du mot cible, puis demander sa fusion orale sans appui orthographique.';
     }
   },
   'syllable-blending':{
@@ -56,26 +73,34 @@ export function therapyTargetMap(definitions=[]){
 
 export function buildTherapyActivities(target,definitions=[]){
   const registry=therapyTargetMap(definitions);
-  return (target?.therapy||[]).filter(id=>TEMPLATES[id]&&registry.has(id)).map(id=>{
-    const definition=registry.get(id);
-    const template=TEMPLATES[id];
-    const expectedResponse=id==='phoneme-initial'
-      ?firstIPAUnit(target?.targetIpa||'')
-      :id==='phoneme-final'
-        ?lastIPAUnit(target?.targetIpa||'')
-        :id==='phoneme-segmentation'
-          ?splitIPAUnits(target?.targetIpa||'')
-          :'';
-    return {
-      id,
-      label:definition.label,
-      unit:definition.unit,
-      description:definition.description,
-      childInstruction:resolveInstruction(template.childInstruction,target),
-      proInstruction:resolveInstruction(template.proInstruction,target),
-      expectedResponse
-    };
-  });
+  const hasTargetIpa=Boolean(normalizeIPA(target?.targetIpa||''));
+  return (target?.therapy||[])
+    .filter(id=>TEMPLATES[id]&&registry.has(id))
+    .filter(id=>id!=='phoneme-blending'||hasTargetIpa)
+    .map(id=>{
+      const definition=registry.get(id);
+      const template=TEMPLATES[id];
+      const expectedResponse=id==='phoneme-initial'
+        ?firstIPAUnit(target?.targetIpa||'')
+        :id==='phoneme-final'
+          ?lastIPAUnit(target?.targetIpa||'')
+          :id==='phoneme-segmentation'
+            ?splitIPAUnits(target?.targetIpa||'')
+            :id==='phoneme-blending'
+              ?normalizeIPA(target?.targetIpa||'')
+              :'';
+      const promptUnits=id==='phoneme-blending'?phonemeSequence(target):[];
+      return {
+        id,
+        label:definition.label,
+        unit:definition.unit,
+        description:definition.description,
+        childInstruction:resolveInstruction(template.childInstruction,target),
+        proInstruction:resolveInstruction(template.proInstruction,target),
+        expectedResponse,
+        promptUnits
+      };
+    });
 }
 
 export function activityInstruction(activity,mode='pro'){

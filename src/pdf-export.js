@@ -15,6 +15,13 @@ export function worksheetMetadata(metadata={}){
   return [metadata.patient?`Patient / élève : ${metadata.patient}`:'',metadata.date?`Date : ${metadata.date}`:'',metadata.level?`Niveau : ${metadata.level}`:''].filter(Boolean);
 }
 
+export function worksheetActivity(activity,mode='pro'){
+  if(!activity?.label)return null;
+  const instruction=mode==='child'?activity.childInstruction:activity.proInstruction;
+  if(!instruction)return null;
+  return {label:activity.label,instruction};
+}
+
 export function normalizeWorksheetSet(items=[],maxItems=4){
   const seen=new Set();
   return (items||[]).filter(item=>item?.answer&&Array.isArray(item.pieces)&&item.pieces.length).filter(item=>{const key=String(item.answer).toLowerCase();if(seen.has(key))return false;seen.add(key);return true;}).slice(0,maxItems);
@@ -27,7 +34,7 @@ function textToPng(text,{width=1500,height=150,font='44px system-ui',weight='600
 function drawCenteredText(doc,text,y,{size=14,style='normal',color=[24,32,51]}={}){doc.setFont('helvetica',style);doc.setFontSize(size);doc.setTextColor(...color);doc.text(String(text),105,y,{align:'center',maxWidth:178});}
 
 async function drawWorksheetPage(doc,rebus,{mode='pro',metadata={},pageNumber=1,pageCount=1}={}){
-  const copy=worksheetCopy(rebus,mode);const meta=worksheetMetadata(metadata);
+  const copy=worksheetCopy(rebus,mode);const meta=worksheetMetadata(metadata);const activity=worksheetActivity(rebus.activity,mode);
   doc.setFillColor(247,249,252);doc.rect(0,0,210,297,'F');doc.setFillColor(255,255,255);doc.roundedRect(12,12,186,273,6,6,'F');
   doc.setFont('helvetica','bold');doc.setFontSize(10);doc.setTextColor(107,114,128);doc.text('REBULO - PHONETIQUE STRICTE',20,24);
   if(meta.length){doc.setFont('helvetica','normal');doc.setFontSize(8.5);doc.setTextColor(95,105,122);doc.text(meta.join('   •   '),190,24,{align:'right',maxWidth:105});}
@@ -37,6 +44,7 @@ async function drawWorksheetPage(doc,rebus,{mode='pro',metadata={},pageNumber=1,
   rebus.pieces.forEach((piece,index)=>{const x=startX+index*(cardWidth+gap);doc.setDrawColor(223,229,238);doc.setFillColor(255,255,255);doc.roundedRect(x,cardY,cardWidth,cardHeight,5,5,'FD');doc.addImage(pngs[index],'PNG',x+(cardWidth-imageSize)/2,cardY+9,imageSize,imageSize,undefined,'FAST');if(copy.showLabels){doc.setFont('helvetica','bold');doc.setFontSize(11);doc.setTextColor(49,58,77);doc.text(String(piece.reading||piece.label||''),x+cardWidth/2,cardY+60,{align:'center',maxWidth:cardWidth-5});}if(index<count-1){doc.setFont('helvetica','bold');doc.setFontSize(18);doc.setTextColor(122,132,150);doc.text('+',x+cardWidth+gap/2,cardY+39,{align:'center'});}});
   if(copy.answerLine){doc.setFont('helvetica','bold');doc.setFontSize(12);doc.setTextColor(49,58,77);doc.text('Réponse :',32,174);doc.setDrawColor(122,132,150);doc.line(56,175,176,175);}
   if(copy.showIpa){const proofImage=textToPng(copy.proof,{height:130,font:'42px system-ui',weight:'600'});doc.addImage(proofImage,'PNG',25,164,160,14,undefined,'FAST');doc.setFont('helvetica','normal');doc.setFontSize(9);doc.setTextColor(95,105,122);doc.text('Chaque image = un mot entier = sa prononciation entière.',105,187,{align:'center'});}
+  if(activity){doc.setFillColor(244,247,255);doc.setDrawColor(217,227,246);doc.roundedRect(24,198,162,30,4,4,'FD');doc.setFont('helvetica','bold');doc.setFontSize(9);doc.setTextColor(49,58,77);doc.text(`Activité : ${activity.label}`,31,207);doc.setFont('helvetica','normal');doc.setFontSize(8.5);doc.setTextColor(75,85,104);const lines=doc.splitTextToSize(activity.instruction,146);doc.text(lines,31,215);}
   doc.setDrawColor(231,235,241);doc.line(22,247,188,247);doc.setFont('helvetica','normal');doc.setFontSize(8);doc.setTextColor(107,114,128);doc.text(mode==='child'?'Fiche enfant - correction non affichée':'Fiche professionnelle - correction phonétique',20,257);doc.text(pageCount>1?`Rebulo - ${pageNumber}/${pageCount}`:'Rebulo',190,257,{align:'right'});
 }
 

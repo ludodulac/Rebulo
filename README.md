@@ -17,6 +17,25 @@ Exemples explicitement refusés :
 - tour /tuʁ/ + nez /ne/ + sol /sɔl/ ne donne pas la prononciation usuelle de tournesol
 - pie /pi/ + rat /ʁa/ + mie /mi/ + dé /de/ ne donne pas la prononciation de pyramide
 
+## Doctrine UX
+
+Rebulo doit avoir la profondeur d'un logiciel professionnel, mais la manipulabilité d'un jeu pour enfant. La référence Clash Royale porte sur la philosophie d'interface — hiérarchie, géographie stable, tactile, feedback et divulgation progressive — et non sur la copie de son identité graphique.
+
+Règles non négociables :
+- une seule scène principale, sans longue page verticale ;
+- le rébus occupe le centre et reste l'objet visuel dominant ;
+- une action principale clairement identifiable par état ;
+- boutons courts, gros et tactiles : un bouton ne doit pas être une phrase ;
+- navigation et actions principales toujours aux mêmes endroits ;
+- options avancées dans des panneaux temporaires, jamais ajoutées automatiquement à l'accueil ;
+- complexité IPA, licences et données cliniques masquées tant qu'elles ne sont pas utiles ;
+- chaque interaction importante produit un feedback visible ;
+- priorité au toucher et à la lisibilité pour enfants, lecteurs fragiles et personnes ayant une motricité moins précise ;
+- codes visuels stables, sans dépendre uniquement de la couleur ;
+- conserver une interface calme : reprendre la lisibilité et la physicalité du jeu mobile, pas sa stimulation permanente.
+
+Toute nouvelle fonction doit d'abord trouver sa place dans cette hiérarchie avant d'obtenir un nouveau contrôle visible.
+
 ## Structure
 
 - `index.html` : interface du créateur et accès au prototype jeu historique

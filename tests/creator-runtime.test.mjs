@@ -2,8 +2,8 @@ import assert from 'node:assert/strict';
 import {buildCreatorCandidate} from '../src/creator-runtime.js';
 
 const lexicon=[
-  {label:'mer',ipa:'/mɛʁ/',active:true,image:'assets/rebus/mer.svg'},
-  {label:'scie',ipa:'/si/',active:true,image:'assets/rebus/scie.svg'}
+  {id:'mer',label:'mer',ipa:'/mɛʁ/',active:true,image:'assets/rebus/mer.svg'},
+  {id:'scie',label:'scie',ipa:'/si/',active:true,image:'assets/rebus/scie.svg'}
 ];
 const definitions=[
   {id:'phoneme-blending',label:'Fusion phonémique',unit:'phoneme',description:'Fusionner des phonèmes en un mot.'},
@@ -27,6 +27,9 @@ assert.equal(candidate.syllableCount,2);
 assert.equal(candidate.source,'coverage-report');
 assert.equal(candidate.generated,true);
 assert.deepEqual(candidate.pieces.map(piece=>piece.reading),['mer','scie']);
+assert.equal(candidate.construction.mode,'strict');
+assert.deepEqual(candidate.construction.operations.map(operation=>operation.type),['whole_word','whole_word']);
+assert.deepEqual(candidate.construction.capabilities,['general','phonetic_strict']);
 
 const blending=candidate.therapyActivities.find(activity=>activity.id==='phoneme-blending');
 assert.ok(blending);
@@ -41,4 +44,4 @@ assert.equal(buildCreatorCandidate({...target,mode:'explicit_operation'},lexicon
 assert.equal(buildCreatorCandidate({...target,assets:'missing'},lexicon,definitions),null);
 assert.equal(buildCreatorCandidate({...target,targetIpa:''},lexicon,definitions),null);
 
-console.log('Rebulo creator runtime: metadata and activities preserved.');
+console.log('Rebulo creator runtime: metadata, construction and activities preserved.');

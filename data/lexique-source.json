@@ -5,10 +5,11 @@
   "download": "http://www.lexique.org/databases/Lexique4/Lexique4.zip",
   "license": "CC BY-SA 4.0",
   "citation": "New, B., Pallier, C., Schalchli, G., Bourgin, J., & Gimenes, M. (2026). Lexique 4: A major upgrade of the Lexique French lexical database. Behavior Research Methods, 58(5), 140.",
-  "fieldsUsed": ["Mot", "Phono_IPA", "Lemme", "Cgram", "FreqMot"],
+  "fieldsUsed": ["Mot", "Phono_IPA", "Lemme", "Cgram", "FreqMot", "NbSyll"],
   "notes": [
     "Les données dérivées de Lexique 4 doivent conserver l'attribution et respecter le partage à l'identique.",
     "La phonologie Lexique sert de matière de calcul, mais un rébus clinique reste soumis à la validation Rebulo et à une revue humaine.",
+    "Le nombre de syllabes peut être transporté depuis Lexique ; aucune frontière syllabique ne doit être déduite des pièces du rébus.",
     "Une fréquence élevée ne rend pas automatiquement un mot adapté à un enfant ou à un objectif orthophonique."
   ]
 }

@@ -10,6 +10,8 @@ const activity={label:'Fusion syllabique',childInstruction:'Consigne enfant',pro
 assert.deepEqual(worksheetActivity(activity,'child'),{label:'Fusion syllabique',instruction:'Consigne enfant'});
 assert.deepEqual(worksheetActivity(activity,'pro'),{label:'Fusion syllabique',instruction:'Consigne pro'});
 assert.equal(worksheetActivity(null,'pro'),null);
-const set=normalizeWorksheetSet([rebus,rebus,{answer:'merci',pieces:[{label:'mer',ipa:'/mɛʁ/'}]},{answer:'parasol',pieces:[{label:'pas',ipa:'/pa/'}]},{answer:'parapluie',pieces:[{label:'pas',ipa:'/pa/'}]},{answer:'extra',pieces:[{label:'x',ipa:'/x/'}]}]);
-assert.deepEqual(set.map(x=>x.answer),['cinéma','merci','parasol','parapluie']);
+const cinemaFusion={...rebus,activity:{id:'syllable-blending',label:'Fusion syllabique'}};
+const cinemaWritten={...rebus,activity:{id:'oral-to-written',label:'Du son vers l’écrit'}};
+const set=normalizeWorksheetSet([cinemaFusion,cinemaFusion,cinemaWritten,{answer:'merci',pieces:[{label:'mer',ipa:'/mɛʁ/'}],activity:{id:'syllable-blending'}},{answer:'parasol',pieces:[{label:'pas',ipa:'/pa/'}],activity:{id:'syllable-blending'}},{answer:'extra',pieces:[{label:'x',ipa:'/x/'}],activity:{id:'syllable-blending'}}]);
+assert.deepEqual(set.map(x=>[x.answer,x.activity?.id]),[['cinéma','syllable-blending'],['cinéma','oral-to-written'],['merci','syllable-blending'],['parasol','syllable-blending']]);
 console.log('Rebulo PDF worksheet modes, activities and series: all tests passed.');

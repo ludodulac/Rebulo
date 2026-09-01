@@ -34,6 +34,14 @@ Ce journal complète `CLINICAL_PICTOGRAM_PLAN.md`. Il consigne les décisions pr
 - Motif : animal très familier, forme visuelle immédiatement identifiable et risque de dénomination concurrente jugé faible pour le prototype.
 - Reste à faire : test de dénomination spontanée avec le public ciblé avant statut clinique.
 
+### clé /kle/
+
+- Statut : `prototype_priority`
+- Actif : oui
+- Asset : OpenMoji KEY (`1F511`)
+- Motif : objet courant, silhouette très spécifique et risque de dénomination concurrente jugé faible pour le prototype.
+- Reste à faire : test de dénomination spontanée avec le public ciblé avant statut clinique.
+
 ### dos /do/
 
 - Statut : `no_suitable_asset`

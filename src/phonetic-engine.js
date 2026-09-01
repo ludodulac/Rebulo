@@ -21,6 +21,11 @@ export function firstIPAUnit(value=''){
   return splitIPAUnits(value)[0]||'';
 }
 
+export function lastIPAUnit(value=''){
+  const units=splitIPAUnits(value);
+  return units[units.length-1]||'';
+}
+
 export function concatenateIPA(pieces=[]){
   return pieces.map(piece=>normalizeIPA(piece.ipa)).join('');
 }

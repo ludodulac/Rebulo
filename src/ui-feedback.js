@@ -1,3 +1,5 @@
+import {friendlyCreatorMessage} from './creator-status.js';
+
 const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 function replayClass(node,className){
@@ -34,6 +36,7 @@ createSummary?.addEventListener('click',event=>{
 const creatorForm=document.querySelector('#creatorForm');
 const arena=document.querySelector('#result');
 const creatorFeedback=document.querySelector('#creatorFeedback');
+const therapyActivity=document.querySelector('#therapyActivity');
 const exportFeedback=document.querySelector('#exportFeedback');
 const sessionDock=document.querySelector('.session-dock');
 
@@ -48,7 +51,10 @@ document.querySelector('#downloadSeries')?.addEventListener('click',event=>repla
 
 if(creatorFeedback){
   new MutationObserver(()=>{
-    if(creatorFeedback.textContent.includes('Solution stricte'))replayClass(arena,'is-ready');
+    const raw=creatorFeedback.textContent;
+    const message=friendlyCreatorMessage(raw,Boolean(therapyActivity?.options?.length));
+    if(message!==raw){creatorFeedback.textContent=message;return;}
+    if(message.startsWith('Rébus exact créé'))replayClass(arena,'is-ready');
   }).observe(creatorFeedback,{childList:true,subtree:true,characterData:true});
 }
 

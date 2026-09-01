@@ -4,15 +4,17 @@ import {
   rankDecompositions,
   validateStrictRebus
 } from './src/phonetic-engine.js';
+import {exportRebusPdf,worksheetCopy} from './src/pdf-export.js';
 
-const state={catalog:[],lexicon:[],corpus:[],current:null,score:0,streak:0,lastId:null,creatorCurrent:null};
+const state={catalog:[],lexicon:[],corpus:[],current:null,score:0,streak:0,lastId:null,creatorCurrent:null,sheetMode:'pro'};
 const els={
   age:document.querySelector('#age'),rebus:document.querySelector('#rebus'),answer:document.querySelector('#answer'),form:document.querySelector('#answerForm'),feedback:document.querySelector('#feedback'),score:document.querySelector('#score'),streak:document.querySelector('#streak'),difficulty:document.querySelector('#difficulty'),hint:document.querySelector('#hint'),solution:document.querySelector('#solution'),newRebus:document.querySelector('#newRebus'),
-  creatorForm:document.querySelector('#creatorForm'),target:document.querySelector('#target'),creatorFeedback:document.querySelector('#creatorFeedback'),result:document.querySelector('#result'),resultWord:document.querySelector('#resultWord'),creatorRebus:document.querySelector('#creatorRebus'),phoneticProof:document.querySelector('#phoneticProof'),changeImage:document.querySelector('#changeImage'),printRebus:document.querySelector('#printRebus'),downloadRebus:document.querySelector('#downloadRebus')
+  creatorForm:document.querySelector('#creatorForm'),target:document.querySelector('#target'),creatorFeedback:document.querySelector('#creatorFeedback'),result:document.querySelector('#result'),resultLabel:document.querySelector('#resultLabel'),resultWord:document.querySelector('#resultWord'),sheetInstruction:document.querySelector('#sheetInstruction'),creatorRebus:document.querySelector('#creatorRebus'),phoneticProof:document.querySelector('#phoneticProof'),worksheetAnswer:document.querySelector('#worksheetAnswer'),changeImage:document.querySelector('#changeImage'),childMode:document.querySelector('#childMode'),proMode:document.querySelector('#proMode'),printRebus:document.querySelector('#printRebus'),downloadRebus:document.querySelector('#downloadRebus'),exportFeedback:document.querySelector('#exportFeedback')
 };
 
 function normalize(s){return String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]/g,'')}
 function setFeedback(text,type=''){if(!els.feedback)return;els.feedback.textContent=text;els.feedback.className='feedback'+(type?' '+type:'')}
+function setExportFeedback(text,type=''){if(!els.exportFeedback)return;els.exportFeedback.textContent=text;els.exportFeedback.className='export-feedback'+(type?' '+type:'')}
 function readingOf(piece){return piece.reading||piece.label||''}
 function pieceNode(piece){const box=document.createElement('div');box.className='piece';const img=document.createElement('img');img.src=piece.image;img.alt=readingOf(piece);const label=document.createElement('span');label.textContent=readingOf(piece);box.append(img,label);return box}
 function renderPieces(container,pieces){container.replaceChildren();pieces.forEach((piece,index)=>{container.appendChild(pieceNode(piece));if(index<pieces.length-1){const plus=document.createElement('span');plus.className='plus';plus.textContent='+';plus.setAttribute('aria-hidden','true');container.appendChild(plus)}})}
@@ -21,6 +23,7 @@ function generatedPieces(target){const decompositions=segmentTargetWithLexicon(t
 function createRebus(){
   const wanted=normalize(els.target.value);
   els.creatorFeedback.className='creator-feedback';
+  setExportFeedback('');
   if(!wanted){els.result.hidden=true;els.creatorFeedback.textContent='Écris d’abord un mot.';els.creatorFeedback.classList.add('bad');return}
   const target=targetEntry(wanted);
   if(!target){state.creatorCurrent=null;els.result.hidden=true;els.creatorFeedback.textContent='Ce mot n’est pas encore dans le corpus pilote. Rebulo ne devine pas sa prononciation.';els.creatorFeedback.classList.add('bad');return}
@@ -32,8 +35,38 @@ function createRebus(){
   state.creatorCurrent=candidate;
   renderCreator();
 }
-function renderCreator(){const r=state.creatorCurrent;if(!r)return;els.result.hidden=false;els.creatorFeedback.textContent='Solution stricte générée par le moteur.';els.resultWord.textContent=r.answer;renderPieces(els.creatorRebus,r.pieces);els.phoneticProof.textContent=`${r.pieces.map(p=>p.ipa).join(' + ')} = ${r.targetIpa}`;els.changeImage.disabled=true;els.changeImage.title='Une seule illustration est disponible pour le moment.';}
-function downloadPrintable(){const r=state.creatorCurrent;if(!r)return;const cards=r.pieces.map(p=>`<figure><img src="${p.image}" alt="${readingOf(p)}"><figcaption>${readingOf(p)}</figcaption></figure>`).join('<b>+</b>');const html=`<!doctype html><html lang="fr"><meta charset="utf-8"><title>Rebulo - ${r.answer}</title><style>body{font-family:system-ui;padding:40px;text-align:center}main{max-width:900px;margin:auto}.row{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;margin:40px 0}figure{margin:0;border:1px solid #ddd;border-radius:20px;padding:18px}img{width:140px;height:140px;object-fit:contain}figcaption{font-weight:700;margin-top:8px}.ipa{color:#666}</style><main><h1>${r.answer}</h1><div class="row">${cards}</div><p class="ipa">${r.pieces.map(p=>p.ipa).join(' + ')} = ${r.targetIpa}</p></main></html>`;const blob=new Blob([html],{type:'text/html;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=`rebulo-${normalize(r.answer)}.html`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+function applySheetMode(mode){
+  if(mode!=='child'&&mode!=='pro')return;
+  state.sheetMode=mode;
+  if(!state.creatorCurrent)return;
+  const copy=worksheetCopy(state.creatorCurrent,mode);
+  els.result.dataset.sheetMode=mode;
+  els.childMode.setAttribute('aria-pressed',String(mode==='child'));
+  els.proMode.setAttribute('aria-pressed',String(mode==='pro'));
+  els.childMode.classList.toggle('secondary',mode!=='child');
+  els.proMode.classList.toggle('secondary',mode!=='pro');
+  els.resultLabel.textContent=mode==='child'?'Fiche enfant':'Correction professionnelle';
+  els.resultWord.textContent=copy.title;
+  els.sheetInstruction.textContent=copy.subtitle;
+  els.worksheetAnswer.hidden=!copy.answerLine;
+  els.phoneticProof.textContent=mode==='pro'?copy.proof:'';
+  setExportFeedback('');
+}
+function renderCreator(){const r=state.creatorCurrent;if(!r)return;els.result.hidden=false;els.creatorFeedback.textContent='Solution stricte générée par le moteur.';renderPieces(els.creatorRebus,r.pieces);els.changeImage.disabled=true;els.changeImage.title='Une seule illustration est disponible pour le moment.';applySheetMode(state.sheetMode)}
+async function downloadPdf(){
+  const r=state.creatorCurrent;if(!r)return;
+  els.downloadRebus.disabled=true;
+  setExportFeedback('Création du PDF…');
+  try{
+    const filename=await exportRebusPdf(r,{mode:state.sheetMode});
+    setExportFeedback(`${filename} créé.`,'good');
+  }catch(error){
+    console.error(error);
+    setExportFeedback('Le PDF n’a pas pu être généré. L’impression reste disponible.','bad');
+  }finally{
+    els.downloadRebus.disabled=false;
+  }
+}
 
 function isStrictCatalogRebus(rebus){return validateStrictRebus(rebus).ok}
 function eligible(){const age=Number(els.age?.value||7);return state.catalog.filter(r=>r.minAge<=age&&isStrictCatalogRebus(r))}
@@ -46,8 +79,10 @@ async function init(){try{const [catalog,lexicon,corpus]=await Promise.all([load
 
 els.creatorForm?.addEventListener('submit',e=>{e.preventDefault();createRebus()});
 els.changeImage?.addEventListener('click',()=>{});
+els.childMode?.addEventListener('click',()=>applySheetMode('child'));
+els.proMode?.addEventListener('click',()=>applySheetMode('pro'));
 els.printRebus?.addEventListener('click',()=>window.print());
-els.downloadRebus?.addEventListener('click',downloadPrintable);
+els.downloadRebus?.addEventListener('click',downloadPdf);
 els.form?.addEventListener('submit',e=>{e.preventDefault();validate()});
 els.hint?.addEventListener('click',()=>{if(state.current)setFeedback(`💡 ${state.current.hint}`)});
 els.solution?.addEventListener('click',()=>{if(!state.current)return;state.streak=0;els.streak.textContent='🔥 0';setFeedback(`Solution : ${state.current.answer}. Sons : ${state.current.pieces.map(p=>`${readingOf(p)} ${p.ipa}`).join(' + ')}.`)});

@@ -110,4 +110,6 @@ jobs:
             exit 0
           fi
           git commit -m 'Refresh Lexique 4 coverage and expansion simulation'
-          git push
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main

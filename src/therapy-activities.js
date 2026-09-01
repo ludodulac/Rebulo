@@ -2,6 +2,7 @@ import {firstIPAUnit,lastIPAUnit,normalizeIPA,splitIPAUnits} from './phonetic-en
 
 const phonemeSequence=(target)=>splitIPAUnits(target?.targetIpa||'');
 const formatPhonemeSequence=(target)=>phonemeSequence(target).map(unit=>`/${unit}/`).join(' + ');
+const validSyllableCount=(target)=>Number.isInteger(target?.syllableCount)&&target.syllableCount>0?target.syllableCount:null;
 
 const TEMPLATES={
   'denomination':{
@@ -53,6 +54,15 @@ const TEMPLATES={
         :'Présenter la séquence phonémique du mot cible, puis demander sa fusion orale sans appui orthographique.';
     }
   },
+  'syllable-count':{
+    childInstruction:'Dis le mot obtenu, puis compte combien de syllabes tu entends.',
+    proInstruction:(target)=>{
+      const expected=validSyllableCount(target);
+      return expected
+        ?`Faire compter les syllabes orales du mot cible sans fournir de découpage. Réponse attendue : ${expected}.`
+        :'Faire compter les syllabes orales du mot cible sans fournir de découpage.';
+    }
+  },
   'syllable-blending':{
     childInstruction:'Prononce le nom entier de chaque image, dans l’ordre, puis enchaîne-les sans retirer ni changer de son. Quel mot obtiens-tu ?',
     proInstruction:'Faire produire les dénominations entières des images, puis les fusionner dans l’ordre sans suppression ni substitution.'
@@ -74,9 +84,11 @@ export function therapyTargetMap(definitions=[]){
 export function buildTherapyActivities(target,definitions=[]){
   const registry=therapyTargetMap(definitions);
   const hasTargetIpa=Boolean(normalizeIPA(target?.targetIpa||''));
+  const syllableCount=validSyllableCount(target);
   return (target?.therapy||[])
     .filter(id=>TEMPLATES[id]&&registry.has(id))
     .filter(id=>id!=='phoneme-blending'||hasTargetIpa)
+    .filter(id=>id!=='syllable-count'||syllableCount)
     .map(id=>{
       const definition=registry.get(id);
       const template=TEMPLATES[id];
@@ -88,7 +100,9 @@ export function buildTherapyActivities(target,definitions=[]){
             ?splitIPAUnits(target?.targetIpa||'')
             :id==='phoneme-blending'
               ?normalizeIPA(target?.targetIpa||'')
-              :'';
+              :id==='syllable-count'
+                ?syllableCount
+                :'';
       const promptUnits=id==='phoneme-blending'?phonemeSequence(target):[];
       return {
         id,

@@ -13,12 +13,17 @@ export function buildCreatorTargets(report={}){
     const key=normalizeKey(row.word);
     if(!key||seen.has(key))continue;
     seen.add(key);
+    const syllableCount=Number.isInteger(row.syllableCount)&&row.syllableCount>0?row.syllableCount:null;
+    const therapy=['denomination','lexical-access','phoneme-initial','phoneme-final','phoneme-segmentation','phoneme-blending'];
+    if(syllableCount)therapy.push('syllable-count');
+    therapy.push('syllable-blending','oral-to-written');
     targets.push({
       target:row.word,
       targetIpa:row.ipa,
+      syllableCount,
       mode:'strict',
       assets:'ready',
-      therapy:['denomination','lexical-access','phoneme-initial','phoneme-final','phoneme-segmentation','phoneme-blending','syllable-blending','oral-to-written'],
+      therapy,
       source:'coverage-report',
       generated:true
     });

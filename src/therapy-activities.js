@@ -1,4 +1,4 @@
-import {firstIPAUnit,lastIPAUnit} from './phonetic-engine.js';
+import {firstIPAUnit,lastIPAUnit,splitIPAUnits} from './phonetic-engine.js';
 
 const TEMPLATES={
   'denomination':{
@@ -25,6 +25,15 @@ const TEMPLATES={
       return expected
         ?`Faire identifier le phonème final du mot cible sans appui orthographique. Réponse attendue : /${expected}/.`
         :'Faire identifier le phonème final du mot cible sans appui orthographique.';
+    }
+  },
+  'phoneme-segmentation':{
+    childInstruction:'Dis le mot obtenu, puis sépare-le en petits sons, dans l’ordre.',
+    proInstruction:(target)=>{
+      const expected=splitIPAUnits(target?.targetIpa||'');
+      return expected.length
+        ?`Faire segmenter oralement le mot cible en phonèmes, sans appui orthographique. Réponse attendue : ${expected.map(unit=>`/${unit}/`).join(' + ')}.`
+        :'Faire segmenter oralement le mot cible en phonèmes, sans appui orthographique.';
     }
   },
   'syllable-blending':{
@@ -54,7 +63,9 @@ export function buildTherapyActivities(target,definitions=[]){
       ?firstIPAUnit(target?.targetIpa||'')
       :id==='phoneme-final'
         ?lastIPAUnit(target?.targetIpa||'')
-        :'';
+        :id==='phoneme-segmentation'
+          ?splitIPAUnits(target?.targetIpa||'')
+          :'';
     return {
       id,
       label:definition.label,

@@ -1,0 +1,43 @@
+/* Mobile robustness: preserve the one-screen hierarchy on small and keyboard-reduced viewports. */
+:root{--app-vh:100dvh}
+.single-screen{height:var(--app-vh)}
+button,.dock-panel>summary,.queue-mini{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+@media(max-width:560px){
+  .single-screen{padding-left:max(8px,env(safe-area-inset-left));padding-right:max(8px,env(safe-area-inset-right));grid-template-rows:auto auto minmax(0,1fr) auto;gap:6px}
+  .topbar{min-height:34px}.topbar h1{font-size:1.34rem}.strict-badge{padding:5px 8px}
+  .creator-feedback{height:14px;margin-top:2px;font-size:.67rem}
+  .creator-row{gap:6px}.creator-row input,.creator-row button{min-height:48px}
+  .arena{min-height:0;overflow:hidden}
+  #creatorRebus.rebus-row{min-height:0;align-content:center;overflow:hidden}
+  .arena-actions button,.mini-mode,.session-pdf{min-height:46px}
+  .session-dock{min-height:48px;grid-template-columns:auto minmax(0,1fr) auto;gap:6px;padding:6px}
+  .session-pdf{grid-column:auto;min-width:58px;padding:0 9px}
+  .bottom-nav{padding-left:max(8px,env(safe-area-inset-left));padding-right:max(8px,env(safe-area-inset-right))}
+  .dock-panel>summary{min-height:56px}
+  .drawer{width:calc(100% - 16px);max-height:min(64vh,520px)}
+}
+@media(max-width:380px){
+  .topbar h1{font-size:1.22rem}.strict-badge{font-size:.6rem}
+  .creator-row input{min-width:0;padding:0 11px;font-size:.95rem}.creator-row button{min-width:76px;padding:0 10px}
+  .arena-head h3{font-size:1rem}.mini-mode{width:44px}
+  #creatorRebus .piece{width:min(28vw,96px);min-height:min(28vw,102px)}
+  #creatorRebus .piece img{width:min(20vw,70px);height:min(20vw,70px)}
+  .arena-actions{grid-template-columns:minmax(0,1fr) 72px}.arena-actions button{padding:0 9px;font-size:.78rem}
+  .queue-actions strong{font-size:.72rem}.queue-actions span{font-size:.62rem}.queue-item{min-width:84px}
+}
+body.keyboard-open .single-screen{padding-bottom:8px;grid-template-rows:auto auto minmax(0,1fr)}
+body.keyboard-open .bottom-nav,body.keyboard-open .session-dock{display:none}
+body.keyboard-open .topbar{min-height:30px}
+body.keyboard-open .creator-feedback{display:none}
+body.keyboard-open .arena{border-radius:18px;padding:7px}
+body.keyboard-open .arena-head{min-height:28px}
+body.keyboard-open #creatorRebus .piece{min-height:76px;max-height:100px}
+body.keyboard-open #creatorRebus .piece img{width:56px;height:56px}
+body.keyboard-open .arena-actions button{min-height:40px}
+@media(max-height:560px){
+  .topbar{min-height:30px}.creator-feedback{display:none}.single-screen{gap:4px}
+  .arena-head{min-height:28px}.phonetic-proof{display:none}
+  #creatorRebus .piece{min-height:76px}#creatorRebus .piece img{width:54px;height:54px}
+  .session-dock{min-height:42px}.arena-actions button{min-height:40px}
+}
+@media print{.single-screen{height:auto}.bottom-nav,.session-dock{display:none!important}}

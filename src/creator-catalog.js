@@ -18,7 +18,7 @@ export function buildCreatorTargets(report={}){
       targetIpa:row.ipa,
       mode:'strict',
       assets:'ready',
-      therapy:['syllable-blending','oral-to-written'],
+      therapy:['denomination','syllable-blending','oral-to-written'],
       source:'coverage-report',
       generated:true
     });

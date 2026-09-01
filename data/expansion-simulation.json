@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T07:59:54.653Z",
+  "generatedAt": "2026-09-01T08:02:58.652Z",
   "lexicalUniquePronouncedForms": 171476,
   "baseline": {
     "constructibleUniqueWords": 331,
@@ -14,22 +14,10 @@
       "rawRank": 1
     },
     {
-      "label": "riz",
-      "ipa": "/ʁi/",
-      "status": "priority_pictogram",
-      "rawRank": 11
-    },
-    {
       "label": "tas",
       "ipa": "/ta/",
       "status": "candidate_pictogram",
       "rawRank": 15
-    },
-    {
-      "label": "lit",
-      "ipa": "/li/",
-      "status": "priority_pictogram",
-      "rawRank": 22
     },
     {
       "label": "terre",
@@ -122,30 +110,8 @@
       "cumulativeMultiPieceUniqueWords": 574,
       "cumulativeConstructibleUniqueWords": 679,
       "cumulativeWeightedMultiPiece": 704.111
-    },
-    {
-      "step": 7,
-      "addedLabel": "riz",
-      "ipa": "/ʁi/",
-      "status": "priority_pictogram",
-      "marginalMultiPieceUniqueWords": 0,
-      "marginalConstructibleUniqueWords": 0,
-      "cumulativeMultiPieceUniqueWords": 574,
-      "cumulativeConstructibleUniqueWords": 679,
-      "cumulativeWeightedMultiPiece": 704.111
-    },
-    {
-      "step": 8,
-      "addedLabel": "lit",
-      "ipa": "/li/",
-      "status": "priority_pictogram",
-      "marginalMultiPieceUniqueWords": 0,
-      "marginalConstructibleUniqueWords": 0,
-      "cumulativeMultiPieceUniqueWords": 574,
-      "cumulativeConstructibleUniqueWords": 679,
-      "cumulativeWeightedMultiPiece": 704.111
     }
   ],
-  "interpretation": "Ordre glouton recalculé après chaque ajout. Le gain porte sur les mots uniques devenant constructibles avec au moins deux pièces, ce qui évite de confondre un simple homophone d’une image avec un vrai rébus.",
-  "caution": "Cette simulation mesure le potentiel lexical strict, pas la qualité clinique. Les candidats de statut candidate_pictogram doivent encore être testés pour la dénomination spontanée et l’imageabilité."
+  "interpretation": "Ordre glouton recalculé après chaque ajout. Les briques déjà actives sont exclues du pool candidat ; le gain porte sur les mots uniques devenant constructibles avec au moins deux pièces, ce qui évite de confondre un simple homophone d’une image avec un vrai rébus.",
+  "caution": "Cette simulation mesure le potentiel lexical strict, pas la qualité clinique. Les candidats de statut candidate_pictogram et les pictogrammes dont la dénomination reste ambiguë doivent encore être testés avant activation."
 }

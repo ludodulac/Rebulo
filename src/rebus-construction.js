@@ -22,7 +22,7 @@ const OPERATION_DEFINITIONS=Object.freeze({
   }),
   [REBUS_OPERATION_TYPES.GRAPHEME]:Object.freeze({
     type:REBUS_OPERATION_TYPES.GRAPHEME,
-    implemented:false,
+    implemented:true,
     strictCompatible:false
   }),
   [REBUS_OPERATION_TYPES.SPATIAL_RELATION]:Object.freeze({
@@ -64,6 +64,29 @@ export function buildWholeWordOperation(piece={}){
     reading:piece.reading||piece.label,
     ipa:piece.ipa,
     image:piece.image||null
+  };
+}
+
+export function buildGraphemeOperation(grapheme,reading=''){
+  if(typeof grapheme!=='string')return null;
+  const value=grapheme.trim();
+  if(!value)return null;
+  const explicitReading=typeof reading==='string'&&reading.trim()?reading.trim():value;
+  return {
+    type:REBUS_OPERATION_TYPES.GRAPHEME,
+    grapheme:value,
+    reading:explicitReading
+  };
+}
+
+export function buildGeneralConstruction(operations=[]){
+  if(!Array.isArray(operations)||operations.length===0)return null;
+  if(operations.some(operation=>!operation||!isOperationImplemented(operation.type)))return null;
+  const strictCompatible=operations.every(operation=>operationDefinition(operation.type)?.strictCompatible===true);
+  return {
+    mode:strictCompatible?'strict_candidate':'general',
+    operations:operations.map(operation=>({...operation})),
+    capabilities:[REBUS_CAPABILITIES.GENERAL]
   };
 }
 

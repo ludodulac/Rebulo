@@ -1,4 +1,8 @@
 const TEMPLATES={
+  'denomination':{
+    childInstruction:'Nomme chaque image, une par une.',
+    proInstruction:'Faire dénommer spontanément chaque pictogramme, sans indice phonémique, et relever les éventuelles réponses concurrentes.'
+  },
   'syllable-blending':{
     childInstruction:'Prononce le nom entier de chaque image, dans l’ordre, puis enchaîne-les sans retirer ni changer de son. Quel mot obtiens-tu ?',
     proInstruction:'Faire produire les dénominations entières des images, puis les fusionner dans l’ordre sans suppression ni substitution.'

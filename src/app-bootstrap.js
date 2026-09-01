@@ -1,10 +1,6 @@
-import {buildCreatorTargets} from './creator-catalog.js';
+import {buildCreatorTargets,mergeCreatorTargets} from './creator-catalog.js';
 
 const nativeFetch=window.fetch.bind(window);
-
-function normalizeKey(value=''){
-  return String(value||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'');
-}
 
 window.fetch=async function rebuloFetch(input,init){
   const url=typeof input==='string'?input:input?.url||'';
@@ -19,9 +15,8 @@ window.fetch=async function rebuloFetch(input,init){
   const corpus=await corpusResponse.json();
   const coverage=await coverageResponse.json();
   const manualItems=Array.isArray(corpus?.items)?corpus.items:[];
-  const manualKeys=new Set(manualItems.map(item=>normalizeKey(item?.target)));
-  const generatedItems=buildCreatorTargets(coverage).filter(item=>!manualKeys.has(normalizeKey(item.target)));
-  const merged={...corpus,items:[...manualItems,...generatedItems]};
+  const generatedItems=buildCreatorTargets(coverage);
+  const merged={...corpus,items:mergeCreatorTargets(manualItems,generatedItems)};
 
   return new Response(JSON.stringify(merged),{
     status:200,

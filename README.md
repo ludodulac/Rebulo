@@ -1,10 +1,12 @@
 # Rebulo
 
-Rebulo est un outil de création de rébus phonétiquement stricts, pensé d'abord pour l'orthophonie et utilisable sur smartphone.
+Rebulo est un créateur de rébus riche, ludique et intelligent. Son cœur actuel sait produire des rébus phonétiquement stricts et sa rigueur linguistique permet des usages pédagogiques et orthophoniques fiables sur smartphone.
 
-## Principe
+L'ambition généraliste et l'usage orthophonique sont complémentaires : Rebulo doit retrouver le plaisir immédiat des rébus de magazines tout en sachant distinguer les constructions et les illustrations qui satisfont des exigences phonétiques ou cliniques plus fortes. Les principes stables de cette architecture sont décrits dans `docs/PRODUCT_PRINCIPLES.md`.
 
-Le moteur ne valide jamais un rébus sur une simple ressemblance orthographique. Une image représente un mot entier et sa prononciation entière ; la concaténation des pièces doit être exactement égale à la prononciation de la cible.
+## Principe strict actuellement implémenté
+
+Le moteur ne valide jamais un rébus strict sur une simple ressemblance orthographique. Une image représente un mot entier et sa prononciation entière ; la concaténation des pièces doit être exactement égale à la prononciation de la cible.
 
 Exemples retenus :
 - mer /mɛʁ/ + scie /si/ → merci /mɛʁsi/
@@ -12,10 +14,12 @@ Exemples retenus :
 - pas /pa/ + rat /ʁa/ + pluie /plɥi/ → parapluie /paʁaplɥi/
 - pas /pa/ + rat /ʁa/ + sol /sɔl/ → parasol /paʁasɔl/
 
-Exemples explicitement refusés :
+Exemples explicitement refusés par le mode strict :
 - riz /ʁi/ + bus /bys/ ne donne pas rébus /ʁebys/
 - tour /tuʁ/ + nez /ne/ + sol /sɔl/ ne donne pas la prononciation usuelle de tournesol
 - pie /pi/ + rat /ʁa/ + mie /mi/ + dé /de/ ne donne pas la prononciation de pyramide
+
+Ces refus ne signifient pas que Rebulo doit rester limité à la concaténation d'images entières. Des conventions de rébus classiques pourront être ajoutées lorsqu'elles sont modélisées comme des opérations explicites et testables ; elles ne devront simplement jamais être présentées comme des solutions `strict`.
 
 ## Doctrine UX
 
@@ -47,13 +51,14 @@ Toute nouvelle fonction doit d'abord trouver sa place dans cette hiérarchie ava
 - `data/asset-sources.json` : provenance et licences des illustrations externes
 - `data/rebus.json` : catalogue historique conservé
 - `assets/rebus/` : pictogrammes SVG
+- `docs/PRODUCT_PRINCIPLES.md` : constitution produit stable et niveaux d'exigence
 - `docs/` : recherche, couverture, plan clinique et passation
 
 ## Règle de qualité
 
-Une solution est refusée dès qu'elle nécessite une suppression arbitraire, une consonne silencieuse « ressuscitée », une liaison inventée, une lecture partielle cachée ou une approximation orthographique. L'absence de solution exacte est un résultat normal du moteur.
+Une solution `strict` est refusée dès qu'elle nécessite une suppression arbitraire, une consonne silencieuse « ressuscitée », une liaison inventée, une lecture partielle cachée ou une approximation orthographique. L'absence de solution exacte est un résultat normal du moteur strict.
 
-Les pictogrammes ajoutés au lexique restent des prototypes tant que leur dénomination spontanée, leur reconnaissance visuelle et leur adéquation à l'âge ciblé n'ont pas été validées.
+La bibliothèque générale et la validation clinique sont deux dimensions différentes. Une illustration peut exister pour un usage ludique sans être présentée comme cliniquement validée. Les pictogrammes destinés aux usages cliniques restent des prototypes tant que leur dénomination spontanée, leur reconnaissance visuelle et leur adéquation au public ciblé n'ont pas été validées.
 
 ## Illustrations et licences
 

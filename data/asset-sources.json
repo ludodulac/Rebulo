@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.4.0",
   "checkedAt": "2026-09-01",
   "policy": "Chaque illustration externe doit avoir une source et une licence explicites. Un asset ne devient pas cliniquement validé par le seul fait d'être licencié ou visuellement disponible.",
   "sources": {
@@ -41,6 +41,16 @@
       "clinicalStatus": "prototype_priority",
       "active": true,
       "note": "Chat est un animal familier et visuellement très identifiable ; il reste néanmoins à valider formellement en dénomination spontanée avant statut clinique."
+    },
+    {
+      "path": "assets/rebus/cle.svg",
+      "concept": "clé",
+      "source": "openmoji",
+      "sourceFile": "color/svg/1F511.svg",
+      "sourceCommit": "d5a58447c55961af1a8cf310d8230fdd106b75e3",
+      "clinicalStatus": "prototype_priority",
+      "active": true,
+      "note": "Clé est un objet courant à silhouette très spécifique ; validation formelle de dénomination spontanée encore requise avant statut clinique."
     },
     {
       "path": "assets/rebus/the.svg",

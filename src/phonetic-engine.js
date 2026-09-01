@@ -68,9 +68,24 @@ export function segmentTargetWithLexicon(targetIpa,lexicon,maxPieces=4){
   return results;
 }
 
+export function decompositionScore(path=[]){
+  if(!path.length)return -Infinity;
+  const qualityTotal=path.reduce((sum,item)=>{
+    const visual=item.visualConfidence??0.5;
+    const label=item.labelStability??0.5;
+    return sum+visual+label;
+  },0);
+  const averageQuality=qualityTotal/(path.length*2);
+  return averageQuality-path.length*0.05;
+}
+
 export function rankDecompositions(decompositions=[]){
   return [...decompositions].sort((a,b)=>{
-    const score=path=>path.reduce((sum,item)=>sum+(item.visualConfidence??0.5)+(item.labelStability??0.5),0)-path.length*0.15;
-    return score(b)-score(a);
+    const scoreDifference=decompositionScore(b)-decompositionScore(a);
+    if(Math.abs(scoreDifference)>1e-9)return scoreDifference;
+    if(a.length!==b.length)return a.length-b.length;
+    const aKey=a.map(item=>item.id||item.label||'').join('|');
+    const bKey=b.map(item=>item.id||item.label||'').join('|');
+    return aKey.localeCompare(bKey,'fr');
   });
 }

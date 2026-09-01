@@ -26,6 +26,7 @@ const lexicon=[
   {label:'mer',ipa:'/mɛʁ/',active:true,visualConfidence:0.98,labelStability:0.99},
   {label:'scie',ipa:'/si/',active:true,visualConfidence:0.97,labelStability:0.99},
   {label:'riz',ipa:'/ʁi/',active:true},
+  {label:'lit',ipa:'/li/',active:true},
   {label:'bus',ipa:'/bys/',active:true},
   {label:'faux-mer',ipa:'/mɛʁ/',active:false,visualConfidence:1,labelStability:1}
 ];
@@ -33,6 +34,11 @@ const decompositions=segmentTargetWithLexicon('/mɛʁsi/',lexicon);
 assert.equal(decompositions.length,1);
 assert.deepEqual(decompositions[0].map(x=>x.label),['mer','scie']);
 assert.equal(segmentTargetWithLexicon('/ʁebys/',lexicon).length,0);
+
+const pilotExpansion=segmentTargetWithLexicon('/liʁi/',lexicon);
+assert.equal(pilotExpansion.length,1);
+assert.deepEqual(pilotExpansion[0].map(x=>x.label),['lit','riz']);
+assert.equal(validateStrictRebus({targetIpa:'/liʁi/',pieces:pilotExpansion[0]}).ok,true);
 
 const alternatives=rankDecompositions([
   [{label:'a',ipa:'/a/',visualConfidence:0.4,labelStability:0.4},{label:'b',ipa:'/b/',visualConfidence:0.4,labelStability:0.4}],

@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-01T14:02:14.356Z",
+  "generatedAt": "2026-09-01T14:18:32.463Z",
   "lexicalUniquePronouncedForms": 171476,
   "baseline": {
-    "constructibleUniqueWords": 359,
-    "multiPieceUniqueWords": 278,
-    "weightedMultiPiece": 339.209
+    "constructibleUniqueWords": 376,
+    "multiPieceUniqueWords": 291,
+    "weightedMultiPiece": 353.541
   },
   "candidatePool": [
     {
@@ -52,20 +52,20 @@
       "status": "priority_pictogram",
       "marginalMultiPieceUniqueWords": 102,
       "marginalConstructibleUniqueWords": 108,
-      "cumulativeMultiPieceUniqueWords": 380,
-      "cumulativeConstructibleUniqueWords": 467,
-      "cumulativeWeightedMultiPiece": 460.785
+      "cumulativeMultiPieceUniqueWords": 393,
+      "cumulativeConstructibleUniqueWords": 484,
+      "cumulativeWeightedMultiPiece": 475.116
     },
     {
       "step": 2,
       "addedLabel": "tas",
       "ipa": "/ta/",
       "status": "candidate_pictogram",
-      "marginalMultiPieceUniqueWords": 77,
-      "marginalConstructibleUniqueWords": 79,
-      "cumulativeMultiPieceUniqueWords": 457,
-      "cumulativeConstructibleUniqueWords": 546,
-      "cumulativeWeightedMultiPiece": 542.969
+      "marginalMultiPieceUniqueWords": 85,
+      "marginalConstructibleUniqueWords": 87,
+      "cumulativeMultiPieceUniqueWords": 478,
+      "cumulativeConstructibleUniqueWords": 571,
+      "cumulativeWeightedMultiPiece": 565.444
     },
     {
       "step": 3,
@@ -74,9 +74,9 @@
       "status": "priority_pictogram",
       "marginalMultiPieceUniqueWords": 41,
       "marginalConstructibleUniqueWords": 52,
-      "cumulativeMultiPieceUniqueWords": 498,
-      "cumulativeConstructibleUniqueWords": 598,
-      "cumulativeWeightedMultiPiece": 599.118
+      "cumulativeMultiPieceUniqueWords": 519,
+      "cumulativeConstructibleUniqueWords": 623,
+      "cumulativeWeightedMultiPiece": 621.593
     },
     {
       "step": 4,
@@ -85,9 +85,9 @@
       "status": "candidate_pictogram",
       "marginalMultiPieceUniqueWords": 38,
       "marginalConstructibleUniqueWords": 44,
-      "cumulativeMultiPieceUniqueWords": 536,
-      "cumulativeConstructibleUniqueWords": 642,
-      "cumulativeWeightedMultiPiece": 649.176
+      "cumulativeMultiPieceUniqueWords": 557,
+      "cumulativeConstructibleUniqueWords": 667,
+      "cumulativeWeightedMultiPiece": 671.651
     },
     {
       "step": 5,
@@ -96,9 +96,9 @@
       "status": "priority_pictogram",
       "marginalMultiPieceUniqueWords": 35,
       "marginalConstructibleUniqueWords": 37,
-      "cumulativeMultiPieceUniqueWords": 571,
-      "cumulativeConstructibleUniqueWords": 679,
-      "cumulativeWeightedMultiPiece": 701.356
+      "cumulativeMultiPieceUniqueWords": 592,
+      "cumulativeConstructibleUniqueWords": 704,
+      "cumulativeWeightedMultiPiece": 723.831
     },
     {
       "step": 6,
@@ -107,9 +107,9 @@
       "status": "candidate_pictogram",
       "marginalMultiPieceUniqueWords": 35,
       "marginalConstructibleUniqueWords": 39,
-      "cumulativeMultiPieceUniqueWords": 606,
-      "cumulativeConstructibleUniqueWords": 718,
-      "cumulativeWeightedMultiPiece": 739.176
+      "cumulativeMultiPieceUniqueWords": 627,
+      "cumulativeConstructibleUniqueWords": 743,
+      "cumulativeWeightedMultiPiece": 761.651
     }
   ],
   "interpretation": "Ordre glouton recalculé après chaque ajout. Les briques déjà actives sont exclues du pool candidat ; le gain porte sur les mots uniques devenant constructibles avec au moins deux pièces, ce qui évite de confondre un simple homophone d’une image avec un vrai rébus.",

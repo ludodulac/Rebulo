@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-01T14:02:13.433Z",
+  "generatedAt": "2026-09-01T14:18:31.405Z",
   "source": "Lexique 4",
-  "pictogramCount": 15,
+  "pictogramCount": 16,
   "lexicalEntryCount": 189832,
   "uniqueWordFormCount": 170756,
-  "strictConstructibleCount": 433,
-  "strictConstructibleUniqueWordCount": 359,
-  "strictMultiPieceCount": 324,
-  "strictMultiPieceUniqueWordCount": 278,
-  "strictCoverage": 0.002281,
-  "strictMultiPieceCoverage": 0.001707,
+  "strictConstructibleCount": 452,
+  "strictConstructibleUniqueWordCount": 376,
+  "strictMultiPieceCount": 339,
+  "strictMultiPieceUniqueWordCount": 291,
+  "strictCoverage": 0.002381,
+  "strictMultiPieceCoverage": 0.001786,
   "methodology": {
     "strict": "Un mot est constructible uniquement si sa forme phonétique entière est la concaténation de dénominations complètes de pictogrammes actifs.",
     "multiPiece": "La métrique multi-pièces exclut les simples homophones d’un seul pictogramme et correspond mieux à un vrai rébus.",
@@ -151,6 +151,15 @@
       ]
     },
     {
+      "word": "clé",
+      "ipa": "kle",
+      "frequency": 73.316,
+      "pos": "NOM",
+      "decomposition": [
+        "cle"
+      ]
+    },
+    {
       "word": "nez",
       "ipa": "ne",
       "frequency": 64.089,
@@ -204,6 +213,15 @@
       "pos": "NOM",
       "decomposition": [
         "chat"
+      ]
+    },
+    {
+      "word": "clés",
+      "ipa": "kle",
+      "frequency": 44.623,
+      "pos": "NOM",
+      "decomposition": [
+        "cle"
       ]
     },
     {
@@ -455,6 +473,15 @@
       ]
     },
     {
+      "word": "clef",
+      "ipa": "kle",
+      "frequency": 10.421,
+      "pos": "NOM",
+      "decomposition": [
+        "cle"
+      ]
+    },
+    {
       "word": "mères",
       "ipa": "mɛʁ",
       "frequency": 10.028,
@@ -522,12 +549,31 @@
       ]
     },
     {
+      "word": "clefs",
+      "ipa": "kle",
+      "frequency": 7.456,
+      "pos": "NOM",
+      "decomposition": [
+        "cle"
+      ]
+    },
+    {
       "word": "mis",
       "ipa": "mi",
       "frequency": 7.449,
       "pos": "ADJ",
       "decomposition": [
         "mie"
+      ]
+    },
+    {
+      "word": "raclée",
+      "ipa": "ʁakle",
+      "frequency": 6.75,
+      "pos": "NOM",
+      "decomposition": [
+        "rat",
+        "cle"
       ]
     },
     {
@@ -1556,6 +1602,16 @@
       ]
     },
     {
+      "word": "raclées",
+      "ipa": "ʁakle",
+      "frequency": 0.462,
+      "pos": "NOM",
+      "decomposition": [
+        "rat",
+        "cle"
+      ]
+    },
+    {
       "word": "décidée",
       "ipa": "deside",
       "frequency": 0.449,
@@ -1702,6 +1758,16 @@
       "decomposition": [
         "rat",
         "mie"
+      ]
+    },
+    {
+      "word": "racler",
+      "ipa": "ʁakle",
+      "frequency": 0.358,
+      "pos": "VER",
+      "decomposition": [
+        "rat",
+        "cle"
       ]
     },
     {
@@ -2063,6 +2129,16 @@
       "pos": "NOM",
       "decomposition": [
         "scie"
+      ]
+    },
+    {
+      "word": "raclé",
+      "ipa": "ʁakle",
+      "frequency": 0.177,
+      "pos": "VER",
+      "decomposition": [
+        "rat",
+        "cle"
       ]
     },
     {
@@ -2546,6 +2622,16 @@
       ]
     },
     {
+      "word": "raclée",
+      "ipa": "ʁakle",
+      "frequency": 0.063,
+      "pos": "VER",
+      "decomposition": [
+        "rat",
+        "cle"
+      ]
+    },
+    {
       "word": "délient",
       "ipa": "deli",
       "frequency": 0.06,
@@ -2723,6 +2809,16 @@
       ]
     },
     {
+      "word": "râclée",
+      "ipa": "ʁakle",
+      "frequency": 0.051,
+      "pos": "NOM",
+      "decomposition": [
+        "rat",
+        "cle"
+      ]
+    },
+    {
       "word": "cinés",
       "ipa": "sine",
       "frequency": 0.047,
@@ -2771,6 +2867,16 @@
       "decomposition": [
         "mie",
         "mie"
+      ]
+    },
+    {
+      "word": "raclez",
+      "ipa": "ʁakle",
+      "frequency": 0.047,
+      "pos": "VER",
+      "decomposition": [
+        "rat",
+        "cle"
       ]
     },
     {
@@ -2854,6 +2960,16 @@
         "pas",
         "rat",
         "de"
+      ]
+    },
+    {
+      "word": "pickler",
+      "ipa": "pikle",
+      "frequency": 0.041,
+      "pos": "VER",
+      "decomposition": [
+        "pie",
+        "cle"
       ]
     },
     {
@@ -3478,6 +3594,16 @@
       ]
     },
     {
+      "word": "raclées",
+      "ipa": "ʁakle",
+      "frequency": 0.016,
+      "pos": "VER",
+      "decomposition": [
+        "rat",
+        "cle"
+      ]
+    },
+    {
       "word": "ridées",
       "ipa": "ʁide",
       "frequency": 0.016,
@@ -3613,6 +3739,16 @@
       ]
     },
     {
+      "word": "cycler",
+      "ipa": "sikle",
+      "frequency": 0.009,
+      "pos": "VER",
+      "decomposition": [
+        "scie",
+        "cle"
+      ]
+    },
+    {
       "word": "dépannées",
       "ipa": "depane",
       "frequency": 0.009,
@@ -3640,6 +3776,16 @@
       "decomposition": [
         "mie",
         "chat"
+      ]
+    },
+    {
+      "word": "raclés",
+      "ipa": "ʁakle",
+      "frequency": 0.009,
+      "pos": "VER",
+      "decomposition": [
+        "rat",
+        "cle"
       ]
     },
     {
@@ -3699,6 +3845,16 @@
       "decomposition": [
         "chat",
         "rat"
+      ]
+    },
+    {
+      "word": "cyclés",
+      "ipa": "sikle",
+      "frequency": 0.006,
+      "pos": "VER",
+      "decomposition": [
+        "scie",
+        "cle"
       ]
     },
     {
@@ -4247,6 +4403,36 @@
       ]
     },
     {
+      "word": "râclé",
+      "ipa": "ʁakle",
+      "frequency": 0.003,
+      "pos": "NOM",
+      "decomposition": [
+        "rat",
+        "cle"
+      ]
+    },
+    {
+      "word": "râclées",
+      "ipa": "ʁakle",
+      "frequency": 0.003,
+      "pos": "NOM",
+      "decomposition": [
+        "rat",
+        "cle"
+      ]
+    },
+    {
+      "word": "râcler",
+      "ipa": "ʁakle",
+      "frequency": 0.003,
+      "pos": "NOM",
+      "decomposition": [
+        "rat",
+        "cle"
+      ]
+    },
+    {
       "word": "radé",
       "ipa": "ʁade",
       "frequency": 0.003,
@@ -4580,6 +4766,16 @@
       "decomposition": [
         "pas",
         "pie"
+      ]
+    },
+    {
+      "word": "raclée",
+      "ipa": "ʁakle",
+      "frequency": 6.75,
+      "pos": "NOM",
+      "decomposition": [
+        "rat",
+        "cle"
       ]
     },
     {
@@ -5257,6 +5453,16 @@
       ]
     },
     {
+      "word": "raclées",
+      "ipa": "ʁakle",
+      "frequency": 0.462,
+      "pos": "NOM",
+      "decomposition": [
+        "rat",
+        "cle"
+      ]
+    },
+    {
       "word": "décidée",
       "ipa": "deside",
       "frequency": 0.449,
@@ -5367,6 +5573,16 @@
       "decomposition": [
         "rat",
         "mie"
+      ]
+    },
+    {
+      "word": "racler",
+      "ipa": "ʁakle",
+      "frequency": 0.358,
+      "pos": "VER",
+      "decomposition": [
+        "rat",
+        "cle"
       ]
     },
     {
@@ -5638,6 +5854,16 @@
         "mat",
         "riz",
         "nez"
+      ]
+    },
+    {
+      "word": "raclé",
+      "ipa": "ʁakle",
+      "frequency": 0.177,
+      "pos": "VER",
+      "decomposition": [
+        "rat",
+        "cle"
       ]
     },
     {
@@ -6085,6 +6311,16 @@
       ]
     },
     {
+      "word": "raclée",
+      "ipa": "ʁakle",
+      "frequency": 0.063,
+      "pos": "VER",
+      "decomposition": [
+        "rat",
+        "cle"
+      ]
+    },
+    {
       "word": "délient",
       "ipa": "deli",
       "frequency": 0.06,
@@ -6253,6 +6489,16 @@
       ]
     },
     {
+      "word": "râclée",
+      "ipa": "ʁakle",
+      "frequency": 0.051,
+      "pos": "NOM",
+      "decomposition": [
+        "rat",
+        "cle"
+      ]
+    },
+    {
       "word": "cinés",
       "ipa": "sine",
       "frequency": 0.047,
@@ -6292,6 +6538,16 @@
       "decomposition": [
         "mie",
         "mie"
+      ]
+    },
+    {
+      "word": "raclez",
+      "ipa": "ʁakle",
+      "frequency": 0.047,
+      "pos": "VER",
+      "decomposition": [
+        "rat",
+        "cle"
       ]
     },
     {
@@ -6357,6 +6613,16 @@
         "pas",
         "rat",
         "de"
+      ]
+    },
+    {
+      "word": "pickler",
+      "ipa": "pikle",
+      "frequency": 0.041,
+      "pos": "VER",
+      "decomposition": [
+        "pie",
+        "cle"
       ]
     },
     {
@@ -6900,6 +7166,16 @@
       ]
     },
     {
+      "word": "raclées",
+      "ipa": "ʁakle",
+      "frequency": 0.016,
+      "pos": "VER",
+      "decomposition": [
+        "rat",
+        "cle"
+      ]
+    },
+    {
       "word": "ridées",
       "ipa": "ʁide",
       "frequency": 0.016,
@@ -7035,6 +7311,16 @@
       ]
     },
     {
+      "word": "cycler",
+      "ipa": "sikle",
+      "frequency": 0.009,
+      "pos": "VER",
+      "decomposition": [
+        "scie",
+        "cle"
+      ]
+    },
+    {
       "word": "dépannées",
       "ipa": "depane",
       "frequency": 0.009,
@@ -7053,6 +7339,16 @@
       "decomposition": [
         "mie",
         "chat"
+      ]
+    },
+    {
+      "word": "raclés",
+      "ipa": "ʁakle",
+      "frequency": 0.009,
+      "pos": "VER",
+      "decomposition": [
+        "rat",
+        "cle"
       ]
     },
     {
@@ -7103,6 +7399,16 @@
       "decomposition": [
         "chat",
         "rat"
+      ]
+    },
+    {
+      "word": "cyclés",
+      "ipa": "sikle",
+      "frequency": 0.006,
+      "pos": "VER",
+      "decomposition": [
+        "scie",
+        "cle"
       ]
     },
     {
@@ -7624,6 +7930,36 @@
       ]
     },
     {
+      "word": "râclé",
+      "ipa": "ʁakle",
+      "frequency": 0.003,
+      "pos": "NOM",
+      "decomposition": [
+        "rat",
+        "cle"
+      ]
+    },
+    {
+      "word": "râclées",
+      "ipa": "ʁakle",
+      "frequency": 0.003,
+      "pos": "NOM",
+      "decomposition": [
+        "rat",
+        "cle"
+      ]
+    },
+    {
+      "word": "râcler",
+      "ipa": "ʁakle",
+      "frequency": 0.003,
+      "pos": "NOM",
+      "decomposition": [
+        "rat",
+        "cle"
+      ]
+    },
+    {
       "word": "radé",
       "ipa": "ʁade",
       "frequency": 0.003,
@@ -7719,8 +8055,8 @@
   "missingSounds": [
     {
       "ipa": "ʁ",
-      "unlockCount": 110,
-      "weightedGain": 156.127,
+      "unlockCount": 111,
+      "weightedGain": 157.134,
       "examples": [
         {
           "word": "par",
@@ -8482,8 +8818,8 @@
     },
     {
       "ipa": "s",
-      "unlockCount": 87,
-      "weightedGain": 119.822,
+      "unlockCount": 88,
+      "weightedGain": 120.823,
       "examples": [
         {
           "word": "passe",
@@ -9408,6 +9744,156 @@
       "hasExactNounCandidate": true
     },
     {
+      "ipa": "ta",
+      "unlockCount": 81,
+      "weightedGain": 85.294,
+      "examples": [
+        {
+          "word": "tapis",
+          "ipa": "tapi",
+          "frequency": 21.924,
+          "frame": [
+            "[ta]",
+            "pie"
+          ]
+        },
+        {
+          "word": "tanner",
+          "ipa": "tane",
+          "frequency": 1.054,
+          "frame": [
+            "[ta]",
+            "nez"
+          ]
+        },
+        {
+          "word": "tatie",
+          "ipa": "tasi",
+          "frequency": 1.022,
+          "frame": [
+            "[ta]",
+            "scie"
+          ]
+        },
+        {
+          "word": "tapis",
+          "ipa": "tapi",
+          "frequency": 0.608,
+          "frame": [
+            "[ta]",
+            "pie"
+          ]
+        },
+        {
+          "word": "tanné",
+          "ipa": "tane",
+          "frequency": 0.528,
+          "frame": [
+            "[ta]",
+            "nez"
+          ]
+        },
+        {
+          "word": "mata",
+          "ipa": "mata",
+          "frequency": 0.478,
+          "frame": [
+            "mat",
+            "[ta]"
+          ]
+        },
+        {
+          "word": "tapi",
+          "ipa": "tapi",
+          "frequency": 0.389,
+          "frame": [
+            "[ta]",
+            "pie"
+          ]
+        },
+        {
+          "word": "lita",
+          "ipa": "lita",
+          "frequency": 0.364,
+          "frame": [
+            "lit",
+            "[ta]"
+          ]
+        },
+        {
+          "word": "tannée",
+          "ipa": "tane",
+          "frequency": 0.345,
+          "frame": [
+            "[ta]",
+            "nez"
+          ]
+        },
+        {
+          "word": "tamis",
+          "ipa": "tami",
+          "frequency": 0.307,
+          "frame": [
+            "[ta]",
+            "mie"
+          ]
+        },
+        {
+          "word": "pita",
+          "ipa": "pita",
+          "frequency": 0.228,
+          "frame": [
+            "pie",
+            "[ta]"
+          ]
+        },
+        {
+          "word": "tapiner",
+          "ipa": "tapine",
+          "frequency": 0.212,
+          "frame": [
+            "[ta]",
+            "pie",
+            "nez"
+          ]
+        }
+      ],
+      "rank": 12,
+      "exactWholeWordCandidates": [
+        {
+          "word": "tas",
+          "ipa": "ta",
+          "pos": "NOM",
+          "frequency": 61.411,
+          "noun": true
+        },
+        {
+          "word": "ta",
+          "ipa": "ta",
+          "pos": "NOM",
+          "frequency": 0.022,
+          "noun": true
+        }
+      ],
+      "exactNounCandidates": [
+        {
+          "word": "tas",
+          "ipa": "ta",
+          "pos": "NOM",
+          "frequency": 61.411,
+          "noun": true
+        },
+        {
+          "word": "ta",
+          "ipa": "ta",
+          "pos": "NOM",
+          "frequency": 0.022,
+          "noun": true
+        }
+      ],
+      "hasExactNounCandidate": true
+    },
+    {
       "ipa": "d",
       "unlockCount": 63,
       "weightedGain": 85.197,
@@ -9528,7 +10014,7 @@
           ]
         }
       ],
-      "rank": 12,
+      "rank": 13,
       "exactWholeWordCandidates": [
         {
           "word": "d",
@@ -9564,154 +10050,306 @@
       "hasExactNounCandidate": true
     },
     {
-      "ipa": "ta",
-      "unlockCount": 73,
-      "weightedGain": 77.15,
+      "ipa": "ko",
+      "unlockCount": 65,
+      "weightedGain": 77.546,
       "examples": [
         {
-          "word": "tapis",
-          "ipa": "tapi",
-          "frequency": 21.924,
+          "word": "commis",
+          "ipa": "komi",
+          "frequency": 26.449,
           "frame": [
-            "[ta]",
-            "pie"
-          ]
-        },
-        {
-          "word": "tanner",
-          "ipa": "tane",
-          "frequency": 1.054,
-          "frame": [
-            "[ta]",
-            "nez"
-          ]
-        },
-        {
-          "word": "tatie",
-          "ipa": "tasi",
-          "frequency": 1.022,
-          "frame": [
-            "[ta]",
-            "scie"
-          ]
-        },
-        {
-          "word": "tapis",
-          "ipa": "tapi",
-          "frequency": 0.608,
-          "frame": [
-            "[ta]",
-            "pie"
-          ]
-        },
-        {
-          "word": "tanné",
-          "ipa": "tane",
-          "frequency": 0.528,
-          "frame": [
-            "[ta]",
-            "nez"
-          ]
-        },
-        {
-          "word": "mata",
-          "ipa": "mata",
-          "frequency": 0.478,
-          "frame": [
-            "mat",
-            "[ta]"
-          ]
-        },
-        {
-          "word": "tapi",
-          "ipa": "tapi",
-          "frequency": 0.389,
-          "frame": [
-            "[ta]",
-            "pie"
-          ]
-        },
-        {
-          "word": "lita",
-          "ipa": "lita",
-          "frequency": 0.364,
-          "frame": [
-            "lit",
-            "[ta]"
-          ]
-        },
-        {
-          "word": "tannée",
-          "ipa": "tane",
-          "frequency": 0.345,
-          "frame": [
-            "[ta]",
-            "nez"
-          ]
-        },
-        {
-          "word": "tamis",
-          "ipa": "tami",
-          "frequency": 0.307,
-          "frame": [
-            "[ta]",
+            "[ko]",
             "mie"
           ]
         },
         {
-          "word": "pita",
-          "ipa": "pita",
-          "frequency": 0.228,
+          "word": "copie",
+          "ipa": "kopi",
+          "frequency": 19.525,
           "frame": [
-            "pie",
-            "[ta]"
+            "[ko]",
+            "pie"
           ]
         },
         {
-          "word": "tapiner",
-          "ipa": "tapine",
-          "frequency": 0.212,
+          "word": "coma",
+          "ipa": "koma",
+          "frequency": 14.617,
           "frame": [
-            "[ta]",
-            "pie",
+            "[ko]",
+            "mat"
+          ]
+        },
+        {
+          "word": "déconner",
+          "ipa": "dekone",
+          "frequency": 8.177,
+          "frame": [
+            "de",
+            "[ko]",
             "nez"
+          ]
+        },
+        {
+          "word": "copies",
+          "ipa": "kopi",
+          "frequency": 8.073,
+          "frame": [
+            "[ko]",
+            "pie"
+          ]
+        },
+        {
+          "word": "colis",
+          "ipa": "koli",
+          "frequency": 7.513,
+          "frame": [
+            "[ko]",
+            "lit"
+          ]
+        },
+        {
+          "word": "déconné",
+          "ipa": "dekone",
+          "frequency": 3.437,
+          "frame": [
+            "de",
+            "[ko]",
+            "nez"
+          ]
+        },
+        {
+          "word": "déco",
+          "ipa": "deko",
+          "frequency": 2.661,
+          "frame": [
+            "de",
+            "[ko]"
+          ]
+        },
+        {
+          "word": "commis",
+          "ipa": "komi",
+          "frequency": 2.152,
+          "frame": [
+            "[ko]",
+            "mie"
+          ]
+        },
+        {
+          "word": "décoder",
+          "ipa": "dekode",
+          "frequency": 1.706,
+          "frame": [
+            "de",
+            "[ko]",
+            "de"
+          ]
+        },
+        {
+          "word": "déconnez",
+          "ipa": "dekone",
+          "frequency": 1.396,
+          "frame": [
+            "de",
+            "[ko]",
+            "nez"
+          ]
+        },
+        {
+          "word": "codé",
+          "ipa": "kode",
+          "frequency": 1.095,
+          "frame": [
+            "[ko]",
+            "de"
           ]
         }
       ],
-      "rank": 13,
+      "rank": 14,
       "exactWholeWordCandidates": [
         {
-          "word": "tas",
-          "ipa": "ta",
+          "word": "cot",
+          "ipa": "ko",
           "pos": "NOM",
-          "frequency": 61.411,
+          "frequency": 0.348,
           "noun": true
         },
         {
-          "word": "ta",
-          "ipa": "ta",
+          "word": "côt",
+          "ipa": "ko",
           "pos": "NOM",
-          "frequency": 0.022,
+          "frequency": 0.013,
           "noun": true
+        },
+        {
+          "word": "cots",
+          "ipa": "ko",
+          "pos": "NOM",
+          "frequency": 0.003,
+          "noun": true
+        },
+        {
+          "word": "co",
+          "ipa": "ko",
+          "pos": "ADV",
+          "frequency": 0.013,
+          "noun": false
         }
       ],
       "exactNounCandidates": [
         {
-          "word": "tas",
-          "ipa": "ta",
+          "word": "cot",
+          "ipa": "ko",
           "pos": "NOM",
-          "frequency": 61.411,
+          "frequency": 0.348,
           "noun": true
         },
         {
-          "word": "ta",
-          "ipa": "ta",
+          "word": "côt",
+          "ipa": "ko",
           "pos": "NOM",
-          "frequency": 0.022,
+          "frequency": 0.013,
+          "noun": true
+        },
+        {
+          "word": "cots",
+          "ipa": "ko",
+          "pos": "NOM",
+          "frequency": 0.003,
           "noun": true
         }
       ],
       "hasExactNounCandidate": true
+    },
+    {
+      "ipa": "ʁə",
+      "unlockCount": 58,
+      "weightedGain": 76.485,
+      "examples": [
+        {
+          "word": "retour",
+          "ipa": "ʁətuʁ",
+          "frequency": 169.544,
+          "frame": [
+            "[ʁə]",
+            "tour"
+          ]
+        },
+        {
+          "word": "retourner",
+          "ipa": "ʁətuʁne",
+          "frequency": 100,
+          "frame": [
+            "[ʁə]",
+            "tour",
+            "nez"
+          ]
+        },
+        {
+          "word": "repas",
+          "ipa": "ʁəpa",
+          "frequency": 51.038,
+          "frame": [
+            "[ʁə]",
+            "pas"
+          ]
+        },
+        {
+          "word": "remercie",
+          "ipa": "ʁəmɛʁsi",
+          "frequency": 47.873,
+          "frame": [
+            "[ʁə]",
+            "mer",
+            "scie"
+          ]
+        },
+        {
+          "word": "retournez",
+          "ipa": "ʁətuʁne",
+          "frequency": 25.377,
+          "frame": [
+            "[ʁə]",
+            "tour",
+            "nez"
+          ]
+        },
+        {
+          "word": "remis",
+          "ipa": "ʁəmi",
+          "frequency": 20.31,
+          "frame": [
+            "[ʁə]",
+            "mie"
+          ]
+        },
+        {
+          "word": "retourné",
+          "ipa": "ʁətuʁne",
+          "frequency": 18.326,
+          "frame": [
+            "[ʁə]",
+            "tour",
+            "nez"
+          ]
+        },
+        {
+          "word": "retournée",
+          "ipa": "ʁətuʁne",
+          "frequency": 7.399,
+          "frame": [
+            "[ʁə]",
+            "tour",
+            "nez"
+          ]
+        },
+        {
+          "word": "relie",
+          "ipa": "ʁəli",
+          "frequency": 3.769,
+          "frame": [
+            "[ʁə]",
+            "lit"
+          ]
+        },
+        {
+          "word": "retournés",
+          "ipa": "ʁətuʁne",
+          "frequency": 2.396,
+          "frame": [
+            "[ʁə]",
+            "tour",
+            "nez"
+          ]
+        },
+        {
+          "word": "remercieras",
+          "ipa": "ʁəmɛʁsiʁa",
+          "frequency": 1.68,
+          "frame": [
+            "[ʁə]",
+            "mer",
+            "scie",
+            "rat"
+          ]
+        },
+        {
+          "word": "remercies",
+          "ipa": "ʁəmɛʁsi",
+          "frequency": 1.484,
+          "frame": [
+            "[ʁə]",
+            "mer",
+            "scie"
+          ]
+        }
+      ],
+      "rank": 15,
+      "exactWholeWordCandidates": [],
+      "exactNounCandidates": [],
+      "hasExactNounCandidate": false
     },
     {
       "ipa": "ʁɛ",
@@ -9832,7 +10470,7 @@
           ]
         }
       ],
-      "rank": 14,
+      "rank": 16,
       "exactWholeWordCandidates": [
         {
           "word": "raie",
@@ -9946,180 +10584,6 @@
           "ipa": "ʁɛ",
           "pos": "NOM",
           "frequency": 0.038,
-          "noun": true
-        }
-      ],
-      "hasExactNounCandidate": true
-    },
-    {
-      "ipa": "ko",
-      "unlockCount": 63,
-      "weightedGain": 75.524,
-      "examples": [
-        {
-          "word": "commis",
-          "ipa": "komi",
-          "frequency": 26.449,
-          "frame": [
-            "[ko]",
-            "mie"
-          ]
-        },
-        {
-          "word": "copie",
-          "ipa": "kopi",
-          "frequency": 19.525,
-          "frame": [
-            "[ko]",
-            "pie"
-          ]
-        },
-        {
-          "word": "coma",
-          "ipa": "koma",
-          "frequency": 14.617,
-          "frame": [
-            "[ko]",
-            "mat"
-          ]
-        },
-        {
-          "word": "déconner",
-          "ipa": "dekone",
-          "frequency": 8.177,
-          "frame": [
-            "de",
-            "[ko]",
-            "nez"
-          ]
-        },
-        {
-          "word": "copies",
-          "ipa": "kopi",
-          "frequency": 8.073,
-          "frame": [
-            "[ko]",
-            "pie"
-          ]
-        },
-        {
-          "word": "colis",
-          "ipa": "koli",
-          "frequency": 7.513,
-          "frame": [
-            "[ko]",
-            "lit"
-          ]
-        },
-        {
-          "word": "déconné",
-          "ipa": "dekone",
-          "frequency": 3.437,
-          "frame": [
-            "de",
-            "[ko]",
-            "nez"
-          ]
-        },
-        {
-          "word": "déco",
-          "ipa": "deko",
-          "frequency": 2.661,
-          "frame": [
-            "de",
-            "[ko]"
-          ]
-        },
-        {
-          "word": "commis",
-          "ipa": "komi",
-          "frequency": 2.152,
-          "frame": [
-            "[ko]",
-            "mie"
-          ]
-        },
-        {
-          "word": "décoder",
-          "ipa": "dekode",
-          "frequency": 1.706,
-          "frame": [
-            "de",
-            "[ko]",
-            "de"
-          ]
-        },
-        {
-          "word": "déconnez",
-          "ipa": "dekone",
-          "frequency": 1.396,
-          "frame": [
-            "de",
-            "[ko]",
-            "nez"
-          ]
-        },
-        {
-          "word": "codé",
-          "ipa": "kode",
-          "frequency": 1.095,
-          "frame": [
-            "[ko]",
-            "de"
-          ]
-        }
-      ],
-      "rank": 15,
-      "exactWholeWordCandidates": [
-        {
-          "word": "cot",
-          "ipa": "ko",
-          "pos": "NOM",
-          "frequency": 0.348,
-          "noun": true
-        },
-        {
-          "word": "côt",
-          "ipa": "ko",
-          "pos": "NOM",
-          "frequency": 0.013,
-          "noun": true
-        },
-        {
-          "word": "cots",
-          "ipa": "ko",
-          "pos": "NOM",
-          "frequency": 0.003,
-          "noun": true
-        },
-        {
-          "word": "co",
-          "ipa": "ko",
-          "pos": "ADV",
-          "frequency": 0.013,
-          "noun": false
-        }
-      ],
-      "exactNounCandidates": [
-        {
-          "word": "cot",
-          "ipa": "ko",
-          "pos": "NOM",
-          "frequency": 0.348,
-          "noun": true
-        },
-        {
-          "word": "côt",
-          "ipa": "ko",
-          "pos": "NOM",
-          "frequency": 0.013,
-          "noun": true
-        },
-        {
-          "word": "cots",
-          "ipa": "ko",
-          "pos": "NOM",
-          "frequency": 0.003,
           "noun": true
         }
       ],
@@ -10249,7 +10713,7 @@
           ]
         }
       ],
-      "rank": 16,
+      "rank": 17,
       "exactWholeWordCandidates": [
         {
           "word": "ais",
@@ -10445,7 +10909,7 @@
           ]
         }
       ],
-      "rank": 17,
+      "rank": 18,
       "exactWholeWordCandidates": [
         {
           "word": "cas",
@@ -10625,7 +11089,7 @@
           ]
         }
       ],
-      "rank": 18,
+      "rank": 19,
       "exactWholeWordCandidates": [
         {
           "word": "p",
@@ -10729,134 +11193,6 @@
         }
       ],
       "hasExactNounCandidate": true
-    },
-    {
-      "ipa": "ʁə",
-      "unlockCount": 52,
-      "weightedGain": 69.708,
-      "examples": [
-        {
-          "word": "retour",
-          "ipa": "ʁətuʁ",
-          "frequency": 169.544,
-          "frame": [
-            "[ʁə]",
-            "tour"
-          ]
-        },
-        {
-          "word": "retourner",
-          "ipa": "ʁətuʁne",
-          "frequency": 100,
-          "frame": [
-            "[ʁə]",
-            "tour",
-            "nez"
-          ]
-        },
-        {
-          "word": "repas",
-          "ipa": "ʁəpa",
-          "frequency": 51.038,
-          "frame": [
-            "[ʁə]",
-            "pas"
-          ]
-        },
-        {
-          "word": "remercie",
-          "ipa": "ʁəmɛʁsi",
-          "frequency": 47.873,
-          "frame": [
-            "[ʁə]",
-            "mer",
-            "scie"
-          ]
-        },
-        {
-          "word": "retournez",
-          "ipa": "ʁətuʁne",
-          "frequency": 25.377,
-          "frame": [
-            "[ʁə]",
-            "tour",
-            "nez"
-          ]
-        },
-        {
-          "word": "remis",
-          "ipa": "ʁəmi",
-          "frequency": 20.31,
-          "frame": [
-            "[ʁə]",
-            "mie"
-          ]
-        },
-        {
-          "word": "retourné",
-          "ipa": "ʁətuʁne",
-          "frequency": 18.326,
-          "frame": [
-            "[ʁə]",
-            "tour",
-            "nez"
-          ]
-        },
-        {
-          "word": "retournée",
-          "ipa": "ʁətuʁne",
-          "frequency": 7.399,
-          "frame": [
-            "[ʁə]",
-            "tour",
-            "nez"
-          ]
-        },
-        {
-          "word": "relie",
-          "ipa": "ʁəli",
-          "frequency": 3.769,
-          "frame": [
-            "[ʁə]",
-            "lit"
-          ]
-        },
-        {
-          "word": "retournés",
-          "ipa": "ʁətuʁne",
-          "frequency": 2.396,
-          "frame": [
-            "[ʁə]",
-            "tour",
-            "nez"
-          ]
-        },
-        {
-          "word": "remercieras",
-          "ipa": "ʁəmɛʁsiʁa",
-          "frequency": 1.68,
-          "frame": [
-            "[ʁə]",
-            "mer",
-            "scie",
-            "rat"
-          ]
-        },
-        {
-          "word": "remercies",
-          "ipa": "ʁəmɛʁsi",
-          "frequency": 1.484,
-          "frame": [
-            "[ʁə]",
-            "mer",
-            "scie"
-          ]
-        }
-      ],
-      "rank": 19,
-      "exactWholeWordCandidates": [],
-      "exactNounCandidates": [],
-      "hasExactNounCandidate": false
     },
     {
       "ipa": "g",
@@ -12596,6 +12932,176 @@
       "hasExactNounCandidate": true
     },
     {
+      "ipa": "mo",
+      "unlockCount": 47,
+      "weightedGain": 53.147,
+      "examples": [
+        {
+          "word": "chameau",
+          "ipa": "ʃamo",
+          "frequency": 3.297,
+          "frame": [
+            "chat",
+            "[mo]"
+          ]
+        },
+        {
+          "word": "démoli",
+          "ipa": "demoli",
+          "frequency": 3.016,
+          "frame": [
+            "de",
+            "[mo]",
+            "lit"
+          ]
+        },
+        {
+          "word": "démo",
+          "ipa": "demo",
+          "frequency": 2.297,
+          "frame": [
+            "de",
+            "[mo]"
+          ]
+        },
+        {
+          "word": "chameaux",
+          "ipa": "ʃamo",
+          "frequency": 1.601,
+          "frame": [
+            "chat",
+            "[mo]"
+          ]
+        },
+        {
+          "word": "démolis",
+          "ipa": "demoli",
+          "frequency": 1.339,
+          "frame": [
+            "de",
+            "[mo]",
+            "lit"
+          ]
+        },
+        {
+          "word": "démodé",
+          "ipa": "demode",
+          "frequency": 0.965,
+          "frame": [
+            "de",
+            "[mo]",
+            "de"
+          ]
+        },
+        {
+          "word": "démodé",
+          "ipa": "demode",
+          "frequency": 0.858,
+          "frame": [
+            "de",
+            "[mo]",
+            "de"
+          ]
+        },
+        {
+          "word": "mollie",
+          "ipa": "moli",
+          "frequency": 0.734,
+          "frame": [
+            "[mo]",
+            "lit"
+          ]
+        },
+        {
+          "word": "démolit",
+          "ipa": "demoli",
+          "frequency": 0.712,
+          "frame": [
+            "de",
+            "[mo]",
+            "lit"
+          ]
+        },
+        {
+          "word": "démolie",
+          "ipa": "demoli",
+          "frequency": 0.699,
+          "frame": [
+            "de",
+            "[mo]",
+            "lit"
+          ]
+        },
+        {
+          "word": "momies",
+          "ipa": "momi",
+          "frequency": 0.611,
+          "frame": [
+            "[mo]",
+            "mie"
+          ]
+        },
+        {
+          "word": "ramolli",
+          "ipa": "ʁamoli",
+          "frequency": 0.484,
+          "frame": [
+            "rat",
+            "[mo]",
+            "lit"
+          ]
+        }
+      ],
+      "rank": 31,
+      "exactWholeWordCandidates": [
+        {
+          "word": "mot",
+          "ipa": "mo",
+          "pos": "NOM",
+          "frequency": 162.478,
+          "noun": true
+        },
+        {
+          "word": "mots",
+          "ipa": "mo",
+          "pos": "NOM",
+          "frequency": 96.804,
+          "noun": true
+        },
+        {
+          "word": "maux",
+          "ipa": "mo",
+          "pos": "NOM",
+          "frequency": 7.054,
+          "noun": true
+        }
+      ],
+      "exactNounCandidates": [
+        {
+          "word": "mot",
+          "ipa": "mo",
+          "pos": "NOM",
+          "frequency": 162.478,
+          "noun": true
+        },
+        {
+          "word": "mots",
+          "ipa": "mo",
+          "pos": "NOM",
+          "frequency": 96.804,
+          "noun": true
+        },
+        {
+          "word": "maux",
+          "ipa": "mo",
+          "pos": "NOM",
+          "frequency": 7.054,
+          "noun": true
+        }
+      ],
+      "hasExactNounCandidate": true
+    },
+    {
       "ipa": "ʒ",
       "unlockCount": 42,
       "weightedGain": 51.504,
@@ -12716,7 +13222,7 @@
           ]
         }
       ],
-      "rank": 31,
+      "rank": 32,
       "exactWholeWordCandidates": [
         {
           "word": "j",
@@ -12866,7 +13372,7 @@
           ]
         }
       ],
-      "rank": 32,
+      "rank": 33,
       "exactWholeWordCandidates": [],
       "exactNounCandidates": [],
       "hasExactNounCandidate": false
@@ -12985,7 +13491,7 @@
           ]
         }
       ],
-      "rank": 33,
+      "rank": 34,
       "exactWholeWordCandidates": [
         {
           "word": "vie",
@@ -13182,180 +13688,10 @@
           ]
         }
       ],
-      "rank": 34,
+      "rank": 35,
       "exactWholeWordCandidates": [],
       "exactNounCandidates": [],
       "hasExactNounCandidate": false
-    },
-    {
-      "ipa": "mo",
-      "unlockCount": 43,
-      "weightedGain": 48.91,
-      "examples": [
-        {
-          "word": "chameau",
-          "ipa": "ʃamo",
-          "frequency": 3.297,
-          "frame": [
-            "chat",
-            "[mo]"
-          ]
-        },
-        {
-          "word": "démoli",
-          "ipa": "demoli",
-          "frequency": 3.016,
-          "frame": [
-            "de",
-            "[mo]",
-            "lit"
-          ]
-        },
-        {
-          "word": "démo",
-          "ipa": "demo",
-          "frequency": 2.297,
-          "frame": [
-            "de",
-            "[mo]"
-          ]
-        },
-        {
-          "word": "chameaux",
-          "ipa": "ʃamo",
-          "frequency": 1.601,
-          "frame": [
-            "chat",
-            "[mo]"
-          ]
-        },
-        {
-          "word": "démolis",
-          "ipa": "demoli",
-          "frequency": 1.339,
-          "frame": [
-            "de",
-            "[mo]",
-            "lit"
-          ]
-        },
-        {
-          "word": "démodé",
-          "ipa": "demode",
-          "frequency": 0.965,
-          "frame": [
-            "de",
-            "[mo]",
-            "de"
-          ]
-        },
-        {
-          "word": "démodé",
-          "ipa": "demode",
-          "frequency": 0.858,
-          "frame": [
-            "de",
-            "[mo]",
-            "de"
-          ]
-        },
-        {
-          "word": "mollie",
-          "ipa": "moli",
-          "frequency": 0.734,
-          "frame": [
-            "[mo]",
-            "lit"
-          ]
-        },
-        {
-          "word": "démolit",
-          "ipa": "demoli",
-          "frequency": 0.712,
-          "frame": [
-            "de",
-            "[mo]",
-            "lit"
-          ]
-        },
-        {
-          "word": "démolie",
-          "ipa": "demoli",
-          "frequency": 0.699,
-          "frame": [
-            "de",
-            "[mo]",
-            "lit"
-          ]
-        },
-        {
-          "word": "momies",
-          "ipa": "momi",
-          "frequency": 0.611,
-          "frame": [
-            "[mo]",
-            "mie"
-          ]
-        },
-        {
-          "word": "ramolli",
-          "ipa": "ʁamoli",
-          "frequency": 0.484,
-          "frame": [
-            "rat",
-            "[mo]",
-            "lit"
-          ]
-        }
-      ],
-      "rank": 35,
-      "exactWholeWordCandidates": [
-        {
-          "word": "mot",
-          "ipa": "mo",
-          "pos": "NOM",
-          "frequency": 162.478,
-          "noun": true
-        },
-        {
-          "word": "mots",
-          "ipa": "mo",
-          "pos": "NOM",
-          "frequency": 96.804,
-          "noun": true
-        },
-        {
-          "word": "maux",
-          "ipa": "mo",
-          "pos": "NOM",
-          "frequency": 7.054,
-          "noun": true
-        }
-      ],
-      "exactNounCandidates": [
-        {
-          "word": "mot",
-          "ipa": "mo",
-          "pos": "NOM",
-          "frequency": 162.478,
-          "noun": true
-        },
-        {
-          "word": "mots",
-          "ipa": "mo",
-          "pos": "NOM",
-          "frequency": 96.804,
-          "noun": true
-        },
-        {
-          "word": "maux",
-          "ipa": "mo",
-          "pos": "NOM",
-          "frequency": 7.054,
-          "noun": true
-        }
-      ],
-      "hasExactNounCandidate": true
     },
     {
       "ipa": "sə",
@@ -13748,6 +14084,199 @@
       "hasExactNounCandidate": true
     },
     {
+      "ipa": "ba",
+      "unlockCount": 43,
+      "weightedGain": 47.525,
+      "examples": [
+        {
+          "word": "débat",
+          "ipa": "deba",
+          "frequency": 10.222,
+          "frame": [
+            "de",
+            "[ba]"
+          ]
+        },
+        {
+          "word": "débarras",
+          "ipa": "debaʁa",
+          "frequency": 2.475,
+          "frame": [
+            "de",
+            "[ba]",
+            "rat"
+          ]
+        },
+        {
+          "word": "débats",
+          "ipa": "deba",
+          "frequency": 2.335,
+          "frame": [
+            "de",
+            "[ba]"
+          ]
+        },
+        {
+          "word": "bâclé",
+          "ipa": "bakle",
+          "frequency": 1.203,
+          "frame": [
+            "[ba]",
+            "cle"
+          ]
+        },
+        {
+          "word": "débat",
+          "ipa": "deba",
+          "frequency": 0.911,
+          "frame": [
+            "de",
+            "[ba]"
+          ]
+        },
+        {
+          "word": "shabbat",
+          "ipa": "ʃaba",
+          "frequency": 0.832,
+          "frame": [
+            "chat",
+            "[ba]"
+          ]
+        },
+        {
+          "word": "banner",
+          "ipa": "bane",
+          "frequency": 0.728,
+          "frame": [
+            "[ba]",
+            "nez"
+          ]
+        },
+        {
+          "word": "débats",
+          "ipa": "deba",
+          "frequency": 0.592,
+          "frame": [
+            "de",
+            "[ba]"
+          ]
+        },
+        {
+          "word": "bâclée",
+          "ipa": "bakle",
+          "frequency": 0.361,
+          "frame": [
+            "[ba]",
+            "cle"
+          ]
+        },
+        {
+          "word": "rabats",
+          "ipa": "ʁaba",
+          "frequency": 0.285,
+          "frame": [
+            "rat",
+            "[ba]"
+          ]
+        },
+        {
+          "word": "rabat",
+          "ipa": "ʁaba",
+          "frequency": 0.263,
+          "frame": [
+            "rat",
+            "[ba]"
+          ]
+        },
+        {
+          "word": "bassiner",
+          "ipa": "basine",
+          "frequency": 0.241,
+          "frame": [
+            "[ba]",
+            "scie",
+            "nez"
+          ]
+        }
+      ],
+      "rank": 38,
+      "exactWholeWordCandidates": [
+        {
+          "word": "bas",
+          "ipa": "ba",
+          "pos": "NOM",
+          "frequency": 64.82,
+          "noun": true
+        },
+        {
+          "word": "bât",
+          "ipa": "ba",
+          "pos": "NOM",
+          "frequency": 0.25,
+          "noun": true
+        },
+        {
+          "word": "bats",
+          "ipa": "ba",
+          "pos": "NOM",
+          "frequency": 0.082,
+          "noun": true
+        },
+        {
+          "word": "bâts",
+          "ipa": "ba",
+          "pos": "NOM",
+          "frequency": 0.009,
+          "noun": true
+        },
+        {
+          "word": "bah",
+          "ipa": "ba",
+          "pos": "ONO",
+          "frequency": 18.307,
+          "noun": false
+        },
+        {
+          "word": "bat",
+          "ipa": "ba",
+          "pos": "VER",
+          "frequency": 26.408,
+          "noun": false
+        }
+      ],
+      "exactNounCandidates": [
+        {
+          "word": "bas",
+          "ipa": "ba",
+          "pos": "NOM",
+          "frequency": 64.82,
+          "noun": true
+        },
+        {
+          "word": "bât",
+          "ipa": "ba",
+          "pos": "NOM",
+          "frequency": 0.25,
+          "noun": true
+        },
+        {
+          "word": "bats",
+          "ipa": "ba",
+          "pos": "NOM",
+          "frequency": 0.082,
+          "noun": true
+        },
+        {
+          "word": "bâts",
+          "ipa": "ba",
+          "pos": "NOM",
+          "frequency": 0.009,
+          "noun": true
+        }
+      ],
+      "hasExactNounCandidate": true
+    },
+    {
       "ipa": "do",
       "unlockCount": 29,
       "weightedGain": 46.813,
@@ -13862,7 +14391,7 @@
           ]
         }
       ],
-      "rank": 38,
+      "rank": 39,
       "exactWholeWordCandidates": [
         {
           "word": "dos",
@@ -14013,7 +14542,7 @@
           ]
         }
       ],
-      "rank": 39,
+      "rank": 40,
       "exactWholeWordCandidates": [
         {
           "word": "m",
@@ -14036,6 +14565,172 @@
           "ipa": "m",
           "pos": "NOM",
           "frequency": 61.199,
+          "noun": true
+        }
+      ],
+      "hasExactNounCandidate": true
+    },
+    {
+      "ipa": "mɑ̃",
+      "unlockCount": 38,
+      "weightedGain": 46.581,
+      "examples": [
+        {
+          "word": "maman",
+          "ipa": "mamɑ̃",
+          "frequency": 470.582,
+          "frame": [
+            "mat",
+            "[mɑ̃]"
+          ]
+        },
+        {
+          "word": "ciment",
+          "ipa": "simɑ̃",
+          "frequency": 3.807,
+          "frame": [
+            "scie",
+            "[mɑ̃]"
+          ]
+        },
+        {
+          "word": "dément",
+          "ipa": "demɑ̃",
+          "frequency": 2.956,
+          "frame": [
+            "de",
+            "[mɑ̃]"
+          ]
+        },
+        {
+          "word": "décidément",
+          "ipa": "desidemɑ̃",
+          "frequency": 2.687,
+          "frame": [
+            "de",
+            "scie",
+            "de",
+            "[mɑ̃]"
+          ]
+        },
+        {
+          "word": "piment",
+          "ipa": "pimɑ̃",
+          "frequency": 2.604,
+          "frame": [
+            "pie",
+            "[mɑ̃]"
+          ]
+        },
+        {
+          "word": "mamans",
+          "ipa": "mamɑ̃",
+          "frequency": 2.123,
+          "frame": [
+            "mat",
+            "[mɑ̃]"
+          ]
+        },
+        {
+          "word": "clément",
+          "ipa": "klemɑ̃",
+          "frequency": 1.503,
+          "frame": [
+            "cle",
+            "[mɑ̃]"
+          ]
+        },
+        {
+          "word": "tourments",
+          "ipa": "tuʁmɑ̃",
+          "frequency": 1.494,
+          "frame": [
+            "tour",
+            "[mɑ̃]"
+          ]
+        },
+        {
+          "word": "tourment",
+          "ipa": "tuʁmɑ̃",
+          "frequency": 1.484,
+          "frame": [
+            "tour",
+            "[mɑ̃]"
+          ]
+        },
+        {
+          "word": "piments",
+          "ipa": "pimɑ̃",
+          "frequency": 1.13,
+          "frame": [
+            "pie",
+            "[mɑ̃]"
+          ]
+        },
+        {
+          "word": "dément",
+          "ipa": "demɑ̃",
+          "frequency": 0.953,
+          "frame": [
+            "de",
+            "[mɑ̃]"
+          ]
+        },
+        {
+          "word": "ralliement",
+          "ipa": "ʁalimɑ̃",
+          "frequency": 0.734,
+          "frame": [
+            "rat",
+            "lit",
+            "[mɑ̃]"
+          ]
+        }
+      ],
+      "rank": 41,
+      "exactWholeWordCandidates": [
+        {
+          "word": "man",
+          "ipa": "mɑ̃",
+          "pos": "NOM",
+          "frequency": 18.566,
+          "noun": true
+        },
+        {
+          "word": "mans",
+          "ipa": "mɑ̃",
+          "pos": "NOM",
+          "frequency": 0.044,
+          "noun": true
+        },
+        {
+          "word": "mens",
+          "ipa": "mɑ̃",
+          "pos": "VER",
+          "frequency": 35.475,
+          "noun": false
+        },
+        {
+          "word": "ment",
+          "ipa": "mɑ̃",
+          "pos": "VER",
+          "frequency": 26.006,
+          "noun": false
+        }
+      ],
+      "exactNounCandidates": [
+        {
+          "word": "man",
+          "ipa": "mɑ̃",
+          "pos": "NOM",
+          "frequency": 18.566,
+          "noun": true
+        },
+        {
+          "word": "mans",
+          "ipa": "mɑ̃",
+          "pos": "NOM",
+          "frequency": 0.044,
           "noun": true
         }
       ],
@@ -14160,7 +14855,7 @@
           ]
         }
       ],
-      "rank": 40,
+      "rank": 42,
       "exactWholeWordCandidates": [
         {
           "word": "tee",
@@ -14327,7 +15022,7 @@
           ]
         }
       ],
-      "rank": 41,
+      "rank": 43,
       "exactWholeWordCandidates": [],
       "exactNounCandidates": [],
       "hasExactNounCandidate": false
@@ -14446,7 +15141,7 @@
           ]
         }
       ],
-      "rank": 42,
+      "rank": 44,
       "exactWholeWordCandidates": [
         {
           "word": "tré",
@@ -14462,172 +15157,6 @@
           "ipa": "tʁe",
           "pos": "NOM",
           "frequency": 0.028,
-          "noun": true
-        }
-      ],
-      "hasExactNounCandidate": true
-    },
-    {
-      "ipa": "mɑ̃",
-      "unlockCount": 36,
-      "weightedGain": 44.045,
-      "examples": [
-        {
-          "word": "maman",
-          "ipa": "mamɑ̃",
-          "frequency": 470.582,
-          "frame": [
-            "mat",
-            "[mɑ̃]"
-          ]
-        },
-        {
-          "word": "ciment",
-          "ipa": "simɑ̃",
-          "frequency": 3.807,
-          "frame": [
-            "scie",
-            "[mɑ̃]"
-          ]
-        },
-        {
-          "word": "dément",
-          "ipa": "demɑ̃",
-          "frequency": 2.956,
-          "frame": [
-            "de",
-            "[mɑ̃]"
-          ]
-        },
-        {
-          "word": "décidément",
-          "ipa": "desidemɑ̃",
-          "frequency": 2.687,
-          "frame": [
-            "de",
-            "scie",
-            "de",
-            "[mɑ̃]"
-          ]
-        },
-        {
-          "word": "piment",
-          "ipa": "pimɑ̃",
-          "frequency": 2.604,
-          "frame": [
-            "pie",
-            "[mɑ̃]"
-          ]
-        },
-        {
-          "word": "mamans",
-          "ipa": "mamɑ̃",
-          "frequency": 2.123,
-          "frame": [
-            "mat",
-            "[mɑ̃]"
-          ]
-        },
-        {
-          "word": "tourments",
-          "ipa": "tuʁmɑ̃",
-          "frequency": 1.494,
-          "frame": [
-            "tour",
-            "[mɑ̃]"
-          ]
-        },
-        {
-          "word": "tourment",
-          "ipa": "tuʁmɑ̃",
-          "frequency": 1.484,
-          "frame": [
-            "tour",
-            "[mɑ̃]"
-          ]
-        },
-        {
-          "word": "piments",
-          "ipa": "pimɑ̃",
-          "frequency": 1.13,
-          "frame": [
-            "pie",
-            "[mɑ̃]"
-          ]
-        },
-        {
-          "word": "dément",
-          "ipa": "demɑ̃",
-          "frequency": 0.953,
-          "frame": [
-            "de",
-            "[mɑ̃]"
-          ]
-        },
-        {
-          "word": "ralliement",
-          "ipa": "ʁalimɑ̃",
-          "frequency": 0.734,
-          "frame": [
-            "rat",
-            "lit",
-            "[mɑ̃]"
-          ]
-        },
-        {
-          "word": "dément",
-          "ipa": "demɑ̃",
-          "frequency": 0.649,
-          "frame": [
-            "de",
-            "[mɑ̃]"
-          ]
-        }
-      ],
-      "rank": 43,
-      "exactWholeWordCandidates": [
-        {
-          "word": "man",
-          "ipa": "mɑ̃",
-          "pos": "NOM",
-          "frequency": 18.566,
-          "noun": true
-        },
-        {
-          "word": "mans",
-          "ipa": "mɑ̃",
-          "pos": "NOM",
-          "frequency": 0.044,
-          "noun": true
-        },
-        {
-          "word": "mens",
-          "ipa": "mɑ̃",
-          "pos": "VER",
-          "frequency": 35.475,
-          "noun": false
-        },
-        {
-          "word": "ment",
-          "ipa": "mɑ̃",
-          "pos": "VER",
-          "frequency": 26.006,
-          "noun": false
-        }
-      ],
-      "exactNounCandidates": [
-        {
-          "word": "man",
-          "ipa": "mɑ̃",
-          "pos": "NOM",
-          "frequency": 18.566,
-          "noun": true
-        },
-        {
-          "word": "mans",
-          "ipa": "mɑ̃",
-          "pos": "NOM",
-          "frequency": 0.044,
           "noun": true
         }
       ],
@@ -14751,7 +15280,7 @@
           ]
         }
       ],
-      "rank": 44,
+      "rank": 45,
       "exactWholeWordCandidates": [],
       "exactNounCandidates": [],
       "hasExactNounCandidate": false
@@ -14871,7 +15400,7 @@
           ]
         }
       ],
-      "rank": 45,
+      "rank": 46,
       "exactWholeWordCandidates": [
         {
           "word": "peau",
@@ -15082,7 +15611,7 @@
           ]
         }
       ],
-      "rank": 46,
+      "rank": 47,
       "exactWholeWordCandidates": [],
       "exactNounCandidates": [],
       "hasExactNounCandidate": false
@@ -15206,7 +15735,7 @@
           ]
         }
       ],
-      "rank": 47,
+      "rank": 48,
       "exactWholeWordCandidates": [
         {
           "word": "va",
@@ -15342,7 +15871,7 @@
           ]
         }
       ],
-      "rank": 48,
+      "rank": 49,
       "exactWholeWordCandidates": [
         {
           "word": "corps",
@@ -15523,7 +16052,7 @@
           ]
         }
       ],
-      "rank": 49,
+      "rank": 50,
       "exactWholeWordCandidates": [
         {
           "word": "to",
@@ -15710,7 +16239,7 @@
           ]
         }
       ],
-      "rank": 50,
+      "rank": 51,
       "exactWholeWordCandidates": [
         {
           "word": "rang",
@@ -15915,7 +16444,7 @@
           ]
         }
       ],
-      "rank": 51,
+      "rank": 52,
       "exactWholeWordCandidates": [
         {
           "word": "g",
@@ -16093,7 +16622,7 @@
           ]
         }
       ],
-      "rank": 52,
+      "rank": 53,
       "exactWholeWordCandidates": [
         {
           "word": "das",
@@ -16236,10 +16765,472 @@
           ]
         }
       ],
-      "rank": 53,
+      "rank": 54,
       "exactWholeWordCandidates": [],
       "exactNounCandidates": [],
       "hasExactNounCandidate": false
+    },
+    {
+      "ipa": "sɛʁ",
+      "unlockCount": 36,
+      "weightedGain": 40.252,
+      "examples": [
+        {
+          "word": "dessert",
+          "ipa": "desɛʁ",
+          "frequency": 13.139,
+          "frame": [
+            "de",
+            "[sɛʁ]"
+          ]
+        },
+        {
+          "word": "desserts",
+          "ipa": "desɛʁ",
+          "frequency": 1.854,
+          "frame": [
+            "de",
+            "[sɛʁ]"
+          ]
+        },
+        {
+          "word": "cerner",
+          "ipa": "sɛʁne",
+          "frequency": 1.741,
+          "frame": [
+            "[sɛʁ]",
+            "nez"
+          ]
+        },
+        {
+          "word": "cerné",
+          "ipa": "sɛʁne",
+          "frequency": 1.734,
+          "frame": [
+            "[sɛʁ]",
+            "nez"
+          ]
+        },
+        {
+          "word": "cernés",
+          "ipa": "sɛʁne",
+          "frequency": 1.161,
+          "frame": [
+            "[sɛʁ]",
+            "nez"
+          ]
+        },
+        {
+          "word": "passèrent",
+          "ipa": "pasɛʁ",
+          "frequency": 0.797,
+          "frame": [
+            "pas",
+            "[sɛʁ]"
+          ]
+        },
+        {
+          "word": "cernée",
+          "ipa": "sɛʁne",
+          "frequency": 0.538,
+          "frame": [
+            "[sɛʁ]",
+            "nez"
+          ]
+        },
+        {
+          "word": "décerné",
+          "ipa": "desɛʁne",
+          "frequency": 0.528,
+          "frame": [
+            "de",
+            "[sɛʁ]",
+            "nez"
+          ]
+        },
+        {
+          "word": "décerner",
+          "ipa": "desɛʁne",
+          "frequency": 0.402,
+          "frame": [
+            "de",
+            "[sɛʁ]",
+            "nez"
+          ]
+        },
+        {
+          "word": "desserre",
+          "ipa": "desɛʁ",
+          "frequency": 0.389,
+          "frame": [
+            "de",
+            "[sɛʁ]"
+          ]
+        },
+        {
+          "word": "dessert",
+          "ipa": "desɛʁ",
+          "frequency": 0.38,
+          "frame": [
+            "de",
+            "[sɛʁ]"
+          ]
+        },
+        {
+          "word": "cernez",
+          "ipa": "sɛʁne",
+          "frequency": 0.165,
+          "frame": [
+            "[sɛʁ]",
+            "nez"
+          ]
+        }
+      ],
+      "rank": 55,
+      "exactWholeWordCandidates": [
+        {
+          "word": "cerf",
+          "ipa": "sɛʁ",
+          "pos": "NOM",
+          "frequency": 4.949,
+          "noun": true
+        },
+        {
+          "word": "serre",
+          "ipa": "sɛʁ",
+          "pos": "NOM",
+          "frequency": 3.085,
+          "noun": true
+        },
+        {
+          "word": "cerfs",
+          "ipa": "sɛʁ",
+          "pos": "NOM",
+          "frequency": 1.063,
+          "noun": true
+        },
+        {
+          "word": "serres",
+          "ipa": "sɛʁ",
+          "pos": "NOM",
+          "frequency": 0.611,
+          "noun": true
+        },
+        {
+          "word": "serf",
+          "ipa": "sɛʁ",
+          "pos": "NOM",
+          "frequency": 0.294,
+          "noun": true
+        },
+        {
+          "word": "serfs",
+          "ipa": "sɛʁ",
+          "pos": "NOM",
+          "frequency": 0.247,
+          "noun": true
+        },
+        {
+          "word": "cerre",
+          "ipa": "sɛʁ",
+          "pos": "NOM",
+          "frequency": 0.022,
+          "noun": true
+        },
+        {
+          "word": "cers",
+          "ipa": "sɛʁ",
+          "pos": "NOM",
+          "frequency": 0.009,
+          "noun": true
+        },
+        {
+          "word": "sert",
+          "ipa": "sɛʁ",
+          "pos": "VER",
+          "frequency": 53.62,
+          "noun": false
+        },
+        {
+          "word": "serrent",
+          "ipa": "sɛʁ",
+          "pos": "VER",
+          "frequency": 0.851,
+          "noun": false
+        }
+      ],
+      "exactNounCandidates": [
+        {
+          "word": "cerf",
+          "ipa": "sɛʁ",
+          "pos": "NOM",
+          "frequency": 4.949,
+          "noun": true
+        },
+        {
+          "word": "serre",
+          "ipa": "sɛʁ",
+          "pos": "NOM",
+          "frequency": 3.085,
+          "noun": true
+        },
+        {
+          "word": "cerfs",
+          "ipa": "sɛʁ",
+          "pos": "NOM",
+          "frequency": 1.063,
+          "noun": true
+        },
+        {
+          "word": "serres",
+          "ipa": "sɛʁ",
+          "pos": "NOM",
+          "frequency": 0.611,
+          "noun": true
+        },
+        {
+          "word": "serf",
+          "ipa": "sɛʁ",
+          "pos": "NOM",
+          "frequency": 0.294,
+          "noun": true
+        },
+        {
+          "word": "serfs",
+          "ipa": "sɛʁ",
+          "pos": "NOM",
+          "frequency": 0.247,
+          "noun": true
+        },
+        {
+          "word": "cerre",
+          "ipa": "sɛʁ",
+          "pos": "NOM",
+          "frequency": 0.022,
+          "noun": true
+        },
+        {
+          "word": "cers",
+          "ipa": "sɛʁ",
+          "pos": "NOM",
+          "frequency": 0.009,
+          "noun": true
+        }
+      ],
+      "hasExactNounCandidate": true
+    },
+    {
+      "ipa": "bu",
+      "unlockCount": 35,
+      "weightedGain": 39.837,
+      "examples": [
+        {
+          "word": "boucler",
+          "ipa": "bukle",
+          "frequency": 5.212,
+          "frame": [
+            "[bu]",
+            "cle"
+          ]
+        },
+        {
+          "word": "bouclé",
+          "ipa": "bukle",
+          "frequency": 3.218,
+          "frame": [
+            "[bu]",
+            "cle"
+          ]
+        },
+        {
+          "word": "boussole",
+          "ipa": "busɔl",
+          "frequency": 3.18,
+          "frame": [
+            "[bu]",
+            "sol"
+          ]
+        },
+        {
+          "word": "bouclez",
+          "ipa": "bukle",
+          "frequency": 3.142,
+          "frame": [
+            "[bu]",
+            "cle"
+          ]
+        },
+        {
+          "word": "bouclée",
+          "ipa": "bukle",
+          "frequency": 1.351,
+          "frame": [
+            "[bu]",
+            "cle"
+          ]
+        },
+        {
+          "word": "bouder",
+          "ipa": "bude",
+          "frequency": 1.297,
+          "frame": [
+            "[bu]",
+            "de"
+          ]
+        },
+        {
+          "word": "bouclés",
+          "ipa": "bukle",
+          "frequency": 0.693,
+          "frame": [
+            "[bu]",
+            "cle"
+          ]
+        },
+        {
+          "word": "bouclé",
+          "ipa": "bukle",
+          "frequency": 0.522,
+          "frame": [
+            "[bu]",
+            "cle"
+          ]
+        },
+        {
+          "word": "boulimie",
+          "ipa": "bulimi",
+          "frequency": 0.437,
+          "frame": [
+            "[bu]",
+            "lit",
+            "mie"
+          ]
+        },
+        {
+          "word": "bouclée",
+          "ipa": "bukle",
+          "frequency": 0.37,
+          "frame": [
+            "[bu]",
+            "cle"
+          ]
+        },
+        {
+          "word": "bouclés",
+          "ipa": "bukle",
+          "frequency": 0.316,
+          "frame": [
+            "[bu]",
+            "cle"
+          ]
+        },
+        {
+          "word": "débout",
+          "ipa": "debu",
+          "frequency": 0.199,
+          "frame": [
+            "de",
+            "[bu]"
+          ]
+        }
+      ],
+      "rank": 56,
+      "exactWholeWordCandidates": [
+        {
+          "word": "bout",
+          "ipa": "bu",
+          "pos": "NOM",
+          "frequency": 101.453,
+          "noun": true
+        },
+        {
+          "word": "boue",
+          "ipa": "bu",
+          "pos": "NOM",
+          "frequency": 12.959,
+          "noun": true
+        },
+        {
+          "word": "bouts",
+          "ipa": "bu",
+          "pos": "NOM",
+          "frequency": 6.234,
+          "noun": true
+        },
+        {
+          "word": "bou",
+          "ipa": "bu",
+          "pos": "NOM",
+          "frequency": 0.139,
+          "noun": true
+        },
+        {
+          "word": "boues",
+          "ipa": "bu",
+          "pos": "NOM",
+          "frequency": 0.101,
+          "noun": true
+        },
+        {
+          "word": "bouent",
+          "ipa": "bu",
+          "pos": "NOM",
+          "frequency": 0.006,
+          "noun": true
+        },
+        {
+          "word": "bous",
+          "ipa": "bu",
+          "pos": "VER",
+          "frequency": 0.326,
+          "noun": false
+        }
+      ],
+      "exactNounCandidates": [
+        {
+          "word": "bout",
+          "ipa": "bu",
+          "pos": "NOM",
+          "frequency": 101.453,
+          "noun": true
+        },
+        {
+          "word": "boue",
+          "ipa": "bu",
+          "pos": "NOM",
+          "frequency": 12.959,
+          "noun": true
+        },
+        {
+          "word": "bouts",
+          "ipa": "bu",
+          "pos": "NOM",
+          "frequency": 6.234,
+          "noun": true
+        },
+        {
+          "word": "bou",
+          "ipa": "bu",
+          "pos": "NOM",
+          "frequency": 0.139,
+          "noun": true
+        },
+        {
+          "word": "boues",
+          "ipa": "bu",
+          "pos": "NOM",
+          "frequency": 0.101,
+          "noun": true
+        },
+        {
+          "word": "bouent",
+          "ipa": "bu",
+          "pos": "NOM",
+          "frequency": 0.006,
+          "noun": true
+        }
+      ],
+      "hasExactNounCandidate": true
     },
     {
       "ipa": "la",
@@ -16361,7 +17352,7 @@
           ]
         }
       ],
-      "rank": 54,
+      "rank": 57,
       "exactWholeWordCandidates": [
         {
           "word": "la",
@@ -16510,7 +17501,7 @@
           ]
         }
       ],
-      "rank": 55,
+      "rank": 58,
       "exactWholeWordCandidates": [
         {
           "word": "pouls",
@@ -16680,7 +17671,7 @@
           ]
         }
       ],
-      "rank": 56,
+      "rank": 59,
       "exactWholeWordCandidates": [
         {
           "word": "su",
@@ -16863,7 +17854,7 @@
           ]
         }
       ],
-      "rank": 57,
+      "rank": 60,
       "exactWholeWordCandidates": [
         {
           "word": "me",
@@ -17004,7 +17995,7 @@
           ]
         }
       ],
-      "rank": 58,
+      "rank": 61,
       "exactWholeWordCandidates": [
         {
           "word": "phi",
@@ -17205,7 +18196,7 @@
           ]
         }
       ],
-      "rank": 59,
+      "rank": 62,
       "exactWholeWordCandidates": [
         {
           "word": "saie",
@@ -17354,7 +18345,7 @@
           ]
         }
       ],
-      "rank": 60,
+      "rank": 63,
       "exactWholeWordCandidates": [],
       "exactNounCandidates": [],
       "hasExactNounCandidate": false
@@ -17473,7 +18464,7 @@
           ]
         }
       ],
-      "rank": 61,
+      "rank": 64,
       "exactWholeWordCandidates": [
         {
           "word": "i",
@@ -17645,7 +18636,7 @@
           ]
         }
       ],
-      "rank": 62,
+      "rank": 65,
       "exactWholeWordCandidates": [
         {
           "word": "taie",
@@ -17717,6 +18708,183 @@
           "ipa": "tɛ",
           "pos": "NOM",
           "frequency": 0.003,
+          "noun": true
+        }
+      ],
+      "hasExactNounCandidate": true
+    },
+    {
+      "ipa": "ni",
+      "unlockCount": 34,
+      "weightedGain": 37.096,
+      "examples": [
+        {
+          "word": "déni",
+          "ipa": "deni",
+          "frequency": 3.051,
+          "frame": [
+            "de",
+            "[ni]"
+          ]
+        },
+        {
+          "word": "manie",
+          "ipa": "mani",
+          "frequency": 2.187,
+          "frame": [
+            "mat",
+            "[ni]"
+          ]
+        },
+        {
+          "word": "mini",
+          "ipa": "mini",
+          "frequency": 1.547,
+          "frame": [
+            "mie",
+            "[ni]"
+          ]
+        },
+        {
+          "word": "manies",
+          "ipa": "mani",
+          "frequency": 0.921,
+          "frame": [
+            "mat",
+            "[ni]"
+          ]
+        },
+        {
+          "word": "tournis",
+          "ipa": "tuʁni",
+          "frequency": 0.728,
+          "frame": [
+            "tour",
+            "[ni]"
+          ]
+        },
+        {
+          "word": "manie",
+          "ipa": "mani",
+          "frequency": 0.668,
+          "frame": [
+            "mat",
+            "[ni]"
+          ]
+        },
+        {
+          "word": "niera",
+          "ipa": "niʁa",
+          "frequency": 0.456,
+          "frame": [
+            "[ni]",
+            "rat"
+          ]
+        },
+        {
+          "word": "rani",
+          "ipa": "ʁani",
+          "frequency": 0.364,
+          "frame": [
+            "rat",
+            "[ni]"
+          ]
+        },
+        {
+          "word": "minis",
+          "ipa": "mini",
+          "frequency": 0.25,
+          "frame": [
+            "mie",
+            "[ni]"
+          ]
+        },
+        {
+          "word": "manies",
+          "ipa": "mani",
+          "frequency": 0.225,
+          "frame": [
+            "mat",
+            "[ni]"
+          ]
+        },
+        {
+          "word": "dénie",
+          "ipa": "deni",
+          "frequency": 0.168,
+          "frame": [
+            "de",
+            "[ni]"
+          ]
+        },
+        {
+          "word": "panis",
+          "ipa": "pani",
+          "frequency": 0.114,
+          "frame": [
+            "pas",
+            "[ni]"
+          ]
+        }
+      ],
+      "rank": 66,
+      "exactWholeWordCandidates": [
+        {
+          "word": "nid",
+          "ipa": "ni",
+          "pos": "NOM",
+          "frequency": 10.693,
+          "noun": true
+        },
+        {
+          "word": "nids",
+          "ipa": "ni",
+          "pos": "NOM",
+          "frequency": 1.184,
+          "noun": true
+        },
+        {
+          "word": "ni",
+          "ipa": "ni",
+          "pos": "CON",
+          "frequency": 254.677,
+          "noun": false
+        },
+        {
+          "word": "nie",
+          "ipa": "ni",
+          "pos": "VER",
+          "frequency": 4.972,
+          "noun": false
+        },
+        {
+          "word": "nies",
+          "ipa": "ni",
+          "pos": "VER",
+          "frequency": 0.962,
+          "noun": false
+        },
+        {
+          "word": "nient",
+          "ipa": "ni",
+          "pos": "VER",
+          "frequency": 0.573,
+          "noun": false
+        }
+      ],
+      "exactNounCandidates": [
+        {
+          "word": "nid",
+          "ipa": "ni",
+          "pos": "NOM",
+          "frequency": 10.693,
+          "noun": true
+        },
+        {
+          "word": "nids",
+          "ipa": "ni",
+          "pos": "NOM",
+          "frequency": 1.184,
           "noun": true
         }
       ],
@@ -17836,7 +19004,7 @@
           ]
         }
       ],
-      "rank": 63,
+      "rank": 67,
       "exactWholeWordCandidates": [
         {
           "word": "lié",
@@ -18001,7 +19169,7 @@
           ]
         }
       ],
-      "rank": 64,
+      "rank": 68,
       "exactWholeWordCandidates": [
         {
           "word": "con",
@@ -18158,7 +19326,7 @@
           ]
         }
       ],
-      "rank": 65,
+      "rank": 69,
       "exactWholeWordCandidates": [
         {
           "word": "nô",
@@ -18317,7 +19485,7 @@
           ]
         }
       ],
-      "rank": 66,
+      "rank": 70,
       "exactWholeWordCandidates": [
         {
           "word": "sang",
@@ -18396,183 +19564,6 @@
           "ipa": "sɑ̃",
           "pos": "NOM",
           "frequency": 0.763,
-          "noun": true
-        }
-      ],
-      "hasExactNounCandidate": true
-    },
-    {
-      "ipa": "ni",
-      "unlockCount": 33,
-      "weightedGain": 36.093,
-      "examples": [
-        {
-          "word": "déni",
-          "ipa": "deni",
-          "frequency": 3.051,
-          "frame": [
-            "de",
-            "[ni]"
-          ]
-        },
-        {
-          "word": "manie",
-          "ipa": "mani",
-          "frequency": 2.187,
-          "frame": [
-            "mat",
-            "[ni]"
-          ]
-        },
-        {
-          "word": "mini",
-          "ipa": "mini",
-          "frequency": 1.547,
-          "frame": [
-            "mie",
-            "[ni]"
-          ]
-        },
-        {
-          "word": "manies",
-          "ipa": "mani",
-          "frequency": 0.921,
-          "frame": [
-            "mat",
-            "[ni]"
-          ]
-        },
-        {
-          "word": "tournis",
-          "ipa": "tuʁni",
-          "frequency": 0.728,
-          "frame": [
-            "tour",
-            "[ni]"
-          ]
-        },
-        {
-          "word": "manie",
-          "ipa": "mani",
-          "frequency": 0.668,
-          "frame": [
-            "mat",
-            "[ni]"
-          ]
-        },
-        {
-          "word": "niera",
-          "ipa": "niʁa",
-          "frequency": 0.456,
-          "frame": [
-            "[ni]",
-            "rat"
-          ]
-        },
-        {
-          "word": "rani",
-          "ipa": "ʁani",
-          "frequency": 0.364,
-          "frame": [
-            "rat",
-            "[ni]"
-          ]
-        },
-        {
-          "word": "minis",
-          "ipa": "mini",
-          "frequency": 0.25,
-          "frame": [
-            "mie",
-            "[ni]"
-          ]
-        },
-        {
-          "word": "manies",
-          "ipa": "mani",
-          "frequency": 0.225,
-          "frame": [
-            "mat",
-            "[ni]"
-          ]
-        },
-        {
-          "word": "dénie",
-          "ipa": "deni",
-          "frequency": 0.168,
-          "frame": [
-            "de",
-            "[ni]"
-          ]
-        },
-        {
-          "word": "panis",
-          "ipa": "pani",
-          "frequency": 0.114,
-          "frame": [
-            "pas",
-            "[ni]"
-          ]
-        }
-      ],
-      "rank": 67,
-      "exactWholeWordCandidates": [
-        {
-          "word": "nid",
-          "ipa": "ni",
-          "pos": "NOM",
-          "frequency": 10.693,
-          "noun": true
-        },
-        {
-          "word": "nids",
-          "ipa": "ni",
-          "pos": "NOM",
-          "frequency": 1.184,
-          "noun": true
-        },
-        {
-          "word": "ni",
-          "ipa": "ni",
-          "pos": "CON",
-          "frequency": 254.677,
-          "noun": false
-        },
-        {
-          "word": "nie",
-          "ipa": "ni",
-          "pos": "VER",
-          "frequency": 4.972,
-          "noun": false
-        },
-        {
-          "word": "nies",
-          "ipa": "ni",
-          "pos": "VER",
-          "frequency": 0.962,
-          "noun": false
-        },
-        {
-          "word": "nient",
-          "ipa": "ni",
-          "pos": "VER",
-          "frequency": 0.573,
-          "noun": false
-        }
-      ],
-      "exactNounCandidates": [
-        {
-          "word": "nid",
-          "ipa": "ni",
-          "pos": "NOM",
-          "frequency": 10.693,
-          "noun": true
-        },
-        {
-          "word": "nids",
-          "ipa": "ni",
-          "pos": "NOM",
-          "frequency": 1.184,
           "noun": true
         }
       ],
@@ -18702,7 +19693,7 @@
           ]
         }
       ],
-      "rank": 68,
+      "rank": 71,
       "exactWholeWordCandidates": [
         {
           "word": "ans",
@@ -18873,7 +19864,7 @@
           ]
         }
       ],
-      "rank": 69,
+      "rank": 72,
       "exactWholeWordCandidates": [],
       "exactNounCandidates": [],
       "hasExactNounCandidate": false
@@ -18996,7 +19987,7 @@
           ]
         }
       ],
-      "rank": 70,
+      "rank": 73,
       "exactWholeWordCandidates": [
         {
           "word": "bord",
@@ -19163,7 +20154,7 @@
           ]
         }
       ],
-      "rank": 71,
+      "rank": 74,
       "exactWholeWordCandidates": [
         {
           "word": "rond",
@@ -19360,7 +20351,7 @@
           ]
         }
       ],
-      "rank": 72,
+      "rank": 75,
       "exactWholeWordCandidates": [
         {
           "word": "temps",
@@ -19591,7 +20582,7 @@
           ]
         }
       ],
-      "rank": 73,
+      "rank": 76,
       "exactWholeWordCandidates": [
         {
           "word": "gras",
@@ -19728,259 +20719,10 @@
           ]
         }
       ],
-      "rank": 74,
+      "rank": 77,
       "exactWholeWordCandidates": [],
       "exactNounCandidates": [],
       "hasExactNounCandidate": false
-    },
-    {
-      "ipa": "sɛʁ",
-      "unlockCount": 30,
-      "weightedGain": 34.21,
-      "examples": [
-        {
-          "word": "dessert",
-          "ipa": "desɛʁ",
-          "frequency": 13.139,
-          "frame": [
-            "de",
-            "[sɛʁ]"
-          ]
-        },
-        {
-          "word": "desserts",
-          "ipa": "desɛʁ",
-          "frequency": 1.854,
-          "frame": [
-            "de",
-            "[sɛʁ]"
-          ]
-        },
-        {
-          "word": "cerner",
-          "ipa": "sɛʁne",
-          "frequency": 1.741,
-          "frame": [
-            "[sɛʁ]",
-            "nez"
-          ]
-        },
-        {
-          "word": "cerné",
-          "ipa": "sɛʁne",
-          "frequency": 1.734,
-          "frame": [
-            "[sɛʁ]",
-            "nez"
-          ]
-        },
-        {
-          "word": "cernés",
-          "ipa": "sɛʁne",
-          "frequency": 1.161,
-          "frame": [
-            "[sɛʁ]",
-            "nez"
-          ]
-        },
-        {
-          "word": "passèrent",
-          "ipa": "pasɛʁ",
-          "frequency": 0.797,
-          "frame": [
-            "pas",
-            "[sɛʁ]"
-          ]
-        },
-        {
-          "word": "cernée",
-          "ipa": "sɛʁne",
-          "frequency": 0.538,
-          "frame": [
-            "[sɛʁ]",
-            "nez"
-          ]
-        },
-        {
-          "word": "décerné",
-          "ipa": "desɛʁne",
-          "frequency": 0.528,
-          "frame": [
-            "de",
-            "[sɛʁ]",
-            "nez"
-          ]
-        },
-        {
-          "word": "décerner",
-          "ipa": "desɛʁne",
-          "frequency": 0.402,
-          "frame": [
-            "de",
-            "[sɛʁ]",
-            "nez"
-          ]
-        },
-        {
-          "word": "desserre",
-          "ipa": "desɛʁ",
-          "frequency": 0.389,
-          "frame": [
-            "de",
-            "[sɛʁ]"
-          ]
-        },
-        {
-          "word": "dessert",
-          "ipa": "desɛʁ",
-          "frequency": 0.38,
-          "frame": [
-            "de",
-            "[sɛʁ]"
-          ]
-        },
-        {
-          "word": "cernez",
-          "ipa": "sɛʁne",
-          "frequency": 0.165,
-          "frame": [
-            "[sɛʁ]",
-            "nez"
-          ]
-        }
-      ],
-      "rank": 75,
-      "exactWholeWordCandidates": [
-        {
-          "word": "cerf",
-          "ipa": "sɛʁ",
-          "pos": "NOM",
-          "frequency": 4.949,
-          "noun": true
-        },
-        {
-          "word": "serre",
-          "ipa": "sɛʁ",
-          "pos": "NOM",
-          "frequency": 3.085,
-          "noun": true
-        },
-        {
-          "word": "cerfs",
-          "ipa": "sɛʁ",
-          "pos": "NOM",
-          "frequency": 1.063,
-          "noun": true
-        },
-        {
-          "word": "serres",
-          "ipa": "sɛʁ",
-          "pos": "NOM",
-          "frequency": 0.611,
-          "noun": true
-        },
-        {
-          "word": "serf",
-          "ipa": "sɛʁ",
-          "pos": "NOM",
-          "frequency": 0.294,
-          "noun": true
-        },
-        {
-          "word": "serfs",
-          "ipa": "sɛʁ",
-          "pos": "NOM",
-          "frequency": 0.247,
-          "noun": true
-        },
-        {
-          "word": "cerre",
-          "ipa": "sɛʁ",
-          "pos": "NOM",
-          "frequency": 0.022,
-          "noun": true
-        },
-        {
-          "word": "cers",
-          "ipa": "sɛʁ",
-          "pos": "NOM",
-          "frequency": 0.009,
-          "noun": true
-        },
-        {
-          "word": "sert",
-          "ipa": "sɛʁ",
-          "pos": "VER",
-          "frequency": 53.62,
-          "noun": false
-        },
-        {
-          "word": "serrent",
-          "ipa": "sɛʁ",
-          "pos": "VER",
-          "frequency": 0.851,
-          "noun": false
-        }
-      ],
-      "exactNounCandidates": [
-        {
-          "word": "cerf",
-          "ipa": "sɛʁ",
-          "pos": "NOM",
-          "frequency": 4.949,
-          "noun": true
-        },
-        {
-          "word": "serre",
-          "ipa": "sɛʁ",
-          "pos": "NOM",
-          "frequency": 3.085,
-          "noun": true
-        },
-        {
-          "word": "cerfs",
-          "ipa": "sɛʁ",
-          "pos": "NOM",
-          "frequency": 1.063,
-          "noun": true
-        },
-        {
-          "word": "serres",
-          "ipa": "sɛʁ",
-          "pos": "NOM",
-          "frequency": 0.611,
-          "noun": true
-        },
-        {
-          "word": "serf",
-          "ipa": "sɛʁ",
-          "pos": "NOM",
-          "frequency": 0.294,
-          "noun": true
-        },
-        {
-          "word": "serfs",
-          "ipa": "sɛʁ",
-          "pos": "NOM",
-          "frequency": 0.247,
-          "noun": true
-        },
-        {
-          "word": "cerre",
-          "ipa": "sɛʁ",
-          "pos": "NOM",
-          "frequency": 0.022,
-          "noun": true
-        },
-        {
-          "word": "cers",
-          "ipa": "sɛʁ",
-          "pos": "NOM",
-          "frequency": 0.009,
-          "noun": true
-        }
-      ],
-      "hasExactNounCandidate": true
     },
     {
       "ipa": "ʁke",
@@ -20098,7 +20840,7 @@
           ]
         }
       ],
-      "rank": 76,
+      "rank": 78,
       "exactWholeWordCandidates": [],
       "exactNounCandidates": [],
       "hasExactNounCandidate": false
@@ -20220,203 +20962,10 @@
           ]
         }
       ],
-      "rank": 77,
+      "rank": 79,
       "exactWholeWordCandidates": [],
       "exactNounCandidates": [],
       "hasExactNounCandidate": false
-    },
-    {
-      "ipa": "ba",
-      "unlockCount": 30,
-      "weightedGain": 33.833,
-      "examples": [
-        {
-          "word": "débat",
-          "ipa": "deba",
-          "frequency": 10.222,
-          "frame": [
-            "de",
-            "[ba]"
-          ]
-        },
-        {
-          "word": "débarras",
-          "ipa": "debaʁa",
-          "frequency": 2.475,
-          "frame": [
-            "de",
-            "[ba]",
-            "rat"
-          ]
-        },
-        {
-          "word": "débats",
-          "ipa": "deba",
-          "frequency": 2.335,
-          "frame": [
-            "de",
-            "[ba]"
-          ]
-        },
-        {
-          "word": "débat",
-          "ipa": "deba",
-          "frequency": 0.911,
-          "frame": [
-            "de",
-            "[ba]"
-          ]
-        },
-        {
-          "word": "shabbat",
-          "ipa": "ʃaba",
-          "frequency": 0.832,
-          "frame": [
-            "chat",
-            "[ba]"
-          ]
-        },
-        {
-          "word": "banner",
-          "ipa": "bane",
-          "frequency": 0.728,
-          "frame": [
-            "[ba]",
-            "nez"
-          ]
-        },
-        {
-          "word": "débats",
-          "ipa": "deba",
-          "frequency": 0.592,
-          "frame": [
-            "de",
-            "[ba]"
-          ]
-        },
-        {
-          "word": "rabats",
-          "ipa": "ʁaba",
-          "frequency": 0.285,
-          "frame": [
-            "rat",
-            "[ba]"
-          ]
-        },
-        {
-          "word": "rabat",
-          "ipa": "ʁaba",
-          "frequency": 0.263,
-          "frame": [
-            "rat",
-            "[ba]"
-          ]
-        },
-        {
-          "word": "bassiner",
-          "ipa": "basine",
-          "frequency": 0.241,
-          "frame": [
-            "[ba]",
-            "scie",
-            "nez"
-          ]
-        },
-        {
-          "word": "rabat",
-          "ipa": "ʁaba",
-          "frequency": 0.222,
-          "frame": [
-            "rat",
-            "[ba]"
-          ]
-        },
-        {
-          "word": "barra",
-          "ipa": "baʁa",
-          "frequency": 0.18,
-          "frame": [
-            "[ba]",
-            "rat"
-          ]
-        }
-      ],
-      "rank": 78,
-      "exactWholeWordCandidates": [
-        {
-          "word": "bas",
-          "ipa": "ba",
-          "pos": "NOM",
-          "frequency": 64.82,
-          "noun": true
-        },
-        {
-          "word": "bât",
-          "ipa": "ba",
-          "pos": "NOM",
-          "frequency": 0.25,
-          "noun": true
-        },
-        {
-          "word": "bats",
-          "ipa": "ba",
-          "pos": "NOM",
-          "frequency": 0.082,
-          "noun": true
-        },
-        {
-          "word": "bâts",
-          "ipa": "ba",
-          "pos": "NOM",
-          "frequency": 0.009,
-          "noun": true
-        },
-        {
-          "word": "bah",
-          "ipa": "ba",
-          "pos": "ONO",
-          "frequency": 18.307,
-          "noun": false
-        },
-        {
-          "word": "bat",
-          "ipa": "ba",
-          "pos": "VER",
-          "frequency": 26.408,
-          "noun": false
-        }
-      ],
-      "exactNounCandidates": [
-        {
-          "word": "bas",
-          "ipa": "ba",
-          "pos": "NOM",
-          "frequency": 64.82,
-          "noun": true
-        },
-        {
-          "word": "bât",
-          "ipa": "ba",
-          "pos": "NOM",
-          "frequency": 0.25,
-          "noun": true
-        },
-        {
-          "word": "bats",
-          "ipa": "ba",
-          "pos": "NOM",
-          "frequency": 0.082,
-          "noun": true
-        },
-        {
-          "word": "bâts",
-          "ipa": "ba",
-          "pos": "NOM",
-          "frequency": 0.009,
-          "noun": true
-        }
-      ],
-      "hasExactNounCandidate": true
     },
     {
       "ipa": "ʃɛ",
@@ -20538,7 +21087,7 @@
           ]
         }
       ],
-      "rank": 79,
+      "rank": 80,
       "exactWholeWordCandidates": [
         {
           "word": "chai",
@@ -20687,7 +21236,7 @@
           ]
         }
       ],
-      "rank": 80,
+      "rank": 81,
       "exactWholeWordCandidates": [
         {
           "word": "veau",
@@ -20888,7 +21437,7 @@
           ]
         }
       ],
-      "rank": 81,
+      "rank": 82,
       "exactWholeWordCandidates": [
         {
           "word": "gué",
@@ -21064,7 +21613,7 @@
           ]
         }
       ],
-      "rank": 82,
+      "rank": 83,
       "exactWholeWordCandidates": [
         {
           "word": "nait",
@@ -21241,7 +21790,7 @@
           ]
         }
       ],
-      "rank": 83,
+      "rank": 84,
       "exactWholeWordCandidates": [
         {
           "word": "saut",
@@ -21476,7 +22025,7 @@
           ]
         }
       ],
-      "rank": 84,
+      "rank": 85,
       "exactWholeWordCandidates": [
         {
           "word": "rot",
@@ -21698,7 +22247,7 @@
           ]
         }
       ],
-      "rank": 85,
+      "rank": 86,
       "exactWholeWordCandidates": [
         {
           "word": "ton",
@@ -21896,7 +22445,7 @@
           ]
         }
       ],
-      "rank": 86,
+      "rank": 87,
       "exactWholeWordCandidates": [
         {
           "word": "na",
@@ -22023,7 +22572,7 @@
           ]
         }
       ],
-      "rank": 87,
+      "rank": 88,
       "exactWholeWordCandidates": [],
       "exactNounCandidates": [],
       "hasExactNounCandidate": false
@@ -22156,7 +22705,7 @@
           ]
         }
       ],
-      "rank": 88,
+      "rank": 89,
       "exactWholeWordCandidates": [],
       "exactNounCandidates": [],
       "hasExactNounCandidate": false
@@ -22275,7 +22824,7 @@
           ]
         }
       ],
-      "rank": 89,
+      "rank": 90,
       "exactWholeWordCandidates": [
         {
           "word": "quais",
@@ -22413,7 +22962,7 @@
           ]
         }
       ],
-      "rank": 90,
+      "rank": 91,
       "exactWholeWordCandidates": [],
       "exactNounCandidates": [],
       "hasExactNounCandidate": false
@@ -22532,7 +23081,7 @@
           ]
         }
       ],
-      "rank": 91,
+      "rank": 92,
       "exactWholeWordCandidates": [
         {
           "word": "mentez",
@@ -22660,7 +23209,7 @@
           ]
         }
       ],
-      "rank": 92,
+      "rank": 93,
       "exactWholeWordCandidates": [],
       "exactNounCandidates": [],
       "hasExactNounCandidate": false
@@ -22789,7 +23338,7 @@
           ]
         }
       ],
-      "rank": 93,
+      "rank": 94,
       "exactWholeWordCandidates": [],
       "exactNounCandidates": [],
       "hasExactNounCandidate": false
@@ -22910,7 +23459,7 @@
           ]
         }
       ],
-      "rank": 94,
+      "rank": 95,
       "exactWholeWordCandidates": [
         {
           "word": "serait",
@@ -23072,7 +23621,7 @@
           ]
         }
       ],
-      "rank": 95,
+      "rank": 96,
       "exactWholeWordCandidates": [
         {
           "word": "de",
@@ -23202,7 +23751,7 @@
           ]
         }
       ],
-      "rank": 96,
+      "rank": 97,
       "exactWholeWordCandidates": [
         {
           "word": "compte",
@@ -23306,6 +23855,148 @@
         }
       ],
       "hasExactNounCandidate": true
+    },
+    {
+      "ipa": "ʃi",
+      "unlockCount": 26,
+      "weightedGain": 28.735,
+      "examples": [
+        {
+          "word": "chimie",
+          "ipa": "ʃimi",
+          "frequency": 6.775,
+          "frame": [
+            "[ʃi]",
+            "mie"
+          ]
+        },
+        {
+          "word": "chili",
+          "ipa": "ʃili",
+          "frequency": 3.453,
+          "frame": [
+            "[ʃi]",
+            "lit"
+          ]
+        },
+        {
+          "word": "chipie",
+          "ipa": "ʃipi",
+          "frequency": 0.832,
+          "frame": [
+            "[ʃi]",
+            "pie"
+          ]
+        },
+        {
+          "word": "chimère",
+          "ipa": "ʃimɛʁ",
+          "frequency": 0.741,
+          "frame": [
+            "[ʃi]",
+            "mer"
+          ]
+        },
+        {
+          "word": "chimères",
+          "ipa": "ʃimɛʁ",
+          "frequency": 0.709,
+          "frame": [
+            "[ʃi]",
+            "mer"
+          ]
+        },
+        {
+          "word": "shimmy",
+          "ipa": "ʃimi",
+          "frequency": 0.203,
+          "frame": [
+            "[ʃi]",
+            "mie"
+          ]
+        },
+        {
+          "word": "chicha",
+          "ipa": "ʃiʃa",
+          "frequency": 0.152,
+          "frame": [
+            "[ʃi]",
+            "chat"
+          ]
+        },
+        {
+          "word": "chiera",
+          "ipa": "ʃiʁa",
+          "frequency": 0.142,
+          "frame": [
+            "[ʃi]",
+            "rat"
+          ]
+        },
+        {
+          "word": "déchira",
+          "ipa": "deʃiʁa",
+          "frequency": 0.13,
+          "frame": [
+            "de",
+            "[ʃi]",
+            "rat"
+          ]
+        },
+        {
+          "word": "chierie",
+          "ipa": "ʃiʁi",
+          "frequency": 0.12,
+          "frame": [
+            "[ʃi]",
+            "riz"
+          ]
+        },
+        {
+          "word": "chiner",
+          "ipa": "ʃine",
+          "frequency": 0.089,
+          "frame": [
+            "[ʃi]",
+            "nez"
+          ]
+        },
+        {
+          "word": "chieras",
+          "ipa": "ʃiʁa",
+          "frequency": 0.082,
+          "frame": [
+            "[ʃi]",
+            "rat"
+          ]
+        }
+      ],
+      "rank": 98,
+      "exactWholeWordCandidates": [
+        {
+          "word": "chie",
+          "ipa": "ʃi",
+          "pos": "VER",
+          "frequency": 3.487,
+          "noun": false
+        },
+        {
+          "word": "chies",
+          "ipa": "ʃi",
+          "pos": "VER",
+          "frequency": 0.756,
+          "noun": false
+        },
+        {
+          "word": "chient",
+          "ipa": "ʃi",
+          "pos": "VER",
+          "frequency": 0.604,
+          "noun": false
+        }
+      ],
+      "exactNounCandidates": [],
+      "hasExactNounCandidate": false
     },
     {
       "ipa": "pɔʁte",
@@ -23421,7 +24112,7 @@
           ]
         }
       ],
-      "rank": 97,
+      "rank": 99,
       "exactWholeWordCandidates": [
         {
           "word": "portée",
@@ -23593,7 +24284,7 @@
           ]
         }
       ],
-      "rank": 98,
+      "rank": 100,
       "exactWholeWordCandidates": [
         {
           "word": "nier",
@@ -23640,312 +24331,6 @@
       ],
       "exactNounCandidates": [],
       "hasExactNounCandidate": false
-    },
-    {
-      "ipa": "ʃi",
-      "unlockCount": 25,
-      "weightedGain": 27.733,
-      "examples": [
-        {
-          "word": "chimie",
-          "ipa": "ʃimi",
-          "frequency": 6.775,
-          "frame": [
-            "[ʃi]",
-            "mie"
-          ]
-        },
-        {
-          "word": "chili",
-          "ipa": "ʃili",
-          "frequency": 3.453,
-          "frame": [
-            "[ʃi]",
-            "lit"
-          ]
-        },
-        {
-          "word": "chipie",
-          "ipa": "ʃipi",
-          "frequency": 0.832,
-          "frame": [
-            "[ʃi]",
-            "pie"
-          ]
-        },
-        {
-          "word": "chimère",
-          "ipa": "ʃimɛʁ",
-          "frequency": 0.741,
-          "frame": [
-            "[ʃi]",
-            "mer"
-          ]
-        },
-        {
-          "word": "chimères",
-          "ipa": "ʃimɛʁ",
-          "frequency": 0.709,
-          "frame": [
-            "[ʃi]",
-            "mer"
-          ]
-        },
-        {
-          "word": "shimmy",
-          "ipa": "ʃimi",
-          "frequency": 0.203,
-          "frame": [
-            "[ʃi]",
-            "mie"
-          ]
-        },
-        {
-          "word": "chicha",
-          "ipa": "ʃiʃa",
-          "frequency": 0.152,
-          "frame": [
-            "[ʃi]",
-            "chat"
-          ]
-        },
-        {
-          "word": "chiera",
-          "ipa": "ʃiʁa",
-          "frequency": 0.142,
-          "frame": [
-            "[ʃi]",
-            "rat"
-          ]
-        },
-        {
-          "word": "déchira",
-          "ipa": "deʃiʁa",
-          "frequency": 0.13,
-          "frame": [
-            "de",
-            "[ʃi]",
-            "rat"
-          ]
-        },
-        {
-          "word": "chierie",
-          "ipa": "ʃiʁi",
-          "frequency": 0.12,
-          "frame": [
-            "[ʃi]",
-            "riz"
-          ]
-        },
-        {
-          "word": "chiner",
-          "ipa": "ʃine",
-          "frequency": 0.089,
-          "frame": [
-            "[ʃi]",
-            "nez"
-          ]
-        },
-        {
-          "word": "chieras",
-          "ipa": "ʃiʁa",
-          "frequency": 0.082,
-          "frame": [
-            "[ʃi]",
-            "rat"
-          ]
-        }
-      ],
-      "rank": 99,
-      "exactWholeWordCandidates": [
-        {
-          "word": "chie",
-          "ipa": "ʃi",
-          "pos": "VER",
-          "frequency": 3.487,
-          "noun": false
-        },
-        {
-          "word": "chies",
-          "ipa": "ʃi",
-          "pos": "VER",
-          "frequency": 0.756,
-          "noun": false
-        },
-        {
-          "word": "chient",
-          "ipa": "ʃi",
-          "pos": "VER",
-          "frequency": 0.604,
-          "noun": false
-        }
-      ],
-      "exactNounCandidates": [],
-      "hasExactNounCandidate": false
-    },
-    {
-      "ipa": "sa",
-      "unlockCount": 25,
-      "weightedGain": 27.615,
-      "examples": [
-        {
-          "word": "passa",
-          "ipa": "pasa",
-          "frequency": 1.965,
-          "frame": [
-            "pas",
-            "[sa]"
-          ]
-        },
-        {
-          "word": "sali",
-          "ipa": "sali",
-          "frequency": 1.861,
-          "frame": [
-            "[sa]",
-            "lit"
-          ]
-        },
-        {
-          "word": "salis",
-          "ipa": "sali",
-          "frequency": 1.146,
-          "frame": [
-            "[sa]",
-            "lit"
-          ]
-        },
-        {
-          "word": "sari",
-          "ipa": "saʁi",
-          "frequency": 0.93,
-          "frame": [
-            "[sa]",
-            "riz"
-          ]
-        },
-        {
-          "word": "lissa",
-          "ipa": "lisa",
-          "frequency": 0.775,
-          "frame": [
-            "lit",
-            "[sa]"
-          ]
-        },
-        {
-          "word": "salit",
-          "ipa": "sali",
-          "frequency": 0.75,
-          "frame": [
-            "[sa]",
-            "lit"
-          ]
-        },
-        {
-          "word": "salie",
-          "ipa": "sali",
-          "frequency": 0.351,
-          "frame": [
-            "[sa]",
-            "lit"
-          ]
-        },
-        {
-          "word": "saris",
-          "ipa": "saʁi",
-          "frequency": 0.259,
-          "frame": [
-            "[sa]",
-            "riz"
-          ]
-        },
-        {
-          "word": "chassa",
-          "ipa": "ʃasa",
-          "frequency": 0.174,
-          "frame": [
-            "chat",
-            "[sa]"
-          ]
-        },
-        {
-          "word": "sara",
-          "ipa": "saʁa",
-          "frequency": 0.171,
-          "frame": [
-            "[sa]",
-            "rat"
-          ]
-        },
-        {
-          "word": "sammy",
-          "ipa": "sami",
-          "frequency": 0.092,
-          "frame": [
-            "[sa]",
-            "mie"
-          ]
-        },
-        {
-          "word": "salira",
-          "ipa": "saliʁa",
-          "frequency": 0.089,
-          "frame": [
-            "[sa]",
-            "lit",
-            "rat"
-          ]
-        }
-      ],
-      "rank": 100,
-      "exactWholeWordCandidates": [
-        {
-          "word": "sas",
-          "ipa": "sa",
-          "pos": "NOM",
-          "frequency": 3.94,
-          "noun": true
-        },
-        {
-          "word": "sa",
-          "ipa": "sa",
-          "pos": "NOM",
-          "frequency": 0.032,
-          "noun": true
-        },
-        {
-          "word": "ça",
-          "ipa": "sa",
-          "pos": "PRO:dem",
-          "frequency": 8446.718,
-          "noun": false
-        },
-        {
-          "word": "çà",
-          "ipa": "sa",
-          "pos": "ADV",
-          "frequency": 10.924,
-          "noun": false
-        }
-      ],
-      "exactNounCandidates": [
-        {
-          "word": "sas",
-          "ipa": "sa",
-          "pos": "NOM",
-          "frequency": 3.94,
-          "noun": true
-        },
-        {
-          "word": "sa",
-          "ipa": "sa",
-          "pos": "NOM",
-          "frequency": 0.032,
-          "noun": true
-        }
-      ],
-      "hasExactNounCandidate": true
     }
   ],
   "provenance": {

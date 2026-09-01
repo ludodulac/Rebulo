@@ -4,13 +4,10 @@ on:
   push:
     paths:
       - '.github/workflows/coverage-analysis.yml'
-      - 'app.js'
-      - 'package.json'
       - 'scripts/analyze-coverage.mjs'
       - 'scripts/import-lexique.mjs'
       - 'scripts/simulate-expansion.mjs'
-      - 'src/**'
-      - 'tests/**'
+      - 'src/phonetic-engine.js'
       - 'data/lexicon-seed.json'
       - 'data/pictogram-priorities.json'
   workflow_dispatch:

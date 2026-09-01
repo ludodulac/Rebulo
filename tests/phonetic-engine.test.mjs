@@ -4,6 +4,7 @@ import {
   concatenateIPA,
   validateStrictRebus,
   segmentTargetWithLexicon,
+  decompositionScore,
   rankDecompositions
 } from '../src/phonetic-engine.js';
 
@@ -50,6 +51,29 @@ const alternatives=rankDecompositions([
   [{label:'ab',ipa:'/ab/',visualConfidence:0.99,labelStability:0.99}]
 ]);
 assert.deepEqual(alternatives[0].map(x=>x.label),['ab']);
+
+const twoStrong=[
+  {label:'ab',ipa:'/ab/',visualConfidence:0.96,labelStability:0.96},
+  {label:'cd',ipa:'/cd/',visualConfidence:0.96,labelStability:0.96}
+];
+const threeSlightlyStronger=[
+  {label:'a',ipa:'/a/',visualConfidence:0.99,labelStability:0.99},
+  {label:'bc',ipa:'/bc/',visualConfidence:0.99,labelStability:0.99},
+  {label:'d',ipa:'/d/',visualConfidence:0.99,labelStability:0.99}
+];
+assert.ok(decompositionScore(twoStrong)>decompositionScore(threeSlightlyStronger));
+assert.deepEqual(rankDecompositions([threeSlightlyStronger,twoStrong])[0].map(x=>x.label),['ab','cd']);
+
+const longerButClearlyBetter=[
+  {label:'a',ipa:'/a/',visualConfidence:1,labelStability:1},
+  {label:'bc',ipa:'/bc/',visualConfidence:1,labelStability:1},
+  {label:'d',ipa:'/d/',visualConfidence:1,labelStability:1}
+];
+const shortButWeak=[
+  {label:'ab',ipa:'/ab/',visualConfidence:0.6,labelStability:0.6},
+  {label:'cd',ipa:'/cd/',visualConfidence:0.6,labelStability:0.6}
+];
+assert.deepEqual(rankDecompositions([shortButWeak,longerButClearlyBetter])[0].map(x=>x.label),['a','bc','d']);
 
 const tooManyPieces=[
   {label:'a',ipa:'/a/',active:true},

@@ -1,0 +1,13 @@
+@media (prefers-reduced-motion:no-preference){
+  .arena,.session-dock,.export-feedback{transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease,background .18s ease}
+  .arena.is-refreshing{transform:scale(.992)}
+  .arena.is-ready{animation:rebulo-ready .34s ease-out}
+  .session-dock.is-receiving{transform:translateY(-2px)}
+  .session-dock.is-confirmed{animation:rebulo-confirm .36s ease-out}
+  .export-feedback.is-confirmed{animation:rebulo-feedback .34s ease-out}
+  button.is-working{animation:rebulo-working .42s ease-out}
+}
+@keyframes rebulo-ready{0%{transform:scale(.985)}65%{transform:scale(1.006)}100%{transform:scale(1)}}
+@keyframes rebulo-confirm{0%{transform:scale(.985)}65%{transform:scale(1.012)}100%{transform:scale(1)}}
+@keyframes rebulo-feedback{0%{opacity:.45;transform:translateY(3px)}100%{opacity:1;transform:translateY(0)}}
+@keyframes rebulo-working{0%{transform:translateY(2px)}55%{transform:translateY(0) scale(.985)}100%{transform:translateY(0) scale(1)}}

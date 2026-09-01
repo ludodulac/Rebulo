@@ -73,30 +73,34 @@ export function therapyTargetMap(definitions=[]){
 
 export function buildTherapyActivities(target,definitions=[]){
   const registry=therapyTargetMap(definitions);
-  return (target?.therapy||[]).filter(id=>TEMPLATES[id]&&registry.has(id)).map(id=>{
-    const definition=registry.get(id);
-    const template=TEMPLATES[id];
-    const expectedResponse=id==='phoneme-initial'
-      ?firstIPAUnit(target?.targetIpa||'')
-      :id==='phoneme-final'
-        ?lastIPAUnit(target?.targetIpa||'')
-        :id==='phoneme-segmentation'
-          ?splitIPAUnits(target?.targetIpa||'')
-          :id==='phoneme-blending'
-            ?normalizeIPA(target?.targetIpa||'')
-            :'';
-    const promptUnits=id==='phoneme-blending'?phonemeSequence(target):[];
-    return {
-      id,
-      label:definition.label,
-      unit:definition.unit,
-      description:definition.description,
-      childInstruction:resolveInstruction(template.childInstruction,target),
-      proInstruction:resolveInstruction(template.proInstruction,target),
-      expectedResponse,
-      promptUnits
-    };
-  });
+  const hasTargetIpa=Boolean(normalizeIPA(target?.targetIpa||''));
+  return (target?.therapy||[])
+    .filter(id=>TEMPLATES[id]&&registry.has(id))
+    .filter(id=>id!=='phoneme-blending'||hasTargetIpa)
+    .map(id=>{
+      const definition=registry.get(id);
+      const template=TEMPLATES[id];
+      const expectedResponse=id==='phoneme-initial'
+        ?firstIPAUnit(target?.targetIpa||'')
+        :id==='phoneme-final'
+          ?lastIPAUnit(target?.targetIpa||'')
+          :id==='phoneme-segmentation'
+            ?splitIPAUnits(target?.targetIpa||'')
+            :id==='phoneme-blending'
+              ?normalizeIPA(target?.targetIpa||'')
+              :'';
+      const promptUnits=id==='phoneme-blending'?phonemeSequence(target):[];
+      return {
+        id,
+        label:definition.label,
+        unit:definition.unit,
+        description:definition.description,
+        childInstruction:resolveInstruction(template.childInstruction,target),
+        proInstruction:resolveInstruction(template.proInstruction,target),
+        expectedResponse,
+        promptUnits
+      };
+    });
 }
 
 export function activityInstruction(activity,mode='pro'){

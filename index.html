@@ -4,59 +4,91 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f7fb">
-  <title>Rebulo — Défi Rébus</title>
+  <title>Rebulo — Créer un rébus</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <main class="app-shell">
     <header class="topbar">
       <div>
-        <p class="eyebrow">REBUS FRANÇAIS</p>
+        <p class="eyebrow">OUTIL ORTHOPHONIQUE</p>
         <h1>Rebulo</h1>
       </div>
-      <div class="score-box" aria-label="Score"><span>⭐</span><strong id="score">0</strong></div>
+      <span class="strict-badge">Phonétique stricte</span>
     </header>
 
-    <section class="controls" aria-label="Réglages du jeu">
-      <label for="age">Âge du joueur</label>
-      <select id="age">
-        <option value="5">5–6 ans</option>
-        <option value="7" selected>7–8 ans</option>
-        <option value="9">9–11 ans</option>
-        <option value="12">12 ans et +</option>
-      </select>
-      <button id="newRebus" type="button">Nouveau rébus</button>
-    </section>
+    <section class="hero-card" aria-labelledby="creator-title">
+      <p class="step">Créer un rébus</p>
+      <h2 id="creator-title">Écris un mot</h2>
+      <p class="intro">Rebulo utilise uniquement des décompositions dont les sons correspondent exactement au mot cible.</p>
 
-    <section class="game-card">
-      <div class="game-meta">
-        <span id="difficulty">Niveau 1</span>
-        <span id="streak">🔥 0</span>
-      </div>
-
-      <p class="prompt">Quel mot entends-tu ?</p>
-      <div id="rebus" class="rebus-row" aria-live="polite"></div>
-
-      <form id="answerForm">
-        <label for="answer">Ta réponse</label>
-        <div class="answer-row">
-          <input id="answer" type="text" autocomplete="off" autocapitalize="none" placeholder="Écris le mot…">
-          <button type="submit">Valider</button>
+      <form id="creatorForm" class="creator-form">
+        <label for="target">Mot à transformer</label>
+        <div class="creator-row">
+          <input id="target" type="text" autocomplete="off" autocapitalize="none" placeholder="Ex. merci" value="merci">
+          <button type="submit">Créer le rébus</button>
         </div>
       </form>
 
-      <div class="secondary-actions">
-        <button id="hint" type="button" class="secondary">💡 Indice</button>
-        <button id="solution" type="button" class="secondary">👀 Solution</button>
-      </div>
+      <div id="creatorFeedback" class="creator-feedback" aria-live="polite"></div>
 
-      <p id="feedback" class="feedback" aria-live="polite">Les images donnent des sons français.</p>
+      <section id="result" class="result-card" hidden>
+        <div class="result-head">
+          <div>
+            <p class="result-label">Résultat</p>
+            <h3 id="resultWord">Merci</h3>
+          </div>
+          <button id="changeImage" type="button" class="secondary small">Changer l’image</button>
+        </div>
+        <div id="creatorRebus" class="rebus-row" aria-live="polite"></div>
+        <p id="phoneticProof" class="phonetic-proof"></p>
+        <div class="output-actions">
+          <button id="printRebus" type="button">Imprimer</button>
+          <button id="downloadRebus" type="button" class="secondary">Télécharger</button>
+        </div>
+      </section>
     </section>
 
     <section class="rule-card">
       <strong>Règle Rebulo</strong>
-      <p>Un rébus n'entre dans le jeu que si ses sons ont été vérifiés. On ne transforme pas « riz » en « ré » pour forcer une réponse.</p>
+      <p>Une image représente un mot entier et sa prononciation entière. S’il n’existe pas de solution exacte dans la bibliothèque actuelle, Rebulo refuse plutôt que d’inventer.</p>
     </section>
+
+    <details class="legacy-panel">
+      <summary>Prototype jeu historique</summary>
+      <section class="controls" aria-label="Réglages du jeu historique">
+        <label for="age">Âge du joueur</label>
+        <select id="age">
+          <option value="5">5–6 ans</option>
+          <option value="7" selected>7–8 ans</option>
+          <option value="9">9–11 ans</option>
+          <option value="12">12 ans et +</option>
+        </select>
+        <button id="newRebus" type="button">Nouveau rébus</button>
+      </section>
+
+      <section class="game-card">
+        <div class="game-meta">
+          <span id="difficulty">Niveau 1</span>
+          <span id="streak">🔥 0</span>
+          <span class="score-box" aria-label="Score">⭐ <strong id="score">0</strong></span>
+        </div>
+        <p class="prompt">Quel mot entends-tu ?</p>
+        <div id="rebus" class="rebus-row" aria-live="polite"></div>
+        <form id="answerForm">
+          <label for="answer">Ta réponse</label>
+          <div class="answer-row">
+            <input id="answer" type="text" autocomplete="off" autocapitalize="none" placeholder="Écris le mot…">
+            <button type="submit">Valider</button>
+          </div>
+        </form>
+        <div class="secondary-actions">
+          <button id="hint" type="button" class="secondary">💡 Indice</button>
+          <button id="solution" type="button" class="secondary">👀 Solution</button>
+        </div>
+        <p id="feedback" class="feedback" aria-live="polite">Les images donnent des sons français.</p>
+      </section>
+    </details>
   </main>
   <script src="app.js" defer></script>
 </body>

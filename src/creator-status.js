@@ -7,3 +7,16 @@ export function creatorStatus({wanted='',target=null,candidate=null}={}){
   if(!Array.isArray(candidate.therapyActivities)||!candidate.therapyActivities.length)return {code:'ready-no-activity',message:'Rébus exact créé. Aucune activité supplémentaire n’est disponible pour ce mot.'};
   return {code:'ready',message:'Rébus exact créé.'};
 }
+
+export function friendlyCreatorMessage(raw='',hasActivities=true){
+  const text=String(raw||'').trim();
+  if(!text)return '';
+  if(text==='Écris d’abord un mot.')return creatorStatus({wanted:''}).message;
+  if(text==='Aucun rébus exact disponible pour ce mot.')return creatorStatus({wanted:'mot'}).message;
+  if(text.startsWith('Refus phonétique'))return creatorStatus({wanted:'mot',target:{mode:'rejected'}}).message;
+  if(text==='La décomposition est étudiée, mais les images nécessaires ne sont pas encore prêtes.')return creatorStatus({wanted:'mot',target:{mode:'strict',assets:'missing'}}).message;
+  if(text==='Aucune décomposition exacte disponible avec les concepts actifs.')return creatorStatus({wanted:'mot',target:{mode:'strict',assets:'ready'},candidate:null}).message;
+  if(text==='Rébus créé.')return hasActivities?creatorStatus({wanted:'mot',target:{mode:'strict',assets:'ready'},candidate:{therapyActivities:[{}]}}).message:creatorStatus({wanted:'mot',target:{mode:'strict',assets:'ready'},candidate:{therapyActivities:[]}}).message;
+  if(text==='Chargement impossible.')return 'Impossible de charger Rebulo. Recharge la page pour réessayer.';
+  return text;
+}

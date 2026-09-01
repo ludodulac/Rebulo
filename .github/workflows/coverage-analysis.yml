@@ -4,10 +4,13 @@ on:
   push:
     paths:
       - '.github/workflows/coverage-analysis.yml'
+      - 'app.js'
+      - 'package.json'
       - 'scripts/analyze-coverage.mjs'
       - 'scripts/import-lexique.mjs'
       - 'scripts/simulate-expansion.mjs'
-      - 'src/phonetic-engine.js'
+      - 'src/**'
+      - 'tests/**'
       - 'data/lexicon-seed.json'
       - 'data/pictogram-priorities.json'
   workflow_dispatch:
@@ -27,6 +30,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+
+      - name: Run project tests
+        run: npm test
 
       - name: Download Lexique 4 mirror
         run: |

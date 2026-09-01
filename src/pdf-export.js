@@ -65,14 +65,14 @@ async function imageUrlToPng(src,size=520){
   return canvas.toDataURL('image/png');
 }
 
-function textToPng(text,{width=1500,height=150,font='44px system-ui',weight='600'}={}){
+function textToPng(text,{width=1500,height=150,font='44px system-ui',weight='600',color='#4b5563'}={}){
   const canvas=document.createElement('canvas');
   canvas.width=width;
   canvas.height=height;
   const context=canvas.getContext('2d');
   context.fillStyle='#ffffff';
   context.fillRect(0,0,width,height);
-  context.fillStyle='#4b5563';
+  context.fillStyle=color;
   context.font=`${weight} ${font}`;
   context.textAlign='center';
   context.textBaseline='middle';
@@ -127,11 +127,7 @@ export async function exportRebusPdf(rebus,{mode='pro'}={}){
       doc.setFont('helvetica','bold');
       doc.setFontSize(11);
       doc.setTextColor(49,58,77);
-      doc.text(String(piece.reading||piece.label||''),x+cardWidth/2,cardY+56,{align:'center',maxWidth:cardWidth-5});
-      doc.setFont('helvetica','normal');
-      doc.setFontSize(8);
-      doc.setTextColor(107,114,128);
-      doc.text(String(piece.ipa||''),x+cardWidth/2,cardY+64,{align:'center',maxWidth:cardWidth-5});
+      doc.text(String(piece.reading||piece.label||''),x+cardWidth/2,cardY+60,{align:'center',maxWidth:cardWidth-5});
     }
     if(index<count-1){
       doc.setFont('helvetica','bold');

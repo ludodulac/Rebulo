@@ -1,11 +1,11 @@
-import {normalizeLayout,paginateSession} from './session-plan.js';
+import {normalizeLayout,paginateSession,sessionItemKey} from './session-plan.js';
 const JSPDF_ESM_URL='https://cdn.jsdelivr.net/npm/jspdf@2.5.2/+esm';
 
 export function sanitizeFilePart(value='rebulo'){const normalized=String(value||'rebulo').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');return normalized||'rebulo'}
 export function worksheetCopy(rebus,mode='pro'){const pieces=rebus?.pieces||[];if(mode==='child')return {title:'Quel mot entends-tu ?',subtitle:'Prononce chaque image puis écris ta réponse.',showAnswer:false,showLabels:false,showIpa:false,answerLine:true};return {title:rebus?.answer||'Correction',subtitle:'Correction orthophonique - dénominations entières et concaténation phonétique stricte.',showAnswer:true,showLabels:true,showIpa:true,answerLine:false,proof:`${pieces.map(piece=>piece.ipa).join(' + ')} = ${rebus?.targetIpa||''}`}}
 export function worksheetMetadata(metadata={}){return [metadata.patient?`Patient / élève : ${metadata.patient}`:'',metadata.date?`Date : ${metadata.date}`:'',metadata.level?`Niveau : ${metadata.level}`:''].filter(Boolean)}
 export function worksheetActivity(activity,mode='pro'){if(!activity?.label)return null;const instruction=mode==='child'?activity.childInstruction:activity.proInstruction;if(!instruction)return null;return {label:activity.label,instruction}}
-export function normalizeWorksheetSet(items=[],maxItems=4){const seen=new Set();return (items||[]).filter(item=>item?.answer&&Array.isArray(item.pieces)&&item.pieces.length).filter(item=>{const key=String(item.answer).toLowerCase();if(seen.has(key))return false;seen.add(key);return true}).slice(0,maxItems)}
+export function normalizeWorksheetSet(items=[],maxItems=4){const seen=new Set();return (items||[]).filter(item=>item?.answer&&Array.isArray(item.pieces)&&item.pieces.length).filter(item=>{const key=sessionItemKey(item);if(seen.has(key))return false;seen.add(key);return true}).slice(0,maxItems)}
 
 async function loadJsPDF(){const module=await import(JSPDF_ESM_URL);const ctor=module.jsPDF||module.default?.jsPDF||module.default;if(!ctor)throw new Error('jspdf_unavailable');return ctor}
 function loadImage(src){return new Promise((resolve,reject)=>{const image=new Image();image.decoding='async';image.onload=()=>resolve(image);image.onerror=()=>reject(new Error(`image_load_failed:${src}`));image.src=src})}

@@ -26,6 +26,14 @@ Ce journal complète `CLINICAL_PICTOGRAM_PLAN.md`. Il consigne les décisions pr
 - Motif : aliment concret et iconographie suffisamment spécifique pour un prototype.
 - Reste à faire : test de dénomination spontanée avant statut clinique.
 
+### chat /ʃa/
+
+- Statut : `prototype_priority`
+- Actif : oui
+- Asset : OpenMoji CAT FACE (`1F431`)
+- Motif : animal très familier, forme visuelle immédiatement identifiable et risque de dénomination concurrente jugé faible pour le prototype.
+- Reste à faire : test de dénomination spontanée avec le public ciblé avant statut clinique.
+
 ### dos /do/
 
 - Statut : `no_suitable_asset`

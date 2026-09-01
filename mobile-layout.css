@@ -2,6 +2,8 @@
 :root{--app-vh:100dvh}
 .single-screen{height:var(--app-vh)}
 button,.dock-panel>summary,.queue-mini{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.creator-row{grid-template-columns:minmax(0,1fr) auto}
+.creator-row input{min-width:0;width:100%}
 @media(max-width:560px){
   .single-screen{padding-left:max(8px,env(safe-area-inset-left));padding-right:max(8px,env(safe-area-inset-right));grid-template-rows:auto auto minmax(0,1fr) auto;gap:6px}
   .topbar{min-height:34px}.topbar h1{font-size:1.34rem}.strict-badge{padding:5px 8px}
@@ -18,7 +20,7 @@ button,.dock-panel>summary,.queue-mini{touch-action:manipulation;-webkit-tap-hig
 }
 @media(max-width:380px){
   .topbar h1{font-size:1.22rem}.strict-badge{font-size:.6rem}
-  .creator-row input{min-width:0;padding:0 11px;font-size:.95rem}.creator-row button{min-width:76px;padding:0 10px}
+  .creator-row input{padding:0 11px;font-size:.95rem}.creator-row button{min-width:76px;padding:0 10px}
   .arena-head h3{font-size:1rem}.mini-mode{width:44px}
   #creatorRebus .piece{width:min(28vw,96px);min-height:min(28vw,102px)}
   #creatorRebus .piece img{width:min(20vw,70px);height:min(20vw,70px)}

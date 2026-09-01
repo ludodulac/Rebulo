@@ -101,6 +101,7 @@ jobs:
           NODE
 
       - name: Commit analysis results
+        if: github.ref == 'refs/heads/main'
         run: |
           git config user.name 'rebulo-analysis-bot'
           git config user.email 'actions@users.noreply.github.com'

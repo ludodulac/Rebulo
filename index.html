@@ -32,20 +32,30 @@
 
       <div id="creatorFeedback" class="creator-feedback" aria-live="polite"></div>
 
-      <section id="result" class="result-card" hidden>
+      <section id="result" class="result-card" data-sheet-mode="pro" hidden>
         <div class="result-head">
           <div>
-            <p class="result-label">Résultat</p>
+            <p id="resultLabel" class="result-label">Correction professionnelle</p>
             <h3 id="resultWord">Merci</h3>
+            <p id="sheetInstruction" class="sheet-instruction">Dénominations entières et preuve phonétique stricte.</p>
           </div>
           <button id="changeImage" type="button" class="secondary small">Changer l’image</button>
         </div>
+
+        <div class="sheet-mode" role="group" aria-label="Type de fiche">
+          <button id="childMode" type="button" class="secondary small" data-mode="child" aria-pressed="false">Fiche enfant</button>
+          <button id="proMode" type="button" class="small" data-mode="pro" aria-pressed="true">Correction pro</button>
+        </div>
+
         <div id="creatorRebus" class="rebus-row" aria-live="polite"></div>
         <p id="phoneticProof" class="phonetic-proof"></p>
+        <div id="worksheetAnswer" class="worksheet-answer" hidden>Réponse : <span aria-hidden="true"></span></div>
+
         <div class="output-actions">
-          <button id="printRebus" type="button">Imprimer</button>
-          <button id="downloadRebus" type="button" class="secondary">Télécharger</button>
+          <button id="printRebus" type="button">Imprimer la fiche</button>
+          <button id="downloadRebus" type="button" class="secondary">Télécharger le PDF</button>
         </div>
+        <p id="exportFeedback" class="export-feedback" aria-live="polite"></p>
       </section>
     </section>
 

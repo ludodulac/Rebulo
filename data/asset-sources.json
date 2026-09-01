@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "checkedAt": "2026-09-01",
   "policy": "Chaque illustration externe doit avoir une source et une licence explicites. Un asset ne devient pas cliniquement validé par le seul fait d'être licencié ou visuellement disponible.",
   "sources": {
@@ -31,6 +31,16 @@
       "clinicalStatus": "prototype_priority",
       "active": true,
       "note": "Riz est classé prioritaire dans le plan clinique ; validation de dénomination spontanée encore requise avant statut clinique."
+    },
+    {
+      "path": "assets/rebus/chat.svg",
+      "concept": "chat",
+      "source": "openmoji",
+      "sourceFile": "color/svg/1F431.svg",
+      "sourceCommit": "ddd79c5288aeb563a77e06830c52fc7d8e9073b2",
+      "clinicalStatus": "prototype_priority",
+      "active": true,
+      "note": "Chat est un animal familier et visuellement très identifiable ; il reste néanmoins à valider formellement en dénomination spontanée avant statut clinique."
     },
     {
       "path": "assets/rebus/the.svg",

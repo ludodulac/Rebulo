@@ -20,6 +20,17 @@ document.querySelectorAll('.bottom-nav .dock-panel').forEach(panel=>{
   });
 });
 
+const createSummary=document.querySelector('.bottom-nav summary[aria-label="Créer"]');
+const createPanel=createSummary?.closest('.dock-panel');
+const targetInput=document.querySelector('#target');
+createSummary?.addEventListener('click',event=>{
+  event.preventDefault();
+  createPanel?.removeAttribute('open');
+  closeOtherPanels(null);
+  targetInput?.focus({preventScroll:true});
+  targetInput?.select();
+});
+
 const creatorForm=document.querySelector('#creatorForm');
 const arena=document.querySelector('#result');
 const creatorFeedback=document.querySelector('#creatorFeedback');

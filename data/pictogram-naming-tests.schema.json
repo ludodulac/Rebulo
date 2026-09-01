@@ -1,0 +1,198 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rebulo.local/schemas/pictogram-naming-tests.schema.json",
+  "title": "Rebulo pictogram naming test records",
+  "description": "Structured records for future pictogram naming tests. This schema stores observed data and explicit human review; it never derives clinical approval from a score or frequency.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "records"],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0"
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/testRecord"
+      }
+    }
+  },
+  "$defs": {
+    "testRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "recordId",
+        "concept",
+        "targetIpa",
+        "asset",
+        "population",
+        "participantCount",
+        "instruction",
+        "observations",
+        "targetResponseCount",
+        "targetResponseFrequency",
+        "competingResponses",
+        "review"
+      ],
+      "properties": {
+        "recordId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "concept": {
+          "type": "string",
+          "minLength": 1
+        },
+        "targetIpa": {
+          "type": "string",
+          "minLength": 1
+        },
+        "asset": {
+          "$ref": "#/$defs/asset"
+        },
+        "population": {
+          "$ref": "#/$defs/population"
+        },
+        "participantCount": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "instruction": {
+          "type": "string",
+          "minLength": 1
+        },
+        "observations": {
+          "type": "array",
+          "description": "Anonymous first spontaneous responses only. Do not store participant names or identifiers.",
+          "items": {
+            "$ref": "#/$defs/observation"
+          }
+        },
+        "targetResponseCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "targetResponseFrequency": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "competingResponses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/competingResponse"
+          }
+        },
+        "notes": {
+          "type": "string"
+        },
+        "review": {
+          "$ref": "#/$defs/review"
+        }
+      }
+    },
+    "asset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "source", "sourceId"],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string"
+        }
+      }
+    },
+    "population": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["description"],
+      "properties": {
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ageRange": {
+          "type": "string"
+        },
+        "languageProfile": {
+          "type": "string"
+        },
+        "cognitiveNeeds": {
+          "type": "string"
+        }
+      }
+    },
+    "observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["responseVerbatim", "hesitation", "noResponse"],
+      "properties": {
+        "responseVerbatim": {
+          "type": "string"
+        },
+        "hesitation": {
+          "type": "boolean"
+        },
+        "noResponse": {
+          "type": "boolean"
+        }
+      }
+    },
+    "competingResponse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["response", "count"],
+      "properties": {
+        "response": {
+          "type": "string",
+          "minLength": 1
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "reviewerName", "reviewedAt", "decisionNote"],
+      "properties": {
+        "status": {
+          "enum": [
+            "prototype_priority",
+            "naming_test_required",
+            "no_suitable_asset",
+            "clinical_reviewed",
+            "clinical_approved"
+          ]
+        },
+        "reviewerName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reviewedAt": {
+          "type": "string",
+          "format": "date"
+        },
+        "decisionNote": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "description": "Explicit human review only. In particular, clinical_approved must be entered as a documented human decision and must never be inferred automatically from response counts or frequencies."
+    }
+  }
+}

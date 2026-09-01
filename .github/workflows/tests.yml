@@ -1,0 +1,36 @@
+name: Rebulo product tests
+
+on:
+  push:
+    paths:
+      - '.github/workflows/tests.yml'
+      - 'app.js'
+      - 'package.json'
+      - 'src/**'
+      - 'tests/**'
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'package.json'
+      - 'src/**'
+      - 'tests/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check browser entry syntax
+        run: node --check app.js
+      - name: Run project tests
+        run: npm test
+      - name: Verify jsPDF browser dependency
+        run: curl --fail --location --silent --show-error --output /dev/null 'https://cdn.jsdelivr.net/npm/jspdf@2.5.2/+esm'

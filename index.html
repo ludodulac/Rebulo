@@ -1,36 +1,15 @@
 <!doctype html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f5f7fb">
-  <title>Rebulo — Créer un rébus</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <main class="app-shell">
-    <header class="topbar"><div><p class="eyebrow">OUTIL ORTHOPHONIQUE</p><h1>Rebulo</h1></div><span class="strict-badge">Phonétique stricte</span></header>
-    <section class="hero-card" aria-labelledby="creator-title">
-      <p class="step">Créer un rébus</p><h2 id="creator-title">Écris un mot</h2>
-      <p class="intro">Rebulo vérifie la prononciation cible, puis cherche une segmentation exacte parmi les concepts illustrables disponibles.</p>
-      <form id="creatorForm" class="creator-form"><label for="target">Mot à transformer</label><div class="creator-row"><input id="target" type="text" autocomplete="off" autocapitalize="none" placeholder="Ex. merci" value="merci"><button type="submit">Créer le rébus</button></div></form>
-      <div id="creatorFeedback" class="creator-feedback" aria-live="polite"></div>
-      <section id="result" class="result-card" data-sheet-mode="pro" hidden>
-        <div class="result-head"><div><p id="resultLabel" class="result-label">Correction professionnelle</p><h3 id="resultWord">Merci</h3><p id="sheetInstruction" class="sheet-instruction">Dénominations entières et preuve phonétique stricte.</p></div><button id="changeImage" type="button" class="secondary small">Changer l’image</button></div>
-        <div class="sheet-mode" role="group" aria-label="Type de fiche"><button id="childMode" type="button" class="secondary small" data-mode="child" aria-pressed="false">Fiche enfant</button><button id="proMode" type="button" class="small" data-mode="pro" aria-pressed="true">Correction pro</button></div>
-        <details class="worksheet-options">
-          <summary>Préparer la fiche</summary>
-          <div class="worksheet-fields">
-            <label for="patientName">Patient / élève<input id="patientName" type="text" autocomplete="off" placeholder="Facultatif"></label>
-            <label for="sessionDate">Date<input id="sessionDate" type="date"></label>
-            <label for="worksheetLevel">Niveau<select id="worksheetLevel"><option value="">Non indiqué</option><option value="Découverte">Découverte</option><option value="Entraînement">Entraînement</option><option value="Consolidation">Consolidation</option></select></label>
-          </div>
-        </details>
-        <div id="creatorRebus" class="rebus-row" aria-live="polite"></div><p id="phoneticProof" class="phonetic-proof"></p><div id="worksheetAnswer" class="worksheet-answer" hidden>Réponse : <span aria-hidden="true"></span></div>
-        <div class="output-actions"><button id="printRebus" type="button">Imprimer la fiche</button><button id="downloadRebus" type="button" class="secondary">Télécharger le PDF</button></div><p id="exportFeedback" class="export-feedback" aria-live="polite"></p>
-      </section>
-    </section>
-    <section class="rule-card"><strong>Règle Rebulo</strong><p>Une image représente un mot entier et sa prononciation entière. S’il n’existe pas de solution exacte dans la bibliothèque actuelle, Rebulo refuse plutôt que d’inventer.</p></section>
-    <details class="legacy-panel"><summary>Prototype jeu historique</summary><section class="controls" aria-label="Réglages du jeu historique"><label for="age">Âge du joueur</label><select id="age"><option value="5">5–6 ans</option><option value="7" selected>7–8 ans</option><option value="9">9–11 ans</option><option value="12">12 ans et +</option></select><button id="newRebus" type="button">Nouveau rébus</button></section><section class="game-card"><div class="game-meta"><span id="difficulty">Niveau 1</span><span id="streak">🔥 0</span><span class="score-box" aria-label="Score">⭐ <strong id="score">0</strong></span></div><p class="prompt">Quel mot entends-tu ?</p><div id="rebus" class="rebus-row" aria-live="polite"></div><form id="answerForm"><label for="answer">Ta réponse</label><div class="answer-row"><input id="answer" type="text" autocomplete="off" autocapitalize="none" placeholder="Écris le mot…"><button type="submit">Valider</button></div></form><div class="secondary-actions"><button id="hint" type="button" class="secondary">💡 Indice</button><button id="solution" type="button" class="secondary">👀 Solution</button></div><p id="feedback" class="feedback" aria-live="polite">Les images donnent des sons français.</p></section></details>
-  </main><script src="app.js" type="module"></script>
-</body></html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f7fb"><title>Rebulo — Créer un rébus</title><link rel="stylesheet" href="styles.css"></head>
+<body><main class="app-shell">
+<header class="topbar"><div><p class="eyebrow">OUTIL ORTHOPHONIQUE</p><h1>Rebulo</h1></div><span class="strict-badge">Phonétique stricte</span></header>
+<section class="hero-card" aria-labelledby="creator-title"><p class="step">Créer un rébus</p><h2 id="creator-title">Écris un mot</h2><p class="intro">Rebulo vérifie la prononciation cible, puis cherche une segmentation exacte parmi les concepts illustrables disponibles.</p>
+<form id="creatorForm" class="creator-form"><label for="target">Mot à transformer</label><div class="creator-row"><input id="target" type="text" autocomplete="off" autocapitalize="none" placeholder="Ex. merci" value="merci"><button type="submit">Créer le rébus</button></div></form><div id="creatorFeedback" class="creator-feedback" aria-live="polite"></div>
+<section id="result" class="result-card" data-sheet-mode="pro" hidden><div class="result-head"><div><p id="resultLabel" class="result-label">Correction professionnelle</p><h3 id="resultWord">Merci</h3><p id="sheetInstruction" class="sheet-instruction">Dénominations entières et preuve phonétique stricte.</p></div><button id="changeImage" type="button" class="secondary small">Changer l’image</button></div>
+<div class="sheet-mode" role="group" aria-label="Type de fiche"><button id="childMode" type="button" class="secondary small" aria-pressed="false">Fiche enfant</button><button id="proMode" type="button" class="small" aria-pressed="true">Correction pro</button></div>
+<details class="worksheet-options"><summary>Préparer la fiche</summary><div class="worksheet-fields"><label for="patientName">Patient / élève<input id="patientName" type="text" autocomplete="off" placeholder="Facultatif"></label><label for="sessionDate">Date<input id="sessionDate" type="date"></label><label for="worksheetLevel">Niveau<select id="worksheetLevel"><option value="">Non indiqué</option><option value="Découverte">Découverte</option><option value="Entraînement">Entraînement</option><option value="Consolidation">Consolidation</option></select></label></div></details>
+<div id="creatorRebus" class="rebus-row" aria-live="polite"></div><p id="phoneticProof" class="phonetic-proof"></p><div id="worksheetAnswer" class="worksheet-answer" hidden>Réponse : <span aria-hidden="true"></span></div>
+<div class="queue-actions"><button id="addToWorksheet" type="button" class="secondary">Ajouter à la série</button><span id="queueCount">0 / 4</span></div><div id="worksheetQueue" class="worksheet-queue" aria-live="polite"></div>
+<div class="output-actions"><button id="printRebus" type="button">Imprimer la fiche</button><button id="downloadRebus" type="button" class="secondary">Télécharger le PDF</button><button id="downloadSeries" type="button" class="secondary" disabled>Télécharger la série</button></div><p id="exportFeedback" class="export-feedback" aria-live="polite"></p></section></section>
+<section class="rule-card"><strong>Règle Rebulo</strong><p>Une image représente un mot entier et sa prononciation entière. S’il n’existe pas de solution exacte dans la bibliothèque actuelle, Rebulo refuse plutôt que d’inventer.</p></section>
+<details class="legacy-panel"><summary>Prototype jeu historique</summary><section class="controls" aria-label="Réglages du jeu historique"><label for="age">Âge du joueur</label><select id="age"><option value="5">5–6 ans</option><option value="7" selected>7–8 ans</option><option value="9">9–11 ans</option><option value="12">12 ans et +</option></select><button id="newRebus" type="button">Nouveau rébus</button></section><section class="game-card"><div class="game-meta"><span id="difficulty">Niveau 1</span><span id="streak">🔥 0</span><span class="score-box">⭐ <strong id="score">0</strong></span></div><p class="prompt">Quel mot entends-tu ?</p><div id="rebus" class="rebus-row"></div><form id="answerForm"><label for="answer">Ta réponse</label><div class="answer-row"><input id="answer" type="text" autocomplete="off" autocapitalize="none" placeholder="Écris le mot…"><button type="submit">Valider</button></div></form><div class="secondary-actions"><button id="hint" type="button" class="secondary">💡 Indice</button><button id="solution" type="button" class="secondary">👀 Solution</button></div><p id="feedback" class="feedback">Les images donnent des sons français.</p></section></details>
+</main><script src="app.js" type="module"></script></body></html>

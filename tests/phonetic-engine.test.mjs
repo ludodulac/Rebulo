@@ -3,6 +3,7 @@ import {
   normalizeIPA,
   splitIPAUnits,
   firstIPAUnit,
+  lastIPAUnit,
   concatenateIPA,
   validateStrictRebus,
   segmentTargetWithLexicon,
@@ -15,6 +16,8 @@ assert.deepEqual(splitIPAUnits('/mɛʁsi/'),['m','ɛ','ʁ','s','i']);
 assert.deepEqual(splitIPAUnits('/ɛ̃fɑ̃/'),['ɛ̃','f','ɑ̃']);
 assert.equal(firstIPAUnit('/ʃato/'),'ʃ');
 assert.equal(firstIPAUnit('/ɛ̃fɑ̃/'),'ɛ̃');
+assert.equal(lastIPAUnit('/mɛʁsi/'),'i');
+assert.equal(lastIPAUnit('/ɛ̃fɑ̃/'),'ɑ̃');
 assert.equal(concatenateIPA([{ipa:'/mɛʁ/'},{ipa:'/si/'}]),'mɛʁsi');
 
 const merci=validateStrictRebus({

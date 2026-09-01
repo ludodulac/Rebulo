@@ -36,7 +36,7 @@ const sessionItem={...candidate,activity:syllableCount};
 const session=normalizeWorksheetSet([sessionItem,sessionItem]);
 assert.equal(session.length,1,'the same target/activity must not be duplicated in a session');
 assert.equal(session[0].syllableCount,2,'creator metadata must survive the session queue');
-assert.equal(sessionItemKey(session[0]),'merci::syllable-count');
+assert.equal(sessionItemKey(session[0]),'merci::syllablecount');
 assert.deepEqual(buildSessionProgression(session).map(step=>step.target),['merci']);
 
 const childActivity=worksheetActivity(session[0].activity,'child');

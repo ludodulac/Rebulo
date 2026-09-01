@@ -75,4 +75,4 @@ Un concept ne peut passer à `active:true` que si :
 4. aucune suppression, liaison inventée ou lecture partielle n'est nécessaire ;
 5. la provenance et la licence de l'asset sont documentées.
 
-Les futurs tests de dénomination devront consigner au minimum : population, nombre de participants, consigne exacte, réponses spontanées, taux du label cible et principales réponses concurrentes.
+La passation et l'enregistrement des futurs tests suivent `PICTOGRAM_NAMING_TEST_PROTOCOL.md` : image seule, première réponse spontanée verbatim, aucune aide phonémique et conservation des réponses concurrentes.

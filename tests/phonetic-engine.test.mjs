@@ -1,6 +1,8 @@
 import assert from 'node:assert/strict';
 import {
   normalizeIPA,
+  splitIPAUnits,
+  firstIPAUnit,
   concatenateIPA,
   validateStrictRebus,
   segmentTargetWithLexicon,
@@ -9,6 +11,10 @@ import {
 } from '../src/phonetic-engine.js';
 
 assert.equal(normalizeIPA('/mɛʁ.si/'),'mɛʁsi');
+assert.deepEqual(splitIPAUnits('/mɛʁsi/'),['m','ɛ','ʁ','s','i']);
+assert.deepEqual(splitIPAUnits('/ɛ̃fɑ̃/'),['ɛ̃','f','ɑ̃']);
+assert.equal(firstIPAUnit('/ʃato/'),'ʃ');
+assert.equal(firstIPAUnit('/ɛ̃fɑ̃/'),'ɛ̃');
 assert.equal(concatenateIPA([{ipa:'/mɛʁ/'},{ipa:'/si/'}]),'mɛʁsi');
 
 const merci=validateStrictRebus({

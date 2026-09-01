@@ -15,7 +15,7 @@ assert.equal(targets.length,2);
 assert.deepEqual(targets.map(item=>item.target),['merci','cinéma']);
 assert.equal(targets[0].mode,'strict');
 assert.equal(targets[0].assets,'ready');
-assert.deepEqual(targets[0].therapy,['denomination','lexical-access','syllable-blending','oral-to-written']);
+assert.deepEqual(targets[0].therapy,['denomination','lexical-access','phoneme-initial','syllable-blending','oral-to-written']);
 assert.equal(targets[0].generated,true);
 
 console.log('creator-catalog tests passed');

@@ -4,6 +4,23 @@ export function normalizeIPA(value=''){
     .normalize('NFC');
 }
 
+export function splitIPAUnits(value=''){
+  const decomposed=normalizeIPA(value).normalize('NFD');
+  const units=[];
+  for(const char of Array.from(decomposed)){
+    if(/\p{M}/u.test(char)){
+      if(units.length)units[units.length-1]+=char;
+      continue;
+    }
+    units.push(char);
+  }
+  return units.map(unit=>unit.normalize('NFC'));
+}
+
+export function firstIPAUnit(value=''){
+  return splitIPAUnits(value)[0]||'';
+}
+
 export function concatenateIPA(pieces=[]){
   return pieces.map(piece=>normalizeIPA(piece.ipa)).join('');
 }

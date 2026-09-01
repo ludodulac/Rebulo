@@ -1,3 +1,5 @@
+import {firstIPAUnit} from './phonetic-engine.js';
+
 const TEMPLATES={
   'denomination':{
     childInstruction:'Nomme chaque image, une par une.',
@@ -6,6 +8,15 @@ const TEMPLATES={
   'lexical-access':{
     childInstruction:'Regarde chaque image. Retrouve son nom tout seul, puis dis-le.',
     proInstruction:'Solliciter l’évocation lexicale à partir de chaque pictogramme sans fournir le label ; laisser un temps de recherche avant toute aide et relever les aides nécessaires.'
+  },
+  'phoneme-initial':{
+    childInstruction:'Dis le mot obtenu. Quel est le tout premier son que tu entends ?',
+    proInstruction:(target)=>{
+      const expected=firstIPAUnit(target?.targetIpa||'');
+      return expected
+        ?`Faire identifier le phonème initial du mot cible sans appui orthographique. Réponse attendue : /${expected}/.`
+        :'Faire identifier le phonème initial du mot cible sans appui orthographique.';
+    }
   },
   'syllable-blending':{
     childInstruction:'Prononce le nom entier de chaque image, dans l’ordre, puis enchaîne-les sans retirer ni changer de son. Quel mot obtiens-tu ?',
@@ -17,6 +28,10 @@ const TEMPLATES={
   }
 };
 
+function resolveInstruction(value,target){
+  return typeof value==='function'?value(target):value;
+}
+
 export function therapyTargetMap(definitions=[]){
   return new Map((definitions||[]).filter(item=>item?.id).map(item=>[item.id,item]));
 }
@@ -25,13 +40,15 @@ export function buildTherapyActivities(target,definitions=[]){
   const registry=therapyTargetMap(definitions);
   return (target?.therapy||[]).filter(id=>TEMPLATES[id]&&registry.has(id)).map(id=>{
     const definition=registry.get(id);
+    const template=TEMPLATES[id];
     return {
       id,
       label:definition.label,
       unit:definition.unit,
       description:definition.description,
-      childInstruction:TEMPLATES[id].childInstruction,
-      proInstruction:TEMPLATES[id].proInstruction
+      childInstruction:resolveInstruction(template.childInstruction,target),
+      proInstruction:resolveInstruction(template.proInstruction,target),
+      expectedResponse:id==='phoneme-initial'?firstIPAUnit(target?.targetIpa||''):''
     };
   });
 }

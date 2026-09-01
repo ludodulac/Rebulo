@@ -28,6 +28,9 @@ jobs:
         with:
           node-version: '22'
 
+      - name: Run project tests
+        run: npm test
+
       - name: Download Lexique 4 mirror
         run: |
           mkdir -p .cache

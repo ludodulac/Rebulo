@@ -1,12 +1,13 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "status": "research-pilot",
-  "note": "Les items stricts sont des candidats de travail. Avant usage clinique, vérifier la prononciation dans Lexique 4 et faire relire par un orthophoniste francophone.",
+  "note": "Les items stricts sont des candidats de travail. Les items general utilisent des conventions de rébus explicites et ne doivent pas être présentés comme phonétiquement stricts.",
   "items": [
     {"target":"merci","targetIpa":"/mɛʁsi/","parts":[{"label":"mer","ipa":"/mɛʁ/"},{"label":"scie","ipa":"/si/"}],"mode":"strict","assets":"ready","therapy":["denomination","lexical-access","phoneme-initial","phoneme-final","phoneme-segmentation","phoneme-blending","syllable-blending","oral-to-written"]},
     {"target":"cinéma","targetIpa":"/sinema/","parts":[{"label":"scie","ipa":"/si/"},{"label":"nez","ipa":"/ne/"},{"label":"mât","ipa":"/ma/"}],"mode":"strict","assets":"ready","therapy":["denomination","lexical-access","phoneme-initial","phoneme-final","phoneme-segmentation","phoneme-blending","syllable-blending","oral-to-written"]},
     {"target":"parapluie","targetIpa":"/paʁaplɥi/","parts":[{"label":"pas","ipa":"/pa/"},{"label":"rat","ipa":"/ʁa/"},{"label":"pluie","ipa":"/plɥi/"}],"mode":"strict","assets":"ready","therapy":["denomination","lexical-access","phoneme-initial","phoneme-final","phoneme-segmentation","phoneme-blending","syllable-blending","oral-to-written"]},
     {"target":"parasol","targetIpa":"/paʁasɔl/","parts":[{"label":"pas","ipa":"/pa/"},{"label":"rat","ipa":"/ʁa/"},{"label":"sol","ipa":"/sɔl/"}],"mode":"strict","assets":"ready","therapy":["denomination","lexical-access","phoneme-initial","phoneme-final","phoneme-segmentation","phoneme-blending","syllable-blending","oral-to-written"]},
+    {"target":"cité","targetIpa":"/site/","mode":"general","assets":"ready","source":"manual-general-pilot","operations":[{"type":"whole_word","pieceId":"scie"},{"type":"grapheme","grapheme":"T","reading":"té"}],"note":"Premier rébus général pilote : l’image scie est lue /si/ et la lettre T est lue par son nom /te/. La construction est volontairement classée general, pas phonetic_strict."},
     {"target":"parade","targetIpa":"/paʁad/","parts":[{"label":"pas","ipa":"/pa/"},{"label":"rat","ipa":"/ʁa/"},{"label":"dé","ipa":"/de/"}],"mode":"rejected","reason":"La forme cible standard finit par /ad/ et non /ade/ : l'assemblage pas+rat+dé ajoute une voyelle."},
     {"target":"tableau","targetIpa":"/tablo/","parts":[{"label":"table","ipa":"/tabl/"},{"label":"eau","ipa":"/o/"}],"mode":"strict","assets":"missing","therapy":["denomination","lexical-access","phoneme-initial","phoneme-final","phoneme-segmentation","phoneme-blending","syllable-blending","oral-to-written"]},
     {"target":"château","targetIpa":"/ʃato/","parts":[{"label":"chat","ipa":"/ʃa/"},{"label":"taux","ipa":"/to/"}],"mode":"strict","assets":"missing","therapy":["denomination","lexical-access","phoneme-initial","phoneme-final","phoneme-segmentation","phoneme-blending","syllable-blending","oral-to-written"]},

@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {buildCreatorCandidate} from '../src/creator-runtime.js';
+import {buildCreatorCandidate,buildGeneralCreatorCandidate} from '../src/creator-runtime.js';
 
 const lexicon=[
   {id:'mer',label:'mer',ipa:'/mɛʁ/',active:true,image:'assets/rebus/mer.svg'},
@@ -44,4 +44,28 @@ assert.equal(buildCreatorCandidate({...target,mode:'explicit_operation'},lexicon
 assert.equal(buildCreatorCandidate({...target,assets:'missing'},lexicon,definitions),null);
 assert.equal(buildCreatorCandidate({...target,targetIpa:''},lexicon,definitions),null);
 
-console.log('Rebulo creator runtime: metadata, construction and activities preserved.');
+const citeTarget={
+  target:'cité',
+  targetIpa:'/site/',
+  mode:'general',
+  assets:'ready',
+  operations:[
+    {type:'whole_word',pieceId:'scie'},
+    {type:'grapheme',grapheme:'T',reading:'té'}
+  ]
+};
+const cite=buildGeneralCreatorCandidate(citeTarget,lexicon);
+assert.ok(cite);
+assert.equal(cite.answer,'cité');
+assert.equal(cite.construction.mode,'general');
+assert.deepEqual(cite.construction.capabilities,['general']);
+assert.deepEqual(cite.pieces.map(piece=>piece.operationType),['whole_word','grapheme']);
+assert.equal(cite.pieces[0].image,'assets/rebus/scie.svg');
+assert.equal(cite.pieces[1].grapheme,'T');
+assert.equal(cite.pieces[1].reading,'té');
+assert.deepEqual(cite.therapyActivities,[]);
+assert.equal(buildGeneralCreatorCandidate({...citeTarget,assets:'missing'},lexicon),null);
+assert.equal(buildGeneralCreatorCandidate({...citeTarget,operations:[{type:'repetition'}]},lexicon),null);
+assert.equal(buildGeneralCreatorCandidate({...citeTarget,operations:[{type:'whole_word',pieceId:'unknown'}]},lexicon),null);
+
+console.log('Rebulo creator runtime: strict and general grapheme candidates preserved.');

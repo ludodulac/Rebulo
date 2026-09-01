@@ -12,6 +12,7 @@ const base=JSON.parse(fs.readFileSync(pictogramPath,'utf8'))
   .filter(x=>x.active!==false&&x.ipa&&x.label)
   .map(x=>({id:x.id||x.label,label:x.label,ipa:normalizeIPA(x.ipa)}));
 const priorities=JSON.parse(fs.readFileSync(prioritiesPath,'utf8'));
+const activeIpas=new Set(base.map(x=>x.ipa));
 
 const allowedStatuses=new Set(['priority_pictogram','candidate_pictogram']);
 const pool=priorities.items
@@ -22,7 +23,8 @@ const pool=priorities.items
     ipa:normalizeIPA(x.sound),
     status:x.status,
     rawRank:x.rawRank
-  }));
+  }))
+  .filter(x=>!activeIpas.has(x.ipa));
 
 const lexical=[];
 const seenEntry=new Set();
@@ -115,8 +117,8 @@ const report={
   baseline,
   candidatePool:pool.map(x=>({label:x.label,ipa:`/${x.ipa}/`,status:x.status,rawRank:x.rawRank})),
   greedyOrder:steps,
-  interpretation:'Ordre glouton recalculé après chaque ajout. Le gain porte sur les mots uniques devenant constructibles avec au moins deux pièces, ce qui évite de confondre un simple homophone d’une image avec un vrai rébus.',
-  caution:'Cette simulation mesure le potentiel lexical strict, pas la qualité clinique. Les candidats de statut candidate_pictogram doivent encore être testés pour la dénomination spontanée et l’imageabilité.'
+  interpretation:'Ordre glouton recalculé après chaque ajout. Les briques déjà actives sont exclues du pool candidat ; le gain porte sur les mots uniques devenant constructibles avec au moins deux pièces, ce qui évite de confondre un simple homophone d’une image avec un vrai rébus.',
+  caution:'Cette simulation mesure le potentiel lexical strict, pas la qualité clinique. Les candidats de statut candidate_pictogram et les pictogrammes dont la dénomination reste ambiguë doivent encore être testés avant activation.'
 };
 
 fs.writeFileSync(outputPath,JSON.stringify(report,null,2));

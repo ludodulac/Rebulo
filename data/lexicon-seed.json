@@ -12,5 +12,7 @@
   {"id":"de","label":"dé","ipa":"/de/","image":"assets/rebus/de.svg","visualConfidence":0.99,"labelStability":0.99,"active":true},
   {"id":"tour","label":"tour","ipa":"/tuʁ/","image":"assets/rebus/tour.svg","visualConfidence":0.90,"labelStability":0.96,"active":true},
   {"id":"lit","label":"lit","ipa":"/li/","image":"assets/rebus/lit.svg","visualConfidence":0.96,"labelStability":0.98,"active":true,"clinicalStatus":"prototype_priority","assetSource":"openmoji:1F6CF"},
-  {"id":"riz","label":"riz","ipa":"/ʁi/","image":"assets/rebus/riz.svg","visualConfidence":0.94,"labelStability":0.97,"active":true,"clinicalStatus":"prototype_priority","assetSource":"openmoji:1F35A"}
+  {"id":"riz","label":"riz","ipa":"/ʁi/","image":"assets/rebus/riz.svg","visualConfidence":0.94,"labelStability":0.97,"active":true,"clinicalStatus":"prototype_priority","assetSource":"openmoji:1F35A"},
+  {"id":"the","label":"thé","ipa":"/te/","image":"assets/rebus/the.svg","visualConfidence":0.72,"labelStability":0.62,"active":false,"clinicalStatus":"naming_test_required","assetSource":"openmoji:1F375","activationBlocker":"Risque de dénomination spontanée tasse, boisson ou café."},
+  {"id":"eau","label":"eau","ipa":"/o/","image":"assets/rebus/eau.svg","visualConfidence":0.82,"labelStability":0.58,"active":false,"clinicalStatus":"naming_test_required","assetSource":"openmoji:1F4A7","activationBlocker":"Risque de dénomination spontanée goutte plutôt que eau."}
 ]

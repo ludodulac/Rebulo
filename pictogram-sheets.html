@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rebulo — feuilles d’indexation des pictogrammes</title>
+  <link rel="stylesheet" href="pictogram-sheets.css">
+</head>
+<body>
+  <main class="print-workbook">
+    <section class="print-toolbar" aria-label="Outils d’impression">
+      <div>
+        <h1>Feuilles d’indexation Rebulo</h1>
+        <p id="printStatus">Préparation des feuilles…</p>
+      </div>
+      <div class="print-toolbar-actions">
+        <button id="csvButton" type="button">Télécharger l’index CSV</button>
+        <button id="printButton" type="button">Imprimer les feuilles</button>
+      </div>
+      <p class="print-help">Chaque lot produit deux pages A4 : une référence noir et blanc avec image + nom, puis une copie avec le même identifiant et une case vide pour dessiner.</p>
+    </section>
+    <div id="printSheets" class="print-sheets" aria-live="polite"></div>
+  </main>
+  <script type="module" src="src/pictogram-sheets-page.js"></script>
+</body>
+</html>

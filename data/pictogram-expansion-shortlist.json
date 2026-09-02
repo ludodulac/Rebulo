@@ -1,10 +1,9 @@
 {
-  "version":"0.3.0",
+  "version":"0.2.0",
   "purpose":"Shortlist de concepts à étudier pour augmenter la couverture de Rebulo sans relâcher les règles phonétiques.",
   "status":"research_only",
   "caution":"Cette liste ne vaut ni validation d'image, ni stabilité de dénomination, ni validation clinique. Aucun concept ne doit devenir actif automatiquement.",
   "items":[
-    {"label":"thé","ipa":"/te/","selectionReason":"Très fort rendement lexical mot-entier et référent concret potentiellement représentable par une tasse de thé.","namingRisk":"Une tasse peut être nommée café, boisson ou tasse; le visuel doit provoquer spontanément « thé » avant toute activation.","status":"research_candidate","activation":"not_ready","assetStatus":"unreviewed","nextGate":"prototype_design"},
     {"label":"tas","ipa":"/ta/","unlockCount":81,"weightedGain":85.294,"examples":["tapis","tanner","tatie","tanné"],"selectionReason":"Très fort rendement phonétique et concept concret simple à illustrer.","namingRisk":"Peut être nommé pile, amas ou tas selon le dessin.","status":"research_candidate","activation":"not_ready"},
     {"label":"raie","ipa":"/ʁɛ/","unlockCount":68,"weightedGain":76.32,"examples":["paraît","marais","lirai","parierais"],"selectionReason":"Bon rendement et possibilité d'un référent concret, notamment l'animal.","namingRisk":"Le mot peut désigner l'animal ou une ligne; le dessin doit provoquer spontanément la bonne dénomination.","status":"research_candidate","activation":"not_ready"},
     {"label":"terre","ipa":"/tɛʁ/","unlockCount":43,"weightedGain":57.55,"examples":["terminé","militaire","terminée","terminer"],"selectionReason":"Concept courant et rendement encore élevé.","namingRisk":"Un globe peut être nommé monde ou planète; un sol peut être nommé sol ou terre.","status":"research_candidate","activation":"not_ready"},

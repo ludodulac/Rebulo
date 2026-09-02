@@ -1,1 +1,29 @@
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f6f3fb;color:#20182c}.atlas-shell{max-width:1180px;margin:auto;padding:24px}.atlas-toolbar{background:#fff;border:1px solid #ddd2eb;border-radius:20px;padding:20px;box-shadow:0 8px 30px rgba(57,34,83,.08)}.eyebrow{margin:0;color:#6d4b86;font-weight:700}.atlas-toolbar h1{margin:.25rem 0 .5rem}.atlas-controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;align-items:end;margin-top:16px}.atlas-controls label{display:grid;gap:6px;font-weight:650}.atlas-controls input,.atlas-controls select,.atlas-controls button{min-height:44px;border:1px solid #bfaed0;border-radius:12px;padding:9px 11px;background:#fff;font:inherit}.atlas-controls button{background:#5b3a75;color:#fff;border-color:#5b3a75;font-weight:750;cursor:pointer}.check{display:flex!important;align-items:center;gap:8px!important}.check input{min-height:auto}.rigor-note{background:#f8f5fb;border-left:4px solid #7b5c91;padding:10px 12px;border-radius:8px}.phoneme-chips{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.phoneme-chips button{border:1px solid #cdbfd9;background:#fff;border-radius:999px;padding:7px 11px;cursor:pointer}.atlas-results{display:grid;gap:16px}.sound-group{background:#fff;border:1px solid #ddd2eb;border-radius:18px;padding:14px}.sound-group h2{margin:0 0 10px}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}.atlas-card{border:1px solid #d8cde2;border-radius:14px;padding:10px;display:grid;grid-template-rows:auto 1fr auto;gap:8px;min-height:220px}.atlas-card img{width:100%;height:120px;object-fit:contain;filter:grayscale(1)}.atlas-card strong{font-size:1.05rem}.meta{font-size:.86rem;color:#5f536a}.blank-box{height:120px;border:1px dashed #777;background:#fff}.print-copy{display:none}@media print{@page{size:A4 portrait;margin:8mm}body{background:#fff}.atlas-shell{max-width:none;padding:0}.atlas-toolbar,.phoneme-chips{display:none}.atlas-results{display:block}.sound-group{break-after:page;border:0;border-radius:0;padding:0;margin:0}.cards{grid-template-columns:repeat(4,1fr);gap:4mm}.atlas-card{min-height:47mm;border-color:#555;border-radius:0;padding:3mm;break-inside:avoid}.atlas-card img,.blank-box{height:25mm}.screen-copy{display:none}.print-copy{display:block;break-before:page}.print-copy .atlas-card img{display:none}.print-copy .atlas-card .blank-box{display:block}.atlas-card{print-color-adjust:economy;-webkit-print-color-adjust:economy}}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f6f3fb;color:#20182c}
+.atlas-shell{max-width:1180px;margin:auto;padding:24px}
+.atlas-toolbar,.lexical-panel{background:#fff;border:1px solid #ddd2eb;border-radius:20px;padding:20px;box-shadow:0 8px 30px rgba(57,34,83,.08)}
+.eyebrow{margin:0;color:#6d4b86;font-weight:700}
+.atlas-toolbar h1{margin:.25rem 0 .5rem}
+.atlas-controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;align-items:end;margin-top:16px}
+.atlas-controls label{display:grid;gap:6px;font-weight:650}
+.atlas-controls input,.atlas-controls select,.atlas-controls button{min-height:44px;border:1px solid #bfaed0;border-radius:12px;padding:9px 11px;background:#fff;font:inherit}
+.atlas-controls button{background:#5b3a75;color:#fff;border-color:#5b3a75;font-weight:750;cursor:pointer}
+.check{display:flex!important;align-items:center;gap:8px!important}.check input{min-height:auto}
+.rigor-note{background:#f8f5fb;border-left:4px solid #7b5c91;padding:10px 12px;border-radius:8px}
+.phoneme-chips{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
+.phoneme-chips button{border:1px solid #cdbfd9;background:#fff;border-radius:999px;padding:7px 11px;cursor:pointer}
+.lexical-panel{margin:0 0 18px}.lexical-panel h2{margin:0 0 6px}.lexical-note{margin:.25rem 0 1rem;color:#5f536a}.lexical-words{display:flex;flex-wrap:wrap;gap:8px}.lexical-word{display:inline-flex;gap:6px;align-items:baseline;border:1px solid #ddd2eb;background:#faf8fd;border-radius:999px;padding:7px 10px}.lexical-word small{color:#6a5f73}.lexical-empty{color:#6a5f73}
+.atlas-results{display:grid;gap:16px}
+.sound-group{background:#fff;border:1px solid #ddd2eb;border-radius:18px;padding:14px}.sound-group h2{margin:0 0 10px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
+.atlas-card{border:1px solid #d8cde2;border-radius:14px;padding:10px;display:grid;grid-template-rows:auto 1fr auto;gap:8px;min-height:220px}
+.atlas-card img{width:100%;height:120px;object-fit:contain}
+.atlas-card strong{font-size:1.05rem}.meta{font-size:.86rem;color:#5f536a}.blank-box{height:120px;border:1px dashed #777;background:#fff}.print-copy{display:none}
+@media print{
+  @page{size:A4 portrait;margin:8mm}
+  body{background:#fff}.atlas-shell{max-width:none;padding:0}.atlas-toolbar,.phoneme-chips,.lexical-panel{display:none}.atlas-results{display:block}
+  .sound-group{break-after:page;border:0;border-radius:0;padding:0;margin:0}.cards{grid-template-columns:repeat(4,1fr);gap:4mm}
+  .atlas-card{min-height:47mm;border-color:#555;border-radius:0;padding:3mm;break-inside:avoid;print-color-adjust:economy;-webkit-print-color-adjust:economy}
+  .atlas-card img{height:25mm;filter:grayscale(1) contrast(1.05)}.blank-box{height:25mm}
+  .screen-copy{display:none}.print-copy{display:block;break-before:page}.print-copy .atlas-card img{display:none}.print-copy .atlas-card .blank-box{display:block}
+}

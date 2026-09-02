@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "principles": [
     "recognition_before_decoration",
     "one_concept_one_focal_object",
@@ -18,12 +18,12 @@
   },
   "audit": [
     {"id":"mer","status":"redesign_priority","reason":"Le paysage mer + soleil ajoute un contexte décoratif alors que le concept doit être identifié immédiatement. Une simple vague n'est pas retenue car elle pourrait être nommée vague plutôt que mer."},
-    {"id":"scie","status":"reference_style","reason":"Migré vers OpenMoji carpentry saw : concept explicitement nommé et style cohérent avec la bibliothèque de référence ; validation clinique non présumée."},
-    {"id":"nez","status":"reference_style","reason":"Migré vers OpenMoji nose : concept explicitement nommé et style cohérent avec la bibliothèque de référence ; validation clinique non présumée."},
+    {"id":"scie","status":"reference_style","reason":"Migré vers OpenMoji carpentry saw ; validation clinique non présumée."},
+    {"id":"nez","status":"reference_style","reason":"Migré vers OpenMoji nose ; validation clinique non présumée."},
     {"id":"mat","status":"redesign_priority","reason":"Le voilier implicite peut concurrencer la dénomination mât."},
-    {"id":"pas","status":"redesign_priority","reason":"Les empreintes peuvent être nommées pieds ou traces plutôt que pas."},
-    {"id":"rat","status":"reference_style","reason":"Migré vers OpenMoji rat : concept explicitement nommé et style cohérent avec la bibliothèque de référence ; validation clinique non présumée."},
-    {"id":"pluie","status":"redesign_priority","reason":"Le visuel reste à harmoniser, mais un simple nuage pluvieux n'est pas retenu automatiquement car il pourrait être nommé nuage plutôt que pluie."},
+    {"id":"pas","status":"keep_then_harmonize","reason":"Migré vers une adaptation OpenMoji footprints pour cohérence et lisibilité. L'ambiguïté pas/pied/empreinte/trace reste à tester, donc aucune validation clinique n'est présumée."},
+    {"id":"rat","status":"reference_style","reason":"Migré vers OpenMoji rat ; validation clinique non présumée."},
+    {"id":"pluie","status":"keep_then_harmonize","reason":"Migré vers une adaptation OpenMoji cloud with rain pour cohérence et lisibilité. Le risque de réponse nuage reste à tester, donc aucune validation clinique n'est présumée."},
     {"id":"sol","status":"keep_then_harmonize","reason":"La réponse écrite a été supprimée du pictogramme. Le visuel reste historique mais peut être conservé pendant la migration."},
     {"id":"pie","status":"redesign_priority","reason":"Silhouette lisible mais style historique non harmonisé."},
     {"id":"mie","status":"redesign_priority","reason":"Le dessin ressemble davantage à du pain entier qu'à la mie seule ; risque sémantique à revoir."},

@@ -37,4 +37,10 @@ const souris=merged.find(item=>String(item.target).toLowerCase()==='souris');
 assert.ok(souris);
 assert.equal(souris.source,'manual-general-spatial-pilot','manual spatial pilot must remain authoritative');
 
-console.log('automatic creator flow: real coverage data creates raté while strict and manual pilots remain preserved.');
+const withAlternatives=automatic.filter(item=>Array.isArray(item.alternatives)&&item.alternatives.length>0);
+assert.ok(withAlternatives.length>0,'real coverage data should expose at least one word with distinct ranked rebus alternatives');
+const example=withAlternatives[0];
+assert.notEqual(example.mode,'rejected');
+assert.ok(example.alternatives.every(item=>['strict','general'].includes(item.mode)));
+
+console.log(`automatic creator flow: real coverage creates raté and ${withAlternatives.length} words with alternatives; example ${example.target} has ${example.alternatives.length+1} proposals.`);

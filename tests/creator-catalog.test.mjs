@@ -4,6 +4,7 @@ import {
   buildCreatorTargets,
   buildGraphemeCreatorTargets,
   creatorTargetScore,
+  creatorTargetSignature,
   letterReadingForIPA,
   mergeCreatorTargets,
   rankCreatorTargets,
@@ -69,6 +70,7 @@ assert.deepEqual(graphemeTargets[3].operations,[
   {type:'whole_word',pieceId:'scie'},
   {type:'grapheme',grapheme:'R',reading:'air'}
 ]);
+assert.notEqual(creatorTargetSignature(graphemeTargets[0]),creatorTargetSignature(targets.find(item=>item.target==='mixte')));
 
 const ranked=rankCreatorTargets([
   {target:'x',mode:'general',frequency:1000,operationCount:2},
@@ -81,9 +83,17 @@ assert.ok(creatorTargetScore(ranked[0])>creatorTargetScore(ranked[1]));
 const best=selectBestGeneratedTargets([...targets,...graphemeTargets]);
 const bestMixte=best.find(item=>item.target==='mixte');
 assert.equal(bestMixte.mode,'strict','strict must beat a more frequent grapheme candidate for the same word');
+assert.equal(bestMixte.alternatives.length,1,'the lower-ranked construction must remain available');
+assert.equal(bestMixte.alternatives[0].mode,'general');
+assert.deepEqual(bestMixte.alternatives[0].operations,[
+  {type:'whole_word',pieceId:'scie'},
+  {type:'grapheme',grapheme:'T',reading:'té'}
+]);
 
 const automatic=buildAutomaticCreatorTargets(report);
-assert.equal(automatic.find(item=>item.target==='mixte').mode,'strict');
+const automaticMixte=automatic.find(item=>item.target==='mixte');
+assert.equal(automaticMixte.mode,'strict');
+assert.equal(automaticMixte.alternatives.length,1);
 assert.ok(automatic.some(item=>item.target==='cité'&&item.mode==='general'));
 
 const manual=[
@@ -91,18 +101,20 @@ const manual=[
   {target:'cinéma',targetIpa:'/different/',mode:'strict',assets:'ready',therapy:['denomination','syllable-blending']},
   {target:'refus',targetIpa:'/mɛʁsi/',mode:'rejected',reason:'manual refusal'},
   {target:'local-only',targetIpa:'/lokal/',mode:'strict',assets:'missing',therapy:['denomination']},
-  {target:'cité',targetIpa:'/site/',mode:'general',assets:'ready',operations:[{type:'whole_word',pieceId:'scie'},{type:'grapheme',grapheme:'T',reading:'té'}],manualNote:'manual general wins'}
+  {target:'cité',targetIpa:'/site/',mode:'general',assets:'ready',operations:[{type:'whole_word',pieceId:'scie'},{type:'grapheme',grapheme:'T',reading:'té'}],manualNote:'manual general wins'},
+  {target:'mixte',targetIpa:'/site/',mode:'strict',assets:'ready',therapy:['denomination'],manualNote:'manual primary wins'}
 ];
 const generated=[
   targets.find(item=>item.target==='merci'),
   targets.find(item=>item.target==='cinéma'),
   {target:'refus',targetIpa:'/mɛʁsi/',syllableCount:2,mode:'strict',assets:'ready',therapy:['syllable-count'],generated:true},
   {target:'generated-only',targetIpa:'/ʒenere/',syllableCount:3,mode:'strict',assets:'ready',therapy:['syllable-count'],generated:true},
-  ...graphemeTargets
+  ...graphemeTargets,
+  targets.find(item=>item.target==='mixte')
 ].filter(Boolean);
 
 const merged=mergeCreatorTargets(manual,generated);
-assert.deepEqual(merged.map(item=>item.target),['merci','cinéma','refus','local-only','cité','generated-only','mixte','théière','merci-R']);
+assert.deepEqual(merged.map(item=>item.target),['merci','cinéma','refus','local-only','cité','mixte','generated-only','théière','merci-R']);
 const mergedMerci=merged.find(item=>item.target==='merci');
 assert.equal(mergedMerci.syllableCount,2);
 assert.deepEqual(mergedMerci.therapy,['denomination','syllable-count','syllable-blending','oral-to-written']);
@@ -115,9 +127,15 @@ const mergedRefus=merged.find(item=>item.target==='refus');
 assert.equal(mergedRefus.mode,'rejected');
 assert.equal(mergedRefus.reason,'manual refusal');
 assert.equal(mergedRefus.syllableCount,undefined);
+assert.equal(mergedRefus.alternatives,undefined,'manual refusal must not expose generated alternatives');
 assert.equal(merged.filter(item=>item.target==='refus').length,1);
 const mergedCite=merged.find(item=>item.target==='cité');
 assert.equal(mergedCite.manualNote,'manual general wins');
 assert.equal(mergedCite.generated,undefined);
+assert.equal(mergedCite.alternatives,undefined,'identical generated construction must be deduplicated');
+const mergedMixte=merged.find(item=>item.target==='mixte');
+assert.equal(mergedMixte.manualNote,'manual primary wins');
+assert.equal(mergedMixte.alternatives.length,1);
+assert.equal(mergedMixte.alternatives[0].mode,'general');
 
 console.log('creator-catalog tests passed');

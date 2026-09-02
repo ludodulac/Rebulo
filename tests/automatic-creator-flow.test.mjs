@@ -37,4 +37,7 @@ const souris=merged.find(item=>String(item.target).toLowerCase()==='souris');
 assert.ok(souris);
 assert.equal(souris.source,'manual-general-spatial-pilot','manual spatial pilot must remain authoritative');
 
-console.log('automatic creator flow: real coverage data creates raté while strict and manual pilots remain preserved.');
+const withAlternatives=automatic.filter(item=>Array.isArray(item.alternatives)&&item.alternatives.length>0);
+assert.ok(withAlternatives.every(item=>item.alternatives.every(alternative=>['strict','general'].includes(alternative.mode))));
+
+console.log(`automatic creator flow: real coverage creates raté; current automatic alternatives: ${withAlternatives.length}.`);

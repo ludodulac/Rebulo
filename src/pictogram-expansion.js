@@ -16,10 +16,11 @@ function knownIpaSet(lexicon=[]){
 }
 
 function looksLikePictogramLabel(value=''){
-  const key=lexicalKey(value);
+  const raw=String(value||'').trim();
+  const key=lexicalKey(raw);
   if(key.length<2)return false;
   if(LETTER_NAME_KEYS.has(key))return false;
-  if(!/[a-zà-ÿ]/i.test(String(value)))return false;
+  if(!/^[a-zà-ÿ-]+$/i.test(raw))return false;
   return true;
 }
 
@@ -63,6 +64,28 @@ export function pictogramExpansionScore(gap={},candidate={}){
   return gain*100+unlock*4+Math.log10(1+frequency)*10;
 }
 
+export function buildPhoneticExpansionOpportunities(report={},lexicon=[],options={}){
+  const limit=Number.isInteger(options?.limit)&&options.limit>0?options.limit:100;
+  const knownIpas=knownIpaSet(lexicon);
+  return (Array.isArray(report?.missingSounds)?report.missingSounds:[])
+    .filter(gap=>{
+      const ipa=normalizeIPA(gap?.ipa||'');
+      return ipa&&!knownIpas.has(ipa);
+    })
+    .map(gap=>({
+      ipa:gap.ipa||'',
+      normalizedIpa:normalizeIPA(gap?.ipa||''),
+      unlockCount:Number(gap?.unlockCount)||0,
+      weightedGain:Number(gap?.weightedGain)||0,
+      rankInCoverage:Number(gap?.rank)||null,
+      examples:exampleWords(gap),
+      status:'phonetic_opportunity'
+    }))
+    .sort((a,b)=>b.weightedGain-a.weightedGain||b.unlockCount-a.unlockCount)
+    .slice(0,limit)
+    .map((item,index)=>({...item,priority:index+1}));
+}
+
 export function buildPictogramExpansionPriorities(report={},lexicon=[],options={}){
   const limit=Number.isInteger(options?.limit)&&options.limit>0?options.limit:25;
   const knownIpas=knownIpaSet(lexicon);
@@ -102,7 +125,7 @@ export function expansionPrioritySummary(priorities=[]){
   return {
     candidateCount:rows.length,
     totalPotentialUnlocks:rows.reduce((sum,item)=>sum+(Number(item?.unlockCount)||0),0),
-    top:rows.slice(0,10).map(item=>({
+    top:rows.slice(0,25).map(item=>({
       priority:item.priority,
       label:item.suggestedLabel,
       ipa:item.ipa,

@@ -20,7 +20,7 @@ function card(entry,kind){
     visual.appendChild(img);
   }
   const label=el('div','print-card-label',entry.label);
-  const data=el('div','print-card-data',`${entry.indexId} | ${entry.id}`);
+  const data=el('div','print-card-data',`${entry.indexId} | ${entry.label}`);
   article.append(code,visual,label,data);
   return article;
 }

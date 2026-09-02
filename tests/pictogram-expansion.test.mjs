@@ -17,8 +17,9 @@ assert.ok(priorities.every(item=>Array.isArray(item.exactNounCandidates)&&item.e
 assert.ok(priorities.every((item,index)=>item.priority===index+1));
 assert.ok(priorities.every((item,index)=>index===0||priorities[index-1].score>=item.score));
 
-const activeIpas=new Set(lexicon.filter(item=>item.active!==false&&item.ipa).map(item=>String(item.ipa).replaceAll('/','')));
-assert.ok(priorities.every(item=>!activeIpas.has(item.normalizedIpa)),'already-active sounds must not be proposed as expansion candidates');
+const knownIpas=new Set(lexicon.filter(item=>item.ipa).map(item=>String(item.ipa).replaceAll('/','')));
+assert.ok(priorities.every(item=>!knownIpas.has(item.normalizedIpa)),'sounds already represented in the lexicon, including blocked prototypes, must not be proposed as new concepts');
+assert.ok(priorities.every(item=>String(item.suggestedLabel).length>=2));
 
 const summary=expansionPrioritySummary(priorities);
 assert.equal(summary.candidateCount,priorities.length);

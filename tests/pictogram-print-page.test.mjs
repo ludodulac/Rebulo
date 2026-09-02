@@ -1,0 +1,22 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+const html=fs.readFileSync('pictogram-sheets.html','utf8');
+const css=fs.readFileSync('pictogram-sheets.css','utf8');
+const js=fs.readFileSync('src/pictogram-sheets-page.js','utf8');
+
+assert.match(html,/Feuilles d’indexation Rebulo/);
+assert.match(html,/Télécharger l’index CSV/);
+assert.match(html,/Imprimer les feuilles/);
+assert.match(html,/même identifiant et une case vide/);
+assert.match(css,/@page\{size:A4 portrait;margin:0\}/);
+assert.match(css,/grid-template-columns:repeat\(4,1fr\)/);
+assert.match(css,/grid-template-rows:repeat\(5,1fr\)/);
+assert.match(css,/filter:grayscale\(1\)/);
+assert.match(css,/print-color-adjust:economy/);
+assert.match(css,/\.drawing \.print-card-drawing/);
+assert.match(js,/RBL-/);
+assert.match(js,/buildPrintSheetPairs/);
+assert.match(js,/pictogramIndexCsv/);
+assert.match(js,/Référence — image \+ nom/);
+assert.match(js,/Dessin — nom \+ case vide/);
+assert.doesNotMatch(html,/patient|clinical_approved/i);
+console.log('pictogram print page: ok');

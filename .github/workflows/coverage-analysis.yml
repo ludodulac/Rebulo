@@ -10,6 +10,7 @@ on:
       - 'scripts/simulate-expansion.mjs'
       - 'src/phonetic-engine.js'
       - 'src/phonetic-productivity.js'
+      - 'src/productivity-opportunities.js'
       - 'src/open-pictogram-library.js'
       - 'src/open-pictogram-library-wave2.js'
       - 'src/open-pictogram-library-wave3.js'
@@ -63,78 +64,23 @@ jobs:
           node --input-type=module <<'NODE'
           import fs from 'node:fs';
           const sha256=fs.readFileSync('.cache/Lexique4.sha256','utf8').trim().split(/\s+/)[0];
-          const provenance={
-            canonicalSource:'https://www.lexique.org/databases/Lexique400/Lexique400.tsv',
-            mirror:'https://github.com/dorfner/pass_the_bomb/blob/master/Lexique400/Lexique4.tsv',
-            sha256,
-            license:'CC BY-SA 4.0'
-          };
+          const provenance={canonicalSource:'https://www.lexique.org/databases/Lexique400/Lexique400.tsv',mirror:'https://github.com/dorfner/pass_the_bomb/blob/master/Lexique400/Lexique4.tsv',sha256,license:'CC BY-SA 4.0'};
 
           const p='data/coverage-report.json';
-          const report=JSON.parse(fs.readFileSync(p,'utf8'));
-          report.provenance=provenance;
-          fs.writeFileSync(p,JSON.stringify(report,null,2));
+          const report=JSON.parse(fs.readFileSync(p,'utf8'));report.provenance=provenance;fs.writeFileSync(p,JSON.stringify(report,null,2));
           const top=report.missingSounds.slice(0,30);
-          const candidates=x=>{
-            const nouns=(x.exactNounCandidates||[]).slice(0,4).map(y=>y.word);
-            const any=(x.exactWholeWordCandidates||[]).slice(0,4).map(y=>y.word);
-            return (nouns.length?nouns:any).join(', ')||'—';
-          };
-          const lines=[
-            '# Rebulo — couverture phonétique Lexique 4','',
-            `- Entrées analysées : ${report.lexicalEntryCount}`,
-            `- Formes orthographiques uniques : ${report.uniqueWordFormCount}`,
-            `- Pictogrammes actifs : ${report.pictogramCount}`,
-            `- Entrées strictement constructibles : ${report.strictConstructibleCount}`,
-            `- Mots uniques strictement constructibles : ${report.strictConstructibleUniqueWordCount}`,
-            `- Entrées en vrais rébus (2+ pièces) : ${report.strictMultiPieceCount}`,
-            `- Mots uniques en vrais rébus (2+ pièces) : ${report.strictMultiPieceUniqueWordCount}`,
-            `- Couverture brute : ${(report.strictCoverage*100).toFixed(4)} %`,
-            `- Couverture rébus 2+ pièces : ${(report.strictMultiPieceCoverage*100).toFixed(4)} %`,'',
-            '## 30 segments manquants les mieux classés','',
-            '| Rang | Segment IPA | Formes débloquées | Gain pondéré | Candidats mot-entier exacts |',
-            '|---:|---|---:|---:|---|',
-            ...top.map(x=>`| ${x.rank} | /${x.ipa}/ | ${x.unlockCount} | ${x.weightedGain} | ${candidates(x)} |`),'',
-            '> Les candidats mot-entier sont seulement des homophones exacts trouvés dans Lexique 4, avec priorité aux noms. Ils ne sont pas automatiquement imageables ni cliniquement admissibles : la stabilité de dénomination et la reconnaissance visuelle restent obligatoires.'
-          ];
+          const candidates=x=>{const nouns=(x.exactNounCandidates||[]).slice(0,4).map(y=>y.word);const any=(x.exactWholeWordCandidates||[]).slice(0,4).map(y=>y.word);return (nouns.length?nouns:any).join(', ')||'—';};
+          const lines=['# Rebulo — couverture phonétique Lexique 4','',`- Entrées analysées : ${report.lexicalEntryCount}`,`- Formes orthographiques uniques : ${report.uniqueWordFormCount}`,`- Pictogrammes actifs : ${report.pictogramCount}`,`- Entrées strictement constructibles : ${report.strictConstructibleCount}`,`- Mots uniques strictement constructibles : ${report.strictConstructibleUniqueWordCount}`,`- Entrées en vrais rébus (2+ pièces) : ${report.strictMultiPieceCount}`,`- Mots uniques en vrais rébus (2+ pièces) : ${report.strictMultiPieceUniqueWordCount}`,`- Couverture brute : ${(report.strictCoverage*100).toFixed(4)} %`,`- Couverture rébus 2+ pièces : ${(report.strictMultiPieceCoverage*100).toFixed(4)} %`,'','## 30 segments manquants les mieux classés','', '| Rang | Segment IPA | Formes débloquées | Gain pondéré | Candidats mot-entier exacts |','|---:|---|---:|---:|---|',...top.map(x=>`| ${x.rank} | /${x.ipa}/ | ${x.unlockCount} | ${x.weightedGain} | ${candidates(x)} |`),'','> Les candidats mot-entier sont seulement des homophones exacts trouvés dans Lexique 4, avec priorité aux noms. Ils ne sont pas automatiquement imageables ni cliniquement admissibles : la stabilité de dénomination et la reconnaissance visuelle restent obligatoires.'];
           fs.writeFileSync('docs/COVERAGE_ANALYSIS.md',lines.join('\n')+'\n');
 
           const prodPath='data/phonetic-productivity-report.json';
-          const prod=JSON.parse(fs.readFileSync(prodPath,'utf8'));
-          prod.provenance=provenance;
-          fs.writeFileSync(prodPath,JSON.stringify(prod,null,2));
-          const productives=(prod.productiveTokens||[]).slice(0,80);
-          const prodLines=[
-            '# Rebulo — productivité phonétique des pictogrammes','',
-            `- Entrées Lexique analysées : ${prod.lexicalEntryCount}`,
-            `- Inventaire fusionné : ${prod.inventory.mergedCount} concepts (${prod.inventory.seedCount} seed + ${prod.inventory.openLibraryCount} entrées OpenMoji avant déduplication).`,
-            `- Pièces strictement productives : ${prod.stats.productive}`,
-            `- Candidats stricts sans preuve : ${prod.stats.candidates}`,
-            `- Concepts général seulement : ${prod.stats.generalOnly}`,
-            `- Cibles uniques en vrais rébus stricts : ${prod.stats.strictRebuses}`,'',
-            'Une pièce est dite **productive** seulement si son mot entier et sa prononciation entière participent à au moins un rébus exact de 2 à 4 pièces. Les candidats ne comptent pas comme couverture productive.','',
-            '## Pièces productives les plus utilisées','',
-            '| Pièce | IPA entière | Cibles strictes | Exemples |',
-            '|---|---|---:|---|',
-            ...productives.map(x=>`| ${x.label} | /${x.normalizedIPA}/ | ${x.strictUseCount} | ${(x.strictExamples||[]).slice(0,3).map(e=>e.word).join(', ')||'—'} |`),'',
-            '> Cette mesure est structurelle et lexicale. Elle ne constitue ni une validation clinique ni un test de dénomination des images. Un pictogramme `active:false` ne participe pas au calcul strict.'
-          ];
+          const prod=JSON.parse(fs.readFileSync(prodPath,'utf8'));prod.provenance=provenance;fs.writeFileSync(prodPath,JSON.stringify(prod,null,2));
+          const productives=(prod.productiveTokens||[]).slice(0,80);const opportunities=(prod.missingWholeWordOpportunities||[]).slice(0,20);
+          const prodLines=['# Rebulo — productivité phonétique des pictogrammes','',`- Entrées Lexique analysées : ${prod.lexicalEntryCount}`,`- Inventaire fusionné : ${prod.inventory.mergedCount} concepts (${prod.inventory.seedCount} seed + ${prod.inventory.openLibraryCount} entrées OpenMoji avant déduplication).`,`- Pièces strictement productives : ${prod.stats.productive}`,`- Candidats stricts sans preuve : ${prod.stats.candidates}`,`- Concepts général seulement : ${prod.stats.generalOnly}`,`- Cibles uniques en vrais rébus stricts : ${prod.stats.strictRebuses}`,'','Une pièce est dite **productive** seulement si son mot entier et sa prononciation entière participent à au moins un rébus exact de 2 à 4 pièces. Les candidats ne comptent pas comme couverture productive.','','## Pièces productives les plus utilisées','', '| Pièce | IPA entière | Cibles strictes | Exemples |','|---|---|---:|---|',...productives.map(x=>`| ${x.label} | /${x.normalizedIPA}/ | ${x.strictUseCount} | ${(x.strictExamples||[]).slice(0,3).map(e=>e.word).join(', ')||'—'} |`),'','## Opportunités de nouvelles pièces mot-entier','', '| Son entier attesté | Cibles potentiellement débloquées | Candidats de dénomination | Exemples de cibles |','|---|---:|---|---|',...opportunities.map(x=>`| /${x.ipa}/ | ${x.targetCount} | ${(x.namingCandidates||[]).slice(0,3).map(n=>n.word).join(', ')||'—'} | ${(x.examples||[]).slice(0,4).map(e=>e.word).join(', ')||'—'} |`),'','> Une opportunité indique seulement qu’un **mot entier attesté** possède exactement ce son et pourrait avoir un rendement structurel s’il devenait une pièce. Elle ne valide ni l’image, ni la dénomination spontanée, ni un usage clinique. Les lectures partielles de pictogrammes restent interdites en strict.'];
           fs.writeFileSync('docs/PHONETIC_PRODUCTIVITY.md',prodLines.join('\n')+'\n');
 
           const sim=JSON.parse(fs.readFileSync('data/expansion-simulation.json','utf8'));
-          const simLines=[
-            '# Rebulo — simulation gloutonne d’expansion','',
-            `- Base : ${sim.baseline.multiPieceUniqueWords} mots uniques en rébus de 2+ pièces.`,
-            `- Candidats testés : ${sim.candidatePool.length}.`,'',
-            '| Étape | Brique ajoutée | IPA | Gain marginal de vrais rébus | Total cumulatif |',
-            '|---:|---|---|---:|---:|',
-            ...sim.greedyOrder.map(x=>`| ${x.step} | ${x.addedLabel} | ${x.ipa} | +${x.marginalMultiPieceUniqueWords} | ${x.cumulativeMultiPieceUniqueWords} |`),'',
-            '## Prototypes inactifs : impact simulé','',
-            '| Scénario | Gain strict 2+ pièces | Gain constructible | Total strict 2+ pièces | Exemples |',
-            '|---|---:|---:|---:|---|',
-            ...(sim.prototypeScenarios||[]).map(x=>`| ${x.name} | +${x.strictMultiPieceGain} | +${x.strictConstructibleGain} | ${x.cumulativeMultiPieceUniqueWords} | ${(x.examples||[]).slice(0,5).map(e=>`${e.word} = ${e.pieces.join(' + ')}`).join('; ')||'—'} |`),'',
-            '> Les prototypes restent inactifs : cette simulation mesure seulement leur rendement lexical strict, pas leur validation visuelle ou clinique.'
-          ];
+          const simLines=['# Rebulo — simulation gloutonne d’expansion','',`- Base : ${sim.baseline.multiPieceUniqueWords} mots uniques en rébus de 2+ pièces.`,`- Candidats testés : ${sim.candidatePool.length}.`,'','| Étape | Brique ajoutée | IPA | Gain marginal de vrais rébus | Total cumulatif |','|---:|---|---|---:|---:|',...sim.greedyOrder.map(x=>`| ${x.step} | ${x.addedLabel} | ${x.ipa} | +${x.marginalMultiPieceUniqueWords} | ${x.cumulativeMultiPieceUniqueWords} |`),'','## Prototypes inactifs : impact simulé','', '| Scénario | Gain strict 2+ pièces | Gain constructible | Total strict 2+ pièces | Exemples |','|---|---:|---:|---:|---|',...(sim.prototypeScenarios||[]).map(x=>`| ${x.name} | +${x.strictMultiPieceGain} | +${x.strictConstructibleGain} | ${x.cumulativeMultiPieceUniqueWords} | ${(x.examples||[]).slice(0,5).map(e=>`${e.word} = ${e.pieces.join(' + ')}`).join('; ')||'—'} |`),'','> Les prototypes restent inactifs : cette simulation mesure seulement leur rendement lexical strict, pas leur validation visuelle ou clinique.'];
           fs.writeFileSync('docs/EXPANSION_SIMULATION.md',simLines.join('\n')+'\n');
           NODE
 
@@ -144,10 +90,7 @@ jobs:
           git config user.name 'rebulo-analysis-bot'
           git config user.email 'actions@users.noreply.github.com'
           git add data/coverage-report.json data/phonetic-productivity-report.json data/expansion-simulation.json docs/COVERAGE_ANALYSIS.md docs/PHONETIC_PRODUCTIVITY.md docs/EXPANSION_SIMULATION.md
-          if git diff --cached --quiet; then
-            echo 'No analysis changes to commit.'
-            exit 0
-          fi
+          if git diff --cached --quiet; then echo 'No analysis changes to commit.'; exit 0; fi
           git commit -m 'Refresh Lexique 4 coverage, productivity and expansion simulation'
           git fetch origin main
           git rebase origin/main

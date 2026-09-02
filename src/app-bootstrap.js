@@ -1,4 +1,4 @@
-import {buildCreatorTargets,mergeCreatorTargets} from './creator-catalog.js';
+import {buildCreatorTargets,buildGraphemeCreatorTargets,mergeCreatorTargets} from './creator-catalog.js';
 
 const nativeFetch=window.fetch.bind(window);
 
@@ -15,7 +15,7 @@ window.fetch=async function rebuloFetch(input,init){
   const corpus=await corpusResponse.json();
   const coverage=await coverageResponse.json();
   const manualItems=Array.isArray(corpus?.items)?corpus.items:[];
-  const generatedItems=buildCreatorTargets(coverage);
+  const generatedItems=[...buildCreatorTargets(coverage),...buildGraphemeCreatorTargets(coverage)];
   const merged={...corpus,items:mergeCreatorTargets(manualItems,generatedItems)};
 
   return new Response(JSON.stringify(merged),{

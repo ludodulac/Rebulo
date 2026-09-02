@@ -40,12 +40,16 @@ function strictSoundBlocks(items=[]){
   return blocks;
 }
 
-function segmentByWholeBlocks(target='',blocks=new Map(),maxPieces=4){
+function buildBlockIndex(blocks=new Map()){
   const byFirst=new Map();
   for(const ipa of blocks.keys()){
     const first=Array.from(ipa)[0]||'';const bucket=byFirst.get(first)||[];bucket.push(ipa);byFirst.set(first,bucket);
   }
   for(const bucket of byFirst.values())bucket.sort((a,b)=>b.length-a.length||a.localeCompare(b));
+  return byFirst;
+}
+
+function segmentByWholeBlocks(target='',byFirst=new Map(),maxPieces=4){
   const results=[];
   function walk(offset,path){
     if(offset===target.length){if(path.length>=2)results.push(path);return;}
@@ -58,22 +62,18 @@ function segmentByWholeBlocks(target='',blocks=new Map(),maxPieces=4){
 }
 
 export function classifyStrictProductivity(items=[],targets=[],{maxPieces=4}={}){
-  const blocks=strictSoundBlocks(items);
+  const blocks=strictSoundBlocks(items);const byFirst=buildBlockIndex(blocks);
   const proof=new Map((items||[]).map(x=>[tokenKey(x),{count:0,examples:[]} ]));
   const rebuses=[];
   for(const target of uniqueTargets(targets)){
-    const decompositions=segmentByWholeBlocks(target.normalizedIPA,blocks,maxPieces);
+    const decompositions=segmentByWholeBlocks(target.normalizedIPA,byFirst,maxPieces);
     if(!decompositions.length)continue;
     decompositions.sort((a,b)=>a.length-b.length||a.join('|').localeCompare(b.join('|')));
     const best=decompositions[0];
     const record={word:target.word,ipa:target.ipa,frequency:Number(target.frequency)||0,decomposition:best.map(ipa=>tokenKey(blocks.get(ipa)[0])),soundBlocks:best};
     rebuses.push(record);
     const usedKeys=new Set();
-    for(const path of decompositions){
-      for(const ipa of path){
-        for(const token of blocks.get(ipa)||[])usedKeys.add(tokenKey(token));
-      }
-    }
+    for(const path of decompositions){for(const ipa of path){for(const token of blocks.get(ipa)||[])usedKeys.add(tokenKey(token));}}
     for(const key of usedKeys){
       const p=proof.get(key);if(!p)continue;p.count+=1;
       if(p.examples.length<5&&!p.examples.some(x=>String(x.word).toLocaleLowerCase('fr')===String(record.word).toLocaleLowerCase('fr')))p.examples.push(record);

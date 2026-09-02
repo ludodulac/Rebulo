@@ -22,4 +22,5 @@ assert.equal(ranked.some(x=>x.label==='thé'),false,'a lexical homophone must no
 assert.equal(ranked.find(x=>x.label==='pot').nextGate,'naming_review');
 assert.equal(ranked.find(x=>x.label==='raie').curationStatus,'research_candidate');
 assert.equal(ranked.find(x=>x.label==='raie').exactLabelAttested,true);
+assert.ok(ranked.every(x=>x.activation),'every reviewed candidate must expose its activation gate');
 console.log('drawable opportunity shortlist: ok');

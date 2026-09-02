@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {buildAutomaticCreatorTargets,mergeCreatorTargets} from '../src/creator-catalog.js';
+import {buildAutomaticCreatorTargets,buildSpatialCreatorTargets,mergeCreatorTargets} from '../src/creator-catalog.js';
 import {buildCreatorCandidate,buildGeneralCreatorCandidate} from '../src/creator-runtime.js';
 
 const [coverage,corpus,lexicon,therapy]=await Promise.all([
@@ -10,6 +10,7 @@ const [coverage,corpus,lexicon,therapy]=await Promise.all([
   readFile(new URL('../data/therapy-targets.json',import.meta.url),'utf8').then(JSON.parse)
 ]);
 
+const spatialAutomatic=buildSpatialCreatorTargets(coverage);
 const automatic=buildAutomaticCreatorTargets(coverage);
 const merged=mergeCreatorTargets(corpus.items||[],automatic);
 
@@ -37,7 +38,21 @@ const souris=merged.find(item=>String(item.target).toLowerCase()==='souris');
 assert.ok(souris);
 assert.equal(souris.source,'manual-general-spatial-pilot','manual spatial pilot must remain authoritative');
 
+for(const spatial of spatialAutomatic){
+  assert.equal(spatial.mode,'general');
+  assert.equal(spatial.source,'coverage-report-spatial');
+  assert.ok(spatial.operations.some(operation=>operation.type==='spatial_relation'&&operation.relation==='under'));
+}
+
+const renderableSpatial=spatialAutomatic
+  .map(target=>({target,candidate:buildGeneralCreatorCandidate(target,lexicon)}))
+  .filter(item=>item.candidate);
+for(const {candidate} of renderableSpatial){
+  assert.deepEqual(candidate.construction.capabilities,['general']);
+  assert.deepEqual(candidate.therapyActivities,[]);
+}
+
 const withAlternatives=automatic.filter(item=>Array.isArray(item.alternatives)&&item.alternatives.length>0);
 assert.ok(withAlternatives.every(item=>item.alternatives.every(alternative=>['strict','general'].includes(alternative.mode))));
 
-console.log(`automatic creator flow: real coverage creates raté; current automatic alternatives: ${withAlternatives.length}.`);
+console.log(`automatic creator flow: raté works; spatial candidates: ${spatialAutomatic.length}; renderable spatial: ${renderableSpatial.length}; automatic alternatives: ${withAlternatives.length}; spatial examples: ${spatialAutomatic.slice(0,5).map(item=>item.target).join(', ')||'none'}.`);

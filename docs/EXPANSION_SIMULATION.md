@@ -12,4 +12,12 @@
 | 5 | dos | /do/ | +35 | 592 |
 | 6 | corps | /kɔʁ/ | +35 | 627 |
 
-> L’ordre est recalculé après chaque ajout. Il mesure le potentiel lexical strict, pas la validité clinique finale.
+## Prototypes inactifs : impact simulé
+
+| Scénario | Gain strict 2+ pièces | Gain constructible | Total strict 2+ pièces | Exemples |
+|---|---:|---:|---:|---|
+| pot | +27 | +33 | 318 | chapeau = chat + pot; dépôt = dé + pot; chapeaux = chat + pot; poli = pot + lit; dépôts = dé + pot |
+| dos | +23 | +25 | 314 | donner = dos + nez; donné = dos + nez; donnez = dos + nez; données = dos + nez; donnée = dos + nez |
+| pot + dos | +50 | +58 | 341 | donner = dos + nez; donné = dos + nez; donnez = dos + nez; chapeau = chat + pot; données = dos + nez |
+
+> Les prototypes restent inactifs : cette simulation mesure seulement leur rendement lexical strict, pas leur validation visuelle ou clinique.

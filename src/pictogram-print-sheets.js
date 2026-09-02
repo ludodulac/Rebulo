@@ -1,10 +1,11 @@
 import {OPEN_PICTOGRAMS,OPENMOJI_SOURCE} from './open-pictogram-library.js';
 import {OPEN_PICTOGRAMS_WAVE_2} from './open-pictogram-library-wave2.js';
+import {OPEN_PICTOGRAMS_WAVE_3} from './open-pictogram-library-wave3.js';
 
 export const PICTOGRAMS_PER_PRINT_PAGE=20;
 export const PRINT_COLUMNS=4;
 export const PRINT_ROWS=5;
-export const ALL_OPEN_PICTOGRAMS=Object.freeze([...OPEN_PICTOGRAMS,...OPEN_PICTOGRAMS_WAVE_2]);
+export const ALL_OPEN_PICTOGRAMS=Object.freeze([...OPEN_PICTOGRAMS,...OPEN_PICTOGRAMS_WAVE_2,...OPEN_PICTOGRAMS_WAVE_3]);
 
 export function pictogramIndexId(item={}){
   const id=String(item?.id||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');

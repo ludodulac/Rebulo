@@ -95,7 +95,11 @@ jobs:
             '| Étape | Brique ajoutée | IPA | Gain marginal de vrais rébus | Total cumulatif |',
             '|---:|---|---|---:|---:|',
             ...sim.greedyOrder.map(x=>`| ${x.step} | ${x.addedLabel} | ${x.ipa} | +${x.marginalMultiPieceUniqueWords} | ${x.cumulativeMultiPieceUniqueWords} |`),'',
-            '> L’ordre est recalculé après chaque ajout. Il mesure le potentiel lexical strict, pas la validité clinique finale.'
+            '## Prototypes inactifs : impact simulé','',
+            '| Scénario | Gain strict 2+ pièces | Gain constructible | Total strict 2+ pièces | Exemples |',
+            '|---|---:|---:|---:|---|',
+            ...(sim.prototypeScenarios||[]).map(x=>`| ${x.name} | +${x.strictMultiPieceGain} | +${x.strictConstructibleGain} | ${x.cumulativeMultiPieceUniqueWords} | ${(x.examples||[]).slice(0,5).map(e=>`${e.word} = ${e.pieces.join(' + ')}`).join('; ')||'—'} |`),'',
+            '> Les prototypes restent inactifs : cette simulation mesure seulement leur rendement lexical strict, pas leur validation visuelle ou clinique.'
           ];
           fs.writeFileSync('docs/EXPANSION_SIMULATION.md',simLines.join('\n')+'\n');
           NODE

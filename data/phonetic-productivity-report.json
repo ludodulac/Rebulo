@@ -1,0 +1,7691 @@
+{
+  "generatedAt": "2026-09-02T21:40:28.450Z",
+  "source": "Lexique 4",
+  "lexicalEntryCount": 189832,
+  "inventory": {
+    "seedCount": 20,
+    "openLibraryCount": 365,
+    "mergedCount": 379
+  },
+  "stats": {
+    "tokens": 379,
+    "productive": 115,
+    "candidates": 206,
+    "generalOnly": 57,
+    "illustrationOnly": 1,
+    "strictRebuses": 741
+  },
+  "methodology": {
+    "strictProductive": "Une pièce est productive uniquement si sa prononciation entière participe à au moins un rébus exact de 2 à 4 pièces dans le corpus de référence.",
+    "strictCandidate": "Une pièce phonétiquement structurée sans preuve d’usage reste candidate et ne compte pas comme enrichissement productif.",
+    "inactive": "Une pièce active:false ne participe jamais au calcul strict, même si son IPA est connue.",
+    "wholeWord": "Aucune sous-partie de la prononciation d’un pictogramme ne peut être utilisée. Vélo /velo/ ne fournit ni /ve/ ni /lo/.",
+    "deduplication": "Les cibles lexicales sont dédupliquées par graphie normalisée + IPA ; le seed Rebulo reste prioritaire lors de la fusion des bibliothèques."
+  },
+  "productiveTokens": [
+    {
+      "id": "de",
+      "label": "dé",
+      "ipa": "/de/",
+      "normalizedIPA": "de",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 214,
+      "strictExamples": [
+        {
+          "word": "garder",
+          "ipa": "gaʁde",
+          "frequency": 154.31,
+          "decomposition": [
+            "gare",
+            "de"
+          ]
+        },
+        {
+          "word": "décidé",
+          "ipa": "deside",
+          "frequency": 94.089,
+          "decomposition": [
+            "de",
+            "scie",
+            "de"
+          ]
+        },
+        {
+          "word": "dépend",
+          "ipa": "depɑ̃",
+          "frequency": 41.174,
+          "decomposition": [
+            "de",
+            "paon"
+          ]
+        },
+        {
+          "word": "gardez",
+          "ipa": "gaʁde",
+          "frequency": 40.94,
+          "decomposition": [
+            "gare",
+            "de"
+          ]
+        },
+        {
+          "word": "décider",
+          "ipa": "deside",
+          "frequency": 40.307,
+          "decomposition": [
+            "de",
+            "scie",
+            "de"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rat",
+      "label": "rat",
+      "ipa": "/ʁa/",
+      "normalizedIPA": "ʁa",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 131,
+      "strictExamples": [
+        {
+          "word": "saura",
+          "ipa": "soʁa",
+          "frequency": 36.573,
+          "decomposition": [
+            "seau",
+            "rat"
+          ]
+        },
+        {
+          "word": "rapporte",
+          "ipa": "ʁapɔʁt",
+          "frequency": 14.557,
+          "decomposition": [
+            "rat",
+            "porte"
+          ]
+        },
+        {
+          "word": "sauras",
+          "ipa": "soʁa",
+          "frequency": 11.041,
+          "decomposition": [
+            "seau",
+            "rat"
+          ]
+        },
+        {
+          "word": "raclée",
+          "ipa": "ʁakle",
+          "frequency": 6.75,
+          "decomposition": [
+            "rat",
+            "cle"
+          ]
+        },
+        {
+          "word": "parapluie",
+          "ipa": "paʁaplɥi",
+          "frequency": 5.019,
+          "decomposition": [
+            "pas",
+            "rat",
+            "pluie"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nez",
+      "label": "nez",
+      "ipa": "/ne/",
+      "normalizedIPA": "ne",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 107,
+      "strictExamples": [
+        {
+          "word": "tourner",
+          "ipa": "tuʁne",
+          "frequency": 50.38,
+          "decomposition": [
+            "tour",
+            "nez"
+          ]
+        },
+        {
+          "word": "cinéma",
+          "ipa": "sinema",
+          "frequency": 39.158,
+          "decomposition": [
+            "scie",
+            "nez",
+            "mat"
+          ]
+        },
+        {
+          "word": "tourné",
+          "ipa": "tuʁne",
+          "frequency": 25.62,
+          "decomposition": [
+            "tour",
+            "nez"
+          ]
+        },
+        {
+          "word": "tournée",
+          "ipa": "tuʁne",
+          "frequency": 22.759,
+          "decomposition": [
+            "tour",
+            "nez"
+          ]
+        },
+        {
+          "word": "tournez",
+          "ipa": "tuʁne",
+          "frequency": 15.19,
+          "decomposition": [
+            "tour",
+            "nez"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pas",
+      "label": "pas",
+      "ipa": "/pa/",
+      "normalizedIPA": "pa",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 87,
+      "strictExamples": [
+        {
+          "word": "papa",
+          "ipa": "papa",
+          "frequency": 226.028,
+          "decomposition": [
+            "pas",
+            "pas"
+          ]
+        },
+        {
+          "word": "parie",
+          "ipa": "paʁi",
+          "frequency": 56.383,
+          "decomposition": [
+            "pas",
+            "riz"
+          ]
+        },
+        {
+          "word": "papier",
+          "ipa": "papje",
+          "frequency": 49.823,
+          "decomposition": [
+            "pas",
+            "pied"
+          ]
+        },
+        {
+          "word": "papiers",
+          "ipa": "papje",
+          "frequency": 43.348,
+          "decomposition": [
+            "pas",
+            "pied"
+          ]
+        },
+        {
+          "word": "palais",
+          "ipa": "palɛ",
+          "frequency": 17.522,
+          "decomposition": [
+            "pas",
+            "lait"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scie",
+      "label": "scie",
+      "ipa": "/si/",
+      "normalizedIPA": "si",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 84,
+      "strictExamples": [
+        {
+          "word": "merci",
+          "ipa": "mɛʁsi",
+          "frequency": 1030.326,
+          "decomposition": [
+            "mer",
+            "scie"
+          ]
+        },
+        {
+          "word": "décidé",
+          "ipa": "deside",
+          "frequency": 94.089,
+          "decomposition": [
+            "de",
+            "scie",
+            "de"
+          ]
+        },
+        {
+          "word": "décider",
+          "ipa": "deside",
+          "frequency": 40.307,
+          "decomposition": [
+            "de",
+            "scie",
+            "de"
+          ]
+        },
+        {
+          "word": "cinéma",
+          "ipa": "sinema",
+          "frequency": 39.158,
+          "decomposition": [
+            "scie",
+            "nez",
+            "mat"
+          ]
+        },
+        {
+          "word": "celle-ci",
+          "ipa": "sɛlsi",
+          "frequency": 30.82,
+          "decomposition": [
+            "sel",
+            "scie"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mat",
+      "label": "mât",
+      "ipa": "/ma/",
+      "normalizedIPA": "ma",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 72,
+      "strictExamples": [
+        {
+          "word": "mari",
+          "ipa": "maʁi",
+          "frequency": 224.339,
+          "decomposition": [
+            "mat",
+            "riz"
+          ]
+        },
+        {
+          "word": "cinéma",
+          "ipa": "sinema",
+          "frequency": 39.158,
+          "decomposition": [
+            "scie",
+            "nez",
+            "mat"
+          ]
+        },
+        {
+          "word": "mamie",
+          "ipa": "mami",
+          "frequency": 17.953,
+          "decomposition": [
+            "mat",
+            "mie"
+          ]
+        },
+        {
+          "word": "marie",
+          "ipa": "maʁi",
+          "frequency": 15.614,
+          "decomposition": [
+            "mat",
+            "riz"
+          ]
+        },
+        {
+          "word": "maris",
+          "ipa": "maʁi",
+          "frequency": 6.158,
+          "decomposition": [
+            "mat",
+            "riz"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "riz",
+      "label": "riz",
+      "ipa": "/ʁi/",
+      "normalizedIPA": "ʁi",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 64,
+      "strictExamples": [
+        {
+          "word": "mari",
+          "ipa": "maʁi",
+          "frequency": 224.339,
+          "decomposition": [
+            "mat",
+            "riz"
+          ]
+        },
+        {
+          "word": "parie",
+          "ipa": "paʁi",
+          "frequency": 56.383,
+          "decomposition": [
+            "pas",
+            "riz"
+          ]
+        },
+        {
+          "word": "pari",
+          "ipa": "paʁi",
+          "frequency": 16.259,
+          "decomposition": [
+            "pas",
+            "riz"
+          ]
+        },
+        {
+          "word": "marie",
+          "ipa": "maʁi",
+          "frequency": 15.614,
+          "decomposition": [
+            "mat",
+            "riz"
+          ]
+        },
+        {
+          "word": "paris",
+          "ipa": "paʁi",
+          "frequency": 12.899,
+          "decomposition": [
+            "pas",
+            "riz"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mie",
+      "label": "mie",
+      "ipa": "/mi/",
+      "normalizedIPA": "mi",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 59,
+      "strictExamples": [
+        {
+          "word": "millions",
+          "ipa": "miljɔ̃",
+          "frequency": 103.509,
+          "decomposition": [
+            "mie",
+            "lion"
+          ]
+        },
+        {
+          "word": "million",
+          "ipa": "miljɔ̃",
+          "frequency": 39.411,
+          "decomposition": [
+            "mie",
+            "lion"
+          ]
+        },
+        {
+          "word": "mamie",
+          "ipa": "mami",
+          "frequency": 17.953,
+          "decomposition": [
+            "mat",
+            "mie"
+          ]
+        },
+        {
+          "word": "mimi",
+          "ipa": "mimi",
+          "frequency": 1.003,
+          "decomposition": [
+            "mie",
+            "mie"
+          ]
+        },
+        {
+          "word": "miné",
+          "ipa": "mine",
+          "frequency": 0.867,
+          "decomposition": [
+            "mie",
+            "nez"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lit",
+      "label": "lit",
+      "ipa": "/li/",
+      "normalizedIPA": "li",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 58,
+      "strictExamples": [
+        {
+          "word": "délit",
+          "ipa": "deli",
+          "frequency": 11.668,
+          "decomposition": [
+            "de",
+            "lit"
+          ]
+        },
+        {
+          "word": "délits",
+          "ipa": "deli",
+          "frequency": 2.563,
+          "decomposition": [
+            "de",
+            "lit"
+          ]
+        },
+        {
+          "word": "liqueur",
+          "ipa": "likœʁ",
+          "frequency": 2.339,
+          "decomposition": [
+            "lit",
+            "coeur"
+          ]
+        },
+        {
+          "word": "lira",
+          "ipa": "liʁa",
+          "frequency": 1.563,
+          "decomposition": [
+            "lit",
+            "rat"
+          ]
+        },
+        {
+          "word": "rallye",
+          "ipa": "ʁali",
+          "frequency": 1.326,
+          "decomposition": [
+            "rat",
+            "lit"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seau",
+      "label": "seau",
+      "ipa": "/so/",
+      "normalizedIPA": "so",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 47,
+      "strictExamples": [
+        {
+          "word": "saura",
+          "ipa": "soʁa",
+          "frequency": 36.573,
+          "decomposition": [
+            "seau",
+            "rat"
+          ]
+        },
+        {
+          "word": "sauras",
+          "ipa": "soʁa",
+          "frequency": 11.041,
+          "decomposition": [
+            "seau",
+            "rat"
+          ]
+        },
+        {
+          "word": "sonné",
+          "ipa": "sone",
+          "frequency": 9.358,
+          "decomposition": [
+            "seau",
+            "nez"
+          ]
+        },
+        {
+          "word": "sonner",
+          "ipa": "sone",
+          "frequency": 9.142,
+          "decomposition": [
+            "seau",
+            "nez"
+          ]
+        },
+        {
+          "word": "sonnez",
+          "ipa": "sone",
+          "frequency": 2.136,
+          "decomposition": [
+            "seau",
+            "nez"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cerf",
+      "label": "cerf",
+      "ipa": "/sɛʁ/",
+      "normalizedIPA": "sɛʁ",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 46,
+      "strictExamples": [
+        {
+          "word": "serpent",
+          "ipa": "sɛʁpɑ̃",
+          "frequency": 19.513,
+          "decomposition": [
+            "cerf",
+            "paon"
+          ]
+        },
+        {
+          "word": "dessert",
+          "ipa": "desɛʁ",
+          "frequency": 13.139,
+          "decomposition": [
+            "de",
+            "cerf"
+          ]
+        },
+        {
+          "word": "serpents",
+          "ipa": "sɛʁpɑ̃",
+          "frequency": 8.981,
+          "decomposition": [
+            "cerf",
+            "paon"
+          ]
+        },
+        {
+          "word": "desserts",
+          "ipa": "desɛʁ",
+          "frequency": 1.854,
+          "decomposition": [
+            "de",
+            "cerf"
+          ]
+        },
+        {
+          "word": "cerner",
+          "ipa": "sɛʁne",
+          "frequency": 1.741,
+          "decomposition": [
+            "cerf",
+            "nez"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pie",
+      "label": "pie",
+      "ipa": "/pi/",
+      "normalizedIPA": "pi",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 35,
+      "strictExamples": [
+        {
+          "word": "pipi",
+          "ipa": "pipi",
+          "frequency": 12.848,
+          "decomposition": [
+            "pie",
+            "pie"
+          ]
+        },
+        {
+          "word": "papi",
+          "ipa": "papi",
+          "frequency": 7.532,
+          "decomposition": [
+            "pas",
+            "pie"
+          ]
+        },
+        {
+          "word": "papy",
+          "ipa": "papi",
+          "frequency": 7.528,
+          "decomposition": [
+            "pas",
+            "pie"
+          ]
+        },
+        {
+          "word": "dépit",
+          "ipa": "depi",
+          "frequency": 5.674,
+          "decomposition": [
+            "de",
+            "pie"
+          ]
+        },
+        {
+          "word": "roupies",
+          "ipa": "ʁupi",
+          "frequency": 2.801,
+          "decomposition": [
+            "roue",
+            "pie"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chat",
+      "label": "chat",
+      "ipa": "/ʃa/",
+      "normalizedIPA": "ʃa",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 31,
+      "strictExamples": [
+        {
+          "word": "chalet",
+          "ipa": "ʃalɛ",
+          "frequency": 5.032,
+          "decomposition": [
+            "chat",
+            "lait"
+          ]
+        },
+        {
+          "word": "pacha",
+          "ipa": "paʃa",
+          "frequency": 2.06,
+          "decomposition": [
+            "pas",
+            "chat"
+          ]
+        },
+        {
+          "word": "rachat",
+          "ipa": "ʁaʃa",
+          "frequency": 1.405,
+          "decomposition": [
+            "rat",
+            "chat"
+          ]
+        },
+        {
+          "word": "châssis",
+          "ipa": "ʃasi",
+          "frequency": 1.101,
+          "decomposition": [
+            "chat",
+            "scie"
+          ]
+        },
+        {
+          "word": "charrie",
+          "ipa": "ʃaʁi",
+          "frequency": 0.826,
+          "decomposition": [
+            "chat",
+            "riz"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lait",
+      "label": "lait",
+      "ipa": "/lɛ/",
+      "normalizedIPA": "lɛ",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 31,
+      "strictExamples": [
+        {
+          "word": "palais",
+          "ipa": "palɛ",
+          "frequency": 17.522,
+          "decomposition": [
+            "pas",
+            "lait"
+          ]
+        },
+        {
+          "word": "délai",
+          "ipa": "delɛ",
+          "frequency": 7.81,
+          "decomposition": [
+            "de",
+            "lait"
+          ]
+        },
+        {
+          "word": "chalet",
+          "ipa": "ʃalɛ",
+          "frequency": 5.032,
+          "decomposition": [
+            "chat",
+            "lait"
+          ]
+        },
+        {
+          "word": "délais",
+          "ipa": "delɛ",
+          "frequency": 2.601,
+          "decomposition": [
+            "de",
+            "lait"
+          ]
+        },
+        {
+          "word": "roulait",
+          "ipa": "ʁulɛ",
+          "frequency": 2.114,
+          "decomposition": [
+            "roue",
+            "lait"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "paon",
+      "label": "paon",
+      "ipa": "/pɑ̃/",
+      "normalizedIPA": "pɑ̃",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 30,
+      "strictExamples": [
+        {
+          "word": "pendant",
+          "ipa": "pɑ̃dɑ̃",
+          "frequency": 377.161,
+          "decomposition": [
+            "paon",
+            "dent"
+          ]
+        },
+        {
+          "word": "dépend",
+          "ipa": "depɑ̃",
+          "frequency": 41.174,
+          "decomposition": [
+            "de",
+            "paon"
+          ]
+        },
+        {
+          "word": "pantalon",
+          "ipa": "pɑ̃talɔ̃",
+          "frequency": 34.19,
+          "decomposition": [
+            "paon",
+            "talon"
+          ]
+        },
+        {
+          "word": "serpent",
+          "ipa": "sɛʁpɑ̃",
+          "frequency": 19.513,
+          "decomposition": [
+            "cerf",
+            "paon"
+          ]
+        },
+        {
+          "word": "serpents",
+          "ipa": "sɛʁpɑ̃",
+          "frequency": 8.981,
+          "decomposition": [
+            "cerf",
+            "paon"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "roue",
+      "label": "roue",
+      "ipa": "/ʁu/",
+      "normalizedIPA": "ʁu",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 27,
+      "strictExamples": [
+        {
+          "word": "roupies",
+          "ipa": "ʁupi",
+          "frequency": 2.801,
+          "decomposition": [
+            "roue",
+            "pie"
+          ]
+        },
+        {
+          "word": "roulait",
+          "ipa": "ʁulɛ",
+          "frequency": 2.114,
+          "decomposition": [
+            "roue",
+            "lait"
+          ]
+        },
+        {
+          "word": "roulais",
+          "ipa": "ʁulɛ",
+          "frequency": 1.171,
+          "decomposition": [
+            "roue",
+            "lait"
+          ]
+        },
+        {
+          "word": "rouvert",
+          "ipa": "ʁuvɛʁ",
+          "frequency": 0.756,
+          "decomposition": [
+            "roue",
+            "ver"
+          ]
+        },
+        {
+          "word": "roumain",
+          "ipa": "ʁumɛ̃",
+          "frequency": 0.608,
+          "decomposition": [
+            "roue",
+            "main"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mer",
+      "label": "mer",
+      "ipa": "/mɛʁ/",
+      "normalizedIPA": "mɛʁ",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 24,
+      "strictExamples": [
+        {
+          "word": "merci",
+          "ipa": "mɛʁsi",
+          "frequency": 1030.326,
+          "decomposition": [
+            "mer",
+            "scie"
+          ]
+        },
+        {
+          "word": "merdé",
+          "ipa": "mɛʁde",
+          "frequency": 11.38,
+          "decomposition": [
+            "mer",
+            "de"
+          ]
+        },
+        {
+          "word": "merder",
+          "ipa": "mɛʁde",
+          "frequency": 1.424,
+          "decomposition": [
+            "mer",
+            "de"
+          ]
+        },
+        {
+          "word": "mercis",
+          "ipa": "mɛʁsi",
+          "frequency": 0.712,
+          "decomposition": [
+            "mer",
+            "scie"
+          ]
+        },
+        {
+          "word": "démerder",
+          "ipa": "demɛʁde",
+          "frequency": 0.642,
+          "decomposition": [
+            "de",
+            "mer",
+            "de"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ver",
+      "label": "ver",
+      "ipa": "/vɛʁ/",
+      "normalizedIPA": "vɛʁ",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 24,
+      "strictExamples": [
+        {
+          "word": "rouvert",
+          "ipa": "ʁuvɛʁ",
+          "frequency": 0.756,
+          "decomposition": [
+            "roue",
+            "ver"
+          ]
+        },
+        {
+          "word": "verso",
+          "ipa": "vɛʁso",
+          "frequency": 0.465,
+          "decomposition": [
+            "ver",
+            "seau"
+          ]
+        },
+        {
+          "word": "pivert",
+          "ipa": "pivɛʁ",
+          "frequency": 0.316,
+          "decomposition": [
+            "pie",
+            "ver"
+          ]
+        },
+        {
+          "word": "vermicelles",
+          "ipa": "vɛʁmisɛl",
+          "frequency": 0.285,
+          "decomposition": [
+            "ver",
+            "mie",
+            "sel"
+          ]
+        },
+        {
+          "word": "vermisseau",
+          "ipa": "vɛʁmiso",
+          "frequency": 0.234,
+          "decomposition": [
+            "ver",
+            "mie",
+            "seau"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pont",
+      "label": "pont",
+      "ipa": "/pɔ̃/",
+      "normalizedIPA": "pɔ̃",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 20,
+      "strictExamples": [
+        {
+          "word": "pompiers",
+          "ipa": "pɔ̃pje",
+          "frequency": 10.373,
+          "decomposition": [
+            "pont",
+            "pied"
+          ]
+        },
+        {
+          "word": "pompier",
+          "ipa": "pɔ̃pje",
+          "frequency": 4.443,
+          "decomposition": [
+            "pont",
+            "pied"
+          ]
+        },
+        {
+          "word": "pompon",
+          "ipa": "pɔ̃pɔ̃",
+          "frequency": 0.937,
+          "decomposition": [
+            "pont",
+            "pont"
+          ]
+        },
+        {
+          "word": "pompons",
+          "ipa": "pɔ̃pɔ̃",
+          "frequency": 0.516,
+          "decomposition": [
+            "pont",
+            "pont"
+          ]
+        },
+        {
+          "word": "chapon",
+          "ipa": "ʃapɔ̃",
+          "frequency": 0.161,
+          "decomposition": [
+            "chat",
+            "pont"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cle",
+      "label": "clé",
+      "ipa": "/kle/",
+      "normalizedIPA": "kle",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 19,
+      "strictExamples": [
+        {
+          "word": "raclée",
+          "ipa": "ʁakle",
+          "frequency": 6.75,
+          "decomposition": [
+            "rat",
+            "cle"
+          ]
+        },
+        {
+          "word": "raclées",
+          "ipa": "ʁakle",
+          "frequency": 0.462,
+          "decomposition": [
+            "rat",
+            "cle"
+          ]
+        },
+        {
+          "word": "racler",
+          "ipa": "ʁakle",
+          "frequency": 0.358,
+          "decomposition": [
+            "rat",
+            "cle"
+          ]
+        },
+        {
+          "word": "raclé",
+          "ipa": "ʁakle",
+          "frequency": 0.177,
+          "decomposition": [
+            "rat",
+            "cle"
+          ]
+        },
+        {
+          "word": "râclée",
+          "ipa": "ʁakle",
+          "frequency": 0.051,
+          "decomposition": [
+            "rat",
+            "cle"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dent",
+      "label": "dent",
+      "ipa": "/dɑ̃/",
+      "normalizedIPA": "dɑ̃",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 19,
+      "strictExamples": [
+        {
+          "word": "pendant",
+          "ipa": "pɑ̃dɑ̃",
+          "frequency": 377.161,
+          "decomposition": [
+            "paon",
+            "dent"
+          ]
+        },
+        {
+          "word": "gardant",
+          "ipa": "gaʁdɑ̃",
+          "frequency": 3.028,
+          "decomposition": [
+            "gare",
+            "dent"
+          ]
+        },
+        {
+          "word": "dépendant",
+          "ipa": "depɑ̃dɑ̃",
+          "frequency": 0.972,
+          "decomposition": [
+            "de",
+            "paon",
+            "dent"
+          ]
+        },
+        {
+          "word": "ramadan",
+          "ipa": "ʁamadɑ̃",
+          "frequency": 0.646,
+          "decomposition": [
+            "rat",
+            "mat",
+            "dent"
+          ]
+        },
+        {
+          "word": "dépendants",
+          "ipa": "depɑ̃dɑ̃",
+          "frequency": 0.604,
+          "decomposition": [
+            "de",
+            "paon",
+            "dent"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "porte",
+      "label": "porte",
+      "ipa": "/pɔʁt/",
+      "normalizedIPA": "pɔʁt",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 17,
+      "strictExamples": [
+        {
+          "word": "rapporte",
+          "ipa": "ʁapɔʁt",
+          "frequency": 14.557,
+          "decomposition": [
+            "rat",
+            "porte"
+          ]
+        },
+        {
+          "word": "portail",
+          "ipa": "pɔʁtaj",
+          "frequency": 9.658,
+          "decomposition": [
+            "porte",
+            "ail"
+          ]
+        },
+        {
+          "word": "rapportent",
+          "ipa": "ʁapɔʁt",
+          "frequency": 1.861,
+          "decomposition": [
+            "rat",
+            "porte"
+          ]
+        },
+        {
+          "word": "porte-avions",
+          "ipa": "pɔʁtavjɔ̃",
+          "frequency": 1.358,
+          "decomposition": [
+            "porte",
+            "avion"
+          ]
+        },
+        {
+          "word": "rapportes",
+          "ipa": "ʁapɔʁt",
+          "frequency": 0.873,
+          "decomposition": [
+            "rat",
+            "porte"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tour",
+      "label": "tour",
+      "ipa": "/tuʁ/",
+      "normalizedIPA": "tuʁ",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 16,
+      "strictExamples": [
+        {
+          "word": "tourner",
+          "ipa": "tuʁne",
+          "frequency": 50.38,
+          "decomposition": [
+            "tour",
+            "nez"
+          ]
+        },
+        {
+          "word": "tourné",
+          "ipa": "tuʁne",
+          "frequency": 25.62,
+          "decomposition": [
+            "tour",
+            "nez"
+          ]
+        },
+        {
+          "word": "tournée",
+          "ipa": "tuʁne",
+          "frequency": 22.759,
+          "decomposition": [
+            "tour",
+            "nez"
+          ]
+        },
+        {
+          "word": "tournez",
+          "ipa": "tuʁne",
+          "frequency": 15.19,
+          "decomposition": [
+            "tour",
+            "nez"
+          ]
+        },
+        {
+          "word": "détourner",
+          "ipa": "detuʁne",
+          "frequency": 4.965,
+          "decomposition": [
+            "de",
+            "tour",
+            "nez"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "balai",
+      "label": "balai",
+      "ipa": "/balɛ/",
+      "normalizedIPA": "balɛ",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 13,
+      "strictExamples": [
+        {
+          "word": "balaiera",
+          "ipa": "balɛʁa",
+          "frequency": 0.13,
+          "decomposition": [
+            "balai",
+            "rat"
+          ]
+        },
+        {
+          "word": "trimballait",
+          "ipa": "tʁɛ̃balɛ",
+          "frequency": 0.12,
+          "decomposition": [
+            "train",
+            "balai"
+          ]
+        },
+        {
+          "word": "trimballais",
+          "ipa": "tʁɛ̃balɛ",
+          "frequency": 0.076,
+          "decomposition": [
+            "train",
+            "balai"
+          ]
+        },
+        {
+          "word": "déballais",
+          "ipa": "debalɛ",
+          "frequency": 0.063,
+          "decomposition": [
+            "de",
+            "balai"
+          ]
+        },
+        {
+          "word": "déballait",
+          "ipa": "debalɛ",
+          "frequency": 0.054,
+          "decomposition": [
+            "de",
+            "balai"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pain",
+      "label": "pain",
+      "ipa": "/pɛ̃/",
+      "normalizedIPA": "pɛ̃",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 13,
+      "strictExamples": [
+        {
+          "word": "pinceau",
+          "ipa": "pɛ̃so",
+          "frequency": 1.854,
+          "decomposition": [
+            "pain",
+            "seau"
+          ]
+        },
+        {
+          "word": "pinceaux",
+          "ipa": "pɛ̃so",
+          "frequency": 1.285,
+          "decomposition": [
+            "pain",
+            "seau"
+          ]
+        },
+        {
+          "word": "dépeint",
+          "ipa": "depɛ̃",
+          "frequency": 0.408,
+          "decomposition": [
+            "de",
+            "pain"
+          ]
+        },
+        {
+          "word": "pimpant",
+          "ipa": "pɛ̃pɑ̃",
+          "frequency": 0.222,
+          "decomposition": [
+            "pain",
+            "paon"
+          ]
+        },
+        {
+          "word": "pin-pon",
+          "ipa": "pɛ̃pɔ̃",
+          "frequency": 0.114,
+          "decomposition": [
+            "pain",
+            "pont"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tente",
+      "label": "tente",
+      "ipa": "/tɑ̃t/",
+      "normalizedIPA": "tɑ̃t",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 13,
+      "strictExamples": [
+        {
+          "word": "détente",
+          "ipa": "detɑ̃t",
+          "frequency": 7.076,
+          "decomposition": [
+            "de",
+            "tente"
+          ]
+        },
+        {
+          "word": "déroutante",
+          "ipa": "deʁutɑ̃t",
+          "frequency": 0.358,
+          "decomposition": [
+            "de",
+            "roue",
+            "tente"
+          ]
+        },
+        {
+          "word": "militante",
+          "ipa": "militɑ̃t",
+          "frequency": 0.31,
+          "decomposition": [
+            "mie",
+            "lit",
+            "tente"
+          ]
+        },
+        {
+          "word": "patente",
+          "ipa": "patɑ̃t",
+          "frequency": 0.225,
+          "decomposition": [
+            "pas",
+            "tente"
+          ]
+        },
+        {
+          "word": "matante",
+          "ipa": "matɑ̃t",
+          "frequency": 0.187,
+          "decomposition": [
+            "mat",
+            "tente"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sel",
+      "label": "sel",
+      "ipa": "/sɛl/",
+      "normalizedIPA": "sɛl",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 12,
+      "strictExamples": [
+        {
+          "word": "celle-ci",
+          "ipa": "sɛlsi",
+          "frequency": 30.82,
+          "decomposition": [
+            "sel",
+            "scie"
+          ]
+        },
+        {
+          "word": "celles-ci",
+          "ipa": "sɛlsi",
+          "frequency": 4.991,
+          "decomposition": [
+            "sel",
+            "scie"
+          ]
+        },
+        {
+          "word": "vermicelles",
+          "ipa": "vɛʁmisɛl",
+          "frequency": 0.285,
+          "decomposition": [
+            "ver",
+            "mie",
+            "sel"
+          ]
+        },
+        {
+          "word": "décèle",
+          "ipa": "desɛl",
+          "frequency": 0.259,
+          "decomposition": [
+            "de",
+            "sel"
+          ]
+        },
+        {
+          "word": "vermicelle",
+          "ipa": "vɛʁmisɛl",
+          "frequency": 0.085,
+          "decomposition": [
+            "ver",
+            "mie",
+            "sel"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sol",
+      "label": "sol",
+      "ipa": "/sɔl/",
+      "normalizedIPA": "sɔl",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 11,
+      "strictExamples": [
+        {
+          "word": "parasol",
+          "ipa": "paʁasɔl",
+          "frequency": 0.516,
+          "decomposition": [
+            "pas",
+            "rat",
+            "sol"
+          ]
+        },
+        {
+          "word": "soldé",
+          "ipa": "sɔlde",
+          "frequency": 0.323,
+          "decomposition": [
+            "sol",
+            "de"
+          ]
+        },
+        {
+          "word": "solder",
+          "ipa": "sɔlde",
+          "frequency": 0.212,
+          "decomposition": [
+            "sol",
+            "de"
+          ]
+        },
+        {
+          "word": "parasols",
+          "ipa": "paʁasɔl",
+          "frequency": 0.199,
+          "decomposition": [
+            "pas",
+            "rat",
+            "sol"
+          ]
+        },
+        {
+          "word": "soldée",
+          "ipa": "sɔlde",
+          "frequency": 0.142,
+          "decomposition": [
+            "sol",
+            "de"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gare",
+      "label": "gare",
+      "ipa": "/gaʁ/",
+      "normalizedIPA": "gaʁ",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 9,
+      "strictExamples": [
+        {
+          "word": "garder",
+          "ipa": "gaʁde",
+          "frequency": 154.31,
+          "decomposition": [
+            "gare",
+            "de"
+          ]
+        },
+        {
+          "word": "gardez",
+          "ipa": "gaʁde",
+          "frequency": 40.94,
+          "decomposition": [
+            "gare",
+            "de"
+          ]
+        },
+        {
+          "word": "gardé",
+          "ipa": "gaʁde",
+          "frequency": 29.535,
+          "decomposition": [
+            "gare",
+            "de"
+          ]
+        },
+        {
+          "word": "cigare",
+          "ipa": "sigaʁ",
+          "frequency": 7.079,
+          "decomposition": [
+            "scie",
+            "gare"
+          ]
+        },
+        {
+          "word": "cigares",
+          "ipa": "sigaʁ",
+          "frequency": 5.006,
+          "decomposition": [
+            "scie",
+            "gare"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "goutte",
+      "label": "goutte",
+      "ipa": "/gut/",
+      "normalizedIPA": "gut",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 9,
+      "strictExamples": [
+        {
+          "word": "dégoûte",
+          "ipa": "degut",
+          "frequency": 3.209,
+          "decomposition": [
+            "de",
+            "goutte"
+          ]
+        },
+        {
+          "word": "dégoûtes",
+          "ipa": "degut",
+          "frequency": 1.873,
+          "decomposition": [
+            "de",
+            "goutte"
+          ]
+        },
+        {
+          "word": "dégoûtent",
+          "ipa": "degut",
+          "frequency": 0.468,
+          "decomposition": [
+            "de",
+            "goutte"
+          ]
+        },
+        {
+          "word": "dégoute",
+          "ipa": "degut",
+          "frequency": 0.389,
+          "decomposition": [
+            "de",
+            "goutte"
+          ]
+        },
+        {
+          "word": "dégoutes",
+          "ipa": "degut",
+          "frequency": 0.184,
+          "decomposition": [
+            "de",
+            "goutte"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pied",
+      "label": "pied",
+      "ipa": "/pje/",
+      "normalizedIPA": "pje",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 9,
+      "strictExamples": [
+        {
+          "word": "papier",
+          "ipa": "papje",
+          "frequency": 49.823,
+          "decomposition": [
+            "pas",
+            "pied"
+          ]
+        },
+        {
+          "word": "papiers",
+          "ipa": "papje",
+          "frequency": 43.348,
+          "decomposition": [
+            "pas",
+            "pied"
+          ]
+        },
+        {
+          "word": "pompiers",
+          "ipa": "pɔ̃pje",
+          "frequency": 10.373,
+          "decomposition": [
+            "pont",
+            "pied"
+          ]
+        },
+        {
+          "word": "pompier",
+          "ipa": "pɔ̃pje",
+          "frequency": 4.443,
+          "decomposition": [
+            "pont",
+            "pied"
+          ]
+        },
+        {
+          "word": "papier-cadeau",
+          "ipa": "papjekado",
+          "frequency": 0.111,
+          "decomposition": [
+            "pas",
+            "pied",
+            "cadeau"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "radio",
+      "label": "radio",
+      "ipa": "/ʁadjo/",
+      "normalizedIPA": "ʁadjo",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 9,
+      "strictExamples": [
+        {
+          "word": "radio-réveil",
+          "ipa": "ʁadjoʁevɛj",
+          "frequency": 0.165,
+          "decomposition": [
+            "radio",
+            "reveil"
+          ]
+        },
+        {
+          "word": "radiotéléphone",
+          "ipa": "ʁadjotelefɔn",
+          "frequency": 0.022,
+          "decomposition": [
+            "radio",
+            "telephone"
+          ]
+        },
+        {
+          "word": "radio-taxi",
+          "ipa": "ʁadjotaksi",
+          "frequency": 0.013,
+          "decomposition": [
+            "radio",
+            "taxi"
+          ]
+        },
+        {
+          "word": "radiotéléphones",
+          "ipa": "ʁadjotelefɔn",
+          "frequency": 0.013,
+          "decomposition": [
+            "radio",
+            "telephone"
+          ]
+        },
+        {
+          "word": "radioréveil",
+          "ipa": "ʁadjoʁevɛj",
+          "frequency": 0.009,
+          "decomposition": [
+            "radio",
+            "reveil"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "train",
+      "label": "train",
+      "ipa": "/tʁɛ̃/",
+      "normalizedIPA": "tʁɛ̃",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 9,
+      "strictExamples": [
+        {
+          "word": "train-train",
+          "ipa": "tʁɛ̃tʁɛ̃",
+          "frequency": 0.566,
+          "decomposition": [
+            "train",
+            "train"
+          ]
+        },
+        {
+          "word": "trimballait",
+          "ipa": "tʁɛ̃balɛ",
+          "frequency": 0.12,
+          "decomposition": [
+            "train",
+            "balai"
+          ]
+        },
+        {
+          "word": "trimballais",
+          "ipa": "tʁɛ̃balɛ",
+          "frequency": 0.076,
+          "decomposition": [
+            "train",
+            "balai"
+          ]
+        },
+        {
+          "word": "trimbalait",
+          "ipa": "tʁɛ̃balɛ",
+          "frequency": 0.044,
+          "decomposition": [
+            "train",
+            "balai"
+          ]
+        },
+        {
+          "word": "trimbalais",
+          "ipa": "tʁɛ̃balɛ",
+          "frequency": 0.025,
+          "decomposition": [
+            "train",
+            "balai"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "coeur",
+      "label": "cœur",
+      "ipa": "/kœʁ/",
+      "normalizedIPA": "kœʁ",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 8,
+      "strictExamples": [
+        {
+          "word": "liqueur",
+          "ipa": "likœʁ",
+          "frequency": 2.339,
+          "decomposition": [
+            "lit",
+            "coeur"
+          ]
+        },
+        {
+          "word": "marteau-piqueur",
+          "ipa": "maʁtopikœʁ",
+          "frequency": 0.535,
+          "decomposition": [
+            "marteau",
+            "pie",
+            "coeur"
+          ]
+        },
+        {
+          "word": "liqueurs",
+          "ipa": "likœʁ",
+          "frequency": 0.415,
+          "decomposition": [
+            "lit",
+            "coeur"
+          ]
+        },
+        {
+          "word": "picker",
+          "ipa": "pikœʁ",
+          "frequency": 0.228,
+          "decomposition": [
+            "pie",
+            "coeur"
+          ]
+        },
+        {
+          "word": "marteaux-piqueurs",
+          "ipa": "maʁtopikœʁ",
+          "frequency": 0.073,
+          "decomposition": [
+            "marteau",
+            "pie",
+            "coeur"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eclair",
+      "label": "éclair",
+      "ipa": "/eklɛʁ/",
+      "normalizedIPA": "eklɛʁ",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 7,
+      "strictExamples": [
+        {
+          "word": "éclaircit",
+          "ipa": "eklɛʁsi",
+          "frequency": 1.152,
+          "decomposition": [
+            "eclair",
+            "scie"
+          ]
+        },
+        {
+          "word": "éclairci",
+          "ipa": "eklɛʁsi",
+          "frequency": 0.94,
+          "decomposition": [
+            "eclair",
+            "scie"
+          ]
+        },
+        {
+          "word": "éclaircira",
+          "ipa": "eklɛʁsiʁa",
+          "frequency": 0.342,
+          "decomposition": [
+            "eclair",
+            "scie",
+            "rat"
+          ]
+        },
+        {
+          "word": "éclaircis",
+          "ipa": "eklɛʁsi",
+          "frequency": 0.196,
+          "decomposition": [
+            "eclair",
+            "scie"
+          ]
+        },
+        {
+          "word": "éclaircie",
+          "ipa": "eklɛʁsi",
+          "frequency": 0.19,
+          "decomposition": [
+            "eclair",
+            "scie"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lezard",
+      "label": "lézard",
+      "ipa": "/lezaʁ/",
+      "normalizedIPA": "lezaʁ",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 7,
+      "strictExamples": [
+        {
+          "word": "lézarder",
+          "ipa": "lezaʁde",
+          "frequency": 0.076,
+          "decomposition": [
+            "lezard",
+            "de"
+          ]
+        },
+        {
+          "word": "lézardé",
+          "ipa": "lezaʁde",
+          "frequency": 0.013,
+          "decomposition": [
+            "lezard",
+            "de"
+          ]
+        },
+        {
+          "word": "lézardés",
+          "ipa": "lezaʁde",
+          "frequency": 0.013,
+          "decomposition": [
+            "lezard",
+            "de"
+          ]
+        },
+        {
+          "word": "lézardée",
+          "ipa": "lezaʁde",
+          "frequency": 0.009,
+          "decomposition": [
+            "lezard",
+            "de"
+          ]
+        },
+        {
+          "word": "lézardant",
+          "ipa": "lezaʁdɑ̃",
+          "frequency": 0.006,
+          "decomposition": [
+            "lezard",
+            "dent"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lion",
+      "label": "lion",
+      "ipa": "/ljɔ̃/",
+      "normalizedIPA": "ljɔ̃",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 7,
+      "strictExamples": [
+        {
+          "word": "millions",
+          "ipa": "miljɔ̃",
+          "frequency": 103.509,
+          "decomposition": [
+            "mie",
+            "lion"
+          ]
+        },
+        {
+          "word": "million",
+          "ipa": "miljɔ̃",
+          "frequency": 39.411,
+          "decomposition": [
+            "mie",
+            "lion"
+          ]
+        },
+        {
+          "word": "lionceau",
+          "ipa": "ljɔ̃so",
+          "frequency": 0.196,
+          "decomposition": [
+            "lion",
+            "seau"
+          ]
+        },
+        {
+          "word": "roulions",
+          "ipa": "ʁuljɔ̃",
+          "frequency": 0.149,
+          "decomposition": [
+            "roue",
+            "lion"
+          ]
+        },
+        {
+          "word": "lionceaux",
+          "ipa": "ljɔ̃so",
+          "frequency": 0.139,
+          "decomposition": [
+            "lion",
+            "seau"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "neige",
+      "label": "neige",
+      "ipa": "/nɛʒ/",
+      "normalizedIPA": "nɛʒ",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 7,
+      "strictExamples": [
+        {
+          "word": "manège",
+          "ipa": "manɛʒ",
+          "frequency": 3.443,
+          "decomposition": [
+            "mat",
+            "neige"
+          ]
+        },
+        {
+          "word": "manèges",
+          "ipa": "manɛʒ",
+          "frequency": 0.601,
+          "decomposition": [
+            "mat",
+            "neige"
+          ]
+        },
+        {
+          "word": "motoneige",
+          "ipa": "motonɛʒ",
+          "frequency": 0.323,
+          "decomposition": [
+            "moto",
+            "neige"
+          ]
+        },
+        {
+          "word": "motoneiges",
+          "ipa": "motonɛʒ",
+          "frequency": 0.12,
+          "decomposition": [
+            "moto",
+            "neige"
+          ]
+        },
+        {
+          "word": "déneige",
+          "ipa": "denɛʒ",
+          "frequency": 0.016,
+          "decomposition": [
+            "de",
+            "neige"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cafard",
+      "label": "cafard",
+      "ipa": "/kafaʁ/",
+      "normalizedIPA": "kafaʁ",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 6,
+      "strictExamples": [
+        {
+          "word": "cafarder",
+          "ipa": "kafaʁde",
+          "frequency": 0.108,
+          "decomposition": [
+            "cafard",
+            "de"
+          ]
+        },
+        {
+          "word": "cafardé",
+          "ipa": "kafaʁde",
+          "frequency": 0.054,
+          "decomposition": [
+            "cafard",
+            "de"
+          ]
+        },
+        {
+          "word": "cafardée",
+          "ipa": "kafaʁde",
+          "frequency": 0.006,
+          "decomposition": [
+            "cafard",
+            "de"
+          ]
+        },
+        {
+          "word": "cafardez",
+          "ipa": "kafaʁde",
+          "frequency": 0.006,
+          "decomposition": [
+            "cafard",
+            "de"
+          ]
+        },
+        {
+          "word": "cafardant",
+          "ipa": "kafaʁdɑ̃",
+          "frequency": 0.003,
+          "decomposition": [
+            "cafard",
+            "dent"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "canard",
+      "label": "canard",
+      "ipa": "/kanaʁ/",
+      "normalizedIPA": "kanaʁ",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 6,
+      "strictExamples": [
+        {
+          "word": "canarder",
+          "ipa": "kanaʁde",
+          "frequency": 0.506,
+          "decomposition": [
+            "canard",
+            "de"
+          ]
+        },
+        {
+          "word": "canardé",
+          "ipa": "kanaʁde",
+          "frequency": 0.187,
+          "decomposition": [
+            "canard",
+            "de"
+          ]
+        },
+        {
+          "word": "canardés",
+          "ipa": "kanaʁde",
+          "frequency": 0.051,
+          "decomposition": [
+            "canard",
+            "de"
+          ]
+        },
+        {
+          "word": "canardez",
+          "ipa": "kanaʁde",
+          "frequency": 0.032,
+          "decomposition": [
+            "canard",
+            "de"
+          ]
+        },
+        {
+          "word": "canardant",
+          "ipa": "kanaʁdɑ̃",
+          "frequency": 0.022,
+          "decomposition": [
+            "canard",
+            "dent"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chaine",
+      "label": "chaîne",
+      "ipa": "/ʃɛn/",
+      "normalizedIPA": "ʃɛn",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 6,
+      "strictExamples": [
+        {
+          "word": "déchaîne",
+          "ipa": "deʃɛn",
+          "frequency": 0.987,
+          "decomposition": [
+            "de",
+            "chaine"
+          ]
+        },
+        {
+          "word": "déchaînent",
+          "ipa": "deʃɛn",
+          "frequency": 0.351,
+          "decomposition": [
+            "de",
+            "chaine"
+          ]
+        },
+        {
+          "word": "déchaine",
+          "ipa": "deʃɛn",
+          "frequency": 0.114,
+          "decomposition": [
+            "de",
+            "chaine"
+          ]
+        },
+        {
+          "word": "déchaînes",
+          "ipa": "deʃɛn",
+          "frequency": 0.041,
+          "decomposition": [
+            "de",
+            "chaine"
+          ]
+        },
+        {
+          "word": "déchainent",
+          "ipa": "deʃɛn",
+          "frequency": 0.035,
+          "decomposition": [
+            "de",
+            "chaine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "main",
+      "label": "main",
+      "ipa": "/mɛ̃/",
+      "normalizedIPA": "mɛ̃",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 6,
+      "strictExamples": [
+        {
+          "word": "roumain",
+          "ipa": "ʁumɛ̃",
+          "frequency": 0.608,
+          "decomposition": [
+            "roue",
+            "main"
+          ]
+        },
+        {
+          "word": "roumains",
+          "ipa": "ʁumɛ̃",
+          "frequency": 0.285,
+          "decomposition": [
+            "roue",
+            "main"
+          ]
+        },
+        {
+          "word": "minci",
+          "ipa": "mɛ̃si",
+          "frequency": 0.171,
+          "decomposition": [
+            "main",
+            "scie"
+          ]
+        },
+        {
+          "word": "mincit",
+          "ipa": "mɛ̃si",
+          "frequency": 0.047,
+          "decomposition": [
+            "main",
+            "scie"
+          ]
+        },
+        {
+          "word": "mincis",
+          "ipa": "mɛ̃si",
+          "frequency": 0.016,
+          "decomposition": [
+            "main",
+            "scie"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "livre",
+      "label": "livre",
+      "ipa": "/livʁ/",
+      "normalizedIPA": "livʁ",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 5,
+      "strictExamples": [
+        {
+          "word": "délivre",
+          "ipa": "delivʁ",
+          "frequency": 2.38,
+          "decomposition": [
+            "de",
+            "livre"
+          ]
+        },
+        {
+          "word": "délivrent",
+          "ipa": "delivʁ",
+          "frequency": 0.149,
+          "decomposition": [
+            "de",
+            "livre"
+          ]
+        },
+        {
+          "word": "serre-livres",
+          "ipa": "sɛʁlivʁ",
+          "frequency": 0.111,
+          "decomposition": [
+            "cerf",
+            "livre"
+          ]
+        },
+        {
+          "word": "délivres",
+          "ipa": "delivʁ",
+          "frequency": 0.098,
+          "decomposition": [
+            "de",
+            "livre"
+          ]
+        },
+        {
+          "word": "serre-livre",
+          "ipa": "sɛʁlivʁ",
+          "frequency": 0.006,
+          "decomposition": [
+            "cerf",
+            "livre"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "peche",
+      "label": "pêche",
+      "ipa": "/pɛʃ/",
+      "normalizedIPA": "pɛʃ",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 5,
+      "strictExamples": [
+        {
+          "word": "dépêche",
+          "ipa": "depɛʃ",
+          "frequency": 38.19,
+          "decomposition": [
+            "de",
+            "peche"
+          ]
+        },
+        {
+          "word": "dépêches",
+          "ipa": "depɛʃ",
+          "frequency": 1.323,
+          "decomposition": [
+            "de",
+            "peche"
+          ]
+        },
+        {
+          "word": "dépêchent",
+          "ipa": "depɛʃ",
+          "frequency": 0.234,
+          "decomposition": [
+            "de",
+            "peche"
+          ]
+        },
+        {
+          "word": "péchera",
+          "ipa": "pɛʃʁa",
+          "frequency": 0.009,
+          "decomposition": [
+            "peche",
+            "rat"
+          ]
+        },
+        {
+          "word": "pécheras",
+          "ipa": "pɛʃʁa",
+          "frequency": 0.006,
+          "decomposition": [
+            "peche",
+            "rat"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "poisson",
+      "label": "poisson",
+      "ipa": "/pwasɔ̃/",
+      "normalizedIPA": "pwasɔ̃",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 5,
+      "strictExamples": [
+        {
+          "word": "poisson-chat",
+          "ipa": "pwasɔ̃ʃa",
+          "frequency": 0.715,
+          "decomposition": [
+            "poisson",
+            "chat"
+          ]
+        },
+        {
+          "word": "poissons-chats",
+          "ipa": "pwasɔ̃ʃa",
+          "frequency": 0.152,
+          "decomposition": [
+            "poisson",
+            "chat"
+          ]
+        },
+        {
+          "word": "poisson-lune",
+          "ipa": "pwasɔ̃lyn",
+          "frequency": 0.063,
+          "decomposition": [
+            "poisson",
+            "lune"
+          ]
+        },
+        {
+          "word": "mi-poisson",
+          "ipa": "mipwasɔ̃",
+          "frequency": 0.016,
+          "decomposition": [
+            "mie",
+            "poisson"
+          ]
+        },
+        {
+          "word": "poisson-scie",
+          "ipa": "pwasɔ̃si",
+          "frequency": 0.006,
+          "decomposition": [
+            "poisson",
+            "scie"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ail",
+      "label": "ail",
+      "ipa": "/aj/",
+      "normalizedIPA": "aj",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 4,
+      "strictExamples": [
+        {
+          "word": "portail",
+          "ipa": "pɔʁtaj",
+          "frequency": 9.658,
+          "decomposition": [
+            "porte",
+            "ail"
+          ]
+        },
+        {
+          "word": "portails",
+          "ipa": "pɔʁtaj",
+          "frequency": 0.728,
+          "decomposition": [
+            "porte",
+            "ail"
+          ]
+        },
+        {
+          "word": "aye-aye",
+          "ipa": "ajaj",
+          "frequency": 0.076,
+          "decomposition": [
+            "ail",
+            "ail"
+          ]
+        },
+        {
+          "word": "aymara",
+          "ipa": "ajmaʁa",
+          "frequency": 0.003,
+          "decomposition": [
+            "ail",
+            "mat",
+            "rat"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bateau",
+      "label": "bateau",
+      "ipa": "/bato/",
+      "normalizedIPA": "bato",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 4,
+      "strictExamples": [
+        {
+          "word": "bateau-mouche",
+          "ipa": "batomuʃ",
+          "frequency": 0.073,
+          "decomposition": [
+            "bateau",
+            "mouche"
+          ]
+        },
+        {
+          "word": "bateaux-mouches",
+          "ipa": "batomuʃ",
+          "frequency": 0.016,
+          "decomposition": [
+            "bateau",
+            "mouche"
+          ]
+        },
+        {
+          "word": "bâtonner",
+          "ipa": "batone",
+          "frequency": 0.006,
+          "decomposition": [
+            "bateau",
+            "nez"
+          ]
+        },
+        {
+          "word": "lit-bateau",
+          "ipa": "libato",
+          "frequency": 0.003,
+          "decomposition": [
+            "lit",
+            "bateau"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bois",
+      "label": "bois",
+      "ipa": "/bwa/",
+      "normalizedIPA": "bwa",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 4,
+      "strictExamples": [
+        {
+          "word": "boira",
+          "ipa": "bwaʁa",
+          "frequency": 1.674,
+          "decomposition": [
+            "bois",
+            "rat"
+          ]
+        },
+        {
+          "word": "boiras",
+          "ipa": "bwaʁa",
+          "frequency": 0.538,
+          "decomposition": [
+            "bois",
+            "rat"
+          ]
+        },
+        {
+          "word": "boisseaux",
+          "ipa": "bwaso",
+          "frequency": 0.174,
+          "decomposition": [
+            "bois",
+            "seau"
+          ]
+        },
+        {
+          "word": "boisseau",
+          "ipa": "bwaso",
+          "frequency": 0.142,
+          "decomposition": [
+            "bois",
+            "seau"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "botte",
+      "label": "botte",
+      "ipa": "/bɔt/",
+      "normalizedIPA": "bɔt",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 4,
+      "strictExamples": [
+        {
+          "word": "rabote",
+          "ipa": "ʁabɔt",
+          "frequency": 0.041,
+          "decomposition": [
+            "rat",
+            "botte"
+          ]
+        },
+        {
+          "word": "rabotent",
+          "ipa": "ʁabɔt",
+          "frequency": 0.006,
+          "decomposition": [
+            "rat",
+            "botte"
+          ]
+        },
+        {
+          "word": "rabotes",
+          "ipa": "ʁabɔt",
+          "frequency": 0.003,
+          "decomposition": [
+            "rat",
+            "botte"
+          ]
+        },
+        {
+          "word": "ribote",
+          "ipa": "ʁibɔt",
+          "frequency": 0.003,
+          "decomposition": [
+            "riz",
+            "botte"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cadeau",
+      "label": "cadeau",
+      "ipa": "/kado/",
+      "normalizedIPA": "kado",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 4,
+      "strictExamples": [
+        {
+          "word": "mikado",
+          "ipa": "mikado",
+          "frequency": 0.851,
+          "decomposition": [
+            "mie",
+            "cadeau"
+          ]
+        },
+        {
+          "word": "papier-cadeau",
+          "ipa": "papjekado",
+          "frequency": 0.111,
+          "decomposition": [
+            "pas",
+            "pied",
+            "cadeau"
+          ]
+        },
+        {
+          "word": "mikados",
+          "ipa": "mikado",
+          "frequency": 0.013,
+          "decomposition": [
+            "mie",
+            "cadeau"
+          ]
+        },
+        {
+          "word": "papa-cadeau",
+          "ipa": "papakado",
+          "frequency": 0.003,
+          "decomposition": [
+            "pas",
+            "pas",
+            "cadeau"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chien",
+      "label": "chien",
+      "ipa": "/ʃjɛ̃/",
+      "normalizedIPA": "ʃjɛ̃",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 4,
+      "strictExamples": [
+        {
+          "word": "chienchien",
+          "ipa": "ʃjɛ̃ʃjɛ̃",
+          "frequency": 0.171,
+          "decomposition": [
+            "chien",
+            "chien"
+          ]
+        },
+        {
+          "word": "chiendent",
+          "ipa": "ʃjɛ̃dɑ̃",
+          "frequency": 0.158,
+          "decomposition": [
+            "chien",
+            "dent"
+          ]
+        },
+        {
+          "word": "chienchiens",
+          "ipa": "ʃjɛ̃ʃjɛ̃",
+          "frequency": 0.013,
+          "decomposition": [
+            "chien",
+            "chien"
+          ]
+        },
+        {
+          "word": "saurischiens",
+          "ipa": "soʁiʃjɛ̃",
+          "frequency": 0.003,
+          "decomposition": [
+            "seau",
+            "riz",
+            "chien"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ecrou",
+      "label": "écrou",
+      "ipa": "/ekʁu/",
+      "normalizedIPA": "ekʁu",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 4,
+      "strictExamples": [
+        {
+          "word": "écroulait",
+          "ipa": "ekʁulɛ",
+          "frequency": 0.386,
+          "decomposition": [
+            "ecrou",
+            "lait"
+          ]
+        },
+        {
+          "word": "écroulaient",
+          "ipa": "ekʁulɛ",
+          "frequency": 0.047,
+          "decomposition": [
+            "ecrou",
+            "lait"
+          ]
+        },
+        {
+          "word": "écroulais",
+          "ipa": "ekʁulɛ",
+          "frequency": 0.019,
+          "decomposition": [
+            "ecrou",
+            "lait"
+          ]
+        },
+        {
+          "word": "écrouera",
+          "ipa": "ekʁuʁa",
+          "frequency": 0.003,
+          "decomposition": [
+            "ecrou",
+            "rat"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pluie",
+      "label": "pluie",
+      "ipa": "/plɥi/",
+      "normalizedIPA": "plɥi",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 4,
+      "strictExamples": [
+        {
+          "word": "parapluie",
+          "ipa": "paʁaplɥi",
+          "frequency": 5.019,
+          "decomposition": [
+            "pas",
+            "rat",
+            "pluie"
+          ]
+        },
+        {
+          "word": "parapluies",
+          "ipa": "paʁaplɥi",
+          "frequency": 0.725,
+          "decomposition": [
+            "pas",
+            "rat",
+            "pluie"
+          ]
+        },
+        {
+          "word": "porte-parapluies",
+          "ipa": "pɔʁtpaʁaplɥi",
+          "frequency": 0.035,
+          "decomposition": [
+            "porte",
+            "parapluie"
+          ]
+        },
+        {
+          "word": "porte-parapluie",
+          "ipa": "pɔʁtpaʁaplɥi",
+          "frequency": 0.025,
+          "decomposition": [
+            "porte",
+            "parapluie"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "souris",
+      "label": "souris",
+      "ipa": "/suʁi/",
+      "normalizedIPA": "suʁi",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 4,
+      "strictExamples": [
+        {
+          "word": "sourira",
+          "ipa": "suʁiʁa",
+          "frequency": 0.443,
+          "decomposition": [
+            "souris",
+            "rat"
+          ]
+        },
+        {
+          "word": "souriras",
+          "ipa": "suʁiʁa",
+          "frequency": 0.13,
+          "decomposition": [
+            "souris",
+            "rat"
+          ]
+        },
+        {
+          "word": "souriceau",
+          "ipa": "suʁiso",
+          "frequency": 0.111,
+          "decomposition": [
+            "souris",
+            "seau"
+          ]
+        },
+        {
+          "word": "souriceaux",
+          "ipa": "suʁiso",
+          "frequency": 0.032,
+          "decomposition": [
+            "souris",
+            "seau"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "taxi",
+      "label": "taxi",
+      "ipa": "/taksi/",
+      "normalizedIPA": "taksi",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 4,
+      "strictExamples": [
+        {
+          "word": "vélo-taxi",
+          "ipa": "velotaksi",
+          "frequency": 0.019,
+          "decomposition": [
+            "velo",
+            "taxi"
+          ]
+        },
+        {
+          "word": "radio-taxi",
+          "ipa": "ʁadjotaksi",
+          "frequency": 0.013,
+          "decomposition": [
+            "radio",
+            "taxi"
+          ]
+        },
+        {
+          "word": "vélos-taxis",
+          "ipa": "velotaksi",
+          "frequency": 0.006,
+          "decomposition": [
+            "velo",
+            "taxi"
+          ]
+        },
+        {
+          "word": "radio-taxis",
+          "ipa": "ʁadjotaksi",
+          "frequency": 0.003,
+          "decomposition": [
+            "radio",
+            "taxi"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "avion",
+      "label": "avion",
+      "ipa": "/avjɔ̃/",
+      "normalizedIPA": "avjɔ̃",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 3,
+      "strictExamples": [
+        {
+          "word": "porte-avions",
+          "ipa": "pɔʁtavjɔ̃",
+          "frequency": 1.358,
+          "decomposition": [
+            "porte",
+            "avion"
+          ]
+        },
+        {
+          "word": "porte-avion",
+          "ipa": "pɔʁtavjɔ̃",
+          "frequency": 0.256,
+          "decomposition": [
+            "porte",
+            "avion"
+          ]
+        },
+        {
+          "word": "avion-école",
+          "ipa": "avjɔ̃ekɔl",
+          "frequency": 0.009,
+          "decomposition": [
+            "avion",
+            "ecole"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bouche",
+      "label": "bouche",
+      "ipa": "/buʃ/",
+      "normalizedIPA": "buʃ",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 3,
+      "strictExamples": [
+        {
+          "word": "débouche",
+          "ipa": "debuʃ",
+          "frequency": 0.775,
+          "decomposition": [
+            "de",
+            "bouche"
+          ]
+        },
+        {
+          "word": "débouchent",
+          "ipa": "debuʃ",
+          "frequency": 0.098,
+          "decomposition": [
+            "de",
+            "bouche"
+          ]
+        },
+        {
+          "word": "débouches",
+          "ipa": "debuʃ",
+          "frequency": 0.028,
+          "decomposition": [
+            "de",
+            "bouche"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cible",
+      "label": "cible",
+      "ipa": "/sibl/",
+      "normalizedIPA": "sibl",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 3,
+      "strictExamples": [
+        {
+          "word": "passible",
+          "ipa": "pasibl",
+          "frequency": 1.209,
+          "decomposition": [
+            "pas",
+            "cible"
+          ]
+        },
+        {
+          "word": "passibles",
+          "ipa": "pasibl",
+          "frequency": 0.152,
+          "decomposition": [
+            "pas",
+            "cible"
+          ]
+        },
+        {
+          "word": "miscible",
+          "ipa": "misibl",
+          "frequency": 0.006,
+          "decomposition": [
+            "mie",
+            "cible"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "crepe",
+      "label": "crêpe",
+      "ipa": "/kʁɛp/",
+      "normalizedIPA": "kʁɛp",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 3,
+      "strictExamples": [
+        {
+          "word": "crêperie",
+          "ipa": "kʁɛpʁi",
+          "frequency": 0.184,
+          "decomposition": [
+            "crepe",
+            "riz"
+          ]
+        },
+        {
+          "word": "crêperies",
+          "ipa": "kʁɛpʁi",
+          "frequency": 0.016,
+          "decomposition": [
+            "crepe",
+            "riz"
+          ]
+        },
+        {
+          "word": "décrêpe",
+          "ipa": "dekʁɛp",
+          "frequency": 0.003,
+          "decomposition": [
+            "de",
+            "crepe"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "montre",
+      "label": "montre",
+      "ipa": "/mɔ̃tʁ/",
+      "normalizedIPA": "mɔ̃tʁ",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 3,
+      "strictExamples": [
+        {
+          "word": "démontre",
+          "ipa": "demɔ̃tʁ",
+          "frequency": 1.589,
+          "decomposition": [
+            "de",
+            "montre"
+          ]
+        },
+        {
+          "word": "démontrent",
+          "ipa": "demɔ̃tʁ",
+          "frequency": 0.37,
+          "decomposition": [
+            "de",
+            "montre"
+          ]
+        },
+        {
+          "word": "démontres",
+          "ipa": "demɔ̃tʁ",
+          "frequency": 0.028,
+          "decomposition": [
+            "de",
+            "montre"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parc",
+      "label": "parc",
+      "ipa": "/paʁk/",
+      "normalizedIPA": "paʁk",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 3,
+      "strictExamples": [
+        {
+          "word": "ciné-parc",
+          "ipa": "sinepaʁk",
+          "frequency": 0.063,
+          "decomposition": [
+            "scie",
+            "nez",
+            "parc"
+          ]
+        },
+        {
+          "word": "cinéparc",
+          "ipa": "sinepaʁk",
+          "frequency": 0.006,
+          "decomposition": [
+            "scie",
+            "nez",
+            "parc"
+          ]
+        },
+        {
+          "word": "cinéparcs",
+          "ipa": "sinepaʁk",
+          "frequency": 0.003,
+          "decomposition": [
+            "scie",
+            "nez",
+            "parc"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "poste",
+      "label": "poste",
+      "ipa": "/pɔst/",
+      "normalizedIPA": "pɔst",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 3,
+      "strictExamples": [
+        {
+          "word": "riposte",
+          "ipa": "ʁipɔst",
+          "frequency": 1.139,
+          "decomposition": [
+            "riz",
+            "poste"
+          ]
+        },
+        {
+          "word": "ripostent",
+          "ipa": "ʁipɔst",
+          "frequency": 0.25,
+          "decomposition": [
+            "riz",
+            "poste"
+          ]
+        },
+        {
+          "word": "ripostes",
+          "ipa": "ʁipɔst",
+          "frequency": 0.101,
+          "decomposition": [
+            "riz",
+            "poste"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reveil",
+      "label": "réveil",
+      "ipa": "/ʁevɛj/",
+      "normalizedIPA": "ʁevɛj",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 3,
+      "strictExamples": [
+        {
+          "word": "radio-réveil",
+          "ipa": "ʁadjoʁevɛj",
+          "frequency": 0.165,
+          "decomposition": [
+            "radio",
+            "reveil"
+          ]
+        },
+        {
+          "word": "radioréveil",
+          "ipa": "ʁadjoʁevɛj",
+          "frequency": 0.009,
+          "decomposition": [
+            "radio",
+            "reveil"
+          ]
+        },
+        {
+          "word": "radios-réveils",
+          "ipa": "ʁadjoʁevɛj",
+          "frequency": 0.009,
+          "decomposition": [
+            "radio",
+            "reveil"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "robe",
+      "label": "robe",
+      "ipa": "/ʁɔb/",
+      "normalizedIPA": "ʁɔb",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 3,
+      "strictExamples": [
+        {
+          "word": "dérobe",
+          "ipa": "deʁɔb",
+          "frequency": 0.563,
+          "decomposition": [
+            "de",
+            "robe"
+          ]
+        },
+        {
+          "word": "dérobes",
+          "ipa": "deʁɔb",
+          "frequency": 0.142,
+          "decomposition": [
+            "de",
+            "robe"
+          ]
+        },
+        {
+          "word": "dérobent",
+          "ipa": "deʁɔb",
+          "frequency": 0.114,
+          "decomposition": [
+            "de",
+            "robe"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "talon",
+      "label": "talon",
+      "ipa": "/talɔ̃/",
+      "normalizedIPA": "talɔ̃",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 3,
+      "strictExamples": [
+        {
+          "word": "pantalon",
+          "ipa": "pɑ̃talɔ̃",
+          "frequency": 34.19,
+          "decomposition": [
+            "paon",
+            "talon"
+          ]
+        },
+        {
+          "word": "pantalons",
+          "ipa": "pɑ̃talɔ̃",
+          "frequency": 6.354,
+          "decomposition": [
+            "paon",
+            "talon"
+          ]
+        },
+        {
+          "word": "détalons",
+          "ipa": "detalɔ̃",
+          "frequency": 0.003,
+          "decomposition": [
+            "de",
+            "talon"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "telephone",
+      "label": "téléphone",
+      "ipa": "/telefɔn/",
+      "normalizedIPA": "telefɔn",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 3,
+      "strictExamples": [
+        {
+          "word": "radiotéléphone",
+          "ipa": "ʁadjotelefɔn",
+          "frequency": 0.022,
+          "decomposition": [
+            "radio",
+            "telephone"
+          ]
+        },
+        {
+          "word": "radiotéléphones",
+          "ipa": "ʁadjotelefɔn",
+          "frequency": 0.013,
+          "decomposition": [
+            "radio",
+            "telephone"
+          ]
+        },
+        {
+          "word": "radio-téléphone",
+          "ipa": "ʁadjotelefɔn",
+          "frequency": 0.006,
+          "decomposition": [
+            "radio",
+            "telephone"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "voiture",
+      "label": "voiture",
+      "ipa": "/vwatyʁ/",
+      "normalizedIPA": "vwatyʁ",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 3,
+      "strictExamples": [
+        {
+          "word": "voiture-balai",
+          "ipa": "vwatyʁbalɛ",
+          "frequency": 0.025,
+          "decomposition": [
+            "voiture",
+            "balai"
+          ]
+        },
+        {
+          "word": "voiture-lit",
+          "ipa": "vwatyʁli",
+          "frequency": 0.009,
+          "decomposition": [
+            "voiture",
+            "lit"
+          ]
+        },
+        {
+          "word": "voitures-balais",
+          "ipa": "vwatyʁbalɛ",
+          "frequency": 0.003,
+          "decomposition": [
+            "voiture",
+            "balai"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "araignee",
+      "label": "araignée",
+      "ipa": "/aʁɛɲe/",
+      "normalizedIPA": "aʁɛɲe",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 2,
+      "strictExamples": [
+        {
+          "word": "singe-araignée",
+          "ipa": "sɛ̃ʒaʁɛɲe",
+          "frequency": 0.063,
+          "decomposition": [
+            "singe",
+            "araignee"
+          ]
+        },
+        {
+          "word": "araignée-crabe",
+          "ipa": "aʁɛɲekʁab",
+          "frequency": 0.009,
+          "decomposition": [
+            "araignee",
+            "crabe"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "boussole",
+      "label": "boussole",
+      "ipa": "/busɔl/",
+      "normalizedIPA": "busɔl",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 2,
+      "strictExamples": [
+        {
+          "word": "déboussole",
+          "ipa": "debusɔl",
+          "frequency": 0.047,
+          "decomposition": [
+            "de",
+            "boussole"
+          ]
+        },
+        {
+          "word": "déboussolent",
+          "ipa": "debusɔl",
+          "frequency": 0.006,
+          "decomposition": [
+            "de",
+            "boussole"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "brouillard",
+      "label": "brouillard",
+      "ipa": "/bʁujaʁ/",
+      "normalizedIPA": "bʁujaʁ",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 2,
+      "strictExamples": [
+        {
+          "word": "débrouillard",
+          "ipa": "debʁujaʁ",
+          "frequency": 0.358,
+          "decomposition": [
+            "de",
+            "brouillard"
+          ]
+        },
+        {
+          "word": "débrouillards",
+          "ipa": "debʁujaʁ",
+          "frequency": 0.104,
+          "decomposition": [
+            "de",
+            "brouillard"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "canape",
+      "label": "canapé",
+      "ipa": "/kanape/",
+      "normalizedIPA": "kanape",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 2,
+      "strictExamples": [
+        {
+          "word": "canapé-lit",
+          "ipa": "kanapeli",
+          "frequency": 0.339,
+          "decomposition": [
+            "canape",
+            "lit"
+          ]
+        },
+        {
+          "word": "canapés-lits",
+          "ipa": "kanapeli",
+          "frequency": 0.013,
+          "decomposition": [
+            "canape",
+            "lit"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "croissant",
+      "label": "croissant",
+      "ipa": "/kʁwasɑ̃/",
+      "normalizedIPA": "kʁwasɑ̃",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 2,
+      "strictExamples": [
+        {
+          "word": "décroissant",
+          "ipa": "dekʁwasɑ̃",
+          "frequency": 0.057,
+          "decomposition": [
+            "de",
+            "croissant"
+          ]
+        },
+        {
+          "word": "décroissants",
+          "ipa": "dekʁwasɑ̃",
+          "frequency": 0.032,
+          "decomposition": [
+            "de",
+            "croissant"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "feuille",
+      "label": "feuille",
+      "ipa": "/fœj/",
+      "normalizedIPA": "fœj",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 2,
+      "strictExamples": [
+        {
+          "word": "cerfeuil",
+          "ipa": "sɛʁfœj",
+          "frequency": 0.044,
+          "decomposition": [
+            "cerf",
+            "feuille"
+          ]
+        },
+        {
+          "word": "cerfeuils",
+          "ipa": "sɛʁfœj",
+          "frequency": 0.003,
+          "decomposition": [
+            "cerf",
+            "feuille"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fleur",
+      "label": "fleur",
+      "ipa": "/flœʁ/",
+      "normalizedIPA": "flœʁ",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 2,
+      "strictExamples": [
+        {
+          "word": "siffleur",
+          "ipa": "siflœʁ",
+          "frequency": 0.104,
+          "decomposition": [
+            "scie",
+            "fleur"
+          ]
+        },
+        {
+          "word": "siffleurs",
+          "ipa": "siflœʁ",
+          "frequency": 0.038,
+          "decomposition": [
+            "scie",
+            "fleur"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "frites",
+      "label": "frites",
+      "ipa": "/fʁit/",
+      "normalizedIPA": "fʁit",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 2,
+      "strictExamples": [
+        {
+          "word": "néphrite",
+          "ipa": "nefʁit",
+          "frequency": 0.028,
+          "decomposition": [
+            "nez",
+            "frites"
+          ]
+        },
+        {
+          "word": "néphrites",
+          "ipa": "nefʁit",
+          "frequency": 0.013,
+          "decomposition": [
+            "nez",
+            "frites"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loupe",
+      "label": "loupe",
+      "ipa": "/lup/",
+      "normalizedIPA": "lup",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 2,
+      "strictExamples": [
+        {
+          "word": "chaloupe",
+          "ipa": "ʃalup",
+          "frequency": 0.693,
+          "decomposition": [
+            "chat",
+            "loupe"
+          ]
+        },
+        {
+          "word": "chaloupes",
+          "ipa": "ʃalup",
+          "frequency": 0.19,
+          "decomposition": [
+            "chat",
+            "loupe"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "marteau",
+      "label": "marteau",
+      "ipa": "/maʁto/",
+      "normalizedIPA": "maʁto",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 2,
+      "strictExamples": [
+        {
+          "word": "marteau-piqueur",
+          "ipa": "maʁtopikœʁ",
+          "frequency": 0.535,
+          "decomposition": [
+            "marteau",
+            "pie",
+            "coeur"
+          ]
+        },
+        {
+          "word": "marteaux-piqueurs",
+          "ipa": "maʁtopikœʁ",
+          "frequency": 0.073,
+          "decomposition": [
+            "marteau",
+            "pie",
+            "coeur"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "miel",
+      "label": "miel",
+      "ipa": "/mjɛl/",
+      "normalizedIPA": "mjɛl",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 2,
+      "strictExamples": [
+        {
+          "word": "démielle",
+          "ipa": "demjɛl",
+          "frequency": 0.003,
+          "decomposition": [
+            "de",
+            "miel"
+          ]
+        },
+        {
+          "word": "miellerie",
+          "ipa": "mjɛlʁi",
+          "frequency": 0.003,
+          "decomposition": [
+            "miel",
+            "riz"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "moto",
+      "label": "moto",
+      "ipa": "/moto/",
+      "normalizedIPA": "moto",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 2,
+      "strictExamples": [
+        {
+          "word": "motoneige",
+          "ipa": "motonɛʒ",
+          "frequency": 0.323,
+          "decomposition": [
+            "moto",
+            "neige"
+          ]
+        },
+        {
+          "word": "motoneiges",
+          "ipa": "motonɛʒ",
+          "frequency": 0.12,
+          "decomposition": [
+            "moto",
+            "neige"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mouche",
+      "label": "mouche",
+      "ipa": "/muʃ/",
+      "normalizedIPA": "muʃ",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 2,
+      "strictExamples": [
+        {
+          "word": "bateau-mouche",
+          "ipa": "batomuʃ",
+          "frequency": 0.073,
+          "decomposition": [
+            "bateau",
+            "mouche"
+          ]
+        },
+        {
+          "word": "bateaux-mouches",
+          "ipa": "batomuʃ",
+          "frequency": 0.016,
+          "decomposition": [
+            "bateau",
+            "mouche"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parapluie",
+      "label": "parapluie",
+      "ipa": "/paʁaplɥi/",
+      "normalizedIPA": "paʁaplɥi",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 2,
+      "strictExamples": [
+        {
+          "word": "porte-parapluies",
+          "ipa": "pɔʁtpaʁaplɥi",
+          "frequency": 0.035,
+          "decomposition": [
+            "porte",
+            "parapluie"
+          ]
+        },
+        {
+          "word": "porte-parapluie",
+          "ipa": "pɔʁtpaʁaplɥi",
+          "frequency": 0.025,
+          "decomposition": [
+            "porte",
+            "parapluie"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pomme",
+      "label": "pomme",
+      "ipa": "/pɔm/",
+      "normalizedIPA": "pɔm",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 2,
+      "strictExamples": [
+        {
+          "word": "pom-pom",
+          "ipa": "pɔmpɔm",
+          "frequency": 0.294,
+          "decomposition": [
+            "pomme",
+            "pomme"
+          ]
+        },
+        {
+          "word": "lipomes",
+          "ipa": "lipɔm",
+          "frequency": 0.003,
+          "decomposition": [
+            "lit",
+            "pomme"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "renard",
+      "label": "renard",
+      "ipa": "/ʁənaʁ/",
+      "normalizedIPA": "ʁənaʁ",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 2,
+      "strictExamples": [
+        {
+          "word": "renardé",
+          "ipa": "ʁənaʁde",
+          "frequency": 0.025,
+          "decomposition": [
+            "renard",
+            "de"
+          ]
+        },
+        {
+          "word": "renarder",
+          "ipa": "ʁənaʁde",
+          "frequency": 0.003,
+          "decomposition": [
+            "renard",
+            "de"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "singe",
+      "label": "singe",
+      "ipa": "/sɛ̃ʒ/",
+      "normalizedIPA": "sɛ̃ʒ",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 2,
+      "strictExamples": [
+        {
+          "word": "singe-araignée",
+          "ipa": "sɛ̃ʒaʁɛɲe",
+          "frequency": 0.063,
+          "decomposition": [
+            "singe",
+            "araignee"
+          ]
+        },
+        {
+          "word": "mi-singe",
+          "ipa": "misɛ̃ʒ",
+          "frequency": 0.022,
+          "decomposition": [
+            "mie",
+            "singe"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ski",
+      "label": "ski",
+      "ipa": "/ski/",
+      "normalizedIPA": "ski",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 2,
+      "strictExamples": [
+        {
+          "word": "skieras",
+          "ipa": "skiʁa",
+          "frequency": 0.013,
+          "decomposition": [
+            "ski",
+            "rat"
+          ]
+        },
+        {
+          "word": "skiera",
+          "ipa": "skiʁa",
+          "frequency": 0.003,
+          "decomposition": [
+            "ski",
+            "rat"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "steak",
+      "label": "steak",
+      "ipa": "/stɛk/",
+      "normalizedIPA": "stɛk",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 2,
+      "strictExamples": [
+        {
+          "word": "pastèque",
+          "ipa": "pastɛk",
+          "frequency": 1.797,
+          "decomposition": [
+            "pas",
+            "steak"
+          ]
+        },
+        {
+          "word": "pastèques",
+          "ipa": "pastɛk",
+          "frequency": 0.766,
+          "decomposition": [
+            "pas",
+            "steak"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tracteur",
+      "label": "tracteur",
+      "ipa": "/tʁaktœʁ/",
+      "normalizedIPA": "tʁaktœʁ",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 2,
+      "strictExamples": [
+        {
+          "word": "détracteurs",
+          "ipa": "detʁaktœʁ",
+          "frequency": 0.411,
+          "decomposition": [
+            "de",
+            "tracteur"
+          ]
+        },
+        {
+          "word": "détracteur",
+          "ipa": "detʁaktœʁ",
+          "frequency": 0.035,
+          "decomposition": [
+            "de",
+            "tracteur"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "velo",
+      "label": "vélo",
+      "ipa": "/velo/",
+      "normalizedIPA": "velo",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 2,
+      "strictExamples": [
+        {
+          "word": "vélo-taxi",
+          "ipa": "velotaksi",
+          "frequency": 0.019,
+          "decomposition": [
+            "velo",
+            "taxi"
+          ]
+        },
+        {
+          "word": "vélos-taxis",
+          "ipa": "velotaksi",
+          "frequency": 0.006,
+          "decomposition": [
+            "velo",
+            "taxi"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bague",
+      "label": "bague",
+      "ipa": "/bag/",
+      "normalizedIPA": "bag",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 1,
+      "strictExamples": [
+        {
+          "word": "bagosse",
+          "ipa": "bagɔs",
+          "frequency": 0.016,
+          "decomposition": [
+            "bague",
+            "os"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chapeau",
+      "label": "chapeau",
+      "ipa": "/ʃapo/",
+      "normalizedIPA": "ʃapo",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 1,
+      "strictExamples": [
+        {
+          "word": "porte-chapeaux",
+          "ipa": "pɔʁtʃapo",
+          "frequency": 0.035,
+          "decomposition": [
+            "porte",
+            "chapeau"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chevre",
+      "label": "chèvre",
+      "ipa": "/ʃɛvʁ/",
+      "normalizedIPA": "ʃɛvʁ",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 1,
+      "strictExamples": [
+        {
+          "word": "mi-chèvre",
+          "ipa": "miʃɛvʁ",
+          "frequency": 0.013,
+          "decomposition": [
+            "mie",
+            "chevre"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cloche",
+      "label": "cloche",
+      "ipa": "/klɔʃ/",
+      "normalizedIPA": "klɔʃ",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 1,
+      "strictExamples": [
+        {
+          "word": "cloche-pied",
+          "ipa": "klɔʃpje",
+          "frequency": 0.006,
+          "decomposition": [
+            "cloche",
+            "pied"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cochon",
+      "label": "cochon",
+      "ipa": "/kɔʃɔ̃/",
+      "normalizedIPA": "kɔʃɔ̃",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 1,
+      "strictExamples": [
+        {
+          "word": "ricochons",
+          "ipa": "ʁikɔʃɔ̃",
+          "frequency": 0.003,
+          "decomposition": [
+            "riz",
+            "cochon"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "crabe",
+      "label": "crabe",
+      "ipa": "/kʁab/",
+      "normalizedIPA": "kʁab",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 1,
+      "strictExamples": [
+        {
+          "word": "araignée-crabe",
+          "ipa": "aʁɛɲekʁab",
+          "frequency": 0.009,
+          "decomposition": [
+            "araignee",
+            "crabe"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cravate",
+      "label": "cravate",
+      "ipa": "/kʁavat/",
+      "normalizedIPA": "kʁavat",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 1,
+      "strictExamples": [
+        {
+          "word": "porte-cravate",
+          "ipa": "pɔʁtkʁavat",
+          "frequency": 0.003,
+          "decomposition": [
+            "porte",
+            "cravate"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ecole",
+      "label": "école",
+      "ipa": "/ekɔl/",
+      "normalizedIPA": "ekɔl",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 1,
+      "strictExamples": [
+        {
+          "word": "avion-école",
+          "ipa": "avjɔ̃ekɔl",
+          "frequency": 0.009,
+          "decomposition": [
+            "avion",
+            "ecole"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fourmi",
+      "label": "fourmi",
+      "ipa": "/fuʁmi/",
+      "normalizedIPA": "fuʁmi",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 1,
+      "strictExamples": [
+        {
+          "word": "fourmilion",
+          "ipa": "fuʁmiljɔ̃",
+          "frequency": 0.009,
+          "decomposition": [
+            "fourmi",
+            "lion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fromage",
+      "label": "fromage",
+      "ipa": "/fʁɔmaʒ/",
+      "normalizedIPA": "fʁɔmaʒ",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 1,
+      "strictExamples": [
+        {
+          "word": "fromageries",
+          "ipa": "fʁɔmaʒʁi",
+          "frequency": 0.013,
+          "decomposition": [
+            "fromage",
+            "riz"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hache",
+      "label": "hache",
+      "ipa": "/aʃ/",
+      "normalizedIPA": "aʃ",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 1,
+      "strictExamples": [
+        {
+          "word": "acheminez",
+          "ipa": "aʃmine",
+          "frequency": 0.019,
+          "decomposition": [
+            "hache",
+            "mie",
+            "nez"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "helicoptere",
+      "label": "hélicoptère",
+      "ipa": "/elikɔptɛʁ/",
+      "normalizedIPA": "elikɔptɛʁ",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 1,
+      "strictExamples": [
+        {
+          "word": "porte-hélicoptères",
+          "ipa": "pɔʁtelikɔptɛʁ",
+          "frequency": 0.003,
+          "decomposition": [
+            "porte",
+            "helicoptere"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jambe",
+      "label": "jambe",
+      "ipa": "/ʒɑ̃b/",
+      "normalizedIPA": "ʒɑ̃b",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 1,
+      "strictExamples": [
+        {
+          "word": "mi-jambe",
+          "ipa": "miʒɑ̃b",
+          "frequency": 0.009,
+          "decomposition": [
+            "mie",
+            "jambe"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lune",
+      "label": "lune",
+      "ipa": "/lyn/",
+      "normalizedIPA": "lyn",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 1,
+      "strictExamples": [
+        {
+          "word": "poisson-lune",
+          "ipa": "pwasɔ̃lyn",
+          "frequency": 0.063,
+          "decomposition": [
+            "poisson",
+            "lune"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maison",
+      "label": "maison",
+      "ipa": "/mɛzɔ̃/",
+      "normalizedIPA": "mɛzɔ̃",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 1,
+      "strictExamples": [
+        {
+          "word": "maison-mère",
+          "ipa": "mɛzɔ̃mɛʁ",
+          "frequency": 0.082,
+          "decomposition": [
+            "maison",
+            "mer"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "manteau",
+      "label": "manteau",
+      "ipa": "/mɑ̃to/",
+      "normalizedIPA": "mɑ̃to",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 1,
+      "strictExamples": [
+        {
+          "word": "mentorat",
+          "ipa": "mɑ̃toʁa",
+          "frequency": 0.07,
+          "decomposition": [
+            "manteau",
+            "rat"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "os",
+      "label": "os",
+      "ipa": "/ɔs/",
+      "normalizedIPA": "ɔs",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 1,
+      "strictExamples": [
+        {
+          "word": "bagosse",
+          "ipa": "bagɔs",
+          "frequency": 0.016,
+          "decomposition": [
+            "bague",
+            "os"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "panier",
+      "label": "panier",
+      "ipa": "/panje/",
+      "normalizedIPA": "panje",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 1,
+      "strictExamples": [
+        {
+          "word": "dépanniez",
+          "ipa": "depanje",
+          "frequency": 0.006,
+          "decomposition": [
+            "de",
+            "panier"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "patate",
+      "label": "patate",
+      "ipa": "/patat/",
+      "normalizedIPA": "patat",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 1,
+      "strictExamples": [
+        {
+          "word": "patatras",
+          "ipa": "patatʁa",
+          "frequency": 0.076,
+          "decomposition": [
+            "patate",
+            "rat"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pile",
+      "label": "pile",
+      "ipa": "/pil/",
+      "normalizedIPA": "pil",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 1,
+      "strictExamples": [
+        {
+          "word": "pompile",
+          "ipa": "pɔ̃pil",
+          "frequency": 0.003,
+          "decomposition": [
+            "pont",
+            "pile"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "poulet",
+      "label": "poulet",
+      "ipa": "/pulɛ/",
+      "normalizedIPA": "pulɛ",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 1,
+      "strictExamples": [
+        {
+          "word": "mi-poulet",
+          "ipa": "mipulɛ",
+          "frequency": 0.013,
+          "decomposition": [
+            "mie",
+            "poulet"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "poumons",
+      "label": "poumons",
+      "ipa": "/pumɔ̃/",
+      "normalizedIPA": "pumɔ̃",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 1,
+      "strictExamples": [
+        {
+          "word": "coeur-poumons",
+          "ipa": "kœʁpumɔ̃",
+          "frequency": 0.022,
+          "decomposition": [
+            "coeur",
+            "poumons"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "raisin",
+      "label": "raisin",
+      "ipa": "/ʁɛzɛ̃/",
+      "normalizedIPA": "ʁɛzɛ̃",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 1,
+      "strictExamples": [
+        {
+          "word": "mi-raisin",
+          "ipa": "miʁɛzɛ̃",
+          "frequency": 0.019,
+          "decomposition": [
+            "mie",
+            "raisin"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rose",
+      "label": "rose",
+      "ipa": "/ʁoz/",
+      "normalizedIPA": "ʁoz",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 1,
+      "strictExamples": [
+        {
+          "word": "cirrhose",
+          "ipa": "siʁoz",
+          "frequency": 0.709,
+          "decomposition": [
+            "scie",
+            "rose"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "savon",
+      "label": "savon",
+      "ipa": "/savɔ̃/",
+      "normalizedIPA": "savɔ̃",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 1,
+      "strictExamples": [
+        {
+          "word": "porte-savon",
+          "ipa": "pɔʁtsavɔ̃",
+          "frequency": 0.063,
+          "decomposition": [
+            "porte",
+            "savon"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "television",
+      "label": "télévision",
+      "ipa": "/televizjɔ̃/",
+      "normalizedIPA": "televizjɔ̃",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 1,
+      "strictExamples": [
+        {
+          "word": "radiotélévision",
+          "ipa": "ʁadjotelevizjɔ̃",
+          "frequency": 0.006,
+          "decomposition": [
+            "radio",
+            "television"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tortue",
+      "label": "tortue",
+      "ipa": "/tɔʁty/",
+      "normalizedIPA": "tɔʁty",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 1,
+      "strictExamples": [
+        {
+          "word": "tortura",
+          "ipa": "tɔʁtyʁa",
+          "frequency": 0.041,
+          "decomposition": [
+            "tortue",
+            "rat"
+          ]
+        }
+      ]
+    }
+  ],
+  "candidateTokens": [
+    {
+      "id": "abeille",
+      "label": "abeille",
+      "ipa": "/abɛj/",
+      "normalizedIPA": "abɛj",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "accordeon",
+      "label": "accordéon",
+      "ipa": "/akɔʁdeɔ̃/",
+      "normalizedIPA": "akɔʁdeɔ̃",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "aigle",
+      "label": "aigle",
+      "ipa": "/ɛgl/",
+      "normalizedIPA": "ɛgl",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "aimant",
+      "label": "aimant",
+      "ipa": "/ɛmɑ̃/",
+      "normalizedIPA": "ɛmɑ̃",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "ambulance",
+      "label": "ambulance",
+      "ipa": "/ɑ̃bylɑ̃s/",
+      "normalizedIPA": "ɑ̃bylɑ̃s",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "ampoule",
+      "label": "ampoule",
+      "ipa": "/ɑ̃pul/",
+      "normalizedIPA": "ɑ̃pul",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "ananas",
+      "label": "ananas",
+      "ipa": "/anana/",
+      "normalizedIPA": "anana",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "ancre",
+      "label": "ancre",
+      "ipa": "/ɑ̃kʁ/",
+      "normalizedIPA": "ɑ̃kʁ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "arbre",
+      "label": "arbre",
+      "ipa": "/aʁbʁ/",
+      "normalizedIPA": "aʁbʁ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "arcenciel",
+      "label": "arc-en-ciel",
+      "ipa": "/aʁkɑ̃sjɛl/",
+      "normalizedIPA": "aʁkɑ̃sjɛl",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "aubergine",
+      "label": "aubergine",
+      "ipa": "/obɛʁʒin/",
+      "normalizedIPA": "obɛʁʒin",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "avocat",
+      "label": "avocat",
+      "ipa": "/avɔka/",
+      "normalizedIPA": "avɔka",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "badminton",
+      "label": "badminton",
+      "ipa": "/badmɛ̃tɔn/",
+      "normalizedIPA": "badmɛ̃tɔn",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "baguette",
+      "label": "baguette",
+      "ipa": "/bagɛt/",
+      "normalizedIPA": "bagɛt",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "baignoire",
+      "label": "baignoire",
+      "ipa": "/bɛɲwaʁ/",
+      "normalizedIPA": "bɛɲwaʁ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "baleine",
+      "label": "baleine",
+      "ipa": "/balɛn/",
+      "normalizedIPA": "balɛn",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "banane",
+      "label": "banane",
+      "ipa": "/banan/",
+      "normalizedIPA": "banan",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "banque",
+      "label": "banque",
+      "ipa": "/bɑ̃k/",
+      "normalizedIPA": "bɑ̃k",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "bequille",
+      "label": "béquille",
+      "ipa": "/bekij/",
+      "normalizedIPA": "bekij",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "beurre",
+      "label": "beurre",
+      "ipa": "/bœʁ/",
+      "normalizedIPA": "bœʁ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "biceps",
+      "label": "biceps",
+      "ipa": "/bisɛps/",
+      "normalizedIPA": "bisɛps",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "biscuit",
+      "label": "biscuit",
+      "ipa": "/biskɥi/",
+      "normalizedIPA": "biskɥi",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "bison",
+      "label": "bison",
+      "ipa": "/bizɔ̃/",
+      "normalizedIPA": "bizɔ̃",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "blaireau",
+      "label": "blaireau",
+      "ipa": "/blɛʁo/",
+      "normalizedIPA": "blɛʁo",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "bonbon",
+      "label": "bonbon",
+      "ipa": "/bɔ̃bɔ̃/",
+      "normalizedIPA": "bɔ̃bɔ̃",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "bouee",
+      "label": "bouée",
+      "ipa": "/bwe/",
+      "normalizedIPA": "bwe",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "bougie",
+      "label": "bougie",
+      "ipa": "/buʒi/",
+      "normalizedIPA": "buʒi",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "bouquet",
+      "label": "bouquet",
+      "ipa": "/bukɛ/",
+      "normalizedIPA": "bukɛ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "boxe",
+      "label": "boxe",
+      "ipa": "/bɔks/",
+      "normalizedIPA": "bɔks",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "bretzel",
+      "label": "bretzel",
+      "ipa": "/bʁɛtsɛl/",
+      "normalizedIPA": "bʁɛtsɛl",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "brique",
+      "label": "brique",
+      "ipa": "/bʁik/",
+      "normalizedIPA": "bʁik",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "brocoli",
+      "label": "brocoli",
+      "ipa": "/bʁɔkɔli/",
+      "normalizedIPA": "bʁɔkɔli",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "bus",
+      "label": "bus",
+      "ipa": "/bys/",
+      "normalizedIPA": "bys",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "cactus",
+      "label": "cactus",
+      "ipa": "/kaktys/",
+      "normalizedIPA": "kaktys",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "cadenas",
+      "label": "cadenas",
+      "ipa": "/kadna/",
+      "normalizedIPA": "kadna",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "calendrier",
+      "label": "calendrier",
+      "ipa": "/kalɑ̃dʁije/",
+      "normalizedIPA": "kalɑ̃dʁije",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "camion",
+      "label": "camion",
+      "ipa": "/kamjɔ̃/",
+      "normalizedIPA": "kamjɔ̃",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "carotte",
+      "label": "carotte",
+      "ipa": "/kaʁɔt/",
+      "normalizedIPA": "kaʁɔt",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "casquette",
+      "label": "casquette",
+      "ipa": "/kaskɛt/",
+      "normalizedIPA": "kaskɛt",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "castor",
+      "label": "castor",
+      "ipa": "/kastɔʁ/",
+      "normalizedIPA": "kastɔʁ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "cerise",
+      "label": "cerise",
+      "ipa": "/səʁiz/",
+      "normalizedIPA": "səʁiz",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "cerveau",
+      "label": "cerveau",
+      "ipa": "/sɛʁvo/",
+      "normalizedIPA": "sɛʁvo",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "chaise",
+      "label": "chaise",
+      "ipa": "/ʃɛz/",
+      "normalizedIPA": "ʃɛz",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "chameau",
+      "label": "chameau",
+      "ipa": "/ʃamo/",
+      "normalizedIPA": "ʃamo",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "champignon",
+      "label": "champignon",
+      "ipa": "/ʃɑ̃piɲɔ̃/",
+      "normalizedIPA": "ʃɑ̃piɲɔ̃",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "chataigne",
+      "label": "châtaigne",
+      "ipa": "/ʃatɛɲ/",
+      "normalizedIPA": "ʃatɛɲ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "chateau",
+      "label": "château",
+      "ipa": "/ʃato/",
+      "normalizedIPA": "ʃato",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "chaussettes",
+      "label": "chaussettes",
+      "ipa": "/ʃosɛt/",
+      "normalizedIPA": "ʃosɛt",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "chaussure",
+      "label": "chaussure",
+      "ipa": "/ʃosyʁ/",
+      "normalizedIPA": "ʃosyʁ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "chauvesouris",
+      "label": "chauve-souris",
+      "ipa": "/ʃovsuri/",
+      "normalizedIPA": "ʃovsuri",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "cheval",
+      "label": "cheval",
+      "ipa": "/ʃəval/",
+      "normalizedIPA": "ʃəval",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "chocolat",
+      "label": "chocolat",
+      "ipa": "/ʃɔkɔla/",
+      "normalizedIPA": "ʃɔkɔla",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "chronometre",
+      "label": "chronomètre",
+      "ipa": "/kʁɔnɔmɛtʁ/",
+      "normalizedIPA": "kʁɔnɔmɛtʁ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "ciseaux",
+      "label": "ciseaux",
+      "ipa": "/sizo/",
+      "normalizedIPA": "sizo",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "citron",
+      "label": "citron",
+      "ipa": "/sitʁɔ̃/",
+      "normalizedIPA": "sitʁɔ̃",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "coccinelle",
+      "label": "coccinelle",
+      "ipa": "/kɔksinɛl/",
+      "normalizedIPA": "kɔksinɛl",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "comete",
+      "label": "comète",
+      "ipa": "/kɔmɛt/",
+      "normalizedIPA": "kɔmɛt",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "couronne",
+      "label": "couronne",
+      "ipa": "/kuʁɔn/",
+      "normalizedIPA": "kuʁɔn",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "crayon",
+      "label": "crayon",
+      "ipa": "/kʁɛjɔ̃/",
+      "normalizedIPA": "kʁɛjɔ̃",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "crevette",
+      "label": "crevette",
+      "ipa": "/kʁəvɛt/",
+      "normalizedIPA": "kʁəvɛt",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "crochet",
+      "label": "crochet",
+      "ipa": "/kʁɔʃɛ/",
+      "normalizedIPA": "kʁɔʃɛ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "crocodile",
+      "label": "crocodile",
+      "ipa": "/kʁɔkɔdil/",
+      "normalizedIPA": "kʁɔkɔdil",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "cygne",
+      "label": "cygne",
+      "ipa": "/siɲ/",
+      "normalizedIPA": "siɲ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "dauphin",
+      "label": "dauphin",
+      "ipa": "/dofɛ̃/",
+      "normalizedIPA": "dofɛ̃",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "desert",
+      "label": "désert",
+      "ipa": "/dezɛʁ/",
+      "normalizedIPA": "dezɛʁ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "diamant",
+      "label": "diamant",
+      "ipa": "/djamɑ̃/",
+      "normalizedIPA": "djamɑ̃",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "dinosaure",
+      "label": "dinosaure",
+      "ipa": "/dinozɔʁ/",
+      "normalizedIPA": "dinozɔʁ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "dossier",
+      "label": "dossier",
+      "ipa": "/dosje/",
+      "normalizedIPA": "dosje",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "douche",
+      "label": "douche",
+      "ipa": "/duʃ/",
+      "normalizedIPA": "duʃ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "eau",
+      "label": "eau",
+      "ipa": "/o/",
+      "normalizedIPA": "o",
+      "productivityStatus": "strict_candidate",
+      "active": false,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "echarpe",
+      "label": "écharpe",
+      "ipa": "/eʃaʁp/",
+      "normalizedIPA": "eʃaʁp",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "echelle",
+      "label": "échelle",
+      "ipa": "/eʃɛl/",
+      "normalizedIPA": "eʃɛl",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "elephant",
+      "label": "éléphant",
+      "ipa": "/elefɑ̃/",
+      "normalizedIPA": "elefɑ̃",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "engrenage",
+      "label": "engrenage",
+      "ipa": "/ɑ̃gʁənaʒ/",
+      "normalizedIPA": "ɑ̃gʁənaʒ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "enveloppe",
+      "label": "enveloppe",
+      "ipa": "/ɑ̃vəlɔp/",
+      "normalizedIPA": "ɑ̃vəlɔp",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "epingle",
+      "label": "épingle",
+      "ipa": "/epɛ̃gl/",
+      "normalizedIPA": "epɛ̃gl",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "eponge",
+      "label": "éponge",
+      "ipa": "/epɔ̃ʒ/",
+      "normalizedIPA": "epɔ̃ʒ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "escargot",
+      "label": "escargot",
+      "ipa": "/ɛskaʁɡo/",
+      "normalizedIPA": "ɛskaʁɡo",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "etoile",
+      "label": "étoile",
+      "ipa": "/etwal/",
+      "normalizedIPA": "etwal",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "extincteur",
+      "label": "extincteur",
+      "ipa": "/ɛkstɛ̃ktœʁ/",
+      "normalizedIPA": "ɛkstɛ̃ktœʁ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "feu",
+      "label": "feu",
+      "ipa": "/fø/",
+      "normalizedIPA": "fø",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "flamant",
+      "label": "flamant",
+      "ipa": "/flamɑ̃/",
+      "normalizedIPA": "flamɑ̃",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "flute",
+      "label": "flûte",
+      "ipa": "/flyt/",
+      "normalizedIPA": "flyt",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "fontaine",
+      "label": "fontaine",
+      "ipa": "/fɔ̃tɛn/",
+      "normalizedIPA": "fɔ̃tɛn",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "fraise",
+      "label": "fraise",
+      "ipa": "/fʁɛz/",
+      "normalizedIPA": "fʁɛz",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "fusee",
+      "label": "fusée",
+      "ipa": "/fyze/",
+      "normalizedIPA": "fyze",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "gateau",
+      "label": "gâteau",
+      "ipa": "/ɡato/",
+      "normalizedIPA": "ɡato",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "gaufre",
+      "label": "gaufre",
+      "ipa": "/gofʁ/",
+      "normalizedIPA": "gofʁ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "girafe",
+      "label": "girafe",
+      "ipa": "/ʒiʁaf/",
+      "normalizedIPA": "ʒiʁaf",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "glace",
+      "label": "glace",
+      "ipa": "/ɡlas/",
+      "normalizedIPA": "ɡlas",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "golf",
+      "label": "golf",
+      "ipa": "/gɔlf/",
+      "normalizedIPA": "gɔlf",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "gorille",
+      "label": "gorille",
+      "ipa": "/goʁij/",
+      "normalizedIPA": "goʁij",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "grenouille",
+      "label": "grenouille",
+      "ipa": "/ɡʁənuj/",
+      "normalizedIPA": "ɡʁənuj",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "grillon",
+      "label": "grillon",
+      "ipa": "/gʁijɔ̃/",
+      "normalizedIPA": "gʁijɔ̃",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "guitare",
+      "label": "guitare",
+      "ipa": "/ɡitaʁ/",
+      "normalizedIPA": "ɡitaʁ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "harpe",
+      "label": "harpe",
+      "ipa": "/aʁp/",
+      "normalizedIPA": "aʁp",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "hautparleur",
+      "label": "haut-parleur",
+      "ipa": "/opaʁlœʁ/",
+      "normalizedIPA": "opaʁlœʁ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "herbe",
+      "label": "herbe",
+      "ipa": "/ɛʁb/",
+      "normalizedIPA": "ɛʁb",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "herisson",
+      "label": "hérisson",
+      "ipa": "/eʁisɔ̃/",
+      "normalizedIPA": "eʁisɔ̃",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "hibiscus",
+      "label": "hibiscus",
+      "ipa": "/ibiskys/",
+      "normalizedIPA": "ibiskys",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "hibou",
+      "label": "hibou",
+      "ipa": "/ibu/",
+      "normalizedIPA": "ibu",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "hippopotame",
+      "label": "hippopotame",
+      "ipa": "/ipopotam/",
+      "normalizedIPA": "ipopotam",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "hockey",
+      "label": "hockey",
+      "ipa": "/ɔkɛ/",
+      "normalizedIPA": "ɔkɛ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "homard",
+      "label": "homard",
+      "ipa": "/ɔmaʁ/",
+      "normalizedIPA": "ɔmaʁ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "hopital",
+      "label": "hôpital",
+      "ipa": "/opital/",
+      "normalizedIPA": "opital",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "hotel",
+      "label": "hôtel",
+      "ipa": "/otɛl/",
+      "normalizedIPA": "otɛl",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "huitre",
+      "label": "huître",
+      "ipa": "/ɥitʁ/",
+      "normalizedIPA": "ɥitʁ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "ile",
+      "label": "île",
+      "ipa": "/il/",
+      "normalizedIPA": "il",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "journal",
+      "label": "journal",
+      "ipa": "/ʒuʁnal/",
+      "normalizedIPA": "ʒuʁnal",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "kangourou",
+      "label": "kangourou",
+      "ipa": "/kɑ̃guʁu/",
+      "normalizedIPA": "kɑ̃guʁu",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "kiwi",
+      "label": "kiwi",
+      "ipa": "/kiwi/",
+      "normalizedIPA": "kiwi",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "koala",
+      "label": "koala",
+      "ipa": "/kɔala/",
+      "normalizedIPA": "kɔala",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "lama",
+      "label": "lama",
+      "ipa": "/lama/",
+      "normalizedIPA": "lama",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "lampe",
+      "label": "lampe",
+      "ipa": "/lɑ̃p/",
+      "normalizedIPA": "lɑ̃p",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "langue",
+      "label": "langue",
+      "ipa": "/lɑ̃ɡ/",
+      "normalizedIPA": "lɑ̃ɡ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "lapin",
+      "label": "lapin",
+      "ipa": "/lapɛ̃/",
+      "normalizedIPA": "lapɛ̃",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "loutre",
+      "label": "loutre",
+      "ipa": "/lutʁ/",
+      "normalizedIPA": "lutʁ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "lunettes",
+      "label": "lunettes",
+      "ipa": "/lynɛt/",
+      "normalizedIPA": "lynɛt",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "magasin",
+      "label": "magasin",
+      "ipa": "/magazɛ̃/",
+      "normalizedIPA": "magazɛ̃",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "mais",
+      "label": "maïs",
+      "ipa": "/mais/",
+      "normalizedIPA": "mais",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "maracas",
+      "label": "maracas",
+      "ipa": "/maʁakas/",
+      "normalizedIPA": "maʁakas",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "marquepage",
+      "label": "marque-page",
+      "ipa": "/maʁkpaʒ/",
+      "normalizedIPA": "maʁkpaʒ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "medaille",
+      "label": "médaille",
+      "ipa": "/medaj/",
+      "normalizedIPA": "medaj",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "metro",
+      "label": "métro",
+      "ipa": "/metʁo/",
+      "normalizedIPA": "metʁo",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "microbe",
+      "label": "microbe",
+      "ipa": "/mikʁɔb/",
+      "normalizedIPA": "mikʁɔb",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "microphone",
+      "label": "microphone",
+      "ipa": "/mikʁofɔn/",
+      "normalizedIPA": "mikʁofɔn",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "microscope",
+      "label": "microscope",
+      "ipa": "/mikʁɔskɔp/",
+      "normalizedIPA": "mikʁɔskɔp",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "minuteur",
+      "label": "minuteur",
+      "ipa": "/minytœʁ/",
+      "normalizedIPA": "minytœʁ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "montagne",
+      "label": "montagne",
+      "ipa": "/mɔ̃taɲ/",
+      "normalizedIPA": "mɔ̃taɲ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "moufette",
+      "label": "moufette",
+      "ipa": "/mufɛt/",
+      "normalizedIPA": "mufɛt",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "moustique",
+      "label": "moustique",
+      "ipa": "/mustik/",
+      "normalizedIPA": "mustik",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "mouton",
+      "label": "mouton",
+      "ipa": "/mutɔ̃/",
+      "normalizedIPA": "mutɔ̃",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "nuage",
+      "label": "nuage",
+      "ipa": "/nɥaʒ/",
+      "normalizedIPA": "nɥaʒ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "oeil",
+      "label": "œil",
+      "ipa": "/œj/",
+      "normalizedIPA": "œj",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "oeuf",
+      "label": "œuf",
+      "ipa": "/œf/",
+      "normalizedIPA": "œf",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "oignon",
+      "label": "oignon",
+      "ipa": "/ɔɲɔ̃/",
+      "normalizedIPA": "ɔɲɔ̃",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "orangoutan",
+      "label": "orang-outan",
+      "ipa": "/ɔʁɑ̃utɑ̃/",
+      "normalizedIPA": "ɔʁɑ̃utɑ̃",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "orange",
+      "label": "orange",
+      "ipa": "/ɔʁɑ̃ʒ/",
+      "normalizedIPA": "ɔʁɑ̃ʒ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "ordinateur",
+      "label": "ordinateur",
+      "ipa": "/ɔʁdinatœʁ/",
+      "normalizedIPA": "ɔʁdinatœʁ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "oreille",
+      "label": "oreille",
+      "ipa": "/ɔʁɛj/",
+      "normalizedIPA": "ɔʁɛj",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "ours",
+      "label": "ours",
+      "ipa": "/uʁs/",
+      "normalizedIPA": "uʁs",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "palmier",
+      "label": "palmier",
+      "ipa": "/palmje/",
+      "normalizedIPA": "palmje",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "panda",
+      "label": "panda",
+      "ipa": "/pɑ̃da/",
+      "normalizedIPA": "pɑ̃da",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "pansement",
+      "label": "pansement",
+      "ipa": "/pɑ̃smɑ̃/",
+      "normalizedIPA": "pɑ̃smɑ̃",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "pantalon",
+      "label": "pantalon",
+      "ipa": "/pɑ̃talɔ̃/",
+      "normalizedIPA": "pɑ̃talɔ̃",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "papillon",
+      "label": "papillon",
+      "ipa": "/papijɔ̃/",
+      "normalizedIPA": "papijɔ̃",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "paresseux",
+      "label": "paresseux",
+      "ipa": "/paʁɛsø/",
+      "normalizedIPA": "paʁɛsø",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "pasteque",
+      "label": "pastèque",
+      "ipa": "/pastɛk/",
+      "normalizedIPA": "pastɛk",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "patinroulette",
+      "label": "patin à roulettes",
+      "ipa": "/patɛ̃aʁulɛt/",
+      "normalizedIPA": "patɛ̃aʁulɛt",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "perroquet",
+      "label": "perroquet",
+      "ipa": "/pɛʁɔkɛ/",
+      "normalizedIPA": "pɛʁɔkɛ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "piano",
+      "label": "piano",
+      "ipa": "/pjano/",
+      "normalizedIPA": "pjano",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "pilule",
+      "label": "pilule",
+      "ipa": "/pilyl/",
+      "normalizedIPA": "pilyl",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "pingouin",
+      "label": "pingouin",
+      "ipa": "/pɛ̃gwɛ̃/",
+      "normalizedIPA": "pɛ̃gwɛ̃",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "pizza",
+      "label": "pizza",
+      "ipa": "/pidza/",
+      "normalizedIPA": "pidza",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "poire",
+      "label": "poire",
+      "ipa": "/pwaʁ/",
+      "normalizedIPA": "pwaʁ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "popcorn",
+      "label": "pop-corn",
+      "ipa": "/pɔpkɔʁn/",
+      "normalizedIPA": "pɔpkɔʁn",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "pot",
+      "label": "pot",
+      "ipa": "/po/",
+      "normalizedIPA": "po",
+      "productivityStatus": "strict_candidate",
+      "active": false,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "punaise",
+      "label": "punaise",
+      "ipa": "/pynɛz/",
+      "normalizedIPA": "pynɛz",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "rasoir",
+      "label": "rasoir",
+      "ipa": "/ʁazwaʁ/",
+      "normalizedIPA": "ʁazwaʁ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "ravioli",
+      "label": "ravioli",
+      "ipa": "/ʁavjɔli/",
+      "normalizedIPA": "ʁavjɔli",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "regle",
+      "label": "règle",
+      "ipa": "/ʁɛɡl/",
+      "normalizedIPA": "ʁɛɡl",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "requin",
+      "label": "requin",
+      "ipa": "/ʁəkɛ̃/",
+      "normalizedIPA": "ʁəkɛ̃",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "rhinoceros",
+      "label": "rhinocéros",
+      "ipa": "/ʁinoseʁɔs/",
+      "normalizedIPA": "ʁinoseʁɔs",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "sablier",
+      "label": "sablier",
+      "ipa": "/sablije/",
+      "normalizedIPA": "sablije",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "salade",
+      "label": "salade",
+      "ipa": "/salad/",
+      "normalizedIPA": "salad",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "sandale",
+      "label": "sandale",
+      "ipa": "/sɑ̃dal/",
+      "normalizedIPA": "sɑ̃dal",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "sandwich",
+      "label": "sandwich",
+      "ipa": "/sɑ̃dwiʃ/",
+      "normalizedIPA": "sɑ̃dwiʃ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "sapin",
+      "label": "sapin",
+      "ipa": "/sapɛ̃/",
+      "normalizedIPA": "sapɛ̃",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "satellite",
+      "label": "satellite",
+      "ipa": "/satelit/",
+      "normalizedIPA": "satelit",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "saxophone",
+      "label": "saxophone",
+      "ipa": "/saksɔfɔn/",
+      "normalizedIPA": "saksɔfɔn",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "scarabee",
+      "label": "scarabée",
+      "ipa": "/skaʁabe/",
+      "normalizedIPA": "skaʁabe",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "seringue",
+      "label": "seringue",
+      "ipa": "/səʁɛ̃g/",
+      "normalizedIPA": "səʁɛ̃g",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "serpent",
+      "label": "serpent",
+      "ipa": "/sɛʁpɑ̃/",
+      "normalizedIPA": "sɛʁpɑ̃",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "skateboard",
+      "label": "skateboard",
+      "ipa": "/skɛtbɔʁd/",
+      "normalizedIPA": "skɛtbɔʁd",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "soleil",
+      "label": "soleil",
+      "ipa": "/sɔlɛj/",
+      "normalizedIPA": "sɔlɛj",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "stade",
+      "label": "stade",
+      "ipa": "/stad/",
+      "normalizedIPA": "stad",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "stethoscope",
+      "label": "stéthoscope",
+      "ipa": "/stetɔskɔp/",
+      "normalizedIPA": "stetɔskɔp",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "stylo",
+      "label": "stylo",
+      "ipa": "/stilo/",
+      "normalizedIPA": "stilo",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "sucette",
+      "label": "sucette",
+      "ipa": "/sysɛt/",
+      "normalizedIPA": "sysɛt",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "sushi",
+      "label": "sushi",
+      "ipa": "/syʃi/",
+      "normalizedIPA": "syʃi",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "taco",
+      "label": "taco",
+      "ipa": "/tako/",
+      "normalizedIPA": "tako",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "tambour",
+      "label": "tambour",
+      "ipa": "/tɑ̃buʁ/",
+      "normalizedIPA": "tɑ̃buʁ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "tarte",
+      "label": "tarte",
+      "ipa": "/taʁt/",
+      "normalizedIPA": "taʁt",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "telescope",
+      "label": "télescope",
+      "ipa": "/teleskɔp/",
+      "normalizedIPA": "teleskɔp",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "the",
+      "label": "thé",
+      "ipa": "/te/",
+      "normalizedIPA": "te",
+      "productivityStatus": "strict_candidate",
+      "active": false,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "theiere",
+      "label": "théière",
+      "ipa": "/tejɛʁ/",
+      "normalizedIPA": "tejɛʁ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "thermometre",
+      "label": "thermomètre",
+      "ipa": "/tɛʁmɔmɛtʁ/",
+      "normalizedIPA": "tɛʁmɔmɛtʁ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "ticket",
+      "label": "ticket",
+      "ipa": "/tikɛ/",
+      "normalizedIPA": "tikɛ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "tigre",
+      "label": "tigre",
+      "ipa": "/tiɡʁ/",
+      "normalizedIPA": "tiɡʁ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "toilettes",
+      "label": "toilettes",
+      "ipa": "/twalɛt/",
+      "normalizedIPA": "twalɛt",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "tomate",
+      "label": "tomate",
+      "ipa": "/tɔmat/",
+      "normalizedIPA": "tɔmat",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "tornade",
+      "label": "tornade",
+      "ipa": "/tɔʁnad/",
+      "normalizedIPA": "tɔʁnad",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "tournesol",
+      "label": "tournesol",
+      "ipa": "/tuʁnəsɔl/",
+      "normalizedIPA": "tuʁnəsɔl",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "tournevis",
+      "label": "tournevis",
+      "ipa": "/tuʁnəvis/",
+      "normalizedIPA": "tuʁnəvis",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "tramway",
+      "label": "tramway",
+      "ipa": "/tʁamwɛ/",
+      "normalizedIPA": "tʁamwɛ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "trefle",
+      "label": "trèfle",
+      "ipa": "/tʁɛfl/",
+      "normalizedIPA": "tʁɛfl",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "trombone",
+      "label": "trombone",
+      "ipa": "/tʁɔ̃bon/",
+      "normalizedIPA": "tʁɔ̃bon",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "trompette",
+      "label": "trompette",
+      "ipa": "/tʁɔ̃pɛt/",
+      "normalizedIPA": "tʁɔ̃pɛt",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "trottinette",
+      "label": "trottinette",
+      "ipa": "/tʁɔtinɛt/",
+      "normalizedIPA": "tʁɔtinɛt",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "tulipe",
+      "label": "tulipe",
+      "ipa": "/tylip/",
+      "normalizedIPA": "tylip",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "usine",
+      "label": "usine",
+      "ipa": "/yzin/",
+      "normalizedIPA": "yzin",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "vache",
+      "label": "vache",
+      "ipa": "/vaʃ/",
+      "normalizedIPA": "vaʃ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "vague",
+      "label": "vague",
+      "ipa": "/vag/",
+      "normalizedIPA": "vag",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "violon",
+      "label": "violon",
+      "ipa": "/vjɔlɔ̃/",
+      "normalizedIPA": "vjɔlɔ̃",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "volcan",
+      "label": "volcan",
+      "ipa": "/vɔlkɑ̃/",
+      "normalizedIPA": "vɔlkɑ̃",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "zebre",
+      "label": "zèbre",
+      "ipa": "/zɛbʁ/",
+      "normalizedIPA": "zɛbʁ",
+      "productivityStatus": "strict_candidate",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    }
+  ],
+  "generalOnlyTokens": [
+    {
+      "id": "bacon",
+      "label": "bacon",
+      "ipa": "/bekɔn/",
+      "normalizedIPA": "bekɔn",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "balle",
+      "label": "balle",
+      "ipa": "/bal/",
+      "normalizedIPA": "bal",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "ballon",
+      "label": "ballon",
+      "ipa": "/balɔ̃/",
+      "normalizedIPA": "balɔ̃",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "basketball",
+      "label": "ballon de basket",
+      "ipa": "/balɔ̃dəbaskɛt/",
+      "normalizedIPA": "balɔ̃dəbaskɛt",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "rugby",
+      "label": "ballon de rugby",
+      "ipa": "/balɔ̃dəʁygbi/",
+      "normalizedIPA": "balɔ̃dəʁygbi",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "volleyball",
+      "label": "ballon de volley",
+      "ipa": "/balɔ̃dəvɔlɛ/",
+      "normalizedIPA": "balɔ̃dəvɔlɛ",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "baseball",
+      "label": "baseball",
+      "ipa": "/bɛzbol/",
+      "normalizedIPA": "bɛzbol",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "biscuitfortune",
+      "label": "biscuit chinois",
+      "ipa": "/biskɥiʃinwa/",
+      "normalizedIPA": "biskɥiʃinwa",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "boiteaoutils",
+      "label": "boîte à outils",
+      "ipa": "/bwatauti/",
+      "normalizedIPA": "bwatauti",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "boitelettres",
+      "label": "boîte aux lettres",
+      "ipa": "/bwatolɛtʁ/",
+      "normalizedIPA": "bwatolɛtʁ",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "boomerang",
+      "label": "boomerang",
+      "ipa": "/buməʁɑ̃g/",
+      "normalizedIPA": "buməʁɑ̃g",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "bowling",
+      "label": "bowling",
+      "ipa": "/buling/",
+      "normalizedIPA": "buling",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "brosseadents",
+      "label": "brosse à dents",
+      "ipa": "/bʁɔsadɑ̃/",
+      "normalizedIPA": "bʁɔsadɑ̃",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "camionpompier",
+      "label": "camion de pompiers",
+      "ipa": "/kamjɔ̃dəpɔ̃pje/",
+      "normalizedIPA": "kamjɔ̃dəpɔ̃pje",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "cartemonde",
+      "label": "carte du monde",
+      "ipa": "/kaʁtdymɔ̃d/",
+      "normalizedIPA": "kaʁtdymɔ̃d",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "casqueaudio",
+      "label": "casque audio",
+      "ipa": "/kaskodjo/",
+      "normalizedIPA": "kaskodjo",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "cerfvolant",
+      "label": "cerf-volant",
+      "ipa": "/sɛʁvɔlɑ̃/",
+      "normalizedIPA": "sɛʁvɔlɑ̃",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "chaussondanse",
+      "label": "chausson de danse",
+      "ipa": "/ʃosɔ̃dədɑ̃s/",
+      "normalizedIPA": "ʃosɔ̃dədɑ̃s",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "clap",
+      "label": "clap",
+      "ipa": "/klap/",
+      "normalizedIPA": "klap",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "cleanglaise",
+      "label": "clé anglaise",
+      "ipa": "/kleɑ̃glɛz/",
+      "normalizedIPA": "kleɑ̃glɛz",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "cupcake",
+      "label": "cupcake",
+      "ipa": "/kœpkɛk/",
+      "normalizedIPA": "kœpkɛk",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "curry",
+      "label": "curry",
+      "ipa": "/kyʁi/",
+      "normalizedIPA": "kyʁi",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "feutricolore",
+      "label": "feu tricolore",
+      "ipa": "/føtʁikɔlɔʁ/",
+      "normalizedIPA": "føtʁikɔlɔʁ",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "flacon",
+      "label": "flacon",
+      "ipa": "/flakɔ̃/",
+      "normalizedIPA": "flakɔ̃",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "gant",
+      "label": "gant",
+      "ipa": "/gɑ̃/",
+      "normalizedIPA": "gɑ̃",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "globeterrestre",
+      "label": "globe terrestre",
+      "ipa": "/glɔbtɛʁɛstʁ/",
+      "normalizedIPA": "glɔbtɛʁɛstʁ",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "grandmagasin",
+      "label": "grand magasin",
+      "ipa": "/gʁɑ̃magazɛ̃/",
+      "normalizedIPA": "gʁɑ̃magazɛ̃",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "halteres",
+      "label": "haltères",
+      "ipa": "/altɛʁ/",
+      "normalizedIPA": "altɛʁ",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "hamburger",
+      "label": "hamburger",
+      "ipa": "/ɑ̃byʁgœʁ/",
+      "normalizedIPA": "ɑ̃byʁgœʁ",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "hotdog",
+      "label": "hot-dog",
+      "ipa": "/ɔtdɔg/",
+      "normalizedIPA": "ɔtdɔg",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "joystick",
+      "label": "joystick",
+      "ipa": "/dʒɔjstik/",
+      "normalizedIPA": "dʒɔjstik",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "kimono",
+      "label": "kimono",
+      "ipa": "/kimɔno/",
+      "normalizedIPA": "kimɔno",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "maillot",
+      "label": "maillot",
+      "ipa": "/majo/",
+      "normalizedIPA": "majo",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "manette",
+      "label": "manette",
+      "ipa": "/manɛt/",
+      "normalizedIPA": "manɛt",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "papierwc",
+      "label": "papier toilette",
+      "ipa": "/papjetwalɛt/",
+      "normalizedIPA": "papjetwalɛt",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "parachute",
+      "label": "parachute",
+      "ipa": "/paʁaʃyt/",
+      "normalizedIPA": "paʁaʃyt",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "photo",
+      "label": "photo",
+      "ipa": "/foto/",
+      "normalizedIPA": "foto",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "pingpong",
+      "label": "ping-pong",
+      "ipa": "/piŋpɔŋ/",
+      "normalizedIPA": "piŋpɔŋ",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "plage",
+      "label": "plage",
+      "ipa": "/plaʒ/",
+      "normalizedIPA": "plaʒ",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "poule",
+      "label": "poule",
+      "ipa": "/pul/",
+      "normalizedIPA": "pul",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "poulpe",
+      "label": "poulpe",
+      "ipa": "/pulp/",
+      "normalizedIPA": "pulp",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "poupee",
+      "label": "poupée",
+      "ipa": "/pupe/",
+      "normalizedIPA": "pupe",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "pousse",
+      "label": "pousse",
+      "ipa": "/pus/",
+      "normalizedIPA": "pus",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "projecteur",
+      "label": "projecteur",
+      "ipa": "/pʁɔʒɛktœʁ/",
+      "normalizedIPA": "pʁɔʒɛktœʁ",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "puzzle",
+      "label": "puzzle",
+      "ipa": "/pœzl/",
+      "normalizedIPA": "pœzl",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "radiox",
+      "label": "radiographie",
+      "ipa": "/ʁadjogʁafi/",
+      "normalizedIPA": "ʁadjogʁafi",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "ramen",
+      "label": "ramen",
+      "ipa": "/ʁamɛn/",
+      "normalizedIPA": "ʁamɛn",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "ratonlaveur",
+      "label": "raton laveur",
+      "ipa": "/ʁatɔ̃lavœʁ/",
+      "normalizedIPA": "ʁatɔ̃lavœʁ",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "rizcuit",
+      "label": "riz cuit",
+      "ipa": "/ʁikɥi/",
+      "normalizedIPA": "ʁikɥi",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "rocher",
+      "label": "rocher",
+      "ipa": "/ʁɔʃe/",
+      "normalizedIPA": "ʁɔʃe",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "sac",
+      "label": "sac",
+      "ipa": "/sak/",
+      "normalizedIPA": "sak",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "short",
+      "label": "short",
+      "ipa": "/ʃɔʁt/",
+      "normalizedIPA": "ʃɔʁt",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "tshirt",
+      "label": "tee-shirt",
+      "ipa": "/tiʃœʁt/",
+      "normalizedIPA": "tiʃœʁt",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "travaux",
+      "label": "travaux",
+      "ipa": "/tʁavo/",
+      "normalizedIPA": "tʁavo",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "vent",
+      "label": "vent",
+      "ipa": "/vɑ̃/",
+      "normalizedIPA": "vɑ̃",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "voiturepolice",
+      "label": "voiture de police",
+      "ipa": "/vwatyʁdəpɔlis/",
+      "normalizedIPA": "vwatyʁdəpɔlis",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    },
+    {
+      "id": "yoyo",
+      "label": "yo-yo",
+      "ipa": "/jojo/",
+      "normalizedIPA": "jojo",
+      "productivityStatus": "general_only",
+      "active": true,
+      "strictEligible": false,
+      "strictUseCount": 0,
+      "strictExamples": []
+    }
+  ],
+  "illustrationOnlyTokens": [
+    {
+      "id": "dos",
+      "label": "dos",
+      "ipa": "/do/",
+      "normalizedIPA": "do",
+      "productivityStatus": "illustration_only",
+      "active": false,
+      "strictEligible": true,
+      "strictUseCount": 0,
+      "strictExamples": []
+    }
+  ],
+  "homophoneGroups": [],
+  "provenance": {
+    "canonicalSource": "https://www.lexique.org/databases/Lexique400/Lexique400.tsv",
+    "mirror": "https://github.com/dorfner/pass_the_bomb/blob/master/Lexique400/Lexique4.tsv",
+    "sha256": "0cd7de82251968cee21b730abf7c30da57d463ba8e5ec8f501ec064b032d1487",
+    "license": "CC BY-SA 4.0"
+  }
+}

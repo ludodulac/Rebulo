@@ -3,30 +3,32 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Rebulo — atlas phonologique</title>
+  <title>Rebulo — atlas des sons</title>
   <link rel="stylesheet" href="phonology-atlas.css">
 </head>
 <body>
 <main class="atlas-shell">
   <header class="atlas-toolbar">
     <div>
-      <p class="eyebrow">Répertoire phonétique Rebulo</p>
+      <p class="eyebrow">Répertoire sonore Rebulo</p>
       <h1>Atlas sons → mots-images → rébus</h1>
-      <p>Recherche les pièces par phonème et position. Une image n’est une pièce stricte que si son mot entier et sa prononciation entière sont utilisés.</p>
+      <p>Tape simplement le son comme tu l’entends : <strong>ra</strong>, <strong>cha</strong>, <strong>ou</strong>, <strong>on</strong>, <strong>ain</strong>, <strong>och</strong>… Rebulo utilise la phonétique exacte en coulisses.</p>
     </div>
     <div class="atlas-controls">
-      <label>Son / IPA <input id="phonemeInput" placeholder="ex. ʃ, s, ʁ"></label>
-      <label>Position <select id="positionSelect"><option value="any">Partout</option><option value="initial">Initiale</option><option value="medial">Médiane</option><option value="final">Finale</option></select></label>
+      <label>Son entendu <input id="soundInput" placeholder="ex. ra, och, cha, ou, on"></label>
+      <label>Position <select id="positionSelect"><option value="any">Partout</option><option value="initial">Au début</option><option value="medial">Au milieu</option><option value="final">À la fin</option></select></label>
       <label>Mot / ID <input id="queryInput" placeholder="chat, RBL-chat…"></label>
       <label class="check"><input id="strictOnly" type="checkbox" checked> Seulement les pièces strictes</label>
       <button id="printButton" type="button">Imprimer / enregistrer en PDF</button>
     </div>
+    <p id="soundInterpretation" class="rigor-note">Écris un son comme tu le prononces. Les variantes possibles sont recherchées ensemble.</p>
     <p id="atlasStatus"></p>
-    <p class="rigor-note"><strong>Rigueur :</strong> sans donnée de syllabation explicite, Rebulo parle de « bloc sonore entier », pas de syllabe. La syllabe sera indexée séparément lorsqu’une donnée lexicale fiable la documente.</p>
+    <details><summary>Détails phonétiques</summary><p>Rebulo conserve l’API (alphabet phonétique international) comme donnée technique de contrôle, mais tu n’as pas besoin de le connaître pour chercher.</p></details>
+    <p class="rigor-note"><strong>Rigueur :</strong> sans donnée de syllabation explicite, Rebulo parle de « bloc sonore entier », pas de syllabe. Une image stricte garde toujours son mot entier et sa prononciation entière.</p>
     <p>Les dessins restent en couleur à l’écran. L’impression passe automatiquement en niveaux de gris pour économiser l’encre.</p>
     <p><a href="pictogram-sheets.html">Voir aussi la banque générale de dessins</a></p>
   </header>
-  <section id="phonemeChips" class="phoneme-chips" aria-label="Sons disponibles"></section>
+  <section id="phonemeChips" class="phoneme-chips" aria-label="Exemples de sons à taper"></section>
   <section class="lexical-panel" aria-labelledby="lexicalTitle">
     <h2 id="lexicalTitle">Mots strictement constructibles dans le lexique actuel</h2>
     <p id="lexicalStatus" class="lexical-note">Chargement du contexte lexical…</p>

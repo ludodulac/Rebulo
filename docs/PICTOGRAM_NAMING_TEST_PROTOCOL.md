@@ -6,6 +6,19 @@ Ce protocole sert à décider si une image peut entrer dans la banque phonétiqu
 
 Une image n’est utile à Rebulo que si elle provoque spontanément le **mot entier attendu**, avec la **prononciation entière attendue**, sans indice caché.
 
+## Comparaison de prototypes avant passation
+
+Lorsqu’un concept prometteur dispose d’un visuel ambigu, Rebulo peut conserver plusieurs prototypes de recherche avant tout test participant. Ces comparaisons sont enregistrées dans `data/pictogram-prototype-comparisons.json`.
+
+Pour chaque candidat, conserver :
+- l’asset exact et sa provenance ;
+- son état de disponibilité ;
+- l’intention visuelle du prototype ;
+- les **risques de dénomination anticipés**, clairement identifiés comme hypothèses et jamais comme réponses observées ;
+- l’état du futur test de dénomination.
+
+Une comparaison de prototypes ne vaut ni test de dénomination, ni validation clinique, ni activation. Tant qu’aucune décision humaine documentée n’existe, le concept concerné reste inactif. L’ajout d’un meilleur candidat visuel doit compléter la comparaison existante plutôt que supprimer silencieusement le prototype précédent.
+
 ## Passation
 
 1. Montrer le pictogramme seul, sans mot écrit, sans rébus et sans contexte.

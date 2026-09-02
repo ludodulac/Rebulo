@@ -1,5 +1,6 @@
 import {buildAutomaticCreatorTargets,mergeCreatorTargets} from './creator-catalog.js';
 import {buildNumberGapTargets,buildOpenPictogramGapTargets,mergeOpenPictograms} from './open-pictogram-library.js';
+import {buildWave2GapTargets,mergeOpenPictogramsWave2} from './open-pictogram-library-wave2.js';
 
 const nativeFetch=window.fetch.bind(window);
 
@@ -22,7 +23,7 @@ window.fetch=async function rebuloFetch(input,init){
     const response=await nativeFetch(input,init);
     if(!response.ok)return response;
     const seed=await response.json();
-    return jsonResponse(mergeOpenPictograms(seed));
+    return jsonResponse(mergeOpenPictogramsWave2(mergeOpenPictograms(seed)));
   }
 
   if(!url.endsWith('data/corpus-pilot.json'))return nativeFetch(input,init);
@@ -39,6 +40,7 @@ window.fetch=async function rebuloFetch(input,init){
   const generatedItems=[
     ...buildAutomaticCreatorTargets(coverage),
     ...buildOpenPictogramGapTargets(coverage),
+    ...buildWave2GapTargets(coverage),
     ...buildNumberGapTargets(coverage)
   ];
   return jsonResponse({...corpus,items:mergeCreatorTargets(manualItems,generatedItems)});

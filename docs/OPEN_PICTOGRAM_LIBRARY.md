@@ -4,7 +4,7 @@
 
 Rebulo ne doit pas dépendre d'une poignée de pictogrammes. La bibliothèque est désormais pensée comme une ressource extensible : illustrations générales, concepts phonétiques structurés, puis éventuelle revue clinique séparée.
 
-Deux vagues OpenMoji portent maintenant la bibliothèque ouverte à plus de 200 concepts visuels usuels, reliés à une prononciation française entière. Elles ne changent pas la règle du mode strict : **image entière → mot conventionnel entier → prononciation entière**, avec concaténation IPA exacte.
+Trois vagues OpenMoji portent maintenant la bibliothèque ouverte à plus de 330 concepts visuels usuels, reliés à une prononciation française entière. Elles ne changent pas la règle du mode strict : **image entière → mot conventionnel entier → prononciation entière**, avec concaténation IPA exacte.
 
 ## Source visuelle principale
 
@@ -23,7 +23,11 @@ Deux autres banques ouvertes ont été examinées comme solutions de repli pour 
 
 La deuxième vague ajoute plus de 100 concepts supplémentaires répartis entre objets courants, vêtements, aliments, animaux, nature, météo, instruments, outils, hygiène, santé et jouets. Elle apporte notamment des unités phonétiques intéressantes telles que `seau /so/`, `scie /si/`, `pile /pil/` et `clé /kle/`.
 
-Comme pour la première vague, une image disponible n'est pas automatiquement considérée comme suffisamment stable pour le strict. Les cas dont la dénomination peut facilement varier restent `strictEligible:false` et servent seulement de ressource générale tant qu'une décision plus robuste n'est pas disponible.
+## Troisième vague
+
+La troisième vague ajoute plus de 120 concepts supplémentaires : transports, lieux, maison, alimentation, insectes et animaux, sport, média, outils, vêtements, santé et météo. Elle ajoute aussi des unités courtes utiles au moteur, notamment `dé /de/`, `nez /ne/`, `sel /sɛl/`, `ver /vɛʁ/`, `bois /bwa/`, `pluie /plɥi/` et `goutte /gut/`.
+
+Comme pour les vagues précédentes, une image disponible n'est pas automatiquement considérée comme suffisamment stable pour le strict. Les cas dont la dénomination peut facilement varier restent `strictEligible:false` et servent seulement de ressource générale tant qu'une décision plus robuste n'est pas disponible.
 
 ## Strict, général et clinique restent distincts
 
@@ -43,7 +47,7 @@ Ces symboles ne sont pas transformés en pictogrammes stricts : ils restent des 
 
 ## Expansion à partir des vrais manques phonétiques
 
-`data/coverage-report.json` contient les sons qui bloquent actuellement des mots du Lexique 4. La grande bibliothèque ne se contente pas d'ajouter des images au hasard : les deux vagues recherchent les nouveaux concepts dont l'IPA correspond exactement à ces manques et transforment leurs exemples en nouvelles cibles jouables.
+`data/coverage-report.json` contient les sons qui bloquent actuellement des mots du Lexique 4. La grande bibliothèque ne se contente pas d'ajouter des images au hasard : les trois vagues recherchent les nouveaux concepts dont l'IPA correspond exactement à ces manques et transforment leurs exemples en nouvelles cibles jouables.
 
 Cela permet d'étendre progressivement la couverture sans simplifier `src/phonetic-engine.js` et sans inventer une lecture partielle d'image.
 
@@ -62,9 +66,17 @@ L'identifiant est dérivé de l'identifiant sémantique du concept, par exemple 
 
 Chaque case contient aussi une petite bande de données lisible par OCR. La page propose un export CSV avec `index_id`, nom, IPA, URL d'image, source, fichier source, commit, licence, statut strict et statut clinique. Ce CSV peut servir de table de correspondance pour un futur découpage automatique de photos ou de scans.
 
-La mise en page d'impression force le format A4 portrait, des traits noirs fins, des images en niveaux de gris et aucun fond décoratif à l'impression afin de limiter la consommation d'encre. La page de dessin imprime une zone entièrement blanche.
+La mise en page d'impression force le format A4 portrait, des traits noirs fins, des images en niveaux de gris et aucun fond décoratif à l'impression afin de limiter la consommation d'encre. La page de dessin imprime une zone entièrement blanche. Le bouton d'impression indique explicitement que la boîte d'impression du navigateur peut enregistrer le carnet au format PDF.
 
-Les feuilles et le CSV utilisent désormais la combinaison de toutes les vagues ouvertes. Toute nouvelle entrée ajoutée dans une vague de bibliothèque apparaît automatiquement dans le carnet sans maintenance d'une deuxième liste.
+Les feuilles et le CSV utilisent la combinaison de toutes les vagues ouvertes. Toute nouvelle entrée ajoutée dans une vague de bibliothèque apparaît automatiquement dans le carnet sans maintenance d'une deuxième liste.
+
+## Consultation publique
+
+Le workflow GitHub Pages déploie automatiquement `main`. Le carnet public est donc disponible à l'adresse :
+
+`https://ludodulac.github.io/Rebulo/pictogram-sheets.html`
+
+Cette URL affiche toujours la version déployée de `main`. Elle permet de consulter toutes les planches, télécharger l'index CSV puis imprimer ou enregistrer l'ensemble en PDF.
 
 ## Étapes suivantes d'enrichissement
 

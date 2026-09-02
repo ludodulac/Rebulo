@@ -12,6 +12,8 @@ export function isDrawableNamingCandidate(candidate={}){
 }
 
 export function buildDrawableOpportunityShortlist(opportunities=[],curatedItems=[],{limit=30}={}){
+  // Important: lexical scoring alone never decides that a word is drawable.
+  // Only concepts already admitted to the human research shortlist can enter this queue.
   const curatedByIpa=new Map();
   for(const item of curatedItems||[]){
     const ipa=normalizeIPA(item.ipa||'');
@@ -24,21 +26,7 @@ export function buildDrawableOpportunityShortlist(opportunities=[],curatedItems=
     if(!ipa||!curated)continue;
     const candidates=(opportunity.namingCandidates||[]).filter(isDrawableNamingCandidate);
     const preferred=candidates.find(x=>normalizedWord(x.word)===normalizedWord(curated.label))||null;
-    out.push({
-      ipa,
-      label:curated.label,
-      targetCount:Number(opportunity.targetCount)||0,
-      frequencySum:Number(opportunity.frequencySum)||0,
-      examples:(opportunity.examples||[]).slice(0,5),
-      lexicalCandidates:candidates.slice(0,5),
-      exactLabelAttested:Boolean(preferred),
-      curationStatus:curated.status||'research_candidate',
-      activation:curated.activation||'not_ready',
-      selectionReason:curated.selectionReason||'',
-      namingRisk:curated.namingRisk||'Dénomination spontanée non vérifiée.',
-      assetStatus:curated.assetStatus||'unreviewed',
-      nextGate:curated.nextGate||'human_drawability_review'
-    });
+    out.push({ipa,label:curated.label,targetCount:Number(opportunity.targetCount)||0,frequencySum:Number(opportunity.frequencySum)||0,examples:(opportunity.examples||[]).slice(0,5),lexicalCandidates:candidates.slice(0,5),exactLabelAttested:Boolean(preferred),curationStatus:curated.status||'research_candidate',activation:curated.activation||'not_ready',selectionReason:curated.selectionReason||'',namingRisk:curated.namingRisk||'Dénomination spontanée non vérifiée.',assetStatus:curated.assetStatus||'unreviewed',nextGate:curated.nextGate||'human_drawability_review'});
   }
   return out.sort((a,b)=>b.targetCount-a.targetCount||b.frequencySum-a.frequencySum||a.label.localeCompare(b.label,'fr')).slice(0,limit);
 }

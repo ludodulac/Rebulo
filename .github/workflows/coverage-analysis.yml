@@ -5,9 +5,15 @@ on:
     paths:
       - '.github/workflows/coverage-analysis.yml'
       - 'scripts/analyze-coverage.mjs'
+      - 'scripts/analyze-productivity.mjs'
       - 'scripts/import-lexique.mjs'
       - 'scripts/simulate-expansion.mjs'
       - 'src/phonetic-engine.js'
+      - 'src/phonetic-productivity.js'
+      - 'src/open-pictogram-library.js'
+      - 'src/open-pictogram-library-wave2.js'
+      - 'src/open-pictogram-library-wave3.js'
+      - 'src/pictogram-print-sheets.js'
       - 'data/lexicon-seed.json'
       - 'data/pictogram-priorities.json'
   workflow_dispatch:
@@ -46,6 +52,9 @@ jobs:
       - name: Run strict coverage analysis
         run: node scripts/analyze-coverage.mjs .cache/lexique4.compact.json data/lexicon-seed.json data/coverage-report.json
 
+      - name: Run merged-library productivity analysis
+        run: node scripts/analyze-productivity.mjs .cache/lexique4.compact.json data/lexicon-seed.json data/phonetic-productivity-report.json
+
       - name: Simulate curated pictogram expansion
         run: node scripts/simulate-expansion.mjs .cache/lexique4.compact.json data/lexicon-seed.json data/pictogram-priorities.json data/expansion-simulation.json
 
@@ -53,14 +62,17 @@ jobs:
         run: |
           node --input-type=module <<'NODE'
           import fs from 'node:fs';
-          const p='data/coverage-report.json';
-          const report=JSON.parse(fs.readFileSync(p,'utf8'));
-          report.provenance={
+          const sha256=fs.readFileSync('.cache/Lexique4.sha256','utf8').trim().split(/\s+/)[0];
+          const provenance={
             canonicalSource:'https://www.lexique.org/databases/Lexique400/Lexique400.tsv',
             mirror:'https://github.com/dorfner/pass_the_bomb/blob/master/Lexique400/Lexique4.tsv',
-            sha256:fs.readFileSync('.cache/Lexique4.sha256','utf8').trim().split(/\s+/)[0],
+            sha256,
             license:'CC BY-SA 4.0'
           };
+
+          const p='data/coverage-report.json';
+          const report=JSON.parse(fs.readFileSync(p,'utf8'));
+          report.provenance=provenance;
           fs.writeFileSync(p,JSON.stringify(report,null,2));
           const top=report.missingSounds.slice(0,30);
           const candidates=x=>{
@@ -87,6 +99,28 @@ jobs:
           ];
           fs.writeFileSync('docs/COVERAGE_ANALYSIS.md',lines.join('\n')+'\n');
 
+          const prodPath='data/phonetic-productivity-report.json';
+          const prod=JSON.parse(fs.readFileSync(prodPath,'utf8'));
+          prod.provenance=provenance;
+          fs.writeFileSync(prodPath,JSON.stringify(prod,null,2));
+          const productives=(prod.productiveTokens||[]).slice(0,80);
+          const prodLines=[
+            '# Rebulo — productivité phonétique des pictogrammes','',
+            `- Entrées Lexique analysées : ${prod.lexicalEntryCount}`,
+            `- Inventaire fusionné : ${prod.inventory.mergedCount} concepts (${prod.inventory.seedCount} seed + ${prod.inventory.openLibraryCount} entrées OpenMoji avant déduplication).`,
+            `- Pièces strictement productives : ${prod.stats.productive}`,
+            `- Candidats stricts sans preuve : ${prod.stats.candidates}`,
+            `- Concepts général seulement : ${prod.stats.generalOnly}`,
+            `- Cibles uniques en vrais rébus stricts : ${prod.stats.strictRebuses}`,'',
+            'Une pièce est dite **productive** seulement si son mot entier et sa prononciation entière participent à au moins un rébus exact de 2 à 4 pièces. Les candidats ne comptent pas comme couverture productive.','',
+            '## Pièces productives les plus utilisées','',
+            '| Pièce | IPA entière | Cibles strictes | Exemples |',
+            '|---|---|---:|---|',
+            ...productives.map(x=>`| ${x.label} | /${x.normalizedIPA}/ | ${x.strictUseCount} | ${(x.strictExamples||[]).slice(0,3).map(e=>e.word).join(', ')||'—'} |`),'',
+            '> Cette mesure est structurelle et lexicale. Elle ne constitue ni une validation clinique ni un test de dénomination des images. Un pictogramme `active:false` ne participe pas au calcul strict.'
+          ];
+          fs.writeFileSync('docs/PHONETIC_PRODUCTIVITY.md',prodLines.join('\n')+'\n');
+
           const sim=JSON.parse(fs.readFileSync('data/expansion-simulation.json','utf8'));
           const simLines=[
             '# Rebulo — simulation gloutonne d’expansion','',
@@ -109,12 +143,12 @@ jobs:
         run: |
           git config user.name 'rebulo-analysis-bot'
           git config user.email 'actions@users.noreply.github.com'
-          git add data/coverage-report.json data/expansion-simulation.json docs/COVERAGE_ANALYSIS.md docs/EXPANSION_SIMULATION.md
+          git add data/coverage-report.json data/phonetic-productivity-report.json data/expansion-simulation.json docs/COVERAGE_ANALYSIS.md docs/PHONETIC_PRODUCTIVITY.md docs/EXPANSION_SIMULATION.md
           if git diff --cached --quiet; then
             echo 'No analysis changes to commit.'
             exit 0
           fi
-          git commit -m 'Refresh Lexique 4 coverage and expansion simulation'
+          git commit -m 'Refresh Lexique 4 coverage, productivity and expansion simulation'
           git fetch origin main
           git rebase origin/main
           git push origin HEAD:main

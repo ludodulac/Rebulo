@@ -1,4 +1,5 @@
 import {normalizeIPA} from './phonetic-engine.js';
+import {SPATIAL_RELATIONS} from './rebus-construction.js';
 
 function normalizeKey(value=''){
   return String(value||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'');
@@ -48,6 +49,11 @@ export function letterReadingForIPA(value=''){
   return FRENCH_LETTER_READINGS.find(item=>normalizeIPA(item.ipa)===normalized)||null;
 }
 
+export function spatialRelationForIPA(value=''){
+  const normalized=normalizeIPA(value);
+  return Object.values(SPATIAL_RELATIONS).find(item=>normalizeIPA(item.ipa||'')===normalized)||null;
+}
+
 export function buildCreatorTargets(report={}){
   const rows=Array.isArray(report?.constructible)?report.constructible:[];
   const ordered=[...rows].sort((a,b)=>Number(b?.frequency||0)-Number(a?.frequency||0));
@@ -79,11 +85,17 @@ export function buildCreatorTargets(report={}){
   return targets;
 }
 
+function gapToken(token){return typeof token==='string'&&token.startsWith('[')&&token.endsWith(']');}
+
 function operationFromFrameToken(token,letter){
   if(typeof token!=='string'||!token)return null;
-  if(token.startsWith('[')&&token.endsWith(']')){
-    return {type:'grapheme',grapheme:letter.grapheme,reading:letter.reading};
-  }
+  if(gapToken(token))return {type:'grapheme',grapheme:letter.grapheme,reading:letter.reading};
+  return {type:'whole_word',pieceId:token};
+}
+
+function spatialOperationFromFrameToken(token,relation){
+  if(typeof token!=='string'||!token)return null;
+  if(gapToken(token))return {type:'spatial_relation',relation:relation.relation,reading:relation.reading};
   return {type:'whole_word',pieceId:token};
 }
 
@@ -109,18 +121,18 @@ function stripAlternatives(item={}){
   return base;
 }
 
-export function buildGraphemeCreatorTargets(report={}){
+function frameExamples(report={},resolver,operationBuilder,source){
   const gaps=Array.isArray(report?.missingSounds)?report.missingSounds:[];
   const candidates=[];
   const seen=new Set();
   for(const gap of gaps){
-    const letter=letterReadingForIPA(gap?.ipa||'');
-    if(!letter)continue;
+    const resolved=resolver(gap?.ipa||'');
+    if(!resolved)continue;
     for(const example of gap?.examples||[]){
       const frame=Array.isArray(example?.frame)?example.frame:[];
       if(!example?.word||!example?.ipa||frame.length<2||frame.length>4)continue;
-      if(frame.filter(token=>typeof token==='string'&&token.startsWith('[')&&token.endsWith(']')).length!==1)continue;
-      const operations=frame.map(token=>operationFromFrameToken(token,letter));
+      if(frame.filter(gapToken).length!==1)continue;
+      const operations=frame.map(token=>operationBuilder(token,resolved));
       if(operations.some(operation=>!operation))continue;
       const candidate={
         target:example.word,
@@ -128,7 +140,7 @@ export function buildGraphemeCreatorTargets(report={}){
         mode:'general',
         assets:'ready',
         operations,
-        source:'coverage-report-grapheme',
+        source,
         generated:true,
         frequency:Number(example?.frequency||0),
         operationCount:operations.length
@@ -140,6 +152,14 @@ export function buildGraphemeCreatorTargets(report={}){
     }
   }
   return candidates;
+}
+
+export function buildGraphemeCreatorTargets(report={}){
+  return frameExamples(report,letterReadingForIPA,operationFromFrameToken,'coverage-report-grapheme');
+}
+
+export function buildSpatialCreatorTargets(report={}){
+  return frameExamples(report,spatialRelationForIPA,spatialOperationFromFrameToken,'coverage-report-spatial');
 }
 
 export function creatorTargetScore(item={}){
@@ -186,7 +206,8 @@ export function selectBestGeneratedTargets(items=[]){
 export function buildAutomaticCreatorTargets(report={}){
   return selectBestGeneratedTargets([
     ...buildCreatorTargets(report),
-    ...buildGraphemeCreatorTargets(report)
+    ...buildGraphemeCreatorTargets(report),
+    ...buildSpatialCreatorTargets(report)
   ]);
 }
 

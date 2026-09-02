@@ -41,6 +41,18 @@ L’atlas regroupe aussi les images par **prononciation entière identique**. Ce
 
 Rebulo ne déduit pas actuellement les frontières syllabiques depuis une simple chaîne IPA. Quand aucune donnée lexicale de syllabation n’est disponible, l’interface dit **bloc sonore entier** et non syllabe. `scripts/import-lexique.mjs` sait déjà importer un nombre de syllabes quand Lexique 4 le fournit ; une prochaine brique pourra exploiter ces données et, si une source fournit les frontières, construire un vrai index syllabique.
 
+## Contexte lexical réel
+
+`src/lexical-sound-index.js` réutilise les formes de `data/coverage-report.json`, lui-même généré à partir de Lexique 4. Pour le même filtre phonème + position, l’atlas peut donc afficher des **mots strictement constructibles actuellement**, triés par fréquence et accompagnés de leur IPA et de leur décomposition Rebulo.
+
+Ce panneau est volontairement présenté comme un **contexte lexical partiel** : il ne contient pas tout le français, mais seulement les formes déjà strictement constructibles présentes dans le rapport courant. Il ne faut pas confondre ce sous-ensemble avec le lexique complet.
+
+Cette couche permet déjà de relier :
+
+`son ciblé → pièces visuelles disponibles → mots réellement constructibles`.
+
+La prochaine étape sera d’indexer aussi les formes non constructibles du lexique complet afin de mesurer, son par son, quels nouveaux blocs visuels auraient le meilleur rendement.
+
 ## Usage orthophonique visé
 
 Le nouvel atlas prépare une recherche professionnelle du type :
@@ -49,9 +61,11 @@ Le nouvel atlas prépare une recherche professionnelle du type :
 
 Cela complète les activités déjà définies dans Rebulo : phonème initial/final, segmentation et fusion phonémique, comptage/fusion syllabique, dénomination et accès lexical. Les activités de rime, suppression et substitution restent distinctes et ne doivent pas être activées par simple analogie.
 
-## Impression et dessin
+## Affichage, impression et dessin
 
-La page publique `phonology-atlas.html` produit, pour le filtre courant, des cartes en noir et blanc avec :
+La page publique `phonology-atlas.html` affiche les pictogrammes **en couleur à l’écran**. Le passage en niveaux de gris est réservé au média d’impression afin de préserver la lisibilité et le plaisir visuel sur le site tout en économisant l’encre sur papier/PDF.
+
+Pour le filtre courant, les cartes comportent :
 - ID stable `RBL-*` ;
 - nom ;
 - IPA entière ;

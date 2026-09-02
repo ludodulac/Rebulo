@@ -15,6 +15,14 @@ for(const id of ['scie','nez','rat']){
   assert.equal(record?.sourceCommit,'aeb8bb3a59e2de39c754ac79180c8131c906acea');
   assert.notEqual(record?.clinicalStatus,'clinical_approved');
 }
+for(const id of ['pas','pluie']){
+  const record=registry.assets.find(asset=>asset.concept===id);
+  assert.equal(record?.source,'openmoji');
+  assert.equal(record?.sourceCommit,'aeb8bb3a59e2de39c754ac79180c8131c906acea');
+  assert.equal(record?.adaptation,'simplified_for_small_size');
+  assert.notEqual(record?.clinicalStatus,'clinical_approved');
+  assert.equal(visual.audit.find(item=>item.id===id)?.status,'keep_then_harmonize');
+}
 const sol=visual.audit.find(item=>item.id==='sol');
 assert.equal(sol.status,'keep_then_harmonize');
 assert.match(sol.reason,/supprimée/i);

@@ -71,7 +71,9 @@ export function buildCreatorTargets(report={}){
       assets:'ready',
       therapy,
       source:'coverage-report',
-      generated:true
+      generated:true,
+      frequency:Number(row?.frequency||0),
+      operationCount:pieces.length
     });
   }
   return targets;
@@ -108,15 +110,54 @@ export function buildGraphemeCreatorTargets(report={}){
         assets:'ready',
         operations,
         source:'coverage-report-grapheme',
-        generated:true
+        generated:true,
+        frequency:Number(example?.frequency||0),
+        operationCount:operations.length
       });
     }
   }
   return candidates;
 }
 
+export function creatorTargetScore(item={}){
+  const modeScore=item?.mode==='strict'?300:item?.mode==='general'?200:0;
+  const count=Number(item?.operationCount||(Array.isArray(item?.operations)?item.operations.length:0));
+  const simplicityScore=count>0?Math.max(0,40-count*10):0;
+  const frequencyScore=Math.min(50,Math.log10(Math.max(1,Number(item?.frequency||0)))*10);
+  return modeScore+simplicityScore+frequencyScore;
+}
+
+export function rankCreatorTargets(items=[]){
+  return [...(items||[])].sort((a,b)=>{
+    const scoreDiff=creatorTargetScore(b)-creatorTargetScore(a);
+    if(scoreDiff)return scoreDiff;
+    const operationDiff=Number(a?.operationCount||a?.operations?.length||99)-Number(b?.operationCount||b?.operations?.length||99);
+    if(operationDiff)return operationDiff;
+    return Number(b?.frequency||0)-Number(a?.frequency||0);
+  });
+}
+
+export function selectBestGeneratedTargets(items=[]){
+  const grouped=new Map();
+  for(const item of items||[]){
+    const key=normalizeKey(item?.target);
+    if(!key)continue;
+    if(!grouped.has(key))grouped.set(key,[]);
+    grouped.get(key).push(item);
+  }
+  return [...grouped.values()].map(group=>rankCreatorTargets(group)[0]).filter(Boolean);
+}
+
+export function buildAutomaticCreatorTargets(report={}){
+  return selectBestGeneratedTargets([
+    ...buildCreatorTargets(report),
+    ...buildGraphemeCreatorTargets(report)
+  ]);
+}
+
 export function mergeCreatorTargets(manualItems=[],generatedItems=[]){
-  const generatedByKey=new Map((generatedItems||[]).filter(item=>normalizeKey(item?.target)).map(item=>[normalizeKey(item.target),item]));
+  const bestGenerated=selectBestGeneratedTargets(generatedItems);
+  const generatedByKey=new Map(bestGenerated.filter(item=>normalizeKey(item?.target)).map(item=>[normalizeKey(item.target),item]));
   const mergedManual=(manualItems||[]).map(item=>{
     const generated=generatedByKey.get(normalizeKey(item?.target));
     if(!generated)return item;
@@ -136,5 +177,5 @@ export function mergeCreatorTargets(manualItems=[],generatedItems=[]){
         :item?.therapy
     };
   });
-  return [...mergedManual,...generatedByKey.values()];
+  return [...mergedManual,...rankCreatorTargets([...generatedByKey.values()])];
 }

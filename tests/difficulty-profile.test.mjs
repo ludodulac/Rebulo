@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {profileFromAge,rebusesForProfile} from '../src/difficulty-profile.js';
+const catalog=JSON.parse(fs.readFileSync(new URL('../data/rebus.json',import.meta.url)));
+assert.equal(profileFromAge(5),'discovery');
+assert.equal(profileFromAge(8),'discovery');
+assert.equal(profileFromAge(9),'intermediate');
+assert.equal(profileFromAge(12),'expert');
+assert.ok(rebusesForProfile(catalog,'discovery').every(item=>Number(item.difficulty||1)<=1));
+assert.ok(rebusesForProfile(catalog,'intermediate').every(item=>Number(item.difficulty||1)<=2));
+assert.equal(rebusesForProfile(catalog,'expert').length,catalog.length);
+const play=fs.readFileSync(new URL('../src/play-mode.js',import.meta.url),'utf8');
+const css=fs.readFileSync(new URL('../play-mode.css',import.meta.url),'utf8');
+assert.match(play,/Joue avec les sons et les mots grâce aux rébus/);
+assert.match(play,/setMode\('play'\)/,'Jouer must be the default experience');
+assert.match(css,/\.play-rebus\{[^}]*flex-wrap:nowrap/,'multi-piece play rebuses must keep one reading line');
+assert.match(css,/overflow-x:auto/,'long mobile rebuses must remain readable via horizontal overflow');
+console.log('difficulty profile UX: ok');

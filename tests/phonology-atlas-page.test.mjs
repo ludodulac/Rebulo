@@ -1,0 +1,16 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+const html=fs.readFileSync('phonology-atlas.html','utf8');
+const css=fs.readFileSync('phonology-atlas.css','utf8');
+const js=fs.readFileSync('src/phonology-atlas-page.js','utf8');
+assert.match(html,/Atlas sons → mots-images → rébus/);
+assert.match(html,/Position/);
+assert.match(html,/Seulement les pièces strictes/);
+assert.match(html,/bloc sonore entier/);
+assert.match(html,/Imprimer \/ enregistrer en PDF/);
+assert.match(css,/@page\{size:A4 portrait/);
+assert.match(css,/filter:grayscale\(1\)/);
+assert.match(js,/filterAtlas/);
+assert.match(js,/phonemeInput/);
+assert.match(js,/print-copy/);
+assert.doesNotMatch(html,/clinical_approved/i);
+console.log('phonology atlas page: ok');

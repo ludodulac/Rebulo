@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Rebulo — atlas phonologique</title>
+  <link rel="stylesheet" href="phonology-atlas.css">
+</head>
+<body>
+<main class="atlas-shell">
+  <header class="atlas-toolbar">
+    <div>
+      <p class="eyebrow">Répertoire phonétique Rebulo</p>
+      <h1>Atlas sons → mots-images → rébus</h1>
+      <p>Recherche les pièces par phonème et position. Une image n’est une pièce stricte que si son mot entier et sa prononciation entière sont utilisés.</p>
+    </div>
+    <div class="atlas-controls">
+      <label>Son / IPA <input id="phonemeInput" placeholder="ex. ʃ, s, ʁ"></label>
+      <label>Position <select id="positionSelect"><option value="any">Partout</option><option value="initial">Initiale</option><option value="medial">Médiane</option><option value="final">Finale</option></select></label>
+      <label>Mot / ID <input id="queryInput" placeholder="chat, RBL-chat…"></label>
+      <label class="check"><input id="strictOnly" type="checkbox" checked> Seulement les pièces strictes</label>
+      <button id="printButton" type="button">Imprimer / enregistrer en PDF</button>
+    </div>
+    <p id="atlasStatus"></p>
+    <p class="rigor-note"><strong>Rigueur :</strong> sans donnée de syllabation explicite, Rebulo parle de « bloc sonore entier », pas de syllabe. La syllabe sera indexée séparément lorsqu’une donnée lexicale fiable la documente.</p>
+    <p><a href="pictogram-sheets.html">Voir aussi la banque générale de dessins</a></p>
+  </header>
+  <section id="phonemeChips" class="phoneme-chips" aria-label="Sons disponibles"></section>
+  <section id="atlasResults" class="atlas-results" aria-live="polite"></section>
+</main>
+<script type="module" src="src/phonology-atlas-page.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const source=fs.readFileSync(new URL('../src/session-experience.js',import.meta.url),'utf8');
+for(const text of ['🔗 Partager la séance','createSessionShareUrl','readSessionShareFromUrl','resolveSharedSession','openSharedSession();','Lien de séance invalide','launchRounds(resolved.items,resolved.help)'])assert.ok(source.includes(text),`missing shared-session UX: ${text}`);
+assert.ok(source.includes("navigator.share"),'mobile sharing should use the native share sheet when available');
+assert.ok(source.includes("navigator.clipboard?.writeText"),'desktop sharing should support copying the same URL');
+assert.ok(source.includes("arena.querySelector('#sessionHintButton').hidden=!activeHelp.hint"),'shared hint permission must control patient UI');
+assert.ok(source.includes("arena.querySelector('#sessionSolutionButton').hidden=!activeHelp.solution"),'shared solution permission must control patient UI');
+assert.equal(source.includes('patientName'),false,'patient identity must never enter session sharing code');
+console.log('session share UX guards: ok');

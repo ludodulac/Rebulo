@@ -15,6 +15,15 @@
           "designIntent": "Prototype existant licencié, conservé comme point de comparaison de départ.",
           "namingRisks": ["plante", "plante en pot", "pot de fleurs"],
           "namingTestStatus": "not_run"
+        },
+        {
+          "candidateId": "pot-openclipart-empty-flowerpot",
+          "asset": "https://www.clker.com/cliparts/5/F/M/j/Y/T/empty-flowerpot-hi.png",
+          "provenance": "OpenClipart public-domain/CC0 source, archived by Clker as Empty Flowerpot (source page historically linked to openclipart.org/detail/78421; Clker page: https://www.clker.com/clipart-empty-flowerpot.html)",
+          "availability": "available",
+          "designIntent": "Candidat externe non modifié montrant un pot de fleurs vide, sans plante visible, afin de réduire l’indice concurrent « plante » avant comparaison humaine.",
+          "namingRisks": ["pot de fleurs", "cache-pot", "pot de plante"],
+          "namingTestStatus": "not_run"
         }
       ],
       "humanDecision": null

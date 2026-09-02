@@ -26,9 +26,6 @@ function strictBlocks(items=[]){
 
 function segmentCounts(value='',blocks=new Set(),maxPieces=3){
   if(!value)return new Set([0]);
-  const chars=Array.from(value);
-  const offsets=[0];
-  for(const char of chars)offsets.push(offsets[offsets.length-1]+char.length);
   const memo=new Map();
   function walk(offset,pieces){
     const key=`${offset}|${pieces}`;
@@ -60,6 +57,11 @@ export function rankMissingWholeWordOpportunities(items=[],targets=[],{maxPieces
   const names=lexicalNamesByIPA(lexical);
   const existing=strictBlocks(items);
   const opportunities=new Map();
+  const countsCache=new Map();
+  const counts=value=>{
+    if(!countsCache.has(value))countsCache.set(value,segmentCounts(value,existing,maxPieces-1));
+    return countsCache.get(value);
+  };
 
   for(const target of lexical){
     const chars=Array.from(target.ipa);
@@ -69,10 +71,8 @@ export function rankMissingWholeWordOpportunities(items=[],targets=[],{maxPieces
     for(let i=0;i<offsets.length-1;i++)for(let j=i+1;j<offsets.length;j++){
       const candidate=target.ipa.slice(offsets[i],offsets[j]);
       if(existing.has(candidate)||!names.has(candidate))continue;
-      const left=target.ipa.slice(0,offsets[i]);
-      const right=target.ipa.slice(offsets[j]);
-      const leftCounts=segmentCounts(left,existing,maxPieces-1);
-      const rightCounts=segmentCounts(right,existing,maxPieces-1);
+      const leftCounts=counts(target.ipa.slice(0,offsets[i]));
+      const rightCounts=counts(target.ipa.slice(offsets[j]));
       let viable=false;let pieceCount=Infinity;
       for(const a of leftCounts)for(const b of rightCounts){
         const total=a+1+b;

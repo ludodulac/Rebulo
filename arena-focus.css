@@ -8,8 +8,13 @@
 #creatorRebus .piece{width:min(31vw,148px);min-height:min(31vw,150px);max-height:168px;border:2px solid #dfe3ef;border-radius:25px;padding:10px;background:#fff;box-shadow:0 8px 0 rgba(49,58,77,.075),0 16px 28px rgba(49,58,77,.07)}
 #creatorRebus .piece img{width:min(23vw,104px);height:min(23vw,104px)}
 #creatorRebus .piece span{font-size:.9rem;font-weight:900;color:#222b3d}
-#creatorRebus .grapheme-piece{background:linear-gradient(180deg,#fff 0%,#f5f3ff 100%);border-color:#d8d4ff}
+#creatorRebus .grapheme-piece,#creatorRebus .spatial-piece{background:linear-gradient(180deg,#fff 0%,#f5f3ff 100%);border-color:#d8d4ff}
 #creatorRebus .grapheme-symbol{font-size:clamp(3.4rem,12vw,5.4rem);line-height:.95;color:#4940b5;font-weight:950;letter-spacing:-.04em}
+#creatorRebus .spatial-diagram{width:min(20vw,86px);height:min(20vw,86px);display:grid;grid-template-rows:1fr 1fr;align-items:center;justify-items:center;position:relative;border-radius:18px;background:#f8f7ff;border:1px solid #e3e0ff}
+#creatorRebus .spatial-reference,#creatorRebus .spatial-subject{line-height:1;font-size:1.75rem}
+#creatorRebus .spatial-reference{color:#8f98ac;align-self:start;padding-top:8px}
+#creatorRebus .spatial-subject{color:#4940b5;align-self:end;padding-bottom:8px}
+#creatorRebus .spatial-diagram::after{content:'↓';position:absolute;inset:0;display:grid;place-items:center;color:#6557df;font-size:1.05rem;font-weight:950}
 #creatorRebus .plus{font-size:1.7rem;color:#8f98ac}
 .strict-badge.general-badge{background:#eef0ff;color:#4940b5}
 .phonetic-proof{font-size:.7rem;color:#7b8495;opacity:.9}
@@ -22,6 +27,6 @@
 .arena[data-sheet-mode="child"] .arena-head .result-label{display:none}
 .arena[data-sheet-mode="child"] #creatorRebus .piece{width:min(33vw,160px);min-height:min(33vw,160px)}
 .arena[data-sheet-mode="child"] #creatorRebus .piece img{width:min(26vw,118px);height:min(26vw,118px)}
-@media(max-width:560px){.arena{padding:9px 8px 8px;gap:5px}.arena-head{min-height:34px}.arena-head h3{font-size:1.08rem}#creatorRebus.rebus-row{gap:7px;padding:7px 4px 9px}#creatorRebus .piece{width:min(29vw,108px);min-height:min(29vw,112px);border-radius:20px;padding:6px;box-shadow:0 6px 0 rgba(49,58,77,.07),0 12px 20px rgba(49,58,77,.06)}#creatorRebus .piece img{width:min(21vw,80px);height:min(21vw,80px)}#creatorRebus .piece span{font-size:.76rem}#creatorRebus .grapheme-symbol{font-size:clamp(2.9rem,14vw,4.2rem)}#creatorRebus .plus{font-size:1.15rem}.phonetic-proof{font-size:.66rem}.arena-actions{gap:6px}.arena-actions button{min-height:46px}.arena[data-sheet-mode="child"] #creatorRebus .piece{width:min(30vw,114px);min-height:min(30vw,118px)}.arena[data-sheet-mode="child"] #creatorRebus .piece img{width:min(23vw,88px);height:min(23vw,88px)}}
+@media(max-width:560px){.arena{padding:9px 8px 8px;gap:5px}.arena-head{min-height:34px}.arena-head h3{font-size:1.08rem}#creatorRebus.rebus-row{gap:7px;padding:7px 4px 9px}#creatorRebus .piece{width:min(29vw,108px);min-height:min(29vw,112px);border-radius:20px;padding:6px;box-shadow:0 6px 0 rgba(49,58,77,.07),0 12px 20px rgba(49,58,77,.06)}#creatorRebus .piece img{width:min(21vw,80px);height:min(21vw,80px)}#creatorRebus .piece span{font-size:.76rem}#creatorRebus .grapheme-symbol{font-size:clamp(2.9rem,14vw,4.2rem)}#creatorRebus .spatial-diagram{width:min(21vw,78px);height:min(21vw,78px)}#creatorRebus .spatial-reference,#creatorRebus .spatial-subject{font-size:1.45rem}#creatorRebus .plus{font-size:1.15rem}.phonetic-proof{font-size:.66rem}.arena-actions{gap:6px}.arena-actions button{min-height:46px}.arena[data-sheet-mode="child"] #creatorRebus .piece{width:min(30vw,114px);min-height:min(30vw,118px)}.arena[data-sheet-mode="child"] #creatorRebus .piece img{width:min(23vw,88px);height:min(23vw,88px)}}
 @media(max-height:700px){#creatorRebus .piece{min-height:84px}#creatorRebus .piece img{width:60px;height:60px}.arena-head{min-height:30px}.phonetic-proof{font-size:.62rem}}
 @media print{.sheet-instruction{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto;white-space:normal}.arena{background:#fff;box-shadow:none}.arena-head{min-height:0}#creatorRebus.rebus-row{padding:5mm;background:#fff;border:0;box-shadow:none}#creatorRebus .piece{box-shadow:none}}

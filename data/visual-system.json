@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "principles": [
     "recognition_before_decoration",
     "one_concept_one_focal_object",
@@ -17,14 +17,14 @@
     "textInsideAsset": "forbidden_unless_the_concept_is_a_grapheme"
   },
   "audit": [
-    {"id":"mer","status":"redesign_priority","reason":"Le paysage mer + soleil ajoute un contexte décoratif alors que le concept doit être identifié immédiatement."},
-    {"id":"scie","status":"redesign_priority","reason":"Forme très schématique et esthétique différente des pictogrammes OpenMoji déjà présents."},
-    {"id":"nez","status":"redesign_priority","reason":"Partie de visage isolée très stylisée, avec une esthétique différente du reste du catalogue."},
+    {"id":"mer","status":"redesign_priority","reason":"Le paysage mer + soleil ajoute un contexte décoratif alors que le concept doit être identifié immédiatement. Une simple vague n'est pas retenue car elle pourrait être nommée vague plutôt que mer."},
+    {"id":"scie","status":"reference_style","reason":"Migré vers OpenMoji carpentry saw : concept explicitement nommé et style cohérent avec la bibliothèque de référence ; validation clinique non présumée."},
+    {"id":"nez","status":"reference_style","reason":"Migré vers OpenMoji nose : concept explicitement nommé et style cohérent avec la bibliothèque de référence ; validation clinique non présumée."},
     {"id":"mat","status":"redesign_priority","reason":"Le voilier implicite peut concurrencer la dénomination mât."},
     {"id":"pas","status":"redesign_priority","reason":"Les empreintes peuvent être nommées pieds ou traces plutôt que pas."},
-    {"id":"rat","status":"redesign_priority","reason":"Lisible mais style clipart historique distinct des actifs OpenMoji."},
-    {"id":"pluie","status":"redesign_priority","reason":"Lisible mais style météorologique générique distinct du système cible."},
-    {"id":"sol","status":"redesign_priority","reason":"Le mot SOL est écrit dans l'image, ce qui révèle directement la réponse et n'est pas acceptable en mode jeu."},
+    {"id":"rat","status":"reference_style","reason":"Migré vers OpenMoji rat : concept explicitement nommé et style cohérent avec la bibliothèque de référence ; validation clinique non présumée."},
+    {"id":"pluie","status":"redesign_priority","reason":"Le visuel reste à harmoniser, mais un simple nuage pluvieux n'est pas retenu automatiquement car il pourrait être nommé nuage plutôt que pluie."},
+    {"id":"sol","status":"keep_then_harmonize","reason":"La réponse écrite a été supprimée du pictogramme. Le visuel reste historique mais peut être conservé pendant la migration."},
     {"id":"pie","status":"redesign_priority","reason":"Silhouette lisible mais style historique non harmonisé."},
     {"id":"mie","status":"redesign_priority","reason":"Le dessin ressemble davantage à du pain entier qu'à la mie seule ; risque sémantique à revoir."},
     {"id":"de","status":"keep_then_harmonize","reason":"Concept très identifiable ; peut rester pendant la migration visuelle."},

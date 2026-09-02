@@ -35,6 +35,6 @@ assert.deepEqual(merciCandidate.construction.capabilities,['general','phonetic_s
 
 const souris=merged.find(item=>String(item.target).toLowerCase()==='souris');
 assert.ok(souris);
-assert.equal(souris.source,'manual-spatial-pilot','manual spatial pilot must remain authoritative');
+assert.equal(souris.source,'manual-general-spatial-pilot','manual spatial pilot must remain authoritative');
 
 console.log('automatic creator flow: real coverage data creates raté while strict and manual pilots remain preserved.');

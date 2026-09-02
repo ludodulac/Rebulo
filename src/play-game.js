@@ -21,11 +21,19 @@ export function playableRebuses(catalog=[]){
 export function choosePlayableRebus(catalog=[],previousId=null,random=Math.random){
   const pool=playableRebuses(catalog);
   if(!pool.length)return null;
-  const alternatives=previousId&&pool.length>1?pool.filter(item=>item.id!==previousId):pool;
-  const source=alternatives.length?alternatives:pool;
+  const showcase=pool.filter(item=>item.presentationStatus==='showcase');
   const sample=Number(random?.());
   const safe=Number.isFinite(sample)?Math.min(0.999999,Math.max(0,sample)):0;
-  return source[Math.floor(safe*source.length)]||source[0];
+  // Give the polished rounds most first impressions while keeping every strict
+  // legacy round reachable so the catalog loses no existing functionality.
+  const preferShowcase=showcase.length>0&&safe<0.8;
+  const preferredPool=preferShowcase?showcase:pool;
+  const alternatives=previousId&&preferredPool.length>1?preferredPool.filter(item=>item.id!==previousId):preferredPool;
+  const source=alternatives.length?alternatives:preferredPool;
+  const scaled=preferShowcase?safe/0.8:(safe-0.8)/0.2;
+  const position=preferShowcase?scaled:(showcase.length?safe>=0.8?scaled:safe:safe);
+  const index=Math.floor(Math.min(0.999999,Math.max(0,Number.isFinite(position)?position:0))*source.length);
+  return source[index]||source[0];
 }
 
 export function playAnswerMatches(value,rebus){

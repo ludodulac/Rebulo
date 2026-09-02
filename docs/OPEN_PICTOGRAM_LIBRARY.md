@@ -4,11 +4,11 @@
 
 Rebulo ne doit pas dépendre d'une poignée de pictogrammes. La bibliothèque est désormais pensée comme une ressource extensible : illustrations générales, concepts phonétiques structurés, puis éventuelle revue clinique séparée.
 
-Cette première extension massive ajoute plus de 100 concepts visuels usuels et les relie à une prononciation française entière. Elle ne change pas la règle du mode strict : **image entière → mot conventionnel entier → prononciation entière**, avec concaténation IPA exacte.
+Deux vagues OpenMoji portent maintenant la bibliothèque ouverte à plus de 200 concepts visuels usuels, reliés à une prononciation française entière. Elles ne changent pas la règle du mode strict : **image entière → mot conventionnel entier → prononciation entière**, avec concaténation IPA exacte.
 
 ## Source visuelle principale
 
-La première grande collection utilise **OpenMoji**, afin de conserver une esthétique cohérente avec les pictogrammes déjà présents dans Rebulo.
+La grande collection utilise **OpenMoji**, afin de conserver une esthétique cohérente avec les pictogrammes déjà présents dans Rebulo.
 
 - Projet : OpenMoji
 - Licence : CC BY-SA 4.0
@@ -17,7 +17,13 @@ La première grande collection utilise **OpenMoji**, afin de conserver une esth�
 
 Le commit est épinglé : Rebulo ne dépend pas silencieusement d'une image qui changerait plus tard. Chaque entrée contient son fichier source, son commit et sa licence.
 
-Deux autres banques ouvertes ont été examinées comme solutions de repli pour de futures extensions : **Noto Emoji** (la plupart des ressources image sous Apache 2.0) et **Twemoji** (graphismes sous CC BY 4.0). Elles ne sont pas mélangées automatiquement dans ce premier lot, afin de préserver la cohérence visuelle. Une source de repli pourra être ajoutée quand OpenMoji ne fournit pas un concept suffisamment clair.
+Deux autres banques ouvertes ont été examinées comme solutions de repli pour de futures extensions : **Noto Emoji** (la plupart des ressources image sous Apache 2.0) et **Twemoji** (graphismes sous CC BY 4.0). Elles ne sont pas mélangées automatiquement tant qu'OpenMoji fournit un visuel satisfaisant, afin de préserver la cohérence visuelle. Une source de repli pourra être ajoutée quand OpenMoji ne fournit pas un concept suffisamment clair.
+
+## Deuxième vague
+
+La deuxième vague ajoute plus de 100 concepts supplémentaires répartis entre objets courants, vêtements, aliments, animaux, nature, météo, instruments, outils, hygiène, santé et jouets. Elle apporte notamment des unités phonétiques intéressantes telles que `seau /so/`, `scie /si/`, `pile /pil/` et `clé /kle/`.
+
+Comme pour la première vague, une image disponible n'est pas automatiquement considérée comme suffisamment stable pour le strict. Les cas dont la dénomination peut facilement varier restent `strictEligible:false` et servent seulement de ressource générale tant qu'une décision plus robuste n'est pas disponible.
 
 ## Strict, général et clinique restent distincts
 
@@ -37,7 +43,7 @@ Ces symboles ne sont pas transformés en pictogrammes stricts : ils restent des 
 
 ## Expansion à partir des vrais manques phonétiques
 
-`data/coverage-report.json` contient les sons qui bloquent actuellement des mots du Lexique 4. La grande bibliothèque ne se contente pas d'ajouter des images au hasard : elle recherche les nouveaux concepts dont l'IPA correspond exactement à ces manques et transforme leurs exemples en nouvelles cibles jouables.
+`data/coverage-report.json` contient les sons qui bloquent actuellement des mots du Lexique 4. La grande bibliothèque ne se contente pas d'ajouter des images au hasard : les deux vagues recherchent les nouveaux concepts dont l'IPA correspond exactement à ces manques et transforment leurs exemples en nouvelles cibles jouables.
 
 Cela permet d'étendre progressivement la couverture sans simplifier `src/phonetic-engine.js` et sans inventer une lecture partielle d'image.
 
@@ -58,8 +64,8 @@ Chaque case contient aussi une petite bande de données lisible par OCR. La page
 
 La mise en page d'impression force le format A4 portrait, des traits noirs fins, des images en niveaux de gris et aucun fond décoratif à l'impression afin de limiter la consommation d'encre. La page de dessin imprime une zone entièrement blanche.
 
+Les feuilles et le CSV utilisent désormais la combinaison de toutes les vagues ouvertes. Toute nouvelle entrée ajoutée dans une vague de bibliothèque apparaît automatiquement dans le carnet sans maintenance d'une deuxième liste.
+
 ## Étapes suivantes d'enrichissement
 
 La bibliothèque doit continuer à croître en partant des gaps de couverture les plus rentables, puis chercher le meilleur visuel ouvert et non ambigu. Quand une image ne peut pas être nommée de façon suffisamment stable, elle reste générale ou prototype. Aucune donnée de dénomination participante ni aucun statut clinique ne doit être inventé pour l'activer.
-
-Les nouvelles images ajoutées à `OPEN_PICTOGRAMS` apparaissent automatiquement dans le carnet A4 et dans son CSV : l'impression et l'indexation restent donc synchronisées avec la bibliothèque sans maintenance manuelle d'une deuxième liste.

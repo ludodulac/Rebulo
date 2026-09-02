@@ -1,14 +1,26 @@
 import {normalizeIPA} from './phonetic-engine.js';
 
+const LETTER_NAME_KEYS=new Set([
+  'a','be','ce','de','effe','ge','hache','i','ji','ka','elle','aime','haine','o','pe','cu','air','esse','te','u','ve','ix','zede'
+]);
+
 function lexicalKey(value=''){
   return String(value||'').trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
 }
 
-function activeIpaSet(lexicon=[]){
+function knownIpaSet(lexicon=[]){
   return new Set((lexicon||[])
-    .filter(item=>item?.active!==false&&item?.ipa)
+    .filter(item=>item?.ipa)
     .map(item=>normalizeIPA(item.ipa))
     .filter(Boolean));
+}
+
+function looksLikePictogramLabel(value=''){
+  const key=lexicalKey(value);
+  if(key.length<2)return false;
+  if(LETTER_NAME_KEYS.has(key))return false;
+  if(!/[a-zà-ÿ]/i.test(String(value)))return false;
+  return true;
 }
 
 function nounCandidates(gap={}){
@@ -16,7 +28,7 @@ function nounCandidates(gap={}){
   const seen=new Set();
   const out=[];
   for(const item of source){
-    if(!item?.word)continue;
+    if(!item?.word||!looksLikePictogramLabel(item.word))continue;
     const key=lexicalKey(item.word);
     if(!key||seen.has(key))continue;
     seen.add(key);
@@ -53,12 +65,12 @@ export function pictogramExpansionScore(gap={},candidate={}){
 
 export function buildPictogramExpansionPriorities(report={},lexicon=[],options={}){
   const limit=Number.isInteger(options?.limit)&&options.limit>0?options.limit:25;
-  const activeIpas=activeIpaSet(lexicon);
+  const knownIpas=knownIpaSet(lexicon);
   const gaps=Array.isArray(report?.missingSounds)?report.missingSounds:[];
   const priorities=[];
   for(const gap of gaps){
     const ipa=normalizeIPA(gap?.ipa||'');
-    if(!ipa||activeIpas.has(ipa))continue;
+    if(!ipa||knownIpas.has(ipa))continue;
     const nouns=nounCandidates(gap);
     if(!nouns.length)continue;
     const lead=nouns[0];
@@ -96,6 +108,7 @@ export function expansionPrioritySummary(priorities=[]){
       ipa:item.ipa,
       unlockCount:item.unlockCount,
       weightedGain:item.weightedGain,
+      alternatives:item.exactNounCandidates?.map(candidate=>candidate.word)||[],
       examples:item.examples
     }))
   };

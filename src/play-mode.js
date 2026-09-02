@@ -17,12 +17,18 @@ const newButton=document.querySelector('#playNewButton');
 let catalog=null;
 let current=null;
 
+function clearRoundState(){
+  if(answer)answer.value='';
+  if(feedback){feedback.textContent='';feedback.className='feedback';}
+  if(hint){hint.hidden=true;hint.textContent='';}
+}
+
 function setMode(mode){
   const playing=mode==='play';
   if(shell)shell.dataset.experience=playing?'play':'create';
   if(createMode){createMode.setAttribute('aria-pressed',String(!playing));createMode.classList.toggle('secondary',playing);}
   if(playMode){playMode.setAttribute('aria-pressed',String(playing));playMode.classList.toggle('secondary',!playing);}
-  if(description)description.textContent=playing?'Devine le mot à partir des images. La réponse reste cachée jusqu’à ce que tu la demandes.':'Transforme un mot en rébus, puis prépare une activité ou une séance.';
+  if(description)description.textContent=playing?'Regarde les images, dis leur nom à voix haute, puis assemble les sons.':'Écris un mot : Rebulo essaie de le transformer en images.';
   if(arena)arena.hidden=!playing;
   if(playing)startRound();
 }
@@ -47,6 +53,7 @@ function renderPiece(piece,index){
 
 function renderRound(rebus){
   current=rebus;
+  clearRoundState();
   if(!current){
     if(feedback)feedback.textContent='Aucun rébus de jeu disponible.';
     return;
@@ -58,10 +65,6 @@ function renderRound(rebus){
       if(index<current.pieces.length-1){const plus=document.createElement('span');plus.className='plus';plus.textContent='+';rebusNode.appendChild(plus);}
     });
   }
-  if(answer)answer.value='';
-  if(feedback){feedback.textContent='';feedback.className='feedback';}
-  if(hint){hint.hidden=true;hint.textContent='';}
-  answer?.focus();
 }
 
 async function startRound(){

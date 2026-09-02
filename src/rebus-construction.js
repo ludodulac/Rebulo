@@ -15,7 +15,7 @@ export const REBUS_CAPABILITIES=Object.freeze({
 });
 
 export const SPATIAL_RELATIONS=Object.freeze({
-  UNDER:Object.freeze({relation:'under',reading:'sous'})
+  UNDER:Object.freeze({relation:'under',reading:'sous',ipa:'/su/'})
 });
 
 const OPERATION_DEFINITIONS=Object.freeze({

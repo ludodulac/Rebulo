@@ -1,13 +1,12 @@
 import assert from 'node:assert/strict';
-import {OPEN_PICTOGRAMS} from '../src/open-pictogram-library.js';
-import {PICTOGRAMS_PER_PRINT_PAGE,PRINT_COLUMNS,PRINT_ROWS,buildIndexedPictograms,buildPrintSheetPairs,pictogramIndexCsv,pictogramIndexId,printLibraryMeta} from '../src/pictogram-print-sheets.js';
+import {ALL_OPEN_PICTOGRAMS,PICTOGRAMS_PER_PRINT_PAGE,PRINT_COLUMNS,PRINT_ROWS,buildIndexedPictograms,buildPrintSheetPairs,pictogramIndexCsv,pictogramIndexId,printLibraryMeta} from '../src/pictogram-print-sheets.js';
 
 assert.equal(PICTOGRAMS_PER_PRINT_PAGE,20);
 assert.equal(PRINT_COLUMNS*PRINT_ROWS,20);
 assert.equal(pictogramIndexId({id:'arcenciel'}),'RBL-arcenciel');
 
 const indexed=buildIndexedPictograms();
-assert.equal(indexed.length,OPEN_PICTOGRAMS.length);
+assert.equal(indexed.length,ALL_OPEN_PICTOGRAMS.length);
 assert.equal(new Set(indexed.map(item=>item.indexId)).size,indexed.length);
 assert.ok(indexed.every(item=>item.indexId.startsWith('RBL-')));
 assert.ok(indexed.every(item=>item.label&&item.image&&item.assetSource));
@@ -27,6 +26,7 @@ for(let i=0;i<pairs.length;i+=2){
 const csv=pictogramIndexCsv();
 assert.match(csv,/index_id,id,label,ipa,image,asset_source/);
 assert.match(csv,/RBL-avion,avion,avion/);
+assert.match(csv,/RBL-seau,seau,seau/);
 assert.match(csv,/CC BY-SA 4\.0/);
 assert.ok(!csv.includes('clinical_approved'));
 

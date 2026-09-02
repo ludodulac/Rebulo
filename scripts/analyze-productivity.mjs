@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import {ALL_OPEN_PICTOGRAMS} from '../src/pictogram-print-sheets.js';
 import {classifyStrictProductivity,groupProductiveHomophones,mergeProductivityInventory} from '../src/phonetic-productivity.js';
+import {rankMissingWholeWordOpportunities} from '../src/productivity-opportunities.js';
 
 const lexiquePath=process.argv[2]||'data/lexique4.compact.json';
 const seedPath=process.argv[3]||'data/lexicon-seed.json';
@@ -10,6 +11,7 @@ const seed=JSON.parse(fs.readFileSync(seedPath,'utf8'));
 const entries=Array.isArray(lexique)?lexique:(lexique.entries||[]);
 const inventory=mergeProductivityInventory(seed,ALL_OPEN_PICTOGRAMS);
 const analysis=classifyStrictProductivity(inventory,entries);
+const opportunities=rankMissingWholeWordOpportunities(inventory,entries,{limit:100});
 const tokens=analysis.tokens.map(token=>({
   id:token.id||'',label:token.label||'',ipa:token.ipa||'',normalizedIPA:token.normalizedIPA,
   productivityStatus:token.productivityStatus,active:token.active!==false,strictEligible:token.strictEligible!==false,
@@ -25,14 +27,17 @@ const report={
     strictCandidate:'Une pièce phonétiquement structurée sans preuve d’usage reste candidate et ne compte pas comme enrichissement productif.',
     inactive:'Une pièce active:false ne participe jamais au calcul strict, même si son IPA est connue.',
     wholeWord:'Aucune sous-partie de la prononciation d’un pictogramme ne peut être utilisée. Vélo /velo/ ne fournit ni /ve/ ni /lo/.',
+    opportunity:'Une opportunité est une prononciation de mot entier attestée dans Lexique qui, ajoutée comme une seule future pièce, débloquerait au moins une cible avec les pièces strictes existantes. Le mot proposé reste un candidat de dénomination, pas un pictogramme validé.',
     deduplication:'Les cibles lexicales sont dédupliquées par graphie normalisée + IPA ; le seed Rebulo reste prioritaire lors de la fusion des bibliothèques.'
   },
   productiveTokens:tokens.filter(x=>x.productivityStatus==='strict_productive'),
   candidateTokens:tokens.filter(x=>x.productivityStatus==='strict_candidate'),
   generalOnlyTokens:tokens.filter(x=>x.productivityStatus==='general_only'),
   illustrationOnlyTokens:tokens.filter(x=>x.productivityStatus==='illustration_only'),
-  homophoneGroups:homophones
+  homophoneGroups:homophones,
+  missingWholeWordOpportunities:opportunities
 };
 fs.writeFileSync(outputPath,JSON.stringify(report,null,2));
 console.log(`Productivity: ${report.stats.productive}/${report.stats.tokens} productive tokens; ${report.stats.strictRebuses} unique strict rebus targets.`);
+console.log(`Opportunities: ${opportunities.length} ranked attested whole-word sound blocks.`);
 console.log(`Report -> ${outputPath}`);

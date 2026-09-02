@@ -69,7 +69,7 @@ export function validateClinicalCandidate(rebus){
 export function segmentTargetWithLexicon(targetIpa,lexicon,maxPieces=4){
   const target=normalizeIPA(targetIpa);
   const items=(lexicon||[])
-    .filter(item=>item.active!==false&&item.ipa&&item.label)
+    .filter(item=>item.active!==false&&item.strictEligible!==false&&item.ipa&&item.label)
     .map(item=>({...item,normalizedIPA:normalizeIPA(item.ipa)}))
     .filter(item=>item.normalizedIPA.length>0);
 

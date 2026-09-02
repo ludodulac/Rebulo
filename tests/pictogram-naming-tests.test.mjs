@@ -34,11 +34,24 @@ assert.ok(potComparison,'pot must have a structured visual prototype comparison'
 assert.equal(potComparison.targetIpa,'/po/');
 assert.equal(potComparison.activationState,'inactive_until_human_decision');
 assert.equal(potComparison.humanDecision,null,'no human prototype decision may be fabricated');
-assert.equal(potComparison.candidates.length,1);
-assert.equal(potComparison.candidates[0].asset,'assets/rebus/pot.svg');
-assert.equal(potComparison.candidates[0].provenance,'openmoji:1FAB4');
-assert.equal(potComparison.candidates[0].namingTestStatus,'not_run');
-assert.deepEqual(potComparison.candidates[0].namingRisks,['plante','plante en pot','pot de fleurs']);
+assert.equal(potComparison.candidates.length,2,'pot should expose two distinct visual candidates for human comparison');
+
+const openMojiPot=potComparison.candidates.find(item=>item.candidateId==='pot-openmoji-1fab4');
+assert.ok(openMojiPot,'the existing OpenMoji prototype must remain available');
+assert.equal(openMojiPot.asset,'assets/rebus/pot.svg');
+assert.equal(openMojiPot.provenance,'openmoji:1FAB4');
+assert.equal(openMojiPot.namingTestStatus,'not_run');
+assert.deepEqual(openMojiPot.namingRisks,['plante','plante en pot','pot de fleurs']);
+
+const emptyPot=potComparison.candidates.find(item=>item.candidateId==='pot-openclipart-empty-flowerpot');
+assert.ok(emptyPot,'an empty-pot candidate must be available for comparison');
+assert.match(emptyPot.asset,/^https:\/\/www\.clker\.com\/cliparts\//);
+assert.match(emptyPot.provenance,/OpenClipart/i);
+assert.match(emptyPot.provenance,/CC0|public-domain/i);
+assert.equal(emptyPot.availability,'available');
+assert.equal(emptyPot.namingTestStatus,'not_run','sourcing an asset must not fabricate naming-test results');
+assert.ok(emptyPot.namingRisks.includes('pot de fleurs'));
+assert.ok(!emptyPot.namingRisks.includes('plante'),'the empty-pot candidate specifically removes the visible-plant cue hypothesis');
 
 const potLexicon=lexicon.find(item=>item.id==='pot');
 assert.ok(potLexicon,'pot prototype must remain registered in the lexicon');

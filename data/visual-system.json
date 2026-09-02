@@ -1,0 +1,37 @@
+{
+  "version": "1.0.0",
+  "principles": [
+    "recognition_before_decoration",
+    "one_concept_one_focal_object",
+    "consistent_rounded_geometry",
+    "no_written_answer_inside_pictogram",
+    "limited_semantic_background",
+    "adult_credible_child_friendly"
+  ],
+  "targetStyle": {
+    "name": "Rebulo clear",
+    "description": "Illustrations chaleureuses et contemporaines, lisibles en petite taille, avec une silhouette dominante, des contours arrondis cohérents et peu de détails concurrents.",
+    "stroke": "rounded_consistent",
+    "detail": "low_to_medium",
+    "background": "none_or_semantic_only",
+    "textInsideAsset": "forbidden_unless_the_concept_is_a_grapheme"
+  },
+  "audit": [
+    {"id":"mer","status":"redesign_priority","reason":"Le paysage mer + soleil ajoute un contexte décoratif alors que le concept doit être identifié immédiatement."},
+    {"id":"scie","status":"redesign_priority","reason":"Forme très schématique et esthétique différente des pictogrammes OpenMoji déjà présents."},
+    {"id":"nez","status":"redesign_priority","reason":"Partie de visage isolée très stylisée, avec une esthétique différente du reste du catalogue."},
+    {"id":"mat","status":"redesign_priority","reason":"Le voilier implicite peut concurrencer la dénomination mât."},
+    {"id":"pas","status":"redesign_priority","reason":"Les empreintes peuvent être nommées pieds ou traces plutôt que pas."},
+    {"id":"rat","status":"redesign_priority","reason":"Lisible mais style clipart historique distinct des actifs OpenMoji."},
+    {"id":"pluie","status":"redesign_priority","reason":"Lisible mais style météorologique générique distinct du système cible."},
+    {"id":"sol","status":"redesign_priority","reason":"Le mot SOL est écrit dans l'image, ce qui révèle directement la réponse et n'est pas acceptable en mode jeu."},
+    {"id":"pie","status":"redesign_priority","reason":"Silhouette lisible mais style historique non harmonisé."},
+    {"id":"mie","status":"redesign_priority","reason":"Le dessin ressemble davantage à du pain entier qu'à la mie seule ; risque sémantique à revoir."},
+    {"id":"de","status":"keep_then_harmonize","reason":"Concept très identifiable ; peut rester pendant la migration visuelle."},
+    {"id":"tour","status":"redesign_priority","reason":"Tour générique lisible mais style historique non harmonisé."},
+    {"id":"lit","status":"reference_style","reason":"Actif OpenMoji documenté ; bonne base de cohérence graphique, sans prétendre à une validation clinique."},
+    {"id":"riz","status":"reference_style","reason":"Actif OpenMoji documenté ; bonne base de cohérence graphique, sans prétendre à une validation clinique."},
+    {"id":"chat","status":"reference_style","reason":"Actif OpenMoji documenté ; bonne base de cohérence graphique, sans prétendre à une validation clinique."},
+    {"id":"cle","status":"reference_style","reason":"Actif OpenMoji documenté ; bonne base de cohérence graphique, sans prétendre à une validation clinique."}
+  ]
+}

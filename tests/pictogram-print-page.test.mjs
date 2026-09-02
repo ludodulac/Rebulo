@@ -5,7 +5,8 @@ const js=fs.readFileSync('src/pictogram-sheets-page.js','utf8');
 
 assert.match(html,/Feuilles d’indexation Rebulo/);
 assert.match(html,/Télécharger l’index CSV/);
-assert.match(html,/Imprimer les feuilles/);
+assert.match(html,/Imprimer \/ enregistrer en PDF/);
+assert.match(html,/Enregistrer au format PDF/);
 assert.match(html,/même identifiant et une case vide/);
 assert.match(css,/@page\{size:A4 portrait;margin:0\}/);
 assert.match(css,/grid-template-columns:repeat\(4,1fr\)/);

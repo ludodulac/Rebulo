@@ -17,6 +17,37 @@ function addSyllableCountActivity(therapy=[]){
   return next;
 }
 
+const FRENCH_LETTER_READINGS=Object.freeze([
+  {grapheme:'A',reading:'a',ipa:'/a/'},
+  {grapheme:'B',reading:'bé',ipa:'/be/'},
+  {grapheme:'C',reading:'cé',ipa:'/se/'},
+  {grapheme:'D',reading:'dé',ipa:'/de/'},
+  {grapheme:'F',reading:'effe',ipa:'/ɛf/'},
+  {grapheme:'G',reading:'gé',ipa:'/ʒe/'},
+  {grapheme:'H',reading:'hache',ipa:'/aʃ/'},
+  {grapheme:'I',reading:'i',ipa:'/i/'},
+  {grapheme:'J',reading:'ji',ipa:'/ʒi/'},
+  {grapheme:'K',reading:'ka',ipa:'/ka/'},
+  {grapheme:'L',reading:'elle',ipa:'/ɛl/'},
+  {grapheme:'M',reading:'aime',ipa:'/ɛm/'},
+  {grapheme:'N',reading:'haine',ipa:'/ɛn/'},
+  {grapheme:'O',reading:'o',ipa:'/o/'},
+  {grapheme:'P',reading:'pé',ipa:'/pe/'},
+  {grapheme:'Q',reading:'cu',ipa:'/ky/'},
+  {grapheme:'R',reading:'air',ipa:'/ɛʁ/'},
+  {grapheme:'S',reading:'esse',ipa:'/ɛs/'},
+  {grapheme:'T',reading:'té',ipa:'/te/'},
+  {grapheme:'U',reading:'u',ipa:'/y/'},
+  {grapheme:'V',reading:'vé',ipa:'/ve/'},
+  {grapheme:'X',reading:'ix',ipa:'/iks/'},
+  {grapheme:'Z',reading:'zède',ipa:'/zɛd/'}
+]);
+
+export function letterReadingForIPA(value=''){
+  const normalized=normalizeIPA(value);
+  return FRENCH_LETTER_READINGS.find(item=>normalizeIPA(item.ipa)===normalized)||null;
+}
+
 export function buildCreatorTargets(report={}){
   const rows=Array.isArray(report?.constructible)?report.constructible:[];
   const ordered=[...rows].sort((a,b)=>Number(b?.frequency||0)-Number(a?.frequency||0));
@@ -44,6 +75,44 @@ export function buildCreatorTargets(report={}){
     });
   }
   return targets;
+}
+
+function operationFromFrameToken(token,letter){
+  if(typeof token!=='string'||!token)return null;
+  if(token.startsWith('[')&&token.endsWith(']')){
+    return {type:'grapheme',grapheme:letter.grapheme,reading:letter.reading};
+  }
+  return {type:'whole_word',pieceId:token};
+}
+
+export function buildGraphemeCreatorTargets(report={}){
+  const gaps=Array.isArray(report?.missingSounds)?report.missingSounds:[];
+  const candidates=[];
+  const seen=new Set();
+  for(const gap of gaps){
+    const letter=letterReadingForIPA(gap?.ipa||'');
+    if(!letter)continue;
+    for(const example of gap?.examples||[]){
+      const frame=Array.isArray(example?.frame)?example.frame:[];
+      if(!example?.word||!example?.ipa||frame.length<2||frame.length>4)continue;
+      if(frame.filter(token=>typeof token==='string'&&token.startsWith('[')&&token.endsWith(']')).length!==1)continue;
+      const key=normalizeKey(example.word);
+      if(!key||seen.has(key))continue;
+      const operations=frame.map(token=>operationFromFrameToken(token,letter));
+      if(operations.some(operation=>!operation))continue;
+      seen.add(key);
+      candidates.push({
+        target:example.word,
+        targetIpa:example.ipa,
+        mode:'general',
+        assets:'ready',
+        operations,
+        source:'coverage-report-grapheme',
+        generated:true
+      });
+    }
+  }
+  return candidates;
 }
 
 export function mergeCreatorTargets(manualItems=[],generatedItems=[]){

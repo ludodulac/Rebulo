@@ -1,9 +1,55 @@
 [
   {
+    "id": "rallye",
+    "answer": "rallye",
+    "minAge": 7,
+    "difficulty": 1,
+    "presentationStatus": "showcase",
+    "pieces": [
+      {"image": "assets/rebus/rat.svg", "reading": "rat", "ipa": "/ʁa/"},
+      {"image": "assets/rebus/lit.svg", "reading": "lit", "ipa": "/li/"}
+    ],
+    "targetIpa": "/ʁali/",
+    "hint": "Nomme les deux images, puis colle les sons.",
+    "phoneticConfidence": 1.0,
+    "validation": "strict"
+  },
+  {
+    "id": "lira",
+    "answer": "lira",
+    "minAge": 7,
+    "difficulty": 1,
+    "presentationStatus": "showcase",
+    "pieces": [
+      {"image": "assets/rebus/lit.svg", "reading": "lit", "ipa": "/li/"},
+      {"image": "assets/rebus/rat.svg", "reading": "rat", "ipa": "/ʁa/"}
+    ],
+    "targetIpa": "/liʁa/",
+    "hint": "Nomme les deux images, puis colle les sons.",
+    "phoneticConfidence": 1.0,
+    "validation": "strict"
+  },
+  {
+    "id": "rira",
+    "answer": "rira",
+    "minAge": 7,
+    "difficulty": 1,
+    "presentationStatus": "showcase",
+    "pieces": [
+      {"image": "assets/rebus/riz.svg", "reading": "riz", "ipa": "/ʁi/"},
+      {"image": "assets/rebus/rat.svg", "reading": "rat", "ipa": "/ʁa/"}
+    ],
+    "targetIpa": "/ʁiʁa/",
+    "hint": "Nomme les deux images, puis colle les sons.",
+    "phoneticConfidence": 1.0,
+    "validation": "strict"
+  },
+  {
     "id": "merci",
     "answer": "merci",
     "minAge": 5,
     "difficulty": 1,
+    "presentationStatus": "experimental_visual",
     "pieces": [
       {"image": "assets/rebus/mer.svg", "reading": "mer", "ipa": "/mɛʁ/"},
       {"image": "assets/rebus/scie.svg", "reading": "scie", "ipa": "/si/"}
@@ -18,6 +64,7 @@
     "answer": "cinéma",
     "minAge": 7,
     "difficulty": 2,
+    "presentationStatus": "experimental_visual",
     "pieces": [
       {"image": "assets/rebus/scie.svg", "reading": "scie", "ipa": "/si/"},
       {"image": "assets/rebus/nez.svg", "reading": "nez", "ipa": "/ne/"},
@@ -33,6 +80,7 @@
     "answer": "parapluie",
     "minAge": 8,
     "difficulty": 3,
+    "presentationStatus": "experimental_visual",
     "pieces": [
       {"image": "assets/rebus/pas.svg", "reading": "pas", "ipa": "/pa/"},
       {"image": "assets/rebus/rat.svg", "reading": "rat", "ipa": "/ʁa/"},
@@ -48,6 +96,7 @@
     "answer": "parasol",
     "minAge": 7,
     "difficulty": 2,
+    "presentationStatus": "experimental_visual",
     "pieces": [
       {"image": "assets/rebus/pas.svg", "reading": "pas", "ipa": "/pa/"},
       {"image": "assets/rebus/rat.svg", "reading": "rat", "ipa": "/ʁa/"},

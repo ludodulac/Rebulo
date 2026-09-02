@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {resolveFrenchSoundQuery,normalizeFrenchSoundQuery} from '../src/french-sound-search.js';
+assert.equal(normalizeFrenchSoundQuery('  RA '),'ra');
+assert.deepEqual(resolveFrenchSoundQuery('ra').ipaCandidates,['ʁa']);
+assert.deepEqual(resolveFrenchSoundQuery('cha').ipaCandidates,['ʃa']);
+assert.deepEqual(resolveFrenchSoundQuery('ou').ipaCandidates,['u']);
+assert.deepEqual(resolveFrenchSoundQuery('on').ipaCandidates,['ɔ̃']);
+assert.deepEqual(resolveFrenchSoundQuery('ain').ipaCandidates,['ɛ̃']);
+assert.deepEqual(resolveFrenchSoundQuery('och').ipaCandidates,['ɔʃ','oʃ']);
+assert.equal(resolveFrenchSoundQuery('och').ambiguous,true);
+assert.deepEqual(resolveFrenchSoundQuery('ouche').ipaCandidates,['uʃ']);
+assert.deepEqual(resolveFrenchSoundQuery('ri').ipaCandidates,['ʁi']);
+assert.deepEqual(resolveFrenchSoundQuery('xyz').ipaCandidates,[]);
+console.log('plain French sound search: ok');

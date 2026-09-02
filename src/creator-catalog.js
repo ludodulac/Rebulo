@@ -96,10 +96,12 @@ function operationSignature(operation={}){
 
 export function creatorTargetSignature(item={}){
   const mode=item?.mode||'unknown';
+  const ipa=normalizeIPA(item?.targetIpa||'');
+  if(mode==='strict')return `${mode}|${ipa}`;
   if(Array.isArray(item?.operations)&&item.operations.length){
-    return `${mode}|${normalizeIPA(item?.targetIpa||'')}|${item.operations.map(operationSignature).join('+')}`;
+    return `${mode}|${ipa}|${item.operations.map(operationSignature).join('+')}`;
   }
-  return `${mode}|${normalizeIPA(item?.targetIpa||'')}|${Number(item?.operationCount||0)}`;
+  return `${mode}|${ipa}|${Number(item?.operationCount||0)}`;
 }
 
 function stripAlternatives(item={}){

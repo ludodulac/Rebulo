@@ -87,6 +87,26 @@ function operationFromFrameToken(token,letter){
   return {type:'whole_word',pieceId:token};
 }
 
+function operationSignature(operation={}){
+  if(operation.type==='whole_word')return `word:${operation.pieceId||operation.label||''}`;
+  if(operation.type==='grapheme')return `grapheme:${operation.grapheme||''}:${operation.reading||''}`;
+  if(operation.type==='spatial_relation')return `spatial:${operation.relation||''}:${operation.reading||''}`;
+  return `${operation.type||'unknown'}:${JSON.stringify(operation)}`;
+}
+
+export function creatorTargetSignature(item={}){
+  const mode=item?.mode||'unknown';
+  if(Array.isArray(item?.operations)&&item.operations.length){
+    return `${mode}|${normalizeIPA(item?.targetIpa||'')}|${item.operations.map(operationSignature).join('+')}`;
+  }
+  return `${mode}|${normalizeIPA(item?.targetIpa||'')}|${Number(item?.operationCount||0)}`;
+}
+
+function stripAlternatives(item={}){
+  const {alternatives,...base}=item||{};
+  return base;
+}
+
 export function buildGraphemeCreatorTargets(report={}){
   const gaps=Array.isArray(report?.missingSounds)?report.missingSounds:[];
   const candidates=[];
@@ -98,12 +118,9 @@ export function buildGraphemeCreatorTargets(report={}){
       const frame=Array.isArray(example?.frame)?example.frame:[];
       if(!example?.word||!example?.ipa||frame.length<2||frame.length>4)continue;
       if(frame.filter(token=>typeof token==='string'&&token.startsWith('[')&&token.endsWith(']')).length!==1)continue;
-      const key=normalizeKey(example.word);
-      if(!key||seen.has(key))continue;
       const operations=frame.map(token=>operationFromFrameToken(token,letter));
       if(operations.some(operation=>!operation))continue;
-      seen.add(key);
-      candidates.push({
+      const candidate={
         target:example.word,
         targetIpa:example.ipa,
         mode:'general',
@@ -113,7 +130,11 @@ export function buildGraphemeCreatorTargets(report={}){
         generated:true,
         frequency:Number(example?.frequency||0),
         operationCount:operations.length
-      });
+      };
+      const key=`${normalizeKey(example.word)}|${creatorTargetSignature(candidate)}`;
+      if(!normalizeKey(example.word)||seen.has(key))continue;
+      seen.add(key);
+      candidates.push(candidate);
     }
   }
   return candidates;
@@ -143,9 +164,21 @@ export function selectBestGeneratedTargets(items=[]){
     const key=normalizeKey(item?.target);
     if(!key)continue;
     if(!grouped.has(key))grouped.set(key,[]);
-    grouped.get(key).push(item);
+    grouped.get(key).push(stripAlternatives(item));
   }
-  return [...grouped.values()].map(group=>rankCreatorTargets(group)[0]).filter(Boolean);
+  return [...grouped.values()].map(group=>{
+    const unique=[];
+    const signatures=new Set();
+    for(const item of rankCreatorTargets(group)){
+      const signature=creatorTargetSignature(item);
+      if(signatures.has(signature))continue;
+      signatures.add(signature);
+      unique.push(item);
+    }
+    const [primary,...alternatives]=unique;
+    if(!primary)return null;
+    return alternatives.length?{...primary,alternatives}:{...primary};
+  }).filter(Boolean);
 }
 
 export function buildAutomaticCreatorTargets(report={}){
@@ -155,6 +188,21 @@ export function buildAutomaticCreatorTargets(report={}){
   ]);
 }
 
+function mergeAlternativeLists(primary={},generated={}){
+  const manualSignature=creatorTargetSignature(primary);
+  const candidates=[stripAlternatives(generated),...(generated?.alternatives||[]).map(stripAlternatives),...(primary?.alternatives||[]).map(stripAlternatives)];
+  const seen=new Set([manualSignature]);
+  const alternatives=[];
+  for(const item of rankCreatorTargets(candidates)){
+    if(!['strict','general'].includes(item?.mode)||item?.assets!=='ready')continue;
+    const signature=creatorTargetSignature(item);
+    if(seen.has(signature))continue;
+    seen.add(signature);
+    alternatives.push(item);
+  }
+  return alternatives;
+}
+
 export function mergeCreatorTargets(manualItems=[],generatedItems=[]){
   const bestGenerated=selectBestGeneratedTargets(generatedItems);
   const generatedByKey=new Map(bestGenerated.filter(item=>normalizeKey(item?.target)).map(item=>[normalizeKey(item.target),item]));
@@ -162,20 +210,26 @@ export function mergeCreatorTargets(manualItems=[],generatedItems=[]){
     const generated=generatedByKey.get(normalizeKey(item?.target));
     if(!generated)return item;
     generatedByKey.delete(normalizeKey(item.target));
+    if(!['strict','general'].includes(item?.mode)||item?.assets!=='ready')return item;
+    let next=item;
     const manualIpa=normalizeIPA(item?.targetIpa||'');
     const generatedIpa=normalizeIPA(generated?.targetIpa||'');
     const canSupplement=item?.mode==='strict'&&generated?.mode==='strict'&&manualIpa&&manualIpa===generatedIpa;
-    if(!canSupplement)return item;
-    const existingCount=validSyllableCount(item?.syllableCount);
-    const generatedCount=validSyllableCount(generated?.syllableCount);
-    if(existingCount||!generatedCount)return item;
-    return {
-      ...item,
-      syllableCount:generatedCount,
-      therapy:Array.isArray(item?.therapy)&&generated?.therapy?.includes('syllable-count')
-        ?addSyllableCountActivity(item.therapy)
-        :item?.therapy
-    };
+    if(canSupplement){
+      const existingCount=validSyllableCount(item?.syllableCount);
+      const generatedCount=validSyllableCount(generated?.syllableCount);
+      if(!existingCount&&generatedCount){
+        next={
+          ...item,
+          syllableCount:generatedCount,
+          therapy:Array.isArray(item?.therapy)&&generated?.therapy?.includes('syllable-count')
+            ?addSyllableCountActivity(item.therapy)
+            :item?.therapy
+        };
+      }
+    }
+    const alternatives=mergeAlternativeLists(next,generated);
+    return alternatives.length?{...next,alternatives}:next;
   });
   return [...mergedManual,...rankCreatorTargets([...generatedByKey.values()])];
 }

@@ -17,8 +17,8 @@ assert.equal(playAnswerMatches('ciné',catalog[3]),false);
 assert.deepEqual(playableRebuses(catalog).map(item=>item.id),['rallye','lira','merci','cinema']);
 assert.equal(choosePlayableRebus(catalog,null,()=>0).id,'rallye');
 assert.equal(choosePlayableRebus(catalog,'rallye',()=>0).id,'lira');
-assert.equal(choosePlayableRebus(catalog,null,()=>0.9).id,'merci');
-assert.equal(choosePlayableRebus(catalog,'merci',()=>0.95).id,'cinema');
+assert.equal(choosePlayableRebus(catalog,null,()=>0.91).id,'merci');
+assert.equal(choosePlayableRebus(catalog,'merci',()=>0.99).id,'cinema');
 
 const hint=safePlayHint(catalog[3]);
 assert.equal(hint,'Le mot commence par C et contient 6 lettres.');

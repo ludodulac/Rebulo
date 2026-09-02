@@ -1,110 +1,23 @@
 [
-  {
-    "id": "rallye",
-    "answer": "rallye",
-    "minAge": 7,
-    "difficulty": 1,
-    "presentationStatus": "showcase",
-    "pieces": [
-      {"image": "assets/rebus/rat.svg", "reading": "rat", "ipa": "/ʁa/"},
-      {"image": "assets/rebus/lit.svg", "reading": "lit", "ipa": "/li/"}
-    ],
-    "targetIpa": "/ʁali/",
-    "hint": "Nomme les deux images, puis colle les sons.",
-    "phoneticConfidence": 1.0,
-    "validation": "strict"
-  },
-  {
-    "id": "lira",
-    "answer": "lira",
-    "minAge": 7,
-    "difficulty": 1,
-    "presentationStatus": "showcase",
-    "pieces": [
-      {"image": "assets/rebus/lit.svg", "reading": "lit", "ipa": "/li/"},
-      {"image": "assets/rebus/rat.svg", "reading": "rat", "ipa": "/ʁa/"}
-    ],
-    "targetIpa": "/liʁa/",
-    "hint": "Nomme les deux images, puis colle les sons.",
-    "phoneticConfidence": 1.0,
-    "validation": "strict"
-  },
-  {
-    "id": "rira",
-    "answer": "rira",
-    "minAge": 7,
-    "difficulty": 1,
-    "presentationStatus": "showcase",
-    "pieces": [
-      {"image": "assets/rebus/riz.svg", "reading": "riz", "ipa": "/ʁi/"},
-      {"image": "assets/rebus/rat.svg", "reading": "rat", "ipa": "/ʁa/"}
-    ],
-    "targetIpa": "/ʁiʁa/",
-    "hint": "Nomme les deux images, puis colle les sons.",
-    "phoneticConfidence": 1.0,
-    "validation": "strict"
-  },
-  {
-    "id": "merci",
-    "answer": "merci",
-    "minAge": 5,
-    "difficulty": 1,
-    "presentationStatus": "experimental_visual",
-    "pieces": [
-      {"image": "assets/rebus/mer.svg", "reading": "mer", "ipa": "/mɛʁ/"},
-      {"image": "assets/rebus/scie.svg", "reading": "scie", "ipa": "/si/"}
-    ],
-    "targetIpa": "/mɛʁsi/",
-    "hint": "Nomme ce que tu vois, puis colle les deux sons.",
-    "phoneticConfidence": 1.0,
-    "validation": "strict"
-  },
-  {
-    "id": "cinema",
-    "answer": "cinéma",
-    "minAge": 7,
-    "difficulty": 2,
-    "presentationStatus": "experimental_visual",
-    "pieces": [
-      {"image": "assets/rebus/scie.svg", "reading": "scie", "ipa": "/si/"},
-      {"image": "assets/rebus/nez.svg", "reading": "nez", "ipa": "/ne/"},
-      {"image": "assets/rebus/mat.svg", "reading": "mât", "ipa": "/ma/"}
-    ],
-    "targetIpa": "/sinema/",
-    "hint": "Scie + nez + mât. Prononce les trois mots sans pause.",
-    "phoneticConfidence": 1.0,
-    "validation": "strict"
-  },
-  {
-    "id": "parapluie",
-    "answer": "parapluie",
-    "minAge": 8,
-    "difficulty": 3,
-    "presentationStatus": "experimental_visual",
-    "pieces": [
-      {"image": "assets/rebus/pas.svg", "reading": "pas", "ipa": "/pa/"},
-      {"image": "assets/rebus/rat.svg", "reading": "rat", "ipa": "/ʁa/"},
-      {"image": "assets/rebus/pluie.svg", "reading": "pluie", "ipa": "/plɥi/"}
-    ],
-    "targetIpa": "/paʁaplɥi/",
-    "hint": "Pas + rat + pluie. Prononce les trois mots sans pause.",
-    "phoneticConfidence": 1.0,
-    "validation": "strict"
-  },
-  {
-    "id": "parasol",
-    "answer": "parasol",
-    "minAge": 7,
-    "difficulty": 2,
-    "presentationStatus": "experimental_visual",
-    "pieces": [
-      {"image": "assets/rebus/pas.svg", "reading": "pas", "ipa": "/pa/"},
-      {"image": "assets/rebus/rat.svg", "reading": "rat", "ipa": "/ʁa/"},
-      {"image": "assets/rebus/sol.svg", "reading": "sol", "ipa": "/sɔl/"}
-    ],
-    "targetIpa": "/paʁasɔl/",
-    "hint": "Pas + rat + sol. Prononce les trois mots sans pause.",
-    "phoneticConfidence": 1.0,
-    "validation": "strict"
-  }
+  {"id":"rallye","answer":"rallye","minAge":7,"difficulty":1,"presentationStatus":"showcase","pieces":[{"image":"assets/rebus/rat.svg","reading":"rat","ipa":"/ʁa/"},{"image":"assets/rebus/lit.svg","reading":"lit","ipa":"/li/"}],"targetIpa":"/ʁali/","hint":"Nomme les deux images, puis colle les sons.","phoneticConfidence":1.0,"validation":"strict"},
+  {"id":"lira","answer":"lira","minAge":7,"difficulty":1,"presentationStatus":"showcase","pieces":[{"image":"assets/rebus/lit.svg","reading":"lit","ipa":"/li/"},{"image":"assets/rebus/rat.svg","reading":"rat","ipa":"/ʁa/"}],"targetIpa":"/liʁa/","hint":"Nomme les deux images, puis colle les sons.","phoneticConfidence":1.0,"validation":"strict"},
+  {"id":"rira","answer":"rira","minAge":7,"difficulty":1,"presentationStatus":"showcase","pieces":[{"image":"assets/rebus/riz.svg","reading":"riz","ipa":"/ʁi/"},{"image":"assets/rebus/rat.svg","reading":"rat","ipa":"/ʁa/"}],"targetIpa":"/ʁiʁa/","hint":"Nomme les deux images, puis colle les sons.","phoneticConfidence":1.0,"validation":"strict"},
+  {"id":"rachat","answer":"rachat","minAge":8,"difficulty":1,"presentationStatus":"showcase","pieces":[{"image":"assets/rebus/rat.svg","reading":"rat","ipa":"/ʁa/"},{"image":"assets/rebus/chat.svg","reading":"chat","ipa":"/ʃa/"}],"targetIpa":"/ʁaʃa/","hint":"Deux images, deux mots, puis colle les sons.","phoneticConfidence":1.0,"validation":"strict"},
+  {"id":"chassis","answer":"châssis","minAge":8,"difficulty":1,"presentationStatus":"showcase","pieces":[{"image":"assets/rebus/chat.svg","reading":"chat","ipa":"/ʃa/"},{"image":"assets/rebus/scie.svg","reading":"scie","ipa":"/si/"}],"targetIpa":"/ʃasi/","hint":"Deux images, deux mots, puis colle les sons.","phoneticConfidence":1.0,"validation":"strict"},
+  {"id":"scierie","answer":"scierie","minAge":9,"difficulty":1,"presentationStatus":"showcase","pieces":[{"image":"assets/rebus/scie.svg","reading":"scie","ipa":"/si/"},{"image":"assets/rebus/riz.svg","reading":"riz","ipa":"/ʁi/"}],"targetIpa":"/siʁi/","hint":"Prononce les deux images sans pause.","phoneticConfidence":1.0,"validation":"strict"},
+  {"id":"delit","answer":"délit","minAge":9,"difficulty":1,"presentationStatus":"showcase","pieces":[{"image":"assets/rebus/de.svg","reading":"dé","ipa":"/de/"},{"image":"assets/rebus/lit.svg","reading":"lit","ipa":"/li/"}],"targetIpa":"/deli/","hint":"Prononce les deux images sans pause.","phoneticConfidence":1.0,"validation":"strict"},
+  {"id":"pacha","answer":"pacha","minAge":8,"difficulty":1,"presentationStatus":"showcase","pieces":[{"image":"assets/rebus/pas.svg","reading":"pas","ipa":"/pa/"},{"image":"assets/rebus/chat.svg","reading":"chat","ipa":"/ʃa/"}],"targetIpa":"/paʃa/","hint":"Prononce les deux images sans pause.","phoneticConfidence":1.0,"validation":"strict"},
+  {"id":"papa","answer":"papa","minAge":5,"difficulty":1,"presentationStatus":"showcase","pieces":[{"image":"assets/rebus/pas.svg","reading":"pas","ipa":"/pa/"},{"image":"assets/rebus/pas.svg","reading":"pas","ipa":"/pa/"}],"targetIpa":"/papa/","hint":"La même image est répétée deux fois.","phoneticConfidence":1.0,"validation":"strict"},
+  {"id":"pari","answer":"pari","minAge":7,"difficulty":1,"presentationStatus":"showcase","pieces":[{"image":"assets/rebus/pas.svg","reading":"pas","ipa":"/pa/"},{"image":"assets/rebus/riz.svg","reading":"riz","ipa":"/ʁi/"}],"targetIpa":"/paʁi/","hint":"Prononce les deux images sans pause.","phoneticConfidence":1.0,"validation":"strict"},
+  {"id":"tourner","answer":"tourner","minAge":8,"difficulty":2,"presentationStatus":"showcase","pieces":[{"image":"assets/rebus/tour.svg","reading":"tour","ipa":"/tuʁ/"},{"image":"assets/rebus/nez.svg","reading":"nez","ipa":"/ne/"}],"targetIpa":"/tuʁne/","hint":"Prononce les deux images sans pause.","phoneticConfidence":1.0,"validation":"strict"},
+  {"id":"detour","answer":"détour","minAge":8,"difficulty":2,"presentationStatus":"showcase","pieces":[{"image":"assets/rebus/de.svg","reading":"dé","ipa":"/de/"},{"image":"assets/rebus/tour.svg","reading":"tour","ipa":"/tuʁ/"}],"targetIpa":"/detuʁ/","hint":"Prononce les deux images sans pause.","phoneticConfidence":1.0,"validation":"strict"},
+  {"id":"dessiner","answer":"dessiner","minAge":8,"difficulty":2,"presentationStatus":"showcase","pieces":[{"image":"assets/rebus/de.svg","reading":"dé","ipa":"/de/"},{"image":"assets/rebus/scie.svg","reading":"scie","ipa":"/si/"},{"image":"assets/rebus/nez.svg","reading":"nez","ipa":"/ne/"}],"targetIpa":"/desine/","hint":"Trois images : prononce-les sans pause.","phoneticConfidence":1.0,"validation":"strict"},
+  {"id":"decider","answer":"décider","minAge":9,"difficulty":2,"presentationStatus":"showcase","pieces":[{"image":"assets/rebus/de.svg","reading":"dé","ipa":"/de/"},{"image":"assets/rebus/scie.svg","reading":"scie","ipa":"/si/"},{"image":"assets/rebus/de.svg","reading":"dé","ipa":"/de/"}],"targetIpa":"/deside/","hint":"Trois images : prononce-les sans pause.","phoneticConfidence":1.0,"validation":"strict"},
+  {"id":"depanner","answer":"dépanner","minAge":9,"difficulty":2,"presentationStatus":"showcase","pieces":[{"image":"assets/rebus/de.svg","reading":"dé","ipa":"/de/"},{"image":"assets/rebus/pas.svg","reading":"pas","ipa":"/pa/"},{"image":"assets/rebus/nez.svg","reading":"nez","ipa":"/ne/"}],"targetIpa":"/depane/","hint":"Trois images : prononce-les sans pause.","phoneticConfidence":1.0,"validation":"strict"},
+  {"id":"detourner","answer":"détourner","minAge":9,"difficulty":3,"presentationStatus":"showcase","pieces":[{"image":"assets/rebus/de.svg","reading":"dé","ipa":"/de/"},{"image":"assets/rebus/tour.svg","reading":"tour","ipa":"/tuʁ/"},{"image":"assets/rebus/nez.svg","reading":"nez","ipa":"/ne/"}],"targetIpa":"/detuʁne/","hint":"Trois images : prononce-les sans pause.","phoneticConfidence":1.0,"validation":"strict"},
+  {"id":"mariner","answer":"mariner","minAge":10,"difficulty":3,"presentationStatus":"showcase","pieces":[{"image":"assets/rebus/mat.svg","reading":"mât","ipa":"/ma/"},{"image":"assets/rebus/riz.svg","reading":"riz","ipa":"/ʁi/"},{"image":"assets/rebus/nez.svg","reading":"nez","ipa":"/ne/"}],"targetIpa":"/maʁine/","hint":"Trois images : prononce-les sans pause.","phoneticConfidence":1.0,"validation":"strict"},
+  {"id":"merci","answer":"merci","minAge":5,"difficulty":1,"presentationStatus":"experimental_visual","pieces":[{"image":"assets/rebus/mer.svg","reading":"mer","ipa":"/mɛʁ/"},{"image":"assets/rebus/scie.svg","reading":"scie","ipa":"/si/"}],"targetIpa":"/mɛʁsi/","hint":"Nomme ce que tu vois, puis colle les deux sons.","phoneticConfidence":1.0,"validation":"strict"},
+  {"id":"cinema","answer":"cinéma","minAge":7,"difficulty":2,"presentationStatus":"experimental_visual","pieces":[{"image":"assets/rebus/scie.svg","reading":"scie","ipa":"/si/"},{"image":"assets/rebus/nez.svg","reading":"nez","ipa":"/ne/"},{"image":"assets/rebus/mat.svg","reading":"mât","ipa":"/ma/"}],"targetIpa":"/sinema/","hint":"Scie + nez + mât. Prononce les trois mots sans pause.","phoneticConfidence":1.0,"validation":"strict"},
+  {"id":"parapluie","answer":"parapluie","minAge":8,"difficulty":3,"presentationStatus":"experimental_visual","pieces":[{"image":"assets/rebus/pas.svg","reading":"pas","ipa":"/pa/"},{"image":"assets/rebus/rat.svg","reading":"rat","ipa":"/ʁa/"},{"image":"assets/rebus/pluie.svg","reading":"pluie","ipa":"/plɥi/"}],"targetIpa":"/paʁaplɥi/","hint":"Pas + rat + pluie. Prononce les trois mots sans pause.","phoneticConfidence":1.0,"validation":"strict"},
+  {"id":"parasol","answer":"parasol","minAge":7,"difficulty":2,"presentationStatus":"experimental_visual","pieces":[{"image":"assets/rebus/pas.svg","reading":"pas","ipa":"/pa/"},{"image":"assets/rebus/rat.svg","reading":"rat","ipa":"/ʁa/"},{"image":"assets/rebus/sol.svg","reading":"sol","ipa":"/sɔl/"}],"targetIpa":"/paʁasɔl/","hint":"Pas + rat + sol. Prononce les trois mots sans pause.","phoneticConfidence":1.0,"validation":"strict"}
 ]

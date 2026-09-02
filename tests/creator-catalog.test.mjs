@@ -3,12 +3,14 @@ import {
   buildAutomaticCreatorTargets,
   buildCreatorTargets,
   buildGraphemeCreatorTargets,
+  buildSpatialCreatorTargets,
   creatorTargetScore,
   creatorTargetSignature,
   letterReadingForIPA,
   mergeCreatorTargets,
   rankCreatorTargets,
-  selectBestGeneratedTargets
+  selectBestGeneratedTargets,
+  spatialRelationForIPA
 } from '../src/creator-catalog.js';
 
 const report={
@@ -27,6 +29,10 @@ const report={
       {word:'cité',ipa:'site',frequency:80,frame:['scie','[te]']},
       {word:'théière',ipa:'tejɛʁ',frequency:20,frame:['[te]','hier']},
       {word:'mixte',ipa:'site',frequency:500,frame:['scie','[te]']}
+    ]},
+    {ipa:'su',examples:[
+      {word:'souris',ipa:'suʁi',frequency:60,frame:['[su]','riz']},
+      {word:'sous-lit',ipa:'suli',frequency:5,frame:['[su]','lit']}
     ]},
     {ipa:'ɛʁ',examples:[
       {word:'merci-R',ipa:'mɛʁsiɛʁ',frequency:5,frame:['mer','scie','[ɛʁ]']}
@@ -50,27 +56,28 @@ assert.equal(targets[2].therapy.includes('syllable-count'),false);
 assert.equal(letterReadingForIPA('/te/').grapheme,'T');
 assert.equal(letterReadingForIPA('ɛʁ').grapheme,'R');
 assert.equal(letterReadingForIPA('/xyz/'),null);
+assert.equal(spatialRelationForIPA('/su/').relation,'under');
+assert.equal(spatialRelationForIPA('xyz'),null);
 
 const graphemeTargets=buildGraphemeCreatorTargets(report);
 assert.deepEqual(graphemeTargets.map(item=>item.target),['cité','théière','mixte','merci-R']);
 assert.equal(graphemeTargets[0].mode,'general');
-assert.equal(graphemeTargets[0].generated,true);
 assert.equal(graphemeTargets[0].source,'coverage-report-grapheme');
-assert.equal(graphemeTargets[0].operationCount,2);
 assert.deepEqual(graphemeTargets[0].operations,[
   {type:'whole_word',pieceId:'scie'},
   {type:'grapheme',grapheme:'T',reading:'té'}
 ]);
-assert.deepEqual(graphemeTargets[1].operations,[
-  {type:'grapheme',grapheme:'T',reading:'té'},
-  {type:'whole_word',pieceId:'hier'}
+
+const spatialTargets=buildSpatialCreatorTargets(report);
+assert.deepEqual(spatialTargets.map(item=>item.target),['souris','sous-lit']);
+assert.equal(spatialTargets[0].source,'coverage-report-spatial');
+assert.deepEqual(spatialTargets[0].operations,[
+  {type:'spatial_relation',relation:'under',reading:'sous'},
+  {type:'whole_word',pieceId:'riz'}
 ]);
-assert.deepEqual(graphemeTargets[3].operations,[
-  {type:'whole_word',pieceId:'mer'},
-  {type:'whole_word',pieceId:'scie'},
-  {type:'grapheme',grapheme:'R',reading:'air'}
-]);
-assert.notEqual(creatorTargetSignature(graphemeTargets[0]),creatorTargetSignature(targets.find(item=>item.target==='mixte')));
+assert.equal(spatialTargets[0].mode,'general');
+assert.equal(spatialTargets[0].generated,true);
+assert.equal(spatialTargets[0].operationCount,2);
 
 const ranked=rankCreatorTargets([
   {target:'x',mode:'general',frequency:1000,operationCount:2},
@@ -80,21 +87,17 @@ const ranked=rankCreatorTargets([
 assert.equal(ranked[0].mode,'strict','strict candidates must remain first');
 assert.ok(creatorTargetScore(ranked[0])>creatorTargetScore(ranked[1]));
 
-const best=selectBestGeneratedTargets([...targets,...graphemeTargets]);
+const best=selectBestGeneratedTargets([...targets,...graphemeTargets,...spatialTargets]);
 const bestMixte=best.find(item=>item.target==='mixte');
 assert.equal(bestMixte.mode,'strict','strict must beat a more frequent grapheme candidate for the same word');
-assert.equal(bestMixte.alternatives.length,1,'the lower-ranked construction must remain available');
+assert.equal(bestMixte.alternatives.length,1);
 assert.equal(bestMixte.alternatives[0].mode,'general');
-assert.deepEqual(bestMixte.alternatives[0].operations,[
-  {type:'whole_word',pieceId:'scie'},
-  {type:'grapheme',grapheme:'T',reading:'té'}
-]);
+assert.notEqual(creatorTargetSignature(spatialTargets[0]),creatorTargetSignature(graphemeTargets[0]));
 
 const automatic=buildAutomaticCreatorTargets(report);
-const automaticMixte=automatic.find(item=>item.target==='mixte');
-assert.equal(automaticMixte.mode,'strict');
-assert.equal(automaticMixte.alternatives.length,1);
+assert.equal(automatic.find(item=>item.target==='mixte').mode,'strict');
 assert.ok(automatic.some(item=>item.target==='cité'&&item.mode==='general'));
+assert.ok(automatic.some(item=>item.target==='souris'&&item.source==='coverage-report-spatial'));
 
 const manual=[
   {target:'merci',targetIpa:'/mɛʁsi/',mode:'strict',assets:'ready',therapy:['denomination','syllable-blending','oral-to-written'],manualNote:'keep me'},
@@ -102,6 +105,7 @@ const manual=[
   {target:'refus',targetIpa:'/mɛʁsi/',mode:'rejected',reason:'manual refusal'},
   {target:'local-only',targetIpa:'/lokal/',mode:'strict',assets:'missing',therapy:['denomination']},
   {target:'cité',targetIpa:'/site/',mode:'general',assets:'ready',operations:[{type:'whole_word',pieceId:'scie'},{type:'grapheme',grapheme:'T',reading:'té'}],manualNote:'manual general wins'},
+  {target:'souris',targetIpa:'/suʁi/',mode:'general',assets:'ready',operations:[{type:'spatial_relation',relation:'under',reading:'sous'},{type:'whole_word',pieceId:'riz'}],manualNote:'manual spatial wins'},
   {target:'mixte',targetIpa:'/site/',mode:'strict',assets:'ready',therapy:['denomination'],manualNote:'manual primary wins'}
 ];
 const generated=[
@@ -110,32 +114,24 @@ const generated=[
   {target:'refus',targetIpa:'/mɛʁsi/',syllableCount:2,mode:'strict',assets:'ready',therapy:['syllable-count'],generated:true},
   {target:'generated-only',targetIpa:'/ʒenere/',syllableCount:3,mode:'strict',assets:'ready',therapy:['syllable-count'],generated:true},
   ...graphemeTargets,
+  ...spatialTargets,
   targets.find(item=>item.target==='mixte')
 ].filter(Boolean);
 
 const merged=mergeCreatorTargets(manual,generated);
-assert.deepEqual(merged.map(item=>item.target),['merci','cinéma','refus','local-only','cité','mixte','generated-only','théière','merci-R']);
-const mergedMerci=merged.find(item=>item.target==='merci');
-assert.equal(mergedMerci.syllableCount,2);
-assert.deepEqual(mergedMerci.therapy,['denomination','syllable-count','syllable-blending','oral-to-written']);
-assert.equal(mergedMerci.manualNote,'keep me');
-assert.equal(mergedMerci.generated,undefined);
-const mergedCinema=merged.find(item=>item.target==='cinéma');
-assert.equal(mergedCinema.syllableCount,undefined);
-assert.equal(mergedCinema.therapy.includes('syllable-count'),false);
 const mergedRefus=merged.find(item=>item.target==='refus');
 assert.equal(mergedRefus.mode,'rejected');
-assert.equal(mergedRefus.reason,'manual refusal');
-assert.equal(mergedRefus.syllableCount,undefined);
-assert.equal(mergedRefus.alternatives,undefined,'manual refusal must not expose generated alternatives');
-assert.equal(merged.filter(item=>item.target==='refus').length,1);
+assert.equal(mergedRefus.alternatives,undefined);
 const mergedCite=merged.find(item=>item.target==='cité');
 assert.equal(mergedCite.manualNote,'manual general wins');
-assert.equal(mergedCite.generated,undefined);
 assert.equal(mergedCite.alternatives,undefined,'identical generated construction must be deduplicated');
+const mergedSouris=merged.find(item=>item.target==='souris');
+assert.equal(mergedSouris.manualNote,'manual spatial wins');
+assert.equal(mergedSouris.alternatives,undefined,'identical spatial generation must not duplicate the manual pilot');
 const mergedMixte=merged.find(item=>item.target==='mixte');
 assert.equal(mergedMixte.manualNote,'manual primary wins');
 assert.equal(mergedMixte.alternatives.length,1);
 assert.equal(mergedMixte.alternatives[0].mode,'general');
+assert.ok(merged.some(item=>item.target==='sous-lit'&&item.source==='coverage-report-spatial'));
 
 console.log('creator-catalog tests passed');

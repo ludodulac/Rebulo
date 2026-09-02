@@ -94,4 +94,29 @@ Une pièce est dite **productive** seulement si son mot entier et sa prononciati
 | moto | /moto/ | 2 | motoneige, motoneiges |
 | mouche | /muʃ/ | 2 | bateau-mouche, bateaux-mouches |
 
-> Cette mesure est structurelle et lexicale. Elle ne constitue ni une validation clinique ni un test de dénomination des images. Un pictogramme `active:false` ne participe pas au calcul strict.
+## Opportunités de nouvelles pièces mot-entier
+
+| Son entier attesté | Cibles potentiellement débloquées | Candidats de dénomination | Exemples de cibles |
+|---|---:|---|---|
+| /e/ | 525 | est, et, eh | aider, montrer, montré, signer |
+| /t/ | 310 | t', t | route, travers, boîte, trou |
+| /a/ | 231 | à, a, as | ami, amis, années, allait |
+| /k/ | 219 | qu', qu | chaque, course, cache, courses |
+| /ɛ/ | 205 | ai, es, aie | aidez, aidé, verrai, portait |
+| /te/ | 199 | tes, thé, t. | sauter, raté, rater, sauté |
+| /s/ | 192 | c', s', c | pense, passe, laisse, penses |
+| /ɑ̃/ | 172 | en, ans, an | envers, empêche, entrain, dégoûtant |
+| /se/ | 162 | ces, ses, sers | passer, passé, laissez, pensez |
+| /d/ | 117 | d', d | merde, garde, rapide, gardes |
+| /ʁe/ | 115 | ré, rez, rée | réponds, répondez, répond, démarrer |
+| /ʁɛ/ | 106 | raie, rai, raies | paraît, portrait, parait, saurais |
+| /n/ | 104 | n', n | tourne, neuf, mine, piscine |
+| /ta/ | 103 | ta, tas | tapis, tanner, tatie, tapant |
+| /l/ | 99 | l', l | mal, lâche, mille, pile |
+| /di/ | 95 | dit, dis, die | dîner, dira, paradis, midi |
+| /ko/ | 92 | cot, co, côt | copain, commis, commissaire, copie |
+| /ɔ̃/ | 85 | on, ont, hon | jambon, dépêchons, wagon, bouchon |
+| /o/ | 84 | au, oh, aux | aussi, aura, autour, auras |
+| /kɔ̃/ | 83 | con, cons | contente, concert, comporte, contourner |
+
+> Une opportunité indique seulement qu’un **mot entier attesté** possède exactement ce son et pourrait avoir un rendement structurel s’il devenait une pièce. Elle ne valide ni l’image, ni la dénomination spontanée, ni un usage clinique. Les lectures partielles de pictogrammes restent interdites en strict.

@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rebulo.local/schemas/pictogram-prototype-comparisons.schema.json",
+  "title": "Rebulo pictogram prototype comparisons",
+  "description": "Research-stage visual prototype comparisons. Naming risks are hypotheses to test, never participant observations or clinical validation.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "comparisons"],
+  "properties": {
+    "schemaVersion": {"const": "1.0"},
+    "comparisons": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/comparison"}
+    }
+  },
+  "$defs": {
+    "comparison": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["concept", "targetIpa", "activationState", "goal", "candidates", "humanDecision"],
+      "properties": {
+        "concept": {"type": "string", "minLength": 1},
+        "targetIpa": {"type": "string", "minLength": 1},
+        "activationState": {"const": "inactive_until_human_decision"},
+        "goal": {"type": "string", "minLength": 1},
+        "candidates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/candidate"}
+        },
+        "humanDecision": {
+          "oneOf": [
+            {"type": "null"},
+            {"$ref": "#/$defs/humanDecision"}
+          ]
+        }
+      }
+    },
+    "candidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["candidateId", "asset", "provenance", "availability", "designIntent", "namingRisks", "namingTestStatus"],
+      "properties": {
+        "candidateId": {"type": "string", "minLength": 1},
+        "asset": {"type": "string", "minLength": 1},
+        "provenance": {"type": "string", "minLength": 1},
+        "availability": {"enum": ["available", "pending"]},
+        "designIntent": {"type": "string", "minLength": 1},
+        "namingRisks": {
+          "type": "array",
+          "description": "Pre-test hypotheses only; never observed participant responses.",
+          "items": {"type": "string", "minLength": 1}
+        },
+        "namingTestStatus": {"enum": ["not_run", "scheduled", "completed"]}
+      }
+    },
+    "humanDecision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reviewerName", "reviewedAt", "decision", "candidateId", "note"],
+      "properties": {
+        "reviewerName": {"type": "string", "minLength": 1},
+        "reviewedAt": {"type": "string", "format": "date"},
+        "decision": {
+          "enum": ["retain_current_prototype", "prefer_candidate", "request_new_candidate", "reject_concept_for_now"]
+        },
+        "candidateId": {"type": "string", "minLength": 1},
+        "note": {"type": "string", "minLength": 1}
+      },
+      "description": "Explicit human research decision only. This object does not activate a lexicon entry and never implies clinical approval."
+    }
+  }
+}

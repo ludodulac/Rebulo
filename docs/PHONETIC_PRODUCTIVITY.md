@@ -119,4 +119,13 @@ Une pièce est dite **productive** seulement si son mot entier et sa prononciati
 | /o/ | 84 | au, oh, aux | aussi, aura, autour, auras |
 | /kɔ̃/ | 83 | con, cons | contente, concert, comporte, contourner |
 
-> Une opportunité indique seulement qu’un **mot entier attesté** possède exactement ce son et pourrait avoir un rendement structurel s’il devenait une pièce. Elle ne valide ni l’image, ni la dénomination spontanée, ni un usage clinique. Les lectures partielles de pictogrammes restent interdites en strict.
+## File de revue : candidats dessinables
+
+| Candidat | Son entier | Cibles potentielles | Statut | Prochaine étape | Exemples |
+|---|---|---:|---|---|---|
+| raie | /ʁɛ/ | 106 | research_candidate | human_drawability_review | paraît, portrait, parait, saurais |
+| tas | /ta/ | 103 | research_candidate | human_drawability_review | tapis, tanner, tatie, tapant |
+| terre | /tɛʁ/ | 47 | research_candidate | human_drawability_review | terminé, militaire, terminée, terminer |
+| pot | /po/ | 35 | prototype_research | naming_review | possible, chapeau, possibles, dépôt |
+
+> La file dessinable élimine les fragments grammaticaux manifestes et conserve les décisions de recherche existantes. Elle ne vaut ni validation de dénomination, ni activation, ni validation clinique.

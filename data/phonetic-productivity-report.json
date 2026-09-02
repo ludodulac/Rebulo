@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T21:57:09.221Z",
+  "generatedAt": "2026-09-02T22:58:00.597Z",
   "source": "Lexique 4",
   "lexicalEntryCount": 189832,
   "inventory": {
@@ -21,6 +21,7 @@
     "inactive": "Une pièce active:false ne participe jamais au calcul strict, même si son IPA est connue.",
     "wholeWord": "Aucune sous-partie de la prononciation d’un pictogramme ne peut être utilisée. Vélo /velo/ ne fournit ni /ve/ ni /lo/.",
     "opportunity": "Une opportunité est une prononciation de mot entier attestée dans Lexique qui, ajoutée comme une seule future pièce, débloquerait au moins une cible avec les pièces strictes existantes. Le mot proposé reste un candidat de dénomination, pas un pictogramme validé.",
+    "drawableShortlist": "La shortlist dessinable retire les fragments grammaticaux manifestes puis réinjecte les décisions de recherche déjà documentées. Elle reste une file de revue humaine, jamais une activation automatique.",
     "deduplication": "Les cibles lexicales sont dédupliquées par graphie normalisée + IPA ; le seed Rebulo reste prioritaire lors de la fusion des bibliothèques."
   },
   "productiveTokens": [
@@ -14843,6 +14844,264 @@
           "pieceCount": 3
         }
       ]
+    }
+  ],
+  "drawableOpportunityShortlist": [
+    {
+      "ipa": "ʁɛ",
+      "label": "raie",
+      "targetCount": 106,
+      "frequencySum": 150.9979999999996,
+      "examples": [
+        {
+          "word": "paraît",
+          "ipa": "paʁɛ",
+          "frequency": 58.244,
+          "pieceCount": 2
+        },
+        {
+          "word": "portrait",
+          "ipa": "pɔʁtʁɛ",
+          "frequency": 14.294,
+          "pieceCount": 2
+        },
+        {
+          "word": "parait",
+          "ipa": "paʁɛ",
+          "frequency": 14.139,
+          "pieceCount": 2
+        },
+        {
+          "word": "saurais",
+          "ipa": "soʁɛ",
+          "frequency": 12.684,
+          "pieceCount": 2
+        },
+        {
+          "word": "saurai",
+          "ipa": "soʁɛ",
+          "frequency": 12.285,
+          "pieceCount": 2
+        }
+      ],
+      "lexicalCandidates": [
+        {
+          "word": "raie",
+          "frequency": 1.63
+        },
+        {
+          "word": "rai",
+          "frequency": 0.69
+        },
+        {
+          "word": "raies",
+          "frequency": 0.313
+        },
+        {
+          "word": "rais",
+          "frequency": 0.247
+        },
+        {
+          "word": "ray",
+          "frequency": 0.155
+        }
+      ],
+      "exactLabelAttested": true,
+      "curationStatus": "research_candidate",
+      "activation": "not_ready",
+      "selectionReason": "Bon rendement et possibilité d'un référent concret, notamment l'animal.",
+      "namingRisk": "Le mot peut désigner l'animal ou une ligne; le dessin doit provoquer spontanément la bonne dénomination.",
+      "assetStatus": "unreviewed",
+      "nextGate": "human_drawability_review"
+    },
+    {
+      "ipa": "ta",
+      "label": "tas",
+      "targetCount": 103,
+      "frequencySum": 31.475999999999985,
+      "examples": [
+        {
+          "word": "tapis",
+          "ipa": "tapi",
+          "frequency": 21.924,
+          "pieceCount": 2
+        },
+        {
+          "word": "tanner",
+          "ipa": "tane",
+          "frequency": 1.054,
+          "pieceCount": 2
+        },
+        {
+          "word": "tatie",
+          "ipa": "tasi",
+          "frequency": 1.022,
+          "pieceCount": 2
+        },
+        {
+          "word": "tapant",
+          "ipa": "tapɑ̃",
+          "frequency": 0.845,
+          "pieceCount": 2
+        },
+        {
+          "word": "tapin",
+          "ipa": "tapɛ̃",
+          "frequency": 0.68,
+          "pieceCount": 2
+        }
+      ],
+      "lexicalCandidates": [
+        {
+          "word": "ta",
+          "frequency": 1157.652
+        },
+        {
+          "word": "tas",
+          "frequency": 61.411
+        }
+      ],
+      "exactLabelAttested": true,
+      "curationStatus": "research_candidate",
+      "activation": "not_ready",
+      "selectionReason": "Très fort rendement phonétique et concept concret simple à illustrer.",
+      "namingRisk": "Peut être nommé pile, amas ou tas selon le dessin.",
+      "assetStatus": "unreviewed",
+      "nextGate": "human_drawability_review"
+    },
+    {
+      "ipa": "tɛʁ",
+      "label": "terre",
+      "targetCount": 47,
+      "frequencySum": 220.50099999999975,
+      "examples": [
+        {
+          "word": "terminé",
+          "ipa": "tɛʁmine",
+          "frequency": 91.165,
+          "pieceCount": 3
+        },
+        {
+          "word": "militaire",
+          "ipa": "militɛʁ",
+          "frequency": 29.117,
+          "pieceCount": 3
+        },
+        {
+          "word": "terminée",
+          "ipa": "tɛʁmine",
+          "frequency": 23.304,
+          "pieceCount": 3
+        },
+        {
+          "word": "terminer",
+          "ipa": "tɛʁmine",
+          "frequency": 19.339,
+          "pieceCount": 3
+        },
+        {
+          "word": "déterminer",
+          "ipa": "detɛʁmine",
+          "frequency": 10.601,
+          "pieceCount": 4
+        }
+      ],
+      "lexicalCandidates": [
+        {
+          "word": "terre",
+          "frequency": 227.345
+        },
+        {
+          "word": "taire",
+          "frequency": 25.845
+        },
+        {
+          "word": "terres",
+          "frequency": 19.646
+        },
+        {
+          "word": "ter",
+          "frequency": 0.747
+        },
+        {
+          "word": "terrent",
+          "frequency": 0.174
+        }
+      ],
+      "exactLabelAttested": true,
+      "curationStatus": "research_candidate",
+      "activation": "not_ready",
+      "selectionReason": "Concept courant et rendement encore élevé.",
+      "namingRisk": "Un globe peut être nommé monde ou planète; un sol peut être nommé sol ou terre.",
+      "assetStatus": "unreviewed",
+      "nextGate": "human_drawability_review"
+    },
+    {
+      "ipa": "po",
+      "label": "pot",
+      "targetCount": 35,
+      "frequencySum": 273.0389999999999,
+      "examples": [
+        {
+          "word": "possible",
+          "ipa": "posibl",
+          "frequency": 196.823,
+          "pieceCount": 2
+        },
+        {
+          "word": "chapeau",
+          "ipa": "ʃapo",
+          "frequency": 39.87,
+          "pieceCount": 2
+        },
+        {
+          "word": "possibles",
+          "ipa": "posibl",
+          "frequency": 9.234,
+          "pieceCount": 2
+        },
+        {
+          "word": "dépôt",
+          "ipa": "depo",
+          "frequency": 9.203,
+          "pieceCount": 2
+        },
+        {
+          "word": "chapeaux",
+          "ipa": "ʃapo",
+          "frequency": 5.497,
+          "pieceCount": 2
+        }
+      ],
+      "lexicalCandidates": [
+        {
+          "word": "peau",
+          "frequency": 66.408
+        },
+        {
+          "word": "pot",
+          "frequency": 20.07
+        },
+        {
+          "word": "pots",
+          "frequency": 4.75
+        },
+        {
+          "word": "peaux",
+          "frequency": 2.737
+        },
+        {
+          "word": "pau",
+          "frequency": 0.032
+        }
+      ],
+      "exactLabelAttested": true,
+      "curationStatus": "prototype_research",
+      "activation": "prototype_registered",
+      "selectionReason": "Référent concret et généralement facile à dessiner; choisi parmi les homophones exacts de /po/ plutôt que peau.",
+      "namingRisk": "Le prototype OpenMoji contient une plante et peut être nommé plante, plante en pot ou pot de fleurs.",
+      "assetStatus": "available_inactive",
+      "nextGate": "naming_review"
     }
   ],
   "provenance": {

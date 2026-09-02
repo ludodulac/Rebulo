@@ -3,22 +3,14 @@ import {buildCreatorCandidate,buildGeneralCreatorCandidate} from '../src/creator
 
 const lexicon=[
   {id:'mer',label:'mer',ipa:'/mɛʁ/',active:true,image:'assets/rebus/mer.svg'},
-  {id:'scie',label:'scie',ipa:'/si/',active:true,image:'assets/rebus/scie.svg'}
+  {id:'scie',label:'scie',ipa:'/si/',active:true,image:'assets/rebus/scie.svg'},
+  {id:'riz',label:'riz',ipa:'/ʁi/',active:true,image:'assets/rebus/riz.svg'}
 ];
 const definitions=[
   {id:'phoneme-blending',label:'Fusion phonémique',unit:'phoneme',description:'Fusionner des phonèmes en un mot.'},
   {id:'syllable-count',label:'Comptage syllabique',unit:'syllable',description:'Compter les syllabes orales d’un mot.'}
 ];
-const target={
-  target:'merci',
-  targetIpa:'/mɛʁsi/',
-  syllableCount:2,
-  mode:'strict',
-  assets:'ready',
-  therapy:['phoneme-blending','syllable-count'],
-  source:'coverage-report',
-  generated:true
-};
+const target={target:'merci',targetIpa:'/mɛʁsi/',syllableCount:2,mode:'strict',assets:'ready',therapy:['phoneme-blending','syllable-count'],source:'coverage-report',generated:true};
 
 const candidate=buildCreatorCandidate(target,lexicon,definitions);
 assert.ok(candidate);
@@ -30,30 +22,18 @@ assert.deepEqual(candidate.pieces.map(piece=>piece.reading),['mer','scie']);
 assert.equal(candidate.construction.mode,'strict');
 assert.deepEqual(candidate.construction.operations.map(operation=>operation.type),['whole_word','whole_word']);
 assert.deepEqual(candidate.construction.capabilities,['general','phonetic_strict']);
-
 const blending=candidate.therapyActivities.find(activity=>activity.id==='phoneme-blending');
 assert.ok(blending);
 assert.equal(blending.expectedResponse,'mɛʁsi');
 assert.deepEqual(blending.promptUnits,['m','ɛ','ʁ','s','i']);
-
 const syllableCount=candidate.therapyActivities.find(activity=>activity.id==='syllable-count');
 assert.ok(syllableCount);
 assert.equal(syllableCount.expectedResponse,2);
-
 assert.equal(buildCreatorCandidate({...target,mode:'explicit_operation'},lexicon,definitions),null);
 assert.equal(buildCreatorCandidate({...target,assets:'missing'},lexicon,definitions),null);
 assert.equal(buildCreatorCandidate({...target,targetIpa:''},lexicon,definitions),null);
 
-const citeTarget={
-  target:'cité',
-  targetIpa:'/site/',
-  mode:'general',
-  assets:'ready',
-  operations:[
-    {type:'whole_word',pieceId:'scie'},
-    {type:'grapheme',grapheme:'T',reading:'té'}
-  ]
-};
+const citeTarget={target:'cité',targetIpa:'/site/',mode:'general',assets:'ready',operations:[{type:'whole_word',pieceId:'scie'},{type:'grapheme',grapheme:'T',reading:'té'}]};
 const cite=buildGeneralCreatorCandidate(citeTarget,lexicon);
 assert.ok(cite);
 assert.equal(cite.answer,'cité');
@@ -64,8 +44,20 @@ assert.equal(cite.pieces[0].image,'assets/rebus/scie.svg');
 assert.equal(cite.pieces[1].grapheme,'T');
 assert.equal(cite.pieces[1].reading,'té');
 assert.deepEqual(cite.therapyActivities,[]);
+
+const sourisTarget={target:'souris',targetIpa:'/suʁi/',mode:'general',assets:'ready',operations:[{type:'spatial_relation',relation:'under'},{type:'whole_word',pieceId:'riz'}]};
+const souris=buildGeneralCreatorCandidate(sourisTarget,lexicon);
+assert.ok(souris);
+assert.equal(souris.answer,'souris');
+assert.deepEqual(souris.construction.capabilities,['general']);
+assert.deepEqual(souris.pieces.map(piece=>piece.operationType),['spatial_relation','whole_word']);
+assert.equal(souris.pieces[0].relation,'under');
+assert.equal(souris.pieces[0].reading,'sous');
+assert.equal(souris.pieces[1].image,'assets/rebus/riz.svg');
+assert.deepEqual(souris.therapyActivities,[]);
+assert.equal(buildGeneralCreatorCandidate({...sourisTarget,operations:[{type:'spatial_relation',relation:'above'},{type:'whole_word',pieceId:'riz'}]},lexicon),null);
 assert.equal(buildGeneralCreatorCandidate({...citeTarget,assets:'missing'},lexicon),null);
 assert.equal(buildGeneralCreatorCandidate({...citeTarget,operations:[{type:'repetition'}]},lexicon),null);
 assert.equal(buildGeneralCreatorCandidate({...citeTarget,operations:[{type:'whole_word',pieceId:'unknown'}]},lexicon),null);
 
-console.log('Rebulo creator runtime: strict and general grapheme candidates preserved.');
+console.log('Rebulo creator runtime: strict, grapheme and spatial general candidates preserved.');

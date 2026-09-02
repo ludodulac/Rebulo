@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.0",
+  "comparisons": [
+    {
+      "concept": "pot",
+      "targetIpa": "/po/",
+      "activationState": "inactive_until_human_decision",
+      "goal": "Comparer des visuels qui font nommer spontanément « pot » plutôt que la plante ou l’ensemble « pot de fleurs », avant toute activation phonétique.",
+      "candidates": [
+        {
+          "candidateId": "pot-openmoji-1fab4",
+          "asset": "assets/rebus/pot.svg",
+          "provenance": "openmoji:1FAB4",
+          "availability": "available",
+          "designIntent": "Prototype existant licencié, conservé comme point de comparaison de départ.",
+          "namingRisks": ["plante", "plante en pot", "pot de fleurs"],
+          "namingTestStatus": "not_run"
+        }
+      ],
+      "humanDecision": null
+    }
+  ]
+}

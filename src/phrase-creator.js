@@ -1,10 +1,36 @@
 import {buildCreatorCandidate,buildGeneralCreatorCandidate} from './creator-runtime.js';
 
 export const PLAYFUL_PHRASES=Object.freeze([
+  'Papa dessine un chat',
+  'Le chat regarde papa',
+  'Papa tourne près du lit',
+  'Le rat file vers le lit',
+  'Le chat dort sur le lit',
+  'Le rat passe sous le lit',
+  'Le chat suit le rat',
+  'Le rat regarde le riz',
+  'Papa prépare le riz',
+  'Le chat renifle le riz',
+  'Le rat fait un détour',
+  'Papa va au cinéma',
+  'Merci papa',
+  'Merci pour le dessin',
   'Le rat sous le parapluie',
-  'Merci pour le cinéma',
   'La souris sous le parasol',
-  'Un souci sous le soleil'
+  'Un souci sous le soleil',
+  'Le chat joue sous la pluie',
+  'Papa prend le parapluie',
+  'Le rat tourne autour du dé',
+  'Le chat cherche la clé',
+  'La clé est près du lit',
+  'Le dé roule sous le lit',
+  'Le rat passe près de la tour',
+  'Papa dessine une tour',
+  'Le chat regarde la mer',
+  'Merci pour le cinéma',
+  'Le rat et le chat jouent',
+  'Papa cherche la clé du lit',
+  'Le chat attend sous le parasol'
 ]);
 
 export function normalizePhraseWord(value=''){
@@ -55,14 +81,7 @@ export function buildPhrasePlan(value='',targets=[],lexicon=[],therapyDefinition
     return {kind:'rebus',text:token.text,mode:target.mode,target,candidate};
   });
 
-  return {
-    input:String(value||''),
-    tokens:planned,
-    wordCount,
-    rebusCount,
-    textCount:Math.max(0,wordCount-rebusCount),
-    complete:wordCount>0&&rebusCount===wordCount
-  };
+  return {input:String(value||''),tokens:planned,wordCount,rebusCount,textCount:Math.max(0,wordCount-rebusCount),complete:wordCount>0&&rebusCount===wordCount};
 }
 
 export function playfulPhraseAt(index=0){

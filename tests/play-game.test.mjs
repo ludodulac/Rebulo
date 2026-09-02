@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import fs from 'node:fs';
 import {normalizePlayAnswer,playableRebuses,choosePlayableRebus,playAnswerMatches,safePlayHint} from '../src/play-game.js';
 
 const catalog=[
@@ -25,5 +26,15 @@ assert.equal(hint.toLowerCase().includes('cinéma'),false);
 assert.equal(hint.toLowerCase().includes('scie'),false);
 assert.equal(hint.toLowerCase().includes('nez'),false);
 assert.equal(hint.toLowerCase().includes('mât'),false);
+
+const realCatalog=JSON.parse(fs.readFileSync(new URL('../data/rebus.json',import.meta.url)));
+const showcase=realCatalog.filter(item=>item.presentationStatus==='showcase');
+assert.deepEqual(showcase.map(item=>item.id),['rallye','lira','rira']);
+for(const rebus of showcase){
+  const built=rebus.pieces.map(piece=>piece.ipa.replaceAll('/','')).join('');
+  assert.equal(`/${built}/`,rebus.targetIpa,`${rebus.id} must remain an exact whole-word IPA concatenation`);
+  assert.equal(rebus.validation,'strict');
+  assert.equal(rebus.phoneticConfidence,1);
+}
 
 console.log('play-game tests: ok');

@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const visual=JSON.parse(fs.readFileSync(new URL('../data/visual-system.json',import.meta.url)));
+const lexicon=JSON.parse(fs.readFileSync(new URL('../data/lexicon-seed.json',import.meta.url)));
+assert.equal(visual.targetStyle.textInsideAsset,'forbidden_unless_the_concept_is_a_grapheme');
+const active=lexicon.filter(item=>item.active).map(item=>item.id);
+const audited=new Set(visual.audit.map(item=>item.id));
+for(const id of active) assert.ok(audited.has(id),`active pictogram ${id} must be visually audited`);
+const sol=visual.audit.find(item=>item.id==='sol');
+assert.equal(sol.status,'redesign_priority');
+assert.match(sol.reason,/écrit|révèle/i);
+for(const item of visual.audit) assert.ok(['redesign_priority','keep_then_harmonize','reference_style'].includes(item.status));
+console.log('Rebulo visual system audit: all tests passed.');

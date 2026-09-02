@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node tests/phonetic-engine.test.mjs && node tests/rebus-construction.test.mjs && node tests/import-lexique.test.mjs && node tests/pdf-export.test.mjs && node tests/therapy-activities.test.mjs && node tests/session-plan.test.mjs && node tests/asset-audit.test.mjs && node tests/creator-catalog.test.mjs && node tests/creator-runtime.test.mjs && node tests/creator-status.test.mjs && node tests/creator-session-pdf-flow.test.mjs && node tests/pictogram-naming-tests.test.mjs && node tests/general-coverage.test.mjs",
+    "test": "node tests/phonetic-engine.test.mjs && node tests/rebus-construction.test.mjs && node tests/import-lexique.test.mjs && node tests/pdf-export.test.mjs && node tests/therapy-activities.test.mjs && node tests/session-plan.test.mjs && node tests/asset-audit.test.mjs && node tests/creator-catalog.test.mjs && node tests/creator-runtime.test.mjs && node tests/automatic-creator-flow.test.mjs && node tests/creator-status.test.mjs && node tests/creator-session-pdf-flow.test.mjs && node tests/pictogram-naming-tests.test.mjs && node tests/general-coverage.test.mjs",
     "import:lexique": "node scripts/import-lexique.mjs",
     "analyze:coverage": "node scripts/analyze-coverage.mjs"
   }

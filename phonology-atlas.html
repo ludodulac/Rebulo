@@ -23,9 +23,15 @@
     </div>
     <p id="atlasStatus"></p>
     <p class="rigor-note"><strong>Rigueur :</strong> sans donnée de syllabation explicite, Rebulo parle de « bloc sonore entier », pas de syllabe. La syllabe sera indexée séparément lorsqu’une donnée lexicale fiable la documente.</p>
+    <p>Les dessins restent en couleur à l’écran. L’impression passe automatiquement en niveaux de gris pour économiser l’encre.</p>
     <p><a href="pictogram-sheets.html">Voir aussi la banque générale de dessins</a></p>
   </header>
   <section id="phonemeChips" class="phoneme-chips" aria-label="Sons disponibles"></section>
+  <section class="lexical-panel" aria-labelledby="lexicalTitle">
+    <h2 id="lexicalTitle">Mots strictement constructibles dans le lexique actuel</h2>
+    <p id="lexicalStatus" class="lexical-note">Chargement du contexte lexical…</p>
+    <div id="lexicalWords" class="lexical-words" aria-live="polite"></div>
+  </section>
   <section id="atlasResults" class="atlas-results" aria-live="polite"></section>
 </main>
 <script type="module" src="src/phonology-atlas-page.js"></script>

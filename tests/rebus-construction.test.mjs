@@ -17,6 +17,7 @@ import {
 
 const mer={id:'mer',label:'mer',reading:'mer',ipa:'/mɛʁ/',image:'assets/rebus/mer.svg'};
 const scie={id:'scie',label:'scie',reading:'scie',ipa:'/si/',image:'assets/rebus/scie.svg'};
+const chat={id:'chat',label:'chat',reading:'chat',ipa:'/ʃa/',image:'assets/rebus/chat.svg'};
 const yoyo={id:'yoyo',label:'yo-yo',reading:'yo-yo',ipa:'/jojo/',image:'openmoji-yoyo.svg'};
 
 const operation=buildWholeWordOperation(mer);
@@ -61,25 +62,28 @@ assert.equal(buildExplicitDeletionOperation({...yoyo,image:''},{keep:'premier yo
 assert.equal(buildExplicitDeletionOperation(yoyo,{keep:'',remove:'second yo',reading:'yo'}),null);
 assert.equal(buildExplicitDeletionOperation(yoyo,{keep:'yo',remove:'yo',reading:'yo'}),null,'deletion must identify distinct visible parts');
 
-const substitution=buildExplicitSubstitutionOperation(yoyo,{replace:'second yo',replacement:'la',reading:'yola',visual:'cross_out_replace'});
+const substitution=buildExplicitSubstitutionOperation(chat,{replace:'CH',replacement:'R',reading:'rat',visual:'cross_out_replace'});
 assert.ok(substitution);
 assert.equal(substitution.type,'explicit_substitution');
-assert.equal(substitution.sourceReading,'yo-yo');
-assert.equal(substitution.replace,'second yo');
-assert.equal(substitution.replacement,'la');
-assert.equal(substitution.reading,'yola');
+assert.equal(substitution.sourceReading,'chat');
+assert.equal(substitution.replace,'CH');
+assert.equal(substitution.replacement,'R');
+assert.equal(substitution.reading,'rat');
 assert.equal(substitution.visual,'cross_out_replace');
-assert.equal(buildExplicitSubstitutionOperation({...yoyo,image:''},{replace:'second yo',replacement:'la',reading:'yola',visual:'swap'}),null);
+assert.equal(buildExplicitSubstitutionOperation({...chat,image:''},{replace:'CH',replacement:'R',reading:'rat',visual:'swap'}),null);
 for(const options of [
-  {replacement:'la',reading:'yola',visual:'swap'},
-  {replace:'second yo',reading:'yola',visual:'swap'},
-  {replace:'second yo',replacement:'la',visual:'swap'},
-  {replace:'second yo',replacement:'la',reading:'yola'},
-  {replace:'yo',replacement:'yo',reading:'yo-yo',visual:'swap'},
-  {replace:'second yo',replacement:'la',reading:'yola',visual:'hidden'}
+  {replacement:'R',reading:'rat',visual:'swap'},
+  {replace:'CH',reading:'rat',visual:'swap'},
+  {replace:'CH',replacement:'R',visual:'swap'},
+  {replace:'CH',replacement:'R',reading:'rat'},
+  {replace:'CH',replacement:'ch',reading:'chat',visual:'swap'},
+  {replace:'ZZ',replacement:'R',reading:'rat',visual:'swap'},
+  {replace:'CH',replacement:'R',reading:'rit',visual:'swap'},
+  {replace:'CH',replacement:'R',reading:'rat',visual:'hidden'}
 ]){
-  assert.equal(buildExplicitSubstitutionOperation(yoyo,options),null,'substitution must be complete, distinct and visibly specified');
+  assert.equal(buildExplicitSubstitutionOperation(chat,options),null,'substitution must be complete, unique, visibly specified and produce its declared reading');
 }
+assert.equal(buildExplicitSubstitutionOperation(yoyo,{replace:'yo',replacement:'la',reading:'la-yo',visual:'swap'}),null,'ambiguous repeated source fragments cannot be substituted implicitly');
 
 const repeated=buildRepetitionOperation(mer,{count:3,reading:'mer mer mer'});
 assert.ok(repeated);
@@ -123,4 +127,4 @@ assert.equal(merci.validation.targetIpa,'mɛʁsi');
 assert.equal(buildStrictConstruction([mer,scie],'/ʁebys/'),null);
 assert.equal(buildStrictConstruction([], '/mɛʁsi/'),null);
 
-console.log('Rebulo construction model: explicit deletion, substitution and repetition stay visible and general-only.');
+console.log('Rebulo construction model: explicit deletion, semantically checked substitution and repetition stay visible and general-only.');

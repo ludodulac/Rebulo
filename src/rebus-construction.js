@@ -59,6 +59,21 @@ export function buildExplicitDeletionOperation(piece={},options={}){
   return {type:REBUS_OPERATION_TYPES.EXPLICIT_DELETION,pieceId:whole.pieceId,label:whole.label,reading,sourceReading:whole.reading,keep,remove,image:whole.image,visual:options?.visual==='half'?'half':'cross_out'};
 }
 
+function normalizeSubstitutionText(value=''){
+  return String(value||'').trim().normalize('NFC').toLocaleLowerCase('fr-FR');
+}
+
+function substitutedReading(sourceReading,replace,replacement){
+  const source=normalizeSubstitutionText(sourceReading);
+  const removed=normalizeSubstitutionText(replace);
+  const added=normalizeSubstitutionText(replacement);
+  if(!source||!removed||!added)return null;
+  const first=source.indexOf(removed);
+  if(first<0)return null;
+  if(source.indexOf(removed,first+removed.length)>=0)return null;
+  return `${source.slice(0,first)}${added}${source.slice(first+removed.length)}`;
+}
+
 export function buildExplicitSubstitutionOperation(piece={},options={}){
   const whole=buildWholeWordOperation(piece);
   if(!whole||!whole.image)return null;
@@ -66,8 +81,9 @@ export function buildExplicitSubstitutionOperation(piece={},options={}){
   const replacement=String(options?.replacement||'').trim();
   const reading=String(options?.reading||'').trim();
   const visual=String(options?.visual||'').trim();
-  if(!replace||!replacement||!reading||!visual||replace===replacement)return null;
+  if(!replace||!replacement||!reading||!visual||normalizeSubstitutionText(replace)===normalizeSubstitutionText(replacement))return null;
   if(!['cross_out_replace','swap'].includes(visual))return null;
+  if(substitutedReading(whole.reading,replace,replacement)!==normalizeSubstitutionText(reading))return null;
   return {type:REBUS_OPERATION_TYPES.EXPLICIT_SUBSTITUTION,pieceId:whole.pieceId,label:whole.label,reading,sourceReading:whole.reading,replace,replacement,image:whole.image,visual};
 }
 

@@ -5,6 +5,7 @@ const lexicon=[
   {id:'mer',label:'mer',ipa:'/mɛʁ/',active:true,image:'assets/rebus/mer.svg'},
   {id:'scie',label:'scie',ipa:'/si/',active:true,image:'assets/rebus/scie.svg'},
   {id:'riz',label:'riz',ipa:'/ʁi/',active:true,image:'assets/rebus/riz.svg'},
+  {id:'chat',label:'chat',ipa:'/ʃa/',active:true,image:'assets/rebus/chat.svg'},
   {id:'yoyo',label:'yo-yo',ipa:'/jojo/',active:true,image:'openmoji-yoyo.svg',strictEligible:false}
 ];
 const definitions=[
@@ -69,17 +70,17 @@ assert.equal(halfYoyo.pieces[0].reading,'yo');
 assert.equal(halfYoyo.pieces[0].visual,'half');
 assert.deepEqual(halfYoyo.therapyActivities,[]);
 
-const substitutionTarget={target:'yola',mode:'general',assets:'ready',operations:[{type:'explicit_substitution',pieceId:'yoyo',replace:'second yo',replacement:'la',reading:'yola',visual:'cross_out_replace'}]};
+const substitutionTarget={target:'rat',mode:'general',assets:'ready',operations:[{type:'explicit_substitution',pieceId:'chat',replace:'CH',replacement:'R',reading:'rat',visual:'cross_out_replace'}]};
 const substitution=buildGeneralCreatorCandidate(substitutionTarget,lexicon);
 assert.ok(substitution);
-assert.equal(substitution.answer,'yola');
+assert.equal(substitution.answer,'rat');
 assert.deepEqual(substitution.construction.capabilities,['general']);
 assert.equal(substitution.construction.operations[0].type,'explicit_substitution');
 assert.equal(substitution.pieces[0].operationType,'explicit_substitution');
-assert.equal(substitution.pieces[0].sourceReading,'yo-yo');
-assert.equal(substitution.pieces[0].replace,'second yo');
-assert.equal(substitution.pieces[0].replacement,'la');
-assert.equal(substitution.pieces[0].reading,'yola');
+assert.equal(substitution.pieces[0].sourceReading,'chat');
+assert.equal(substitution.pieces[0].replace,'CH');
+assert.equal(substitution.pieces[0].replacement,'R');
+assert.equal(substitution.pieces[0].reading,'rat');
 assert.equal(substitution.pieces[0].visual,'cross_out_replace');
 assert.deepEqual(substitution.therapyActivities,[]);
 
@@ -100,9 +101,10 @@ assert.equal(buildGeneralCreatorCandidate({...sourisTarget,operations:[{type:'sp
 assert.equal(buildGeneralCreatorCandidate({...citeTarget,assets:'missing'},lexicon),null);
 assert.equal(buildGeneralCreatorCandidate({...citeTarget,operations:[{type:'whole_word',pieceId:'unknown'}]},lexicon),null);
 assert.equal(buildGeneralCreatorCandidate({...halfYoyoTarget,operations:[{type:'explicit_deletion',pieceId:'yoyo',keep:'yo',remove:'yo',reading:'yo'}]},lexicon),null);
-assert.equal(buildGeneralCreatorCandidate({...substitutionTarget,operations:[{type:'explicit_substitution',pieceId:'yoyo',replace:'second yo',replacement:'la',reading:'yola'}]},lexicon),null);
-assert.equal(buildGeneralCreatorCandidate({...substitutionTarget,operations:[{type:'explicit_substitution',pieceId:'yoyo',replace:'yo',replacement:'yo',reading:'yo-yo',visual:'swap'}]},lexicon),null);
+assert.equal(buildGeneralCreatorCandidate({...substitutionTarget,operations:[{type:'explicit_substitution',pieceId:'chat',replace:'CH',replacement:'R',reading:'rat'}]},lexicon),null);
+assert.equal(buildGeneralCreatorCandidate({...substitutionTarget,operations:[{type:'explicit_substitution',pieceId:'chat',replace:'CH',replacement:'R',reading:'rit',visual:'swap'}]},lexicon),null);
+assert.equal(buildGeneralCreatorCandidate({...substitutionTarget,operations:[{type:'explicit_substitution',pieceId:'chat',replace:'ZZ',replacement:'R',reading:'rat',visual:'swap'}]},lexicon),null);
 assert.equal(buildGeneralCreatorCandidate({...repetitionTarget,operations:[{type:'repetition',pieceId:'mer',count:1,reading:'mer'}]},lexicon),null);
 assert.equal(buildGeneralCreatorCandidate({...repetitionTarget,operations:[{type:'repetition',pieceId:'mer',count:2,reading:''}]},lexicon),null);
 
-console.log('Rebulo creator runtime: strict and explicit general operations preserved, including deletion, substitution and repetition.');
+console.log('Rebulo creator runtime: strict and explicit general operations preserved, with substitution semantics checked against the source reading.');

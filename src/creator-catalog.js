@@ -169,7 +169,7 @@ export function buildRepetitionCreatorTargets(report={}){
   const seen=new Set();
   for(const row of rows){
     const pieces=Array.isArray(row?.decomposition)?row.decomposition:[];
-    if(!row?.word||!row?.ipa||pieces.length<2||pieces.length>6)continue;
+    if(!row?.word||!row?.ipa||pieces.length<2||pieces.length>4)continue;
     const pieceId=String(pieces[0]||'').trim();
     if(!pieceId||pieces.some(piece=>piece!==pieceId))continue;
     const candidate={

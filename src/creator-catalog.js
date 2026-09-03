@@ -103,6 +103,7 @@ function operationSignature(operation={}){
   if(operation.type==='whole_word')return `word:${operation.pieceId||operation.label||''}`;
   if(operation.type==='grapheme')return `grapheme:${operation.grapheme||''}:${operation.reading||''}`;
   if(operation.type==='spatial_relation')return `spatial:${operation.relation||''}:${operation.reading||''}`;
+  if(operation.type==='repetition')return `repetition:${operation.pieceId||operation.label||''}:${Number(operation.count||0)}:${operation.reading||''}`;
   return `${operation.type||'unknown'}:${JSON.stringify(operation)}`;
 }
 
@@ -162,6 +163,34 @@ export function buildSpatialCreatorTargets(report={}){
   return frameExamples(report,spatialRelationForIPA,spatialOperationFromFrameToken,'coverage-report-spatial');
 }
 
+export function buildRepetitionCreatorTargets(report={}){
+  const rows=Array.isArray(report?.constructible)?report.constructible:[];
+  const candidates=[];
+  const seen=new Set();
+  for(const row of rows){
+    const pieces=Array.isArray(row?.decomposition)?row.decomposition:[];
+    if(!row?.word||!row?.ipa||pieces.length<2||pieces.length>6)continue;
+    const pieceId=String(pieces[0]||'').trim();
+    if(!pieceId||pieces.some(piece=>piece!==pieceId))continue;
+    const candidate={
+      target:row.word,
+      targetIpa:row.ipa,
+      mode:'general',
+      assets:'ready',
+      operations:[{type:'repetition',pieceId,count:pieces.length,reading:pieces.join(' ')}],
+      source:'coverage-report-repetition',
+      generated:true,
+      frequency:Number(row?.frequency||0),
+      operationCount:1
+    };
+    const key=`${normalizeKey(row.word)}|${creatorTargetSignature(candidate)}`;
+    if(!normalizeKey(row.word)||seen.has(key))continue;
+    seen.add(key);
+    candidates.push(candidate);
+  }
+  return candidates;
+}
+
 export function creatorTargetScore(item={}){
   const modeScore=item?.mode==='strict'?300:item?.mode==='general'?200:0;
   const count=Number(item?.operationCount||(Array.isArray(item?.operations)?item.operations.length:0));
@@ -207,7 +236,8 @@ export function buildAutomaticCreatorTargets(report={}){
   return selectBestGeneratedTargets([
     ...buildCreatorTargets(report),
     ...buildGraphemeCreatorTargets(report),
-    ...buildSpatialCreatorTargets(report)
+    ...buildSpatialCreatorTargets(report),
+    ...buildRepetitionCreatorTargets(report)
   ]);
 }
 

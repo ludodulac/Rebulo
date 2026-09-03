@@ -1,0 +1,18 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://rebulo.local/schemas/pictogram-naming-test-plans.schema.json",
+  "title":"Rebulo pictogram naming test plans",
+  "description":"Pre-observation research plans only. A plan contains no participant result and never activates a pictogram.",
+  "type":"object","additionalProperties":false,"required":["schemaVersion","plans"],
+  "properties":{"schemaVersion":{"const":"1.0"},"plans":{"type":"array","items":{"$ref":"#/$defs/plan"}}},
+  "$defs":{
+    "plan":{"type":"object","additionalProperties":false,"required":["planId","concept","targetIpa","status","activationState","candidateIds","instruction","capture","decisionGate"],"properties":{
+      "planId":{"type":"string","minLength":1},"concept":{"type":"string","minLength":1},"targetIpa":{"type":"string","minLength":1},
+      "status":{"const":"ready_for_human_naming_test"},"activationState":{"const":"inactive_until_human_decision"},
+      "candidateIds":{"type":"array","minItems":2,"uniqueItems":true,"items":{"type":"string","minLength":1}},
+      "instruction":{"type":"string","minLength":1},
+      "capture":{"type":"object","additionalProperties":false,"required":["firstSpontaneousResponseOnly","anonymousOnly","hesitation","noResponse","candidateOrder"],"properties":{"firstSpontaneousResponseOnly":{"const":true},"anonymousOnly":{"const":true},"hesitation":{"const":true},"noResponse":{"const":true},"candidateOrder":{"const":"counterbalanced_or_randomized"}}},
+      "decisionGate":{"type":"object","additionalProperties":false,"required":["requiresHumanReview","automaticActivation","note"],"properties":{"requiresHumanReview":{"const":true},"automaticActivation":{"const":false},"note":{"type":"string","minLength":1}}}
+    }}
+  }
+}

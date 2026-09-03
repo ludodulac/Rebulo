@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import {
   REBUS_CAPABILITIES,
   REBUS_OPERATION_TYPES,
+  buildExplicitDeletionOperation,
   buildGeneralConstruction,
   buildGraphemeOperation,
   buildSpatialRelationOperation,
@@ -14,6 +15,7 @@ import {
 
 const mer={id:'mer',label:'mer',reading:'mer',ipa:'/mɛʁ/',image:'assets/rebus/mer.svg'};
 const scie={id:'scie',label:'scie',reading:'scie',ipa:'/si/',image:'assets/rebus/scie.svg'};
+const yoyo={id:'yoyo',label:'yo-yo',reading:'yo-yo',ipa:'/jojo/',image:'openmoji-yoyo.svg'};
 
 const operation=buildWholeWordOperation(mer);
 assert.deepEqual(operation,{type:'whole_word',pieceId:'mer',label:'mer',reading:'mer',ipa:'/mɛʁ/',image:'assets/rebus/mer.svg'});
@@ -25,7 +27,9 @@ assert.equal(isOperationImplemented(REBUS_OPERATION_TYPES.GRAPHEME),true);
 assert.equal(operationDefinition(REBUS_OPERATION_TYPES.GRAPHEME).strictCompatible,false);
 assert.equal(isOperationImplemented(REBUS_OPERATION_TYPES.SPATIAL_RELATION),true);
 assert.equal(operationDefinition(REBUS_OPERATION_TYPES.SPATIAL_RELATION).strictCompatible,false);
-for(const type of [REBUS_OPERATION_TYPES.EXPLICIT_DELETION,REBUS_OPERATION_TYPES.EXPLICIT_SUBSTITUTION,REBUS_OPERATION_TYPES.REPETITION]){
+assert.equal(isOperationImplemented(REBUS_OPERATION_TYPES.EXPLICIT_DELETION),true);
+assert.equal(operationDefinition(REBUS_OPERATION_TYPES.EXPLICIT_DELETION).strictCompatible,false);
+for(const type of [REBUS_OPERATION_TYPES.EXPLICIT_SUBSTITUTION,REBUS_OPERATION_TYPES.REPETITION]){
   assert.equal(isOperationImplemented(type),false,`${type} must remain declared but unavailable`);
 }
 assert.equal(operationDefinition('unknown'),null);
@@ -41,6 +45,21 @@ assert.deepEqual(under,{type:'spatial_relation',relation:'under',reading:'sous'}
 assert.equal(buildSpatialRelationOperation('above'),null);
 assert.equal(buildSpatialRelationOperation(''),null);
 
+const halfYoyo=buildExplicitDeletionOperation(yoyo,{keep:'yo',remove:'yo',visual:'half'});
+assert.ok(halfYoyo);
+assert.equal(halfYoyo.type,'explicit_deletion');
+assert.equal(halfYoyo.sourceReading,'yo-yo');
+assert.equal(halfYoyo.reading,'yo');
+assert.equal(halfYoyo.keep,'yo');
+assert.equal(halfYoyo.remove,'yo');
+assert.equal(halfYoyo.visual,'half');
+assert.equal(buildExplicitDeletionOperation(yoyo,{keep:'yo',remove:'yo'}).visual,'cross_out');
+assert.equal(buildExplicitDeletionOperation({...yoyo,image:''},{keep:'yo',remove:'yo'}),null);
+assert.equal(buildExplicitDeletionOperation(yoyo,{keep:'',remove:'yo'}),null);
+assert.equal(buildExplicitDeletionOperation(yoyo,{keep:'yo',remove:'yo'}),null,'deletion must identify distinct kept and removed readings');
+const halfYoyoExplicit=buildExplicitDeletionOperation(yoyo,{keep:'yo',remove:'second yo',visual:'half'});
+assert.ok(halfYoyoExplicit);
+
 const mixed=buildGeneralConstruction([operation,grapheme]);
 assert.ok(mixed);
 assert.equal(mixed.mode,'general');
@@ -52,6 +71,10 @@ assert.ok(spatial);
 assert.equal(spatial.mode,'general');
 assert.deepEqual(spatial.operations.map(item=>item.type),['spatial_relation','whole_word']);
 assert.equal(supportsConstructionCapability(spatial,REBUS_CAPABILITIES.PHONETIC_STRICT),false);
+const deletion=buildGeneralConstruction([halfYoyoExplicit]);
+assert.ok(deletion);
+assert.equal(deletion.mode,'general');
+assert.equal(supportsConstructionCapability(deletion,REBUS_CAPABILITIES.PHONETIC_STRICT),false);
 assert.equal(buildGeneralConstruction([]),null);
 assert.equal(buildGeneralConstruction([{type:REBUS_OPERATION_TYPES.REPETITION}]),null);
 
@@ -66,4 +89,4 @@ assert.equal(merci.validation.targetIpa,'mɛʁsi');
 assert.equal(buildStrictConstruction([mer,scie],'/ʁebys/'),null);
 assert.equal(buildStrictConstruction([], '/mɛʁsi/'),null);
 
-console.log('Rebulo construction model: grapheme, spatial relation and strict capabilities preserved.');
+console.log('Rebulo construction model: explicit deletion is visible metadata and remains general-only.');

@@ -1,0 +1,16 @@
+{
+  "schemaVersion":"1.0",
+  "plans":[
+    {
+      "planId":"pot-prototype-comparison-v1",
+      "concept":"pot",
+      "targetIpa":"/po/",
+      "status":"ready_for_human_naming_test",
+      "activationState":"inactive_until_human_decision",
+      "candidateIds":["pot-openmoji-1fab4","pot-openclipart-empty-flowerpot"],
+      "instruction":"Montrer un seul visuel à la fois et demander : « Qu’est-ce que c’est ? ». Ne pas suggérer le mot pot avant la première réponse.",
+      "capture":{"firstSpontaneousResponseOnly":true,"anonymousOnly":true,"hesitation":true,"noResponse":true,"candidateOrder":"counterbalanced_or_randomized"},
+      "decisionGate":{"requiresHumanReview":true,"automaticActivation":false,"note":"Comparer les réponses spontanées et les confusions observées. La fréquence seule ne déclenche jamais l’activation et ne constitue pas une validation clinique."}
+    }
+  ]
+}

@@ -83,12 +83,26 @@ assert.equal(substitution.pieces[0].reading,'yola');
 assert.equal(substitution.pieces[0].visual,'cross_out_replace');
 assert.deepEqual(substitution.therapyActivities,[]);
 
+const repetitionTarget={target:'mermer',mode:'general',assets:'ready',operations:[{type:'repetition',pieceId:'mer',count:2,reading:'mer mer'}]};
+const repetition=buildGeneralCreatorCandidate(repetitionTarget,lexicon);
+assert.ok(repetition);
+assert.equal(repetition.answer,'mermer');
+assert.deepEqual(repetition.construction.capabilities,['general']);
+assert.equal(repetition.construction.operations[0].type,'repetition');
+assert.equal(repetition.pieces[0].operationType,'repetition');
+assert.equal(repetition.pieces[0].sourceReading,'mer');
+assert.equal(repetition.pieces[0].count,2);
+assert.equal(repetition.pieces[0].reading,'mer mer');
+assert.equal(repetition.pieces[0].visual,'copies');
+assert.deepEqual(repetition.therapyActivities,[]);
+
 assert.equal(buildGeneralCreatorCandidate({...sourisTarget,operations:[{type:'spatial_relation',relation:'above'},{type:'whole_word',pieceId:'riz'}]},lexicon),null);
 assert.equal(buildGeneralCreatorCandidate({...citeTarget,assets:'missing'},lexicon),null);
-assert.equal(buildGeneralCreatorCandidate({...citeTarget,operations:[{type:'repetition'}]},lexicon),null);
 assert.equal(buildGeneralCreatorCandidate({...citeTarget,operations:[{type:'whole_word',pieceId:'unknown'}]},lexicon),null);
 assert.equal(buildGeneralCreatorCandidate({...halfYoyoTarget,operations:[{type:'explicit_deletion',pieceId:'yoyo',keep:'yo',remove:'yo',reading:'yo'}]},lexicon),null);
 assert.equal(buildGeneralCreatorCandidate({...substitutionTarget,operations:[{type:'explicit_substitution',pieceId:'yoyo',replace:'second yo',replacement:'la',reading:'yola'}]},lexicon),null);
 assert.equal(buildGeneralCreatorCandidate({...substitutionTarget,operations:[{type:'explicit_substitution',pieceId:'yoyo',replace:'yo',replacement:'yo',reading:'yo-yo',visual:'swap'}]},lexicon),null);
+assert.equal(buildGeneralCreatorCandidate({...repetitionTarget,operations:[{type:'repetition',pieceId:'mer',count:1,reading:'mer'}]},lexicon),null);
+assert.equal(buildGeneralCreatorCandidate({...repetitionTarget,operations:[{type:'repetition',pieceId:'mer',count:2,reading:''}]},lexicon),null);
 
-console.log('Rebulo creator runtime: strict and explicit general operations preserved, including deletion and substitution.');
+console.log('Rebulo creator runtime: strict and explicit general operations preserved, including deletion, substitution and repetition.');

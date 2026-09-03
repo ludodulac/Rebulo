@@ -54,8 +54,9 @@ export function buildExplicitDeletionOperation(piece={},options={}){
   if(!whole||!whole.image)return null;
   const keep=String(options?.keep||'').trim();
   const remove=String(options?.remove||'').trim();
-  if(!keep||!remove||keep===remove)return null;
-  return {type:REBUS_OPERATION_TYPES.EXPLICIT_DELETION,pieceId:whole.pieceId,label:whole.label,reading:keep,sourceReading:whole.reading,keep,remove,image:whole.image,visual:options?.visual==='half'?'half':'cross_out'};
+  const reading=String(options?.reading||'').trim();
+  if(!keep||!remove||!reading||keep===remove)return null;
+  return {type:REBUS_OPERATION_TYPES.EXPLICIT_DELETION,pieceId:whole.pieceId,label:whole.label,reading,sourceReading:whole.reading,keep,remove,image:whole.image,visual:options?.visual==='half'?'half':'cross_out'};
 }
 
 export function buildGeneralConstruction(operations=[]){

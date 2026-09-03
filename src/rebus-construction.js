@@ -23,7 +23,7 @@ const OPERATION_DEFINITIONS=Object.freeze({
   [REBUS_OPERATION_TYPES.GRAPHEME]:Object.freeze({type:REBUS_OPERATION_TYPES.GRAPHEME,implemented:true,strictCompatible:false}),
   [REBUS_OPERATION_TYPES.SPATIAL_RELATION]:Object.freeze({type:REBUS_OPERATION_TYPES.SPATIAL_RELATION,implemented:true,strictCompatible:false}),
   [REBUS_OPERATION_TYPES.EXPLICIT_DELETION]:Object.freeze({type:REBUS_OPERATION_TYPES.EXPLICIT_DELETION,implemented:true,strictCompatible:false}),
-  [REBUS_OPERATION_TYPES.EXPLICIT_SUBSTITUTION]:Object.freeze({type:REBUS_OPERATION_TYPES.EXPLICIT_SUBSTITUTION,implemented:false,strictCompatible:false}),
+  [REBUS_OPERATION_TYPES.EXPLICIT_SUBSTITUTION]:Object.freeze({type:REBUS_OPERATION_TYPES.EXPLICIT_SUBSTITUTION,implemented:true,strictCompatible:false}),
   [REBUS_OPERATION_TYPES.REPETITION]:Object.freeze({type:REBUS_OPERATION_TYPES.REPETITION,implemented:false,strictCompatible:false})
 });
 
@@ -57,6 +57,18 @@ export function buildExplicitDeletionOperation(piece={},options={}){
   const reading=String(options?.reading||'').trim();
   if(!keep||!remove||!reading||keep===remove)return null;
   return {type:REBUS_OPERATION_TYPES.EXPLICIT_DELETION,pieceId:whole.pieceId,label:whole.label,reading,sourceReading:whole.reading,keep,remove,image:whole.image,visual:options?.visual==='half'?'half':'cross_out'};
+}
+
+export function buildExplicitSubstitutionOperation(piece={},options={}){
+  const whole=buildWholeWordOperation(piece);
+  if(!whole||!whole.image)return null;
+  const replace=String(options?.replace||'').trim();
+  const replacement=String(options?.replacement||'').trim();
+  const reading=String(options?.reading||'').trim();
+  const visual=String(options?.visual||'').trim();
+  if(!replace||!replacement||!reading||!visual||replace===replacement)return null;
+  if(!['cross_out_replace','swap'].includes(visual))return null;
+  return {type:REBUS_OPERATION_TYPES.EXPLICIT_SUBSTITUTION,pieceId:whole.pieceId,label:whole.label,reading,sourceReading:whole.reading,replace,replacement,image:whole.image,visual};
 }
 
 export function buildGeneralConstruction(operations=[]){

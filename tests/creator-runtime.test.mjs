@@ -4,7 +4,8 @@ import {buildCreatorCandidate,buildGeneralCreatorCandidate} from '../src/creator
 const lexicon=[
   {id:'mer',label:'mer',ipa:'/mɛʁ/',active:true,image:'assets/rebus/mer.svg'},
   {id:'scie',label:'scie',ipa:'/si/',active:true,image:'assets/rebus/scie.svg'},
-  {id:'riz',label:'riz',ipa:'/ʁi/',active:true,image:'assets/rebus/riz.svg'}
+  {id:'riz',label:'riz',ipa:'/ʁi/',active:true,image:'assets/rebus/riz.svg'},
+  {id:'yoyo',label:'yo-yo',ipa:'/jojo/',active:true,image:'openmoji-yoyo.svg',strictEligible:false}
 ];
 const definitions=[
   {id:'phoneme-blending',label:'Fusion phonémique',unit:'phoneme',description:'Fusionner des phonèmes en un mot.'},
@@ -55,9 +56,23 @@ assert.equal(souris.pieces[0].relation,'under');
 assert.equal(souris.pieces[0].reading,'sous');
 assert.equal(souris.pieces[1].image,'assets/rebus/riz.svg');
 assert.deepEqual(souris.therapyActivities,[]);
+
+const halfYoyoTarget={target:'yo',mode:'general',assets:'ready',operations:[{type:'explicit_deletion',pieceId:'yoyo',keep:'premier yo',remove:'second yo',reading:'yo',visual:'half'}]};
+const halfYoyo=buildGeneralCreatorCandidate(halfYoyoTarget,lexicon);
+assert.ok(halfYoyo);
+assert.equal(halfYoyo.answer,'yo');
+assert.deepEqual(halfYoyo.construction.capabilities,['general']);
+assert.equal(halfYoyo.construction.operations[0].type,'explicit_deletion');
+assert.equal(halfYoyo.pieces[0].operationType,'explicit_deletion');
+assert.equal(halfYoyo.pieces[0].sourceReading,'yo-yo');
+assert.equal(halfYoyo.pieces[0].reading,'yo');
+assert.equal(halfYoyo.pieces[0].visual,'half');
+assert.deepEqual(halfYoyo.therapyActivities,[]);
+
 assert.equal(buildGeneralCreatorCandidate({...sourisTarget,operations:[{type:'spatial_relation',relation:'above'},{type:'whole_word',pieceId:'riz'}]},lexicon),null);
 assert.equal(buildGeneralCreatorCandidate({...citeTarget,assets:'missing'},lexicon),null);
 assert.equal(buildGeneralCreatorCandidate({...citeTarget,operations:[{type:'repetition'}]},lexicon),null);
 assert.equal(buildGeneralCreatorCandidate({...citeTarget,operations:[{type:'whole_word',pieceId:'unknown'}]},lexicon),null);
+assert.equal(buildGeneralCreatorCandidate({...halfYoyoTarget,operations:[{type:'explicit_deletion',pieceId:'yoyo',keep:'yo',remove:'yo',reading:'yo'}]},lexicon),null);
 
-console.log('Rebulo creator runtime: strict, grapheme and spatial general candidates preserved.');
+console.log('Rebulo creator runtime: strict and explicit general operations preserved, including deletion.');

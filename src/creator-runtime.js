@@ -1,5 +1,5 @@
 import {rankDecompositions,segmentTargetWithLexicon,validateStrictRebus} from './phonetic-engine.js';
-import {buildGeneralConstruction,buildGraphemeOperation,buildSpatialRelationOperation,buildStrictConstruction,buildWholeWordOperation,REBUS_OPERATION_TYPES} from './rebus-construction.js';
+import {buildExplicitDeletionOperation,buildGeneralConstruction,buildGraphemeOperation,buildSpatialRelationOperation,buildStrictConstruction,buildWholeWordOperation,REBUS_OPERATION_TYPES} from './rebus-construction.js';
 import {buildTherapyActivities} from './therapy-activities.js';
 
 export function buildCreatorCandidate(target,lexicon=[],therapyDefinitions=[]){
@@ -35,6 +35,11 @@ export function buildGeneralCreatorCandidate(target,lexicon=[]){
       const operation=buildSpatialRelationOperation(spec.relation);
       if(!operation)return null;
       operations.push(operation);pieces.push({id:null,label:operation.reading,reading:operation.reading,relation:operation.relation,operationType:REBUS_OPERATION_TYPES.SPATIAL_RELATION});continue;
+    }
+    if(spec?.type===REBUS_OPERATION_TYPES.EXPLICIT_DELETION){
+      const piece=findLexiconPiece(spec,lexicon);const operation=buildExplicitDeletionOperation(piece||{},spec);
+      if(!operation)return null;
+      operations.push(operation);pieces.push({...piece,reading:operation.reading,sourceReading:operation.sourceReading,keep:operation.keep,remove:operation.remove,visual:operation.visual,operationType:REBUS_OPERATION_TYPES.EXPLICIT_DELETION});continue;
     }
     return null;
   }

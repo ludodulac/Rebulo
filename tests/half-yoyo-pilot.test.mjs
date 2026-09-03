@@ -1,10 +1,11 @@
 import assert from 'node:assert/strict';
+import fs from 'node:fs';
 import {segmentTargetWithLexicon} from '../src/phonetic-engine.js';
 import {buildGeneralCreatorCandidate} from '../src/creator-runtime.js';
 import {generalOperationVisual} from '../src/general-operation-visual.js';
 import {GENERAL_OPERATION_PICTOGRAMS,mergeGeneralOperationPictograms} from '../src/general-operation-pictograms.js';
-import corpus from '../data/corpus-pilot.json' with {type:'json'};
 
+const corpus=JSON.parse(fs.readFileSync(new URL('../data/corpus-pilot.json',import.meta.url),'utf8'));
 const yoyo=GENERAL_OPERATION_PICTOGRAMS.find(item=>item.id==='yoyo');
 assert.ok(yoyo,'the half-yoyo pilot needs an explicit source pictogram');
 assert.equal(yoyo.label,'yo-yo');

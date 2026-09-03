@@ -1,0 +1,9 @@
+{
+  "schemaVersion":"1.0",
+  "briefs":[
+    {"concept":"dos","targetIpa":"/do/","researchStatus":"prototype_design","priorityEvidence":["prototype inactif déjà simulé","gain strict démontré dans la simulation Lexique 4"],"visualGoal":"Montrer clairement un dos humain sans faire nommer d’abord personne, homme, femme ou derrière.","avoidCues":["visage dominant","silhouette entière trop générique","mise en scène narrative"],"namingRisks":["personne","homme","femme","derrière"],"nextGate":"prototype_comparison","automaticActivation":false},
+    {"concept":"tas","targetIpa":"/ta/","researchStatus":"prototype_design","priorityEvidence":["shortlist dessinable humaine","opportunité mot-entier à fort rendement dans Lexique 4"],"visualGoal":"Dessiner un amas simple dont la dénomination spontanée la plus naturelle puisse être « tas ».","avoidCues":["objets trop reconnaissables qui imposent leur propre nom","forme trop régulière évoquant une pile"],"namingRisks":["pile","amas","monticule"],"nextGate":"prototype_comparison","automaticActivation":false},
+    {"concept":"raie","targetIpa":"/ʁɛ/","researchStatus":"asset_search","priorityEvidence":["shortlist dessinable humaine","opportunité mot-entier à fort rendement dans Lexique 4"],"visualGoal":"Privilégier le poisson raie dans un visuel immédiatement identifiable, sans ligne ni rayure concurrente.","avoidCues":["trait abstrait","motif rayé","scène marine trop chargée"],"namingRisks":["poisson","manta","requin"],"nextGate":"asset_review","automaticActivation":false},
+    {"concept":"terre","targetIpa":"/tɛʁ/","researchStatus":"prototype_design","priorityEvidence":["shortlist dessinable humaine","opportunité mot-entier utile dans Lexique 4"],"visualGoal":"Faire évoquer la matière terre/sol plutôt que la planète entière.","avoidCues":["globe terrestre","planète bleue","paysage complet"],"namingRisks":["sol","boue","monde","planète"],"nextGate":"prototype_comparison","automaticActivation":false}
+  ]
+}

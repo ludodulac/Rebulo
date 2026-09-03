@@ -69,10 +69,26 @@ assert.equal(halfYoyo.pieces[0].reading,'yo');
 assert.equal(halfYoyo.pieces[0].visual,'half');
 assert.deepEqual(halfYoyo.therapyActivities,[]);
 
+const substitutionTarget={target:'yola',mode:'general',assets:'ready',operations:[{type:'explicit_substitution',pieceId:'yoyo',replace:'second yo',replacement:'la',reading:'yola',visual:'cross_out_replace'}]};
+const substitution=buildGeneralCreatorCandidate(substitutionTarget,lexicon);
+assert.ok(substitution);
+assert.equal(substitution.answer,'yola');
+assert.deepEqual(substitution.construction.capabilities,['general']);
+assert.equal(substitution.construction.operations[0].type,'explicit_substitution');
+assert.equal(substitution.pieces[0].operationType,'explicit_substitution');
+assert.equal(substitution.pieces[0].sourceReading,'yo-yo');
+assert.equal(substitution.pieces[0].replace,'second yo');
+assert.equal(substitution.pieces[0].replacement,'la');
+assert.equal(substitution.pieces[0].reading,'yola');
+assert.equal(substitution.pieces[0].visual,'cross_out_replace');
+assert.deepEqual(substitution.therapyActivities,[]);
+
 assert.equal(buildGeneralCreatorCandidate({...sourisTarget,operations:[{type:'spatial_relation',relation:'above'},{type:'whole_word',pieceId:'riz'}]},lexicon),null);
 assert.equal(buildGeneralCreatorCandidate({...citeTarget,assets:'missing'},lexicon),null);
 assert.equal(buildGeneralCreatorCandidate({...citeTarget,operations:[{type:'repetition'}]},lexicon),null);
 assert.equal(buildGeneralCreatorCandidate({...citeTarget,operations:[{type:'whole_word',pieceId:'unknown'}]},lexicon),null);
 assert.equal(buildGeneralCreatorCandidate({...halfYoyoTarget,operations:[{type:'explicit_deletion',pieceId:'yoyo',keep:'yo',remove:'yo',reading:'yo'}]},lexicon),null);
+assert.equal(buildGeneralCreatorCandidate({...substitutionTarget,operations:[{type:'explicit_substitution',pieceId:'yoyo',replace:'second yo',replacement:'la',reading:'yola'}]},lexicon),null);
+assert.equal(buildGeneralCreatorCandidate({...substitutionTarget,operations:[{type:'explicit_substitution',pieceId:'yoyo',replace:'yo',replacement:'yo',reading:'yo-yo',visual:'swap'}]},lexicon),null);
 
-console.log('Rebulo creator runtime: strict and explicit general operations preserved, including deletion.');
+console.log('Rebulo creator runtime: strict and explicit general operations preserved, including deletion and substitution.');

@@ -3,6 +3,7 @@ import {
   REBUS_CAPABILITIES,
   REBUS_OPERATION_TYPES,
   buildExplicitDeletionOperation,
+  buildExplicitSubstitutionOperation,
   buildGeneralConstruction,
   buildGraphemeOperation,
   buildSpatialRelationOperation,
@@ -29,9 +30,9 @@ assert.equal(isOperationImplemented(REBUS_OPERATION_TYPES.SPATIAL_RELATION),true
 assert.equal(operationDefinition(REBUS_OPERATION_TYPES.SPATIAL_RELATION).strictCompatible,false);
 assert.equal(isOperationImplemented(REBUS_OPERATION_TYPES.EXPLICIT_DELETION),true);
 assert.equal(operationDefinition(REBUS_OPERATION_TYPES.EXPLICIT_DELETION).strictCompatible,false);
-for(const type of [REBUS_OPERATION_TYPES.EXPLICIT_SUBSTITUTION,REBUS_OPERATION_TYPES.REPETITION]){
-  assert.equal(isOperationImplemented(type),false,`${type} must remain declared but unavailable`);
-}
+assert.equal(isOperationImplemented(REBUS_OPERATION_TYPES.EXPLICIT_SUBSTITUTION),true);
+assert.equal(operationDefinition(REBUS_OPERATION_TYPES.EXPLICIT_SUBSTITUTION).strictCompatible,false);
+assert.equal(isOperationImplemented(REBUS_OPERATION_TYPES.REPETITION),false,'repetition must remain declared but unavailable');
 assert.equal(operationDefinition('unknown'),null);
 
 const grapheme=buildGraphemeOperation(' R ','air');
@@ -58,6 +59,26 @@ assert.equal(buildExplicitDeletionOperation({...yoyo,image:''},{keep:'premier yo
 assert.equal(buildExplicitDeletionOperation(yoyo,{keep:'',remove:'second yo',reading:'yo'}),null);
 assert.equal(buildExplicitDeletionOperation(yoyo,{keep:'yo',remove:'yo',reading:'yo'}),null,'deletion must identify distinct visible parts');
 
+const substitution=buildExplicitSubstitutionOperation(yoyo,{replace:'second yo',replacement:'la',reading:'yola',visual:'cross_out_replace'});
+assert.ok(substitution);
+assert.equal(substitution.type,'explicit_substitution');
+assert.equal(substitution.sourceReading,'yo-yo');
+assert.equal(substitution.replace,'second yo');
+assert.equal(substitution.replacement,'la');
+assert.equal(substitution.reading,'yola');
+assert.equal(substitution.visual,'cross_out_replace');
+assert.equal(buildExplicitSubstitutionOperation({...yoyo,image:''},{replace:'second yo',replacement:'la',reading:'yola',visual:'swap'}),null);
+for(const options of [
+  {replacement:'la',reading:'yola',visual:'swap'},
+  {replace:'second yo',reading:'yola',visual:'swap'},
+  {replace:'second yo',replacement:'la',visual:'swap'},
+  {replace:'second yo',replacement:'la',reading:'yola'},
+  {replace:'yo',replacement:'yo',reading:'yo-yo',visual:'swap'},
+  {replace:'second yo',replacement:'la',reading:'yola',visual:'hidden'}
+]){
+  assert.equal(buildExplicitSubstitutionOperation(yoyo,options),null,'substitution must be complete, distinct and visibly specified');
+}
+
 const mixed=buildGeneralConstruction([operation,grapheme]);
 assert.ok(mixed);
 assert.equal(mixed.mode,'general');
@@ -73,6 +94,10 @@ const deletion=buildGeneralConstruction([halfYoyo]);
 assert.ok(deletion);
 assert.equal(deletion.mode,'general');
 assert.equal(supportsConstructionCapability(deletion,REBUS_CAPABILITIES.PHONETIC_STRICT),false);
+const substituted=buildGeneralConstruction([substitution]);
+assert.ok(substituted);
+assert.equal(substituted.mode,'general');
+assert.equal(supportsConstructionCapability(substituted,REBUS_CAPABILITIES.PHONETIC_STRICT),false);
 assert.equal(buildGeneralConstruction([]),null);
 assert.equal(buildGeneralConstruction([{type:REBUS_OPERATION_TYPES.REPETITION}]),null);
 
@@ -87,4 +112,4 @@ assert.equal(merci.validation.targetIpa,'mɛʁsi');
 assert.equal(buildStrictConstruction([mer,scie],'/ʁebys/'),null);
 assert.equal(buildStrictConstruction([], '/mɛʁsi/'),null);
 
-console.log('Rebulo construction model: explicit deletion is visible metadata and remains general-only.');
+console.log('Rebulo construction model: explicit deletion and substitution stay visible, validated and general-only.');

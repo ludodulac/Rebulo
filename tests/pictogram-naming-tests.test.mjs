@@ -40,18 +40,35 @@ assert.ok(emptyPot);
 assert.equal(emptyPot.namingTestStatus,'not_run','sourcing an asset must not fabricate naming-test results');
 assert.ok(!emptyPot.namingRisks.includes('plante'),'the empty-pot candidate specifically removes the visible-plant cue hypothesis');
 
+const dosComparison=comparisonRegistry.comparisons.find(item=>item.concept==='dos');
+assert.ok(dosComparison,'dos must progress from a design brief to a structured prototype comparison');
+assert.equal(dosComparison.targetIpa,'/do/');
+assert.equal(dosComparison.activationState,'inactive_until_human_decision');
+assert.equal(dosComparison.humanDecision,null,'no dos prototype decision may be fabricated');
+assert.equal(dosComparison.candidates.length,2,'dos should compare two distinct visual strategies');
+for(const candidate of dosComparison.candidates){
+  assert.equal(candidate.availability,'available');
+  assert.equal(candidate.namingTestStatus,'not_run');
+  assert.ok(candidate.namingRisks.length>0);
+}
+assert.ok(dosComparison.candidates.some(item=>item.provenance.includes('CC0')),'dos comparison should include a public-domain/CC0 option');
+assert.ok(dosComparison.candidates.some(item=>item.provenance.includes('CC BY-SA 4.0')),'dos comparison should include the OpenMoji alternative with explicit license');
+
 assert.equal(planRegistry.schemaVersion,'1.0');
 assert.match(planSchema.description,/contains no participant result/i);
-const potPlan=planRegistry.plans.find(item=>item.concept==='pot');
-assert.ok(potPlan,'pot must have an executable pre-observation naming plan');
-assert.equal(potPlan.activationState,'inactive_until_human_decision');
-assert.deepEqual(new Set(potPlan.candidateIds),new Set(potComparison.candidates.map(x=>x.candidateId)));
-assert.equal(potPlan.capture.firstSpontaneousResponseOnly,true);
-assert.equal(potPlan.capture.anonymousOnly,true);
-assert.equal(potPlan.capture.candidateOrder,'counterbalanced_or_randomized');
-assert.equal(potPlan.decisionGate.requiresHumanReview,true);
-assert.equal(potPlan.decisionGate.automaticActivation,false);
-assert.match(potPlan.instruction,/Qu’est-ce que c’est/);
+for(const concept of ['pot','dos']){
+  const comparison=comparisonRegistry.comparisons.find(item=>item.concept===concept);
+  const plan=planRegistry.plans.find(item=>item.concept===concept);
+  assert.ok(plan,`${concept} must have an executable pre-observation naming plan`);
+  assert.equal(plan.activationState,'inactive_until_human_decision');
+  assert.deepEqual(new Set(plan.candidateIds),new Set(comparison.candidates.map(x=>x.candidateId)));
+  assert.equal(plan.capture.firstSpontaneousResponseOnly,true);
+  assert.equal(plan.capture.anonymousOnly,true);
+  assert.equal(plan.capture.candidateOrder,'counterbalanced_or_randomized');
+  assert.equal(plan.decisionGate.requiresHumanReview,true);
+  assert.equal(plan.decisionGate.automaticActivation,false);
+  assert.match(plan.instruction,/Qu’est-ce que c’est/);
+}
 
 const potLexicon=lexicon.find(item=>item.id==='pot');
 assert.ok(potLexicon,'pot prototype must remain registered in the lexicon');
@@ -59,4 +76,9 @@ assert.equal(potLexicon.active,false,'prototype comparison must never auto-activ
 assert.equal(potLexicon.clinicalStatus,'naming_test_required');
 assert.equal(potLexicon.prototypeStatus,'asset_available');
 
-console.log('pictogram naming test schema guardrails: ok');
+const dosLexicon=lexicon.find(item=>item.id==='dos');
+assert.ok(dosLexicon,'dos prototype must remain registered in the lexicon');
+assert.equal(dosLexicon.active,false,'prototype comparison must never auto-activate dos');
+assert.notEqual(dosLexicon.clinicalStatus,'clinical_approved');
+
+console.log('pictogram naming test schema guardrails: pot and dos comparisons stay research-only.');

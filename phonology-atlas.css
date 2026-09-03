@@ -4,7 +4,8 @@ body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",
 .atlas-toolbar,.lexical-panel{background:#fff;border:1px solid #ddd2eb;border-radius:20px;padding:20px;box-shadow:0 8px 30px rgba(57,34,83,.08)}
 .eyebrow{margin:0;color:#6d4b86;font-weight:700}
 .atlas-toolbar h1{margin:.25rem 0 .5rem}
-.atlas-controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;align-items:end;margin-top:16px}
+.sound-search{display:grid;grid-template-columns:minmax(220px,1fr) auto;gap:12px;align-items:end;margin-top:16px;padding:14px;background:#f8f5fb;border:1px solid #ddd2eb;border-radius:16px}.sound-search label{display:grid;gap:6px;font-weight:750}.sound-search input,.sound-search button{min-height:48px;border:1px solid #bfaed0;border-radius:12px;padding:9px 11px;background:#fff;font:inherit}.sound-search button{background:#5b3a75;color:#fff;border-color:#5b3a75;font-weight:800;cursor:pointer;padding-inline:18px}
+.atlas-controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;align-items:end;margin-top:12px}
 .atlas-controls label{display:grid;gap:6px;font-weight:650}
 .atlas-controls input,.atlas-controls select,.atlas-controls button{min-height:44px;border:1px solid #bfaed0;border-radius:12px;padding:9px 11px;background:#fff;font:inherit}
 .atlas-controls button{background:#5b3a75;color:#fff;border-color:#5b3a75;font-weight:750;cursor:pointer}
@@ -13,12 +14,13 @@ body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",
 .phoneme-chips{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
 .phoneme-chips button{border:1px solid #cdbfd9;background:#fff;border-radius:999px;padding:7px 11px;cursor:pointer}
 .lexical-panel{margin:0 0 18px}.lexical-panel h2{margin:0 0 6px}.lexical-note{margin:.25rem 0 1rem;color:#5f536a}.lexical-words{display:flex;flex-wrap:wrap;gap:8px}.lexical-word{display:inline-flex;gap:6px;align-items:baseline;border:1px solid #ddd2eb;background:#faf8fd;border-radius:999px;padding:7px 10px}.lexical-word small{color:#6a5f73}.lexical-empty{color:#6a5f73}
-.atlas-results{display:grid;gap:16px}
+.atlas-results{display:grid;gap:16px;scroll-margin-top:12px}
 .sound-group{background:#fff;border:1px solid #ddd2eb;border-radius:18px;padding:14px}.sound-group h2{margin:0 0 10px}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
 .atlas-card{border:1px solid #d8cde2;border-radius:14px;padding:10px;display:grid;grid-template-rows:auto 1fr auto;gap:8px;min-height:220px}
 .atlas-card img{width:100%;height:120px;object-fit:contain}
 .atlas-card strong{font-size:1.05rem}.meta{font-size:.86rem;color:#5f536a}.blank-box{height:120px;border:1px dashed #777;background:#fff}.print-copy{display:none}
+@media(max-width:640px){.atlas-shell{padding:12px}.sound-search{grid-template-columns:1fr}.sound-search button{width:100%}}
 @media print{
   @page{size:A4 portrait;margin:8mm}
   body{background:#fff}.atlas-shell{max-width:none;padding:0}.atlas-toolbar,.phoneme-chips,.lexical-panel{display:none}.atlas-results{display:block}

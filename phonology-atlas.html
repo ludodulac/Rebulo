@@ -14,14 +14,17 @@
       <h1>Atlas sons → mots-images → rébus</h1>
       <p>Tape simplement le son comme tu l’entends : <strong>ra</strong>, <strong>cha</strong>, <strong>ou</strong>, <strong>on</strong>, <strong>ain</strong>, <strong>och</strong>… Rebulo utilise la phonétique exacte en coulisses.</p>
     </div>
-    <div class="atlas-controls">
+    <form id="soundSearchForm" class="sound-search" role="search">
       <label>Son entendu <input id="soundInput" placeholder="ex. ra, och, cha, ou, on"></label>
+      <button id="soundSearchButton" type="submit">Chercher ce son</button>
+    </form>
+    <div class="atlas-controls">
       <label>Position <select id="positionSelect"><option value="any">Partout</option><option value="initial">Au début</option><option value="medial">Au milieu</option><option value="final">À la fin</option></select></label>
       <label>Mot / ID <input id="queryInput" placeholder="chat, RBL-chat…"></label>
       <label class="check"><input id="strictOnly" type="checkbox" checked> Seulement les pièces strictes</label>
       <button id="printButton" type="button">Imprimer / enregistrer en PDF</button>
     </div>
-    <p id="soundInterpretation" class="rigor-note">Écris un son comme tu le prononces. Les variantes possibles sont recherchées ensemble.</p>
+    <p id="soundInterpretation" class="rigor-note">Écris un son comme tu le prononces, puis lance la recherche. Les variantes possibles sont recherchées ensemble.</p>
     <p id="atlasStatus"></p>
     <details><summary>Détails phonétiques</summary><p>Rebulo conserve l’API (alphabet phonétique international) comme donnée technique de contrôle, mais tu n’as pas besoin de le connaître pour chercher.</p></details>
     <p class="rigor-note"><strong>Rigueur :</strong> sans donnée de syllabation explicite, Rebulo parle de « bloc sonore entier », pas de syllabe. Une image stricte garde toujours son mot entier et sa prononciation entière.</p>

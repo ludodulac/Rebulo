@@ -6,6 +6,7 @@ import {
   buildExplicitSubstitutionOperation,
   buildGeneralConstruction,
   buildGraphemeOperation,
+  buildRepetitionOperation,
   buildSpatialRelationOperation,
   buildStrictConstruction,
   buildWholeWordOperation,
@@ -32,7 +33,8 @@ assert.equal(isOperationImplemented(REBUS_OPERATION_TYPES.EXPLICIT_DELETION),tru
 assert.equal(operationDefinition(REBUS_OPERATION_TYPES.EXPLICIT_DELETION).strictCompatible,false);
 assert.equal(isOperationImplemented(REBUS_OPERATION_TYPES.EXPLICIT_SUBSTITUTION),true);
 assert.equal(operationDefinition(REBUS_OPERATION_TYPES.EXPLICIT_SUBSTITUTION).strictCompatible,false);
-assert.equal(isOperationImplemented(REBUS_OPERATION_TYPES.REPETITION),false,'repetition must remain declared but unavailable');
+assert.equal(isOperationImplemented(REBUS_OPERATION_TYPES.REPETITION),true);
+assert.equal(operationDefinition(REBUS_OPERATION_TYPES.REPETITION).strictCompatible,false);
 assert.equal(operationDefinition('unknown'),null);
 
 const grapheme=buildGraphemeOperation(' R ','air');
@@ -79,6 +81,18 @@ for(const options of [
   assert.equal(buildExplicitSubstitutionOperation(yoyo,options),null,'substitution must be complete, distinct and visibly specified');
 }
 
+const repeated=buildRepetitionOperation(mer,{count:3,reading:'mer mer mer'});
+assert.ok(repeated);
+assert.equal(repeated.type,'repetition');
+assert.equal(repeated.sourceReading,'mer');
+assert.equal(repeated.count,3);
+assert.equal(repeated.reading,'mer mer mer');
+assert.equal(repeated.visual,'copies');
+for(const options of [{count:1,reading:'mer'},{count:2,reading:''},{count:2.5,reading:'mer mer'},{count:7,reading:'mer mer'}]){
+  assert.equal(buildRepetitionOperation(mer,options),null,'repetition must have a bounded visible count and documented reading');
+}
+assert.equal(buildRepetitionOperation({...mer,image:''},{count:2,reading:'mer mer'}),null);
+
 const mixed=buildGeneralConstruction([operation,grapheme]);
 assert.ok(mixed);
 assert.equal(mixed.mode,'general');
@@ -90,16 +104,13 @@ assert.ok(spatial);
 assert.equal(spatial.mode,'general');
 assert.deepEqual(spatial.operations.map(item=>item.type),['spatial_relation','whole_word']);
 assert.equal(supportsConstructionCapability(spatial,REBUS_CAPABILITIES.PHONETIC_STRICT),false);
-const deletion=buildGeneralConstruction([halfYoyo]);
-assert.ok(deletion);
-assert.equal(deletion.mode,'general');
-assert.equal(supportsConstructionCapability(deletion,REBUS_CAPABILITIES.PHONETIC_STRICT),false);
-const substituted=buildGeneralConstruction([substitution]);
-assert.ok(substituted);
-assert.equal(substituted.mode,'general');
-assert.equal(supportsConstructionCapability(substituted,REBUS_CAPABILITIES.PHONETIC_STRICT),false);
+for(const generalOnly of [halfYoyo,substitution,repeated]){
+  const construction=buildGeneralConstruction([generalOnly]);
+  assert.ok(construction);
+  assert.equal(construction.mode,'general');
+  assert.equal(supportsConstructionCapability(construction,REBUS_CAPABILITIES.PHONETIC_STRICT),false);
+}
 assert.equal(buildGeneralConstruction([]),null);
-assert.equal(buildGeneralConstruction([{type:REBUS_OPERATION_TYPES.REPETITION}]),null);
 
 const merci=buildStrictConstruction([mer,scie],'/mɛʁsi/');
 assert.ok(merci);
@@ -112,4 +123,4 @@ assert.equal(merci.validation.targetIpa,'mɛʁsi');
 assert.equal(buildStrictConstruction([mer,scie],'/ʁebys/'),null);
 assert.equal(buildStrictConstruction([], '/mɛʁsi/'),null);
 
-console.log('Rebulo construction model: explicit deletion and substitution stay visible, validated and general-only.');
+console.log('Rebulo construction model: explicit deletion, substitution and repetition stay visible and general-only.');

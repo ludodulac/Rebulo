@@ -24,7 +24,7 @@ const OPERATION_DEFINITIONS=Object.freeze({
   [REBUS_OPERATION_TYPES.SPATIAL_RELATION]:Object.freeze({type:REBUS_OPERATION_TYPES.SPATIAL_RELATION,implemented:true,strictCompatible:false}),
   [REBUS_OPERATION_TYPES.EXPLICIT_DELETION]:Object.freeze({type:REBUS_OPERATION_TYPES.EXPLICIT_DELETION,implemented:true,strictCompatible:false}),
   [REBUS_OPERATION_TYPES.EXPLICIT_SUBSTITUTION]:Object.freeze({type:REBUS_OPERATION_TYPES.EXPLICIT_SUBSTITUTION,implemented:true,strictCompatible:false}),
-  [REBUS_OPERATION_TYPES.REPETITION]:Object.freeze({type:REBUS_OPERATION_TYPES.REPETITION,implemented:false,strictCompatible:false})
+  [REBUS_OPERATION_TYPES.REPETITION]:Object.freeze({type:REBUS_OPERATION_TYPES.REPETITION,implemented:true,strictCompatible:false})
 });
 
 export function operationDefinition(type){return OPERATION_DEFINITIONS[type]||null;}
@@ -69,6 +69,15 @@ export function buildExplicitSubstitutionOperation(piece={},options={}){
   if(!replace||!replacement||!reading||!visual||replace===replacement)return null;
   if(!['cross_out_replace','swap'].includes(visual))return null;
   return {type:REBUS_OPERATION_TYPES.EXPLICIT_SUBSTITUTION,pieceId:whole.pieceId,label:whole.label,reading,sourceReading:whole.reading,replace,replacement,image:whole.image,visual};
+}
+
+export function buildRepetitionOperation(piece={},options={}){
+  const whole=buildWholeWordOperation(piece);
+  if(!whole||!whole.image)return null;
+  const count=Number(options?.count);
+  const reading=String(options?.reading||'').trim();
+  if(!Number.isInteger(count)||count<2||count>6||!reading)return null;
+  return {type:REBUS_OPERATION_TYPES.REPETITION,pieceId:whole.pieceId,label:whole.label,reading,sourceReading:whole.reading,count,image:whole.image,visual:'copies'};
 }
 
 export function buildGeneralConstruction(operations=[]){

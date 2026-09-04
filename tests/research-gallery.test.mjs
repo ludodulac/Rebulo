@@ -15,15 +15,25 @@ assert.match(html,/ni une réponse de dénomination, ni une validation clinique,
 assert.match(html,/Exporter la curation JSON/);
 assert.match(html,/Aperçu sans indices/);
 assert.match(html,/data-blind-preview="false"/);
+assert.match(html,/id="stimulusLightbox"/);
+assert.match(html,/id="lightboxPrevious"/);
+assert.match(html,/id="lightboxNext"/);
+assert.match(html,/id="lightboxClose"/);
 assert.match(html,/naming-test\.html/);
 assert.match(js,/pictogram-prototype-comparisons\.json/);
 assert.match(js,/Image indisponible — ne pas utiliser ce stimulus/);
 assert.match(js,/researchCurationExport/);
 assert.match(js,/function setBlindPreview\(enabled\)/);
+assert.match(js,/function openLightbox\(candidateId=''/);
+assert.match(js,/function moveLightbox\(step\)/);
+assert.match(js,/Agrandir ce prototype/);
+assert.match(js,/shell\.dataset\.blindPreview==='true'\?'Prototype visuel':candidate\.candidateId/,'blind lightbox label must not reveal candidate metadata');
 assert.match(js,/concept, IPA, intentions, risques, provenance et curation sont masqués/);
 assert.match(css,/data-blind-preview="true"[^}]*\.concept-heading/);
 assert.match(css,/data-blind-preview="true"[^}]*\.card-body/);
 assert.match(css,/data-blind-preview="true"[^}]*#exportCuration/);
+assert.match(css,/\.stimulus-lightbox::backdrop/);
+assert.match(css,/\.lightbox-stage/);
 assert.doesNotMatch(js,/localStorage|sessionStorage/,'visual curation should stay in memory until explicit export');
 assert.doesNotMatch(js,/clinical_approved|active\s*[:=]\s*true/i);
 assert.match(namingHtml,/research-gallery\.html/,'naming runner should link to the curator gallery');
@@ -57,4 +67,4 @@ assert.match(exported.researchNotice,/Not naming-test evidence, not clinical val
 assert.equal('targetResponseFrequency' in exported,false);
 assert.equal('humanDecision' in exported,false);
 
-console.log('research gallery: twenty local stimuli, blind preview and separate visual-design curation guardrails ok');
+console.log('research gallery: twenty local stimuli, blind preview, zoom navigation and separate visual-design curation guardrails ok');

@@ -1,4 +1,4 @@
-const exportKeys=new Set(['schemaVersion','sessionCode','concept','targetIpa','candidateIds','observations','researchNotice']);
+const exportKeys=new Set(['schemaVersion','sessionCode','concept','comparisonRevision','targetIpa','candidateIds','observations','researchNotice']);
 const observationKeys=new Set(['candidateId','responseVerbatim','hesitation','noResponse']);
 
 function normalizedResponse(value=''){
@@ -12,11 +12,11 @@ function comparisonFor(comparisons=[],concept=''){
 export function validateNamingObservationExport(payload={},comparisons=[]){
   if(!payload||typeof payload!=='object'||Array.isArray(payload))return null;
   if(Object.keys(payload).some(key=>!exportKeys.has(key)))return null;
-  if(payload.schemaVersion!=='1.0'||!payload.sessionCode||!payload.concept||!payload.targetIpa)return null;
+  if(payload.schemaVersion!=='1.0'||!payload.sessionCode||!payload.concept||!payload.comparisonRevision||!payload.targetIpa)return null;
   if(!/^[a-zA-Z0-9_-]{1,32}$/.test(String(payload.sessionCode)))return null;
   if(!Array.isArray(payload.candidateIds)||!Array.isArray(payload.observations))return null;
   const comparison=comparisonFor(comparisons,payload.concept);
-  if(!comparison||comparison.targetIpa!==payload.targetIpa)return null;
+  if(!comparison||comparison.targetIpa!==payload.targetIpa||comparison.revision!==payload.comparisonRevision)return null;
   const expectedIds=(comparison.candidates||[]).map(item=>item.candidateId);
   if(payload.candidateIds.length!==expectedIds.length||new Set(payload.candidateIds).size!==payload.candidateIds.length)return null;
   if(expectedIds.some(id=>!payload.candidateIds.includes(id)))return null;
@@ -34,7 +34,7 @@ export function validateNamingObservationExport(payload={},comparisons=[]){
     seen.add(observation.candidateId);
     observations.push({candidateId:observation.candidateId,responseVerbatim,hesitation:observation.hesitation,noResponse:observation.noResponse});
   }
-  return {schemaVersion:'1.0',sessionCode:String(payload.sessionCode),concept:payload.concept,targetIpa:payload.targetIpa,candidateIds:[...payload.candidateIds],observations};
+  return {schemaVersion:'1.0',sessionCode:String(payload.sessionCode),concept:payload.concept,comparisonRevision:payload.comparisonRevision,targetIpa:payload.targetIpa,candidateIds:[...payload.candidateIds],observations};
 }
 
 export function buildNamingObservationReview(payloads=[],comparisons=[]){
@@ -44,13 +44,13 @@ export function buildNamingObservationReview(payloads=[],comparisons=[]){
   for(const payload of payloads){
     const session=validateNamingObservationExport(payload,comparisons);
     if(!session)return null;
-    const key=`${session.concept}:${session.sessionCode}`;
+    const key=`${session.concept}:${session.comparisonRevision}:${session.sessionCode}`;
     if(sessionKeys.has(key))return null;
     sessionKeys.add(key);sessions.push(session);
   }
   const concepts=[];
   for(const comparison of comparisons||[]){
-    const conceptSessions=sessions.filter(item=>item.concept===comparison.concept);
+    const conceptSessions=sessions.filter(item=>item.concept===comparison.concept&&item.comparisonRevision===comparison.revision);
     if(!conceptSessions.length)continue;
     const candidateSummaries=[];
     for(const candidate of comparison.candidates||[]){
@@ -68,7 +68,7 @@ export function buildNamingObservationReview(payloads=[],comparisons=[]){
       const responses=[...responseMap.values()].sort((a,b)=>b.count-a.count||a.response.localeCompare(b.response,'fr'));
       candidateSummaries.push({candidateId:candidate.candidateId,asset:candidate.asset||'',observationCount:observations.length,targetResponseCount,hesitationCount,noResponseCount,responses});
     }
-    concepts.push({concept:comparison.concept,targetIpa:comparison.targetIpa,sessionCount:conceptSessions.length,candidates:candidateSummaries});
+    concepts.push({concept:comparison.concept,comparisonRevision:comparison.revision,targetIpa:comparison.targetIpa,sessionCount:conceptSessions.length,candidates:candidateSummaries});
   }
-  return {schemaVersion:'1.0',kind:'descriptive_naming_observation_review',sessionCount:sessions.length,concepts,researchNotice:'Descriptive counts from imported anonymous observations only. No automatic prototype activation or clinical validation.'};
+  return {schemaVersion:'1.0',kind:'descriptive_naming_observation_review',sessionCount:sessions.length,concepts,researchNotice:'Descriptive counts from imported anonymous observations tied to an explicit comparison revision only. No automatic prototype activation or clinical validation.'};
 }

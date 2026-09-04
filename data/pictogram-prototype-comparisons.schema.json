@@ -17,9 +17,10 @@
     "comparison": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["concept", "targetIpa", "activationState", "goal", "candidates", "humanDecision"],
+      "required": ["concept", "revision", "targetIpa", "activationState", "goal", "candidates", "humanDecision"],
       "properties": {
         "concept": {"type": "string", "minLength": 1},
+        "revision": {"type": "string", "pattern": "^[a-z0-9-]+-v[1-9][0-9]*$", "description": "Stable revision for the exact candidate set and stimulus assets used by a naming passation. Must change whenever that set or any stimulus changes."},
         "targetIpa": {"type": "string", "minLength": 1},
         "activationState": {"const": "inactive_until_human_decision"},
         "goal": {"type": "string", "minLength": 1},

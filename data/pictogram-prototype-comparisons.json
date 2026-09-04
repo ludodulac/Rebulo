@@ -32,12 +32,12 @@
       "concept": "dos",
       "targetIpa": "/do/",
       "activationState": "inactive_until_human_decision",
-      "goal": "Comparer deux stratégies visuelles libres qui rendent le dos humain saillant sans supposer qu’une silhouette vue de derrière sera spontanément nommée « dos ».",
+      "goal": "Comparer des stratégies visuelles libres qui rendent le dos humain saillant sans supposer qu’une silhouette vue de derrière sera spontanément nommée « dos ».",
       "candidates": [
         {
           "candidateId": "dos-svgsilh-rear-person",
-          "asset": "https://svgsilh.com/image/145991.html",
-          "provenance": "SVG Silh image 145991, derived from Pixabay and released CC0; source page identifies a rear-view human figure.",
+          "asset": "https://svgsilh.com/svg/145991.svg",
+          "provenance": "SVG Silh image 145991, derived from Pixabay and released CC0; source page https://svgsilh.com/image/145991.html identifies a rear-view human figure.",
           "availability": "available",
           "designIntent": "Tester une vue arrière simple et libre de droits, sans annotation, comme référence minimale de silhouette humaine vue de dos.",
           "namingRisks": ["personne", "homme", "femme", "derrière"],
@@ -45,8 +45,8 @@
         },
         {
           "candidateId": "dos-openmoji-backache-e321",
-          "asset": "https://openmoji.org/library/emoji-E321/",
-          "provenance": "OpenMoji E321 Backache, CC BY-SA 4.0; official OpenMoji library page.",
+          "asset": "assets/research/dos-openmoji-backache-e321.svg",
+          "provenance": "OpenMoji E321 Backache, CC BY-SA 4.0, vendored from hfg-gmuend/openmoji color/svg/E321.svg; source commit 8e273eb04d7ca350dfca80fc36cc8913a26d86fb; official library page https://openmoji.org/library/emoji-E321/.",
           "availability": "available",
           "designIntent": "Tester un visuel où la zone du dos est explicitement saillante par le geste, afin de comparer la reconnaissance de la partie du corps à une simple vue arrière.",
           "namingRisks": ["mal de dos", "douleur", "personne", "reins"],

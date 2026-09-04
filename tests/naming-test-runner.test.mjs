@@ -44,13 +44,16 @@ assert.doesNotMatch(js,/badge\.textContent\s*=\s*activeComparison\.concept/,'tri
 assert.doesNotMatch(js,/localStorage|sessionStorage|fetch\([^)]*method\s*:\s*['"]POST/i,'runner must not persist observations remotely or in browser storage');
 assert.doesNotMatch(js,/clinical_approved|active\s*[:=]\s*true/i,'runner must not activate or clinically approve pictograms');
 
-const dos=registry.comparisons.find(item=>item.concept==='dos');
-assert.ok(dos);
-assert.equal(dos.candidates.length,2);
-for(const candidate of dos.candidates){
-  assert.doesNotMatch(candidate.asset,/\/image\/\d+\.html|\/library\/emoji-/,'stimulus asset must be an image, not a source page');
-  if(!/^https?:/.test(candidate.asset)) await access(new URL(`../${candidate.asset}`,import.meta.url));
+for(const conceptName of ['pot','dos']){
+  const liveComparison=registry.comparisons.find(item=>item.concept===conceptName);
+  assert.ok(liveComparison);
+  assert.equal(liveComparison.candidates.length,4,`${conceptName} should expose four stimuli in the runner`);
+  for(const candidate of liveComparison.candidates){
+    assert.doesNotMatch(candidate.asset,/\/image\/\d+\.html|\/library\/emoji-/,'stimulus asset must be an image, not a source page');
+    if(!/^https?:/.test(candidate.asset)) await access(new URL(`../${candidate.asset}`,import.meta.url));
+  }
 }
+const dos=registry.comparisons.find(item=>item.concept==='dos');
 assert.ok(dos.candidates.some(candidate=>candidate.asset==='assets/research/dos-openmoji-backache-e321.svg'));
 
-console.log('naming test runner: anonymous local capture, neutral trials and renderable asset guardrails ok');
+console.log('naming test runner: anonymous local capture, neutral trials and four-stimulus asset guardrails ok');

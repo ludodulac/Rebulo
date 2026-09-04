@@ -66,7 +66,7 @@ export function buildNamingObservationReview(payloads=[],comparisons=[]){
         current.count+=1;responseMap.set(normalized,current);
       }
       const responses=[...responseMap.values()].sort((a,b)=>b.count-a.count||a.response.localeCompare(b.response,'fr'));
-      candidateSummaries.push({candidateId:candidate.candidateId,observationCount:observations.length,targetResponseCount,hesitationCount,noResponseCount,responses});
+      candidateSummaries.push({candidateId:candidate.candidateId,asset:candidate.asset||'',observationCount:observations.length,targetResponseCount,hesitationCount,noResponseCount,responses});
     }
     concepts.push({concept:comparison.concept,targetIpa:comparison.targetIpa,sessionCount:conceptSessions.length,candidates:candidateSummaries});
   }

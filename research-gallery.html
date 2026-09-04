@@ -19,7 +19,8 @@
       <span id="conceptCount">—</span> concepts · <span id="stimulusCount">—</span> stimuli
       <span class="curation-summary">· <span id="keepCount">0</span> garder · <span id="reworkCount">0</span> retravailler · <span id="rejectCount">0</span> écarter · <span id="unreviewedCount">0</span> non évalués</span>
     </section>
-    <div class="gallery-actions"><button id="blindPreview" type="button" aria-pressed="false">Aperçu sans indices</button><button id="exportCuration" type="button" disabled>Exporter la curation JSON</button><button id="clearCuration" type="button" class="secondary">Effacer les choix</button></div>
+    <div class="gallery-actions"><button id="blindPreview" type="button" aria-pressed="false">Aperçu sans indices</button><label class="import-control">Importer une curation JSON<input id="importCuration" type="file" accept="application/json,.json"></label><button id="exportCuration" type="button" disabled>Exporter la curation JSON</button><button id="clearCuration" type="button" class="secondary">Effacer les choix</button></div>
+    <p class="import-note">L’import accepte uniquement un export de curation visuelle Rebulo. Un fichier de passation, un résultat clinique ou un format inconnu est refusé.</p>
     <div id="galleryGroups" class="gallery-groups"></div>
     <p id="galleryStatus" class="status" aria-live="polite"></p>
   </main>

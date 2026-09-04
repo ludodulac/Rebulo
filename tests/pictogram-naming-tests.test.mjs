@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {readFile} from 'node:fs/promises';
+import {readFile,access} from 'node:fs/promises';
 
 const schema=JSON.parse(await readFile(new URL('../data/pictogram-naming-tests.schema.json',import.meta.url),'utf8'));
 const registry=JSON.parse(await readFile(new URL('../data/pictogram-naming-tests.json',import.meta.url),'utf8'));
@@ -30,7 +30,7 @@ assert.ok(potComparison,'pot must have a structured visual prototype comparison'
 assert.equal(potComparison.targetIpa,'/po/');
 assert.equal(potComparison.activationState,'inactive_until_human_decision');
 assert.equal(potComparison.humanDecision,null,'no human prototype decision may be fabricated');
-assert.equal(potComparison.candidates.length,2,'pot should expose two distinct visual candidates for human comparison');
+assert.equal(potComparison.candidates.length,4,'pot should expose four distinct visual candidates for human comparison');
 
 const openMojiPot=potComparison.candidates.find(item=>item.candidateId==='pot-openmoji-1fab4');
 assert.equal(openMojiPot.namingTestStatus,'not_run');
@@ -45,7 +45,7 @@ assert.ok(dosComparison,'dos must progress from a design brief to a structured p
 assert.equal(dosComparison.targetIpa,'/do/');
 assert.equal(dosComparison.activationState,'inactive_until_human_decision');
 assert.equal(dosComparison.humanDecision,null,'no dos prototype decision may be fabricated');
-assert.equal(dosComparison.candidates.length,2,'dos should compare two distinct visual strategies');
+assert.equal(dosComparison.candidates.length,4,'dos should compare four distinct visual strategies');
 for(const candidate of dosComparison.candidates){
   assert.equal(candidate.availability,'available');
   assert.equal(candidate.namingTestStatus,'not_run');
@@ -54,14 +54,24 @@ for(const candidate of dosComparison.candidates){
 assert.ok(dosComparison.candidates.some(item=>item.provenance.includes('CC0')),'dos comparison should include a public-domain/CC0 option');
 assert.ok(dosComparison.candidates.some(item=>item.provenance.includes('CC BY-SA 4.0')),'dos comparison should include the OpenMoji alternative with explicit license');
 
+const rebuloResearchCandidates=[...potComparison.candidates,...dosComparison.candidates].filter(item=>item.candidateId.includes('-rebulo-'));
+assert.equal(rebuloResearchCandidates.length,4,'the richer comparison should add four Rebulo-authored local stimuli');
+for(const candidate of rebuloResearchCandidates){
+  assert.match(candidate.asset,/^assets\/research\/.+\.svg$/);
+  await access(new URL(`../${candidate.asset}`,import.meta.url));
+  assert.match(candidate.provenance,/Prototype de recherche dessiné dans Rebulo/);
+}
+
 assert.equal(planRegistry.schemaVersion,'1.0');
 assert.match(planSchema.description,/contains no participant result/i);
 for(const concept of ['pot','dos']){
   const comparison=comparisonRegistry.comparisons.find(item=>item.concept===concept);
   const plan=planRegistry.plans.find(item=>item.concept===concept);
   assert.ok(plan,`${concept} must have an executable pre-observation naming plan`);
+  assert.match(plan.planId,/-v2$/,'richer four-stimulus plans must be versioned');
   assert.equal(plan.activationState,'inactive_until_human_decision');
   assert.deepEqual(new Set(plan.candidateIds),new Set(comparison.candidates.map(x=>x.candidateId)));
+  assert.equal(plan.candidateIds.length,4);
   assert.equal(plan.capture.firstSpontaneousResponseOnly,true);
   assert.equal(plan.capture.anonymousOnly,true);
   assert.equal(plan.capture.candidateOrder,'counterbalanced_or_randomized');
@@ -81,4 +91,4 @@ assert.ok(dosLexicon,'dos prototype must remain registered in the lexicon');
 assert.equal(dosLexicon.active,false,'prototype comparison must never auto-activate dos');
 assert.notEqual(dosLexicon.clinicalStatus,'clinical_approved');
 
-console.log('pictogram naming test schema guardrails: pot and dos comparisons stay research-only.');
+console.log('pictogram naming test schema guardrails: pot and dos expose four real stimuli and stay research-only.');

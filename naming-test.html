@@ -13,28 +13,19 @@
       <div>
         <p class="eyebrow">Recherche visuelle · local uniquement</p>
         <h1>Test de dénomination</h1>
-        <p>Montre une image seule, demande « Qu’est-ce que c’est ? » et note la toute première réponse spontanée.</p>
-        <p><a href="research-gallery.html">Voir d’abord la planche complète des prototypes →</a></p>
-        <p><a href="naming-review.html">Revoir des exports de passation existants →</a></p>
+        <p>Choisis ce que tu veux tester, puis montre simplement les images une par une.</p>
+        <p><a href="research-gallery.html">Voir la planche des images →</a> · <a href="naming-review.html">Revoir des résultats →</a></p>
       </div>
     </header>
 
-    <section id="setupPanel" class="panel">
-      <h2>Nouvelle passation</h2>
-      <label>Concept
+    <section id="setupPanel" class="panel setup-panel">
+      <h2>Prêt à tester</h2>
+      <label>Je veux tester
         <select id="conceptSelect"></select>
       </label>
-      <label>Code anonyme de session
-        <input id="sessionCode" autocomplete="off" placeholder="ex. S01" maxlength="32">
-      </label>
-      <fieldset>
-        <legend>Ordre des prototypes</legend>
-        <label><input type="radio" name="orderMode" value="random" checked> Aléatoire</label>
-        <label><input type="radio" name="orderMode" value="forward"> Ordre A → B</label>
-        <label><input type="radio" name="orderMode" value="reverse"> Ordre B → A</label>
-      </fieldset>
-      <p class="privacy-note">Aucun nom, âge, diagnostic ou autre donnée personnelle n’est demandé. Les réponses restent dans cet onglet jusqu’à l’export.</p>
-      <button id="startSession" type="button">Commencer</button>
+      <p class="simple-help">Rebulo crée tout seul un code anonyme et mélange les 4 images. Tu n’as rien d’autre à régler.</p>
+      <p class="privacy-note">Ne saisis aucun nom, âge ou diagnostic. Les réponses restent dans cet onglet jusqu’au téléchargement.</p>
+      <button id="startSession" type="button" class="primary-action">Lancer le test</button>
     </section>
 
     <section id="trialPanel" class="panel" hidden>
@@ -49,19 +40,19 @@
           <label><input id="hesitation" type="checkbox"> Hésitation</label>
           <label><input id="noResponse" type="checkbox"> Pas de réponse</label>
         </div>
-        <button type="submit">Enregistrer et continuer</button>
+        <button type="submit" class="primary-action">Enregistrer et continuer</button>
       </form>
     </section>
 
     <section id="completePanel" class="panel" hidden>
-      <h2>Passation terminée</h2>
+      <h2>Terminé</h2>
       <p id="completeSummary"></p>
-      <p>Le fichier exporté contient uniquement le code de session, le concept, l’identifiant du prototype et les réponses brutes. Il ne constitue ni une validation clinique ni une décision d’activation.</p>
+      <p>Garde ce fichier : il contient les réponses anonymes de cette passation. Il ne valide ni n’active automatiquement aucune image.</p>
       <div class="actions">
-        <button id="exportJson" type="button">Exporter le JSON</button>
-        <button id="newSession" type="button" class="secondary">Nouvelle passation</button>
+        <button id="exportJson" type="button" class="primary-action">Télécharger les réponses</button>
+        <button id="newSession" type="button" class="secondary">Tester une autre personne</button>
       </div>
-      <p><a href="naming-review.html">Analyser descriptivement plusieurs exports →</a></p>
+      <p><a href="naming-review.html">Comparer plusieurs fichiers de réponses →</a></p>
     </section>
 
     <p id="status" class="status" aria-live="polite"></p>

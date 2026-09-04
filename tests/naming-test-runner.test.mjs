@@ -20,8 +20,11 @@ assert.equal(exported.sessionCode,'S01');assert.equal(exported.comparisonRevisio
 const html=await readFile(new URL('../naming-test.html',import.meta.url),'utf8');
 const js=await readFile(new URL('../naming-test.js',import.meta.url),'utf8');
 const registry=JSON.parse(await readFile(new URL('../data/pictogram-prototype-comparisons.json',import.meta.url),'utf8'));
-assert.match(html,/local uniquement/i);assert.match(html,/Aucun nom, âge, diagnostic/i);assert.match(html,/première réponse spontanée/i);assert.match(html,/ni une validation clinique ni une décision d’activation/i);
+assert.match(html,/local uniquement/i);assert.match(html,/Ne saisis aucun nom, âge ou diagnostic/i);assert.match(html,/première réponse spontanée/i);assert.match(html,/Lancer le test/);assert.match(html,/Télécharger les réponses/);assert.match(html,/mélange les 4 images/i);
+assert.doesNotMatch(html,/Code anonyme de session|Ordre des prototypes|name="orderMode"/,'manual session and ordering controls should stay out of the simple flow');
 assert.match(js,/pictogram-prototype-comparisons\.json/);assert.match(js,/badge\.textContent='Prototype visuel'/);assert.doesNotMatch(js,/badge\.textContent\s*=\s*activeComparison\.concept/);
+assert.match(js,/function anonymousSessionCode\(\)/);assert.match(js,/sessionCode:anonymousSessionCode\(\),orderMode:'random'/,'session code and random order must be automatic');
+assert.doesNotMatch(js,/sessionCode\.value|input\[name="orderMode"\]/,'simple flow must not depend on manual setup fields');
 assert.doesNotMatch(js,/localStorage|sessionStorage|fetch\([^)]*method\s*:\s*['"]POST/i);assert.doesNotMatch(js,/clinical_approved|active\s*[:=]\s*true/i);
 assert.match(js,/image\.onload=.*setTrialEnabled\(true\)/s,'response controls must unlock only after image load');
 assert.match(js,/image\.onerror=.*setTrialEnabled\(false\)/s,'image failure must keep response controls locked');
@@ -36,4 +39,4 @@ for(const conceptName of ['pot','dos','raie','tas','terre']){
 }
 const dos=registry.comparisons.find(item=>item.concept==='dos');assert.ok(dos.candidates.some(candidate=>candidate.asset==='assets/research/dos-openmoji-backache-e321.svg'));
 
-console.log('naming test runner: neutral trials, revision-stamped exports, twenty stimuli and failed-image capture guardrails ok');
+console.log('naming test runner: simple anonymous launch, neutral trials, revision-stamped exports and failed-image guardrails ok');

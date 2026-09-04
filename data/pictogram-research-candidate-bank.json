@@ -1,0 +1,108 @@
+{
+  "schemaVersion": "1.0",
+  "purpose": "Source bank for difficult pictogram concepts. Entries are research leads only and are never activated automatically.",
+  "concepts": [
+    {
+      "concept": "tas",
+      "targetIpa": "/ta/",
+      "activationState": "research_only",
+      "candidates": [
+        {
+          "candidateId": "tas-freesvg-dirt-pile",
+          "sourcePage": "https://freesvg.org/dirt-pile",
+          "previewAsset": "https://freesvg.org/img/misc-proto-dirt-pile.png",
+          "license": "Public Domain / CC0",
+          "sourceLabel": "Dirt pile",
+          "namingRisks": ["terre", "boue", "tas de terre"],
+          "runnerReady": false
+        },
+        {
+          "candidateId": "tas-publicdomainvectors-pile-rocks",
+          "sourcePage": "https://publicdomainvectors.org/en/free-clipart/Pile-of-rocks/74332.html",
+          "license": "Public Domain",
+          "sourceLabel": "Pile of rocks",
+          "namingRisks": ["pierres", "rochers", "cailloux"],
+          "runnerReady": false
+        },
+        {
+          "candidateId": "tas-openclipart-dirt-pile-209732",
+          "sourcePage": "https://openclipart.org/detail/209732/harvestable-resources-dirt-pile",
+          "license": "Public Domain",
+          "sourceLabel": "Harvestable Resources Dirt Pile",
+          "namingRisks": ["terre", "boue", "rochers"],
+          "runnerReady": false
+        }
+      ]
+    },
+    {
+      "concept": "raie",
+      "targetIpa": "/ʁɛ/",
+      "activationState": "research_only",
+      "candidates": [
+        {
+          "candidateId": "raie-freesvg-stingray-62186",
+          "sourcePage": "https://freesvg.org/index.php/stingray-image",
+          "license": "Public Domain",
+          "sourceLabel": "Stingray image",
+          "namingRisks": ["poisson", "manta", "animal marin"],
+          "runnerReady": false
+        },
+        {
+          "candidateId": "raie-openclipart-stingray-124033",
+          "sourcePage": "https://openclipart.org/detail/124033/stingray",
+          "license": "Public Domain",
+          "sourceLabel": "stingray",
+          "namingRisks": ["poisson", "manta", "requin"],
+          "runnerReady": false
+        },
+        {
+          "candidateId": "raie-openclipart-manta-24455",
+          "sourcePage": "https://openclipart.org/detail/24455/manta",
+          "license": "Public Domain",
+          "sourceLabel": "manta",
+          "namingRisks": ["manta", "poisson", "raie manta"],
+          "runnerReady": false
+        }
+      ]
+    },
+    {
+      "concept": "terre",
+      "targetIpa": "/tɛʁ/",
+      "activationState": "research_only",
+      "candidates": [
+        {
+          "candidateId": "terre-openclipart-soil-298052",
+          "sourcePage": "https://openclipart.org/detail/298052/soil",
+          "previewAsset": "https://openclipart.org/image/800px/svg_to_png/298052/grass-soil-vector-pdv.png",
+          "license": "Public Domain",
+          "sourceLabel": "Soil",
+          "namingRisks": ["sol", "herbe", "jardin"],
+          "runnerReady": false
+        },
+        {
+          "candidateId": "terre-publicdomainvectors-soil",
+          "sourcePage": "https://publicdomainvectors.org/en/free-soil-vector",
+          "license": "Public Domain",
+          "sourceLabel": "soil vector collection",
+          "namingRisks": ["sol", "champ", "terreau"],
+          "runnerReady": false
+        },
+        {
+          "candidateId": "terre-freesvg-dirt-pile",
+          "sourcePage": "https://freesvg.org/dirt-pile",
+          "previewAsset": "https://freesvg.org/img/misc-proto-dirt-pile.png",
+          "license": "Public Domain / CC0",
+          "sourceLabel": "Dirt pile",
+          "namingRisks": ["tas", "boue", "monticule"],
+          "runnerReady": false
+        }
+      ]
+    }
+  ],
+  "guardrails": {
+    "automaticActivation": false,
+    "clinicalValidation": false,
+    "requiresHumanDecision": true,
+    "runnerRequiresSeparateStimulusReview": true
+  }
+}

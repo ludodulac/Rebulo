@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import {readFile,access} from 'node:fs/promises';
+import {createResearchCuration,setResearchCurationDecision,researchCurationSummary,researchCurationExport} from '../src/research-curation-session.js';
 
 const html=await readFile(new URL('../research-gallery.html',import.meta.url),'utf8');
 const js=await readFile(new URL('../research-gallery.js',import.meta.url),'utf8');
@@ -8,11 +9,14 @@ const namingHtml=await readFile(new URL('../naming-test.html',import.meta.url),'
 
 assert.match(html,/Planche des prototypes/);
 assert.match(html,/Recherche seulement/i);
-assert.match(html,/Aucun prototype affiché ici n’est activé automatiquement/i);
-assert.match(html,/aucune validation clinique/i);
+assert.match(html,/garder \/ retravailler \/ écarter/i);
+assert.match(html,/ni une réponse de dénomination, ni une validation clinique, ni une activation/i);
+assert.match(html,/Exporter la curation JSON/);
 assert.match(html,/naming-test\.html/);
 assert.match(js,/pictogram-prototype-comparisons\.json/);
 assert.match(js,/Image indisponible — ne pas utiliser ce stimulus/);
+assert.match(js,/researchCurationExport/);
+assert.doesNotMatch(js,/localStorage|sessionStorage/,'visual curation should stay in memory until explicit export');
 assert.doesNotMatch(js,/clinical_approved|active\s*[:=]\s*true/i);
 assert.match(namingHtml,/research-gallery\.html/,'naming runner should link to the curator gallery');
 
@@ -25,8 +29,24 @@ for(const comparison of live){
     assert.ok(candidate.designIntent);
     assert.ok(candidate.provenance);
     assert.ok(candidate.namingRisks.length>0);
-    if(!/^https?:/.test(candidate.asset))await access(new URL(`../${candidate.asset}`,import.meta.url));
+    assert.doesNotMatch(candidate.asset,/^https?:/,'all active naming stimuli should now be served locally');
+    await access(new URL(`../${candidate.asset}`,import.meta.url));
   }
 }
 
-console.log('research gallery: five concepts, twenty stimuli and research-only guardrails ok');
+let curation=createResearchCuration({comparisons:live});
+assert.equal(curation.items.length,20);
+assert.deepEqual(researchCurationSummary(curation),{keep:0,rework:0,reject:0,unreviewed:20});
+curation=setResearchCurationDecision(curation,curation.items[0].candidateId,'keep','lisible au premier coup d’œil');
+curation=setResearchCurationDecision(curation,curation.items[1].candidateId,'rework','simplifier la silhouette');
+curation=setResearchCurationDecision(curation,curation.items[2].candidateId,'reject','trop ambigu');
+assert.deepEqual(researchCurationSummary(curation),{keep:1,rework:1,reject:1,unreviewed:17});
+assert.equal(setResearchCurationDecision(curation,curation.items[3].candidateId,'clinical_approved','nope'),null,'curation must reject clinical-looking decisions');
+const exported=researchCurationExport(curation);
+assert.equal(exported.kind,'visual_research_curation');
+assert.equal(exported.decisions.length,3);
+assert.match(exported.researchNotice,/Not naming-test evidence, not clinical validation, and not an activation decision/);
+assert.equal('targetResponseFrequency' in exported,false);
+assert.equal('humanDecision' in exported,false);
+
+console.log('research gallery: twenty local stimuli plus separate visual-design curation guardrails ok');

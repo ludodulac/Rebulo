@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import {readFile,access} from 'node:fs/promises';
-import {createResearchCuration,setResearchCurationDecision,researchCurationSummary,researchCurationExport} from '../src/research-curation-session.js';
+import {createResearchCuration,setResearchCurationDecision,researchCurationSummary,researchCurationExport,applyResearchCurationImport} from '../src/research-curation-session.js';
 
 const html=await readFile(new URL('../research-gallery.html',import.meta.url),'utf8');
 const js=await readFile(new URL('../research-gallery.js',import.meta.url),'utf8');
@@ -12,6 +12,8 @@ assert.match(html,/Planche des prototypes/);
 assert.match(html,/Recherche seulement/i);
 assert.match(html,/garder \/ retravailler \/ écarter/i);
 assert.match(html,/ni une réponse de dénomination, ni une validation clinique, ni une activation/i);
+assert.match(html,/Importer une curation JSON/);
+assert.match(html,/Un fichier de passation, un résultat clinique ou un format inconnu est refusé/);
 assert.match(html,/Exporter la curation JSON/);
 assert.match(html,/Aperçu sans indices/);
 assert.match(html,/data-blind-preview="false"/);
@@ -23,6 +25,9 @@ assert.match(html,/naming-test\.html/);
 assert.match(js,/pictogram-prototype-comparisons\.json/);
 assert.match(js,/Image indisponible — ne pas utiliser ce stimulus/);
 assert.match(js,/researchCurationExport/);
+assert.match(js,/applyResearchCurationImport/);
+assert.match(js,/async function importCurationFile\(file\)/);
+assert.match(js,/Import refusé/);
 assert.match(js,/function setBlindPreview\(enabled\)/);
 assert.match(js,/function openLightbox\(candidateId=''/);
 assert.match(js,/function moveLightbox\(step\)/);
@@ -32,6 +37,7 @@ assert.match(js,/concept, IPA, intentions, risques, provenance et curation sont 
 assert.match(css,/data-blind-preview="true"[^}]*\.concept-heading/);
 assert.match(css,/data-blind-preview="true"[^}]*\.card-body/);
 assert.match(css,/data-blind-preview="true"[^}]*#exportCuration/);
+assert.match(css,/data-blind-preview="true"[^}]*\.import-control/);
 assert.match(css,/\.stimulus-lightbox::backdrop/);
 assert.match(css,/\.lightbox-stage/);
 assert.doesNotMatch(js,/localStorage|sessionStorage/,'visual curation should stay in memory until explicit export');
@@ -67,4 +73,16 @@ assert.match(exported.researchNotice,/Not naming-test evidence, not clinical val
 assert.equal('targetResponseFrequency' in exported,false);
 assert.equal('humanDecision' in exported,false);
 
-console.log('research gallery: twenty local stimuli, blind preview, zoom navigation and separate visual-design curation guardrails ok');
+const empty=createResearchCuration({comparisons:live});
+const restored=applyResearchCurationImport(empty,exported);
+assert.ok(restored,'a genuine Rebulo visual curation export must be importable');
+assert.deepEqual(researchCurationSummary(restored),{keep:1,rework:1,reject:1,unreviewed:17});
+assert.equal(restored.items.find(item=>item.candidateId===curation.items[1].candidateId).note,'simplifier la silhouette');
+assert.equal(applyResearchCurationImport(empty,{schemaVersion:'1.0',observations:[],concept:'pot'}),null,'a naming-test shaped file must be refused');
+assert.equal(applyResearchCurationImport(empty,{...exported,clinicalStatus:'clinical_approved'}),null,'unknown clinical-looking top-level fields must be refused');
+assert.equal(applyResearchCurationImport(empty,{...exported,decisions:[{...exported.decisions[0],decision:'clinical_approved'}]}),null,'unknown decisions must be refused');
+assert.equal(applyResearchCurationImport(empty,{...exported,decisions:[{...exported.decisions[0],concept:'wrong'}]}),null,'candidate/concept mismatches must be refused');
+assert.equal(applyResearchCurationImport(empty,{...exported,decisions:[exported.decisions[0],exported.decisions[0]]}),null,'duplicate candidate decisions must be refused');
+assert.equal(applyResearchCurationImport(empty,{...exported,decisions:[{...exported.decisions[0],participantName:'x'}]}),null,'unexpected decision fields must be refused');
+
+console.log('research gallery: twenty local stimuli, zoom, blind preview and strict reusable visual curation guardrails ok');

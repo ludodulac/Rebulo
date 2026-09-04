@@ -1,4 +1,6 @@
 const allowedDecisions=new Set(['keep','rework','reject']);
+const allowedImportKeys=new Set(['schemaVersion','kind','decisions','researchNotice']);
+const allowedDecisionKeys=new Set(['concept','candidateId','decision','note']);
 
 export function createResearchCuration(registry={}){
   const comparisons=Array.isArray(registry.comparisons)?registry.comparisons:[];
@@ -42,4 +44,31 @@ export function researchCurationExport(session={}){
     decisions:session.items.filter(item=>allowedDecisions.has(item.decision)).map(item=>({concept:item.concept,candidateId:item.candidateId,decision:item.decision,note:item.note||''})),
     researchNotice:'Visual design curation only. Not naming-test evidence, not clinical validation, and not an activation decision.'
   };
+}
+
+export function applyResearchCurationImport(session={},payload={}){
+  if(!session||!Array.isArray(session.items)||!payload||typeof payload!=='object'||Array.isArray(payload)) return null;
+  if(payload.schemaVersion!=='1.0'||payload.kind!=='visual_research_curation'||!Array.isArray(payload.decisions)) return null;
+  if(Object.keys(payload).some(key=>!allowedImportKeys.has(key))) return null;
+  const byId=new Map(session.items.map(item=>[item.candidateId,item]));
+  const seen=new Set();
+  const normalized=[];
+  for(const entry of payload.decisions){
+    if(!entry||typeof entry!=='object'||Array.isArray(entry)) return null;
+    if(Object.keys(entry).some(key=>!allowedDecisionKeys.has(key))) return null;
+    const candidateId=String(entry.candidateId||'');
+    const current=byId.get(candidateId);
+    if(!current||seen.has(candidateId)||!allowedDecisions.has(entry.decision)) return null;
+    if(String(entry.concept||'')!==current.concept) return null;
+    const note=String(entry.note||'').trim();
+    if(note.length>240) return null;
+    seen.add(candidateId);
+    normalized.push({candidateId,decision:entry.decision,note});
+  }
+  let imported={...session,items:session.items.map(item=>({...item,decision:null,note:''}))};
+  for(const entry of normalized){
+    imported=setResearchCurationDecision(imported,entry.candidateId,entry.decision,entry.note);
+    if(!imported) return null;
+  }
+  return imported;
 }

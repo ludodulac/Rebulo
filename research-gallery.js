@@ -1,4 +1,4 @@
-import {createResearchCuration,setResearchCurationDecision,researchCurationSummary,researchCurationExport} from './src/research-curation-session.js';
+import {createResearchCuration,setResearchCurationDecision,researchCurationSummary,researchCurationExport,applyResearchCurationImport} from './src/research-curation-session.js';
 
 const shell=document.querySelector('[data-research-gallery]');
 const groups=document.querySelector('#galleryGroups');
@@ -10,6 +10,7 @@ const reworkCount=document.querySelector('#reworkCount');
 const rejectCount=document.querySelector('#rejectCount');
 const unreviewedCount=document.querySelector('#unreviewedCount');
 const blindPreviewButton=document.querySelector('#blindPreview');
+const importInput=document.querySelector('#importCuration');
 const exportButton=document.querySelector('#exportCuration');
 const clearButton=document.querySelector('#clearCuration');
 const lightbox=document.querySelector('#stimulusLightbox');
@@ -71,6 +72,18 @@ function setBlindPreview(enabled){
   status.textContent=on?'Aperçu sans indices : concept, IPA, intentions, risques, provenance et curation sont masqués.':'Mode expert restauré.';
 }
 
+function syncCurationToDom(){
+  for(const card of groups.querySelectorAll('.card')){
+    const item=curation?.items?.find(entry=>entry.candidateId===card.dataset.candidateId);
+    const decision=item?.decision||null;
+    card.dataset.curation=decision||'unreviewed';
+    for(const button of card.querySelectorAll('.curation-choices button'))button.setAttribute('aria-pressed',String(button.dataset.decision===decision));
+    const note=card.querySelector('.curation-controls textarea');
+    if(note)note.value=item?.note||'';
+  }
+  refreshSummary();
+}
+
 function decisionControls(candidate={}){
   const wrap=document.createElement('div');wrap.className='curation-controls';
   const title=text('div','Curation visuelle','curation-title');wrap.append(title);
@@ -84,9 +97,7 @@ function decisionControls(candidate={}){
       const updated=setResearchCurationDecision(curation,candidate.candidateId,nextDecision,note);
       if(!updated)return;
       curation=updated;
-      for(const peer of choices.querySelectorAll('button'))peer.setAttribute('aria-pressed',String(peer.dataset.decision===nextDecision));
-      wrap.closest('.card').dataset.curation=nextDecision||'unreviewed';
-      refreshSummary();
+      syncCurationToDom();
     });
     button.setAttribute('aria-pressed','false');choices.append(button);
   }
@@ -95,7 +106,7 @@ function decisionControls(candidate={}){
     const current=curation?.items?.find(item=>item.candidateId===candidate.candidateId);
     if(!current)return;
     const updated=setResearchCurationDecision(curation,candidate.candidateId,current.decision,note.value);
-    if(updated)curation=updated;
+    if(updated){curation=updated;syncCurationToDom();}
   });
   wrap.append(choices,note);return wrap;
 }
@@ -126,14 +137,32 @@ function downloadCuration(){
   const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='rebulo-visual-curation.json';document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);status.textContent='Curation visuelle exportée localement.';
 }
 
+async function importCurationFile(file){
+  if(!file||!curation)return;
+  try{
+    const payload=JSON.parse(await file.text());
+    const imported=applyResearchCurationImport(curation,payload);
+    if(!imported)throw new Error('invalid visual curation');
+    curation=imported;
+    syncCurationToDom();
+    const count=payload.decisions.length;
+    status.textContent=`Curation visuelle chargée localement : ${count} décision(s).`;
+  }catch(error){
+    console.error(error);
+    status.textContent='Import refusé : sélectionne uniquement un export JSON de curation visuelle Rebulo compatible.';
+  }finally{
+    if(importInput)importInput.value='';
+  }
+}
+
 function clearCuration(){
   if(!curation)return;
   curation={...curation,items:curation.items.map(item=>({...item,decision:null,note:''}))};
-  for(const card of groups.querySelectorAll('.card')){card.dataset.curation='unreviewed';for(const button of card.querySelectorAll('.curation-choices button'))button.setAttribute('aria-pressed','false');const note=card.querySelector('textarea');if(note)note.value='';}
-  refreshSummary();status.textContent='Choix de curation effacés.';
+  syncCurationToDom();status.textContent='Choix de curation effacés.';
 }
 
 blindPreviewButton?.addEventListener('click',()=>setBlindPreview(shell.dataset.blindPreview!=='true'));
+importInput?.addEventListener('change',()=>importCurationFile(importInput.files?.[0]));
 exportButton?.addEventListener('click',downloadCuration);clearButton?.addEventListener('click',clearCuration);
 lightboxPrevious?.addEventListener('click',()=>moveLightbox(-1));lightboxNext?.addEventListener('click',()=>moveLightbox(1));lightboxClose?.addEventListener('click',()=>lightbox.close());
 lightbox?.addEventListener('click',event=>{if(event.target===lightbox)lightbox.close();});
@@ -148,7 +177,7 @@ async function init(){
     groups.replaceChildren(...comparisons.map(renderComparison));
     conceptCount.textContent=String(comparisons.length);
     stimulusCount.textContent=String(lightboxCandidates.length);
-    refreshSummary();
+    syncCurationToDom();
     if(!comparisons.length)status.textContent='Aucun prototype de recherche disponible.';
   }catch(error){console.error(error);status.textContent='Impossible de charger la planche de prototypes.';}
 }

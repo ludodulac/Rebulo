@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {readFile} from 'node:fs/promises';
+import {readFile,access} from 'node:fs/promises';
 import {createNamingSession,recordNamingObservation,namingSessionExport,orderedCandidates} from '../src/naming-test-session.js';
 
 const comparison={concept:'dos',targetIpa:'/do/',activationState:'inactive_until_human_decision',candidates:[{candidateId:'dos-a',asset:'a.svg'},{candidateId:'dos-b',asset:'b.svg'}]};
@@ -33,12 +33,24 @@ assert.equal('participantName' in exported,false,'export must not introduce pers
 
 const html=await readFile(new URL('../naming-test.html',import.meta.url),'utf8');
 const js=await readFile(new URL('../naming-test.js',import.meta.url),'utf8');
+const registry=JSON.parse(await readFile(new URL('../data/pictogram-prototype-comparisons.json',import.meta.url),'utf8'));
 assert.match(html,/local uniquement/i);
 assert.match(html,/Aucun nom, âge, diagnostic/i);
 assert.match(html,/première réponse spontanée/i);
 assert.match(html,/ni une validation clinique ni une décision d’activation/i);
 assert.match(js,/pictogram-prototype-comparisons\.json/);
+assert.match(js,/badge\.textContent='Prototype visuel'/,'trial badge must stay neutral');
+assert.doesNotMatch(js,/badge\.textContent\s*=\s*activeComparison\.concept/,'trial UI must not reveal the target concept');
 assert.doesNotMatch(js,/localStorage|sessionStorage|fetch\([^)]*method\s*:\s*['"]POST/i,'runner must not persist observations remotely or in browser storage');
 assert.doesNotMatch(js,/clinical_approved|active\s*[:=]\s*true/i,'runner must not activate or clinically approve pictograms');
 
-console.log('naming test runner: anonymous local capture and export guardrails ok');
+const dos=registry.comparisons.find(item=>item.concept==='dos');
+assert.ok(dos);
+assert.equal(dos.candidates.length,2);
+for(const candidate of dos.candidates){
+  assert.doesNotMatch(candidate.asset,/\/image\/\d+\.html|\/library\/emoji-/,'stimulus asset must be an image, not a source page');
+  if(!/^https?:/.test(candidate.asset)) await access(new URL(`../${candidate.asset}`,import.meta.url));
+}
+assert.ok(dos.candidates.some(candidate=>candidate.asset==='assets/research/dos-openmoji-backache-e321.svg'));
+
+console.log('naming test runner: anonymous local capture, neutral trials and renderable asset guardrails ok');

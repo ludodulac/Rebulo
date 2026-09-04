@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Rebulo — revue des passations</title>
+  <link rel="stylesheet" href="naming-review.css">
+</head>
+<body>
+  <main class="review-shell" data-naming-review>
+    <header class="review-header">
+      <div class="header-links"><a href="naming-test.html">← Test de dénomination</a><a href="research-gallery.html">Planche des prototypes →</a></div>
+      <p class="eyebrow">Recherche visuelle · analyse descriptive locale</p>
+      <h1>Revue des passations</h1>
+      <p class="lede">Charge plusieurs exports JSON réellement produits par le test de dénomination pour comparer les réponses brutes par prototype.</p>
+      <div class="warning"><strong>Aucune validation automatique.</strong> Cette page compte des observations anonymes. Elle ne décide ni qu’un pictogramme est bon, ni qu’il doit être activé, ni qu’il possède une validité clinique.</div>
+    </header>
+
+    <section class="import-panel">
+      <label class="file-control">Charger des exports de passation JSON
+        <input id="reviewFiles" type="file" accept="application/json,.json" multiple>
+      </label>
+      <button id="clearReview" type="button" class="secondary">Effacer la revue</button>
+      <p>Les fichiers sont lus uniquement dans cet onglet. Aucun envoi serveur, aucune persistance navigateur.</p>
+    </section>
+
+    <section id="reviewSummary" class="review-summary" hidden aria-live="polite">
+      <strong id="sessionCount">0</strong> session(s) valide(s) chargée(s).
+    </section>
+    <div id="reviewResults" class="review-results"></div>
+    <p id="reviewStatus" class="status" aria-live="polite"></p>
+  </main>
+  <script type="module" src="naming-review.js"></script>
+</body>
+</html>

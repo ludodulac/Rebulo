@@ -11,7 +11,6 @@ const lexicon=JSON.parse(await readFile(new URL('../data/lexicon-seed.json',impo
 
 assert.equal(registry.schemaVersion,'1.0');
 assert.deepEqual(registry.records,[],'the repository must not contain fabricated participant results');
-
 const record=schema.$defs.testRecord;
 for(const field of ['concept','targetIpa','asset','population','participantCount','instruction','observations','targetResponseFrequency','competingResponses','review']) assert.ok(record.required.includes(field),`missing required naming-test field: ${field}`);
 assert.equal(schema.$defs.observation.additionalProperties,false);
@@ -72,13 +71,14 @@ assert.match(planRegistry.plans.find(item=>item.concept==='pot').planId,/-v2$/);
 assert.match(planRegistry.plans.find(item=>item.concept==='dos').planId,/-v2$/);
 assert.match(planRegistry.plans.find(item=>item.concept==='raie').planId,/-v1$/);
 
-for(const concept of ['pot','dos','raie']){
+for(const concept of ['pot','dos']){
   const item=lexicon.find(entry=>entry.id===concept);
   assert.ok(item,`${concept} must remain registered in the lexicon`);
   assert.equal(item.active,false,`${concept} naming comparison must never auto-activate the lexicon entry`);
   assert.notEqual(item.clinicalStatus,'clinical_approved');
 }
+assert.equal(lexicon.find(item=>item.id==='raie'),undefined,'raie research must not silently create or reactivate a lexicon entry');
 assert.equal(lexicon.find(item=>item.id==='pot').clinicalStatus,'naming_test_required');
 assert.equal(lexicon.find(item=>item.id==='pot').prototypeStatus,'asset_available');
 
-console.log('pictogram naming test schema guardrails: pot, dos and raie expose four real stimuli and stay research-only.');
+console.log('pictogram naming test schema guardrails: pot, dos and raie expose four real stimuli; raie stays outside the lexicon.');

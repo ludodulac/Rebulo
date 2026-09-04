@@ -23,6 +23,19 @@
     <div id="galleryGroups" class="gallery-groups"></div>
     <p id="galleryStatus" class="status" aria-live="polite"></p>
   </main>
+
+  <dialog id="stimulusLightbox" class="stimulus-lightbox" aria-labelledby="lightboxLabel">
+    <div class="lightbox-inner">
+      <button id="lightboxClose" type="button" class="lightbox-close" aria-label="Fermer l’agrandissement">×</button>
+      <div class="lightbox-stage"><img id="lightboxImage" alt="Prototype visuel agrandi"></div>
+      <div class="lightbox-footer">
+        <button id="lightboxPrevious" type="button">← Précédent</button>
+        <span id="lightboxLabel">Prototype visuel</span>
+        <button id="lightboxNext" type="button">Suivant →</button>
+      </div>
+    </div>
+  </dialog>
+
   <script type="module" src="research-gallery.js"></script>
 </body>
 </html>

@@ -12,7 +12,15 @@ const unreviewedCount=document.querySelector('#unreviewedCount');
 const blindPreviewButton=document.querySelector('#blindPreview');
 const exportButton=document.querySelector('#exportCuration');
 const clearButton=document.querySelector('#clearCuration');
+const lightbox=document.querySelector('#stimulusLightbox');
+const lightboxImage=document.querySelector('#lightboxImage');
+const lightboxLabel=document.querySelector('#lightboxLabel');
+const lightboxPrevious=document.querySelector('#lightboxPrevious');
+const lightboxNext=document.querySelector('#lightboxNext');
+const lightboxClose=document.querySelector('#lightboxClose');
 let curation=null;
+let lightboxCandidates=[];
+let lightboxIndex=-1;
 
 function text(tag,value,className=''){
   const node=document.createElement(tag);
@@ -30,11 +38,36 @@ function refreshSummary(){
   exportButton.disabled=(summary.keep+summary.rework+summary.reject)===0;
 }
 
+function refreshLightbox(){
+  const candidate=lightboxCandidates[lightboxIndex];
+  if(!candidate)return;
+  lightboxImage.src=candidate.asset;
+  lightboxImage.alt='Prototype visuel agrandi';
+  lightboxLabel.textContent=shell.dataset.blindPreview==='true'?'Prototype visuel':candidate.candidateId;
+  lightboxPrevious.disabled=lightboxCandidates.length<2;
+  lightboxNext.disabled=lightboxCandidates.length<2;
+}
+
+function openLightbox(candidateId=''){
+  const index=lightboxCandidates.findIndex(item=>item.candidateId===candidateId);
+  if(index<0||!lightbox?.showModal)return;
+  lightboxIndex=index;
+  refreshLightbox();
+  lightbox.showModal();
+}
+
+function moveLightbox(step){
+  if(!lightboxCandidates.length)return;
+  lightboxIndex=(lightboxIndex+step+lightboxCandidates.length)%lightboxCandidates.length;
+  refreshLightbox();
+}
+
 function setBlindPreview(enabled){
   const on=Boolean(enabled);
   shell.dataset.blindPreview=String(on);
   blindPreviewButton.setAttribute('aria-pressed',String(on));
   blindPreviewButton.textContent=on?'Quitter l’aperçu sans indices':'Aperçu sans indices';
+  if(lightbox?.open)refreshLightbox();
   status.textContent=on?'Aperçu sans indices : concept, IPA, intentions, risques, provenance et curation sont masqués.':'Mode expert restauré.';
 }
 
@@ -69,9 +102,10 @@ function decisionControls(candidate={}){
 
 function renderCandidate(candidate={}){
   const card=document.createElement('article');card.className='card';card.dataset.candidateId=candidate.candidateId||'';card.dataset.curation='unreviewed';
-  const stage=document.createElement('div');stage.className='image-stage';
+  const stage=document.createElement('button');stage.type='button';stage.className='image-stage';stage.setAttribute('aria-label','Agrandir ce prototype');
   const image=document.createElement('img');image.src=candidate.asset||'';image.alt='Prototype visuel';image.loading='lazy';
-  image.addEventListener('error',()=>{card.dataset.loadError='true';stage.replaceChildren(text('p','Image indisponible — ne pas utiliser ce stimulus.','image-error'));});
+  image.addEventListener('error',()=>{card.dataset.loadError='true';stage.disabled=true;stage.replaceChildren(text('p','Image indisponible — ne pas utiliser ce stimulus.','image-error'));});
+  stage.addEventListener('click',()=>openLightbox(candidate.candidateId));
   stage.append(image);
   const body=document.createElement('div');body.className='card-body';
   body.append(text('div',candidate.candidateId,'candidate-id'),text('p',candidate.designIntent,'intent'),text('div','Risques de dénomination','risk-title'));
@@ -101,6 +135,8 @@ function clearCuration(){
 
 blindPreviewButton?.addEventListener('click',()=>setBlindPreview(shell.dataset.blindPreview!=='true'));
 exportButton?.addEventListener('click',downloadCuration);clearButton?.addEventListener('click',clearCuration);
+lightboxPrevious?.addEventListener('click',()=>moveLightbox(-1));lightboxNext?.addEventListener('click',()=>moveLightbox(1));lightboxClose?.addEventListener('click',()=>lightbox.close());
+lightbox?.addEventListener('click',event=>{if(event.target===lightbox)lightbox.close();});
 
 async function init(){
   try{
@@ -108,9 +144,10 @@ async function init(){
     const registry=await response.json();
     const comparisons=(registry.comparisons||[]).filter(item=>item.activationState==='inactive_until_human_decision'&&item.candidates?.length);
     curation=createResearchCuration({comparisons});
+    lightboxCandidates=comparisons.flatMap(item=>item.candidates||[]);
     groups.replaceChildren(...comparisons.map(renderComparison));
     conceptCount.textContent=String(comparisons.length);
-    stimulusCount.textContent=String(comparisons.reduce((sum,item)=>sum+(item.candidates?.length||0),0));
+    stimulusCount.textContent=String(lightboxCandidates.length);
     refreshSummary();
     if(!comparisons.length)status.textContent='Aucun prototype de recherche disponible.';
   }catch(error){console.error(error);status.textContent='Impossible de charger la planche de prototypes.';}

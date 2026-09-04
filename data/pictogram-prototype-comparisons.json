@@ -5,7 +5,7 @@
       "concept": "pot",
       "targetIpa": "/po/",
       "activationState": "inactive_until_human_decision",
-      "goal": "Comparer des visuels qui font nommer spontanément « pot » plutôt que la plante ou l’ensemble « pot de fleurs », avant toute activation phonétique.",
+      "goal": "Comparer plusieurs stratégies visuelles qui font nommer spontanément « pot » plutôt que la plante ou l’ensemble « pot de fleurs », avant toute activation phonétique.",
       "candidates": [
         {
           "candidateId": "pot-openmoji-1fab4",
@@ -24,6 +24,24 @@
           "designIntent": "Candidat externe non modifié montrant un pot de fleurs vide, sans plante visible, afin de réduire l’indice concurrent « plante » avant comparaison humaine.",
           "namingRisks": ["pot de fleurs", "cache-pot", "pot de plante"],
           "namingTestStatus": "not_run"
+        },
+        {
+          "candidateId": "pot-rebulo-empty-tapered",
+          "asset": "assets/research/pot-empty-tapered.svg",
+          "provenance": "Prototype de recherche dessiné dans Rebulo, formes SVG originales, sans texte ni indice phonétique.",
+          "availability": "available",
+          "designIntent": "Isoler la forme canonique d’un pot vide évasé, sans plante, afin de mesurer si le nom court « pot » apparaît spontanément.",
+          "namingRisks": ["pot de fleurs", "cache-pot", "vase"],
+          "namingTestStatus": "not_run"
+        },
+        {
+          "candidateId": "pot-rebulo-empty-cylinder",
+          "asset": "assets/research/pot-empty-cylinder.svg",
+          "provenance": "Prototype de recherche dessiné dans Rebulo, formes SVG originales, sans texte ni indice phonétique.",
+          "availability": "available",
+          "designIntent": "Tester une forme cylindrique vide plus neutre pour mesurer le risque de réponses « bocal », « boîte » ou « récipient ».",
+          "namingRisks": ["bocal", "boîte", "récipient", "cache-pot"],
+          "namingTestStatus": "not_run"
         }
       ],
       "humanDecision": null
@@ -32,7 +50,7 @@
       "concept": "dos",
       "targetIpa": "/do/",
       "activationState": "inactive_until_human_decision",
-      "goal": "Comparer des stratégies visuelles libres qui rendent le dos humain saillant sans supposer qu’une silhouette vue de derrière sera spontanément nommée « dos ».",
+      "goal": "Comparer plusieurs stratégies visuelles qui rendent le dos humain saillant sans supposer qu’une silhouette vue de derrière sera spontanément nommée « dos ».",
       "candidates": [
         {
           "candidateId": "dos-svgsilh-rear-person",
@@ -50,6 +68,24 @@
           "availability": "available",
           "designIntent": "Tester un visuel où la zone du dos est explicitement saillante par le geste, afin de comparer la reconnaissance de la partie du corps à une simple vue arrière.",
           "namingRisks": ["mal de dos", "douleur", "personne", "reins"],
+          "namingTestStatus": "not_run"
+        },
+        {
+          "candidateId": "dos-rebulo-back-outline",
+          "asset": "assets/research/dos-back-outline.svg",
+          "provenance": "Prototype de recherche dessiné dans Rebulo, formes SVG originales représentant un torse humain vu de derrière.",
+          "availability": "available",
+          "designIntent": "Rendre la vue arrière plus anatomiquement lisible que la silhouette seule, sans surligner une zone particulière.",
+          "namingRisks": ["personne", "corps", "homme", "derrière"],
+          "namingTestStatus": "not_run"
+        },
+        {
+          "candidateId": "dos-rebulo-highlighted-back",
+          "asset": "assets/research/dos-highlighted-back.svg",
+          "provenance": "Prototype de recherche dessiné dans Rebulo, formes SVG originales avec zone dorsale visuellement surlignée, sans texte.",
+          "availability": "available",
+          "designIntent": "Tester si un surlignage explicite de la zone dorsale favorise « dos » plutôt que « personne » sans introduire de mot ou de symbole phonétique.",
+          "namingRisks": ["mal de dos", "douleur", "rouge", "personne"],
           "namingTestStatus": "not_run"
         }
       ],

@@ -4,6 +4,7 @@ import {createResearchCuration,setResearchCurationDecision,researchCurationSumma
 
 const html=await readFile(new URL('../research-gallery.html',import.meta.url),'utf8');
 const js=await readFile(new URL('../research-gallery.js',import.meta.url),'utf8');
+const css=await readFile(new URL('../research-gallery.css',import.meta.url),'utf8');
 const comparisons=JSON.parse(await readFile(new URL('../data/pictogram-prototype-comparisons.json',import.meta.url),'utf8'));
 const namingHtml=await readFile(new URL('../naming-test.html',import.meta.url),'utf8');
 
@@ -12,10 +13,17 @@ assert.match(html,/Recherche seulement/i);
 assert.match(html,/garder \/ retravailler \/ écarter/i);
 assert.match(html,/ni une réponse de dénomination, ni une validation clinique, ni une activation/i);
 assert.match(html,/Exporter la curation JSON/);
+assert.match(html,/Aperçu sans indices/);
+assert.match(html,/data-blind-preview="false"/);
 assert.match(html,/naming-test\.html/);
 assert.match(js,/pictogram-prototype-comparisons\.json/);
 assert.match(js,/Image indisponible — ne pas utiliser ce stimulus/);
 assert.match(js,/researchCurationExport/);
+assert.match(js,/function setBlindPreview\(enabled\)/);
+assert.match(js,/concept, IPA, intentions, risques, provenance et curation sont masqués/);
+assert.match(css,/data-blind-preview="true"[^}]*\.concept-heading/);
+assert.match(css,/data-blind-preview="true"[^}]*\.card-body/);
+assert.match(css,/data-blind-preview="true"[^}]*#exportCuration/);
 assert.doesNotMatch(js,/localStorage|sessionStorage/,'visual curation should stay in memory until explicit export');
 assert.doesNotMatch(js,/clinical_approved|active\s*[:=]\s*true/i);
 assert.match(namingHtml,/research-gallery\.html/,'naming runner should link to the curator gallery');
@@ -49,4 +57,4 @@ assert.match(exported.researchNotice,/Not naming-test evidence, not clinical val
 assert.equal('targetResponseFrequency' in exported,false);
 assert.equal('humanDecision' in exported,false);
 
-console.log('research gallery: twenty local stimuli plus separate visual-design curation guardrails ok');
+console.log('research gallery: twenty local stimuli, blind preview and separate visual-design curation guardrails ok');

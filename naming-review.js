@@ -38,7 +38,7 @@ function renderReview(review){
   sessionCount.textContent=String(review.sessionCount);summary.hidden=false;
   for(const concept of review.concepts){
     const section=document.createElement('section');section.className='concept-review';
-    const heading=document.createElement('div');heading.className='concept-heading';heading.append(text('h2',concept.concept),text('span',concept.targetIpa,'ipa'),text('span',`${concept.sessionCount} session(s)`));
+    const heading=document.createElement('div');heading.className='concept-heading';heading.append(text('h2',concept.concept),text('span',concept.targetIpa,'ipa'),text('span',concept.comparisonRevision,'revision'),text('span',`${concept.sessionCount} session(s)`));
     const grid=document.createElement('div');grid.className='candidate-grid';for(const candidate of concept.candidates)grid.append(renderCandidate(candidate));
     section.append(heading,grid);results.append(section);
   }
@@ -54,7 +54,7 @@ async function loadFiles(files){
     renderReview(review);
     status.textContent=`${review.sessionCount} export(s) anonyme(s) analysé(s) localement. Comptages descriptifs uniquement.`;
   }catch(error){
-    console.error(error);results.replaceChildren();summary.hidden=true;status.textContent='Revue refusée : charge uniquement des exports complets et compatibles du test de dénomination Rebulo, sans doublon de session.';
+    console.error(error);results.replaceChildren();summary.hidden=true;status.textContent='Revue refusée : charge uniquement des exports complets et compatibles du test de dénomination Rebulo, sans doublon de session et de la même révision que les stimuli actuels.';
   }finally{fileInput.value='';}
 }
 

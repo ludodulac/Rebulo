@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="research-gallery.css">
 </head>
 <body>
-  <main class="gallery-shell" data-research-gallery>
+  <main class="gallery-shell" data-research-gallery data-blind-preview="false">
     <header class="gallery-header">
       <div class="header-links"><a href="index.html">← Rebulo</a><a href="naming-test.html">Lancer une passation →</a></div>
       <p class="eyebrow">Recherche visuelle · vue de curation</p>
@@ -19,7 +19,7 @@
       <span id="conceptCount">—</span> concepts · <span id="stimulusCount">—</span> stimuli
       <span class="curation-summary">· <span id="keepCount">0</span> garder · <span id="reworkCount">0</span> retravailler · <span id="rejectCount">0</span> écarter · <span id="unreviewedCount">0</span> non évalués</span>
     </section>
-    <div class="gallery-actions"><button id="exportCuration" type="button" disabled>Exporter la curation JSON</button><button id="clearCuration" type="button" class="secondary">Effacer les choix</button></div>
+    <div class="gallery-actions"><button id="blindPreview" type="button" aria-pressed="false">Aperçu sans indices</button><button id="exportCuration" type="button" disabled>Exporter la curation JSON</button><button id="clearCuration" type="button" class="secondary">Effacer les choix</button></div>
     <div id="galleryGroups" class="gallery-groups"></div>
     <p id="galleryStatus" class="status" aria-live="polite"></p>
   </main>

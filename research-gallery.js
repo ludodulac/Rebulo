@@ -1,5 +1,6 @@
 import {createResearchCuration,setResearchCurationDecision,researchCurationSummary,researchCurationExport} from './src/research-curation-session.js';
 
+const shell=document.querySelector('[data-research-gallery]');
 const groups=document.querySelector('#galleryGroups');
 const status=document.querySelector('#galleryStatus');
 const conceptCount=document.querySelector('#conceptCount');
@@ -8,6 +9,7 @@ const keepCount=document.querySelector('#keepCount');
 const reworkCount=document.querySelector('#reworkCount');
 const rejectCount=document.querySelector('#rejectCount');
 const unreviewedCount=document.querySelector('#unreviewedCount');
+const blindPreviewButton=document.querySelector('#blindPreview');
 const exportButton=document.querySelector('#exportCuration');
 const clearButton=document.querySelector('#clearCuration');
 let curation=null;
@@ -26,6 +28,14 @@ function refreshSummary(){
   rejectCount.textContent=String(summary.reject);
   unreviewedCount.textContent=String(summary.unreviewed);
   exportButton.disabled=(summary.keep+summary.rework+summary.reject)===0;
+}
+
+function setBlindPreview(enabled){
+  const on=Boolean(enabled);
+  shell.dataset.blindPreview=String(on);
+  blindPreviewButton.setAttribute('aria-pressed',String(on));
+  blindPreviewButton.textContent=on?'Quitter l’aperçu sans indices':'Aperçu sans indices';
+  status.textContent=on?'Aperçu sans indices : concept, IPA, intentions, risques, provenance et curation sont masqués.':'Mode expert restauré.';
 }
 
 function decisionControls(candidate={}){
@@ -89,6 +99,7 @@ function clearCuration(){
   refreshSummary();status.textContent='Choix de curation effacés.';
 }
 
+blindPreviewButton?.addEventListener('click',()=>setBlindPreview(shell.dataset.blindPreview!=='true'));
 exportButton?.addEventListener('click',downloadCuration);clearButton?.addEventListener('click',clearCuration);
 
 async function init(){

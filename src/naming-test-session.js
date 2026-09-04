@@ -15,12 +15,13 @@ export function orderedCandidates(candidates=[],mode='random',random=Math.random
 
 export function createNamingSession(comparison={},options={}){
   const sessionCode=normalizedCode(options.sessionCode);
-  if(!sessionCode||!comparison?.concept||!comparison?.targetIpa||!Array.isArray(comparison.candidates)||comparison.candidates.length===0)return null;
+  if(!sessionCode||!comparison?.concept||!comparison?.revision||!comparison?.targetIpa||!Array.isArray(comparison.candidates)||comparison.candidates.length===0)return null;
   const candidates=orderedCandidates(comparison.candidates,options.orderMode||'random',options.random||Math.random);
   return {
     schemaVersion:'1.0',
     sessionCode,
     concept:comparison.concept,
+    comparisonRevision:comparison.revision,
     targetIpa:comparison.targetIpa,
     startedAt:new Date().toISOString(),
     orderMode:options.orderMode||'random',
@@ -46,11 +47,12 @@ export function recordNamingObservation(session,candidate={},response={}){
 }
 
 export function namingSessionExport(session){
-  if(!session)return null;
+  if(!session?.comparisonRevision)return null;
   return {
     schemaVersion:session.schemaVersion,
     sessionCode:session.sessionCode,
     concept:session.concept,
+    comparisonRevision:session.comparisonRevision,
     targetIpa:session.targetIpa,
     candidateIds:[...session.candidateIds],
     observations:session.observations.map(item=>({...item})),

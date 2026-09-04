@@ -18,15 +18,19 @@ function metric(value,label){
 
 function renderCandidate(candidate){
   const card=document.createElement('article');card.className='candidate-review';
-  card.append(text('div',candidate.candidateId,'candidate-id'));
+  const visual=document.createElement('div');visual.className='candidate-visual';
+  const image=document.createElement('img');image.src=candidate.asset;image.alt='Prototype visuel correspondant aux observations';image.loading='lazy';
+  image.addEventListener('error',()=>visual.replaceChildren(text('span','Image indisponible','image-error')));visual.append(image);
+  const body=document.createElement('div');body.className='candidate-review-body';
+  body.append(text('div',candidate.candidateId,'candidate-id'));
   const metrics=document.createElement('div');metrics.className='metrics';
   metrics.append(metric(candidate.observationCount,'observations'),metric(candidate.targetResponseCount,'réponse égale au concept'),metric(candidate.hesitationCount,'hésitations'),metric(candidate.noResponseCount,'sans réponse'));
-  card.append(metrics,text('div','Réponses verbatim regroupées','response-title'));
+  body.append(metrics,text('div','Réponses verbatim regroupées','response-title'));
   if(candidate.responses.length){
     const list=document.createElement('ul');list.className='responses';
-    for(const response of candidate.responses){const item=document.createElement('li');item.append(text('strong',`${response.count}× `),document.createTextNode(response.response));list.append(item);}card.append(list);
-  }else card.append(text('p','Aucune réponse verbale enregistrée.','empty-response'));
-  return card;
+    for(const response of candidate.responses){const item=document.createElement('li');item.append(text('strong',`${response.count}× `),document.createTextNode(response.response));list.append(item);}body.append(list);
+  }else body.append(text('p','Aucune réponse verbale enregistrée.','empty-response'));
+  card.append(visual,body);return card;
 }
 
 function renderReview(review){

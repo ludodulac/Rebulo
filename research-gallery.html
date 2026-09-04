@@ -13,9 +13,13 @@
       <p class="eyebrow">Recherche visuelle · vue de curation</p>
       <h1>Planche des prototypes</h1>
       <p class="lede">Toutes les images candidates sont visibles ici avant une passation. Cette page sert à juger la lisibilité des stimuli, pas à recueillir des réponses.</p>
-      <div class="warning"><strong>Recherche seulement.</strong> Aucun prototype affiché ici n’est activé automatiquement, et cette planche ne constitue aucune validation clinique.</div>
+      <div class="warning"><strong>Recherche seulement.</strong> Les choix « garder / retravailler / écarter » sont des décisions de design locales. Ils ne constituent ni une réponse de dénomination, ni une validation clinique, ni une activation.</div>
     </header>
-    <section class="summary" aria-live="polite"><span id="conceptCount">—</span> concepts · <span id="stimulusCount">—</span> stimuli</section>
+    <section class="summary" aria-live="polite">
+      <span id="conceptCount">—</span> concepts · <span id="stimulusCount">—</span> stimuli
+      <span class="curation-summary">· <span id="keepCount">0</span> garder · <span id="reworkCount">0</span> retravailler · <span id="rejectCount">0</span> écarter · <span id="unreviewedCount">0</span> non évalués</span>
+    </section>
+    <div class="gallery-actions"><button id="exportCuration" type="button" disabled>Exporter la curation JSON</button><button id="clearCuration" type="button" class="secondary">Effacer les choix</button></div>
     <div id="galleryGroups" class="gallery-groups"></div>
     <p id="galleryStatus" class="status" aria-live="polite"></p>
   </main>

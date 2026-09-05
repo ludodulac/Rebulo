@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0",
+  "status": "research_mapping_only",
+  "principle": "Map visual readings under study to whole-word pronunciations without activating them or granting Exact eligibility.",
+  "items": [
+    {"reading":"pot","ipa":"/po/","status":"tracked_research_reading"},
+    {"reading":"dos","ipa":"/do/","status":"tracked_research_reading"},
+    {"reading":"do","ipa":"/do/","status":"tracked_research_reading"},
+    {"reading":"Terre","ipa":"/tɛʁ/","status":"tracked_research_reading"},
+    {"reading":"tas","ipa":"/ta/","status":"tracked_research_reading"},
+    {"reading":"raie","ipa":"/ʁɛ/","status":"tracked_research_reading"}
+  ],
+  "guardrails": {
+    "automaticActivation": false,
+    "automaticExactEligibility": false,
+    "clinicalValidation": false
+  }
+}

@@ -2,7 +2,7 @@
   "version":"0.3.0",
   "purpose":"Shortlist de concepts à fort rendement pour augmenter la couverture de Rebulo sans relâcher les règles phonétiques.",
   "status":"mixed_research_and_general",
-  "caution":"L'activation générale explicite par décision produit est distincte d'une validation clinique. Aucun concept de recherche ne devient actif automatiquement.",
+  "caution":"L'activation générale explicite par décision produit est distincte d'une validation clinique. Aucun concept de recherche ne devient actif automatiquement. Les unlockCount sont des opportunités mesurées par concept et ne doivent pas être additionnées comme un gain net unique sans recalcul global.",
   "items":[
     {"label":"tas","ipa":"/ta/","unlockCount":81,"weightedGain":85.294,"examples":["tapis","tanner","tatie","tanné"],"selectionReason":"Très fort rendement phonétique et concept concret simple à illustrer.","namingRisk":"Peut être nommé pile, amas ou tas selon le dessin.","status":"research_candidate","activation":"not_ready"},
     {"label":"raie","ipa":"/ʁɛ/","unlockCount":68,"weightedGain":76.32,"examples":["paraît","marais","lirai","parierais"],"selectionReason":"Fort rendement; la direction retenue est la raie centrale des cheveux avec flèche explicite.","namingRisk":"Validation clinique distincte; le visuel général a été approuvé par le fondateur.","status":"general_owner_approved","activation":"general_active","assetStatus":"assets/rebus/raie-comic.svg","clinicalStatus":"unreviewed"},

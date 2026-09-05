@@ -29,11 +29,15 @@ assert.equal(terre.supersededBy,'terre-v2-research');
 assert.equal(terre.researchStatus,'naming_review');
 assert.match(terre.visualGoal,/historique|historical/i);
 assert.match(terre.visualGoal,/terre-v2-research/);
-const registeredDos=lexicon.find(x=>x.id==='dos');
-assert.ok(registeredDos,'dos must remain registered as an inactive prototype');
-assert.equal(registeredDos.active,false,'a design brief must not activate dos');
-for(const concept of ['tas','raie','terre']){
+
+// Briefs never auto-activate anything. Later explicit product-owner approval can
+// activate a different production revision without mutating these historical briefs.
+for(const concept of ['dos','raie','terre']){
   const item=lexicon.find(x=>x.id===concept);
-  if(item)assert.notEqual(item.active,true,`${concept} brief must not silently activate a seed token`);
+  assert.ok(item,`${concept} must exist after explicit general approval`);
+  assert.equal(item.active,true);
+  assert.equal(item.prototypeStatus,'general_owner_approved');
+  assert.equal(item.clinicalStatus,'unreviewed');
 }
-console.log('pictogram prototype briefs: ok');
+assert.equal(lexicon.find(x=>x.id==='tas'),undefined,'tas remains research-only');
+console.log('pictogram prototype briefs: historical research remains separate from explicit general activation');

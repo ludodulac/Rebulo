@@ -1,21 +1,38 @@
 {
-  "version": "1.2.0",
+  "version": "1.4.1",
   "principles": [
     "recognition_before_decoration",
     "one_concept_one_focal_object",
     "consistent_rounded_geometry",
     "no_written_answer_inside_pictogram",
     "limited_semantic_background",
-    "adult_credible_child_friendly"
+    "adult_credible_child_friendly",
+    "semantic_cues_allowed_when_they_disambiguate_the_target"
   ],
   "targetStyle": {
-    "name": "Rebulo clear",
-    "description": "Illustrations chaleureuses et contemporaines, lisibles en petite taille, avec une silhouette dominante, des contours arrondis cohérents et peu de détails concurrents.",
-    "stroke": "rounded_consistent",
+    "name": "Rebulo BD claire",
+    "description": "Illustrations BD chaleureuses, colorées et immédiatement lisibles, sur fond blanc ou transparent, avec contours noirs nets, silhouette dominante, ombrage léger et très peu de détails concurrents. Un indice visuel explicite comme une flèche ou un outil est autorisé lorsqu'il rend le mot conventionnel évident sans écrire la réponse.",
+    "stroke": "bold_rounded_consistent",
     "detail": "low_to_medium",
-    "background": "none_or_semantic_only",
-    "textInsideAsset": "forbidden_unless_the_concept_is_a_grapheme"
+    "background": "white_transparent_or_semantic_only",
+    "textInsideAsset": "forbidden_unless_the_concept_is_a_grapheme",
+    "referenceDirection": "Planche BD approuvée par le fondateur le 2026-09-06; utiliser la même grammaire visuelle pour les nouveaux pictogrammes.",
+    "generationRules": [
+      "one pictogram per asset; never ship a numbered worksheet crop as a production pictogram",
+      "remove labels and item numbers from production assets",
+      "prefer the conventional French lexical reading over visual minimalism",
+      "use arrows only to point to a body part or feature when the whole character would otherwise dominate naming",
+      "context objects may disambiguate a material or relation but are never phonetic pieces",
+      "keep production assets readable at small card size"
+    ]
   },
+  "approvedConceptDirections": [
+    {"concept":"dos","targetIpa":"/do/","asset":"assets/rebus/dos-comic.svg","artRevision":"dos-comic-v1","direction":"Personne recourbée ou vue de dos avec une flèche rouge pointant explicitement la zone du dos.","status":"art_direction_approved","phoneticActivation":"general_active_owner_approved","clinicalValidation":"not_claimed"},
+    {"concept":"raie","targetIpa":"/ʁɛ/","asset":"assets/rebus/raie-comic.svg","artRevision":"raie-comic-v1","direction":"Chevelure vue de face ou du dessus avec raie centrale nette et flèche rouge pointant la séparation des cheveux; préférée au poisson pour la lecture lexicale visée.","status":"art_direction_approved","phoneticActivation":"general_active_owner_approved","clinicalValidation":"not_claimed"},
+    {"concept":"pot","targetIpa":"/po/","asset":"assets/rebus/pot-comic.svg","artRevision":"pot-comic-v1","direction":"Pot de fleur en terre cuite très classique, forme simple et immédiatement reconnaissable; plante facultative si elle ne domine pas la dénomination.","status":"art_direction_approved","phoneticActivation":"general_active_owner_approved","clinicalValidation":"not_claimed"},
+    {"concept":"terre","targetIpa":"/tɛʁ/","asset":"assets/rebus/terre-comic.svg","artRevision":"terre-comic-v1","direction":"Tas de terre brune avec pelle ou transplantoir planté dedans pour rendre la matière terre évidente.","status":"art_direction_approved","phoneticActivation":"general_active_owner_approved","clinicalValidation":"not_claimed"},
+    {"concept":"tas","targetIpa":"/ta/","direction":"Amas visiblement constitué de plusieurs éléments ou matière, avec silhouette de tas dominante; éviter les piles régulières.","status":"art_direction_candidate","phoneticActivation":"still_requires_engine_gate"}
+  ],
   "audit": [
     {"id":"mer","status":"redesign_priority","reason":"Le paysage mer + soleil ajoute un contexte décoratif alors que le concept doit être identifié immédiatement. Une simple vague n'est pas retenue car elle pourrait être nommée vague plutôt que mer."},
     {"id":"scie","status":"reference_style","reason":"Migré vers OpenMoji carpentry saw ; validation clinique non présumée."},
@@ -32,6 +49,10 @@
     {"id":"lit","status":"reference_style","reason":"Actif OpenMoji documenté ; bonne base de cohérence graphique, sans prétendre à une validation clinique."},
     {"id":"riz","status":"reference_style","reason":"Actif OpenMoji documenté ; bonne base de cohérence graphique, sans prétendre à une validation clinique."},
     {"id":"chat","status":"reference_style","reason":"Actif OpenMoji documenté ; bonne base de cohérence graphique, sans prétendre à une validation clinique."},
-    {"id":"cle","status":"reference_style","reason":"Actif OpenMoji documenté ; bonne base de cohérence graphique, sans prétendre à une validation clinique."}
+    {"id":"cle","status":"reference_style","reason":"Actif OpenMoji documenté ; bonne base de cohérence graphique, sans prétendre à une validation clinique."},
+    {"id":"pot","status":"reference_style","reason":"Nouveau pot BD sans plante dominante, approuvé pour l'usage général; validation clinique non présumée."},
+    {"id":"dos","status":"reference_style","reason":"Nouveau dos BD avec flèche sémantique explicite, approuvé pour l'usage général; validation clinique non présumée."},
+    {"id":"raie","status":"reference_style","reason":"Nouvelle raie des cheveux BD avec flèche explicite, approuvée pour l'usage général; validation clinique non présumée."},
+    {"id":"terre","status":"reference_style","reason":"Nouveau tas de terre BD avec pelle contextuelle, approuvé pour l'usage général; validation clinique non présumée."}
   ]
 }

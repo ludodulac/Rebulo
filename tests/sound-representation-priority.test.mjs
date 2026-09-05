@@ -19,12 +19,14 @@ assert.equal(doSound.strictMultiPieceGain,23);
 assert.equal(doSound.impactMethod,'isolated_prototype');
 assert.ok(doSound.representations.some(item=>item.reading==='dos'&&item.rebusCount===4));
 assert.ok(doSound.representations.some(item=>item.reading==='do'&&item.rebusCount===1));
-assert.ok(doSound.inventory.some(item=>item.label==='dos'&&item.active===false));
-assert.equal(doSound.researchState,'attested_sound_needs_visual_resolution');
+assert.ok(doSound.inventory.some(item=>item.label==='dos'&&item.active===true));
+assert.equal(doSound.researchState,'already_active');
 
 const poSound=sound('po');
 assert.equal(poSound.strictMultiPieceGain,27);
 assert.ok(poSound.representations.some(item=>item.reading==='pot'&&item.rebusCount===4));
+assert.ok(poSound.inventory.some(item=>item.label==='pot'&&item.active===true));
+assert.equal(poSound.researchState,'already_active');
 
 const taSound=sound('ta');
 assert.equal(taSound.strictMultiPieceGain,85);

@@ -4,8 +4,8 @@ import {readFile} from 'node:fs/promises';
 const corpus=JSON.parse(await readFile(new URL('../data/attested-rebus-corpus.json',import.meta.url),'utf8'));
 assert.equal(corpus.schemaVersion,'1.0');
 assert.equal(corpus.status,'research_evidence_only');
-assert.ok(corpus.sources.length>=6);
-assert.ok(corpus.attestedRebuses.length>=41);
+assert.ok(corpus.sources.length>=8);
+assert.ok(corpus.attestedRebuses.length>=43);
 const sourceIds=new Set(corpus.sources.map(source=>source.id));
 for(const rebus of corpus.attestedRebuses){
   assert.ok(rebus.answer);assert.ok(rebus.pieces.length>=2);assert.ok(rebus.sourceIds.length>=1);
@@ -17,9 +17,11 @@ assert.deepEqual(piece('pot').attestedIn.sort(),['chapeau','drapeau','poney','tr
 assert.equal(piece('dos').evidenceCount,4);
 assert.deepEqual(piece('dos').attestedIn.sort(),['bandeau','domino','judo','rideau']);
 assert.deepEqual(piece('Terre').attestedIn,['solitaire']);
+assert.equal(piece('tas').evidenceCount,2);
+assert.deepEqual(piece('tas').attestedIn.sort(),['portable','tapis']);
 assert.equal(piece('do').evidenceCount,1);
 assert.deepEqual(piece('do').attestedIn,['donner sa langue au chat']);
-for(const uncertain of ['tas','raie'])assert.equal(piece(uncertain).evidenceCount,0,`${uncertain} must not be promoted without attestation`);
+assert.equal(piece('raie').evidenceCount,0,'raie must not be promoted without attestation');
 assert.equal(corpus.guardrails.automaticLexiconActivation,false);
 assert.equal(corpus.guardrails.clinicalValidation,false);
 assert.equal(corpus.guardrails.strictModeEligibilityFromAttestationAlone,false);

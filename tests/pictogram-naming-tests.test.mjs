@@ -37,7 +37,16 @@ assert.equal(planRegistry.schemaVersion,'1.0');assert.match(planSchema.descripti
 for(const concept of ['pot','dos','raie','tas','terre']){const comparison=comparisonRegistry.comparisons.find(item=>item.concept===concept);const plan=planRegistry.plans.find(item=>item.concept===concept);assert.ok(comparison);assert.ok(plan);assert.match(comparison.revision,new RegExp(`^${concept}-v[1-9][0-9]*$`));assert.equal(plan.comparisonRevision,comparison.revision,`${concept} plan must point at the exact stimulus revision`);assert.equal(plan.activationState,'inactive_until_human_decision');assert.deepEqual(new Set(plan.candidateIds),new Set(comparison.candidates.map(x=>x.candidateId)));assert.equal(plan.candidateIds.length,4);assert.equal(plan.capture.firstSpontaneousResponseOnly,true);assert.equal(plan.capture.anonymousOnly,true);assert.equal(plan.capture.candidateOrder,'counterbalanced_or_randomized');assert.equal(plan.decisionGate.requiresHumanReview,true);assert.equal(plan.decisionGate.automaticActivation,false);assert.match(plan.instruction,/Qu’est-ce que c’est/);}
 assert.match(planRegistry.plans.find(item=>item.concept==='pot').planId,/-v3$/);assert.match(planRegistry.plans.find(item=>item.concept==='dos').planId,/-v3$/);assert.match(planRegistry.plans.find(item=>item.concept==='raie').planId,/-v1$/);
 
-for(const concept of ['pot','dos']){const item=lexicon.find(entry=>entry.id===concept);assert.ok(item);assert.equal(item.active,false);assert.notEqual(item.clinicalStatus,'clinical_approved');}
-assert.equal(lexicon.find(item=>item.id==='raie'),undefined,'raie research must not silently create or reactivate a lexicon entry');assert.equal(lexicon.find(item=>item.id==='pot').clinicalStatus,'naming_test_required');assert.equal(lexicon.find(item=>item.id==='pot').prototypeStatus,'asset_available');
+// The old comparison plans remain immutable historical research. The founder's later
+// product decision activates new comic revisions for general use only; it does not
+// rewrite those old observations or turn them into clinical evidence.
+for(const concept of ['pot','dos','raie','terre']){
+  const item=lexicon.find(entry=>entry.id===concept);
+  assert.ok(item,`${concept} must exist after explicit product approval`);
+  assert.equal(item.active,true,`${concept} is active for general generation`);
+  assert.equal(item.clinicalStatus,'unreviewed','general activation must not imply clinical approval');
+  assert.equal(item.prototypeStatus,'general_owner_approved');
+  assert.match(item.image,new RegExp(`^assets/rebus/${concept}-comic\\.svg$`));
+}
 
-console.log('pictogram naming tests: comparison revisions align with plans; all research comparisons remain inactive.');
+console.log('pictogram naming tests: historical comparison revisions stay immutable while new comic revisions are general-only.');

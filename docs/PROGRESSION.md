@@ -27,7 +27,7 @@ Les conventions générales (lettres, relations spatiales, suppression/substitut
 
 ## Première passation humaine réelle reçue
 
-Le 5 septembre 2026, une première personne a réalisé une session pour chacun des cinq concepts de recherche. Ces observations restent descriptives et ne validentent aucun pictogramme à elles seules.
+Le 5 septembre 2026, une première personne a réalisé une session pour chacun des cinq concepts de recherche. Ces observations restent descriptives et ne valident aucun pictogramme à elles seules.
 
 ### raie — `raie-v1`
 

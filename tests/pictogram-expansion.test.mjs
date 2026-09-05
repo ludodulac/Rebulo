@@ -22,18 +22,22 @@ assert.ok(priorities.every(item=>item.needsNamingReview===true));
 assert.ok(priorities.every(item=>item.clinicalStatus==='not_reviewed'));
 
 const knownIpas=new Set(lexicon.filter(item=>item.ipa).map(item=>String(item.ipa).replaceAll('/','')));
-assert.ok(priorities.every(item=>!knownIpas.has(item.normalizedIpa)),'registered prototypes must leave the new-concept ranking even while inactive');
+assert.ok(priorities.every(item=>!knownIpas.has(item.normalizedIpa)),'registered or active concepts must leave the new-concept ranking');
 
-assert.equal(shortlist.status,'research_only');
+assert.equal(shortlist.status,'mixed_research_and_general');
 assert.equal(shortlist.items.length,5);
 for(const item of shortlist.items){
   const ipa=String(item.ipa||'').replaceAll('/','');
-  if(item.activation==='prototype_registered'){
-    const prototype=lexicon.find(entry=>String(entry.ipa||'').replaceAll('/','')===ipa&&entry.label===item.label);
-    assert.ok(prototype,`${item.label} must exist in the lexicon once registered`);
-    assert.equal(prototype.active,false,'research prototypes must not become active automatically');
-    assert.equal(prototype.clinicalStatus,'naming_test_required');
-    assert.ok(!priorities.some(candidate=>candidate.normalizedIpa===ipa),'registered prototypes must not be proposed again as new concepts');
+  if(item.activation==='general_active'){
+    const entry=lexicon.find(candidate=>String(candidate.ipa||'').replaceAll('/','')===ipa&&candidate.label===item.label);
+    assert.ok(entry,`${item.label} must exist in the lexicon once explicitly approved`);
+    assert.equal(entry.active,true,`${item.label} must be active for general generation`);
+    assert.equal(entry.clinicalStatus,'unreviewed','general approval must not imply clinical validation');
+    const asset=assets.assets.find(candidate=>candidate.path===entry.image);
+    assert.ok(asset,`${item.label} must have a documented production asset`);
+    assert.equal(asset.active,true);
+    assert.equal(asset.clinicalStatus,'unreviewed');
+    assert.ok(!priorities.some(candidate=>candidate.normalizedIpa===ipa),'active concepts must not be proposed again as new concepts');
   }else{
     assert.equal(item.status,'research_candidate');
     assert.equal(item.activation,'not_ready');
@@ -44,15 +48,16 @@ for(const item of shortlist.items){
   }
 }
 
-const pot=lexicon.find(item=>item.id==='pot');
-const dos=lexicon.find(item=>item.id==='dos');
-assert.equal(pot.prototypeStatus,'asset_available');
-assert.equal(dos.prototypeStatus,'asset_pending');
-assert.ok(assets.assets.some(asset=>asset.concept==='pot'&&asset.active===false&&asset.clinicalStatus==='naming_test_required'));
-assert.ok(!assets.assets.some(asset=>asset.concept==='dos'),'dos must not claim an asset before a specific prototype exists');
+for(const id of ['pot','dos','raie','terre']){
+  const entry=lexicon.find(item=>item.id===id);
+  assert.equal(entry.prototypeStatus,'general_owner_approved');
+  assert.equal(entry.active,true);
+  assert.equal(entry.clinicalStatus,'unreviewed');
+}
+assert.ok(assets.assets.some(asset=>asset.path==='assets/rebus/pot.svg'&&asset.active===false),'historical OpenMoji pot prototype must remain preserved');
 
 const summary=expansionPrioritySummary(priorities);
 assert.equal(summary.candidateCount,priorities.length);
 assert.ok(summary.totalPotentialUnlocks>0);
 
-console.log('PICTOGRAM_PROTOTYPES '+JSON.stringify({pot:{status:pot.prototypeStatus,active:pot.active},dos:{status:dos.prototypeStatus,active:dos.active}}));
+console.log('PICTOGRAM_GENERAL_ACTIVATION '+JSON.stringify(Object.fromEntries(['pot','dos','raie','terre'].map(id=>[id,lexicon.find(item=>item.id===id).active]))));

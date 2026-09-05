@@ -27,7 +27,15 @@ assert.deepEqual(new Set(plan.candidateIds),new Set(terre.candidates.map(item=>i
 assert.equal(plan.capture.firstSpontaneousResponseOnly,true);
 assert.equal(plan.capture.anonymousOnly,true);
 assert.equal(plan.decisionGate.automaticActivation,false);
-assert.equal(lexicon.find(item=>item.id==='terre'),undefined,'terre research must not silently create or reactivate a lexicon entry');
+
+// terre-v1 stays an untouched research record. The production pictogram is a later,
+// explicitly approved comic revision and must not retroactively alter these trials.
+const productionTerre=lexicon.find(item=>item.id==='terre');
+assert.ok(productionTerre);
+assert.equal(productionTerre.active,true);
+assert.equal(productionTerre.image,'assets/rebus/terre-comic.svg');
+assert.equal(productionTerre.prototypeStatus,'general_owner_approved');
+assert.equal(productionTerre.clinicalStatus,'unreviewed');
 assert.deepEqual(namingRecords.records,[],'no participant result may be fabricated');
 
-console.log('terre naming stimuli: four local candidates remain research-only and outside the lexicon');
+console.log('terre naming stimuli: historical research stays immutable; approved comic revision is general-only.');

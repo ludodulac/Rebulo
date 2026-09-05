@@ -1,5 +1,5 @@
 {
-  "version": "1.3.0",
+  "version": "1.4.0",
   "principles": [
     "recognition_before_decoration",
     "one_concept_one_focal_object",
@@ -27,10 +27,10 @@
     ]
   },
   "approvedConceptDirections": [
-    {"concept":"dos","targetIpa":"/do/","direction":"Personne recourbée ou vue de dos avec une flèche rouge pointant explicitement la zone du dos.","status":"art_direction_approved","phoneticActivation":"still_requires_engine_gate"},
-    {"concept":"raie","targetIpa":"/ʁɛ/","direction":"Chevelure vue de face ou du dessus avec raie centrale nette et flèche rouge pointant la séparation des cheveux; préférée au poisson pour la lecture lexicale visée.","status":"art_direction_approved","phoneticActivation":"still_requires_engine_gate"},
-    {"concept":"pot","targetIpa":"/po/","direction":"Pot de fleur en terre cuite très classique, forme simple et immédiatement reconnaissable; plante facultative si elle ne domine pas la dénomination.","status":"art_direction_approved","phoneticActivation":"still_requires_engine_gate"},
-    {"concept":"terre","targetIpa":"/tɛʁ/","direction":"Tas de terre brune avec pelle ou transplantoir planté dedans pour rendre la matière terre évidente.","status":"art_direction_approved","phoneticActivation":"still_requires_engine_gate"},
+    {"concept":"dos","targetIpa":"/do/","direction":"Personne recourbée ou vue de dos avec une flèche rouge pointant explicitement la zone du dos.","status":"art_direction_approved","phoneticActivation":"general_active_owner_approved","clinicalValidation":"not_claimed"},
+    {"concept":"raie","targetIpa":"/ʁɛ/","direction":"Chevelure vue de face ou du dessus avec raie centrale nette et flèche rouge pointant la séparation des cheveux; préférée au poisson pour la lecture lexicale visée.","status":"art_direction_approved","phoneticActivation":"general_active_owner_approved","clinicalValidation":"not_claimed"},
+    {"concept":"pot","targetIpa":"/po/","direction":"Pot de fleur en terre cuite très classique, forme simple et immédiatement reconnaissable; plante facultative si elle ne domine pas la dénomination.","status":"art_direction_approved","phoneticActivation":"general_active_owner_approved","clinicalValidation":"not_claimed"},
+    {"concept":"terre","targetIpa":"/tɛʁ/","direction":"Tas de terre brune avec pelle ou transplantoir planté dedans pour rendre la matière terre évidente.","status":"art_direction_approved","phoneticActivation":"general_active_owner_approved","clinicalValidation":"not_claimed"},
     {"concept":"tas","targetIpa":"/ta/","direction":"Amas visiblement constitué de plusieurs éléments ou matière, avec silhouette de tas dominante; éviter les piles régulières.","status":"art_direction_candidate","phoneticActivation":"still_requires_engine_gate"}
   ],
   "audit": [
@@ -49,6 +49,10 @@
     {"id":"lit","status":"reference_style","reason":"Actif OpenMoji documenté ; bonne base de cohérence graphique, sans prétendre à une validation clinique."},
     {"id":"riz","status":"reference_style","reason":"Actif OpenMoji documenté ; bonne base de cohérence graphique, sans prétendre à une validation clinique."},
     {"id":"chat","status":"reference_style","reason":"Actif OpenMoji documenté ; bonne base de cohérence graphique, sans prétendre à une validation clinique."},
-    {"id":"cle","status":"reference_style","reason":"Actif OpenMoji documenté ; bonne base de cohérence graphique, sans prétendre à une validation clinique."}
+    {"id":"cle","status":"reference_style","reason":"Actif OpenMoji documenté ; bonne base de cohérence graphique, sans prétendre à une validation clinique."},
+    {"id":"pot","status":"reference_style","reason":"Nouveau pot BD sans plante dominante, approuvé pour l'usage général; validation clinique non présumée."},
+    {"id":"dos","status":"reference_style","reason":"Nouveau dos BD avec flèche sémantique explicite, approuvé pour l'usage général; validation clinique non présumée."},
+    {"id":"raie","status":"reference_style","reason":"Nouvelle raie des cheveux BD avec flèche explicite, approuvée pour l'usage général; validation clinique non présumée."},
+    {"id":"terre","status":"reference_style","reason":"Nouveau tas de terre BD avec pelle contextuelle, approuvé pour l'usage général; validation clinique non présumée."}
   ]
 }

@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0",
+  "status": "research_evidence_only",
+  "principle": "Record attested rebus readings before creating or activating new pictograms. Attestation is evidence of rebus convention, not clinical validation and not automatic Exact-mode eligibility.",
+  "sources": [
+    {
+      "id": "oif-mediation-2023",
+      "title": "60 activités de médiation linguistique pour la classe de français",
+      "publisher": "Organisation internationale de la Francophonie",
+      "url": "https://parlonsfrancais.francophonie.org/app/uploads/2023/06/MK-digital-final-1.pdf"
+    },
+    {
+      "id": "rebustory-examples",
+      "title": "Exemples de rébus",
+      "publisher": "Rébustory",
+      "url": "https://rebustory.com/une-section-de-page-daccueil/"
+    },
+    {
+      "id": "dessine-moi-syllabes",
+      "title": "Rébus en image — Cycle 1 — Phonologie (syllabes)",
+      "publisher": "Dessine-moi une histoire",
+      "url": "https://dessinemoiunehistoire.net/wp-content/uploads/2013/10/Jeux-sur-les-syllabes.pdf"
+    },
+    {
+      "id": "ime-gpeajh-2020",
+      "title": "Réponses aux rébus",
+      "publisher": "IME du GPEAJH",
+      "url": "https://www.ime.gpeajh.org/index.php/2020/05/05/reponses-aux-rebus/"
+    }
+  ],
+  "attestedRebuses": [
+    {"answer":"chapeau","pieces":["chat","pot"],"sourceIds":["oif-mediation-2023","rebustory-examples","dessine-moi-syllabes","ime-gpeajh-2020"]},
+    {"answer":"chalet","pieces":["chat","lait"],"sourceIds":["oif-mediation-2023","dessine-moi-syllabes","ime-gpeajh-2020"]},
+    {"answer":"pinceau","pieces":["pain","seau"],"sourceIds":["rebustory-examples","dessine-moi-syllabes","ime-gpeajh-2020"]},
+    {"answer":"sirène","pieces":["scie","reine"],"sourceIds":["rebustory-examples","dessine-moi-syllabes"]},
+    {"answer":"ciel","pieces":["scie","aile"],"sourceIds":["rebustory-examples"]},
+    {"answer":"fanfare","pieces":["faon","phare"],"sourceIds":["rebustory-examples","ime-gpeajh-2020"]},
+    {"answer":"parasol","pieces":["pas","rat","sol"],"sourceIds":["rebustory-examples"]},
+    {"answer":"découvert","pieces":["dé","cou","verre"],"sourceIds":["rebustory-examples"]},
+    {"answer":"courageux","pieces":["cou","rat","jeux"],"sourceIds":["oif-mediation-2023","rebustory-examples"]},
+    {"answer":"sérieux","pieces":["C","riz","yeux"],"sourceIds":["oif-mediation-2023"]},
+    {"answer":"solitaire","pieces":["seau","lit","Terre"],"sourceIds":["oif-mediation-2023"]},
+    {"answer":"heureux","pieces":["heure","œufs"],"sourceIds":["oif-mediation-2023"]},
+    {"answer":"coccinelle","pieces":["coq","scie","N","aile"],"sourceIds":["oif-mediation-2023","ime-gpeajh-2020"]},
+    {"answer":"fourmi","pieces":["four","mie"],"sourceIds":["oif-mediation-2023","ime-gpeajh-2020"]},
+    {"answer":"citron","pieces":["scie","tronc"],"sourceIds":["ime-gpeajh-2020"]},
+    {"answer":"rideau","pieces":["riz","dos"],"sourceIds":["ime-gpeajh-2020"]},
+    {"answer":"domino","pieces":["dos","mie","N","os"],"sourceIds":["ime-gpeajh-2020"]},
+    {"answer":"mirabelle","pieces":["mi","rat","belle"],"sourceIds":["ime-gpeajh-2020"]},
+    {"answer":"drapeau","pieces":["drap","pot"],"sourceIds":["dessine-moi-syllabes"]},
+    {"answer":"souris","pieces":["sou","riz"],"sourceIds":["dessine-moi-syllabes"]},
+    {"answer":"bravo","pieces":["bras","veau"],"sourceIds":["dessine-moi-syllabes"]},
+    {"answer":"poney","pieces":["pot","nez"],"sourceIds":["dessine-moi-syllabes"]},
+    {"answer":"jouet","pieces":["joue","haie"],"sourceIds":["dessine-moi-syllabes"]},
+    {"answer":"pompier","pieces":["pont","pied"],"sourceIds":["dessine-moi-syllabes"]},
+    {"answer":"cinéma","pieces":["scie","nez","mât"],"sourceIds":["dessine-moi-syllabes"]}
+  ],
+  "pieceEvidence": [
+    {"reading":"pot","attestedIn":["chapeau","drapeau","poney"],"evidenceCount":3,"preferredVisualCue":"pot de fleur en terre cuite, silhouette simple; avoid decorative plant dominating the object","candidateStatus":"high_priority_visual_source_search"},
+    {"reading":"dos","attestedIn":["rideau","domino"],"evidenceCount":2,"preferredVisualCue":"existing rebus sources attest the reading; inspect their actual image before choosing anatomical back versus another convention","candidateStatus":"needs_visual_source_inspection"},
+    {"reading":"Terre","attestedIn":["solitaire"],"evidenceCount":1,"preferredVisualCue":"planet Earth is explicitly used in the OIF example","candidateStatus":"strong_visual_lead"},
+    {"reading":"tas","attestedIn":[],"evidenceCount":0,"preferredVisualCue":"listed as drawable in the Cycle 1 resource, but no composed example in this first corpus; do not infer a visual convention yet","candidateStatus":"needs_visual_source_inspection"},
+    {"reading":"raie","attestedIn":[],"evidenceCount":0,"preferredVisualCue":"not attested in this first corpus; retain human naming evidence separately and search more sources","candidateStatus":"needs_more_attestation"},
+    {"reading":"do","attestedIn":[],"evidenceCount":0,"preferredVisualCue":"musical-note hypothesis remains plausible but is not counted as attested by this corpus until a sourced rebus image is recorded","candidateStatus":"needs_more_attestation"}
+  ],
+  "guardrails": {
+    "automaticLexiconActivation": false,
+    "clinicalValidation": false,
+    "strictModeEligibilityFromAttestationAlone": false,
+    "partialHiddenReadingAllowedInStrictMode": false
+  }
+}

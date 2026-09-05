@@ -1,229 +1,95 @@
 # REBULO — PASSATION ACTIVE / POINT D’ENTRÉE UNIQUE
 
-**Dernière mise à jour : 4 septembre 2026, après fusion de la PR #106.**
+**Dernière mise à jour : 5 septembre 2026, après fusion de la PR #114 et première passation humaine réelle.**
 
-Ce fichier est le point d’entrée prioritaire pour toute nouvelle conversation chargée de continuer Rebulo.
+Ce fichier est le point d’entrée prioritaire pour continuer Rebulo. Le journal lisible d’avancement est `docs/PROGRESSION.md`.
 
 ## Phrase de reprise
 
-> **Continue Rebulo. Lis `docs/PROJECT_HANDOFF_2026-09-01.md`, vérifie le HEAD réel de `main`, puis reprends la prochaine brique utile avec une branche dédiée, tests, PR, CI verte, fusion et vérification Pages.**
+> **Continue Rebulo. Lis `docs/PROJECT_HANDOFF_2026-09-01.md` et `docs/PROGRESSION.md`, vérifie le HEAD réel de `main`, puis reprends la prochaine brique utile avec une branche dédiée, tests, PR, CI verte, fusion et vérification Pages.**
 
-Règles de travail : vérifier `main` avant toute écriture ; ne jamais écrire directement sur `main` ; préférer une brique cohérente à une vague de changements ; préserver toutes les fonctionnalités existantes ; ne jamais fabriquer de résultats humains, de validation clinique ou de statut `clinical_approved`.
+Règles : vérifier `main` avant toute écriture ; ne jamais écrire directement sur `main` ; préserver les fonctionnalités ; ne jamais fabriquer de résultats humains, de validation clinique ou de statut `clinical_approved`.
 
 ---
 
 # 1. Vision produit
 
-Rebulo est d’abord un créateur général de rébus riche, ludique et intelligent. L’orthophonie est un usage exigeant du même moteur, pas un remplacement de cette ambition.
+Rebulo est un créateur général de rébus riche, ludique et intelligent, avec une couche Exact extrêmement rigoureuse. L’orthophonie est un usage exigeant du même moteur.
 
-Principe produit :
+Parcours central : `Écris un mot → Créer le rébus`.
 
-> **Un créateur de rébus général riche et ludique, avec une couche Exact extrêmement rigoureuse.**
-
-Le parcours `Écris un mot → Créer le rébus` reste central.
-
----
-
-# 2. Invariant du mode Exact
-
-La promesse stricte ne doit jamais être affaiblie :
+# 2. Invariant Exact
 
 **IMAGE ENTIÈRE → MOT CONVENTIONNEL ENTIER → PRONONCIATION ENTIÈRE.**
 
-Une construction Exact n’est valide que si la concaténation exacte des prononciations entières correspond à la cible.
+Interdits en strict : lecture partielle cachée, suppression arbitraire, consonne muette ressuscitée, liaison inventée, approximation orthographique ou assouplissement destiné à gonfler la couverture.
 
-Interdits en strict : lecture partielle cachée, suppression arbitraire, consonne muette ressuscitée, liaison inventée, approximation orthographique ou assouplissement pour améliorer artificiellement la couverture.
+`buildStrictConstruction` et `validateStrictRebus` restent des garde-fous. `grapheme`, `spatial_relation`, `explicit_deletion`, `explicit_substitution` et `repetition` sont des conventions générales seulement et doivent être visuellement explicites.
 
-`buildStrictConstruction` et `validateStrictRebus` sont des garde-fous à préserver. Les opérations générales ne doivent jamais obtenir `PHONETIC_STRICT` par raccourci.
-
----
-
-# 3. Rébus général : opérations explicites actuellement disponibles
-
-`src/rebus-construction.js` modélise :
-
-- `whole_word` — strict-compatible ;
-- `grapheme` — général seulement ;
-- `spatial_relation` — général seulement ;
-- `explicit_deletion` — général seulement ;
-- `explicit_substitution` — général seulement ;
-- `repetition` — général seulement.
-
-Les opérations générales doivent être visibles dans le dessin, jamais cachées dans la lecture.
-
-Exemples structurants :
-
-- `souris = sous + riz` via relation spatiale explicite ;
-- `yo` via demi-yo-yo visible, jamais via lecture cachée d’un yo-yo entier ;
-- `parasol` conserve `pas + rat + sol` comme solution Exact prioritaire, avec variante générale `pas + chat (CH→R) + sol` ;
-- `papa` et `pipi` peuvent proposer une répétition générale, mais leur construction stricte reste prioritaire.
-
-La substitution est contrôlée sémantiquement : le fragment remplacé doit exister exactement une fois dans la lecture source et le remplacement doit réellement produire la lecture déclarée. Ne pas réautoriser les substitutions arbitraires.
-
----
-
-# 4. État technique vérifié lors de cette passation
+# 3. État technique
 
 Dépôt : `ludodulac/Rebulo`.
 
-HEAD de `main` après PR #106 :
+Après PR #114, `main` était `25f160c9988658ed768130443d91b44ecd6b3fc2`. Toujours re-vérifier le HEAD avant une écriture.
 
-`0173b235b909ed21463f71b1d9ed4e4474aab450`
+PRs récentes : #107 handoff ; #108 zoom galerie ; #109 ré-import strict de curation ; #110 revue descriptive ; #111 miniatures ; #112 révisions de comparaison ; #113 passation simplifiée ; #114 corpus de rébus attestés. Les tests et Pages de #114 ont réussi.
 
-Toujours re-vérifier ce SHA avant une nouvelle écriture.
+# 4. Changement de méthode majeur
 
-PRs structurantes récentes :
+Ne plus créer des vagues de pictogrammes plausibles à l’aveugle. Priorité : collecter de vrais rébus français publiés, analyser leurs images, extraire les briques réellement utilisées, conserver lecture/source/contexte/ambiguïtés, puis chercher un asset libre ou produire une adaptation originale conforme à la convention. Les passations servent ensuite à départager les cas incertains.
 
-- #84 `explicit_substitution` ;
-- #85 `repetition` ;
-- #86 rendu visuel réel des opérations générales ;
-- #87 demi-yo-yo explicite ;
-- #88 réutilisation du yo-yo Wave 2 existant ;
-- #89 alternatives automatiques de répétition ;
-- #90 variante substitution de `parasol` ;
-- #91 garde sémantique des substitutions ;
-- #92 comparaison humaine structurée pour `dos` ;
-- #93 runner local de dénomination ;
-- #94–#95 corrections d’intégrité du runner et des stimuli ;
-- #96 garde de promotion depuis la banque de recherche ;
-- #97 `pot` et `dos` passent à quatre stimuli ;
-- #98 `raie` reçoit quatre stimuli de recherche ;
-- #99 `tas` reçoit quatre stimuli ;
-- #100 `terre` reçoit quatre stimuli ;
-- #101 galerie visuelle des prototypes ;
-- #102 blocage des réponses si l’image n’a pas chargé ;
-- #103 tous les stimuli de dénomination sont servis localement ;
-- #104 curation visuelle locale `garder / retravailler / écarter` avec export JSON ;
-- #105 audit CI des SVG de recherche ;
-- #106 aperçu sans indices de la galerie.
+`data/attested-rebus-corpus.json` contient 25 compositions attestées issues de quatre sources initiales, dont `chat + pot → chapeau`, `pain + seau → pinceau`, `scie + reine → sirène`, `riz + dos → rideau`, `dos + mie + N + os → domino`, `seau + lit + Terre → solitaire`.
 
----
+Une attestation prouve un usage de convention dans un rébus ; elle ne constitue ni validation clinique, ni activation lexicale automatique, ni éligibilité automatique au mode Exact.
 
-# 5. Recherche visuelle actuelle : 20 stimuli locaux
+# 5. Première passation humaine réelle
 
-Le runner de dénomination et la galerie couvrent actuellement cinq concepts, quatre stimuli chacun :
+Le 5 septembre 2026, une première personne a réalisé les cinq sessions historiques. Les réponses verbatim sont consignées dans `docs/PROGRESSION.md`.
 
-- `pot /po/` ;
-- `dos /do/` ;
-- `raie /ʁɛ/` ;
-- `tas /ta/` ;
-- `terre /tɛʁ/`.
+Résumé descriptif :
 
-Soit **20 stimuli actifs dans la couche de recherche visuelle**.
+- `raie-v1` : 3/4 réponses « raie » ; quatrième « éléphant » avec remarque de possible effet de contexte ;
+- `pot-v3` : `empty-tapered` → « pot » ; autres réponses « vase de poterie », « tasse de poterie », « pot de plante » ;
+- `terre-v1` : `mound` → « terre » ; autres « roche », « coukie », « jardin » ;
+- `tas-v1` : aucune réponse « tas » ; « cailloux », « caca », « briques », « formes géométriques » ;
+- `dos-v3` : aucune réponse « dos » ; « bonome », « douleur », « gant d'attrapeur », « personne forte ».
 
-Tous doivent rester `inactive_until_human_decision`. Aucun résultat de dénomination n’a été inventé. La curation visuelle n’est pas une donnée de dénomination et ne constitue pas une validation clinique.
+Une personne ne valide aucun pictogramme. Cette passation sert surtout à réorienter la recherche visuelle.
 
-`pot` et `dos` existent comme prototypes inactifs dans le lexique. `raie`, `tas` et `terre` restent volontairement hors du lexique : leur présence dans la galerie de recherche ne doit pas les créer ou les réactiver silencieusement.
+# 6. Conséquences iconographiques
 
----
+- `pot` : brique fortement attestée ; étudier le pot de fleur vide canonique plutôt que des décorations dominantes.
+- `dos` : lecture attestée dans `rideau` et `domino`, mais inspecter les images sources. Étudier séparément la note `do` sans la déclarer attestée avant preuve.
+- `Terre` : planète Terre, piste forte attestée dans `solitaire`; à comparer à la matière terrestre.
+- `tas` : les quatre prototypes abstraits ont échoué dans cette première session ; rechercher une convention existante ou un contexte d’usage avant de redessiner.
+- `raie` : poisson prometteur dans cette session ; continuer la recherche d’attestations avant promotion.
 
-# 6. Outils humains disponibles
+Un outil peut aider à reconnaître une matière ou une situation, mais il ne doit jamais devenir une lecture phonétique cachée en Exact.
 
-## Runner de dénomination
+# 7. Outils humains
 
-Page : `naming-test.html`.
+`naming-test.html` : passation simple, anonyme, code et ordre aléatoire automatiques, question « Qu’est-ce que c’est ? », export JSON local.
 
-Comportement :
+`naming-review.html` : imports multiples liés à la révision exacte, comptages descriptifs et miniatures, aucune activation automatique.
 
-- session anonyme ;
-- aucune donnée personnelle demandée ;
-- première réponse spontanée uniquement ;
-- ordre aléatoire / avant / arrière ;
-- concept masqué pendant le stimulus ;
-- aucune persistance navigateur ou serveur ;
-- export JSON explicite ;
-- impossible d’enregistrer une réponse tant que l’image n’est pas chargée.
+`research-gallery.html` : galerie, aperçu sans indices, zoom/navigation, curation locale et ré-import strict.
 
-La consigne reste : **« Qu’est-ce que c’est ? »** sans suggérer la cible.
+# 8. Statut recherche
 
-## Galerie de curation
+Les comparaisons `pot`, `dos`, `raie`, `tas`, `terre` restent `inactive_until_human_decision`. Ne pas les réactiver automatiquement.
 
-Page : `research-gallery.html`.
+`data/pictogram-naming-tests.json` reste vide : ne pas fabriquer un agrégat ou une validation à partir d’une seule personne. Les exports bruts réels restent des observations anonymes liées à leur `comparisonRevision`.
 
-Elle affiche les 20 stimuli, leurs intentions, risques et provenances. Elle possède :
+# 9. Prochaine direction
 
-- curation locale `garder / retravailler / écarter` ;
-- note de design facultative ;
-- export JSON séparé des données de dénomination ;
-- mode **Aperçu sans indices** qui masque concept, IPA, intention, risques, provenance et curation.
+Construire le **vocabulaire visuel attesté de Rebulo** : agrandir le corpus → enregistrer la preuve iconographique réelle par brique → classer convention forte / plausible / non établie → identifier des assets libres → intégrer au moteur général sans toucher aux garanties Exact → mesurer la couverture → préparer une nouvelle comparaison sourcée → seulement alors refaire une passation.
 
-La curation reste uniquement en mémoire tant que l’utilisateur n’exporte pas.
+Ne pas refaire immédiatement les 20 anciens stimuli : `dos` et `tas` doivent d’abord être retravaillés selon les conventions réelles observées.
 
----
+# 10. Garde-fous
 
-# 7. Intégrité des stimuli
+Ne pas inventer participants ou observations ; ne pas déclarer `clinical_approved` automatiquement ; ne pas affaiblir Exact ; ne pas réintroduire de lecture partielle cachée ; ne pas recopier des illustrations protégées ; ne pas réactiver silencieusement les prototypes ; ne pas confondre attestation dans un rébus, reconnaissance spontanée d’une image et validation clinique.
 
-`tests/research-stimulus-integrity.test.mjs` impose pour les 20 stimuli :
+# 11. Résumé de reprise
 
-- asset local ;
-- SVG ;
-- `viewBox` ;
-- aucun `<text>` visible ;
-- aucun script ou `foreignObject` ;
-- aucune ressource distante ;
-- aucune URL exécutable ;
-- identifiants uniques.
-
-Ne pas contourner ce test pour rendre une image « plus pratique ». Les stimuli doivent rester autonomes et sans indice lexical visible.
-
----
-
-# 8. Statut des prototypes et décisions humaines
-
-Aucune des comparaisons visuelles ne doit déclencher automatiquement :
-
-- `active:true` ;
-- `clinical_approved` ;
-- une promotion dans le mode Exact ;
-- une entrée de lexique pour `raie`, `tas` ou `terre`.
-
-Les données humaines réelles, lorsqu’elles arriveront, doivent être résumées descriptivement : fréquence des réponses cibles, confusions, hésitations et absence de réponse. La décision de promotion reste humaine et séparée.
-
----
-
-# 9. Bibliothèque d’images et principes de sourcing
-
-Réutiliser les pictogrammes libres existants lorsqu’ils conviennent. Le yo-yo existe déjà dans `src/open-pictogram-library-wave2.js` : ne pas créer un second module yo-yo.
-
-Les illustrations protégées peuvent servir à étudier les conventions, pas à être recopiées dans le produit.
-
-Éviter les vagues de centaines de pictogrammes. L’expansion doit partir d’opportunités utiles et de visuels réellement compréhensibles.
-
----
-
-# 10. Prochaine direction recommandée
-
-La priorité n’est plus d’ajouter encore des concepts. Le pipeline de recherche est désormais assez riche pour commencer à **améliorer la qualité des 20 stimuli existants**.
-
-Ordre recommandé :
-
-1. vérifier le déploiement Pages de la dernière PR ;
-2. utiliser la galerie et l’aperçu sans indices pour identifier les visuels manifestement faibles ;
-3. améliorer en priorité les candidats `rework`, sans modifier les statuts de lexique ;
-4. conserver quatre variantes distinctes par concept tant qu’aucune donnée humaine ne justifie une réduction ;
-5. quand de vraies passations sont disponibles, analyser les JSON sans fabriquer d’inférence clinique ;
-6. seulement après décision humaine explicite, envisager une promotion contrôlée d’un prototype.
-
-Briques techniques possibles en attendant des données humaines : zoom/lightbox dans la galerie, comparaison côte à côte plus forte, import/relecture d’un export de curation, synthèse automatique descriptive des fichiers de passation, ou raffinements visuels ciblés des 20 SVG.
-
----
-
-# 11. Choses à ne pas faire
-
-Ne pas :
-
-- réactiver automatiquement `pot`, `dos`, `tas`, `raie` ou `terre` ;
-- transformer une décision de design en validation de dénomination ;
-- inventer des participants ou des pourcentages ;
-- affaiblir le mode Exact ;
-- réintroduire des lectures partielles cachées ;
-- généraliser une découpe arbitraire comme `tonton` ;
-- recréer un pictogramme yo-yo déjà présent ;
-- remplacer des stimuli locaux par des URLs distantes sans raison forte ;
-- supprimer un garde-fou CI pour faire passer un prototype.
-
----
-
-# 12. Résumé de reprise
-
-**Continuer Rebulo comme créateur général de rébus, préserver l’invariant Exact, maintenir les opérations générales explicitement visibles, garder les prototypes de recherche inactifs, et concentrer la prochaine phase sur la qualité et l’évaluation humaine réelle des 20 stimuli locaux plutôt que sur une nouvelle expansion quantitative.**
+**Continuer Rebulo en apprenant d’abord le langage visuel des vrais rébus français. Le corpus attesté devient la base de l’expansion. Les premières observations humaines indiquent que `dos` et `tas` doivent être repensés, tandis que `raie`, un pot vide canonique et certaines représentations de terre méritent d’être approfondis. Préserver strictement l’invariant Exact et ne promouvoir aucune brique sans le niveau de preuve correspondant.**

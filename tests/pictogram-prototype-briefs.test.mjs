@@ -8,6 +8,8 @@ const lexicon=JSON.parse(await readFile(new URL('../data/lexicon-seed.json',impo
 
 assert.equal(registry.schemaVersion,'1.0');
 assert.match(schema.description,/not assets, naming results, activation decisions, or clinical validation/i);
+assert.ok(schema.$defs.brief.properties.revision,'brief schema should allow an exact research revision');
+assert.ok(schema.$defs.brief.properties.supersededBy,'brief schema should preserve supersession lineage');
 const concepts=registry.briefs.map(x=>x.concept);
 for(const concept of ['dos','tas','raie','terre'])assert.ok(concepts.includes(concept),`missing prototype brief: ${concept}`);
 for(const brief of registry.briefs){
@@ -21,6 +23,12 @@ for(const brief of registry.briefs){
 const dos=registry.briefs.find(x=>x.concept==='dos');
 assert.equal(dos.nextGate,'prototype_comparison');
 assert.ok(dos.namingRisks.includes('derrière'));
+const terre=registry.briefs.find(x=>x.concept==='terre');
+assert.equal(terre.revision,'terre-v1');
+assert.equal(terre.supersededBy,'terre-v2-research');
+assert.equal(terre.researchStatus,'naming_review');
+assert.match(terre.visualGoal,/historique|historical/i);
+assert.match(terre.visualGoal,/terre-v2-research/);
 const registeredDos=lexicon.find(x=>x.id==='dos');
 assert.ok(registeredDos,'dos must remain registered as an inactive prototype');
 assert.equal(registeredDos.active,false,'a design brief must not activate dos');

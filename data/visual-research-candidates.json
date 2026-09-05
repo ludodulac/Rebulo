@@ -2,43 +2,11 @@
   "schemaVersion": "1.0",
   "status": "research_only",
   "purpose": "Turn high-value phonetic opportunities into conservative visual research tasks without activating them in Exact mode.",
-  "guardrails": {
-    "automaticLexiconActivation": false,
-    "automaticStrictEligibility": false,
-    "humanNamingValidationRequired": true,
-    "oldFailedStimuliReusableWithoutNewRevision": false
-  },
+  "guardrails": {"automaticLexiconActivation":false,"automaticStrictEligibility":false,"humanNamingValidationRequired":true,"oldFailedStimuliReusableWithoutNewRevision":false},
   "candidates": [
-    {
-      "reading": "tas",
-      "ipa": "ta",
-      "researchRevision": "tas-v2-research",
-      "engineOpportunity": "high",
-      "attestationState": "multi_source_attested",
-      "visualHypothesis": "small mound or pile of earth/sand; a shovel may be contextual support but never a phonetic component",
-      "nextEvidence": ["find an open/licensable mound-first asset or source drawing", "compare mound alone versus mound with contextual shovel", "run a fresh spontaneous naming test under a new revision"],
-      "activationState": "inactive"
-    },
-    {
-      "reading": "pot",
-      "ipa": "po",
-      "researchRevision": "pot-v4-research",
-      "engineOpportunity": "high",
-      "attestationState": "repeated_attested",
-      "visualHypothesis": "simple flowerpot/terracotta-pot silhouette; the container must dominate over any plant or contents",
-      "nextEvidence": ["inspect open flowerpot candidates rather than pot-of-food imagery", "prefer a visually lexical pot over decorative plant imagery", "run a fresh spontaneous naming test under a new revision"],
-      "activationState": "inactive"
-    },
-    {
-      "reading": "do",
-      "ipa": "do",
-      "researchRevision": "do-v1-research",
-      "engineOpportunity": "shared_with_dos",
-      "attestationState": "single_note_convention_attested",
-      "visualHypothesis": "musical note do only when staff position or another explicit convention makes the reading do rather than generic note",
-      "alternativeRepresentations": ["dos"],
-      "nextEvidence": ["study open staff-note assets with unambiguous do placement", "compare spontaneous reading do versus note/musique", "keep dos as a separate visual representation of the same sound"],
-      "activationState": "inactive"
-    }
+    {"reading":"tas","ipa":"ta","researchRevision":"tas-v2-research","engineOpportunity":"high","attestationState":"multi_source_attested","visualHypothesis":"small mound or pile of earth/sand; a shovel may be contextual support but never a phonetic component","nextEvidence":["find an open/licensable mound-first asset or source drawing","compare mound alone versus mound with contextual shovel","run a fresh spontaneous naming test under a new revision"],"activationState":"inactive"},
+    {"reading":"Terre","ipa":"tɛʁ","researchRevision":"terre-v2-research","engineOpportunity":"high","attestationState":"attested_planet_reading","visualHypothesis":"planet Earth shown as a recognizable blue-green globe; test the lexical answer Terre against planète, monde and globe instead of reusing the failed matter/soil stimuli from terre-v1","nextEvidence":["compare open Earth-specific globe candidates","run a fresh spontaneous naming test under terre-v2","keep planet-Earth evidence separate from soil/matter evidence"],"activationState":"inactive"},
+    {"reading":"pot","ipa":"po","researchRevision":"pot-v4-research","engineOpportunity":"high","attestationState":"repeated_attested","visualHypothesis":"simple flowerpot/terracotta-pot silhouette; the container must dominate over any plant or contents","nextEvidence":["inspect open flowerpot candidates rather than pot-of-food imagery","prefer a visually lexical pot over decorative plant imagery","run a fresh spontaneous naming test under a new revision"],"activationState":"inactive"},
+    {"reading":"do","ipa":"do","researchRevision":"do-v1-research","engineOpportunity":"shared_with_dos","attestationState":"single_note_convention_attested","visualHypothesis":"musical note do only when staff position or another explicit convention makes the reading do rather than generic note","alternativeRepresentations":["dos"],"nextEvidence":["study open staff-note assets with unambiguous do placement","compare spontaneous reading do versus note/musique","keep dos as a separate visual representation of the same sound"],"activationState":"inactive"}
   ]
 }

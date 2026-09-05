@@ -3,11 +3,15 @@ import {readFile} from 'node:fs/promises';
 
 const data=JSON.parse(await readFile(new URL('../data/visual-research-open-assets.json',import.meta.url),'utf8'));
 assert.equal(data.status,'research_only');
-assert.equal(data.items.length,3);
-const item=reading=>data.items.find(entry=>entry.reading===reading);
+assert.equal(data.items.length,4);
+const item=reading=>data.items.find(entry=>entry.reading.toLowerCase()===reading.toLowerCase());
 assert.equal(item('tas').decision,'open_asset_gap');
 assert.match(item('tas').contextualCue,/contributes no sound/);
 assert.ok(item('tas').rejectedShortcuts.includes('old tas-v1 stones/blocks/geometric stimuli'));
+assert.equal(item('Terre').decision,'open_planet_candidates_found_reading_unproven');
+assert.ok(item('Terre').assetLeads.some(asset=>asset.title==='Earth clipart.svg' && asset.license==='CC0 1.0'));
+assert.ok(item('Terre').assetLeads.some(asset=>asset.title==='Globe icon.svg' && asset.license==='Public domain'));
+assert.ok(item('Terre').rejectedShortcuts.some(value=>/terre-v1/.test(value)));
 assert.equal(item('pot').decision,'open_candidate_found');
 assert.ok(item('pot').assetLeads.some(asset=>asset.title==='Vector flowerpot.svg' && asset.license==='CC BY-SA 4.0'));
 assert.equal(item('do').decision,'open_notation_material_found_but_reading_unproven');

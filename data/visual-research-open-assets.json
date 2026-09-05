@@ -1,69 +1,13 @@
 {
-  "schemaVersion": "1.0",
-  "status": "research_only",
-  "principle": "An open license makes an asset reusable, not visually valid. Every lead still needs spontaneous naming evidence before activation.",
-  "items": [
-    {
-      "reading": "tas",
-      "researchRevision": "tas-v2-research",
-      "decision": "open_asset_gap",
-      "preferredForm": "small mound or pile of earth/sand, mound visually dominant",
-      "contextualCue": "a shovel may help disambiguate the mound but contributes no sound",
-      "rejectedShortcuts": ["generic shovel alone", "commercial stock mound icons", "old tas-v1 stones/blocks/geometric stimuli"],
-      "nextAction": "continue open-source search; do not manufacture a validated-looking asset from unrelated parts"
-    },
-    {
-      "reading": "pot",
-      "researchRevision": "pot-v4-research",
-      "decision": "open_candidate_found",
-      "preferredForm": "empty clay flowerpot with the container dominating the image",
-      "assetLeads": [
-        {
-          "source": "Wikimedia Commons",
-          "title": "Vector flowerpot.svg",
-          "url": "https://commons.wikimedia.org/wiki/File:Vector_flowerpot.svg",
-          "license": "CC BY-SA 4.0",
-          "author": "BoxOfNotes",
-          "fit": "strong_shape_candidate",
-          "caveat": "license and provenance are suitable for study; naming as pot still requires a fresh human test"
-        },
-        {
-          "source": "Wikimedia Commons / Open Clip Art",
-          "title": "Flower-and-flowerpot.svg",
-          "url": "https://commons.wikimedia.org/wiki/File:Flower-and-flowerpot.svg",
-          "license": "CC0 1.0",
-          "author": "hatalar205",
-          "fit": "comparison_candidate",
-          "caveat": "the flower may dominate spontaneous naming, so compare against the empty-pot candidate"
-        }
-      ],
-      "nextAction": "compare empty pot versus flower-and-pot in a fresh pot-v4 naming revision"
-    },
-    {
-      "reading": "do",
-      "researchRevision": "do-v1-research",
-      "decision": "open_notation_material_found_but_reading_unproven",
-      "preferredForm": "a note whose staff position unambiguously denotes do in the chosen convention",
-      "assetLeads": [
-        {
-          "source": "Wikimedia Commons",
-          "title": "Grand staff labeled notes.svg",
-          "url": "https://commons.wikimedia.org/wiki/File:Grand_staff_labeled_notes.svg",
-          "license": "Public domain",
-          "fit": "reference_material",
-          "caveat": "use to study note placement; a labeled educational diagram is not itself a clean rebus pictogram"
-        },
-        {
-          "source": "Wikimedia Commons",
-          "title": "Music Staff.svg",
-          "url": "https://commons.wikimedia.org/wiki/File:Music_Staff.svg",
-          "license": "Public domain",
-          "fit": "construction_material_only",
-          "caveat": "staff alone has no do reading and must never be counted as phonetic evidence"
-        }
-      ],
-      "alternativeRepresentation": "dos",
-      "nextAction": "define an explicit do-placement stimulus and test whether people answer do rather than note or musique; keep dos separate"
-    }
+  "schemaVersion":"1.0","status":"research_only","principle":"An open license makes an asset reusable, not visually valid. Every lead still needs spontaneous naming evidence before activation.",
+  "items":[
+    {"reading":"tas","researchRevision":"tas-v2-research","decision":"open_asset_gap","preferredForm":"small mound or pile of earth/sand, mound visually dominant","contextualCue":"a shovel may help disambiguate the mound but contributes no sound","rejectedShortcuts":["generic shovel alone","commercial stock mound icons","old tas-v1 stones/blocks/geometric stimuli"],"nextAction":"continue open-source search; do not manufacture a validated-looking asset from unrelated parts"},
+    {"reading":"Terre","researchRevision":"terre-v2-research","decision":"open_planet_candidates_found_reading_unproven","preferredForm":"Earth-specific blue-green globe with recognizable continents; avoid generic wireframe globe when possible","assetLeads":[
+      {"source":"Wikimedia Commons","title":"Earth clipart.svg","url":"https://commons.wikimedia.org/wiki/File:Earth_clipart.svg","license":"CC0 1.0","fit":"strong_planet_candidate","caveat":"open and Earth-specific, but spontaneous naming may still be planète or monde rather than Terre"},
+      {"source":"Wikimedia Commons","title":"Globe.svg","url":"https://commons.wikimedia.org/wiki/File:Globe.svg","license":"free_reuse_check_source_page_before_import","fit":"earth_specific_reference","caveat":"description explicitly identifies Earth; provenance/license metadata must be captured exactly before importing the asset"},
+      {"source":"Wikimedia Commons","title":"Globe icon.svg","url":"https://commons.wikimedia.org/wiki/File:Globe_icon.svg","license":"Public domain","fit":"comparison_candidate","caveat":"schematic globe may elicit globe or monde and is therefore a useful negative/comparison stimulus, not a validated Terre pictogram"}
+    ],"rejectedShortcuts":["reuse terre-v1 soil/mound/clod stimuli as evidence for planet Terre","treat any generic globe icon as automatically reading Terre"],"nextAction":"prepare terre-v2 planet-only naming comparison and ask for spontaneous first response before activation"},
+    {"reading":"pot","researchRevision":"pot-v4-research","decision":"open_candidate_found","preferredForm":"empty clay flowerpot with the container dominating the image","assetLeads":[{"source":"Wikimedia Commons","title":"Vector flowerpot.svg","url":"https://commons.wikimedia.org/wiki/File:Vector_flowerpot.svg","license":"CC BY-SA 4.0","author":"BoxOfNotes","fit":"strong_shape_candidate","caveat":"license and provenance are suitable for study; naming as pot still requires a fresh human test"},{"source":"Wikimedia Commons / Open Clip Art","title":"Flower-and-flowerpot.svg","url":"https://commons.wikimedia.org/wiki/File:Flower-and-flowerpot.svg","license":"CC0 1.0","author":"hatalar205","fit":"comparison_candidate","caveat":"the flower may dominate spontaneous naming, so compare against the empty-pot candidate"}],"nextAction":"compare empty pot versus flower-and-pot in a fresh pot-v4 naming revision"},
+    {"reading":"do","researchRevision":"do-v1-research","decision":"open_notation_material_found_but_reading_unproven","preferredForm":"a note whose staff position unambiguously denotes do in the chosen convention","assetLeads":[{"source":"Wikimedia Commons","title":"Grand staff labeled notes.svg","url":"https://commons.wikimedia.org/wiki/File:Grand_staff_labeled_notes.svg","license":"Public domain","fit":"reference_material","caveat":"use to study note placement; a labeled educational diagram is not itself a clean rebus pictogram"},{"source":"Wikimedia Commons","title":"Music Staff.svg","url":"https://commons.wikimedia.org/wiki/File:Music_Staff.svg","license":"Public domain","fit":"construction_material_only","caveat":"staff alone has no do reading and must never be counted as phonetic evidence"}],"alternativeRepresentation":"dos","nextAction":"define an explicit do-placement stimulus and test whether people answer do rather than note or musique; keep dos separate"}
   ]
 }

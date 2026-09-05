@@ -1,5 +1,5 @@
 {
-  "version": "1.4.0",
+  "version": "1.4.1",
   "principles": [
     "recognition_before_decoration",
     "one_concept_one_focal_object",
@@ -27,10 +27,10 @@
     ]
   },
   "approvedConceptDirections": [
-    {"concept":"dos","targetIpa":"/do/","direction":"Personne recourbée ou vue de dos avec une flèche rouge pointant explicitement la zone du dos.","status":"art_direction_approved","phoneticActivation":"general_active_owner_approved","clinicalValidation":"not_claimed"},
-    {"concept":"raie","targetIpa":"/ʁɛ/","direction":"Chevelure vue de face ou du dessus avec raie centrale nette et flèche rouge pointant la séparation des cheveux; préférée au poisson pour la lecture lexicale visée.","status":"art_direction_approved","phoneticActivation":"general_active_owner_approved","clinicalValidation":"not_claimed"},
-    {"concept":"pot","targetIpa":"/po/","direction":"Pot de fleur en terre cuite très classique, forme simple et immédiatement reconnaissable; plante facultative si elle ne domine pas la dénomination.","status":"art_direction_approved","phoneticActivation":"general_active_owner_approved","clinicalValidation":"not_claimed"},
-    {"concept":"terre","targetIpa":"/tɛʁ/","direction":"Tas de terre brune avec pelle ou transplantoir planté dedans pour rendre la matière terre évidente.","status":"art_direction_approved","phoneticActivation":"general_active_owner_approved","clinicalValidation":"not_claimed"},
+    {"concept":"dos","targetIpa":"/do/","asset":"assets/rebus/dos-comic.svg","artRevision":"dos-comic-v1","direction":"Personne recourbée ou vue de dos avec une flèche rouge pointant explicitement la zone du dos.","status":"art_direction_approved","phoneticActivation":"general_active_owner_approved","clinicalValidation":"not_claimed"},
+    {"concept":"raie","targetIpa":"/ʁɛ/","asset":"assets/rebus/raie-comic.svg","artRevision":"raie-comic-v1","direction":"Chevelure vue de face ou du dessus avec raie centrale nette et flèche rouge pointant la séparation des cheveux; préférée au poisson pour la lecture lexicale visée.","status":"art_direction_approved","phoneticActivation":"general_active_owner_approved","clinicalValidation":"not_claimed"},
+    {"concept":"pot","targetIpa":"/po/","asset":"assets/rebus/pot-comic.svg","artRevision":"pot-comic-v1","direction":"Pot de fleur en terre cuite très classique, forme simple et immédiatement reconnaissable; plante facultative si elle ne domine pas la dénomination.","status":"art_direction_approved","phoneticActivation":"general_active_owner_approved","clinicalValidation":"not_claimed"},
+    {"concept":"terre","targetIpa":"/tɛʁ/","asset":"assets/rebus/terre-comic.svg","artRevision":"terre-comic-v1","direction":"Tas de terre brune avec pelle ou transplantoir planté dedans pour rendre la matière terre évidente.","status":"art_direction_approved","phoneticActivation":"general_active_owner_approved","clinicalValidation":"not_claimed"},
     {"concept":"tas","targetIpa":"/ta/","direction":"Amas visiblement constitué de plusieurs éléments ou matière, avec silhouette de tas dominante; éviter les piles régulières.","status":"art_direction_candidate","phoneticActivation":"still_requires_engine_gate"}
   ],
   "audit": [

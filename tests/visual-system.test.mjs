@@ -5,6 +5,7 @@ const lexicon=JSON.parse(fs.readFileSync(new URL('../data/lexicon-seed.json',imp
 const registry=JSON.parse(fs.readFileSync(new URL('../data/asset-sources.json',import.meta.url)));
 const game=JSON.parse(fs.readFileSync(new URL('../data/rebus.json',import.meta.url)));
 assert.equal(visual.targetStyle.textInsideAsset,'forbidden_unless_the_concept_is_a_grapheme');
+assert.equal(visual.targetStyle.name,'Rebulo BD claire');
 const active=lexicon.filter(item=>item.active).map(item=>item.id);
 const audited=new Set(visual.audit.map(item=>item.id));
 for(const id of active) assert.ok(audited.has(id),`active pictogram ${id} must be visually audited`);
@@ -27,9 +28,28 @@ const sol=visual.audit.find(item=>item.id==='sol');
 assert.equal(sol.status,'keep_then_harmonize');
 assert.match(sol.reason,/supprimée/i);
 for(const item of visual.audit) assert.ok(['redesign_priority','keep_then_harmonize','reference_style'].includes(item.status));
+
+const approved=new Map(visual.approvedConceptDirections.map(item=>[item.concept,item]));
+for(const id of ['pot','dos','raie','terre']){
+  const direction=approved.get(id);
+  const entry=lexicon.find(item=>item.id===id);
+  assert.ok(direction,`${id} must have an approved comic direction`);
+  assert.equal(direction.status,'art_direction_approved');
+  assert.equal(direction.phoneticActivation,'general_active_owner_approved');
+  assert.equal(direction.clinicalValidation,'not_claimed');
+  assert.equal(direction.asset,entry.image);
+  assert.equal(direction.artRevision,`${id}-comic-v1`);
+  assert.ok(fs.existsSync(new URL(`../${direction.asset}`,import.meta.url)),`${id} comic asset must exist`);
+  const record=registry.assets.find(asset=>asset.path===direction.asset);
+  assert.equal(record?.source,'rebulo_original');
+  assert.equal(record?.active,true);
+  assert.equal(record?.clinicalStatus,'unreviewed');
+}
+assert.equal(approved.get('tas')?.status,'art_direction_candidate');
+
 const strictImages=new Set(game.filter(item=>item.validation==='strict').flatMap(item=>item.pieces.map(piece=>piece.image)));
 for(const image of strictImages){
   const svg=fs.readFileSync(new URL(`../${image}`,import.meta.url),'utf8');
   assert.doesNotMatch(svg,/<text\b/i,`${image} must not contain written answer text in strict game mode`);
 }
-console.log('Rebulo visual system audit: all tests passed.');
+console.log('Rebulo visual system audit: approved comic production assets are linked; all tests passed.');

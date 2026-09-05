@@ -2,47 +2,47 @@
 
 - Entrées analysées : 189832
 - Formes orthographiques uniques : 170756
-- Pictogrammes actifs : 16
-- Entrées strictement constructibles : 452
-- Mots uniques strictement constructibles : 376
-- Entrées en vrais rébus (2+ pièces) : 339
-- Mots uniques en vrais rébus (2+ pièces) : 291
-- Couverture brute : 0.2381 %
-- Couverture rébus 2+ pièces : 0.1786 %
+- Pictogrammes actifs : 20
+- Entrées strictement constructibles : 663
+- Mots uniques strictement constructibles : 556
+- Entrées en vrais rébus (2+ pièces) : 522
+- Mots uniques en vrais rébus (2+ pièces) : 448
+- Couverture brute : 0.3493 %
+- Couverture rébus 2+ pièces : 0.2750 %
 
 ## 30 segments manquants les mieux classés
 
 | Rang | Segment IPA | Formes débloquées | Gain pondéré | Candidats mot-entier exacts |
 |---:|---|---:|---:|---|
-| 1 | /ʁ/ | 111 | 157.134 | — |
-| 2 | /t/ | 127 | 155.353 | t |
-| 3 | /se/ | 111 | 153.638 | cé |
-| 4 | /te/ | 126 | 150.27 | thé, t., té, thés |
-| 5 | /k/ | 121 | 142.092 | qu', qu |
-| 6 | /s/ | 88 | 120.823 | c, s' |
-| 7 | /p/ | 87 | 107.112 | — |
-| 8 | /l/ | 80 | 103.913 | l, l' |
-| 9 | /n/ | 78 | 98.716 | n |
-| 10 | /a/ | 69 | 97.381 | a, ha, hâ |
-| 11 | /ʁe/ | 82 | 93.607 | ré |
-| 12 | /ta/ | 81 | 85.294 | tas, ta |
-| 13 | /d/ | 63 | 85.197 | d, d' |
-| 14 | /ko/ | 65 | 77.546 | cot, côt, cots |
-| 15 | /ʁə/ | 58 | 76.485 | — |
-| 16 | /ʁɛ/ | 68 | 76.32 | raie, rai, raies, rais |
-| 17 | /e/ | 62 | 75.459 | ais, ai |
-| 18 | /ka/ | 70 | 75.441 | cas, k, ka, kas |
-| 19 | /pe/ | 69 | 75.322 | p, p., pô, pe |
-| 20 | /g/ | 60 | 67.14 | — |
-| 21 | /di/ | 46 | 60.105 | dit, die, dits |
-| 22 | /ʃe/ | 45 | 58.409 | ché |
-| 23 | /tɛʁ/ | 43 | 57.55 | terre, terres, donataires |
-| 24 | /ʁje/ | 41 | 57.346 | riez |
-| 25 | /su/ | 42 | 56.748 | sous, sou, saoûl, souls |
-| 26 | /me/ | 52 | 55.726 | maye, mée |
-| 27 | /z/ | 46 | 55.226 | zzz, zzzz |
-| 28 | /je/ | 52 | 54.773 | — |
-| 29 | /j/ | 49 | 53.816 | — |
-| 30 | /ve/ | 49 | 53.152 | v, v., vés |
+| 1 | /t/ | 173 | 210.467 | t |
+| 2 | /se/ | 151 | 197.975 | cé |
+| 3 | /te/ | 160 | 186.258 | thé, t., té, thés |
+| 4 | /ʁ/ | 130 | 181.673 | — |
+| 5 | /k/ | 155 | 181.61 | qu', qu |
+| 6 | /s/ | 119 | 159.122 | c, s' |
+| 7 | /n/ | 120 | 151.302 | n |
+| 8 | /a/ | 113 | 150.051 | a, ha, hâ |
+| 9 | /p/ | 108 | 139.919 | — |
+| 10 | /l/ | 98 | 125.968 | l, l' |
+| 11 | /d/ | 86 | 113.527 | d, d' |
+| 12 | /ʁə/ | 91 | 112.927 | — |
+| 13 | /ʁe/ | 97 | 111.209 | ré |
+| 14 | /sə/ | 71 | 102.473 | se |
+| 15 | /ka/ | 85 | 95.024 | cas, k, ka, kas |
+| 16 | /e/ | 79 | 93.508 | ais, ai |
+| 17 | /ta/ | 87 | 91.35 | tas, ta |
+| 18 | /ko/ | 78 | 90.941 | cot, côt, cots |
+| 19 | /ze/ | 70 | 88.855 | — |
+| 20 | /pe/ | 81 | 87.726 | p, p., pô, pe |
+| 21 | /di/ | 63 | 83.994 | dit, die, dits |
+| 22 | /g/ | 75 | 82.892 | — |
+| 23 | /v/ | 60 | 82.238 | — |
+| 24 | /z/ | 63 | 81.395 | zzz, zzzz |
+| 25 | /me/ | 72 | 77.817 | maye, mée |
+| 26 | /o/ | 47 | 77.503 | eau, haut, o, eaux |
+| 27 | /ʃe/ | 59 | 72.942 | ché |
+| 28 | /j/ | 60 | 72.494 | — |
+| 29 | /m/ | 59 | 69.417 | m |
+| 30 | /je/ | 66 | 69.406 | — |
 
 > Les candidats mot-entier sont seulement des homophones exacts trouvés dans Lexique 4, avec priorité aux noms. Ils ne sont pas automatiquement imageables ni cliniquement admissibles : la stabilité de dénomination et la reconnaissance visuelle restent obligatoires.

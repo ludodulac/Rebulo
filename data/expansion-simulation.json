@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-02T22:58:02.137Z",
+  "generatedAt": "2026-09-05T23:46:06.769Z",
   "lexicalUniquePronouncedForms": 171476,
   "baseline": {
-    "constructibleUniqueWords": 376,
-    "multiPieceUniqueWords": 291,
-    "weightedMultiPiece": 353.541
+    "constructibleUniqueWords": 556,
+    "multiPieceUniqueWords": 448,
+    "weightedMultiPiece": 552.342
   },
   "candidatePool": [
     {
@@ -20,22 +20,10 @@
       "rawRank": 15
     },
     {
-      "label": "terre",
-      "ipa": "/tɛʁ/",
-      "status": "candidate_pictogram",
-      "rawRank": 23
-    },
-    {
       "label": "corps",
       "ipa": "/kɔʁ/",
       "status": "candidate_pictogram",
       "rawRank": 26
-    },
-    {
-      "label": "dos",
-      "ipa": "/do/",
-      "status": "priority_pictogram",
-      "rawRank": 27
     },
     {
       "label": "eau",
@@ -50,417 +38,47 @@
       "addedLabel": "thé",
       "ipa": "/te/",
       "status": "priority_pictogram",
-      "marginalMultiPieceUniqueWords": 102,
-      "marginalConstructibleUniqueWords": 108,
-      "cumulativeMultiPieceUniqueWords": 393,
-      "cumulativeConstructibleUniqueWords": 484,
-      "cumulativeWeightedMultiPiece": 475.116
+      "marginalMultiPieceUniqueWords": 130,
+      "marginalConstructibleUniqueWords": 136,
+      "cumulativeMultiPieceUniqueWords": 578,
+      "cumulativeConstructibleUniqueWords": 692,
+      "cumulativeWeightedMultiPiece": 703.812
     },
     {
       "step": 2,
       "addedLabel": "tas",
       "ipa": "/ta/",
       "status": "candidate_pictogram",
-      "marginalMultiPieceUniqueWords": 85,
-      "marginalConstructibleUniqueWords": 87,
-      "cumulativeMultiPieceUniqueWords": 478,
-      "cumulativeConstructibleUniqueWords": 571,
-      "cumulativeWeightedMultiPiece": 565.444
+      "marginalMultiPieceUniqueWords": 95,
+      "marginalConstructibleUniqueWords": 97,
+      "cumulativeMultiPieceUniqueWords": 673,
+      "cumulativeConstructibleUniqueWords": 789,
+      "cumulativeWeightedMultiPiece": 804.446
     },
     {
       "step": 3,
       "addedLabel": "eau",
       "ipa": "/o/",
       "status": "priority_pictogram",
-      "marginalMultiPieceUniqueWords": 41,
-      "marginalConstructibleUniqueWords": 52,
-      "cumulativeMultiPieceUniqueWords": 519,
-      "cumulativeConstructibleUniqueWords": 623,
-      "cumulativeWeightedMultiPiece": 621.593
+      "marginalMultiPieceUniqueWords": 50,
+      "marginalConstructibleUniqueWords": 61,
+      "cumulativeMultiPieceUniqueWords": 723,
+      "cumulativeConstructibleUniqueWords": 850,
+      "cumulativeWeightedMultiPiece": 878.685
     },
     {
       "step": 4,
-      "addedLabel": "terre",
-      "ipa": "/tɛʁ/",
-      "status": "candidate_pictogram",
-      "marginalMultiPieceUniqueWords": 38,
-      "marginalConstructibleUniqueWords": 44,
-      "cumulativeMultiPieceUniqueWords": 557,
-      "cumulativeConstructibleUniqueWords": 667,
-      "cumulativeWeightedMultiPiece": 671.651
-    },
-    {
-      "step": 5,
-      "addedLabel": "dos",
-      "ipa": "/do/",
-      "status": "priority_pictogram",
-      "marginalMultiPieceUniqueWords": 35,
-      "marginalConstructibleUniqueWords": 37,
-      "cumulativeMultiPieceUniqueWords": 592,
-      "cumulativeConstructibleUniqueWords": 704,
-      "cumulativeWeightedMultiPiece": 723.831
-    },
-    {
-      "step": 6,
       "addedLabel": "corps",
       "ipa": "/kɔʁ/",
       "status": "candidate_pictogram",
-      "marginalMultiPieceUniqueWords": 35,
-      "marginalConstructibleUniqueWords": 39,
-      "cumulativeMultiPieceUniqueWords": 627,
-      "cumulativeConstructibleUniqueWords": 743,
-      "cumulativeWeightedMultiPiece": 761.651
+      "marginalMultiPieceUniqueWords": 37,
+      "marginalConstructibleUniqueWords": 41,
+      "cumulativeMultiPieceUniqueWords": 760,
+      "cumulativeConstructibleUniqueWords": 891,
+      "cumulativeWeightedMultiPiece": 918.513
     }
   ],
-  "prototypeScenarios": [
-    {
-      "name": "pot",
-      "added": [
-        {
-          "label": "pot",
-          "ipa": "/po/",
-          "assetStatus": "asset_available"
-        }
-      ],
-      "strictMultiPieceGain": 27,
-      "strictConstructibleGain": 33,
-      "weightedMultiPieceGain": 33.223,
-      "cumulativeMultiPieceUniqueWords": 318,
-      "examples": [
-        {
-          "word": "chapeau",
-          "frequency": 39.87,
-          "pieces": [
-            "chat",
-            "pot"
-          ]
-        },
-        {
-          "word": "dépôt",
-          "frequency": 9.203,
-          "pieces": [
-            "dé",
-            "pot"
-          ]
-        },
-        {
-          "word": "chapeaux",
-          "frequency": 5.497,
-          "pieces": [
-            "chat",
-            "pot"
-          ]
-        },
-        {
-          "word": "poli",
-          "frequency": 4.576,
-          "pieces": [
-            "pot",
-            "lit"
-          ]
-        },
-        {
-          "word": "dépôts",
-          "frequency": 2.051,
-          "pieces": [
-            "dé",
-            "pot"
-          ]
-        },
-        {
-          "word": "polie",
-          "frequency": 1.848,
-          "pieces": [
-            "pot",
-            "lit"
-          ]
-        },
-        {
-          "word": "pipeau",
-          "frequency": 1.222,
-          "pieces": [
-            "pie",
-            "pot"
-          ]
-        },
-        {
-          "word": "polis",
-          "frequency": 0.832,
-          "pieces": [
-            "pot",
-            "lit"
-          ]
-        },
-        {
-          "word": "polymère",
-          "frequency": 0.459,
-          "pieces": [
-            "pot",
-            "lit",
-            "mer"
-          ]
-        },
-        {
-          "word": "poly",
-          "frequency": 0.323,
-          "pieces": [
-            "pot",
-            "lit"
-          ]
-        },
-        {
-          "word": "polies",
-          "frequency": 0.133,
-          "pieces": [
-            "pot",
-            "lit"
-          ]
-        },
-        {
-          "word": "polit",
-          "frequency": 0.111,
-          "pieces": [
-            "pot",
-            "lit"
-          ]
-        }
-      ],
-      "note": "Gain isolé par rapport à la base active actuelle."
-    },
-    {
-      "name": "dos",
-      "added": [
-        {
-          "label": "dos",
-          "ipa": "/do/",
-          "assetStatus": "asset_pending"
-        }
-      ],
-      "strictMultiPieceGain": 23,
-      "strictConstructibleGain": 25,
-      "weightedMultiPieceGain": 38.544,
-      "cumulativeMultiPieceUniqueWords": 314,
-      "examples": [
-        {
-          "word": "donner",
-          "frequency": 261.88,
-          "pieces": [
-            "dos",
-            "nez"
-          ]
-        },
-        {
-          "word": "donné",
-          "frequency": 250.693,
-          "pieces": [
-            "dos",
-            "nez"
-          ]
-        },
-        {
-          "word": "donnez",
-          "frequency": 110.443,
-          "pieces": [
-            "dos",
-            "nez"
-          ]
-        },
-        {
-          "word": "données",
-          "frequency": 38.367,
-          "pieces": [
-            "dos",
-            "nez"
-          ]
-        },
-        {
-          "word": "donnée",
-          "frequency": 15.775,
-          "pieces": [
-            "dos",
-            "nez"
-          ]
-        },
-        {
-          "word": "rideau",
-          "frequency": 7.842,
-          "pieces": [
-            "riz",
-            "dos"
-          ]
-        },
-        {
-          "word": "rideaux",
-          "frequency": 7.582,
-          "pieces": [
-            "riz",
-            "dos"
-          ]
-        },
-        {
-          "word": "dodo",
-          "frequency": 5.943,
-          "pieces": [
-            "dos",
-            "dos"
-          ]
-        },
-        {
-          "word": "donnés",
-          "frequency": 5.744,
-          "pieces": [
-            "dos",
-            "nez"
-          ]
-        },
-        {
-          "word": "dominer",
-          "frequency": 4.158,
-          "pieces": [
-            "dos",
-            "mie",
-            "nez"
-          ]
-        },
-        {
-          "word": "radeau",
-          "frequency": 2.563,
-          "pieces": [
-            "rat",
-            "dos"
-          ]
-        },
-        {
-          "word": "dominé",
-          "frequency": 1.304,
-          "pieces": [
-            "dos",
-            "mie",
-            "nez"
-          ]
-        }
-      ],
-      "note": "Gain isolé par rapport à la base active actuelle."
-    },
-    {
-      "name": "pot + dos",
-      "added": [
-        {
-          "label": "pot",
-          "ipa": "/po/",
-          "assetStatus": "asset_available"
-        },
-        {
-          "label": "dos",
-          "ipa": "/do/",
-          "assetStatus": "asset_pending"
-        }
-      ],
-      "strictMultiPieceGain": 50,
-      "strictConstructibleGain": 58,
-      "weightedMultiPieceGain": 71.767,
-      "cumulativeMultiPieceUniqueWords": 341,
-      "examples": [
-        {
-          "word": "donner",
-          "frequency": 261.88,
-          "pieces": [
-            "dos",
-            "nez"
-          ]
-        },
-        {
-          "word": "donné",
-          "frequency": 250.693,
-          "pieces": [
-            "dos",
-            "nez"
-          ]
-        },
-        {
-          "word": "donnez",
-          "frequency": 110.443,
-          "pieces": [
-            "dos",
-            "nez"
-          ]
-        },
-        {
-          "word": "chapeau",
-          "frequency": 39.87,
-          "pieces": [
-            "chat",
-            "pot"
-          ]
-        },
-        {
-          "word": "données",
-          "frequency": 38.367,
-          "pieces": [
-            "dos",
-            "nez"
-          ]
-        },
-        {
-          "word": "donnée",
-          "frequency": 15.775,
-          "pieces": [
-            "dos",
-            "nez"
-          ]
-        },
-        {
-          "word": "dépôt",
-          "frequency": 9.203,
-          "pieces": [
-            "dé",
-            "pot"
-          ]
-        },
-        {
-          "word": "rideau",
-          "frequency": 7.842,
-          "pieces": [
-            "riz",
-            "dos"
-          ]
-        },
-        {
-          "word": "rideaux",
-          "frequency": 7.582,
-          "pieces": [
-            "riz",
-            "dos"
-          ]
-        },
-        {
-          "word": "dodo",
-          "frequency": 5.943,
-          "pieces": [
-            "dos",
-            "dos"
-          ]
-        },
-        {
-          "word": "donnés",
-          "frequency": 5.744,
-          "pieces": [
-            "dos",
-            "nez"
-          ]
-        },
-        {
-          "word": "chapeaux",
-          "frequency": 5.497,
-          "pieces": [
-            "chat",
-            "pot"
-          ]
-        }
-      ],
-      "note": "Gain combiné recalculé ; il ne faut pas additionner les gains isolés."
-    }
-  ],
+  "prototypeScenarios": [],
   "interpretation": "Ordre glouton recalculé après chaque ajout. Les briques déjà actives sont exclues du pool candidat ; le gain porte sur les mots uniques devenant constructibles avec au moins deux pièces, ce qui évite de confondre un simple homophone d’une image avec un vrai rébus.",
   "prototypeInterpretation": "Les scénarios de prototypes simulent séparément puis ensemble les concepts enregistrés comme prototypes mais toujours inactifs. Ils n’activent rien dans le produit.",
   "caution": "Cette simulation mesure le potentiel lexical strict, pas la qualité clinique. Un prototype doit encore satisfaire les exigences de visuel, de dénomination et de provenance avant toute activation."

@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0",
+  "id": "naming-board-20-v1",
+  "status": "research_only",
+  "purpose": "Pass 20 existing Rebulo pictogram prototypes in a mixed order while hiding the intended labels from the participant.",
+  "administration": {
+    "prompt": "Qu’est-ce que c’est ?",
+    "recordFirstSpontaneousResponseOnly": true,
+    "noHintBeforeResponse": true,
+    "noCorrectionBeforeEnd": true,
+    "hesitationCanBeRecorded": true,
+    "noResponseCanBeRecorded": true,
+    "automaticActivation": false
+  },
+  "methodNotes": [
+    "The five concepts are interleaved so variants of the same concept are never adjacent.",
+    "This board is diagnostic: several legacy variants are known to have produced weak or ambiguous names in earlier observations.",
+    "A response belongs only to the exact asset and revision shown; do not transfer evidence to a redesigned stimulus.",
+    "Passing this board does not by itself make a pictogram Exact-eligible. Human review remains required."
+  ],
+  "items": [
+    {"id":"01","concept":"raie","revision":"raie-v1","candidateId":"raie-rebulo-swimming","asset":"assets/research/raie-swimming.svg"},
+    {"id":"02","concept":"pot","revision":"pot-v3","candidateId":"pot-rebulo-empty-tapered","asset":"assets/research/pot-empty-tapered.svg"},
+    {"id":"03","concept":"dos","revision":"dos-v3","candidateId":"dos-rebulo-back-outline","asset":"assets/research/dos-back-outline.svg"},
+    {"id":"04","concept":"terre","revision":"terre-v1","candidateId":"terre-rebulo-mound","asset":"assets/research/terre-mound.svg"},
+    {"id":"05","concept":"tas","revision":"tas-v1","candidateId":"tas-rebulo-stones","asset":"assets/research/tas-stones.svg"},
+    {"id":"06","concept":"pot","revision":"pot-v3","candidateId":"pot-openmoji-1fab4","asset":"assets/rebus/pot.svg"},
+    {"id":"07","concept":"raie","revision":"raie-v1","candidateId":"raie-rebulo-spotted","asset":"assets/research/raie-spotted.svg"},
+    {"id":"08","concept":"terre","revision":"terre-v1","candidateId":"terre-rebulo-cross-section","asset":"assets/research/terre-cross-section.svg"},
+    {"id":"09","concept":"dos","revision":"dos-v3","candidateId":"dos-rebulo-rear-silhouette","asset":"assets/research/dos-rear-silhouette.svg"},
+    {"id":"10","concept":"tas","revision":"tas-v1","candidateId":"tas-rebulo-dirt","asset":"assets/research/tas-dirt.svg"},
+    {"id":"11","concept":"pot","revision":"pot-v3","candidateId":"pot-rebulo-empty-saucer","asset":"assets/research/pot-empty-saucer.svg"},
+    {"id":"12","concept":"raie","revision":"raie-v1","candidateId":"raie-rebulo-silhouette","asset":"assets/research/raie-silhouette.svg"},
+    {"id":"13","concept":"tas","revision":"tas-v1","candidateId":"tas-rebulo-blocks","asset":"assets/research/tas-blocks.svg"},
+    {"id":"14","concept":"dos","revision":"dos-v3","candidateId":"dos-openmoji-backache-e321","asset":"assets/research/dos-openmoji-backache-e321.svg"},
+    {"id":"15","concept":"terre","revision":"terre-v1","candidateId":"terre-rebulo-clods","asset":"assets/research/terre-clods.svg"},
+    {"id":"16","concept":"pot","revision":"pot-v3","candidateId":"pot-rebulo-empty-cylinder","asset":"assets/research/pot-empty-cylinder.svg"},
+    {"id":"17","concept":"dos","revision":"dos-v3","candidateId":"dos-rebulo-highlighted-back","asset":"assets/research/dos-highlighted-back.svg"},
+    {"id":"18","concept":"tas","revision":"tas-v1","candidateId":"tas-rebulo-mixed-objects","asset":"assets/research/tas-mixed-objects.svg"},
+    {"id":"19","concept":"raie","revision":"raie-v1","candidateId":"raie-rebulo-outline","asset":"assets/research/raie-outline.svg"},
+    {"id":"20","concept":"terre","revision":"terre-v1","candidateId":"terre-rebulo-patch","asset":"assets/research/terre-patch.svg"}
+  ]
+}

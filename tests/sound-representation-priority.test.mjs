@@ -29,8 +29,9 @@ assert.ok(poSound.representations.some(item=>item.reading==='pot'&&item.rebusCou
 const taSound=sound('ta');
 assert.equal(taSound.strictMultiPieceGain,85);
 assert.equal(taSound.impactMethod,'greedy_contextual');
-assert.equal(taSound.attestedRepresentationCount,0);
-assert.equal(taSound.researchState,'high_impact_without_attested_representation');
+assert.equal(taSound.attestedRepresentationCount,1);
+assert.ok(taSound.representations.some(item=>item.reading==='tas'&&item.rebusCount===2&&item.sourceCount===2));
+assert.equal(taSound.researchState,'attested_sound_needs_visual_resolution');
 
 assert.ok(priorities[0].researchPriorityScore>=priorities.at(-1).researchPriorityScore);
 console.log('sound representation priority: phonetic impact is separated from visual reading evidence');

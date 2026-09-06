@@ -1,5 +1,5 @@
 {
-  "version": "1.5.0",
+  "version": "1.6.0",
   "principles": [
     "recognition_before_decoration",
     "one_concept_one_focal_object",
@@ -32,7 +32,8 @@
     {"concept":"pot","targetIpa":"/po/","asset":"assets/rebus/pot-comic.svg","artRevision":"pot-comic-v1","direction":"Pot de fleur en terre cuite très classique, forme simple et immédiatement reconnaissable; plante facultative si elle ne domine pas la dénomination.","status":"art_direction_approved","phoneticActivation":"general_active_owner_approved","clinicalValidation":"not_claimed"},
     {"concept":"terre","targetIpa":"/tɛʁ/","asset":"assets/rebus/terre-comic.svg","artRevision":"terre-comic-v1","direction":"Tas de terre brune avec pelle ou transplantoir planté dedans pour rendre la matière terre évidente.","status":"art_direction_approved","phoneticActivation":"general_active_owner_approved","clinicalValidation":"not_claimed"},
     {"concept":"thé","targetIpa":"/te/","asset":"assets/rebus/the.svg","artRevision":"the-comic-v1","direction":"Tasse de thé fumant avec sachet visible; direction BD migrée au chemin canonique, usage général fondé sur l'attestation pédagogique explicite du concept thé dans un exercice officiel de rébus.","status":"attested_general_direction","phoneticActivation":"general_active_attested","clinicalValidation":"not_claimed"},
-    {"concept":"tas","targetIpa":"/ta/","asset":"assets/rebus/tas.svg","artRevision":"tas-comic-v1","direction":"Vrai tas de terre ou sable à silhouette dominante; pelle secondaire uniquement contextuelle et sans contribution phonétique.","status":"art_direction_approved","phoneticActivation":"general_active_owner_approved","clinicalValidation":"not_claimed","namingRisk":"Peut encore provoquer pile ou amas; aucune validation clinique n'est revendiquée."}
+    {"concept":"tas","targetIpa":"/ta/","asset":"assets/rebus/tas.svg","artRevision":"tas-comic-v1","direction":"Vrai tas de terre ou sable à silhouette dominante; pelle secondaire uniquement contextuelle et sans contribution phonétique.","status":"art_direction_approved","phoneticActivation":"general_active_owner_approved","clinicalValidation":"not_claimed","namingRisk":"Peut encore provoquer pile ou amas; aucune validation clinique n'est revendiquée."},
+    {"concept":"eau","targetIpa":"/o/","asset":"assets/rebus/eau.svg","artRevision":"eau-comic-v1","direction":"Verre simple clairement rempli d'eau; le contenu doit être lisible comme eau sans écrire le mot dans l'image.","status":"art_direction_approved","phoneticActivation":"general_active_owner_approved","clinicalValidation":"not_claimed","namingRisk":"Le contenant peut provoquer verre plutôt que eau; ambiguïté conservée explicitement."}
   ],
   "audit": [
     {"id":"mer","status":"redesign_priority","reason":"Le paysage mer + soleil ajoute un contexte décoratif alors que le concept doit être identifié immédiatement. Une simple vague n'est pas retenue car elle pourrait être nommée vague plutôt que mer."},
@@ -56,6 +57,7 @@
     {"id":"dos","status":"reference_style","reason":"Nouveau dos BD avec flèche sémantique explicite, approuvé pour l'usage général; validation clinique non présumée."},
     {"id":"raie","status":"reference_style","reason":"Nouvelle raie des cheveux BD avec flèche explicite, approuvée pour l'usage général; validation clinique non présumée."},
     {"id":"terre","status":"reference_style","reason":"Nouveau tas de terre BD avec pelle contextuelle, approuvé pour l'usage général; validation clinique non présumée."},
-    {"id":"tas","status":"reference_style","reason":"Nouveau tas BD `tas-comic-v1`, avec amas dominant et pelle secondaire contextuelle; usage général approuvé, ambiguïté pile/amas encore ouverte et validation clinique non présumée."}
+    {"id":"tas","status":"reference_style","reason":"Nouveau tas BD `tas-comic-v1`, avec amas dominant et pelle secondaire contextuelle; usage général approuvé, ambiguïté pile/amas encore ouverte et validation clinique non présumée."},
+    {"id":"eau","status":"reference_style","reason":"Nouveau verre d'eau BD `eau-comic-v1` au chemin canonique. Le risque de réponse verre reste ouvert; usage général approuvé sans validation clinique présumée."}
   ]
 }

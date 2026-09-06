@@ -30,7 +30,7 @@ assert.match(sol.reason,/supprimée/i);
 for(const item of visual.audit) assert.ok(['redesign_priority','keep_then_harmonize','reference_style'].includes(item.status));
 
 const approved=new Map(visual.approvedConceptDirections.map(item=>[item.concept,item]));
-for(const id of ['pot','dos','raie','terre','tas']){
+for(const id of ['pot','dos','raie','terre','tas','eau']){
   const direction=approved.get(id);
   const entry=lexicon.find(item=>item.id===id);
   assert.ok(direction,`${id} must have an approved comic direction`);
@@ -50,6 +50,7 @@ const teaDirection=approved.get('thé');
 assert.equal(teaDirection?.artRevision,'the-comic-v1');
 assert.equal(teaDirection?.asset,'assets/rebus/the.svg');
 assert.match(visual.audit.find(item=>item.id==='the')?.reason,/the-comic-v1/);
+assert.match(approved.get('eau')?.namingRisk,/verre/);
 
 const strictImages=new Set(game.filter(item=>item.validation==='strict').flatMap(item=>item.pieces.map(piece=>piece.image)));
 for(const image of strictImages){

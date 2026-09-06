@@ -5,9 +5,15 @@ const data=JSON.parse(await readFile(new URL('../data/visual-research-open-asset
 assert.equal(data.status,'research_only');
 assert.equal(data.items.length,4);
 const item=reading=>data.items.find(entry=>entry.reading.toLowerCase()===reading.toLowerCase());
-assert.equal(item('tas').decision,'open_asset_gap');
-assert.match(item('tas').contextualCue,/contributes no sound/);
-assert.ok(item('tas').rejectedShortcuts.includes('old tas-v1 stones/blocks/geometric stimuli'));
+const tas=item('tas');
+assert.equal(tas.decision,'open_candidates_found_reading_unproven');
+assert.match(tas.contextualCue,/contributes no sound/);
+assert.ok(tas.rejectedShortcuts.includes('old tas-v1 stones/blocks/geometric stimuli'));
+assert.ok(tas.rejectedShortcuts.some(value=>/license is open/.test(value)));
+assert.ok(tas.assetLeads.length>=3);
+assert.ok(tas.assetLeads.some(asset=>asset.license==='Public domain'));
+assert.ok(tas.assetLeads.some(asset=>asset.license==='CC0'));
+assert.ok(tas.assetLeads.every(asset=>/tas|pile|mound|soil|sand|sable|pelle|production pictogram|evidence/i.test(asset.caveat)));
 assert.equal(item('Terre').decision,'open_planet_candidates_found_reading_unproven');
 assert.ok(item('Terre').assetLeads.some(asset=>asset.title==='Earth clipart.svg' && asset.license==='CC0 1.0'));
 assert.ok(item('Terre').assetLeads.some(asset=>asset.title==='Globe icon.svg' && asset.license==='Public domain'));

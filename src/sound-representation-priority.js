@@ -66,14 +66,19 @@ export function buildSoundRepresentationPriorities({corpus,readingSounds,lexicon
   }
 
   for(const group of groups.values()){
-    const impact=isolated.get(group.ipa)||contextual.get(group.ipa)||{gain:0,method:'none'};
-    group.strictMultiPieceGain=impact.gain;
-    group.impactMethod=impact.method;
     group.attestedRepresentationCount=group.representations.filter(item=>item.rebusCount>0).length;
     group.maxSourceCount=Math.max(0,...group.representations.map(item=>item.sourceCount));
     group.totalAttestedRebuses=group.representations.reduce((sum,item)=>sum+item.rebusCount,0);
     group.hasActiveInventory=group.inventory.some(item=>item.active);
     group.hasInactivePrototype=group.inventory.some(item=>!item.active);
+
+    // Expansion reports are refreshed asynchronously after an activation. Never let
+    // a stale pre-activation gain keep an already-active sound in the pending queue.
+    const impact=group.hasActiveInventory
+      ? {gain:0,method:'none'}
+      : isolated.get(group.ipa)||contextual.get(group.ipa)||{gain:0,method:'none'};
+    group.strictMultiPieceGain=impact.gain;
+    group.impactMethod=impact.method;
     group.researchPriorityScore=group.strictMultiPieceGain*1000+group.maxSourceCount*100+group.totalAttestedRebuses*10+group.attestedRepresentationCount;
     group.researchState=group.hasActiveInventory?'already_active':group.attestedRepresentationCount>0?'attested_sound_needs_visual_resolution':'high_impact_without_attested_representation';
   }

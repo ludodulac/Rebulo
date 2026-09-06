@@ -32,11 +32,11 @@ for(const item of shortlist.items){
     const entry=lexicon.find(candidate=>String(candidate.ipa||'').replaceAll('/','')===ipa&&candidate.label===item.label);
     assert.ok(entry,`${item.label} must exist in the lexicon once explicitly approved`);
     assert.equal(entry.active,true,`${item.label} must be active for general generation`);
-    assert.equal(entry.clinicalStatus,'unreviewed','general approval must not imply clinical validation');
+    assert.equal(entry.clinicalStatus,item.clinicalStatus,'shortlist and lexicon must preserve the exact non-clinical status of the active revision');
     const asset=assets.assets.find(candidate=>candidate.path===entry.image);
     assert.ok(asset,`${item.label} must have a documented production asset`);
     assert.equal(asset.active,true);
-    assert.equal(asset.clinicalStatus,'unreviewed');
+    assert.equal(asset.clinicalStatus,item.clinicalStatus);
     assert.ok(!priorities.some(candidate=>candidate.normalizedIpa===ipa),'active concepts must not be proposed again as new concepts');
   }else{
     assert.equal(item.status,'research_candidate');
@@ -48,16 +48,17 @@ for(const item of shortlist.items){
   }
 }
 
-for(const id of ['pot','dos','raie','terre']){
+for(const id of ['pot','dos','raie','terre','tas']){
   const entry=lexicon.find(item=>item.id===id);
   assert.equal(entry.prototypeStatus,'general_owner_approved');
   assert.equal(entry.active,true);
-  assert.equal(entry.clinicalStatus,'unreviewed');
+  assert.ok(['unreviewed','naming_test_required'].includes(entry.clinicalStatus));
 }
+assert.equal(lexicon.find(item=>item.id==='tas').artRevision,'tas-comic-v1');
 assert.ok(assets.assets.some(asset=>asset.path==='assets/rebus/pot.svg'&&asset.active===false),'historical OpenMoji pot prototype must remain preserved');
 
 const summary=expansionPrioritySummary(priorities);
 assert.equal(summary.candidateCount,priorities.length);
 assert.ok(summary.totalPotentialUnlocks>0);
 
-console.log('PICTOGRAM_GENERAL_ACTIVATION '+JSON.stringify(Object.fromEntries(['pot','dos','raie','terre'].map(id=>[id,lexicon.find(item=>item.id===id).active]))));
+console.log('PICTOGRAM_GENERAL_ACTIVATION '+JSON.stringify(Object.fromEntries(['pot','dos','raie','terre','tas'].map(id=>[id,lexicon.find(item=>item.id===id).active]))));

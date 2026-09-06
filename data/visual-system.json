@@ -1,5 +1,5 @@
 {
-  "version": "1.4.2",
+  "version": "1.5.0",
   "principles": [
     "recognition_before_decoration",
     "one_concept_one_focal_object",
@@ -31,8 +31,8 @@
     {"concept":"raie","targetIpa":"/ʁɛ/","asset":"assets/rebus/raie-comic.svg","artRevision":"raie-comic-v1","direction":"Chevelure vue de face ou du dessus avec raie centrale nette et flèche rouge pointant la séparation des cheveux; préférée au poisson pour la lecture lexicale visée.","status":"art_direction_approved","phoneticActivation":"general_active_owner_approved","clinicalValidation":"not_claimed"},
     {"concept":"pot","targetIpa":"/po/","asset":"assets/rebus/pot-comic.svg","artRevision":"pot-comic-v1","direction":"Pot de fleur en terre cuite très classique, forme simple et immédiatement reconnaissable; plante facultative si elle ne domine pas la dénomination.","status":"art_direction_approved","phoneticActivation":"general_active_owner_approved","clinicalValidation":"not_claimed"},
     {"concept":"terre","targetIpa":"/tɛʁ/","asset":"assets/rebus/terre-comic.svg","artRevision":"terre-comic-v1","direction":"Tas de terre brune avec pelle ou transplantoir planté dedans pour rendre la matière terre évidente.","status":"art_direction_approved","phoneticActivation":"general_active_owner_approved","clinicalValidation":"not_claimed"},
-    {"concept":"thé","targetIpa":"/te/","asset":"assets/rebus/the.svg","direction":"Tasse de thé avec sachet visible; usage général fondé sur l'attestation pédagogique explicite du concept thé dans un exercice officiel de rébus.","status":"attested_general_direction","phoneticActivation":"general_active_attested","clinicalValidation":"not_claimed"},
-    {"concept":"tas","targetIpa":"/ta/","direction":"Amas visiblement constitué de plusieurs éléments ou matière, avec silhouette de tas dominante; éviter les piles régulières.","status":"art_direction_candidate","phoneticActivation":"still_requires_engine_gate"}
+    {"concept":"thé","targetIpa":"/te/","asset":"assets/rebus/the.svg","artRevision":"the-comic-v1","direction":"Tasse de thé fumant avec sachet visible; direction BD migrée au chemin canonique, usage général fondé sur l'attestation pédagogique explicite du concept thé dans un exercice officiel de rébus.","status":"attested_general_direction","phoneticActivation":"general_active_attested","clinicalValidation":"not_claimed"},
+    {"concept":"tas","targetIpa":"/ta/","asset":"assets/rebus/tas.svg","artRevision":"tas-comic-v1","direction":"Vrai tas de terre ou sable à silhouette dominante; pelle secondaire uniquement contextuelle et sans contribution phonétique.","status":"art_direction_approved","phoneticActivation":"general_active_owner_approved","clinicalValidation":"not_claimed","namingRisk":"Peut encore provoquer pile ou amas; aucune validation clinique n'est revendiquée."}
   ],
   "audit": [
     {"id":"mer","status":"redesign_priority","reason":"Le paysage mer + soleil ajoute un contexte décoratif alors que le concept doit être identifié immédiatement. Une simple vague n'est pas retenue car elle pourrait être nommée vague plutôt que mer."},
@@ -51,10 +51,11 @@
     {"id":"riz","status":"reference_style","reason":"Actif OpenMoji documenté ; bonne base de cohérence graphique, sans prétendre à une validation clinique."},
     {"id":"chat","status":"reference_style","reason":"Actif OpenMoji documenté ; bonne base de cohérence graphique, sans prétendre à une validation clinique."},
     {"id":"cle","status":"reference_style","reason":"Actif OpenMoji documenté ; bonne base de cohérence graphique, sans prétendre à une validation clinique."},
-    {"id":"the","status":"reference_style","reason":"OpenMoji teacup activé pour l'usage général grâce à une attestation pédagogique explicite du concept thé en rébus; validation clinique non présumée."},
+    {"id":"the","status":"reference_style","reason":"Nouvelle tasse de thé BD `the-comic-v1` au chemin canonique; usage général maintenu, validation clinique non présumée."},
     {"id":"pot","status":"reference_style","reason":"Nouveau pot BD sans plante dominante, approuvé pour l'usage général; validation clinique non présumée."},
     {"id":"dos","status":"reference_style","reason":"Nouveau dos BD avec flèche sémantique explicite, approuvé pour l'usage général; validation clinique non présumée."},
     {"id":"raie","status":"reference_style","reason":"Nouvelle raie des cheveux BD avec flèche explicite, approuvée pour l'usage général; validation clinique non présumée."},
-    {"id":"terre","status":"reference_style","reason":"Nouveau tas de terre BD avec pelle contextuelle, approuvé pour l'usage général; validation clinique non présumée."}
+    {"id":"terre","status":"reference_style","reason":"Nouveau tas de terre BD avec pelle contextuelle, approuvé pour l'usage général; validation clinique non présumée."},
+    {"id":"tas","status":"reference_style","reason":"Nouveau tas BD `tas-comic-v1`, avec amas dominant et pelle secondaire contextuelle; usage général approuvé, ambiguïté pile/amas encore ouverte et validation clinique non présumée."}
   ]
 }

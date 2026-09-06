@@ -39,5 +39,11 @@ for(const concept of ['dos','raie','terre']){
   assert.equal(item.prototypeStatus,'general_owner_approved');
   assert.equal(item.clinicalStatus,'unreviewed');
 }
-assert.equal(lexicon.find(x=>x.id==='tas'),undefined,'tas remains research-only');
+const tas=lexicon.find(x=>x.id==='tas');
+assert.ok(tas,'tas may be explicitly activated as a newer production revision');
+assert.equal(tas.active,true);
+assert.equal(tas.artRevision,'tas-comic-v1');
+assert.equal(tas.prototypeStatus,'general_owner_approved');
+assert.equal(tas.clinicalStatus,'naming_test_required');
+assert.notEqual(tas.artRevision,registry.briefs.find(x=>x.concept==='tas')?.revision,'historical tas brief must remain distinct from production comic revision');
 console.log('pictogram prototype briefs: historical research remains separate from explicit general activation');

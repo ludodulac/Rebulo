@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-06T12:31:33.147Z",
+  "generatedAt": "2026-09-06T12:36:06.261Z",
   "lexicalUniquePronouncedForms": 171476,
   "baseline": {
-    "constructibleUniqueWords": 789,
-    "multiPieceUniqueWords": 673,
-    "weightedMultiPiece": 804.446
+    "constructibleUniqueWords": 850,
+    "multiPieceUniqueWords": 723,
+    "weightedMultiPiece": 878.685
   },
   "candidatePool": [
     {
@@ -12,28 +12,11 @@
       "ipa": "/kɔʁ/",
       "status": "candidate_pictogram",
       "rawRank": 26
-    },
-    {
-      "label": "eau",
-      "ipa": "/o/",
-      "status": "priority_pictogram",
-      "rawRank": 30
     }
   ],
   "greedyOrder": [
     {
       "step": 1,
-      "addedLabel": "eau",
-      "ipa": "/o/",
-      "status": "priority_pictogram",
-      "marginalMultiPieceUniqueWords": 50,
-      "marginalConstructibleUniqueWords": 61,
-      "cumulativeMultiPieceUniqueWords": 723,
-      "cumulativeConstructibleUniqueWords": 850,
-      "cumulativeWeightedMultiPiece": 878.685
-    },
-    {
-      "step": 2,
       "addedLabel": "corps",
       "ipa": "/kɔʁ/",
       "status": "candidate_pictogram",

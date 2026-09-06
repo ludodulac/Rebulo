@@ -2,47 +2,47 @@
 
 - Entrées analysées : 189832
 - Formes orthographiques uniques : 170756
-- Pictogrammes actifs : 22
-- Entrées strictement constructibles : 949
-- Mots uniques strictement constructibles : 789
-- Entrées en vrais rébus (2+ pièces) : 797
-- Mots uniques en vrais rébus (2+ pièces) : 673
-- Couverture brute : 0.4999 %
-- Couverture rébus 2+ pièces : 0.4198 %
+- Pictogrammes actifs : 23
+- Entrées strictement constructibles : 1032
+- Mots uniques strictement constructibles : 850
+- Entrées en vrais rébus (2+ pièces) : 865
+- Mots uniques en vrais rébus (2+ pièces) : 723
+- Couverture brute : 0.5436 %
+- Couverture rébus 2+ pièces : 0.4557 %
 
 ## 30 segments manquants les mieux classés
 
 | Rang | Segment IPA | Formes débloquées | Gain pondéré | Candidats mot-entier exacts |
 |---:|---|---:|---:|---|
-| 1 | /t/ | 205 | 246.781 | t |
-| 2 | /se/ | 188 | 237.352 | cé |
-| 3 | /s/ | 182 | 236.5 | c, s' |
-| 4 | /ʁ/ | 169 | 230.069 | — |
-| 5 | /a/ | 160 | 201.913 | a, ha, hâ |
-| 6 | /k/ | 168 | 197.678 | qu', qu |
-| 7 | /n/ | 133 | 164.825 | n |
-| 8 | /l/ | 133 | 162.583 | l, l' |
-| 9 | /p/ | 122 | 157.269 | — |
-| 10 | /ʁe/ | 131 | 151.636 | ré |
-| 11 | /ka/ | 122 | 140.04 | cas, k, ka, kas |
-| 12 | /e/ | 108 | 135.409 | ais, ai |
-| 13 | /ko/ | 109 | 132.983 | cot, côt, cots |
-| 14 | /ze/ | 111 | 130.735 | — |
-| 15 | /ɑ̃/ | 120 | 130.683 | ans, an, han |
-| 16 | /ʁə/ | 101 | 123.141 | — |
-| 17 | /pe/ | 109 | 121.698 | p, p., pô, pe |
-| 18 | /kɔ̃/ | 98 | 117.599 | con, cons |
-| 19 | /d/ | 87 | 114.555 | d, d' |
-| 20 | /sə/ | 82 | 113.998 | se |
-| 21 | /ʃe/ | 90 | 109.647 | ché |
-| 22 | /f/ | 96 | 106.678 | — |
-| 23 | /o/ | 67 | 102.139 | eau, haut, o, eaux |
-| 24 | /g/ | 91 | 100.753 | — |
-| 25 | /me/ | 89 | 98.617 | maye, mée |
-| 26 | /je/ | 90 | 96.871 | — |
-| 27 | /j/ | 77 | 95.985 | — |
-| 28 | /z/ | 74 | 92.481 | zzz, zzzz |
-| 29 | /i/ | 65 | 88.421 | i, y, hie |
-| 30 | /mɑ̃/ | 75 | 88.049 | man, mans |
+| 1 | /t/ | 279 | 346.286 | t |
+| 2 | /s/ | 265 | 343.653 | c, s' |
+| 3 | /k/ | 287 | 341.562 | qu', qu |
+| 4 | /ʁ/ | 239 | 308.524 | — |
+| 5 | /n/ | 205 | 251.201 | n |
+| 6 | /se/ | 196 | 245.689 | cé |
+| 7 | /l/ | 192 | 231.583 | l, l' |
+| 8 | /a/ | 164 | 205.95 | a, ha, hâ |
+| 9 | /ze/ | 148 | 176.616 | — |
+| 10 | /f/ | 142 | 169.563 | — |
+| 11 | /m/ | 139 | 165.713 | m |
+| 12 | /g/ | 147 | 163.229 | — |
+| 13 | /p/ | 124 | 160.828 | — |
+| 14 | /ʁe/ | 137 | 160.772 | ré |
+| 15 | /v/ | 121 | 160.397 | — |
+| 16 | /ka/ | 133 | 152.618 | cas, k, ka, kas |
+| 17 | /z/ | 117 | 143.968 | zzz, zzzz |
+| 18 | /e/ | 109 | 137.103 | ais, ai |
+| 19 | /pe/ | 118 | 132.994 | p, p., pô, pe |
+| 20 | /ko/ | 109 | 132.983 | cot, côt, cots |
+| 21 | /ɑ̃/ | 120 | 130.683 | ans, an, han |
+| 22 | /ʒ/ | 101 | 130.62 | j |
+| 23 | /j/ | 104 | 128.626 | — |
+| 24 | /ʁə/ | 101 | 123.141 | — |
+| 25 | /b/ | 104 | 121.831 | — |
+| 26 | /d/ | 91 | 120.918 | d, d' |
+| 27 | /sə/ | 86 | 118.009 | se |
+| 28 | /kɔ̃/ | 98 | 117.599 | con, cons |
+| 29 | /ʃe/ | 93 | 112.99 | ché |
+| 30 | /me/ | 93 | 103.767 | maye, mée |
 
 > Les candidats mot-entier sont seulement des homophones exacts trouvés dans Lexique 4, avec priorité aux noms. Ils ne sont pas automatiquement imageables ni cliniquement admissibles : la stabilité de dénomination et la reconnaissance visuelle restent obligatoires.

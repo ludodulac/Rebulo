@@ -16,16 +16,10 @@ const merged=mergeCreatorTargets(corpus.items||[],automatic);
 
 const rate=merged.find(item=>String(item.target).toLowerCase()==='raté');
 assert.ok(rate,'raté should be generated from the real coverage report');
-assert.equal(rate.mode,'general');
+assert.equal(rate.mode,'strict','active rat + thé should promote raté to the strict path');
 assert.equal(rate.generated,true);
-assert.equal(rate.source,'coverage-report-grapheme');
-const rateCandidate=buildGeneralCreatorCandidate(rate,lexicon);
-assert.ok(rateCandidate,'raté should become a renderable general rebus');
-assert.deepEqual(rateCandidate.pieces.map(piece=>piece.operationType),['whole_word','grapheme']);
-assert.equal(rateCandidate.pieces[0].label,'rat');
-assert.equal(rateCandidate.pieces[1].grapheme,'T');
-assert.deepEqual(rateCandidate.construction.capabilities,['general']);
-assert.deepEqual(rateCandidate.therapyActivities,[]);
+assert.equal(rate.source,'coverage-report');
+assert.ok(!rate.operations,'the promoted strict target must not depend on a grapheme operation');
 
 const merci=merged.find(item=>String(item.target).toLowerCase()==='merci');
 assert.ok(merci);
@@ -55,4 +49,4 @@ for(const {candidate} of renderableSpatial){
 const withAlternatives=automatic.filter(item=>Array.isArray(item.alternatives)&&item.alternatives.length>0);
 assert.ok(withAlternatives.every(item=>item.alternatives.every(alternative=>['strict','general'].includes(alternative.mode))));
 
-console.log(`automatic creator flow: raté works; spatial candidates: ${spatialAutomatic.length}; renderable spatial: ${renderableSpatial.length}; automatic alternatives: ${withAlternatives.length}; spatial examples: ${spatialAutomatic.slice(0,5).map(item=>item.target).join(', ')||'none'}.`);
+console.log(`automatic creator flow: raté is strict with thé active; spatial candidates: ${spatialAutomatic.length}; renderable spatial: ${renderableSpatial.length}; automatic alternatives: ${withAlternatives.length}; spatial examples: ${spatialAutomatic.slice(0,5).map(item=>item.target).join(', ')||'none'}.`);

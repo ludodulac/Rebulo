@@ -35,11 +35,13 @@ assert.equal(activeThe.active,true);
 assert.equal(activeThe.clinicalStatus,'naming_test_required');
 
 const taSound=sound('ta');
-assert.ok(taSound.strictMultiPieceGain>0);
-assert.equal(taSound.impactMethod,'greedy_contextual');
+assert.ok(taSound);
+assert.ok(taSound.inventory.some(item=>item.label==='tas'&&item.active===true));
 assert.equal(taSound.attestedRepresentationCount,1);
 assert.ok(taSound.representations.some(item=>item.reading==='tas'&&item.rebusCount===2&&item.sourceCount===2));
-assert.equal(taSound.researchState,'attested_sound_needs_visual_resolution');
+assert.equal(taSound.researchState,'already_active');
+assert.equal(taSound.strictMultiPieceGain,0,'activated tas should leave the pending expansion queue');
+assert.equal(taSound.impactMethod,'none');
 
 assert.ok(priorities[0].researchPriorityScore>=priorities.at(-1).researchPriorityScore);
-console.log('sound representation priority: active sounds leave pending expansion gain; attested unresolved sounds remain prioritized');
+console.log('sound representation priority: activated sounds leave pending expansion gain while attested evidence stays visible');

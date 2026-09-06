@@ -1,18 +1,12 @@
 {
-  "generatedAt": "2026-09-06T12:21:33.078Z",
+  "generatedAt": "2026-09-06T12:31:33.147Z",
   "lexicalUniquePronouncedForms": 171476,
   "baseline": {
-    "constructibleUniqueWords": 692,
-    "multiPieceUniqueWords": 578,
-    "weightedMultiPiece": 703.812
+    "constructibleUniqueWords": 789,
+    "multiPieceUniqueWords": 673,
+    "weightedMultiPiece": 804.446
   },
   "candidatePool": [
-    {
-      "label": "tas",
-      "ipa": "/ta/",
-      "status": "candidate_pictogram",
-      "rawRank": 15
-    },
     {
       "label": "corps",
       "ipa": "/kɔʁ/",
@@ -29,17 +23,6 @@
   "greedyOrder": [
     {
       "step": 1,
-      "addedLabel": "tas",
-      "ipa": "/ta/",
-      "status": "candidate_pictogram",
-      "marginalMultiPieceUniqueWords": 95,
-      "marginalConstructibleUniqueWords": 97,
-      "cumulativeMultiPieceUniqueWords": 673,
-      "cumulativeConstructibleUniqueWords": 789,
-      "cumulativeWeightedMultiPiece": 804.446
-    },
-    {
-      "step": 2,
       "addedLabel": "eau",
       "ipa": "/o/",
       "status": "priority_pictogram",
@@ -50,7 +33,7 @@
       "cumulativeWeightedMultiPiece": 878.685
     },
     {
-      "step": 3,
+      "step": 2,
       "addedLabel": "corps",
       "ipa": "/kɔʁ/",
       "status": "candidate_pictogram",

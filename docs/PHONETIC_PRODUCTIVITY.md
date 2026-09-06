@@ -1,11 +1,11 @@
 # Rebulo — productivité phonétique des pictogrammes
 
 - Entrées Lexique analysées : 189832
-- Inventaire fusionné : 381 concepts (22 seed + 365 entrées OpenMoji avant déduplication).
-- Pièces strictement productives : 131
-- Candidats stricts sans preuve : 193
+- Inventaire fusionné : 382 concepts (23 seed + 365 entrées OpenMoji avant déduplication).
+- Pièces strictement productives : 133
+- Candidats stricts sans preuve : 192
 - Concepts général seulement : 57
-- Cibles uniques en vrais rébus stricts : 1191
+- Cibles uniques en vrais rébus stricts : 1327
 
 Une pièce est dite **productive** seulement si son mot entier et sa prononciation entière participent à au moins un rébus exact de 2 à 4 pièces. Les candidats ne comptent pas comme couverture productive.
 
@@ -13,54 +13,55 @@ Une pièce est dite **productive** seulement si son mot entier et sa prononciati
 
 | Pièce | IPA entière | Cibles strictes | Exemples |
 |---|---|---:|---|
-| dé | /de/ | 290 | garder, décidé, dépend |
-| thé | /te/ | 228 | sauter, raté, rater |
-| rat | /ʁa/ | 170 | saura, raté, rater |
-| nez | /ne/ | 152 | donner, donné, donnez |
-| pas | /pa/ | 135 | papa, paraît, parie |
-| lit | /li/ | 127 | militaire, délit, solitaire |
-| scie | /si/ | 118 | merci, décidé, décider |
-| mât | /ma/ | 114 | mari, cinéma, mamie |
-| raie | /ʁɛ/ | 112 | paraît, portrait, parait |
-| mie | /mi/ | 109 | millions, terminé, million |
-| riz | /ʁi/ | 87 | mari, parie, pari |
-| seau | /so/ | 70 | sauter, saura, sauté |
-| pie | /pi/ | 58 | thérapie, pipi, papi |
-| pot | /po/ | 56 | possible, chapeau, possibles |
+| dé | /de/ | 296 | garder, décidé, dépend |
+| thé | /te/ | 241 | sauter, raté, rater |
+| rat | /ʁa/ | 186 | saura, raté, rater |
+| nez | /ne/ | 164 | donner, donné, donnez |
+| pas | /pa/ | 141 | papa, paraît, parie |
+| lit | /li/ | 136 | militaire, délit, solitaire |
+| tas | /ta/ | 136 | tapis, tata, tâter |
+| scie | /si/ | 123 | merci, décidé, décider |
+| mât | /ma/ | 121 | mari, cinéma, mamie |
+| mie | /mi/ | 118 | millions, terminé, million |
+| raie | /ʁɛ/ | 116 | paraît, portrait, parait |
+| riz | /ʁi/ | 95 | mari, parie, pari |
+| seau | /so/ | 75 | sauter, saura, sauté |
+| pie | /pi/ | 72 | tapis, thérapie, pipi |
+| pot | /po/ | 60 | possible, chapeau, possibles |
 | cerf | /sɛʁ/ | 53 | serpent, dessert, serpents |
-| terre | /tɛʁ/ | 47 | terminé, militaire, terminée |
-| chat | /ʃa/ | 43 | chapeau, charité, chapeaux |
-| dos | /do/ | 40 | donner, donné, donnez |
-| roue | /ʁu/ | 40 | roupies, roulait, roulais |
-| paon | /pɑ̃/ | 39 | pendant, dépend, pantalon |
-| lait | /lɛ/ | 33 | palais, délai, chalet |
-| pont | /pɔ̃/ | 31 | pompiers, pompier, pompon |
-| dent | /dɑ̃/ | 27 | pendant, dentaire, gardant |
-| mer | /mɛʁ/ | 25 | merci, merdé, merder |
+| chat | /ʃa/ | 49 | chapeau, charité, chapeaux |
+| terre | /tɛʁ/ | 49 | terminé, militaire, terminée |
+| dos | /do/ | 43 | donner, donné, donnez |
+| paon | /pɑ̃/ | 42 | pendant, dépend, pantalon |
+| roue | /ʁu/ | 42 | roupies, roulait, roulais |
+| lait | /lɛ/ | 39 | palais, délai, chalet |
+| pont | /pɔ̃/ | 34 | pompiers, pompier, pompon |
+| dent | /dɑ̃/ | 29 | pendant, dentaire, gardant |
+| clé | /kle/ | 27 | raclée, raclées, racler |
+| mer | /mɛʁ/ | 26 | merci, merdé, merder |
+| bois | /bwa/ | 25 | boirai, boira, boirais |
 | ver | /vɛʁ/ | 25 | rouvert, verso, pivert |
-| bois | /bwa/ | 24 | boirai, boira, boirais |
+| pain | /pɛ̃/ | 23 | pinceau, pinceaux, tapin |
 | porte | /pɔʁt/ | 20 | rapporte, portrait, portail |
-| clé | /kle/ | 19 | raclée, raclées, racler |
-| pain | /pɛ̃/ | 17 | pinceau, pinceaux, dépeint |
 | balai | /balɛ/ | 16 | balaiera, trimballait, trimballais |
 | tour | /tuʁ/ | 16 | tourner, tourné, tournée |
+| pied | /pje/ | 15 | papier, papiers, pompiers |
 | sel | /sɛl/ | 13 | celle-ci, celles-ci, vermicelles |
 | tente | /tɑ̃t/ | 13 | détente, déroutante, militante |
 | éclair | /eklɛʁ/ | 11 | éclaircit, éclairci, éclaircira |
-| pied | /pje/ | 11 | papier, papiers, pompiers |
+| fleur | /flœʁ/ | 11 | flirter, flirté, flirtez |
 | sol | /sɔl/ | 11 | parasol, soldé, solder |
-| fleur | /flœʁ/ | 10 | flirter, flirté, flirtez |
 | radio | /ʁadjo/ | 10 | radiothérapie, radio-réveil, radiotéléphone |
 | cœur | /kœʁ/ | 9 | liqueur, marteau-piqueur, docker |
+| désert | /dezɛʁ/ | 9 | déserté, déserter, désertée |
 | gare | /gaʁ/ | 9 | garder, gardez, gardé |
 | goutte | /gut/ | 9 | dégoûte, dégoûtes, dégoûtent |
 | main | /mɛ̃/ | 9 | roumain, roumains, minci |
 | train | /tʁɛ̃/ | 9 | train-train, trimballait, trimballais |
-| désert | /dezɛʁ/ | 8 | déserté, déserter, désertée |
+| lion | /ljɔ̃/ | 8 | millions, million, lionceau |
 | souris | /suʁi/ | 8 | sourira, sourirai, souriras |
 | chapeau | /ʃapo/ | 7 | chapeauté, porte-chapeaux, chapeauter |
 | lézard | /lezaʁ/ | 7 | lézarder, lézardé, lézardés |
-| lion | /ljɔ̃/ | 7 | millions, million, lionceau |
 | neige | /nɛʒ/ | 7 | manège, manèges, motoneige |
 | cafard | /kafaʁ/ | 6 | cafarder, cafardé, cafardée |
 | canard | /kanaʁ/ | 6 | canarder, canardé, canardés |
@@ -77,8 +78,10 @@ Une pièce est dite **productive** seulement si son mot entier et sa prononciati
 | ail | /aj/ | 4 | portail, portails, aye-aye |
 | bateau | /bato/ | 4 | bateau-mouche, bateaux-mouches, bâtonner |
 | botte | /bɔt/ | 4 | rabote, rabotent, rabotes |
+| bus | /bys/ | 4 | tarabuster, tarabusté, tarabustez |
 | cadeau | /kado/ | 4 | mikado, papier-cadeau, mikados |
 | chien | /ʃjɛ̃/ | 4 | chienchien, chiendent, chienchiens |
+| hache | /aʃ/ | 4 | th, acheminez, achetè |
 | pluie | /plɥi/ | 4 | parapluie, parapluies, porte-parapluies |
 | renard | /ʁənaʁ/ | 4 | renardeau, renardé, renardeaux |
 | ski | /ski/ | 4 | skierai, skieras, skiera |
@@ -86,43 +89,39 @@ Une pièce est dite **productive** seulement si son mot entier et sa prononciati
 | avion | /avjɔ̃/ | 3 | porte-avions, porte-avion, avion-école |
 | bouche | /buʃ/ | 3 | débouche, débouchent, débouches |
 | crêpe | /kʁɛp/ | 3 | crêperie, crêperies, décrêpe |
-| hache | /aʃ/ | 3 | th, acheminez, achetè |
 | montre | /mɔ̃tʁ/ | 3 | démontre, démontrent, démontres |
 | mouche | /muʃ/ | 3 | bateau-mouche, bateaux-mouches, moucheter |
 | parc | /paʁk/ | 3 | ciné-parc, cinéparc, cinéparcs |
-| poste | /pɔst/ | 3 | riposte, ripostent, ripostes |
-| réveil | /ʁevɛj/ | 3 | radio-réveil, radioréveil, radios-réveils |
-| robe | /ʁɔb/ | 3 | dérobe, dérobes, dérobent |
+| piano | /pjano/ | 3 | pianoter, pianoté, pianota |
 
 ## Opportunités de nouvelles pièces mot-entier
 
 | Son entier attesté | Cibles potentiellement débloquées | Candidats de dénomination | Exemples de cibles |
 |---|---:|---|---|
-| /e/ | 570 | est, et, eh | été, aider, montrer, montré |
-| /t/ | 388 | t', t | très, route, travers, boîte |
-| /a/ | 332 | à, a, as | ami, amis, années, arrêtez |
-| /s/ | 275 | c', s', c | pense, passe, laisse, rester |
-| /k/ | 268 | qu', qu | chaque, course, cache, courses |
-| /ɑ̃/ | 254 | en, ans, an | envers, empêche, entrain, dégoûtant |
-| /ɛ/ | 224 | ai, es, aie | aidez, aidé, verrai, portait |
-| /se/ | 209 | ces, ses, sers | passer, passé, laissez, pensez |
-| /d/ | 162 | d', d | merde, garde, rapide, gardes |
-| /n/ | 153 | n', n | tourne, neuf, mine, reine |
-| /kɔ̃/ | 142 | con, cons | contente, raconter, compter, raconté |
-| /ʁe/ | 136 | ré, rez, rée | réponds, répondez, répond, démarrer |
-| /ka/ | 127 | cas, k, ka | cadeau, cadeaux, qualité, capacité |
-| /l/ | 126 | l', l | mal, lâche, mille, pile |
-| /ta/ | 125 | ta, tas | tapis, tâter, tanner, tatie |
-| /i/ | 121 | y, i, hi | ici, idée, ira, irai |
-| /ko/ | 121 | cot, co, côt | côté, copain, côtés, commis |
-| /sə/ | 120 | se | sera, serait, ceci, serai |
+| /e/ | 580 | est, et, eh | été, aider, état, montrer |
+| /t/ | 407 | t', t | très, route, travers, boîte |
+| /a/ | 346 | à, a, as | ami, amis, années, arrêtez |
+| /s/ | 307 | c', s', c | pense, passe, laisse, rester |
+| /k/ | 284 | qu', qu | chaque, course, taxi, cache |
+| /ɑ̃/ | 262 | en, ans, an | envers, empêche, entrain, dégoûtant |
+| /ɛ/ | 230 | ai, es, aie | aidez, aidé, verrai, portait |
+| /se/ | 227 | ces, ses, sers | passer, passé, laissez, pensez |
+| /n/ | 167 | n', n | tourne, neuf, mine, reine |
+| /d/ | 165 | d', d | merde, garde, rapide, gardes |
+| /kɔ̃/ | 157 | con, cons | contente, raconter, compter, raconté |
+| /l/ | 154 | l', l | mal, lâche, mille, pile |
+| /ʁe/ | 144 | ré, rez, rée | réponds, répondez, répond, démarrer |
+| /ko/ | 135 | cot, co, côt | côté, copain, côtés, commis |
+| /ka/ | 135 | cas, k, ka | cadeau, cadeaux, qualité, capacité |
+| /sə/ | 130 | se | sera, serait, ceci, serai |
+| /o/ | 124 | au, oh, aux | aussi, aurais, aurait, aura |
+| /i/ | 123 | y, i, hi | ici, idée, ira, irai |
 | /di/ | 120 | dit, dis, die | dirait, dîner, dirais, dirai |
-| /o/ | 118 | au, oh, aux | aussi, aurais, aurait, aura |
+| /pe/ | 112 | p, p., pô | taper, pétrin, péter, pédé |
 
 ## File de revue : candidats dessinables
 
 | Candidat | Son entier | Cibles potentielles | Statut | Prochaine étape | Exemples |
 |---|---|---:|---|---|---|
-| tas | /ta/ | 125 | research_candidate | human_drawability_review | tapis, tâter, tanner, tatie |
 
 > La file dessinable élimine les fragments grammaticaux manifestes et conserve les décisions de recherche existantes. Elle ne vaut ni validation de dénomination, ni activation, ni validation clinique.

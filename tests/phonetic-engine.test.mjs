@@ -37,6 +37,8 @@ const lexicon=[
   {label:'scie',ipa:'/si/',active:true,visualConfidence:0.97,labelStability:0.99},
   {label:'riz',ipa:'/ʁi/',active:true},
   {label:'lit',ipa:'/li/',active:true},
+  {label:'pie',ipa:'/pi/',active:true},
+  {label:'tas',ipa:'/ta/',active:true,clinicalStatus:'naming_test_required'},
   {label:'thé',ipa:'/te/',active:false,clinicalStatus:'naming_test_required'},
   {label:'eau',ipa:'/o/',active:false,clinicalStatus:'naming_test_required'},
   {label:'bus',ipa:'/bys/',active:true},
@@ -51,6 +53,12 @@ const pilotExpansion=segmentTargetWithLexicon('/liʁi/',lexicon);
 assert.equal(pilotExpansion.length,1);
 assert.deepEqual(pilotExpansion[0].map(x=>x.label),['lit','riz']);
 assert.equal(validateStrictRebus({targetIpa:'/liʁi/',pieces:pilotExpansion[0]}).ok,true);
+
+const tapis=segmentTargetWithLexicon('/tapi/',lexicon);
+assert.ok(tapis.some(parts=>parts.map(x=>x.label).join('+')==='tas+pie'));
+const tasPie=tapis.find(parts=>parts.map(x=>x.label).join('+')==='tas+pie');
+assert.equal(validateStrictRebus({targetIpa:'/tapi/',pieces:tasPie}).ok,true);
+assert.equal(validateStrictRebus({targetIpa:'/api/',pieces:[{label:'tas',ipa:'/ta/'},{label:'pie',ipa:'/pi/'}]}).ok,false,'tas must contribute its complete /ta/ pronunciation');
 
 assert.equal(segmentTargetWithLexicon('/te/',lexicon).length,0);
 assert.equal(segmentTargetWithLexicon('/o/',lexicon).length,0);

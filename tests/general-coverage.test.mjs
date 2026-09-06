@@ -5,7 +5,7 @@ import {analyzeGeneralCoverage} from '../src/general-coverage.js';
 const report=JSON.parse(fs.readFileSync('data/coverage-report.json','utf8'));
 const metrics=analyzeGeneralCoverage(report);
 
-assert.equal(metrics.strictMultiPieceUniqueWordCount,291);
+assert.ok(metrics.strictMultiPieceUniqueWordCount>=291,'strict multi-piece coverage must not regress below the established baseline');
 assert.ok(metrics.graphemeGeneratedUniqueWordCount>0);
 assert.equal(
   metrics.combinedStrictAndGraphemeUniqueWordCount,

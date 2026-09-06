@@ -8,6 +8,7 @@ const namingRecords=JSON.parse(await readFile(new URL('../data/pictogram-naming-
 
 const tas=comparisons.comparisons.find(item=>item.concept==='tas');
 assert.ok(tas);
+assert.equal(tas.revision,'tas-v1');
 assert.equal(tas.targetIpa,'/ta/');
 assert.equal(tas.activationState,'inactive_until_human_decision');
 assert.equal(tas.humanDecision,null);
@@ -27,7 +28,16 @@ assert.deepEqual(new Set(plan.candidateIds),new Set(tas.candidates.map(item=>ite
 assert.equal(plan.capture.firstSpontaneousResponseOnly,true);
 assert.equal(plan.capture.anonymousOnly,true);
 assert.equal(plan.decisionGate.automaticActivation,false);
-assert.equal(lexicon.find(item=>item.id==='tas'),undefined,'tas research must not silently create or reactivate a lexicon entry');
+
+const activeTas=lexicon.find(item=>item.id==='tas');
+assert.ok(activeTas,'the newer product revision may exist without rewriting tas-v1 research');
+assert.equal(activeTas.ipa,'/ta/');
+assert.equal(activeTas.active,true);
+assert.equal(activeTas.image,'assets/rebus/tas.svg');
+assert.equal(activeTas.artRevision,'tas-comic-v1');
+assert.equal(activeTas.prototypeStatus,'general_owner_approved');
+assert.equal(activeTas.clinicalStatus,'naming_test_required');
+assert.notEqual(activeTas.artRevision,tas.revision,'tas-v1 research observations must never be transferred to the comic revision');
 assert.deepEqual(namingRecords.records,[],'no participant result may be fabricated');
 
-console.log('tas naming stimuli: four local candidates remain research-only and outside the lexicon');
+console.log('tas naming stimuli: tas-v1 remains immutable research while tas-comic-v1 is a separate general-product revision');

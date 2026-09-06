@@ -30,7 +30,7 @@ assert.match(sol.reason,/supprimée/i);
 for(const item of visual.audit) assert.ok(['redesign_priority','keep_then_harmonize','reference_style'].includes(item.status));
 
 const approved=new Map(visual.approvedConceptDirections.map(item=>[item.concept,item]));
-for(const id of ['pot','dos','raie','terre']){
+for(const id of ['pot','dos','raie','terre','tas']){
   const direction=approved.get(id);
   const entry=lexicon.find(item=>item.id===id);
   assert.ok(direction,`${id} must have an approved comic direction`);
@@ -43,9 +43,13 @@ for(const id of ['pot','dos','raie','terre']){
   const record=registry.assets.find(asset=>asset.path===direction.asset);
   assert.equal(record?.source,'rebulo_original');
   assert.equal(record?.active,true);
-  assert.equal(record?.clinicalStatus,'unreviewed');
+  assert.equal(record?.clinicalStatus,entry.clinicalStatus);
+  assert.notEqual(record?.clinicalStatus,'clinical_approved');
 }
-assert.equal(approved.get('tas')?.status,'art_direction_candidate');
+const teaDirection=approved.get('thé');
+assert.equal(teaDirection?.artRevision,'the-comic-v1');
+assert.equal(teaDirection?.asset,'assets/rebus/the.svg');
+assert.match(visual.audit.find(item=>item.id==='the')?.reason,/the-comic-v1/);
 
 const strictImages=new Set(game.filter(item=>item.validation==='strict').flatMap(item=>item.pieces.map(piece=>piece.image)));
 for(const image of strictImages){

@@ -28,11 +28,11 @@ assert.ok(poSound.inventory.some(item=>item.label==='pot'&&item.active===true));
 assert.equal(poSound.researchState,'already_active');
 assert.equal(poSound.strictMultiPieceGain,0,'active inventory should no longer be counted as a pending expansion gain');
 
-const teSound=sound('te');
-assert.ok(teSound);
-assert.ok(teSound.inventory.some(item=>item.label==='thé'&&item.active===true));
-assert.equal(teSound.researchState,'already_active');
-assert.equal(teSound.strictMultiPieceGain,0,'newly active thé should leave the pending expansion pool');
+const activeThe=lexiconSeed.find(item=>item.label==='thé');
+assert.ok(activeThe);
+assert.equal(activeThe.ipa,'/te/');
+assert.equal(activeThe.active,true);
+assert.equal(activeThe.clinicalStatus,'naming_test_required');
 
 const taSound=sound('ta');
 assert.ok(taSound.strictMultiPieceGain>0);

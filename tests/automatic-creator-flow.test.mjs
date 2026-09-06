@@ -19,7 +19,7 @@ assert.ok(rate,'raté should be generated from the real coverage report');
 assert.equal(rate.mode,'strict','active rat + thé should promote raté to the strict path');
 assert.equal(rate.generated,true);
 assert.equal(rate.source,'coverage-report');
-assert.ok(Array.isArray(rate.alternatives)&&rate.alternatives.some(item=>item.mode==='general'&&item.source==='coverage-report-grapheme'),'the former rat + T construction should remain available as a general alternative');
+assert.ok(!rate.operations,'the promoted strict target must not depend on a grapheme operation');
 
 const merci=merged.find(item=>String(item.target).toLowerCase()==='merci');
 assert.ok(merci);

@@ -1,18 +1,12 @@
 {
-  "generatedAt": "2026-09-05T23:46:06.769Z",
+  "generatedAt": "2026-09-06T08:00:31.439Z",
   "lexicalUniquePronouncedForms": 171476,
   "baseline": {
-    "constructibleUniqueWords": 556,
-    "multiPieceUniqueWords": 448,
-    "weightedMultiPiece": 552.342
+    "constructibleUniqueWords": 692,
+    "multiPieceUniqueWords": 578,
+    "weightedMultiPiece": 703.812
   },
   "candidatePool": [
-    {
-      "label": "thé",
-      "ipa": "/te/",
-      "status": "priority_pictogram",
-      "rawRank": 1
-    },
     {
       "label": "tas",
       "ipa": "/ta/",
@@ -35,17 +29,6 @@
   "greedyOrder": [
     {
       "step": 1,
-      "addedLabel": "thé",
-      "ipa": "/te/",
-      "status": "priority_pictogram",
-      "marginalMultiPieceUniqueWords": 130,
-      "marginalConstructibleUniqueWords": 136,
-      "cumulativeMultiPieceUniqueWords": 578,
-      "cumulativeConstructibleUniqueWords": 692,
-      "cumulativeWeightedMultiPiece": 703.812
-    },
-    {
-      "step": 2,
       "addedLabel": "tas",
       "ipa": "/ta/",
       "status": "candidate_pictogram",
@@ -56,7 +39,7 @@
       "cumulativeWeightedMultiPiece": 804.446
     },
     {
-      "step": 3,
+      "step": 2,
       "addedLabel": "eau",
       "ipa": "/o/",
       "status": "priority_pictogram",
@@ -67,7 +50,7 @@
       "cumulativeWeightedMultiPiece": 878.685
     },
     {
-      "step": 4,
+      "step": 3,
       "addedLabel": "corps",
       "ipa": "/kɔʁ/",
       "status": "candidate_pictogram",

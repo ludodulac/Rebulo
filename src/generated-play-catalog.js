@@ -1,5 +1,4 @@
-import {buildCreatorTargets} from './creator-catalog.js';
-import {buildCreatorCandidate} from './creator-runtime.js';
+import {validateStrictRebus} from './phonetic-engine.js';
 
 function normalizeKey(value=''){
   return String(value||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'');
@@ -18,25 +17,40 @@ function minimumAgeFromDifficulty(difficulty){
 }
 
 export function generatedPlayableRebuses(coverage={},lexicon=[]){
+  const rows=Array.isArray(coverage?.constructible)?coverage.constructible:[];
+  const activeById=new Map((lexicon||[]).filter(piece=>piece?.active!==false&&piece?.id&&piece?.image).map(piece=>[piece.id,piece]));
+  const seen=new Set();
   const rounds=[];
-  for(const target of buildCreatorTargets(coverage)){
-    const candidate=buildCreatorCandidate(target,lexicon,[]);
-    if(!candidate||!Array.isArray(candidate.pieces)||candidate.pieces.length<2)continue;
-    const difficulty=difficultyFromPieces(candidate.pieces.length);
+  for(const row of rows){
+    const decomposition=Array.isArray(row?.decomposition)?row.decomposition:[];
+    if(!row?.word||!row?.ipa||decomposition.length<2||decomposition.length>4)continue;
+    const key=normalizeKey(row.word);
+    if(!key||seen.has(key))continue;
+    const pieces=decomposition.map(id=>activeById.get(id)||null);
+    if(pieces.some(piece=>!piece))continue;
+    const strictCandidate={
+      answer:row.word,
+      targetIpa:row.ipa,
+      pieces:pieces.map(piece=>({...piece,reading:piece.label}))
+    };
+    if(!validateStrictRebus(strictCandidate).ok)continue;
+    seen.add(key);
+    const difficulty=difficultyFromPieces(pieces.length);
     rounds.push({
-      id:`generated-${normalizeKey(candidate.answer)}`,
-      answer:candidate.answer,
-      targetIpa:candidate.targetIpa,
+      id:`generated-${key}`,
+      answer:row.word,
+      targetIpa:row.ipa,
       minAge:minimumAgeFromDifficulty(difficulty),
       difficulty,
       presentationStatus:'showcase',
       source:'coverage-report',
       generated:true,
       validation:'strict',
-      pieces:candidate.pieces.map(piece=>({
+      frequency:Number(row?.frequency||0),
+      pieces:pieces.map(piece=>({
         id:piece.id,
         image:piece.image,
-        reading:piece.reading||piece.label,
+        reading:piece.label,
         ipa:piece.ipa
       })),
       hint:'Nomme chaque image, puis assemble les sons sans en ajouter ni en retirer.'

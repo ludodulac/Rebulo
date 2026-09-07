@@ -1,11 +1,23 @@
 import {validateStrictRebus} from './phonetic-engine.js';
 
+const LOW_CONFIDENCE_PLAY_WORDS=new Set([
+  'rara',
+  'pawnee'
+]);
+
 function normalizeKey(value=''){
   return String(value||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'');
 }
 
 function exactWordKey(value=''){
-  return String(value||'').toLocaleLowerCase('fr-FR').normalize('NFC');
+  return String(value||'').toLocaleLowerCase('fr-FR').normalize('NFC').trim();
+}
+
+function playQuality(row){
+  const word=exactWordKey(row?.word);
+  const frequency=Number(row?.frequency||0);
+  if(!word||LOW_CONFIDENCE_PLAY_WORDS.has(word)||frequency<1)return 'review_needed';
+  return 'default_play';
 }
 
 function difficultyFromPieces(count){
@@ -38,13 +50,15 @@ export function generatedPlayableRebuses(coverage={},lexicon=[]){
     if(!validateStrictRebus(strictCandidate).ok)continue;
     seenWords.add(wordKey);
     const difficulty=difficultyFromPieces(pieces.length);
+    const quality=playQuality(row);
     rounds.push({
       id:`generated-${rounds.length+1}-${normalizeKey(row.word)}`,
       answer:row.word,
       targetIpa:row.ipa,
       minAge:minimumAgeFromDifficulty(difficulty),
       difficulty,
-      presentationStatus:'showcase',
+      playQuality:quality,
+      presentationStatus:quality==='default_play'?'showcase':'review_needed',
       source:'coverage-report',
       generated:true,
       validation:'strict',

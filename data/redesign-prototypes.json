@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "purpose": "Première planche de redesign visuel des pictogrammes actifs Rebulo. Ces entrées sont des syllabes/lectures mot-entier, pas des mots-cibles arbitraires comme voiture.",
+  "status": "research_only",
+  "activationPolicy": "Aucun prototype ne remplace un asset actif sans revue de dénomination attachée à sa révision exacte.",
+  "items": [
+    {
+      "concept": "mât",
+      "targetReading": "mât",
+      "ipa": "/ma/",
+      "currentIssue": "Le stimulus actuel n'évoque pas assez spontanément le mât.",
+      "candidateRevision": "mat-boat-arrow-comic-v1",
+      "asset": "assets/research/mat-boat-arrow-comic-v1.svg",
+      "visualDirection": "voilier simple avec flèche vers le mât",
+      "namingRisks": ["bateau", "voilier", "voile"],
+      "nextGate": "blind_naming_review"
+    },
+    {
+      "concept": "cor",
+      "targetReading": "cor",
+      "ipa": "/kɔʁ/",
+      "currentIssue": "Le personnage entier peut être nommé homme, garçon ou personne plutôt que corps. La piste homophone cor est plus visuelle.",
+      "candidateRevision": "cor-horn-comic-v1",
+      "asset": "assets/research/cor-horn-comic-v1.svg",
+      "visualDirection": "cor d'harmonie isolé, instrument dominant",
+      "namingRisks": ["trompette", "instrument", "cor d'harmonie"],
+      "nextGate": "phonetic_and_product_review"
+    },
+    {
+      "concept": "tas",
+      "targetReading": "tas",
+      "ipa": "/ta/",
+      "currentIssue": "Le tas de terre peut entrer en concurrence avec la lecture terre.",
+      "candidateRevision": "tas-leaves-comic-v1",
+      "asset": "assets/research/tas-leaves-comic-v1.svg",
+      "visualDirection": "tas de feuilles, sans pelle, pour ne pas confondre avec terre",
+      "namingRisks": ["feuilles", "automne", "paquet de feuilles"],
+      "nextGate": "compare_against_tas_terre"
+    },
+    {
+      "concept": "tour",
+      "targetReading": "tour",
+      "ipa": "/tuʁ/",
+      "currentIssue": "La tour bâtiment peut être nommée château, donjon ou tour de château.",
+      "candidateRevision": "tour-chess-rook-comic-v1",
+      "asset": "assets/research/tour-chess-rook-comic-v1.svg",
+      "visualDirection": "tour de jeu d'échecs isolée",
+      "namingRisks": ["pièce d'échecs", "échec", "tour"],
+      "nextGate": "blind_naming_review"
+    }
+  ]
+}

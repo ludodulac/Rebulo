@@ -3,6 +3,7 @@ import { buildAssetInventory } from '../scripts/audit-asset-library.mjs';
 
 const inventory = await buildAssetInventory(new URL('..', import.meta.url).pathname);
 
+assert.equal(inventory.schemaVersion, '1.1');
 assert.equal(inventory.summary.production, 24, 'production SVG count should exclude archived legacy pot');
 assert.equal(inventory.summary.prepared, 0, 'prepared comic queue should be empty after corps migration');
 assert.equal(inventory.summary.research, 23, 'research inventory should include the inactive nid prototype');
@@ -54,6 +55,8 @@ assert.ok(!inventory.summary.activeLegacyStyle.includes(nidPrototype.path), 'ina
 assert.ok(inventory.summary.duplicateReadings.includes('pot'), 'archived pot history should remain visible alongside production');
 assert.ok(inventory.summary.duplicateReadings.includes('tas'), 'historical tas research stimuli should remain visible as same-reading revisions');
 assert.ok(inventory.summary.duplicateReadings.includes('eau'), 'historical water revision should remain visible alongside production');
+assert.deepEqual(inventory.summary.productionDuplicateReadings, [], 'historical revisions must not be misreported as duplicate production concepts');
+for (const reading of ['pot','tas','eau']) assert.ok(inventory.summary.historicalRevisionReadings.includes(reading), `${reading} should be classified as production + research history`);
 assert.ok(inventory.summary.activeLegacyStyle.includes('assets/rebus/chat.svg'), 'audit should expose active assets that still need comic migration');
 
-console.log('asset-library-inventory.test.mjs: ok');
+console.log('asset-library-inventory.test.mjs: lifecycle-aware duplicate classification ok');

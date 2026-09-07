@@ -1,0 +1,30 @@
+import assert from 'node:assert/strict';
+import {allowedSessionEvents,createSessionState,isSessionResolved,SESSION_EVENTS,SESSION_STATES,sessionTransition} from '../src/session-state-machine.js';
+
+let state=createSessionState();
+assert.equal(state,SESSION_STATES.PRESENTATION);
+state=sessionTransition(state,SESSION_EVENTS.BEGIN_ATTEMPT);
+assert.equal(state,SESSION_STATES.ATTEMPT);
+state=sessionTransition(state,SESSION_EVENTS.INCORRECT);
+assert.equal(state,SESSION_STATES.RETRY);
+state=sessionTransition(state,SESSION_EVENTS.REQUEST_HELP);
+assert.equal(state,SESSION_STATES.HELP);
+state=sessionTransition(state,SESSION_EVENTS.BEGIN_RETRY);
+assert.equal(state,SESSION_STATES.RETRY);
+state=sessionTransition(state,SESSION_EVENTS.CORRECT);
+assert.equal(state,SESSION_STATES.RESOLUTION);
+assert.equal(isSessionResolved(state),true);
+state=sessionTransition(state,SESSION_EVENTS.NEXT_ROUND);
+assert.equal(state,SESSION_STATES.PRESENTATION);
+state=sessionTransition(state,SESSION_EVENTS.SHOW_SOLUTION);
+assert.equal(state,SESSION_STATES.RESOLUTION);
+state=sessionTransition(state,SESSION_EVENTS.COMPLETE_SESSION);
+assert.equal(state,SESSION_STATES.RESULT);
+assert.equal(isSessionResolved(state),true);
+state=sessionTransition(state,SESSION_EVENTS.RESET);
+assert.equal(state,SESSION_STATES.PRESENTATION);
+
+assert.equal(sessionTransition(SESSION_STATES.RESULT,SESSION_EVENTS.CORRECT),SESSION_STATES.RESULT);
+assert.ok(allowedSessionEvents(SESSION_STATES.ATTEMPT).includes(SESSION_EVENTS.REQUEST_HELP));
+assert.ok(!allowedSessionEvents(SESSION_STATES.RESOLUTION).includes(SESSION_EVENTS.REQUEST_HELP));
+console.log('session state machine: explicit presentation → attempt/help/retry → resolution → result');

@@ -11,6 +11,8 @@ on:
       - 'scripts/import-lexique.mjs'
       - 'scripts/simulate-expansion.mjs'
       - 'src/phonetic-engine.js'
+      - 'src/generated-play-catalog.js'
+      - 'tests/generated-play-catalog.test.mjs'
       - 'src/phonetic-productivity.js'
       - 'src/productivity-opportunities.js'
       - 'src/drawable-opportunities.js'
@@ -51,6 +53,8 @@ jobs:
         run: node scripts/import-lexique.mjs .cache/Lexique4.tsv .cache/lexique4.compact.json
       - name: Run strict coverage analysis
         run: node scripts/analyze-coverage.mjs .cache/lexique4.compact.json data/lexicon-seed.json data/coverage-report.json
+      - name: Verify full playable strict catalog
+        run: node tests/generated-play-catalog.test.mjs
       - name: Rank active pictogram dependencies
         run: node scripts/analyze-active-dependencies.mjs .cache/lexique4.compact.json data/lexicon-seed.json data/active-dependency-report.json
       - name: Build visual migration readiness queue

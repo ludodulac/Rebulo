@@ -17,6 +17,7 @@ export function tokenizePhrase(value=''){const text=String(value||'');const toke
 export function isPhraseInput(value=''){return tokenizePhrase(value).filter(token=>token.kind==='word').length>1;}
 function viableCandidate(target,lexicon=[],therapyDefinitions=[]){if(!target||target.assets!=='ready')return null;if(target.mode==='strict')return buildCreatorCandidate(target,lexicon,therapyDefinitions);if(target.mode==='general')return buildGeneralCreatorCandidate(target,lexicon);return null;}
 function directPictogram(key,lexicon=[]){const item=(lexicon||[]).find(entry=>entry?.active&&entry?.image&&normalizePhraseWord(entry.label)===key);if(!item)return null;const mode=item.strictEligible===false?'general':'strict';return {answer:item.label,targetIpa:item.ipa,pieces:[{...item,image:item.image,reading:item.label,ipa:item.ipa}],construction:{mode,source:mode==='strict'?'direct_pictogram':'direct_illustration'}};}
+export function phrasePracticeMetrics(plan={}){const wordCount=Math.max(0,Number(plan.wordCount)||0);const rebusCount=Math.max(0,Number(plan.rebusCount)||0);const textCount=Math.max(0,Number(plan.textCount)||0);const strictRebusCount=(plan.tokens||[]).filter(token=>token?.kind==='rebus'&&token?.mode==='strict').length;return {wordCount,rebusCount,textCount,strictRebusCount,rebusRatio:wordCount?rebusCount/wordCount:0,strictRebusRatio:wordCount?strictRebusCount/wordCount:0,complete:Boolean(plan.complete)};}
 export function buildPhrasePlan(value='',targets=[],lexicon=[],therapyDefinitions=[]){
   const tokens=tokenizePhrase(value);const targetMap=new Map();for(const target of targets||[]){const key=normalizePhraseWord(target?.target);if(key&&!targetMap.has(key))targetMap.set(key,target);}
   let wordCount=0;let rebusCount=0;let conventionCount=0;
@@ -27,6 +28,7 @@ export function buildPhrasePlan(value='',targets=[],lexicon=[],therapyDefinition
     const symbol=PHRASE_SYMBOLS[key];if(symbol){rebusCount+=1;conventionCount+=1;return {kind:'symbol',text:token.text,...symbol,mode:'general'};}
     return {kind:'text',text:token.text,reason:target?'not_renderable':'not_available'};
   });
-  return {input:String(value||''),tokens:planned,wordCount,rebusCount,conventionCount,textCount:Math.max(0,wordCount-rebusCount),complete:wordCount>0&&rebusCount===wordCount};
+  const plan={input:String(value||''),tokens:planned,wordCount,rebusCount,conventionCount,textCount:Math.max(0,wordCount-rebusCount),complete:wordCount>0&&rebusCount===wordCount};
+  return {...plan,practice:phrasePracticeMetrics(plan)};
 }
 export function playfulPhraseAt(index=0){const size=PLAYFUL_PHRASES.length;if(!size)return '';const safe=((Number(index)||0)%size+size)%size;return PLAYFUL_PHRASES[safe];}

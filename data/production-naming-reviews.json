@@ -2,69 +2,16 @@
   "schemaVersion":"1.0",
   "reviews":[
     {
-      "concept":"pluie",
-      "revision":"pluie-openmoji-1f327-v1",
-      "targetIpa":"/plɥi/",
-      "activationState":"active_general_naming_review",
-      "clinicalStatus":"naming_test_required",
-      "goal":"Mesurer si le stimulus de production actuel déclenche spontanément « pluie » plutôt que « nuage », sans modifier son activation générale ni revendiquer de validation clinique.",
-      "candidates":[
-        {
-          "candidateId":"pluie-production-openmoji-1f327-v1",
-          "asset":"assets/rebus/pluie.svg",
-          "provenance":"OpenMoji 1F327 cloud with rain, adaptation locale simplifiée pour petite taille; révision de production pluie-openmoji-1f327-v1.",
-          "availability":"available",
-          "designIntent":"Tester exactement le stimulus actuellement affiché par Rebulo afin d'attacher toute observation de dénomination à sa révision réelle.",
-          "namingRisks":["nuage","nuage de pluie","mauvais temps"],
-          "namingTestStatus":"not_run"
-        }
-      ],
-      "automaticActivation":false,
-      "humanDecision":null
+      "concept":"pluie","revision":"pluie-openmoji-1f327-v1","targetIpa":"/plɥi/","activationState":"active_general_naming_review","clinicalStatus":"naming_test_required","goal":"Mesurer si le stimulus de production actuel déclenche spontanément « pluie » plutôt que « nuage », sans modifier son activation générale ni revendiquer de validation clinique.","candidates":[{"candidateId":"pluie-production-openmoji-1f327-v1","asset":"assets/rebus/pluie.svg","provenance":"OpenMoji 1F327 cloud with rain, adaptation locale simplifiée pour petite taille; révision de production pluie-openmoji-1f327-v1.","availability":"available","designIntent":"Tester exactement le stimulus actuellement affiché par Rebulo afin d'attacher toute observation de dénomination à sa révision réelle.","namingRisks":["nuage","nuage de pluie","mauvais temps"],"namingTestStatus":"not_run"}],"automaticActivation":false,"humanDecision":null
     },
     {
-      "concept":"clé",
-      "revision":"cle-openmoji-1f511-v1",
-      "targetIpa":"/kle/",
-      "activationState":"active_general_naming_review",
-      "clinicalStatus":"naming_test_required",
-      "goal":"Mesurer la dénomination spontanée du stimulus de production actuel sans modifier son activation générale. La réponse « clef » est une variante orthographique française attendue du même mot /kle/ et doit être distinguée manuellement d'une réponse sémantiquement concurrente.",
-      "candidates":[
-        {
-          "candidateId":"cle-production-openmoji-1f511-v1",
-          "asset":"assets/rebus/cle.svg",
-          "provenance":"OpenMoji 1F511 key, CC BY-SA 4.0; révision de production cle-openmoji-1f511-v1.",
-          "availability":"available",
-          "designIntent":"Tester exactement la clé actuellement affichée par Rebulo et rattacher les observations à cette révision précise.",
-          "namingRisks":["clef","clé de porte","clé ancienne"],
-          "namingTestStatus":"not_run",
-          "reviewNote":"« clef » n'est pas considérée comme une erreur clinique automatique : c'est une variante orthographique du même mot prononcé /kle/. Le compteur descriptif exact reste volontairement conservateur et la décision appartient à la revue humaine."
-        }
-      ],
-      "automaticActivation":false,
-      "humanDecision":null
+      "concept":"clé","revision":"cle-openmoji-1f511-v1","targetIpa":"/kle/","activationState":"active_general_naming_review","clinicalStatus":"naming_test_required","goal":"Mesurer la dénomination spontanée du stimulus de production actuel sans modifier son activation générale. La réponse « clef » est une variante orthographique française attendue du même mot /kle/ et doit être distinguée manuellement d'une réponse sémantiquement concurrente.","candidates":[{"candidateId":"cle-production-openmoji-1f511-v1","asset":"assets/rebus/cle.svg","provenance":"OpenMoji 1F511 key, CC BY-SA 4.0; révision de production cle-openmoji-1f511-v1.","availability":"available","designIntent":"Tester exactement la clé actuellement affichée par Rebulo et rattacher les observations à cette révision précise.","namingRisks":["clef","clé de porte","clé ancienne"],"namingTestStatus":"not_run","reviewNote":"« clef » n'est pas considérée comme une erreur clinique automatique : c'est une variante orthographique du même mot prononcé /kle/. Le compteur descriptif exact reste volontairement conservateur et la décision appartient à la revue humaine."}],"automaticActivation":false,"humanDecision":null
     },
     {
-      "concept":"sol",
-      "revision":"sol-note-v2",
-      "targetIpa":"/sɔl/",
-      "activationState":"active_general_naming_review",
-      "clinicalStatus":"naming_test_required",
-      "goal":"Mesurer si la note de musique actuellement affichée par Rebulo provoque spontanément le mot entier « sol ». Le dessin n'affiche pas de clé musicale et peut donc provoquer une dénomination générique; aucune modification d'activation ni validation clinique n'est automatique.",
-      "candidates":[
-        {
-          "candidateId":"sol-production-note-v2",
-          "asset":"assets/rebus/sol.svg",
-          "provenance":"Illustration originale Rebulo ajoutée comme pictogramme de note sol le 2026-08-31, puis révisée au commit 4cb0c773ed9046558396dafa2b304a6e1227caca le 2026-09-02 pour supprimer la réponse écrite; révision sol-note-v2.",
-          "availability":"available",
-          "designIntent":"Tester exactement le stimulus de production actuel avant tout éventuel redesign musical plus explicite.",
-          "namingRisks":["note","note de musique","musique"],
-          "namingTestStatus":"not_run",
-          "reviewNote":"Une réponse générique « note » ou « musique » indiquerait un problème de dénomination du stimulus actuel, pas un problème phonétique du segment /sɔl/. Toute décision de redesign reste humaine."
-        }
-      ],
-      "automaticActivation":false,
-      "humanDecision":null
+      "concept":"sol","revision":"sol-note-v2","targetIpa":"/sɔl/","activationState":"active_general_naming_review","clinicalStatus":"naming_test_required","goal":"Mesurer si la note de musique actuellement affichée par Rebulo provoque spontanément le mot entier « sol ». Le dessin n'affiche pas de clé musicale et peut donc provoquer une dénomination générique; aucune modification d'activation ni validation clinique n'est automatique.","candidates":[{"candidateId":"sol-production-note-v2","asset":"assets/rebus/sol.svg","provenance":"Illustration originale Rebulo ajoutée comme pictogramme de note sol le 2026-08-31, puis révisée au commit 4cb0c773ed9046558396dafa2b304a6e1227caca le 2026-09-02 pour supprimer la réponse écrite; révision sol-note-v2.","availability":"available","designIntent":"Tester exactement le stimulus de production actuel avant tout éventuel redesign musical plus explicite.","namingRisks":["note","note de musique","musique"],"namingTestStatus":"not_run","reviewNote":"Une réponse générique « note » ou « musique » indiquerait un problème de dénomination du stimulus actuel, pas un problème phonétique du segment /sɔl/. Toute décision de redesign reste humaine."}],"automaticActivation":false,"humanDecision":null
+    },
+    {
+      "concept":"tour","revision":"tour-tower-v1","targetIpa":"/tuʁ/","activationState":"active_general_naming_review","clinicalStatus":"naming_test_required","goal":"Mesurer si la tour architecturale actuellement affichée par Rebulo provoque spontanément le mot entier « tour », sans modifier son activation générale ni sa valeur phonétique /tuʁ/.","candidates":[{"candidateId":"tour-production-tower-v1","asset":"assets/rebus/tour.svg","provenance":"Illustration originale Rebulo ajoutée au commit 87ea639b2dd52f301e3581d5a0875ac769a21803 le 2026-08-31 avec le message explicite « Add original tower rebus pictogram »; révision tour-tower-v1.","availability":"available","designIntent":"Tester exactement la tour de production actuelle avant tout éventuel redesign; la structure entière reste l'unique concept phonétique.","namingRisks":["château","donjon","tour de château"],"namingTestStatus":"not_run","reviewNote":"Une réponse « château » ou « donjon » signale une ambiguïté de dénomination du stimulus, pas une autorisation de changer le mot phonétique cible. Toute décision de redesign reste humaine."}],"automaticActivation":false,"humanDecision":null
     }
   ]
 }

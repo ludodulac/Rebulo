@@ -26,7 +26,7 @@
 | 19 | corps | /kɔʁ/ | 37 | -37 | 95.1 % | naming_test_required |
 | 20 | clé | /kle/ | 21 | -21 | 97.2 % | naming_test_required |
 | 21 | mer | /mɛʁ/ | 21 | -21 | 97.2 % | undocumented |
-| 22 | tour | /tuʁ/ | 18 | -18 | 97.6 % | undocumented |
+| 22 | tour | /tuʁ/ | 18 | -18 | 97.6 % | naming_test_required |
 | 23 | sol | /sɔl/ | 10 | -10 | 98.7 % | naming_test_required |
 | 24 | pluie | /plɥi/ | 2 | -2 | 99.7 % | naming_test_required |
 

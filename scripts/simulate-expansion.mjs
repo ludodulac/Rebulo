@@ -5,6 +5,7 @@ const lexiquePath=process.argv[2]||'.cache/lexique4.compact.json';
 const pictogramPath=process.argv[3]||'data/lexicon-seed.json';
 const prioritiesPath=process.argv[4]||'data/pictogram-priorities.json';
 const outputPath=process.argv[5]||'data/expansion-simulation.json';
+const shortlistPath=process.argv[6]||'data/pictogram-expansion-shortlist.json';
 
 const lexique=JSON.parse(fs.readFileSync(lexiquePath,'utf8'));
 const entries=Array.isArray(lexique)?lexique:(lexique.entries||[]);
@@ -16,19 +17,39 @@ const prototypePool=pictograms
   .filter(x=>x.active===false&&x.ipa&&x.label&&['asset_available','asset_pending'].includes(x.prototypeStatus))
   .map(x=>({id:x.id||x.label,label:x.label,ipa:normalizeIPA(x.ipa),assetStatus:x.prototypeStatus}));
 const priorities=JSON.parse(fs.readFileSync(prioritiesPath,'utf8'));
+const shortlist=JSON.parse(fs.readFileSync(shortlistPath,'utf8'));
 const activeIpas=new Set(base.map(x=>x.ipa));
 
 const allowedStatuses=new Set(['priority_pictogram','candidate_pictogram']);
-const pool=priorities.items
+const legacyPool=(priorities.items||[])
   .filter(x=>allowedStatuses.has(x.status)&&x.proposedLabel&&x.sound)
   .map(x=>({
     id:`candidate-${x.proposedLabel}`,
     label:x.proposedLabel,
     ipa:normalizeIPA(x.sound),
     status:x.status,
-    rawRank:x.rawRank
+    rawRank:Number(x.rawRank)||Number.MAX_SAFE_INTEGER,
+    source:'legacy_priorities'
   }))
-  .filter(x=>!activeIpas.has(x.ipa));
+  .filter(x=>x.ipa&&!activeIpas.has(x.ipa));
+
+const curatedPool=(shortlist.items||[])
+  .filter(x=>x.status==='research_candidate'&&x.activation==='not_ready'&&x.label&&x.ipa)
+  .map((x,index)=>({
+    id:`curated-${x.label}`,
+    label:x.label,
+    ipa:normalizeIPA(x.ipa),
+    status:'research_candidate',
+    rawRank:index+1,
+    source:'curated_shortlist',
+    assetStatus:x.assetStatus||'not_created'
+  }))
+  .filter(x=>x.ipa&&!activeIpas.has(x.ipa));
+
+const poolByIpa=new Map();
+for(const item of legacyPool)poolByIpa.set(item.ipa,item);
+for(const item of curatedPool)poolByIpa.set(item.ipa,item);
+const pool=[...poolByIpa.values()];
 
 const lexical=[];
 const seenEntry=new Set();
@@ -114,6 +135,7 @@ while(remaining.length){
     addedLabel:best.candidate.label,
     ipa:`/${best.candidate.ipa}/`,
     status:best.candidate.status,
+    source:best.candidate.source,
     marginalMultiPieceUniqueWords:best.marginalMultiPiece,
     marginalConstructibleUniqueWords:best.marginalConstructible,
     cumulativeMultiPieceUniqueWords:best.next.multiPieceUniqueWords,
@@ -143,20 +165,25 @@ const prototypeScenarios=[];
 for(const prototype of prototypePool)prototypeScenarios.push(scenario(prototype.label,[prototype]));
 if(prototypePool.length>=2)prototypeScenarios.push(scenario(prototypePool.map(x=>x.label).join(' + '),prototypePool));
 
+const curatedCandidateScenarios=curatedPool.map(candidate=>scenario(candidate.label,[candidate]));
+
 const report={
   generatedAt:new Date().toISOString(),
   lexicalUniquePronouncedForms:lexical.length,
   baseline:{constructibleUniqueWords:baseline.constructibleUniqueWords,multiPieceUniqueWords:baseline.multiPieceUniqueWords,weightedMultiPiece:baseline.weightedMultiPiece},
-  candidatePool:pool.map(x=>({label:x.label,ipa:`/${x.ipa}/`,status:x.status,rawRank:x.rawRank})),
+  candidatePool:pool.map(x=>({label:x.label,ipa:`/${x.ipa}/`,status:x.status,source:x.source,rawRank:x.rawRank})),
   greedyOrder:steps,
+  curatedCandidateScenarios,
   prototypeScenarios,
-  interpretation:'Ordre glouton recalculé après chaque ajout. Les briques déjà actives sont exclues du pool candidat ; le gain porte sur les mots uniques devenant constructibles avec au moins deux pièces, ce qui évite de confondre un simple homophone d’une image avec un vrai rébus.',
+  interpretation:'Ordre glouton recalculé après chaque ajout. Les briques déjà actives sont exclues du pool candidat ; les candidats curatés mais non actifs sont simulés sans être activés.',
+  curatedCandidateInterpretation:'Un candidat de la shortlist de recherche peut être simulé lexicalement avant création du visuel. Ce calcul ne vaut ni validation de dénomination, ni validation visuelle, ni activation.',
   prototypeInterpretation:'Les scénarios de prototypes simulent séparément puis ensemble les concepts enregistrés comme prototypes mais toujours inactifs. Ils n’activent rien dans le produit.',
-  caution:'Cette simulation mesure le potentiel lexical strict, pas la qualité clinique. Un prototype doit encore satisfaire les exigences de visuel, de dénomination et de provenance avant toute activation.'
+  caution:'Cette simulation mesure le potentiel lexical strict, pas la qualité clinique. Un candidat doit encore satisfaire les exigences de visuel, de dénomination et de provenance avant toute activation.'
 };
 
 fs.writeFileSync(outputPath,JSON.stringify(report,null,2));
 console.log(`Baseline multi-piece unique: ${baseline.multiPieceUniqueWords}`);
 for(const step of steps)console.log(`${step.step}. ${step.addedLabel} ${step.ipa}: +${step.marginalMultiPieceUniqueWords} -> ${step.cumulativeMultiPieceUniqueWords}`);
+for(const item of curatedCandidateScenarios)console.log(`Curated ${item.name}: +${item.strictMultiPieceGain} strict multi-piece; +${item.strictConstructibleGain} constructible; examples=${item.examples.slice(0,5).map(x=>`${x.word}:${x.pieces.join('+')}`).join(', ')}`);
 for(const item of prototypeScenarios)console.log(`Prototype ${item.name}: +${item.strictMultiPieceGain} strict multi-piece; +${item.strictConstructibleGain} constructible; examples=${item.examples.slice(0,5).map(x=>`${x.word}:${x.pieces.join('+')}`).join(', ')}`);
 console.log(`Report -> ${outputPath}`);

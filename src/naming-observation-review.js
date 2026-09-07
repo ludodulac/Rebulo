@@ -5,8 +5,8 @@ function normalizedResponse(value=''){
   return String(value).trim().normalize('NFC').toLocaleLowerCase('fr-FR');
 }
 
-function comparisonFor(comparisons=[],concept=''){
-  return (comparisons||[]).find(item=>item.concept===concept)||null;
+function comparisonFor(comparisons=[],payload={}){
+  return (comparisons||[]).find(item=>item.concept===payload.concept&&item.revision===payload.comparisonRevision&&item.targetIpa===payload.targetIpa)||null;
 }
 
 export function validateNamingObservationExport(payload={},comparisons=[]){
@@ -15,8 +15,8 @@ export function validateNamingObservationExport(payload={},comparisons=[]){
   if(payload.schemaVersion!=='1.0'||!payload.sessionCode||!payload.concept||!payload.comparisonRevision||!payload.targetIpa)return null;
   if(!/^[a-zA-Z0-9_-]{1,32}$/.test(String(payload.sessionCode)))return null;
   if(!Array.isArray(payload.candidateIds)||!Array.isArray(payload.observations))return null;
-  const comparison=comparisonFor(comparisons,payload.concept);
-  if(!comparison||comparison.targetIpa!==payload.targetIpa||comparison.revision!==payload.comparisonRevision)return null;
+  const comparison=comparisonFor(comparisons,payload);
+  if(!comparison)return null;
   const expectedIds=(comparison.candidates||[]).map(item=>item.candidateId);
   if(payload.candidateIds.length!==expectedIds.length||new Set(payload.candidateIds).size!==payload.candidateIds.length)return null;
   if(expectedIds.some(id=>!payload.candidateIds.includes(id)))return null;
@@ -50,7 +50,7 @@ export function buildNamingObservationReview(payloads=[],comparisons=[]){
   }
   const concepts=[];
   for(const comparison of comparisons||[]){
-    const conceptSessions=sessions.filter(item=>item.concept===comparison.concept&&item.comparisonRevision===comparison.revision);
+    const conceptSessions=sessions.filter(item=>item.concept===comparison.concept&&item.comparisonRevision===comparison.revision&&item.targetIpa===comparison.targetIpa);
     if(!conceptSessions.length)continue;
     const candidateSummaries=[];
     for(const candidate of comparison.candidates||[]){
@@ -68,7 +68,7 @@ export function buildNamingObservationReview(payloads=[],comparisons=[]){
       const responses=[...responseMap.values()].sort((a,b)=>b.count-a.count||a.response.localeCompare(b.response,'fr'));
       candidateSummaries.push({candidateId:candidate.candidateId,asset:candidate.asset||'',observationCount:observations.length,targetResponseCount,hesitationCount,noResponseCount,responses});
     }
-    concepts.push({concept:comparison.concept,comparisonRevision:comparison.revision,targetIpa:comparison.targetIpa,sessionCount:conceptSessions.length,candidates:candidateSummaries});
+    concepts.push({concept:comparison.concept,comparisonRevision:comparison.revision,targetIpa:comparison.targetIpa,activationState:comparison.activationState||'',sessionCount:conceptSessions.length,candidates:candidateSummaries});
   }
-  return {schemaVersion:'1.0',kind:'descriptive_naming_observation_review',sessionCount:sessions.length,concepts,researchNotice:'Descriptive counts from imported anonymous observations tied to an explicit comparison revision only. No automatic prototype activation or clinical validation.'};
+  return {schemaVersion:'1.0',kind:'descriptive_naming_observation_review',sessionCount:sessions.length,concepts,researchNotice:'Descriptive counts from imported anonymous observations tied to an explicit stimulus revision only. No automatic product activation, deactivation or clinical validation.'};
 }

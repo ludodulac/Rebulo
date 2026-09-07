@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T01:59:28.051Z",
+  "generatedAt": "2026-09-07T02:27:23.946Z",
   "source": "Lexique 4",
   "lexicalEntryCount": 189832,
   "inventory": {
@@ -22,6 +22,7 @@
     "wholeWord": "Aucune sous-partie de la prononciation d’un pictogramme ne peut être utilisée. Vélo /velo/ ne fournit ni /ve/ ni /lo/.",
     "opportunity": "Une opportunité est une prononciation de mot entier attestée dans Lexique qui, ajoutée comme une seule future pièce, débloquerait au moins une cible avec les pièces strictes existantes. Le mot proposé reste un candidat de dénomination, pas un pictogramme validé.",
     "drawableShortlist": "La shortlist dessinable retire les fragments grammaticaux manifestes puis réinjecte les décisions de recherche déjà documentées. Elle reste une file de revue humaine, jamais une activation automatique.",
+    "expansionCurationLeads": "Les leads exposent les opportunités lexicales restantes quand la shortlist curatée est épuisée. Ils ne proposent aucun label final et exigent une curation humaine avant toute conception ou simulation.",
     "deduplication": "Les cibles lexicales sont dédupliquées par graphie normalisée + IPA ; le seed Rebulo reste prioritaire lors de la fusion des bibliothèques."
   },
   "productiveTokens": [
@@ -16199,6 +16200,1172 @@
     }
   ],
   "drawableOpportunityShortlist": [],
+  "expansionCurationLeads": [
+    {
+      "ipa": "e",
+      "targetCount": 596,
+      "frequencySum": 2657.392000000006,
+      "lexicalCandidates": [
+        {
+          "word": "est",
+          "frequency": 19266.114
+        },
+        {
+          "word": "et",
+          "frequency": 12851.275
+        },
+        {
+          "word": "eh",
+          "frequency": 431.354
+        },
+        {
+          "word": "hé",
+          "frequency": 389.842
+        },
+        {
+          "word": "ait",
+          "frequency": 113.323
+        }
+      ],
+      "examples": [
+        {
+          "word": "été",
+          "ipa": "ete",
+          "frequency": 1267.07,
+          "pieceCount": 2
+        },
+        {
+          "word": "aider",
+          "ipa": "ede",
+          "frequency": 463.516,
+          "pieceCount": 2
+        },
+        {
+          "word": "état",
+          "ipa": "eta",
+          "frequency": 142.633,
+          "pieceCount": 2
+        },
+        {
+          "word": "montrer",
+          "ipa": "mɔ̃tʁe",
+          "frequency": 136.908,
+          "pieceCount": 2
+        },
+        {
+          "word": "montré",
+          "ipa": "mɔ̃tʁe",
+          "frequency": 38.38,
+          "pieceCount": 2
+        }
+      ],
+      "status": "needs_human_curation",
+      "activation": "not_ready",
+      "proposedLabel": null,
+      "nextGate": "human_concept_and_drawability_review",
+      "caution": "Ces mots sont seulement des homophones entiers attestés. Aucun n’est déclaré pictogramme, stable ou activable automatiquement."
+    },
+    {
+      "ipa": "k",
+      "targetCount": 426,
+      "frequencySum": 1255.167000000001,
+      "lexicalCandidates": [
+        {
+          "word": "qu",
+          "frequency": 0.62
+        }
+      ],
+      "examples": [
+        {
+          "word": "chaque",
+          "ipa": "ʃak",
+          "frequency": 285.614,
+          "pieceCount": 2
+        },
+        {
+          "word": "côté",
+          "ipa": "kote",
+          "frequency": 251.38,
+          "pieceCount": 3
+        },
+        {
+          "word": "copain",
+          "ipa": "kopɛ̃",
+          "frequency": 51.655,
+          "pieceCount": 3
+        },
+        {
+          "word": "course",
+          "ipa": "kuʁs",
+          "frequency": 48.386,
+          "pieceCount": 2
+        },
+        {
+          "word": "taxi",
+          "ipa": "taksi",
+          "frequency": 47.38,
+          "pieceCount": 3
+        }
+      ],
+      "status": "needs_human_curation",
+      "activation": "not_ready",
+      "proposedLabel": null,
+      "nextGate": "human_concept_and_drawability_review",
+      "caution": "Ces mots sont seulement des homophones entiers attestés. Aucun n’est déclaré pictogramme, stable ou activable automatiquement."
+    },
+    {
+      "ipa": "a",
+      "targetCount": 372,
+      "frequencySum": 3022.6820000000034,
+      "lexicalCandidates": [
+        {
+          "word": "as",
+          "frequency": 2096.155
+        },
+        {
+          "word": "ah",
+          "frequency": 442.294
+        },
+        {
+          "word": "ha",
+          "frequency": 45.75
+        }
+      ],
+      "examples": [
+        {
+          "word": "accord",
+          "ipa": "akɔʁ",
+          "frequency": 974.725,
+          "pieceCount": 2
+        },
+        {
+          "word": "ami",
+          "ipa": "ami",
+          "frequency": 341.278,
+          "pieceCount": 2
+        },
+        {
+          "word": "amis",
+          "ipa": "ami",
+          "frequency": 261.459,
+          "pieceCount": 2
+        },
+        {
+          "word": "années",
+          "ipa": "ane",
+          "frequency": 209.759,
+          "pieceCount": 2
+        },
+        {
+          "word": "arrêtez",
+          "ipa": "aʁɛte",
+          "frequency": 158.449,
+          "pieceCount": 3
+        }
+      ],
+      "status": "needs_human_curation",
+      "activation": "not_ready",
+      "proposedLabel": null,
+      "nextGate": "human_concept_and_drawability_review",
+      "caution": "Ces mots sont seulement des homophones entiers attestés. Aucun n’est déclaré pictogramme, stable ou activable automatiquement."
+    },
+    {
+      "ipa": "ɑ̃",
+      "targetCount": 277,
+      "frequencySum": 1260.841999999998,
+      "lexicalCandidates": [
+        {
+          "word": "en",
+          "frequency": 5839
+        },
+        {
+          "word": "ans",
+          "frequency": 699.199
+        },
+        {
+          "word": "an",
+          "frequency": 112.57
+        },
+        {
+          "word": "han",
+          "frequency": 2.392
+        }
+      ],
+      "examples": [
+        {
+          "word": "encore",
+          "ipa": "ɑ̃kɔʁ",
+          "frequency": 1065.934,
+          "pieceCount": 2
+        },
+        {
+          "word": "envers",
+          "ipa": "ɑ̃vɛʁ",
+          "frequency": 40.114,
+          "pieceCount": 2
+        },
+        {
+          "word": "empêche",
+          "ipa": "ɑ̃pɛʃ",
+          "frequency": 24.342,
+          "pieceCount": 2
+        },
+        {
+          "word": "entrain",
+          "ipa": "ɑ̃tʁɛ̃",
+          "frequency": 13.285,
+          "pieceCount": 2
+        },
+        {
+          "word": "dégoûtant",
+          "ipa": "degutɑ̃",
+          "frequency": 11.623,
+          "pieceCount": 3
+        }
+      ],
+      "status": "needs_human_curation",
+      "activation": "not_ready",
+      "proposedLabel": null,
+      "nextGate": "human_concept_and_drawability_review",
+      "caution": "Ces mots sont seulement des homophones entiers attestés. Aucun n’est déclaré pictogramme, stable ou activable automatiquement."
+    },
+    {
+      "ipa": "se",
+      "targetCount": 240,
+      "frequencySum": 2142.8349999999978,
+      "lexicalCandidates": [
+        {
+          "word": "ces",
+          "frequency": 1211.918
+        },
+        {
+          "word": "ses",
+          "frequency": 745.003
+        },
+        {
+          "word": "sers",
+          "frequency": 30.516
+        },
+        {
+          "word": "cé",
+          "frequency": 0.111
+        }
+      ],
+      "examples": [
+        {
+          "word": "passer",
+          "ipa": "pase",
+          "frequency": 358.949,
+          "pieceCount": 2
+        },
+        {
+          "word": "passé",
+          "ipa": "pase",
+          "frequency": 356.668,
+          "pieceCount": 2
+        },
+        {
+          "word": "laissez",
+          "ipa": "lɛse",
+          "frequency": 271.054,
+          "pieceCount": 2
+        },
+        {
+          "word": "pensez",
+          "ipa": "pɑ̃se",
+          "frequency": 200.712,
+          "pieceCount": 2
+        },
+        {
+          "word": "pensé",
+          "ipa": "pɑ̃se",
+          "frequency": 183.009,
+          "pieceCount": 2
+        }
+      ],
+      "status": "needs_human_curation",
+      "activation": "not_ready",
+      "proposedLabel": null,
+      "nextGate": "human_concept_and_drawability_review",
+      "caution": "Ces mots sont seulement des homophones entiers attestés. Aucun n’est déclaré pictogramme, stable ou activable automatiquement."
+    },
+    {
+      "ipa": "ɛ",
+      "targetCount": 234,
+      "frequencySum": 250.98399999999938,
+      "lexicalCandidates": [
+        {
+          "word": "ai",
+          "frequency": 5199.114
+        },
+        {
+          "word": "es",
+          "frequency": 1725.427
+        },
+        {
+          "word": "aie",
+          "frequency": 32.813
+        },
+        {
+          "word": "aies",
+          "frequency": 32.582
+        },
+        {
+          "word": "hey",
+          "frequency": 24.126
+        }
+      ],
+      "examples": [
+        {
+          "word": "aidez",
+          "ipa": "ɛde",
+          "frequency": 62.427,
+          "pieceCount": 2
+        },
+        {
+          "word": "aidé",
+          "ipa": "ɛde",
+          "frequency": 48.443,
+          "pieceCount": 2
+        },
+        {
+          "word": "verrai",
+          "ipa": "vɛʁɛ",
+          "frequency": 27.187,
+          "pieceCount": 2
+        },
+        {
+          "word": "portait",
+          "ipa": "pɔʁtɛ",
+          "frequency": 24.278,
+          "pieceCount": 2
+        },
+        {
+          "word": "aidée",
+          "ipa": "ɛde",
+          "frequency": 10.149,
+          "pieceCount": 2
+        }
+      ],
+      "status": "needs_human_curation",
+      "activation": "not_ready",
+      "proposedLabel": null,
+      "nextGate": "human_concept_and_drawability_review",
+      "caution": "Ces mots sont seulement des homophones entiers attestés. Aucun n’est déclaré pictogramme, stable ou activable automatiquement."
+    },
+    {
+      "ipa": "kɔ̃",
+      "targetCount": 163,
+      "frequencySum": 328.1979999999996,
+      "lexicalCandidates": [
+        {
+          "word": "con",
+          "frequency": 54.804
+        },
+        {
+          "word": "cons",
+          "frequency": 10.541
+        }
+      ],
+      "examples": [
+        {
+          "word": "contente",
+          "ipa": "kɔ̃tɑ̃t",
+          "frequency": 53.785,
+          "pieceCount": 2
+        },
+        {
+          "word": "raconter",
+          "ipa": "ʁakɔ̃te",
+          "frequency": 42.212,
+          "pieceCount": 3
+        },
+        {
+          "word": "compter",
+          "ipa": "kɔ̃te",
+          "frequency": 41.598,
+          "pieceCount": 2
+        },
+        {
+          "word": "raconté",
+          "ipa": "ʁakɔ̃te",
+          "frequency": 28.437,
+          "pieceCount": 3
+        },
+        {
+          "word": "concert",
+          "ipa": "kɔ̃sɛʁ",
+          "frequency": 28.009,
+          "pieceCount": 2
+        }
+      ],
+      "status": "needs_human_curation",
+      "activation": "not_ready",
+      "proposedLabel": null,
+      "nextGate": "human_concept_and_drawability_review",
+      "caution": "Ces mots sont seulement des homophones entiers attestés. Aucun n’est déclaré pictogramme, stable ou activable automatiquement."
+    },
+    {
+      "ipa": "ʁe",
+      "targetCount": 150,
+      "frequencySum": 274.3499999999995,
+      "lexicalCandidates": [
+        {
+          "word": "ré",
+          "frequency": 1.649
+        },
+        {
+          "word": "rez",
+          "frequency": 0.566
+        },
+        {
+          "word": "rée",
+          "frequency": 0.047
+        },
+        {
+          "word": "rées",
+          "frequency": 0.013
+        }
+      ],
+      "examples": [
+        {
+          "word": "aurez",
+          "ipa": "oʁe",
+          "frequency": 58.823,
+          "pieceCount": 2
+        },
+        {
+          "word": "réponds",
+          "ipa": "ʁepɔ̃",
+          "frequency": 46.373,
+          "pieceCount": 2
+        },
+        {
+          "word": "répondez",
+          "ipa": "ʁepɔ̃de",
+          "frequency": 29.256,
+          "pieceCount": 3
+        },
+        {
+          "word": "répond",
+          "ipa": "ʁepɔ̃",
+          "frequency": 28.636,
+          "pieceCount": 2
+        },
+        {
+          "word": "démarrer",
+          "ipa": "demaʁe",
+          "frequency": 8.956,
+          "pieceCount": 3
+        }
+      ],
+      "status": "needs_human_curation",
+      "activation": "not_ready",
+      "proposedLabel": null,
+      "nextGate": "human_concept_and_drawability_review",
+      "caution": "Ces mots sont seulement des homophones entiers attestés. Aucun n’est déclaré pictogramme, stable ou activable automatiquement."
+    },
+    {
+      "ipa": "ka",
+      "targetCount": 147,
+      "frequencySum": 227.4869999999996,
+      "lexicalCandidates": [
+        {
+          "word": "cas",
+          "frequency": 317.316
+        },
+        {
+          "word": "ka",
+          "frequency": 0.661
+        },
+        {
+          "word": "kas",
+          "frequency": 0.028
+        }
+      ],
+      "examples": [
+        {
+          "word": "cadeau",
+          "ipa": "kado",
+          "frequency": 89.68,
+          "pieceCount": 2
+        },
+        {
+          "word": "cadeaux",
+          "ipa": "kado",
+          "frequency": 26.579,
+          "pieceCount": 2
+        },
+        {
+          "word": "qualité",
+          "ipa": "kalite",
+          "frequency": 20.835,
+          "pieceCount": 3
+        },
+        {
+          "word": "capacité",
+          "ipa": "kapasite",
+          "frequency": 13.835,
+          "pieceCount": 4
+        },
+        {
+          "word": "chaos",
+          "ipa": "kao",
+          "frequency": 13.456,
+          "pieceCount": 2
+        }
+      ],
+      "status": "needs_human_curation",
+      "activation": "not_ready",
+      "proposedLabel": null,
+      "nextGate": "human_concept_and_drawability_review",
+      "caution": "Ces mots sont seulement des homophones entiers attestés. Aucun n’est déclaré pictogramme, stable ou activable automatiquement."
+    },
+    {
+      "ipa": "sə",
+      "targetCount": 139,
+      "frequencySum": 1472.4519999999998,
+      "lexicalCandidates": [
+        {
+          "word": "se",
+          "frequency": 2685.443
+        }
+      ],
+      "examples": [
+        {
+          "word": "sera",
+          "ipa": "səʁa",
+          "frequency": 471.468,
+          "pieceCount": 2
+        },
+        {
+          "word": "serait",
+          "ipa": "səʁɛ",
+          "frequency": 340.706,
+          "pieceCount": 2
+        },
+        {
+          "word": "ceci",
+          "ipa": "səsi",
+          "frequency": 145.763,
+          "pieceCount": 2
+        },
+        {
+          "word": "serai",
+          "ipa": "səʁɛ",
+          "frequency": 138.114,
+          "pieceCount": 2
+        },
+        {
+          "word": "serais",
+          "ipa": "səʁɛ",
+          "frequency": 99.709,
+          "pieceCount": 2
+        }
+      ],
+      "status": "needs_human_curation",
+      "activation": "not_ready",
+      "proposedLabel": null,
+      "nextGate": "human_concept_and_drawability_review",
+      "caution": "Ces mots sont seulement des homophones entiers attestés. Aucun n’est déclaré pictogramme, stable ou activable automatiquement."
+    },
+    {
+      "ipa": "ko",
+      "targetCount": 136,
+      "frequencySum": 541.327,
+      "lexicalCandidates": [
+        {
+          "word": "cot",
+          "frequency": 0.348
+        },
+        {
+          "word": "co",
+          "frequency": 0.013
+        },
+        {
+          "word": "côt",
+          "frequency": 0.013
+        },
+        {
+          "word": "cots",
+          "frequency": 0.003
+        }
+      ],
+      "examples": [
+        {
+          "word": "côté",
+          "ipa": "kote",
+          "frequency": 251.38,
+          "pieceCount": 2
+        },
+        {
+          "word": "copain",
+          "ipa": "kopɛ̃",
+          "frequency": 51.655,
+          "pieceCount": 2
+        },
+        {
+          "word": "côtés",
+          "ipa": "kote",
+          "frequency": 36.199,
+          "pieceCount": 2
+        },
+        {
+          "word": "commis",
+          "ipa": "komi",
+          "frequency": 26.449,
+          "pieceCount": 2
+        },
+        {
+          "word": "commissaire",
+          "ipa": "komisɛʁ",
+          "frequency": 24.772,
+          "pieceCount": 3
+        }
+      ],
+      "status": "needs_human_curation",
+      "activation": "not_ready",
+      "proposedLabel": null,
+      "nextGate": "human_concept_and_drawability_review",
+      "caution": "Ces mots sont seulement des homophones entiers attestés. Aucun n’est déclaré pictogramme, stable ou activable automatiquement."
+    },
+    {
+      "ipa": "di",
+      "targetCount": 126,
+      "frequencySum": 616.3170000000009,
+      "lexicalCandidates": [
+        {
+          "word": "dit",
+          "frequency": 2182.177
+        },
+        {
+          "word": "dis",
+          "frequency": 864.009
+        },
+        {
+          "word": "die",
+          "frequency": 1.56
+        },
+        {
+          "word": "dits",
+          "frequency": 1.12
+        },
+        {
+          "word": "dît",
+          "frequency": 0.047
+        }
+      ],
+      "examples": [
+        {
+          "word": "dirait",
+          "ipa": "diʁɛ",
+          "frequency": 230.589,
+          "pieceCount": 2
+        },
+        {
+          "word": "dîner",
+          "ipa": "dine",
+          "frequency": 81.193,
+          "pieceCount": 2
+        },
+        {
+          "word": "dirais",
+          "ipa": "diʁɛ",
+          "frequency": 73.816,
+          "pieceCount": 2
+        },
+        {
+          "word": "dirai",
+          "ipa": "diʁɛ",
+          "frequency": 66.766,
+          "pieceCount": 2
+        },
+        {
+          "word": "dira",
+          "ipa": "diʁa",
+          "frequency": 33.212,
+          "pieceCount": 2
+        }
+      ],
+      "status": "needs_human_curation",
+      "activation": "not_ready",
+      "proposedLabel": null,
+      "nextGate": "human_concept_and_drawability_review",
+      "caution": "Ces mots sont seulement des homophones entiers attestés. Aucun n’est déclaré pictogramme, stable ou activable automatiquement."
+    },
+    {
+      "ipa": "i",
+      "targetCount": 124,
+      "frequencySum": 3018.4290000000005,
+      "lexicalCandidates": [
+        {
+          "word": "hi",
+          "frequency": 6.222
+        },
+        {
+          "word": "hie",
+          "frequency": 0.022
+        }
+      ],
+      "examples": [
+        {
+          "word": "ici",
+          "ipa": "isi",
+          "frequency": 2271.794,
+          "pieceCount": 2
+        },
+        {
+          "word": "idée",
+          "ipa": "ide",
+          "frequency": 374.823,
+          "pieceCount": 2
+        },
+        {
+          "word": "ira",
+          "ipa": "iʁa",
+          "frequency": 135.706,
+          "pieceCount": 2
+        },
+        {
+          "word": "irai",
+          "ipa": "iʁɛ",
+          "frequency": 55.152,
+          "pieceCount": 2
+        },
+        {
+          "word": "idées",
+          "ipa": "ide",
+          "frequency": 54.237,
+          "pieceCount": 2
+        }
+      ],
+      "status": "needs_human_curation",
+      "activation": "not_ready",
+      "proposedLabel": null,
+      "nextGate": "human_concept_and_drawability_review",
+      "caution": "Ces mots sont seulement des homophones entiers attestés. Aucun n’est déclaré pictogramme, stable ou activable automatiquement."
+    },
+    {
+      "ipa": "z",
+      "targetCount": 123,
+      "frequencySum": 241.09999999999954,
+      "lexicalCandidates": [
+        {
+          "word": "zzz",
+          "frequency": 0.304
+        },
+        {
+          "word": "zzzz",
+          "frequency": 0.035
+        }
+      ],
+      "examples": [
+        {
+          "word": "pose",
+          "ipa": "poz",
+          "frequency": 52.459,
+          "pieceCount": 2
+        },
+        {
+          "word": "pause",
+          "ipa": "poz",
+          "frequency": 42.364,
+          "pieceCount": 2
+        },
+        {
+          "word": "mise",
+          "ipa": "miz",
+          "frequency": 32.009,
+          "pieceCount": 2
+        },
+        {
+          "word": "oses",
+          "ipa": "oz",
+          "frequency": 14.585,
+          "pieceCount": 2
+        },
+        {
+          "word": "ose",
+          "ipa": "oz",
+          "frequency": 12.677,
+          "pieceCount": 2
+        }
+      ],
+      "status": "needs_human_curation",
+      "activation": "not_ready",
+      "proposedLabel": null,
+      "nextGate": "human_concept_and_drawability_review",
+      "caution": "Ces mots sont seulement des homophones entiers attestés. Aucun n’est déclaré pictogramme, stable ou activable automatiquement."
+    },
+    {
+      "ipa": "pe",
+      "targetCount": 121,
+      "frequencySum": 116.22600000000006,
+      "lexicalCandidates": [
+        {
+          "word": "pô",
+          "frequency": 0.307
+        },
+        {
+          "word": "pe",
+          "frequency": 0.282
+        },
+        {
+          "word": "pé",
+          "frequency": 0.127
+        }
+      ],
+      "examples": [
+        {
+          "word": "taper",
+          "ipa": "tape",
+          "frequency": 17.839,
+          "pieceCount": 2
+        },
+        {
+          "word": "opéra",
+          "ipa": "opeʁa",
+          "frequency": 10.373,
+          "pieceCount": 3
+        },
+        {
+          "word": "pétrin",
+          "ipa": "petʁɛ̃",
+          "frequency": 10.354,
+          "pieceCount": 2
+        },
+        {
+          "word": "péter",
+          "ipa": "pete",
+          "frequency": 10.101,
+          "pieceCount": 2
+        },
+        {
+          "word": "pédé",
+          "ipa": "pede",
+          "frequency": 9.696,
+          "pieceCount": 2
+        }
+      ],
+      "status": "needs_human_curation",
+      "activation": "not_ready",
+      "proposedLabel": null,
+      "nextGate": "human_concept_and_drawability_review",
+      "caution": "Ces mots sont seulement des homophones entiers attestés. Aucun n’est déclaré pictogramme, stable ou activable automatiquement."
+    },
+    {
+      "ipa": "sɛ",
+      "targetCount": 113,
+      "frequencySum": 461.5629999999993,
+      "lexicalCandidates": [
+        {
+          "word": "sais",
+          "frequency": 2731.453
+        },
+        {
+          "word": "sait",
+          "frequency": 405.361
+        },
+        {
+          "word": "saie",
+          "frequency": 0.003
+        }
+      ],
+      "examples": [
+        {
+          "word": "pensais",
+          "ipa": "pɑ̃sɛ",
+          "frequency": 309.851,
+          "pieceCount": 2
+        },
+        {
+          "word": "pensait",
+          "ipa": "pɑ̃sɛ",
+          "frequency": 47.886,
+          "pieceCount": 2
+        },
+        {
+          "word": "passait",
+          "ipa": "pasɛ",
+          "frequency": 26.494,
+          "pieceCount": 2
+        },
+        {
+          "word": "décès",
+          "ipa": "desɛ",
+          "frequency": 17.573,
+          "pieceCount": 2
+        },
+        {
+          "word": "passais",
+          "ipa": "pasɛ",
+          "frequency": 10.896,
+          "pieceCount": 2
+        }
+      ],
+      "status": "needs_human_curation",
+      "activation": "not_ready",
+      "proposedLabel": null,
+      "nextGate": "human_concept_and_drawability_review",
+      "caution": "Ces mots sont seulement des homophones entiers attestés. Aucun n’est déclaré pictogramme, stable ou activable automatiquement."
+    },
+    {
+      "ipa": "ba",
+      "targetCount": 113,
+      "frequencySum": 79.42100000000003,
+      "lexicalCandidates": [
+        {
+          "word": "bas",
+          "frequency": 70.297
+        },
+        {
+          "word": "bat",
+          "frequency": 26.408
+        },
+        {
+          "word": "bah",
+          "frequency": 18.307
+        },
+        {
+          "word": "bats",
+          "frequency": 15.604
+        },
+        {
+          "word": "bât",
+          "frequency": 0.25
+        }
+      ],
+      "examples": [
+        {
+          "word": "bagarre",
+          "ipa": "bagaʁ",
+          "frequency": 18.085,
+          "pieceCount": 2
+        },
+        {
+          "word": "débat",
+          "ipa": "deba",
+          "frequency": 10.222,
+          "pieceCount": 2
+        },
+        {
+          "word": "tabac",
+          "ipa": "taba",
+          "frequency": 9.62,
+          "pieceCount": 2
+        },
+        {
+          "word": "battez",
+          "ipa": "bate",
+          "frequency": 7.741,
+          "pieceCount": 2
+        },
+        {
+          "word": "balai",
+          "ipa": "balɛ",
+          "frequency": 7.215,
+          "pieceCount": 2
+        }
+      ],
+      "status": "needs_human_curation",
+      "activation": "not_ready",
+      "proposedLabel": null,
+      "nextGate": "human_concept_and_drawability_review",
+      "caution": "Ces mots sont seulement des homophones entiers attestés. Aucun n’est déclaré pictogramme, stable ou activable automatiquement."
+    },
+    {
+      "ipa": "tɛ",
+      "targetCount": 108,
+      "frequencySum": 11.81400000000002,
+      "lexicalCandidates": [
+        {
+          "word": "tais",
+          "frequency": 56.364
+        },
+        {
+          "word": "tait",
+          "frequency": 4.677
+        },
+        {
+          "word": "taie",
+          "frequency": 0.503
+        },
+        {
+          "word": "taies",
+          "frequency": 0.234
+        },
+        {
+          "word": "têt",
+          "frequency": 0.13
+        }
+      ],
+      "examples": [
+        {
+          "word": "sautait",
+          "ipa": "sotɛ",
+          "frequency": 1.266,
+          "pieceCount": 2
+        },
+        {
+          "word": "tairai",
+          "ipa": "tɛʁɛ",
+          "frequency": 0.829,
+          "pieceCount": 2
+        },
+        {
+          "word": "flirtait",
+          "ipa": "flœʁtɛ",
+          "frequency": 0.731,
+          "pieceCount": 2
+        },
+        {
+          "word": "sautais",
+          "ipa": "sotɛ",
+          "frequency": 0.652,
+          "pieceCount": 2
+        },
+        {
+          "word": "flirtais",
+          "ipa": "flœʁtɛ",
+          "frequency": 0.623,
+          "pieceCount": 2
+        }
+      ],
+      "status": "needs_human_curation",
+      "activation": "not_ready",
+      "proposedLabel": null,
+      "nextGate": "human_concept_and_drawability_review",
+      "caution": "Ces mots sont seulement des homophones entiers attestés. Aucun n’est déclaré pictogramme, stable ou activable automatiquement."
+    },
+    {
+      "ipa": "ɛ̃",
+      "targetCount": 104,
+      "frequencySum": 829.2460000000004,
+      "lexicalCandidates": [
+        {
+          "word": "hein",
+          "frequency": 367.028
+        },
+        {
+          "word": "ein",
+          "frequency": 0.304
+        },
+        {
+          "word": "eins",
+          "frequency": 0.051
+        },
+        {
+          "word": "ain",
+          "frequency": 0.044
+        },
+        {
+          "word": "un",
+          "frequency": 0.032
+        }
+      ],
+      "examples": [
+        {
+          "word": "importe",
+          "ipa": "ɛ̃pɔʁt",
+          "frequency": 329.405,
+          "pieceCount": 2
+        },
+        {
+          "word": "ainsi",
+          "ipa": "ɛ̃si",
+          "frequency": 166.187,
+          "pieceCount": 2
+        },
+        {
+          "word": "impossible",
+          "ipa": "ɛ̃posibl",
+          "frequency": 107.111,
+          "pieceCount": 3
+        },
+        {
+          "word": "intérêt",
+          "ipa": "ɛ̃teʁɛ",
+          "frequency": 69.383,
+          "pieceCount": 3
+        },
+        {
+          "word": "terrain",
+          "ipa": "tɛʁɛ̃",
+          "frequency": 57.56,
+          "pieceCount": 2
+        }
+      ],
+      "status": "needs_human_curation",
+      "activation": "not_ready",
+      "proposedLabel": null,
+      "nextGate": "human_concept_and_drawability_review",
+      "caution": "Ces mots sont seulement des homophones entiers attestés. Aucun n’est déclaré pictogramme, stable ou activable automatiquement."
+    },
+    {
+      "ipa": "ni",
+      "targetCount": 103,
+      "frequencySum": 28.176999999999992,
+      "lexicalCandidates": [
+        {
+          "word": "ni",
+          "frequency": 254.677
+        },
+        {
+          "word": "nid",
+          "frequency": 10.693
+        },
+        {
+          "word": "nie",
+          "frequency": 4.972
+        },
+        {
+          "word": "nids",
+          "frequency": 1.184
+        },
+        {
+          "word": "nies",
+          "frequency": 0.962
+        }
+      ],
+      "examples": [
+        {
+          "word": "maternité",
+          "ipa": "matɛʁnite",
+          "frequency": 3.804,
+          "pieceCount": 4
+        },
+        {
+          "word": "déni",
+          "ipa": "deni",
+          "frequency": 3.051,
+          "pieceCount": 2
+        },
+        {
+          "word": "vernis",
+          "ipa": "vɛʁni",
+          "frequency": 2.867,
+          "pieceCount": 2
+        },
+        {
+          "word": "paternité",
+          "ipa": "patɛʁnite",
+          "frequency": 2.585,
+          "pieceCount": 4
+        },
+        {
+          "word": "pawnee",
+          "ipa": "poni",
+          "frequency": 2.259,
+          "pieceCount": 2
+        }
+      ],
+      "status": "needs_human_curation",
+      "activation": "not_ready",
+      "proposedLabel": null,
+      "nextGate": "human_concept_and_drawability_review",
+      "caution": "Ces mots sont seulement des homophones entiers attestés. Aucun n’est déclaré pictogramme, stable ou activable automatiquement."
+    }
+  ],
   "provenance": {
     "canonicalSource": "https://www.lexique.org/databases/Lexique400/Lexique400.tsv",
     "mirror": "https://github.com/dorfner/pass_the_bomb/blob/master/Lexique400/Lexique4.tsv",

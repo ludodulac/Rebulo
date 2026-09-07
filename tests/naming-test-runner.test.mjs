@@ -21,6 +21,8 @@ const html=await readFile(new URL('../naming-test.html',import.meta.url),'utf8')
 const js=await readFile(new URL('../naming-test.js',import.meta.url),'utf8');
 const registry=JSON.parse(await readFile(new URL('../data/pictogram-prototype-comparisons.json',import.meta.url),'utf8'));
 const productionRegistry=JSON.parse(await readFile(new URL('../data/production-naming-reviews.json',import.meta.url),'utf8'));
+const seed=JSON.parse(await readFile(new URL('../data/lexicon-seed.json',import.meta.url),'utf8'));
+const assetSources=JSON.parse(await readFile(new URL('../data/asset-sources.json',import.meta.url),'utf8'));
 assert.match(html,/local uniquement/i);assert.match(html,/Ne saisis aucun nom, âge ou diagnostic/i);assert.match(html,/première réponse spontanée/i);assert.match(html,/Lancer le test/);assert.match(html,/Télécharger les réponses/);assert.match(html,/stimuli du protocole dans un ordre aléatoire quand il y en a plusieurs/i);
 assert.doesNotMatch(html,/mélange les 4 images/i,'runner copy must not assume every revision has four stimuli');
 assert.doesNotMatch(html,/Code anonyme de session|Ordre des prototypes|name="orderMode"/,'manual session and ordering controls should stay out of the simple flow');
@@ -41,6 +43,9 @@ for(const conceptName of ['pot','dos','raie','tas','terre']){
 }
 const nid=registry.comparisons.find(item=>item.concept==='nid');assert.ok(nid);assert.equal(nid.revision,'nid-v1');assert.equal(nid.candidates.length,1);await access(new URL(`../${nid.candidates[0].asset}`,import.meta.url));
 const pluie=productionRegistry.reviews.find(item=>item.concept==='pluie');assert.ok(pluie);assert.equal(pluie.revision,'pluie-openmoji-1f327-v1');assert.equal(pluie.activationState,'active_general_naming_review');assert.equal(pluie.automaticActivation,false);assert.equal(pluie.candidates.length,1);assert.deepEqual(pluie.candidates[0].namingRisks,['nuage','nuage de pluie','mauvais temps']);await access(new URL(`../${pluie.candidates[0].asset}`,import.meta.url));
+const cle=productionRegistry.reviews.find(item=>item.concept==='clé');assert.ok(cle);assert.equal(cle.revision,'cle-openmoji-1f511-v1');assert.equal(cle.targetIpa,'/kle/');assert.equal(cle.activationState,'active_general_naming_review');assert.equal(cle.automaticActivation,false);assert.equal(cle.candidates.length,1);assert.ok(cle.candidates[0].namingRisks.includes('clef'));assert.match(cle.candidates[0].reviewNote,/variante orthographique/);await access(new URL(`../${cle.candidates[0].asset}`,import.meta.url));
+const cleSeed=seed.find(item=>item.id==='cle');assert.ok(cleSeed);assert.equal(cleSeed.artRevision,'cle-openmoji-1f511-v1');assert.equal(cleSeed.clinicalStatus,'naming_test_required');assert.equal(cleSeed.active,true);
+const cleSource=assetSources.assets.find(item=>item.path==='assets/rebus/cle.svg');assert.ok(cleSource);assert.equal(cleSource.artRevision,'cle-openmoji-1f511-v1');assert.equal(cleSource.clinicalStatus,'naming_test_required');assert.equal(cleSource.active,true);
 const dos=registry.comparisons.find(item=>item.concept==='dos');assert.ok(dos.candidates.some(candidate=>candidate.asset==='assets/research/dos-openmoji-backache-e321.svg'));
 
-console.log('naming test runner: inactive prototypes and active production reviews stay revision-bound, anonymous and non-clinical.');
+console.log('naming test runner: inactive prototypes plus pluie and clé production reviews stay revision-bound, anonymous and non-clinical.');

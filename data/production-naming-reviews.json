@@ -1,0 +1,26 @@
+{
+  "schemaVersion":"1.0",
+  "reviews":[
+    {
+      "concept":"pluie",
+      "revision":"pluie-openmoji-1f327-v1",
+      "targetIpa":"/plɥi/",
+      "activationState":"active_general_naming_review",
+      "clinicalStatus":"naming_test_required",
+      "goal":"Mesurer si le stimulus de production actuel déclenche spontanément « pluie » plutôt que « nuage », sans modifier son activation générale ni revendiquer de validation clinique.",
+      "candidates":[
+        {
+          "candidateId":"pluie-production-openmoji-1f327-v1",
+          "asset":"assets/rebus/pluie.svg",
+          "provenance":"OpenMoji 1F327 cloud with rain, adaptation locale simplifiée pour petite taille; révision de production pluie-openmoji-1f327-v1.",
+          "availability":"available",
+          "designIntent":"Tester exactement le stimulus actuellement affiché par Rebulo afin d'attacher toute observation de dénomination à sa révision réelle.",
+          "namingRisks":["nuage","nuage de pluie","mauvais temps"],
+          "namingTestStatus":"not_run"
+        }
+      ],
+      "automaticActivation":false,
+      "humanDecision":null
+    }
+  ]
+}

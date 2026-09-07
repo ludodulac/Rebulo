@@ -45,10 +45,11 @@ assert.doesNotMatch(js,/clinical_approved|active\s*[:=]\s*true/i);
 assert.match(namingHtml,/research-gallery\.html/,'naming runner should link to the curator gallery');
 
 const live=comparisons.comparisons.filter(item=>item.activationState==='inactive_until_human_decision');
-assert.equal(live.length,5,'gallery should currently expose five research concepts');
-assert.equal(live.reduce((sum,item)=>sum+item.candidates.length,0),20,'gallery should currently expose twenty stimuli');
+assert.equal(live.length,6,'gallery should expose five historical comparison concepts plus nid-v1');
+assert.equal(live.reduce((sum,item)=>sum+item.candidates.length,0),21,'gallery should expose twenty historical stimuli plus the nid prototype');
 for(const comparison of live){
-  assert.equal(comparison.candidates.length,4,`${comparison.concept} should have four gallery candidates`);
+  const expectedCount=comparison.concept==='nid'?1:4;
+  assert.equal(comparison.candidates.length,expectedCount,`${comparison.concept} should expose its revision-bound candidate set`);
   for(const candidate of comparison.candidates){
     assert.ok(candidate.designIntent);
     assert.ok(candidate.provenance);
@@ -59,12 +60,12 @@ for(const comparison of live){
 }
 
 let curation=createResearchCuration({comparisons:live});
-assert.equal(curation.items.length,20);
-assert.deepEqual(researchCurationSummary(curation),{keep:0,rework:0,reject:0,unreviewed:20});
+assert.equal(curation.items.length,21);
+assert.deepEqual(researchCurationSummary(curation),{keep:0,rework:0,reject:0,unreviewed:21});
 curation=setResearchCurationDecision(curation,curation.items[0].candidateId,'keep','lisible au premier coup d’œil');
 curation=setResearchCurationDecision(curation,curation.items[1].candidateId,'rework','simplifier la silhouette');
 curation=setResearchCurationDecision(curation,curation.items[2].candidateId,'reject','trop ambigu');
-assert.deepEqual(researchCurationSummary(curation),{keep:1,rework:1,reject:1,unreviewed:17});
+assert.deepEqual(researchCurationSummary(curation),{keep:1,rework:1,reject:1,unreviewed:18});
 assert.equal(setResearchCurationDecision(curation,curation.items[3].candidateId,'clinical_approved','nope'),null,'curation must reject clinical-looking decisions');
 const exported=researchCurationExport(curation);
 assert.equal(exported.kind,'visual_research_curation');
@@ -76,7 +77,7 @@ assert.equal('humanDecision' in exported,false);
 const empty=createResearchCuration({comparisons:live});
 const restored=applyResearchCurationImport(empty,exported);
 assert.ok(restored,'a genuine Rebulo visual curation export must be importable');
-assert.deepEqual(researchCurationSummary(restored),{keep:1,rework:1,reject:1,unreviewed:17});
+assert.deepEqual(researchCurationSummary(restored),{keep:1,rework:1,reject:1,unreviewed:18});
 assert.equal(restored.items.find(item=>item.candidateId===curation.items[1].candidateId).note,'simplifier la silhouette');
 assert.equal(applyResearchCurationImport(empty,{schemaVersion:'1.0',observations:[],concept:'pot'}),null,'a naming-test shaped file must be refused');
 assert.equal(applyResearchCurationImport(empty,{...exported,clinicalStatus:'clinical_approved'}),null,'unknown clinical-looking top-level fields must be refused');
@@ -85,4 +86,4 @@ assert.equal(applyResearchCurationImport(empty,{...exported,decisions:[{...expor
 assert.equal(applyResearchCurationImport(empty,{...exported,decisions:[exported.decisions[0],exported.decisions[0]]}),null,'duplicate candidate decisions must be refused');
 assert.equal(applyResearchCurationImport(empty,{...exported,decisions:[{...exported.decisions[0],participantName:'x'}]}),null,'unexpected decision fields must be refused');
 
-console.log('research gallery: twenty local stimuli, zoom, blind preview and strict reusable visual curation guardrails ok');
+console.log('research gallery: twenty-one local stimuli, zoom, blind preview and strict reusable visual curation guardrails ok');

@@ -4,7 +4,7 @@ Rebulo est un créateur de rébus riche, ludique et intelligent. Son cœur actue
 
 L'ambition généraliste et l'usage orthophonique sont complémentaires : Rebulo doit retrouver le plaisir immédiat des rébus de magazines tout en sachant distinguer les constructions et les illustrations qui satisfont des exigences phonétiques ou cliniques plus fortes. Les principes stables de cette architecture sont décrits dans `docs/PRODUCT_PRINCIPLES.md`.
 
-Le mode Jouer consomme désormais la couverture stricte générée par Lexique 4 : avec l'inventaire actif actuel, 760 mots uniques en rébus stricts multi-images sont exposés au jeu, au lieu de rester limités au petit catalogue historique.
+Le mode Jouer est branché sur le catalogue strict généré : le rapport Lexique courant expose 760 mots uniques en vrais rébus multi-images à partir des pictogrammes actifs. Les planches imprimables de travail sont désormais centrées sur ces briques sonores courtes, avec jusqu'à 20 stimuli par page. Deux PDF versionnés sont conservés dans `docs/print/` : la planche de référence et la planche de dessins à refaire.
 
 ## Principe strict actuellement implémenté
 
@@ -53,6 +53,7 @@ Toute nouvelle fonction doit d'abord trouver sa place dans cette hiérarchie ava
 - `data/asset-sources.json` : provenance et licences des illustrations externes
 - `data/rebus.json` : catalogue historique conservé
 - `assets/rebus/` : pictogrammes SVG
+- `docs/print/` : PDF de référence des briques sonores et planches de dessins à refaire
 - `docs/PRODUCT_PRINCIPLES.md` : constitution produit stable et niveaux d'exigence
 - `docs/` : recherche, couverture, plan clinique et passation
 

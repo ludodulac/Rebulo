@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0.0",
+  "purpose": "Progressive phrase practice presets for Rebulo. These are product presets, not claims of clinical validation.",
+  "principles": [
+    "same_simple_interaction_for_child_patient_and_clinician",
+    "progress_from_sound_bricks_to_words_to_short_sentences",
+    "prefer_daily_language_and_short_functional_utterances",
+    "allow_visual_support_to_be_reduced_progressively",
+    "keep_clinical_validation_separate_from_product_activation"
+  ],
+  "profiles": [
+    {
+      "id": "phrase-2-3",
+      "label": "Phrase courte",
+      "minWords": 2,
+      "maxWords": 3,
+      "maxTextFallbackWords": 1,
+      "preferredRebusRatio": 0.5,
+      "goal": "Associer quelques briques sonores et produire ou comprendre un énoncé très court."
+    },
+    {
+      "id": "phrase-4-6",
+      "label": "Phrase simple",
+      "minWords": 4,
+      "maxWords": 6,
+      "maxTextFallbackWords": 2,
+      "preferredRebusRatio": 0.5,
+      "goal": "Travailler une phrase quotidienne courte avec plusieurs appuis visuels."
+    },
+    {
+      "id": "phrase-7-10",
+      "label": "Phrase développée",
+      "minWords": 7,
+      "maxWords": 10,
+      "maxTextFallbackWords": 4,
+      "preferredRebusRatio": 0.4,
+      "goal": "Allonger l’énoncé tout en conservant des repères visuels ciblés."
+    }
+  ]
+}

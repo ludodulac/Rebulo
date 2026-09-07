@@ -15,7 +15,7 @@ fs.writeFileSync(lexiquePath,JSON.stringify({source:'fixture',entries:[
   {word:'cinéma',ipa:'/sinema/'},
   {word:'parasol',ipa:'/paʁasɔl/'},
   {word:'papa',ipa:'/papa/'},
-  {word:'mère',ipa:'/mɛʁ/}
+  {word:'mère',ipa:'/mɛʁ/'}
 ]}));
 fs.writeFileSync(pictogramPath,JSON.stringify([
   {id:'mer',label:'mer',ipa:'/mɛʁ/',image:'mer.svg',active:true},

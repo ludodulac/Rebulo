@@ -54,8 +54,10 @@ const columns={
   phon:findColumn(['phono','phon','phonologie','phonology','phoneme']),
   freq:findColumn(['freqmot','freq_mot','freqlivres','freqfilms2','freq','frequency']),
   pos:findColumn(['cgram','pos','categorie','categorie_grammaticale']),
-  syllableCount:findColumn(['nbsyll','nb_syll','syllable_count','syllables']),
-  syllabification:findColumn(['phono_syll','phonosyll','syll','syllabation','syllabification','syllabifie'])
+  syllableCount:findColumn(['nbsyll','nb_syll','syllnb','syll_nb','syllable_count','syllables']),
+  // Only accept a column that explicitly contains IPA syllabification. Lexique 4's
+  // SyllPhono column uses its legacy phonological code and must not be presented as IPA.
+  syllabification:findColumn(['phono_ipa_syll','ipa_syll','syll_ipa','syllabation_ipa','syllabification_ipa','syll','syllabation','syllabification','syllabifie'])
 };
 
 const phonColumn=columns.ipa>=0?columns.ipa:columns.phon;

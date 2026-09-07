@@ -68,22 +68,38 @@ function candidateEntry(raw={}){
 }
 
 export function buildTargetVocabulary(entries=[]){
-  const best=new Map();
+  const groups=new Map();
   for(const raw of entries||[]){
     const item=candidateEntry(raw);
     if(!item)continue;
     const lemmaKey=normalizedWord(item.lemma);
     if(!lemmaKey)continue;
+    let group=groups.get(lemmaKey);
+    if(!group){group={best:null,pronunciations:new Map()};groups.set(lemmaKey,group);}
     const isLemmaForm=normalizedWord(item.target)===lemmaKey;
-    const previous=best.get(lemmaKey);
+    const previous=group.best;
     if(!previous||
       (isLemmaForm&&!previous.isLemmaForm)||
       (isLemmaForm===previous.isLemmaForm&&item.frequency>previous.item.frequency)){
-      best.set(lemmaKey,{item,isLemmaForm});
+      group.best={item,isLemmaForm};
     }
+    let pronunciation=group.pronunciations.get(item.targetIpa);
+    if(!pronunciation){
+      pronunciation={ipa:item.targetIpa,forms:[],maxFrequency:0};
+      group.pronunciations.set(item.targetIpa,pronunciation);
+    }
+    if(!pronunciation.forms.includes(item.target))pronunciation.forms.push(item.target);
+    pronunciation.maxFrequency=Math.max(pronunciation.maxFrequency,item.frequency);
   }
-  return [...best.values()]
-    .map(value=>value.item)
+  return [...groups.values()]
+    .filter(group=>group.best)
+    .map(group=>{
+      const primary=group.best.item;
+      const pronunciationVariants=[...group.pronunciations.values()]
+        .filter(value=>value.ipa!==primary.targetIpa)
+        .sort((a,b)=>b.maxFrequency-a.maxFrequency||a.ipa.localeCompare(b.ipa));
+      return {...primary,pronunciationVariants};
+    })
     .sort((a,b)=>a.ageBandCandidate-b.ageBandCandidate||b.frequency-a.frequency||a.target.localeCompare(b.target,'fr'));
 }
 
@@ -114,11 +130,13 @@ export function targetVocabularyStats(targets=[]){
   const ageBands=Object.fromEntries(TARGET_AGE_BANDS.map(profile=>[String(profile.age),0]));
   let sourceExactSyllabification=0;
   let needsSourceReview=0;
+  let alternatePronunciations=0;
   for(const target of targets||[]){
     const key=String(target?.ageBandCandidate||'');
     if(key in ageBands)ageBands[key]+=1;
     if(target?.syllabificationStatus==='source_exact')sourceExactSyllabification+=1;
     else needsSourceReview+=1;
+    alternatePronunciations+=Array.isArray(target?.pronunciationVariants)?target.pronunciationVariants.length:0;
   }
-  return {total:targets.length,ageBands,sourceExactSyllabification,needsSourceReview};
+  return {total:targets.length,ageBands,sourceExactSyllabification,needsSourceReview,alternatePronunciations};
 }

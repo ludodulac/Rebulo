@@ -24,6 +24,8 @@ const targets=buildTargetVocabulary([
   {word:'merci',lemma:'merci',ipa:'mɛʁsi',frequency:1030,syllableCount:2,syllabification:'mɛʁ.si',pos:'ONO'},
   {word:'maison',lemma:'maison',ipa:'mɛzɔ̃',frequency:80,syllableCount:2,syllabification:'',pos:'NOM'},
   {word:'bizarre',lemma:'bizarre',ipa:'bizaʁ',frequency:4,syllableCount:2,syllabification:'bi.zaʁ.ə',pos:'ADJ'},
+  {word:'plus',lemma:'plus',ipa:'plys',frequency:100,syllableCount:1,syllabification:'plys',pos:'ADV'},
+  {word:'plus',lemma:'plus',ipa:'ply',frequency:90,syllableCount:1,syllabification:'ply',pos:'ADV'},
   {word:'la',lemma:'le',ipa:'la',frequency:9999,syllableCount:1,syllabification:'la',pos:'ART:def'}
 ]);
 
@@ -34,6 +36,9 @@ assert.equal(targets.find(item=>item.target==='merci').ageStatus,'heuristic_pres
 assert.equal(targets.find(item=>item.target==='maison').syllabificationStatus,'needs_source_review');
 assert.equal(targets.find(item=>item.target==='bizarre').syllabificationStatus,'needs_source_review');
 assert.equal(targets.some(item=>item.target==='la'),false);
+const plus=targets.find(item=>item.target==='plus');
+assert.equal(plus.targetIpa,'plys');
+assert.deepEqual(plus.pronunciationVariants.map(item=>item.ipa),['ply'],'alternate IPA pronunciations must be retained without duplicating the target lemma');
 
 const inventory=buildSyllableInventory(targets);
 assert.equal(inventory.some(item=>item.ipa==='mɛzɔ̃'),false,'missing source syllabification must never be invented');
@@ -45,10 +50,11 @@ assert.ok(si.examples.includes('merci'));
 assert.equal(si.minAgeBandCandidate,5);
 
 const stats=targetVocabularyStats(targets);
-assert.equal(stats.total,5);
-assert.equal(stats.sourceExactSyllabification,3);
+assert.equal(stats.total,6);
+assert.equal(stats.sourceExactSyllabification,4);
 assert.equal(stats.needsSourceReview,2);
+assert.equal(stats.alternatePronunciations,1);
 assert.ok(stats.ageBands['5']>=1);
 assert.ok(stats.ageBands['7']>=1);
 
-console.log('Target vocabulary: heuristic age preselection and source-only syllable inventory passed.');
+console.log('Target vocabulary: heuristic age preselection, pronunciation variants, and source-only syllable inventory passed.');

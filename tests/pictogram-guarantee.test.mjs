@@ -15,7 +15,11 @@ assert.deepEqual(names.map(item=>item.label),['tour','château','donjon','tour d
 assert.ok(names.slice(1).every(item=>item.evidence==='declared_naming_risk'));
 assert.ok(names.every(item=>item.population==='unspecified'));
 
-const observed={...review,candidates:[{...review.candidates[0],namingTestStatus:'observed'}]};
+const scheduled={...review,candidates:[{...review.candidates[0],namingTestStatus:'scheduled'}]};
+assert.equal(highestPictogramGuarantee(production,scheduled),PICTOGRAM_GUARANTEE_LEVELS.NAMING_REVIEW_PLANNED);
+const decidedWithoutCompletedTest={...scheduled,humanDecision:{decision:'prefer_candidate'}};
+assert.equal(highestPictogramGuarantee(production,decidedWithoutCompletedTest),PICTOGRAM_GUARANTEE_LEVELS.NAMING_REVIEW_PLANNED);
+const observed={...review,candidates:[{...review.candidates[0],namingTestStatus:'completed'}]};
 assert.equal(highestPictogramGuarantee(production,observed),PICTOGRAM_GUARANTEE_LEVELS.HUMAN_OBSERVED);
 const validated={...production,clinicalStatus:'validated'};
 assert.equal(highestPictogramGuarantee(validated,observed),PICTOGRAM_GUARANTEE_LEVELS.CLINICALLY_VALIDATED);

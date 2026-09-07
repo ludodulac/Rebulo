@@ -26,11 +26,37 @@ const merci=validateStrictRebus({
 });
 assert.equal(merci.ok,true);
 
+const cinema=validateStrictRebus({
+  targetIpa:'/sinema/',
+  pieces:[{ipa:'/si/'},{ipa:'/ne/'},{ipa:'/ma/'}]
+});
+assert.equal(cinema.ok,true,'a difficult strict solution must still validate when every full pronunciation concatenates exactly');
+
 const fauxRebus=validateStrictRebus({
   targetIpa:'/ʁebys/',
   pieces:[{ipa:'/ʁi/'},{ipa:'/bys/'}]
 });
-assert.equal(fauxRebus.ok,false);
+assert.equal(fauxRebus.ok,false,'orthographic resemblance must not replace an exact phonetic match');
+
+assert.equal(validateStrictRebus({
+  targetIpa:'/va/',
+  pieces:[{label:'vache',ipa:'/vaʃ/'}]
+}).ok,false,'strict mode must not hide a final-phoneme deletion');
+
+assert.equal(validateStrictRebus({
+  targetIpa:'/lezami/',
+  pieces:[{label:'les',ipa:'/le/'},{label:'amis',ipa:'/ami/'}]
+}).ok,false,'strict mode must not invent a liaison consonant');
+
+assert.equal(validateStrictRebus({
+  targetIpa:'/tuʁnəsɔl/',
+  pieces:[{label:'tour',ipa:'/tuʁ/'},{label:'nez',ipa:'/ne/'},{label:'sol',ipa:'/sɔl/'}]
+}).ok,false,'historical tournesol near-match must remain rejected');
+
+assert.equal(validateStrictRebus({
+  targetIpa:'/piʁamid/',
+  pieces:[{label:'pie',ipa:'/pi/'},{label:'rat',ipa:'/ʁa/'},{label:'mie',ipa:'/mi/'},{label:'dé',ipa:'/de/'}]
+}).ok,false,'historical pyramide spelling-driven construction must remain rejected');
 
 const lexicon=[
   {label:'mer',ipa:'/mɛʁ/',active:true,visualConfidence:0.98,labelStability:0.99},

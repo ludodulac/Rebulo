@@ -24,7 +24,7 @@
 | 17 | dos | /do/ | 40 | -40 | 94.7 % | unreviewed |
 | 18 | terre | /tɛʁ/ | 38 | -38 | 95.0 % | unreviewed |
 | 19 | corps | /kɔʁ/ | 37 | -37 | 95.1 % | naming_test_required |
-| 20 | clé | /kle/ | 21 | -21 | 97.2 % | prototype_priority |
+| 20 | clé | /kle/ | 21 | -21 | 97.2 % | naming_test_required |
 | 21 | mer | /mɛʁ/ | 21 | -21 | 97.2 % | undocumented |
 | 22 | tour | /tuʁ/ | 18 | -18 | 97.6 % | undocumented |
 | 23 | sol | /sɔl/ | 10 | -10 | 98.7 % | undocumented |

@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {PLAYFUL_PHRASES,buildPhrasePlan,isPhraseInput,playfulPhraseAt,tokenizePhrase} from '../src/phrase-creator.js';
+import {PLAYFUL_PHRASES,buildPhrasePlan,isPhraseInput,phrasePracticeMetrics,playfulPhraseAt,tokenizePhrase} from '../src/phrase-creator.js';
 
 assert.equal(isPhraseInput('merci'),false);
 assert.equal(isPhraseInput('merci souris'),true);
@@ -18,6 +18,10 @@ const targets=[{target:'merci',targetIpa:'/mɛʁsi/',mode:'strict',assets:'ready
 const plan=buildPhrasePlan('Merci, ami !',targets,lexicon,[]);
 assert.equal(plan.wordCount,2);assert.equal(plan.rebusCount,1);assert.equal(plan.textCount,1);assert.equal(plan.complete,false);
 assert.equal(plan.tokens.find(token=>token.kind==='rebus')?.candidate.answer,'merci');
+assert.equal(plan.practice.rebusRatio,0.5);
+assert.equal(plan.practice.strictRebusRatio,0.5);
+assert.equal(plan.practice.complete,false);
+assert.deepEqual(plan.practice,phrasePracticeMetrics(plan));
 
 const direct=buildPhrasePlan('un chat',targets,lexicon,[]);
 assert.equal(direct.wordCount,2);
@@ -30,7 +34,11 @@ const chat=direct.tokens.find(token=>token.kind==='rebus');
 assert.equal(chat?.candidate.answer,'chat');
 assert.equal(chat?.candidate.pieces[0].image,'chat.svg');
 assert.equal(chat?.candidate.construction.source,'direct_pictogram');
+assert.equal(direct.practice.rebusRatio,1);
+assert.equal(direct.practice.strictRebusCount,1);
+assert.equal(direct.practice.strictRebusRatio,0.5);
 
 const unavailable=buildPhrasePlan('Bonjour tout le monde',[],lexicon,[]);
 assert.equal(unavailable.wordCount,4);assert.equal(unavailable.rebusCount,0);assert.equal(unavailable.textCount,4);
+assert.equal(unavailable.practice.rebusRatio,0);
 console.log('phrase creator planning: ok');

@@ -5,7 +5,8 @@ const registry=JSON.parse(await readFile(new URL('../data/pictogram-prototype-co
 const comparisons=(registry.comparisons||[]).filter(item=>item.activationState==='inactive_until_human_decision');
 const candidates=comparisons.flatMap(item=>(item.candidates||[]).map(candidate=>({...candidate,concept:item.concept})));
 
-assert.equal(candidates.length,20,'the active research gallery should currently expose twenty stimuli');
+assert.equal(candidates.length,21,'the active research gallery should expose the twenty historical stimuli plus nid-v1');
+assert.equal(candidates.filter(item=>item.concept==='nid').length,1,'nid-v1 must contribute exactly one revision-bound research stimulus');
 for(const candidate of candidates){
   assert.match(candidate.asset,/\.svg$/i,`${candidate.candidateId} should use an SVG research stimulus`);
   assert.doesNotMatch(candidate.asset,/^https?:/i,`${candidate.candidateId} should be served locally`);

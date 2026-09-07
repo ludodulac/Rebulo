@@ -13,10 +13,11 @@ assert.equal(report.schemaVersion,'1.0');
 assert.equal(report.baseline.strictMultiPieceUniqueWords,760);
 assert.equal(report.queue.length,24);
 assert.ok(report.queue.every((item,index,array)=>index===0||array[index-1].strictUniqueLossIfUnavailable<=item.strictUniqueLossIfUnavailable),'queue should prioritize lower dependency loss');
-const pluie=report.queue.find(x=>x.id==='pluie');assert.ok(pluie);assert.equal(pluie.strictUniqueLossIfUnavailable,2);assert.equal(pluie.dependencyRisk,'low');assert.equal(pluie.provenanceDocumented,true);assert.equal(pluie.revisionStamped,true);assert.equal(pluie.namingReviewAvailable,true);assert.equal(pluie.nextGate,'collect_human_naming_observations');
-const sol=report.queue.find(x=>x.id==='sol');assert.ok(sol);assert.equal(sol.strictUniqueLossIfUnavailable,10);assert.equal(sol.dependencyRisk,'low');assert.equal(sol.provenanceDocumented,true);assert.equal(sol.source,'rebulo_original');assert.equal(sol.artRevision,'sol-note-v2');assert.equal(sol.namingReviewAvailable,true);assert.equal(sol.nextGate,'collect_human_naming_observations');
-const cle=report.queue.find(x=>x.id==='cle');assert.ok(cle);assert.equal(cle.strictUniqueLossIfUnavailable,21);assert.equal(cle.provenanceDocumented,true);assert.equal(cle.artRevision,'cle-openmoji-1f511-v1');assert.equal(cle.namingReviewAvailable,true);assert.equal(cle.nextGate,'collect_human_naming_observations');
-for(const id of ['tour','mer']){const item=report.queue.find(x=>x.id===id);assert.ok(item);assert.equal(item.provenanceDocumented,false);assert.equal(item.nextGate,'document_provenance');}
+const pluie=report.queue.find(x=>x.id==='pluie');assert.ok(pluie);assert.equal(pluie.strictUniqueLossIfUnavailable,2);assert.equal(pluie.nextGate,'collect_human_naming_observations');
+const sol=report.queue.find(x=>x.id==='sol');assert.ok(sol);assert.equal(sol.strictUniqueLossIfUnavailable,10);assert.equal(sol.source,'rebulo_original');assert.equal(sol.artRevision,'sol-note-v2');assert.equal(sol.nextGate,'collect_human_naming_observations');
+const tour=report.queue.find(x=>x.id==='tour');assert.ok(tour);assert.equal(tour.strictUniqueLossIfUnavailable,18);assert.equal(tour.dependencyRisk,'moderate');assert.equal(tour.provenanceDocumented,true);assert.equal(tour.source,'rebulo_original');assert.equal(tour.artRevision,'tour-tower-v1');assert.equal(tour.namingReviewAvailable,true);assert.equal(tour.nextGate,'collect_human_naming_observations');
+const cle=report.queue.find(x=>x.id==='cle');assert.ok(cle);assert.equal(cle.strictUniqueLossIfUnavailable,21);assert.equal(cle.artRevision,'cle-openmoji-1f511-v1');assert.equal(cle.nextGate,'collect_human_naming_observations');
+const mer=report.queue.find(x=>x.id==='mer');assert.ok(mer);assert.equal(mer.provenanceDocumented,false);assert.equal(mer.nextGate,'document_provenance');
 const de=report.queue.find(x=>x.id==='de');assert.ok(de);assert.equal(de.dependencyRisk,'critical');assert.equal(de.strictUniqueLossIfUnavailable,170);
 assert.match(report.methodology.clinicalCaution,/validation clinique|dénomination/i);
-console.log('visual migration readiness: pluie, sol and clé are observation-ready while unresolved provenance stays blocked.');
+console.log('visual migration readiness: pluie, sol, tour and clé are observation-ready while unresolved provenance stays blocked.');

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": "2026-09-07T07:49:16.753Z",
+  "generatedAt": "2026-09-07T07:56:04.128Z",
   "baseline": {
     "activePictogramCount": 24,
     "strictMultiPieceEntries": 911,
@@ -35,14 +35,14 @@
       "image": "assets/rebus/sol.svg",
       "strictUniqueLossIfUnavailable": 10,
       "dependencyRisk": "low",
-      "provenanceDocumented": false,
-      "source": "undocumented",
-      "revisionStamped": false,
-      "artRevision": null,
-      "namingReviewAvailable": false,
-      "clinicalStatus": "undocumented",
-      "readinessScore": 0,
-      "nextGate": "document_provenance"
+      "provenanceDocumented": true,
+      "source": "rebulo_original",
+      "revisionStamped": true,
+      "artRevision": "sol-note-v2",
+      "namingReviewAvailable": true,
+      "clinicalStatus": "naming_test_required",
+      "readinessScore": 3,
+      "nextGate": "collect_human_naming_observations"
     },
     {
       "id": "tour",

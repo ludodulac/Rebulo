@@ -27,7 +27,7 @@
 | 20 | clé | /kle/ | 21 | -21 | 97.2 % | naming_test_required |
 | 21 | mer | /mɛʁ/ | 21 | -21 | 97.2 % | undocumented |
 | 22 | tour | /tuʁ/ | 18 | -18 | 97.6 % | undocumented |
-| 23 | sol | /sɔl/ | 10 | -10 | 98.7 % | undocumented |
+| 23 | sol | /sɔl/ | 10 | -10 | 98.7 % | naming_test_required |
 | 24 | pluie | /plɥi/ | 2 | -2 | 99.7 % | naming_test_required |
 
 > La perte est recalculée avec le même moteur phonétique strict et tient compte des décompositions alternatives. Ce classement mesure la dépendance du générateur, pas la validité clinique du stimulus. Toute nouvelle révision visuelle exige une nouvelle vérification de dénomination.

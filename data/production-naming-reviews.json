@@ -21,6 +21,28 @@
       ],
       "automaticActivation":false,
       "humanDecision":null
+    },
+    {
+      "concept":"clé",
+      "revision":"cle-openmoji-1f511-v1",
+      "targetIpa":"/kle/",
+      "activationState":"active_general_naming_review",
+      "clinicalStatus":"naming_test_required",
+      "goal":"Mesurer la dénomination spontanée du stimulus de production actuel sans modifier son activation générale. La réponse « clef » est une variante orthographique française attendue du même mot /kle/ et doit être distinguée manuellement d'une réponse sémantiquement concurrente.",
+      "candidates":[
+        {
+          "candidateId":"cle-production-openmoji-1f511-v1",
+          "asset":"assets/rebus/cle.svg",
+          "provenance":"OpenMoji 1F511 key, CC BY-SA 4.0; révision de production cle-openmoji-1f511-v1.",
+          "availability":"available",
+          "designIntent":"Tester exactement la clé actuellement affichée par Rebulo et rattacher les observations à cette révision précise.",
+          "namingRisks":["clef","clé de porte","clé ancienne"],
+          "namingTestStatus":"not_run",
+          "reviewNote":"« clef » n'est pas considérée comme une erreur clinique automatique : c'est une variante orthographique du même mot prononcé /kle/. Le compteur descriptif exact reste volontairement conservateur et la décision appartient à la revue humaine."
+        }
+      ],
+      "automaticActivation":false,
+      "humanDecision":null
     }
   ]
 }

@@ -3,9 +3,9 @@ import { buildAssetInventory } from '../scripts/audit-asset-library.mjs';
 
 const inventory = await buildAssetInventory(new URL('..', import.meta.url).pathname);
 
-assert.equal(inventory.summary.production, 25, 'production SVG count should stay explicit during cleanup');
+assert.equal(inventory.summary.production, 24, 'production SVG count should exclude archived legacy pot');
 assert.equal(inventory.summary.prepared, 0, 'prepared comic queue should be empty after corps migration');
-assert.equal(inventory.summary.research, 21, 'historical research stimuli should remain preserved');
+assert.equal(inventory.summary.research, 22, 'historical research stimuli should remain preserved');
 
 const expectedComicProduction = [
   ['the', '/te/', 'the-comic-v1'],
@@ -36,7 +36,14 @@ assert.equal(historicalWater.active, false);
 assert.equal(historicalWater.style, 'legacy_or_external');
 assert.equal(historicalWater.revision, 'eau-openmoji-drop-v1');
 
-assert.ok(inventory.summary.duplicateReadings.includes('pot'), 'pot duplicate should remain visible until safely migrated');
+const historicalPot = inventory.assets.find(item => item.path === 'assets/research/pot-openmoji-1fab4.svg');
+assert.ok(historicalPot, 'previous pot-with-plant stimulus should be archived');
+assert.equal(historicalPot.active, false);
+assert.equal(historicalPot.style, 'legacy_or_external');
+assert.equal(historicalPot.revision, 'pot-openmoji-1fab4-v1');
+assert.ok(!inventory.assets.some(item => item.path === 'assets/rebus/pot.svg'), 'legacy pot should no longer live in production');
+
+assert.ok(inventory.summary.duplicateReadings.includes('pot'), 'archived pot history should remain visible alongside production');
 assert.ok(inventory.summary.duplicateReadings.includes('tas'), 'historical tas research stimuli should remain visible as same-reading revisions');
 assert.ok(inventory.summary.duplicateReadings.includes('eau'), 'historical water revision should remain visible alongside production');
 assert.ok(inventory.summary.activeLegacyStyle.includes('assets/rebus/chat.svg'), 'audit should expose active assets that still need comic migration');

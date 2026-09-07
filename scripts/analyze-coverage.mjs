@@ -177,11 +177,12 @@ const report={
     caution:'Un segment bien classé ou un homophone exact n’autorise pas automatiquement un pictogramme. Il doit être concret, représentable, stable, reconnaissable et validé.'
   },
   constructible:constructible.slice(0,500),
-  constructibleMultiPiece:constructibleMultiPiece.slice(0,500),
+  constructibleMultiPiece,
   missingSounds
 };
 
 fs.writeFileSync(outputPath,JSON.stringify(report,null,2));
 console.log(`Coverage: ${constructible.length}/${entries.length}; multi-piece: ${constructibleMultiPiece.length}`);
+console.log(`Playable strict unique words: ${uniqueMultiPiece.size}; serialized multi-piece rows: ${constructibleMultiPiece.length}`);
 console.log(`Top missing sounds: ${missingSounds.slice(0,10).map(x=>`${x.ipa} (${x.unlockCount})`).join(', ')}`);
 console.log(`Report -> ${outputPath}`);

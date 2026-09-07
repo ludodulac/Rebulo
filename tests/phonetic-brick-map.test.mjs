@@ -4,7 +4,8 @@ import {
   classifySegmentInventory,
   analyzeTargetConstructibility,
   buildSegmentResearchQueue,
-  rankBrickOpportunities
+  rankBrickOpportunities,
+  rankVisualResearchLeads
 } from '../src/phonetic-brick-map.js';
 
 const targets=[
@@ -56,4 +57,17 @@ assert.equal(opportunities[0].ipa,'ku');
 assert.equal(opportunities[0].strictUnlocked,2,'adding one exact /ku/ image brick should unlock both ba+ku and ku+ba');
 assert.equal(opportunities[0].totalUnlocked,2);
 
-console.log('Phonetic brick map: segment inventory, inverse exact candidates, enriched fallback, and coverage gain passed.');
+const leads=rankVisualResearchLeads([
+  {...opportunities[0]},
+  {ipa:'k',unitCount:1,targetCount:50,totalFrequency:1000,minAgeBandCandidate:5,wholeWordCandidates:[],strictUnlocked:10,generalUnlocked:10,totalUnlocked:20,weightedGain:500,examplesUnlocked:['cas']}
+]);
+const kuLead=leads.find(row=>row.ipa==='ku');
+const kLead=leads.find(row=>row.ipa==='k');
+assert.equal(kuLead.researchRoute,'review_exact_lexical_candidates');
+assert.ok(kuLead.plausibleLexicalCandidates.some(candidate=>candidate.word==='cou'));
+assert.ok(kuLead.nounCandidateCount>=2);
+assert.equal(kuLead.visualAssessment,'human_review_required');
+assert.equal(kLead.researchRoute,'prefer_explicit_letter_or_other_visible_operation');
+assert.ok(kuLead.researchPriorityScore>kLead.researchPriorityScore,'a reusable multi-unit segment with exact noun candidates should outrank a bare consonant fallback in this scenario');
+
+console.log('Phonetic brick map: segment inventory, inverse exact candidates, enriched fallback, gain, and research routing passed.');

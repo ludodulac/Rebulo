@@ -1,6 +1,7 @@
 import {normalizeIPA,splitIPAUnits} from './phonetic-engine.js';
 import {classifySyllableCoverage} from './syllable-coverage.js';
 import {wholeWordRepresentationCandidates} from './syllable-representation-candidates.js';
+import {isDrawableNamingCandidate} from './drawable-opportunities.js';
 
 function targetKey(target={}){
   return `${String(target?.target||target?.word||'').toLocaleLowerCase('fr')}|${normalizeIPA(target?.targetIpa||target?.ipa||'')}`;
@@ -108,4 +109,50 @@ export function rankBrickOpportunities(researchRows=[],targets=[],lexicon=[],{li
     });
   }
   return opportunities.sort((a,b)=>b.totalUnlocked-a.totalUnlocked||b.weightedGain-a.weightedGain||b.targetCount-a.targetCount||a.ipa.localeCompare(b.ipa));
+}
+
+function candidateResearchScore(candidate={}){
+  const pos=String(candidate?.pos||'').toUpperCase().split(':')[0];
+  const posScore=pos==='NOM'?30:pos==='ONO'?24:pos==='ADJ'?10:pos==='VER'?8:4;
+  const frequency=Math.max(0,Number(candidate?.frequency)||0);
+  const lexicalFrequencyScore=Math.min(25,Math.log10(frequency+1)*8);
+  const word=String(candidate?.word||'').trim();
+  const lengthScore=word.length>=2&&word.length<=10?8:word.length<=15?4:0;
+  return Number((posScore+lexicalFrequencyScore+lengthScore).toFixed(3));
+}
+
+export function rankVisualResearchLeads(opportunities=[],{limit=60}={}){
+  const leads=(opportunities||[]).map(row=>{
+    const plausibleLexicalCandidates=(row.wholeWordCandidates||[])
+      .filter(isDrawableNamingCandidate)
+      .map(candidate=>({...candidate,automaticResearchScore:candidateResearchScore(candidate)}))
+      .sort((a,b)=>b.automaticResearchScore-a.automaticResearchScore||b.frequency-a.frequency||a.word.localeCompare(b.word,'fr'));
+    const nounCandidateCount=plausibleLexicalCandidates.filter(candidate=>String(candidate.pos||'').toUpperCase().split(':')[0]==='NOM').length;
+    const candidateEvidence=plausibleLexicalCandidates.length>0;
+    const route=candidateEvidence
+      ?'review_exact_lexical_candidates'
+      :row.unitCount>=2
+        ?'search_scene_expression_or_alternate_segmentation'
+        :'prefer_explicit_letter_or_other_visible_operation';
+    const sizeBonus=Math.min(4,Number(row.unitCount)||0)*12;
+    const lexicalBonus=candidateEvidence?90+Math.min(40,plausibleLexicalCandidates.length*8):0;
+    const nounBonus=Math.min(40,nounCandidateCount*10);
+    const singleUnitPenalty=Number(row.unitCount)===1?45:0;
+    const letterFallbackPenalty=!candidateEvidence&&Number(row.unitCount)===1?70:0;
+    const coverageScore=Math.min(180,Number(row.totalUnlocked||0)*2)+Math.min(70,Number(row.strictUnlocked||0));
+    const frequencyScore=Math.min(70,Math.log10(Math.max(1,Number(row.weightedGain)||0))*16);
+    const researchPriorityScore=Number((coverageScore+frequencyScore+sizeBonus+lexicalBonus+nounBonus-singleUnitPenalty-letterFallbackPenalty).toFixed(3));
+    return {
+      ...row,
+      plausibleLexicalCandidates,
+      nounCandidateCount,
+      researchRoute:route,
+      researchPriorityScore,
+      visualAssessment:'human_review_required',
+      spontaneousNamingAssessment:'human_review_required',
+      ageSuitabilityAssessment:'human_review_required',
+      clinicalAssessment:'not_assessed'
+    };
+  });
+  return leads.sort((a,b)=>b.researchPriorityScore-a.researchPriorityScore||b.totalUnlocked-a.totalUnlocked||b.strictUnlocked-a.strictUnlocked||b.weightedGain-a.weightedGain||a.ipa.localeCompare(b.ipa)).slice(0,limit);
 }

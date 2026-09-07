@@ -19,7 +19,7 @@ function metric(value,label){
 function renderCandidate(candidate){
   const card=document.createElement('article');card.className='candidate-review';
   const visual=document.createElement('div');visual.className='candidate-visual';
-  const image=document.createElement('img');image.src=candidate.asset;image.alt='Prototype visuel correspondant aux observations';image.loading='lazy';
+  const image=document.createElement('img');image.src=candidate.asset;image.alt='Stimulus visuel correspondant aux observations';image.loading='lazy';
   image.addEventListener('error',()=>visual.replaceChildren(text('span','Image indisponible','image-error')));visual.append(image);
   const body=document.createElement('div');body.className='candidate-review-body';
   body.append(text('div',candidate.candidateId,'candidate-id'));
@@ -38,7 +38,8 @@ function renderReview(review){
   sessionCount.textContent=String(review.sessionCount);summary.hidden=false;
   for(const concept of review.concepts){
     const section=document.createElement('section');section.className='concept-review';
-    const heading=document.createElement('div');heading.className='concept-heading';heading.append(text('h2',concept.concept),text('span',concept.targetIpa,'ipa'),text('span',concept.comparisonRevision,'revision'),text('span',`${concept.sessionCount} session(s)`));
+    const sourceLabel=concept.activationState==='active_general_naming_review'?'stimulus actif en revue':'prototype de recherche';
+    const heading=document.createElement('div');heading.className='concept-heading';heading.append(text('h2',concept.concept),text('span',concept.targetIpa,'ipa'),text('span',concept.comparisonRevision,'revision'),text('span',sourceLabel),text('span',`${concept.sessionCount} session(s)`));
     const grid=document.createElement('div');grid.className='candidate-grid';for(const candidate of concept.candidates)grid.append(renderCandidate(candidate));
     section.append(heading,grid);results.append(section);
   }
@@ -54,7 +55,7 @@ async function loadFiles(files){
     renderReview(review);
     status.textContent=`${review.sessionCount} export(s) anonyme(s) analysé(s) localement. Comptages descriptifs uniquement.`;
   }catch(error){
-    console.error(error);results.replaceChildren();summary.hidden=true;status.textContent='Revue refusée : charge uniquement des exports complets et compatibles du test de dénomination Rebulo, sans doublon de session et de la même révision que les stimuli actuels.';
+    console.error(error);results.replaceChildren();summary.hidden=true;status.textContent='Revue refusée : charge uniquement des exports complets et compatibles du test de dénomination Rebulo, sans doublon de session et liés exactement à une révision actuellement enregistrée.';
   }finally{fileInput.value='';}
 }
 
@@ -62,11 +63,14 @@ function clearReview(){results.replaceChildren();summary.hidden=true;sessionCoun
 
 fileInput?.addEventListener('change',()=>loadFiles(fileInput.files));clearButton?.addEventListener('click',clearReview);
 
+async function loadJson(path){const response=await fetch(path,{cache:'no-store'});if(!response.ok)throw new Error(`${path} unavailable`);return response.json();}
 async function init(){
   try{
-    const response=await fetch('./data/pictogram-prototype-comparisons.json',{cache:'no-store'});if(!response.ok)throw new Error('comparisons unavailable');
-    const registry=await response.json();comparisons=(registry.comparisons||[]).filter(item=>item.activationState==='inactive_until_human_decision');
-    if(!comparisons.length){fileInput.disabled=true;status.textContent='Aucune comparaison de recherche disponible.';}
-  }catch(error){console.error(error);fileInput.disabled=true;status.textContent='Impossible de charger les comparaisons de recherche.';}
+    const [prototypeRegistry,productionRegistry]=await Promise.all([loadJson('./data/pictogram-prototype-comparisons.json'),loadJson('./data/production-naming-reviews.json')]);
+    const inactive=(prototypeRegistry.comparisons||[]).filter(item=>item.activationState==='inactive_until_human_decision'&&item.candidates?.length);
+    const production=(productionRegistry.reviews||[]).filter(item=>item.activationState==='active_general_naming_review'&&item.candidates?.length);
+    comparisons=[...inactive,...production];
+    if(!comparisons.length){fileInput.disabled=true;status.textContent='Aucun stimulus révisable disponible.';}
+  }catch(error){console.error(error);fileInput.disabled=true;status.textContent='Impossible de charger le registre des stimuli.';}
 }
 init();

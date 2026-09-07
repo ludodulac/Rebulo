@@ -3,33 +3,26 @@ import { buildAssetInventory } from '../scripts/audit-asset-library.mjs';
 
 const inventory = await buildAssetInventory(new URL('..', import.meta.url).pathname);
 
-assert.equal(inventory.summary.production, 24, 'production SVG count should stay explicit during cleanup');
-assert.equal(inventory.summary.prepared, 1, 'tea, tas and water should leave the prepared queue after migration');
+assert.equal(inventory.summary.production, 25, 'production SVG count should stay explicit during cleanup');
+assert.equal(inventory.summary.prepared, 0, 'prepared comic queue should be empty after corps migration');
 assert.equal(inventory.summary.research, 21, 'historical research stimuli should remain preserved');
 
-const productionTea = inventory.assets.find(item => item.path === 'assets/rebus/the.svg');
-assert.ok(productionTea, 'canonical tea asset should remain at the stable production path');
-assert.equal(productionTea.active, true);
-assert.equal(productionTea.style, 'comic');
-assert.equal(productionTea.revision, 'the-comic-v1');
-assert.equal(productionTea.clinicalStatus, 'naming_test_required');
-assert.equal(productionTea.ipa, '/te/');
-
-const productionTas = inventory.assets.find(item => item.path === 'assets/rebus/tas.svg');
-assert.ok(productionTas, 'tas should be promoted to a canonical production asset');
-assert.equal(productionTas.active, true);
-assert.equal(productionTas.style, 'comic');
-assert.equal(productionTas.revision, 'tas-comic-v1');
-assert.equal(productionTas.clinicalStatus, 'naming_test_required');
-assert.equal(productionTas.ipa, '/ta/');
-
-const productionWater = inventory.assets.find(item => item.path === 'assets/rebus/eau.svg');
-assert.ok(productionWater, 'water should keep its stable canonical path');
-assert.equal(productionWater.active, true);
-assert.equal(productionWater.style, 'comic');
-assert.equal(productionWater.revision, 'eau-comic-v1');
-assert.equal(productionWater.clinicalStatus, 'naming_test_required');
-assert.equal(productionWater.ipa, '/o/');
+const expectedComicProduction = [
+  ['the', '/te/', 'the-comic-v1'],
+  ['tas', '/ta/', 'tas-comic-v1'],
+  ['eau', '/o/', 'eau-comic-v1'],
+  ['corps', '/kɔʁ/', 'corps-comic-v1']
+];
+for (const [id, ipa, revision] of expectedComicProduction) {
+  const asset = inventory.assets.find(item => item.path === `assets/rebus/${id}.svg`);
+  assert.ok(asset, `${id} should have a canonical production asset`);
+  assert.equal(asset.active, true);
+  assert.equal(asset.style, 'comic');
+  assert.equal(asset.revision, revision);
+  assert.equal(asset.clinicalStatus, 'naming_test_required');
+  assert.equal(asset.ipa, ipa);
+  assert.ok(!inventory.summary.activeLegacyStyle.includes(asset.path), `${id} should not be reported as legacy style`);
+}
 
 const historicalTea = inventory.assets.find(item => item.path === 'assets/research/the-openmoji-1f375.svg');
 assert.ok(historicalTea, 'previous tea stimulus should be archived');
@@ -47,8 +40,5 @@ assert.ok(inventory.summary.duplicateReadings.includes('pot'), 'pot duplicate sh
 assert.ok(inventory.summary.duplicateReadings.includes('tas'), 'historical tas research stimuli should remain visible as same-reading revisions');
 assert.ok(inventory.summary.duplicateReadings.includes('eau'), 'historical water revision should remain visible alongside production');
 assert.ok(inventory.summary.activeLegacyStyle.includes('assets/rebus/chat.svg'), 'audit should expose active assets that still need comic migration');
-assert.ok(!inventory.summary.activeLegacyStyle.includes('assets/rebus/the.svg'), 'migrated tea should no longer be reported as legacy style');
-assert.ok(!inventory.summary.activeLegacyStyle.includes('assets/rebus/tas.svg'), 'migrated tas should not be reported as legacy style');
-assert.ok(!inventory.summary.activeLegacyStyle.includes('assets/rebus/eau.svg'), 'migrated water should not be reported as legacy style');
 
 console.log('asset-library-inventory.test.mjs: ok');

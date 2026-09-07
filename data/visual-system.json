@@ -1,31 +1,7 @@
 {
-  "version": "1.6.0",
-  "principles": [
-    "recognition_before_decoration",
-    "one_concept_one_focal_object",
-    "consistent_rounded_geometry",
-    "no_written_answer_inside_pictogram",
-    "limited_semantic_background",
-    "adult_credible_child_friendly",
-    "semantic_cues_allowed_when_they_disambiguate_the_target"
-  ],
-  "targetStyle": {
-    "name": "Rebulo BD claire",
-    "description": "Illustrations BD chaleureuses, colorées et immédiatement lisibles, sur fond blanc ou transparent, avec contours noirs nets, silhouette dominante, ombrage léger et très peu de détails concurrents. Un indice visuel explicite comme une flèche ou un outil est autorisé lorsqu'il rend le mot conventionnel évident sans écrire la réponse.",
-    "stroke": "bold_rounded_consistent",
-    "detail": "low_to_medium",
-    "background": "white_transparent_or_semantic_only",
-    "textInsideAsset": "forbidden_unless_the_concept_is_a_grapheme",
-    "referenceDirection": "Planche BD approuvée par le fondateur le 2026-09-06; utiliser la même grammaire visuelle pour les nouveaux pictogrammes.",
-    "generationRules": [
-      "one pictogram per asset; never ship a numbered worksheet crop as a production pictogram",
-      "remove labels and item numbers from production assets",
-      "prefer the conventional French lexical reading over visual minimalism",
-      "use arrows only to point to a body part or feature when the whole character would otherwise dominate naming",
-      "context objects may disambiguate a material or relation but are never phonetic pieces",
-      "keep production assets readable at small card size"
-    ]
-  },
+  "version": "1.7.0",
+  "principles": ["recognition_before_decoration","one_concept_one_focal_object","consistent_rounded_geometry","no_written_answer_inside_pictogram","limited_semantic_background","adult_credible_child_friendly","semantic_cues_allowed_when_they_disambiguate_the_target"],
+  "targetStyle": {"name":"Rebulo BD claire","description":"Illustrations BD chaleureuses, colorées et immédiatement lisibles, sur fond blanc ou transparent, avec contours noirs nets, silhouette dominante, ombrage léger et très peu de détails concurrents. Un indice visuel explicite comme une flèche ou un outil est autorisé lorsqu'il rend le mot conventionnel évident sans écrire la réponse.","stroke":"bold_rounded_consistent","detail":"low_to_medium","background":"white_transparent_or_semantic_only","textInsideAsset":"forbidden_unless_the_concept_is_a_grapheme","referenceDirection":"Planche BD approuvée par le fondateur le 2026-09-06; utiliser la même grammaire visuelle pour les nouveaux pictogrammes.","generationRules":["one pictogram per asset; never ship a numbered worksheet crop as a production pictogram","remove labels and item numbers from production assets","prefer the conventional French lexical reading over visual minimalism","use arrows only to point to a body part or feature when the whole character would otherwise dominate naming","context objects may disambiguate a material or relation but are never phonetic pieces","keep production assets readable at small card size"]},
   "approvedConceptDirections": [
     {"concept":"dos","targetIpa":"/do/","asset":"assets/rebus/dos-comic.svg","artRevision":"dos-comic-v1","direction":"Personne recourbée ou vue de dos avec une flèche rouge pointant explicitement la zone du dos.","status":"art_direction_approved","phoneticActivation":"general_active_owner_approved","clinicalValidation":"not_claimed"},
     {"concept":"raie","targetIpa":"/ʁɛ/","asset":"assets/rebus/raie-comic.svg","artRevision":"raie-comic-v1","direction":"Chevelure vue de face ou du dessus avec raie centrale nette et flèche rouge pointant la séparation des cheveux; préférée au poisson pour la lecture lexicale visée.","status":"art_direction_approved","phoneticActivation":"general_active_owner_approved","clinicalValidation":"not_claimed"},
@@ -33,7 +9,8 @@
     {"concept":"terre","targetIpa":"/tɛʁ/","asset":"assets/rebus/terre-comic.svg","artRevision":"terre-comic-v1","direction":"Tas de terre brune avec pelle ou transplantoir planté dedans pour rendre la matière terre évidente.","status":"art_direction_approved","phoneticActivation":"general_active_owner_approved","clinicalValidation":"not_claimed"},
     {"concept":"thé","targetIpa":"/te/","asset":"assets/rebus/the.svg","artRevision":"the-comic-v1","direction":"Tasse de thé fumant avec sachet visible; direction BD migrée au chemin canonique, usage général fondé sur l'attestation pédagogique explicite du concept thé dans un exercice officiel de rébus.","status":"attested_general_direction","phoneticActivation":"general_active_attested","clinicalValidation":"not_claimed"},
     {"concept":"tas","targetIpa":"/ta/","asset":"assets/rebus/tas.svg","artRevision":"tas-comic-v1","direction":"Vrai tas de terre ou sable à silhouette dominante; pelle secondaire uniquement contextuelle et sans contribution phonétique.","status":"art_direction_approved","phoneticActivation":"general_active_owner_approved","clinicalValidation":"not_claimed","namingRisk":"Peut encore provoquer pile ou amas; aucune validation clinique n'est revendiquée."},
-    {"concept":"eau","targetIpa":"/o/","asset":"assets/rebus/eau.svg","artRevision":"eau-comic-v1","direction":"Verre simple clairement rempli d'eau; le contenu doit être lisible comme eau sans écrire le mot dans l'image.","status":"art_direction_approved","phoneticActivation":"general_active_owner_approved","clinicalValidation":"not_claimed","namingRisk":"Le contenant peut provoquer verre plutôt que eau; ambiguïté conservée explicitement."}
+    {"concept":"eau","targetIpa":"/o/","asset":"assets/rebus/eau.svg","artRevision":"eau-comic-v1","direction":"Verre simple clairement rempli d'eau; le contenu doit être lisible comme eau sans écrire le mot dans l'image.","status":"art_direction_approved","phoneticActivation":"general_active_owner_approved","clinicalValidation":"not_claimed","namingRisk":"Le contenant peut provoquer verre plutôt que eau; ambiguïté conservée explicitement."},
+    {"concept":"corps","targetIpa":"/kɔʁ/","asset":"assets/rebus/corps.svg","artRevision":"corps-comic-v1","direction":"Personnage humain entier, corps visible de la tête aux pieds, composition simple et sans texte.","status":"art_direction_approved","phoneticActivation":"general_active_owner_approved","clinicalValidation":"not_claimed","namingRisk":"Le personnage peut provoquer personne, homme ou garçon plutôt que corps; ambiguïté conservée explicitement."}
   ],
   "audit": [
     {"id":"mer","status":"redesign_priority","reason":"Le paysage mer + soleil ajoute un contexte décoratif alors que le concept doit être identifié immédiatement. Une simple vague n'est pas retenue car elle pourrait être nommée vague plutôt que mer."},
@@ -58,6 +35,7 @@
     {"id":"raie","status":"reference_style","reason":"Nouvelle raie des cheveux BD avec flèche explicite, approuvée pour l'usage général; validation clinique non présumée."},
     {"id":"terre","status":"reference_style","reason":"Nouveau tas de terre BD avec pelle contextuelle, approuvé pour l'usage général; validation clinique non présumée."},
     {"id":"tas","status":"reference_style","reason":"Nouveau tas BD `tas-comic-v1`, avec amas dominant et pelle secondaire contextuelle; usage général approuvé, ambiguïté pile/amas encore ouverte et validation clinique non présumée."},
-    {"id":"eau","status":"reference_style","reason":"Nouveau verre d'eau BD `eau-comic-v1` au chemin canonique. Le risque de réponse verre reste ouvert; usage général approuvé sans validation clinique présumée."}
+    {"id":"eau","status":"reference_style","reason":"Nouveau verre d'eau BD `eau-comic-v1` au chemin canonique. Le risque de réponse verre reste ouvert; usage général approuvé sans validation clinique présumée."},
+    {"id":"corps","status":"reference_style","reason":"Nouveau personnage entier BD `corps-comic-v1` au chemin canonique. Le risque de réponses personne/homme/garçon reste ouvert; usage général approuvé sans validation clinique présumée."}
   ]
 }

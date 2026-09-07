@@ -19,8 +19,7 @@ function hasAsset(item={}){return Boolean(item.image||item.asset);}
 function hasPhoneticStructure(item={}){return Boolean(item.ipa||item.targetIpa)&&item.strictEligible!==false;}
 function hasNamingPlan(review={}){return Boolean(review?.revision&&review?.targetIpa&&Array.isArray(review?.candidates)&&review.candidates.length);}
 function hasHumanEvidence(review={}){
-  if(review?.humanDecision)return true;
-  return (review?.candidates||[]).some(candidate=>candidate?.namingTestStatus&&candidate.namingTestStatus!=='not_run');
+  return (review?.candidates||[]).some(candidate=>candidate?.namingTestStatus==='completed');
 }
 function hasClinicalValidation(item={},review={}){
   return item?.clinicalStatus==='validated'||item?.clinicalValidation==='validated'||review?.clinicalStatus==='validated'||review?.humanDecision==='clinical_validated';

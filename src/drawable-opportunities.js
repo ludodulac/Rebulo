@@ -30,3 +30,27 @@ export function buildDrawableOpportunityShortlist(opportunities=[],curatedItems=
   }
   return out.sort((a,b)=>b.targetCount-a.targetCount||b.frequencySum-a.frequencySum||a.label.localeCompare(b.label,'fr')).slice(0,limit);
 }
+
+export function buildExpansionCurationLeads(opportunities=[],activeItems=[],{limit=20}={}){
+  const activeIpas=new Set((activeItems||[]).filter(item=>item?.active!==false).map(item=>normalizeIPA(item?.ipa||'')).filter(Boolean));
+  const leads=[];
+  for(const opportunity of opportunities||[]){
+    const ipa=normalizeIPA(opportunity?.ipa||'');
+    if(!ipa||activeIpas.has(ipa))continue;
+    const lexicalCandidates=(opportunity.namingCandidates||[]).filter(isDrawableNamingCandidate).slice(0,5);
+    if(!lexicalCandidates.length)continue;
+    leads.push({
+      ipa,
+      targetCount:Number(opportunity.targetCount)||0,
+      frequencySum:Number(opportunity.frequencySum)||0,
+      lexicalCandidates,
+      examples:(opportunity.examples||[]).slice(0,5),
+      status:'needs_human_curation',
+      activation:'not_ready',
+      proposedLabel:null,
+      nextGate:'human_concept_and_drawability_review',
+      caution:'Ces mots sont seulement des homophones entiers attestés. Aucun n’est déclaré pictogramme, stable ou activable automatiquement.'
+    });
+  }
+  return leads.sort((a,b)=>b.targetCount-a.targetCount||b.frequencySum-a.frequencySum||a.ipa.localeCompare(b.ipa)).slice(0,limit);
+}

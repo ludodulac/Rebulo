@@ -1,15 +1,140 @@
 {
-  "generatedAt": "2026-09-07T04:11:26.682Z",
+  "generatedAt": "2026-09-07T04:14:25.216Z",
   "lexicalUniquePronouncedForms": 171476,
   "baseline": {
     "constructibleUniqueWords": 891,
     "multiPieceUniqueWords": 760,
     "weightedMultiPiece": 918.513
   },
-  "candidatePool": [],
-  "greedyOrder": [],
+  "candidatePool": [
+    {
+      "label": "nid",
+      "ipa": "/ni/",
+      "status": "research_candidate",
+      "source": "curated_shortlist",
+      "rawRank": 1
+    }
+  ],
+  "greedyOrder": [
+    {
+      "step": 1,
+      "addedLabel": "nid",
+      "ipa": "/ni/",
+      "status": "research_candidate",
+      "source": "curated_shortlist",
+      "marginalMultiPieceUniqueWords": 75,
+      "marginalConstructibleUniqueWords": 81,
+      "cumulativeMultiPieceUniqueWords": 835,
+      "cumulativeConstructibleUniqueWords": 972,
+      "cumulativeWeightedMultiPiece": 999.326
+    }
+  ],
+  "curatedCandidateScenarios": [
+    {
+      "name": "nid",
+      "added": [
+        {
+          "label": "nid",
+          "ipa": "/ni/",
+          "assetStatus": "not_created"
+        }
+      ],
+      "strictMultiPieceGain": 75,
+      "strictConstructibleGain": 81,
+      "weightedMultiPieceGain": 80.813,
+      "cumulativeMultiPieceUniqueWords": 835,
+      "examples": [
+        {
+          "word": "maternité",
+          "frequency": 3.804,
+          "pieces": [
+            "mât",
+            "terre",
+            "nid",
+            "thé"
+          ]
+        },
+        {
+          "word": "déni",
+          "frequency": 3.051,
+          "pieces": [
+            "dé",
+            "nid"
+          ]
+        },
+        {
+          "word": "paternité",
+          "frequency": 2.585,
+          "pieces": [
+            "pas",
+            "terre",
+            "nid",
+            "thé"
+          ]
+        },
+        {
+          "word": "pawnee",
+          "frequency": 2.259,
+          "pieces": [
+            "pot",
+            "nid"
+          ]
+        },
+        {
+          "word": "manie",
+          "frequency": 2.187,
+          "pieces": [
+            "mât",
+            "nid"
+          ]
+        },
+        {
+          "word": "mini",
+          "frequency": 1.547,
+          "pieces": [
+            "mie",
+            "nid"
+          ]
+        },
+        {
+          "word": "manies",
+          "frequency": 0.921,
+          "pieces": [
+            "mât",
+            "nid"
+          ]
+        },
+        {
+          "word": "tournis",
+          "frequency": 0.728,
+          "pieces": [
+            "tour",
+            "nid"
+          ]
+        },
+        {
+          "word": "nierai",
+          "frequency": 0.709,
+          "pieces": [
+            "nid",
+            "raie"
+          ]
+        },
+        {
+          "word": "niera",
+          "frequency": 0.456,
+          "pieces": [
+            "nid",
+            "rat"
+          ]
+        }
+      ],
+      "note": "Gain isolé par rapport à la base active actuelle."
+    }
+  ],
   "prototypeScenarios": [],
-  "interpretation": "Ordre glouton recalculé après chaque ajout. Les briques déjà actives sont exclues du pool candidat ; le gain porte sur les mots uniques devenant constructibles avec au moins deux pièces, ce qui évite de confondre un simple homophone d’une image avec un vrai rébus.",
+  "interpretation": "Ordre glouton recalculé après chaque ajout. Les briques déjà actives sont exclues du pool candidat ; les candidats curatés mais non actifs sont simulés sans être activés.",
+  "curatedCandidateInterpretation": "Un candidat de la shortlist de recherche peut être simulé lexicalement avant création du visuel. Ce calcul ne vaut ni validation de dénomination, ni validation visuelle, ni activation.",
   "prototypeInterpretation": "Les scénarios de prototypes simulent séparément puis ensemble les concepts enregistrés comme prototypes mais toujours inactifs. Ils n’activent rien dans le produit.",
-  "caution": "Cette simulation mesure le potentiel lexical strict, pas la qualité clinique. Un prototype doit encore satisfaire les exigences de visuel, de dénomination et de provenance avant toute activation."
+  "caution": "Cette simulation mesure le potentiel lexical strict, pas la qualité clinique. Un candidat doit encore satisfaire les exigences de visuel, de dénomination et de provenance avant toute activation."
 }

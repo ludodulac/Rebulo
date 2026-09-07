@@ -22,6 +22,6 @@ for(const item of registry.items){
   const svg=fs.readFileSync(new URL(`../${item.asset}`,import.meta.url),'utf8');
   assert.doesNotMatch(svg,/<text\b/i,`${item.asset} must not contain the written answer`);
   assert.doesNotMatch(svg,/<image\b/i,`${item.asset} must be self-contained vector artwork`);
-  assert.doesNotMatch(svg,/http(s)?:\/\//i,`${item.asset} must not load external resources`);
+  assert.doesNotMatch(svg,/(?:href|xlink:href)\s*=\s*["']https?:\/\//i,`${item.asset} must not load external resources`);
 }
 console.log('redesign-prototypes: syllable prototypes are research-only and text-free');

@@ -46,7 +46,12 @@ for(const item of shortlist.items){
     assert.ok(lead,`${item.label} must map to a fresh curation lead`);
     assert.ok(lead.lexicalCandidates.some(candidate=>String(candidate.word).toLowerCase()===String(item.label).toLowerCase()));
     assert.equal(item.unlockCount,lead.targetCount);
-    assert.equal(item.assetStatus,'not_created');
+    if(item.assetStatus!=='not_created'){
+      const asset=assets.assets.find(candidate=>candidate.path===item.assetStatus);
+      assert.ok(asset,`${item.label} research asset must be documented before naming review`);
+      assert.equal(asset.active,false);
+      assert.equal(asset.artRevision,item.artRevision);
+    }
   }
 }
 
@@ -54,7 +59,10 @@ const nid=shortlist.items.find(item=>item.label==='nid');
 assert.ok(nid);
 assert.equal(nid.ipa,'/ni/');
 assert.equal(nid.unlockCount,103);
-assert.equal(nid.nextGate,'visual_prototype_then_naming_review');
+assert.equal(nid.assetStatus,'assets/research/nid-comic-v1.svg');
+assert.equal(nid.artRevision,'nid-comic-v1');
+assert.equal(nid.clinicalStatus,'naming_test_required');
+assert.equal(nid.nextGate,'naming_review');
 
 for(const id of ['pot','dos','raie','terre','tas']){
   const entry=lexicon.find(item=>item.id===id);

@@ -59,11 +59,11 @@ export function generatedPlayableRebuses(coverage={},lexicon=[]){
 export function mergePlayableCatalog(manual=[],generated=[]){
   const byAnswer=new Map();
   for(const item of generated||[]){
-    const key=normalizeKey(item?.answer);
+    const key=exactWordKey(item?.answer);
     if(key&&!byAnswer.has(key))byAnswer.set(key,item);
   }
   for(const item of manual||[]){
-    const key=normalizeKey(item?.answer);
+    const key=exactWordKey(item?.answer);
     if(!key||byAnswer.has(key))continue;
     byAnswer.set(key,item);
   }

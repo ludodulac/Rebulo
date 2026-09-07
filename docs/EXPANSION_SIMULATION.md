@@ -1,11 +1,10 @@
 # Rebulo — simulation gloutonne d’expansion
 
-- Base : 723 mots uniques en rébus de 2+ pièces.
-- Candidats testés : 1.
+- Base : 760 mots uniques en rébus de 2+ pièces.
+- Candidats testés : 0.
 
 | Étape | Brique ajoutée | IPA | Gain marginal de vrais rébus | Total cumulatif |
 |---:|---|---|---:|---:|
-| 1 | corps | /kɔʁ/ | +37 | 760 |
 
 ## Prototypes inactifs : impact simulé
 

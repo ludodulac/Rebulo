@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-09-06T12:36:05.644Z",
+  "generatedAt": "2026-09-07T01:59:28.051Z",
   "source": "Lexique 4",
   "lexicalEntryCount": 189832,
   "inventory": {
-    "seedCount": 23,
+    "seedCount": 24,
     "openLibraryCount": 365,
-    "mergedCount": 382
+    "mergedCount": 383
   },
   "stats": {
-    "tokens": 382,
-    "productive": 143,
-    "candidates": 182,
+    "tokens": 383,
+    "productive": 145,
+    "candidates": 181,
     "generalOnly": 57,
     "illustrationOnly": 0,
-    "strictRebuses": 1453
+    "strictRebuses": 1498
   },
   "methodology": {
     "strictProductive": "Une pièce est productive uniquement si sa prononciation entière participe à au moins un rébus exact de 2 à 4 pièces dans le corpus de référence.",
@@ -33,7 +33,7 @@
       "productivityStatus": "strict_productive",
       "active": true,
       "strictEligible": true,
-      "strictUseCount": 299,
+      "strictUseCount": 321,
       "strictExamples": [
         {
           "word": "garder",
@@ -150,7 +150,7 @@
       "productivityStatus": "strict_productive",
       "active": true,
       "strictEligible": true,
-      "strictUseCount": 191,
+      "strictUseCount": 200,
       "strictExamples": [
         {
           "word": "aura",
@@ -207,7 +207,7 @@
       "productivityStatus": "strict_productive",
       "active": true,
       "strictEligible": true,
-      "strictUseCount": 182,
+      "strictUseCount": 190,
       "strictExamples": [
         {
           "word": "donner",
@@ -439,7 +439,7 @@
       "productivityStatus": "strict_productive",
       "active": true,
       "strictEligible": true,
-      "strictUseCount": 126,
+      "strictUseCount": 127,
       "strictExamples": [
         {
           "word": "aussi",
@@ -614,7 +614,7 @@
       "productivityStatus": "strict_productive",
       "active": true,
       "strictEligible": true,
-      "strictUseCount": 120,
+      "strictUseCount": 121,
       "strictExamples": [
         {
           "word": "millions",
@@ -789,7 +789,7 @@
       "productivityStatus": "strict_productive",
       "active": true,
       "strictEligible": true,
-      "strictUseCount": 78,
+      "strictUseCount": 81,
       "strictExamples": [
         {
           "word": "tapis",
@@ -847,7 +847,7 @@
       "productivityStatus": "strict_productive",
       "active": true,
       "strictEligible": true,
-      "strictUseCount": 75,
+      "strictUseCount": 76,
       "strictExamples": [
         {
           "word": "sauter",
@@ -904,7 +904,7 @@
       "productivityStatus": "strict_productive",
       "active": true,
       "strictEligible": true,
-      "strictUseCount": 61,
+      "strictUseCount": 63,
       "strictExamples": [
         {
           "word": "possible",
@@ -961,7 +961,7 @@
       "productivityStatus": "strict_productive",
       "active": true,
       "strictEligible": true,
-      "strictUseCount": 54,
+      "strictUseCount": 57,
       "strictExamples": [
         {
           "word": "serpent",
@@ -1132,6 +1132,120 @@
       ]
     },
     {
+      "id": "dos",
+      "label": "dos",
+      "ipa": "/do/",
+      "normalizedIPA": "do",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 47,
+      "strictExamples": [
+        {
+          "word": "donner",
+          "ipa": "done",
+          "frequency": 261.88,
+          "decomposition": [
+            "dos",
+            "nez"
+          ]
+        },
+        {
+          "word": "donné",
+          "ipa": "done",
+          "frequency": 250.693,
+          "decomposition": [
+            "dos",
+            "nez"
+          ]
+        },
+        {
+          "word": "donnez",
+          "ipa": "done",
+          "frequency": 110.443,
+          "decomposition": [
+            "dos",
+            "nez"
+          ]
+        },
+        {
+          "word": "données",
+          "ipa": "done",
+          "frequency": 38.367,
+          "decomposition": [
+            "dos",
+            "nez"
+          ]
+        },
+        {
+          "word": "donnée",
+          "ipa": "done",
+          "frequency": 15.775,
+          "decomposition": [
+            "dos",
+            "nez"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "corps",
+      "label": "corps",
+      "ipa": "/kɔʁ/",
+      "normalizedIPA": "kɔʁ",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 45,
+      "strictExamples": [
+        {
+          "word": "décor",
+          "ipa": "dekɔʁ",
+          "frequency": 5.886,
+          "decomposition": [
+            "de",
+            "corps"
+          ]
+        },
+        {
+          "word": "décors",
+          "ipa": "dekɔʁ",
+          "frequency": 3,
+          "decomposition": [
+            "de",
+            "corps"
+          ]
+        },
+        {
+          "word": "cornée",
+          "ipa": "kɔʁne",
+          "frequency": 0.699,
+          "decomposition": [
+            "corps",
+            "nez"
+          ]
+        },
+        {
+          "word": "décore",
+          "ipa": "dekɔʁ",
+          "frequency": 0.617,
+          "decomposition": [
+            "de",
+            "corps"
+          ]
+        },
+        {
+          "word": "corso",
+          "ipa": "kɔʁso",
+          "frequency": 0.497,
+          "decomposition": [
+            "corps",
+            "seau"
+          ]
+        }
+      ]
+    },
+    {
       "id": "lait",
       "label": "lait",
       "ipa": "/lɛ/",
@@ -1184,63 +1298,6 @@
           "decomposition": [
             "roue",
             "lait"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "dos",
-      "label": "dos",
-      "ipa": "/do/",
-      "normalizedIPA": "do",
-      "productivityStatus": "strict_productive",
-      "active": true,
-      "strictEligible": true,
-      "strictUseCount": 44,
-      "strictExamples": [
-        {
-          "word": "donner",
-          "ipa": "done",
-          "frequency": 261.88,
-          "decomposition": [
-            "dos",
-            "nez"
-          ]
-        },
-        {
-          "word": "donné",
-          "ipa": "done",
-          "frequency": 250.693,
-          "decomposition": [
-            "dos",
-            "nez"
-          ]
-        },
-        {
-          "word": "donnez",
-          "ipa": "done",
-          "frequency": 110.443,
-          "decomposition": [
-            "dos",
-            "nez"
-          ]
-        },
-        {
-          "word": "données",
-          "ipa": "done",
-          "frequency": 38.367,
-          "decomposition": [
-            "dos",
-            "nez"
-          ]
-        },
-        {
-          "word": "donnée",
-          "ipa": "done",
-          "frequency": 15.775,
-          "decomposition": [
-            "dos",
-            "nez"
           ]
         }
       ]
@@ -1426,7 +1483,7 @@
       "productivityStatus": "strict_productive",
       "active": true,
       "strictEligible": true,
-      "strictUseCount": 29,
+      "strictUseCount": 30,
       "strictExamples": [
         {
           "word": "pendant",
@@ -3088,6 +3145,64 @@
       ]
     },
     {
+      "id": "ail",
+      "label": "ail",
+      "ipa": "/aj/",
+      "normalizedIPA": "aj",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 6,
+      "strictExamples": [
+        {
+          "word": "portail",
+          "ipa": "pɔʁtaj",
+          "frequency": 9.658,
+          "decomposition": [
+            "porte",
+            "ail"
+          ]
+        },
+        {
+          "word": "portails",
+          "ipa": "pɔʁtaj",
+          "frequency": 0.728,
+          "decomposition": [
+            "porte",
+            "ail"
+          ]
+        },
+        {
+          "word": "aye-aye",
+          "ipa": "ajaj",
+          "frequency": 0.076,
+          "decomposition": [
+            "ail",
+            "ail"
+          ]
+        },
+        {
+          "word": "aïoli",
+          "ipa": "ajoli",
+          "frequency": 0.073,
+          "decomposition": [
+            "ail",
+            "eau",
+            "lit"
+          ]
+        },
+        {
+          "word": "corails",
+          "ipa": "kɔʁaj",
+          "frequency": 0.013,
+          "decomposition": [
+            "corps",
+            "ail"
+          ]
+        }
+      ]
+    },
+    {
       "id": "cafard",
       "label": "cafard",
       "ipa": "/kafaʁ/",
@@ -3368,65 +3483,6 @@
           "decomposition": [
             "serpent",
             "terre"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ail",
-      "label": "ail",
-      "ipa": "/aj/",
-      "normalizedIPA": "aj",
-      "productivityStatus": "strict_productive",
-      "active": true,
-      "strictEligible": true,
-      "strictUseCount": 5,
-      "strictExamples": [
-        {
-          "word": "portail",
-          "ipa": "pɔʁtaj",
-          "frequency": 9.658,
-          "decomposition": [
-            "porte",
-            "ail"
-          ]
-        },
-        {
-          "word": "portails",
-          "ipa": "pɔʁtaj",
-          "frequency": 0.728,
-          "decomposition": [
-            "porte",
-            "ail"
-          ]
-        },
-        {
-          "word": "aye-aye",
-          "ipa": "ajaj",
-          "frequency": 0.076,
-          "decomposition": [
-            "ail",
-            "ail"
-          ]
-        },
-        {
-          "word": "aïoli",
-          "ipa": "ajoli",
-          "frequency": 0.073,
-          "decomposition": [
-            "ail",
-            "eau",
-            "lit"
-          ]
-        },
-        {
-          "word": "aymara",
-          "ipa": "ajmaʁa",
-          "frequency": 0.003,
-          "decomposition": [
-            "ail",
-            "mat",
-            "rat"
           ]
         }
       ]
@@ -5737,6 +5793,38 @@
           "decomposition": [
             "pas",
             "steak"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ticket",
+      "label": "ticket",
+      "ipa": "/tikɛ/",
+      "normalizedIPA": "tikɛ",
+      "productivityStatus": "strict_productive",
+      "active": true,
+      "strictEligible": true,
+      "strictUseCount": 2,
+      "strictExamples": [
+        {
+          "word": "décortiquait",
+          "ipa": "dekɔʁtikɛ",
+          "frequency": 0.006,
+          "decomposition": [
+            "de",
+            "corps",
+            "ticket"
+          ]
+        },
+        {
+          "word": "décortiquaient",
+          "ipa": "dekɔʁtikɛ",
+          "frequency": 0.003,
+          "decomposition": [
+            "de",
+            "corps",
+            "ticket"
           ]
         }
       ]
@@ -8188,17 +8276,6 @@
       "strictExamples": []
     },
     {
-      "id": "ticket",
-      "label": "ticket",
-      "ipa": "/tikɛ/",
-      "normalizedIPA": "tikɛ",
-      "productivityStatus": "strict_candidate",
-      "active": true,
-      "strictEligible": true,
-      "strictUseCount": 0,
-      "strictExamples": []
-    },
-    {
       "id": "tigre",
       "label": "tigre",
       "ipa": "/tiɡʁ/",
@@ -8998,8 +9075,8 @@
   "missingWholeWordOpportunities": [
     {
       "ipa": "e",
-      "targetCount": 585,
-      "frequencySum": 2657.1710000000066,
+      "targetCount": 596,
+      "frequencySum": 2657.392000000006,
       "namingCandidates": [
         {
           "word": "est",
@@ -9075,8 +9152,8 @@
     },
     {
       "ipa": "t",
-      "targetCount": 495,
-      "frequencySum": 2786.676999999996,
+      "targetCount": 496,
+      "frequencySum": 2787.002999999996,
       "namingCandidates": [
         {
           "word": "t'",
@@ -9205,8 +9282,8 @@
     },
     {
       "ipa": "s",
-      "targetCount": 389,
-      "frequencySum": 3842.287000000004,
+      "targetCount": 396,
+      "frequencySum": 3852.4350000000036,
       "namingCandidates": [
         {
           "word": "c'",
@@ -9278,8 +9355,8 @@
     },
     {
       "ipa": "a",
-      "targetCount": 353,
-      "frequencySum": 2019.4039999999986,
+      "targetCount": 372,
+      "frequencySum": 3022.6820000000034,
       "namingCandidates": [
         {
           "word": "à",
@@ -9303,6 +9380,12 @@
         }
       ],
       "examples": [
+        {
+          "word": "accord",
+          "ipa": "akɔʁ",
+          "frequency": 974.725,
+          "pieceCount": 2
+        },
         {
           "word": "ami",
           "ipa": "ami",
@@ -9344,19 +9427,13 @@
           "ipa": "ami",
           "frequency": 140.278,
           "pieceCount": 2
-        },
-        {
-          "word": "allais",
-          "ipa": "alɛ",
-          "frequency": 134.364,
-          "pieceCount": 2
         }
       ]
     },
     {
       "ipa": "ɑ̃",
-      "targetCount": 264,
-      "frequencySum": 194.44299999999924,
+      "targetCount": 277,
+      "frequencySum": 1260.841999999998,
       "namingCandidates": [
         {
           "word": "en",
@@ -9376,6 +9453,12 @@
         }
       ],
       "examples": [
+        {
+          "word": "encore",
+          "ipa": "ɑ̃kɔʁ",
+          "frequency": 1065.934,
+          "pieceCount": 2
+        },
         {
           "word": "envers",
           "ipa": "ɑ̃vɛʁ",
@@ -9417,19 +9500,13 @@
           "ipa": "ɑ̃gaʁ",
           "frequency": 6.608,
           "pieceCount": 2
-        },
-        {
-          "word": "emmerder",
-          "ipa": "ɑ̃mɛʁde",
-          "frequency": 5.329,
-          "pieceCount": 3
         }
       ]
     },
     {
       "ipa": "n",
-      "targetCount": 236,
-      "frequencySum": 949.8679999999999,
+      "targetCount": 243,
+      "frequencySum": 961.17,
       "namingCandidates": [
         {
           "word": "n'",
@@ -9493,8 +9570,8 @@
     },
     {
       "ipa": "se",
-      "targetCount": 235,
-      "frequencySum": 2141.967999999998,
+      "targetCount": 240,
+      "frequencySum": 2142.8349999999978,
       "namingCandidates": [
         {
           "word": "ces",
@@ -9566,8 +9643,8 @@
     },
     {
       "ipa": "ɛ",
-      "targetCount": 233,
-      "frequencySum": 250.97799999999938,
+      "targetCount": 234,
+      "frequencySum": 250.98399999999938,
       "namingCandidates": [
         {
           "word": "ai",
@@ -9643,8 +9720,8 @@
     },
     {
       "ipa": "l",
-      "targetCount": 219,
-      "frequencySum": 821.7230000000013,
+      "targetCount": 224,
+      "frequencySum": 827.1250000000013,
       "namingCandidates": [
         {
           "word": "l'",
@@ -9708,8 +9785,8 @@
     },
     {
       "ipa": "d",
-      "targetCount": 211,
-      "frequencySum": 1424.1950000000004,
+      "targetCount": 220,
+      "frequencySum": 1459.2740000000003,
       "namingCandidates": [
         {
           "word": "d'",
@@ -9838,8 +9915,8 @@
     },
     {
       "ipa": "kɔ̃",
-      "targetCount": 157,
-      "frequencySum": 327.8729999999996,
+      "targetCount": 163,
+      "frequencySum": 328.1979999999996,
       "namingCandidates": [
         {
           "word": "con",
@@ -10048,6 +10125,67 @@
       ]
     },
     {
+      "ipa": "sə",
+      "targetCount": 139,
+      "frequencySum": 1472.4519999999998,
+      "namingCandidates": [
+        {
+          "word": "se",
+          "frequency": 2685.443
+        }
+      ],
+      "examples": [
+        {
+          "word": "sera",
+          "ipa": "səʁa",
+          "frequency": 471.468,
+          "pieceCount": 2
+        },
+        {
+          "word": "serait",
+          "ipa": "səʁɛ",
+          "frequency": 340.706,
+          "pieceCount": 2
+        },
+        {
+          "word": "ceci",
+          "ipa": "səsi",
+          "frequency": 145.763,
+          "pieceCount": 2
+        },
+        {
+          "word": "serai",
+          "ipa": "səʁɛ",
+          "frequency": 138.114,
+          "pieceCount": 2
+        },
+        {
+          "word": "serais",
+          "ipa": "səʁɛ",
+          "frequency": 99.709,
+          "pieceCount": 2
+        },
+        {
+          "word": "seras",
+          "ipa": "səʁa",
+          "frequency": 73.089,
+          "pieceCount": 2
+        },
+        {
+          "word": "laisserai",
+          "ipa": "lɛsəʁɛ",
+          "frequency": 33.418,
+          "pieceCount": 3
+        },
+        {
+          "word": "passera",
+          "ipa": "pasəʁa",
+          "frequency": 32.389,
+          "pieceCount": 3
+        }
+      ]
+    },
+    {
       "ipa": "ko",
       "targetCount": 136,
       "frequencySum": 541.327,
@@ -10121,67 +10259,6 @@
       ]
     },
     {
-      "ipa": "sə",
-      "targetCount": 134,
-      "frequencySum": 1472.4209999999998,
-      "namingCandidates": [
-        {
-          "word": "se",
-          "frequency": 2685.443
-        }
-      ],
-      "examples": [
-        {
-          "word": "sera",
-          "ipa": "səʁa",
-          "frequency": 471.468,
-          "pieceCount": 2
-        },
-        {
-          "word": "serait",
-          "ipa": "səʁɛ",
-          "frequency": 340.706,
-          "pieceCount": 2
-        },
-        {
-          "word": "ceci",
-          "ipa": "səsi",
-          "frequency": 145.763,
-          "pieceCount": 2
-        },
-        {
-          "word": "serai",
-          "ipa": "səʁɛ",
-          "frequency": 138.114,
-          "pieceCount": 2
-        },
-        {
-          "word": "serais",
-          "ipa": "səʁɛ",
-          "frequency": 99.709,
-          "pieceCount": 2
-        },
-        {
-          "word": "seras",
-          "ipa": "səʁa",
-          "frequency": 73.089,
-          "pieceCount": 2
-        },
-        {
-          "word": "laisserai",
-          "ipa": "lɛsəʁɛ",
-          "frequency": 33.418,
-          "pieceCount": 3
-        },
-        {
-          "word": "passera",
-          "ipa": "pasəʁa",
-          "frequency": 32.389,
-          "pieceCount": 3
-        }
-      ]
-    },
-    {
       "ipa": "ʒ",
       "targetCount": 134,
       "frequencySum": 488.29299999999944,
@@ -10248,8 +10325,8 @@
     },
     {
       "ipa": "di",
-      "targetCount": 125,
-      "frequencySum": 616.3080000000009,
+      "targetCount": 126,
+      "frequencySum": 616.3170000000009,
       "namingCandidates": [
         {
           "word": "dit",
@@ -10463,8 +10540,8 @@
     },
     {
       "ipa": "pe",
-      "targetCount": 119,
-      "frequencySum": 115.95400000000005,
+      "targetCount": 121,
+      "frequencySum": 116.22600000000006,
       "namingCandidates": [
         {
           "word": "p",
@@ -10539,9 +10616,78 @@
       ]
     },
     {
+      "ipa": "sɛ",
+      "targetCount": 113,
+      "frequencySum": 461.5629999999993,
+      "namingCandidates": [
+        {
+          "word": "sais",
+          "frequency": 2731.453
+        },
+        {
+          "word": "sait",
+          "frequency": 405.361
+        },
+        {
+          "word": "saie",
+          "frequency": 0.003
+        }
+      ],
+      "examples": [
+        {
+          "word": "pensais",
+          "ipa": "pɑ̃sɛ",
+          "frequency": 309.851,
+          "pieceCount": 2
+        },
+        {
+          "word": "pensait",
+          "ipa": "pɑ̃sɛ",
+          "frequency": 47.886,
+          "pieceCount": 2
+        },
+        {
+          "word": "passait",
+          "ipa": "pasɛ",
+          "frequency": 26.494,
+          "pieceCount": 2
+        },
+        {
+          "word": "décès",
+          "ipa": "desɛ",
+          "frequency": 17.573,
+          "pieceCount": 2
+        },
+        {
+          "word": "passais",
+          "ipa": "pasɛ",
+          "frequency": 10.896,
+          "pieceCount": 2
+        },
+        {
+          "word": "pensaient",
+          "ipa": "pɑ̃sɛ",
+          "frequency": 8.028,
+          "pieceCount": 2
+        },
+        {
+          "word": "laissait",
+          "ipa": "lɛsɛ",
+          "frequency": 7.089,
+          "pieceCount": 2
+        },
+        {
+          "word": "laissais",
+          "ipa": "lɛsɛ",
+          "frequency": 4.94,
+          "pieceCount": 2
+        }
+      ]
+    },
+    {
       "ipa": "ba",
-      "targetCount": 112,
-      "frequencySum": 79.41500000000003,
+      "targetCount": 113,
+      "frequencySum": 79.42100000000003,
       "namingCandidates": [
         {
           "word": "bas",
@@ -10612,75 +10758,6 @@
           "ipa": "debaʁa",
           "frequency": 2.475,
           "pieceCount": 3
-        }
-      ]
-    },
-    {
-      "ipa": "sɛ",
-      "targetCount": 109,
-      "frequencySum": 460.0949999999993,
-      "namingCandidates": [
-        {
-          "word": "sais",
-          "frequency": 2731.453
-        },
-        {
-          "word": "sait",
-          "frequency": 405.361
-        },
-        {
-          "word": "saie",
-          "frequency": 0.003
-        }
-      ],
-      "examples": [
-        {
-          "word": "pensais",
-          "ipa": "pɑ̃sɛ",
-          "frequency": 309.851,
-          "pieceCount": 2
-        },
-        {
-          "word": "pensait",
-          "ipa": "pɑ̃sɛ",
-          "frequency": 47.886,
-          "pieceCount": 2
-        },
-        {
-          "word": "passait",
-          "ipa": "pasɛ",
-          "frequency": 26.494,
-          "pieceCount": 2
-        },
-        {
-          "word": "décès",
-          "ipa": "desɛ",
-          "frequency": 17.573,
-          "pieceCount": 2
-        },
-        {
-          "word": "passais",
-          "ipa": "pasɛ",
-          "frequency": 10.896,
-          "pieceCount": 2
-        },
-        {
-          "word": "pensaient",
-          "ipa": "pɑ̃sɛ",
-          "frequency": 8.028,
-          "pieceCount": 2
-        },
-        {
-          "word": "laissait",
-          "ipa": "lɛsɛ",
-          "frequency": 7.089,
-          "pieceCount": 2
-        },
-        {
-          "word": "laissais",
-          "ipa": "lɛsɛ",
-          "frequency": 4.94,
-          "pieceCount": 2
         }
       ]
     },
@@ -10763,8 +10840,8 @@
     },
     {
       "ipa": "ɛ̃",
-      "targetCount": 100,
-      "frequencySum": 829.1260000000004,
+      "targetCount": 104,
+      "frequencySum": 829.2460000000004,
       "namingCandidates": [
         {
           "word": "hein",
@@ -10839,78 +10916,9 @@
       ]
     },
     {
-      "ipa": "me",
-      "targetCount": 100,
-      "frequencySum": 59.426999999999964,
-      "namingCandidates": [
-        {
-          "word": "mes",
-          "frequency": 1028.275
-        },
-        {
-          "word": "maye",
-          "frequency": 0.054
-        },
-        {
-          "word": "mée",
-          "frequency": 0.047
-        }
-      ],
-      "examples": [
-        {
-          "word": "mérité",
-          "ipa": "meʁite",
-          "frequency": 11.722,
-          "pieceCount": 3
-        },
-        {
-          "word": "météo",
-          "ipa": "meteo",
-          "frequency": 10.472,
-          "pieceCount": 3
-        },
-        {
-          "word": "mairie",
-          "ipa": "meʁi",
-          "frequency": 8.753,
-          "pieceCount": 2
-        },
-        {
-          "word": "méritez",
-          "ipa": "meʁite",
-          "frequency": 6.896,
-          "pieceCount": 3
-        },
-        {
-          "word": "mériter",
-          "ipa": "meʁite",
-          "frequency": 6.288,
-          "pieceCount": 3
-        },
-        {
-          "word": "paumé",
-          "ipa": "pome",
-          "frequency": 1.801,
-          "pieceCount": 2
-        },
-        {
-          "word": "ramer",
-          "ipa": "ʁame",
-          "frequency": 1.566,
-          "pieceCount": 2
-        },
-        {
-          "word": "méritée",
-          "ipa": "meʁite",
-          "frequency": 1.329,
-          "pieceCount": 3
-        }
-      ]
-    },
-    {
       "ipa": "ni",
-      "targetCount": 98,
-      "frequencySum": 28.104999999999993,
+      "targetCount": 103,
+      "frequencySum": 28.176999999999992,
       "namingCandidates": [
         {
           "word": "ni",
@@ -10985,70 +10993,78 @@
       ]
     },
     {
-      "ipa": "tə",
-      "targetCount": 94,
-      "frequencySum": 97.74000000000014,
+      "ipa": "me",
+      "targetCount": 100,
+      "frequencySum": 59.426999999999964,
       "namingCandidates": [
         {
-          "word": "te",
-          "frequency": 3493.949
+          "word": "mes",
+          "frequency": 1028.275
+        },
+        {
+          "word": "maye",
+          "frequency": 0.054
+        },
+        {
+          "word": "mée",
+          "frequency": 0.047
         }
       ],
       "examples": [
         {
-          "word": "tenez",
-          "ipa": "təne",
-          "frequency": 81.937,
+          "word": "mérité",
+          "ipa": "meʁite",
+          "frequency": 11.722,
+          "pieceCount": 3
+        },
+        {
+          "word": "météo",
+          "ipa": "meteo",
+          "frequency": 10.472,
+          "pieceCount": 3
+        },
+        {
+          "word": "mairie",
+          "ipa": "meʁi",
+          "frequency": 8.753,
           "pieceCount": 2
         },
         {
-          "word": "maintenez",
-          "ipa": "mɛ̃təne",
-          "frequency": 5.013,
+          "word": "méritez",
+          "ipa": "meʁite",
+          "frequency": 6.896,
           "pieceCount": 3
         },
         {
-          "word": "détenez",
-          "ipa": "detəne",
-          "frequency": 1.003,
+          "word": "mériter",
+          "ipa": "meʁite",
+          "frequency": 6.288,
           "pieceCount": 3
         },
         {
-          "word": "sautera",
-          "ipa": "sotəʁa",
-          "frequency": 0.873,
-          "pieceCount": 3
+          "word": "paumé",
+          "ipa": "pome",
+          "frequency": 1.801,
+          "pieceCount": 2
         },
         {
-          "word": "raterai",
-          "ipa": "ʁatəʁɛ",
-          "frequency": 0.804,
-          "pieceCount": 3
+          "word": "ramer",
+          "ipa": "ʁame",
+          "frequency": 1.566,
+          "pieceCount": 2
         },
         {
-          "word": "piraterie",
-          "ipa": "piʁatəʁi",
-          "frequency": 0.737,
-          "pieceCount": 4
-        },
-        {
-          "word": "raterais",
-          "ipa": "ʁatəʁɛ",
-          "frequency": 0.687,
-          "pieceCount": 3
-        },
-        {
-          "word": "sauterais",
-          "ipa": "sotəʁɛ",
-          "frequency": 0.674,
+          "word": "méritée",
+          "ipa": "meʁite",
+          "frequency": 1.329,
           "pieceCount": 3
         }
       ]
     },
     {
       "ipa": "ɔ̃",
-      "targetCount": 93,
-      "frequencySum": 54.134999999999955,
+      "targetCount": 97,
+      "frequencySum": 54.22599999999996,
       "namingCandidates": [
         {
           "word": "on",
@@ -11115,9 +11131,70 @@
       ]
     },
     {
+      "ipa": "tə",
+      "targetCount": 94,
+      "frequencySum": 97.74000000000014,
+      "namingCandidates": [
+        {
+          "word": "te",
+          "frequency": 3493.949
+        }
+      ],
+      "examples": [
+        {
+          "word": "tenez",
+          "ipa": "təne",
+          "frequency": 81.937,
+          "pieceCount": 2
+        },
+        {
+          "word": "maintenez",
+          "ipa": "mɛ̃təne",
+          "frequency": 5.013,
+          "pieceCount": 3
+        },
+        {
+          "word": "détenez",
+          "ipa": "detəne",
+          "frequency": 1.003,
+          "pieceCount": 3
+        },
+        {
+          "word": "sautera",
+          "ipa": "sotəʁa",
+          "frequency": 0.873,
+          "pieceCount": 3
+        },
+        {
+          "word": "raterai",
+          "ipa": "ʁatəʁɛ",
+          "frequency": 0.804,
+          "pieceCount": 3
+        },
+        {
+          "word": "piraterie",
+          "ipa": "piʁatəʁi",
+          "frequency": 0.737,
+          "pieceCount": 4
+        },
+        {
+          "word": "raterais",
+          "ipa": "ʁatəʁɛ",
+          "frequency": 0.687,
+          "pieceCount": 3
+        },
+        {
+          "word": "sauterais",
+          "ipa": "sotəʁɛ",
+          "frequency": 0.674,
+          "pieceCount": 3
+        }
+      ]
+    },
+    {
       "ipa": "ti",
-      "targetCount": 90,
-      "frequencySum": 38.669999999999966,
+      "targetCount": 91,
+      "frequencySum": 38.675999999999966,
       "namingCandidates": [
         {
           "word": "tee",
@@ -11180,6 +11257,160 @@
           "ipa": "pjetine",
           "frequency": 1.184,
           "pieceCount": 3
+        }
+      ]
+    },
+    {
+      "ipa": "nɛ",
+      "targetCount": 89,
+      "frequencySum": 45.108999999999966,
+      "namingCandidates": [
+        {
+          "word": "naît",
+          "frequency": 2.934
+        },
+        {
+          "word": "nait",
+          "frequency": 0.351
+        },
+        {
+          "word": "nais",
+          "frequency": 0.212
+        },
+        {
+          "word": "nay",
+          "frequency": 0.041
+        },
+        {
+          "word": "naient",
+          "frequency": 0.003
+        }
+      ],
+      "examples": [
+        {
+          "word": "donnait",
+          "ipa": "donɛ",
+          "frequency": 12.582,
+          "pieceCount": 2
+        },
+        {
+          "word": "donnais",
+          "ipa": "donɛ",
+          "frequency": 5.674,
+          "pieceCount": 2
+        },
+        {
+          "word": "poney",
+          "ipa": "ponɛ",
+          "frequency": 4.728,
+          "pieceCount": 2
+        },
+        {
+          "word": "tournait",
+          "ipa": "tuʁnɛ",
+          "frequency": 4.215,
+          "pieceCount": 2
+        },
+        {
+          "word": "sonnait",
+          "ipa": "sonɛ",
+          "frequency": 2.589,
+          "pieceCount": 2
+        },
+        {
+          "word": "donnaient",
+          "ipa": "donɛ",
+          "frequency": 2.092,
+          "pieceCount": 2
+        },
+        {
+          "word": "poneys",
+          "ipa": "ponɛ",
+          "frequency": 1.772,
+          "pieceCount": 2
+        },
+        {
+          "word": "minet",
+          "ipa": "minɛ",
+          "frequency": 1.038,
+          "pieceCount": 2
+        }
+      ]
+    },
+    {
+      "ipa": "vi",
+      "targetCount": 86,
+      "frequencySum": 226.11499999999984,
+      "namingCandidates": [
+        {
+          "word": "vie",
+          "frequency": 962.829
+        },
+        {
+          "word": "vit",
+          "frequency": 63.073
+        },
+        {
+          "word": "vies",
+          "frequency": 52.396
+        },
+        {
+          "word": "vis",
+          "frequency": 42.275
+        },
+        {
+          "word": "vît",
+          "frequency": 0.073
+        }
+      ],
+      "examples": [
+        {
+          "word": "ravi",
+          "ipa": "ʁavi",
+          "frequency": 49.301,
+          "pieceCount": 2
+        },
+        {
+          "word": "vidéo",
+          "ipa": "video",
+          "frequency": 40.94,
+          "pieceCount": 3
+        },
+        {
+          "word": "servi",
+          "ipa": "sɛʁvi",
+          "frequency": 33.098,
+          "pieceCount": 2
+        },
+        {
+          "word": "ravie",
+          "ipa": "ʁavi",
+          "frequency": 29.547,
+          "pieceCount": 2
+        },
+        {
+          "word": "vidéos",
+          "ipa": "video",
+          "frequency": 15.434,
+          "pieceCount": 3
+        },
+        {
+          "word": "vider",
+          "ipa": "vide",
+          "frequency": 9.94,
+          "pieceCount": 2
+        },
+        {
+          "word": "servira",
+          "ipa": "sɛʁviʁa",
+          "frequency": 8.383,
+          "pieceCount": 3
+        },
+        {
+          "word": "vidé",
+          "ipa": "vide",
+          "frequency": 6.886,
+          "pieceCount": 2
         }
       ]
     },
@@ -11256,160 +11487,6 @@
           "word": "filets",
           "ipa": "filɛ",
           "frequency": 2.392,
-          "pieceCount": 2
-        }
-      ]
-    },
-    {
-      "ipa": "vi",
-      "targetCount": 84,
-      "frequencySum": 226.10899999999987,
-      "namingCandidates": [
-        {
-          "word": "vie",
-          "frequency": 962.829
-        },
-        {
-          "word": "vit",
-          "frequency": 63.073
-        },
-        {
-          "word": "vies",
-          "frequency": 52.396
-        },
-        {
-          "word": "vis",
-          "frequency": 42.275
-        },
-        {
-          "word": "vît",
-          "frequency": 0.073
-        }
-      ],
-      "examples": [
-        {
-          "word": "ravi",
-          "ipa": "ʁavi",
-          "frequency": 49.301,
-          "pieceCount": 2
-        },
-        {
-          "word": "vidéo",
-          "ipa": "video",
-          "frequency": 40.94,
-          "pieceCount": 3
-        },
-        {
-          "word": "servi",
-          "ipa": "sɛʁvi",
-          "frequency": 33.098,
-          "pieceCount": 2
-        },
-        {
-          "word": "ravie",
-          "ipa": "ʁavi",
-          "frequency": 29.547,
-          "pieceCount": 2
-        },
-        {
-          "word": "vidéos",
-          "ipa": "video",
-          "frequency": 15.434,
-          "pieceCount": 3
-        },
-        {
-          "word": "vider",
-          "ipa": "vide",
-          "frequency": 9.94,
-          "pieceCount": 2
-        },
-        {
-          "word": "servira",
-          "ipa": "sɛʁviʁa",
-          "frequency": 8.383,
-          "pieceCount": 3
-        },
-        {
-          "word": "vidé",
-          "ipa": "vide",
-          "frequency": 6.886,
-          "pieceCount": 2
-        }
-      ]
-    },
-    {
-      "ipa": "nɛ",
-      "targetCount": 84,
-      "frequencySum": 43.80499999999997,
-      "namingCandidates": [
-        {
-          "word": "naît",
-          "frequency": 2.934
-        },
-        {
-          "word": "nait",
-          "frequency": 0.351
-        },
-        {
-          "word": "nais",
-          "frequency": 0.212
-        },
-        {
-          "word": "nay",
-          "frequency": 0.041
-        },
-        {
-          "word": "naient",
-          "frequency": 0.003
-        }
-      ],
-      "examples": [
-        {
-          "word": "donnait",
-          "ipa": "donɛ",
-          "frequency": 12.582,
-          "pieceCount": 2
-        },
-        {
-          "word": "donnais",
-          "ipa": "donɛ",
-          "frequency": 5.674,
-          "pieceCount": 2
-        },
-        {
-          "word": "poney",
-          "ipa": "ponɛ",
-          "frequency": 4.728,
-          "pieceCount": 2
-        },
-        {
-          "word": "tournait",
-          "ipa": "tuʁnɛ",
-          "frequency": 4.215,
-          "pieceCount": 2
-        },
-        {
-          "word": "sonnait",
-          "ipa": "sonɛ",
-          "frequency": 2.589,
-          "pieceCount": 2
-        },
-        {
-          "word": "donnaient",
-          "ipa": "donɛ",
-          "frequency": 2.092,
-          "pieceCount": 2
-        },
-        {
-          "word": "poneys",
-          "ipa": "ponɛ",
-          "frequency": 1.772,
-          "pieceCount": 2
-        },
-        {
-          "word": "minet",
-          "ipa": "minɛ",
-          "frequency": 1.038,
           "pieceCount": 2
         }
       ]
@@ -12230,6 +12307,79 @@
       ]
     },
     {
+      "ipa": "sa",
+      "targetCount": 70,
+      "frequencySum": 29.826999999999984,
+      "namingCandidates": [
+        {
+          "word": "ça",
+          "frequency": 8446.718
+        },
+        {
+          "word": "sa",
+          "frequency": 1260.028
+        },
+        {
+          "word": "çà",
+          "frequency": 10.924
+        },
+        {
+          "word": "sas",
+          "frequency": 3.94
+        }
+      ],
+      "examples": [
+        {
+          "word": "sapin",
+          "ipa": "sapɛ̃",
+          "frequency": 6.225,
+          "pieceCount": 2
+        },
+        {
+          "word": "satané",
+          "ipa": "satane",
+          "frequency": 4.304,
+          "pieceCount": 3
+        },
+        {
+          "word": "satanée",
+          "ipa": "satane",
+          "frequency": 2.715,
+          "pieceCount": 3
+        },
+        {
+          "word": "passa",
+          "ipa": "pasa",
+          "frequency": 1.965,
+          "pieceCount": 2
+        },
+        {
+          "word": "sali",
+          "ipa": "sali",
+          "frequency": 1.861,
+          "pieceCount": 2
+        },
+        {
+          "word": "satanés",
+          "ipa": "satane",
+          "frequency": 1.307,
+          "pieceCount": 3
+        },
+        {
+          "word": "versa",
+          "ipa": "vɛʁsa",
+          "frequency": 1.247,
+          "pieceCount": 2
+        },
+        {
+          "word": "salis",
+          "ipa": "sali",
+          "frequency": 1.146,
+          "pieceCount": 2
+        }
+      ]
+    },
+    {
       "ipa": "mo",
       "targetCount": 69,
       "frequencySum": 39.80899999999997,
@@ -12299,74 +12449,139 @@
       ]
     },
     {
-      "ipa": "sa",
-      "targetCount": 69,
-      "frequencySum": 29.807999999999986,
+      "ipa": "də",
+      "targetCount": 68,
+      "frequencySum": 474.27599999999956,
       "namingCandidates": [
         {
-          "word": "ça",
-          "frequency": 8446.718
-        },
-        {
-          "word": "sa",
-          "frequency": 1260.028
-        },
-        {
-          "word": "çà",
-          "frequency": 10.924
-        },
-        {
-          "word": "sas",
-          "frequency": 3.94
+          "word": "de",
+          "frequency": 26323.301
         }
       ],
       "examples": [
         {
-          "word": "sapin",
-          "ipa": "sapɛ̃",
-          "frequency": 6.225,
+          "word": "demain",
+          "ipa": "dəmɛ̃",
+          "frequency": 311.19,
           "pieceCount": 2
         },
         {
-          "word": "satané",
-          "ipa": "satane",
-          "frequency": 4.304,
+          "word": "dedans",
+          "ipa": "dədɑ̃",
+          "frequency": 86.453,
+          "pieceCount": 2
+        },
+        {
+          "word": "demi",
+          "ipa": "dəmi",
+          "frequency": 23.434,
+          "pieceCount": 2
+        },
+        {
+          "word": "demi-tour",
+          "ipa": "dəmituʁ",
+          "frequency": 16.443,
           "pieceCount": 3
         },
         {
-          "word": "satanée",
-          "ipa": "satane",
-          "frequency": 2.715,
+          "word": "demie",
+          "ipa": "dəmi",
+          "frequency": 9.225,
+          "pieceCount": 2
+        },
+        {
+          "word": "garderai",
+          "ipa": "gaʁdəʁɛ",
+          "frequency": 4.842,
           "pieceCount": 3
         },
         {
-          "word": "passa",
-          "ipa": "pasa",
-          "frequency": 1.965,
-          "pieceCount": 2
-        },
-        {
-          "word": "sali",
-          "ipa": "sali",
-          "frequency": 1.861,
-          "pieceCount": 2
-        },
-        {
-          "word": "satanés",
-          "ipa": "satane",
-          "frequency": 1.307,
+          "word": "gardera",
+          "ipa": "gaʁdəʁa",
+          "frequency": 3.453,
           "pieceCount": 3
         },
         {
-          "word": "versa",
-          "ipa": "vɛʁsa",
-          "frequency": 1.247,
+          "word": "décidera",
+          "ipa": "desidəʁa",
+          "frequency": 3.212,
+          "pieceCount": 4
+        }
+      ]
+    },
+    {
+      "ipa": "sɑ̃",
+      "targetCount": 68,
+      "frequencySum": 260.43799999999965,
+      "namingCandidates": [
+        {
+          "word": "sans",
+          "frequency": 861.231
+        },
+        {
+          "word": "sang",
+          "frequency": 321.009
+        },
+        {
+          "word": "sens",
+          "frequency": 231.025
+        },
+        {
+          "word": "sent",
+          "frequency": 67.997
+        },
+        {
+          "word": "cent",
+          "frequency": 25.639
+        }
+      ],
+      "examples": [
+        {
+          "word": "santé",
+          "ipa": "sɑ̃te",
+          "frequency": 77.335,
           "pieceCount": 2
         },
         {
-          "word": "salis",
-          "ipa": "sali",
-          "frequency": 1.146,
+          "word": "descends",
+          "ipa": "desɑ̃",
+          "frequency": 35.744,
+          "pieceCount": 2
+        },
+        {
+          "word": "sentez",
+          "ipa": "sɑ̃te",
+          "frequency": 32.997,
+          "pieceCount": 2
+        },
+        {
+          "word": "sensible",
+          "ipa": "sɑ̃sibl",
+          "frequency": 18.953,
+          "pieceCount": 2
+        },
+        {
+          "word": "descend",
+          "ipa": "desɑ̃",
+          "frequency": 17.582,
+          "pieceCount": 2
+        },
+        {
+          "word": "descendez",
+          "ipa": "desɑ̃de",
+          "frequency": 17.415,
+          "pieceCount": 3
+        },
+        {
+          "word": "passant",
+          "ipa": "pasɑ̃",
+          "frequency": 13.696,
+          "pieceCount": 2
+        },
+        {
+          "word": "laissant",
+          "ipa": "lɛsɑ̃",
+          "frequency": 11.991,
           "pieceCount": 2
         }
       ]
@@ -12445,86 +12660,9 @@
       ]
     },
     {
-      "ipa": "sɑ̃",
-      "targetCount": 67,
-      "frequencySum": 260.43499999999966,
-      "namingCandidates": [
-        {
-          "word": "sans",
-          "frequency": 861.231
-        },
-        {
-          "word": "sang",
-          "frequency": 321.009
-        },
-        {
-          "word": "sens",
-          "frequency": 231.025
-        },
-        {
-          "word": "sent",
-          "frequency": 67.997
-        },
-        {
-          "word": "cent",
-          "frequency": 25.639
-        }
-      ],
-      "examples": [
-        {
-          "word": "santé",
-          "ipa": "sɑ̃te",
-          "frequency": 77.335,
-          "pieceCount": 2
-        },
-        {
-          "word": "descends",
-          "ipa": "desɑ̃",
-          "frequency": 35.744,
-          "pieceCount": 2
-        },
-        {
-          "word": "sentez",
-          "ipa": "sɑ̃te",
-          "frequency": 32.997,
-          "pieceCount": 2
-        },
-        {
-          "word": "sensible",
-          "ipa": "sɑ̃sibl",
-          "frequency": 18.953,
-          "pieceCount": 2
-        },
-        {
-          "word": "descend",
-          "ipa": "desɑ̃",
-          "frequency": 17.582,
-          "pieceCount": 2
-        },
-        {
-          "word": "descendez",
-          "ipa": "desɑ̃de",
-          "frequency": 17.415,
-          "pieceCount": 3
-        },
-        {
-          "word": "passant",
-          "ipa": "pasɑ̃",
-          "frequency": 13.696,
-          "pieceCount": 2
-        },
-        {
-          "word": "laissant",
-          "ipa": "lɛsɑ̃",
-          "frequency": 11.991,
-          "pieceCount": 2
-        }
-      ]
-    },
-    {
       "ipa": "səʁɛ",
-      "targetCount": 67,
-      "frequencySum": 91.11900000000009,
+      "targetCount": 68,
+      "frequencySum": 91.12200000000009,
       "namingCandidates": [
         {
           "word": "serait",
@@ -12596,8 +12734,8 @@
     },
     {
       "ipa": "na",
-      "targetCount": 67,
-      "frequencySum": 20.935999999999986,
+      "targetCount": 68,
+      "frequencySum": 20.941999999999986,
       "namingCandidates": [
         {
           "word": "na",
@@ -12651,6 +12789,79 @@
           "word": "nacelles",
           "ipa": "nasɛl",
           "frequency": 0.614,
+          "pieceCount": 2
+        }
+      ]
+    },
+    {
+      "ipa": "ve",
+      "targetCount": 67,
+      "frequencySum": 481.8679999999997,
+      "namingCandidates": [
+        {
+          "word": "v",
+          "frequency": 11.908
+        },
+        {
+          "word": "v.",
+          "frequency": 1.193
+        },
+        {
+          "word": "vé",
+          "frequency": 0.218
+        },
+        {
+          "word": "vés",
+          "frequency": 0.013
+        }
+      ],
+      "examples": [
+        {
+          "word": "vérité",
+          "ipa": "veʁite",
+          "frequency": 206.579,
+          "pieceCount": 3
+        },
+        {
+          "word": "sauver",
+          "ipa": "sove",
+          "frequency": 132.741,
+          "pieceCount": 2
+        },
+        {
+          "word": "sauvé",
+          "ipa": "sove",
+          "frequency": 65.734,
+          "pieceCount": 2
+        },
+        {
+          "word": "sauvée",
+          "ipa": "sove",
+          "frequency": 11.551,
+          "pieceCount": 2
+        },
+        {
+          "word": "sauvez",
+          "ipa": "sove",
+          "frequency": 11.06,
+          "pieceCount": 2
+        },
+        {
+          "word": "servez",
+          "ipa": "sɛʁve",
+          "frequency": 10.741,
+          "pieceCount": 2
+        },
+        {
+          "word": "sauvés",
+          "ipa": "sove",
+          "frequency": 8.392,
+          "pieceCount": 2
+        },
+        {
+          "word": "river",
+          "ipa": "ʁive",
+          "frequency": 5.313,
           "pieceCount": 2
         }
       ]
@@ -12810,135 +13021,62 @@
       ]
     },
     {
-      "ipa": "ve",
+      "ipa": "nə",
       "targetCount": 65,
-      "frequencySum": 476.5739999999997,
+      "frequencySum": 10.81700000000001,
       "namingCandidates": [
         {
-          "word": "v",
-          "frequency": 11.908
-        },
-        {
-          "word": "v.",
-          "frequency": 1.193
-        },
-        {
-          "word": "vé",
-          "frequency": 0.218
-        },
-        {
-          "word": "vés",
-          "frequency": 0.013
+          "word": "ne",
+          "frequency": 10469.953
         }
       ],
       "examples": [
         {
-          "word": "vérité",
-          "ipa": "veʁite",
-          "frequency": 206.579,
+          "word": "tournera",
+          "ipa": "tuʁnəʁa",
+          "frequency": 1.544,
           "pieceCount": 3
         },
         {
-          "word": "sauver",
-          "ipa": "sove",
-          "frequency": 132.741,
-          "pieceCount": 2
+          "word": "terminera",
+          "ipa": "tɛʁminəʁa",
+          "frequency": 1.525,
+          "pieceCount": 4
         },
         {
-          "word": "sauvé",
-          "ipa": "sove",
-          "frequency": 65.734,
-          "pieceCount": 2
-        },
-        {
-          "word": "sauvée",
-          "ipa": "sove",
-          "frequency": 11.551,
-          "pieceCount": 2
-        },
-        {
-          "word": "sauvez",
-          "ipa": "sove",
-          "frequency": 11.06,
-          "pieceCount": 2
-        },
-        {
-          "word": "servez",
-          "ipa": "sɛʁve",
-          "frequency": 10.741,
-          "pieceCount": 2
-        },
-        {
-          "word": "sauvés",
-          "ipa": "sove",
-          "frequency": 8.392,
-          "pieceCount": 2
-        },
-        {
-          "word": "river",
-          "ipa": "ʁive",
-          "frequency": 5.313,
-          "pieceCount": 2
-        }
-      ]
-    },
-    {
-      "ipa": "də",
-      "targetCount": 64,
-      "frequencySum": 474.2069999999996,
-      "namingCandidates": [
-        {
-          "word": "de",
-          "frequency": 26323.301
-        }
-      ],
-      "examples": [
-        {
-          "word": "demain",
-          "ipa": "dəmɛ̃",
-          "frequency": 311.19,
-          "pieceCount": 2
-        },
-        {
-          "word": "dedans",
-          "ipa": "dədɑ̃",
-          "frequency": 86.453,
-          "pieceCount": 2
-        },
-        {
-          "word": "demi",
-          "ipa": "dəmi",
-          "frequency": 23.434,
-          "pieceCount": 2
-        },
-        {
-          "word": "demi-tour",
-          "ipa": "dəmituʁ",
-          "frequency": 16.443,
+          "word": "minerai",
+          "ipa": "minəʁɛ",
+          "frequency": 1.155,
           "pieceCount": 3
         },
         {
-          "word": "demie",
-          "ipa": "dəmi",
-          "frequency": 9.225,
-          "pieceCount": 2
-        },
-        {
-          "word": "garderai",
-          "ipa": "gaʁdəʁɛ",
-          "frequency": 4.842,
+          "word": "tournesol",
+          "ipa": "tuʁnəsɔl",
+          "frequency": 0.949,
           "pieceCount": 3
         },
         {
-          "word": "gardera",
-          "ipa": "gaʁdəʁa",
-          "frequency": 3.453,
+          "word": "tournerait",
+          "ipa": "tuʁnəʁɛ",
+          "frequency": 0.87,
           "pieceCount": 3
         },
         {
-          "word": "décidera",
-          "ipa": "desidəʁa",
-          "frequency": 3.212,
+          "word": "tournesols",
+          "ipa": "tuʁnəsɔl",
+          "frequency": 0.541,
+          "pieceCount": 3
+        },
+        {
+          "word": "tournerai",
+          "ipa": "tuʁnəʁɛ",
+          "frequency": 0.418,
+          "pieceCount": 3
+        },
+        {
+          "word": "terminerai",
+          "ipa": "tɛʁminəʁɛ",
+          "frequency": 0.405,
           "pieceCount": 4
         }
       ]
@@ -13013,63 +13151,67 @@
       ]
     },
     {
-      "ipa": "nə",
-      "targetCount": 64,
-      "frequencySum": 10.81100000000001,
+      "ipa": "jɔ̃",
+      "targetCount": 62,
+      "frequencySum": 48.351000000000006,
       "namingCandidates": [
         {
-          "word": "ne",
-          "frequency": 10469.953
+          "word": "ions",
+          "frequency": 0.611
+        },
+        {
+          "word": "ion",
+          "frequency": 0.18
         }
       ],
       "examples": [
         {
-          "word": "tournera",
-          "ipa": "tuʁnəʁa",
-          "frequency": 1.544,
+          "word": "rayon",
+          "ipa": "ʁɛjɔ̃",
+          "frequency": 21.177,
+          "pieceCount": 2
+        },
+        {
+          "word": "rayons",
+          "ipa": "ʁɛjɔ̃",
+          "frequency": 8.892,
+          "pieceCount": 2
+        },
+        {
+          "word": "papillon",
+          "ipa": "papijɔ̃",
+          "frequency": 8.706,
           "pieceCount": 3
         },
         {
-          "word": "terminera",
-          "ipa": "tɛʁminəʁa",
-          "frequency": 1.525,
-          "pieceCount": 4
-        },
-        {
-          "word": "minerai",
-          "ipa": "minəʁɛ",
-          "frequency": 1.155,
+          "word": "papillons",
+          "ipa": "papijɔ̃",
+          "frequency": 3.924,
           "pieceCount": 3
         },
         {
-          "word": "tournesol",
-          "ipa": "tuʁnəsɔl",
-          "frequency": 0.949,
+          "word": "maillon",
+          "ipa": "majɔ̃",
+          "frequency": 1.491,
+          "pieceCount": 2
+        },
+        {
+          "word": "oreillons",
+          "ipa": "oʁɛjɔ̃",
+          "frequency": 0.902,
           "pieceCount": 3
         },
         {
-          "word": "tournerait",
-          "ipa": "tuʁnəʁɛ",
-          "frequency": 0.87,
-          "pieceCount": 3
+          "word": "sillon",
+          "ipa": "sijɔ̃",
+          "frequency": 0.383,
+          "pieceCount": 2
         },
         {
-          "word": "tournesols",
-          "ipa": "tuʁnəsɔl",
-          "frequency": 0.541,
-          "pieceCount": 3
-        },
-        {
-          "word": "tournerai",
-          "ipa": "tuʁnəʁɛ",
-          "frequency": 0.418,
-          "pieceCount": 3
-        },
-        {
-          "word": "terminerai",
-          "ipa": "tɛʁminəʁɛ",
-          "frequency": 0.405,
-          "pieceCount": 4
+          "word": "sillons",
+          "ipa": "sijɔ̃",
+          "frequency": 0.339,
+          "pieceCount": 2
         }
       ]
     },
@@ -13147,71 +13289,6 @@
           "ipa": "siʁote",
           "frequency": 0.813,
           "pieceCount": 3
-        }
-      ]
-    },
-    {
-      "ipa": "jɔ̃",
-      "targetCount": 60,
-      "frequencySum": 48.342000000000006,
-      "namingCandidates": [
-        {
-          "word": "ions",
-          "frequency": 0.611
-        },
-        {
-          "word": "ion",
-          "frequency": 0.18
-        }
-      ],
-      "examples": [
-        {
-          "word": "rayon",
-          "ipa": "ʁɛjɔ̃",
-          "frequency": 21.177,
-          "pieceCount": 2
-        },
-        {
-          "word": "rayons",
-          "ipa": "ʁɛjɔ̃",
-          "frequency": 8.892,
-          "pieceCount": 2
-        },
-        {
-          "word": "papillon",
-          "ipa": "papijɔ̃",
-          "frequency": 8.706,
-          "pieceCount": 3
-        },
-        {
-          "word": "papillons",
-          "ipa": "papijɔ̃",
-          "frequency": 3.924,
-          "pieceCount": 3
-        },
-        {
-          "word": "maillon",
-          "ipa": "majɔ̃",
-          "frequency": 1.491,
-          "pieceCount": 2
-        },
-        {
-          "word": "oreillons",
-          "ipa": "oʁɛjɔ̃",
-          "frequency": 0.902,
-          "pieceCount": 3
-        },
-        {
-          "word": "sillon",
-          "ipa": "sijɔ̃",
-          "frequency": 0.383,
-          "pieceCount": 2
-        },
-        {
-          "word": "sillons",
-          "ipa": "sijɔ̃",
-          "frequency": 0.339,
-          "pieceCount": 2
         }
       ]
     },
@@ -13654,6 +13731,71 @@
       ]
     },
     {
+      "ipa": "da",
+      "targetCount": 57,
+      "frequencySum": 125.6430000000001,
+      "namingCandidates": [
+        {
+          "word": "da",
+          "frequency": 6.12
+        },
+        {
+          "word": "das",
+          "frequency": 0.491
+        }
+      ],
+      "examples": [
+        {
+          "word": "soldats",
+          "ipa": "sɔlda",
+          "frequency": 45.25,
+          "pieceCount": 2
+        },
+        {
+          "word": "soldat",
+          "ipa": "sɔlda",
+          "frequency": 44.323,
+          "pieceCount": 2
+        },
+        {
+          "word": "soda",
+          "ipa": "soda",
+          "frequency": 11.566,
+          "pieceCount": 2
+        },
+        {
+          "word": "data",
+          "ipa": "data",
+          "frequency": 5.275,
+          "pieceCount": 2
+        },
+        {
+          "word": "sida",
+          "ipa": "sida",
+          "frequency": 3.047,
+          "pieceCount": 2
+        },
+        {
+          "word": "panda",
+          "ipa": "pɑ̃da",
+          "frequency": 2.864,
+          "pieceCount": 2
+        },
+        {
+          "word": "décida",
+          "ipa": "desida",
+          "frequency": 2.44,
+          "pieceCount": 3
+        },
+        {
+          "word": "sodas",
+          "ipa": "soda",
+          "frequency": 1.772,
+          "pieceCount": 2
+        }
+      ]
+    },
+    {
       "ipa": "tʁe",
       "targetCount": 57,
       "frequencySum": 104.92900000000003,
@@ -13792,139 +13934,9 @@
       ]
     },
     {
-      "ipa": "ɛt",
-      "targetCount": 55,
-      "frequencySum": 130.54999999999984,
-      "namingCandidates": [
-        {
-          "word": "êtes",
-          "frequency": 1058.066
-        },
-        {
-          "word": "eth",
-          "frequency": 0.003
-        }
-      ],
-      "examples": [
-        {
-          "word": "achète",
-          "ipa": "aʃɛt",
-          "frequency": 30.459,
-          "pieceCount": 2
-        },
-        {
-          "word": "lunettes",
-          "ipa": "lynɛt",
-          "frequency": 29.114,
-          "pieceCount": 2
-        },
-        {
-          "word": "cigarette",
-          "ipa": "sigaʁɛt",
-          "frequency": 20.437,
-          "pieceCount": 3
-        },
-        {
-          "word": "cigarettes",
-          "ipa": "sigaʁɛt",
-          "frequency": 15.443,
-          "pieceCount": 3
-        },
-        {
-          "word": "poète",
-          "ipa": "poɛt",
-          "frequency": 8.541,
-          "pieceCount": 2
-        },
-        {
-          "word": "achètes",
-          "ipa": "aʃɛt",
-          "frequency": 5.642,
-          "pieceCount": 2
-        },
-        {
-          "word": "baguette",
-          "ipa": "bagɛt",
-          "frequency": 4.611,
-          "pieceCount": 2
-        },
-        {
-          "word": "achètent",
-          "ipa": "aʃɛt",
-          "frequency": 4.275,
-          "pieceCount": 2
-        }
-      ]
-    },
-    {
-      "ipa": "da",
-      "targetCount": 55,
-      "frequencySum": 125.6050000000001,
-      "namingCandidates": [
-        {
-          "word": "da",
-          "frequency": 6.12
-        },
-        {
-          "word": "das",
-          "frequency": 0.491
-        }
-      ],
-      "examples": [
-        {
-          "word": "soldats",
-          "ipa": "sɔlda",
-          "frequency": 45.25,
-          "pieceCount": 2
-        },
-        {
-          "word": "soldat",
-          "ipa": "sɔlda",
-          "frequency": 44.323,
-          "pieceCount": 2
-        },
-        {
-          "word": "soda",
-          "ipa": "soda",
-          "frequency": 11.566,
-          "pieceCount": 2
-        },
-        {
-          "word": "data",
-          "ipa": "data",
-          "frequency": 5.275,
-          "pieceCount": 2
-        },
-        {
-          "word": "sida",
-          "ipa": "sida",
-          "frequency": 3.047,
-          "pieceCount": 2
-        },
-        {
-          "word": "panda",
-          "ipa": "pɑ̃da",
-          "frequency": 2.864,
-          "pieceCount": 2
-        },
-        {
-          "word": "décida",
-          "ipa": "desida",
-          "frequency": 2.44,
-          "pieceCount": 3
-        },
-        {
-          "word": "sodas",
-          "ipa": "soda",
-          "frequency": 1.772,
-          "pieceCount": 2
-        }
-      ]
-    },
-    {
       "ipa": "al",
-      "targetCount": 54,
-      "frequencySum": 180.56599999999992,
+      "targetCount": 55,
+      "frequencySum": 180.5689999999999,
       "namingCandidates": [
         {
           "word": "ale",
@@ -13994,6 +14006,140 @@
           "word": "postal",
           "ipa": "pɔstal",
           "frequency": 1.541,
+          "pieceCount": 2
+        }
+      ]
+    },
+    {
+      "ipa": "ɛt",
+      "targetCount": 55,
+      "frequencySum": 130.54999999999984,
+      "namingCandidates": [
+        {
+          "word": "êtes",
+          "frequency": 1058.066
+        },
+        {
+          "word": "eth",
+          "frequency": 0.003
+        }
+      ],
+      "examples": [
+        {
+          "word": "achète",
+          "ipa": "aʃɛt",
+          "frequency": 30.459,
+          "pieceCount": 2
+        },
+        {
+          "word": "lunettes",
+          "ipa": "lynɛt",
+          "frequency": 29.114,
+          "pieceCount": 2
+        },
+        {
+          "word": "cigarette",
+          "ipa": "sigaʁɛt",
+          "frequency": 20.437,
+          "pieceCount": 3
+        },
+        {
+          "word": "cigarettes",
+          "ipa": "sigaʁɛt",
+          "frequency": 15.443,
+          "pieceCount": 3
+        },
+        {
+          "word": "poète",
+          "ipa": "poɛt",
+          "frequency": 8.541,
+          "pieceCount": 2
+        },
+        {
+          "word": "achètes",
+          "ipa": "aʃɛt",
+          "frequency": 5.642,
+          "pieceCount": 2
+        },
+        {
+          "word": "baguette",
+          "ipa": "bagɛt",
+          "frequency": 4.611,
+          "pieceCount": 2
+        },
+        {
+          "word": "achètent",
+          "ipa": "aʃɛt",
+          "frequency": 4.275,
+          "pieceCount": 2
+        }
+      ]
+    },
+    {
+      "ipa": "bi",
+      "targetCount": 55,
+      "frequencySum": 8.550000000000006,
+      "namingCandidates": [
+        {
+          "word": "by",
+          "frequency": 18.073
+        },
+        {
+          "word": "bi",
+          "frequency": 6.174
+        },
+        {
+          "word": "bee",
+          "frequency": 0.149
+        }
+      ],
+      "examples": [
+        {
+          "word": "débit",
+          "ipa": "debi",
+          "frequency": 1.794,
+          "pieceCount": 2
+        },
+        {
+          "word": "libido",
+          "ipa": "libido",
+          "frequency": 1.437,
+          "pieceCount": 3
+        },
+        {
+          "word": "rabbi",
+          "ipa": "ʁabi",
+          "frequency": 0.801,
+          "pieceCount": 2
+        },
+        {
+          "word": "billion",
+          "ipa": "biljɔ̃",
+          "frequency": 0.604,
+          "pieceCount": 2
+        },
+        {
+          "word": "débiter",
+          "ipa": "debite",
+          "frequency": 0.554,
+          "pieceCount": 3
+        },
+        {
+          "word": "billions",
+          "ipa": "biljɔ̃",
+          "frequency": 0.525,
+          "pieceCount": 2
+        },
+        {
+          "word": "débiner",
+          "ipa": "debine",
+          "frequency": 0.399,
+          "pieceCount": 3
+        },
+        {
+          "word": "billy",
+          "ipa": "bili",
+          "frequency": 0.297,
           "pieceCount": 2
         }
       ]
@@ -14145,75 +14291,6 @@
           "ipa": "ʁigolɛ",
           "frequency": 0.953,
           "pieceCount": 3
-        }
-      ]
-    },
-    {
-      "ipa": "bi",
-      "targetCount": 54,
-      "frequencySum": 8.547000000000006,
-      "namingCandidates": [
-        {
-          "word": "by",
-          "frequency": 18.073
-        },
-        {
-          "word": "bi",
-          "frequency": 6.174
-        },
-        {
-          "word": "bee",
-          "frequency": 0.149
-        }
-      ],
-      "examples": [
-        {
-          "word": "débit",
-          "ipa": "debi",
-          "frequency": 1.794,
-          "pieceCount": 2
-        },
-        {
-          "word": "libido",
-          "ipa": "libido",
-          "frequency": 1.437,
-          "pieceCount": 3
-        },
-        {
-          "word": "rabbi",
-          "ipa": "ʁabi",
-          "frequency": 0.801,
-          "pieceCount": 2
-        },
-        {
-          "word": "billion",
-          "ipa": "biljɔ̃",
-          "frequency": 0.604,
-          "pieceCount": 2
-        },
-        {
-          "word": "débiter",
-          "ipa": "debite",
-          "frequency": 0.554,
-          "pieceCount": 3
-        },
-        {
-          "word": "billions",
-          "ipa": "biljɔ̃",
-          "frequency": 0.525,
-          "pieceCount": 2
-        },
-        {
-          "word": "débiner",
-          "ipa": "debine",
-          "frequency": 0.399,
-          "pieceCount": 3
-        },
-        {
-          "word": "billy",
-          "ipa": "bili",
-          "frequency": 0.297,
-          "pieceCount": 2
         }
       ]
     },
@@ -14372,6 +14449,75 @@
       ]
     },
     {
+      "ipa": "sjɔ̃",
+      "targetCount": 52,
+      "frequencySum": 199.6499999999998,
+      "namingCandidates": [
+        {
+          "word": "scion",
+          "frequency": 0.089
+        },
+        {
+          "word": "cyon",
+          "frequency": 0.041
+        },
+        {
+          "word": "scions",
+          "frequency": 0.013
+        }
+      ],
+      "examples": [
+        {
+          "word": "mission",
+          "ipa": "misjɔ̃",
+          "frequency": 89.566,
+          "pieceCount": 2
+        },
+        {
+          "word": "version",
+          "ipa": "vɛʁsjɔ̃",
+          "frequency": 28.373,
+          "pieceCount": 2
+        },
+        {
+          "word": "passion",
+          "ipa": "pasjɔ̃",
+          "frequency": 20.595,
+          "pieceCount": 2
+        },
+        {
+          "word": "pension",
+          "ipa": "pɑ̃sjɔ̃",
+          "frequency": 12.228,
+          "pieceCount": 2
+        },
+        {
+          "word": "démission",
+          "ipa": "demisjɔ̃",
+          "frequency": 6.763,
+          "pieceCount": 3
+        },
+        {
+          "word": "missions",
+          "ipa": "misjɔ̃",
+          "frequency": 6.744,
+          "pieceCount": 2
+        },
+        {
+          "word": "pensions",
+          "ipa": "pɑ̃sjɔ̃",
+          "frequency": 6.551,
+          "pieceCount": 2
+        },
+        {
+          "word": "potion",
+          "ipa": "posjɔ̃",
+          "frequency": 5.459,
+          "pieceCount": 2
+        }
+      ]
+    },
+    {
       "ipa": "lo",
       "targetCount": 52,
       "frequencySum": 29.222999999999992,
@@ -14445,70 +14591,78 @@
       ]
     },
     {
-      "ipa": "sjɔ̃",
-      "targetCount": 50,
-      "frequencySum": 198.29799999999983,
+      "ipa": "nje",
+      "targetCount": 52,
+      "frequencySum": 23.785000000000007,
       "namingCandidates": [
         {
-          "word": "scion",
-          "frequency": 0.089
+          "word": "nier",
+          "frequency": 9.073
         },
         {
-          "word": "cyon",
-          "frequency": 0.041
+          "word": "nié",
+          "frequency": 2.392
         },
         {
-          "word": "scions",
-          "frequency": 0.013
+          "word": "niez",
+          "frequency": 2.165
+        },
+        {
+          "word": "niée",
+          "frequency": 0.073
+        },
+        {
+          "word": "niés",
+          "frequency": 0.016
         }
       ],
       "examples": [
         {
-          "word": "mission",
-          "ipa": "misjɔ̃",
-          "frequency": 89.566,
+          "word": "panier",
+          "ipa": "panje",
+          "frequency": 11.547,
           "pieceCount": 2
         },
         {
-          "word": "version",
-          "ipa": "vɛʁsjɔ̃",
-          "frequency": 28.373,
+          "word": "donniez",
+          "ipa": "donje",
+          "frequency": 3.335,
           "pieceCount": 2
         },
         {
-          "word": "passion",
-          "ipa": "pasjɔ̃",
-          "frequency": 20.595,
+          "word": "manier",
+          "ipa": "manje",
+          "frequency": 2.519,
           "pieceCount": 2
         },
         {
-          "word": "pension",
-          "ipa": "pɑ̃sjɔ̃",
-          "frequency": 12.228,
+          "word": "paniers",
+          "ipa": "panje",
+          "frequency": 2.361,
           "pieceCount": 2
         },
         {
-          "word": "démission",
-          "ipa": "demisjɔ̃",
-          "frequency": 6.763,
+          "word": "cordonnier",
+          "ipa": "kɔʁdonje",
+          "frequency": 1.25,
           "pieceCount": 3
         },
         {
-          "word": "missions",
-          "ipa": "misjɔ̃",
-          "frequency": 6.744,
+          "word": "minier",
+          "ipa": "minje",
+          "frequency": 0.342,
           "pieceCount": 2
         },
         {
-          "word": "pensions",
-          "ipa": "pɑ̃sjɔ̃",
-          "frequency": 6.551,
+          "word": "miniers",
+          "ipa": "minje",
+          "frequency": 0.329,
           "pieceCount": 2
         },
         {
-          "word": "potion",
-          "ipa": "posjɔ̃",
-          "frequency": 5.459,
+          "word": "maniez",
+          "ipa": "manje",
+          "frequency": 0.263,
           "pieceCount": 2
         }
       ]
@@ -14741,78 +14895,78 @@
       ]
     },
     {
-      "ipa": "nje",
+      "ipa": "my",
       "targetCount": 48,
-      "frequencySum": 22.428000000000008,
+      "frequencySum": 8.801000000000005,
       "namingCandidates": [
         {
-          "word": "nier",
-          "frequency": 9.073
+          "word": "mu",
+          "frequency": 2.028
         },
         {
-          "word": "nié",
-          "frequency": 2.392
+          "word": "mue",
+          "frequency": 0.297
         },
         {
-          "word": "niez",
-          "frequency": 2.165
+          "word": "mû",
+          "frequency": 0.114
         },
         {
-          "word": "niée",
+          "word": "mus",
+          "frequency": 0.092
+        },
+        {
+          "word": "muent",
           "frequency": 0.073
-        },
-        {
-          "word": "niés",
-          "frequency": 0.016
         }
       ],
       "examples": [
         {
-          "word": "panier",
-          "ipa": "panje",
-          "frequency": 11.547,
+          "word": "muté",
+          "ipa": "myte",
+          "frequency": 2.468,
           "pieceCount": 2
         },
         {
-          "word": "donniez",
-          "ipa": "donje",
-          "frequency": 3.335,
+          "word": "mûri",
+          "ipa": "myʁi",
+          "frequency": 1.123,
           "pieceCount": 2
         },
         {
-          "word": "manier",
-          "ipa": "manje",
-          "frequency": 2.519,
+          "word": "muter",
+          "ipa": "myte",
+          "frequency": 1.054,
           "pieceCount": 2
         },
         {
-          "word": "paniers",
-          "ipa": "panje",
-          "frequency": 2.361,
+          "word": "mulet",
+          "ipa": "mylɛ",
+          "frequency": 0.93,
           "pieceCount": 2
         },
         {
-          "word": "minier",
-          "ipa": "minje",
-          "frequency": 0.342,
+          "word": "mutée",
+          "ipa": "myte",
+          "frequency": 0.576,
           "pieceCount": 2
         },
         {
-          "word": "miniers",
-          "ipa": "minje",
-          "frequency": 0.329,
+          "word": "mulets",
+          "ipa": "mylɛ",
+          "frequency": 0.367,
           "pieceCount": 2
         },
         {
-          "word": "maniez",
-          "ipa": "manje",
-          "frequency": 0.263,
+          "word": "mutante",
+          "ipa": "mytɑ̃t",
+          "frequency": 0.291,
           "pieceCount": 2
         },
         {
-          "word": "tourniez",
-          "ipa": "tuʁnje",
-          "frequency": 0.241,
+          "word": "mûrit",
+          "ipa": "myʁi",
+          "frequency": 0.253,
           "pieceCount": 2
         }
       ]
@@ -15025,6 +15179,67 @@
       ]
     },
     {
+      "ipa": "ɛks",
+      "targetCount": 47,
+      "frequencySum": 18.418999999999997,
+      "namingCandidates": [
+        {
+          "word": "ex",
+          "frequency": 32.367
+        }
+      ],
+      "examples": [
+        {
+          "word": "ex-mari",
+          "ipa": "ɛksmaʁi",
+          "frequency": 6.525,
+          "pieceCount": 3
+        },
+        {
+          "word": "expo",
+          "ipa": "ɛkspo",
+          "frequency": 3.335,
+          "pieceCount": 2
+        },
+        {
+          "word": "exterminer",
+          "ipa": "ɛkstɛʁmine",
+          "frequency": 2.813,
+          "pieceCount": 4
+        },
+        {
+          "word": "expier",
+          "ipa": "ɛkspje",
+          "frequency": 1.171,
+          "pieceCount": 2
+        },
+        {
+          "word": "exterminés",
+          "ipa": "ɛkstɛʁmine",
+          "frequency": 0.652,
+          "pieceCount": 4
+        },
+        {
+          "word": "exterminé",
+          "ipa": "ɛkstɛʁmine",
+          "frequency": 0.535,
+          "pieceCount": 4
+        },
+        {
+          "word": "ecsta",
+          "ipa": "ɛksta",
+          "frequency": 0.449,
+          "pieceCount": 2
+        },
+        {
+          "word": "exterminez",
+          "ipa": "ɛkstɛʁmine",
+          "frequency": 0.345,
+          "pieceCount": 4
+        }
+      ]
+    },
+    {
       "ipa": "ʃɛ",
       "targetCount": 47,
       "frequencySum": 17.926,
@@ -15151,147 +15366,9 @@
       ]
     },
     {
-      "ipa": "ɛks",
-      "targetCount": 46,
-      "frequencySum": 18.412999999999997,
-      "namingCandidates": [
-        {
-          "word": "ex",
-          "frequency": 32.367
-        }
-      ],
-      "examples": [
-        {
-          "word": "ex-mari",
-          "ipa": "ɛksmaʁi",
-          "frequency": 6.525,
-          "pieceCount": 3
-        },
-        {
-          "word": "expo",
-          "ipa": "ɛkspo",
-          "frequency": 3.335,
-          "pieceCount": 2
-        },
-        {
-          "word": "exterminer",
-          "ipa": "ɛkstɛʁmine",
-          "frequency": 2.813,
-          "pieceCount": 4
-        },
-        {
-          "word": "expier",
-          "ipa": "ɛkspje",
-          "frequency": 1.171,
-          "pieceCount": 2
-        },
-        {
-          "word": "exterminés",
-          "ipa": "ɛkstɛʁmine",
-          "frequency": 0.652,
-          "pieceCount": 4
-        },
-        {
-          "word": "exterminé",
-          "ipa": "ɛkstɛʁmine",
-          "frequency": 0.535,
-          "pieceCount": 4
-        },
-        {
-          "word": "ecsta",
-          "ipa": "ɛksta",
-          "frequency": 0.449,
-          "pieceCount": 2
-        },
-        {
-          "word": "exterminez",
-          "ipa": "ɛkstɛʁmine",
-          "frequency": 0.345,
-          "pieceCount": 4
-        }
-      ]
-    },
-    {
-      "ipa": "my",
-      "targetCount": 46,
-      "frequencySum": 8.795000000000005,
-      "namingCandidates": [
-        {
-          "word": "mu",
-          "frequency": 2.028
-        },
-        {
-          "word": "mue",
-          "frequency": 0.297
-        },
-        {
-          "word": "mû",
-          "frequency": 0.114
-        },
-        {
-          "word": "mus",
-          "frequency": 0.092
-        },
-        {
-          "word": "muent",
-          "frequency": 0.073
-        }
-      ],
-      "examples": [
-        {
-          "word": "muté",
-          "ipa": "myte",
-          "frequency": 2.468,
-          "pieceCount": 2
-        },
-        {
-          "word": "mûri",
-          "ipa": "myʁi",
-          "frequency": 1.123,
-          "pieceCount": 2
-        },
-        {
-          "word": "muter",
-          "ipa": "myte",
-          "frequency": 1.054,
-          "pieceCount": 2
-        },
-        {
-          "word": "mulet",
-          "ipa": "mylɛ",
-          "frequency": 0.93,
-          "pieceCount": 2
-        },
-        {
-          "word": "mutée",
-          "ipa": "myte",
-          "frequency": 0.576,
-          "pieceCount": 2
-        },
-        {
-          "word": "mulets",
-          "ipa": "mylɛ",
-          "frequency": 0.367,
-          "pieceCount": 2
-        },
-        {
-          "word": "mutante",
-          "ipa": "mytɑ̃t",
-          "frequency": 0.291,
-          "pieceCount": 2
-        },
-        {
-          "word": "mûrit",
-          "ipa": "myʁi",
-          "frequency": 0.253,
-          "pieceCount": 2
-        }
-      ]
-    },
-    {
       "ipa": "tɔ̃",
-      "targetCount": 45,
-      "frequencySum": 29.053999999999995,
+      "targetCount": 46,
+      "frequencySum": 29.072999999999993,
       "namingCandidates": [
         {
           "word": "ton",
@@ -15361,6 +15438,75 @@
           "word": "ponton",
           "ipa": "pɔ̃tɔ̃",
           "frequency": 1.07,
+          "pieceCount": 2
+        }
+      ]
+    },
+    {
+      "ipa": "sɔ̃",
+      "targetCount": 45,
+      "frequencySum": 344.138,
+      "namingCandidates": [
+        {
+          "word": "son",
+          "frequency": 1778.316
+        },
+        {
+          "word": "sont",
+          "frequency": 1420.161
+        },
+        {
+          "word": "sons",
+          "frequency": 7.108
+        }
+      ],
+      "examples": [
+        {
+          "word": "garçon",
+          "ipa": "gaʁsɔ̃",
+          "frequency": 181.896,
+          "pieceCount": 2
+        },
+        {
+          "word": "garçons",
+          "ipa": "gaʁsɔ̃",
+          "frequency": 69.699,
+          "pieceCount": 2
+        },
+        {
+          "word": "laissons",
+          "ipa": "lɛsɔ̃",
+          "frequency": 21.054,
+          "pieceCount": 2
+        },
+        {
+          "word": "pensons",
+          "ipa": "pɑ̃sɔ̃",
+          "frequency": 19.114,
+          "pieceCount": 2
+        },
+        {
+          "word": "passons",
+          "ipa": "pasɔ̃",
+          "frequency": 16.06,
+          "pieceCount": 2
+        },
+        {
+          "word": "boisson",
+          "ipa": "bwasɔ̃",
+          "frequency": 14.658,
+          "pieceCount": 2
+        },
+        {
+          "word": "boissons",
+          "ipa": "bwasɔ̃",
+          "frequency": 9.956,
+          "pieceCount": 2
+        },
+        {
+          "word": "dansons",
+          "ipa": "dɑ̃sɔ̃",
+          "frequency": 3.139,
           "pieceCount": 2
         }
       ]
@@ -15443,79 +15589,6 @@
       ]
     },
     {
-      "ipa": "kɔʁ",
-      "targetCount": 45,
-      "frequencySum": 13.782000000000002,
-      "namingCandidates": [
-        {
-          "word": "corps",
-          "frequency": 258.307
-        },
-        {
-          "word": "cor",
-          "frequency": 1.858
-        },
-        {
-          "word": "cors",
-          "frequency": 0.728
-        },
-        {
-          "word": "khor",
-          "frequency": 0.003
-        }
-      ],
-      "examples": [
-        {
-          "word": "décor",
-          "ipa": "dekɔʁ",
-          "frequency": 5.886,
-          "pieceCount": 2
-        },
-        {
-          "word": "décors",
-          "ipa": "dekɔʁ",
-          "frequency": 3,
-          "pieceCount": 2
-        },
-        {
-          "word": "cornée",
-          "ipa": "kɔʁne",
-          "frequency": 0.699,
-          "pieceCount": 2
-        },
-        {
-          "word": "décore",
-          "ipa": "dekɔʁ",
-          "frequency": 0.617,
-          "pieceCount": 2
-        },
-        {
-          "word": "corso",
-          "ipa": "kɔʁso",
-          "frequency": 0.497,
-          "pieceCount": 2
-        },
-        {
-          "word": "corsaire",
-          "ipa": "kɔʁsɛʁ",
-          "frequency": 0.421,
-          "pieceCount": 2
-        },
-        {
-          "word": "raccord",
-          "ipa": "ʁakɔʁ",
-          "frequency": 0.415,
-          "pieceCount": 2
-        },
-        {
-          "word": "raccorder",
-          "ipa": "ʁakɔʁde",
-          "frequency": 0.301,
-          "pieceCount": 3
-        }
-      ]
-    },
-    {
       "ipa": "ke",
       "targetCount": 44,
       "frequencySum": 457.5539999999998,
@@ -15572,75 +15645,6 @@
           "word": "requinquer",
           "ipa": "ʁəkɛ̃ke",
           "frequency": 0.367,
-          "pieceCount": 2
-        }
-      ]
-    },
-    {
-      "ipa": "sɔ̃",
-      "targetCount": 44,
-      "frequencySum": 344.125,
-      "namingCandidates": [
-        {
-          "word": "son",
-          "frequency": 1778.316
-        },
-        {
-          "word": "sont",
-          "frequency": 1420.161
-        },
-        {
-          "word": "sons",
-          "frequency": 7.108
-        }
-      ],
-      "examples": [
-        {
-          "word": "garçon",
-          "ipa": "gaʁsɔ̃",
-          "frequency": 181.896,
-          "pieceCount": 2
-        },
-        {
-          "word": "garçons",
-          "ipa": "gaʁsɔ̃",
-          "frequency": 69.699,
-          "pieceCount": 2
-        },
-        {
-          "word": "laissons",
-          "ipa": "lɛsɔ̃",
-          "frequency": 21.054,
-          "pieceCount": 2
-        },
-        {
-          "word": "pensons",
-          "ipa": "pɑ̃sɔ̃",
-          "frequency": 19.114,
-          "pieceCount": 2
-        },
-        {
-          "word": "passons",
-          "ipa": "pasɔ̃",
-          "frequency": 16.06,
-          "pieceCount": 2
-        },
-        {
-          "word": "boisson",
-          "ipa": "bwasɔ̃",
-          "frequency": 14.658,
-          "pieceCount": 2
-        },
-        {
-          "word": "boissons",
-          "ipa": "bwasɔ̃",
-          "frequency": 9.956,
-          "pieceCount": 2
-        },
-        {
-          "word": "dansons",
-          "ipa": "dɑ̃sɔ̃",
-          "frequency": 3.139,
           "pieceCount": 2
         }
       ]
@@ -16129,6 +16133,67 @@
           "ipa": "pijɛ",
           "frequency": 0.089,
           "pieceCount": 2
+        }
+      ]
+    },
+    {
+      "ipa": "dek",
+      "targetCount": 42,
+      "frequencySum": 35.044000000000004,
+      "namingCandidates": [
+        {
+          "word": "déc",
+          "frequency": 0.63
+        }
+      ],
+      "examples": [
+        {
+          "word": "déconner",
+          "ipa": "dekone",
+          "frequency": 8.177,
+          "pieceCount": 3
+        },
+        {
+          "word": "décrit",
+          "ipa": "dekʁi",
+          "frequency": 7.699,
+          "pieceCount": 2
+        },
+        {
+          "word": "déconné",
+          "ipa": "dekone",
+          "frequency": 3.437,
+          "pieceCount": 3
+        },
+        {
+          "word": "déco",
+          "ipa": "deko",
+          "frequency": 2.661,
+          "pieceCount": 2
+        },
+        {
+          "word": "décret",
+          "ipa": "dekʁɛ",
+          "frequency": 2.316,
+          "pieceCount": 2
+        },
+        {
+          "word": "décris",
+          "ipa": "dekʁi",
+          "frequency": 1.937,
+          "pieceCount": 2
+        },
+        {
+          "word": "décoder",
+          "ipa": "dekode",
+          "frequency": 1.706,
+          "pieceCount": 3
+        },
+        {
+          "word": "déconnez",
+          "ipa": "dekone",
+          "frequency": 1.396,
+          "pieceCount": 3
         }
       ]
     }

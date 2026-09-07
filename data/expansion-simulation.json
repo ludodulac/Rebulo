@@ -1,32 +1,13 @@
 {
-  "generatedAt": "2026-09-06T12:36:06.261Z",
+  "generatedAt": "2026-09-07T01:59:28.617Z",
   "lexicalUniquePronouncedForms": 171476,
   "baseline": {
-    "constructibleUniqueWords": 850,
-    "multiPieceUniqueWords": 723,
-    "weightedMultiPiece": 878.685
+    "constructibleUniqueWords": 891,
+    "multiPieceUniqueWords": 760,
+    "weightedMultiPiece": 918.513
   },
-  "candidatePool": [
-    {
-      "label": "corps",
-      "ipa": "/kɔʁ/",
-      "status": "candidate_pictogram",
-      "rawRank": 26
-    }
-  ],
-  "greedyOrder": [
-    {
-      "step": 1,
-      "addedLabel": "corps",
-      "ipa": "/kɔʁ/",
-      "status": "candidate_pictogram",
-      "marginalMultiPieceUniqueWords": 37,
-      "marginalConstructibleUniqueWords": 41,
-      "cumulativeMultiPieceUniqueWords": 760,
-      "cumulativeConstructibleUniqueWords": 891,
-      "cumulativeWeightedMultiPiece": 918.513
-    }
-  ],
+  "candidatePool": [],
+  "greedyOrder": [],
   "prototypeScenarios": [],
   "interpretation": "Ordre glouton recalculé après chaque ajout. Les briques déjà actives sont exclues du pool candidat ; le gain porte sur les mots uniques devenant constructibles avec au moins deux pièces, ce qui évite de confondre un simple homophone d’une image avec un vrai rébus.",
   "prototypeInterpretation": "Les scénarios de prototypes simulent séparément puis ensemble les concepts enregistrés comme prototypes mais toujours inactifs. Ils n’activent rien dans le produit.",

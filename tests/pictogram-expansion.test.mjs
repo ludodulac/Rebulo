@@ -55,7 +55,11 @@ for(const id of ['pot','dos','raie','terre','tas']){
   assert.ok(['unreviewed','naming_test_required'].includes(entry.clinicalStatus));
 }
 assert.equal(lexicon.find(item=>item.id==='tas').artRevision,'tas-comic-v1');
-assert.ok(assets.assets.some(asset=>asset.path==='assets/rebus/pot.svg'&&asset.active===false),'historical OpenMoji pot prototype must remain preserved');
+const historicalPot=assets.assets.find(asset=>asset.path==='assets/research/pot-openmoji-1fab4.svg');
+assert.ok(historicalPot,'historical OpenMoji pot prototype must remain preserved');
+assert.equal(historicalPot.active,false);
+assert.equal(historicalPot.lifecycleStatus,'historical');
+assert.equal(historicalPot.artRevision,'pot-openmoji-1fab4-v1');
 
 const summary=expansionPrioritySummary(priorities);
 assert.equal(summary.candidateCount,priorities.length);

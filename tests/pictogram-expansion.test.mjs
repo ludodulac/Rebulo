@@ -2,11 +2,12 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {buildPhoneticExpansionOpportunities,buildPictogramExpansionPriorities,expansionPrioritySummary} from '../src/pictogram-expansion.js';
 
-const [coverage,lexicon,shortlist,assets]=await Promise.all([
+const [coverage,lexicon,shortlist,assets,productivity]=await Promise.all([
   readFile(new URL('../data/coverage-report.json',import.meta.url),'utf8').then(JSON.parse),
   readFile(new URL('../data/lexicon-seed.json',import.meta.url),'utf8').then(JSON.parse),
   readFile(new URL('../data/pictogram-expansion-shortlist.json',import.meta.url),'utf8').then(JSON.parse),
-  readFile(new URL('../data/asset-sources.json',import.meta.url),'utf8').then(JSON.parse)
+  readFile(new URL('../data/asset-sources.json',import.meta.url),'utf8').then(JSON.parse),
+  readFile(new URL('../data/phonetic-productivity-report.json',import.meta.url),'utf8').then(JSON.parse)
 ]);
 
 const opportunities=buildPhoneticExpansionOpportunities(coverage,lexicon,{limit:100});
@@ -25,28 +26,35 @@ const knownIpas=new Set(lexicon.filter(item=>item.ipa).map(item=>String(item.ipa
 assert.ok(priorities.every(item=>!knownIpas.has(item.normalizedIpa)),'registered or active concepts must leave the new-concept ranking');
 
 assert.equal(shortlist.status,'mixed_research_and_general');
-assert.equal(shortlist.items.length,5);
+assert.equal(shortlist.items.length,6);
 for(const item of shortlist.items){
   const ipa=String(item.ipa||'').replaceAll('/','');
   if(item.activation==='general_active'){
     const entry=lexicon.find(candidate=>String(candidate.ipa||'').replaceAll('/','')===ipa&&candidate.label===item.label);
     assert.ok(entry,`${item.label} must exist in the lexicon once explicitly approved`);
     assert.equal(entry.active,true,`${item.label} must be active for general generation`);
-    assert.equal(entry.clinicalStatus,item.clinicalStatus,'shortlist and lexicon must preserve the exact non-clinical status of the active revision');
+    assert.equal(entry.clinicalStatus,item.clinicalStatus);
     const asset=assets.assets.find(candidate=>candidate.path===entry.image);
     assert.ok(asset,`${item.label} must have a documented production asset`);
     assert.equal(asset.active,true);
     assert.equal(asset.clinicalStatus,item.clinicalStatus);
-    assert.ok(!priorities.some(candidate=>candidate.normalizedIpa===ipa),'active concepts must not be proposed again as new concepts');
+    assert.ok(!priorities.some(candidate=>candidate.normalizedIpa===ipa));
   }else{
     assert.equal(item.status,'research_candidate');
     assert.equal(item.activation,'not_ready');
-    const priority=priorities.find(candidate=>candidate.normalizedIpa===ipa);
-    assert.ok(priority,`${item.label} must map to a measured coverage opportunity`);
-    assert.ok(priority.exactNounCandidates.some(candidate=>String(candidate.word).toLowerCase()===String(item.label).toLowerCase()));
-    assert.equal(item.unlockCount,priority.unlockCount);
+    const lead=(productivity.expansionCurationLeads||[]).find(candidate=>String(candidate.ipa||'').replaceAll('/','')===ipa);
+    assert.ok(lead,`${item.label} must map to a fresh curation lead`);
+    assert.ok(lead.lexicalCandidates.some(candidate=>String(candidate.word).toLowerCase()===String(item.label).toLowerCase()));
+    assert.equal(item.unlockCount,lead.targetCount);
+    assert.equal(item.assetStatus,'not_created');
   }
 }
+
+const nid=shortlist.items.find(item=>item.label==='nid');
+assert.ok(nid);
+assert.equal(nid.ipa,'/ni/');
+assert.equal(nid.unlockCount,103);
+assert.equal(nid.nextGate,'visual_prototype_then_naming_review');
 
 for(const id of ['pot','dos','raie','terre','tas']){
   const entry=lexicon.find(item=>item.id===id);
@@ -56,7 +64,7 @@ for(const id of ['pot','dos','raie','terre','tas']){
 }
 assert.equal(lexicon.find(item=>item.id==='tas').artRevision,'tas-comic-v1');
 const historicalPot=assets.assets.find(asset=>asset.path==='assets/research/pot-openmoji-1fab4.svg');
-assert.ok(historicalPot,'historical OpenMoji pot prototype must remain preserved');
+assert.ok(historicalPot);
 assert.equal(historicalPot.active,false);
 assert.equal(historicalPot.lifecycleStatus,'historical');
 assert.equal(historicalPot.artRevision,'pot-openmoji-1fab4-v1');

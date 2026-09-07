@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import { spawnSync } from 'node:child_process';
+
+const root=new URL('..',import.meta.url).pathname;
+const output=path.join(os.tmpdir(),`rebulo-active-dependencies-${process.pid}.json`);
+const run=spawnSync(process.execPath,['scripts/analyze-active-dependencies.mjs','data/lexique4.compact.json','data/lexicon-seed.json',output],{cwd:root,encoding:'utf8'});
+assert.equal(run.status,0,run.stderr||run.stdout);
+const report=JSON.parse(fs.readFileSync(output,'utf8'));
+fs.unlinkSync(output);
+assert.equal(report.schemaVersion,'1.0');
+assert.equal(report.baseline.strictMultiPieceUniqueWords,760,'dependency baseline must stay aligned with strict coverage');
+assert.equal(report.baseline.activePictogramCount,24);
+assert.equal(report.dependencies.length,24);
+assert.ok(report.dependencies.every(item=>item.strictUniqueLossIfUnavailable>=0));
+assert.ok(report.dependencies.every((item,index,array)=>index===0||array[index-1].strictUniqueLossIfUnavailable>=item.strictUniqueLossIfUnavailable),'dependencies should be ranked by strict unique loss');
+for(const id of ['scie','nez','rat','lit','riz','chat','cle']) assert.ok(report.dependencies.some(item=>item.id===id),`${id} should be ranked`);
+assert.match(report.methodology.clinicalCaution,/validité clinique|dénomination/i);
+console.log('active-dependency-report.test.mjs: strict dependency ranking ok');

@@ -54,7 +54,8 @@ const columns={
   phon:findColumn(['phono','phon','phonologie','phonology','phoneme']),
   freq:findColumn(['freqmot','freq_mot','freqlivres','freqfilms2','freq','frequency']),
   pos:findColumn(['cgram','pos','categorie','categorie_grammaticale']),
-  syllableCount:findColumn(['nbsyll','nb_syll','syllable_count','syllables'])
+  syllableCount:findColumn(['nbsyll','nb_syll','syllable_count','syllables']),
+  syllabification:findColumn(['phono_syll','phonosyll','syll','syllabation','syllabification','syllabifie'])
 };
 
 const phonColumn=columns.ipa>=0?columns.ipa:columns.phon;
@@ -74,13 +75,15 @@ for(const line of lines){
   const freqRaw=columns.freq>=0?(cells[columns.freq]||'').replace(',','.'):'';
   const syllableRaw=columns.syllableCount>=0?(cells[columns.syllableCount]||'').trim():'';
   const syllableCount=syllableRaw?Number.parseInt(syllableRaw,10):null;
+  const syllabification=columns.syllabification>=0?(cells[columns.syllabification]||'').trim():'';
   rows.push({
     word,
     lemma:columns.lemma>=0?(cells[columns.lemma]||'').trim():word,
     ipa:phon,
     frequency:freqRaw?Number(freqRaw)||0:0,
     pos:columns.pos>=0?(cells[columns.pos]||'').trim():'',
-    syllableCount:Number.isInteger(syllableCount)&&syllableCount>0?syllableCount:null
+    syllableCount:Number.isInteger(syllableCount)&&syllableCount>0?syllableCount:null,
+    syllabification:syllabification||null
   });
 }
 

@@ -3,7 +3,8 @@ import {buildPhrasePlan,phrasePracticeMetrics} from './phrase-creator.js';
 export const DEFAULT_PHRASE_PRACTICE_POLICY=Object.freeze({
   minimumRebusRatio:0.5,
   minimumStrictRebusRatio:0.25,
-  maximumTextWords:3
+  maximumTextWords:3,
+  validationStatus:'product_guidance_only'
 });
 
 export function phrasePracticeBand(plan={}){
@@ -24,7 +25,7 @@ export function buildPhrasePracticeCatalog(phrases=[],targets=[],lexicon=[],ther
     const plan=buildPhrasePlan(phrase,targets,lexicon,therapyDefinitions);
     const metrics=plan.practice||phrasePracticeMetrics(plan);
     const eligible=metrics.rebusRatio>=policy.minimumRebusRatio&&metrics.strictRebusRatio>=policy.minimumStrictRebusRatio&&metrics.textCount<=policy.maximumTextWords;
-    return {phrase,index,plan,metrics,band:phrasePracticeBand(plan),score:scorePhrasePractice(plan),eligible};
+    return {phrase,index,plan,metrics,band:phrasePracticeBand(plan),score:scorePhrasePractice(plan),eligible,validationStatus:policy.validationStatus||'product_guidance_only'};
   }).sort((a,b)=>Number(b.eligible)-Number(a.eligible)||b.score-a.score||a.metrics.wordCount-b.metrics.wordCount||a.index-b.index);
 }
 

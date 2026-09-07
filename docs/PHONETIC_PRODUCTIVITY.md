@@ -123,5 +123,6 @@ Une pièce est dite **productive** seulement si son mot entier et sa prononciati
 
 | Candidat | Son entier | Cibles potentielles | Statut | Prochaine étape | Exemples |
 |---|---|---:|---|---|---|
+| nid | /ni/ | 103 | research_candidate | visual_prototype_then_naming_review | maternité, déni, vernis, paternité |
 
 > La file dessinable élimine les fragments grammaticaux manifestes et conserve les décisions de recherche existantes. Elle ne vaut ni validation de dénomination, ni activation, ni validation clinique.

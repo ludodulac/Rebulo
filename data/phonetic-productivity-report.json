@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T02:27:23.946Z",
+  "generatedAt": "2026-09-07T04:11:26.174Z",
   "source": "Lexique 4",
   "lexicalEntryCount": 189832,
   "inventory": {
@@ -16199,7 +16199,75 @@
       ]
     }
   ],
-  "drawableOpportunityShortlist": [],
+  "drawableOpportunityShortlist": [
+    {
+      "ipa": "ni",
+      "label": "nid",
+      "targetCount": 103,
+      "frequencySum": 28.176999999999992,
+      "examples": [
+        {
+          "word": "maternité",
+          "ipa": "matɛʁnite",
+          "frequency": 3.804,
+          "pieceCount": 4
+        },
+        {
+          "word": "déni",
+          "ipa": "deni",
+          "frequency": 3.051,
+          "pieceCount": 2
+        },
+        {
+          "word": "vernis",
+          "ipa": "vɛʁni",
+          "frequency": 2.867,
+          "pieceCount": 2
+        },
+        {
+          "word": "paternité",
+          "ipa": "patɛʁnite",
+          "frequency": 2.585,
+          "pieceCount": 4
+        },
+        {
+          "word": "pawnee",
+          "ipa": "poni",
+          "frequency": 2.259,
+          "pieceCount": 2
+        }
+      ],
+      "lexicalCandidates": [
+        {
+          "word": "ni",
+          "frequency": 254.677
+        },
+        {
+          "word": "nid",
+          "frequency": 10.693
+        },
+        {
+          "word": "nie",
+          "frequency": 4.972
+        },
+        {
+          "word": "nids",
+          "frequency": 1.184
+        },
+        {
+          "word": "nies",
+          "frequency": 0.962
+        }
+      ],
+      "exactLabelAttested": true,
+      "curationStatus": "research_candidate",
+      "activation": "not_ready",
+      "selectionReason": "Premier lead post-activation combinant rendement encore élevé et référent concret naturel. « nid » fournit exactement /ni/ sans découpage caché et se représente par un nid d'oiseau simple.",
+      "namingRisk": "Un nid vide peut être nommé « nid d'oiseau » ou décrit par son contenu; privilégier une forme de nid très prototypique sans oiseau dominant. La stabilité de dénomination doit être testée avant toute activation.",
+      "assetStatus": "not_created",
+      "nextGate": "visual_prototype_then_naming_review"
+    }
+  ],
   "expansionCurationLeads": [
     {
       "ipa": "e",

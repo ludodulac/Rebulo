@@ -29,3 +29,64 @@ export function sessionProgress(index=0,total=0){
   const step=Math.min(safeTotal,Math.max(1,(Number(index)||0)+1));
   return {step,total:safeTotal,percent:Math.round(step/safeTotal*100)};
 }
+
+export const SESSION_PHASES=Object.freeze({
+  PRESENTATION:'presentation',
+  ATTEMPT:'attempt',
+  HELP:'help',
+  RETRY:'retry',
+  RESOLUTION:'resolution',
+  RESULT:'result'
+});
+
+export const SESSION_EVENTS=Object.freeze({
+  PRESENT:'present',
+  SUBMIT_INCORRECT:'submit_incorrect',
+  SUBMIT_CORRECT:'submit_correct',
+  REQUEST_HELP:'request_help',
+  RETRY:'retry',
+  REVEAL_SOLUTION:'reveal_solution',
+  RECORD_RESULT:'record_result'
+});
+
+const SESSION_TRANSITIONS=Object.freeze({
+  [SESSION_PHASES.PRESENTATION]:Object.freeze({
+    [SESSION_EVENTS.PRESENT]:SESSION_PHASES.ATTEMPT
+  }),
+  [SESSION_PHASES.ATTEMPT]:Object.freeze({
+    [SESSION_EVENTS.SUBMIT_INCORRECT]:SESSION_PHASES.RETRY,
+    [SESSION_EVENTS.SUBMIT_CORRECT]:SESSION_PHASES.RESOLUTION,
+    [SESSION_EVENTS.REQUEST_HELP]:SESSION_PHASES.HELP,
+    [SESSION_EVENTS.REVEAL_SOLUTION]:SESSION_PHASES.RESOLUTION
+  }),
+  [SESSION_PHASES.HELP]:Object.freeze({
+    [SESSION_EVENTS.RETRY]:SESSION_PHASES.RETRY,
+    [SESSION_EVENTS.REVEAL_SOLUTION]:SESSION_PHASES.RESOLUTION
+  }),
+  [SESSION_PHASES.RETRY]:Object.freeze({
+    [SESSION_EVENTS.SUBMIT_INCORRECT]:SESSION_PHASES.RETRY,
+    [SESSION_EVENTS.SUBMIT_CORRECT]:SESSION_PHASES.RESOLUTION,
+    [SESSION_EVENTS.REQUEST_HELP]:SESSION_PHASES.HELP,
+    [SESSION_EVENTS.REVEAL_SOLUTION]:SESSION_PHASES.RESOLUTION
+  }),
+  [SESSION_PHASES.RESOLUTION]:Object.freeze({
+    [SESSION_EVENTS.RECORD_RESULT]:SESSION_PHASES.RESULT
+  }),
+  [SESSION_PHASES.RESULT]:Object.freeze({})
+});
+
+export function createSessionState(){
+  return {phase:SESSION_PHASES.PRESENTATION,attempts:0,hintUsed:false,solutionUsed:false,resolvedBy:null};
+}
+
+export function transitionSessionState(state=createSessionState(),event=''){
+  const currentPhase=Object.values(SESSION_PHASES).includes(state?.phase)?state.phase:SESSION_PHASES.PRESENTATION;
+  const nextPhase=SESSION_TRANSITIONS[currentPhase]?.[event];
+  if(!nextPhase)return {...state,phase:currentPhase};
+  const next={...state,phase:nextPhase};
+  if(event===SESSION_EVENTS.SUBMIT_INCORRECT||event===SESSION_EVENTS.SUBMIT_CORRECT)next.attempts=(Number(state?.attempts)||0)+1;
+  if(event===SESSION_EVENTS.REQUEST_HELP)next.hintUsed=true;
+  if(event===SESSION_EVENTS.REVEAL_SOLUTION){next.solutionUsed=true;next.resolvedBy='solution';}
+  if(event===SESSION_EVENTS.SUBMIT_CORRECT)next.resolvedBy='answer';
+  return next;
+}

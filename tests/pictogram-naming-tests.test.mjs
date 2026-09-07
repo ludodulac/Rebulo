@@ -37,6 +37,14 @@ assert.equal(planRegistry.schemaVersion,'1.0');assert.match(planSchema.descripti
 for(const concept of ['pot','dos','raie','tas','terre']){const comparison=comparisonRegistry.comparisons.find(item=>item.concept===concept);const plan=planRegistry.plans.find(item=>item.concept===concept);assert.ok(comparison);assert.ok(plan);assert.match(comparison.revision,new RegExp(`^${concept}-v[1-9][0-9]*$`));assert.equal(plan.comparisonRevision,comparison.revision,`${concept} plan must point at the exact stimulus revision`);assert.equal(plan.activationState,'inactive_until_human_decision');assert.deepEqual(new Set(plan.candidateIds),new Set(comparison.candidates.map(x=>x.candidateId)));assert.equal(plan.candidateIds.length,4);assert.equal(plan.capture.firstSpontaneousResponseOnly,true);assert.equal(plan.capture.anonymousOnly,true);assert.equal(plan.capture.candidateOrder,'counterbalanced_or_randomized');assert.equal(plan.decisionGate.requiresHumanReview,true);assert.equal(plan.decisionGate.automaticActivation,false);assert.match(plan.instruction,/Qu’est-ce que c’est/);}
 assert.match(planRegistry.plans.find(item=>item.concept==='pot').planId,/-v3$/);assert.match(planRegistry.plans.find(item=>item.concept==='dos').planId,/-v3$/);assert.match(planRegistry.plans.find(item=>item.concept==='raie').planId,/-v1$/);
 
+const nidComparison=comparisonRegistry.comparisons.find(item=>item.concept==='nid');
+const nidPlan=planRegistry.plans.find(item=>item.concept==='nid');
+assert.ok(nidComparison);assert.ok(nidPlan);
+assert.equal(nidComparison.revision,'nid-v1');assert.equal(nidComparison.targetIpa,'/ni/');assert.equal(nidComparison.activationState,'inactive_until_human_decision');assert.equal(nidComparison.humanDecision,null);
+assert.equal(nidComparison.candidates.length,1);
+const nidCandidate=nidComparison.candidates[0];assert.equal(nidCandidate.candidateId,'nid-rebulo-comic-v1');assert.equal(nidCandidate.asset,'assets/research/nid-comic-v1.svg');assert.equal(nidCandidate.namingTestStatus,'not_run');assert.ok(nidCandidate.namingRisks.includes("nid d'oiseau"));await access(new URL(`../${nidCandidate.asset}`,import.meta.url));
+assert.equal(nidPlan.comparisonRevision,'nid-v1');assert.deepEqual(nidPlan.candidateIds,['nid-rebulo-comic-v1']);assert.equal(nidPlan.activationState,'inactive_until_human_decision');assert.equal(nidPlan.capture.firstSpontaneousResponseOnly,true);assert.equal(nidPlan.capture.anonymousOnly,true);assert.equal(nidPlan.decisionGate.requiresHumanReview,true);assert.equal(nidPlan.decisionGate.automaticActivation,false);assert.match(nidPlan.instruction,/Qu’est-ce que c’est/);
+
 // The old comparison plans remain immutable historical research. The founder's later
 // product decision activates new comic revisions for general use only; it does not
 // rewrite those old observations or turn them into clinical evidence.
@@ -49,4 +57,4 @@ for(const concept of ['pot','dos','raie','terre']){
   assert.match(item.image,new RegExp(`^assets/rebus/${concept}-comic\\.svg$`));
 }
 
-console.log('pictogram naming tests: historical comparison revisions stay immutable while new comic revisions are general-only.');
+console.log('pictogram naming tests: historical comparison revisions stay immutable while nid-v1 remains research-only.');

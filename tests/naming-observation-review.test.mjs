@@ -3,7 +3,8 @@ import {readFile} from 'node:fs/promises';
 import {validateNamingObservationExport,buildNamingObservationReview} from '../src/naming-observation-review.js';
 
 const registry=JSON.parse(await readFile(new URL('../data/pictogram-prototype-comparisons.json',import.meta.url),'utf8'));
-const comparisons=registry.comparisons.filter(item=>item.activationState==='inactive_until_human_decision');
+const productionRegistry=JSON.parse(await readFile(new URL('../data/production-naming-reviews.json',import.meta.url),'utf8'));
+const comparisons=[...registry.comparisons.filter(item=>item.activationState==='inactive_until_human_decision'),...productionRegistry.reviews.filter(item=>item.activationState==='active_general_naming_review')];
 const pot=comparisons.find(item=>item.concept==='pot');
 assert.ok(pot);assert.equal(pot.revision,'pot-v3');assert.equal(pot.candidates.length,4);
 const ids=pot.candidates.map(item=>item.candidateId);
@@ -17,12 +18,23 @@ const s2=session('S02',[{response:'Pot'},{response:'pot de fleurs'},{response:'t
 const validated=validateNamingObservationExport(s1,comparisons);assert.ok(validated);assert.equal(validated.comparisonRevision,pot.revision);
 const review=buildNamingObservationReview([s1,s2],comparisons);
 assert.ok(review);assert.equal(review.kind,'descriptive_naming_observation_review');assert.equal(review.sessionCount,2);assert.equal(review.concepts.length,1);
-const potReview=review.concepts[0];assert.equal(potReview.concept,'pot');assert.equal(potReview.comparisonRevision,pot.revision);assert.equal(potReview.sessionCount,2);assert.equal(potReview.candidates.length,4);
+const potReview=review.concepts[0];assert.equal(potReview.concept,'pot');assert.equal(potReview.comparisonRevision,pot.revision);assert.equal(potReview.activationState,'inactive_until_human_decision');assert.equal(potReview.sessionCount,2);assert.equal(potReview.candidates.length,4);
 const first=potReview.candidates.find(item=>item.candidateId===ids[0]);assert.equal(first.observationCount,2);assert.equal(first.targetResponseCount,2,'case-normalized exact concept matches should be counted descriptively');assert.deepEqual(first.responses,[{response:'pot',count:2}]);assert.equal(first.asset,pot.candidates[0].asset);assert.doesNotMatch(first.asset,/^https?:/,'review thumbnails must reuse audited local stimuli');
 const second=potReview.candidates.find(item=>item.candidateId===ids[1]);assert.equal(second.hesitationCount,1);assert.equal(second.targetResponseCount,0);assert.equal(second.asset,pot.candidates[1].asset);
 const third=potReview.candidates.find(item=>item.candidateId===ids[2]);assert.equal(third.noResponseCount,1);
 const fourth=potReview.candidates.find(item=>item.candidateId===ids[3]);assert.deepEqual(fourth.responses,[{response:'vase',count:2}]);assert.equal(fourth.hesitationCount,1);
-assert.match(review.researchNotice,/explicit comparison revision/);assert.match(review.researchNotice,/No automatic prototype activation or clinical validation/);
+assert.match(review.researchNotice,/explicit stimulus revision/);assert.match(review.researchNotice,/No automatic product activation, deactivation or clinical validation/);
+
+const pluie=comparisons.find(item=>item.concept==='pluie'&&item.activationState==='active_general_naming_review');
+assert.ok(pluie);assert.equal(pluie.revision,'pluie-openmoji-1f327-v1');assert.equal(pluie.candidates.length,1);
+const pluieId=pluie.candidates[0].candidateId;
+const pluieSession={schemaVersion:'1.0',sessionCode:'RAIN01',concept:'pluie',comparisonRevision:pluie.revision,targetIpa:pluie.targetIpa,candidateIds:[pluieId],observations:[{candidateId:pluieId,responseVerbatim:'nuage',hesitation:false,noResponse:false}],researchNotice:'Raw anonymous naming observations only. No automatic activation or clinical validation.'};
+const pluieReview=buildNamingObservationReview([pluieSession],comparisons);assert.ok(pluieReview);assert.equal(pluieReview.concepts.length,1);assert.equal(pluieReview.concepts[0].concept,'pluie');assert.equal(pluieReview.concepts[0].activationState,'active_general_naming_review');assert.equal(pluieReview.concepts[0].candidates[0].targetResponseCount,0);assert.deepEqual(pluieReview.concepts[0].candidates[0].responses,[{response:'nuage',count:1}]);assert.equal(pluieReview.concepts[0].candidates[0].asset,'assets/rebus/pluie.svg');
+
+const shadowPot={...pot,revision:'pot-v99',targetIpa:'/po/',candidates:[{candidateId:'pot-shadow',asset:'shadow.svg'}]};
+const exactRevisionSet=[shadowPot,pot];
+assert.ok(validateNamingObservationExport(s1,exactRevisionSet),'matching must use concept + revision + IPA, not the first concept with the same name');
+assert.equal(validateNamingObservationExport({...s1,comparisonRevision:'pot-v99'},exactRevisionSet),null,'candidate IDs must also match the exact revision');
 
 assert.equal(buildNamingObservationReview([s1,s1],comparisons),null,'duplicate concept/revision/session codes must be rejected');
 assert.equal(validateNamingObservationExport({...s1,comparisonRevision:'pot-v2'},comparisons),null,'old comparison revisions must not be interpreted against current stimuli');
@@ -39,7 +51,7 @@ const html=await readFile(new URL('../naming-review.html',import.meta.url),'utf8
 const js=await readFile(new URL('../naming-review.js',import.meta.url),'utf8');
 const css=await readFile(new URL('../naming-review.css',import.meta.url),'utf8');
 const namingHtml=await readFile(new URL('../naming-test.html',import.meta.url),'utf8');
-assert.match(html,/Revue des passations/);assert.match(html,/Aucune validation automatique/);assert.match(html,/Aucun envoi serveur, aucune persistance navigateur/);assert.match(html,/multiple/);
-assert.match(js,/buildNamingObservationReview/);assert.match(js,/comparisonRevision/);assert.match(js,/même révision que les stimuli actuels/);assert.match(js,/candidate\.asset/);assert.match(js,/Prototype visuel correspondant aux observations/);assert.match(js,/Comptages descriptifs uniquement/);assert.match(css,/\.candidate-visual/);assert.doesNotMatch(js,/localStorage|sessionStorage|method\s*:\s*['"]POST/i);assert.doesNotMatch(js,/clinical_approved|active\s*[:=]\s*true/i);
+assert.match(html,/Revue des passations/);assert.match(html,/Aucune validation automatique/);assert.match(html,/activé ou désactivé/);assert.match(html,/Aucun envoi serveur, aucune persistance navigateur/);assert.match(html,/multiple/);
+assert.match(js,/buildNamingObservationReview/);assert.match(js,/pictogram-prototype-comparisons\.json/);assert.match(js,/production-naming-reviews\.json/);assert.match(js,/comparisonRevision/);assert.match(js,/révision actuellement enregistrée/);assert.match(js,/candidate\.asset/);assert.match(js,/Stimulus visuel correspondant aux observations/);assert.match(js,/stimulus actif en revue/);assert.match(js,/prototype de recherche/);assert.match(js,/Comptages descriptifs uniquement/);assert.match(css,/\.candidate-visual/);assert.doesNotMatch(js,/localStorage|sessionStorage|method\s*:\s*['"]POST/i);assert.doesNotMatch(js,/clinical_approved|active\s*[:=]\s*true/i);
 assert.match(namingHtml,/naming-review\.html/);
-console.log('naming observation review: revision-bound anonymous imports, descriptive counts and local stimulus-linked cards only.');
+console.log('naming observation review: prototypes and active production stimuli stay revision-bound, anonymous, descriptive and non-activating.');

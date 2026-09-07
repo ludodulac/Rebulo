@@ -43,6 +43,28 @@
       ],
       "automaticActivation":false,
       "humanDecision":null
+    },
+    {
+      "concept":"sol",
+      "revision":"sol-note-v2",
+      "targetIpa":"/sɔl/",
+      "activationState":"active_general_naming_review",
+      "clinicalStatus":"naming_test_required",
+      "goal":"Mesurer si la note de musique actuellement affichée par Rebulo provoque spontanément le mot entier « sol ». Le dessin n'affiche pas de clé musicale et peut donc provoquer une dénomination générique; aucune modification d'activation ni validation clinique n'est automatique.",
+      "candidates":[
+        {
+          "candidateId":"sol-production-note-v2",
+          "asset":"assets/rebus/sol.svg",
+          "provenance":"Illustration originale Rebulo ajoutée comme pictogramme de note sol le 2026-08-31, puis révisée au commit 4cb0c773ed9046558396dafa2b304a6e1227caca le 2026-09-02 pour supprimer la réponse écrite; révision sol-note-v2.",
+          "availability":"available",
+          "designIntent":"Tester exactement le stimulus de production actuel avant tout éventuel redesign musical plus explicite.",
+          "namingRisks":["note","note de musique","musique"],
+          "namingTestStatus":"not_run",
+          "reviewNote":"Une réponse générique « note » ou « musique » indiquerait un problème de dénomination du stimulus actuel, pas un problème phonétique du segment /sɔl/. Toute décision de redesign reste humaine."
+        }
+      ],
+      "automaticActivation":false,
+      "humanDecision":null
     }
   ]
 }

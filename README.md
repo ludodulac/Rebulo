@@ -4,6 +4,8 @@ Rebulo est un créateur de rébus riche, ludique et intelligent. Son cœur actue
 
 L'ambition généraliste et l'usage orthophonique sont complémentaires : Rebulo doit retrouver le plaisir immédiat des rébus de magazines tout en sachant distinguer les constructions et les illustrations qui satisfont des exigences phonétiques ou cliniques plus fortes. Les principes stables de cette architecture sont décrits dans `docs/PRODUCT_PRINCIPLES.md`.
 
+Le mode Jouer consomme désormais la couverture stricte générée par Lexique 4 : avec l'inventaire actif actuel, 760 mots uniques en rébus stricts multi-images sont exposés au jeu, au lieu de rester limités au petit catalogue historique.
+
 ## Principe strict actuellement implémenté
 
 Le moteur ne valide jamais un rébus strict sur une simple ressemblance orthographique. Une image représente un mot entier et sa prononciation entière ; la concaténation des pièces doit être exactement égale à la prononciation de la cible.

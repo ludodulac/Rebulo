@@ -62,9 +62,13 @@ export async function buildAssetInventory(root = process.cwd()) {
   }
 
   const readingCounts = new Map();
-  for (const { assetPath } of rawAssets) {
+  const lifecyclesByReading = new Map();
+  for (const { assetPath, lifecycle } of rawAssets) {
     const reading = normalizeReading(inferReading(assetPath, sourceByPath.get(assetPath)));
     readingCounts.set(reading, (readingCounts.get(reading) || 0) + 1);
+    const lifecycles = lifecyclesByReading.get(reading) || [];
+    lifecycles.push(lifecycle);
+    lifecyclesByReading.set(reading, lifecycles);
   }
 
   const assets = rawAssets.map(({ assetPath, lifecycle }) => {
@@ -91,8 +95,18 @@ export async function buildAssetInventory(root = process.cwd()) {
     };
   }).sort((a, b) => a.path.localeCompare(b.path));
 
+  const duplicateReadings = [...new Set(assets.filter(item => item.duplicateReading).map(item => item.reading))].sort();
+  const productionDuplicateReadings = duplicateReadings.filter(reading => {
+    const lifecycles = lifecyclesByReading.get(normalizeReading(reading)) || [];
+    return lifecycles.filter(item => item === 'production').length > 1;
+  });
+  const historicalRevisionReadings = duplicateReadings.filter(reading => {
+    const lifecycles = lifecyclesByReading.get(normalizeReading(reading)) || [];
+    return lifecycles.includes('production') && lifecycles.includes('research') && lifecycles.filter(item => item === 'production').length === 1;
+  });
+
   return {
-    schemaVersion: '1.0',
+    schemaVersion: '1.1',
     generatedFrom: ['assets/rebus/', 'assets/prepared/comic/', 'assets/research/'],
     summary: {
       total: assets.length,
@@ -100,7 +114,9 @@ export async function buildAssetInventory(root = process.cwd()) {
       prepared: assets.filter(item => item.lifecycle === 'prepared').length,
       research: assets.filter(item => item.lifecycle === 'research').length,
       activeLegacyStyle: assets.filter(item => item.active && item.style !== 'comic').map(item => item.path),
-      duplicateReadings: [...new Set(assets.filter(item => item.duplicateReading).map(item => item.reading))].sort()
+      duplicateReadings,
+      productionDuplicateReadings,
+      historicalRevisionReadings
     },
     assets
   };

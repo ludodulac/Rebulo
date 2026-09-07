@@ -6,7 +6,7 @@ const inventory = await buildAssetInventory(new URL('..', import.meta.url).pathn
 assert.equal(inventory.schemaVersion, '1.1');
 assert.equal(inventory.summary.production, 24, 'production SVG count should exclude archived legacy pot');
 assert.equal(inventory.summary.prepared, 0, 'prepared comic queue should be empty after corps migration');
-assert.equal(inventory.summary.research, 27, 'research inventory should include nid plus the four redesign prototypes');
+assert.equal(inventory.summary.research, 27, 'research inventory should include nid plus four new redesign prototypes');
 
 const expectedComicProduction = [
   ['the', '/te/', 'the-comic-v1'],
@@ -52,10 +52,17 @@ assert.equal(nidPrototype.revision, 'nid-comic-v1');
 assert.equal(nidPrototype.clinicalStatus, 'naming_test_required');
 assert.ok(!inventory.summary.activeLegacyStyle.includes(nidPrototype.path), 'inactive research prototypes must never enter active legacy migration warnings');
 
-for (const id of ['mat-sailboat-arrow-v1','tour-chess-rook-v1','tas-leaves-v1','cor-french-horn-v1']) {
-  const prototype = inventory.assets.find(item => item.path === `assets/research/${id}.svg`);
-  assert.ok(prototype, `${id} should stay in the research library until human naming review`);
-  assert.equal(prototype.active, false);
+const redesignPaths = [
+  'assets/research/mat-boat-arrow-comic-v1.svg',
+  'assets/research/tour-chess-rook-comic-v1.svg',
+  'assets/research/tas-leaves-comic-v1.svg',
+  'assets/research/cor-horn-comic-v1.svg'
+];
+for (const path of redesignPaths) {
+  const asset = inventory.assets.find(item => item.path === path);
+  assert.ok(asset, `${path} should stay in the research library until human naming review`);
+  assert.equal(asset.active, false, `${path} must not silently become an active production asset`);
+  assert.ok(!inventory.summary.activeLegacyStyle.includes(path), `${path} must never count as active legacy production`);
 }
 
 assert.ok(inventory.summary.duplicateReadings.includes('pot'), 'archived pot history should remain visible alongside production');

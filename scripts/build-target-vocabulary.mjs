@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {buildTargetVocabulary,buildSyllableInventory,targetVocabularyStats} from '../src/target-vocabulary.js';
 import {analyzeSyllableInventoryCoverage} from '../src/syllable-coverage.js';
+import {buildRepresentationResearchQueue,representationResearchStats} from '../src/syllable-representation-candidates.js';
 import {OPEN_PICTOGRAMS} from '../src/open-pictogram-library.js';
 import {OPEN_PICTOGRAMS_WAVE_2} from '../src/open-pictogram-library-wave2.js';
 import {OPEN_PICTOGRAMS_WAVE_3} from '../src/open-pictogram-library-wave3.js';
@@ -23,24 +24,28 @@ const targets=buildTargetVocabulary(entries);
 const syllables=buildSyllableInventory(targets);
 const stats=targetVocabularyStats(targets);
 const syllableCoverage=analyzeSyllableInventoryCoverage(syllables,technicalInventory);
+const representationResearchQueue=buildRepresentationResearchQueue(syllableCoverage.rows,entries);
+const representationResearch=representationResearchStats(representationResearchQueue);
 
 const report={
   generatedAt:new Date().toISOString(),
   source:source?.source||'Lexique 4',
   sourceLicense:source?.license||'CC BY-SA 4.0',
   status:'editorial-preselection',
-  caution:'Les niveaux d’âge sont une présélection heuristique fondée sur fréquence, longueur et nombre de syllabes. Ils ne constituent ni un âge d’acquisition ni une validation clinique. La syllabation n’est considérée exacte que lorsqu’elle provient explicitement de la source lexicale. La couverture par le stock pictographique est technique : elle ne transforme pas un pictogramme non revu en stimulus cliniquement validé.',
+  caution:'Les niveaux d’âge sont une présélection heuristique fondée sur fréquence, longueur et nombre de syllabes. Ils ne constituent ni un âge d’acquisition ni une validation clinique. La syllabation n’est considérée exacte que lorsqu’elle provient explicitement de la source lexicale. La couverture par le stock pictographique est technique : elle ne transforme pas un pictogramme non revu en stimulus cliniquement validé. Les mots proposés pour les lacunes sont uniquement des homophones lexicaux exacts à étudier visuellement ; ils ne sont jamais activés automatiquement.',
   selectionPolicy:{
     lexicalCategories:['NOM','VER','ADJ','ADV','ONO'],
     onePreferredFormPerLemma:true,
     ageBands:'5–6, 7–8, 9–11, 12+; heuristique seulement',
     sourceSyllabificationRequiredForExactInventory:true,
-    representationOrder:['strict whole word','strict composition of whole words','explicit grapheme general operation','research gap']
+    representationOrder:['strict whole word','strict composition of whole words','explicit grapheme general operation','exact whole-word research candidate','unresolved research gap']
   },
   stats,
   technicalPictogramInventoryCount:technicalInventory.length,
   syllableInventoryCount:syllables.length,
   syllableCoverageCounts:syllableCoverage.counts,
+  representationResearch,
+  representationResearchQueue,
   syllableInventory:syllableCoverage.rows,
   targets
 };
@@ -49,3 +54,4 @@ fs.mkdirSync(path.dirname(output),{recursive:true});
 fs.writeFileSync(output,JSON.stringify(report,null,2));
 console.log(`Built ${targets.length} target lemmas and ${syllables.length} source syllables -> ${output}`);
 console.log(`Syllable coverage: ${JSON.stringify(syllableCoverage.counts)}`);
+console.log(`Representation research: ${JSON.stringify(representationResearch)}`);

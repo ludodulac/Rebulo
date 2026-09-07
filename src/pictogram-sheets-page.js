@@ -1,4 +1,5 @@
-import {buildPrintSheetPairs,pictogramIndexCsv,printLibraryMeta} from './pictogram-print-sheets.js';
+import {buildPrintSheetPairs,pictogramIndexCsv} from './pictogram-print-sheets.js';
+import {syllablePrintItems,syllablePrintMeta} from './syllable-print-library.js';
 
 function el(tag,className='',text=''){
   const node=document.createElement(tag);
@@ -30,7 +31,7 @@ function sheetPage(sheet,totalLots){
   page.dataset.kind=sheet.kind;
   page.dataset.lot=sheet.lot;
   const header=el('header','print-sheet-head');
-  const title=el('strong','',sheet.kind==='reference'?'Référence — image + nom':'Dessin — nom + case vide');
+  const title=el('strong','',sheet.kind==='reference'?'Référence - image + son':'Dessin - son + case vide');
   const meta=el('span','',`REBULO · lot ${sheet.lot}/${String(totalLots).padStart(3,'0')}`);
   header.append(title,meta);
   const grid=el('div','print-grid');
@@ -39,12 +40,12 @@ function sheetPage(sheet,totalLots){
   return page;
 }
 
-function downloadCsv(){
-  const blob=new Blob([pictogramIndexCsv()],{type:'text/csv;charset=utf-8'});
+function downloadCsv(items){
+  const blob=new Blob([pictogramIndexCsv(items)],{type:'text/csv;charset=utf-8'});
   const url=URL.createObjectURL(blob);
   const link=document.createElement('a');
   link.href=url;
-  link.download='rebulo-pictogram-index.csv';
+  link.download='rebulo-index-briques-sonores.csv';
   document.body.appendChild(link);
   link.click();
   link.remove();
@@ -54,13 +55,15 @@ function downloadCsv(){
 function render(){
   const root=document.querySelector('#printSheets');
   const status=document.querySelector('#printStatus');
-  const sheets=buildPrintSheetPairs();
-  const meta=printLibraryMeta();
+  const items=syllablePrintItems();
+  const sheets=buildPrintSheetPairs(items);
+  const meta=syllablePrintMeta();
+  const lots=Math.ceil(items.length/20);
   root.replaceChildren();
-  sheets.forEach(sheet=>root.appendChild(sheetPage(sheet,meta.pages)));
-  status.textContent=`${meta.count} images indexées · ${meta.pages} lots · ${meta.pages*2} feuilles A4`;
+  sheets.forEach(sheet=>root.appendChild(sheetPage(sheet,lots)));
+  status.textContent=`${meta.count} briques sonores · ${meta.active} actives · ${meta.research} prototypes · ${lots} lots de 20 maximum`;
   document.querySelector('#printButton')?.addEventListener('click',()=>window.print());
-  document.querySelector('#csvButton')?.addEventListener('click',downloadCsv);
+  document.querySelector('#csvButton')?.addEventListener('click',()=>downloadCsv(items));
 }
 
 render();

@@ -1,0 +1,14 @@
+{
+  "version":"1.0.0",
+  "status":"heuristic_product_preselection",
+  "purpose":"Séparer explicitement le potentiel lexical global de Lexique 4 du vocabulaire qui doit piloter les priorités produit Rebulo.",
+  "tiers":[
+    {"id":"very_common_simple","priorityWeight":6,"description":"Mots très fréquents, courts et simples, prioritaires pour les premiers niveaux."},
+    {"id":"child_common","priorityWeight":5,"description":"Vocabulaire courant accessible aux enfants."},
+    {"id":"school_common","priorityWeight":4,"description":"Vocabulaire scolaire courant et largement utile."},
+    {"id":"teen_adult_common","priorityWeight":3,"description":"Français courant adolescent/adulte, sans spécialisation inutile."},
+    {"id":"advanced_useful","priorityWeight":2,"description":"Vocabulaire plus élaboré mais encore utile et raisonnablement fréquent."},
+    {"id":"lexique_background","priorityWeight":0,"description":"Formes conservées comme données linguistiques mais ne pilotant pas les nouvelles briques."}
+  ],
+  "caution":"Cette politique reste une présélection automatique. Fréquence, longueur et catégorie grammaticale ne suffisent pas à établir familiarité, âge d'acquisition ou pertinence pédagogique; les enrichissements issus de ressources enfant/scolaires et la revue humaine restent nécessaires."
+}

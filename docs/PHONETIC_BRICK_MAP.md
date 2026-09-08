@@ -20,6 +20,19 @@
 - Vague suivante : as /as/.
 - Réserve : tee /ti/, anse /ɑ̃s/.
 
+## Stratégies explicites pour les segments difficiles
+
+| Segment | Mots utiles | Stratégie | Pistes lexicales | Fallback visible | Statut |
+|---|---:|---|---|---|---|
+| /mɑ̃/ | 18 | alternate_segmentation_first | man, mans, mens | MENT | contextual_grapheme_rule_not_yet_authorized |
+| /ɛ̃/ | 16 | alternate_segmentation_first | hein, ain | IN, UN | contextual_grapheme_rule_not_yet_authorized |
+| /œʁ/ | 11 | scene_comparison | heure | — | compare_two_scene_variants_in_blind_naming_test |
+| /aʁ/ | 8 | scene_comparison_for_older_users | art | — | prototype_only_after_higher_confidence_natural_objects |
+| /al/ | 9 | alternate_segmentation_preferred | halle, ale | — | search_shared_alternative_segments_before_visual_prototype |
+| /tʁ/ | 29 | alternate_segmentation_required | — | TR | grapheme_cluster_general_mode_research_only |
+| /sjɔ̃/ | 20 | alternate_segmentation_required | scion | TION, SION | contextual_grapheme_rule_not_yet_authorized |
+| /di/ | 16 | alternate_segmentation_required | dit | — | search_alternate_exact_decompositions; do_not_use_letter_D_for_di |
+
 ## Alternatives automatiques aux segments difficiles
 
 | Segment difficile | Mots utiles débloqués | Autre segment | Candidat naturel | Mots communs | Exemples |
@@ -96,4 +109,4 @@
 | 29 | /wa/ | 4 | 83.804 | 5 | oie, ouah, oye, wouah |
 | 30 | /ɔʁ/ | 4 | 382.03 | 6 | or, ord, ort, ore |
 
-> La liste Éduscol renforce l’utilité scolaire; elle ne fournit pas d’âge d’acquisition. Les scores visuels et de dénomination restent des hypothèses jusqu’aux tests humains.
+> Les graphèmes du registre des segments difficiles sont des pistes de recherche du mode général, pas des règles autorisées. La liste Éduscol renforce l’utilité scolaire; elle ne fournit pas d’âge d’acquisition.

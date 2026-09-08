@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T07:01:15.139Z",
+  "generatedAt": "2026-09-08T07:15:32.292Z",
   "source": "Lexique 4",
   "sourceLicense": "CC BY-SA 4.0",
   "schoolFrequencyEvidence": {
@@ -17,6 +17,7 @@
     "gain": "Useful Rebulo gain is primary; full Lexique-style target gain remains secondary context.",
     "researchPriority": "Automatic segment ranking uses useful coverage enriched by public school-frequency evidence when available. Curated candidate ranking additionally incorporates visual plausibility, naming risk and editorial age accessibility.",
     "alternativeRoutes": "Competing one-brick opportunities signal real alternative decomposition routes when they unlock some of the same useful words.",
+    "hardSegments": "High-value gaps with weak natural pictograms receive an explicit research strategy: alternate segmentation, scene comparison, or non-authorized visible grapheme research. No contextual grapheme is activated by this registry.",
     "waveSelection": "The current prototype wave is stored separately from historical candidate-bank decisions.",
     "visualCaution": "Lexical exactness and automatic scores never imply imageability, spontaneous naming, age suitability, or clinical validation."
   },
@@ -84,6 +85,129 @@
   "candidateBankValidation": {
     "valid": true,
     "warnings": []
+  },
+  "hardSegmentStrategies": {
+    "summary": {
+      "segmentCount": 8,
+      "scene": 2,
+      "alternate": 6,
+      "visibleFallbackResearch": 4
+    },
+    "warnings": [],
+    "segments": [
+      {
+        "ipa": "mɑ̃",
+        "usefulUnlockReference": 18,
+        "strategy": "alternate_segmentation_first",
+        "lexicalLeads": [
+          "man",
+          "mans",
+          "mens"
+        ],
+        "lexicalAssessment": "phonetic_exact_but_not_natural_child_pictograms",
+        "visibleFallbackResearch": [
+          "MENT"
+        ],
+        "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
+        "nextGate": "measure_alternate_segmentations_then_formalize_contextual_grapheme_if_still_needed"
+      },
+      {
+        "ipa": "ɛ̃",
+        "usefulUnlockReference": 16,
+        "strategy": "alternate_segmentation_first",
+        "lexicalLeads": [
+          "hein",
+          "ain"
+        ],
+        "lexicalAssessment": "exact_but_poor_or_ambiguous_visual_naming",
+        "visibleFallbackResearch": [
+          "IN",
+          "UN"
+        ],
+        "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
+        "nextGate": "compare_alternate_segmentations_before_any_grapheme_rule"
+      },
+      {
+        "ipa": "œʁ",
+        "usefulUnlockReference": 11,
+        "strategy": "scene_comparison",
+        "lexicalLeads": [
+          "heure"
+        ],
+        "lexicalAssessment": "exact_and_scene_plausible_but_high_naming_risk",
+        "visualHypotheses": [
+          "personne consultant clairement l'heure sur une horloge ou une montre, sans texte dominant"
+        ],
+        "nextGate": "compare_two_scene_variants_in_blind_naming_test"
+      },
+      {
+        "ipa": "aʁ",
+        "usefulUnlockReference": 8,
+        "strategy": "scene_comparison_for_older_users",
+        "lexicalLeads": [
+          "art"
+        ],
+        "lexicalAssessment": "exact_but_abstract_concept_with_high_naming_variability",
+        "visualHypotheses": [
+          "petite scène cohérente réunissant tableau, palette et sculpture pour viser le concept global art"
+        ],
+        "nextGate": "prototype_only_after_higher_confidence_natural_objects"
+      },
+      {
+        "ipa": "al",
+        "usefulUnlockReference": 9,
+        "strategy": "alternate_segmentation_preferred",
+        "lexicalLeads": [
+          "halle",
+          "ale"
+        ],
+        "lexicalAssessment": "halle_has_high_naming_risk_and_ale_is_age_inappropriate_as_visual_reference",
+        "nextGate": "search_shared_alternative_segments_before_visual_prototype"
+      },
+      {
+        "ipa": "tʁ",
+        "usefulUnlockReference": 29,
+        "strategy": "alternate_segmentation_required",
+        "lexicalLeads": [],
+        "lexicalAssessment": "no_natural_exact_whole_word_candidate",
+        "visibleFallbackResearch": [
+          "TR"
+        ],
+        "fallbackStatus": "grapheme_cluster_general_mode_research_only",
+        "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
+      },
+      {
+        "ipa": "sjɔ̃",
+        "usefulUnlockReference": 20,
+        "strategy": "alternate_segmentation_required",
+        "lexicalLeads": [
+          "scion"
+        ],
+        "lexicalAssessment": "exact_but_spontaneous_naming_risk_is_very_high",
+        "visibleFallbackResearch": [
+          "TION",
+          "SION"
+        ],
+        "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
+        "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
+      },
+      {
+        "ipa": "di",
+        "usefulUnlockReference": 16,
+        "strategy": "alternate_segmentation_required",
+        "lexicalLeads": [
+          "dit"
+        ],
+        "lexicalAssessment": "exact_but_not_naturally_picturable",
+        "rejectedFallbacks": [
+          {
+            "label": "D",
+            "reason": "French letter name is /de/, not /di/; phonetic mismatch."
+          }
+        ],
+        "nextGate": "search_alternate_exact_decompositions; do_not_use_letter_D_for_di"
+      }
+    ]
   },
   "waveSelection": {
     "version": "1.0.0",
@@ -3977,7 +4101,22 @@
       "visualAssessment": "human_review_required",
       "spontaneousNamingAssessment": "human_review_required",
       "ageSuitabilityAssessment": "human_review_required",
-      "clinicalAssessment": "not_assessed"
+      "clinicalAssessment": "not_assessed",
+      "hardSegmentStrategy": {
+        "ipa": "sjɔ̃",
+        "usefulUnlockReference": 20,
+        "strategy": "alternate_segmentation_required",
+        "lexicalLeads": [
+          "scion"
+        ],
+        "lexicalAssessment": "exact_but_spontaneous_naming_risk_is_very_high",
+        "visibleFallbackResearch": [
+          "TION",
+          "SION"
+        ],
+        "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
+        "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
+      }
     },
     {
       "ipa": "mɑ̃",
@@ -4248,7 +4387,23 @@
       "visualAssessment": "human_review_required",
       "spontaneousNamingAssessment": "human_review_required",
       "ageSuitabilityAssessment": "human_review_required",
-      "clinicalAssessment": "not_assessed"
+      "clinicalAssessment": "not_assessed",
+      "hardSegmentStrategy": {
+        "ipa": "mɑ̃",
+        "usefulUnlockReference": 18,
+        "strategy": "alternate_segmentation_first",
+        "lexicalLeads": [
+          "man",
+          "mans",
+          "mens"
+        ],
+        "lexicalAssessment": "phonetic_exact_but_not_natural_child_pictograms",
+        "visibleFallbackResearch": [
+          "MENT"
+        ],
+        "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
+        "nextGate": "measure_alternate_segmentations_then_formalize_contextual_grapheme_if_still_needed"
+      }
     },
     {
       "ipa": "di",
@@ -4505,7 +4660,23 @@
       "visualAssessment": "human_review_required",
       "spontaneousNamingAssessment": "human_review_required",
       "ageSuitabilityAssessment": "human_review_required",
-      "clinicalAssessment": "not_assessed"
+      "clinicalAssessment": "not_assessed",
+      "hardSegmentStrategy": {
+        "ipa": "di",
+        "usefulUnlockReference": 16,
+        "strategy": "alternate_segmentation_required",
+        "lexicalLeads": [
+          "dit"
+        ],
+        "lexicalAssessment": "exact_but_not_naturally_picturable",
+        "rejectedFallbacks": [
+          {
+            "label": "D",
+            "reason": "French letter name is /de/, not /di/; phonetic mismatch."
+          }
+        ],
+        "nextGate": "search_alternate_exact_decompositions; do_not_use_letter_D_for_di"
+      }
     },
     {
       "ipa": "ɑ̃",
@@ -5115,7 +5286,23 @@
       "visualAssessment": "human_review_required",
       "spontaneousNamingAssessment": "human_review_required",
       "ageSuitabilityAssessment": "human_review_required",
-      "clinicalAssessment": "not_assessed"
+      "clinicalAssessment": "not_assessed",
+      "hardSegmentStrategy": {
+        "ipa": "ɛ̃",
+        "usefulUnlockReference": 16,
+        "strategy": "alternate_segmentation_first",
+        "lexicalLeads": [
+          "hein",
+          "ain"
+        ],
+        "lexicalAssessment": "exact_but_poor_or_ambiguous_visual_naming",
+        "visibleFallbackResearch": [
+          "IN",
+          "UN"
+        ],
+        "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
+        "nextGate": "compare_alternate_segmentations_before_any_grapheme_rule"
+      }
     },
     {
       "ipa": "œʁ",
@@ -5350,7 +5537,20 @@
       "visualAssessment": "human_review_required",
       "spontaneousNamingAssessment": "human_review_required",
       "ageSuitabilityAssessment": "human_review_required",
-      "clinicalAssessment": "not_assessed"
+      "clinicalAssessment": "not_assessed",
+      "hardSegmentStrategy": {
+        "ipa": "œʁ",
+        "usefulUnlockReference": 11,
+        "strategy": "scene_comparison",
+        "lexicalLeads": [
+          "heure"
+        ],
+        "lexicalAssessment": "exact_and_scene_plausible_but_high_naming_risk",
+        "visualHypotheses": [
+          "personne consultant clairement l'heure sur une horloge ou une montre, sans texte dominant"
+        ],
+        "nextGate": "compare_two_scene_variants_in_blind_naming_test"
+      }
     },
     {
       "ipa": "tʁ",
@@ -5615,7 +5815,19 @@
       "visualAssessment": "human_review_required",
       "spontaneousNamingAssessment": "human_review_required",
       "ageSuitabilityAssessment": "human_review_required",
-      "clinicalAssessment": "not_assessed"
+      "clinicalAssessment": "not_assessed",
+      "hardSegmentStrategy": {
+        "ipa": "tʁ",
+        "usefulUnlockReference": 29,
+        "strategy": "alternate_segmentation_required",
+        "lexicalLeads": [],
+        "lexicalAssessment": "no_natural_exact_whole_word_candidate",
+        "visibleFallbackResearch": [
+          "TR"
+        ],
+        "fallbackStatus": "grapheme_cluster_general_mode_research_only",
+        "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
+      }
     },
     {
       "ipa": "al",
@@ -5877,7 +6089,18 @@
       "visualAssessment": "human_review_required",
       "spontaneousNamingAssessment": "human_review_required",
       "ageSuitabilityAssessment": "human_review_required",
-      "clinicalAssessment": "not_assessed"
+      "clinicalAssessment": "not_assessed",
+      "hardSegmentStrategy": {
+        "ipa": "al",
+        "usefulUnlockReference": 9,
+        "strategy": "alternate_segmentation_preferred",
+        "lexicalLeads": [
+          "halle",
+          "ale"
+        ],
+        "lexicalAssessment": "halle_has_high_naming_risk_and_ale_is_age_inappropriate_as_visual_reference",
+        "nextGate": "search_shared_alternative_segments_before_visual_prototype"
+      }
     },
     {
       "ipa": "aʁ",
@@ -6186,7 +6409,20 @@
       "visualAssessment": "human_review_required",
       "spontaneousNamingAssessment": "human_review_required",
       "ageSuitabilityAssessment": "human_review_required",
-      "clinicalAssessment": "not_assessed"
+      "clinicalAssessment": "not_assessed",
+      "hardSegmentStrategy": {
+        "ipa": "aʁ",
+        "usefulUnlockReference": 8,
+        "strategy": "scene_comparison_for_older_users",
+        "lexicalLeads": [
+          "art"
+        ],
+        "lexicalAssessment": "exact_but_abstract_concept_with_high_naming_variability",
+        "visualHypotheses": [
+          "petite scène cohérente réunissant tableau, palette et sculpture pour viser le concept global art"
+        ],
+        "nextGate": "prototype_only_after_higher_confidence_natural_objects"
+      }
     },
     {
       "ipa": "f",

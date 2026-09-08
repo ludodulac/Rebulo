@@ -1,3 +1,5 @@
+import {normalizeIPA} from './phonetic-engine.js';
+
 function candidateType(candidate={}){
   return String(candidate?.candidateType||'').trim();
 }
@@ -12,20 +14,33 @@ function isPictogramOrSceneCandidate(candidate={}){
   return /pictogram|scene/.test(type)&&Boolean(String(candidate?.label||'').trim());
 }
 
+function normalizedFallback(fallback,sourceIpa,researchIpa,evidence={}){
+  if(typeof fallback==='string'){
+    const label=fallback.trim();
+    if(!label)return null;
+    return {label,sourceIpa:sourceIpa||null,targetIpa:null,operationType:null,fallbackStatus:evidence.fallbackStatus||'research_only_not_authorized',nextGate:evidence.nextGate||null};
+  }
+  if(!fallback||typeof fallback!=='object')return null;
+  const label=String(fallback.label||'').trim();
+  const targetIpa=normalizeIPA(fallback.ipa||'');
+  if(!label||!targetIpa||targetIpa!==normalizeIPA(researchIpa||''))return null;
+  return {
+    label,
+    sourceIpa:sourceIpa||null,
+    targetIpa,
+    operationType:String(fallback.operationType||'').trim()||null,
+    fallbackStatus:fallback.status||evidence.fallbackStatus||'research_only_not_authorized',
+    nextGate:fallback.nextGate||evidence.nextGate||null
+  };
+}
+
 function documentedStrategyFallbacks(group={}){
   const fallbacks=[];
   for(const row of group?.strategyEvidence||[]){
     const evidence=row?.evidence||{};
-    for(const label of evidence.visibleFallbackResearch||[]){
-      const value=String(label||'').trim();
-      if(value&&!fallbacks.some(item=>item.label===value)){
-        fallbacks.push({
-          label:value,
-          sourceIpa:row.ipa||null,
-          fallbackStatus:evidence.fallbackStatus||'research_only_not_authorized',
-          nextGate:evidence.nextGate||null
-        });
-      }
+    for(const fallback of evidence.visibleFallbackResearch||[]){
+      const item=normalizedFallback(fallback,row.ipa,group.researchIpa,evidence);
+      if(item&&!fallbacks.some(existing=>existing.label===item.label&&existing.targetIpa===item.targetIpa))fallbacks.push(item);
     }
   }
   return fallbacks;

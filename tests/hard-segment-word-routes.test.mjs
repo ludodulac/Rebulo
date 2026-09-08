@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import {buildHardSegmentWordRoutes,hardSegmentWordRouteStats,buildVisualResearchNeedQueue,visualResearchNeedStats} from '../src/hard-segment-word-routes.js';
-import {classifyVisualResearchNeedQueue,visualResearchRouteStats} from '../src/hard-segment-research-routes.js';
+import {classifyVisualResearchNeedQueue,classifyVisualResearchRoute,visualResearchRouteStats} from '../src/hard-segment-research-routes.js';
 
 const strategies=[
   {ipa:'tʁ',strategy:'alternate_segmentation_required'},
@@ -119,4 +119,17 @@ assert.deepEqual(routeStats.groupCountsByRouteClass,{
   discover_new_representation:1
 });
 assert.equal(routeStats.targetCount,stats.targetsStillNeedingCuratedVisualAlternative,'research route classes must conserve every unresolved target exactly once');
-console.log('Hard segment word routes: unresolved visual needs stay partitioned while pictogram, documented visible-operation and genuinely new-representation research routes remain distinct.');
+
+const dFallback={label:'D',ipa:'d',operationType:'grapheme_sound',status:'grapheme_sound_general_mode_research_only',nextGate:'test_D_to_d'};
+const exactDGroup={needType:'find_lexical_or_visible_operation_for_phonetic_brick',researchIpa:'d',strategyEvidence:[{ipa:'di',evidence:{visibleFallbackResearch:[dFallback],fallbackStatus:'grapheme_sound_general_mode_research_only'}}]};
+const dRoute=classifyVisualResearchRoute(exactDGroup);
+assert.equal(dRoute.routeClass,'formalize_documented_visible_general_operation');
+assert.equal(dRoute.visibleOperations[0].label,'D');
+assert.equal(dRoute.visibleOperations[0].targetIpa,'d');
+assert.equal(dRoute.visibleOperations[0].operationType,'grapheme_sound');
+for(const leakedIpa of ['di','dite','mid']){
+  const leaked=classifyVisualResearchRoute({...exactDGroup,researchIpa:leakedIpa});
+  assert.equal(leaked.routeClass,'discover_new_representation',`D→/d/ must not leak into /${leakedIpa}/`);
+  assert.equal(leaked.visibleOperations.length,0);
+}
+console.log('Hard segment word routes: unresolved visual needs stay partitioned and IPA-scoped grapheme-sound fallbacks cannot leak into longer segments.');

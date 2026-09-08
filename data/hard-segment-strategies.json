@@ -1,7 +1,7 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "status": "research_only",
-  "objective": "Pour les segments Rebulo utiles mais mal représentables, privilégier une autre segmentation exacte avant de créer une image faible; n'autoriser un graphème que comme opération générale visible, définie et testable.",
+  "objective": "Pour les segments Rebulo utiles mais mal représentables, privilégier une autre segmentation exacte avant de créer une image faible; n'autoriser un graphème que comme opération générale visible, définie, IPA-ciblée et testable.",
   "segments": [
     {
       "ipa": "mɑ̃",
@@ -39,7 +39,17 @@
       "lexicalLeads": ["art"],
       "lexicalAssessment": "exact_but_abstract_concept_with_high_naming_variability",
       "visualHypotheses": ["petite scène cohérente réunissant tableau, palette et sculpture pour viser le concept global art"],
-      "nextGate": "prototype_only_after_higher_confidence_natural_objects"
+      "visibleFallbackResearch": [
+        {
+          "label": "R",
+          "ipa": "ʁ",
+          "operationType": "grapheme_sound",
+          "status": "grapheme_sound_general_mode_research_only",
+          "nextGate": "render_explicit_R_to_sound_cue_then_test_general_mode_comprehension"
+        }
+      ],
+      "fallbackStatus": "grapheme_sound_general_mode_research_only",
+      "nextGate": "prototype_art_only_after_higher_confidence_objects; keep_R_sound_explicit_and_general_only"
     },
     {
       "ipa": "al",
@@ -47,7 +57,24 @@
       "strategy": "alternate_segmentation_preferred",
       "lexicalLeads": ["halle", "ale"],
       "lexicalAssessment": "halle_has_high_naming_risk_and_ale_is_age_inappropriate_as_visual_reference",
-      "nextGate": "search_shared_alternative_segments_before_visual_prototype"
+      "visibleFallbackResearch": [
+        {
+          "label": "L",
+          "ipa": "l",
+          "operationType": "grapheme_sound",
+          "status": "grapheme_sound_general_mode_research_only",
+          "nextGate": "render_explicit_L_to_sound_cue_then_test_general_mode_comprehension"
+        },
+        {
+          "label": "N",
+          "ipa": "n",
+          "operationType": "grapheme_sound",
+          "status": "grapheme_sound_general_mode_research_only",
+          "nextGate": "render_explicit_N_to_sound_cue_then_test_general_mode_comprehension"
+        }
+      ],
+      "fallbackStatus": "grapheme_sound_general_mode_research_only",
+      "nextGate": "search_shared_alternative_segments_before_visual_prototype; keep_letter_sounds_explicit_and_general_only"
     },
     {
       "ipa": "tʁ",
@@ -75,11 +102,21 @@
       "strategy": "alternate_segmentation_required",
       "lexicalLeads": ["dit"],
       "lexicalAssessment": "exact_but_not_naturally_picturable",
-      "rejectedFallbacks": [
-        {"label": "D", "reason": "French letter name is /de/, not /di/; phonetic mismatch."}
+      "visibleFallbackResearch": [
+        {
+          "label": "D",
+          "ipa": "d",
+          "operationType": "grapheme_sound",
+          "status": "grapheme_sound_general_mode_research_only",
+          "nextGate": "render_explicit_D_to_sound_cue_then_test_general_mode_comprehension"
+        }
       ],
-      "nextGate": "search_alternate_exact_decompositions; do_not_use_letter_D_for_di"
+      "fallbackStatus": "grapheme_sound_general_mode_research_only",
+      "rejectedFallbacks": [
+        {"label": "D", "reason": "French letter name is /de/, not /di/; phonetic mismatch. This rejection concerns the letter-name operation, not an explicitly IPA-scoped grapheme_sound operation for /d/."}
+      ],
+      "nextGate": "search_alternate_exact_decompositions; D_as_letter_name_remains_invalid_for_di; explicit_D_to_d_stays_general_research_only"
     }
   ],
-  "caution": "Ce registre ordonne la recherche. Il n'active aucune brique, ne définit aucune nouvelle règle de graphème et ne vaut ni validation de dénomination ni validation clinique."
+  "caution": "Ce registre ordonne la recherche. Il n'active aucune brique, ne transforme jamais le nom d'une lettre en phonème caché et ne vaut ni validation de dénomination ni validation clinique. Une règle grapheme_sound n'est applicable qu'au segment IPA explicitement déclaré."
 }

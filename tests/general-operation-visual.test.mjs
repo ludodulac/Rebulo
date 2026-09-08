@@ -1,6 +1,12 @@
 import assert from 'node:assert/strict';
 import {generalOperationVisual} from '../src/general-operation-visual.js';
 
+const graphemeSound=generalOperationVisual({operationType:'grapheme_sound',grapheme:'D',ipa:'/d/',reading:'son d'});
+assert.deepEqual(graphemeSound,{kind:'grapheme-sound',grapheme:'D',ipa:'/d/',reading:'son d',visual:'grapheme_with_sound_cue'});
+assert.deepEqual(generalOperationVisual({operationType:'grapheme_sound',grapheme:'R',ipa:'/ʁ/'}),{kind:'grapheme-sound',grapheme:'R',ipa:'/ʁ/',reading:null,visual:'grapheme_with_sound_cue'});
+assert.equal(generalOperationVisual({operationType:'grapheme_sound',grapheme:'D',ipa:''}),null);
+assert.equal(generalOperationVisual({operationType:'grapheme_sound',grapheme:'',ipa:'/d/'}),null);
+
 const half=generalOperationVisual({operationType:'explicit_deletion',image:'yoyo.svg',label:'yo-yo',sourceReading:'yo-yo',keep:'premier yo',remove:'second yo',reading:'yo',visual:'half'});
 assert.deepEqual(half,{kind:'deletion-half',image:'yoyo.svg',label:'yo-yo',reading:'yo',sourceReading:'yo-yo',keep:'premier yo',remove:'second yo'});
 const crossed=generalOperationVisual({operationType:'explicit_deletion',image:'yoyo.svg',label:'yo-yo',sourceReading:'yo-yo',keep:'premier yo',remove:'second yo',reading:'yo',visual:'cross_out'});
@@ -21,4 +27,4 @@ assert.equal(generalOperationVisual({operationType:'whole_word',image:'mer.svg'}
 assert.equal(generalOperationVisual({operationType:'explicit_deletion',image:'yoyo.svg',sourceReading:'yo-yo',reading:'yo'}),null);
 assert.equal(generalOperationVisual({operationType:'repetition',image:'',sourceReading:'mer',count:2,reading:'mer mer'}),null);
 
-console.log('General operation visuals: deletion, substitution and repetition expose explicit render models.');
+console.log('General operation visuals: grapheme-sound, deletion, substitution and repetition expose explicit render models.');

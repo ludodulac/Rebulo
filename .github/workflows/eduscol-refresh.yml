@@ -8,6 +8,7 @@ permissions:
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
         with:
@@ -19,7 +20,7 @@ jobs:
       - name: Download official Eduscol PDF and import evidence
         run: |
           mkdir -p .cache
-          curl --fail --location --retry 3 'https://media.education.gouv.fr/file/ecole/20/6/liste-mots-par-frequence_115206.pdf' -o .cache/eduscol-frequency.pdf
+          curl --fail --location --connect-timeout 10 --max-time 60 --retry 2 'https://eduscol.education.fr/document/15655/download' -o .cache/eduscol-frequency.pdf
           pdftotext -raw .cache/eduscol-frequency.pdf .cache/eduscol-frequency.txt
           node scripts/import-eduscol-frequency.mjs .cache/eduscol-frequency.txt data/eduscol-frequency-lexicon.json
       - name: Commit evidence snapshot

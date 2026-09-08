@@ -31,35 +31,35 @@ Ce classement pénalise les sons unitaires sans candidat lexical naturel et favo
 
 | Rang | Segment | Route de recherche | Mots débloqués | Images seules | Candidats à examiner |
 |---:|---|---|---:|---:|---|
-| 1 | /e/ | review_exact_lexical_candidates | 78 | 65 | eh, hé, ais, est |
-| 2 | /ʁe/ | review_exact_lexical_candidates | 61 | 20 | ré, rée |
+| 1 | /ʁe/ | review_exact_lexical_candidates | 61 | 20 | ré, rée |
+| 2 | /e/ | review_exact_lexical_candidates | 78 | 65 | eh, hé, ais, est |
 | 3 | /sjɔ̃/ | review_exact_lexical_candidates | 30 | 13 | scion, cyon, scions |
 | 4 | /mɑ̃/ | review_exact_lexical_candidates | 29 | 15 | man, mans, mens |
-| 5 | /aʁ/ | review_exact_lexical_candidates | 14 | 11 | art, are, hart, arrhes |
-| 6 | /ʁo/ | review_exact_lexical_candidates | 17 | 11 | rot, rho, rôt, rhô |
+| 5 | /tʁ/ | search_scene_expression_or_alternate_segmentation | 51 | 17 | — |
+| 6 | /ɑ̃/ | review_exact_lexical_candidates | 34 | 21 | an, han |
 | 7 | /di/ | review_exact_lexical_candidates | 24 | 15 | dit, die, dit |
-| 8 | /al/ | review_exact_lexical_candidates | 14 | 8 | ale, halle, hâle, hale |
-| 9 | /œʁ/ | review_exact_lexical_candidates | 12 | 11 | heure, heurt, heur |
-| 10 | /ɛ̃/ | review_exact_lexical_candidates | 23 | 18 | hein, ein, eins, ain |
-| 11 | /la/ | review_exact_lexical_candidates | 14 | 10 | là, la, las |
-| 12 | /ɑ̃/ | review_exact_lexical_candidates | 34 | 21 | an, han |
+| 8 | /ɛ̃/ | review_exact_lexical_candidates | 23 | 18 | hein, ein, eins, ain |
+| 9 | /st/ | search_scene_expression_or_alternate_segmentation | 40 | 18 | — |
+| 10 | /aʁ/ | review_exact_lexical_candidates | 14 | 11 | art, are, hart, arrhes |
+| 11 | /ʁo/ | review_exact_lexical_candidates | 17 | 11 | rot, rho, rôt, rhô |
+| 12 | /al/ | review_exact_lexical_candidates | 14 | 8 | ale, halle, hâle, hale |
 | 13 | /kɔ̃/ | review_exact_lexical_candidates | 22 | 18 | con |
-| 14 | /ti/ | review_exact_lexical_candidates | 16 | 10 | tee, tie |
-| 15 | /ɛ/ | review_exact_lexical_candidates | 20 | 9 | hey, haie, es, aie |
-| 16 | /ɑ̃t/ | review_exact_lexical_candidates | 13 | 3 | ante, ente, hante, ente |
-| 17 | /wa/ | review_exact_lexical_candidates | 5 | 5 | oie, ouah, oye, wouah |
-| 18 | /in/ | review_exact_lexical_candidates | 6 | 3 | hin, in, yins |
-| 19 | /at/ | review_exact_lexical_candidates | 7 | 3 | hâte, atte, hâte |
+| 14 | /la/ | review_exact_lexical_candidates | 14 | 10 | là, la, las |
+| 15 | /œʁ/ | review_exact_lexical_candidates | 12 | 11 | heure, heurt, heur |
+| 16 | /ɛ/ | review_exact_lexical_candidates | 20 | 9 | hey, haie, es, aie |
+| 17 | /z/ | review_exact_lexical_candidates | 29 | 8 | zzz, zzzz |
+| 18 | /ti/ | review_exact_lexical_candidates | 16 | 10 | tee, tie |
+| 19 | /f/ | prefer_explicit_letter_or_other_visible_operation | 77 | 28 | — |
 | 20 | /k/ | prefer_explicit_letter_or_other_visible_operation | 136 | 76 | — |
 | 21 | /t/ | prefer_explicit_letter_or_other_visible_operation | 159 | 79 | — |
-| 22 | /ɔʁ/ | review_exact_lexical_candidates | 6 | 4 | or, ord, ort, ore |
+| 22 | /l/ | prefer_explicit_letter_or_other_visible_operation | 110 | 37 | — |
 | 23 | /s/ | prefer_explicit_letter_or_other_visible_operation | 108 | 65 | — |
-| 24 | /ɑ̃s/ | review_exact_lexical_candidates | 3 | 1 | anse, hans, hanse |
-| 25 | /tʁ/ | search_scene_expression_or_alternate_segmentation | 51 | 17 | — |
-| 26 | /as/ | review_exact_lexical_candidates | 5 | 3 | as, asse |
-| 27 | /ʁ/ | prefer_explicit_letter_or_other_visible_operation | 137 | 54 | — |
-| 28 | /ik/ | review_exact_lexical_candidates | 3 | 3 | hic, hics |
-| 29 | /z/ | review_exact_lexical_candidates | 29 | 8 | zzz, zzzz |
+| 24 | /ɑ̃t/ | review_exact_lexical_candidates | 13 | 3 | ante, ente, hante, ente |
+| 25 | /ʁ/ | prefer_explicit_letter_or_other_visible_operation | 137 | 54 | — |
+| 26 | /p/ | prefer_explicit_letter_or_other_visible_operation | 68 | 22 | — |
+| 27 | /v/ | prefer_explicit_letter_or_other_visible_operation | 55 | 24 | — |
+| 28 | /m/ | prefer_explicit_letter_or_other_visible_operation | 63 | 37 | — |
+| 29 | /ʒ/ | prefer_explicit_letter_or_other_visible_operation | 61 | 30 | — |
 | 30 | /n/ | prefer_explicit_letter_or_other_visible_operation | 113 | 44 | — |
 
 ## Rendement phonétique brut

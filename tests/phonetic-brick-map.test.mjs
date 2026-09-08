@@ -10,20 +10,26 @@ const opportunities=rankBrickOpportunities([kuResearch],targets,lexicon,{limit:1
 const sharedTarget={key:'mot|moti',word:'mot',targetIpa:'moti'};const leads=rankVisualResearchLeads([{...opportunities[0]},{ipa:'k',unitCount:1,targetCount:50,totalFrequency:1000,minAgeBandCandidate:5,wholeWordCandidates:[],strictUnlocked:10,generalUnlocked:10,totalUnlocked:20,weightedGain:500,usefulUnlocked:0,usefulWeightedGain:0,usefulUnlockedTargets:[],examplesUnlocked:['cas']},{ipa:'tʁ',unitCount:2,wholeWordCandidates:[],strictUnlocked:3,generalUnlocked:0,totalUnlocked:3,weightedGain:20,usefulUnlocked:1,usefulWeightedGain:20,usefulUnlockedTargets:[sharedTarget]},{ipa:'ɔʁ',unitCount:2,wholeWordCandidates:[{word:'or',pos:'NOM',frequency:30}],strictUnlocked:2,generalUnlocked:0,totalUnlocked:2,weightedGain:15,usefulUnlocked:1,usefulWeightedGain:15,usefulUnlockedTargets:[sharedTarget]}]);const kuLead=leads.find(r=>r.ipa==='ku'),kLead=leads.find(r=>r.ipa==='k');assert.equal(kuLead.researchRoute,'review_exact_lexical_candidates');assert.ok(kuLead.plausibleLexicalCandidates.some(c=>c.word==='cou'));assert.equal(kuLead.priorityObjective,'rebulo_useful_coverage_first_global_coverage_secondary');assert.equal(kLead.researchRoute,'prefer_explicit_letter_or_other_visible_operation');assert.ok(kuLead.researchPriorityScore>kLead.researchPriorityScore);
 const strategies=buildAlternativeSegmentStrategies(leads);const tr=strategies.find(row=>row.ipa==='tʁ');assert.equal(tr.strategyState,'alternate_one_brick_routes_found');assert.equal(tr.alternativeSegments[0].ipa,'ɔʁ');assert.equal(tr.alternativeSegments[0].naturalCandidate,'or');assert.deepEqual(tr.alternativeSegments[0].sharedExamples,['mot']);
 
-const hardSearchTargets=[{target:'ab',targetIpa:'ab',frequency:10,ageBandCandidate:7,rebuloUtilityTier:'child_common'},{target:'hors-sujet',targetIpa:'zo',frequency:20,ageBandCandidate:7,rebuloUtilityTier:'child_common'}];
-const hardSearchInventory=[{id:'a',label:'A-test',ipa:'a',active:true,strictEligible:true}];
+const hardSearchTargets=[{target:'abc',targetIpa:'abc',frequency:10,ageBandCandidate:7,rebuloUtilityTier:'child_common'},{target:'hors-sujet',targetIpa:'zo',frequency:20,ageBandCandidate:7,rebuloUtilityTier:'child_common'}];
+const hardSearchInventory=[{id:'a',label:'A-test',ipa:'a',active:true,strictEligible:true},{id:'c',label:'C-test',ipa:'c',active:true,strictEligible:true}];
 const hardSearchRows=[
   {ipa:'b',unitCount:1,wholeWordCandidates:[]},
-  {ipa:'c',unitCount:1,wholeWordCandidates:[]},
-  {ipa:'d',unitCount:1,wholeWordCandidates:[{word:'de-test',pos:'NOM',frequency:1}]}
+  {ipa:'x',unitCount:1,wholeWordCandidates:[]},
+  {ipa:'y',unitCount:1,wholeWordCandidates:[{word:'y-test',pos:'NOM',frequency:1}]}
 ];
-const hardSearch=buildHardRouteOpportunitySearch(hardSearchRows,hardSearchTargets,hardSearchInventory,{segments:[{ipa:'b'}]},{maxRows:3,maxOperations:4});
-assert.equal(hardSearch.registeredSegmentCount,1);
-assert.equal(hardSearch.sourceOpportunityCount,1);
-assert.equal(hardSearch.hardTargetCount,1,'expanded route search must be restricted to targets actually unlocked by registered hard segments');
-assert.equal(hardSearch.searchedResearchRowCount,3);
-assert.equal(hardSearch.opportunities.length,3,'targeted route search may inspect rows beyond the smaller global priority window');
-assert.ok(hardSearch.opportunities.some(row=>row.ipa==='d'));
-assert.equal(hardSearch.sourceOpportunities[0].usefulUnlockedTargets[0].word,'ab');
+const hardLexicalEntries=[{word:'bc-test',lemma:'bc-test',ipa:'bc',frequency:3,pos:'NOM',syllableCount:1}];
+const targetedHardSearch=buildHardRouteOpportunitySearch(hardSearchRows,hardSearchTargets,hardSearchInventory,{segments:[{ipa:'b'}]},{maxRows:20,maxOperations:4,entries:hardLexicalEntries});
+assert.equal(targetedHardSearch.registeredSegmentCount,1);
+assert.equal(targetedHardSearch.sourceOpportunityCount,1);
+assert.equal(targetedHardSearch.hardTargetCount,1,'hard-route search must be restricted to targets actually unlocked by registered hard segments');
+assert.equal(targetedHardSearch.researchPoolMode,'hard_target_segment_inventory');
+assert.ok(targetedHardSearch.opportunities.some(row=>row.ipa==='bc'),'targeted hard-word inventory must discover locally relevant segments absent from the global research rows');
+assert.ok(targetedHardSearch.opportunities.find(row=>row.ipa==='bc').wholeWordCandidates.some(candidate=>candidate.word==='bc-test'));
+assert.equal(targetedHardSearch.sourceOpportunities[0].usefulUnlockedTargets[0].word,'abc');
+const fallbackHardSearch=buildHardRouteOpportunitySearch(hardSearchRows,hardSearchTargets,hardSearchInventory,{segments:[{ipa:'b'}]},{maxRows:3,maxOperations:4});
+assert.equal(fallbackHardSearch.researchPoolMode,'provided_research_rows');
+assert.equal(fallbackHardSearch.searchedResearchRowCount,3);
+assert.equal(fallbackHardSearch.opportunities.length,3,'compatibility fallback may still inspect provided rows');
+assert.ok(fallbackHardSearch.opportunities.some(row=>row.ipa==='y'));
 assert.throws(()=>buildHardRouteOpportunitySearch(hardSearchRows,hardSearchTargets,hardSearchInventory,{segments:[{ipa:'missing'}]},{maxRows:3}),/missing registered source segments/);
-console.log('Phonetic brick map: useful coverage, exact candidates, automatic alternatives and targeted expanded hard-route search passed.');
+console.log('Phonetic brick map: useful coverage, exact candidates, automatic alternatives and hard-target-local route search passed.');

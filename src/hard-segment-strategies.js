@@ -1,7 +1,25 @@
 import {normalizeIPA} from './phonetic-engine.js';
 
 const ALLOWED_STRATEGIES=new Set(['alternate_segmentation_first','scene_comparison','scene_comparison_for_older_users','alternate_segmentation_preferred','alternate_segmentation_required']);
-const AUTHORIZED_FALLBACK_STATUSES=new Set(['contextual_grapheme_rule_not_yet_authorized','grapheme_cluster_general_mode_research_only']);
+const AUTHORIZED_FALLBACK_STATUSES=new Set(['contextual_grapheme_rule_not_yet_authorized','grapheme_cluster_general_mode_research_only','grapheme_sound_general_mode_research_only']);
+
+function validateVisibleFallbacks(row,sourceIpa,errors){
+  for(const fallback of row.visibleFallbackResearch||[]){
+    if(typeof fallback==='string'){
+      if(!fallback.trim())errors.push(`Fallback visible vide pour /${sourceIpa}/.`);
+      continue;
+    }
+    if(!fallback||typeof fallback!=='object'){
+      errors.push(`Fallback visible invalide pour /${sourceIpa}/.`);
+      continue;
+    }
+    const label=String(fallback.label||'').trim();
+    const targetIpa=normalizeIPA(fallback.ipa||'');
+    if(!label||!targetIpa)errors.push(`Fallback graphème-son incomplet pour /${sourceIpa}/.`);
+    if(fallback.operationType!=='grapheme_sound')errors.push(`Fallback IPA ciblé de /${sourceIpa}/ sans operationType grapheme_sound.`);
+    if(!String(fallback.status||'').includes('research_only'))errors.push(`Fallback graphème-son /${targetIpa||'?'} / présenté comme autorisé trop tôt.`);
+  }
+}
 
 export function validateHardSegmentStrategies(registry={}){
   const errors=[],warnings=[],seen=new Set();
@@ -13,6 +31,7 @@ export function validateHardSegmentStrategies(registry={}){
     if(!ALLOWED_STRATEGIES.has(row.strategy))errors.push(`Stratégie inconnue pour /${ipa}/: ${row.strategy}`);
     if((row.visibleFallbackResearch||[]).length&&!AUTHORIZED_FALLBACK_STATUSES.has(row.fallbackStatus))errors.push(`Fallback visible non borné pour /${ipa}/.`);
     if((row.visibleFallbackResearch||[]).length&&String(row.fallbackStatus).includes('research')===false&&String(row.fallbackStatus).includes('not_yet_authorized')===false)errors.push(`Fallback de /${ipa}/ présenté comme autorisé trop tôt.`);
+    validateVisibleFallbacks(row,ipa,errors);
     if(!(row.nextGate||'').trim())errors.push(`Segment /${ipa}/ sans prochaine étape.`);
     if(row.strategy.startsWith('scene_')&&!(row.visualHypotheses||[]).length)errors.push(`Scène /${ipa}/ sans hypothèse visuelle.`);
     if(row.strategy.includes('alternate_segmentation')&&!(row.lexicalAssessment||'').trim())warnings.push(`Segment /${ipa}/ sans diagnostic lexical.`);

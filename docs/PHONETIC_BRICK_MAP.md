@@ -13,7 +13,28 @@
 - Avec lettre explicite : 161 (2.0 %).
 - Non résolu : 7512 (93.2 %).
 
-## Priorités de recherche utiles
+## Candidats déjà curatés — priorité qualité × utilité
+
+| Rang | Segment | Meilleur candidat recherche | Score qualité candidat | Mots utiles débloqués | Priorité combinée |
+|---:|---|---|---:|---:|---:|
+| 1 | /e/ | É | 50 | 45 | 310.369 |
+| 2 | /ʁe/ | ré | 59 | 37 | 302.902 |
+| 3 | /ɑ̃/ | AN | 50 | 22 | 170.647 |
+| 4 | /ɛ/ | haie | 85 | 12 | 169.3 |
+| 5 | /œʁ/ | heure | 59 | 11 | 120.632 |
+| 6 | /sjɔ̃/ | — | — | 20 | 105.551 |
+| 7 | /di/ | — | — | 16 | 87.72 |
+| 8 | /al/ | halle | 52 | 9 | 86.613 |
+| 9 | /ɔʁ/ | or | 85 | 4 | 84.696 |
+| 10 | /ti/ | tee | 69 | 6 | 83.875 |
+| 11 | /aʁ/ | art | 56 | 8 | 83.339 |
+| 12 | /wa/ | oie | 95 | 4 | 82.142 |
+| 13 | /as/ | as | 85 | 4 | 73.848 |
+| 14 | /kɔ̃/ | — | — | 11 | 67.148 |
+| 15 | /ʁo/ | rot | 49 | 7 | 57.383 |
+| 16 | /ɑ̃s/ | anse | 63 | 1 | 31.475 |
+
+## Priorités automatiques de recherche utiles
 
 | Rang | Segment | Mots utiles débloqués | Gain utile pondéré | Gain global | Candidats à examiner |
 |---:|---|---:|---:|---:|---|
@@ -83,4 +104,4 @@
 | 29 | /je/ | 14 | 28 | 207.727 |
 | 30 | /ʁə/ | 13 | 21 | 618.073 |
 
-> Les priorités produit utilisent le vocabulaire utile Rebulo. Les statistiques globales restent visibles comme potentiel linguistique secondaire. Aucune piste n’est validée visuellement ni cliniquement par ce classement.
+> Les scores de qualité sont des heuristiques de recherche fondées sur des hypothèses éditoriales. Une validation humaine de dénomination reste obligatoire avant toute activation.

@@ -13,6 +13,33 @@
 - Avec lettre explicite : 161 (2.0 %).
 - Non résolu : 7512 (93.2 %).
 
+## Vague de prototypes actuelle
+
+- Première vague : haie /ɛ/, oie /wa/, or /ɔʁ/.
+- Simulation phonétique : +31 cibles techniquement jouables.
+- Vague suivante : as /as/.
+- Réserve : tee /ti/, anse /ɑ̃s/.
+
+## Alternatives automatiques aux segments difficiles
+
+| Segment difficile | Mots utiles débloqués | Autre segment | Candidat naturel | Mots communs aux deux routes | Exemples |
+|---|---:|---|---|---:|---|
+| /tʁ/ | 29 | /t/ | — | 9 | travers, attraper, traverser, rattraper, patrie, tracer |
+| /k/ | 84 | /ks/ | — | 4 | sexy, accident, lexie, maxi |
+| /t/ | 97 | /tʁ/ | — | 9 | travers, attraper, traverser, rattraper, patrie, tracer |
+| /l/ | 68 | /al/ | ale | 9 | allô, signal, allo, idéal, haleine, allergie |
+| /s/ | 65 | /l/ | — | 5 | laisse, domicile, missile, lester, docile |
+| /p/ | 51 | /pʁ/ | — | 6 | esprit, prix, privé, pris, primaire, priver |
+| /ʁ/ | 85 | /aʁ/ | art | 8 | art, bagarre, are, harper, artère, mouchard |
+| /n/ | 70 | /ʁ/ | — | 6 | reine, sirène, arène, marraine, rênes, raina |
+| /b/ | 60 | /bl/ | — | 2 | obliger, obligé |
+| /d/ | 48 | /di/ | dit | 12 | dîner, paradis, midi, diriger, diner, dit |
+| /st/ | 22 | /s/ | — | 1 | mystère |
+| /bl/ | 18 | /b/ | — | 2 | obliger, obligé |
+| /m/ | 32 | /l/ | — | 2 | mille, similaire |
+| /pʁ/ | 16 | /p/ | — | 6 | esprit, prix, privé, pris, primaire, priver |
+| /ks/ | 8 | /k/ | — | 4 | sexy, accident, lexie, maxi |
+
 ## Candidats déjà curatés — priorité qualité × utilité
 
 | Rang | Segment | Meilleur candidat recherche | Score qualité candidat | Mots utiles débloqués | Priorité combinée |
@@ -69,39 +96,4 @@
 | 29 | /wa/ | 4 | 83.804 | 5 | oie, ouah, oye, wouah |
 | 30 | /ɔʁ/ | 4 | 382.03 | 6 | or, ord, ort, ore |
 
-## Potentiel linguistique global conservé
-
-| Rang | Segment | Gain utile | Gain global | Fréquence globale pondérée |
-|---:|---|---:|---:|---:|
-| 1 | /t/ | 97 | 159 | 3642.559 |
-| 2 | /ʁ/ | 85 | 137 | 2342.773 |
-| 3 | /k/ | 84 | 136 | 3984.163 |
-| 4 | /n/ | 70 | 113 | 1422.66 |
-| 5 | /l/ | 68 | 110 | 3153.277 |
-| 6 | /s/ | 65 | 108 | 2827.394 |
-| 7 | /b/ | 60 | 94 | 1091.536 |
-| 8 | /p/ | 51 | 68 | 2162.05 |
-| 9 | /f/ | 48 | 77 | 3842.631 |
-| 10 | /d/ | 48 | 83 | 842.677 |
-| 11 | /e/ | 45 | 78 | 2003.547 |
-| 12 | /ʒ/ | 37 | 61 | 1430.758 |
-| 13 | /ʁe/ | 37 | 61 | 730.311 |
-| 14 | /v/ | 32 | 55 | 3307.413 |
-| 15 | /m/ | 32 | 63 | 1428.634 |
-| 16 | /g/ | 31 | 61 | 896.459 |
-| 17 | /tʁ/ | 29 | 51 | 2190.626 |
-| 18 | /ɑ̃/ | 22 | 34 | 1312.14 |
-| 19 | /st/ | 22 | 40 | 643.02 |
-| 20 | /ʃ/ | 22 | 37 | 522.664 |
-| 21 | /sjɔ̃/ | 20 | 30 | 318.246 |
-| 22 | /z/ | 20 | 29 | 175.235 |
-| 23 | /mɑ̃/ | 18 | 29 | 822.427 |
-| 24 | /bl/ | 18 | 22 | 494.585 |
-| 25 | /ɛ̃/ | 16 | 23 | 839.352 |
-| 26 | /pʁ/ | 16 | 19 | 722.115 |
-| 27 | /j/ | 16 | 29 | 575.84 |
-| 28 | /di/ | 16 | 24 | 215.027 |
-| 29 | /je/ | 14 | 28 | 207.727 |
-| 30 | /ʁə/ | 13 | 21 | 618.073 |
-
-> Les scores de qualité sont des heuristiques de recherche fondées sur des hypothèses éditoriales. Une validation humaine de dénomination reste obligatoire avant toute activation.
+> Une alternative signifie que deux briques virtuelles différentes peuvent indépendamment débloquer certains mêmes mots. Il faut encore choisir la segmentation la plus naturelle et la représentation la plus fiable.

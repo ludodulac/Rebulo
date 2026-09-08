@@ -13,7 +13,7 @@ assert.equal(registry.schemaVersion,'1.0');assert.deepEqual(registry.records,[],
 const record=schema.$defs.testRecord;for(const field of ['concept','targetIpa','asset','population','participantCount','instruction','observations','targetResponseFrequency','competingResponses','review'])assert.ok(record.required.includes(field));
 assert.equal(schema.$defs.observation.additionalProperties,false);assert.deepEqual(schema.$defs.observation.required,['responseVerbatim','hesitation','noResponse']);assert.match(schema.$defs.review.description,/must never be inferred automatically/i);
 assert.equal(comparisonRegistry.schemaVersion,'1.0');assert.ok(comparisonSchema.$defs.comparison.required.includes('revision'));assert.match(comparisonSchema.$defs.comparison.properties.revision.description,/must change whenever/i);assert.equal(comparisonSchema.$defs.comparison.properties.activationState.const,'inactive_until_human_decision');assert.match(comparisonSchema.$defs.candidate.properties.namingRisks.description,/hypotheses only/i);assert.match(comparisonSchema.$defs.humanDecision.description,/does not activate a lexicon entry/i);
-assert.ok(planSchema.$defs.plan.required.includes('comparisonRevision'));
+assert.ok(planSchema.$defs.plan.required.includes('comparisonRevision'));assert.ok(planSchema.$defs.plan.properties.status.enum.includes('blocked_pending_stimuli'));
 
 const potComparison=comparisonRegistry.comparisons.find(item=>item.concept==='pot');
 assert.ok(potComparison);assert.equal(potComparison.revision,'pot-v3');assert.equal(potComparison.targetIpa,'/po/');assert.equal(potComparison.activationState,'inactive_until_human_decision');assert.equal(potComparison.humanDecision,null);assert.equal(potComparison.candidates.length,4);
@@ -45,6 +45,10 @@ assert.equal(nidComparison.candidates.length,1);
 const nidCandidate=nidComparison.candidates[0];assert.equal(nidCandidate.candidateId,'nid-rebulo-comic-v1');assert.equal(nidCandidate.asset,'assets/research/nid-comic-v1.svg');assert.equal(nidCandidate.namingTestStatus,'not_run');assert.ok(nidCandidate.namingRisks.includes("nid d'oiseau"));await access(new URL(`../${nidCandidate.asset}`,import.meta.url));
 assert.equal(nidPlan.comparisonRevision,'nid-v1');assert.deepEqual(nidPlan.candidateIds,['nid-rebulo-comic-v1']);assert.equal(nidPlan.activationState,'inactive_until_human_decision');assert.equal(nidPlan.capture.firstSpontaneousResponseOnly,true);assert.equal(nidPlan.capture.anonymousOnly,true);assert.equal(nidPlan.decisionGate.requiresHumanReview,true);assert.equal(nidPlan.decisionGate.automaticActivation,false);assert.match(nidPlan.instruction,/Qu’est-ce que c’est/);
 
+const heureComparison=comparisonRegistry.comparisons.find(item=>item.concept==='heure');
+const heurePlan=planRegistry.plans.find(item=>item.concept==='heure');
+assert.ok(heureComparison);assert.ok(heurePlan);assert.equal(heureComparison.revision,'heure-v1');assert.equal(heureComparison.targetIpa,'/œʁ/');assert.equal(heureComparison.humanDecision,null);assert.equal(heureComparison.candidates.length,2);assert.ok(heureComparison.candidates.every(item=>item.availability==='pending'&&item.namingTestStatus==='not_run'));assert.deepEqual(heurePlan.candidateIds,heureComparison.candidates.map(item=>item.candidateId));assert.equal(heurePlan.status,'blocked_pending_stimuli');assert.equal(heurePlan.activationState,'inactive_until_human_decision');assert.equal(heurePlan.decisionGate.requiresHumanReview,true);assert.equal(heurePlan.decisionGate.automaticActivation,false);assert.match(heurePlan.decisionGate.note,/planche comparative/i);assert.match(heurePlan.instruction,/sans légende/i);
+
 // The old comparison plans remain immutable historical research. The founder's later
 // product decision activates new comic revisions for general use only; it does not
 // rewrite those old observations or turn them into clinical evidence.
@@ -57,4 +61,4 @@ for(const concept of ['pot','dos','raie','terre']){
   assert.match(item.image,new RegExp(`^assets/rebus/${concept}-comic\\.svg$`));
 }
 
-console.log('pictogram naming tests: historical comparison revisions stay immutable while nid-v1 remains research-only.');
+console.log('pictogram naming tests: historical revisions stay immutable; heure remains blocked until separate blind stimuli exist.');

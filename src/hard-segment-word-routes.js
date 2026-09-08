@@ -82,6 +82,37 @@ function routeScore(route={}){
   return strictBonus+visualBonus+representationBonus-operationPenalty-graphemePenalty+Number(route.alternativeUsefulUnlocked||0);
 }
 
+function targetVisualResearchNeed(sourceIpa='',routes=[]){
+  const visual=routes.find(route=>route.visualResearchStatus==='curated_visual_research_candidate');
+  if(visual)return null;
+  const lexical=routes.find(route=>route.representationStatus==='lexical_representation_candidate');
+  if(lexical)return {
+    needType:'curate_existing_lexical_candidate',
+    researchIpa:lexical.alternativeIpa,
+    routeMode:lexical.mode,
+    coverageType:lexical.coverageType,
+    representationLeads:lexical.representationLeads,
+    nextAction:'assess_visual_concept_then_naming_risk_before_prototype'
+  };
+  const phonetic=routes[0];
+  if(phonetic)return {
+    needType:'find_lexical_or_visible_operation_for_phonetic_brick',
+    researchIpa:phonetic.alternativeIpa,
+    routeMode:phonetic.mode,
+    coverageType:phonetic.coverageType,
+    representationLeads:[],
+    nextAction:'search_exact_whole_word_or_explicit_general_operation'
+  };
+  return {
+    needType:'resolve_source_segment',
+    researchIpa:sourceIpa,
+    routeMode:null,
+    coverageType:'uncovered',
+    representationLeads:[],
+    nextAction:'compare_source_scene_lexical_and_alternate_segmentation_strategies'
+  };
+}
+
 export function buildHardSegmentWordRoutes(strategies=[],opportunities=[],technicalInventory=[],{maxOperations=4,maxRoutesPerTarget=5,visualCandidateBank=null}={}){
   const opportunityByIpa=new Map((opportunities||[]).map(row=>[normalizeIPA(row.ipa),row]));
   const visualIndex=curatedVisualCandidateIndex(visualCandidateBank||{});
@@ -127,6 +158,7 @@ export function buildHardSegmentWordRoutes(strategies=[],opportunities=[],techni
       const retained=unique.slice(0,maxRoutesPerTarget);
       const representableCount=unique.filter(route=>route.representationStatus==='lexical_representation_candidate').length;
       const visualCount=unique.filter(route=>route.visualResearchStatus==='curated_visual_research_candidate').length;
+      const visualResearchNeed=visualCount?null:targetVisualResearchNeed(ipa,unique);
       targets.push({
         key:target.key,
         word:target.word,
@@ -139,7 +171,8 @@ export function buildHardSegmentWordRoutes(strategies=[],opportunities=[],techni
         routes:retained,
         resolutionState:unique.length?'exact_alternative_routes_found':'still_needs_new_representation_or_rule',
         representationResolutionState:representableCount?'representable_alternative_candidate_found':'still_needs_representable_alternative',
-        visualResolutionState:visualCount?'curated_visual_research_candidate_found':(representableCount?'lexical_candidate_needs_visual_curation':'still_needs_visual_representation')
+        visualResolutionState:visualCount?'curated_visual_research_candidate_found':(representableCount?'lexical_candidate_needs_visual_curation':'still_needs_visual_representation'),
+        visualResearchNeed
       });
     }
     rows.push({
@@ -157,6 +190,118 @@ export function buildHardSegmentWordRoutes(strategies=[],opportunities=[],techni
     });
   }
   return rows;
+}
+
+function compactCandidate(candidate={}){
+  return {
+    label:candidate.label||null,
+    candidateType:candidate.candidateType||null,
+    visualPlausibility:candidate.visualPlausibility||null,
+    spontaneousNamingRisk:candidate.spontaneousNamingRisk||null,
+    researchDecision:candidate.researchDecision||null,
+    nextGate:candidate.nextGate||null
+  };
+}
+
+function candidateBankEvidence(ipa='',bank={}){
+  const normalized=normalizeIPA(ipa);
+  const segment=(bank?.segments||[]).find(row=>normalizeIPA(row?.ipa||'')===normalized);
+  if(!segment)return null;
+  return {
+    recommendedRoute:segment.recommendedRoute||null,
+    candidates:(segment.candidates||[]).slice(0,5).map(compactCandidate)
+  };
+}
+
+function hardStrategyEvidence(sourceIpa='',registry={}){
+  const normalized=normalizeIPA(sourceIpa);
+  const row=(registry?.segments||[]).find(item=>normalizeIPA(item?.ipa||'')===normalized);
+  if(!row)return null;
+  return {
+    strategy:row.strategy||null,
+    lexicalLeads:row.lexicalLeads||[],
+    lexicalAssessment:row.lexicalAssessment||null,
+    visualHypotheses:row.visualHypotheses||[],
+    visibleFallbackResearch:row.visibleFallbackResearch||[],
+    fallbackStatus:row.fallbackStatus||null,
+    rejectedFallbacks:row.rejectedFallbacks||[],
+    nextGate:row.nextGate||null
+  };
+}
+
+const VISUAL_NEED_TYPE_ORDER={
+  curate_existing_lexical_candidate:0,
+  find_lexical_or_visible_operation_for_phonetic_brick:1,
+  resolve_source_segment:2
+};
+
+export function buildVisualResearchNeedQueue(rows=[],{visualCandidateBank=null,hardStrategyRegistry=null}={}){
+  const groups=new Map();
+  for(const source of rows||[]){
+    for(const target of source.targets||[]){
+      const need=target.visualResearchNeed;
+      if(!need)continue;
+      const researchIpa=normalizeIPA(need.researchIpa||source.ipa||'');
+      const key=`${need.needType}|${researchIpa}`;
+      let group=groups.get(key);
+      if(!group){
+        group={
+          needType:need.needType,
+          researchIpa,
+          affectedTargetCount:0,
+          minAgeBandCandidate:12,
+          sourceSegments:[],
+          lexicalCandidates:[],
+          examples:[],
+          routeModes:[],
+          candidateBankEvidence:candidateBankEvidence(researchIpa,visualCandidateBank||{}),
+          strategyEvidence:[],
+          nextAction:need.nextAction,
+          status:'research_only'
+        };
+        groups.set(key,group);
+      }
+      group.affectedTargetCount++;
+      group.minAgeBandCandidate=Math.min(group.minAgeBandCandidate,Number(target.ageBandCandidate)||12);
+      if(!group.sourceSegments.includes(source.ipa))group.sourceSegments.push(source.ipa);
+      if(need.routeMode&&!group.routeModes.includes(need.routeMode))group.routeModes.push(need.routeMode);
+      for(const lead of need.representationLeads||[]){
+        const word=String(lead.word||'').trim();
+        if(word&&!group.lexicalCandidates.some(candidate=>normalizedWord(candidate.word)===normalizedWord(word)))group.lexicalCandidates.push(lead);
+      }
+      if(group.examples.length<10)group.examples.push({word:target.word,targetIpa:target.targetIpa,sourceIpa:source.ipa,ageBandCandidate:target.ageBandCandidate});
+    }
+  }
+  for(const group of groups.values()){
+    group.sourceSegments.sort((a,b)=>a.localeCompare(b));
+    group.routeModes.sort();
+    group.lexicalCandidates=group.lexicalCandidates.slice(0,6);
+    group.strategyEvidence=group.sourceSegments.map(ipa=>({ipa,evidence:hardStrategyEvidence(ipa,hardStrategyRegistry||{})})).filter(row=>row.evidence);
+  }
+  return [...groups.values()].sort((a,b)=>{
+    const type=(VISUAL_NEED_TYPE_ORDER[a.needType]??99)-(VISUAL_NEED_TYPE_ORDER[b.needType]??99);
+    if(type)return type;
+    return b.affectedTargetCount-a.affectedTargetCount||a.minAgeBandCandidate-b.minAgeBandCandidate||a.researchIpa.localeCompare(b.researchIpa);
+  });
+}
+
+export function visualResearchNeedStats(queue=[]){
+  const counts={
+    curate_existing_lexical_candidate:0,
+    find_lexical_or_visible_operation_for_phonetic_brick:0,
+    resolve_source_segment:0
+  };
+  let unresolvedTargetCount=0;
+  for(const row of queue||[]){
+    const count=Number(row.affectedTargetCount)||0;
+    unresolvedTargetCount+=count;
+    counts[row.needType]=(counts[row.needType]||0)+count;
+  }
+  return {
+    groupCount:(queue||[]).length,
+    unresolvedTargetCount,
+    targetCountsByNeedType:counts
+  };
 }
 
 export function hardSegmentWordRouteStats(rows=[]){

@@ -132,4 +132,21 @@ for(const leakedIpa of ['di','dite','mid']){
   assert.equal(leaked.routeClass,'discover_new_representation',`D→/d/ must not leak into /${leakedIpa}/`);
   assert.equal(leaked.visibleOperations.length,0);
 }
-console.log('Hard segment word routes: unresolved visual needs stay partitioned and IPA-scoped grapheme-sound fallbacks cannot leak into longer segments.');
+
+const residualCompositions=[
+  {ipa:'dite',operations:[{type:'grapheme_sound',label:'D',ipa:'d'},{type:'grapheme',label:'I',ipa:'i'},{type:'grapheme',label:'T',ipa:'te'}]},
+  {ipa:'mid',operations:[{type:'whole_word',label:'mie',ipa:'mi'},{type:'grapheme_sound',label:'D',ipa:'d'}]},
+  {ipa:'ɲal',operations:[{type:'grapheme_sound',label:'GN',ipa:'ɲ'},{type:'grapheme',label:'A',ipa:'a'},{type:'grapheme_sound',label:'L',ipa:'l'}]},
+  {ipa:'jœʁ',operations:[{type:'grapheme_sound',label:'Y',ipa:'j'},{type:'whole_word',label:'heure',ipa:'œʁ',dependencyStatus:'scene_research_not_naming_validated'}]}
+].map(item=>({...item,status:'composed_general_mode_research_only',nextGate:'test_visible_composition'}));
+for(const composition of residualCompositions){
+  const group={needType:'find_lexical_or_visible_operation_for_phonetic_brick',researchIpa:composition.ipa,strategyEvidence:[{ipa:'source',evidence:{composedFallbackResearch:[composition]}}]};
+  const route=classifyVisualResearchRoute(group);
+  assert.equal(route.routeClass,'formalize_documented_visible_general_operation',`/${composition.ipa}/ must have a documented exact composition`);
+  assert.equal(route.visibleOperations[0].targetIpa,composition.ipa);
+  assert.equal(route.visibleOperations[0].operationType,'composed_general_operation');
+}
+const malformedComposition={...residualCompositions[0],operations:[...residualCompositions[0].operations.slice(0,2),{type:'grapheme',label:'T',ipa:'tə'}]};
+const malformedRoute=classifyVisualResearchRoute({needType:'find_lexical_or_visible_operation_for_phonetic_brick',researchIpa:'dite',strategyEvidence:[{ipa:'di',evidence:{composedFallbackResearch:[malformedComposition]}}]});
+assert.equal(malformedRoute.routeClass,'discover_new_representation','a composition whose operation IPAs do not exactly concatenate to the target must be ignored');
+console.log('Hard segment word routes: exact residual compositions close the research-routing gap without IPA leakage or hidden operations.');

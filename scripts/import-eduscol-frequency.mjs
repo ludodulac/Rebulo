@@ -1,14 +1,15 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import {parseEduscolFrequencyOdsXml,eduscolFrequencyDataset} from '../src/eduscol-frequency.js';
+import {parseEduscolFrequencyOdsXml,parseEduscolFrequencyText,eduscolFrequencyDataset} from '../src/eduscol-frequency.js';
 
-const input=process.argv[2]||'.cache/eduscol-frequency-content.xml';
+const input=process.argv[2]||'.cache/eduscol-frequency.txt';
 const output=process.argv[3]||'data/eduscol-frequency-lexicon.json';
 if(!fs.existsSync(input)){
-  console.error(`Contenu ODS Éduscol introuvable: ${input}`);
+  console.error(`Source Éduscol introuvable: ${input}`);
   process.exit(1);
 }
-const entries=parseEduscolFrequencyOdsXml(fs.readFileSync(input,'utf8'));
+const source=fs.readFileSync(input,'utf8');
+const entries=source.includes('<table:table-row')?parseEduscolFrequencyOdsXml(source):parseEduscolFrequencyText(source);
 if(entries.length<1000){
   console.error(`Import Éduscol insuffisant: ${entries.length} entrées détectées; attendu environ 1500.`);
   process.exit(2);

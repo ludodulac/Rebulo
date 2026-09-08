@@ -7,7 +7,7 @@ const technicalInventory=[
 ];
 const targetTr={key:'tari|taʁi',word:'tari',targetIpa:'taʁi',ageBandCandidate:7,rebuloUtilityTier:'child_common'};
 const targetDi={key:'dodo|dodo',word:'dodo',targetIpa:'dodo',ageBandCandidate:5,rebuloUtilityTier:'very_common_simple'};
-const targetSingle={key:'ta-test|ta',word:'ta-test',targetIpa:'ta',ageBandCandidate:7,rebuloUtilityTier:'child_common'};
+const targetSingle={key:'to-test|to',word:'to-test',targetIpa:'to',ageBandCandidate:7,rebuloUtilityTier:'child_common'};
 const opportunities=[
   {ipa:'tʁ',usefulUnlocked:1,usefulUnlockedTargets:[targetTr],wholeWordCandidates:[]},
   {ipa:'ʁi',usefulUnlocked:4,usefulUnlockedTargets:[targetTr],wholeWordCandidates:[{word:'riz',lemma:'riz',pos:'NOM',frequency:30,phoneticStatus:'whole_pronunciation_exact'}]},

@@ -3,9 +3,7 @@ import {buildHardSegmentWordRoutes,hardSegmentWordRouteStats} from '../src/hard-
 
 const strategies=[{ipa:'tʁ',strategy:'alternate_segmentation_required'},{ipa:'di',strategy:'alternate_segmentation_required'}];
 const technicalInventory=[
-  {id:'tas',label:'tas',ipa:'ta',active:true,strictEligible:true},
-  {id:'riz',label:'riz',ipa:'ʁi',active:true,strictEligible:true},
-  {id:'dos',label:'dos',ipa:'do',active:true,strictEligible:true}
+  {id:'tas',label:'tas',ipa:'ta',active:true,strictEligible:true}
 ];
 const targetTr={key:'tari|taʁi',word:'tari',targetIpa:'taʁi',ageBandCandidate:7,rebuloUtilityTier:'child_common'};
 const targetDi={key:'dodo|dodo',word:'dodo',targetIpa:'dodo',ageBandCandidate:5,rebuloUtilityTier:'very_common_simple'};

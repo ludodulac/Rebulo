@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import {buildPhoneticSegmentInventory,classifySegmentInventory,analyzeTargetConstructibility,buildSegmentResearchQueue,rankBrickOpportunities,rankVisualResearchLeads,buildAlternativeSegmentStrategies} from '../src/phonetic-brick-map.js';
+import {buildHardRouteOpportunitySearch} from '../src/hard-route-opportunity-search.js';
 const targets=[{target:'cinéma',targetIpa:'sinema',frequency:42,ageBandCandidate:7,rebuloUtilityTier:'child_common'},{target:'K-huis',targetIpa:'kaɥi',frequency:8,ageBandCandidate:9,rebuloUtilityTier:'school_common'},{target:'bakou',targetIpa:'baku',frequency:12,ageBandCandidate:7,rebuloUtilityTier:'school_common'},{target:'kouba',targetIpa:'kuba',frequency:6,ageBandCandidate:9,rebuloUtilityTier:'teen_adult_common'}];
 const lexicon=[{id:'scie',label:'scie',ipa:'/si/',active:true,strictEligible:true},{id:'nez',label:'nez',ipa:'/ne/',active:true,strictEligible:true},{id:'mat',label:'mât',ipa:'/ma/',active:true,strictEligible:true},{id:'huis',label:'huis',ipa:'/ɥi/',active:true,strictEligible:true},{id:'bas',label:'bas',ipa:'/ba/',active:true,strictEligible:true}];
 const inventory=buildPhoneticSegmentInventory(targets,{minUnits:1,maxUnits:3});assert.ok(inventory.some(r=>r.ipa==='in'));assert.ok(inventory.some(r=>r.ipa==='ku'));assert.equal(inventory.find(r=>r.ipa==='ku').targetCount,2);
@@ -8,4 +9,21 @@ const lexicalEntries=[{word:'cou',lemma:'cou',ipa:'ku',frequency:42,pos:'NOM',sy
 const opportunities=rankBrickOpportunities([kuResearch],targets,lexicon,{limit:10});assert.equal(opportunities[0].strictUnlocked,2);assert.equal(opportunities[0].usefulUnlocked,2);assert.equal(opportunities[0].usefulUnlockedTargets.length,2);assert.ok(opportunities[0].usefulWeightedGain>0);
 const sharedTarget={key:'mot|moti',word:'mot',targetIpa:'moti'};const leads=rankVisualResearchLeads([{...opportunities[0]},{ipa:'k',unitCount:1,targetCount:50,totalFrequency:1000,minAgeBandCandidate:5,wholeWordCandidates:[],strictUnlocked:10,generalUnlocked:10,totalUnlocked:20,weightedGain:500,usefulUnlocked:0,usefulWeightedGain:0,usefulUnlockedTargets:[],examplesUnlocked:['cas']},{ipa:'tʁ',unitCount:2,wholeWordCandidates:[],strictUnlocked:3,generalUnlocked:0,totalUnlocked:3,weightedGain:20,usefulUnlocked:1,usefulWeightedGain:20,usefulUnlockedTargets:[sharedTarget]},{ipa:'ɔʁ',unitCount:2,wholeWordCandidates:[{word:'or',pos:'NOM',frequency:30}],strictUnlocked:2,generalUnlocked:0,totalUnlocked:2,weightedGain:15,usefulUnlocked:1,usefulWeightedGain:15,usefulUnlockedTargets:[sharedTarget]}]);const kuLead=leads.find(r=>r.ipa==='ku'),kLead=leads.find(r=>r.ipa==='k');assert.equal(kuLead.researchRoute,'review_exact_lexical_candidates');assert.ok(kuLead.plausibleLexicalCandidates.some(c=>c.word==='cou'));assert.equal(kuLead.priorityObjective,'rebulo_useful_coverage_first_global_coverage_secondary');assert.equal(kLead.researchRoute,'prefer_explicit_letter_or_other_visible_operation');assert.ok(kuLead.researchPriorityScore>kLead.researchPriorityScore);
 const strategies=buildAlternativeSegmentStrategies(leads);const tr=strategies.find(row=>row.ipa==='tʁ');assert.equal(tr.strategyState,'alternate_one_brick_routes_found');assert.equal(tr.alternativeSegments[0].ipa,'ɔʁ');assert.equal(tr.alternativeSegments[0].naturalCandidate,'or');assert.deepEqual(tr.alternativeSegments[0].sharedExamples,['mot']);
-console.log('Phonetic brick map: useful coverage, exact candidates and automatic alternative-segmentation strategies passed.');
+
+const hardSearchTargets=[{target:'ab',targetIpa:'ab',frequency:10,ageBandCandidate:7,rebuloUtilityTier:'child_common'},{target:'hors-sujet',targetIpa:'zo',frequency:20,ageBandCandidate:7,rebuloUtilityTier:'child_common'}];
+const hardSearchInventory=[{id:'a',label:'A-test',ipa:'a',active:true,strictEligible:true}];
+const hardSearchRows=[
+  {ipa:'b',unitCount:1,wholeWordCandidates:[]},
+  {ipa:'c',unitCount:1,wholeWordCandidates:[]},
+  {ipa:'d',unitCount:1,wholeWordCandidates:[{word:'de-test',pos:'NOM',frequency:1}]}
+];
+const hardSearch=buildHardRouteOpportunitySearch(hardSearchRows,hardSearchTargets,hardSearchInventory,{segments:[{ipa:'b'}]},{maxRows:3,maxOperations:4});
+assert.equal(hardSearch.registeredSegmentCount,1);
+assert.equal(hardSearch.sourceOpportunityCount,1);
+assert.equal(hardSearch.hardTargetCount,1,'expanded route search must be restricted to targets actually unlocked by registered hard segments');
+assert.equal(hardSearch.searchedResearchRowCount,3);
+assert.equal(hardSearch.opportunities.length,3,'targeted route search may inspect rows beyond the smaller global priority window');
+assert.ok(hardSearch.opportunities.some(row=>row.ipa==='d'));
+assert.equal(hardSearch.sourceOpportunities[0].usefulUnlockedTargets[0].word,'ab');
+assert.throws(()=>buildHardRouteOpportunitySearch(hardSearchRows,hardSearchTargets,hardSearchInventory,{segments:[{ipa:'missing'}]},{maxRows:3}),/missing registered source segments/);
+console.log('Phonetic brick map: useful coverage, exact candidates, automatic alternatives and targeted expanded hard-route search passed.');

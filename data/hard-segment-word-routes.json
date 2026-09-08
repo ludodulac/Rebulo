@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-08T09:13:53.686Z",
+  "generatedAt": "2026-09-08T09:42:19.069Z",
   "status": "research_only",
-  "sourceBrickMapGeneratedAt": "2026-09-08T09:13:49.188Z",
+  "sourceBrickMapGeneratedAt": "2026-09-08T09:42:14.142Z",
   "strategyVersion": "1.0.0",
   "visualCandidateBankVersion": "0.1.0",
   "methodology": {
@@ -9,7 +9,8 @@
     "alternateRequirement": "A route must use the tested alternative brick and contain at least two operations; trivial whole-target replacement is excluded.",
     "representationReadiness": "Exact phonetic routes are counted separately from routes whose tested alternative has a non-trivial lexical representation candidate. Single-letter Lexique artifacts never make a route representation-ready.",
     "visualResearchReadiness": "A lexical candidate counts as visually curated only when the same whole word and IPA already exist in the research candidate bank with an explicit pictogram/scene concept and a non-rejected visual research decision. This remains research-only, not naming validation.",
-    "visualNeedQueue": "Every target without a curated visual route is assigned exactly one primary research need: curate an existing exact lexical candidate, find a lexical/visible operation for an exact phonetic brick, or resolve the original hard segment when no exact alternate route exists.",
+    "visualNeedQueue": "Every target without a curated visual route is assigned exactly one primary research need.",
+    "researchRouteClassification": "Each unresolved need is then classified as pictogram/scene research, formalization of an already documented visible general-operation hypothesis, or discovery of a genuinely new representation. A documented fallback remains research-only and never becomes an authorized operation by classification.",
     "strictPreference": "Strict routes rank before general routes. General routes remain explicit and visible only.",
     "activation": "No route, lexical lead, pictogram, scene or grapheme is activated by this report."
   },
@@ -34,6 +35,19 @@
       "curate_existing_lexical_candidate": 2,
       "find_lexical_or_visible_operation_for_phonetic_brick": 36,
       "resolve_source_segment": 82
+    }
+  },
+  "visualResearchRouteSummary": {
+    "targetCount": 120,
+    "targetCountsByRouteClass": {
+      "research_pictogram_or_scene": 11,
+      "formalize_documented_visible_general_operation": 77,
+      "discover_new_representation": 32
+    },
+    "groupCountsByRouteClass": {
+      "research_pictogram_or_scene": 1,
+      "formalize_documented_visible_general_operation": 7,
+      "discover_new_representation": 5
     }
   },
   "visualResearchNeedQueue": [
@@ -93,7 +107,21 @@
         }
       ],
       "nextAction": "assess_visual_concept_then_naming_risk_before_prototype",
-      "status": "research_only"
+      "status": "research_only",
+      "researchRoute": {
+        "routeClass": "formalize_documented_visible_general_operation",
+        "visibleOperations": [
+          {
+            "label": "TR",
+            "sourceIpa": "tʁ",
+            "fallbackStatus": "grapheme_cluster_general_mode_research_only",
+            "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
+          }
+        ],
+        "visualCandidates": [],
+        "authorizationStatus": "research_only_not_authorized",
+        "nextAction": "define_and_test_visible_general_operation_semantics_before_any_activation"
+      }
     },
     {
       "needType": "curate_existing_lexical_candidate",
@@ -181,7 +209,21 @@
         }
       ],
       "nextAction": "assess_visual_concept_then_naming_risk_before_prototype",
-      "status": "research_only"
+      "status": "research_only",
+      "researchRoute": {
+        "routeClass": "formalize_documented_visible_general_operation",
+        "visibleOperations": [
+          {
+            "label": "É",
+            "candidateType": "explicit_grapheme_tile",
+            "researchDecision": "fallback_only",
+            "nextGate": "define_visible_grapheme_reading_policy"
+          }
+        ],
+        "visualCandidates": [],
+        "authorizationStatus": "research_only_not_authorized",
+        "nextAction": "define_and_test_visible_general_operation_semantics_before_any_activation"
+      }
     },
     {
       "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
@@ -281,7 +323,14 @@
         }
       ],
       "nextAction": "search_exact_whole_word_or_explicit_general_operation",
-      "status": "research_only"
+      "status": "research_only",
+      "researchRoute": {
+        "routeClass": "discover_new_representation",
+        "visibleOperations": [],
+        "visualCandidates": [],
+        "authorizationStatus": "no_documented_representation_route",
+        "nextAction": "search_exact_whole_word_scene_alternate_segmentation_or_explicit_operation"
+      }
     },
     {
       "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
@@ -383,7 +432,14 @@
         }
       ],
       "nextAction": "search_exact_whole_word_or_explicit_general_operation",
-      "status": "research_only"
+      "status": "research_only",
+      "researchRoute": {
+        "routeClass": "discover_new_representation",
+        "visibleOperations": [],
+        "visualCandidates": [],
+        "authorizationStatus": "no_documented_representation_route",
+        "nextAction": "search_exact_whole_word_scene_alternate_segmentation_or_explicit_operation"
+      }
     },
     {
       "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
@@ -467,7 +523,21 @@
         }
       ],
       "nextAction": "search_exact_whole_word_or_explicit_general_operation",
-      "status": "research_only"
+      "status": "research_only",
+      "researchRoute": {
+        "routeClass": "formalize_documented_visible_general_operation",
+        "visibleOperations": [
+          {
+            "label": "TR",
+            "sourceIpa": "tʁ",
+            "fallbackStatus": "grapheme_cluster_general_mode_research_only",
+            "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
+          }
+        ],
+        "visualCandidates": [],
+        "authorizationStatus": "research_only_not_authorized",
+        "nextAction": "define_and_test_visible_general_operation_semantics_before_any_activation"
+      }
     },
     {
       "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
@@ -539,7 +609,14 @@
         }
       ],
       "nextAction": "search_exact_whole_word_or_explicit_general_operation",
-      "status": "research_only"
+      "status": "research_only",
+      "researchRoute": {
+        "routeClass": "discover_new_representation",
+        "visibleOperations": [],
+        "visualCandidates": [],
+        "authorizationStatus": "no_documented_representation_route",
+        "nextAction": "search_exact_whole_word_scene_alternate_segmentation_or_explicit_operation"
+      }
     },
     {
       "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
@@ -605,7 +682,14 @@
         }
       ],
       "nextAction": "search_exact_whole_word_or_explicit_general_operation",
-      "status": "research_only"
+      "status": "research_only",
+      "researchRoute": {
+        "routeClass": "discover_new_representation",
+        "visibleOperations": [],
+        "visualCandidates": [],
+        "authorizationStatus": "no_documented_representation_route",
+        "nextAction": "search_exact_whole_word_scene_alternate_segmentation_or_explicit_operation"
+      }
     },
     {
       "needType": "resolve_source_segment",
@@ -713,7 +797,34 @@
         }
       ],
       "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies",
-      "status": "research_only"
+      "status": "research_only",
+      "researchRoute": {
+        "routeClass": "formalize_documented_visible_general_operation",
+        "visibleOperations": [
+          {
+            "label": "TION",
+            "sourceIpa": "sjɔ̃",
+            "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
+            "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
+          },
+          {
+            "label": "SION",
+            "sourceIpa": "sjɔ̃",
+            "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
+            "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
+          }
+        ],
+        "visualCandidates": [
+          {
+            "label": "scion",
+            "candidateType": "whole_word_pictogram",
+            "researchDecision": "reject_visual_priority",
+            "nextGate": "seek_alternate_segmentation_or_explicit_operation"
+          }
+        ],
+        "authorizationStatus": "research_only_not_authorized",
+        "nextAction": "define_and_test_visible_general_operation_semantics_before_any_activation"
+      }
     },
     {
       "needType": "resolve_source_segment",
@@ -806,7 +917,21 @@
         }
       ],
       "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies",
-      "status": "research_only"
+      "status": "research_only",
+      "researchRoute": {
+        "routeClass": "formalize_documented_visible_general_operation",
+        "visibleOperations": [
+          {
+            "label": "TR",
+            "sourceIpa": "tʁ",
+            "fallbackStatus": "grapheme_cluster_general_mode_research_only",
+            "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
+          }
+        ],
+        "visualCandidates": [],
+        "authorizationStatus": "research_only_not_authorized",
+        "nextAction": "define_and_test_visible_general_operation_semantics_before_any_activation"
+      }
     },
     {
       "needType": "resolve_source_segment",
@@ -903,7 +1028,21 @@
         }
       ],
       "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies",
-      "status": "research_only"
+      "status": "research_only",
+      "researchRoute": {
+        "routeClass": "formalize_documented_visible_general_operation",
+        "visibleOperations": [
+          {
+            "label": "MENT",
+            "sourceIpa": "mɑ̃",
+            "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
+            "nextGate": "measure_alternate_segmentations_then_formalize_contextual_grapheme_if_still_needed"
+          }
+        ],
+        "visualCandidates": [],
+        "authorizationStatus": "research_only_not_authorized",
+        "nextAction": "define_and_test_visible_general_operation_semantics_before_any_activation"
+      }
     },
     {
       "needType": "resolve_source_segment",
@@ -1018,7 +1157,27 @@
         }
       ],
       "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies",
-      "status": "research_only"
+      "status": "research_only",
+      "researchRoute": {
+        "routeClass": "research_pictogram_or_scene",
+        "visibleOperations": [],
+        "visualCandidates": [
+          {
+            "label": "heure",
+            "candidateType": "whole_word_scene",
+            "researchDecision": "second_wave",
+            "nextGate": "compare_scene_variants_before_prototype"
+          },
+          {
+            "label": "heurt",
+            "candidateType": "whole_word_scene",
+            "researchDecision": "reject_visual_priority",
+            "nextGate": "prefer_heure"
+          }
+        ],
+        "authorizationStatus": "research_only_not_naming_validated",
+        "nextAction": "evaluate_spontaneous_naming_and_visual_concept_before_prototype"
+      }
     },
     {
       "needType": "resolve_source_segment",
@@ -1109,7 +1268,27 @@
         }
       ],
       "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies",
-      "status": "research_only"
+      "status": "research_only",
+      "researchRoute": {
+        "routeClass": "formalize_documented_visible_general_operation",
+        "visibleOperations": [
+          {
+            "label": "IN",
+            "sourceIpa": "ɛ̃",
+            "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
+            "nextGate": "compare_alternate_segmentations_before_any_grapheme_rule"
+          },
+          {
+            "label": "UN",
+            "sourceIpa": "ɛ̃",
+            "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
+            "nextGate": "compare_alternate_segmentations_before_any_grapheme_rule"
+          }
+        ],
+        "visualCandidates": [],
+        "authorizationStatus": "research_only_not_authorized",
+        "nextAction": "define_and_test_visible_general_operation_semantics_before_any_activation"
+      }
     },
     {
       "needType": "resolve_source_segment",
@@ -1183,7 +1362,14 @@
         }
       ],
       "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies",
-      "status": "research_only"
+      "status": "research_only",
+      "researchRoute": {
+        "routeClass": "discover_new_representation",
+        "visibleOperations": [],
+        "visualCandidates": [],
+        "authorizationStatus": "no_documented_representation_route",
+        "nextAction": "search_exact_whole_word_scene_alternate_segmentation_or_explicit_operation"
+      }
     }
   ],
   "segments": [

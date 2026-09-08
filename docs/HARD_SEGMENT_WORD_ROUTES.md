@@ -14,29 +14,29 @@
 - Cibles avec route stricte et candidat visuel curaté : 0.
 - Cibles avec au moins une route générale visible : 41.
 
-> Exactitude phonétique ≠ représentation lexicale ≠ piste visuelle curatée ≠ validation de dénomination. La file ci-dessous partitionne exactement les cibles encore non résolues visuellement; rien n’est activé automatiquement.
+> Exactitude phonétique ≠ représentation lexicale ≠ piste visuelle curatée ≠ validation de dénomination. La file ci-dessous partitionne exactement les cibles encore non résolues visuellement; une piste générale documentée reste non autorisée tant que sa sémantique visible n’est pas formalisée et testée.
 
 ## File priorisée des besoins visuels
 
-- À curater à partir d’un mot exact déjà trouvé : 2 cibles.
-- À résoudre par un mot exact ou une opération visible pour une brique phonétique : 36 cibles.
-- À résoudre au niveau du segment source : 82 cibles.
+- Recherche pictogramme/scène : 11 cibles dans 1 groupes.
+- Opération générale visible déjà documentée à formaliser : 77 cibles dans 7 groupes.
+- Nouvelle représentation réellement à découvrir : 32 cibles dans 5 groupes.
 
-| Rang | Besoin | Brique/segment | Cibles | Âge min. | Mots exacts déjà trouvés | État de la banque visuelle | Segments sources | Exemples |
-|---:|---|---|---:|---:|---|---|---|---|
-| 1 | curater le mot exact existant | /at/ | 1 | 7 | hâte, atte | — | /tʁ/ | attraper |
-| 2 | curater le mot exact existant | /e/ | 1 | 9 | ais, ai, et, eh | É (fallback_only) | /aʁ/ | harper |
-| 3 | trouver mot exact ou opération visible | /d/ | 12 | 5 | — | — | /di/ | dîner, paradis, midi, diriger |
-| 4 | trouver mot exact ou opération visible | /ʁ/ | 8 | 5 | — | — | /al/, /aʁ/ | art, bagarre, are, artère |
-| 5 | trouver mot exact ou opération visible | /t/ | 8 | 5 | — | — | /tʁ/ | travers, traverser, rattraper, tracer |
-| 6 | trouver mot exact ou opération visible | /l/ | 6 | 5 | — | — | /al/ | allô, signal, allo, idéal |
-| 7 | trouver mot exact ou opération visible | /n/ | 2 | 9 | — | — | /al/, /aʁ/ | arène, haleine |
-| 8 | résoudre le segment source | /sjɔ̃/ | 20 | 5 | — | scion (reject_visual_priority) | /sjɔ̃/ | mission, version, passion, opération |
-| 9 | résoudre le segment source | /tʁ/ | 20 | 5 | — | — | /tʁ/ | trop, autre, d'autres, quatre |
-| 10 | résoudre le segment source | /mɑ̃/ | 18 | 5 | — | — | /mɑ̃/ | maman, manger, man, serment |
-| 11 | résoudre le segment source | /œʁ/ | 11 | 5 | — | heure (second_wave), heurt (reject_visual_priority) | /œʁ/ | heure, h, erreur, ailleurs |
-| 12 | résoudre le segment source | /ɛ̃/ | 9 | 5 | — | — | /ɛ̃/ | hein, ainsi, terrain, impossible |
-| 13 | résoudre le segment source | /di/ | 4 | 9 | — | dit (reject_visual_priority) | /di/ | humidité, cupidité, rapidité, diversité |
+| Rang | Besoin | Voie de recherche | Brique/segment | Cibles | Âge min. | Mots exacts | Opération visible documentée | Banque visuelle | Segments sources | Exemples |
+|---:|---|---|---|---:|---:|---|---|---|---|---|
+| 1 | curater le mot exact existant | opération générale visible documentée | /at/ | 1 | 7 | hâte, atte | TR | — | /tʁ/ | attraper |
+| 2 | curater le mot exact existant | opération générale visible documentée | /e/ | 1 | 9 | ais, ai, et, eh | É | É (fallback_only) | /aʁ/ | harper |
+| 3 | trouver mot exact ou opération visible | nouvelle représentation à découvrir | /d/ | 12 | 5 | — | — | — | /di/ | dîner, paradis, midi, diriger |
+| 4 | trouver mot exact ou opération visible | nouvelle représentation à découvrir | /ʁ/ | 8 | 5 | — | — | — | /al/, /aʁ/ | art, bagarre, are, artère |
+| 5 | trouver mot exact ou opération visible | opération générale visible documentée | /t/ | 8 | 5 | — | TR | — | /tʁ/ | travers, traverser, rattraper, tracer |
+| 6 | trouver mot exact ou opération visible | nouvelle représentation à découvrir | /l/ | 6 | 5 | — | — | — | /al/ | allô, signal, allo, idéal |
+| 7 | trouver mot exact ou opération visible | nouvelle représentation à découvrir | /n/ | 2 | 9 | — | — | — | /al/, /aʁ/ | arène, haleine |
+| 8 | résoudre le segment source | opération générale visible documentée | /sjɔ̃/ | 20 | 5 | — | TION, SION | scion (reject_visual_priority) | /sjɔ̃/ | mission, version, passion, opération |
+| 9 | résoudre le segment source | opération générale visible documentée | /tʁ/ | 20 | 5 | — | TR | — | /tʁ/ | trop, autre, d'autres, quatre |
+| 10 | résoudre le segment source | opération générale visible documentée | /mɑ̃/ | 18 | 5 | — | MENT | — | /mɑ̃/ | maman, manger, man, serment |
+| 11 | résoudre le segment source | pictogramme / scène | /œʁ/ | 11 | 5 | — | — | heure (second_wave), heurt (reject_visual_priority) | /œʁ/ | heure, h, erreur, ailleurs |
+| 12 | résoudre le segment source | opération générale visible documentée | /ɛ̃/ | 9 | 5 | — | IN, UN | — | /ɛ̃/ | hein, ainsi, terrain, impossible |
+| 13 | résoudre le segment source | nouvelle représentation à découvrir | /di/ | 4 | 9 | — | — | dit (reject_visual_priority) | /di/ | humidité, cupidité, rapidité, diversité |
 
 ## /mɑ̃/ — alternate_segmentation_first
 

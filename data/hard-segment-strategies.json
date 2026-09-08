@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "status": "research_only",
   "objective": "Pour les segments Rebulo utiles mais mal représentables, privilégier une autre segmentation exacte avant de créer une image faible; n'autoriser un graphème que comme opération générale visible, définie, IPA-ciblée et testable.",
   "segments": [
@@ -30,6 +30,17 @@
       "lexicalLeads": ["heure"],
       "lexicalAssessment": "exact_and_scene_plausible_but_high_naming_risk",
       "visualHypotheses": ["personne consultant clairement l'heure sur une horloge ou une montre, sans texte dominant"],
+      "composedFallbackResearch": [
+        {
+          "ipa": "jœʁ",
+          "status": "composed_general_mode_research_only",
+          "operations": [
+            {"type": "grapheme_sound", "label": "Y", "ipa": "j"},
+            {"type": "whole_word", "label": "heure", "ipa": "œʁ", "dependencyStatus": "scene_research_not_naming_validated"}
+          ],
+          "nextGate": "validate_heure_scene_naming_then_test_explicit_Y_to_j_cue"
+        }
+      ],
       "nextGate": "compare_two_scene_variants_in_blind_naming_test"
     },
     {
@@ -73,6 +84,18 @@
           "nextGate": "render_explicit_N_to_sound_cue_then_test_general_mode_comprehension"
         }
       ],
+      "composedFallbackResearch": [
+        {
+          "ipa": "ɲal",
+          "status": "composed_general_mode_research_only",
+          "operations": [
+            {"type": "grapheme_sound", "label": "GN", "ipa": "ɲ"},
+            {"type": "grapheme", "label": "A", "ipa": "a"},
+            {"type": "grapheme_sound", "label": "L", "ipa": "l"}
+          ],
+          "nextGate": "test_explicit_GN_to_ɲ_and_L_to_l_cues_as_a_visible_general_composition"
+        }
+      ],
       "fallbackStatus": "grapheme_sound_general_mode_research_only",
       "nextGate": "search_shared_alternative_segments_before_visual_prototype; keep_letter_sounds_explicit_and_general_only"
     },
@@ -111,6 +134,27 @@
           "nextGate": "render_explicit_D_to_sound_cue_then_test_general_mode_comprehension"
         }
       ],
+      "composedFallbackResearch": [
+        {
+          "ipa": "dite",
+          "status": "composed_general_mode_research_only",
+          "operations": [
+            {"type": "grapheme_sound", "label": "D", "ipa": "d"},
+            {"type": "grapheme", "label": "I", "ipa": "i"},
+            {"type": "grapheme", "label": "T", "ipa": "te"}
+          ],
+          "nextGate": "test_D_sound_plus_I_and_T_letter_names_as_one_visible_general_composition"
+        },
+        {
+          "ipa": "mid",
+          "status": "composed_general_mode_research_only",
+          "operations": [
+            {"type": "whole_word", "label": "mie", "ipa": "mi"},
+            {"type": "grapheme_sound", "label": "D", "ipa": "d"}
+          ],
+          "nextGate": "test_mie_plus_explicit_D_to_d_as_visible_general_composition"
+        }
+      ],
       "fallbackStatus": "grapheme_sound_general_mode_research_only",
       "rejectedFallbacks": [
         {"label": "D", "reason": "French letter name is /de/, not /di/; phonetic mismatch. This rejection concerns the letter-name operation, not an explicitly IPA-scoped grapheme_sound operation for /d/."}
@@ -118,5 +162,5 @@
       "nextGate": "search_alternate_exact_decompositions; D_as_letter_name_remains_invalid_for_di; explicit_D_to_d_stays_general_research_only"
     }
   ],
-  "caution": "Ce registre ordonne la recherche. Il n'active aucune brique, ne transforme jamais le nom d'une lettre en phonème caché et ne vaut ni validation de dénomination ni validation clinique. Une règle grapheme_sound n'est applicable qu'au segment IPA explicitement déclaré."
+  "caution": "Ce registre ordonne la recherche. Il n'active aucune brique, ne transforme jamais le nom d'une lettre en phonème caché et ne vaut ni validation de dénomination ni validation clinique. Une règle grapheme_sound ou une composition de recherche n'est applicable qu'au segment IPA explicitement déclaré, avec toutes ses opérations visibles."
 }

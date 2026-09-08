@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import {buildHardSegmentWordRoutes,hardSegmentWordRouteStats,buildVisualResearchNeedQueue,visualResearchNeedStats} from '../src/hard-segment-word-routes.js';
+import {classifyVisualResearchNeedQueue,visualResearchRouteStats} from '../src/hard-segment-research-routes.js';
 
 const strategies=[
   {ipa:'tʁ',strategy:'alternate_segmentation_required'},
@@ -26,13 +27,12 @@ const opportunities=[
 ];
 const visualCandidateBank={segments:[
   {ipa:'ʁi',recommendedRoute:'natural_pictogram',candidates:[{label:'riz',candidateType:'whole_word_pictogram',visualConcept:'Un bol de riz clairement identifiable.',visualPlausibility:'high',spontaneousNamingRisk:'low',researchDecision:'first_wave',nextGate:'prototype_then_naming_test'}]},
-  {ipa:'do',recommendedRoute:'natural_pictogram',candidates:[{label:'dos',candidateType:'whole_word_pictogram',visualConcept:'Le dos d’une personne.',visualPlausibility:'medium',spontaneousNamingRisk:'medium',researchDecision:'reject_visual_priority',nextGate:'do_not_promote'}]},
-  {ipa:'z',recommendedRoute:'scene_comparison',candidates:[{label:'zzz',candidateType:'whole_word_scene',visualConcept:'Un personnage endormi.',visualPlausibility:'low',spontaneousNamingRisk:'high',researchDecision:'reject_visual_priority',nextGate:'seek_other_route'}]}
+  {ipa:'do',recommendedRoute:'natural_pictogram',candidates:[{label:'dos',candidateType:'whole_word_pictogram',visualConcept:'Le dos d’une personne.',visualPlausibility:'medium',spontaneousNamingRisk:'medium',researchDecision:'reject_visual_priority',nextGate:'do_not_promote'}]}
 ]};
 const hardStrategyRegistry={segments:[
   {ipa:'di',strategy:'alternate_segmentation_required',nextGate:'search_alternate_exact_decompositions'},
-  {ipa:'x',strategy:'alternate_segmentation_required',visibleFallbackResearch:['X'],fallbackStatus:'research_only',nextGate:'define_visible_operation_only_if_needed'},
-  {ipa:'z',strategy:'scene_comparison',lexicalLeads:['zzz'],lexicalAssessment:'weak_scene',nextGate:'compare_scene_variants'}
+  {ipa:'x',strategy:'alternate_segmentation_required',visibleFallbackResearch:['T'],fallbackStatus:'research_only_not_authorized',nextGate:'define_visible_operation_only_if_needed'},
+  {ipa:'z',strategy:'scene_comparison',lexicalLeads:[],lexicalAssessment:'no_current_route',nextGate:'search_new_representation'}
 ]};
 
 const rows=buildHardSegmentWordRoutes(strategies,opportunities,technicalInventory,{maxOperations:4,maxRoutesPerTarget:3,visualCandidateBank});
@@ -84,8 +84,10 @@ assert.equal(stats.targetsStillBlocked,1);
 assert.equal(stats.targetsStillNeedingRepresentableAlternative,3);
 assert.equal(stats.targetsStillNeedingCuratedVisualAlternative,4);
 
-const queue=buildVisualResearchNeedQueue(rows,{visualCandidateBank,hardStrategyRegistry});
+const rawQueue=buildVisualResearchNeedQueue(rows,{visualCandidateBank,hardStrategyRegistry});
+const queue=classifyVisualResearchNeedQueue(rawQueue);
 const queueStats=visualResearchNeedStats(queue);
+const routeStats=visualResearchRouteStats(queue);
 assert.deepEqual(queue.map(row=>row.needType),[
   'curate_existing_lexical_candidate',
   'find_lexical_or_visible_operation_for_phonetic_brick',
@@ -94,16 +96,27 @@ assert.deepEqual(queue.map(row=>row.needType),[
 assert.equal(queue[0].researchIpa,'do');
 assert.equal(queue[0].lexicalCandidates[0].word,'dos');
 assert.equal(queue[0].candidateBankEvidence.candidates[0].researchDecision,'reject_visual_priority','rejected bank evidence remains visible without being promoted');
+assert.equal(queue[0].researchRoute.routeClass,'research_pictogram_or_scene');
 assert.equal(queue[1].researchIpa,'t');
 assert.equal(queue[1].affectedTargetCount,2,'same missing phonetic brick must aggregate multiple targets');
+assert.equal(queue[1].researchRoute.routeClass,'formalize_documented_visible_general_operation');
+assert.equal(queue[1].researchRoute.visibleOperations[0].label,'T');
+assert.equal(queue[1].researchRoute.authorizationStatus,'research_only_not_authorized');
 assert.equal(queue[2].researchIpa,'z');
-assert.equal(queue[2].strategyEvidence[0].evidence.nextGate,'compare_scene_variants');
+assert.equal(queue[2].researchRoute.routeClass,'discover_new_representation');
+assert.equal(queue[2].strategyEvidence[0].evidence.nextGate,'search_new_representation');
 assert.equal(queueStats.groupCount,3);
 assert.equal(queueStats.unresolvedTargetCount,4);
 assert.equal(queueStats.unresolvedTargetCount,stats.targetsStillNeedingCuratedVisualAlternative,'queue must partition every unresolved visual target exactly once');
-assert.deepEqual(queueStats.targetCountsByNeedType,{
-  curate_existing_lexical_candidate:1,
-  find_lexical_or_visible_operation_for_phonetic_brick:2,
-  resolve_source_segment:1
+assert.deepEqual(routeStats.targetCountsByRouteClass,{
+  research_pictogram_or_scene:1,
+  formalize_documented_visible_general_operation:2,
+  discover_new_representation:1
 });
-console.log('Hard segment word routes: visual need queue partitions unresolved targets into lexical curation, phonetic-brick research and source-segment resolution.');
+assert.deepEqual(routeStats.groupCountsByRouteClass,{
+  research_pictogram_or_scene:1,
+  formalize_documented_visible_general_operation:1,
+  discover_new_representation:1
+});
+assert.equal(routeStats.targetCount,stats.targetsStillNeedingCuratedVisualAlternative,'research route classes must conserve every unresolved target exactly once');
+console.log('Hard segment word routes: unresolved visual needs stay partitioned while pictogram, documented visible-operation and genuinely new-representation research routes remain distinct.');

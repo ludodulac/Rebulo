@@ -10,6 +10,21 @@
 
 Les segments ci-dessous sont des **séquences IPA utiles au rébus**. Ils ne sont pas automatiquement des syllabes linguistiques. Les candidats lexicaux ont une prononciation entière exacte, mais leur qualité visuelle et leur dénomination restent à valider.
 
+## Première vague de briques à prototyper
+
+Si les 6 briques de cette vague étaient toutes validées puis activées, la simulation phonétique rendrait 60 cibles supplémentaires techniquement constructibles par rapport au stock actuel. Ce nombre ne vaut pas validation visuelle.
+
+| Segment | Candidat recommandé | Concept visuel | Risque de dénomination | Gain individuel | Dont images seules |
+|---|---|---|---|---:|---:|
+| /ɛ/ | haie | Une haie végétale dense, isolée, vue de face avec une limite nette de jardin, sans maison dominante. | medium | 20 | 9 |
+| /wa/ | oie | Une oie blanche adulte entière, profil trois-quarts, cou long et bec orange, seule sur fond clair. | low_medium | 5 | 5 |
+| /ɔʁ/ | or | Deux petits lingots d'or accompagnés d'une pépite brute, sans monnaie ni texte, pour évoquer la matière or plutôt qu'un objet précis. | medium | 6 | 4 |
+| /ti/ | tee | Un tee de golf planté dans un petit carré de gazon avec une balle posée dessus, le tee restant clairement visible et central. | medium_high | 16 | 10 |
+| /ɑ̃s/ | anse | Une grande tasse simple dont l'anse est très visible et dégagée, avec cadrage qui rend la partie nommable sans symbole ni texte. | high | 3 | 1 |
+| /as/ | as | Une carte à jouer d'as très simple, avec un seul grand symbole de couleur au centre; si la lettre A est nécessaire à la reconnaissance, la considérer comme partie intrinsèque de l'objet et non comme lecture cachée. | medium | 5 | 3 |
+
+> Cette vague est une file de prototypage/recherche. Aucun de ces visuels ne devient automatiquement une brique active.
+
 ## Priorités de recherche de représentations
 
 Ce classement pénalise les sons unitaires sans candidat lexical naturel et favorise les segments réutilisables avec plusieurs pistes lexicales. Il sert uniquement à organiser la recherche humaine/visuelle.

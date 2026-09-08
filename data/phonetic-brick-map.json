@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T23:23:50.872Z",
+  "generatedAt": "2026-09-08T00:13:29.674Z",
   "source": "Lexique 4",
   "sourceLicense": "CC BY-SA 4.0",
   "status": "research_mapping_only",
@@ -10,6 +10,7 @@
     "candidateSearch": "Whole Lexique entries whose complete IPA pronunciation exactly equals an uncovered segment.",
     "gain": "For each prioritized segment, add one virtual exact whole-word brick and count previously unresolved target words that become exactly constructible.",
     "researchPriority": "A separate automatic research score combines coverage gain, segment size and existence of plausible lexical candidates. It is a queueing heuristic only, never a visual-validity score.",
+    "curatedWave": "Human/editorial research hypotheses are stored separately from automatic rankings. The first-wave simulation adds only virtual exact readings and never activates a pictogram.",
     "visualCaution": "Lexical exactness never implies imageability, spontaneous naming, age suitability, or clinical validation."
   },
   "targetVocabulary": {
@@ -43,6 +44,706 @@
     "withExactWholeWordCandidates": 141,
     "withoutExactWholeWordCandidates": 109
   },
+  "candidateBankValidation": {
+    "valid": true,
+    "warnings": []
+  },
+  "firstWaveSimulation": {
+    "selectedSegments": [
+      {
+        "ipa": "ɛ",
+        "candidate": "haie"
+      },
+      {
+        "ipa": "wa",
+        "candidate": "oie"
+      },
+      {
+        "ipa": "ɔʁ",
+        "candidate": "or"
+      },
+      {
+        "ipa": "ti",
+        "candidate": "tee"
+      },
+      {
+        "ipa": "ɑ̃s",
+        "candidate": "anse"
+      },
+      {
+        "ipa": "as",
+        "candidate": "as"
+      }
+    ],
+    "baseline": {
+      "whole_image": 352,
+      "image_composition": 157,
+      "image_plus_letter": 265,
+      "unresolved": 13361
+    },
+    "withResearchWave": {
+      "whole_image": 362,
+      "image_composition": 184,
+      "image_plus_letter": 288,
+      "unresolved": 13301
+    },
+    "delta": {
+      "whole_image": 10,
+      "image_composition": 27,
+      "image_plus_letter": 23,
+      "unresolved": -60
+    },
+    "newlyPlayable": 60,
+    "caution": "Simulation phonétique uniquement : les briques virtuelles ne sont ni activées ni validées visuellement."
+  },
+  "curatedBrickResearch": [
+    {
+      "ipa": "ɛ",
+      "recommendedRoute": "natural_pictogram",
+      "candidates": [
+        {
+          "label": "haie",
+          "candidateType": "whole_word_pictogram",
+          "lexicalEvidence": "lexique_exact",
+          "visualConcept": "Une haie végétale dense, isolée, vue de face avec une limite nette de jardin, sans maison dominante.",
+          "visualPlausibility": "high",
+          "spontaneousNamingRisk": "medium",
+          "mainConfusions": [
+            "buisson",
+            "arbuste",
+            "mur végétal"
+          ],
+          "suggestedAgeFloor": 7,
+          "ageStatus": "editorial_hypothesis",
+          "researchDecision": "first_wave",
+          "nextGate": "prototype_then_naming_test"
+        },
+        {
+          "label": "hey",
+          "candidateType": "interjection_tile",
+          "lexicalEvidence": "lexique_exact",
+          "visualPlausibility": "low",
+          "spontaneousNamingRisk": "high",
+          "researchDecision": "fallback_only",
+          "nextGate": "do_not_draw_as_object"
+        }
+      ],
+      "coverageEvidence": {
+        "totalUnlocked": 20,
+        "strictUnlocked": 9,
+        "generalUnlocked": 11,
+        "weightedGain": 146.502,
+        "examplesUnlocked": [
+          "intérêt",
+          "hey",
+          "interroger",
+          "briquet",
+          "indépendant",
+          "banquet",
+          "parquet",
+          "inverser"
+        ]
+      }
+    },
+    {
+      "ipa": "wa",
+      "recommendedRoute": "natural_pictogram",
+      "candidates": [
+        {
+          "label": "oie",
+          "candidateType": "whole_word_pictogram",
+          "lexicalEvidence": "lexique_exact",
+          "visualConcept": "Une oie blanche adulte entière, profil trois-quarts, cou long et bec orange, seule sur fond clair.",
+          "visualPlausibility": "high",
+          "spontaneousNamingRisk": "low_medium",
+          "mainConfusions": [
+            "canard",
+            "cygne"
+          ],
+          "suggestedAgeFloor": 5,
+          "ageStatus": "editorial_hypothesis",
+          "researchDecision": "first_wave",
+          "nextGate": "prototype_then_naming_test"
+        },
+        {
+          "label": "ouah",
+          "candidateType": "sound_scene",
+          "lexicalEvidence": "lexique_exact",
+          "visualPlausibility": "low",
+          "spontaneousNamingRisk": "high",
+          "researchDecision": "reject_visual_priority",
+          "nextGate": "keep_as_lexical_alternative_only"
+        }
+      ],
+      "coverageEvidence": {
+        "totalUnlocked": 5,
+        "strictUnlocked": 5,
+        "generalUnlocked": 0,
+        "weightedGain": 25.428,
+        "examplesUnlocked": [
+          "ouah",
+          "oie",
+          "wouah",
+          "water",
+          "oye"
+        ]
+      }
+    },
+    {
+      "ipa": "ɔʁ",
+      "recommendedRoute": "natural_material_pictogram",
+      "candidates": [
+        {
+          "label": "or",
+          "candidateType": "whole_word_pictogram",
+          "lexicalEvidence": "lexique_exact",
+          "visualConcept": "Deux petits lingots d'or accompagnés d'une pépite brute, sans monnaie ni texte, pour évoquer la matière or plutôt qu'un objet précis.",
+          "visualPlausibility": "high",
+          "spontaneousNamingRisk": "medium",
+          "mainConfusions": [
+            "lingot",
+            "trésor",
+            "métal"
+          ],
+          "suggestedAgeFloor": 7,
+          "ageStatus": "editorial_hypothesis",
+          "researchDecision": "first_wave",
+          "nextGate": "prototype_then_naming_test"
+        },
+        {
+          "label": "ore",
+          "candidateType": "whole_word_pictogram",
+          "lexicalEvidence": "lexique_exact",
+          "visualPlausibility": "low",
+          "spontaneousNamingRisk": "high",
+          "researchDecision": "reject_visual_priority",
+          "nextGate": "prefer_or"
+        }
+      ],
+      "coverageEvidence": {
+        "totalUnlocked": 6,
+        "strictUnlocked": 4,
+        "generalUnlocked": 2,
+        "weightedGain": 81.953,
+        "examplesUnlocked": [
+          "or",
+          "orgie",
+          "ordonner",
+          "signor",
+          "kaori",
+          "ordonné"
+        ]
+      }
+    },
+    {
+      "ipa": "ti",
+      "recommendedRoute": "natural_object_pictogram",
+      "candidates": [
+        {
+          "label": "tee",
+          "candidateType": "whole_word_pictogram",
+          "lexicalEvidence": "lexique_exact",
+          "visualConcept": "Un tee de golf planté dans un petit carré de gazon avec une balle posée dessus, le tee restant clairement visible et central.",
+          "visualPlausibility": "high",
+          "spontaneousNamingRisk": "medium_high",
+          "mainConfusions": [
+            "golf",
+            "balle",
+            "support"
+          ],
+          "suggestedAgeFloor": 12,
+          "ageStatus": "editorial_hypothesis",
+          "researchDecision": "first_wave",
+          "nextGate": "prototype_then_age_specific_naming_test"
+        },
+        {
+          "label": "tie",
+          "candidateType": "whole_word_candidate",
+          "lexicalEvidence": "lexique_exact",
+          "visualPlausibility": "low",
+          "spontaneousNamingRisk": "high",
+          "researchDecision": "reject_visual_priority",
+          "nextGate": "prefer_tee"
+        }
+      ],
+      "coverageEvidence": {
+        "totalUnlocked": 16,
+        "strictUnlocked": 10,
+        "generalUnlocked": 6,
+        "weightedGain": 91.937,
+        "examplesUnlocked": [
+          "matinée",
+          "appétit",
+          "identité",
+          "utilité",
+          "hostilité",
+          "piétiner",
+          "tee",
+          "patiner"
+        ]
+      }
+    },
+    {
+      "ipa": "ɑ̃s",
+      "recommendedRoute": "part_of_object_pictogram",
+      "candidates": [
+        {
+          "label": "anse",
+          "candidateType": "whole_word_pictogram",
+          "lexicalEvidence": "lexique_exact",
+          "visualConcept": "Une grande tasse simple dont l'anse est très visible et dégagée, avec cadrage qui rend la partie nommable sans symbole ni texte.",
+          "visualPlausibility": "high",
+          "spontaneousNamingRisk": "high",
+          "mainConfusions": [
+            "poignée",
+            "tasse"
+          ],
+          "suggestedAgeFloor": 9,
+          "ageStatus": "editorial_hypothesis",
+          "researchDecision": "first_wave",
+          "nextGate": "prototype_then_naming_test_before_any_activation"
+        },
+        {
+          "label": "hanse",
+          "candidateType": "whole_word_candidate",
+          "lexicalEvidence": "lexique_exact",
+          "visualPlausibility": "low",
+          "spontaneousNamingRisk": "high",
+          "researchDecision": "reject_visual_priority",
+          "nextGate": "prefer_anse"
+        }
+      ],
+      "coverageEvidence": {
+        "totalUnlocked": 3,
+        "strictUnlocked": 1,
+        "generalUnlocked": 2,
+        "weightedGain": 21.975,
+        "examplesUnlocked": [
+          "séance",
+          "délivrance",
+          "encercler"
+        ]
+      }
+    },
+    {
+      "ipa": "as",
+      "recommendedRoute": "recognizable_symbolic_object",
+      "candidates": [
+        {
+          "label": "as",
+          "candidateType": "whole_word_pictogram",
+          "lexicalEvidence": "lexique_exact",
+          "visualConcept": "Une carte à jouer d'as très simple, avec un seul grand symbole de couleur au centre; si la lettre A est nécessaire à la reconnaissance, la considérer comme partie intrinsèque de l'objet et non comme lecture cachée.",
+          "visualPlausibility": "high",
+          "spontaneousNamingRisk": "medium",
+          "mainConfusions": [
+            "carte",
+            "carte à jouer"
+          ],
+          "suggestedAgeFloor": 7,
+          "ageStatus": "editorial_hypothesis",
+          "researchDecision": "first_wave",
+          "nextGate": "prototype_then_naming_test"
+        },
+        {
+          "label": "asse",
+          "candidateType": "whole_word_candidate",
+          "lexicalEvidence": "lexique_exact",
+          "visualPlausibility": "low",
+          "spontaneousNamingRisk": "high",
+          "researchDecision": "reject_visual_priority",
+          "nextGate": "prefer_as"
+        }
+      ],
+      "coverageEvidence": {
+        "totalUnlocked": 5,
+        "strictUnlocked": 3,
+        "generalUnlocked": 2,
+        "weightedGain": 30.684,
+        "examplesUnlocked": [
+          "as",
+          "assassiner",
+          "terrasse",
+          "assassiné",
+          "aster"
+        ]
+      }
+    },
+    {
+      "ipa": "œʁ",
+      "recommendedRoute": "small_scene",
+      "candidates": [
+        {
+          "label": "heure",
+          "candidateType": "whole_word_scene",
+          "lexicalEvidence": "lexique_exact",
+          "visualConcept": "Une horloge simple associée à un geste clair de consultation de l'heure, sans chiffre écrit dominant ni texte.",
+          "visualPlausibility": "medium_high",
+          "spontaneousNamingRisk": "high",
+          "mainConfusions": [
+            "horloge",
+            "montre",
+            "temps"
+          ],
+          "suggestedAgeFloor": 7,
+          "ageStatus": "editorial_hypothesis",
+          "researchDecision": "second_wave",
+          "nextGate": "compare_scene_variants_before_prototype"
+        },
+        {
+          "label": "heurt",
+          "candidateType": "whole_word_scene",
+          "lexicalEvidence": "lexique_exact",
+          "visualPlausibility": "medium",
+          "spontaneousNamingRisk": "high",
+          "mainConfusions": [
+            "choc",
+            "collision"
+          ],
+          "researchDecision": "reject_visual_priority",
+          "nextGate": "prefer_heure"
+        }
+      ],
+      "coverageEvidence": {
+        "totalUnlocked": 12,
+        "strictUnlocked": 11,
+        "generalUnlocked": 1,
+        "weightedGain": 755.546,
+        "examplesUnlocked": [
+          "heure",
+          "h",
+          "erreur",
+          "ailleurs",
+          "terreur",
+          "livreur",
+          "boxeur",
+          "pêcheur"
+        ]
+      }
+    },
+    {
+      "ipa": "aʁ",
+      "recommendedRoute": "small_scene",
+      "candidates": [
+        {
+          "label": "art",
+          "candidateType": "whole_word_scene",
+          "lexicalEvidence": "lexique_exact",
+          "visualConcept": "Petite composition cohérente avec tableau, palette et sculpture, sans artiste ni musée dominant, pour viser le concept global art.",
+          "visualPlausibility": "medium_high",
+          "spontaneousNamingRisk": "high",
+          "mainConfusions": [
+            "peinture",
+            "dessin",
+            "musée",
+            "création"
+          ],
+          "suggestedAgeFloor": 9,
+          "ageStatus": "editorial_hypothesis",
+          "researchDecision": "second_wave",
+          "nextGate": "compare_scene_variants_before_prototype"
+        },
+        {
+          "label": "are",
+          "candidateType": "whole_word_candidate",
+          "lexicalEvidence": "lexique_exact",
+          "visualPlausibility": "low",
+          "spontaneousNamingRisk": "high",
+          "researchDecision": "reject_visual_priority",
+          "nextGate": "prefer_art"
+        }
+      ],
+      "coverageEvidence": {
+        "totalUnlocked": 14,
+        "strictUnlocked": 11,
+        "generalUnlocked": 3,
+        "weightedGain": 112.061,
+        "examplesUnlocked": [
+          "art",
+          "bagarre",
+          "are",
+          "harper",
+          "artère",
+          "mouchard",
+          "arène",
+          "ardent"
+        ]
+      }
+    },
+    {
+      "ipa": "al",
+      "recommendedRoute": "natural_place_pictogram_with_caution",
+      "candidates": [
+        {
+          "label": "halle",
+          "candidateType": "whole_word_pictogram",
+          "lexicalEvidence": "lexique_exact",
+          "visualConcept": "Une halle de marché couverte reconnaissable, structure ouverte avec étals visibles, sans panneau écrit.",
+          "visualPlausibility": "medium_high",
+          "spontaneousNamingRisk": "high",
+          "mainConfusions": [
+            "marché",
+            "bâtiment",
+            "hangar"
+          ],
+          "suggestedAgeFloor": 12,
+          "ageStatus": "editorial_hypothesis",
+          "researchDecision": "reserve",
+          "nextGate": "do_not_prototype_before_higher_yield_candidates"
+        }
+      ],
+      "coverageEvidence": {
+        "totalUnlocked": 14,
+        "strictUnlocked": 8,
+        "generalUnlocked": 6,
+        "weightedGain": 194.008,
+        "examplesUnlocked": [
+          "allô",
+          "signal",
+          "allo",
+          "idéal",
+          "haleine",
+          "allergie",
+          "alerter",
+          "halo"
+        ]
+      }
+    },
+    {
+      "ipa": "ʁo",
+      "recommendedRoute": "scene_with_high_naming_risk",
+      "candidates": [
+        {
+          "label": "rot",
+          "candidateType": "whole_word_scene",
+          "lexicalEvidence": "lexique_exact",
+          "visualConcept": "Personnage qui rote après avoir bu, sans texte ni onomatopée visible.",
+          "visualPlausibility": "medium",
+          "spontaneousNamingRisk": "high",
+          "mainConfusions": [
+            "roter",
+            "burp",
+            "boire"
+          ],
+          "suggestedAgeFloor": 9,
+          "ageStatus": "editorial_hypothesis",
+          "researchDecision": "reserve",
+          "nextGate": "prefer_alternate_segmentation_when_possible"
+        }
+      ],
+      "coverageEvidence": {
+        "totalUnlocked": 17,
+        "strictUnlocked": 11,
+        "generalUnlocked": 6,
+        "weightedGain": 28.04,
+        "examplesUnlocked": [
+          "sirop",
+          "carreau",
+          "romain",
+          "rodéo",
+          "rôder",
+          "taro",
+          "sororité",
+          "dérober"
+        ]
+      }
+    },
+    {
+      "ipa": "sjɔ̃",
+      "recommendedRoute": "reject_natural_priority",
+      "candidates": [
+        {
+          "label": "scion",
+          "candidateType": "whole_word_pictogram",
+          "lexicalEvidence": "lexique_exact",
+          "visualConcept": "Jeune pousse ou greffon végétal.",
+          "visualPlausibility": "medium",
+          "spontaneousNamingRisk": "very_high",
+          "mainConfusions": [
+            "pousse",
+            "branche",
+            "plante",
+            "greffon"
+          ],
+          "suggestedAgeFloor": 12,
+          "ageStatus": "editorial_hypothesis",
+          "researchDecision": "reject_visual_priority",
+          "nextGate": "seek_alternate_segmentation_or_explicit_operation"
+        }
+      ],
+      "coverageEvidence": {
+        "totalUnlocked": 30,
+        "strictUnlocked": 13,
+        "generalUnlocked": 17,
+        "weightedGain": 318.246,
+        "examplesUnlocked": [
+          "mission",
+          "version",
+          "passion",
+          "possession",
+          "pension",
+          "opération",
+          "génération",
+          "libération"
+        ]
+      }
+    },
+    {
+      "ipa": "di",
+      "recommendedRoute": "alternate_segmentation_or_explicit_word_tile",
+      "candidates": [
+        {
+          "label": "dit",
+          "candidateType": "whole_word_candidate",
+          "lexicalEvidence": "lexique_exact",
+          "visualPlausibility": "low",
+          "spontaneousNamingRisk": "very_high",
+          "researchDecision": "reject_visual_priority",
+          "nextGate": "seek_alternate_segmentation"
+        }
+      ],
+      "coverageEvidence": {
+        "totalUnlocked": 24,
+        "strictUnlocked": 15,
+        "generalUnlocked": 9,
+        "weightedGain": 215.027,
+        "examplesUnlocked": [
+          "dîner",
+          "paradis",
+          "midi",
+          "diriger",
+          "diner",
+          "dit",
+          "diffuser",
+          "humidité"
+        ]
+      }
+    },
+    {
+      "ipa": "e",
+      "recommendedRoute": "explicit_grapheme_fallback",
+      "candidates": [
+        {
+          "label": "É",
+          "candidateType": "explicit_grapheme_tile",
+          "lexicalEvidence": "grapheme_reading_rule",
+          "visualPlausibility": "not_applicable",
+          "spontaneousNamingRisk": "not_applicable",
+          "researchDecision": "fallback_only",
+          "nextGate": "define_visible_grapheme_reading_policy"
+        }
+      ],
+      "coverageEvidence": {
+        "totalUnlocked": 78,
+        "strictUnlocked": 65,
+        "generalUnlocked": 13,
+        "weightedGain": 2003.547,
+        "examplesUnlocked": [
+          "aider",
+          "eh",
+          "hé",
+          "état",
+          "montrer",
+          "été",
+          "apporter",
+          "échapper"
+        ]
+      }
+    },
+    {
+      "ipa": "ʁe",
+      "recommendedRoute": "explicit_music_note_tile",
+      "candidates": [
+        {
+          "label": "ré",
+          "candidateType": "music_note_tile",
+          "lexicalEvidence": "lexique_exact",
+          "visualPlausibility": "not_applicable",
+          "spontaneousNamingRisk": "medium",
+          "researchDecision": "fallback_only",
+          "nextGate": "keep_visibly_distinct_from_object_pictograms"
+        }
+      ],
+      "coverageEvidence": {
+        "totalUnlocked": 61,
+        "strictUnlocked": 20,
+        "generalUnlocked": 41,
+        "weightedGain": 730.311,
+        "examplesUnlocked": [
+          "arrêter",
+          "gérer",
+          "réparer",
+          "réel",
+          "libérer",
+          "répéter",
+          "séparer",
+          "adorer"
+        ]
+      }
+    },
+    {
+      "ipa": "ɑ̃",
+      "recommendedRoute": "explicit_grapheme_or_alternate_segmentation",
+      "candidates": [
+        {
+          "label": "AN",
+          "candidateType": "explicit_grapheme_tile",
+          "lexicalEvidence": "grapheme_reading_rule",
+          "visualPlausibility": "not_applicable",
+          "spontaneousNamingRisk": "not_applicable",
+          "researchDecision": "fallback_only",
+          "nextGate": "penalize_in_rebus_scoring"
+        }
+      ],
+      "coverageEvidence": {
+        "totalUnlocked": 34,
+        "strictUnlocked": 21,
+        "generalUnlocked": 13,
+        "weightedGain": 1312.14,
+        "examplesUnlocked": [
+          "encore",
+          "an",
+          "océan",
+          "entrain",
+          "envers",
+          "dégoûtant",
+          "géant",
+          "embêter"
+        ]
+      }
+    },
+    {
+      "ipa": "kɔ̃",
+      "recommendedRoute": "alternate_segmentation",
+      "candidates": [
+        {
+          "label": "con",
+          "candidateType": "whole_word_candidate",
+          "lexicalEvidence": "lexique_exact",
+          "visualPlausibility": "low",
+          "spontaneousNamingRisk": "very_high",
+          "researchDecision": "reject_visual_priority",
+          "nextGate": "do_not_use_as_child_pictogram"
+        }
+      ],
+      "coverageEvidence": {
+        "totalUnlocked": 22,
+        "strictUnlocked": 18,
+        "generalUnlocked": 4,
+        "weightedGain": 226.923,
+        "examplesUnlocked": [
+          "con",
+          "raconter",
+          "compter",
+          "concert",
+          "congé",
+          "comté",
+          "conserver",
+          "contourner"
+        ]
+      }
+    }
+  ],
   "topVisualResearchLeads": [
     {
       "ipa": "e",

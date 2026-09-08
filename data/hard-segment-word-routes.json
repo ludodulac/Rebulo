@@ -1,11 +1,12 @@
 {
-  "generatedAt": "2026-09-08T08:28:05.563Z",
+  "generatedAt": "2026-09-08T08:41:31.958Z",
   "status": "research_only",
-  "sourceBrickMapGeneratedAt": "2026-09-08T08:28:02.014Z",
+  "sourceBrickMapGeneratedAt": "2026-09-08T08:41:27.087Z",
   "strategyVersion": "1.0.0",
   "methodology": {
     "exactness": "Every route reconstructs the complete target IPA with complete visible operation readings.",
     "alternateRequirement": "A route must use the tested alternative brick and contain at least two operations; trivial whole-target replacement is excluded.",
+    "representationReadiness": "Exact phonetic routes are counted separately from routes whose tested alternative has a non-trivial lexical representation candidate. Single-letter Lexique artifacts never make a route representation-ready.",
     "strictPreference": "Strict routes rank before general routes. General routes remain explicit and visible only.",
     "activation": "No route, lexical lead, pictogram or grapheme is activated by this report."
   },
@@ -13,8 +14,11 @@
     "segmentCount": 8,
     "targetCount": 127,
     "targetsWithAlternativeRoutes": 45,
+    "targetsWithRepresentableAlternativeRoutes": 9,
     "targetsStillBlocked": 82,
+    "targetsStillNeedingRepresentableAlternative": 118,
     "strictAlternativeTargets": 5,
+    "strictRepresentableAlternativeTargets": 1,
     "generalAlternativeTargets": 41
   },
   "segments": [
@@ -24,7 +28,9 @@
       "sourceUsefulUnlocked": 18,
       "targetCount": 18,
       "targetsWithAlternativeRoutes": 0,
+      "targetsWithRepresentableAlternativeRoutes": 0,
       "targetsStillBlocked": 18,
+      "targetsStillNeedingRepresentableAlternative": 18,
       "targets": [
         {
           "key": "maman|mamɑ̃",
@@ -33,8 +39,10 @@
           "ageBandCandidate": 5,
           "rebuloUtilityTier": "very_common_simple",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "manger|mɑ̃ʒe",
@@ -43,8 +51,10 @@
           "ageBandCandidate": 5,
           "rebuloUtilityTier": "very_common_simple",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "man|mɑ̃",
@@ -53,8 +63,10 @@
           "ageBandCandidate": 7,
           "rebuloUtilityTier": "school_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "serment|sɛʁmɑ̃",
@@ -63,8 +75,10 @@
           "ageBandCandidate": 7,
           "rebuloUtilityTier": "school_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "amant|amɑ̃",
@@ -73,8 +87,10 @@
           "ageBandCandidate": 7,
           "rebuloUtilityTier": "school_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "apparemment|apaʁamɑ̃",
@@ -83,8 +99,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "school_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "document|dokymɑ̃",
@@ -93,8 +111,10 @@
           "ageBandCandidate": 7,
           "rebuloUtilityTier": "teen_adult_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "alimentaire|alimɑ̃tɛʁ",
@@ -103,8 +123,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "teen_adult_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "documentaire|dokymɑ̃tɛʁ",
@@ -113,8 +135,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "ciment|simɑ̃",
@@ -123,8 +147,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "dément|demɑ̃",
@@ -133,8 +159,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "décidément|desidemɑ̃",
@@ -143,8 +171,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "alimenter|alimɑ̃te",
@@ -153,8 +183,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "piment|pimɑ̃",
@@ -163,8 +195,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "poliment|polimɑ̃",
@@ -173,8 +207,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "tourmenter|tuʁmɑ̃te",
@@ -183,8 +219,10 @@
           "ageBandCandidate": 12,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "mentalité|mɑ̃talite",
@@ -193,8 +231,10 @@
           "ageBandCandidate": 12,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "clément|klemɑ̃",
@@ -203,8 +243,10 @@
           "ageBandCandidate": 12,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         }
       ]
     },
@@ -214,7 +256,9 @@
       "sourceUsefulUnlocked": 16,
       "targetCount": 16,
       "targetsWithAlternativeRoutes": 7,
+      "targetsWithRepresentableAlternativeRoutes": 7,
       "targetsStillBlocked": 9,
+      "targetsStillNeedingRepresentableAlternative": 9,
       "targets": [
         {
           "key": "hein|ɛ̃",
@@ -223,8 +267,10 @@
           "ageBandCandidate": 5,
           "rebuloUtilityTier": "very_common_simple",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "ainsi|ɛ̃si",
@@ -233,8 +279,10 @@
           "ageBandCandidate": 5,
           "rebuloUtilityTier": "very_common_simple",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "terrain|tɛʁɛ̃",
@@ -243,8 +291,10 @@
           "ageBandCandidate": 5,
           "rebuloUtilityTier": "child_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "impossible|ɛ̃posibl",
@@ -253,8 +303,10 @@
           "ageBandCandidate": 7,
           "rebuloUtilityTier": "child_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "intérêt|ɛ̃teʁɛ",
@@ -263,6 +315,7 @@
           "ageBandCandidate": 7,
           "rebuloUtilityTier": "child_common",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 1,
           "routes": [
             {
               "alternativeIpa": "ɛ",
@@ -322,12 +375,48 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [
+                {
+                  "word": "haie",
+                  "lemma": "haie",
+                  "pos": "NOM",
+                  "frequency": 1.209,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "es",
+                  "lemma": "es",
+                  "pos": "NOM",
+                  "frequency": 0.193,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "aie",
+                  "lemma": "aie",
+                  "pos": "NOM",
+                  "frequency": 0.149,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "ait",
+                  "lemma": "ait",
+                  "pos": "NOM",
+                  "frequency": 0.076,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "representationStatus": "lexical_representation_candidate",
               "alternativeUsefulUnlocked": 12,
               "status": "research_only_exact_route",
-              "score": -63
+              "score": -3
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "representable_alternative_candidate_found"
         },
         {
           "key": "incident|ɛ̃sidɑ̃",
@@ -336,8 +425,10 @@
           "ageBandCandidate": 7,
           "rebuloUtilityTier": "school_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "interroger|ɛ̃tɛʁoʒe",
@@ -346,6 +437,7 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "school_common",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 1,
           "routes": [
             {
               "alternativeIpa": "ɛ",
@@ -411,12 +503,48 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [
+                {
+                  "word": "haie",
+                  "lemma": "haie",
+                  "pos": "NOM",
+                  "frequency": 1.209,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "es",
+                  "lemma": "es",
+                  "pos": "NOM",
+                  "frequency": 0.193,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "aie",
+                  "lemma": "aie",
+                  "pos": "NOM",
+                  "frequency": 0.149,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "ait",
+                  "lemma": "ait",
+                  "pos": "NOM",
+                  "frequency": 0.076,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "representationStatus": "lexical_representation_candidate",
               "alternativeUsefulUnlocked": 12,
               "status": "research_only_exact_route",
-              "score": -88
+              "score": -28
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "representable_alternative_candidate_found"
         },
         {
           "key": "insigne|ɛ̃siɲ",
@@ -425,8 +553,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "teen_adult_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "impoli|ɛ̃poli",
@@ -435,8 +565,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "indépendant|ɛ̃depɑ̃dɑ̃",
@@ -445,6 +577,7 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 1,
           "routes": [
             {
               "alternativeIpa": "ɛ",
@@ -510,12 +643,48 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [
+                {
+                  "word": "haie",
+                  "lemma": "haie",
+                  "pos": "NOM",
+                  "frequency": 1.209,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "es",
+                  "lemma": "es",
+                  "pos": "NOM",
+                  "frequency": 0.193,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "aie",
+                  "lemma": "aie",
+                  "pos": "NOM",
+                  "frequency": 0.149,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "ait",
+                  "lemma": "ait",
+                  "pos": "NOM",
+                  "frequency": 0.076,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "representationStatus": "lexical_representation_candidate",
               "alternativeUsefulUnlocked": 12,
               "status": "research_only_exact_route",
-              "score": -88
+              "score": -28
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "representable_alternative_candidate_found"
         },
         {
           "key": "inverser|ɛ̃vɛʁse",
@@ -524,6 +693,7 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 1,
           "routes": [
             {
               "alternativeIpa": "ɛ",
@@ -583,12 +753,48 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [
+                {
+                  "word": "haie",
+                  "lemma": "haie",
+                  "pos": "NOM",
+                  "frequency": 1.209,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "es",
+                  "lemma": "es",
+                  "pos": "NOM",
+                  "frequency": 0.193,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "aie",
+                  "lemma": "aie",
+                  "pos": "NOM",
+                  "frequency": 0.149,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "ait",
+                  "lemma": "ait",
+                  "pos": "NOM",
+                  "frequency": 0.076,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "representationStatus": "lexical_representation_candidate",
               "alternativeUsefulUnlocked": 12,
               "status": "research_only_exact_route",
-              "score": -63
+              "score": -3
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "representable_alternative_candidate_found"
         },
         {
           "key": "impôt|ɛ̃po",
@@ -597,8 +803,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "inciter|ɛ̃site",
@@ -607,6 +815,7 @@
           "ageBandCandidate": 12,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 1,
           "routes": [
             {
               "alternativeIpa": "ɛ",
@@ -666,12 +875,48 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [
+                {
+                  "word": "haie",
+                  "lemma": "haie",
+                  "pos": "NOM",
+                  "frequency": 1.209,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "es",
+                  "lemma": "es",
+                  "pos": "NOM",
+                  "frequency": 0.193,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "aie",
+                  "lemma": "aie",
+                  "pos": "NOM",
+                  "frequency": 0.149,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "ait",
+                  "lemma": "ait",
+                  "pos": "NOM",
+                  "frequency": 0.076,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "representationStatus": "lexical_representation_candidate",
               "alternativeUsefulUnlocked": 12,
               "status": "research_only_exact_route",
-              "score": -63
+              "score": -3
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "representable_alternative_candidate_found"
         },
         {
           "key": "importuner|ɛ̃pɔʁtyne",
@@ -680,6 +925,7 @@
           "ageBandCandidate": 12,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 1,
           "routes": [
             {
               "alternativeIpa": "ɛ",
@@ -745,12 +991,48 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [
+                {
+                  "word": "haie",
+                  "lemma": "haie",
+                  "pos": "NOM",
+                  "frequency": 1.209,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "es",
+                  "lemma": "es",
+                  "pos": "NOM",
+                  "frequency": 0.193,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "aie",
+                  "lemma": "aie",
+                  "pos": "NOM",
+                  "frequency": 0.149,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "ait",
+                  "lemma": "ait",
+                  "pos": "NOM",
+                  "frequency": 0.076,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "representationStatus": "lexical_representation_candidate",
               "alternativeUsefulUnlocked": 12,
               "status": "research_only_exact_route",
-              "score": -88
+              "score": -28
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "representable_alternative_candidate_found"
         },
         {
           "key": "interner|ɛ̃tɛʁne",
@@ -759,8 +1041,10 @@
           "ageBandCandidate": 12,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "lycéen|liseɛ̃",
@@ -769,6 +1053,7 @@
           "ageBandCandidate": 12,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 1,
           "routes": [
             {
               "alternativeIpa": "ɛ",
@@ -828,12 +1113,48 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [
+                {
+                  "word": "haie",
+                  "lemma": "haie",
+                  "pos": "NOM",
+                  "frequency": 1.209,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "es",
+                  "lemma": "es",
+                  "pos": "NOM",
+                  "frequency": 0.193,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "aie",
+                  "lemma": "aie",
+                  "pos": "NOM",
+                  "frequency": 0.149,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "ait",
+                  "lemma": "ait",
+                  "pos": "NOM",
+                  "frequency": 0.076,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "representationStatus": "lexical_representation_candidate",
               "alternativeUsefulUnlocked": 12,
               "status": "research_only_exact_route",
-              "score": -63
+              "score": -3
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "representable_alternative_candidate_found"
         }
       ]
     },
@@ -843,7 +1164,9 @@
       "sourceUsefulUnlocked": 11,
       "targetCount": 11,
       "targetsWithAlternativeRoutes": 0,
+      "targetsWithRepresentableAlternativeRoutes": 0,
       "targetsStillBlocked": 11,
+      "targetsStillNeedingRepresentableAlternative": 11,
       "targets": [
         {
           "key": "heure|œʁ",
@@ -852,8 +1175,10 @@
           "ageBandCandidate": 5,
           "rebuloUtilityTier": "very_common_simple",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "h|œʁ",
@@ -862,8 +1187,10 @@
           "ageBandCandidate": 5,
           "rebuloUtilityTier": "very_common_simple",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "erreur|ɛʁœʁ",
@@ -872,8 +1199,10 @@
           "ageBandCandidate": 5,
           "rebuloUtilityTier": "child_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "ailleurs|ajœʁ",
@@ -882,8 +1211,10 @@
           "ageBandCandidate": 5,
           "rebuloUtilityTier": "child_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "terreur|tɛʁœʁ",
@@ -892,8 +1223,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "school_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "heurter|œʁte",
@@ -902,8 +1235,10 @@
           "ageBandCandidate": 12,
           "rebuloUtilityTier": "school_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "livreur|livʁœʁ",
@@ -912,8 +1247,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "teen_adult_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "boxeur|bɔksœʁ",
@@ -922,8 +1259,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "pêcheur|pɛʃœʁ",
@@ -932,8 +1271,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "porteur|pɔʁtœʁ",
@@ -942,8 +1283,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "éclaireur|eklɛʁœʁ",
@@ -952,8 +1295,10 @@
           "ageBandCandidate": 12,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         }
       ]
     },
@@ -963,7 +1308,9 @@
       "sourceUsefulUnlocked": 8,
       "targetCount": 8,
       "targetsWithAlternativeRoutes": 8,
+      "targetsWithRepresentableAlternativeRoutes": 1,
       "targetsStillBlocked": 0,
+      "targetsStillNeedingRepresentableAlternative": 7,
       "targets": [
         {
           "key": "art|aʁ",
@@ -972,6 +1319,7 @@
           "ageBandCandidate": 5,
           "rebuloUtilityTier": "child_common",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "ʁ",
@@ -992,12 +1340,15 @@
                 }
               ],
               "lexicalLeads": [],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 86,
               "status": "research_only_exact_route",
               "score": -84
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "bagarre|bagaʁ",
@@ -1006,6 +1357,7 @@
           "ageBandCandidate": 7,
           "rebuloUtilityTier": "school_common",
           "alternativeRouteCount": 2,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "ʁ",
@@ -1032,6 +1384,8 @@
                 }
               ],
               "lexicalLeads": [],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 86,
               "status": "research_only_exact_route",
               "score": -109
@@ -1061,12 +1415,15 @@
                 }
               ],
               "lexicalLeads": [],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 60,
               "status": "research_only_exact_route",
               "score": -135
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "are|aʁ",
@@ -1075,6 +1432,7 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "teen_adult_common",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "ʁ",
@@ -1095,12 +1453,15 @@
                 }
               ],
               "lexicalLeads": [],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 86,
               "status": "research_only_exact_route",
               "score": -84
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "harper|aʁpe",
@@ -1109,6 +1470,7 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "teen_adult_common",
           "alternativeRouteCount": 2,
+          "representableAlternativeRouteCount": 1,
           "routes": [
             {
               "alternativeIpa": "e",
@@ -1162,9 +1524,44 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [
+                {
+                  "word": "ais",
+                  "lemma": "ais",
+                  "pos": "NOM",
+                  "frequency": 11.953,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "ai",
+                  "lemma": "ai",
+                  "pos": "NOM",
+                  "frequency": 0.848,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "et",
+                  "lemma": "et",
+                  "pos": "NOM",
+                  "frequency": 0.019,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "eh",
+                  "lemma": "eh",
+                  "pos": "ONO",
+                  "frequency": 431.354,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "representationStatus": "lexical_representation_candidate",
               "alternativeUsefulUnlocked": 45,
               "status": "research_only_exact_route",
-              "score": 1115
+              "score": 1175
             },
             {
               "alternativeIpa": "ʁ",
@@ -1191,12 +1588,15 @@
                 }
               ],
               "lexicalLeads": [],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 86,
               "status": "research_only_exact_route",
               "score": -229
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "representable_alternative_candidate_found"
         },
         {
           "key": "artère|aʁtɛʁ",
@@ -1205,6 +1605,7 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "teen_adult_common",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "ʁ",
@@ -1231,12 +1632,15 @@
                 }
               ],
               "lexicalLeads": [],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 86,
               "status": "research_only_exact_route",
               "score": -109
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "mouchard|muʃaʁ",
@@ -1245,6 +1649,7 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "ʁ",
@@ -1271,12 +1676,15 @@
                 }
               ],
               "lexicalLeads": [],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 86,
               "status": "research_only_exact_route",
               "score": -109
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "arène|aʁɛn",
@@ -1285,6 +1693,7 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 2,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "n",
@@ -1320,9 +1729,11 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 70,
               "status": "research_only_exact_route",
-              "score": -5
+              "score": -125
             },
             {
               "alternativeIpa": "ʁ",
@@ -1349,12 +1760,15 @@
                 }
               ],
               "lexicalLeads": [],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 86,
               "status": "research_only_exact_route",
               "score": -229
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "ardent|aʁdɑ̃",
@@ -1363,6 +1777,7 @@
           "ageBandCandidate": 12,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "ʁ",
@@ -1389,12 +1804,15 @@
                 }
               ],
               "lexicalLeads": [],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 86,
               "status": "research_only_exact_route",
               "score": -109
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         }
       ]
     },
@@ -1404,7 +1822,9 @@
       "sourceUsefulUnlocked": 9,
       "targetCount": 9,
       "targetsWithAlternativeRoutes": 9,
+      "targetsWithRepresentableAlternativeRoutes": 0,
       "targetsStillBlocked": 0,
+      "targetsStillNeedingRepresentableAlternative": 9,
       "targets": [
         {
           "key": "allô|alo",
@@ -1413,6 +1833,7 @@
           "ageBandCandidate": 5,
           "rebuloUtilityTier": "child_common",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "l",
@@ -1448,12 +1869,15 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 68,
               "status": "research_only_exact_route",
-              "score": -7
+              "score": -127
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "signal|siɲal",
@@ -1462,6 +1886,7 @@
           "ageBandCandidate": 7,
           "rebuloUtilityTier": "child_common",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "l",
@@ -1497,12 +1922,15 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 68,
               "status": "research_only_exact_route",
-              "score": -7
+              "score": -127
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "allo|alo",
@@ -1511,6 +1939,7 @@
           "ageBandCandidate": 7,
           "rebuloUtilityTier": "school_common",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "l",
@@ -1546,12 +1975,15 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 68,
               "status": "research_only_exact_route",
-              "score": -7
+              "score": -127
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "idéal|ideal",
@@ -1560,6 +1992,7 @@
           "ageBandCandidate": 7,
           "rebuloUtilityTier": "teen_adult_common",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "l",
@@ -1601,12 +2034,15 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 68,
               "status": "research_only_exact_route",
-              "score": -152
+              "score": -272
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "haleine|alɛn",
@@ -1615,6 +2051,7 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "teen_adult_common",
           "alternativeRouteCount": 2,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "n",
@@ -1650,9 +2087,11 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 70,
               "status": "research_only_exact_route",
-              "score": -5
+              "score": -125
             },
             {
               "alternativeIpa": "l",
@@ -1688,12 +2127,15 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 68,
               "status": "research_only_exact_route",
-              "score": -127
+              "score": -247
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "allergie|alɛʁʒi",
@@ -1702,6 +2144,7 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 2,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "ʁ",
@@ -1734,6 +2177,8 @@
                 }
               ],
               "lexicalLeads": [],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 86,
               "status": "research_only_exact_route",
               "score": -254
@@ -1778,12 +2223,15 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 68,
               "status": "research_only_exact_route",
-              "score": -272
+              "score": -392
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "alerter|alɛʁte",
@@ -1792,6 +2240,7 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 2,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "ʁ",
@@ -1824,6 +2273,8 @@
                 }
               ],
               "lexicalLeads": [],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 86,
               "status": "research_only_exact_route",
               "score": -134
@@ -1868,12 +2319,15 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 68,
               "status": "research_only_exact_route",
-              "score": -152
+              "score": -272
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "halo|alo",
@@ -1882,6 +2336,7 @@
           "ageBandCandidate": 12,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "l",
@@ -1917,12 +2372,15 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 68,
               "status": "research_only_exact_route",
-              "score": -7
+              "score": -127
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "postal|pɔstal",
@@ -1931,6 +2389,7 @@
           "ageBandCandidate": 12,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "l",
@@ -1966,12 +2425,15 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 68,
               "status": "research_only_exact_route",
-              "score": -7
+              "score": -127
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         }
       ]
     },
@@ -1981,7 +2443,9 @@
       "sourceUsefulUnlocked": 29,
       "targetCount": 29,
       "targetsWithAlternativeRoutes": 9,
+      "targetsWithRepresentableAlternativeRoutes": 1,
       "targetsStillBlocked": 20,
+      "targetsStillNeedingRepresentableAlternative": 28,
       "targets": [
         {
           "key": "trop|tʁo",
@@ -1990,8 +2454,10 @@
           "ageBandCandidate": 5,
           "rebuloUtilityTier": "very_common_simple",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "autre|otʁ",
@@ -2000,8 +2466,10 @@
           "ageBandCandidate": 5,
           "rebuloUtilityTier": "very_common_simple",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "d'autres|dotʁ",
@@ -2010,8 +2478,10 @@
           "ageBandCandidate": 5,
           "rebuloUtilityTier": "very_common_simple",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "quatre|katʁ",
@@ -2020,8 +2490,10 @@
           "ageBandCandidate": 5,
           "rebuloUtilityTier": "very_common_simple",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "lettre|lɛtʁ",
@@ -2030,8 +2502,10 @@
           "ageBandCandidate": 5,
           "rebuloUtilityTier": "child_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "travers|tʁavɛʁ",
@@ -2040,6 +2514,7 @@
           "ageBandCandidate": 5,
           "rebuloUtilityTier": "child_common",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "t",
@@ -2075,12 +2550,15 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 99,
               "status": "research_only_exact_route",
-              "score": 1144
+              "score": 1024
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "attraper|atʁape",
@@ -2089,6 +2567,7 @@
           "ageBandCandidate": 7,
           "rebuloUtilityTier": "child_common",
           "alternativeRouteCount": 2,
+          "representableAlternativeRouteCount": 1,
           "routes": [
             {
               "alternativeIpa": "at",
@@ -2140,9 +2619,36 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [
+                {
+                  "word": "hâte",
+                  "lemma": "hâte",
+                  "pos": "NOM",
+                  "frequency": 29.892,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "atte",
+                  "lemma": "atte",
+                  "pos": "NOM",
+                  "frequency": 0.038,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "hâte",
+                  "lemma": "hâter",
+                  "pos": "VER",
+                  "frequency": 1.127,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "representationStatus": "lexical_representation_candidate",
               "alternativeUsefulUnlocked": 3,
               "status": "research_only_exact_route",
-              "score": -72
+              "score": -12
             },
             {
               "alternativeIpa": "t",
@@ -2184,12 +2690,15 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 99,
               "status": "research_only_exact_route",
-              "score": -121
+              "score": -241
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "representable_alternative_candidate_found"
         },
         {
           "key": "théâtre|teatʁ",
@@ -2198,8 +2707,10 @@
           "ageBandCandidate": 7,
           "rebuloUtilityTier": "school_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "traverser|tʁavɛʁse",
@@ -2208,6 +2719,7 @@
           "ageBandCandidate": 7,
           "rebuloUtilityTier": "school_common",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "t",
@@ -2249,12 +2761,15 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 99,
               "status": "research_only_exact_route",
-              "score": -1
+              "score": -121
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "rattraper|ʁatʁape",
@@ -2263,6 +2778,7 @@
           "ageBandCandidate": 7,
           "rebuloUtilityTier": "school_common",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "t",
@@ -2304,12 +2820,15 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 99,
               "status": "research_only_exact_route",
-              "score": -1
+              "score": -121
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "paraître|paʁɛtʁ",
@@ -2318,8 +2837,10 @@
           "ageBandCandidate": 7,
           "rebuloUtilityTier": "school_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "apparaître|apaʁɛtʁ",
@@ -2328,8 +2849,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "school_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "tracer|tʁase",
@@ -2338,6 +2861,7 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "school_common",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "t",
@@ -2373,12 +2897,15 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 99,
               "status": "research_only_exact_route",
-              "score": 24
+              "score": -96
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "chapitre|ʃapitʁ",
@@ -2387,8 +2914,10 @@
           "ageBandCandidate": 7,
           "rebuloUtilityTier": "teen_adult_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "détresse|detʁɛs",
@@ -2397,8 +2926,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "teen_adult_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "patrie|patʁi",
@@ -2407,6 +2938,7 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "teen_adult_common",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "t",
@@ -2442,12 +2974,15 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 99,
               "status": "research_only_exact_route",
-              "score": 1144
+              "score": 1024
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "trauma|tʁoma",
@@ -2456,8 +2991,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "teen_adult_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "peintre|pɛ̃tʁ",
@@ -2466,8 +3003,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "teen_adult_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "atroce|atʁɔs",
@@ -2476,8 +3015,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "teen_adult_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "terrestre|tɛʁɛstʁ",
@@ -2486,8 +3027,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "maestro|maɛstʁo",
@@ -2496,8 +3039,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "litre|litʁ",
@@ -2506,8 +3051,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "traversée|tʁavɛʁse",
@@ -2516,6 +3063,7 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "t",
@@ -2557,12 +3105,15 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 99,
               "status": "research_only_exact_route",
-              "score": -1
+              "score": -121
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "tripoter|tʁipote",
@@ -2571,6 +3122,7 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "t",
@@ -2612,12 +3164,15 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 99,
               "status": "research_only_exact_route",
-              "score": 1119
+              "score": 999
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "traine|tʁɛn",
@@ -2626,8 +3181,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "tri|tʁi",
@@ -2636,6 +3193,7 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "t",
@@ -2665,12 +3223,15 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 99,
               "status": "research_only_exact_route",
-              "score": 1169
+              "score": 1049
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "paraitre|paʁɛtʁ",
@@ -2679,8 +3240,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "traîneau|tʁɛno",
@@ -2689,8 +3252,10 @@
           "ageBandCandidate": 12,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "traîne|tʁɛn",
@@ -2699,8 +3264,10 @@
           "ageBandCandidate": 12,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         }
       ]
     },
@@ -2710,7 +3277,9 @@
       "sourceUsefulUnlocked": 20,
       "targetCount": 20,
       "targetsWithAlternativeRoutes": 0,
+      "targetsWithRepresentableAlternativeRoutes": 0,
       "targetsStillBlocked": 20,
+      "targetsStillNeedingRepresentableAlternative": 20,
       "targets": [
         {
           "key": "mission|misjɔ̃",
@@ -2719,8 +3288,10 @@
           "ageBandCandidate": 5,
           "rebuloUtilityTier": "child_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "version|vɛʁsjɔ̃",
@@ -2729,8 +3300,10 @@
           "ageBandCandidate": 7,
           "rebuloUtilityTier": "school_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "passion|pasjɔ̃",
@@ -2739,8 +3312,10 @@
           "ageBandCandidate": 7,
           "rebuloUtilityTier": "school_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "opération|opeʁasjɔ̃",
@@ -2749,8 +3324,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "school_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "possession|posesjɔ̃",
@@ -2759,8 +3336,10 @@
           "ageBandCandidate": 7,
           "rebuloUtilityTier": "teen_adult_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "pension|pɑ̃sjɔ̃",
@@ -2769,8 +3348,10 @@
           "ageBandCandidate": 7,
           "rebuloUtilityTier": "teen_adult_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "génération|ʒeneʁasjɔ̃",
@@ -2779,8 +3360,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "teen_adult_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "libération|libeʁasjɔ̃",
@@ -2789,8 +3372,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "teen_adult_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "séparation|sepaʁasjɔ̃",
@@ -2799,8 +3384,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "teen_adult_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "démission|demisjɔ̃",
@@ -2809,8 +3396,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "teen_adult_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "apparition|apaʁisjɔ̃",
@@ -2819,8 +3408,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "teen_adult_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "potion|posjɔ̃",
@@ -2829,8 +3420,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "teen_adult_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "session|sesjɔ̃",
@@ -2839,8 +3432,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "teen_adult_common",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "citation|sitasjɔ̃",
@@ -2849,8 +3444,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "tentation|tɑ̃tasjɔ̃",
@@ -2859,8 +3456,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "agitation|aʒitasjɔ̃",
@@ -2869,8 +3468,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "occupation|okypasjɔ̃",
@@ -2879,8 +3480,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "imitation|imitasjɔ̃",
@@ -2889,8 +3492,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "assignation|asiɲasjɔ̃",
@@ -2899,8 +3504,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "ration|ʁasjɔ̃",
@@ -2909,8 +3516,10 @@
           "ageBandCandidate": 12,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         }
       ]
     },
@@ -2920,7 +3529,9 @@
       "sourceUsefulUnlocked": 16,
       "targetCount": 16,
       "targetsWithAlternativeRoutes": 12,
+      "targetsWithRepresentableAlternativeRoutes": 0,
       "targetsStillBlocked": 4,
+      "targetsStillNeedingRepresentableAlternative": 16,
       "targets": [
         {
           "key": "dîner|dine",
@@ -2929,6 +3540,7 @@
           "ageBandCandidate": 5,
           "rebuloUtilityTier": "child_common",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "d",
@@ -2964,12 +3576,15 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 48,
               "status": "research_only_exact_route",
-              "score": -27
+              "score": -147
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "paradis|paʁadi",
@@ -2978,6 +3593,7 @@
           "ageBandCandidate": 7,
           "rebuloUtilityTier": "school_common",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "d",
@@ -3019,12 +3635,15 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 48,
               "status": "research_only_exact_route",
-              "score": -52
+              "score": -172
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "midi|midi",
@@ -3033,6 +3652,7 @@
           "ageBandCandidate": 7,
           "rebuloUtilityTier": "school_common",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "d",
@@ -3068,12 +3688,15 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 48,
               "status": "research_only_exact_route",
-              "score": -27
+              "score": -147
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "diriger|diʁiʒe",
@@ -3082,6 +3705,7 @@
           "ageBandCandidate": 7,
           "rebuloUtilityTier": "school_common",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "d",
@@ -3123,12 +3747,15 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 48,
               "status": "research_only_exact_route",
-              "score": -172
+              "score": -292
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "diner|dine",
@@ -3137,6 +3764,7 @@
           "ageBandCandidate": 7,
           "rebuloUtilityTier": "school_common",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "d",
@@ -3172,12 +3800,15 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 48,
               "status": "research_only_exact_route",
-              "score": -27
+              "score": -147
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "divers|divɛʁ",
@@ -3186,6 +3817,7 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "school_common",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "d",
@@ -3221,12 +3853,15 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 48,
               "status": "research_only_exact_route",
-              "score": -27
+              "score": -147
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "dit|di",
@@ -3235,6 +3870,7 @@
           "ageBandCandidate": 7,
           "rebuloUtilityTier": "teen_adult_common",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "d",
@@ -3264,12 +3900,15 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 48,
               "status": "research_only_exact_route",
-              "score": -2
+              "score": -122
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "diffuser|difyze",
@@ -3278,6 +3917,7 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "d",
@@ -3313,12 +3953,15 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 48,
               "status": "research_only_exact_route",
-              "score": -27
+              "score": -147
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "humidité|ymidite",
@@ -3327,8 +3970,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "paddy|padi",
@@ -3337,6 +3982,7 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "d",
@@ -3372,12 +4018,15 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 48,
               "status": "research_only_exact_route",
-              "score": -27
+              "score": -147
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "cupidité|kypidite",
@@ -3386,8 +4035,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "rapidité|ʁapidite",
@@ -3396,8 +4047,10 @@
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "dandy|dɑ̃di",
@@ -3406,6 +4059,7 @@
           "ageBandCandidate": 12,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "d",
@@ -3441,12 +4095,15 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 48,
               "status": "research_only_exact_route",
-              "score": -27
+              "score": -147
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "diversité|divɛʁsite",
@@ -3455,8 +4112,10 @@
           "ageBandCandidate": 12,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
           "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule"
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "die|di",
@@ -3465,6 +4124,7 @@
           "ageBandCandidate": 12,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "d",
@@ -3494,12 +4154,15 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 48,
               "status": "research_only_exact_route",
-              "score": -2
+              "score": -122
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         },
         {
           "key": "caddie|kadi",
@@ -3508,6 +4171,7 @@
           "ageBandCandidate": 12,
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 1,
+          "representableAlternativeRouteCount": 0,
           "routes": [
             {
               "alternativeIpa": "d",
@@ -3543,12 +4207,15 @@
                   "activationState": "research_only"
                 }
               ],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
               "alternativeUsefulUnlocked": 48,
               "status": "research_only_exact_route",
-              "score": -147
+              "score": -267
             }
           ],
-          "resolutionState": "exact_alternative_routes_found"
+          "resolutionState": "exact_alternative_routes_found",
+          "representationResolutionState": "still_needs_representable_alternative"
         }
       ]
     }

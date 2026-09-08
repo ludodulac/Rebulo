@@ -1,0 +1,19 @@
+{
+  "version":"1.0.0",
+  "status":"research_only",
+  "supersedesHistoricalBankWave":true,
+  "objective":"Prioriser les prototypes par couverture utile Rebulo combinée à la qualité de dénomination, la simplicité visuelle et l’accessibilité d’âge.",
+  "firstWave":[
+    {"ipa":"ɛ","candidate":"haie","reason":"Bon rendement utile, référent concret, qualité visuelle élevée; risque de confusion modéré à tester."},
+    {"ipa":"wa","candidate":"oie","reason":"Rendement plus faible mais excellente accessibilité et risque de dénomination relativement bas."},
+    {"ipa":"ɔʁ","candidate":"or","reason":"Référent culturellement courant, visuel simple à comparer; risque de nommer lingot/trésor à tester."}
+  ],
+  "secondWave":[
+    {"ipa":"as","candidate":"as","reason":"Bonne qualité potentielle mais rendement utile inférieur; à prototyper après les résultats de la première vague."}
+  ],
+  "reserve":[
+    {"ipa":"ti","candidate":"tee","reason":"Objet spécialisé, âge élevé et risque de dénomination moyen-haut pour seulement six mots utiles débloqués."},
+    {"ipa":"ɑ̃s","candidate":"anse","reason":"Risque élevé de réponses poignée/tasse; faible rendement utile."}
+  ],
+  "caution":"Cette sélection ordonne la recherche seulement. Aucun candidat n’est activé, validé humainement ou cliniquement par ce fichier."
+}

@@ -9,6 +9,11 @@ import {
   rankBrickOpportunities,
   rankVisualResearchLeads
 } from '../src/phonetic-brick-map.js';
+import {
+  validatePhoneticBrickCandidateBank,
+  attachCuratedBrickEvidence,
+  simulateCuratedBrickWave
+} from '../src/phonetic-brick-curation.js';
 import {mergeProductivityInventory} from '../src/phonetic-productivity.js';
 import {OPEN_PICTOGRAMS} from '../src/open-pictogram-library.js';
 import {OPEN_PICTOGRAMS_WAVE_2} from '../src/open-pictogram-library-wave2.js';
@@ -26,6 +31,13 @@ if(!fs.existsSync(input)){
 const source=JSON.parse(fs.readFileSync(input,'utf8'));
 const entries=Array.isArray(source?.entries)?source.entries:[];
 const seed=JSON.parse(fs.readFileSync('data/lexicon-seed.json','utf8'));
+const candidateBank=JSON.parse(fs.readFileSync('data/phonetic-brick-candidates.json','utf8'));
+const candidateValidation=validatePhoneticBrickCandidateBank(candidateBank,entries);
+if(!candidateValidation.valid){
+  console.error('Banque de candidats phonétiques invalide:');
+  for(const error of candidateValidation.errors)console.error(`- ${error}`);
+  process.exit(2);
+}
 const technicalInventory=mergeProductivityInventory(seed,[...OPEN_PICTOGRAMS,...OPEN_PICTOGRAMS_WAVE_2,...OPEN_PICTOGRAMS_WAVE_3]);
 const targets=buildTargetVocabulary(entries);
 const targetStats=targetVocabularyStats(targets);
@@ -37,6 +49,8 @@ const targetCoverage=analyzeTargetConstructibility(targets,technicalInventory,4)
 const researchQueue=buildSegmentResearchQueue(classifiedSegments,entries,{candidateLimit:8,maxSegments:250});
 const opportunities=rankBrickOpportunities(researchQueue,targets,technicalInventory,{limit:60,maxOperations:4});
 const visualResearchLeads=rankVisualResearchLeads(opportunities,{limit:60});
+const curatedBrickResearch=attachCuratedBrickEvidence(candidateBank,opportunities);
+const firstWaveSimulation=simulateCuratedBrickWave(candidateBank,targets,technicalInventory,{maxOperations:4});
 
 const report={
   generatedAt:new Date().toISOString(),
@@ -50,6 +64,7 @@ const report={
     candidateSearch:'Whole Lexique entries whose complete IPA pronunciation exactly equals an uncovered segment.',
     gain:'For each prioritized segment, add one virtual exact whole-word brick and count previously unresolved target words that become exactly constructible.',
     researchPriority:'A separate automatic research score combines coverage gain, segment size and existence of plausible lexical candidates. It is a queueing heuristic only, never a visual-validity score.',
+    curatedWave:'Human/editorial research hypotheses are stored separately from automatic rankings. The first-wave simulation adds only virtual exact readings and never activates a pictogram.',
     visualCaution:'Lexical exactness never implies imageability, spontaneous naming, age suitability, or clinical validation.'
   },
   targetVocabulary:targetStats,
@@ -62,6 +77,9 @@ const report={
     withExactWholeWordCandidates:researchQueue.filter(row=>row.wholeWordCandidates.length>0).length,
     withoutExactWholeWordCandidates:researchQueue.filter(row=>row.wholeWordCandidates.length===0).length
   },
+  candidateBankValidation:{valid:true,warnings:candidateValidation.warnings},
+  firstWaveSimulation,
+  curatedBrickResearch,
   topVisualResearchLeads:visualResearchLeads,
   topBrickOpportunities:opportunities,
   topUncoveredSegments:researchQueue.slice(0,120)
@@ -74,7 +92,10 @@ const pct=(n,d)=>d?`${(100*n/d).toFixed(1)} %`:'0 %';
 const totalTargets=targetStats.total;
 const top=opportunities.slice(0,30);
 const visualTop=visualResearchLeads.slice(0,30);
+const firstWave=new Set(candidateBank.firstWaveSegments||[]);
+const firstWaveRows=curatedBrickResearch.filter(row=>firstWave.has(row.ipa));
 const candidateLabels=(row,key='wholeWordCandidates')=>(row[key]||[]).slice(0,4).map(x=>x.word).join(', ')||'—';
+const recommendedCandidate=row=>(row.candidates||[]).find(candidate=>candidate.researchDecision==='first_wave')||row.candidates?.[0]||null;
 const lines=[
   '# Rebulo — cartographie des briques phonétiques',
   '',
@@ -87,6 +108,16 @@ const lines=[
   `- Cibles encore non résolues : ${targetCoverage.counts.unresolved} (${pct(targetCoverage.counts.unresolved,totalTargets)}).`,
   '',
   'Les segments ci-dessous sont des **séquences IPA utiles au rébus**. Ils ne sont pas automatiquement des syllabes linguistiques. Les candidats lexicaux ont une prononciation entière exacte, mais leur qualité visuelle et leur dénomination restent à valider.',
+  '',
+  '## Première vague de briques à prototyper',
+  '',
+  `Si les ${firstWaveSimulation.selectedSegments.length} briques de cette vague étaient toutes validées puis activées, la simulation phonétique rendrait ${firstWaveSimulation.newlyPlayable} cibles supplémentaires techniquement constructibles par rapport au stock actuel. Ce nombre ne vaut pas validation visuelle.`,
+  '',
+  '| Segment | Candidat recommandé | Concept visuel | Risque de dénomination | Gain individuel | Dont images seules |',
+  '|---|---|---|---|---:|---:|',
+  ...firstWaveRows.map(row=>{const candidate=recommendedCandidate(row);return `| /${row.ipa}/ | ${candidate?.label||'—'} | ${candidate?.visualConcept||'—'} | ${candidate?.spontaneousNamingRisk||'—'} | ${row.coverageEvidence?.totalUnlocked??'—'} | ${row.coverageEvidence?.strictUnlocked??'—'} |`;}),
+  '',
+  '> Cette vague est une file de prototypage/recherche. Aucun de ces visuels ne devient automatiquement une brique active.',
   '',
   '## Priorités de recherche de représentations',
   '',
@@ -116,4 +147,5 @@ fs.writeFileSync(markdownOutput,lines.join('\n')+'\n');
 console.log(`Target vocabulary: ${totalTargets}`);
 console.log(`Segments: ${classifiedSegments.length}; research queue: ${researchQueue.length}`);
 console.log(`Target coverage: ${JSON.stringify(targetCoverage.counts)}`);
+console.log(`First curated wave: ${firstWaveSimulation.selectedSegments.length} segments; +${firstWaveSimulation.newlyPlayable} technically playable targets`);
 console.log(`Wrote ${output} and ${markdownOutput}`);

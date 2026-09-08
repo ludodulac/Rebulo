@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {validateHardSegmentStrategies,hardSegmentStrategySummary,attachHardSegmentStrategies} from '../src/hard-segment-strategies.js';
+const registry=JSON.parse(fs.readFileSync('data/hard-segment-strategies.json','utf8'));
+const validation=validateHardSegmentStrategies(registry);assert.equal(validation.valid,true,validation.errors.join('\n'));
+const summary=hardSegmentStrategySummary(registry);assert.equal(summary.segmentCount,8);assert.equal(summary.scene,2);assert.ok(summary.alternate>=6);assert.ok(summary.visibleFallbackResearch>=4);
+const byIpa=new Map(registry.segments.map(x=>[x.ipa,x]));assert.equal(byIpa.get('mɑ̃').strategy,'alternate_segmentation_first');assert.equal(byIpa.get('ɛ̃').fallbackStatus,'contextual_grapheme_rule_not_yet_authorized');assert.equal(byIpa.get('œʁ').strategy,'scene_comparison');assert.equal(byIpa.get('tʁ').strategy,'alternate_segmentation_required');assert.equal(byIpa.get('sjɔ̃').lexicalAssessment.includes('very_high'),true);const di=byIpa.get('di');assert.equal(di.strategy,'alternate_segmentation_required');assert.ok(di.rejectedFallbacks.some(x=>x.label==='D'&&x.reason.includes('/de/')),'D must be explicitly rejected for /di/ because its French letter name is /de/');
+const attached=attachHardSegmentStrategies([{ipa:'tʁ',usefulUnlocked:29},{ipa:'wa',usefulUnlocked:4}],registry);assert.equal(attached[0].hardSegmentStrategy.strategy,'alternate_segmentation_required');assert.equal('hardSegmentStrategy' in attached[1],false);
+const bad=structuredClone(registry);bad.segments.find(x=>x.ipa==='di').rejectedFallbacks=[];assert.equal(validateHardSegmentStrategies(bad).valid,false);
+console.log('Hard segment strategies: scenes, alternate segmentations and non-authorized grapheme research remain explicit.');

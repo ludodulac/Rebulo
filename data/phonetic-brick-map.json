@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T11:52:46.782Z",
+  "generatedAt": "2026-09-08T12:19:18.778Z",
   "source": "Lexique 4",
   "sourceLicense": "CC BY-SA 4.0",
   "schoolFrequencyEvidence": {
@@ -99,7 +99,8 @@
       "segmentCount": 8,
       "scene": 2,
       "alternate": 6,
-      "visibleFallbackResearch": 7
+      "visibleFallbackResearch": 7,
+      "composedFallbackResearch": 4
     },
     "warnings": [],
     "segments": [
@@ -145,6 +146,26 @@
         "lexicalAssessment": "exact_and_scene_plausible_but_high_naming_risk",
         "visualHypotheses": [
           "personne consultant clairement l'heure sur une horloge ou une montre, sans texte dominant"
+        ],
+        "composedFallbackResearch": [
+          {
+            "ipa": "jœʁ",
+            "status": "composed_general_mode_research_only",
+            "operations": [
+              {
+                "type": "grapheme_sound",
+                "label": "Y",
+                "ipa": "j"
+              },
+              {
+                "type": "whole_word",
+                "label": "heure",
+                "ipa": "œʁ",
+                "dependencyStatus": "scene_research_not_naming_validated"
+              }
+            ],
+            "nextGate": "validate_heure_scene_naming_then_test_explicit_Y_to_j_cue"
+          }
         ],
         "nextGate": "compare_two_scene_variants_in_blind_naming_test"
       },
@@ -196,6 +217,30 @@
             "nextGate": "render_explicit_N_to_sound_cue_then_test_general_mode_comprehension"
           }
         ],
+        "composedFallbackResearch": [
+          {
+            "ipa": "ɲal",
+            "status": "composed_general_mode_research_only",
+            "operations": [
+              {
+                "type": "grapheme_sound",
+                "label": "GN",
+                "ipa": "ɲ"
+              },
+              {
+                "type": "grapheme",
+                "label": "A",
+                "ipa": "a"
+              },
+              {
+                "type": "grapheme_sound",
+                "label": "L",
+                "ipa": "l"
+              }
+            ],
+            "nextGate": "test_explicit_GN_to_ɲ_and_L_to_l_cues_as_a_visible_general_composition"
+          }
+        ],
         "fallbackStatus": "grapheme_sound_general_mode_research_only",
         "nextGate": "search_shared_alternative_segments_before_visual_prototype; keep_letter_sounds_explicit_and_general_only"
       },
@@ -241,6 +286,47 @@
             "operationType": "grapheme_sound",
             "status": "grapheme_sound_general_mode_research_only",
             "nextGate": "render_explicit_D_to_sound_cue_then_test_general_mode_comprehension"
+          }
+        ],
+        "composedFallbackResearch": [
+          {
+            "ipa": "dite",
+            "status": "composed_general_mode_research_only",
+            "operations": [
+              {
+                "type": "grapheme_sound",
+                "label": "D",
+                "ipa": "d"
+              },
+              {
+                "type": "grapheme",
+                "label": "I",
+                "ipa": "i"
+              },
+              {
+                "type": "grapheme",
+                "label": "T",
+                "ipa": "te"
+              }
+            ],
+            "nextGate": "test_D_sound_plus_I_and_T_letter_names_as_one_visible_general_composition"
+          },
+          {
+            "ipa": "mid",
+            "status": "composed_general_mode_research_only",
+            "operations": [
+              {
+                "type": "whole_word",
+                "label": "mie",
+                "ipa": "mi"
+              },
+              {
+                "type": "grapheme_sound",
+                "label": "D",
+                "ipa": "d"
+              }
+            ],
+            "nextGate": "test_mie_plus_explicit_D_to_d_as_visible_general_composition"
           }
         ],
         "fallbackStatus": "grapheme_sound_general_mode_research_only",
@@ -4988,6 +5074,47 @@
             "nextGate": "render_explicit_D_to_sound_cue_then_test_general_mode_comprehension"
           }
         ],
+        "composedFallbackResearch": [
+          {
+            "ipa": "dite",
+            "status": "composed_general_mode_research_only",
+            "operations": [
+              {
+                "type": "grapheme_sound",
+                "label": "D",
+                "ipa": "d"
+              },
+              {
+                "type": "grapheme",
+                "label": "I",
+                "ipa": "i"
+              },
+              {
+                "type": "grapheme",
+                "label": "T",
+                "ipa": "te"
+              }
+            ],
+            "nextGate": "test_D_sound_plus_I_and_T_letter_names_as_one_visible_general_composition"
+          },
+          {
+            "ipa": "mid",
+            "status": "composed_general_mode_research_only",
+            "operations": [
+              {
+                "type": "whole_word",
+                "label": "mie",
+                "ipa": "mi"
+              },
+              {
+                "type": "grapheme_sound",
+                "label": "D",
+                "ipa": "d"
+              }
+            ],
+            "nextGate": "test_mie_plus_explicit_D_to_d_as_visible_general_composition"
+          }
+        ],
         "fallbackStatus": "grapheme_sound_general_mode_research_only",
         "rejectedFallbacks": [
           {
@@ -5869,6 +5996,26 @@
         "visualHypotheses": [
           "personne consultant clairement l'heure sur une horloge ou une montre, sans texte dominant"
         ],
+        "composedFallbackResearch": [
+          {
+            "ipa": "jœʁ",
+            "status": "composed_general_mode_research_only",
+            "operations": [
+              {
+                "type": "grapheme_sound",
+                "label": "Y",
+                "ipa": "j"
+              },
+              {
+                "type": "whole_word",
+                "label": "heure",
+                "ipa": "œʁ",
+                "dependencyStatus": "scene_research_not_naming_validated"
+              }
+            ],
+            "nextGate": "validate_heure_scene_naming_then_test_explicit_Y_to_j_cue"
+          }
+        ],
         "nextGate": "compare_two_scene_variants_in_blind_naming_test"
       }
     },
@@ -6433,6 +6580,30 @@
             "operationType": "grapheme_sound",
             "status": "grapheme_sound_general_mode_research_only",
             "nextGate": "render_explicit_N_to_sound_cue_then_test_general_mode_comprehension"
+          }
+        ],
+        "composedFallbackResearch": [
+          {
+            "ipa": "ɲal",
+            "status": "composed_general_mode_research_only",
+            "operations": [
+              {
+                "type": "grapheme_sound",
+                "label": "GN",
+                "ipa": "ɲ"
+              },
+              {
+                "type": "grapheme",
+                "label": "A",
+                "ipa": "a"
+              },
+              {
+                "type": "grapheme_sound",
+                "label": "L",
+                "ipa": "l"
+              }
+            ],
+            "nextGate": "test_explicit_GN_to_ɲ_and_L_to_l_cues_as_a_visible_general_composition"
           }
         ],
         "fallbackStatus": "grapheme_sound_general_mode_research_only",

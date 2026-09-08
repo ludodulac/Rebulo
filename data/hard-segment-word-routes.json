@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-08T11:53:05.873Z",
+  "generatedAt": "2026-09-08T12:19:37.793Z",
   "status": "research_only",
-  "sourceBrickMapGeneratedAt": "2026-09-08T11:52:46.782Z",
-  "strategyVersion": "1.1.0",
+  "sourceBrickMapGeneratedAt": "2026-09-08T12:19:18.778Z",
+  "strategyVersion": "1.2.0",
   "visualCandidateBankVersion": "0.1.0",
   "routeSearchOpportunityCount": 250,
   "methodology": {
@@ -43,13 +43,13 @@
     "targetCount": 117,
     "targetCountsByRouteClass": {
       "research_pictogram_or_scene": 17,
-      "formalize_documented_visible_general_operation": 95,
-      "discover_new_representation": 5
+      "formalize_documented_visible_general_operation": 100,
+      "discover_new_representation": 0
     },
     "groupCountsByRouteClass": {
       "research_pictogram_or_scene": 5,
-      "formalize_documented_visible_general_operation": 37,
-      "discover_new_representation": 4
+      "formalize_documented_visible_general_operation": 41,
+      "discover_new_representation": 0
     }
   },
   "visualResearchNeedQueue": [
@@ -115,6 +115,7 @@
               "TION",
               "SION"
             ],
+            "composedFallbackResearch": [],
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "rejectedFallbacks": [],
             "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
@@ -245,6 +246,30 @@
                 "nextGate": "render_explicit_N_to_sound_cue_then_test_general_mode_comprehension"
               }
             ],
+            "composedFallbackResearch": [
+              {
+                "ipa": "ɲal",
+                "status": "composed_general_mode_research_only",
+                "operations": [
+                  {
+                    "type": "grapheme_sound",
+                    "label": "GN",
+                    "ipa": "ɲ"
+                  },
+                  {
+                    "type": "grapheme",
+                    "label": "A",
+                    "ipa": "a"
+                  },
+                  {
+                    "type": "grapheme_sound",
+                    "label": "L",
+                    "ipa": "l"
+                  }
+                ],
+                "nextGate": "test_explicit_GN_to_ɲ_and_L_to_l_cues_as_a_visible_general_composition"
+              }
+            ],
             "fallbackStatus": "grapheme_sound_general_mode_research_only",
             "rejectedFallbacks": [],
             "nextGate": "search_shared_alternative_segments_before_visual_prototype; keep_letter_sounds_explicit_and_general_only"
@@ -314,6 +339,7 @@
             "visibleFallbackResearch": [
               "TR"
             ],
+            "composedFallbackResearch": [],
             "fallbackStatus": "grapheme_cluster_general_mode_research_only",
             "rejectedFallbacks": [],
             "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
@@ -393,6 +419,7 @@
             "visibleFallbackResearch": [
               "TR"
             ],
+            "composedFallbackResearch": [],
             "fallbackStatus": "grapheme_cluster_general_mode_research_only",
             "rejectedFallbacks": [],
             "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
@@ -465,6 +492,7 @@
             "visibleFallbackResearch": [
               "TR"
             ],
+            "composedFallbackResearch": [],
             "fallbackStatus": "grapheme_cluster_general_mode_research_only",
             "rejectedFallbacks": [],
             "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
@@ -541,6 +569,7 @@
               "IN",
               "UN"
             ],
+            "composedFallbackResearch": [],
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "rejectedFallbacks": [],
             "nextGate": "compare_alternate_segmentations_before_any_grapheme_rule"
@@ -630,6 +659,7 @@
             "visibleFallbackResearch": [
               "TR"
             ],
+            "composedFallbackResearch": [],
             "fallbackStatus": "grapheme_cluster_general_mode_research_only",
             "rejectedFallbacks": [],
             "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
@@ -735,6 +765,30 @@
                 "nextGate": "render_explicit_N_to_sound_cue_then_test_general_mode_comprehension"
               }
             ],
+            "composedFallbackResearch": [
+              {
+                "ipa": "ɲal",
+                "status": "composed_general_mode_research_only",
+                "operations": [
+                  {
+                    "type": "grapheme_sound",
+                    "label": "GN",
+                    "ipa": "ɲ"
+                  },
+                  {
+                    "type": "grapheme",
+                    "label": "A",
+                    "ipa": "a"
+                  },
+                  {
+                    "type": "grapheme_sound",
+                    "label": "L",
+                    "ipa": "l"
+                  }
+                ],
+                "nextGate": "test_explicit_GN_to_ɲ_and_L_to_l_cues_as_a_visible_general_composition"
+              }
+            ],
             "fallbackStatus": "grapheme_sound_general_mode_research_only",
             "rejectedFallbacks": [],
             "nextGate": "search_shared_alternative_segments_before_visual_prototype; keep_letter_sounds_explicit_and_general_only"
@@ -802,6 +856,7 @@
             "visibleFallbackResearch": [
               "MENT"
             ],
+            "composedFallbackResearch": [],
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "rejectedFallbacks": [],
             "nextGate": "measure_alternate_segmentations_then_formalize_contextual_grapheme_if_still_needed"
@@ -894,6 +949,7 @@
             "visibleFallbackResearch": [
               "MENT"
             ],
+            "composedFallbackResearch": [],
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "rejectedFallbacks": [],
             "nextGate": "measure_alternate_segmentations_then_formalize_contextual_grapheme_if_still_needed"
@@ -974,6 +1030,7 @@
             "visibleFallbackResearch": [
               "TR"
             ],
+            "composedFallbackResearch": [],
             "fallbackStatus": "grapheme_cluster_general_mode_research_only",
             "rejectedFallbacks": [],
             "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
@@ -1055,6 +1112,7 @@
             "visibleFallbackResearch": [
               "TR"
             ],
+            "composedFallbackResearch": [],
             "fallbackStatus": "grapheme_cluster_general_mode_research_only",
             "rejectedFallbacks": [],
             "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
@@ -1125,6 +1183,7 @@
               "IN",
               "UN"
             ],
+            "composedFallbackResearch": [],
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "rejectedFallbacks": [],
             "nextGate": "compare_alternate_segmentations_before_any_grapheme_rule"
@@ -1202,6 +1261,7 @@
               "TION",
               "SION"
             ],
+            "composedFallbackResearch": [],
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "rejectedFallbacks": [],
             "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
@@ -1280,6 +1340,7 @@
             "visibleFallbackResearch": [
               "MENT"
             ],
+            "composedFallbackResearch": [],
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "rejectedFallbacks": [],
             "nextGate": "measure_alternate_segmentations_then_formalize_contextual_grapheme_if_still_needed"
@@ -1372,6 +1433,47 @@
                 "operationType": "grapheme_sound",
                 "status": "grapheme_sound_general_mode_research_only",
                 "nextGate": "render_explicit_D_to_sound_cue_then_test_general_mode_comprehension"
+              }
+            ],
+            "composedFallbackResearch": [
+              {
+                "ipa": "dite",
+                "status": "composed_general_mode_research_only",
+                "operations": [
+                  {
+                    "type": "grapheme_sound",
+                    "label": "D",
+                    "ipa": "d"
+                  },
+                  {
+                    "type": "grapheme",
+                    "label": "I",
+                    "ipa": "i"
+                  },
+                  {
+                    "type": "grapheme",
+                    "label": "T",
+                    "ipa": "te"
+                  }
+                ],
+                "nextGate": "test_D_sound_plus_I_and_T_letter_names_as_one_visible_general_composition"
+              },
+              {
+                "ipa": "mid",
+                "status": "composed_general_mode_research_only",
+                "operations": [
+                  {
+                    "type": "whole_word",
+                    "label": "mie",
+                    "ipa": "mi"
+                  },
+                  {
+                    "type": "grapheme_sound",
+                    "label": "D",
+                    "ipa": "d"
+                  }
+                ],
+                "nextGate": "test_mie_plus_explicit_D_to_d_as_visible_general_composition"
               }
             ],
             "fallbackStatus": "grapheme_sound_general_mode_research_only",
@@ -1482,6 +1584,7 @@
                 "nextGate": "render_explicit_R_to_sound_cue_then_test_general_mode_comprehension"
               }
             ],
+            "composedFallbackResearch": [],
             "fallbackStatus": "grapheme_sound_general_mode_research_only",
             "rejectedFallbacks": [],
             "nextGate": "prototype_art_only_after_higher_confidence_objects; keep_R_sound_explicit_and_general_only"
@@ -1558,6 +1661,7 @@
             "visibleFallbackResearch": [
               "MENT"
             ],
+            "composedFallbackResearch": [],
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "rejectedFallbacks": [],
             "nextGate": "measure_alternate_segmentations_then_formalize_contextual_grapheme_if_still_needed"
@@ -1635,6 +1739,7 @@
               "TION",
               "SION"
             ],
+            "composedFallbackResearch": [],
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "rejectedFallbacks": [],
             "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
@@ -1720,6 +1825,7 @@
               "TION",
               "SION"
             ],
+            "composedFallbackResearch": [],
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "rejectedFallbacks": [],
             "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
@@ -1798,6 +1904,7 @@
             "visibleFallbackResearch": [
               "MENT"
             ],
+            "composedFallbackResearch": [],
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "rejectedFallbacks": [],
             "nextGate": "measure_alternate_segmentations_then_formalize_contextual_grapheme_if_still_needed"
@@ -1884,6 +1991,47 @@
                 "nextGate": "render_explicit_D_to_sound_cue_then_test_general_mode_comprehension"
               }
             ],
+            "composedFallbackResearch": [
+              {
+                "ipa": "dite",
+                "status": "composed_general_mode_research_only",
+                "operations": [
+                  {
+                    "type": "grapheme_sound",
+                    "label": "D",
+                    "ipa": "d"
+                  },
+                  {
+                    "type": "grapheme",
+                    "label": "I",
+                    "ipa": "i"
+                  },
+                  {
+                    "type": "grapheme",
+                    "label": "T",
+                    "ipa": "te"
+                  }
+                ],
+                "nextGate": "test_D_sound_plus_I_and_T_letter_names_as_one_visible_general_composition"
+              },
+              {
+                "ipa": "mid",
+                "status": "composed_general_mode_research_only",
+                "operations": [
+                  {
+                    "type": "whole_word",
+                    "label": "mie",
+                    "ipa": "mi"
+                  },
+                  {
+                    "type": "grapheme_sound",
+                    "label": "D",
+                    "ipa": "d"
+                  }
+                ],
+                "nextGate": "test_mie_plus_explicit_D_to_d_as_visible_general_composition"
+              }
+            ],
             "fallbackStatus": "grapheme_sound_general_mode_research_only",
             "rejectedFallbacks": [
               {
@@ -1950,6 +2098,7 @@
               "IN",
               "UN"
             ],
+            "composedFallbackResearch": [],
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "rejectedFallbacks": [],
             "nextGate": "compare_alternate_segmentations_before_any_grapheme_rule"
@@ -2028,6 +2177,7 @@
             "visibleFallbackResearch": [
               "MENT"
             ],
+            "composedFallbackResearch": [],
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "rejectedFallbacks": [],
             "nextGate": "measure_alternate_segmentations_then_formalize_contextual_grapheme_if_still_needed"
@@ -2118,6 +2268,7 @@
             "visibleFallbackResearch": [
               "TR"
             ],
+            "composedFallbackResearch": [],
             "fallbackStatus": "grapheme_cluster_general_mode_research_only",
             "rejectedFallbacks": [],
             "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
@@ -2231,6 +2382,47 @@
                 "nextGate": "render_explicit_D_to_sound_cue_then_test_general_mode_comprehension"
               }
             ],
+            "composedFallbackResearch": [
+              {
+                "ipa": "dite",
+                "status": "composed_general_mode_research_only",
+                "operations": [
+                  {
+                    "type": "grapheme_sound",
+                    "label": "D",
+                    "ipa": "d"
+                  },
+                  {
+                    "type": "grapheme",
+                    "label": "I",
+                    "ipa": "i"
+                  },
+                  {
+                    "type": "grapheme",
+                    "label": "T",
+                    "ipa": "te"
+                  }
+                ],
+                "nextGate": "test_D_sound_plus_I_and_T_letter_names_as_one_visible_general_composition"
+              },
+              {
+                "ipa": "mid",
+                "status": "composed_general_mode_research_only",
+                "operations": [
+                  {
+                    "type": "whole_word",
+                    "label": "mie",
+                    "ipa": "mi"
+                  },
+                  {
+                    "type": "grapheme_sound",
+                    "label": "D",
+                    "ipa": "d"
+                  }
+                ],
+                "nextGate": "test_mie_plus_explicit_D_to_d_as_visible_general_composition"
+              }
+            ],
             "fallbackStatus": "grapheme_sound_general_mode_research_only",
             "rejectedFallbacks": [
               {
@@ -2333,6 +2525,7 @@
                 "nextGate": "render_explicit_R_to_sound_cue_then_test_general_mode_comprehension"
               }
             ],
+            "composedFallbackResearch": [],
             "fallbackStatus": "grapheme_sound_general_mode_research_only",
             "rejectedFallbacks": [],
             "nextGate": "prototype_art_only_after_higher_confidence_objects; keep_R_sound_explicit_and_general_only"
@@ -2406,6 +2599,7 @@
               "TION",
               "SION"
             ],
+            "composedFallbackResearch": [],
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "rejectedFallbacks": [],
             "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
@@ -2493,6 +2687,30 @@
                 "nextGate": "render_explicit_N_to_sound_cue_then_test_general_mode_comprehension"
               }
             ],
+            "composedFallbackResearch": [
+              {
+                "ipa": "ɲal",
+                "status": "composed_general_mode_research_only",
+                "operations": [
+                  {
+                    "type": "grapheme_sound",
+                    "label": "GN",
+                    "ipa": "ɲ"
+                  },
+                  {
+                    "type": "grapheme",
+                    "label": "A",
+                    "ipa": "a"
+                  },
+                  {
+                    "type": "grapheme_sound",
+                    "label": "L",
+                    "ipa": "l"
+                  }
+                ],
+                "nextGate": "test_explicit_GN_to_ɲ_and_L_to_l_cues_as_a_visible_general_composition"
+              }
+            ],
             "fallbackStatus": "grapheme_sound_general_mode_research_only",
             "rejectedFallbacks": [],
             "nextGate": "search_shared_alternative_segments_before_visual_prototype; keep_letter_sounds_explicit_and_general_only"
@@ -2560,6 +2778,7 @@
               "TION",
               "SION"
             ],
+            "composedFallbackResearch": [],
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "rejectedFallbacks": [],
             "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
@@ -2640,6 +2859,47 @@
                 "nextGate": "render_explicit_D_to_sound_cue_then_test_general_mode_comprehension"
               }
             ],
+            "composedFallbackResearch": [
+              {
+                "ipa": "dite",
+                "status": "composed_general_mode_research_only",
+                "operations": [
+                  {
+                    "type": "grapheme_sound",
+                    "label": "D",
+                    "ipa": "d"
+                  },
+                  {
+                    "type": "grapheme",
+                    "label": "I",
+                    "ipa": "i"
+                  },
+                  {
+                    "type": "grapheme",
+                    "label": "T",
+                    "ipa": "te"
+                  }
+                ],
+                "nextGate": "test_D_sound_plus_I_and_T_letter_names_as_one_visible_general_composition"
+              },
+              {
+                "ipa": "mid",
+                "status": "composed_general_mode_research_only",
+                "operations": [
+                  {
+                    "type": "whole_word",
+                    "label": "mie",
+                    "ipa": "mi"
+                  },
+                  {
+                    "type": "grapheme_sound",
+                    "label": "D",
+                    "ipa": "d"
+                  }
+                ],
+                "nextGate": "test_mie_plus_explicit_D_to_d_as_visible_general_composition"
+              }
+            ],
             "fallbackStatus": "grapheme_sound_general_mode_research_only",
             "rejectedFallbacks": [
               {
@@ -2654,11 +2914,37 @@
       "nextAction": "search_exact_whole_word_or_explicit_general_operation",
       "status": "research_only",
       "researchRoute": {
-        "routeClass": "discover_new_representation",
-        "visibleOperations": [],
+        "routeClass": "formalize_documented_visible_general_operation",
+        "visibleOperations": [
+          {
+            "label": "D→/d/ + I→/i/ + T→/te/",
+            "sourceIpa": "di",
+            "targetIpa": "dite",
+            "operationType": "composed_general_operation",
+            "operations": [
+              {
+                "type": "grapheme_sound",
+                "label": "D",
+                "ipa": "d"
+              },
+              {
+                "type": "grapheme",
+                "label": "I",
+                "ipa": "i"
+              },
+              {
+                "type": "grapheme",
+                "label": "T",
+                "ipa": "te"
+              }
+            ],
+            "fallbackStatus": "composed_general_mode_research_only",
+            "nextGate": "test_D_sound_plus_I_and_T_letter_names_as_one_visible_general_composition"
+          }
+        ],
         "visualCandidates": [],
-        "authorizationStatus": "no_documented_representation_route",
-        "nextAction": "search_exact_whole_word_scene_alternate_segmentation_or_explicit_operation"
+        "authorizationStatus": "research_only_not_authorized",
+        "nextAction": "define_and_test_visible_general_operation_semantics_before_any_activation"
       }
     },
     {
@@ -2697,6 +2983,7 @@
               "IN",
               "UN"
             ],
+            "composedFallbackResearch": [],
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "rejectedFallbacks": [],
             "nextGate": "compare_alternate_segmentations_before_any_grapheme_rule"
@@ -2764,6 +3051,26 @@
               "personne consultant clairement l'heure sur une horloge ou une montre, sans texte dominant"
             ],
             "visibleFallbackResearch": [],
+            "composedFallbackResearch": [
+              {
+                "ipa": "jœʁ",
+                "status": "composed_general_mode_research_only",
+                "operations": [
+                  {
+                    "type": "grapheme_sound",
+                    "label": "Y",
+                    "ipa": "j"
+                  },
+                  {
+                    "type": "whole_word",
+                    "label": "heure",
+                    "ipa": "œʁ",
+                    "dependencyStatus": "scene_research_not_naming_validated"
+                  }
+                ],
+                "nextGate": "validate_heure_scene_naming_then_test_explicit_Y_to_j_cue"
+              }
+            ],
             "fallbackStatus": null,
             "rejectedFallbacks": [],
             "nextGate": "compare_two_scene_variants_in_blind_naming_test"
@@ -2773,11 +3080,33 @@
       "nextAction": "search_exact_whole_word_or_explicit_general_operation",
       "status": "research_only",
       "researchRoute": {
-        "routeClass": "discover_new_representation",
-        "visibleOperations": [],
+        "routeClass": "formalize_documented_visible_general_operation",
+        "visibleOperations": [
+          {
+            "label": "Y→/j/ + heure→/œʁ/",
+            "sourceIpa": "œʁ",
+            "targetIpa": "jœʁ",
+            "operationType": "composed_general_operation",
+            "operations": [
+              {
+                "type": "grapheme_sound",
+                "label": "Y",
+                "ipa": "j"
+              },
+              {
+                "type": "whole_word",
+                "label": "heure",
+                "ipa": "œʁ",
+                "dependencyStatus": "scene_research_not_naming_validated"
+              }
+            ],
+            "fallbackStatus": "composed_general_mode_research_only",
+            "nextGate": "validate_heure_scene_naming_then_test_explicit_Y_to_j_cue"
+          }
+        ],
         "visualCandidates": [],
-        "authorizationStatus": "no_documented_representation_route",
-        "nextAction": "search_exact_whole_word_scene_alternate_segmentation_or_explicit_operation"
+        "authorizationStatus": "research_only_not_authorized",
+        "nextAction": "define_and_test_visible_general_operation_semantics_before_any_activation"
       }
     },
     {
@@ -2816,6 +3145,7 @@
             "visibleFallbackResearch": [
               "MENT"
             ],
+            "composedFallbackResearch": [],
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "rejectedFallbacks": [],
             "nextGate": "measure_alternate_segmentations_then_formalize_contextual_grapheme_if_still_needed"
@@ -2881,6 +3211,47 @@
                 "nextGate": "render_explicit_D_to_sound_cue_then_test_general_mode_comprehension"
               }
             ],
+            "composedFallbackResearch": [
+              {
+                "ipa": "dite",
+                "status": "composed_general_mode_research_only",
+                "operations": [
+                  {
+                    "type": "grapheme_sound",
+                    "label": "D",
+                    "ipa": "d"
+                  },
+                  {
+                    "type": "grapheme",
+                    "label": "I",
+                    "ipa": "i"
+                  },
+                  {
+                    "type": "grapheme",
+                    "label": "T",
+                    "ipa": "te"
+                  }
+                ],
+                "nextGate": "test_D_sound_plus_I_and_T_letter_names_as_one_visible_general_composition"
+              },
+              {
+                "ipa": "mid",
+                "status": "composed_general_mode_research_only",
+                "operations": [
+                  {
+                    "type": "whole_word",
+                    "label": "mie",
+                    "ipa": "mi"
+                  },
+                  {
+                    "type": "grapheme_sound",
+                    "label": "D",
+                    "ipa": "d"
+                  }
+                ],
+                "nextGate": "test_mie_plus_explicit_D_to_d_as_visible_general_composition"
+              }
+            ],
             "fallbackStatus": "grapheme_sound_general_mode_research_only",
             "rejectedFallbacks": [
               {
@@ -2895,11 +3266,32 @@
       "nextAction": "search_exact_whole_word_or_explicit_general_operation",
       "status": "research_only",
       "researchRoute": {
-        "routeClass": "discover_new_representation",
-        "visibleOperations": [],
+        "routeClass": "formalize_documented_visible_general_operation",
+        "visibleOperations": [
+          {
+            "label": "mie→/mi/ + D→/d/",
+            "sourceIpa": "di",
+            "targetIpa": "mid",
+            "operationType": "composed_general_operation",
+            "operations": [
+              {
+                "type": "whole_word",
+                "label": "mie",
+                "ipa": "mi"
+              },
+              {
+                "type": "grapheme_sound",
+                "label": "D",
+                "ipa": "d"
+              }
+            ],
+            "fallbackStatus": "composed_general_mode_research_only",
+            "nextGate": "test_mie_plus_explicit_D_to_d_as_visible_general_composition"
+          }
+        ],
         "visualCandidates": [],
-        "authorizationStatus": "no_documented_representation_route",
-        "nextAction": "search_exact_whole_word_scene_alternate_segmentation_or_explicit_operation"
+        "authorizationStatus": "research_only_not_authorized",
+        "nextAction": "define_and_test_visible_general_operation_semantics_before_any_activation"
       }
     },
     {
@@ -2950,6 +3342,30 @@
                 "nextGate": "render_explicit_N_to_sound_cue_then_test_general_mode_comprehension"
               }
             ],
+            "composedFallbackResearch": [
+              {
+                "ipa": "ɲal",
+                "status": "composed_general_mode_research_only",
+                "operations": [
+                  {
+                    "type": "grapheme_sound",
+                    "label": "GN",
+                    "ipa": "ɲ"
+                  },
+                  {
+                    "type": "grapheme",
+                    "label": "A",
+                    "ipa": "a"
+                  },
+                  {
+                    "type": "grapheme_sound",
+                    "label": "L",
+                    "ipa": "l"
+                  }
+                ],
+                "nextGate": "test_explicit_GN_to_ɲ_and_L_to_l_cues_as_a_visible_general_composition"
+              }
+            ],
             "fallbackStatus": "grapheme_sound_general_mode_research_only",
             "rejectedFallbacks": [],
             "nextGate": "search_shared_alternative_segments_before_visual_prototype; keep_letter_sounds_explicit_and_general_only"
@@ -2959,11 +3375,37 @@
       "nextAction": "search_exact_whole_word_or_explicit_general_operation",
       "status": "research_only",
       "researchRoute": {
-        "routeClass": "discover_new_representation",
-        "visibleOperations": [],
+        "routeClass": "formalize_documented_visible_general_operation",
+        "visibleOperations": [
+          {
+            "label": "GN→/ɲ/ + A→/a/ + L→/l/",
+            "sourceIpa": "al",
+            "targetIpa": "ɲal",
+            "operationType": "composed_general_operation",
+            "operations": [
+              {
+                "type": "grapheme_sound",
+                "label": "GN",
+                "ipa": "ɲ"
+              },
+              {
+                "type": "grapheme",
+                "label": "A",
+                "ipa": "a"
+              },
+              {
+                "type": "grapheme_sound",
+                "label": "L",
+                "ipa": "l"
+              }
+            ],
+            "fallbackStatus": "composed_general_mode_research_only",
+            "nextGate": "test_explicit_GN_to_ɲ_and_L_to_l_cues_as_a_visible_general_composition"
+          }
+        ],
         "visualCandidates": [],
-        "authorizationStatus": "no_documented_representation_route",
-        "nextAction": "search_exact_whole_word_scene_alternate_segmentation_or_explicit_operation"
+        "authorizationStatus": "research_only_not_authorized",
+        "nextAction": "define_and_test_visible_general_operation_semantics_before_any_activation"
       }
     },
     {
@@ -3002,6 +3444,7 @@
               "IN",
               "UN"
             ],
+            "composedFallbackResearch": [],
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "rejectedFallbacks": [],
             "nextGate": "compare_alternate_segmentations_before_any_grapheme_rule"
@@ -3067,6 +3510,7 @@
             "visibleFallbackResearch": [
               "TR"
             ],
+            "composedFallbackResearch": [],
             "fallbackStatus": "grapheme_cluster_general_mode_research_only",
             "rejectedFallbacks": [],
             "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
@@ -3140,6 +3584,30 @@
                 "nextGate": "render_explicit_N_to_sound_cue_then_test_general_mode_comprehension"
               }
             ],
+            "composedFallbackResearch": [
+              {
+                "ipa": "ɲal",
+                "status": "composed_general_mode_research_only",
+                "operations": [
+                  {
+                    "type": "grapheme_sound",
+                    "label": "GN",
+                    "ipa": "ɲ"
+                  },
+                  {
+                    "type": "grapheme",
+                    "label": "A",
+                    "ipa": "a"
+                  },
+                  {
+                    "type": "grapheme_sound",
+                    "label": "L",
+                    "ipa": "l"
+                  }
+                ],
+                "nextGate": "test_explicit_GN_to_ɲ_and_L_to_l_cues_as_a_visible_general_composition"
+              }
+            ],
             "fallbackStatus": "grapheme_sound_general_mode_research_only",
             "rejectedFallbacks": [],
             "nextGate": "search_shared_alternative_segments_before_visual_prototype; keep_letter_sounds_explicit_and_general_only"
@@ -3197,6 +3665,7 @@
             "visibleFallbackResearch": [
               "TR"
             ],
+            "composedFallbackResearch": [],
             "fallbackStatus": "grapheme_cluster_general_mode_research_only",
             "rejectedFallbacks": [],
             "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
@@ -3254,6 +3723,7 @@
             "visibleFallbackResearch": [
               "TR"
             ],
+            "composedFallbackResearch": [],
             "fallbackStatus": "grapheme_cluster_general_mode_research_only",
             "rejectedFallbacks": [],
             "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
@@ -3363,6 +3833,7 @@
             "visibleFallbackResearch": [
               "TR"
             ],
+            "composedFallbackResearch": [],
             "fallbackStatus": "grapheme_cluster_general_mode_research_only",
             "rejectedFallbacks": [],
             "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
@@ -3494,6 +3965,26 @@
               "personne consultant clairement l'heure sur une horloge ou une montre, sans texte dominant"
             ],
             "visibleFallbackResearch": [],
+            "composedFallbackResearch": [
+              {
+                "ipa": "jœʁ",
+                "status": "composed_general_mode_research_only",
+                "operations": [
+                  {
+                    "type": "grapheme_sound",
+                    "label": "Y",
+                    "ipa": "j"
+                  },
+                  {
+                    "type": "whole_word",
+                    "label": "heure",
+                    "ipa": "œʁ",
+                    "dependencyStatus": "scene_research_not_naming_validated"
+                  }
+                ],
+                "nextGate": "validate_heure_scene_naming_then_test_explicit_Y_to_j_cue"
+              }
+            ],
             "fallbackStatus": null,
             "rejectedFallbacks": [],
             "nextGate": "compare_two_scene_variants_in_blind_naming_test"
@@ -3605,6 +4096,7 @@
             "visibleFallbackResearch": [
               "MENT"
             ],
+            "composedFallbackResearch": [],
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "rejectedFallbacks": [],
             "nextGate": "measure_alternate_segmentations_then_formalize_contextual_grapheme_if_still_needed"
@@ -3717,6 +4209,7 @@
               "TION",
               "SION"
             ],
+            "composedFallbackResearch": [],
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "rejectedFallbacks": [],
             "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
@@ -3803,6 +4296,7 @@
               "IN",
               "UN"
             ],
+            "composedFallbackResearch": [],
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "rejectedFallbacks": [],
             "nextGate": "compare_alternate_segmentations_before_any_grapheme_rule"

@@ -20,8 +20,8 @@
 ## File priorisée des besoins visuels
 
 - Recherche pictogramme/scène : 17 cibles dans 5 groupes.
-- Opération générale visible déjà documentée à formaliser : 95 cibles dans 37 groupes.
-- Nouvelle représentation réellement à découvrir : 5 cibles dans 4 groupes.
+- Opération générale visible déjà documentée à formaliser : 100 cibles dans 41 groupes.
+- Nouvelle représentation réellement à découvrir : 0 cibles dans 0 groupes.
 
 | Rang | Besoin | Voie de recherche | Brique/segment | Cibles | Âge min. | Mots exacts | Opération visible documentée | Banque visuelle | Segments sources | Exemples |
 |---:|---|---|---|---:|---:|---|---|---|---|---|
@@ -55,12 +55,12 @@
 | 28 | trouver mot exact ou opération visible | opération générale visible documentée | /tasjɔ̃/ | 3 | 9 | — | TION, SION | — | /sjɔ̃/ | citation, agitation, imitation |
 | 29 | trouver mot exact ou opération visible | opération générale visible documentée | /l/ | 2 | 7 | — | L | — | /al/ | idéal, postal |
 | 30 | trouver mot exact ou opération visible | opération générale visible documentée | /asjɔ̃/ | 2 | 9 | — | TION, SION | — | /sjɔ̃/ | tentation, assignation |
-| 31 | trouver mot exact ou opération visible | nouvelle représentation à découvrir | /dite/ | 2 | 9 | — | — | — | /di/ | cupidité, rapidité |
+| 31 | trouver mot exact ou opération visible | opération générale visible documentée | /dite/ | 2 | 9 | — | D→/d/ + I→/i/ + T→/te/ | — | /di/ | cupidité, rapidité |
 | 32 | trouver mot exact ou opération visible | opération générale visible documentée | /ɛ̃s/ | 1 | 5 | — | IN, UN | — | /ɛ̃/ | ainsi |
-| 33 | trouver mot exact ou opération visible | nouvelle représentation à découvrir | /jœʁ/ | 1 | 5 | — | — | — | /œʁ/ | ailleurs |
+| 33 | trouver mot exact ou opération visible | opération générale visible documentée | /jœʁ/ | 1 | 5 | — | Y→/j/ + heure→/œʁ/ | — | /œʁ/ | ailleurs |
 | 34 | trouver mot exact ou opération visible | opération générale visible documentée | /kymɑ̃/ | 1 | 7 | — | MENT | — | /mɑ̃/ | document |
-| 35 | trouver mot exact ou opération visible | nouvelle représentation à découvrir | /mid/ | 1 | 7 | — | — | — | /di/ | midi |
-| 36 | trouver mot exact ou opération visible | nouvelle représentation à découvrir | /ɲal/ | 1 | 7 | — | — | — | /al/ | signal |
+| 35 | trouver mot exact ou opération visible | opération générale visible documentée | /mid/ | 1 | 7 | — | mie→/mi/ + D→/d/ | — | /di/ | midi |
+| 36 | trouver mot exact ou opération visible | opération générale visible documentée | /ɲal/ | 1 | 7 | — | GN→/ɲ/ + A→/a/ + L→/l/ | — | /al/ | signal |
 | 37 | trouver mot exact ou opération visible | opération générale visible documentée | /ɛ̃p/ | 1 | 9 | — | IN, UN | — | /ɛ̃/ | impôt |
 | 38 | trouver mot exact ou opération visible | opération générale visible documentée | /ɛstʁ/ | 1 | 9 | — | TR | — | /tʁ/ | terrestre |
 | 39 | trouver mot exact ou opération visible | opération générale visible documentée | /n/ | 1 | 9 | — | N | — | /al/ | haleine |

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T11:03:03.421Z",
+  "generatedAt": "2026-09-08T11:52:46.782Z",
   "source": "Lexique 4",
   "sourceLicense": "CC BY-SA 4.0",
   "schoolFrequencyEvidence": {
@@ -99,7 +99,7 @@
       "segmentCount": 8,
       "scene": 2,
       "alternate": 6,
-      "visibleFallbackResearch": 4
+      "visibleFallbackResearch": 7
     },
     "warnings": [],
     "segments": [
@@ -159,7 +159,17 @@
         "visualHypotheses": [
           "petite scène cohérente réunissant tableau, palette et sculpture pour viser le concept global art"
         ],
-        "nextGate": "prototype_only_after_higher_confidence_natural_objects"
+        "visibleFallbackResearch": [
+          {
+            "label": "R",
+            "ipa": "ʁ",
+            "operationType": "grapheme_sound",
+            "status": "grapheme_sound_general_mode_research_only",
+            "nextGate": "render_explicit_R_to_sound_cue_then_test_general_mode_comprehension"
+          }
+        ],
+        "fallbackStatus": "grapheme_sound_general_mode_research_only",
+        "nextGate": "prototype_art_only_after_higher_confidence_objects; keep_R_sound_explicit_and_general_only"
       },
       {
         "ipa": "al",
@@ -170,7 +180,24 @@
           "ale"
         ],
         "lexicalAssessment": "halle_has_high_naming_risk_and_ale_is_age_inappropriate_as_visual_reference",
-        "nextGate": "search_shared_alternative_segments_before_visual_prototype"
+        "visibleFallbackResearch": [
+          {
+            "label": "L",
+            "ipa": "l",
+            "operationType": "grapheme_sound",
+            "status": "grapheme_sound_general_mode_research_only",
+            "nextGate": "render_explicit_L_to_sound_cue_then_test_general_mode_comprehension"
+          },
+          {
+            "label": "N",
+            "ipa": "n",
+            "operationType": "grapheme_sound",
+            "status": "grapheme_sound_general_mode_research_only",
+            "nextGate": "render_explicit_N_to_sound_cue_then_test_general_mode_comprehension"
+          }
+        ],
+        "fallbackStatus": "grapheme_sound_general_mode_research_only",
+        "nextGate": "search_shared_alternative_segments_before_visual_prototype; keep_letter_sounds_explicit_and_general_only"
       },
       {
         "ipa": "tʁ",
@@ -207,13 +234,23 @@
           "dit"
         ],
         "lexicalAssessment": "exact_but_not_naturally_picturable",
+        "visibleFallbackResearch": [
+          {
+            "label": "D",
+            "ipa": "d",
+            "operationType": "grapheme_sound",
+            "status": "grapheme_sound_general_mode_research_only",
+            "nextGate": "render_explicit_D_to_sound_cue_then_test_general_mode_comprehension"
+          }
+        ],
+        "fallbackStatus": "grapheme_sound_general_mode_research_only",
         "rejectedFallbacks": [
           {
             "label": "D",
-            "reason": "French letter name is /de/, not /di/; phonetic mismatch."
+            "reason": "French letter name is /de/, not /di/; phonetic mismatch. This rejection concerns the letter-name operation, not an explicitly IPA-scoped grapheme_sound operation for /d/."
           }
         ],
-        "nextGate": "search_alternate_exact_decompositions; do_not_use_letter_D_for_di"
+        "nextGate": "search_alternate_exact_decompositions; D_as_letter_name_remains_invalid_for_di; explicit_D_to_d_stays_general_research_only"
       }
     ]
   },
@@ -4942,13 +4979,23 @@
           "dit"
         ],
         "lexicalAssessment": "exact_but_not_naturally_picturable",
+        "visibleFallbackResearch": [
+          {
+            "label": "D",
+            "ipa": "d",
+            "operationType": "grapheme_sound",
+            "status": "grapheme_sound_general_mode_research_only",
+            "nextGate": "render_explicit_D_to_sound_cue_then_test_general_mode_comprehension"
+          }
+        ],
+        "fallbackStatus": "grapheme_sound_general_mode_research_only",
         "rejectedFallbacks": [
           {
             "label": "D",
-            "reason": "French letter name is /de/, not /di/; phonetic mismatch."
+            "reason": "French letter name is /de/, not /di/; phonetic mismatch. This rejection concerns the letter-name operation, not an explicitly IPA-scoped grapheme_sound operation for /d/."
           }
         ],
-        "nextGate": "search_alternate_exact_decompositions; do_not_use_letter_D_for_di"
+        "nextGate": "search_alternate_exact_decompositions; D_as_letter_name_remains_invalid_for_di; explicit_D_to_d_stays_general_research_only"
       }
     },
     {
@@ -6372,7 +6419,24 @@
           "ale"
         ],
         "lexicalAssessment": "halle_has_high_naming_risk_and_ale_is_age_inappropriate_as_visual_reference",
-        "nextGate": "search_shared_alternative_segments_before_visual_prototype"
+        "visibleFallbackResearch": [
+          {
+            "label": "L",
+            "ipa": "l",
+            "operationType": "grapheme_sound",
+            "status": "grapheme_sound_general_mode_research_only",
+            "nextGate": "render_explicit_L_to_sound_cue_then_test_general_mode_comprehension"
+          },
+          {
+            "label": "N",
+            "ipa": "n",
+            "operationType": "grapheme_sound",
+            "status": "grapheme_sound_general_mode_research_only",
+            "nextGate": "render_explicit_N_to_sound_cue_then_test_general_mode_comprehension"
+          }
+        ],
+        "fallbackStatus": "grapheme_sound_general_mode_research_only",
+        "nextGate": "search_shared_alternative_segments_before_visual_prototype; keep_letter_sounds_explicit_and_general_only"
       }
     },
     {
@@ -6694,7 +6758,17 @@
         "visualHypotheses": [
           "petite scène cohérente réunissant tableau, palette et sculpture pour viser le concept global art"
         ],
-        "nextGate": "prototype_only_after_higher_confidence_natural_objects"
+        "visibleFallbackResearch": [
+          {
+            "label": "R",
+            "ipa": "ʁ",
+            "operationType": "grapheme_sound",
+            "status": "grapheme_sound_general_mode_research_only",
+            "nextGate": "render_explicit_R_to_sound_cue_then_test_general_mode_comprehension"
+          }
+        ],
+        "fallbackStatus": "grapheme_sound_general_mode_research_only",
+        "nextGate": "prototype_art_only_after_higher_confidence_objects; keep_R_sound_explicit_and_general_only"
       }
     },
     {

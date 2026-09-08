@@ -28,11 +28,11 @@
 | /mɑ̃/ | 18 | alternate_segmentation_first | man, mans, mens | MENT | contextual_grapheme_rule_not_yet_authorized |
 | /ɛ̃/ | 16 | alternate_segmentation_first | hein, ain | IN, UN | contextual_grapheme_rule_not_yet_authorized |
 | /œʁ/ | 11 | scene_comparison | heure | — | compare_two_scene_variants_in_blind_naming_test |
-| /aʁ/ | 8 | scene_comparison_for_older_users | art | — | prototype_only_after_higher_confidence_natural_objects |
-| /al/ | 9 | alternate_segmentation_preferred | halle, ale | — | search_shared_alternative_segments_before_visual_prototype |
+| /aʁ/ | 8 | scene_comparison_for_older_users | art | [object Object] | grapheme_sound_general_mode_research_only |
+| /al/ | 9 | alternate_segmentation_preferred | halle, ale | [object Object], [object Object] | grapheme_sound_general_mode_research_only |
 | /tʁ/ | 29 | alternate_segmentation_required | — | TR | grapheme_cluster_general_mode_research_only |
 | /sjɔ̃/ | 20 | alternate_segmentation_required | scion | TION, SION | contextual_grapheme_rule_not_yet_authorized |
-| /di/ | 16 | alternate_segmentation_required | dit | — | search_alternate_exact_decompositions; do_not_use_letter_D_for_di |
+| /di/ | 16 | alternate_segmentation_required | dit | [object Object] | grapheme_sound_general_mode_research_only |
 
 ## Alternatives automatiques aux segments difficiles
 

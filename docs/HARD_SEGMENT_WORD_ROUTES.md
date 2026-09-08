@@ -20,8 +20,8 @@
 ## File priorisée des besoins visuels
 
 - Recherche pictogramme/scène : 17 cibles dans 5 groupes.
-- Opération générale visible déjà documentée à formaliser : 77 cibles dans 33 groupes.
-- Nouvelle représentation réellement à découvrir : 23 cibles dans 8 groupes.
+- Opération générale visible déjà documentée à formaliser : 95 cibles dans 37 groupes.
+- Nouvelle représentation réellement à découvrir : 5 cibles dans 4 groupes.
 
 | Rang | Besoin | Voie de recherche | Brique/segment | Cibles | Âge min. | Mots exacts | Opération visible documentée | Banque visuelle | Segments sources | Exemples |
 |---:|---|---|---|---:|---:|---|---|---|---|---|
@@ -50,10 +50,10 @@
 | 23 | curater le mot exact existant | opération générale visible documentée | /ɛ̃tɛʁ/ | 1 | 12 | inter | IN, UN | — | /ɛ̃/ | interner |
 | 24 | curater le mot exact existant | opération générale visible documentée | /mɑ̃te/ | 1 | 12 | mentez | MENT | — | /mɑ̃/ | tourmenter |
 | 25 | curater le mot exact existant | opération générale visible documentée | /tʁɛn/ | 1 | 12 | traine, traîne, trainent, traines | TR | — | /tʁ/ | traîneau |
-| 26 | trouver mot exact ou opération visible | nouvelle représentation à découvrir | /d/ | 9 | 5 | — | — | — | /di/ | dîner, diriger, diner, dit |
-| 27 | trouver mot exact ou opération visible | nouvelle représentation à découvrir | /ʁ/ | 6 | 5 | — | — | — | /aʁ/ | art, bagarre, are, artère |
+| 26 | trouver mot exact ou opération visible | opération générale visible documentée | /d/ | 9 | 5 | — | D | — | /di/ | dîner, diriger, diner, dit |
+| 27 | trouver mot exact ou opération visible | opération générale visible documentée | /ʁ/ | 6 | 5 | — | R | — | /aʁ/ | art, bagarre, are, artère |
 | 28 | trouver mot exact ou opération visible | opération générale visible documentée | /tasjɔ̃/ | 3 | 9 | — | TION, SION | — | /sjɔ̃/ | citation, agitation, imitation |
-| 29 | trouver mot exact ou opération visible | nouvelle représentation à découvrir | /l/ | 2 | 7 | — | — | — | /al/ | idéal, postal |
+| 29 | trouver mot exact ou opération visible | opération générale visible documentée | /l/ | 2 | 7 | — | L | — | /al/ | idéal, postal |
 | 30 | trouver mot exact ou opération visible | opération générale visible documentée | /asjɔ̃/ | 2 | 9 | — | TION, SION | — | /sjɔ̃/ | tentation, assignation |
 | 31 | trouver mot exact ou opération visible | nouvelle représentation à découvrir | /dite/ | 2 | 9 | — | — | — | /di/ | cupidité, rapidité |
 | 32 | trouver mot exact ou opération visible | opération générale visible documentée | /ɛ̃s/ | 1 | 5 | — | IN, UN | — | /ɛ̃/ | ainsi |
@@ -63,7 +63,7 @@
 | 36 | trouver mot exact ou opération visible | nouvelle représentation à découvrir | /ɲal/ | 1 | 7 | — | — | — | /al/ | signal |
 | 37 | trouver mot exact ou opération visible | opération générale visible documentée | /ɛ̃p/ | 1 | 9 | — | IN, UN | — | /ɛ̃/ | impôt |
 | 38 | trouver mot exact ou opération visible | opération générale visible documentée | /ɛstʁ/ | 1 | 9 | — | TR | — | /tʁ/ | terrestre |
-| 39 | trouver mot exact ou opération visible | nouvelle représentation à découvrir | /n/ | 1 | 9 | — | — | — | /al/ | haleine |
+| 39 | trouver mot exact ou opération visible | opération générale visible documentée | /n/ | 1 | 9 | — | N | — | /al/ | haleine |
 | 40 | trouver mot exact ou opération visible | opération générale visible documentée | /t/ | 1 | 9 | — | TR | — | /tʁ/ | tri |
 | 41 | trouver mot exact ou opération visible | opération générale visible documentée | /tʁa/ | 1 | 9 | — | TR | — | /tʁ/ | tracer |
 | 42 | résoudre le segment source | opération générale visible documentée | /tʁ/ | 11 | 5 | — | TR | — | /tʁ/ | trop, autre, d'autres, quatre |

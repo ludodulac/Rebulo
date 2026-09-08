@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-08T11:03:21.429Z",
+  "generatedAt": "2026-09-08T11:53:05.873Z",
   "status": "research_only",
-  "sourceBrickMapGeneratedAt": "2026-09-08T11:03:03.421Z",
-  "strategyVersion": "1.0.0",
+  "sourceBrickMapGeneratedAt": "2026-09-08T11:52:46.782Z",
+  "strategyVersion": "1.1.0",
   "visualCandidateBankVersion": "0.1.0",
   "routeSearchOpportunityCount": 250,
   "methodology": {
@@ -43,13 +43,13 @@
     "targetCount": 117,
     "targetCountsByRouteClass": {
       "research_pictogram_or_scene": 17,
-      "formalize_documented_visible_general_operation": 77,
-      "discover_new_representation": 23
+      "formalize_documented_visible_general_operation": 95,
+      "discover_new_representation": 5
     },
     "groupCountsByRouteClass": {
       "research_pictogram_or_scene": 5,
-      "formalize_documented_visible_general_operation": 33,
-      "discover_new_representation": 8
+      "formalize_documented_visible_general_operation": 37,
+      "discover_new_representation": 4
     }
   },
   "visualResearchNeedQueue": [
@@ -129,12 +129,16 @@
           {
             "label": "TION",
             "sourceIpa": "sjɔ̃",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
           },
           {
             "label": "SION",
             "sourceIpa": "sjɔ̃",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
           }
@@ -225,10 +229,25 @@
             ],
             "lexicalAssessment": "halle_has_high_naming_risk_and_ale_is_age_inappropriate_as_visual_reference",
             "visualHypotheses": [],
-            "visibleFallbackResearch": [],
-            "fallbackStatus": null,
+            "visibleFallbackResearch": [
+              {
+                "label": "L",
+                "ipa": "l",
+                "operationType": "grapheme_sound",
+                "status": "grapheme_sound_general_mode_research_only",
+                "nextGate": "render_explicit_L_to_sound_cue_then_test_general_mode_comprehension"
+              },
+              {
+                "label": "N",
+                "ipa": "n",
+                "operationType": "grapheme_sound",
+                "status": "grapheme_sound_general_mode_research_only",
+                "nextGate": "render_explicit_N_to_sound_cue_then_test_general_mode_comprehension"
+              }
+            ],
+            "fallbackStatus": "grapheme_sound_general_mode_research_only",
             "rejectedFallbacks": [],
-            "nextGate": "search_shared_alternative_segments_before_visual_prototype"
+            "nextGate": "search_shared_alternative_segments_before_visual_prototype; keep_letter_sounds_explicit_and_general_only"
           }
         }
       ],
@@ -309,6 +328,8 @@
           {
             "label": "TR",
             "sourceIpa": "tʁ",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "grapheme_cluster_general_mode_research_only",
             "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
           }
@@ -386,6 +407,8 @@
           {
             "label": "TR",
             "sourceIpa": "tʁ",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "grapheme_cluster_general_mode_research_only",
             "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
           }
@@ -456,6 +479,8 @@
           {
             "label": "TR",
             "sourceIpa": "tʁ",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "grapheme_cluster_general_mode_research_only",
             "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
           }
@@ -530,12 +555,16 @@
           {
             "label": "IN",
             "sourceIpa": "ɛ̃",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "nextGate": "compare_alternate_segmentations_before_any_grapheme_rule"
           },
           {
             "label": "UN",
             "sourceIpa": "ɛ̃",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "nextGate": "compare_alternate_segmentations_before_any_grapheme_rule"
           }
@@ -615,6 +644,8 @@
           {
             "label": "TR",
             "sourceIpa": "tʁ",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "grapheme_cluster_general_mode_research_only",
             "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
           }
@@ -688,10 +719,25 @@
             ],
             "lexicalAssessment": "halle_has_high_naming_risk_and_ale_is_age_inappropriate_as_visual_reference",
             "visualHypotheses": [],
-            "visibleFallbackResearch": [],
-            "fallbackStatus": null,
+            "visibleFallbackResearch": [
+              {
+                "label": "L",
+                "ipa": "l",
+                "operationType": "grapheme_sound",
+                "status": "grapheme_sound_general_mode_research_only",
+                "nextGate": "render_explicit_L_to_sound_cue_then_test_general_mode_comprehension"
+              },
+              {
+                "label": "N",
+                "ipa": "n",
+                "operationType": "grapheme_sound",
+                "status": "grapheme_sound_general_mode_research_only",
+                "nextGate": "render_explicit_N_to_sound_cue_then_test_general_mode_comprehension"
+              }
+            ],
+            "fallbackStatus": "grapheme_sound_general_mode_research_only",
             "rejectedFallbacks": [],
-            "nextGate": "search_shared_alternative_segments_before_visual_prototype"
+            "nextGate": "search_shared_alternative_segments_before_visual_prototype; keep_letter_sounds_explicit_and_general_only"
           }
         }
       ],
@@ -770,6 +816,8 @@
           {
             "label": "MENT",
             "sourceIpa": "mɑ̃",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "nextGate": "measure_alternate_segmentations_then_formalize_contextual_grapheme_if_still_needed"
           }
@@ -860,6 +908,8 @@
           {
             "label": "MENT",
             "sourceIpa": "mɑ̃",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "nextGate": "measure_alternate_segmentations_then_formalize_contextual_grapheme_if_still_needed"
           }
@@ -938,6 +988,8 @@
           {
             "label": "TR",
             "sourceIpa": "tʁ",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "grapheme_cluster_general_mode_research_only",
             "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
           }
@@ -1017,6 +1069,8 @@
           {
             "label": "TR",
             "sourceIpa": "tʁ",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "grapheme_cluster_general_mode_research_only",
             "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
           }
@@ -1085,12 +1139,16 @@
           {
             "label": "IN",
             "sourceIpa": "ɛ̃",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "nextGate": "compare_alternate_segmentations_before_any_grapheme_rule"
           },
           {
             "label": "UN",
             "sourceIpa": "ɛ̃",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "nextGate": "compare_alternate_segmentations_before_any_grapheme_rule"
           }
@@ -1158,12 +1216,16 @@
           {
             "label": "TION",
             "sourceIpa": "sjɔ̃",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
           },
           {
             "label": "SION",
             "sourceIpa": "sjɔ̃",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
           }
@@ -1232,6 +1294,8 @@
           {
             "label": "MENT",
             "sourceIpa": "mɑ̃",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "nextGate": "measure_alternate_segmentations_then_formalize_contextual_grapheme_if_still_needed"
           }
@@ -1301,15 +1365,23 @@
             ],
             "lexicalAssessment": "exact_but_not_naturally_picturable",
             "visualHypotheses": [],
-            "visibleFallbackResearch": [],
-            "fallbackStatus": null,
+            "visibleFallbackResearch": [
+              {
+                "label": "D",
+                "ipa": "d",
+                "operationType": "grapheme_sound",
+                "status": "grapheme_sound_general_mode_research_only",
+                "nextGate": "render_explicit_D_to_sound_cue_then_test_general_mode_comprehension"
+              }
+            ],
+            "fallbackStatus": "grapheme_sound_general_mode_research_only",
             "rejectedFallbacks": [
               {
                 "label": "D",
-                "reason": "French letter name is /de/, not /di/; phonetic mismatch."
+                "reason": "French letter name is /de/, not /di/; phonetic mismatch. This rejection concerns the letter-name operation, not an explicitly IPA-scoped grapheme_sound operation for /d/."
               }
             ],
-            "nextGate": "search_alternate_exact_decompositions; do_not_use_letter_D_for_di"
+            "nextGate": "search_alternate_exact_decompositions; D_as_letter_name_remains_invalid_for_di; explicit_D_to_d_stays_general_research_only"
           }
         }
       ],
@@ -1401,10 +1473,18 @@
             "visualHypotheses": [
               "petite scène cohérente réunissant tableau, palette et sculpture pour viser le concept global art"
             ],
-            "visibleFallbackResearch": [],
-            "fallbackStatus": null,
+            "visibleFallbackResearch": [
+              {
+                "label": "R",
+                "ipa": "ʁ",
+                "operationType": "grapheme_sound",
+                "status": "grapheme_sound_general_mode_research_only",
+                "nextGate": "render_explicit_R_to_sound_cue_then_test_general_mode_comprehension"
+              }
+            ],
+            "fallbackStatus": "grapheme_sound_general_mode_research_only",
             "rejectedFallbacks": [],
-            "nextGate": "prototype_only_after_higher_confidence_natural_objects"
+            "nextGate": "prototype_art_only_after_higher_confidence_objects; keep_R_sound_explicit_and_general_only"
           }
         }
       ],
@@ -1492,6 +1572,8 @@
           {
             "label": "MENT",
             "sourceIpa": "mɑ̃",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "nextGate": "measure_alternate_segmentations_then_formalize_contextual_grapheme_if_still_needed"
           }
@@ -1567,12 +1649,16 @@
           {
             "label": "TION",
             "sourceIpa": "sjɔ̃",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
           },
           {
             "label": "SION",
             "sourceIpa": "sjɔ̃",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
           }
@@ -1648,12 +1734,16 @@
           {
             "label": "TION",
             "sourceIpa": "sjɔ̃",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
           },
           {
             "label": "SION",
             "sourceIpa": "sjɔ̃",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
           }
@@ -1722,6 +1812,8 @@
           {
             "label": "MENT",
             "sourceIpa": "mɑ̃",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "nextGate": "measure_alternate_segmentations_then_formalize_contextual_grapheme_if_still_needed"
           }
@@ -1783,15 +1875,23 @@
             ],
             "lexicalAssessment": "exact_but_not_naturally_picturable",
             "visualHypotheses": [],
-            "visibleFallbackResearch": [],
-            "fallbackStatus": null,
+            "visibleFallbackResearch": [
+              {
+                "label": "D",
+                "ipa": "d",
+                "operationType": "grapheme_sound",
+                "status": "grapheme_sound_general_mode_research_only",
+                "nextGate": "render_explicit_D_to_sound_cue_then_test_general_mode_comprehension"
+              }
+            ],
+            "fallbackStatus": "grapheme_sound_general_mode_research_only",
             "rejectedFallbacks": [
               {
                 "label": "D",
-                "reason": "French letter name is /de/, not /di/; phonetic mismatch."
+                "reason": "French letter name is /de/, not /di/; phonetic mismatch. This rejection concerns the letter-name operation, not an explicitly IPA-scoped grapheme_sound operation for /d/."
               }
             ],
-            "nextGate": "search_alternate_exact_decompositions; do_not_use_letter_D_for_di"
+            "nextGate": "search_alternate_exact_decompositions; D_as_letter_name_remains_invalid_for_di; explicit_D_to_d_stays_general_research_only"
           }
         }
       ],
@@ -1864,12 +1964,16 @@
           {
             "label": "IN",
             "sourceIpa": "ɛ̃",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "nextGate": "compare_alternate_segmentations_before_any_grapheme_rule"
           },
           {
             "label": "UN",
             "sourceIpa": "ɛ̃",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "nextGate": "compare_alternate_segmentations_before_any_grapheme_rule"
           }
@@ -1938,6 +2042,8 @@
           {
             "label": "MENT",
             "sourceIpa": "mɑ̃",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "nextGate": "measure_alternate_segmentations_then_formalize_contextual_grapheme_if_still_needed"
           }
@@ -2026,6 +2132,8 @@
           {
             "label": "TR",
             "sourceIpa": "tʁ",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "grapheme_cluster_general_mode_research_only",
             "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
           }
@@ -2114,26 +2222,43 @@
             ],
             "lexicalAssessment": "exact_but_not_naturally_picturable",
             "visualHypotheses": [],
-            "visibleFallbackResearch": [],
-            "fallbackStatus": null,
+            "visibleFallbackResearch": [
+              {
+                "label": "D",
+                "ipa": "d",
+                "operationType": "grapheme_sound",
+                "status": "grapheme_sound_general_mode_research_only",
+                "nextGate": "render_explicit_D_to_sound_cue_then_test_general_mode_comprehension"
+              }
+            ],
+            "fallbackStatus": "grapheme_sound_general_mode_research_only",
             "rejectedFallbacks": [
               {
                 "label": "D",
-                "reason": "French letter name is /de/, not /di/; phonetic mismatch."
+                "reason": "French letter name is /de/, not /di/; phonetic mismatch. This rejection concerns the letter-name operation, not an explicitly IPA-scoped grapheme_sound operation for /d/."
               }
             ],
-            "nextGate": "search_alternate_exact_decompositions; do_not_use_letter_D_for_di"
+            "nextGate": "search_alternate_exact_decompositions; D_as_letter_name_remains_invalid_for_di; explicit_D_to_d_stays_general_research_only"
           }
         }
       ],
       "nextAction": "search_exact_whole_word_or_explicit_general_operation",
       "status": "research_only",
       "researchRoute": {
-        "routeClass": "discover_new_representation",
-        "visibleOperations": [],
+        "routeClass": "formalize_documented_visible_general_operation",
+        "visibleOperations": [
+          {
+            "label": "D",
+            "sourceIpa": "di",
+            "targetIpa": "d",
+            "operationType": "grapheme_sound",
+            "fallbackStatus": "grapheme_sound_general_mode_research_only",
+            "nextGate": "render_explicit_D_to_sound_cue_then_test_general_mode_comprehension"
+          }
+        ],
         "visualCandidates": [],
-        "authorizationStatus": "no_documented_representation_route",
-        "nextAction": "search_exact_whole_word_scene_alternate_segmentation_or_explicit_operation"
+        "authorizationStatus": "research_only_not_authorized",
+        "nextAction": "define_and_test_visible_general_operation_semantics_before_any_activation"
       }
     },
     {
@@ -2199,21 +2324,38 @@
             "visualHypotheses": [
               "petite scène cohérente réunissant tableau, palette et sculpture pour viser le concept global art"
             ],
-            "visibleFallbackResearch": [],
-            "fallbackStatus": null,
+            "visibleFallbackResearch": [
+              {
+                "label": "R",
+                "ipa": "ʁ",
+                "operationType": "grapheme_sound",
+                "status": "grapheme_sound_general_mode_research_only",
+                "nextGate": "render_explicit_R_to_sound_cue_then_test_general_mode_comprehension"
+              }
+            ],
+            "fallbackStatus": "grapheme_sound_general_mode_research_only",
             "rejectedFallbacks": [],
-            "nextGate": "prototype_only_after_higher_confidence_natural_objects"
+            "nextGate": "prototype_art_only_after_higher_confidence_objects; keep_R_sound_explicit_and_general_only"
           }
         }
       ],
       "nextAction": "search_exact_whole_word_or_explicit_general_operation",
       "status": "research_only",
       "researchRoute": {
-        "routeClass": "discover_new_representation",
-        "visibleOperations": [],
+        "routeClass": "formalize_documented_visible_general_operation",
+        "visibleOperations": [
+          {
+            "label": "R",
+            "sourceIpa": "aʁ",
+            "targetIpa": "ʁ",
+            "operationType": "grapheme_sound",
+            "fallbackStatus": "grapheme_sound_general_mode_research_only",
+            "nextGate": "render_explicit_R_to_sound_cue_then_test_general_mode_comprehension"
+          }
+        ],
         "visualCandidates": [],
-        "authorizationStatus": "no_documented_representation_route",
-        "nextAction": "search_exact_whole_word_scene_alternate_segmentation_or_explicit_operation"
+        "authorizationStatus": "research_only_not_authorized",
+        "nextAction": "define_and_test_visible_general_operation_semantics_before_any_activation"
       }
     },
     {
@@ -2278,12 +2420,16 @@
           {
             "label": "TION",
             "sourceIpa": "sjɔ̃",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
           },
           {
             "label": "SION",
             "sourceIpa": "sjɔ̃",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
           }
@@ -2331,21 +2477,45 @@
             ],
             "lexicalAssessment": "halle_has_high_naming_risk_and_ale_is_age_inappropriate_as_visual_reference",
             "visualHypotheses": [],
-            "visibleFallbackResearch": [],
-            "fallbackStatus": null,
+            "visibleFallbackResearch": [
+              {
+                "label": "L",
+                "ipa": "l",
+                "operationType": "grapheme_sound",
+                "status": "grapheme_sound_general_mode_research_only",
+                "nextGate": "render_explicit_L_to_sound_cue_then_test_general_mode_comprehension"
+              },
+              {
+                "label": "N",
+                "ipa": "n",
+                "operationType": "grapheme_sound",
+                "status": "grapheme_sound_general_mode_research_only",
+                "nextGate": "render_explicit_N_to_sound_cue_then_test_general_mode_comprehension"
+              }
+            ],
+            "fallbackStatus": "grapheme_sound_general_mode_research_only",
             "rejectedFallbacks": [],
-            "nextGate": "search_shared_alternative_segments_before_visual_prototype"
+            "nextGate": "search_shared_alternative_segments_before_visual_prototype; keep_letter_sounds_explicit_and_general_only"
           }
         }
       ],
       "nextAction": "search_exact_whole_word_or_explicit_general_operation",
       "status": "research_only",
       "researchRoute": {
-        "routeClass": "discover_new_representation",
-        "visibleOperations": [],
+        "routeClass": "formalize_documented_visible_general_operation",
+        "visibleOperations": [
+          {
+            "label": "L",
+            "sourceIpa": "al",
+            "targetIpa": "l",
+            "operationType": "grapheme_sound",
+            "fallbackStatus": "grapheme_sound_general_mode_research_only",
+            "nextGate": "render_explicit_L_to_sound_cue_then_test_general_mode_comprehension"
+          }
+        ],
         "visualCandidates": [],
-        "authorizationStatus": "no_documented_representation_route",
-        "nextAction": "search_exact_whole_word_scene_alternate_segmentation_or_explicit_operation"
+        "authorizationStatus": "research_only_not_authorized",
+        "nextAction": "define_and_test_visible_general_operation_semantics_before_any_activation"
       }
     },
     {
@@ -2404,12 +2574,16 @@
           {
             "label": "TION",
             "sourceIpa": "sjɔ̃",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
           },
           {
             "label": "SION",
             "sourceIpa": "sjɔ̃",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
           }
@@ -2457,15 +2631,23 @@
             ],
             "lexicalAssessment": "exact_but_not_naturally_picturable",
             "visualHypotheses": [],
-            "visibleFallbackResearch": [],
-            "fallbackStatus": null,
+            "visibleFallbackResearch": [
+              {
+                "label": "D",
+                "ipa": "d",
+                "operationType": "grapheme_sound",
+                "status": "grapheme_sound_general_mode_research_only",
+                "nextGate": "render_explicit_D_to_sound_cue_then_test_general_mode_comprehension"
+              }
+            ],
+            "fallbackStatus": "grapheme_sound_general_mode_research_only",
             "rejectedFallbacks": [
               {
                 "label": "D",
-                "reason": "French letter name is /de/, not /di/; phonetic mismatch."
+                "reason": "French letter name is /de/, not /di/; phonetic mismatch. This rejection concerns the letter-name operation, not an explicitly IPA-scoped grapheme_sound operation for /d/."
               }
             ],
-            "nextGate": "search_alternate_exact_decompositions; do_not_use_letter_D_for_di"
+            "nextGate": "search_alternate_exact_decompositions; D_as_letter_name_remains_invalid_for_di; explicit_D_to_d_stays_general_research_only"
           }
         }
       ],
@@ -2529,12 +2711,16 @@
           {
             "label": "IN",
             "sourceIpa": "ɛ̃",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "nextGate": "compare_alternate_segmentations_before_any_grapheme_rule"
           },
           {
             "label": "UN",
             "sourceIpa": "ɛ̃",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "nextGate": "compare_alternate_segmentations_before_any_grapheme_rule"
           }
@@ -2644,6 +2830,8 @@
           {
             "label": "MENT",
             "sourceIpa": "mɑ̃",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "nextGate": "measure_alternate_segmentations_then_formalize_contextual_grapheme_if_still_needed"
           }
@@ -2684,15 +2872,23 @@
             ],
             "lexicalAssessment": "exact_but_not_naturally_picturable",
             "visualHypotheses": [],
-            "visibleFallbackResearch": [],
-            "fallbackStatus": null,
+            "visibleFallbackResearch": [
+              {
+                "label": "D",
+                "ipa": "d",
+                "operationType": "grapheme_sound",
+                "status": "grapheme_sound_general_mode_research_only",
+                "nextGate": "render_explicit_D_to_sound_cue_then_test_general_mode_comprehension"
+              }
+            ],
+            "fallbackStatus": "grapheme_sound_general_mode_research_only",
             "rejectedFallbacks": [
               {
                 "label": "D",
-                "reason": "French letter name is /de/, not /di/; phonetic mismatch."
+                "reason": "French letter name is /de/, not /di/; phonetic mismatch. This rejection concerns the letter-name operation, not an explicitly IPA-scoped grapheme_sound operation for /d/."
               }
             ],
-            "nextGate": "search_alternate_exact_decompositions; do_not_use_letter_D_for_di"
+            "nextGate": "search_alternate_exact_decompositions; D_as_letter_name_remains_invalid_for_di; explicit_D_to_d_stays_general_research_only"
           }
         }
       ],
@@ -2738,10 +2934,25 @@
             ],
             "lexicalAssessment": "halle_has_high_naming_risk_and_ale_is_age_inappropriate_as_visual_reference",
             "visualHypotheses": [],
-            "visibleFallbackResearch": [],
-            "fallbackStatus": null,
+            "visibleFallbackResearch": [
+              {
+                "label": "L",
+                "ipa": "l",
+                "operationType": "grapheme_sound",
+                "status": "grapheme_sound_general_mode_research_only",
+                "nextGate": "render_explicit_L_to_sound_cue_then_test_general_mode_comprehension"
+              },
+              {
+                "label": "N",
+                "ipa": "n",
+                "operationType": "grapheme_sound",
+                "status": "grapheme_sound_general_mode_research_only",
+                "nextGate": "render_explicit_N_to_sound_cue_then_test_general_mode_comprehension"
+              }
+            ],
+            "fallbackStatus": "grapheme_sound_general_mode_research_only",
             "rejectedFallbacks": [],
-            "nextGate": "search_shared_alternative_segments_before_visual_prototype"
+            "nextGate": "search_shared_alternative_segments_before_visual_prototype; keep_letter_sounds_explicit_and_general_only"
           }
         }
       ],
@@ -2805,12 +3016,16 @@
           {
             "label": "IN",
             "sourceIpa": "ɛ̃",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "nextGate": "compare_alternate_segmentations_before_any_grapheme_rule"
           },
           {
             "label": "UN",
             "sourceIpa": "ɛ̃",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "nextGate": "compare_alternate_segmentations_before_any_grapheme_rule"
           }
@@ -2866,6 +3081,8 @@
           {
             "label": "TR",
             "sourceIpa": "tʁ",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "grapheme_cluster_general_mode_research_only",
             "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
           }
@@ -2907,21 +3124,45 @@
             ],
             "lexicalAssessment": "halle_has_high_naming_risk_and_ale_is_age_inappropriate_as_visual_reference",
             "visualHypotheses": [],
-            "visibleFallbackResearch": [],
-            "fallbackStatus": null,
+            "visibleFallbackResearch": [
+              {
+                "label": "L",
+                "ipa": "l",
+                "operationType": "grapheme_sound",
+                "status": "grapheme_sound_general_mode_research_only",
+                "nextGate": "render_explicit_L_to_sound_cue_then_test_general_mode_comprehension"
+              },
+              {
+                "label": "N",
+                "ipa": "n",
+                "operationType": "grapheme_sound",
+                "status": "grapheme_sound_general_mode_research_only",
+                "nextGate": "render_explicit_N_to_sound_cue_then_test_general_mode_comprehension"
+              }
+            ],
+            "fallbackStatus": "grapheme_sound_general_mode_research_only",
             "rejectedFallbacks": [],
-            "nextGate": "search_shared_alternative_segments_before_visual_prototype"
+            "nextGate": "search_shared_alternative_segments_before_visual_prototype; keep_letter_sounds_explicit_and_general_only"
           }
         }
       ],
       "nextAction": "search_exact_whole_word_or_explicit_general_operation",
       "status": "research_only",
       "researchRoute": {
-        "routeClass": "discover_new_representation",
-        "visibleOperations": [],
+        "routeClass": "formalize_documented_visible_general_operation",
+        "visibleOperations": [
+          {
+            "label": "N",
+            "sourceIpa": "al",
+            "targetIpa": "n",
+            "operationType": "grapheme_sound",
+            "fallbackStatus": "grapheme_sound_general_mode_research_only",
+            "nextGate": "render_explicit_N_to_sound_cue_then_test_general_mode_comprehension"
+          }
+        ],
         "visualCandidates": [],
-        "authorizationStatus": "no_documented_representation_route",
-        "nextAction": "search_exact_whole_word_scene_alternate_segmentation_or_explicit_operation"
+        "authorizationStatus": "research_only_not_authorized",
+        "nextAction": "define_and_test_visible_general_operation_semantics_before_any_activation"
       }
     },
     {
@@ -2970,6 +3211,8 @@
           {
             "label": "TR",
             "sourceIpa": "tʁ",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "grapheme_cluster_general_mode_research_only",
             "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
           }
@@ -3025,6 +3268,8 @@
           {
             "label": "TR",
             "sourceIpa": "tʁ",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "grapheme_cluster_general_mode_research_only",
             "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
           }
@@ -3132,6 +3377,8 @@
           {
             "label": "TR",
             "sourceIpa": "tʁ",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "grapheme_cluster_general_mode_research_only",
             "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
           }
@@ -3372,6 +3619,8 @@
           {
             "label": "MENT",
             "sourceIpa": "mɑ̃",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "nextGate": "measure_alternate_segmentations_then_formalize_contextual_grapheme_if_still_needed"
           }
@@ -3482,12 +3731,16 @@
           {
             "label": "TION",
             "sourceIpa": "sjɔ̃",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
           },
           {
             "label": "SION",
             "sourceIpa": "sjɔ̃",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
           }
@@ -3564,12 +3817,16 @@
           {
             "label": "IN",
             "sourceIpa": "ɛ̃",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "nextGate": "compare_alternate_segmentations_before_any_grapheme_rule"
           },
           {
             "label": "UN",
             "sourceIpa": "ɛ̃",
+            "targetIpa": null,
+            "operationType": null,
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
             "nextGate": "compare_alternate_segmentations_before_any_grapheme_rule"
           }

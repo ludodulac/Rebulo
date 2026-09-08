@@ -8,8 +8,8 @@
   "$defs":{
     "plan":{"type":"object","additionalProperties":false,"required":["planId","concept","comparisonRevision","targetIpa","status","activationState","candidateIds","instruction","capture","decisionGate"],"properties":{
       "planId":{"type":"string","minLength":1},"concept":{"type":"string","minLength":1},"comparisonRevision":{"type":"string","pattern":"^[a-z0-9-]+-v[1-9][0-9]*$"},"targetIpa":{"type":"string","minLength":1},
-      "status":{"const":"ready_for_human_naming_test"},"activationState":{"const":"inactive_until_human_decision"},
-      "candidateIds":{"type":"array","minItems":2,"uniqueItems":true,"items":{"type":"string","minLength":1}},
+      "status":{"enum":["blocked_pending_stimuli","ready_for_human_naming_test"]},"activationState":{"const":"inactive_until_human_decision"},
+      "candidateIds":{"type":"array","minItems":1,"uniqueItems":true,"items":{"type":"string","minLength":1}},
       "instruction":{"type":"string","minLength":1},
       "capture":{"type":"object","additionalProperties":false,"required":["firstSpontaneousResponseOnly","anonymousOnly","hesitation","noResponse","candidateOrder"],"properties":{"firstSpontaneousResponseOnly":{"const":true},"anonymousOnly":{"const":true},"hesitation":{"const":true},"noResponse":{"const":true},"candidateOrder":{"const":"counterbalanced_or_randomized"}}},
       "decisionGate":{"type":"object","additionalProperties":false,"required":["requiresHumanReview","automaticActivation","note"],"properties":{"requiresHumanReview":{"const":true},"automaticActivation":{"const":false},"note":{"type":"string","minLength":1}}}

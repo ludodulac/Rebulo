@@ -5,6 +5,7 @@
 - Arrière-plan Lexique non prioritaire : 6041 lemmes.
 - Cibles appuyées par la liste scolaire Éduscol : 1341.
 - Segments IPA du vocabulaire utile : 25075.
+- Recherche de routes difficiles : 250 briques examinées sur 127 cibles ciblées; les 60 priorités globales restent inchangées.
 
 ## Couverture utile Rebulo
 

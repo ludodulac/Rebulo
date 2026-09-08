@@ -1,9 +1,10 @@
 {
-  "generatedAt": "2026-09-08T09:42:19.069Z",
+  "generatedAt": "2026-09-08T09:55:27.770Z",
   "status": "research_only",
-  "sourceBrickMapGeneratedAt": "2026-09-08T09:42:14.142Z",
+  "sourceBrickMapGeneratedAt": "2026-09-08T09:55:08.407Z",
   "strategyVersion": "1.0.0",
   "visualCandidateBankVersion": "0.1.0",
+  "routeSearchOpportunityCount": 250,
   "methodology": {
     "exactness": "Every route reconstructs the complete target IPA with complete visible operation readings.",
     "alternateRequirement": "A route must use the tested alternative brick and contain at least two operations; trivial whole-target replacement is excluded.",
@@ -11,46 +12,211 @@
     "visualResearchReadiness": "A lexical candidate counts as visually curated only when the same whole word and IPA already exist in the research candidate bank with an explicit pictogram/scene concept and a non-rejected visual research decision. This remains research-only, not naming validation.",
     "visualNeedQueue": "Every target without a curated visual route is assigned exactly one primary research need.",
     "researchRouteClassification": "Each unresolved need is then classified as pictogram/scene research, formalization of an already documented visible general-operation hypothesis, or discovery of a genuinely new representation. A documented fallback remains research-only and never becomes an authorized operation by classification.",
+    "routeSearchPool": "Hard-segment routing uses the targeted expanded opportunity pool when present; the legacy top-60 pool is only a compatibility fallback. This changes research discovery only, never activation or phonetic rules.",
     "strictPreference": "Strict routes rank before general routes. General routes remain explicit and visible only.",
     "activation": "No route, lexical lead, pictogram, scene or grapheme is activated by this report."
   },
   "stats": {
     "segmentCount": 8,
     "targetCount": 127,
-    "targetsWithAlternativeRoutes": 45,
-    "targetsWithRepresentableAlternativeRoutes": 9,
+    "targetsWithAlternativeRoutes": 50,
+    "targetsWithRepresentableAlternativeRoutes": 15,
     "targetsWithCuratedVisualAlternativeRoutes": 7,
-    "targetsStillBlocked": 82,
-    "targetsStillNeedingRepresentableAlternative": 118,
+    "targetsStillBlocked": 77,
+    "targetsStillNeedingRepresentableAlternative": 112,
     "targetsStillNeedingCuratedVisualAlternative": 120,
-    "strictAlternativeTargets": 5,
-    "strictRepresentableAlternativeTargets": 1,
+    "strictAlternativeTargets": 7,
+    "strictRepresentableAlternativeTargets": 4,
     "strictCuratedVisualAlternativeTargets": 0,
-    "generalAlternativeTargets": 41
+    "generalAlternativeTargets": 45
   },
   "visualResearchNeedQueueStats": {
-    "groupCount": 13,
+    "groupCount": 20,
     "unresolvedTargetCount": 120,
     "targetCountsByNeedType": {
-      "curate_existing_lexical_candidate": 2,
-      "find_lexical_or_visible_operation_for_phonetic_brick": 36,
-      "resolve_source_segment": 82
+      "curate_existing_lexical_candidate": 8,
+      "find_lexical_or_visible_operation_for_phonetic_brick": 35,
+      "resolve_source_segment": 77
     }
   },
   "visualResearchRouteSummary": {
     "targetCount": 120,
     "targetCountsByRouteClass": {
-      "research_pictogram_or_scene": 11,
+      "research_pictogram_or_scene": 15,
       "formalize_documented_visible_general_operation": 77,
-      "discover_new_representation": 32
+      "discover_new_representation": 28
     },
     "groupCountsByRouteClass": {
-      "research_pictogram_or_scene": 1,
-      "formalize_documented_visible_general_operation": 7,
+      "research_pictogram_or_scene": 3,
+      "formalize_documented_visible_general_operation": 12,
       "discover_new_representation": 5
     }
   },
   "visualResearchNeedQueue": [
+    {
+      "needType": "curate_existing_lexical_candidate",
+      "researchIpa": "lo",
+      "affectedTargetCount": 3,
+      "minAgeBandCandidate": 5,
+      "sourceSegments": [
+        "al"
+      ],
+      "lexicalCandidates": [
+        {
+          "word": "lot",
+          "lemma": "lot",
+          "pos": "NOM",
+          "frequency": 13.326,
+          "phoneticStatus": "whole_pronunciation_exact",
+          "activationState": "research_only"
+        },
+        {
+          "word": "los",
+          "lemma": "los",
+          "pos": "NOM",
+          "frequency": 0.918,
+          "phoneticStatus": "whole_pronunciation_exact",
+          "activationState": "research_only"
+        },
+        {
+          "word": "laud",
+          "lemma": "laud",
+          "pos": "NOM",
+          "frequency": 0.013,
+          "phoneticStatus": "whole_pronunciation_exact",
+          "activationState": "research_only"
+        }
+      ],
+      "examples": [
+        {
+          "word": "allô",
+          "targetIpa": "alo",
+          "sourceIpa": "al",
+          "ageBandCandidate": 5
+        },
+        {
+          "word": "allo",
+          "targetIpa": "alo",
+          "sourceIpa": "al",
+          "ageBandCandidate": 7
+        },
+        {
+          "word": "halo",
+          "targetIpa": "alo",
+          "sourceIpa": "al",
+          "ageBandCandidate": 12
+        }
+      ],
+      "routeModes": [
+        "general"
+      ],
+      "candidateBankEvidence": null,
+      "strategyEvidence": [
+        {
+          "ipa": "al",
+          "evidence": {
+            "strategy": "alternate_segmentation_preferred",
+            "lexicalLeads": [
+              "halle",
+              "ale"
+            ],
+            "lexicalAssessment": "halle_has_high_naming_risk_and_ale_is_age_inappropriate_as_visual_reference",
+            "visualHypotheses": [],
+            "visibleFallbackResearch": [],
+            "fallbackStatus": null,
+            "rejectedFallbacks": [],
+            "nextGate": "search_shared_alternative_segments_before_visual_prototype"
+          }
+        }
+      ],
+      "nextAction": "assess_visual_concept_then_naming_risk_before_prototype",
+      "status": "research_only",
+      "researchRoute": {
+        "routeClass": "research_pictogram_or_scene",
+        "visibleOperations": [],
+        "visualCandidates": [],
+        "authorizationStatus": "research_only_not_naming_validated",
+        "nextAction": "evaluate_spontaneous_naming_and_visual_concept_before_prototype"
+      }
+    },
+    {
+      "needType": "curate_existing_lexical_candidate",
+      "researchIpa": "tʁi",
+      "affectedTargetCount": 2,
+      "minAgeBandCandidate": 9,
+      "sourceSegments": [
+        "tʁ"
+      ],
+      "lexicalCandidates": [
+        {
+          "word": "tri",
+          "lemma": "tri",
+          "pos": "NOM",
+          "frequency": 2.111,
+          "phoneticStatus": "whole_pronunciation_exact",
+          "activationState": "research_only"
+        },
+        {
+          "word": "trie",
+          "lemma": "trier",
+          "pos": "VER",
+          "frequency": 0.595,
+          "phoneticStatus": "whole_pronunciation_exact",
+          "activationState": "research_only"
+        }
+      ],
+      "examples": [
+        {
+          "word": "patrie",
+          "targetIpa": "patʁi",
+          "sourceIpa": "tʁ",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "tripoter",
+          "targetIpa": "tʁipote",
+          "sourceIpa": "tʁ",
+          "ageBandCandidate": 9
+        }
+      ],
+      "routeModes": [
+        "strict"
+      ],
+      "candidateBankEvidence": null,
+      "strategyEvidence": [
+        {
+          "ipa": "tʁ",
+          "evidence": {
+            "strategy": "alternate_segmentation_required",
+            "lexicalLeads": [],
+            "lexicalAssessment": "no_natural_exact_whole_word_candidate",
+            "visualHypotheses": [],
+            "visibleFallbackResearch": [
+              "TR"
+            ],
+            "fallbackStatus": "grapheme_cluster_general_mode_research_only",
+            "rejectedFallbacks": [],
+            "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
+          }
+        }
+      ],
+      "nextAction": "assess_visual_concept_then_naming_risk_before_prototype",
+      "status": "research_only",
+      "researchRoute": {
+        "routeClass": "formalize_documented_visible_general_operation",
+        "visibleOperations": [
+          {
+            "label": "TR",
+            "sourceIpa": "tʁ",
+            "fallbackStatus": "grapheme_cluster_general_mode_research_only",
+            "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
+          }
+        ],
+        "visualCandidates": [],
+        "authorizationStatus": "research_only_not_authorized",
+        "nextAction": "define_and_test_visible_general_operation_semantics_before_any_activation"
+      }
+    },
     {
       "needType": "curate_existing_lexical_candidate",
       "researchIpa": "at",
@@ -121,6 +287,89 @@
         "visualCandidates": [],
         "authorizationStatus": "research_only_not_authorized",
         "nextAction": "define_and_test_visible_general_operation_semantics_before_any_activation"
+      }
+    },
+    {
+      "needType": "curate_existing_lexical_candidate",
+      "researchIpa": "ba",
+      "affectedTargetCount": 1,
+      "minAgeBandCandidate": 7,
+      "sourceSegments": [
+        "aʁ"
+      ],
+      "lexicalCandidates": [
+        {
+          "word": "bas",
+          "lemma": "bas",
+          "pos": "NOM",
+          "frequency": 64.82,
+          "phoneticStatus": "whole_pronunciation_exact",
+          "activationState": "research_only"
+        },
+        {
+          "word": "bât",
+          "lemma": "bât",
+          "pos": "NOM",
+          "frequency": 0.25,
+          "phoneticStatus": "whole_pronunciation_exact",
+          "activationState": "research_only"
+        },
+        {
+          "word": "bats",
+          "lemma": "bats",
+          "pos": "NOM",
+          "frequency": 0.082,
+          "phoneticStatus": "whole_pronunciation_exact",
+          "activationState": "research_only"
+        },
+        {
+          "word": "bah",
+          "lemma": "bah",
+          "pos": "ONO",
+          "frequency": 18.307,
+          "phoneticStatus": "whole_pronunciation_exact",
+          "activationState": "research_only"
+        }
+      ],
+      "examples": [
+        {
+          "word": "bagarre",
+          "targetIpa": "bagaʁ",
+          "sourceIpa": "aʁ",
+          "ageBandCandidate": 7
+        }
+      ],
+      "routeModes": [
+        "strict"
+      ],
+      "candidateBankEvidence": null,
+      "strategyEvidence": [
+        {
+          "ipa": "aʁ",
+          "evidence": {
+            "strategy": "scene_comparison_for_older_users",
+            "lexicalLeads": [
+              "art"
+            ],
+            "lexicalAssessment": "exact_but_abstract_concept_with_high_naming_variability",
+            "visualHypotheses": [
+              "petite scène cohérente réunissant tableau, palette et sculpture pour viser le concept global art"
+            ],
+            "visibleFallbackResearch": [],
+            "fallbackStatus": null,
+            "rejectedFallbacks": [],
+            "nextGate": "prototype_only_after_higher_confidence_natural_objects"
+          }
+        }
+      ],
+      "nextAction": "assess_visual_concept_then_naming_risk_before_prototype",
+      "status": "research_only",
+      "researchRoute": {
+        "routeClass": "research_pictogram_or_scene",
+        "visibleOperations": [],
+        "visualCandidates": [],
+        "authorizationStatus": "research_only_not_naming_validated",
+        "nextAction": "evaluate_spontaneous_naming_and_visual_concept_before_prototype"
       }
     },
     {
@@ -335,7 +584,7 @@
     {
       "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
       "researchIpa": "ʁ",
-      "affectedTargetCount": 8,
+      "affectedTargetCount": 7,
       "minAgeBandCandidate": 5,
       "sourceSegments": [
         "al",
@@ -348,12 +597,6 @@
           "targetIpa": "aʁ",
           "sourceIpa": "aʁ",
           "ageBandCandidate": 5
-        },
-        {
-          "word": "bagarre",
-          "targetIpa": "bagaʁ",
-          "sourceIpa": "aʁ",
-          "ageBandCandidate": 7
         },
         {
           "word": "are",
@@ -443,8 +686,8 @@
     },
     {
       "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
-      "researchIpa": "t",
-      "affectedTargetCount": 8,
+      "researchIpa": "tʁa",
+      "affectedTargetCount": 5,
       "minAgeBandCandidate": 5,
       "sourceSegments": [
         "tʁ"
@@ -476,26 +719,8 @@
           "ageBandCandidate": 9
         },
         {
-          "word": "patrie",
-          "targetIpa": "patʁi",
-          "sourceIpa": "tʁ",
-          "ageBandCandidate": 9
-        },
-        {
           "word": "traversée",
           "targetIpa": "tʁavɛʁse",
-          "sourceIpa": "tʁ",
-          "ageBandCandidate": 9
-        },
-        {
-          "word": "tripoter",
-          "targetIpa": "tʁipote",
-          "sourceIpa": "tʁ",
-          "ageBandCandidate": 9
-        },
-        {
-          "word": "tri",
-          "targetIpa": "tʁi",
           "sourceIpa": "tʁ",
           "ageBandCandidate": 9
         }
@@ -542,28 +767,16 @@
     {
       "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
       "researchIpa": "l",
-      "affectedTargetCount": 6,
-      "minAgeBandCandidate": 5,
+      "affectedTargetCount": 3,
+      "minAgeBandCandidate": 7,
       "sourceSegments": [
         "al"
       ],
       "lexicalCandidates": [],
       "examples": [
         {
-          "word": "allô",
-          "targetIpa": "alo",
-          "sourceIpa": "al",
-          "ageBandCandidate": 5
-        },
-        {
           "word": "signal",
           "targetIpa": "siɲal",
-          "sourceIpa": "al",
-          "ageBandCandidate": 7
-        },
-        {
-          "word": "allo",
-          "targetIpa": "alo",
           "sourceIpa": "al",
           "ageBandCandidate": 7
         },
@@ -572,12 +785,6 @@
           "targetIpa": "ideal",
           "sourceIpa": "al",
           "ageBandCandidate": 7
-        },
-        {
-          "word": "halo",
-          "targetIpa": "alo",
-          "sourceIpa": "al",
-          "ageBandCandidate": 12
         },
         {
           "word": "postal",
@@ -616,6 +823,148 @@
         "visualCandidates": [],
         "authorizationStatus": "no_documented_representation_route",
         "nextAction": "search_exact_whole_word_scene_alternate_segmentation_or_explicit_operation"
+      }
+    },
+    {
+      "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+      "researchIpa": "ɛ̃s",
+      "affectedTargetCount": 2,
+      "minAgeBandCandidate": 5,
+      "sourceSegments": [
+        "ɛ̃"
+      ],
+      "lexicalCandidates": [],
+      "examples": [
+        {
+          "word": "ainsi",
+          "targetIpa": "ɛ̃si",
+          "sourceIpa": "ɛ̃",
+          "ageBandCandidate": 5
+        },
+        {
+          "word": "incident",
+          "targetIpa": "ɛ̃sidɑ̃",
+          "sourceIpa": "ɛ̃",
+          "ageBandCandidate": 7
+        }
+      ],
+      "routeModes": [
+        "general"
+      ],
+      "candidateBankEvidence": null,
+      "strategyEvidence": [
+        {
+          "ipa": "ɛ̃",
+          "evidence": {
+            "strategy": "alternate_segmentation_first",
+            "lexicalLeads": [
+              "hein",
+              "ain"
+            ],
+            "lexicalAssessment": "exact_but_poor_or_ambiguous_visual_naming",
+            "visualHypotheses": [],
+            "visibleFallbackResearch": [
+              "IN",
+              "UN"
+            ],
+            "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
+            "rejectedFallbacks": [],
+            "nextGate": "compare_alternate_segmentations_before_any_grapheme_rule"
+          }
+        }
+      ],
+      "nextAction": "search_exact_whole_word_or_explicit_general_operation",
+      "status": "research_only",
+      "researchRoute": {
+        "routeClass": "formalize_documented_visible_general_operation",
+        "visibleOperations": [
+          {
+            "label": "IN",
+            "sourceIpa": "ɛ̃",
+            "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
+            "nextGate": "compare_alternate_segmentations_before_any_grapheme_rule"
+          },
+          {
+            "label": "UN",
+            "sourceIpa": "ɛ̃",
+            "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
+            "nextGate": "compare_alternate_segmentations_before_any_grapheme_rule"
+          }
+        ],
+        "visualCandidates": [],
+        "authorizationStatus": "research_only_not_authorized",
+        "nextAction": "define_and_test_visible_general_operation_semantics_before_any_activation"
+      }
+    },
+    {
+      "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+      "researchIpa": "asjɔ̃",
+      "affectedTargetCount": 2,
+      "minAgeBandCandidate": 9,
+      "sourceSegments": [
+        "sjɔ̃"
+      ],
+      "lexicalCandidates": [],
+      "examples": [
+        {
+          "word": "tentation",
+          "targetIpa": "tɑ̃tasjɔ̃",
+          "sourceIpa": "sjɔ̃",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "assignation",
+          "targetIpa": "asiɲasjɔ̃",
+          "sourceIpa": "sjɔ̃",
+          "ageBandCandidate": 9
+        }
+      ],
+      "routeModes": [
+        "general",
+        "strict"
+      ],
+      "candidateBankEvidence": null,
+      "strategyEvidence": [
+        {
+          "ipa": "sjɔ̃",
+          "evidence": {
+            "strategy": "alternate_segmentation_required",
+            "lexicalLeads": [
+              "scion"
+            ],
+            "lexicalAssessment": "exact_but_spontaneous_naming_risk_is_very_high",
+            "visualHypotheses": [],
+            "visibleFallbackResearch": [
+              "TION",
+              "SION"
+            ],
+            "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
+            "rejectedFallbacks": [],
+            "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
+          }
+        }
+      ],
+      "nextAction": "search_exact_whole_word_or_explicit_general_operation",
+      "status": "research_only",
+      "researchRoute": {
+        "routeClass": "formalize_documented_visible_general_operation",
+        "visibleOperations": [
+          {
+            "label": "TION",
+            "sourceIpa": "sjɔ̃",
+            "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
+            "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
+          },
+          {
+            "label": "SION",
+            "sourceIpa": "sjɔ̃",
+            "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
+            "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
+          }
+        ],
+        "visualCandidates": [],
+        "authorizationStatus": "research_only_not_authorized",
+        "nextAction": "define_and_test_visible_general_operation_semantics_before_any_activation"
       }
     },
     {
@@ -692,136 +1041,121 @@
       }
     },
     {
-      "needType": "resolve_source_segment",
-      "researchIpa": "sjɔ̃",
-      "affectedTargetCount": 20,
-      "minAgeBandCandidate": 5,
+      "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+      "researchIpa": "t",
+      "affectedTargetCount": 1,
+      "minAgeBandCandidate": 9,
       "sourceSegments": [
-        "sjɔ̃"
+        "tʁ"
       ],
       "lexicalCandidates": [],
       "examples": [
         {
-          "word": "mission",
-          "targetIpa": "misjɔ̃",
-          "sourceIpa": "sjɔ̃",
-          "ageBandCandidate": 5
-        },
-        {
-          "word": "version",
-          "targetIpa": "vɛʁsjɔ̃",
-          "sourceIpa": "sjɔ̃",
-          "ageBandCandidate": 7
-        },
-        {
-          "word": "passion",
-          "targetIpa": "pasjɔ̃",
-          "sourceIpa": "sjɔ̃",
-          "ageBandCandidate": 7
-        },
-        {
-          "word": "opération",
-          "targetIpa": "opeʁasjɔ̃",
-          "sourceIpa": "sjɔ̃",
-          "ageBandCandidate": 9
-        },
-        {
-          "word": "possession",
-          "targetIpa": "posesjɔ̃",
-          "sourceIpa": "sjɔ̃",
-          "ageBandCandidate": 7
-        },
-        {
-          "word": "pension",
-          "targetIpa": "pɑ̃sjɔ̃",
-          "sourceIpa": "sjɔ̃",
-          "ageBandCandidate": 7
-        },
-        {
-          "word": "génération",
-          "targetIpa": "ʒeneʁasjɔ̃",
-          "sourceIpa": "sjɔ̃",
-          "ageBandCandidate": 9
-        },
-        {
-          "word": "libération",
-          "targetIpa": "libeʁasjɔ̃",
-          "sourceIpa": "sjɔ̃",
-          "ageBandCandidate": 9
-        },
-        {
-          "word": "séparation",
-          "targetIpa": "sepaʁasjɔ̃",
-          "sourceIpa": "sjɔ̃",
-          "ageBandCandidate": 9
-        },
-        {
-          "word": "démission",
-          "targetIpa": "demisjɔ̃",
-          "sourceIpa": "sjɔ̃",
+          "word": "tri",
+          "targetIpa": "tʁi",
+          "sourceIpa": "tʁ",
           "ageBandCandidate": 9
         }
       ],
-      "routeModes": [],
-      "candidateBankEvidence": {
-        "recommendedRoute": "reject_natural_priority",
-        "candidates": [
-          {
-            "label": "scion",
-            "candidateType": "whole_word_pictogram",
-            "visualPlausibility": "medium",
-            "spontaneousNamingRisk": "very_high",
-            "researchDecision": "reject_visual_priority",
-            "nextGate": "seek_alternate_segmentation_or_explicit_operation"
-          }
-        ]
-      },
+      "routeModes": [
+        "strict"
+      ],
+      "candidateBankEvidence": null,
       "strategyEvidence": [
         {
-          "ipa": "sjɔ̃",
+          "ipa": "tʁ",
           "evidence": {
             "strategy": "alternate_segmentation_required",
-            "lexicalLeads": [
-              "scion"
-            ],
-            "lexicalAssessment": "exact_but_spontaneous_naming_risk_is_very_high",
+            "lexicalLeads": [],
+            "lexicalAssessment": "no_natural_exact_whole_word_candidate",
             "visualHypotheses": [],
             "visibleFallbackResearch": [
-              "TION",
-              "SION"
+              "TR"
             ],
-            "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
+            "fallbackStatus": "grapheme_cluster_general_mode_research_only",
             "rejectedFallbacks": [],
-            "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
+            "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
           }
         }
       ],
-      "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies",
+      "nextAction": "search_exact_whole_word_or_explicit_general_operation",
       "status": "research_only",
       "researchRoute": {
         "routeClass": "formalize_documented_visible_general_operation",
         "visibleOperations": [
           {
-            "label": "TION",
-            "sourceIpa": "sjɔ̃",
+            "label": "TR",
+            "sourceIpa": "tʁ",
+            "fallbackStatus": "grapheme_cluster_general_mode_research_only",
+            "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
+          }
+        ],
+        "visualCandidates": [],
+        "authorizationStatus": "research_only_not_authorized",
+        "nextAction": "define_and_test_visible_general_operation_semantics_before_any_activation"
+      }
+    },
+    {
+      "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+      "researchIpa": "ɛ̃t",
+      "affectedTargetCount": 1,
+      "minAgeBandCandidate": 12,
+      "sourceSegments": [
+        "ɛ̃"
+      ],
+      "lexicalCandidates": [],
+      "examples": [
+        {
+          "word": "interner",
+          "targetIpa": "ɛ̃tɛʁne",
+          "sourceIpa": "ɛ̃",
+          "ageBandCandidate": 12
+        }
+      ],
+      "routeModes": [
+        "general"
+      ],
+      "candidateBankEvidence": null,
+      "strategyEvidence": [
+        {
+          "ipa": "ɛ̃",
+          "evidence": {
+            "strategy": "alternate_segmentation_first",
+            "lexicalLeads": [
+              "hein",
+              "ain"
+            ],
+            "lexicalAssessment": "exact_but_poor_or_ambiguous_visual_naming",
+            "visualHypotheses": [],
+            "visibleFallbackResearch": [
+              "IN",
+              "UN"
+            ],
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
-            "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
+            "rejectedFallbacks": [],
+            "nextGate": "compare_alternate_segmentations_before_any_grapheme_rule"
+          }
+        }
+      ],
+      "nextAction": "search_exact_whole_word_or_explicit_general_operation",
+      "status": "research_only",
+      "researchRoute": {
+        "routeClass": "formalize_documented_visible_general_operation",
+        "visibleOperations": [
+          {
+            "label": "IN",
+            "sourceIpa": "ɛ̃",
+            "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
+            "nextGate": "compare_alternate_segmentations_before_any_grapheme_rule"
           },
           {
-            "label": "SION",
-            "sourceIpa": "sjɔ̃",
+            "label": "UN",
+            "sourceIpa": "ɛ̃",
             "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
-            "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
+            "nextGate": "compare_alternate_segmentations_before_any_grapheme_rule"
           }
         ],
-        "visualCandidates": [
-          {
-            "label": "scion",
-            "candidateType": "whole_word_pictogram",
-            "researchDecision": "reject_visual_priority",
-            "nextGate": "seek_alternate_segmentation_or_explicit_operation"
-          }
-        ],
+        "visualCandidates": [],
         "authorizationStatus": "research_only_not_authorized",
         "nextAction": "define_and_test_visible_general_operation_semantics_before_any_activation"
       }
@@ -1046,6 +1380,141 @@
     },
     {
       "needType": "resolve_source_segment",
+      "researchIpa": "sjɔ̃",
+      "affectedTargetCount": 18,
+      "minAgeBandCandidate": 5,
+      "sourceSegments": [
+        "sjɔ̃"
+      ],
+      "lexicalCandidates": [],
+      "examples": [
+        {
+          "word": "mission",
+          "targetIpa": "misjɔ̃",
+          "sourceIpa": "sjɔ̃",
+          "ageBandCandidate": 5
+        },
+        {
+          "word": "version",
+          "targetIpa": "vɛʁsjɔ̃",
+          "sourceIpa": "sjɔ̃",
+          "ageBandCandidate": 7
+        },
+        {
+          "word": "passion",
+          "targetIpa": "pasjɔ̃",
+          "sourceIpa": "sjɔ̃",
+          "ageBandCandidate": 7
+        },
+        {
+          "word": "opération",
+          "targetIpa": "opeʁasjɔ̃",
+          "sourceIpa": "sjɔ̃",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "possession",
+          "targetIpa": "posesjɔ̃",
+          "sourceIpa": "sjɔ̃",
+          "ageBandCandidate": 7
+        },
+        {
+          "word": "pension",
+          "targetIpa": "pɑ̃sjɔ̃",
+          "sourceIpa": "sjɔ̃",
+          "ageBandCandidate": 7
+        },
+        {
+          "word": "génération",
+          "targetIpa": "ʒeneʁasjɔ̃",
+          "sourceIpa": "sjɔ̃",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "libération",
+          "targetIpa": "libeʁasjɔ̃",
+          "sourceIpa": "sjɔ̃",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "séparation",
+          "targetIpa": "sepaʁasjɔ̃",
+          "sourceIpa": "sjɔ̃",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "démission",
+          "targetIpa": "demisjɔ̃",
+          "sourceIpa": "sjɔ̃",
+          "ageBandCandidate": 9
+        }
+      ],
+      "routeModes": [],
+      "candidateBankEvidence": {
+        "recommendedRoute": "reject_natural_priority",
+        "candidates": [
+          {
+            "label": "scion",
+            "candidateType": "whole_word_pictogram",
+            "visualPlausibility": "medium",
+            "spontaneousNamingRisk": "very_high",
+            "researchDecision": "reject_visual_priority",
+            "nextGate": "seek_alternate_segmentation_or_explicit_operation"
+          }
+        ]
+      },
+      "strategyEvidence": [
+        {
+          "ipa": "sjɔ̃",
+          "evidence": {
+            "strategy": "alternate_segmentation_required",
+            "lexicalLeads": [
+              "scion"
+            ],
+            "lexicalAssessment": "exact_but_spontaneous_naming_risk_is_very_high",
+            "visualHypotheses": [],
+            "visibleFallbackResearch": [
+              "TION",
+              "SION"
+            ],
+            "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
+            "rejectedFallbacks": [],
+            "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
+          }
+        }
+      ],
+      "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies",
+      "status": "research_only",
+      "researchRoute": {
+        "routeClass": "formalize_documented_visible_general_operation",
+        "visibleOperations": [
+          {
+            "label": "TION",
+            "sourceIpa": "sjɔ̃",
+            "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
+            "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
+          },
+          {
+            "label": "SION",
+            "sourceIpa": "sjɔ̃",
+            "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
+            "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
+          }
+        ],
+        "visualCandidates": [
+          {
+            "label": "scion",
+            "candidateType": "whole_word_pictogram",
+            "researchDecision": "reject_visual_priority",
+            "nextGate": "seek_alternate_segmentation_or_explicit_operation"
+          }
+        ],
+        "authorizationStatus": "research_only_not_authorized",
+        "nextAction": "define_and_test_visible_general_operation_semantics_before_any_activation"
+      }
+    },
+    {
+      "needType": "resolve_source_segment",
       "researchIpa": "œʁ",
       "affectedTargetCount": 11,
       "minAgeBandCandidate": 5,
@@ -1182,7 +1651,7 @@
     {
       "needType": "resolve_source_segment",
       "researchIpa": "ɛ̃",
-      "affectedTargetCount": 9,
+      "affectedTargetCount": 6,
       "minAgeBandCandidate": 5,
       "sourceSegments": [
         "ɛ̃"
@@ -1196,12 +1665,6 @@
           "ageBandCandidate": 5
         },
         {
-          "word": "ainsi",
-          "targetIpa": "ɛ̃si",
-          "sourceIpa": "ɛ̃",
-          "ageBandCandidate": 5
-        },
-        {
           "word": "terrain",
           "targetIpa": "tɛʁɛ̃",
           "sourceIpa": "ɛ̃",
@@ -1210,12 +1673,6 @@
         {
           "word": "impossible",
           "targetIpa": "ɛ̃posibl",
-          "sourceIpa": "ɛ̃",
-          "ageBandCandidate": 7
-        },
-        {
-          "word": "incident",
-          "targetIpa": "ɛ̃sidɑ̃",
           "sourceIpa": "ɛ̃",
           "ageBandCandidate": 7
         },
@@ -1236,12 +1693,6 @@
           "targetIpa": "ɛ̃po",
           "sourceIpa": "ɛ̃",
           "ageBandCandidate": 9
-        },
-        {
-          "word": "interner",
-          "targetIpa": "ɛ̃tɛʁne",
-          "sourceIpa": "ɛ̃",
-          "ageBandCandidate": 12
         }
       ],
       "routeModes": [],
@@ -1788,10 +2239,10 @@
       "strategy": "alternate_segmentation_first",
       "sourceUsefulUnlocked": 16,
       "targetCount": 16,
-      "targetsWithAlternativeRoutes": 7,
+      "targetsWithAlternativeRoutes": 10,
       "targetsWithRepresentableAlternativeRoutes": 7,
       "targetsWithCuratedVisualAlternativeRoutes": 7,
-      "targetsStillBlocked": 9,
+      "targetsStillBlocked": 6,
       "targetsStillNeedingRepresentableAlternative": 9,
       "targetsStillNeedingCuratedVisualAlternative": 9,
       "targets": [
@@ -1823,20 +2274,48 @@
           "targetIpa": "ɛ̃si",
           "ageBandCandidate": 5,
           "rebuloUtilityTier": "very_common_simple",
-          "alternativeRouteCount": 0,
+          "alternativeRouteCount": 1,
           "representableAlternativeRouteCount": 0,
           "curatedVisualAlternativeRouteCount": 0,
-          "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule",
+          "routes": [
+            {
+              "alternativeIpa": "ɛ̃s",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-ɛ̃s",
+                  "label": "/ɛ̃s/",
+                  "ipa": "ɛ̃s"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "I",
+                  "reading": "i",
+                  "ipa": "i"
+                }
+              ],
+              "lexicalLeads": [],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
+              "visualResearchLeads": [],
+              "visualResearchStatus": "phonetic_only_no_visual_candidate",
+              "alternativeUsefulUnlocked": 3,
+              "status": "research_only_exact_route",
+              "score": -167
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
           "visualResolutionState": "still_needs_visual_representation",
           "visualResearchNeed": {
-            "needType": "resolve_source_segment",
-            "researchIpa": "ɛ̃",
-            "routeMode": null,
-            "coverageType": "uncovered",
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "ɛ̃s",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
             "representationLeads": [],
-            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
           }
         },
         {
@@ -1999,9 +2478,9 @@
                 }
               ],
               "visualResearchStatus": "curated_visual_research_candidate",
-              "alternativeUsefulUnlocked": 12,
+              "alternativeUsefulUnlocked": 7,
               "status": "research_only_exact_route",
-              "score": 257
+              "score": 252
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -2015,20 +2494,54 @@
           "targetIpa": "ɛ̃sidɑ̃",
           "ageBandCandidate": 7,
           "rebuloUtilityTier": "school_common",
-          "alternativeRouteCount": 0,
+          "alternativeRouteCount": 1,
           "representableAlternativeRouteCount": 0,
           "curatedVisualAlternativeRouteCount": 0,
-          "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule",
+          "routes": [
+            {
+              "alternativeIpa": "ɛ̃s",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-ɛ̃s",
+                  "label": "/ɛ̃s/",
+                  "ipa": "ɛ̃s"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "I",
+                  "reading": "i",
+                  "ipa": "i"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "dent",
+                  "label": "dent",
+                  "ipa": "dɑ̃"
+                }
+              ],
+              "lexicalLeads": [],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
+              "visualResearchLeads": [],
+              "visualResearchStatus": "phonetic_only_no_visual_candidate",
+              "alternativeUsefulUnlocked": 3,
+              "status": "research_only_exact_route",
+              "score": -192
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
           "visualResolutionState": "still_needs_visual_representation",
           "visualResearchNeed": {
-            "needType": "resolve_source_segment",
-            "researchIpa": "ɛ̃",
-            "routeMode": null,
-            "coverageType": "uncovered",
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "ɛ̃s",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
             "representationLeads": [],
-            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
           }
         },
         {
@@ -2037,7 +2550,7 @@
           "targetIpa": "ɛ̃tɛʁoʒe",
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "school_common",
-          "alternativeRouteCount": 1,
+          "alternativeRouteCount": 2,
           "representableAlternativeRouteCount": 1,
           "curatedVisualAlternativeRouteCount": 1,
           "routes": [
@@ -2153,9 +2666,48 @@
                 }
               ],
               "visualResearchStatus": "curated_visual_research_candidate",
-              "alternativeUsefulUnlocked": 12,
+              "alternativeUsefulUnlocked": 7,
               "status": "research_only_exact_route",
-              "score": 232
+              "score": 227
+            },
+            {
+              "alternativeIpa": "ɛ̃t",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-ɛ̃t",
+                  "label": "/ɛ̃t/",
+                  "ipa": "ɛ̃t"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "R",
+                  "reading": "air",
+                  "ipa": "ɛʁ"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "eau",
+                  "label": "eau",
+                  "ipa": "o"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "G",
+                  "reading": "gé",
+                  "ipa": "ʒe"
+                }
+              ],
+              "lexicalLeads": [],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
+              "visualResearchLeads": [],
+              "visualResearchStatus": "phonetic_only_no_visual_candidate",
+              "alternativeUsefulUnlocked": 2,
+              "status": "research_only_exact_route",
+              "score": -338
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -2329,9 +2881,9 @@
                 }
               ],
               "visualResearchStatus": "curated_visual_research_candidate",
-              "alternativeUsefulUnlocked": 12,
+              "alternativeUsefulUnlocked": 7,
               "status": "research_only_exact_route",
-              "score": 232
+              "score": 227
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -2455,9 +3007,9 @@
                 }
               ],
               "visualResearchStatus": "curated_visual_research_candidate",
-              "alternativeUsefulUnlocked": 12,
+              "alternativeUsefulUnlocked": 7,
               "status": "research_only_exact_route",
-              "score": 257
+              "score": 252
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -2493,7 +3045,7 @@
           "targetIpa": "ɛ̃site",
           "ageBandCandidate": 12,
           "rebuloUtilityTier": "advanced_useful",
-          "alternativeRouteCount": 1,
+          "alternativeRouteCount": 2,
           "representableAlternativeRouteCount": 1,
           "curatedVisualAlternativeRouteCount": 1,
           "routes": [
@@ -2603,9 +3155,42 @@
                 }
               ],
               "visualResearchStatus": "curated_visual_research_candidate",
-              "alternativeUsefulUnlocked": 12,
+              "alternativeUsefulUnlocked": 7,
               "status": "research_only_exact_route",
-              "score": 257
+              "score": 252
+            },
+            {
+              "alternativeIpa": "ɛ̃s",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-ɛ̃s",
+                  "label": "/ɛ̃s/",
+                  "ipa": "ɛ̃s"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "I",
+                  "reading": "i",
+                  "ipa": "i"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "the",
+                  "label": "thé",
+                  "ipa": "te"
+                }
+              ],
+              "lexicalLeads": [],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
+              "visualResearchLeads": [],
+              "visualResearchStatus": "phonetic_only_no_visual_candidate",
+              "alternativeUsefulUnlocked": 3,
+              "status": "research_only_exact_route",
+              "score": -192
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -2735,9 +3320,9 @@
                 }
               ],
               "visualResearchStatus": "curated_visual_research_candidate",
-              "alternativeUsefulUnlocked": 12,
+              "alternativeUsefulUnlocked": 7,
               "status": "research_only_exact_route",
-              "score": 232
+              "score": 227
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -2751,20 +3336,54 @@
           "targetIpa": "ɛ̃tɛʁne",
           "ageBandCandidate": 12,
           "rebuloUtilityTier": "advanced_useful",
-          "alternativeRouteCount": 0,
+          "alternativeRouteCount": 1,
           "representableAlternativeRouteCount": 0,
           "curatedVisualAlternativeRouteCount": 0,
-          "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule",
+          "routes": [
+            {
+              "alternativeIpa": "ɛ̃t",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-ɛ̃t",
+                  "label": "/ɛ̃t/",
+                  "ipa": "ɛ̃t"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "R",
+                  "reading": "air",
+                  "ipa": "ɛʁ"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "nez",
+                  "label": "nez",
+                  "ipa": "ne"
+                }
+              ],
+              "lexicalLeads": [],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
+              "visualResearchLeads": [],
+              "visualResearchStatus": "phonetic_only_no_visual_candidate",
+              "alternativeUsefulUnlocked": 2,
+              "status": "research_only_exact_route",
+              "score": -193
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
           "visualResolutionState": "still_needs_visual_representation",
           "visualResearchNeed": {
-            "needType": "resolve_source_segment",
-            "researchIpa": "ɛ̃",
-            "routeMode": null,
-            "coverageType": "uncovered",
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "ɛ̃t",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
             "representationLeads": [],
-            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
           }
         },
         {
@@ -2883,9 +3502,9 @@
                 }
               ],
               "visualResearchStatus": "curated_visual_research_candidate",
-              "alternativeUsefulUnlocked": 12,
+              "alternativeUsefulUnlocked": 7,
               "status": "research_only_exact_route",
-              "score": 257
+              "score": 252
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -3157,10 +3776,10 @@
       "sourceUsefulUnlocked": 8,
       "targetCount": 8,
       "targetsWithAlternativeRoutes": 8,
-      "targetsWithRepresentableAlternativeRoutes": 1,
+      "targetsWithRepresentableAlternativeRoutes": 2,
       "targetsWithCuratedVisualAlternativeRoutes": 0,
       "targetsStillBlocked": 0,
-      "targetsStillNeedingRepresentableAlternative": 7,
+      "targetsStillNeedingRepresentableAlternative": 6,
       "targetsStillNeedingCuratedVisualAlternative": 8,
       "targets": [
         {
@@ -3196,9 +3815,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 86,
+              "alternativeUsefulUnlocked": 10,
               "status": "research_only_exact_route",
-              "score": -84
+              "score": -160
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -3219,10 +3838,103 @@
           "targetIpa": "bagaʁ",
           "ageBandCandidate": 7,
           "rebuloUtilityTier": "school_common",
-          "alternativeRouteCount": 2,
-          "representableAlternativeRouteCount": 0,
+          "alternativeRouteCount": 3,
+          "representableAlternativeRouteCount": 1,
           "curatedVisualAlternativeRouteCount": 0,
           "routes": [
+            {
+              "alternativeIpa": "ba",
+              "mode": "strict",
+              "coverageType": "composite_words",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-ba",
+                  "label": "/ba/",
+                  "ipa": "ba"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "gare",
+                  "label": "gare",
+                  "ipa": "gaʁ"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "bas",
+                  "lemma": "bas",
+                  "pos": "NOM",
+                  "frequency": 64.82,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "bât",
+                  "lemma": "bât",
+                  "pos": "NOM",
+                  "frequency": 0.25,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "bats",
+                  "lemma": "bats",
+                  "pos": "NOM",
+                  "frequency": 0.082,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "bah",
+                  "lemma": "bah",
+                  "pos": "ONO",
+                  "frequency": 18.307,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "representationLeads": [
+                {
+                  "word": "bas",
+                  "lemma": "bas",
+                  "pos": "NOM",
+                  "frequency": 64.82,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "bât",
+                  "lemma": "bât",
+                  "pos": "NOM",
+                  "frequency": 0.25,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "bats",
+                  "lemma": "bats",
+                  "pos": "NOM",
+                  "frequency": 0.082,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "bah",
+                  "lemma": "bah",
+                  "pos": "ONO",
+                  "frequency": 18.307,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "representationStatus": "lexical_representation_candidate",
+              "visualResearchLeads": [],
+              "visualResearchStatus": "lexical_only_no_curated_visual_candidate",
+              "alternativeUsefulUnlocked": 1,
+              "status": "research_only_exact_route",
+              "score": 1131
+            },
             {
               "alternativeIpa": "ʁ",
               "mode": "general",
@@ -3252,9 +3964,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 86,
+              "alternativeUsefulUnlocked": 10,
               "status": "research_only_exact_route",
-              "score": -109
+              "score": -185
             },
             {
               "alternativeIpa": "b",
@@ -3285,21 +3997,54 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 60,
+              "alternativeUsefulUnlocked": 1,
               "status": "research_only_exact_route",
-              "score": -135
+              "score": -194
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
-          "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation",
+          "representationResolutionState": "representable_alternative_candidate_found",
+          "visualResolutionState": "lexical_candidate_needs_visual_curation",
           "visualResearchNeed": {
-            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
-            "researchIpa": "ʁ",
-            "routeMode": "general",
-            "coverageType": "explicit_grapheme",
-            "representationLeads": [],
-            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+            "needType": "curate_existing_lexical_candidate",
+            "researchIpa": "ba",
+            "routeMode": "strict",
+            "coverageType": "composite_words",
+            "representationLeads": [
+              {
+                "word": "bas",
+                "lemma": "bas",
+                "pos": "NOM",
+                "frequency": 64.82,
+                "phoneticStatus": "whole_pronunciation_exact",
+                "activationState": "research_only"
+              },
+              {
+                "word": "bât",
+                "lemma": "bât",
+                "pos": "NOM",
+                "frequency": 0.25,
+                "phoneticStatus": "whole_pronunciation_exact",
+                "activationState": "research_only"
+              },
+              {
+                "word": "bats",
+                "lemma": "bats",
+                "pos": "NOM",
+                "frequency": 0.082,
+                "phoneticStatus": "whole_pronunciation_exact",
+                "activationState": "research_only"
+              },
+              {
+                "word": "bah",
+                "lemma": "bah",
+                "pos": "ONO",
+                "frequency": 18.307,
+                "phoneticStatus": "whole_pronunciation_exact",
+                "activationState": "research_only"
+              }
+            ],
+            "nextAction": "assess_visual_concept_then_naming_risk_before_prototype"
           }
         },
         {
@@ -3335,9 +4080,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 86,
+              "alternativeUsefulUnlocked": 10,
               "status": "research_only_exact_route",
-              "score": -84
+              "score": -160
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -3451,9 +4196,9 @@
               "representationStatus": "lexical_representation_candidate",
               "visualResearchLeads": [],
               "visualResearchStatus": "lexical_only_no_curated_visual_candidate",
-              "alternativeUsefulUnlocked": 45,
+              "alternativeUsefulUnlocked": 1,
               "status": "research_only_exact_route",
-              "score": 1175
+              "score": 1131
             },
             {
               "alternativeIpa": "ʁ",
@@ -3484,9 +4229,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 86,
+              "alternativeUsefulUnlocked": 10,
               "status": "research_only_exact_route",
-              "score": -229
+              "score": -305
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -3540,7 +4285,7 @@
           "targetIpa": "aʁtɛʁ",
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "teen_adult_common",
-          "alternativeRouteCount": 1,
+          "alternativeRouteCount": 2,
           "representableAlternativeRouteCount": 0,
           "curatedVisualAlternativeRouteCount": 0,
           "routes": [
@@ -3573,9 +4318,42 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 86,
+              "alternativeUsefulUnlocked": 10,
               "status": "research_only_exact_route",
-              "score": -109
+              "score": -185
+            },
+            {
+              "alternativeIpa": "ʁt",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "grapheme",
+                  "grapheme": "A",
+                  "reading": "a",
+                  "ipa": "a"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-ʁt",
+                  "label": "/ʁt/",
+                  "ipa": "ʁt"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "R",
+                  "reading": "air",
+                  "ipa": "ɛʁ"
+                }
+              ],
+              "lexicalLeads": [],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
+              "visualResearchLeads": [],
+              "visualResearchStatus": "phonetic_only_no_visual_candidate",
+              "alternativeUsefulUnlocked": 1,
+              "status": "research_only_exact_route",
+              "score": -314
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -3629,9 +4407,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 86,
+              "alternativeUsefulUnlocked": 10,
               "status": "research_only_exact_route",
-              "score": -109
+              "score": -185
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -3694,9 +4472,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 70,
+              "alternativeUsefulUnlocked": 2,
               "status": "research_only_exact_route",
-              "score": -125
+              "score": -193
             },
             {
               "alternativeIpa": "ʁ",
@@ -3727,9 +4505,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 86,
+              "alternativeUsefulUnlocked": 10,
               "status": "research_only_exact_route",
-              "score": -229
+              "score": -305
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -3783,9 +4561,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 86,
+              "alternativeUsefulUnlocked": 10,
               "status": "research_only_exact_route",
-              "score": -109
+              "score": -185
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -3808,10 +4586,10 @@
       "sourceUsefulUnlocked": 9,
       "targetCount": 9,
       "targetsWithAlternativeRoutes": 9,
-      "targetsWithRepresentableAlternativeRoutes": 0,
+      "targetsWithRepresentableAlternativeRoutes": 3,
       "targetsWithCuratedVisualAlternativeRoutes": 0,
       "targetsStillBlocked": 0,
-      "targetsStillNeedingRepresentableAlternative": 9,
+      "targetsStillNeedingRepresentableAlternative": 6,
       "targetsStillNeedingCuratedVisualAlternative": 9,
       "targets": [
         {
@@ -3820,10 +4598,87 @@
           "targetIpa": "alo",
           "ageBandCandidate": 5,
           "rebuloUtilityTier": "child_common",
-          "alternativeRouteCount": 1,
-          "representableAlternativeRouteCount": 0,
+          "alternativeRouteCount": 2,
+          "representableAlternativeRouteCount": 1,
           "curatedVisualAlternativeRouteCount": 0,
           "routes": [
+            {
+              "alternativeIpa": "lo",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "grapheme",
+                  "grapheme": "A",
+                  "reading": "a",
+                  "ipa": "a"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-lo",
+                  "label": "/lo/",
+                  "ipa": "lo"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "lot",
+                  "lemma": "lot",
+                  "pos": "NOM",
+                  "frequency": 13.326,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "los",
+                  "lemma": "los",
+                  "pos": "NOM",
+                  "frequency": 0.918,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "laud",
+                  "lemma": "laud",
+                  "pos": "NOM",
+                  "frequency": 0.013,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "representationLeads": [
+                {
+                  "word": "lot",
+                  "lemma": "lot",
+                  "pos": "NOM",
+                  "frequency": 13.326,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "los",
+                  "lemma": "los",
+                  "pos": "NOM",
+                  "frequency": 0.918,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "laud",
+                  "lemma": "laud",
+                  "pos": "NOM",
+                  "frequency": 0.013,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "representationStatus": "lexical_representation_candidate",
+              "visualResearchLeads": [],
+              "visualResearchStatus": "lexical_only_no_curated_visual_candidate",
+              "alternativeUsefulUnlocked": 3,
+              "status": "research_only_exact_route",
+              "score": 13
+            },
             {
               "alternativeIpa": "l",
               "mode": "general",
@@ -3862,21 +4717,46 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 68,
+              "alternativeUsefulUnlocked": 9,
               "status": "research_only_exact_route",
-              "score": -127
+              "score": -186
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
-          "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation",
+          "representationResolutionState": "representable_alternative_candidate_found",
+          "visualResolutionState": "lexical_candidate_needs_visual_curation",
           "visualResearchNeed": {
-            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
-            "researchIpa": "l",
+            "needType": "curate_existing_lexical_candidate",
+            "researchIpa": "lo",
             "routeMode": "general",
             "coverageType": "explicit_grapheme",
-            "representationLeads": [],
-            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+            "representationLeads": [
+              {
+                "word": "lot",
+                "lemma": "lot",
+                "pos": "NOM",
+                "frequency": 13.326,
+                "phoneticStatus": "whole_pronunciation_exact",
+                "activationState": "research_only"
+              },
+              {
+                "word": "los",
+                "lemma": "los",
+                "pos": "NOM",
+                "frequency": 0.918,
+                "phoneticStatus": "whole_pronunciation_exact",
+                "activationState": "research_only"
+              },
+              {
+                "word": "laud",
+                "lemma": "laud",
+                "pos": "NOM",
+                "frequency": 0.013,
+                "phoneticStatus": "whole_pronunciation_exact",
+                "activationState": "research_only"
+              }
+            ],
+            "nextAction": "assess_visual_concept_then_naming_risk_before_prototype"
           }
         },
         {
@@ -3927,9 +4807,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 68,
+              "alternativeUsefulUnlocked": 9,
               "status": "research_only_exact_route",
-              "score": -127
+              "score": -186
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -3950,10 +4830,87 @@
           "targetIpa": "alo",
           "ageBandCandidate": 7,
           "rebuloUtilityTier": "school_common",
-          "alternativeRouteCount": 1,
-          "representableAlternativeRouteCount": 0,
+          "alternativeRouteCount": 2,
+          "representableAlternativeRouteCount": 1,
           "curatedVisualAlternativeRouteCount": 0,
           "routes": [
+            {
+              "alternativeIpa": "lo",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "grapheme",
+                  "grapheme": "A",
+                  "reading": "a",
+                  "ipa": "a"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-lo",
+                  "label": "/lo/",
+                  "ipa": "lo"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "lot",
+                  "lemma": "lot",
+                  "pos": "NOM",
+                  "frequency": 13.326,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "los",
+                  "lemma": "los",
+                  "pos": "NOM",
+                  "frequency": 0.918,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "laud",
+                  "lemma": "laud",
+                  "pos": "NOM",
+                  "frequency": 0.013,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "representationLeads": [
+                {
+                  "word": "lot",
+                  "lemma": "lot",
+                  "pos": "NOM",
+                  "frequency": 13.326,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "los",
+                  "lemma": "los",
+                  "pos": "NOM",
+                  "frequency": 0.918,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "laud",
+                  "lemma": "laud",
+                  "pos": "NOM",
+                  "frequency": 0.013,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "representationStatus": "lexical_representation_candidate",
+              "visualResearchLeads": [],
+              "visualResearchStatus": "lexical_only_no_curated_visual_candidate",
+              "alternativeUsefulUnlocked": 3,
+              "status": "research_only_exact_route",
+              "score": 13
+            },
             {
               "alternativeIpa": "l",
               "mode": "general",
@@ -3992,21 +4949,46 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 68,
+              "alternativeUsefulUnlocked": 9,
               "status": "research_only_exact_route",
-              "score": -127
+              "score": -186
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
-          "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation",
+          "representationResolutionState": "representable_alternative_candidate_found",
+          "visualResolutionState": "lexical_candidate_needs_visual_curation",
           "visualResearchNeed": {
-            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
-            "researchIpa": "l",
+            "needType": "curate_existing_lexical_candidate",
+            "researchIpa": "lo",
             "routeMode": "general",
             "coverageType": "explicit_grapheme",
-            "representationLeads": [],
-            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+            "representationLeads": [
+              {
+                "word": "lot",
+                "lemma": "lot",
+                "pos": "NOM",
+                "frequency": 13.326,
+                "phoneticStatus": "whole_pronunciation_exact",
+                "activationState": "research_only"
+              },
+              {
+                "word": "los",
+                "lemma": "los",
+                "pos": "NOM",
+                "frequency": 0.918,
+                "phoneticStatus": "whole_pronunciation_exact",
+                "activationState": "research_only"
+              },
+              {
+                "word": "laud",
+                "lemma": "laud",
+                "pos": "NOM",
+                "frequency": 0.013,
+                "phoneticStatus": "whole_pronunciation_exact",
+                "activationState": "research_only"
+              }
+            ],
+            "nextAction": "assess_visual_concept_then_naming_risk_before_prototype"
           }
         },
         {
@@ -4063,9 +5045,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 68,
+              "alternativeUsefulUnlocked": 9,
               "status": "research_only_exact_route",
-              "score": -272
+              "score": -331
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -4128,9 +5110,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 70,
+              "alternativeUsefulUnlocked": 2,
               "status": "research_only_exact_route",
-              "score": -125
+              "score": -193
             },
             {
               "alternativeIpa": "l",
@@ -4170,9 +5152,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 68,
+              "alternativeUsefulUnlocked": 9,
               "status": "research_only_exact_route",
-              "score": -247
+              "score": -306
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -4232,9 +5214,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 86,
+              "alternativeUsefulUnlocked": 10,
               "status": "research_only_exact_route",
-              "score": -254
+              "score": -330
             },
             {
               "alternativeIpa": "l",
@@ -4280,9 +5262,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 68,
+              "alternativeUsefulUnlocked": 9,
               "status": "research_only_exact_route",
-              "score": -392
+              "score": -451
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -4342,9 +5324,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 86,
+              "alternativeUsefulUnlocked": 10,
               "status": "research_only_exact_route",
-              "score": -134
+              "score": -210
             },
             {
               "alternativeIpa": "l",
@@ -4390,9 +5372,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 68,
+              "alternativeUsefulUnlocked": 9,
               "status": "research_only_exact_route",
-              "score": -272
+              "score": -331
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -4413,10 +5395,87 @@
           "targetIpa": "alo",
           "ageBandCandidate": 12,
           "rebuloUtilityTier": "advanced_useful",
-          "alternativeRouteCount": 1,
-          "representableAlternativeRouteCount": 0,
+          "alternativeRouteCount": 2,
+          "representableAlternativeRouteCount": 1,
           "curatedVisualAlternativeRouteCount": 0,
           "routes": [
+            {
+              "alternativeIpa": "lo",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "grapheme",
+                  "grapheme": "A",
+                  "reading": "a",
+                  "ipa": "a"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-lo",
+                  "label": "/lo/",
+                  "ipa": "lo"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "lot",
+                  "lemma": "lot",
+                  "pos": "NOM",
+                  "frequency": 13.326,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "los",
+                  "lemma": "los",
+                  "pos": "NOM",
+                  "frequency": 0.918,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "laud",
+                  "lemma": "laud",
+                  "pos": "NOM",
+                  "frequency": 0.013,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "representationLeads": [
+                {
+                  "word": "lot",
+                  "lemma": "lot",
+                  "pos": "NOM",
+                  "frequency": 13.326,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "los",
+                  "lemma": "los",
+                  "pos": "NOM",
+                  "frequency": 0.918,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "laud",
+                  "lemma": "laud",
+                  "pos": "NOM",
+                  "frequency": 0.013,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "representationStatus": "lexical_representation_candidate",
+              "visualResearchLeads": [],
+              "visualResearchStatus": "lexical_only_no_curated_visual_candidate",
+              "alternativeUsefulUnlocked": 3,
+              "status": "research_only_exact_route",
+              "score": 13
+            },
             {
               "alternativeIpa": "l",
               "mode": "general",
@@ -4455,21 +5514,46 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 68,
+              "alternativeUsefulUnlocked": 9,
               "status": "research_only_exact_route",
-              "score": -127
+              "score": -186
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
-          "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation",
+          "representationResolutionState": "representable_alternative_candidate_found",
+          "visualResolutionState": "lexical_candidate_needs_visual_curation",
           "visualResearchNeed": {
-            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
-            "researchIpa": "l",
+            "needType": "curate_existing_lexical_candidate",
+            "researchIpa": "lo",
             "routeMode": "general",
             "coverageType": "explicit_grapheme",
-            "representationLeads": [],
-            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+            "representationLeads": [
+              {
+                "word": "lot",
+                "lemma": "lot",
+                "pos": "NOM",
+                "frequency": 13.326,
+                "phoneticStatus": "whole_pronunciation_exact",
+                "activationState": "research_only"
+              },
+              {
+                "word": "los",
+                "lemma": "los",
+                "pos": "NOM",
+                "frequency": 0.918,
+                "phoneticStatus": "whole_pronunciation_exact",
+                "activationState": "research_only"
+              },
+              {
+                "word": "laud",
+                "lemma": "laud",
+                "pos": "NOM",
+                "frequency": 0.013,
+                "phoneticStatus": "whole_pronunciation_exact",
+                "activationState": "research_only"
+              }
+            ],
+            "nextAction": "assess_visual_concept_then_naming_risk_before_prototype"
           }
         },
         {
@@ -4520,9 +5604,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 68,
+              "alternativeUsefulUnlocked": 9,
               "status": "research_only_exact_route",
-              "score": -127
+              "score": -186
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -4545,10 +5629,10 @@
       "sourceUsefulUnlocked": 29,
       "targetCount": 29,
       "targetsWithAlternativeRoutes": 9,
-      "targetsWithRepresentableAlternativeRoutes": 1,
+      "targetsWithRepresentableAlternativeRoutes": 3,
       "targetsWithCuratedVisualAlternativeRoutes": 0,
       "targetsStillBlocked": 20,
-      "targetsStillNeedingRepresentableAlternative": 28,
+      "targetsStillNeedingRepresentableAlternative": 26,
       "targetsStillNeedingCuratedVisualAlternative": 29,
       "targets": [
         {
@@ -4667,10 +5751,37 @@
           "targetIpa": "tʁavɛʁ",
           "ageBandCandidate": 5,
           "rebuloUtilityTier": "child_common",
-          "alternativeRouteCount": 1,
+          "alternativeRouteCount": 2,
           "representableAlternativeRouteCount": 0,
           "curatedVisualAlternativeRouteCount": 0,
           "routes": [
+            {
+              "alternativeIpa": "tʁa",
+              "mode": "strict",
+              "coverageType": "composite_words",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-tʁa",
+                  "label": "/tʁa/",
+                  "ipa": "tʁa"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "ver",
+                  "label": "ver",
+                  "ipa": "vɛʁ"
+                }
+              ],
+              "lexicalLeads": [],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
+              "visualResearchLeads": [],
+              "visualResearchStatus": "phonetic_only_no_visual_candidate",
+              "alternativeUsefulUnlocked": 6,
+              "status": "research_only_exact_route",
+              "score": 956
+            },
             {
               "alternativeIpa": "t",
               "mode": "strict",
@@ -4709,9 +5820,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 99,
+              "alternativeUsefulUnlocked": 9,
               "status": "research_only_exact_route",
-              "score": 1024
+              "score": 934
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -4719,7 +5830,7 @@
           "visualResolutionState": "still_needs_visual_representation",
           "visualResearchNeed": {
             "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
-            "researchIpa": "t",
+            "researchIpa": "tʁa",
             "routeMode": "strict",
             "coverageType": "composite_words",
             "representationLeads": [],
@@ -4732,7 +5843,7 @@
           "targetIpa": "atʁape",
           "ageBandCandidate": 7,
           "rebuloUtilityTier": "child_common",
-          "alternativeRouteCount": 2,
+          "alternativeRouteCount": 3,
           "representableAlternativeRouteCount": 1,
           "curatedVisualAlternativeRouteCount": 0,
           "routes": [
@@ -4815,9 +5926,42 @@
               "representationStatus": "lexical_representation_candidate",
               "visualResearchLeads": [],
               "visualResearchStatus": "lexical_only_no_curated_visual_candidate",
-              "alternativeUsefulUnlocked": 3,
+              "alternativeUsefulUnlocked": 1,
               "status": "research_only_exact_route",
-              "score": -12
+              "score": -14
+            },
+            {
+              "alternativeIpa": "tʁa",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "grapheme",
+                  "grapheme": "A",
+                  "reading": "a",
+                  "ipa": "a"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-tʁa",
+                  "label": "/tʁa/",
+                  "ipa": "tʁa"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "P",
+                  "reading": "pé",
+                  "ipa": "pe"
+                }
+              ],
+              "lexicalLeads": [],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
+              "visualResearchLeads": [],
+              "visualResearchStatus": "phonetic_only_no_visual_candidate",
+              "alternativeUsefulUnlocked": 6,
+              "status": "research_only_exact_route",
+              "score": -309
             },
             {
               "alternativeIpa": "t",
@@ -4863,9 +6007,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 99,
+              "alternativeUsefulUnlocked": 9,
               "status": "research_only_exact_route",
-              "score": -241
+              "score": -331
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -4933,10 +6077,43 @@
           "targetIpa": "tʁavɛʁse",
           "ageBandCandidate": 7,
           "rebuloUtilityTier": "school_common",
-          "alternativeRouteCount": 1,
+          "alternativeRouteCount": 2,
           "representableAlternativeRouteCount": 0,
           "curatedVisualAlternativeRouteCount": 0,
           "routes": [
+            {
+              "alternativeIpa": "tʁa",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-tʁa",
+                  "label": "/tʁa/",
+                  "ipa": "tʁa"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "ver",
+                  "label": "ver",
+                  "ipa": "vɛʁ"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "C",
+                  "reading": "cé",
+                  "ipa": "se"
+                }
+              ],
+              "lexicalLeads": [],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
+              "visualResearchLeads": [],
+              "visualResearchStatus": "phonetic_only_no_visual_candidate",
+              "alternativeUsefulUnlocked": 6,
+              "status": "research_only_exact_route",
+              "score": -189
+            },
             {
               "alternativeIpa": "t",
               "mode": "general",
@@ -4981,9 +6158,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 99,
+              "alternativeUsefulUnlocked": 9,
               "status": "research_only_exact_route",
-              "score": -121
+              "score": -211
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -4991,7 +6168,7 @@
           "visualResolutionState": "still_needs_visual_representation",
           "visualResearchNeed": {
             "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
-            "researchIpa": "t",
+            "researchIpa": "tʁa",
             "routeMode": "general",
             "coverageType": "explicit_grapheme",
             "representationLeads": [],
@@ -5004,10 +6181,43 @@
           "targetIpa": "ʁatʁape",
           "ageBandCandidate": 7,
           "rebuloUtilityTier": "school_common",
-          "alternativeRouteCount": 1,
+          "alternativeRouteCount": 2,
           "representableAlternativeRouteCount": 0,
           "curatedVisualAlternativeRouteCount": 0,
           "routes": [
+            {
+              "alternativeIpa": "tʁa",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "rat",
+                  "label": "rat",
+                  "ipa": "ʁa"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-tʁa",
+                  "label": "/tʁa/",
+                  "ipa": "tʁa"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "P",
+                  "reading": "pé",
+                  "ipa": "pe"
+                }
+              ],
+              "lexicalLeads": [],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
+              "visualResearchLeads": [],
+              "visualResearchStatus": "phonetic_only_no_visual_candidate",
+              "alternativeUsefulUnlocked": 6,
+              "status": "research_only_exact_route",
+              "score": -189
+            },
             {
               "alternativeIpa": "t",
               "mode": "general",
@@ -5052,9 +6262,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 99,
+              "alternativeUsefulUnlocked": 9,
               "status": "research_only_exact_route",
-              "score": -121
+              "score": -211
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -5062,7 +6272,7 @@
           "visualResolutionState": "still_needs_visual_representation",
           "visualResearchNeed": {
             "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
-            "researchIpa": "t",
+            "researchIpa": "tʁa",
             "routeMode": "general",
             "coverageType": "explicit_grapheme",
             "representationLeads": [],
@@ -5119,10 +6329,37 @@
           "targetIpa": "tʁase",
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "school_common",
-          "alternativeRouteCount": 1,
+          "alternativeRouteCount": 2,
           "representableAlternativeRouteCount": 0,
           "curatedVisualAlternativeRouteCount": 0,
           "routes": [
+            {
+              "alternativeIpa": "tʁa",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-tʁa",
+                  "label": "/tʁa/",
+                  "ipa": "tʁa"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "C",
+                  "reading": "cé",
+                  "ipa": "se"
+                }
+              ],
+              "lexicalLeads": [],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
+              "visualResearchLeads": [],
+              "visualResearchStatus": "phonetic_only_no_visual_candidate",
+              "alternativeUsefulUnlocked": 6,
+              "status": "research_only_exact_route",
+              "score": -164
+            },
             {
               "alternativeIpa": "t",
               "mode": "general",
@@ -5161,9 +6398,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 99,
+              "alternativeUsefulUnlocked": 9,
               "status": "research_only_exact_route",
-              "score": -96
+              "score": -186
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -5171,7 +6408,7 @@
           "visualResolutionState": "still_needs_visual_representation",
           "visualResearchNeed": {
             "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
-            "researchIpa": "t",
+            "researchIpa": "tʁa",
             "routeMode": "general",
             "coverageType": "explicit_grapheme",
             "representationLeads": [],
@@ -5228,10 +6465,71 @@
           "targetIpa": "patʁi",
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "teen_adult_common",
-          "alternativeRouteCount": 1,
-          "representableAlternativeRouteCount": 0,
+          "alternativeRouteCount": 2,
+          "representableAlternativeRouteCount": 1,
           "curatedVisualAlternativeRouteCount": 0,
           "routes": [
+            {
+              "alternativeIpa": "tʁi",
+              "mode": "strict",
+              "coverageType": "composite_words",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "pas",
+                  "label": "pas",
+                  "ipa": "pa"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-tʁi",
+                  "label": "/tʁi/",
+                  "ipa": "tʁi"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "tri",
+                  "lemma": "tri",
+                  "pos": "NOM",
+                  "frequency": 2.111,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "trie",
+                  "lemma": "trier",
+                  "pos": "VER",
+                  "frequency": 0.595,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "representationLeads": [
+                {
+                  "word": "tri",
+                  "lemma": "tri",
+                  "pos": "NOM",
+                  "frequency": 2.111,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "trie",
+                  "lemma": "trier",
+                  "pos": "VER",
+                  "frequency": 0.595,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "representationStatus": "lexical_representation_candidate",
+              "visualResearchLeads": [],
+              "visualResearchStatus": "lexical_only_no_curated_visual_candidate",
+              "alternativeUsefulUnlocked": 3,
+              "status": "research_only_exact_route",
+              "score": 1133
+            },
             {
               "alternativeIpa": "t",
               "mode": "strict",
@@ -5270,21 +6568,38 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 99,
+              "alternativeUsefulUnlocked": 9,
               "status": "research_only_exact_route",
-              "score": 1024
+              "score": 934
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
-          "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation",
+          "representationResolutionState": "representable_alternative_candidate_found",
+          "visualResolutionState": "lexical_candidate_needs_visual_curation",
           "visualResearchNeed": {
-            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
-            "researchIpa": "t",
+            "needType": "curate_existing_lexical_candidate",
+            "researchIpa": "tʁi",
             "routeMode": "strict",
             "coverageType": "composite_words",
-            "representationLeads": [],
-            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+            "representationLeads": [
+              {
+                "word": "tri",
+                "lemma": "tri",
+                "pos": "NOM",
+                "frequency": 2.111,
+                "phoneticStatus": "whole_pronunciation_exact",
+                "activationState": "research_only"
+              },
+              {
+                "word": "trie",
+                "lemma": "trier",
+                "pos": "VER",
+                "frequency": 0.595,
+                "phoneticStatus": "whole_pronunciation_exact",
+                "activationState": "research_only"
+              }
+            ],
+            "nextAction": "assess_visual_concept_then_naming_risk_before_prototype"
           }
         },
         {
@@ -5425,10 +6740,43 @@
           "targetIpa": "tʁavɛʁse",
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
-          "alternativeRouteCount": 1,
+          "alternativeRouteCount": 2,
           "representableAlternativeRouteCount": 0,
           "curatedVisualAlternativeRouteCount": 0,
           "routes": [
+            {
+              "alternativeIpa": "tʁa",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-tʁa",
+                  "label": "/tʁa/",
+                  "ipa": "tʁa"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "ver",
+                  "label": "ver",
+                  "ipa": "vɛʁ"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "C",
+                  "reading": "cé",
+                  "ipa": "se"
+                }
+              ],
+              "lexicalLeads": [],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
+              "visualResearchLeads": [],
+              "visualResearchStatus": "phonetic_only_no_visual_candidate",
+              "alternativeUsefulUnlocked": 6,
+              "status": "research_only_exact_route",
+              "score": -189
+            },
             {
               "alternativeIpa": "t",
               "mode": "general",
@@ -5473,9 +6821,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 99,
+              "alternativeUsefulUnlocked": 9,
               "status": "research_only_exact_route",
-              "score": -121
+              "score": -211
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -5483,7 +6831,7 @@
           "visualResolutionState": "still_needs_visual_representation",
           "visualResearchNeed": {
             "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
-            "researchIpa": "t",
+            "researchIpa": "tʁa",
             "routeMode": "general",
             "coverageType": "explicit_grapheme",
             "representationLeads": [],
@@ -5496,10 +6844,77 @@
           "targetIpa": "tʁipote",
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
-          "alternativeRouteCount": 1,
-          "representableAlternativeRouteCount": 0,
+          "alternativeRouteCount": 2,
+          "representableAlternativeRouteCount": 1,
           "curatedVisualAlternativeRouteCount": 0,
           "routes": [
+            {
+              "alternativeIpa": "tʁi",
+              "mode": "strict",
+              "coverageType": "composite_words",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-tʁi",
+                  "label": "/tʁi/",
+                  "ipa": "tʁi"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "pot",
+                  "label": "pot",
+                  "ipa": "po"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "the",
+                  "label": "thé",
+                  "ipa": "te"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "tri",
+                  "lemma": "tri",
+                  "pos": "NOM",
+                  "frequency": 2.111,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "trie",
+                  "lemma": "trier",
+                  "pos": "VER",
+                  "frequency": 0.595,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "representationLeads": [
+                {
+                  "word": "tri",
+                  "lemma": "tri",
+                  "pos": "NOM",
+                  "frequency": 2.111,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "trie",
+                  "lemma": "trier",
+                  "pos": "VER",
+                  "frequency": 0.595,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "representationStatus": "lexical_representation_candidate",
+              "visualResearchLeads": [],
+              "visualResearchStatus": "lexical_only_no_curated_visual_candidate",
+              "alternativeUsefulUnlocked": 3,
+              "status": "research_only_exact_route",
+              "score": 1108
+            },
             {
               "alternativeIpa": "t",
               "mode": "strict",
@@ -5544,21 +6959,38 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 99,
+              "alternativeUsefulUnlocked": 9,
               "status": "research_only_exact_route",
-              "score": 999
+              "score": 909
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
-          "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation",
+          "representationResolutionState": "representable_alternative_candidate_found",
+          "visualResolutionState": "lexical_candidate_needs_visual_curation",
           "visualResearchNeed": {
-            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
-            "researchIpa": "t",
+            "needType": "curate_existing_lexical_candidate",
+            "researchIpa": "tʁi",
             "routeMode": "strict",
             "coverageType": "composite_words",
-            "representationLeads": [],
-            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+            "representationLeads": [
+              {
+                "word": "tri",
+                "lemma": "tri",
+                "pos": "NOM",
+                "frequency": 2.111,
+                "phoneticStatus": "whole_pronunciation_exact",
+                "activationState": "research_only"
+              },
+              {
+                "word": "trie",
+                "lemma": "trier",
+                "pos": "VER",
+                "frequency": 0.595,
+                "phoneticStatus": "whole_pronunciation_exact",
+                "activationState": "research_only"
+              }
+            ],
+            "nextAction": "assess_visual_concept_then_naming_risk_before_prototype"
           }
         },
         {
@@ -5625,9 +7057,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 99,
+              "alternativeUsefulUnlocked": 9,
               "status": "research_only_exact_route",
-              "score": 1049
+              "score": 959
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -5715,10 +7147,10 @@
       "strategy": "alternate_segmentation_required",
       "sourceUsefulUnlocked": 20,
       "targetCount": 20,
-      "targetsWithAlternativeRoutes": 0,
+      "targetsWithAlternativeRoutes": 2,
       "targetsWithRepresentableAlternativeRoutes": 0,
       "targetsWithCuratedVisualAlternativeRoutes": 0,
-      "targetsStillBlocked": 20,
+      "targetsStillBlocked": 18,
       "targetsStillNeedingRepresentableAlternative": 20,
       "targetsStillNeedingCuratedVisualAlternative": 20,
       "targets": [
@@ -6036,20 +7468,48 @@
           "targetIpa": "tɑ̃tasjɔ̃",
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
-          "alternativeRouteCount": 0,
+          "alternativeRouteCount": 1,
           "representableAlternativeRouteCount": 0,
           "curatedVisualAlternativeRouteCount": 0,
-          "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule",
+          "routes": [
+            {
+              "alternativeIpa": "asjɔ̃",
+              "mode": "strict",
+              "coverageType": "composite_words",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "tente",
+                  "label": "tente",
+                  "ipa": "tɑ̃t"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-asjɔ̃",
+                  "label": "/asjɔ̃/",
+                  "ipa": "asjɔ̃"
+                }
+              ],
+              "lexicalLeads": [],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
+              "visualResearchLeads": [],
+              "visualResearchStatus": "phonetic_only_no_visual_candidate",
+              "alternativeUsefulUnlocked": 2,
+              "status": "research_only_exact_route",
+              "score": 952
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
           "visualResolutionState": "still_needs_visual_representation",
           "visualResearchNeed": {
-            "needType": "resolve_source_segment",
-            "researchIpa": "sjɔ̃",
-            "routeMode": null,
-            "coverageType": "uncovered",
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "asjɔ̃",
+            "routeMode": "strict",
+            "coverageType": "composite_words",
             "representationLeads": [],
-            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
           }
         },
         {
@@ -6124,20 +7584,54 @@
           "targetIpa": "asiɲasjɔ̃",
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful",
-          "alternativeRouteCount": 0,
+          "alternativeRouteCount": 1,
           "representableAlternativeRouteCount": 0,
           "curatedVisualAlternativeRouteCount": 0,
-          "routes": [],
-          "resolutionState": "still_needs_new_representation_or_rule",
+          "routes": [
+            {
+              "alternativeIpa": "asjɔ̃",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "grapheme",
+                  "grapheme": "A",
+                  "reading": "a",
+                  "ipa": "a"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "cygne",
+                  "label": "cygne",
+                  "ipa": "siɲ"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-asjɔ̃",
+                  "label": "/asjɔ̃/",
+                  "ipa": "asjɔ̃"
+                }
+              ],
+              "lexicalLeads": [],
+              "representationLeads": [],
+              "representationStatus": "phonetic_only_unresolved_alternative",
+              "visualResearchLeads": [],
+              "visualResearchStatus": "phonetic_only_no_visual_candidate",
+              "alternativeUsefulUnlocked": 2,
+              "status": "research_only_exact_route",
+              "score": -193
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
           "visualResolutionState": "still_needs_visual_representation",
           "visualResearchNeed": {
-            "needType": "resolve_source_segment",
-            "researchIpa": "sjɔ̃",
-            "routeMode": null,
-            "coverageType": "uncovered",
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "asjɔ̃",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
             "representationLeads": [],
-            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
           }
         },
         {
@@ -6224,9 +7718,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 48,
+              "alternativeUsefulUnlocked": 12,
               "status": "research_only_exact_route",
-              "score": -147
+              "score": -183
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -6295,9 +7789,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 48,
+              "alternativeUsefulUnlocked": 12,
               "status": "research_only_exact_route",
-              "score": -172
+              "score": -208
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -6360,9 +7854,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 48,
+              "alternativeUsefulUnlocked": 12,
               "status": "research_only_exact_route",
-              "score": -147
+              "score": -183
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -6431,9 +7925,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 48,
+              "alternativeUsefulUnlocked": 12,
               "status": "research_only_exact_route",
-              "score": -292
+              "score": -328
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -6496,9 +7990,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 48,
+              "alternativeUsefulUnlocked": 12,
               "status": "research_only_exact_route",
-              "score": -147
+              "score": -183
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -6561,9 +8055,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 48,
+              "alternativeUsefulUnlocked": 12,
               "status": "research_only_exact_route",
-              "score": -147
+              "score": -183
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -6620,9 +8114,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 48,
+              "alternativeUsefulUnlocked": 12,
               "status": "research_only_exact_route",
-              "score": -122
+              "score": -158
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -6685,9 +8179,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 48,
+              "alternativeUsefulUnlocked": 12,
               "status": "research_only_exact_route",
-              "score": -147
+              "score": -183
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -6772,9 +8266,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 48,
+              "alternativeUsefulUnlocked": 12,
               "status": "research_only_exact_route",
-              "score": -147
+              "score": -183
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -6881,9 +8375,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 48,
+              "alternativeUsefulUnlocked": 12,
               "status": "research_only_exact_route",
-              "score": -147
+              "score": -183
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -6962,9 +8456,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 48,
+              "alternativeUsefulUnlocked": 12,
               "status": "research_only_exact_route",
-              "score": -122
+              "score": -158
             }
           ],
           "resolutionState": "exact_alternative_routes_found",
@@ -7027,9 +8521,9 @@
               "representationStatus": "phonetic_only_unresolved_alternative",
               "visualResearchLeads": [],
               "visualResearchStatus": "phonetic_only_no_visual_candidate",
-              "alternativeUsefulUnlocked": 48,
+              "alternativeUsefulUnlocked": 12,
               "status": "research_only_exact_route",
-              "score": -267
+              "score": -303
             }
           ],
           "resolutionState": "exact_alternative_routes_found",

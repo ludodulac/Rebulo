@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T09:55:08.407Z",
+  "generatedAt": "2026-09-08T10:48:18.640Z",
   "source": "Lexique 4",
   "sourceLicense": "CC BY-SA 4.0",
   "schoolFrequencyEvidence": {
@@ -1327,6 +1327,76 @@
         ]
       },
       "curationPriorityScore": 31.475,
+      "curationPriorityStatus": "heuristic_research_only"
+    },
+    {
+      "ipa": "ba",
+      "recommendedRoute": "natural_object_pictogram_with_high_naming_risk",
+      "candidates": [
+        {
+          "label": "bas",
+          "candidateType": "whole_word_pictogram",
+          "lexicalEvidence": "lexique_exact",
+          "visualConcept": "Un bas vestimentaire isolé et clairement distinct d’une chaussette, présenté sans mannequin ni texte; hypothèse visuelle à comparer avant tout prototype.",
+          "visualPlausibility": "medium_high",
+          "spontaneousNamingRisk": "high",
+          "mainConfusions": [
+            "chaussette",
+            "collant",
+            "bas de contention"
+          ],
+          "suggestedAgeFloor": 9,
+          "ageStatus": "editorial_hypothesis",
+          "researchDecision": "reserve",
+          "nextGate": "compare_visual_variants_before_prototype_then_naming_test",
+          "researchQuality": {
+            "score": 56,
+            "visualComponent": 0.82,
+            "namingComponent": 0.28,
+            "ageAccessibilityComponent": 0.75,
+            "status": "heuristic_research_only"
+          }
+        }
+      ],
+      "bestResearchCandidate": "bas",
+      "coverageEvidence": null,
+      "curationPriorityScore": 0,
+      "curationPriorityStatus": "heuristic_research_only"
+    },
+    {
+      "ipa": "lo",
+      "recommendedRoute": "lexical_candidate_but_reject_visual_priority",
+      "candidates": [
+        {
+          "label": "lot",
+          "candidateType": "whole_word_candidate",
+          "lexicalEvidence": "lexique_exact",
+          "visualConcept": "Un lot de plusieurs objets semblables regroupés; la scène reste volontairement non proposée comme stimulus autonome car la dénomination spontanée attendue est trop instable.",
+          "visualPlausibility": "medium",
+          "spontaneousNamingRisk": "very_high",
+          "mainConfusions": [
+            "groupe",
+            "tas",
+            "ensemble",
+            "cadeaux",
+            "objets"
+          ],
+          "suggestedAgeFloor": 7,
+          "ageStatus": "editorial_hypothesis",
+          "researchDecision": "reject_visual_priority",
+          "nextGate": "keep_as_lexical_evidence_only",
+          "researchQuality": {
+            "score": 6,
+            "visualComponent": 0.62,
+            "namingComponent": 0.08,
+            "ageAccessibilityComponent": 0.9,
+            "status": "heuristic_research_only"
+          }
+        }
+      ],
+      "bestResearchCandidate": null,
+      "coverageEvidence": null,
+      "curationPriorityScore": 0,
       "curationPriorityStatus": "heuristic_research_only"
     }
   ],

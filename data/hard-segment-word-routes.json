@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-08T09:55:27.770Z",
+  "generatedAt": "2026-09-08T10:48:38.218Z",
   "status": "research_only",
-  "sourceBrickMapGeneratedAt": "2026-09-08T09:55:08.407Z",
+  "sourceBrickMapGeneratedAt": "2026-09-08T10:48:18.640Z",
   "strategyVersion": "1.0.0",
   "visualCandidateBankVersion": "0.1.0",
   "routeSearchOpportunityCount": 250,
@@ -21,33 +21,33 @@
     "targetCount": 127,
     "targetsWithAlternativeRoutes": 50,
     "targetsWithRepresentableAlternativeRoutes": 15,
-    "targetsWithCuratedVisualAlternativeRoutes": 7,
+    "targetsWithCuratedVisualAlternativeRoutes": 8,
     "targetsStillBlocked": 77,
     "targetsStillNeedingRepresentableAlternative": 112,
-    "targetsStillNeedingCuratedVisualAlternative": 120,
+    "targetsStillNeedingCuratedVisualAlternative": 119,
     "strictAlternativeTargets": 7,
     "strictRepresentableAlternativeTargets": 4,
-    "strictCuratedVisualAlternativeTargets": 0,
+    "strictCuratedVisualAlternativeTargets": 1,
     "generalAlternativeTargets": 45
   },
   "visualResearchNeedQueueStats": {
-    "groupCount": 20,
-    "unresolvedTargetCount": 120,
+    "groupCount": 19,
+    "unresolvedTargetCount": 119,
     "targetCountsByNeedType": {
-      "curate_existing_lexical_candidate": 8,
+      "curate_existing_lexical_candidate": 7,
       "find_lexical_or_visible_operation_for_phonetic_brick": 35,
       "resolve_source_segment": 77
     }
   },
   "visualResearchRouteSummary": {
-    "targetCount": 120,
+    "targetCount": 119,
     "targetCountsByRouteClass": {
-      "research_pictogram_or_scene": 15,
+      "research_pictogram_or_scene": 14,
       "formalize_documented_visible_general_operation": 77,
       "discover_new_representation": 28
     },
     "groupCountsByRouteClass": {
-      "research_pictogram_or_scene": 3,
+      "research_pictogram_or_scene": 2,
       "formalize_documented_visible_general_operation": 12,
       "discover_new_representation": 5
     }
@@ -110,7 +110,19 @@
       "routeModes": [
         "general"
       ],
-      "candidateBankEvidence": null,
+      "candidateBankEvidence": {
+        "recommendedRoute": "lexical_candidate_but_reject_visual_priority",
+        "candidates": [
+          {
+            "label": "lot",
+            "candidateType": "whole_word_candidate",
+            "visualPlausibility": "medium",
+            "spontaneousNamingRisk": "very_high",
+            "researchDecision": "reject_visual_priority",
+            "nextGate": "keep_as_lexical_evidence_only"
+          }
+        ]
+      },
       "strategyEvidence": [
         {
           "ipa": "al",
@@ -287,89 +299,6 @@
         "visualCandidates": [],
         "authorizationStatus": "research_only_not_authorized",
         "nextAction": "define_and_test_visible_general_operation_semantics_before_any_activation"
-      }
-    },
-    {
-      "needType": "curate_existing_lexical_candidate",
-      "researchIpa": "ba",
-      "affectedTargetCount": 1,
-      "minAgeBandCandidate": 7,
-      "sourceSegments": [
-        "aʁ"
-      ],
-      "lexicalCandidates": [
-        {
-          "word": "bas",
-          "lemma": "bas",
-          "pos": "NOM",
-          "frequency": 64.82,
-          "phoneticStatus": "whole_pronunciation_exact",
-          "activationState": "research_only"
-        },
-        {
-          "word": "bât",
-          "lemma": "bât",
-          "pos": "NOM",
-          "frequency": 0.25,
-          "phoneticStatus": "whole_pronunciation_exact",
-          "activationState": "research_only"
-        },
-        {
-          "word": "bats",
-          "lemma": "bats",
-          "pos": "NOM",
-          "frequency": 0.082,
-          "phoneticStatus": "whole_pronunciation_exact",
-          "activationState": "research_only"
-        },
-        {
-          "word": "bah",
-          "lemma": "bah",
-          "pos": "ONO",
-          "frequency": 18.307,
-          "phoneticStatus": "whole_pronunciation_exact",
-          "activationState": "research_only"
-        }
-      ],
-      "examples": [
-        {
-          "word": "bagarre",
-          "targetIpa": "bagaʁ",
-          "sourceIpa": "aʁ",
-          "ageBandCandidate": 7
-        }
-      ],
-      "routeModes": [
-        "strict"
-      ],
-      "candidateBankEvidence": null,
-      "strategyEvidence": [
-        {
-          "ipa": "aʁ",
-          "evidence": {
-            "strategy": "scene_comparison_for_older_users",
-            "lexicalLeads": [
-              "art"
-            ],
-            "lexicalAssessment": "exact_but_abstract_concept_with_high_naming_variability",
-            "visualHypotheses": [
-              "petite scène cohérente réunissant tableau, palette et sculpture pour viser le concept global art"
-            ],
-            "visibleFallbackResearch": [],
-            "fallbackStatus": null,
-            "rejectedFallbacks": [],
-            "nextGate": "prototype_only_after_higher_confidence_natural_objects"
-          }
-        }
-      ],
-      "nextAction": "assess_visual_concept_then_naming_risk_before_prototype",
-      "status": "research_only",
-      "researchRoute": {
-        "routeClass": "research_pictogram_or_scene",
-        "visibleOperations": [],
-        "visualCandidates": [],
-        "authorizationStatus": "research_only_not_naming_validated",
-        "nextAction": "evaluate_spontaneous_naming_and_visual_concept_before_prototype"
       }
     },
     {
@@ -3777,10 +3706,10 @@
       "targetCount": 8,
       "targetsWithAlternativeRoutes": 8,
       "targetsWithRepresentableAlternativeRoutes": 2,
-      "targetsWithCuratedVisualAlternativeRoutes": 0,
+      "targetsWithCuratedVisualAlternativeRoutes": 1,
       "targetsStillBlocked": 0,
       "targetsStillNeedingRepresentableAlternative": 6,
-      "targetsStillNeedingCuratedVisualAlternative": 8,
+      "targetsStillNeedingCuratedVisualAlternative": 7,
       "targets": [
         {
           "key": "art|aʁ",
@@ -3840,7 +3769,7 @@
           "rebuloUtilityTier": "school_common",
           "alternativeRouteCount": 3,
           "representableAlternativeRouteCount": 1,
-          "curatedVisualAlternativeRouteCount": 0,
+          "curatedVisualAlternativeRouteCount": 1,
           "routes": [
             {
               "alternativeIpa": "ba",
@@ -3929,11 +3858,22 @@
                 }
               ],
               "representationStatus": "lexical_representation_candidate",
-              "visualResearchLeads": [],
-              "visualResearchStatus": "lexical_only_no_curated_visual_candidate",
+              "visualResearchLeads": [
+                {
+                  "label": "bas",
+                  "candidateType": "whole_word_pictogram",
+                  "visualConcept": "Un bas vestimentaire isolé et clairement distinct d’une chaussette, présenté sans mannequin ni texte; hypothèse visuelle à comparer avant tout prototype.",
+                  "visualPlausibility": "medium_high",
+                  "spontaneousNamingRisk": "high",
+                  "researchDecision": "reserve",
+                  "nextGate": "compare_visual_variants_before_prototype_then_naming_test",
+                  "activationState": "research_only"
+                }
+              ],
+              "visualResearchStatus": "curated_visual_research_candidate",
               "alternativeUsefulUnlocked": 1,
               "status": "research_only_exact_route",
-              "score": 1131
+              "score": 1391
             },
             {
               "alternativeIpa": "ʁ",
@@ -4004,48 +3944,8 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "representable_alternative_candidate_found",
-          "visualResolutionState": "lexical_candidate_needs_visual_curation",
-          "visualResearchNeed": {
-            "needType": "curate_existing_lexical_candidate",
-            "researchIpa": "ba",
-            "routeMode": "strict",
-            "coverageType": "composite_words",
-            "representationLeads": [
-              {
-                "word": "bas",
-                "lemma": "bas",
-                "pos": "NOM",
-                "frequency": 64.82,
-                "phoneticStatus": "whole_pronunciation_exact",
-                "activationState": "research_only"
-              },
-              {
-                "word": "bât",
-                "lemma": "bât",
-                "pos": "NOM",
-                "frequency": 0.25,
-                "phoneticStatus": "whole_pronunciation_exact",
-                "activationState": "research_only"
-              },
-              {
-                "word": "bats",
-                "lemma": "bats",
-                "pos": "NOM",
-                "frequency": 0.082,
-                "phoneticStatus": "whole_pronunciation_exact",
-                "activationState": "research_only"
-              },
-              {
-                "word": "bah",
-                "lemma": "bah",
-                "pos": "ONO",
-                "frequency": 18.307,
-                "phoneticStatus": "whole_pronunciation_exact",
-                "activationState": "research_only"
-              }
-            ],
-            "nextAction": "assess_visual_concept_then_naming_risk_before_prototype"
-          }
+          "visualResolutionState": "curated_visual_research_candidate_found",
+          "visualResearchNeed": null
         },
         {
           "key": "are|aʁ",

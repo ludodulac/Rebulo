@@ -9,6 +9,7 @@ on:
       - 'scripts/build-visual-migration-readiness.mjs'
       - 'scripts/analyze-productivity.mjs'
       - 'scripts/import-lexique.mjs'
+      - 'scripts/import-eduscol-frequency.mjs'
       - 'scripts/simulate-expansion.mjs'
       - 'scripts/build-phonetic-brick-map.mjs'
       - 'src/phonetic-engine.js'
@@ -18,12 +19,15 @@ on:
       - 'src/productivity-opportunities.js'
       - 'src/drawable-opportunities.js'
       - 'src/target-vocabulary.js'
+      - 'src/eduscol-frequency.js'
       - 'src/syllable-coverage.js'
       - 'src/syllable-representation-candidates.js'
       - 'src/phonetic-brick-map.js'
       - 'src/phonetic-brick-curation.js'
       - 'data/phonetic-brick-candidates.json'
+      - 'data/phonetic-brick-wave-selection.json'
       - 'data/rebulo-vocabulary-policy.json'
+      - 'data/eduscol-frequency-lexicon.json'
       - 'tests/import-lexique.test.mjs'
       - 'tests/target-vocabulary.test.mjs'
       - 'tests/phonetic-brick-map.test.mjs'
@@ -63,8 +67,18 @@ jobs:
           sha256sum .cache/Lexique4.tsv | tee .cache/Lexique4.sha256
       - name: Import compact lexical data
         run: node scripts/import-lexique.mjs .cache/Lexique4.tsv .cache/lexique4.compact.json
+      - name: Refresh Eduscol school frequency evidence when upstream allows it
+        run: |
+          if curl --fail --location --retry 2 --user-agent 'Mozilla/5.0 Rebulo research refresh' --referer 'https://eduscol.education.gouv.fr/6873/liste-de-frequence-lexicale' 'https://eduscol.education.gouv.fr/media/91806/download' -o .cache/eduscol-frequency.ods; then
+            unzip -p .cache/eduscol-frequency.ods content.xml > .cache/eduscol-frequency-content.xml
+            test -s .cache/eduscol-frequency-content.xml
+            node scripts/import-eduscol-frequency.mjs .cache/eduscol-frequency-content.xml data/eduscol-frequency-lexicon.json
+          else
+            echo 'Eduscol blocks this GitHub runner; using the versioned evidence snapshot with provenance.'
+            test -s data/eduscol-frequency-lexicon.json
+          fi
       - name: Build target phonetic brick map
-        run: node scripts/build-phonetic-brick-map.mjs .cache/lexique4.compact.json data/phonetic-brick-map.json docs/PHONETIC_BRICK_MAP.md
+        run: node scripts/build-phonetic-brick-map.mjs .cache/lexique4.compact.json data/phonetic-brick-map.json docs/PHONETIC_BRICK_MAP.md data/eduscol-frequency-lexicon.json
       - name: Run strict coverage analysis
         run: node scripts/analyze-coverage.mjs .cache/lexique4.compact.json data/lexicon-seed.json data/coverage-report.json
       - name: Verify full playable strict catalog
@@ -100,9 +114,9 @@ jobs:
         run: |
           git config user.name 'rebulo-analysis-bot'
           git config user.email 'actions@users.noreply.github.com'
-          git add data/phonetic-brick-map.json docs/PHONETIC_BRICK_MAP.md data/coverage-report.json data/active-dependency-report.json data/visual-migration-readiness.json data/phonetic-productivity-report.json data/expansion-simulation.json docs/COVERAGE_ANALYSIS.md docs/ACTIVE_DEPENDENCIES.md docs/PHONETIC_PRODUCTIVITY.md docs/EXPANSION_SIMULATION.md
+          git add data/eduscol-frequency-lexicon.json data/phonetic-brick-map.json docs/PHONETIC_BRICK_MAP.md data/coverage-report.json data/active-dependency-report.json data/visual-migration-readiness.json data/phonetic-productivity-report.json data/expansion-simulation.json docs/COVERAGE_ANALYSIS.md docs/ACTIVE_DEPENDENCIES.md docs/PHONETIC_PRODUCTIVITY.md docs/EXPANSION_SIMULATION.md
           if git diff --cached --quiet; then echo 'No analysis changes to commit.'; exit 0; fi
-          git commit -m 'Refresh Lexique 4 coverage, productivity and phonetic brick map'
+          git commit -m 'Refresh school vocabulary evidence and Lexique analyses'
           git fetch origin main
           git rebase origin/main
           git push origin HEAD:main

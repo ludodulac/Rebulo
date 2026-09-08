@@ -46,6 +46,36 @@ function documentedStrategyFallbacks(group={}){
   return fallbacks;
 }
 
+function operationLabel(operation={}){
+  const label=String(operation.label||operation.grapheme||'').trim();
+  const ipa=normalizeIPA(operation.ipa||'');
+  return label&&ipa?`${label}→/${ipa}/`:label;
+}
+
+function documentedComposedFallbacks(group={}){
+  const targetIpa=normalizeIPA(group.researchIpa||'');
+  const rows=[];
+  for(const row of group?.strategyEvidence||[]){
+    for(const composition of row?.evidence?.composedFallbackResearch||[]){
+      const ipa=normalizeIPA(composition?.ipa||'');
+      const operations=Array.isArray(composition?.operations)?composition.operations:[];
+      if(!ipa||ipa!==targetIpa||operations.length<2)continue;
+      const built=operations.map(operation=>normalizeIPA(operation?.ipa||'')).join('');
+      if(!built||built!==ipa)continue;
+      rows.push({
+        label:operations.map(operationLabel).join(' + '),
+        sourceIpa:row.ipa||null,
+        targetIpa:ipa,
+        operationType:'composed_general_operation',
+        operations,
+        fallbackStatus:composition.status||'composed_general_mode_research_only',
+        nextGate:composition.nextGate||null
+      });
+    }
+  }
+  return rows;
+}
+
 function documentedBankOperations(group={}){
   return (group?.candidateBankEvidence?.candidates||[])
     .filter(isVisibleGeneralOperationCandidate)
@@ -69,7 +99,7 @@ function documentedVisualCandidates(group={}){
 }
 
 export function classifyVisualResearchRoute(group={}){
-  const visibleOperations=[...documentedBankOperations(group),...documentedStrategyFallbacks(group)];
+  const visibleOperations=[...documentedBankOperations(group),...documentedStrategyFallbacks(group),...documentedComposedFallbacks(group)];
   const visualCandidates=documentedVisualCandidates(group);
   if(visibleOperations.length){
     return {

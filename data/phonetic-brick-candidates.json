@@ -1,0 +1,371 @@
+{
+  "version": "0.1.0",
+  "status": "research_only",
+  "policy": {
+    "phoneticValidity": "Every whole-word candidate must use its complete attested pronunciation; no hidden truncation.",
+    "visualMeaning": "A visual proposal is only a hypothesis about spontaneous naming until human testing.",
+    "selection": "Prefer natural whole-word pictograms, then small recognizable scenes, then explicit grapheme/note tiles; never force a weak image to avoid a visible fallback.",
+    "age": "Suggested age floors are editorial hypotheses only, not acquisition-age evidence.",
+    "activation": "Nothing in this file is automatically active in play or clinically validated."
+  },
+  "firstWaveSegments": ["ɛ", "wa", "ɔʁ", "ti", "ɑ̃s", "as"],
+  "segments": [
+    {
+      "ipa": "ɛ",
+      "recommendedRoute": "natural_pictogram",
+      "candidates": [
+        {
+          "label": "haie",
+          "candidateType": "whole_word_pictogram",
+          "lexicalEvidence": "lexique_exact",
+          "visualConcept": "Une haie végétale dense, isolée, vue de face avec une limite nette de jardin, sans maison dominante.",
+          "visualPlausibility": "high",
+          "spontaneousNamingRisk": "medium",
+          "mainConfusions": ["buisson", "arbuste", "mur végétal"],
+          "suggestedAgeFloor": 7,
+          "ageStatus": "editorial_hypothesis",
+          "researchDecision": "first_wave",
+          "nextGate": "prototype_then_naming_test"
+        },
+        {
+          "label": "hey",
+          "candidateType": "interjection_tile",
+          "lexicalEvidence": "lexique_exact",
+          "visualPlausibility": "low",
+          "spontaneousNamingRisk": "high",
+          "researchDecision": "fallback_only",
+          "nextGate": "do_not_draw_as_object"
+        }
+      ]
+    },
+    {
+      "ipa": "wa",
+      "recommendedRoute": "natural_pictogram",
+      "candidates": [
+        {
+          "label": "oie",
+          "candidateType": "whole_word_pictogram",
+          "lexicalEvidence": "lexique_exact",
+          "visualConcept": "Une oie blanche adulte entière, profil trois-quarts, cou long et bec orange, seule sur fond clair.",
+          "visualPlausibility": "high",
+          "spontaneousNamingRisk": "low_medium",
+          "mainConfusions": ["canard", "cygne"],
+          "suggestedAgeFloor": 5,
+          "ageStatus": "editorial_hypothesis",
+          "researchDecision": "first_wave",
+          "nextGate": "prototype_then_naming_test"
+        },
+        {
+          "label": "ouah",
+          "candidateType": "sound_scene",
+          "lexicalEvidence": "lexique_exact",
+          "visualPlausibility": "low",
+          "spontaneousNamingRisk": "high",
+          "researchDecision": "reject_visual_priority",
+          "nextGate": "keep_as_lexical_alternative_only"
+        }
+      ]
+    },
+    {
+      "ipa": "ɔʁ",
+      "recommendedRoute": "natural_material_pictogram",
+      "candidates": [
+        {
+          "label": "or",
+          "candidateType": "whole_word_pictogram",
+          "lexicalEvidence": "lexique_exact",
+          "visualConcept": "Deux petits lingots d'or accompagnés d'une pépite brute, sans monnaie ni texte, pour évoquer la matière or plutôt qu'un objet précis.",
+          "visualPlausibility": "high",
+          "spontaneousNamingRisk": "medium",
+          "mainConfusions": ["lingot", "trésor", "métal"],
+          "suggestedAgeFloor": 7,
+          "ageStatus": "editorial_hypothesis",
+          "researchDecision": "first_wave",
+          "nextGate": "prototype_then_naming_test"
+        },
+        {
+          "label": "ore",
+          "candidateType": "whole_word_pictogram",
+          "lexicalEvidence": "lexique_exact",
+          "visualPlausibility": "low",
+          "spontaneousNamingRisk": "high",
+          "researchDecision": "reject_visual_priority",
+          "nextGate": "prefer_or"
+        }
+      ]
+    },
+    {
+      "ipa": "ti",
+      "recommendedRoute": "natural_object_pictogram",
+      "candidates": [
+        {
+          "label": "tee",
+          "candidateType": "whole_word_pictogram",
+          "lexicalEvidence": "lexique_exact",
+          "visualConcept": "Un tee de golf planté dans un petit carré de gazon avec une balle posée dessus, le tee restant clairement visible et central.",
+          "visualPlausibility": "high",
+          "spontaneousNamingRisk": "medium_high",
+          "mainConfusions": ["golf", "balle", "support"],
+          "suggestedAgeFloor": 12,
+          "ageStatus": "editorial_hypothesis",
+          "researchDecision": "first_wave",
+          "nextGate": "prototype_then_age_specific_naming_test"
+        },
+        {
+          "label": "tie",
+          "candidateType": "whole_word_candidate",
+          "lexicalEvidence": "lexique_exact",
+          "visualPlausibility": "low",
+          "spontaneousNamingRisk": "high",
+          "researchDecision": "reject_visual_priority",
+          "nextGate": "prefer_tee"
+        }
+      ]
+    },
+    {
+      "ipa": "ɑ̃s",
+      "recommendedRoute": "part_of_object_pictogram",
+      "candidates": [
+        {
+          "label": "anse",
+          "candidateType": "whole_word_pictogram",
+          "lexicalEvidence": "lexique_exact",
+          "visualConcept": "Une grande tasse simple dont l'anse est très visible et dégagée, avec cadrage qui rend la partie nommable sans symbole ni texte.",
+          "visualPlausibility": "high",
+          "spontaneousNamingRisk": "high",
+          "mainConfusions": ["poignée", "tasse"],
+          "suggestedAgeFloor": 9,
+          "ageStatus": "editorial_hypothesis",
+          "researchDecision": "first_wave",
+          "nextGate": "prototype_then_naming_test_before_any_activation"
+        },
+        {
+          "label": "hanse",
+          "candidateType": "whole_word_candidate",
+          "lexicalEvidence": "lexique_exact",
+          "visualPlausibility": "low",
+          "spontaneousNamingRisk": "high",
+          "researchDecision": "reject_visual_priority",
+          "nextGate": "prefer_anse"
+        }
+      ]
+    },
+    {
+      "ipa": "as",
+      "recommendedRoute": "recognizable_symbolic_object",
+      "candidates": [
+        {
+          "label": "as",
+          "candidateType": "whole_word_pictogram",
+          "lexicalEvidence": "lexique_exact",
+          "visualConcept": "Une carte à jouer d'as très simple, avec un seul grand symbole de couleur au centre; si la lettre A est nécessaire à la reconnaissance, la considérer comme partie intrinsèque de l'objet et non comme lecture cachée.",
+          "visualPlausibility": "high",
+          "spontaneousNamingRisk": "medium",
+          "mainConfusions": ["carte", "carte à jouer"],
+          "suggestedAgeFloor": 7,
+          "ageStatus": "editorial_hypothesis",
+          "researchDecision": "first_wave",
+          "nextGate": "prototype_then_naming_test"
+        },
+        {
+          "label": "asse",
+          "candidateType": "whole_word_candidate",
+          "lexicalEvidence": "lexique_exact",
+          "visualPlausibility": "low",
+          "spontaneousNamingRisk": "high",
+          "researchDecision": "reject_visual_priority",
+          "nextGate": "prefer_as"
+        }
+      ]
+    },
+    {
+      "ipa": "œʁ",
+      "recommendedRoute": "small_scene",
+      "candidates": [
+        {
+          "label": "heure",
+          "candidateType": "whole_word_scene",
+          "lexicalEvidence": "lexique_exact",
+          "visualConcept": "Une horloge simple associée à un geste clair de consultation de l'heure, sans chiffre écrit dominant ni texte.",
+          "visualPlausibility": "medium_high",
+          "spontaneousNamingRisk": "high",
+          "mainConfusions": ["horloge", "montre", "temps"],
+          "suggestedAgeFloor": 7,
+          "ageStatus": "editorial_hypothesis",
+          "researchDecision": "second_wave",
+          "nextGate": "compare_scene_variants_before_prototype"
+        },
+        {
+          "label": "heurt",
+          "candidateType": "whole_word_scene",
+          "lexicalEvidence": "lexique_exact",
+          "visualPlausibility": "medium",
+          "spontaneousNamingRisk": "high",
+          "mainConfusions": ["choc", "collision"],
+          "researchDecision": "reject_visual_priority",
+          "nextGate": "prefer_heure"
+        }
+      ]
+    },
+    {
+      "ipa": "aʁ",
+      "recommendedRoute": "small_scene",
+      "candidates": [
+        {
+          "label": "art",
+          "candidateType": "whole_word_scene",
+          "lexicalEvidence": "lexique_exact",
+          "visualConcept": "Petite composition cohérente avec tableau, palette et sculpture, sans artiste ni musée dominant, pour viser le concept global art.",
+          "visualPlausibility": "medium_high",
+          "spontaneousNamingRisk": "high",
+          "mainConfusions": ["peinture", "dessin", "musée", "création"],
+          "suggestedAgeFloor": 9,
+          "ageStatus": "editorial_hypothesis",
+          "researchDecision": "second_wave",
+          "nextGate": "compare_scene_variants_before_prototype"
+        },
+        {
+          "label": "are",
+          "candidateType": "whole_word_candidate",
+          "lexicalEvidence": "lexique_exact",
+          "visualPlausibility": "low",
+          "spontaneousNamingRisk": "high",
+          "researchDecision": "reject_visual_priority",
+          "nextGate": "prefer_art"
+        }
+      ]
+    },
+    {
+      "ipa": "al",
+      "recommendedRoute": "natural_place_pictogram_with_caution",
+      "candidates": [
+        {
+          "label": "halle",
+          "candidateType": "whole_word_pictogram",
+          "lexicalEvidence": "lexique_exact",
+          "visualConcept": "Une halle de marché couverte reconnaissable, structure ouverte avec étals visibles, sans panneau écrit.",
+          "visualPlausibility": "medium_high",
+          "spontaneousNamingRisk": "high",
+          "mainConfusions": ["marché", "bâtiment", "hangar"],
+          "suggestedAgeFloor": 12,
+          "ageStatus": "editorial_hypothesis",
+          "researchDecision": "reserve",
+          "nextGate": "do_not_prototype_before_higher_yield_candidates"
+        }
+      ]
+    },
+    {
+      "ipa": "ʁo",
+      "recommendedRoute": "scene_with_high_naming_risk",
+      "candidates": [
+        {
+          "label": "rot",
+          "candidateType": "whole_word_scene",
+          "lexicalEvidence": "lexique_exact",
+          "visualConcept": "Personnage qui rote après avoir bu, sans texte ni onomatopée visible.",
+          "visualPlausibility": "medium",
+          "spontaneousNamingRisk": "high",
+          "mainConfusions": ["roter", "burp", "boire"],
+          "suggestedAgeFloor": 9,
+          "ageStatus": "editorial_hypothesis",
+          "researchDecision": "reserve",
+          "nextGate": "prefer_alternate_segmentation_when_possible"
+        }
+      ]
+    },
+    {
+      "ipa": "sjɔ̃",
+      "recommendedRoute": "reject_natural_priority",
+      "candidates": [
+        {
+          "label": "scion",
+          "candidateType": "whole_word_pictogram",
+          "lexicalEvidence": "lexique_exact",
+          "visualConcept": "Jeune pousse ou greffon végétal.",
+          "visualPlausibility": "medium",
+          "spontaneousNamingRisk": "very_high",
+          "mainConfusions": ["pousse", "branche", "plante", "greffon"],
+          "suggestedAgeFloor": 12,
+          "ageStatus": "editorial_hypothesis",
+          "researchDecision": "reject_visual_priority",
+          "nextGate": "seek_alternate_segmentation_or_explicit_operation"
+        }
+      ]
+    },
+    {
+      "ipa": "di",
+      "recommendedRoute": "alternate_segmentation_or_explicit_word_tile",
+      "candidates": [
+        {
+          "label": "dit",
+          "candidateType": "whole_word_candidate",
+          "lexicalEvidence": "lexique_exact",
+          "visualPlausibility": "low",
+          "spontaneousNamingRisk": "very_high",
+          "researchDecision": "reject_visual_priority",
+          "nextGate": "seek_alternate_segmentation"
+        }
+      ]
+    },
+    {
+      "ipa": "e",
+      "recommendedRoute": "explicit_grapheme_fallback",
+      "candidates": [
+        {
+          "label": "É",
+          "candidateType": "explicit_grapheme_tile",
+          "lexicalEvidence": "grapheme_reading_rule",
+          "visualPlausibility": "not_applicable",
+          "spontaneousNamingRisk": "not_applicable",
+          "researchDecision": "fallback_only",
+          "nextGate": "define_visible_grapheme_reading_policy"
+        }
+      ]
+    },
+    {
+      "ipa": "ʁe",
+      "recommendedRoute": "explicit_music_note_tile",
+      "candidates": [
+        {
+          "label": "ré",
+          "candidateType": "music_note_tile",
+          "lexicalEvidence": "lexique_exact",
+          "visualPlausibility": "not_applicable",
+          "spontaneousNamingRisk": "medium",
+          "researchDecision": "fallback_only",
+          "nextGate": "keep_visibly_distinct_from_object_pictograms"
+        }
+      ]
+    },
+    {
+      "ipa": "ɑ̃",
+      "recommendedRoute": "explicit_grapheme_or_alternate_segmentation",
+      "candidates": [
+        {
+          "label": "AN",
+          "candidateType": "explicit_grapheme_tile",
+          "lexicalEvidence": "grapheme_reading_rule",
+          "visualPlausibility": "not_applicable",
+          "spontaneousNamingRisk": "not_applicable",
+          "researchDecision": "fallback_only",
+          "nextGate": "penalize_in_rebus_scoring"
+        }
+      ]
+    },
+    {
+      "ipa": "kɔ̃",
+      "recommendedRoute": "alternate_segmentation",
+      "candidates": [
+        {
+          "label": "con",
+          "candidateType": "whole_word_candidate",
+          "lexicalEvidence": "lexique_exact",
+          "visualPlausibility": "low",
+          "spontaneousNamingRisk": "very_high",
+          "researchDecision": "reject_visual_priority",
+          "nextGate": "do_not_use_as_child_pictogram"
+        }
+      ]
+    }
+  ]
+}

@@ -26,6 +26,7 @@ const report={
   methodology:{
     exactness:'Every route reconstructs the complete target IPA with complete visible operation readings.',
     alternateRequirement:'A route must use the tested alternative brick and contain at least two operations; trivial whole-target replacement is excluded.',
+    representationReadiness:'Exact phonetic routes are counted separately from routes whose tested alternative has a non-trivial lexical representation candidate. Single-letter Lexique artifacts never make a route representation-ready.',
     strictPreference:'Strict routes rank before general routes. General routes remain explicit and visible only.',
     activation:'No route, lexical lead, pictogram or grapheme is activated by this report.'
   },
@@ -40,24 +41,28 @@ const lines=[
   '# Rebulo — routes mot-par-mot pour segments difficiles','',
   `- Segments analysés : ${stats.segmentCount}.`,
   `- Cibles utiles concernées : ${stats.targetCount}.`,
-  `- Cibles avec au moins une route alternative exacte : ${stats.targetsWithAlternativeRoutes}.`,
-  `- Cibles encore bloquées : ${stats.targetsStillBlocked}.`,
+  `- Cibles avec au moins une route phonétiquement exacte : ${stats.targetsWithAlternativeRoutes}.`,
+  `- Cibles dont une route exacte dispose aussi d’un candidat lexical de représentation : ${stats.targetsWithRepresentableAlternativeRoutes}.`,
+  `- Cibles sans aucune route exacte : ${stats.targetsStillBlocked}.`,
+  `- Cibles qui nécessitent encore une représentation réellement exploitable : ${stats.targetsStillNeedingRepresentableAlternative}.`,
   `- Cibles avec route alternative stricte : ${stats.strictAlternativeTargets}.`,
+  `- Cibles avec route stricte et candidat lexical de représentation : ${stats.strictRepresentableAlternativeTargets}.`,
   `- Cibles avec au moins une route générale visible : ${stats.generalAlternativeTargets}.`,'',
-  '> Une route n’est comptée que si elle reconstruit toute la prononciation, utilise réellement la brique alternative testée et comporte au moins deux opérations. Rien ici n’est activé automatiquement.',''
+  '> Exactitude phonétique ≠ représentation exploitable. Une entrée Lexique d’une seule lettre comme « t » ne compte jamais ici comme candidat lexical pictographiable. Rien dans ce rapport n’est activé automatiquement.',''
 ];
 for(const segment of rows){
-  lines.push(`## /${segment.ipa}/ — ${segment.strategy}`,'',`- ${segment.targetsWithAlternativeRoutes}/${segment.targetCount} cibles ont une route exacte concurrente; ${segment.targetsStillBlocked} restent réellement bloquées.`,'');
-  lines.push('| Mot | IPA | État | Meilleure route alternative | Piste lexicale de la nouvelle brique |','|---|---|---|---|---|');
+  lines.push(`## /${segment.ipa}/ — ${segment.strategy}`,'',`- ${segment.targetsWithAlternativeRoutes}/${segment.targetCount} cibles ont une route phonétiquement exacte; ${segment.targetsWithRepresentableAlternativeRoutes}/${segment.targetCount} ont aussi une piste lexicale de représentation; ${segment.targetsStillNeedingRepresentableAlternative} nécessitent encore une représentation.`,'');
+  lines.push('| Mot | IPA | Route exacte | Représentation | Meilleure route | Candidat lexical de la nouvelle brique |','|---|---|---|---|---|---|');
   for(const target of segment.targets){
-    const route=target.routes?.[0];
+    const representable=(target.routes||[]).find(route=>route.representationStatus==='lexical_representation_candidate');
+    const route=representable||target.routes?.[0];
     const routeText=route?(route.operations||[]).map(opLabel).join(' + '):'—';
-    const leads=route?(route.lexicalLeads||[]).map(item=>item.word).filter(Boolean).slice(0,3).join(', ')||'—':'—';
-    lines.push(`| ${target.word} | /${target.targetIpa}/ | ${target.resolutionState} | ${routeText} | ${leads} |`);
+    const leads=route?(route.representationLeads||[]).map(item=>item.word).filter(Boolean).slice(0,3).join(', ')||'—':'—';
+    lines.push(`| ${target.word} | /${target.targetIpa}/ | ${target.resolutionState} | ${target.representationResolutionState} | ${routeText} | ${leads} |`);
   }
   lines.push('');
 }
 fs.mkdirSync(path.dirname(markdownOutput),{recursive:true});
 fs.writeFileSync(markdownOutput,lines.join('\n')+'\n');
-console.log(`Hard segment routes: ${stats.targetsWithAlternativeRoutes}/${stats.targetCount} targets have exact alternatives; ${stats.targetsStillBlocked} remain blocked.`);
+console.log(`Hard segment routes: ${stats.targetsWithAlternativeRoutes}/${stats.targetCount} exact; ${stats.targetsWithRepresentableAlternativeRoutes} have representation candidates; ${stats.targetsStillNeedingRepresentableAlternative} still need a representable alternative.`);
 console.log(`Wrote ${jsonOutput} and ${markdownOutput}`);

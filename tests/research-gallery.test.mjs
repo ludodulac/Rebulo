@@ -44,8 +44,10 @@ assert.doesNotMatch(js,/localStorage|sessionStorage/,'visual curation should sta
 assert.doesNotMatch(js,/clinical_approved|active\s*[:=]\s*true/i);
 assert.match(namingHtml,/research-gallery\.html/,'naming runner should link to the curator gallery');
 
-const live=comparisons.comparisons.filter(item=>item.activationState==='inactive_until_human_decision');
-assert.equal(live.length,6,'gallery should expose five historical comparison concepts plus nid-v1');
+const pending=comparisons.comparisons.filter(item=>item.candidates.some(candidate=>candidate.availability==='pending'));
+assert.deepEqual(pending.map(item=>item.concept),['heure'],'only heure should currently be registered with pending research stimuli');
+const live=comparisons.comparisons.filter(item=>item.activationState==='inactive_until_human_decision'&&item.candidates.every(candidate=>candidate.availability==='available'));
+assert.equal(live.length,6,'gallery should expose only comparison sets whose stimuli are actually available');
 assert.equal(live.reduce((sum,item)=>sum+item.candidates.length,0),21,'gallery should expose twenty historical stimuli plus the nid prototype');
 for(const comparison of live){
   const expectedCount=comparison.concept==='nid'?1:4;
@@ -54,7 +56,7 @@ for(const comparison of live){
     assert.ok(candidate.designIntent);
     assert.ok(candidate.provenance);
     assert.ok(candidate.namingRisks.length>0);
-    assert.doesNotMatch(candidate.asset,/^https?:/,'all active naming stimuli should now be served locally');
+    assert.doesNotMatch(candidate.asset,/^https?:/,'all available naming stimuli should be served locally');
     await access(new URL(`../${candidate.asset}`,import.meta.url));
   }
 }
@@ -86,4 +88,4 @@ assert.equal(applyResearchCurationImport(empty,{...exported,decisions:[{...expor
 assert.equal(applyResearchCurationImport(empty,{...exported,decisions:[exported.decisions[0],exported.decisions[0]]}),null,'duplicate candidate decisions must be refused');
 assert.equal(applyResearchCurationImport(empty,{...exported,decisions:[{...exported.decisions[0],participantName:'x'}]}),null,'unexpected decision fields must be refused');
 
-console.log('research gallery: twenty-one local stimuli, zoom, blind preview and strict reusable visual curation guardrails ok');
+console.log('research gallery: only available local stimuli enter curation; pending heure variants stay blocked.');

@@ -69,6 +69,12 @@ function documentedVisualCandidates(group={}){
   return (group?.candidateBankEvidence?.candidates||[]).filter(isPictogramOrSceneCandidate).map(candidate=>({label:candidate.label,candidateType:candidate.candidateType,visualPlausibility:candidate.visualPlausibility||null,spontaneousNamingRisk:candidate.spontaneousNamingRisk||null,researchDecision:candidate.researchDecision||null,nextGate:candidate.nextGate||null}));
 }
 
+function rejectedBankCandidates(group={}){
+  const candidates=group?.candidateBankEvidence?.candidates||[];
+  if(!candidates.length||!candidates.every(candidate=>candidate.researchDecision==='reject_visual_priority'))return [];
+  return candidates.map(candidate=>candidate.label).filter(Boolean);
+}
+
 export function classifyPictogramResearchTriage(group={}){
   const route=group?.researchRoute||classifyVisualResearchRoute(group);
   if(route.routeClass!=='research_pictogram_or_scene')return null;
@@ -76,6 +82,10 @@ export function classifyPictogramResearchTriage(group={}){
   const retained=candidates.filter(candidate=>!['reject_visual_priority','fallback_only'].includes(candidate.researchDecision));
   if(retained.length){
     return {triageClass:'prototype_candidate_needs_blind_naming_test',candidateLabels:retained.map(candidate=>candidate.label),authorizationStatus:'research_only_not_naming_validated',nextAction:'prepare_contrasting_visual_variants_then_run_blind_spontaneous_naming_test'};
+  }
+  const rejectedLexical=rejectedBankCandidates(group);
+  if(rejectedLexical.length){
+    return {triageClass:'do_not_prototype_exact_lexical_candidate',candidateLabels:rejectedLexical,authorizationStatus:'research_only_visual_eligibility_rejected',nextAction:'keep_as_exact_lexical_negative_evidence_and_prefer_general_or_alternate_route'};
   }
   if(candidates.length&&candidates.every(candidate=>candidate.researchDecision==='reject_visual_priority')){
     return {triageClass:'do_not_prototype_current_visual_candidate',candidateLabels:candidates.map(candidate=>candidate.label),authorizationStatus:'research_only_visual_priority_rejected',nextAction:'keep_as_negative_visual_evidence_and_prefer_general_or_alternate_route'};
@@ -114,8 +124,8 @@ export function visualResearchRouteStats(queue=[]){
 }
 
 export function pictogramResearchTriageStats(queue=[]){
-  const targetCountsByTriageClass={prototype_candidate_needs_blind_naming_test:0,do_not_prototype_current_visual_candidate:0,lexical_candidate_needs_visual_eligibility_review:0};
-  const groupCountsByTriageClass={prototype_candidate_needs_blind_naming_test:0,do_not_prototype_current_visual_candidate:0,lexical_candidate_needs_visual_eligibility_review:0};
+  const targetCountsByTriageClass={prototype_candidate_needs_blind_naming_test:0,do_not_prototype_exact_lexical_candidate:0,do_not_prototype_current_visual_candidate:0,lexical_candidate_needs_visual_eligibility_review:0};
+  const groupCountsByTriageClass={prototype_candidate_needs_blind_naming_test:0,do_not_prototype_exact_lexical_candidate:0,do_not_prototype_current_visual_candidate:0,lexical_candidate_needs_visual_eligibility_review:0};
   let targetCount=0;
   for(const group of queue||[]){
     const triage=group?.pictogramTriage||classifyPictogramResearchTriage(group);

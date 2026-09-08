@@ -5,21 +5,21 @@
 - Opportunités examinées pour les routes difficiles : 250.
 - Cibles avec au moins une route phonétiquement exacte : 86.
 - Cibles dont une route exacte dispose aussi d’un candidat lexical de représentation : 52.
-- Cibles dont une route dispose déjà d’un candidat visuel curaté en recherche : 7.
+- Cibles dont une route dispose déjà d’un candidat visuel curaté en recherche : 10.
 - Cibles sans aucune route exacte : 41.
 - Cibles qui nécessitent encore un candidat lexical de représentation : 75.
-- Cibles qui nécessitent encore une piste visuelle curatée : 120.
-- Groupes de besoins visuels : 49.
+- Cibles qui nécessitent encore une piste visuelle curatée : 117.
+- Groupes de besoins visuels : 46.
 - Cibles avec route alternative stricte : 37.
 - Cibles avec route stricte et candidat lexical de représentation : 25.
-- Cibles avec route stricte et candidat visuel curaté : 0.
+- Cibles avec route stricte et candidat visuel curaté : 1.
 - Cibles avec au moins une route générale visible : 65.
 
 > Exactitude phonétique ≠ représentation lexicale ≠ piste visuelle curatée ≠ validation de dénomination. La file ci-dessous partitionne exactement les cibles encore non résolues visuellement; une piste générale documentée reste non autorisée tant que sa sémantique visible n’est pas formalisée et testée.
 
 ## File priorisée des besoins visuels
 
-- Recherche pictogramme/scène : 20 cibles dans 8 groupes.
+- Recherche pictogramme/scène : 17 cibles dans 5 groupes.
 - Opération générale visible déjà documentée à formaliser : 77 cibles dans 33 groupes.
 - Nouvelle représentation réellement à découvrir : 23 cibles dans 8 groupes.
 
@@ -38,42 +38,39 @@
 | 11 | curater le mot exact existant | opération générale visible documentée | /tʁi/ | 2 | 9 | tri, trie | TR | — | /tʁ/ | patrie, tripoter |
 | 12 | curater le mot exact existant | opération générale visible documentée | /tʁo/ | 2 | 9 | trot, trop | TR | — | /tʁ/ | trauma, maestro |
 | 13 | curater le mot exact existant | opération générale visible documentée | /ɛ̃si/ | 1 | 7 | ainsi | IN, UN | — | /ɛ̃/ | incident |
-| 14 | curater le mot exact existant | pictogramme / scène | /ʁadi/ | 1 | 7 | radis, radie | — | — | /di/ | paradis |
-| 15 | curater le mot exact existant | opération générale visible documentée | /sesjɔ̃/ | 1 | 7 | session | TION, SION | — | /sjɔ̃/ | possession |
-| 16 | curater le mot exact existant | opération générale visible documentée | /demɑ̃/ | 1 | 9 | dément | MENT | — | /mɑ̃/ | décidément |
-| 17 | curater le mot exact existant | pictogramme / scène | /div/ | 1 | 9 | div, dive | — | — | /di/ | divers |
-| 18 | curater le mot exact existant | opération générale visible documentée | /e/ | 1 | 9 | ais, ai, et, eh | É | É (fallback_only) | /aʁ/ | harper |
-| 19 | curater le mot exact existant | opération générale visible documentée | /limɑ̃/ | 1 | 9 | liman, limant | MENT | — | /mɑ̃/ | poliment |
-| 20 | curater le mot exact existant | pictogramme / scène | /midi/ | 1 | 9 | midi | — | — | /di/ | humidité |
-| 21 | curater le mot exact existant | opération générale visible documentée | /misjɔ̃/ | 1 | 9 | mission, missions | TION, SION | — | /sjɔ̃/ | démission |
-| 22 | curater le mot exact existant | opération générale visible documentée | /pasjɔ̃/ | 1 | 9 | passion, passions | TION, SION | — | /sjɔ̃/ | occupation |
-| 23 | curater le mot exact existant | opération générale visible documentée | /ʁamɑ̃/ | 1 | 9 | ramant | MENT | — | /mɑ̃/ | apparemment |
-| 24 | curater le mot exact existant | pictogramme / scène | /ʁɛn/ | 1 | 9 | reine, renne, rêne, raines | — | — | /aʁ/ | arène |
-| 25 | curater le mot exact existant | pictogramme / scène | /divɛʁ/ | 1 | 12 | divers | — | — | /di/ | diversité |
-| 26 | curater le mot exact existant | opération générale visible documentée | /ɛ̃tɛʁ/ | 1 | 12 | inter | IN, UN | — | /ɛ̃/ | interner |
-| 27 | curater le mot exact existant | opération générale visible documentée | /mɑ̃te/ | 1 | 12 | mentez | MENT | — | /mɑ̃/ | tourmenter |
-| 28 | curater le mot exact existant | opération générale visible documentée | /tʁɛn/ | 1 | 12 | traine, traîne, trainent, traines | TR | — | /tʁ/ | traîneau |
-| 29 | trouver mot exact ou opération visible | nouvelle représentation à découvrir | /d/ | 9 | 5 | — | — | — | /di/ | dîner, diriger, diner, dit |
-| 30 | trouver mot exact ou opération visible | nouvelle représentation à découvrir | /ʁ/ | 6 | 5 | — | — | — | /aʁ/ | art, bagarre, are, artère |
-| 31 | trouver mot exact ou opération visible | opération générale visible documentée | /tasjɔ̃/ | 3 | 9 | — | TION, SION | — | /sjɔ̃/ | citation, agitation, imitation |
-| 32 | trouver mot exact ou opération visible | nouvelle représentation à découvrir | /l/ | 2 | 7 | — | — | — | /al/ | idéal, postal |
-| 33 | trouver mot exact ou opération visible | opération générale visible documentée | /asjɔ̃/ | 2 | 9 | — | TION, SION | — | /sjɔ̃/ | tentation, assignation |
-| 34 | trouver mot exact ou opération visible | nouvelle représentation à découvrir | /dite/ | 2 | 9 | — | — | — | /di/ | cupidité, rapidité |
-| 35 | trouver mot exact ou opération visible | opération générale visible documentée | /ɛ̃s/ | 1 | 5 | — | IN, UN | — | /ɛ̃/ | ainsi |
-| 36 | trouver mot exact ou opération visible | nouvelle représentation à découvrir | /jœʁ/ | 1 | 5 | — | — | — | /œʁ/ | ailleurs |
-| 37 | trouver mot exact ou opération visible | opération générale visible documentée | /kymɑ̃/ | 1 | 7 | — | MENT | — | /mɑ̃/ | document |
-| 38 | trouver mot exact ou opération visible | nouvelle représentation à découvrir | /mid/ | 1 | 7 | — | — | — | /di/ | midi |
-| 39 | trouver mot exact ou opération visible | nouvelle représentation à découvrir | /ɲal/ | 1 | 7 | — | — | — | /al/ | signal |
-| 40 | trouver mot exact ou opération visible | opération générale visible documentée | /ɛ̃p/ | 1 | 9 | — | IN, UN | — | /ɛ̃/ | impôt |
-| 41 | trouver mot exact ou opération visible | opération générale visible documentée | /ɛstʁ/ | 1 | 9 | — | TR | — | /tʁ/ | terrestre |
-| 42 | trouver mot exact ou opération visible | nouvelle représentation à découvrir | /n/ | 1 | 9 | — | — | — | /al/ | haleine |
-| 43 | trouver mot exact ou opération visible | opération générale visible documentée | /t/ | 1 | 9 | — | TR | — | /tʁ/ | tri |
-| 44 | trouver mot exact ou opération visible | opération générale visible documentée | /tʁa/ | 1 | 9 | — | TR | — | /tʁ/ | tracer |
-| 45 | résoudre le segment source | opération générale visible documentée | /tʁ/ | 11 | 5 | — | TR | — | /tʁ/ | trop, autre, d'autres, quatre |
-| 46 | résoudre le segment source | pictogramme / scène | /œʁ/ | 10 | 5 | — | — | heure (second_wave), heurt (reject_visual_priority) | /œʁ/ | heure, h, erreur, terreur |
-| 47 | résoudre le segment source | opération générale visible documentée | /mɑ̃/ | 9 | 5 | — | MENT | — | /mɑ̃/ | maman, manger, man, serment |
-| 48 | résoudre le segment source | opération générale visible documentée | /sjɔ̃/ | 8 | 5 | — | TION, SION | scion (reject_visual_priority) | /sjɔ̃/ | mission, version, passion, pension |
-| 49 | résoudre le segment source | opération générale visible documentée | /ɛ̃/ | 3 | 5 | — | IN, UN | — | /ɛ̃/ | hein, terrain, insigne |
+| 14 | curater le mot exact existant | opération générale visible documentée | /sesjɔ̃/ | 1 | 7 | session | TION, SION | — | /sjɔ̃/ | possession |
+| 15 | curater le mot exact existant | opération générale visible documentée | /demɑ̃/ | 1 | 9 | dément | MENT | — | /mɑ̃/ | décidément |
+| 16 | curater le mot exact existant | pictogramme / scène | /div/ | 1 | 9 | div, dive | — | div (reject_visual_priority) | /di/ | divers |
+| 17 | curater le mot exact existant | opération générale visible documentée | /e/ | 1 | 9 | ais, ai, et, eh | É | É (fallback_only) | /aʁ/ | harper |
+| 18 | curater le mot exact existant | opération générale visible documentée | /limɑ̃/ | 1 | 9 | liman, limant | MENT | — | /mɑ̃/ | poliment |
+| 19 | curater le mot exact existant | opération générale visible documentée | /misjɔ̃/ | 1 | 9 | mission, missions | TION, SION | — | /sjɔ̃/ | démission |
+| 20 | curater le mot exact existant | opération générale visible documentée | /pasjɔ̃/ | 1 | 9 | passion, passions | TION, SION | — | /sjɔ̃/ | occupation |
+| 21 | curater le mot exact existant | opération générale visible documentée | /ʁamɑ̃/ | 1 | 9 | ramant | MENT | — | /mɑ̃/ | apparemment |
+| 22 | curater le mot exact existant | pictogramme / scène | /divɛʁ/ | 1 | 12 | divers | — | divers (reject_visual_priority) | /di/ | diversité |
+| 23 | curater le mot exact existant | opération générale visible documentée | /ɛ̃tɛʁ/ | 1 | 12 | inter | IN, UN | — | /ɛ̃/ | interner |
+| 24 | curater le mot exact existant | opération générale visible documentée | /mɑ̃te/ | 1 | 12 | mentez | MENT | — | /mɑ̃/ | tourmenter |
+| 25 | curater le mot exact existant | opération générale visible documentée | /tʁɛn/ | 1 | 12 | traine, traîne, trainent, traines | TR | — | /tʁ/ | traîneau |
+| 26 | trouver mot exact ou opération visible | nouvelle représentation à découvrir | /d/ | 9 | 5 | — | — | — | /di/ | dîner, diriger, diner, dit |
+| 27 | trouver mot exact ou opération visible | nouvelle représentation à découvrir | /ʁ/ | 6 | 5 | — | — | — | /aʁ/ | art, bagarre, are, artère |
+| 28 | trouver mot exact ou opération visible | opération générale visible documentée | /tasjɔ̃/ | 3 | 9 | — | TION, SION | — | /sjɔ̃/ | citation, agitation, imitation |
+| 29 | trouver mot exact ou opération visible | nouvelle représentation à découvrir | /l/ | 2 | 7 | — | — | — | /al/ | idéal, postal |
+| 30 | trouver mot exact ou opération visible | opération générale visible documentée | /asjɔ̃/ | 2 | 9 | — | TION, SION | — | /sjɔ̃/ | tentation, assignation |
+| 31 | trouver mot exact ou opération visible | nouvelle représentation à découvrir | /dite/ | 2 | 9 | — | — | — | /di/ | cupidité, rapidité |
+| 32 | trouver mot exact ou opération visible | opération générale visible documentée | /ɛ̃s/ | 1 | 5 | — | IN, UN | — | /ɛ̃/ | ainsi |
+| 33 | trouver mot exact ou opération visible | nouvelle représentation à découvrir | /jœʁ/ | 1 | 5 | — | — | — | /œʁ/ | ailleurs |
+| 34 | trouver mot exact ou opération visible | opération générale visible documentée | /kymɑ̃/ | 1 | 7 | — | MENT | — | /mɑ̃/ | document |
+| 35 | trouver mot exact ou opération visible | nouvelle représentation à découvrir | /mid/ | 1 | 7 | — | — | — | /di/ | midi |
+| 36 | trouver mot exact ou opération visible | nouvelle représentation à découvrir | /ɲal/ | 1 | 7 | — | — | — | /al/ | signal |
+| 37 | trouver mot exact ou opération visible | opération générale visible documentée | /ɛ̃p/ | 1 | 9 | — | IN, UN | — | /ɛ̃/ | impôt |
+| 38 | trouver mot exact ou opération visible | opération générale visible documentée | /ɛstʁ/ | 1 | 9 | — | TR | — | /tʁ/ | terrestre |
+| 39 | trouver mot exact ou opération visible | nouvelle représentation à découvrir | /n/ | 1 | 9 | — | — | — | /al/ | haleine |
+| 40 | trouver mot exact ou opération visible | opération générale visible documentée | /t/ | 1 | 9 | — | TR | — | /tʁ/ | tri |
+| 41 | trouver mot exact ou opération visible | opération générale visible documentée | /tʁa/ | 1 | 9 | — | TR | — | /tʁ/ | tracer |
+| 42 | résoudre le segment source | opération générale visible documentée | /tʁ/ | 11 | 5 | — | TR | — | /tʁ/ | trop, autre, d'autres, quatre |
+| 43 | résoudre le segment source | pictogramme / scène | /œʁ/ | 10 | 5 | — | — | heure (second_wave), heurt (reject_visual_priority) | /œʁ/ | heure, h, erreur, terreur |
+| 44 | résoudre le segment source | opération générale visible documentée | /mɑ̃/ | 9 | 5 | — | MENT | — | /mɑ̃/ | maman, manger, man, serment |
+| 45 | résoudre le segment source | opération générale visible documentée | /sjɔ̃/ | 8 | 5 | — | TION, SION | scion (reject_visual_priority) | /sjɔ̃/ | mission, version, passion, pension |
+| 46 | résoudre le segment source | opération générale visible documentée | /ɛ̃/ | 3 | 5 | — | IN, UN | — | /ɛ̃/ | hein, terrain, insigne |
 
 ## /mɑ̃/ — alternate_segmentation_first
 
@@ -143,7 +140,7 @@
 
 ## /aʁ/ — scene_comparison_for_older_users
 
-- 8/8 cibles ont une route phonétiquement exacte; 2/8 ont une piste lexicale; 0/8 ont déjà une piste visuelle curatée; 8 nécessitent encore une piste visuelle.
+- 8/8 cibles ont une route phonétiquement exacte; 2/8 ont une piste lexicale; 1/8 ont déjà une piste visuelle curatée; 7 nécessitent encore une piste visuelle.
 
 | Mot | IPA | Route exacte | Lexical | Visuel curaté | Meilleure route | Nouvelle brique | Prochaine porte |
 |---|---|---|---|---|---|---|---|
@@ -153,7 +150,7 @@
 | harper | /aʁpe/ | exact_alternative_routes_found | representable_alternative_candidate_found | lexical_candidate_needs_visual_curation | harpe /aʁp/ + /e/ /e/ | ais, ai, et | assess_visual_concept_then_naming_risk_before_prototype |
 | artère | /aʁtɛʁ/ | exact_alternative_routes_found | still_needs_representable_alternative | still_needs_visual_representation | A /a/ + /ʁ/ /ʁ/ + terre /tɛʁ/ | — | search_exact_whole_word_or_explicit_general_operation |
 | mouchard | /muʃaʁ/ | exact_alternative_routes_found | still_needs_representable_alternative | still_needs_visual_representation | mouche /muʃ/ + A /a/ + /ʁ/ /ʁ/ | — | search_exact_whole_word_or_explicit_general_operation |
-| arène | /aʁɛn/ | exact_alternative_routes_found | representable_alternative_candidate_found | lexical_candidate_needs_visual_curation | A /a/ + /ʁɛn/ /ʁɛn/ | reine, renne, rêne | assess_visual_concept_then_naming_risk_before_prototype |
+| arène | /aʁɛn/ | exact_alternative_routes_found | representable_alternative_candidate_found | curated_visual_research_candidate_found | A /a/ + /ʁɛn/ /ʁɛn/ | reine | compare_with_renne_then_naming_test |
 | ardent | /aʁdɑ̃/ | exact_alternative_routes_found | still_needs_representable_alternative | still_needs_visual_representation | A /a/ + /ʁ/ /ʁ/ + dent /dɑ̃/ | — | search_exact_whole_word_or_explicit_general_operation |
 
 ## /al/ — alternate_segmentation_preferred
@@ -237,19 +234,19 @@
 
 ## /di/ — alternate_segmentation_required
 
-- 16/16 cibles ont une route phonétiquement exacte; 4/16 ont une piste lexicale; 0/16 ont déjà une piste visuelle curatée; 16 nécessitent encore une piste visuelle.
+- 16/16 cibles ont une route phonétiquement exacte; 4/16 ont une piste lexicale; 2/16 ont déjà une piste visuelle curatée; 14 nécessitent encore une piste visuelle.
 
 | Mot | IPA | Route exacte | Lexical | Visuel curaté | Meilleure route | Nouvelle brique | Prochaine porte |
 |---|---|---|---|---|---|---|---|
 | dîner | /dine/ | exact_alternative_routes_found | still_needs_representable_alternative | still_needs_visual_representation | /d/ /d/ + I /i/ + nez /ne/ | — | search_exact_whole_word_or_explicit_general_operation |
-| paradis | /paʁadi/ | exact_alternative_routes_found | representable_alternative_candidate_found | lexical_candidate_needs_visual_curation | pas /pa/ + /ʁadi/ /ʁadi/ | radis, radie | assess_visual_concept_then_naming_risk_before_prototype |
+| paradis | /paʁadi/ | exact_alternative_routes_found | representable_alternative_candidate_found | curated_visual_research_candidate_found | pas /pa/ + /ʁadi/ /ʁadi/ | radis | prototype_then_naming_test |
 | midi | /midi/ | exact_alternative_routes_found | still_needs_representable_alternative | still_needs_visual_representation | /mid/ /mid/ + I /i/ | — | search_exact_whole_word_or_explicit_general_operation |
 | diriger | /diʁiʒe/ | exact_alternative_routes_found | still_needs_representable_alternative | still_needs_visual_representation | /d/ /d/ + I /i/ + riz /ʁi/ + G /ʒe/ | — | search_exact_whole_word_or_explicit_general_operation |
 | diner | /dine/ | exact_alternative_routes_found | still_needs_representable_alternative | still_needs_visual_representation | /d/ /d/ + I /i/ + nez /ne/ | — | search_exact_whole_word_or_explicit_general_operation |
 | divers | /divɛʁ/ | exact_alternative_routes_found | representable_alternative_candidate_found | lexical_candidate_needs_visual_curation | /div/ /div/ + R /ɛʁ/ | div, dive | assess_visual_concept_then_naming_risk_before_prototype |
 | dit | /di/ | exact_alternative_routes_found | still_needs_representable_alternative | still_needs_visual_representation | /d/ /d/ + I /i/ | — | search_exact_whole_word_or_explicit_general_operation |
 | diffuser | /difyze/ | exact_alternative_routes_found | still_needs_representable_alternative | still_needs_visual_representation | /d/ /d/ + I /i/ + fusée /fyze/ | — | search_exact_whole_word_or_explicit_general_operation |
-| humidité | /ymidite/ | exact_alternative_routes_found | representable_alternative_candidate_found | lexical_candidate_needs_visual_curation | U /y/ + /midi/ /midi/ + thé /te/ | midi | assess_visual_concept_then_naming_risk_before_prototype |
+| humidité | /ymidite/ | exact_alternative_routes_found | representable_alternative_candidate_found | curated_visual_research_candidate_found | U /y/ + /midi/ /midi/ + thé /te/ | midi | compare_scene_variants_before_prototype_then_naming_test |
 | paddy | /padi/ | exact_alternative_routes_found | still_needs_representable_alternative | still_needs_visual_representation | pas /pa/ + /d/ /d/ + I /i/ | — | search_exact_whole_word_or_explicit_general_operation |
 | cupidité | /kypidite/ | exact_alternative_routes_found | still_needs_representable_alternative | still_needs_visual_representation | Q /ky/ + pie /pi/ + /dite/ /dite/ | — | search_exact_whole_word_or_explicit_general_operation |
 | rapidité | /ʁapidite/ | exact_alternative_routes_found | still_needs_representable_alternative | still_needs_visual_representation | rat /ʁa/ + pie /pi/ + /dite/ /dite/ | — | search_exact_whole_word_or_explicit_general_operation |

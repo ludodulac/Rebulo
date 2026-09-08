@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-08T10:53:29.711Z",
+  "generatedAt": "2026-09-08T11:03:21.429Z",
   "status": "research_only",
-  "sourceBrickMapGeneratedAt": "2026-09-08T10:53:10.540Z",
+  "sourceBrickMapGeneratedAt": "2026-09-08T11:03:03.421Z",
   "strategyVersion": "1.0.0",
   "visualCandidateBankVersion": "0.1.0",
   "routeSearchOpportunityCount": 250,
@@ -21,33 +21,33 @@
     "targetCount": 127,
     "targetsWithAlternativeRoutes": 86,
     "targetsWithRepresentableAlternativeRoutes": 52,
-    "targetsWithCuratedVisualAlternativeRoutes": 7,
+    "targetsWithCuratedVisualAlternativeRoutes": 10,
     "targetsStillBlocked": 41,
     "targetsStillNeedingRepresentableAlternative": 75,
-    "targetsStillNeedingCuratedVisualAlternative": 120,
+    "targetsStillNeedingCuratedVisualAlternative": 117,
     "strictAlternativeTargets": 37,
     "strictRepresentableAlternativeTargets": 25,
-    "strictCuratedVisualAlternativeTargets": 0,
+    "strictCuratedVisualAlternativeTargets": 1,
     "generalAlternativeTargets": 65
   },
   "visualResearchNeedQueueStats": {
-    "groupCount": 49,
-    "unresolvedTargetCount": 120,
+    "groupCount": 46,
+    "unresolvedTargetCount": 117,
     "targetCountsByNeedType": {
-      "curate_existing_lexical_candidate": 45,
+      "curate_existing_lexical_candidate": 42,
       "find_lexical_or_visible_operation_for_phonetic_brick": 34,
       "resolve_source_segment": 41
     }
   },
   "visualResearchRouteSummary": {
-    "targetCount": 120,
+    "targetCount": 117,
     "targetCountsByRouteClass": {
-      "research_pictogram_or_scene": 20,
+      "research_pictogram_or_scene": 17,
       "formalize_documented_visible_general_operation": 77,
       "discover_new_representation": 23
     },
     "groupCountsByRouteClass": {
-      "research_pictogram_or_scene": 8,
+      "research_pictogram_or_scene": 5,
       "formalize_documented_visible_general_operation": 33,
       "discover_new_representation": 8
     }
@@ -1102,76 +1102,6 @@
     },
     {
       "needType": "curate_existing_lexical_candidate",
-      "researchIpa": "ʁadi",
-      "affectedTargetCount": 1,
-      "minAgeBandCandidate": 7,
-      "sourceSegments": [
-        "di"
-      ],
-      "lexicalCandidates": [
-        {
-          "word": "radis",
-          "lemma": "radis",
-          "pos": "NOM",
-          "frequency": 1.456,
-          "phoneticStatus": "whole_pronunciation_exact",
-          "activationState": "research_only"
-        },
-        {
-          "word": "radie",
-          "lemma": "radier",
-          "pos": "VER",
-          "frequency": 0.032,
-          "phoneticStatus": "whole_pronunciation_exact",
-          "activationState": "research_only"
-        }
-      ],
-      "examples": [
-        {
-          "word": "paradis",
-          "targetIpa": "paʁadi",
-          "sourceIpa": "di",
-          "ageBandCandidate": 7
-        }
-      ],
-      "routeModes": [
-        "strict"
-      ],
-      "candidateBankEvidence": null,
-      "strategyEvidence": [
-        {
-          "ipa": "di",
-          "evidence": {
-            "strategy": "alternate_segmentation_required",
-            "lexicalLeads": [
-              "dit"
-            ],
-            "lexicalAssessment": "exact_but_not_naturally_picturable",
-            "visualHypotheses": [],
-            "visibleFallbackResearch": [],
-            "fallbackStatus": null,
-            "rejectedFallbacks": [
-              {
-                "label": "D",
-                "reason": "French letter name is /de/, not /di/; phonetic mismatch."
-              }
-            ],
-            "nextGate": "search_alternate_exact_decompositions; do_not_use_letter_D_for_di"
-          }
-        }
-      ],
-      "nextAction": "assess_visual_concept_then_naming_risk_before_prototype",
-      "status": "research_only",
-      "researchRoute": {
-        "routeClass": "research_pictogram_or_scene",
-        "visibleOperations": [],
-        "visualCandidates": [],
-        "authorizationStatus": "research_only_not_naming_validated",
-        "nextAction": "evaluate_spontaneous_naming_and_visual_concept_before_prototype"
-      }
-    },
-    {
-      "needType": "curate_existing_lexical_candidate",
       "researchIpa": "sesjɔ̃",
       "affectedTargetCount": 1,
       "minAgeBandCandidate": 7,
@@ -1348,7 +1278,19 @@
       "routeModes": [
         "general"
       ],
-      "candidateBankEvidence": null,
+      "candidateBankEvidence": {
+        "recommendedRoute": "lexical_candidate_but_reject_visual_priority",
+        "candidates": [
+          {
+            "label": "div",
+            "candidateType": "whole_word_candidate",
+            "visualPlausibility": "low",
+            "spontaneousNamingRisk": "very_high",
+            "researchDecision": "reject_visual_priority",
+            "nextGate": "keep_as_lexical_evidence_only"
+          }
+        ]
+      },
       "strategyEvidence": [
         {
           "ipa": "di",
@@ -1557,68 +1499,6 @@
         "visualCandidates": [],
         "authorizationStatus": "research_only_not_authorized",
         "nextAction": "define_and_test_visible_general_operation_semantics_before_any_activation"
-      }
-    },
-    {
-      "needType": "curate_existing_lexical_candidate",
-      "researchIpa": "midi",
-      "affectedTargetCount": 1,
-      "minAgeBandCandidate": 9,
-      "sourceSegments": [
-        "di"
-      ],
-      "lexicalCandidates": [
-        {
-          "word": "midi",
-          "lemma": "midi",
-          "pos": "NOM",
-          "frequency": 26.953,
-          "phoneticStatus": "whole_pronunciation_exact",
-          "activationState": "research_only"
-        }
-      ],
-      "examples": [
-        {
-          "word": "humidité",
-          "targetIpa": "ymidite",
-          "sourceIpa": "di",
-          "ageBandCandidate": 9
-        }
-      ],
-      "routeModes": [
-        "general"
-      ],
-      "candidateBankEvidence": null,
-      "strategyEvidence": [
-        {
-          "ipa": "di",
-          "evidence": {
-            "strategy": "alternate_segmentation_required",
-            "lexicalLeads": [
-              "dit"
-            ],
-            "lexicalAssessment": "exact_but_not_naturally_picturable",
-            "visualHypotheses": [],
-            "visibleFallbackResearch": [],
-            "fallbackStatus": null,
-            "rejectedFallbacks": [
-              {
-                "label": "D",
-                "reason": "French letter name is /de/, not /di/; phonetic mismatch."
-              }
-            ],
-            "nextGate": "search_alternate_exact_decompositions; do_not_use_letter_D_for_di"
-          }
-        }
-      ],
-      "nextAction": "assess_visual_concept_then_naming_risk_before_prototype",
-      "status": "research_only",
-      "researchRoute": {
-        "routeClass": "research_pictogram_or_scene",
-        "visibleOperations": [],
-        "visualCandidates": [],
-        "authorizationStatus": "research_only_not_naming_validated",
-        "nextAction": "evaluate_spontaneous_naming_and_visual_concept_before_prototype"
       }
     },
     {
@@ -1853,89 +1733,6 @@
     },
     {
       "needType": "curate_existing_lexical_candidate",
-      "researchIpa": "ʁɛn",
-      "affectedTargetCount": 1,
-      "minAgeBandCandidate": 9,
-      "sourceSegments": [
-        "aʁ"
-      ],
-      "lexicalCandidates": [
-        {
-          "word": "reine",
-          "lemma": "reine",
-          "pos": "NOM",
-          "frequency": 26.478,
-          "phoneticStatus": "whole_pronunciation_exact",
-          "activationState": "research_only"
-        },
-        {
-          "word": "renne",
-          "lemma": "renne",
-          "pos": "NOM",
-          "frequency": 1.288,
-          "phoneticStatus": "whole_pronunciation_exact",
-          "activationState": "research_only"
-        },
-        {
-          "word": "rêne",
-          "lemma": "rêne",
-          "pos": "NOM",
-          "frequency": 0.051,
-          "phoneticStatus": "whole_pronunciation_exact",
-          "activationState": "research_only"
-        },
-        {
-          "word": "raines",
-          "lemma": "rainer",
-          "pos": "VER",
-          "frequency": 0.405,
-          "phoneticStatus": "whole_pronunciation_exact",
-          "activationState": "research_only"
-        }
-      ],
-      "examples": [
-        {
-          "word": "arène",
-          "targetIpa": "aʁɛn",
-          "sourceIpa": "aʁ",
-          "ageBandCandidate": 9
-        }
-      ],
-      "routeModes": [
-        "general"
-      ],
-      "candidateBankEvidence": null,
-      "strategyEvidence": [
-        {
-          "ipa": "aʁ",
-          "evidence": {
-            "strategy": "scene_comparison_for_older_users",
-            "lexicalLeads": [
-              "art"
-            ],
-            "lexicalAssessment": "exact_but_abstract_concept_with_high_naming_variability",
-            "visualHypotheses": [
-              "petite scène cohérente réunissant tableau, palette et sculpture pour viser le concept global art"
-            ],
-            "visibleFallbackResearch": [],
-            "fallbackStatus": null,
-            "rejectedFallbacks": [],
-            "nextGate": "prototype_only_after_higher_confidence_natural_objects"
-          }
-        }
-      ],
-      "nextAction": "assess_visual_concept_then_naming_risk_before_prototype",
-      "status": "research_only",
-      "researchRoute": {
-        "routeClass": "research_pictogram_or_scene",
-        "visibleOperations": [],
-        "visualCandidates": [],
-        "authorizationStatus": "research_only_not_naming_validated",
-        "nextAction": "evaluate_spontaneous_naming_and_visual_concept_before_prototype"
-      }
-    },
-    {
-      "needType": "curate_existing_lexical_candidate",
       "researchIpa": "divɛʁ",
       "affectedTargetCount": 1,
       "minAgeBandCandidate": 12,
@@ -1963,7 +1760,19 @@
       "routeModes": [
         "strict"
       ],
-      "candidateBankEvidence": null,
+      "candidateBankEvidence": {
+        "recommendedRoute": "abstract_concept_reject_visual_priority",
+        "candidates": [
+          {
+            "label": "divers",
+            "candidateType": "whole_word_candidate",
+            "visualPlausibility": "medium",
+            "spontaneousNamingRisk": "very_high",
+            "researchDecision": "reject_visual_priority",
+            "nextGate": "keep_as_lexical_evidence_only"
+          }
+        ]
+      },
       "strategyEvidence": [
         {
           "ipa": "di",
@@ -7242,10 +7051,10 @@
       "targetCount": 8,
       "targetsWithAlternativeRoutes": 8,
       "targetsWithRepresentableAlternativeRoutes": 2,
-      "targetsWithCuratedVisualAlternativeRoutes": 0,
+      "targetsWithCuratedVisualAlternativeRoutes": 1,
       "targetsStillBlocked": 0,
       "targetsStillNeedingRepresentableAlternative": 6,
-      "targetsStillNeedingCuratedVisualAlternative": 8,
+      "targetsStillNeedingCuratedVisualAlternative": 7,
       "targets": [
         {
           "key": "art|aʁ",
@@ -7771,7 +7580,7 @@
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 3,
           "representableAlternativeRouteCount": 1,
-          "curatedVisualAlternativeRouteCount": 0,
+          "curatedVisualAlternativeRouteCount": 1,
           "routes": [
             {
               "alternativeIpa": "ʁɛn",
@@ -7860,11 +7669,32 @@
                 }
               ],
               "representationStatus": "lexical_representation_candidate",
-              "visualResearchLeads": [],
-              "visualResearchStatus": "lexical_only_no_curated_visual_candidate",
+              "visualResearchLeads": [
+                {
+                  "label": "reine",
+                  "candidateType": "whole_word_scene",
+                  "visualConcept": "Une reine adulte avec couronne et trône, tenue royale claire, sans texte ni symbole phonétique.",
+                  "visualPlausibility": "medium_high",
+                  "spontaneousNamingRisk": "medium_high",
+                  "researchDecision": "reserve",
+                  "nextGate": "compare_with_renne_then_naming_test",
+                  "activationState": "research_only"
+                },
+                {
+                  "label": "renne",
+                  "candidateType": "whole_word_pictogram",
+                  "visualConcept": "Un renne entier de profil trois-quarts, bois bien visibles, silhouette distincte d’un cerf, sans traîneau ni Père Noël dominant.",
+                  "visualPlausibility": "high",
+                  "spontaneousNamingRisk": "medium_high",
+                  "researchDecision": "reserve",
+                  "nextGate": "compare_with_reine_then_naming_test",
+                  "activationState": "research_only"
+                }
+              ],
+              "visualResearchStatus": "curated_visual_research_candidate",
               "alternativeUsefulUnlocked": 1,
               "status": "research_only_exact_route",
-              "score": 11
+              "score": 271
             },
             {
               "alternativeIpa": "n",
@@ -7944,48 +7774,8 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "representable_alternative_candidate_found",
-          "visualResolutionState": "lexical_candidate_needs_visual_curation",
-          "visualResearchNeed": {
-            "needType": "curate_existing_lexical_candidate",
-            "researchIpa": "ʁɛn",
-            "routeMode": "general",
-            "coverageType": "explicit_grapheme",
-            "representationLeads": [
-              {
-                "word": "reine",
-                "lemma": "reine",
-                "pos": "NOM",
-                "frequency": 26.478,
-                "phoneticStatus": "whole_pronunciation_exact",
-                "activationState": "research_only"
-              },
-              {
-                "word": "renne",
-                "lemma": "renne",
-                "pos": "NOM",
-                "frequency": 1.288,
-                "phoneticStatus": "whole_pronunciation_exact",
-                "activationState": "research_only"
-              },
-              {
-                "word": "rêne",
-                "lemma": "rêne",
-                "pos": "NOM",
-                "frequency": 0.051,
-                "phoneticStatus": "whole_pronunciation_exact",
-                "activationState": "research_only"
-              },
-              {
-                "word": "raines",
-                "lemma": "rainer",
-                "pos": "VER",
-                "frequency": 0.405,
-                "phoneticStatus": "whole_pronunciation_exact",
-                "activationState": "research_only"
-              }
-            ],
-            "nextAction": "assess_visual_concept_then_naming_risk_before_prototype"
-          }
+          "visualResolutionState": "curated_visual_research_candidate_found",
+          "visualResearchNeed": null
         },
         {
           "key": "ardent|aʁdɑ̃",
@@ -13023,10 +12813,10 @@
       "targetCount": 16,
       "targetsWithAlternativeRoutes": 16,
       "targetsWithRepresentableAlternativeRoutes": 4,
-      "targetsWithCuratedVisualAlternativeRoutes": 0,
+      "targetsWithCuratedVisualAlternativeRoutes": 2,
       "targetsStillBlocked": 0,
       "targetsStillNeedingRepresentableAlternative": 12,
-      "targetsStillNeedingCuratedVisualAlternative": 16,
+      "targetsStillNeedingCuratedVisualAlternative": 14,
       "targets": [
         {
           "key": "dîner|dine",
@@ -13101,7 +12891,7 @@
           "rebuloUtilityTier": "school_common",
           "alternativeRouteCount": 4,
           "representableAlternativeRouteCount": 3,
-          "curatedVisualAlternativeRouteCount": 0,
+          "curatedVisualAlternativeRouteCount": 1,
           "routes": [
             {
               "alternativeIpa": "ʁadi",
@@ -13158,11 +12948,22 @@
                 }
               ],
               "representationStatus": "lexical_representation_candidate",
-              "visualResearchLeads": [],
-              "visualResearchStatus": "lexical_only_no_curated_visual_candidate",
+              "visualResearchLeads": [
+                {
+                  "label": "radis",
+                  "candidateType": "whole_word_pictogram",
+                  "visualConcept": "Un radis rouge entier avec feuilles vertes, isolé sur fond clair, sans panier ni autres légumes dominants.",
+                  "visualPlausibility": "high",
+                  "spontaneousNamingRisk": "low_medium",
+                  "researchDecision": "second_wave",
+                  "nextGate": "prototype_then_naming_test",
+                  "activationState": "research_only"
+                }
+              ],
+              "visualResearchStatus": "curated_visual_research_candidate",
               "alternativeUsefulUnlocked": 1,
               "status": "research_only_exact_route",
-              "score": 1131
+              "score": 1391
             },
             {
               "alternativeIpa": "paʁad",
@@ -13343,32 +13144,8 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "representable_alternative_candidate_found",
-          "visualResolutionState": "lexical_candidate_needs_visual_curation",
-          "visualResearchNeed": {
-            "needType": "curate_existing_lexical_candidate",
-            "researchIpa": "ʁadi",
-            "routeMode": "strict",
-            "coverageType": "composite_words",
-            "representationLeads": [
-              {
-                "word": "radis",
-                "lemma": "radis",
-                "pos": "NOM",
-                "frequency": 1.456,
-                "phoneticStatus": "whole_pronunciation_exact",
-                "activationState": "research_only"
-              },
-              {
-                "word": "radie",
-                "lemma": "radier",
-                "pos": "VER",
-                "frequency": 0.032,
-                "phoneticStatus": "whole_pronunciation_exact",
-                "activationState": "research_only"
-              }
-            ],
-            "nextAction": "assess_visual_concept_then_naming_risk_before_prototype"
-          }
+          "visualResolutionState": "curated_visual_research_candidate_found",
+          "visualResearchNeed": null
         },
         {
           "key": "midi|midi",
@@ -13873,7 +13650,7 @@
           "rebuloUtilityTier": "advanced_useful",
           "alternativeRouteCount": 3,
           "representableAlternativeRouteCount": 1,
-          "curatedVisualAlternativeRouteCount": 0,
+          "curatedVisualAlternativeRouteCount": 1,
           "routes": [
             {
               "alternativeIpa": "midi",
@@ -13920,11 +13697,22 @@
                 }
               ],
               "representationStatus": "lexical_representation_candidate",
-              "visualResearchLeads": [],
-              "visualResearchStatus": "lexical_only_no_curated_visual_candidate",
+              "visualResearchLeads": [
+                {
+                  "label": "midi",
+                  "candidateType": "whole_word_scene",
+                  "visualConcept": "Petite scène combinant soleil haut dans le ciel et horloge analogique aux aiguilles sur douze, sans texte; le stimulus doit viser le moment de la journée plutôt que l’objet horloge.",
+                  "visualPlausibility": "medium_high",
+                  "spontaneousNamingRisk": "high",
+                  "researchDecision": "reserve",
+                  "nextGate": "compare_scene_variants_before_prototype_then_naming_test",
+                  "activationState": "research_only"
+                }
+              ],
+              "visualResearchStatus": "curated_visual_research_candidate",
               "alternativeUsefulUnlocked": 2,
               "status": "research_only_exact_route",
-              "score": -13
+              "score": 247
             },
             {
               "alternativeIpa": "dite",
@@ -14001,24 +13789,8 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "representable_alternative_candidate_found",
-          "visualResolutionState": "lexical_candidate_needs_visual_curation",
-          "visualResearchNeed": {
-            "needType": "curate_existing_lexical_candidate",
-            "researchIpa": "midi",
-            "routeMode": "general",
-            "coverageType": "explicit_grapheme",
-            "representationLeads": [
-              {
-                "word": "midi",
-                "lemma": "midi",
-                "pos": "NOM",
-                "frequency": 26.953,
-                "phoneticStatus": "whole_pronunciation_exact",
-                "activationState": "research_only"
-              }
-            ],
-            "nextAction": "assess_visual_concept_then_naming_risk_before_prototype"
-          }
+          "visualResolutionState": "curated_visual_research_candidate_found",
+          "visualResearchNeed": null
         },
         {
           "key": "paddy|padi",

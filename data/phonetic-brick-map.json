@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T10:53:10.540Z",
+  "generatedAt": "2026-09-08T11:03:03.421Z",
   "source": "Lexique 4",
   "sourceLicense": "CC BY-SA 4.0",
   "schoolFrequencyEvidence": {
@@ -1365,6 +1365,74 @@
       "curationPriorityStatus": "heuristic_research_only"
     },
     {
+      "ipa": "div",
+      "recommendedRoute": "lexical_candidate_but_reject_visual_priority",
+      "candidates": [
+        {
+          "label": "div",
+          "candidateType": "whole_word_candidate",
+          "lexicalEvidence": "lexique_exact",
+          "visualPlausibility": "low",
+          "spontaneousNamingRisk": "very_high",
+          "mainConfusions": [
+            "sigle",
+            "mot technique",
+            "texte"
+          ],
+          "suggestedAgeFloor": 12,
+          "ageStatus": "editorial_hypothesis",
+          "researchDecision": "reject_visual_priority",
+          "nextGate": "keep_as_lexical_evidence_only",
+          "researchQuality": {
+            "score": 4,
+            "visualComponent": 0.25,
+            "namingComponent": 0.08,
+            "ageAccessibilityComponent": 0.55,
+            "status": "heuristic_research_only"
+          }
+        }
+      ],
+      "bestResearchCandidate": null,
+      "coverageEvidence": null,
+      "curationPriorityScore": 0,
+      "curationPriorityStatus": "heuristic_research_only"
+    },
+    {
+      "ipa": "divɛʁ",
+      "recommendedRoute": "abstract_concept_reject_visual_priority",
+      "candidates": [
+        {
+          "label": "divers",
+          "candidateType": "whole_word_candidate",
+          "lexicalEvidence": "lexique_exact",
+          "visualConcept": "Ensemble d’objets volontairement variés; hypothèse non retenue comme pictogramme autonome car la réponse attendue serait plus probablement différents, plusieurs ou objets.",
+          "visualPlausibility": "medium",
+          "spontaneousNamingRisk": "very_high",
+          "mainConfusions": [
+            "différents",
+            "plusieurs",
+            "variés",
+            "objets"
+          ],
+          "suggestedAgeFloor": 9,
+          "ageStatus": "editorial_hypothesis",
+          "researchDecision": "reject_visual_priority",
+          "nextGate": "keep_as_lexical_evidence_only",
+          "researchQuality": {
+            "score": 6,
+            "visualComponent": 0.62,
+            "namingComponent": 0.08,
+            "ageAccessibilityComponent": 0.75,
+            "status": "heuristic_research_only"
+          }
+        }
+      ],
+      "bestResearchCandidate": null,
+      "coverageEvidence": null,
+      "curationPriorityScore": 0,
+      "curationPriorityStatus": "heuristic_research_only"
+    },
+    {
       "ipa": "lo",
       "recommendedRoute": "lexical_candidate_but_reject_visual_priority",
       "candidates": [
@@ -1396,6 +1464,133 @@
         }
       ],
       "bestResearchCandidate": null,
+      "coverageEvidence": null,
+      "curationPriorityScore": 0,
+      "curationPriorityStatus": "heuristic_research_only"
+    },
+    {
+      "ipa": "midi",
+      "recommendedRoute": "small_scene_with_high_naming_risk",
+      "candidates": [
+        {
+          "label": "midi",
+          "candidateType": "whole_word_scene",
+          "lexicalEvidence": "lexique_exact",
+          "visualConcept": "Petite scène combinant soleil haut dans le ciel et horloge analogique aux aiguilles sur douze, sans texte; le stimulus doit viser le moment de la journée plutôt que l’objet horloge.",
+          "visualPlausibility": "medium_high",
+          "spontaneousNamingRisk": "high",
+          "mainConfusions": [
+            "douze heures",
+            "horloge",
+            "heure",
+            "déjeuner"
+          ],
+          "suggestedAgeFloor": 7,
+          "ageStatus": "editorial_hypothesis",
+          "researchDecision": "reserve",
+          "nextGate": "compare_scene_variants_before_prototype_then_naming_test",
+          "researchQuality": {
+            "score": 59,
+            "visualComponent": 0.82,
+            "namingComponent": 0.28,
+            "ageAccessibilityComponent": 0.9,
+            "status": "heuristic_research_only"
+          }
+        }
+      ],
+      "bestResearchCandidate": "midi",
+      "coverageEvidence": null,
+      "curationPriorityScore": 0,
+      "curationPriorityStatus": "heuristic_research_only"
+    },
+    {
+      "ipa": "ʁadi",
+      "recommendedRoute": "natural_object_pictogram",
+      "candidates": [
+        {
+          "label": "radis",
+          "candidateType": "whole_word_pictogram",
+          "lexicalEvidence": "lexique_exact",
+          "visualConcept": "Un radis rouge entier avec feuilles vertes, isolé sur fond clair, sans panier ni autres légumes dominants.",
+          "visualPlausibility": "high",
+          "spontaneousNamingRisk": "low_medium",
+          "mainConfusions": [
+            "navet",
+            "betterave",
+            "légume"
+          ],
+          "suggestedAgeFloor": 5,
+          "ageStatus": "editorial_hypothesis",
+          "researchDecision": "second_wave",
+          "nextGate": "prototype_then_naming_test",
+          "researchQuality": {
+            "score": 95,
+            "visualComponent": 1,
+            "namingComponent": 0.88,
+            "ageAccessibilityComponent": 1,
+            "status": "heuristic_research_only"
+          }
+        }
+      ],
+      "bestResearchCandidate": "radis",
+      "coverageEvidence": null,
+      "curationPriorityScore": 0,
+      "curationPriorityStatus": "heuristic_research_only"
+    },
+    {
+      "ipa": "ʁɛn",
+      "recommendedRoute": "compare_natural_object_and_character_scene",
+      "candidates": [
+        {
+          "label": "renne",
+          "candidateType": "whole_word_pictogram",
+          "lexicalEvidence": "lexique_exact",
+          "visualConcept": "Un renne entier de profil trois-quarts, bois bien visibles, silhouette distincte d’un cerf, sans traîneau ni Père Noël dominant.",
+          "visualPlausibility": "high",
+          "spontaneousNamingRisk": "medium_high",
+          "mainConfusions": [
+            "cerf",
+            "caribou",
+            "élan"
+          ],
+          "suggestedAgeFloor": 7,
+          "ageStatus": "editorial_hypothesis",
+          "researchDecision": "reserve",
+          "nextGate": "compare_with_reine_then_naming_test",
+          "researchQuality": {
+            "score": 76,
+            "visualComponent": 1,
+            "namingComponent": 0.5,
+            "ageAccessibilityComponent": 0.9,
+            "status": "heuristic_research_only"
+          }
+        },
+        {
+          "label": "reine",
+          "candidateType": "whole_word_scene",
+          "lexicalEvidence": "lexique_exact",
+          "visualConcept": "Une reine adulte avec couronne et trône, tenue royale claire, sans texte ni symbole phonétique.",
+          "visualPlausibility": "medium_high",
+          "spontaneousNamingRisk": "medium_high",
+          "mainConfusions": [
+            "princesse",
+            "dame",
+            "roi"
+          ],
+          "suggestedAgeFloor": 7,
+          "ageStatus": "editorial_hypothesis",
+          "researchDecision": "reserve",
+          "nextGate": "compare_with_renne_then_naming_test",
+          "researchQuality": {
+            "score": 69,
+            "visualComponent": 0.82,
+            "namingComponent": 0.5,
+            "ageAccessibilityComponent": 0.9,
+            "status": "heuristic_research_only"
+          }
+        }
+      ],
+      "bestResearchCandidate": "renne",
       "coverageEvidence": null,
       "curationPriorityScore": 0,
       "curationPriorityStatus": "heuristic_research_only"

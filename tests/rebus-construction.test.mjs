@@ -6,6 +6,7 @@ import {
   buildExplicitSubstitutionOperation,
   buildGeneralConstruction,
   buildGraphemeOperation,
+  buildGraphemeSoundOperation,
   buildRepetitionOperation,
   buildSpatialRelationOperation,
   buildStrictConstruction,
@@ -28,6 +29,8 @@ assert.equal(isOperationImplemented(REBUS_OPERATION_TYPES.WHOLE_WORD),true);
 assert.equal(operationDefinition(REBUS_OPERATION_TYPES.WHOLE_WORD).strictCompatible,true);
 assert.equal(isOperationImplemented(REBUS_OPERATION_TYPES.GRAPHEME),true);
 assert.equal(operationDefinition(REBUS_OPERATION_TYPES.GRAPHEME).strictCompatible,false);
+assert.equal(isOperationImplemented(REBUS_OPERATION_TYPES.GRAPHEME_SOUND),true);
+assert.equal(operationDefinition(REBUS_OPERATION_TYPES.GRAPHEME_SOUND).strictCompatible,false);
 assert.equal(isOperationImplemented(REBUS_OPERATION_TYPES.SPATIAL_RELATION),true);
 assert.equal(operationDefinition(REBUS_OPERATION_TYPES.SPATIAL_RELATION).strictCompatible,false);
 assert.equal(isOperationImplemented(REBUS_OPERATION_TYPES.EXPLICIT_DELETION),true);
@@ -43,6 +46,13 @@ assert.deepEqual(grapheme,{type:'grapheme',grapheme:'R',reading:'air'});
 assert.deepEqual(buildGraphemeOperation('K'),{type:'grapheme',grapheme:'K',reading:'K'});
 assert.equal(buildGraphemeOperation('   '),null);
 assert.equal(buildGraphemeOperation(null),null);
+
+const dSound=buildGraphemeSoundOperation(' D ','/d/','son d');
+assert.deepEqual(dSound,{type:'grapheme_sound',grapheme:'D',ipa:'/d/',reading:'son d',visual:'grapheme_with_sound_cue'});
+assert.deepEqual(buildGraphemeSoundOperation('R','ʁ'),{type:'grapheme_sound',grapheme:'R',ipa:'/ʁ/',reading:null,visual:'grapheme_with_sound_cue'});
+assert.equal(buildGraphemeSoundOperation('D',''),null);
+assert.equal(buildGraphemeSoundOperation('','/d/'),null);
+assert.notDeepEqual(buildGraphemeSoundOperation('D','/d/'),buildGraphemeOperation('D','dé'),'grapheme-sound must remain distinct from the French letter-name operation');
 
 const under=buildSpatialRelationOperation('under');
 assert.deepEqual(under,{type:'spatial_relation',relation:'under',reading:'sous'});
@@ -103,12 +113,18 @@ assert.equal(mixed.mode,'general');
 assert.deepEqual(mixed.operations.map(item=>item.type),['whole_word','grapheme']);
 assert.equal(supportsConstructionCapability(mixed,REBUS_CAPABILITIES.GENERAL),true);
 assert.equal(supportsConstructionCapability(mixed,REBUS_CAPABILITIES.PHONETIC_STRICT),false);
+const soundMixed=buildGeneralConstruction([operation,dSound]);
+assert.ok(soundMixed);
+assert.equal(soundMixed.mode,'general');
+assert.deepEqual(soundMixed.operations.map(item=>item.type),['whole_word','grapheme_sound']);
+assert.equal(soundMixed.operations[1].ipa,'/d/');
+assert.equal(supportsConstructionCapability(soundMixed,REBUS_CAPABILITIES.PHONETIC_STRICT),false);
 const spatial=buildGeneralConstruction([under,operation]);
 assert.ok(spatial);
 assert.equal(spatial.mode,'general');
 assert.deepEqual(spatial.operations.map(item=>item.type),['spatial_relation','whole_word']);
 assert.equal(supportsConstructionCapability(spatial,REBUS_CAPABILITIES.PHONETIC_STRICT),false);
-for(const generalOnly of [halfYoyo,substitution,repeated]){
+for(const generalOnly of [halfYoyo,substitution,repeated,dSound]){
   const construction=buildGeneralConstruction([generalOnly]);
   assert.ok(construction);
   assert.equal(construction.mode,'general');
@@ -127,4 +143,4 @@ assert.equal(merci.validation.targetIpa,'mɛʁsi');
 assert.equal(buildStrictConstruction([mer,scie],'/ʁebys/'),null);
 assert.equal(buildStrictConstruction([], '/mɛʁsi/'),null);
 
-console.log('Rebulo construction model: explicit deletion, semantically checked substitution and repetition stay visible and general-only.');
+console.log('Rebulo construction model: explicit grapheme-sound, deletion, substitution and repetition stay visible and general-only.');

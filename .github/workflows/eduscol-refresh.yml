@@ -1,0 +1,31 @@
+name: Bootstrap Eduscol evidence
+on:
+  push:
+    paths:
+      - '.github/workflows/eduscol-refresh.yml'
+permissions:
+  contents: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/eduscol-vocabulary-evidence
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Download official Eduscol PDF and import evidence
+        run: |
+          mkdir -p .cache
+          curl --fail --location --retry 3 'https://media.education.gouv.fr/file/ecole/20/6/liste-mots-par-frequence_115206.pdf' -o .cache/eduscol-frequency.pdf
+          pdftotext -raw .cache/eduscol-frequency.pdf .cache/eduscol-frequency.txt
+          node scripts/import-eduscol-frequency.mjs .cache/eduscol-frequency.txt data/eduscol-frequency-lexicon.json
+      - name: Commit evidence snapshot
+        run: |
+          git config user.name 'rebulo-analysis-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/eduscol-frequency-lexicon.json
+          git commit -m 'Refresh official Eduscol frequency evidence'
+          git push origin HEAD:feat/eduscol-vocabulary-evidence

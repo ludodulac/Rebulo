@@ -1,8 +1,9 @@
-import {validateStrictRebus} from './phonetic-engine.js';
+import {normalizeIPA,validateStrictRebus} from './phonetic-engine.js';
 
 export const REBUS_OPERATION_TYPES=Object.freeze({
   WHOLE_WORD:'whole_word',
   GRAPHEME:'grapheme',
+  GRAPHEME_SOUND:'grapheme_sound',
   SPATIAL_RELATION:'spatial_relation',
   EXPLICIT_DELETION:'explicit_deletion',
   EXPLICIT_SUBSTITUTION:'explicit_substitution',
@@ -21,6 +22,7 @@ export const SPATIAL_RELATIONS=Object.freeze({
 const OPERATION_DEFINITIONS=Object.freeze({
   [REBUS_OPERATION_TYPES.WHOLE_WORD]:Object.freeze({type:REBUS_OPERATION_TYPES.WHOLE_WORD,implemented:true,strictCompatible:true}),
   [REBUS_OPERATION_TYPES.GRAPHEME]:Object.freeze({type:REBUS_OPERATION_TYPES.GRAPHEME,implemented:true,strictCompatible:false}),
+  [REBUS_OPERATION_TYPES.GRAPHEME_SOUND]:Object.freeze({type:REBUS_OPERATION_TYPES.GRAPHEME_SOUND,implemented:true,strictCompatible:false}),
   [REBUS_OPERATION_TYPES.SPATIAL_RELATION]:Object.freeze({type:REBUS_OPERATION_TYPES.SPATIAL_RELATION,implemented:true,strictCompatible:false}),
   [REBUS_OPERATION_TYPES.EXPLICIT_DELETION]:Object.freeze({type:REBUS_OPERATION_TYPES.EXPLICIT_DELETION,implemented:true,strictCompatible:false}),
   [REBUS_OPERATION_TYPES.EXPLICIT_SUBSTITUTION]:Object.freeze({type:REBUS_OPERATION_TYPES.EXPLICIT_SUBSTITUTION,implemented:true,strictCompatible:false}),
@@ -41,6 +43,15 @@ export function buildGraphemeOperation(grapheme,reading=''){
   if(!value)return null;
   const explicitReading=typeof reading==='string'&&reading.trim()?reading.trim():value;
   return {type:REBUS_OPERATION_TYPES.GRAPHEME,grapheme:value,reading:explicitReading};
+}
+
+export function buildGraphemeSoundOperation(grapheme,ipa,reading=''){
+  if(typeof grapheme!=='string')return null;
+  const value=grapheme.trim();
+  const normalized=normalizeIPA(ipa||'');
+  if(!value||!normalized)return null;
+  const explicitReading=typeof reading==='string'&&reading.trim()?reading.trim():null;
+  return {type:REBUS_OPERATION_TYPES.GRAPHEME_SOUND,grapheme:value,ipa:`/${normalized}/`,reading:explicitReading,visual:'grapheme_with_sound_cue'};
 }
 
 export function buildSpatialRelationOperation(relation){

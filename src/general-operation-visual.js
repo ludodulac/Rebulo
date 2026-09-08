@@ -1,7 +1,14 @@
-const GENERAL_VISUAL_TYPES=new Set(['explicit_deletion','explicit_substitution','repetition']);
+const GENERAL_VISUAL_TYPES=new Set(['grapheme_sound','explicit_deletion','explicit_substitution','repetition']);
 
 export function generalOperationVisual(piece={}){
-  if(!GENERAL_VISUAL_TYPES.has(piece?.operationType)||!piece?.image)return null;
+  if(!GENERAL_VISUAL_TYPES.has(piece?.operationType))return null;
+  if(piece.operationType==='grapheme_sound'){
+    const grapheme=String(piece.grapheme||'').trim();
+    const ipa=String(piece.ipa||'').trim();
+    if(!grapheme||!ipa)return null;
+    return {kind:'grapheme-sound',grapheme,ipa,reading:String(piece.reading||'').trim()||null,visual:'grapheme_with_sound_cue'};
+  }
+  if(!piece?.image)return null;
   if(piece.operationType==='explicit_deletion'){
     if(!piece.reading||!piece.sourceReading||!piece.keep||!piece.remove)return null;
     return {kind:piece.visual==='half'?'deletion-half':'deletion-cross-out',image:piece.image,label:piece.label||piece.sourceReading,reading:piece.reading,sourceReading:piece.sourceReading,keep:piece.keep,remove:piece.remove};

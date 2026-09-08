@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T00:14:26.135Z",
+  "generatedAt": "2026-09-08T00:21:14.882Z",
   "source": "Lexique 4",
   "lexicalEntryCount": 189832,
   "inventory": {
@@ -16201,6 +16201,73 @@
   ],
   "drawableOpportunityShortlist": [
     {
+      "ipa": "ɛ",
+      "label": "haie",
+      "targetCount": 234,
+      "frequencySum": 250.98399999999938,
+      "examples": [
+        {
+          "word": "aidez",
+          "ipa": "ɛde",
+          "frequency": 62.427,
+          "pieceCount": 2
+        },
+        {
+          "word": "aidé",
+          "ipa": "ɛde",
+          "frequency": 48.443,
+          "pieceCount": 2
+        },
+        {
+          "word": "verrai",
+          "ipa": "vɛʁɛ",
+          "frequency": 27.187,
+          "pieceCount": 2
+        },
+        {
+          "word": "portait",
+          "ipa": "pɔʁtɛ",
+          "frequency": 24.278,
+          "pieceCount": 2
+        },
+        {
+          "word": "aidée",
+          "ipa": "ɛde",
+          "frequency": 10.149,
+          "pieceCount": 2
+        }
+      ],
+      "lexicalCandidates": [
+        {
+          "word": "ai",
+          "frequency": 5199.114
+        },
+        {
+          "word": "es",
+          "frequency": 1725.427
+        },
+        {
+          "word": "aie",
+          "frequency": 32.813
+        },
+        {
+          "word": "aies",
+          "frequency": 32.582
+        },
+        {
+          "word": "hey",
+          "frequency": 24.126
+        }
+      ],
+      "exactLabelAttested": false,
+      "curationStatus": "research_candidate",
+      "activation": "not_ready",
+      "selectionReason": "Premier candidat naturel retenu pour /ɛ/ après cartographie globale : mot entier exact, référent concret courant et meilleure piste visuelle que les homophones grammaticaux ou interjectifs.",
+      "namingRisk": "Une haie peut être nommée buisson, arbuste ou mur végétal. Le prototype doit montrer une haie de jardin très prototypique sans décor dominant.",
+      "assetStatus": "not_created",
+      "nextGate": "prototype_comparison"
+    },
+    {
       "ipa": "ni",
       "label": "nid",
       "targetCount": 103,
@@ -16266,6 +16333,124 @@
       "namingRisk": "Un nid vide peut être nommé « nid d'oiseau » ou décrit par son contenu; privilégier une forme de nid très prototypique sans oiseau dominant. La stabilité de dénomination doit être testée avant toute activation.",
       "assetStatus": "assets/research/nid-comic-v1.svg",
       "nextGate": "naming_review"
+    },
+    {
+      "ipa": "ti",
+      "label": "tee",
+      "targetCount": 91,
+      "frequencySum": 38.675999999999966,
+      "examples": [
+        {
+          "word": "matinée",
+          "ipa": "matine",
+          "frequency": 16.709,
+          "pieceCount": 3
+        },
+        {
+          "word": "tirait",
+          "ipa": "tiʁɛ",
+          "frequency": 2.981,
+          "pieceCount": 2
+        },
+        {
+          "word": "hostilité",
+          "ipa": "ɔstilite",
+          "frequency": 2.222,
+          "pieceCount": 4
+        },
+        {
+          "word": "piétiner",
+          "ipa": "pjetine",
+          "frequency": 1.551,
+          "pieceCount": 3
+        },
+        {
+          "word": "patiner",
+          "ipa": "patine",
+          "frequency": 1.399,
+          "pieceCount": 3
+        }
+      ],
+      "lexicalCandidates": [
+        {
+          "word": "tee",
+          "frequency": 1.456
+        },
+        {
+          "word": "tie",
+          "frequency": 0.133
+        },
+        {
+          "word": "tees",
+          "frequency": 0.057
+        }
+      ],
+      "exactLabelAttested": true,
+      "curationStatus": "research_candidate",
+      "activation": "not_ready",
+      "selectionReason": "Fort rendement pour un candidat mot-entier concret. Le tee de golf est une vraie dénomination entière /ti/ et évite une lecture partielle ou une lettre mal prononcée.",
+      "namingRisk": "Connaissance lexicale dépendante de l'âge et de la familiarité avec le golf ; peut être nommé support, balle ou golf. À réserver d'abord aux profils plus âgés.",
+      "assetStatus": "not_created",
+      "nextGate": "prototype_comparison"
+    },
+    {
+      "ipa": "as",
+      "label": "as",
+      "targetCount": 47,
+      "frequencySum": 20.556999999999995,
+      "examples": [
+        {
+          "word": "assaut",
+          "ipa": "aso",
+          "frequency": 10.076,
+          "pieceCount": 2
+        },
+        {
+          "word": "terrasse",
+          "ipa": "tɛʁas",
+          "frequency": 5.006,
+          "pieceCount": 2
+        },
+        {
+          "word": "associe",
+          "ipa": "asosi",
+          "frequency": 1.639,
+          "pieceCount": 3
+        },
+        {
+          "word": "aster",
+          "ipa": "astɛʁ",
+          "frequency": 0.538,
+          "pieceCount": 2
+        },
+        {
+          "word": "assauts",
+          "ipa": "aso",
+          "frequency": 0.462,
+          "pieceCount": 2
+        }
+      ],
+      "lexicalCandidates": [
+        {
+          "word": "as",
+          "frequency": 14.016
+        },
+        {
+          "word": "asse",
+          "frequency": 0.152
+        },
+        {
+          "word": "asses",
+          "frequency": 0.047
+        }
+      ],
+      "exactLabelAttested": true,
+      "curationStatus": "research_candidate",
+      "activation": "not_ready",
+      "selectionReason": "Mot entier exact et objet culturellement reconnaissable via une carte d'as ; utile pour tester une brique symbolique dont la lettre éventuelle fait partie de l'objet représenté.",
+      "namingRisk": "Peut être nommé carte ou carte à jouer. La présence d'un A imprimé doit être traitée comme caractéristique intrinsèque de la carte, jamais comme lecture phonétique cachée ajoutée.",
+      "assetStatus": "not_created",
+      "nextGate": "prototype_comparison"
     }
   ],
   "expansionCurationLeads": [

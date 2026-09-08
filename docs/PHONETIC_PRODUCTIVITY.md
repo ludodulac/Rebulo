@@ -123,6 +123,9 @@ Une pièce est dite **productive** seulement si son mot entier et sa prononciati
 
 | Candidat | Son entier | Cibles potentielles | Statut | Prochaine étape | Exemples |
 |---|---|---:|---|---|---|
+| haie | /ɛ/ | 234 | research_candidate | prototype_comparison | aidez, aidé, verrai, portait |
 | nid | /ni/ | 103 | research_candidate | naming_review | maternité, déni, vernis, paternité |
+| tee | /ti/ | 91 | research_candidate | prototype_comparison | matinée, tirait, hostilité, piétiner |
+| as | /as/ | 47 | research_candidate | prototype_comparison | assaut, terrasse, associe, aster |
 
 > La file dessinable élimine les fragments grammaticaux manifestes et conserve les décisions de recherche existantes. Elle ne vaut ni validation de dénomination, ni activation, ni validation clinique.

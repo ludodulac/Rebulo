@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T00:14:26.823Z",
+  "generatedAt": "2026-09-08T00:21:17.473Z",
   "lexicalUniquePronouncedForms": 171476,
   "baseline": {
     "constructibleUniqueWords": 891,
@@ -13,6 +13,48 @@
       "status": "research_candidate",
       "source": "curated_shortlist",
       "rawRank": 1
+    },
+    {
+      "label": "haie",
+      "ipa": "/ɛ/",
+      "status": "research_candidate",
+      "source": "curated_shortlist",
+      "rawRank": 2
+    },
+    {
+      "label": "oie",
+      "ipa": "/wa/",
+      "status": "research_candidate",
+      "source": "curated_shortlist",
+      "rawRank": 3
+    },
+    {
+      "label": "or",
+      "ipa": "/ɔʁ/",
+      "status": "research_candidate",
+      "source": "curated_shortlist",
+      "rawRank": 4
+    },
+    {
+      "label": "tee",
+      "ipa": "/ti/",
+      "status": "research_candidate",
+      "source": "curated_shortlist",
+      "rawRank": 5
+    },
+    {
+      "label": "anse",
+      "ipa": "/ɑ̃s/",
+      "status": "research_candidate",
+      "source": "curated_shortlist",
+      "rawRank": 6
+    },
+    {
+      "label": "as",
+      "ipa": "/as/",
+      "status": "research_candidate",
+      "source": "curated_shortlist",
+      "rawRank": 7
     }
   ],
   "greedyOrder": [
@@ -27,6 +69,78 @@
       "cumulativeMultiPieceUniqueWords": 835,
       "cumulativeConstructibleUniqueWords": 972,
       "cumulativeWeightedMultiPiece": 999.326
+    },
+    {
+      "step": 2,
+      "addedLabel": "tee",
+      "ipa": "/ti/",
+      "status": "research_candidate",
+      "source": "curated_shortlist",
+      "marginalMultiPieceUniqueWords": 66,
+      "marginalConstructibleUniqueWords": 69,
+      "cumulativeMultiPieceUniqueWords": 901,
+      "cumulativeConstructibleUniqueWords": 1041,
+      "cumulativeWeightedMultiPiece": 1071.362
+    },
+    {
+      "step": 3,
+      "addedLabel": "haie",
+      "ipa": "/ɛ/",
+      "status": "research_candidate",
+      "source": "curated_shortlist",
+      "marginalMultiPieceUniqueWords": 39,
+      "marginalConstructibleUniqueWords": 54,
+      "cumulativeMultiPieceUniqueWords": 940,
+      "cumulativeConstructibleUniqueWords": 1095,
+      "cumulativeWeightedMultiPiece": 1117.019
+    },
+    {
+      "step": 4,
+      "addedLabel": "as",
+      "ipa": "/as/",
+      "status": "research_candidate",
+      "source": "curated_shortlist",
+      "marginalMultiPieceUniqueWords": 32,
+      "marginalConstructibleUniqueWords": 35,
+      "cumulativeMultiPieceUniqueWords": 972,
+      "cumulativeConstructibleUniqueWords": 1130,
+      "cumulativeWeightedMultiPiece": 1152.337
+    },
+    {
+      "step": 5,
+      "addedLabel": "or",
+      "ipa": "/ɔʁ/",
+      "status": "research_candidate",
+      "source": "curated_shortlist",
+      "marginalMultiPieceUniqueWords": 26,
+      "marginalConstructibleUniqueWords": 32,
+      "cumulativeMultiPieceUniqueWords": 998,
+      "cumulativeConstructibleUniqueWords": 1162,
+      "cumulativeWeightedMultiPiece": 1182.771
+    },
+    {
+      "step": 6,
+      "addedLabel": "oie",
+      "ipa": "/wa/",
+      "status": "research_candidate",
+      "source": "curated_shortlist",
+      "marginalMultiPieceUniqueWords": 26,
+      "marginalConstructibleUniqueWords": 34,
+      "cumulativeMultiPieceUniqueWords": 1024,
+      "cumulativeConstructibleUniqueWords": 1196,
+      "cumulativeWeightedMultiPiece": 1212.084
+    },
+    {
+      "step": 7,
+      "addedLabel": "anse",
+      "ipa": "/ɑ̃s/",
+      "status": "research_candidate",
+      "source": "curated_shortlist",
+      "marginalMultiPieceUniqueWords": 12,
+      "marginalConstructibleUniqueWords": 16,
+      "cumulativeMultiPieceUniqueWords": 1036,
+      "cumulativeConstructibleUniqueWords": 1212,
+      "cumulativeWeightedMultiPiece": 1224.19
     }
   ],
   "curatedCandidateScenarios": [
@@ -126,6 +240,346 @@
           "pieces": [
             "nid",
             "rat"
+          ]
+        }
+      ],
+      "note": "Gain isolé par rapport à la base active actuelle."
+    },
+    {
+      "name": "haie",
+      "added": [
+        {
+          "label": "haie",
+          "ipa": "/ɛ/",
+          "assetStatus": "not_created"
+        }
+      ],
+      "strictMultiPieceGain": 38,
+      "strictConstructibleGain": 53,
+      "weightedMultiPieceGain": 44.629,
+      "cumulativeMultiPieceUniqueWords": 798,
+      "examples": [
+        {
+          "word": "aidez",
+          "frequency": 62.427,
+          "pieces": [
+            "haie",
+            "dé"
+          ]
+        },
+        {
+          "word": "aidé",
+          "frequency": 48.443,
+          "pieces": [
+            "haie",
+            "dé"
+          ]
+        },
+        {
+          "word": "aidée",
+          "frequency": 10.149,
+          "pieces": [
+            "haie",
+            "dé"
+          ]
+        },
+        {
+          "word": "aidés",
+          "frequency": 5.728,
+          "pieces": [
+            "haie",
+            "dé"
+          ]
+        },
+        {
+          "word": "tairai",
+          "frequency": 0.829,
+          "pieces": [
+            "terre",
+            "haie"
+          ]
+        },
+        {
+          "word": "aidées",
+          "frequency": 0.453,
+          "pieces": [
+            "haie",
+            "dé"
+          ]
+        },
+        {
+          "word": "errait",
+          "frequency": 0.446,
+          "pieces": [
+            "haie",
+            "raie"
+          ]
+        }
+      ],
+      "note": "Gain isolé par rapport à la base active actuelle."
+    },
+    {
+      "name": "oie",
+      "added": [
+        {
+          "label": "oie",
+          "ipa": "/wa/",
+          "assetStatus": "not_created"
+        }
+      ],
+      "strictMultiPieceGain": 13,
+      "strictConstructibleGain": 21,
+      "weightedMultiPieceGain": 13.984,
+      "cumulativeMultiPieceUniqueWords": 773,
+      "examples": [
+        {
+          "word": "waters",
+          "frequency": 1.918,
+          "pieces": [
+            "oie",
+            "terre"
+          ]
+        },
+        {
+          "word": "water",
+          "frequency": 1.864,
+          "pieces": [
+            "oie",
+            "terre"
+          ]
+        }
+      ],
+      "note": "Gain isolé par rapport à la base active actuelle."
+    },
+    {
+      "name": "or",
+      "added": [
+        {
+          "label": "or",
+          "ipa": "/ɔʁ/",
+          "assetStatus": "not_created"
+        }
+      ],
+      "strictMultiPieceGain": 15,
+      "strictConstructibleGain": 21,
+      "weightedMultiPieceGain": 18.353,
+      "cumulativeMultiPieceUniqueWords": 775,
+      "examples": [
+        {
+          "word": "ordonné",
+          "frequency": 12.633,
+          "pieces": [
+            "or",
+            "dos",
+            "nez"
+          ]
+        },
+        {
+          "word": "hormis",
+          "frequency": 2.978,
+          "pieces": [
+            "or",
+            "mie"
+          ]
+        },
+        {
+          "word": "ordonner",
+          "frequency": 2.421,
+          "pieces": [
+            "or",
+            "dos",
+            "nez"
+          ]
+        },
+        {
+          "word": "ordonnez",
+          "frequency": 1.266,
+          "pieces": [
+            "or",
+            "dos",
+            "nez"
+          ]
+        },
+        {
+          "word": "ordonnée",
+          "frequency": 0.503,
+          "pieces": [
+            "or",
+            "dos",
+            "nez"
+          ]
+        }
+      ],
+      "note": "Gain isolé par rapport à la base active actuelle."
+    },
+    {
+      "name": "tee",
+      "added": [
+        {
+          "label": "tee",
+          "ipa": "/ti/",
+          "assetStatus": "not_created"
+        }
+      ],
+      "strictMultiPieceGain": 64,
+      "strictConstructibleGain": 67,
+      "weightedMultiPieceGain": 69.535,
+      "cumulativeMultiPieceUniqueWords": 824,
+      "examples": [
+        {
+          "word": "matinée",
+          "frequency": 16.709,
+          "pieces": [
+            "mât",
+            "tee",
+            "nez"
+          ]
+        },
+        {
+          "word": "tirait",
+          "frequency": 2.981,
+          "pieces": [
+            "tee",
+            "raie"
+          ]
+        },
+        {
+          "word": "patiner",
+          "frequency": 1.399,
+          "pieces": [
+            "pas",
+            "tee",
+            "nez"
+          ]
+        },
+        {
+          "word": "city",
+          "frequency": 1.342,
+          "pieces": [
+            "scie",
+            "tee"
+          ]
+        },
+        {
+          "word": "tirais",
+          "frequency": 1.206,
+          "pieces": [
+            "tee",
+            "raie"
+          ]
+        },
+        {
+          "word": "tiraient",
+          "frequency": 1.06,
+          "pieces": [
+            "tee",
+            "raie"
+          ]
+        },
+        {
+          "word": "titi",
+          "frequency": 0.82,
+          "pieces": [
+            "tee",
+            "tee"
+          ]
+        },
+        {
+          "word": "tipi",
+          "frequency": 0.589,
+          "pieces": [
+            "tee",
+            "pie"
+          ]
+        },
+        {
+          "word": "tiret",
+          "frequency": 0.56,
+          "pieces": [
+            "tee",
+            "raie"
+          ]
+        },
+        {
+          "word": "tira",
+          "frequency": 0.506,
+          "pieces": [
+            "tee",
+            "rat"
+          ]
+        }
+      ],
+      "note": "Gain isolé par rapport à la base active actuelle."
+    },
+    {
+      "name": "anse",
+      "added": [
+        {
+          "label": "anse",
+          "ipa": "/ɑ̃s/",
+          "assetStatus": "not_created"
+        }
+      ],
+      "strictMultiPieceGain": 3,
+      "strictConstructibleGain": 7,
+      "weightedMultiPieceGain": 3.067,
+      "cumulativeMultiPieceUniqueWords": 763,
+      "examples": [],
+      "note": "Gain isolé par rapport à la base active actuelle."
+    },
+    {
+      "name": "as",
+      "added": [
+        {
+          "label": "as",
+          "ipa": "/as/",
+          "assetStatus": "not_created"
+        }
+      ],
+      "strictMultiPieceGain": 23,
+      "strictConstructibleGain": 26,
+      "weightedMultiPieceGain": 26.258,
+      "cumulativeMultiPieceUniqueWords": 783,
+      "examples": [
+        {
+          "word": "assaut",
+          "frequency": 10.076,
+          "pieces": [
+            "as",
+            "eau"
+          ]
+        },
+        {
+          "word": "terrasse",
+          "frequency": 5.006,
+          "pieces": [
+            "terre",
+            "as"
+          ]
+        },
+        {
+          "word": "associe",
+          "frequency": 1.639,
+          "pieces": [
+            "as",
+            "eau",
+            "scie"
+          ]
+        },
+        {
+          "word": "aster",
+          "frequency": 0.538,
+          "pieces": [
+            "as",
+            "terre"
+          ]
+        },
+        {
+          "word": "assauts",
+          "frequency": 0.462,
+          "pieces": [
+            "as",
+            "eau"
           ]
         }
       ],

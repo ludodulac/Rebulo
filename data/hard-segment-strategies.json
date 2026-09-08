@@ -1,0 +1,85 @@
+{
+  "version": "1.0.0",
+  "status": "research_only",
+  "objective": "Pour les segments Rebulo utiles mais mal représentables, privilégier une autre segmentation exacte avant de créer une image faible; n'autoriser un graphème que comme opération générale visible, définie et testable.",
+  "segments": [
+    {
+      "ipa": "mɑ̃",
+      "usefulUnlockReference": 18,
+      "strategy": "alternate_segmentation_first",
+      "lexicalLeads": ["man", "mans", "mens"],
+      "lexicalAssessment": "phonetic_exact_but_not_natural_child_pictograms",
+      "visibleFallbackResearch": ["MENT"],
+      "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
+      "nextGate": "measure_alternate_segmentations_then_formalize_contextual_grapheme_if_still_needed"
+    },
+    {
+      "ipa": "ɛ̃",
+      "usefulUnlockReference": 16,
+      "strategy": "alternate_segmentation_first",
+      "lexicalLeads": ["hein", "ain"],
+      "lexicalAssessment": "exact_but_poor_or_ambiguous_visual_naming",
+      "visibleFallbackResearch": ["IN", "UN"],
+      "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
+      "nextGate": "compare_alternate_segmentations_before_any_grapheme_rule"
+    },
+    {
+      "ipa": "œʁ",
+      "usefulUnlockReference": 11,
+      "strategy": "scene_comparison",
+      "lexicalLeads": ["heure"],
+      "lexicalAssessment": "exact_and_scene_plausible_but_high_naming_risk",
+      "visualHypotheses": ["personne consultant clairement l'heure sur une horloge ou une montre, sans texte dominant"],
+      "nextGate": "compare_two_scene_variants_in_blind_naming_test"
+    },
+    {
+      "ipa": "aʁ",
+      "usefulUnlockReference": 8,
+      "strategy": "scene_comparison_for_older_users",
+      "lexicalLeads": ["art"],
+      "lexicalAssessment": "exact_but_abstract_concept_with_high_naming_variability",
+      "visualHypotheses": ["petite scène cohérente réunissant tableau, palette et sculpture pour viser le concept global art"],
+      "nextGate": "prototype_only_after_higher_confidence_natural_objects"
+    },
+    {
+      "ipa": "al",
+      "usefulUnlockReference": 9,
+      "strategy": "alternate_segmentation_preferred",
+      "lexicalLeads": ["halle", "ale"],
+      "lexicalAssessment": "halle_has_high_naming_risk_and_ale_is_age_inappropriate_as_visual_reference",
+      "nextGate": "search_shared_alternative_segments_before_visual_prototype"
+    },
+    {
+      "ipa": "tʁ",
+      "usefulUnlockReference": 29,
+      "strategy": "alternate_segmentation_required",
+      "lexicalLeads": [],
+      "lexicalAssessment": "no_natural_exact_whole_word_candidate",
+      "visibleFallbackResearch": ["TR"],
+      "fallbackStatus": "grapheme_cluster_general_mode_research_only",
+      "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
+    },
+    {
+      "ipa": "sjɔ̃",
+      "usefulUnlockReference": 20,
+      "strategy": "alternate_segmentation_required",
+      "lexicalLeads": ["scion"],
+      "lexicalAssessment": "exact_but_spontaneous_naming_risk_is_very_high",
+      "visibleFallbackResearch": ["TION", "SION"],
+      "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
+      "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
+    },
+    {
+      "ipa": "di",
+      "usefulUnlockReference": 16,
+      "strategy": "alternate_segmentation_required",
+      "lexicalLeads": ["dit"],
+      "lexicalAssessment": "exact_but_not_naturally_picturable",
+      "rejectedFallbacks": [
+        {"label": "D", "reason": "French letter name is /de/, not /di/; phonetic mismatch."}
+      ],
+      "nextGate": "search_alternate_exact_decompositions; do_not_use_letter_D_for_di"
+    }
+  ],
+  "caution": "Ce registre ordonne la recherche. Il n'active aucune brique, ne définit aucune nouvelle règle de graphème et ne vaut ni validation de dénomination ni validation clinique."
+}

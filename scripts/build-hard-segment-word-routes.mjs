@@ -18,7 +18,8 @@ const strategies=JSON.parse(fs.readFileSync(strategyPath,'utf8'));
 const visualCandidateBank=JSON.parse(fs.readFileSync('data/phonetic-brick-candidates.json','utf8'));
 const seed=JSON.parse(fs.readFileSync('data/lexicon-seed.json','utf8'));
 const technicalInventory=mergeProductivityInventory(seed,[...OPEN_PICTOGRAMS,...OPEN_PICTOGRAMS_WAVE_2,...OPEN_PICTOGRAMS_WAVE_3]);
-const rows=buildHardSegmentWordRoutes(strategies.segments||[],brickMap.topBrickOpportunities||[],technicalInventory,{maxOperations:4,maxRoutesPerTarget:5,visualCandidateBank});
+const routeSearchOpportunities=brickMap.hardRouteSearchOpportunities||brickMap.topBrickOpportunities||[];
+const rows=buildHardSegmentWordRoutes(strategies.segments||[],routeSearchOpportunities,technicalInventory,{maxOperations:4,maxRoutesPerTarget:5,visualCandidateBank});
 const stats=hardSegmentWordRouteStats(rows);
 const rawVisualResearchNeedQueue=buildVisualResearchNeedQueue(rows,{visualCandidateBank,hardStrategyRegistry:strategies});
 const visualResearchNeedQueue=classifyVisualResearchNeedQueue(rawVisualResearchNeedQueue);
@@ -36,6 +37,7 @@ const report={
   sourceBrickMapGeneratedAt:brickMap.generatedAt||null,
   strategyVersion:strategies.version||null,
   visualCandidateBankVersion:visualCandidateBank.version||null,
+  routeSearchOpportunityCount:routeSearchOpportunities.length,
   methodology:{
     exactness:'Every route reconstructs the complete target IPA with complete visible operation readings.',
     alternateRequirement:'A route must use the tested alternative brick and contain at least two operations; trivial whole-target replacement is excluded.',
@@ -43,6 +45,7 @@ const report={
     visualResearchReadiness:'A lexical candidate counts as visually curated only when the same whole word and IPA already exist in the research candidate bank with an explicit pictogram/scene concept and a non-rejected visual research decision. This remains research-only, not naming validation.',
     visualNeedQueue:'Every target without a curated visual route is assigned exactly one primary research need.',
     researchRouteClassification:'Each unresolved need is then classified as pictogram/scene research, formalization of an already documented visible general-operation hypothesis, or discovery of a genuinely new representation. A documented fallback remains research-only and never becomes an authorized operation by classification.',
+    routeSearchPool:'Hard-segment routing uses the targeted expanded opportunity pool when present; the legacy top-60 pool is only a compatibility fallback. This changes research discovery only, never activation or phonetic rules.',
     strictPreference:'Strict routes rank before general routes. General routes remain explicit and visible only.',
     activation:'No route, lexical lead, pictogram, scene or grapheme is activated by this report.'
   },
@@ -79,6 +82,7 @@ const lines=[
   '# Rebulo — routes mot-par-mot pour segments difficiles','',
   `- Segments analysés : ${stats.segmentCount}.`,
   `- Cibles utiles concernées : ${stats.targetCount}.`,
+  `- Opportunités examinées pour les routes difficiles : ${routeSearchOpportunities.length}.`,
   `- Cibles avec au moins une route phonétiquement exacte : ${stats.targetsWithAlternativeRoutes}.`,
   `- Cibles dont une route exacte dispose aussi d’un candidat lexical de représentation : ${stats.targetsWithRepresentableAlternativeRoutes}.`,
   `- Cibles dont une route dispose déjà d’un candidat visuel curaté en recherche : ${stats.targetsWithCuratedVisualAlternativeRoutes}.`,
@@ -122,6 +126,7 @@ for(const segment of rows){
 fs.mkdirSync(path.dirname(markdownOutput),{recursive:true});
 fs.writeFileSync(markdownOutput,lines.join('\n')+'\n');
 console.log(`Hard segment routes: ${stats.targetsWithAlternativeRoutes}/${stats.targetCount} exact; ${stats.targetsWithRepresentableAlternativeRoutes} lexical; ${stats.targetsWithCuratedVisualAlternativeRoutes} visually curated research candidates; ${stats.targetsStillNeedingCuratedVisualAlternative} still need visual research.`);
+console.log(`Hard-route opportunity pool: ${routeSearchOpportunities.length}.`);
 console.log(`Visual need queue: ${visualResearchNeedQueueStats.groupCount} groups partition ${visualResearchNeedQueueStats.unresolvedTargetCount} unresolved targets.`);
 console.log(`Research routes: pictogram/scene=${visualResearchRouteSummary.targetCountsByRouteClass.research_pictogram_or_scene}; documented visible general operation=${visualResearchRouteSummary.targetCountsByRouteClass.formalize_documented_visible_general_operation}; new representation=${visualResearchRouteSummary.targetCountsByRouteClass.discover_new_representation}.`);
 console.log(`Wrote ${jsonOutput} and ${markdownOutput}`);

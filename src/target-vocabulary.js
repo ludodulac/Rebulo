@@ -7,136 +7,76 @@ export const TARGET_AGE_BANDS=Object.freeze([
   Object.freeze({age:12,label:'12 ans +',minFrequency:0.5,maxSyllables:5,maxLetters:18})
 ]);
 
+export const REBULO_UTILITY_TIERS=Object.freeze([
+  'very_common_simple','child_common','school_common','teen_adult_common','advanced_useful','lexique_background'
+]);
+const UTILITY_WEIGHTS=Object.freeze({very_common_simple:6,child_common:5,school_common:4,teen_adult_common:3,advanced_useful:2,lexique_background:0});
 const ALLOWED_POS=new Set(['NOM','VER','ADJ','ADV','ONO']);
 
-function lexicalPos(value=''){
-  return String(value||'').trim().toUpperCase().split(':')[0];
-}
-
-function normalizedWord(value=''){
-  return String(value||'').trim().toLocaleLowerCase('fr').normalize('NFC');
-}
-
-function letterCount(value=''){
-  return Array.from(normalizedWord(value).replace(/[-'’]/g,'')).length;
-}
+function lexicalPos(value=''){return String(value||'').trim().toUpperCase().split(':')[0];}
+function normalizedWord(value=''){return String(value||'').trim().toLocaleLowerCase('fr').normalize('NFC');}
+function letterCount(value=''){return Array.from(normalizedWord(value).replace(/[-'’]/g,'')).length;}
 
 export function sourceSyllables(value=''){
   const raw=String(value||'').trim();
   if(!raw)return [];
-  return raw
-    .replace(/^[/\[]|[/\]]$/g,'')
-    .split(/[.·‧-]+/)
-    .map(normalizeIPA)
-    .filter(Boolean);
+  return raw.replace(/^[/\[]|[/\]]$/g,'').split(/[.·‧-]+/).map(normalizeIPA).filter(Boolean);
 }
 
 export function ageBandCandidateForEntry(entry={}){
-  const word=normalizedWord(entry.word||entry.lemma);
-  const frequency=Number(entry.frequency)||0;
+  const word=normalizedWord(entry.word||entry.lemma);const frequency=Number(entry.frequency)||0;
   const syllableCount=Number.isInteger(entry.syllableCount)&&entry.syllableCount>0?entry.syllableCount:null;
   const pos=lexicalPos(entry.pos);
-  if(!word||!normalizeIPA(entry.ipa)||!ALLOWED_POS.has(pos))return null;
-  if(!/^[\p{L}'’-]+$/u.test(word))return null;
-  if(!syllableCount)return null;
+  if(!word||!normalizeIPA(entry.ipa)||!ALLOWED_POS.has(pos)||!/^[\p{L}'’-]+$/u.test(word)||!syllableCount)return null;
   const letters=letterCount(word);
-  return TARGET_AGE_BANDS.find(profile=>frequency>=profile.minFrequency&&syllableCount<=profile.maxSyllables&&letters<=profile.maxLetters)?.age||null;
+  return TARGET_AGE_BANDS.find(p=>frequency>=p.minFrequency&&syllableCount<=p.maxSyllables&&letters<=p.maxLetters)?.age||null;
 }
 
+export function rebuloUtilityTierForEntry(entry={}){
+  const frequency=Math.max(0,Number(entry.frequency)||0);const syllables=Number(entry.syllableCount)||99;const letters=letterCount(entry.word||entry.lemma);
+  if(!ageBandCandidateForEntry(entry))return 'lexique_background';
+  if(frequency>=100&&syllables<=2&&letters<=9)return 'very_common_simple';
+  if(frequency>=35&&syllables<=3&&letters<=12)return 'child_common';
+  if(frequency>=10&&syllables<=4&&letters<=15)return 'school_common';
+  if(frequency>=3&&syllables<=5&&letters<=18)return 'teen_adult_common';
+  if(frequency>=0.5)return 'advanced_useful';
+  return 'lexique_background';
+}
+export function rebuloUtilityWeight(target={}){return UTILITY_WEIGHTS[target.rebuloUtilityTier]??0;}
+export function isRebuloPriorityTarget(target={}){return rebuloUtilityWeight(target)>0;}
+
 function candidateEntry(raw={}){
-  const word=String(raw.word||'').trim();
-  const lemma=String(raw.lemma||word).trim();
-  const ipa=normalizeIPA(raw.ipa||'');
+  const word=String(raw.word||'').trim(),lemma=String(raw.lemma||word).trim(),ipa=normalizeIPA(raw.ipa||'');
   const syllableCount=Number.isInteger(raw.syllableCount)&&raw.syllableCount>0?raw.syllableCount:null;
-  const syllables=sourceSyllables(raw.syllabification||'');
-  const ageBandCandidate=ageBandCandidateForEntry(raw);
+  const syllables=sourceSyllables(raw.syllabification||''),ageBandCandidate=ageBandCandidateForEntry(raw);
   if(!ageBandCandidate)return null;
-  return {
-    target:word,
-    lemma,
-    targetIpa:ipa,
-    pos:raw.pos||'',
-    frequency:Number(raw.frequency)||0,
-    syllableCount,
-    syllables,
-    syllabificationSource:raw.syllabification||null,
-    syllabificationStatus:syllables.length===syllableCount?'source_exact':'needs_source_review',
-    ageBandCandidate,
-    ageStatus:'heuristic_preselection',
-    source:'Lexique 4'
-  };
+  const rebuloUtilityTier=rebuloUtilityTierForEntry(raw);
+  return {target:word,lemma,targetIpa:ipa,pos:raw.pos||'',frequency:Number(raw.frequency)||0,syllableCount,syllables,
+    syllabificationSource:raw.syllabification||null,syllabificationStatus:syllables.length===syllableCount?'source_exact':'needs_source_review',
+    ageBandCandidate,ageStatus:'heuristic_preselection',rebuloUtilityTier,rebuloUtilityWeight:UTILITY_WEIGHTS[rebuloUtilityTier]??0,
+    utilityStatus:'heuristic_product_preselection',source:'Lexique 4'};
 }
 
 export function buildTargetVocabulary(entries=[]){
   const groups=new Map();
-  for(const raw of entries||[]){
-    const item=candidateEntry(raw);
-    if(!item)continue;
-    const lemmaKey=normalizedWord(item.lemma);
-    if(!lemmaKey)continue;
-    let group=groups.get(lemmaKey);
-    if(!group){group={best:null,pronunciations:new Map()};groups.set(lemmaKey,group);}
-    const isLemmaForm=normalizedWord(item.target)===lemmaKey;
-    const previous=group.best;
-    if(!previous||
-      (isLemmaForm&&!previous.isLemmaForm)||
-      (isLemmaForm===previous.isLemmaForm&&item.frequency>previous.item.frequency)){
-      group.best={item,isLemmaForm};
-    }
-    let pronunciation=group.pronunciations.get(item.targetIpa);
-    if(!pronunciation){
-      pronunciation={ipa:item.targetIpa,forms:[],maxFrequency:0};
-      group.pronunciations.set(item.targetIpa,pronunciation);
-    }
-    if(!pronunciation.forms.includes(item.target))pronunciation.forms.push(item.target);
-    pronunciation.maxFrequency=Math.max(pronunciation.maxFrequency,item.frequency);
+  for(const raw of entries||[]){const item=candidateEntry(raw);if(!item)continue;const lemmaKey=normalizedWord(item.lemma);if(!lemmaKey)continue;
+    let group=groups.get(lemmaKey);if(!group){group={best:null,pronunciations:new Map()};groups.set(lemmaKey,group);}
+    const isLemmaForm=normalizedWord(item.target)===lemmaKey,previous=group.best;
+    if(!previous||(isLemmaForm&&!previous.isLemmaForm)||(isLemmaForm===previous.isLemmaForm&&item.frequency>previous.item.frequency))group.best={item,isLemmaForm};
+    let pronunciation=group.pronunciations.get(item.targetIpa);if(!pronunciation){pronunciation={ipa:item.targetIpa,forms:[],maxFrequency:0};group.pronunciations.set(item.targetIpa,pronunciation);}
+    if(!pronunciation.forms.includes(item.target))pronunciation.forms.push(item.target);pronunciation.maxFrequency=Math.max(pronunciation.maxFrequency,item.frequency);
   }
-  return [...groups.values()]
-    .filter(group=>group.best)
-    .map(group=>{
-      const primary=group.best.item;
-      const pronunciationVariants=[...group.pronunciations.values()]
-        .filter(value=>value.ipa!==primary.targetIpa)
-        .sort((a,b)=>b.maxFrequency-a.maxFrequency||a.ipa.localeCompare(b.ipa));
-      return {...primary,pronunciationVariants};
-    })
-    .sort((a,b)=>a.ageBandCandidate-b.ageBandCandidate||b.frequency-a.frequency||a.target.localeCompare(b.target,'fr'));
+  return [...groups.values()].filter(g=>g.best).map(g=>{const primary=g.best.item;const pronunciationVariants=[...g.pronunciations.values()].filter(v=>v.ipa!==primary.targetIpa).sort((a,b)=>b.maxFrequency-a.maxFrequency||a.ipa.localeCompare(b.ipa));return {...primary,pronunciationVariants};})
+    .sort((a,b)=>b.rebuloUtilityWeight-a.rebuloUtilityWeight||a.ageBandCandidate-b.ageBandCandidate||b.frequency-a.frequency||a.target.localeCompare(b.target,'fr'));
 }
 
 export function buildSyllableInventory(targets=[]){
-  const inventory=new Map();
-  for(const target of targets||[]){
-    if(target?.syllabificationStatus!=='source_exact')continue;
-    for(const syllable of target.syllables||[]){
-      const ipa=normalizeIPA(syllable);
-      if(!ipa)continue;
-      let item=inventory.get(ipa);
-      if(!item){
-        item={ipa,targetCount:0,totalFrequency:0,minAgeBandCandidate:12,examples:[]};
-        inventory.set(ipa,item);
-      }
-      item.targetCount+=1;
-      item.totalFrequency+=Number(target.frequency)||0;
-      item.minAgeBandCandidate=Math.min(item.minAgeBandCandidate,Number(target.ageBandCandidate)||12);
-      if(item.examples.length<8&&!item.examples.includes(target.target))item.examples.push(target.target);
-    }
-  }
-  return [...inventory.values()]
-    .map(item=>({...item,totalFrequency:Number(item.totalFrequency.toFixed(3))}))
-    .sort((a,b)=>b.targetCount-a.targetCount||b.totalFrequency-a.totalFrequency||a.ipa.localeCompare(b.ipa));
+  const inventory=new Map();for(const target of targets||[]){if(target?.syllabificationStatus!=='source_exact')continue;for(const syllable of target.syllables||[]){const ipa=normalizeIPA(syllable);if(!ipa)continue;let item=inventory.get(ipa);if(!item){item={ipa,targetCount:0,totalFrequency:0,minAgeBandCandidate:12,examples:[]};inventory.set(ipa,item);}item.targetCount++;item.totalFrequency+=Number(target.frequency)||0;item.minAgeBandCandidate=Math.min(item.minAgeBandCandidate,Number(target.ageBandCandidate)||12);if(item.examples.length<8&&!item.examples.includes(target.target))item.examples.push(target.target);}}
+  return [...inventory.values()].map(i=>({...i,totalFrequency:Number(i.totalFrequency.toFixed(3))})).sort((a,b)=>b.targetCount-a.targetCount||b.totalFrequency-a.totalFrequency||a.ipa.localeCompare(b.ipa));
 }
 
 export function targetVocabularyStats(targets=[]){
-  const ageBands=Object.fromEntries(TARGET_AGE_BANDS.map(profile=>[String(profile.age),0]));
-  let sourceExactSyllabification=0;
-  let needsSourceReview=0;
-  let alternatePronunciations=0;
-  for(const target of targets||[]){
-    const key=String(target?.ageBandCandidate||'');
-    if(key in ageBands)ageBands[key]+=1;
-    if(target?.syllabificationStatus==='source_exact')sourceExactSyllabification+=1;
-    else needsSourceReview+=1;
-    alternatePronunciations+=Array.isArray(target?.pronunciationVariants)?target.pronunciationVariants.length:0;
-  }
-  return {total:targets.length,ageBands,sourceExactSyllabification,needsSourceReview,alternatePronunciations};
+  const ageBands=Object.fromEntries(TARGET_AGE_BANDS.map(p=>[String(p.age),0]));const utilityTiers=Object.fromEntries(REBULO_UTILITY_TIERS.map(t=>[t,0]));let sourceExactSyllabification=0,needsSourceReview=0,alternatePronunciations=0;
+  for(const target of targets||[]){const key=String(target?.ageBandCandidate||'');if(key in ageBands)ageBands[key]++;if(target?.rebuloUtilityTier in utilityTiers)utilityTiers[target.rebuloUtilityTier]++;if(target?.syllabificationStatus==='source_exact')sourceExactSyllabification++;else needsSourceReview++;alternatePronunciations+=Array.isArray(target?.pronunciationVariants)?target.pronunciationVariants.length:0;}
+  return {total:targets.length,ageBands,utilityTiers,rebuloPriorityTotal:targets.filter(isRebuloPriorityTarget).length,sourceExactSyllabification,needsSourceReview,alternatePronunciations};
 }

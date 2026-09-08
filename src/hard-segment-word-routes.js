@@ -223,6 +223,7 @@ function hardStrategyEvidence(sourceIpa='',registry={}){
     lexicalAssessment:row.lexicalAssessment||null,
     visualHypotheses:row.visualHypotheses||[],
     visibleFallbackResearch:row.visibleFallbackResearch||[],
+    composedFallbackResearch:row.composedFallbackResearch||[],
     fallbackStatus:row.fallbackStatus||null,
     rejectedFallbacks:row.rejectedFallbacks||[],
     nextGate:row.nextGate||null

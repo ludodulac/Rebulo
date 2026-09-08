@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-08T09:03:55.526Z",
+  "generatedAt": "2026-09-08T09:13:53.686Z",
   "status": "research_only",
-  "sourceBrickMapGeneratedAt": "2026-09-08T09:03:50.713Z",
+  "sourceBrickMapGeneratedAt": "2026-09-08T09:13:49.188Z",
   "strategyVersion": "1.0.0",
   "visualCandidateBankVersion": "0.1.0",
   "methodology": {
@@ -9,6 +9,7 @@
     "alternateRequirement": "A route must use the tested alternative brick and contain at least two operations; trivial whole-target replacement is excluded.",
     "representationReadiness": "Exact phonetic routes are counted separately from routes whose tested alternative has a non-trivial lexical representation candidate. Single-letter Lexique artifacts never make a route representation-ready.",
     "visualResearchReadiness": "A lexical candidate counts as visually curated only when the same whole word and IPA already exist in the research candidate bank with an explicit pictogram/scene concept and a non-rejected visual research decision. This remains research-only, not naming validation.",
+    "visualNeedQueue": "Every target without a curated visual route is assigned exactly one primary research need: curate an existing exact lexical candidate, find a lexical/visible operation for an exact phonetic brick, or resolve the original hard segment when no exact alternate route exists.",
     "strictPreference": "Strict routes rank before general routes. General routes remain explicit and visible only.",
     "activation": "No route, lexical lead, pictogram, scene or grapheme is activated by this report."
   },
@@ -26,6 +27,1165 @@
     "strictCuratedVisualAlternativeTargets": 0,
     "generalAlternativeTargets": 41
   },
+  "visualResearchNeedQueueStats": {
+    "groupCount": 13,
+    "unresolvedTargetCount": 120,
+    "targetCountsByNeedType": {
+      "curate_existing_lexical_candidate": 2,
+      "find_lexical_or_visible_operation_for_phonetic_brick": 36,
+      "resolve_source_segment": 82
+    }
+  },
+  "visualResearchNeedQueue": [
+    {
+      "needType": "curate_existing_lexical_candidate",
+      "researchIpa": "at",
+      "affectedTargetCount": 1,
+      "minAgeBandCandidate": 7,
+      "sourceSegments": [
+        "tʁ"
+      ],
+      "lexicalCandidates": [
+        {
+          "word": "hâte",
+          "lemma": "hâte",
+          "pos": "NOM",
+          "frequency": 29.892,
+          "phoneticStatus": "whole_pronunciation_exact",
+          "activationState": "research_only"
+        },
+        {
+          "word": "atte",
+          "lemma": "atte",
+          "pos": "NOM",
+          "frequency": 0.038,
+          "phoneticStatus": "whole_pronunciation_exact",
+          "activationState": "research_only"
+        }
+      ],
+      "examples": [
+        {
+          "word": "attraper",
+          "targetIpa": "atʁape",
+          "sourceIpa": "tʁ",
+          "ageBandCandidate": 7
+        }
+      ],
+      "routeModes": [
+        "general"
+      ],
+      "candidateBankEvidence": null,
+      "strategyEvidence": [
+        {
+          "ipa": "tʁ",
+          "evidence": {
+            "strategy": "alternate_segmentation_required",
+            "lexicalLeads": [],
+            "lexicalAssessment": "no_natural_exact_whole_word_candidate",
+            "visualHypotheses": [],
+            "visibleFallbackResearch": [
+              "TR"
+            ],
+            "fallbackStatus": "grapheme_cluster_general_mode_research_only",
+            "rejectedFallbacks": [],
+            "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
+          }
+        }
+      ],
+      "nextAction": "assess_visual_concept_then_naming_risk_before_prototype",
+      "status": "research_only"
+    },
+    {
+      "needType": "curate_existing_lexical_candidate",
+      "researchIpa": "e",
+      "affectedTargetCount": 1,
+      "minAgeBandCandidate": 9,
+      "sourceSegments": [
+        "aʁ"
+      ],
+      "lexicalCandidates": [
+        {
+          "word": "ais",
+          "lemma": "ais",
+          "pos": "NOM",
+          "frequency": 11.953,
+          "phoneticStatus": "whole_pronunciation_exact",
+          "activationState": "research_only"
+        },
+        {
+          "word": "ai",
+          "lemma": "ai",
+          "pos": "NOM",
+          "frequency": 0.848,
+          "phoneticStatus": "whole_pronunciation_exact",
+          "activationState": "research_only"
+        },
+        {
+          "word": "et",
+          "lemma": "et",
+          "pos": "NOM",
+          "frequency": 0.019,
+          "phoneticStatus": "whole_pronunciation_exact",
+          "activationState": "research_only"
+        },
+        {
+          "word": "eh",
+          "lemma": "eh",
+          "pos": "ONO",
+          "frequency": 431.354,
+          "phoneticStatus": "whole_pronunciation_exact",
+          "activationState": "research_only"
+        }
+      ],
+      "examples": [
+        {
+          "word": "harper",
+          "targetIpa": "aʁpe",
+          "sourceIpa": "aʁ",
+          "ageBandCandidate": 9
+        }
+      ],
+      "routeModes": [
+        "strict"
+      ],
+      "candidateBankEvidence": {
+        "recommendedRoute": "explicit_grapheme_fallback",
+        "candidates": [
+          {
+            "label": "É",
+            "candidateType": "explicit_grapheme_tile",
+            "visualPlausibility": "not_applicable",
+            "spontaneousNamingRisk": "not_applicable",
+            "researchDecision": "fallback_only",
+            "nextGate": "define_visible_grapheme_reading_policy"
+          }
+        ]
+      },
+      "strategyEvidence": [
+        {
+          "ipa": "aʁ",
+          "evidence": {
+            "strategy": "scene_comparison_for_older_users",
+            "lexicalLeads": [
+              "art"
+            ],
+            "lexicalAssessment": "exact_but_abstract_concept_with_high_naming_variability",
+            "visualHypotheses": [
+              "petite scène cohérente réunissant tableau, palette et sculpture pour viser le concept global art"
+            ],
+            "visibleFallbackResearch": [],
+            "fallbackStatus": null,
+            "rejectedFallbacks": [],
+            "nextGate": "prototype_only_after_higher_confidence_natural_objects"
+          }
+        }
+      ],
+      "nextAction": "assess_visual_concept_then_naming_risk_before_prototype",
+      "status": "research_only"
+    },
+    {
+      "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+      "researchIpa": "d",
+      "affectedTargetCount": 12,
+      "minAgeBandCandidate": 5,
+      "sourceSegments": [
+        "di"
+      ],
+      "lexicalCandidates": [],
+      "examples": [
+        {
+          "word": "dîner",
+          "targetIpa": "dine",
+          "sourceIpa": "di",
+          "ageBandCandidate": 5
+        },
+        {
+          "word": "paradis",
+          "targetIpa": "paʁadi",
+          "sourceIpa": "di",
+          "ageBandCandidate": 7
+        },
+        {
+          "word": "midi",
+          "targetIpa": "midi",
+          "sourceIpa": "di",
+          "ageBandCandidate": 7
+        },
+        {
+          "word": "diriger",
+          "targetIpa": "diʁiʒe",
+          "sourceIpa": "di",
+          "ageBandCandidate": 7
+        },
+        {
+          "word": "diner",
+          "targetIpa": "dine",
+          "sourceIpa": "di",
+          "ageBandCandidate": 7
+        },
+        {
+          "word": "divers",
+          "targetIpa": "divɛʁ",
+          "sourceIpa": "di",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "dit",
+          "targetIpa": "di",
+          "sourceIpa": "di",
+          "ageBandCandidate": 7
+        },
+        {
+          "word": "diffuser",
+          "targetIpa": "difyze",
+          "sourceIpa": "di",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "paddy",
+          "targetIpa": "padi",
+          "sourceIpa": "di",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "dandy",
+          "targetIpa": "dɑ̃di",
+          "sourceIpa": "di",
+          "ageBandCandidate": 12
+        }
+      ],
+      "routeModes": [
+        "general"
+      ],
+      "candidateBankEvidence": null,
+      "strategyEvidence": [
+        {
+          "ipa": "di",
+          "evidence": {
+            "strategy": "alternate_segmentation_required",
+            "lexicalLeads": [
+              "dit"
+            ],
+            "lexicalAssessment": "exact_but_not_naturally_picturable",
+            "visualHypotheses": [],
+            "visibleFallbackResearch": [],
+            "fallbackStatus": null,
+            "rejectedFallbacks": [
+              {
+                "label": "D",
+                "reason": "French letter name is /de/, not /di/; phonetic mismatch."
+              }
+            ],
+            "nextGate": "search_alternate_exact_decompositions; do_not_use_letter_D_for_di"
+          }
+        }
+      ],
+      "nextAction": "search_exact_whole_word_or_explicit_general_operation",
+      "status": "research_only"
+    },
+    {
+      "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+      "researchIpa": "ʁ",
+      "affectedTargetCount": 8,
+      "minAgeBandCandidate": 5,
+      "sourceSegments": [
+        "al",
+        "aʁ"
+      ],
+      "lexicalCandidates": [],
+      "examples": [
+        {
+          "word": "art",
+          "targetIpa": "aʁ",
+          "sourceIpa": "aʁ",
+          "ageBandCandidate": 5
+        },
+        {
+          "word": "bagarre",
+          "targetIpa": "bagaʁ",
+          "sourceIpa": "aʁ",
+          "ageBandCandidate": 7
+        },
+        {
+          "word": "are",
+          "targetIpa": "aʁ",
+          "sourceIpa": "aʁ",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "artère",
+          "targetIpa": "aʁtɛʁ",
+          "sourceIpa": "aʁ",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "mouchard",
+          "targetIpa": "muʃaʁ",
+          "sourceIpa": "aʁ",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "ardent",
+          "targetIpa": "aʁdɑ̃",
+          "sourceIpa": "aʁ",
+          "ageBandCandidate": 12
+        },
+        {
+          "word": "allergie",
+          "targetIpa": "alɛʁʒi",
+          "sourceIpa": "al",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "alerter",
+          "targetIpa": "alɛʁte",
+          "sourceIpa": "al",
+          "ageBandCandidate": 9
+        }
+      ],
+      "routeModes": [
+        "general"
+      ],
+      "candidateBankEvidence": null,
+      "strategyEvidence": [
+        {
+          "ipa": "al",
+          "evidence": {
+            "strategy": "alternate_segmentation_preferred",
+            "lexicalLeads": [
+              "halle",
+              "ale"
+            ],
+            "lexicalAssessment": "halle_has_high_naming_risk_and_ale_is_age_inappropriate_as_visual_reference",
+            "visualHypotheses": [],
+            "visibleFallbackResearch": [],
+            "fallbackStatus": null,
+            "rejectedFallbacks": [],
+            "nextGate": "search_shared_alternative_segments_before_visual_prototype"
+          }
+        },
+        {
+          "ipa": "aʁ",
+          "evidence": {
+            "strategy": "scene_comparison_for_older_users",
+            "lexicalLeads": [
+              "art"
+            ],
+            "lexicalAssessment": "exact_but_abstract_concept_with_high_naming_variability",
+            "visualHypotheses": [
+              "petite scène cohérente réunissant tableau, palette et sculpture pour viser le concept global art"
+            ],
+            "visibleFallbackResearch": [],
+            "fallbackStatus": null,
+            "rejectedFallbacks": [],
+            "nextGate": "prototype_only_after_higher_confidence_natural_objects"
+          }
+        }
+      ],
+      "nextAction": "search_exact_whole_word_or_explicit_general_operation",
+      "status": "research_only"
+    },
+    {
+      "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+      "researchIpa": "t",
+      "affectedTargetCount": 8,
+      "minAgeBandCandidate": 5,
+      "sourceSegments": [
+        "tʁ"
+      ],
+      "lexicalCandidates": [],
+      "examples": [
+        {
+          "word": "travers",
+          "targetIpa": "tʁavɛʁ",
+          "sourceIpa": "tʁ",
+          "ageBandCandidate": 5
+        },
+        {
+          "word": "traverser",
+          "targetIpa": "tʁavɛʁse",
+          "sourceIpa": "tʁ",
+          "ageBandCandidate": 7
+        },
+        {
+          "word": "rattraper",
+          "targetIpa": "ʁatʁape",
+          "sourceIpa": "tʁ",
+          "ageBandCandidate": 7
+        },
+        {
+          "word": "tracer",
+          "targetIpa": "tʁase",
+          "sourceIpa": "tʁ",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "patrie",
+          "targetIpa": "patʁi",
+          "sourceIpa": "tʁ",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "traversée",
+          "targetIpa": "tʁavɛʁse",
+          "sourceIpa": "tʁ",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "tripoter",
+          "targetIpa": "tʁipote",
+          "sourceIpa": "tʁ",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "tri",
+          "targetIpa": "tʁi",
+          "sourceIpa": "tʁ",
+          "ageBandCandidate": 9
+        }
+      ],
+      "routeModes": [
+        "general",
+        "strict"
+      ],
+      "candidateBankEvidence": null,
+      "strategyEvidence": [
+        {
+          "ipa": "tʁ",
+          "evidence": {
+            "strategy": "alternate_segmentation_required",
+            "lexicalLeads": [],
+            "lexicalAssessment": "no_natural_exact_whole_word_candidate",
+            "visualHypotheses": [],
+            "visibleFallbackResearch": [
+              "TR"
+            ],
+            "fallbackStatus": "grapheme_cluster_general_mode_research_only",
+            "rejectedFallbacks": [],
+            "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
+          }
+        }
+      ],
+      "nextAction": "search_exact_whole_word_or_explicit_general_operation",
+      "status": "research_only"
+    },
+    {
+      "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+      "researchIpa": "l",
+      "affectedTargetCount": 6,
+      "minAgeBandCandidate": 5,
+      "sourceSegments": [
+        "al"
+      ],
+      "lexicalCandidates": [],
+      "examples": [
+        {
+          "word": "allô",
+          "targetIpa": "alo",
+          "sourceIpa": "al",
+          "ageBandCandidate": 5
+        },
+        {
+          "word": "signal",
+          "targetIpa": "siɲal",
+          "sourceIpa": "al",
+          "ageBandCandidate": 7
+        },
+        {
+          "word": "allo",
+          "targetIpa": "alo",
+          "sourceIpa": "al",
+          "ageBandCandidate": 7
+        },
+        {
+          "word": "idéal",
+          "targetIpa": "ideal",
+          "sourceIpa": "al",
+          "ageBandCandidate": 7
+        },
+        {
+          "word": "halo",
+          "targetIpa": "alo",
+          "sourceIpa": "al",
+          "ageBandCandidate": 12
+        },
+        {
+          "word": "postal",
+          "targetIpa": "pɔstal",
+          "sourceIpa": "al",
+          "ageBandCandidate": 12
+        }
+      ],
+      "routeModes": [
+        "general"
+      ],
+      "candidateBankEvidence": null,
+      "strategyEvidence": [
+        {
+          "ipa": "al",
+          "evidence": {
+            "strategy": "alternate_segmentation_preferred",
+            "lexicalLeads": [
+              "halle",
+              "ale"
+            ],
+            "lexicalAssessment": "halle_has_high_naming_risk_and_ale_is_age_inappropriate_as_visual_reference",
+            "visualHypotheses": [],
+            "visibleFallbackResearch": [],
+            "fallbackStatus": null,
+            "rejectedFallbacks": [],
+            "nextGate": "search_shared_alternative_segments_before_visual_prototype"
+          }
+        }
+      ],
+      "nextAction": "search_exact_whole_word_or_explicit_general_operation",
+      "status": "research_only"
+    },
+    {
+      "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+      "researchIpa": "n",
+      "affectedTargetCount": 2,
+      "minAgeBandCandidate": 9,
+      "sourceSegments": [
+        "al",
+        "aʁ"
+      ],
+      "lexicalCandidates": [],
+      "examples": [
+        {
+          "word": "arène",
+          "targetIpa": "aʁɛn",
+          "sourceIpa": "aʁ",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "haleine",
+          "targetIpa": "alɛn",
+          "sourceIpa": "al",
+          "ageBandCandidate": 9
+        }
+      ],
+      "routeModes": [
+        "general"
+      ],
+      "candidateBankEvidence": null,
+      "strategyEvidence": [
+        {
+          "ipa": "al",
+          "evidence": {
+            "strategy": "alternate_segmentation_preferred",
+            "lexicalLeads": [
+              "halle",
+              "ale"
+            ],
+            "lexicalAssessment": "halle_has_high_naming_risk_and_ale_is_age_inappropriate_as_visual_reference",
+            "visualHypotheses": [],
+            "visibleFallbackResearch": [],
+            "fallbackStatus": null,
+            "rejectedFallbacks": [],
+            "nextGate": "search_shared_alternative_segments_before_visual_prototype"
+          }
+        },
+        {
+          "ipa": "aʁ",
+          "evidence": {
+            "strategy": "scene_comparison_for_older_users",
+            "lexicalLeads": [
+              "art"
+            ],
+            "lexicalAssessment": "exact_but_abstract_concept_with_high_naming_variability",
+            "visualHypotheses": [
+              "petite scène cohérente réunissant tableau, palette et sculpture pour viser le concept global art"
+            ],
+            "visibleFallbackResearch": [],
+            "fallbackStatus": null,
+            "rejectedFallbacks": [],
+            "nextGate": "prototype_only_after_higher_confidence_natural_objects"
+          }
+        }
+      ],
+      "nextAction": "search_exact_whole_word_or_explicit_general_operation",
+      "status": "research_only"
+    },
+    {
+      "needType": "resolve_source_segment",
+      "researchIpa": "sjɔ̃",
+      "affectedTargetCount": 20,
+      "minAgeBandCandidate": 5,
+      "sourceSegments": [
+        "sjɔ̃"
+      ],
+      "lexicalCandidates": [],
+      "examples": [
+        {
+          "word": "mission",
+          "targetIpa": "misjɔ̃",
+          "sourceIpa": "sjɔ̃",
+          "ageBandCandidate": 5
+        },
+        {
+          "word": "version",
+          "targetIpa": "vɛʁsjɔ̃",
+          "sourceIpa": "sjɔ̃",
+          "ageBandCandidate": 7
+        },
+        {
+          "word": "passion",
+          "targetIpa": "pasjɔ̃",
+          "sourceIpa": "sjɔ̃",
+          "ageBandCandidate": 7
+        },
+        {
+          "word": "opération",
+          "targetIpa": "opeʁasjɔ̃",
+          "sourceIpa": "sjɔ̃",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "possession",
+          "targetIpa": "posesjɔ̃",
+          "sourceIpa": "sjɔ̃",
+          "ageBandCandidate": 7
+        },
+        {
+          "word": "pension",
+          "targetIpa": "pɑ̃sjɔ̃",
+          "sourceIpa": "sjɔ̃",
+          "ageBandCandidate": 7
+        },
+        {
+          "word": "génération",
+          "targetIpa": "ʒeneʁasjɔ̃",
+          "sourceIpa": "sjɔ̃",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "libération",
+          "targetIpa": "libeʁasjɔ̃",
+          "sourceIpa": "sjɔ̃",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "séparation",
+          "targetIpa": "sepaʁasjɔ̃",
+          "sourceIpa": "sjɔ̃",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "démission",
+          "targetIpa": "demisjɔ̃",
+          "sourceIpa": "sjɔ̃",
+          "ageBandCandidate": 9
+        }
+      ],
+      "routeModes": [],
+      "candidateBankEvidence": {
+        "recommendedRoute": "reject_natural_priority",
+        "candidates": [
+          {
+            "label": "scion",
+            "candidateType": "whole_word_pictogram",
+            "visualPlausibility": "medium",
+            "spontaneousNamingRisk": "very_high",
+            "researchDecision": "reject_visual_priority",
+            "nextGate": "seek_alternate_segmentation_or_explicit_operation"
+          }
+        ]
+      },
+      "strategyEvidence": [
+        {
+          "ipa": "sjɔ̃",
+          "evidence": {
+            "strategy": "alternate_segmentation_required",
+            "lexicalLeads": [
+              "scion"
+            ],
+            "lexicalAssessment": "exact_but_spontaneous_naming_risk_is_very_high",
+            "visualHypotheses": [],
+            "visibleFallbackResearch": [
+              "TION",
+              "SION"
+            ],
+            "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
+            "rejectedFallbacks": [],
+            "nextGate": "seek_alternate_segmentations_before_contextual_grapheme_design"
+          }
+        }
+      ],
+      "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies",
+      "status": "research_only"
+    },
+    {
+      "needType": "resolve_source_segment",
+      "researchIpa": "tʁ",
+      "affectedTargetCount": 20,
+      "minAgeBandCandidate": 5,
+      "sourceSegments": [
+        "tʁ"
+      ],
+      "lexicalCandidates": [],
+      "examples": [
+        {
+          "word": "trop",
+          "targetIpa": "tʁo",
+          "sourceIpa": "tʁ",
+          "ageBandCandidate": 5
+        },
+        {
+          "word": "autre",
+          "targetIpa": "otʁ",
+          "sourceIpa": "tʁ",
+          "ageBandCandidate": 5
+        },
+        {
+          "word": "d'autres",
+          "targetIpa": "dotʁ",
+          "sourceIpa": "tʁ",
+          "ageBandCandidate": 5
+        },
+        {
+          "word": "quatre",
+          "targetIpa": "katʁ",
+          "sourceIpa": "tʁ",
+          "ageBandCandidate": 5
+        },
+        {
+          "word": "lettre",
+          "targetIpa": "lɛtʁ",
+          "sourceIpa": "tʁ",
+          "ageBandCandidate": 5
+        },
+        {
+          "word": "théâtre",
+          "targetIpa": "teatʁ",
+          "sourceIpa": "tʁ",
+          "ageBandCandidate": 7
+        },
+        {
+          "word": "paraître",
+          "targetIpa": "paʁɛtʁ",
+          "sourceIpa": "tʁ",
+          "ageBandCandidate": 7
+        },
+        {
+          "word": "apparaître",
+          "targetIpa": "apaʁɛtʁ",
+          "sourceIpa": "tʁ",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "chapitre",
+          "targetIpa": "ʃapitʁ",
+          "sourceIpa": "tʁ",
+          "ageBandCandidate": 7
+        },
+        {
+          "word": "détresse",
+          "targetIpa": "detʁɛs",
+          "sourceIpa": "tʁ",
+          "ageBandCandidate": 9
+        }
+      ],
+      "routeModes": [],
+      "candidateBankEvidence": null,
+      "strategyEvidence": [
+        {
+          "ipa": "tʁ",
+          "evidence": {
+            "strategy": "alternate_segmentation_required",
+            "lexicalLeads": [],
+            "lexicalAssessment": "no_natural_exact_whole_word_candidate",
+            "visualHypotheses": [],
+            "visibleFallbackResearch": [
+              "TR"
+            ],
+            "fallbackStatus": "grapheme_cluster_general_mode_research_only",
+            "rejectedFallbacks": [],
+            "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
+          }
+        }
+      ],
+      "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies",
+      "status": "research_only"
+    },
+    {
+      "needType": "resolve_source_segment",
+      "researchIpa": "mɑ̃",
+      "affectedTargetCount": 18,
+      "minAgeBandCandidate": 5,
+      "sourceSegments": [
+        "mɑ̃"
+      ],
+      "lexicalCandidates": [],
+      "examples": [
+        {
+          "word": "maman",
+          "targetIpa": "mamɑ̃",
+          "sourceIpa": "mɑ̃",
+          "ageBandCandidate": 5
+        },
+        {
+          "word": "manger",
+          "targetIpa": "mɑ̃ʒe",
+          "sourceIpa": "mɑ̃",
+          "ageBandCandidate": 5
+        },
+        {
+          "word": "man",
+          "targetIpa": "mɑ̃",
+          "sourceIpa": "mɑ̃",
+          "ageBandCandidate": 7
+        },
+        {
+          "word": "serment",
+          "targetIpa": "sɛʁmɑ̃",
+          "sourceIpa": "mɑ̃",
+          "ageBandCandidate": 7
+        },
+        {
+          "word": "amant",
+          "targetIpa": "amɑ̃",
+          "sourceIpa": "mɑ̃",
+          "ageBandCandidate": 7
+        },
+        {
+          "word": "apparemment",
+          "targetIpa": "apaʁamɑ̃",
+          "sourceIpa": "mɑ̃",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "document",
+          "targetIpa": "dokymɑ̃",
+          "sourceIpa": "mɑ̃",
+          "ageBandCandidate": 7
+        },
+        {
+          "word": "alimentaire",
+          "targetIpa": "alimɑ̃tɛʁ",
+          "sourceIpa": "mɑ̃",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "documentaire",
+          "targetIpa": "dokymɑ̃tɛʁ",
+          "sourceIpa": "mɑ̃",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "ciment",
+          "targetIpa": "simɑ̃",
+          "sourceIpa": "mɑ̃",
+          "ageBandCandidate": 9
+        }
+      ],
+      "routeModes": [],
+      "candidateBankEvidence": null,
+      "strategyEvidence": [
+        {
+          "ipa": "mɑ̃",
+          "evidence": {
+            "strategy": "alternate_segmentation_first",
+            "lexicalLeads": [
+              "man",
+              "mans",
+              "mens"
+            ],
+            "lexicalAssessment": "phonetic_exact_but_not_natural_child_pictograms",
+            "visualHypotheses": [],
+            "visibleFallbackResearch": [
+              "MENT"
+            ],
+            "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
+            "rejectedFallbacks": [],
+            "nextGate": "measure_alternate_segmentations_then_formalize_contextual_grapheme_if_still_needed"
+          }
+        }
+      ],
+      "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies",
+      "status": "research_only"
+    },
+    {
+      "needType": "resolve_source_segment",
+      "researchIpa": "œʁ",
+      "affectedTargetCount": 11,
+      "minAgeBandCandidate": 5,
+      "sourceSegments": [
+        "œʁ"
+      ],
+      "lexicalCandidates": [],
+      "examples": [
+        {
+          "word": "heure",
+          "targetIpa": "œʁ",
+          "sourceIpa": "œʁ",
+          "ageBandCandidate": 5
+        },
+        {
+          "word": "h",
+          "targetIpa": "œʁ",
+          "sourceIpa": "œʁ",
+          "ageBandCandidate": 5
+        },
+        {
+          "word": "erreur",
+          "targetIpa": "ɛʁœʁ",
+          "sourceIpa": "œʁ",
+          "ageBandCandidate": 5
+        },
+        {
+          "word": "ailleurs",
+          "targetIpa": "ajœʁ",
+          "sourceIpa": "œʁ",
+          "ageBandCandidate": 5
+        },
+        {
+          "word": "terreur",
+          "targetIpa": "tɛʁœʁ",
+          "sourceIpa": "œʁ",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "heurter",
+          "targetIpa": "œʁte",
+          "sourceIpa": "œʁ",
+          "ageBandCandidate": 12
+        },
+        {
+          "word": "livreur",
+          "targetIpa": "livʁœʁ",
+          "sourceIpa": "œʁ",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "boxeur",
+          "targetIpa": "bɔksœʁ",
+          "sourceIpa": "œʁ",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "pêcheur",
+          "targetIpa": "pɛʃœʁ",
+          "sourceIpa": "œʁ",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "porteur",
+          "targetIpa": "pɔʁtœʁ",
+          "sourceIpa": "œʁ",
+          "ageBandCandidate": 9
+        }
+      ],
+      "routeModes": [],
+      "candidateBankEvidence": {
+        "recommendedRoute": "small_scene",
+        "candidates": [
+          {
+            "label": "heure",
+            "candidateType": "whole_word_scene",
+            "visualPlausibility": "medium_high",
+            "spontaneousNamingRisk": "high",
+            "researchDecision": "second_wave",
+            "nextGate": "compare_scene_variants_before_prototype"
+          },
+          {
+            "label": "heurt",
+            "candidateType": "whole_word_scene",
+            "visualPlausibility": "medium",
+            "spontaneousNamingRisk": "high",
+            "researchDecision": "reject_visual_priority",
+            "nextGate": "prefer_heure"
+          }
+        ]
+      },
+      "strategyEvidence": [
+        {
+          "ipa": "œʁ",
+          "evidence": {
+            "strategy": "scene_comparison",
+            "lexicalLeads": [
+              "heure"
+            ],
+            "lexicalAssessment": "exact_and_scene_plausible_but_high_naming_risk",
+            "visualHypotheses": [
+              "personne consultant clairement l'heure sur une horloge ou une montre, sans texte dominant"
+            ],
+            "visibleFallbackResearch": [],
+            "fallbackStatus": null,
+            "rejectedFallbacks": [],
+            "nextGate": "compare_two_scene_variants_in_blind_naming_test"
+          }
+        }
+      ],
+      "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies",
+      "status": "research_only"
+    },
+    {
+      "needType": "resolve_source_segment",
+      "researchIpa": "ɛ̃",
+      "affectedTargetCount": 9,
+      "minAgeBandCandidate": 5,
+      "sourceSegments": [
+        "ɛ̃"
+      ],
+      "lexicalCandidates": [],
+      "examples": [
+        {
+          "word": "hein",
+          "targetIpa": "ɛ̃",
+          "sourceIpa": "ɛ̃",
+          "ageBandCandidate": 5
+        },
+        {
+          "word": "ainsi",
+          "targetIpa": "ɛ̃si",
+          "sourceIpa": "ɛ̃",
+          "ageBandCandidate": 5
+        },
+        {
+          "word": "terrain",
+          "targetIpa": "tɛʁɛ̃",
+          "sourceIpa": "ɛ̃",
+          "ageBandCandidate": 5
+        },
+        {
+          "word": "impossible",
+          "targetIpa": "ɛ̃posibl",
+          "sourceIpa": "ɛ̃",
+          "ageBandCandidate": 7
+        },
+        {
+          "word": "incident",
+          "targetIpa": "ɛ̃sidɑ̃",
+          "sourceIpa": "ɛ̃",
+          "ageBandCandidate": 7
+        },
+        {
+          "word": "insigne",
+          "targetIpa": "ɛ̃siɲ",
+          "sourceIpa": "ɛ̃",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "impoli",
+          "targetIpa": "ɛ̃poli",
+          "sourceIpa": "ɛ̃",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "impôt",
+          "targetIpa": "ɛ̃po",
+          "sourceIpa": "ɛ̃",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "interner",
+          "targetIpa": "ɛ̃tɛʁne",
+          "sourceIpa": "ɛ̃",
+          "ageBandCandidate": 12
+        }
+      ],
+      "routeModes": [],
+      "candidateBankEvidence": null,
+      "strategyEvidence": [
+        {
+          "ipa": "ɛ̃",
+          "evidence": {
+            "strategy": "alternate_segmentation_first",
+            "lexicalLeads": [
+              "hein",
+              "ain"
+            ],
+            "lexicalAssessment": "exact_but_poor_or_ambiguous_visual_naming",
+            "visualHypotheses": [],
+            "visibleFallbackResearch": [
+              "IN",
+              "UN"
+            ],
+            "fallbackStatus": "contextual_grapheme_rule_not_yet_authorized",
+            "rejectedFallbacks": [],
+            "nextGate": "compare_alternate_segmentations_before_any_grapheme_rule"
+          }
+        }
+      ],
+      "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies",
+      "status": "research_only"
+    },
+    {
+      "needType": "resolve_source_segment",
+      "researchIpa": "di",
+      "affectedTargetCount": 4,
+      "minAgeBandCandidate": 9,
+      "sourceSegments": [
+        "di"
+      ],
+      "lexicalCandidates": [],
+      "examples": [
+        {
+          "word": "humidité",
+          "targetIpa": "ymidite",
+          "sourceIpa": "di",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "cupidité",
+          "targetIpa": "kypidite",
+          "sourceIpa": "di",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "rapidité",
+          "targetIpa": "ʁapidite",
+          "sourceIpa": "di",
+          "ageBandCandidate": 9
+        },
+        {
+          "word": "diversité",
+          "targetIpa": "divɛʁsite",
+          "sourceIpa": "di",
+          "ageBandCandidate": 12
+        }
+      ],
+      "routeModes": [],
+      "candidateBankEvidence": {
+        "recommendedRoute": "alternate_segmentation_or_explicit_word_tile",
+        "candidates": [
+          {
+            "label": "dit",
+            "candidateType": "whole_word_candidate",
+            "visualPlausibility": "low",
+            "spontaneousNamingRisk": "very_high",
+            "researchDecision": "reject_visual_priority",
+            "nextGate": "seek_alternate_segmentation"
+          }
+        ]
+      },
+      "strategyEvidence": [
+        {
+          "ipa": "di",
+          "evidence": {
+            "strategy": "alternate_segmentation_required",
+            "lexicalLeads": [
+              "dit"
+            ],
+            "lexicalAssessment": "exact_but_not_naturally_picturable",
+            "visualHypotheses": [],
+            "visibleFallbackResearch": [],
+            "fallbackStatus": null,
+            "rejectedFallbacks": [
+              {
+                "label": "D",
+                "reason": "French letter name is /de/, not /di/; phonetic mismatch."
+              }
+            ],
+            "nextGate": "search_alternate_exact_decompositions; do_not_use_letter_D_for_di"
+          }
+        }
+      ],
+      "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies",
+      "status": "research_only"
+    }
+  ],
   "segments": [
     {
       "ipa": "mɑ̃",
@@ -51,7 +1211,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "mɑ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "manger|mɑ̃ʒe",
@@ -65,7 +1233,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "mɑ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "man|mɑ̃",
@@ -79,7 +1255,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "mɑ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "serment|sɛʁmɑ̃",
@@ -93,7 +1277,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "mɑ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "amant|amɑ̃",
@@ -107,7 +1299,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "mɑ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "apparemment|apaʁamɑ̃",
@@ -121,7 +1321,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "mɑ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "document|dokymɑ̃",
@@ -135,7 +1343,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "mɑ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "alimentaire|alimɑ̃tɛʁ",
@@ -149,7 +1365,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "mɑ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "documentaire|dokymɑ̃tɛʁ",
@@ -163,7 +1387,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "mɑ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "ciment|simɑ̃",
@@ -177,7 +1409,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "mɑ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "dément|demɑ̃",
@@ -191,7 +1431,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "mɑ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "décidément|desidemɑ̃",
@@ -205,7 +1453,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "mɑ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "alimenter|alimɑ̃te",
@@ -219,7 +1475,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "mɑ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "piment|pimɑ̃",
@@ -233,7 +1497,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "mɑ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "poliment|polimɑ̃",
@@ -247,7 +1519,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "mɑ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "tourmenter|tuʁmɑ̃te",
@@ -261,7 +1541,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "mɑ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "mentalité|mɑ̃talite",
@@ -275,7 +1563,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "mɑ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "clément|klemɑ̃",
@@ -289,7 +1585,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "mɑ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         }
       ]
     },
@@ -317,7 +1621,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "ɛ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "ainsi|ɛ̃si",
@@ -331,7 +1643,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "ɛ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "terrain|tɛʁɛ̃",
@@ -345,7 +1665,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "ɛ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "impossible|ɛ̃posibl",
@@ -359,7 +1687,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "ɛ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "intérêt|ɛ̃teʁɛ",
@@ -484,7 +1820,8 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "representable_alternative_candidate_found",
-          "visualResolutionState": "curated_visual_research_candidate_found"
+          "visualResolutionState": "curated_visual_research_candidate_found",
+          "visualResearchNeed": null
         },
         {
           "key": "incident|ɛ̃sidɑ̃",
@@ -498,7 +1835,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "ɛ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "interroger|ɛ̃tɛʁoʒe",
@@ -629,7 +1974,8 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "representable_alternative_candidate_found",
-          "visualResolutionState": "curated_visual_research_candidate_found"
+          "visualResolutionState": "curated_visual_research_candidate_found",
+          "visualResearchNeed": null
         },
         {
           "key": "insigne|ɛ̃siɲ",
@@ -643,7 +1989,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "ɛ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "impoli|ɛ̃poli",
@@ -657,7 +2011,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "ɛ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "indépendant|ɛ̃depɑ̃dɑ̃",
@@ -788,7 +2150,8 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "representable_alternative_candidate_found",
-          "visualResolutionState": "curated_visual_research_candidate_found"
+          "visualResolutionState": "curated_visual_research_candidate_found",
+          "visualResearchNeed": null
         },
         {
           "key": "inverser|ɛ̃vɛʁse",
@@ -913,7 +2276,8 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "representable_alternative_candidate_found",
-          "visualResolutionState": "curated_visual_research_candidate_found"
+          "visualResolutionState": "curated_visual_research_candidate_found",
+          "visualResearchNeed": null
         },
         {
           "key": "impôt|ɛ̃po",
@@ -927,7 +2291,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "ɛ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "inciter|ɛ̃site",
@@ -1052,7 +2424,8 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "representable_alternative_candidate_found",
-          "visualResolutionState": "curated_visual_research_candidate_found"
+          "visualResolutionState": "curated_visual_research_candidate_found",
+          "visualResearchNeed": null
         },
         {
           "key": "importuner|ɛ̃pɔʁtyne",
@@ -1183,7 +2556,8 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "representable_alternative_candidate_found",
-          "visualResolutionState": "curated_visual_research_candidate_found"
+          "visualResolutionState": "curated_visual_research_candidate_found",
+          "visualResearchNeed": null
         },
         {
           "key": "interner|ɛ̃tɛʁne",
@@ -1197,7 +2571,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "ɛ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "lycéen|liseɛ̃",
@@ -1322,7 +2704,8 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "representable_alternative_candidate_found",
-          "visualResolutionState": "curated_visual_research_candidate_found"
+          "visualResolutionState": "curated_visual_research_candidate_found",
+          "visualResearchNeed": null
         }
       ]
     },
@@ -1350,7 +2733,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "œʁ",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "h|œʁ",
@@ -1364,7 +2755,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "œʁ",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "erreur|ɛʁœʁ",
@@ -1378,7 +2777,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "œʁ",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "ailleurs|ajœʁ",
@@ -1392,7 +2799,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "œʁ",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "terreur|tɛʁœʁ",
@@ -1406,7 +2821,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "œʁ",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "heurter|œʁte",
@@ -1420,7 +2843,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "œʁ",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "livreur|livʁœʁ",
@@ -1434,7 +2865,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "œʁ",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "boxeur|bɔksœʁ",
@@ -1448,7 +2887,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "œʁ",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "pêcheur|pɛʃœʁ",
@@ -1462,7 +2909,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "œʁ",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "porteur|pɔʁtœʁ",
@@ -1476,7 +2931,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "œʁ",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "éclaireur|eklɛʁœʁ",
@@ -1490,7 +2953,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "œʁ",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         }
       ]
     },
@@ -1546,7 +3017,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "ʁ",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         },
         {
           "key": "bagarre|bagaʁ",
@@ -1627,7 +3106,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "ʁ",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         },
         {
           "key": "are|aʁ",
@@ -1669,7 +3156,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "ʁ",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         },
         {
           "key": "harper|aʁpe",
@@ -1810,7 +3305,48 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "representable_alternative_candidate_found",
-          "visualResolutionState": "lexical_candidate_needs_visual_curation"
+          "visualResolutionState": "lexical_candidate_needs_visual_curation",
+          "visualResearchNeed": {
+            "needType": "curate_existing_lexical_candidate",
+            "researchIpa": "e",
+            "routeMode": "strict",
+            "coverageType": "composite_words",
+            "representationLeads": [
+              {
+                "word": "ais",
+                "lemma": "ais",
+                "pos": "NOM",
+                "frequency": 11.953,
+                "phoneticStatus": "whole_pronunciation_exact",
+                "activationState": "research_only"
+              },
+              {
+                "word": "ai",
+                "lemma": "ai",
+                "pos": "NOM",
+                "frequency": 0.848,
+                "phoneticStatus": "whole_pronunciation_exact",
+                "activationState": "research_only"
+              },
+              {
+                "word": "et",
+                "lemma": "et",
+                "pos": "NOM",
+                "frequency": 0.019,
+                "phoneticStatus": "whole_pronunciation_exact",
+                "activationState": "research_only"
+              },
+              {
+                "word": "eh",
+                "lemma": "eh",
+                "pos": "ONO",
+                "frequency": 431.354,
+                "phoneticStatus": "whole_pronunciation_exact",
+                "activationState": "research_only"
+              }
+            ],
+            "nextAction": "assess_visual_concept_then_naming_risk_before_prototype"
+          }
         },
         {
           "key": "artère|aʁtɛʁ",
@@ -1858,7 +3394,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "ʁ",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         },
         {
           "key": "mouchard|muʃaʁ",
@@ -1906,7 +3450,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "ʁ",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         },
         {
           "key": "arène|aʁɛn",
@@ -1996,7 +3548,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "n",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         },
         {
           "key": "ardent|aʁdɑ̃",
@@ -2044,7 +3604,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "ʁ",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         }
       ]
     },
@@ -2115,7 +3683,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "l",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         },
         {
           "key": "signal|siɲal",
@@ -2172,7 +3748,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "l",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         },
         {
           "key": "allo|alo",
@@ -2229,7 +3813,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "l",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         },
         {
           "key": "idéal|ideal",
@@ -2292,7 +3884,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "l",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         },
         {
           "key": "haleine|alɛn",
@@ -2391,7 +3991,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "n",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         },
         {
           "key": "allergie|alɛʁʒi",
@@ -2493,7 +4101,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "ʁ",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         },
         {
           "key": "alerter|alɛʁte",
@@ -2595,7 +4211,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "ʁ",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         },
         {
           "key": "halo|alo",
@@ -2652,7 +4276,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "l",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         },
         {
           "key": "postal|pɔstal",
@@ -2709,7 +4341,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "l",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         }
       ]
     },
@@ -2737,7 +4377,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "tʁ",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "autre|otʁ",
@@ -2751,7 +4399,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "tʁ",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "d'autres|dotʁ",
@@ -2765,7 +4421,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "tʁ",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "quatre|katʁ",
@@ -2779,7 +4443,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "tʁ",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "lettre|lɛtʁ",
@@ -2793,7 +4465,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "tʁ",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "travers|tʁavɛʁ",
@@ -2850,7 +4530,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "t",
+            "routeMode": "strict",
+            "coverageType": "composite_words",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         },
         {
           "key": "attraper|atʁape",
@@ -2996,7 +4684,40 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "representable_alternative_candidate_found",
-          "visualResolutionState": "lexical_candidate_needs_visual_curation"
+          "visualResolutionState": "lexical_candidate_needs_visual_curation",
+          "visualResearchNeed": {
+            "needType": "curate_existing_lexical_candidate",
+            "researchIpa": "at",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
+            "representationLeads": [
+              {
+                "word": "hâte",
+                "lemma": "hâte",
+                "pos": "NOM",
+                "frequency": 29.892,
+                "phoneticStatus": "whole_pronunciation_exact",
+                "activationState": "research_only"
+              },
+              {
+                "word": "atte",
+                "lemma": "atte",
+                "pos": "NOM",
+                "frequency": 0.038,
+                "phoneticStatus": "whole_pronunciation_exact",
+                "activationState": "research_only"
+              },
+              {
+                "word": "hâte",
+                "lemma": "hâter",
+                "pos": "VER",
+                "frequency": 1.127,
+                "phoneticStatus": "whole_pronunciation_exact",
+                "activationState": "research_only"
+              }
+            ],
+            "nextAction": "assess_visual_concept_then_naming_risk_before_prototype"
+          }
         },
         {
           "key": "théâtre|teatʁ",
@@ -3010,7 +4731,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "tʁ",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "traverser|tʁavɛʁse",
@@ -3073,7 +4802,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "t",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         },
         {
           "key": "rattraper|ʁatʁape",
@@ -3136,7 +4873,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "t",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         },
         {
           "key": "paraître|paʁɛtʁ",
@@ -3150,7 +4895,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "tʁ",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "apparaître|apaʁɛtʁ",
@@ -3164,7 +4917,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "tʁ",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "tracer|tʁase",
@@ -3221,7 +4982,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "t",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         },
         {
           "key": "chapitre|ʃapitʁ",
@@ -3235,7 +5004,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "tʁ",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "détresse|detʁɛs",
@@ -3249,7 +5026,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "tʁ",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "patrie|patʁi",
@@ -3306,7 +5091,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "t",
+            "routeMode": "strict",
+            "coverageType": "composite_words",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         },
         {
           "key": "trauma|tʁoma",
@@ -3320,7 +5113,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "tʁ",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "peintre|pɛ̃tʁ",
@@ -3334,7 +5135,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "tʁ",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "atroce|atʁɔs",
@@ -3348,7 +5157,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "tʁ",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "terrestre|tɛʁɛstʁ",
@@ -3362,7 +5179,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "tʁ",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "maestro|maɛstʁo",
@@ -3376,7 +5201,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "tʁ",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "litre|litʁ",
@@ -3390,7 +5223,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "tʁ",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "traversée|tʁavɛʁse",
@@ -3453,7 +5294,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "t",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         },
         {
           "key": "tripoter|tʁipote",
@@ -3516,7 +5365,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "t",
+            "routeMode": "strict",
+            "coverageType": "composite_words",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         },
         {
           "key": "traine|tʁɛn",
@@ -3530,7 +5387,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "tʁ",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "tri|tʁi",
@@ -3581,7 +5446,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "t",
+            "routeMode": "strict",
+            "coverageType": "composite_words",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         },
         {
           "key": "paraitre|paʁɛtʁ",
@@ -3595,7 +5468,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "tʁ",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "traîneau|tʁɛno",
@@ -3609,7 +5490,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "tʁ",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "traîne|tʁɛn",
@@ -3623,7 +5512,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "tʁ",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         }
       ]
     },
@@ -3651,7 +5548,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "sjɔ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "version|vɛʁsjɔ̃",
@@ -3665,7 +5570,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "sjɔ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "passion|pasjɔ̃",
@@ -3679,7 +5592,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "sjɔ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "opération|opeʁasjɔ̃",
@@ -3693,7 +5614,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "sjɔ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "possession|posesjɔ̃",
@@ -3707,7 +5636,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "sjɔ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "pension|pɑ̃sjɔ̃",
@@ -3721,7 +5658,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "sjɔ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "génération|ʒeneʁasjɔ̃",
@@ -3735,7 +5680,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "sjɔ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "libération|libeʁasjɔ̃",
@@ -3749,7 +5702,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "sjɔ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "séparation|sepaʁasjɔ̃",
@@ -3763,7 +5724,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "sjɔ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "démission|demisjɔ̃",
@@ -3777,7 +5746,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "sjɔ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "apparition|apaʁisjɔ̃",
@@ -3791,7 +5768,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "sjɔ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "potion|posjɔ̃",
@@ -3805,7 +5790,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "sjɔ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "session|sesjɔ̃",
@@ -3819,7 +5812,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "sjɔ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "citation|sitasjɔ̃",
@@ -3833,7 +5834,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "sjɔ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "tentation|tɑ̃tasjɔ̃",
@@ -3847,7 +5856,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "sjɔ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "agitation|aʒitasjɔ̃",
@@ -3861,7 +5878,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "sjɔ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "occupation|okypasjɔ̃",
@@ -3875,7 +5900,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "sjɔ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "imitation|imitasjɔ̃",
@@ -3889,7 +5922,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "sjɔ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "assignation|asiɲasjɔ̃",
@@ -3903,7 +5944,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "sjɔ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "ration|ʁasjɔ̃",
@@ -3917,7 +5966,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "sjɔ̃",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         }
       ]
     },
@@ -3988,7 +6045,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "d",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         },
         {
           "key": "paradis|paʁadi",
@@ -4051,7 +6116,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "d",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         },
         {
           "key": "midi|midi",
@@ -4108,7 +6181,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "d",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         },
         {
           "key": "diriger|diʁiʒe",
@@ -4171,7 +6252,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "d",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         },
         {
           "key": "diner|dine",
@@ -4228,7 +6317,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "d",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         },
         {
           "key": "divers|divɛʁ",
@@ -4285,7 +6382,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "d",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         },
         {
           "key": "dit|di",
@@ -4336,7 +6441,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "d",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         },
         {
           "key": "diffuser|difyze",
@@ -4393,7 +6506,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "d",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         },
         {
           "key": "humidité|ymidite",
@@ -4407,7 +6528,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "di",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "paddy|padi",
@@ -4464,7 +6593,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "d",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         },
         {
           "key": "cupidité|kypidite",
@@ -4478,7 +6615,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "di",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "rapidité|ʁapidite",
@@ -4492,7 +6637,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "di",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "dandy|dɑ̃di",
@@ -4549,7 +6702,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "d",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         },
         {
           "key": "diversité|divɛʁsite",
@@ -4563,7 +6724,15 @@
           "routes": [],
           "resolutionState": "still_needs_new_representation_or_rule",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "di",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
+          }
         },
         {
           "key": "die|di",
@@ -4614,7 +6783,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "d",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         },
         {
           "key": "caddie|kadi",
@@ -4671,7 +6848,15 @@
           ],
           "resolutionState": "exact_alternative_routes_found",
           "representationResolutionState": "still_needs_representable_alternative",
-          "visualResolutionState": "still_needs_visual_representation"
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "find_lexical_or_visible_operation_for_phonetic_brick",
+            "researchIpa": "d",
+            "routeMode": "general",
+            "coverageType": "explicit_grapheme",
+            "representationLeads": [],
+            "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
         }
       ]
     }

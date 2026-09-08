@@ -1,0 +1,3562 @@
+{
+  "generatedAt": "2026-09-08T08:28:05.563Z",
+  "status": "research_only",
+  "sourceBrickMapGeneratedAt": "2026-09-08T08:28:02.014Z",
+  "strategyVersion": "1.0.0",
+  "methodology": {
+    "exactness": "Every route reconstructs the complete target IPA with complete visible operation readings.",
+    "alternateRequirement": "A route must use the tested alternative brick and contain at least two operations; trivial whole-target replacement is excluded.",
+    "strictPreference": "Strict routes rank before general routes. General routes remain explicit and visible only.",
+    "activation": "No route, lexical lead, pictogram or grapheme is activated by this report."
+  },
+  "stats": {
+    "segmentCount": 8,
+    "targetCount": 127,
+    "targetsWithAlternativeRoutes": 45,
+    "targetsStillBlocked": 82,
+    "strictAlternativeTargets": 5,
+    "generalAlternativeTargets": 41
+  },
+  "segments": [
+    {
+      "ipa": "mɑ̃",
+      "strategy": "alternate_segmentation_first",
+      "sourceUsefulUnlocked": 18,
+      "targetCount": 18,
+      "targetsWithAlternativeRoutes": 0,
+      "targetsStillBlocked": 18,
+      "targets": [
+        {
+          "key": "maman|mamɑ̃",
+          "word": "maman",
+          "targetIpa": "mamɑ̃",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "very_common_simple",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "manger|mɑ̃ʒe",
+          "word": "manger",
+          "targetIpa": "mɑ̃ʒe",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "very_common_simple",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "man|mɑ̃",
+          "word": "man",
+          "targetIpa": "mɑ̃",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "school_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "serment|sɛʁmɑ̃",
+          "word": "serment",
+          "targetIpa": "sɛʁmɑ̃",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "school_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "amant|amɑ̃",
+          "word": "amant",
+          "targetIpa": "amɑ̃",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "school_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "apparemment|apaʁamɑ̃",
+          "word": "apparemment",
+          "targetIpa": "apaʁamɑ̃",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "school_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "document|dokymɑ̃",
+          "word": "document",
+          "targetIpa": "dokymɑ̃",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "teen_adult_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "alimentaire|alimɑ̃tɛʁ",
+          "word": "alimentaire",
+          "targetIpa": "alimɑ̃tɛʁ",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "documentaire|dokymɑ̃tɛʁ",
+          "word": "documentaire",
+          "targetIpa": "dokymɑ̃tɛʁ",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "ciment|simɑ̃",
+          "word": "ciment",
+          "targetIpa": "simɑ̃",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "dément|demɑ̃",
+          "word": "dément",
+          "targetIpa": "demɑ̃",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "décidément|desidemɑ̃",
+          "word": "décidément",
+          "targetIpa": "desidemɑ̃",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "alimenter|alimɑ̃te",
+          "word": "alimenter",
+          "targetIpa": "alimɑ̃te",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "piment|pimɑ̃",
+          "word": "piment",
+          "targetIpa": "pimɑ̃",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "poliment|polimɑ̃",
+          "word": "poliment",
+          "targetIpa": "polimɑ̃",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "tourmenter|tuʁmɑ̃te",
+          "word": "tourmenter",
+          "targetIpa": "tuʁmɑ̃te",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "mentalité|mɑ̃talite",
+          "word": "mentalité",
+          "targetIpa": "mɑ̃talite",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "clément|klemɑ̃",
+          "word": "clément",
+          "targetIpa": "klemɑ̃",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        }
+      ]
+    },
+    {
+      "ipa": "ɛ̃",
+      "strategy": "alternate_segmentation_first",
+      "sourceUsefulUnlocked": 16,
+      "targetCount": 16,
+      "targetsWithAlternativeRoutes": 7,
+      "targetsStillBlocked": 9,
+      "targets": [
+        {
+          "key": "hein|ɛ̃",
+          "word": "hein",
+          "targetIpa": "ɛ̃",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "very_common_simple",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "ainsi|ɛ̃si",
+          "word": "ainsi",
+          "targetIpa": "ɛ̃si",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "very_common_simple",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "terrain|tɛʁɛ̃",
+          "word": "terrain",
+          "targetIpa": "tɛʁɛ̃",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "child_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "impossible|ɛ̃posibl",
+          "word": "impossible",
+          "targetIpa": "ɛ̃posibl",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "child_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "intérêt|ɛ̃teʁɛ",
+          "word": "intérêt",
+          "targetIpa": "ɛ̃teʁɛ",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "child_common",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "ɛ",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-ɛ",
+                  "label": "/ɛ/",
+                  "ipa": "ɛ"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "T",
+                  "reading": "té",
+                  "ipa": "te"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "raie",
+                  "label": "raie",
+                  "ipa": "ʁɛ"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "haie",
+                  "lemma": "haie",
+                  "pos": "NOM",
+                  "frequency": 1.209,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "es",
+                  "lemma": "es",
+                  "pos": "NOM",
+                  "frequency": 0.193,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "aie",
+                  "lemma": "aie",
+                  "pos": "NOM",
+                  "frequency": 0.149,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "ait",
+                  "lemma": "ait",
+                  "pos": "NOM",
+                  "frequency": 0.076,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 12,
+              "status": "research_only_exact_route",
+              "score": -63
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "incident|ɛ̃sidɑ̃",
+          "word": "incident",
+          "targetIpa": "ɛ̃sidɑ̃",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "school_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "interroger|ɛ̃tɛʁoʒe",
+          "word": "interroger",
+          "targetIpa": "ɛ̃tɛʁoʒe",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "school_common",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "ɛ",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-ɛ",
+                  "label": "/ɛ/",
+                  "ipa": "ɛ"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "terre",
+                  "label": "terre",
+                  "ipa": "tɛʁ"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "eau",
+                  "label": "eau",
+                  "ipa": "o"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "G",
+                  "reading": "gé",
+                  "ipa": "ʒe"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "haie",
+                  "lemma": "haie",
+                  "pos": "NOM",
+                  "frequency": 1.209,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "es",
+                  "lemma": "es",
+                  "pos": "NOM",
+                  "frequency": 0.193,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "aie",
+                  "lemma": "aie",
+                  "pos": "NOM",
+                  "frequency": 0.149,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "ait",
+                  "lemma": "ait",
+                  "pos": "NOM",
+                  "frequency": 0.076,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 12,
+              "status": "research_only_exact_route",
+              "score": -88
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "insigne|ɛ̃siɲ",
+          "word": "insigne",
+          "targetIpa": "ɛ̃siɲ",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "impoli|ɛ̃poli",
+          "word": "impoli",
+          "targetIpa": "ɛ̃poli",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "indépendant|ɛ̃depɑ̃dɑ̃",
+          "word": "indépendant",
+          "targetIpa": "ɛ̃depɑ̃dɑ̃",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "ɛ",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-ɛ",
+                  "label": "/ɛ/",
+                  "ipa": "ɛ"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "D",
+                  "reading": "dé",
+                  "ipa": "de"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "paon",
+                  "label": "paon",
+                  "ipa": "pɑ̃"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "dent",
+                  "label": "dent",
+                  "ipa": "dɑ̃"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "haie",
+                  "lemma": "haie",
+                  "pos": "NOM",
+                  "frequency": 1.209,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "es",
+                  "lemma": "es",
+                  "pos": "NOM",
+                  "frequency": 0.193,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "aie",
+                  "lemma": "aie",
+                  "pos": "NOM",
+                  "frequency": 0.149,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "ait",
+                  "lemma": "ait",
+                  "pos": "NOM",
+                  "frequency": 0.076,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 12,
+              "status": "research_only_exact_route",
+              "score": -88
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "inverser|ɛ̃vɛʁse",
+          "word": "inverser",
+          "targetIpa": "ɛ̃vɛʁse",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "ɛ",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-ɛ",
+                  "label": "/ɛ/",
+                  "ipa": "ɛ"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "ver",
+                  "label": "ver",
+                  "ipa": "vɛʁ"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "C",
+                  "reading": "cé",
+                  "ipa": "se"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "haie",
+                  "lemma": "haie",
+                  "pos": "NOM",
+                  "frequency": 1.209,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "es",
+                  "lemma": "es",
+                  "pos": "NOM",
+                  "frequency": 0.193,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "aie",
+                  "lemma": "aie",
+                  "pos": "NOM",
+                  "frequency": 0.149,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "ait",
+                  "lemma": "ait",
+                  "pos": "NOM",
+                  "frequency": 0.076,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 12,
+              "status": "research_only_exact_route",
+              "score": -63
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "impôt|ɛ̃po",
+          "word": "impôt",
+          "targetIpa": "ɛ̃po",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "inciter|ɛ̃site",
+          "word": "inciter",
+          "targetIpa": "ɛ̃site",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "ɛ",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-ɛ",
+                  "label": "/ɛ/",
+                  "ipa": "ɛ"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "scie",
+                  "label": "scie",
+                  "ipa": "si"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "T",
+                  "reading": "té",
+                  "ipa": "te"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "haie",
+                  "lemma": "haie",
+                  "pos": "NOM",
+                  "frequency": 1.209,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "es",
+                  "lemma": "es",
+                  "pos": "NOM",
+                  "frequency": 0.193,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "aie",
+                  "lemma": "aie",
+                  "pos": "NOM",
+                  "frequency": 0.149,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "ait",
+                  "lemma": "ait",
+                  "pos": "NOM",
+                  "frequency": 0.076,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 12,
+              "status": "research_only_exact_route",
+              "score": -63
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "importuner|ɛ̃pɔʁtyne",
+          "word": "importuner",
+          "targetIpa": "ɛ̃pɔʁtyne",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "ɛ",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-ɛ",
+                  "label": "/ɛ/",
+                  "ipa": "ɛ"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "porte",
+                  "label": "porte",
+                  "ipa": "pɔʁt"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "U",
+                  "reading": "u",
+                  "ipa": "y"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "nez",
+                  "label": "nez",
+                  "ipa": "ne"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "haie",
+                  "lemma": "haie",
+                  "pos": "NOM",
+                  "frequency": 1.209,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "es",
+                  "lemma": "es",
+                  "pos": "NOM",
+                  "frequency": 0.193,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "aie",
+                  "lemma": "aie",
+                  "pos": "NOM",
+                  "frequency": 0.149,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "ait",
+                  "lemma": "ait",
+                  "pos": "NOM",
+                  "frequency": 0.076,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 12,
+              "status": "research_only_exact_route",
+              "score": -88
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "interner|ɛ̃tɛʁne",
+          "word": "interner",
+          "targetIpa": "ɛ̃tɛʁne",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "lycéen|liseɛ̃",
+          "word": "lycéen",
+          "targetIpa": "liseɛ̃",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "ɛ",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "lit",
+                  "label": "lit",
+                  "ipa": "li"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "C",
+                  "reading": "cé",
+                  "ipa": "se"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-ɛ",
+                  "label": "/ɛ/",
+                  "ipa": "ɛ"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "haie",
+                  "lemma": "haie",
+                  "pos": "NOM",
+                  "frequency": 1.209,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "es",
+                  "lemma": "es",
+                  "pos": "NOM",
+                  "frequency": 0.193,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "aie",
+                  "lemma": "aie",
+                  "pos": "NOM",
+                  "frequency": 0.149,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "ait",
+                  "lemma": "ait",
+                  "pos": "NOM",
+                  "frequency": 0.076,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 12,
+              "status": "research_only_exact_route",
+              "score": -63
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        }
+      ]
+    },
+    {
+      "ipa": "œʁ",
+      "strategy": "scene_comparison",
+      "sourceUsefulUnlocked": 11,
+      "targetCount": 11,
+      "targetsWithAlternativeRoutes": 0,
+      "targetsStillBlocked": 11,
+      "targets": [
+        {
+          "key": "heure|œʁ",
+          "word": "heure",
+          "targetIpa": "œʁ",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "very_common_simple",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "h|œʁ",
+          "word": "h",
+          "targetIpa": "œʁ",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "very_common_simple",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "erreur|ɛʁœʁ",
+          "word": "erreur",
+          "targetIpa": "ɛʁœʁ",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "child_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "ailleurs|ajœʁ",
+          "word": "ailleurs",
+          "targetIpa": "ajœʁ",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "child_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "terreur|tɛʁœʁ",
+          "word": "terreur",
+          "targetIpa": "tɛʁœʁ",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "school_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "heurter|œʁte",
+          "word": "heurter",
+          "targetIpa": "œʁte",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "school_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "livreur|livʁœʁ",
+          "word": "livreur",
+          "targetIpa": "livʁœʁ",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "boxeur|bɔksœʁ",
+          "word": "boxeur",
+          "targetIpa": "bɔksœʁ",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "pêcheur|pɛʃœʁ",
+          "word": "pêcheur",
+          "targetIpa": "pɛʃœʁ",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "porteur|pɔʁtœʁ",
+          "word": "porteur",
+          "targetIpa": "pɔʁtœʁ",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "éclaireur|eklɛʁœʁ",
+          "word": "éclaireur",
+          "targetIpa": "eklɛʁœʁ",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        }
+      ]
+    },
+    {
+      "ipa": "aʁ",
+      "strategy": "scene_comparison_for_older_users",
+      "sourceUsefulUnlocked": 8,
+      "targetCount": 8,
+      "targetsWithAlternativeRoutes": 8,
+      "targetsStillBlocked": 0,
+      "targets": [
+        {
+          "key": "art|aʁ",
+          "word": "art",
+          "targetIpa": "aʁ",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "child_common",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "ʁ",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "grapheme",
+                  "grapheme": "A",
+                  "reading": "a",
+                  "ipa": "a"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-ʁ",
+                  "label": "/ʁ/",
+                  "ipa": "ʁ"
+                }
+              ],
+              "lexicalLeads": [],
+              "alternativeUsefulUnlocked": 86,
+              "status": "research_only_exact_route",
+              "score": -84
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "bagarre|bagaʁ",
+          "word": "bagarre",
+          "targetIpa": "bagaʁ",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "school_common",
+          "alternativeRouteCount": 2,
+          "routes": [
+            {
+              "alternativeIpa": "ʁ",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "bague",
+                  "label": "bague",
+                  "ipa": "bag"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "A",
+                  "reading": "a",
+                  "ipa": "a"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-ʁ",
+                  "label": "/ʁ/",
+                  "ipa": "ʁ"
+                }
+              ],
+              "lexicalLeads": [],
+              "alternativeUsefulUnlocked": 86,
+              "status": "research_only_exact_route",
+              "score": -109
+            },
+            {
+              "alternativeIpa": "b",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-b",
+                  "label": "/b/",
+                  "ipa": "b"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "A",
+                  "reading": "a",
+                  "ipa": "a"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "gare",
+                  "label": "gare",
+                  "ipa": "gaʁ"
+                }
+              ],
+              "lexicalLeads": [],
+              "alternativeUsefulUnlocked": 60,
+              "status": "research_only_exact_route",
+              "score": -135
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "are|aʁ",
+          "word": "are",
+          "targetIpa": "aʁ",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "ʁ",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "grapheme",
+                  "grapheme": "A",
+                  "reading": "a",
+                  "ipa": "a"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-ʁ",
+                  "label": "/ʁ/",
+                  "ipa": "ʁ"
+                }
+              ],
+              "lexicalLeads": [],
+              "alternativeUsefulUnlocked": 86,
+              "status": "research_only_exact_route",
+              "score": -84
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "harper|aʁpe",
+          "word": "harper",
+          "targetIpa": "aʁpe",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common",
+          "alternativeRouteCount": 2,
+          "routes": [
+            {
+              "alternativeIpa": "e",
+              "mode": "strict",
+              "coverageType": "composite_words",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "harpe",
+                  "label": "harpe",
+                  "ipa": "aʁp"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-e",
+                  "label": "/e/",
+                  "ipa": "e"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "ais",
+                  "lemma": "ais",
+                  "pos": "NOM",
+                  "frequency": 11.953,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "ai",
+                  "lemma": "ai",
+                  "pos": "NOM",
+                  "frequency": 0.848,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "et",
+                  "lemma": "et",
+                  "pos": "NOM",
+                  "frequency": 0.019,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "eh",
+                  "lemma": "eh",
+                  "pos": "ONO",
+                  "frequency": 431.354,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 45,
+              "status": "research_only_exact_route",
+              "score": 1115
+            },
+            {
+              "alternativeIpa": "ʁ",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "grapheme",
+                  "grapheme": "A",
+                  "reading": "a",
+                  "ipa": "a"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-ʁ",
+                  "label": "/ʁ/",
+                  "ipa": "ʁ"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "P",
+                  "reading": "pé",
+                  "ipa": "pe"
+                }
+              ],
+              "lexicalLeads": [],
+              "alternativeUsefulUnlocked": 86,
+              "status": "research_only_exact_route",
+              "score": -229
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "artère|aʁtɛʁ",
+          "word": "artère",
+          "targetIpa": "aʁtɛʁ",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "ʁ",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "grapheme",
+                  "grapheme": "A",
+                  "reading": "a",
+                  "ipa": "a"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-ʁ",
+                  "label": "/ʁ/",
+                  "ipa": "ʁ"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "terre",
+                  "label": "terre",
+                  "ipa": "tɛʁ"
+                }
+              ],
+              "lexicalLeads": [],
+              "alternativeUsefulUnlocked": 86,
+              "status": "research_only_exact_route",
+              "score": -109
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "mouchard|muʃaʁ",
+          "word": "mouchard",
+          "targetIpa": "muʃaʁ",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "ʁ",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "mouche",
+                  "label": "mouche",
+                  "ipa": "muʃ"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "A",
+                  "reading": "a",
+                  "ipa": "a"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-ʁ",
+                  "label": "/ʁ/",
+                  "ipa": "ʁ"
+                }
+              ],
+              "lexicalLeads": [],
+              "alternativeUsefulUnlocked": 86,
+              "status": "research_only_exact_route",
+              "score": -109
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "arène|aʁɛn",
+          "word": "arène",
+          "targetIpa": "aʁɛn",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 2,
+          "routes": [
+            {
+              "alternativeIpa": "n",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "grapheme",
+                  "grapheme": "A",
+                  "reading": "a",
+                  "ipa": "a"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "raie",
+                  "label": "raie",
+                  "ipa": "ʁɛ"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-n",
+                  "label": "/n/",
+                  "ipa": "n"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "n",
+                  "lemma": "ne",
+                  "pos": "NOM",
+                  "frequency": 1.782,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 70,
+              "status": "research_only_exact_route",
+              "score": -5
+            },
+            {
+              "alternativeIpa": "ʁ",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "grapheme",
+                  "grapheme": "A",
+                  "reading": "a",
+                  "ipa": "a"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-ʁ",
+                  "label": "/ʁ/",
+                  "ipa": "ʁ"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "N",
+                  "reading": "haine",
+                  "ipa": "ɛn"
+                }
+              ],
+              "lexicalLeads": [],
+              "alternativeUsefulUnlocked": 86,
+              "status": "research_only_exact_route",
+              "score": -229
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "ardent|aʁdɑ̃",
+          "word": "ardent",
+          "targetIpa": "aʁdɑ̃",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "ʁ",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "grapheme",
+                  "grapheme": "A",
+                  "reading": "a",
+                  "ipa": "a"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-ʁ",
+                  "label": "/ʁ/",
+                  "ipa": "ʁ"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "dent",
+                  "label": "dent",
+                  "ipa": "dɑ̃"
+                }
+              ],
+              "lexicalLeads": [],
+              "alternativeUsefulUnlocked": 86,
+              "status": "research_only_exact_route",
+              "score": -109
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        }
+      ]
+    },
+    {
+      "ipa": "al",
+      "strategy": "alternate_segmentation_preferred",
+      "sourceUsefulUnlocked": 9,
+      "targetCount": 9,
+      "targetsWithAlternativeRoutes": 9,
+      "targetsStillBlocked": 0,
+      "targets": [
+        {
+          "key": "allô|alo",
+          "word": "allô",
+          "targetIpa": "alo",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "child_common",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "l",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "grapheme",
+                  "grapheme": "A",
+                  "reading": "a",
+                  "ipa": "a"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-l",
+                  "label": "/l/",
+                  "ipa": "l"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "eau",
+                  "label": "eau",
+                  "ipa": "o"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "l",
+                  "lemma": "l",
+                  "pos": "NOM",
+                  "frequency": 7.946,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 68,
+              "status": "research_only_exact_route",
+              "score": -7
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "signal|siɲal",
+          "word": "signal",
+          "targetIpa": "siɲal",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "child_common",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "l",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "cygne",
+                  "label": "cygne",
+                  "ipa": "siɲ"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "A",
+                  "reading": "a",
+                  "ipa": "a"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-l",
+                  "label": "/l/",
+                  "ipa": "l"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "l",
+                  "lemma": "l",
+                  "pos": "NOM",
+                  "frequency": 7.946,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 68,
+              "status": "research_only_exact_route",
+              "score": -7
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "allo|alo",
+          "word": "allo",
+          "targetIpa": "alo",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "school_common",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "l",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "grapheme",
+                  "grapheme": "A",
+                  "reading": "a",
+                  "ipa": "a"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-l",
+                  "label": "/l/",
+                  "ipa": "l"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "eau",
+                  "label": "eau",
+                  "ipa": "o"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "l",
+                  "lemma": "l",
+                  "pos": "NOM",
+                  "frequency": 7.946,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 68,
+              "status": "research_only_exact_route",
+              "score": -7
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "idéal|ideal",
+          "word": "idéal",
+          "targetIpa": "ideal",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "teen_adult_common",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "l",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "grapheme",
+                  "grapheme": "I",
+                  "reading": "i",
+                  "ipa": "i"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "de",
+                  "label": "dé",
+                  "ipa": "de"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "A",
+                  "reading": "a",
+                  "ipa": "a"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-l",
+                  "label": "/l/",
+                  "ipa": "l"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "l",
+                  "lemma": "l",
+                  "pos": "NOM",
+                  "frequency": 7.946,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 68,
+              "status": "research_only_exact_route",
+              "score": -152
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "haleine|alɛn",
+          "word": "haleine",
+          "targetIpa": "alɛn",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common",
+          "alternativeRouteCount": 2,
+          "routes": [
+            {
+              "alternativeIpa": "n",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "grapheme",
+                  "grapheme": "A",
+                  "reading": "a",
+                  "ipa": "a"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "lait",
+                  "label": "lait",
+                  "ipa": "lɛ"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-n",
+                  "label": "/n/",
+                  "ipa": "n"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "n",
+                  "lemma": "ne",
+                  "pos": "NOM",
+                  "frequency": 1.782,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 70,
+              "status": "research_only_exact_route",
+              "score": -5
+            },
+            {
+              "alternativeIpa": "l",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "grapheme",
+                  "grapheme": "A",
+                  "reading": "a",
+                  "ipa": "a"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-l",
+                  "label": "/l/",
+                  "ipa": "l"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "N",
+                  "reading": "haine",
+                  "ipa": "ɛn"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "l",
+                  "lemma": "l",
+                  "pos": "NOM",
+                  "frequency": 7.946,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 68,
+              "status": "research_only_exact_route",
+              "score": -127
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "allergie|alɛʁʒi",
+          "word": "allergie",
+          "targetIpa": "alɛʁʒi",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 2,
+          "routes": [
+            {
+              "alternativeIpa": "ʁ",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "grapheme",
+                  "grapheme": "A",
+                  "reading": "a",
+                  "ipa": "a"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "lait",
+                  "label": "lait",
+                  "ipa": "lɛ"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-ʁ",
+                  "label": "/ʁ/",
+                  "ipa": "ʁ"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "J",
+                  "reading": "ji",
+                  "ipa": "ʒi"
+                }
+              ],
+              "lexicalLeads": [],
+              "alternativeUsefulUnlocked": 86,
+              "status": "research_only_exact_route",
+              "score": -254
+            },
+            {
+              "alternativeIpa": "l",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "grapheme",
+                  "grapheme": "A",
+                  "reading": "a",
+                  "ipa": "a"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-l",
+                  "label": "/l/",
+                  "ipa": "l"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "R",
+                  "reading": "air",
+                  "ipa": "ɛʁ"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "J",
+                  "reading": "ji",
+                  "ipa": "ʒi"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "l",
+                  "lemma": "l",
+                  "pos": "NOM",
+                  "frequency": 7.946,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 68,
+              "status": "research_only_exact_route",
+              "score": -272
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "alerter|alɛʁte",
+          "word": "alerter",
+          "targetIpa": "alɛʁte",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 2,
+          "routes": [
+            {
+              "alternativeIpa": "ʁ",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "grapheme",
+                  "grapheme": "A",
+                  "reading": "a",
+                  "ipa": "a"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "lait",
+                  "label": "lait",
+                  "ipa": "lɛ"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-ʁ",
+                  "label": "/ʁ/",
+                  "ipa": "ʁ"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "the",
+                  "label": "thé",
+                  "ipa": "te"
+                }
+              ],
+              "lexicalLeads": [],
+              "alternativeUsefulUnlocked": 86,
+              "status": "research_only_exact_route",
+              "score": -134
+            },
+            {
+              "alternativeIpa": "l",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "grapheme",
+                  "grapheme": "A",
+                  "reading": "a",
+                  "ipa": "a"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-l",
+                  "label": "/l/",
+                  "ipa": "l"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "R",
+                  "reading": "air",
+                  "ipa": "ɛʁ"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "the",
+                  "label": "thé",
+                  "ipa": "te"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "l",
+                  "lemma": "l",
+                  "pos": "NOM",
+                  "frequency": 7.946,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 68,
+              "status": "research_only_exact_route",
+              "score": -152
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "halo|alo",
+          "word": "halo",
+          "targetIpa": "alo",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "l",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "grapheme",
+                  "grapheme": "A",
+                  "reading": "a",
+                  "ipa": "a"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-l",
+                  "label": "/l/",
+                  "ipa": "l"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "eau",
+                  "label": "eau",
+                  "ipa": "o"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "l",
+                  "lemma": "l",
+                  "pos": "NOM",
+                  "frequency": 7.946,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 68,
+              "status": "research_only_exact_route",
+              "score": -7
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "postal|pɔstal",
+          "word": "postal",
+          "targetIpa": "pɔstal",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "l",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "poste",
+                  "label": "poste",
+                  "ipa": "pɔst"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "A",
+                  "reading": "a",
+                  "ipa": "a"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-l",
+                  "label": "/l/",
+                  "ipa": "l"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "l",
+                  "lemma": "l",
+                  "pos": "NOM",
+                  "frequency": 7.946,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 68,
+              "status": "research_only_exact_route",
+              "score": -7
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        }
+      ]
+    },
+    {
+      "ipa": "tʁ",
+      "strategy": "alternate_segmentation_required",
+      "sourceUsefulUnlocked": 29,
+      "targetCount": 29,
+      "targetsWithAlternativeRoutes": 9,
+      "targetsStillBlocked": 20,
+      "targets": [
+        {
+          "key": "trop|tʁo",
+          "word": "trop",
+          "targetIpa": "tʁo",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "very_common_simple",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "autre|otʁ",
+          "word": "autre",
+          "targetIpa": "otʁ",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "very_common_simple",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "d'autres|dotʁ",
+          "word": "d'autres",
+          "targetIpa": "dotʁ",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "very_common_simple",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "quatre|katʁ",
+          "word": "quatre",
+          "targetIpa": "katʁ",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "very_common_simple",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "lettre|lɛtʁ",
+          "word": "lettre",
+          "targetIpa": "lɛtʁ",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "child_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "travers|tʁavɛʁ",
+          "word": "travers",
+          "targetIpa": "tʁavɛʁ",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "child_common",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "t",
+              "mode": "strict",
+              "coverageType": "composite_words",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-t",
+                  "label": "/t/",
+                  "ipa": "t"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "rat",
+                  "label": "rat",
+                  "ipa": "ʁa"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "ver",
+                  "label": "ver",
+                  "ipa": "vɛʁ"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "t",
+                  "lemma": "t",
+                  "pos": "NOM",
+                  "frequency": 22.282,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 99,
+              "status": "research_only_exact_route",
+              "score": 1144
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "attraper|atʁape",
+          "word": "attraper",
+          "targetIpa": "atʁape",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "child_common",
+          "alternativeRouteCount": 2,
+          "routes": [
+            {
+              "alternativeIpa": "at",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-at",
+                  "label": "/at/",
+                  "ipa": "at"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "rat",
+                  "label": "rat",
+                  "ipa": "ʁa"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "P",
+                  "reading": "pé",
+                  "ipa": "pe"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "hâte",
+                  "lemma": "hâte",
+                  "pos": "NOM",
+                  "frequency": 29.892,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "atte",
+                  "lemma": "atte",
+                  "pos": "NOM",
+                  "frequency": 0.038,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                },
+                {
+                  "word": "hâte",
+                  "lemma": "hâter",
+                  "pos": "VER",
+                  "frequency": 1.127,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 3,
+              "status": "research_only_exact_route",
+              "score": -72
+            },
+            {
+              "alternativeIpa": "t",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "grapheme",
+                  "grapheme": "A",
+                  "reading": "a",
+                  "ipa": "a"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-t",
+                  "label": "/t/",
+                  "ipa": "t"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "rat",
+                  "label": "rat",
+                  "ipa": "ʁa"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "P",
+                  "reading": "pé",
+                  "ipa": "pe"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "t",
+                  "lemma": "t",
+                  "pos": "NOM",
+                  "frequency": 22.282,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 99,
+              "status": "research_only_exact_route",
+              "score": -121
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "théâtre|teatʁ",
+          "word": "théâtre",
+          "targetIpa": "teatʁ",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "school_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "traverser|tʁavɛʁse",
+          "word": "traverser",
+          "targetIpa": "tʁavɛʁse",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "school_common",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "t",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-t",
+                  "label": "/t/",
+                  "ipa": "t"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "rat",
+                  "label": "rat",
+                  "ipa": "ʁa"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "ver",
+                  "label": "ver",
+                  "ipa": "vɛʁ"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "C",
+                  "reading": "cé",
+                  "ipa": "se"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "t",
+                  "lemma": "t",
+                  "pos": "NOM",
+                  "frequency": 22.282,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 99,
+              "status": "research_only_exact_route",
+              "score": -1
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "rattraper|ʁatʁape",
+          "word": "rattraper",
+          "targetIpa": "ʁatʁape",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "school_common",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "t",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "rat",
+                  "label": "rat",
+                  "ipa": "ʁa"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-t",
+                  "label": "/t/",
+                  "ipa": "t"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "rat",
+                  "label": "rat",
+                  "ipa": "ʁa"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "P",
+                  "reading": "pé",
+                  "ipa": "pe"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "t",
+                  "lemma": "t",
+                  "pos": "NOM",
+                  "frequency": 22.282,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 99,
+              "status": "research_only_exact_route",
+              "score": -1
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "paraître|paʁɛtʁ",
+          "word": "paraître",
+          "targetIpa": "paʁɛtʁ",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "school_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "apparaître|apaʁɛtʁ",
+          "word": "apparaître",
+          "targetIpa": "apaʁɛtʁ",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "school_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "tracer|tʁase",
+          "word": "tracer",
+          "targetIpa": "tʁase",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "school_common",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "t",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-t",
+                  "label": "/t/",
+                  "ipa": "t"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "rat",
+                  "label": "rat",
+                  "ipa": "ʁa"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "C",
+                  "reading": "cé",
+                  "ipa": "se"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "t",
+                  "lemma": "t",
+                  "pos": "NOM",
+                  "frequency": 22.282,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 99,
+              "status": "research_only_exact_route",
+              "score": 24
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "chapitre|ʃapitʁ",
+          "word": "chapitre",
+          "targetIpa": "ʃapitʁ",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "teen_adult_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "détresse|detʁɛs",
+          "word": "détresse",
+          "targetIpa": "detʁɛs",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "patrie|patʁi",
+          "word": "patrie",
+          "targetIpa": "patʁi",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "t",
+              "mode": "strict",
+              "coverageType": "composite_words",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "pas",
+                  "label": "pas",
+                  "ipa": "pa"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-t",
+                  "label": "/t/",
+                  "ipa": "t"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "riz",
+                  "label": "riz",
+                  "ipa": "ʁi"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "t",
+                  "lemma": "t",
+                  "pos": "NOM",
+                  "frequency": 22.282,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 99,
+              "status": "research_only_exact_route",
+              "score": 1144
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "trauma|tʁoma",
+          "word": "trauma",
+          "targetIpa": "tʁoma",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "peintre|pɛ̃tʁ",
+          "word": "peintre",
+          "targetIpa": "pɛ̃tʁ",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "atroce|atʁɔs",
+          "word": "atroce",
+          "targetIpa": "atʁɔs",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "terrestre|tɛʁɛstʁ",
+          "word": "terrestre",
+          "targetIpa": "tɛʁɛstʁ",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "maestro|maɛstʁo",
+          "word": "maestro",
+          "targetIpa": "maɛstʁo",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "litre|litʁ",
+          "word": "litre",
+          "targetIpa": "litʁ",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "traversée|tʁavɛʁse",
+          "word": "traversée",
+          "targetIpa": "tʁavɛʁse",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "t",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-t",
+                  "label": "/t/",
+                  "ipa": "t"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "rat",
+                  "label": "rat",
+                  "ipa": "ʁa"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "ver",
+                  "label": "ver",
+                  "ipa": "vɛʁ"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "C",
+                  "reading": "cé",
+                  "ipa": "se"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "t",
+                  "lemma": "t",
+                  "pos": "NOM",
+                  "frequency": 22.282,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 99,
+              "status": "research_only_exact_route",
+              "score": -1
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "tripoter|tʁipote",
+          "word": "tripoter",
+          "targetIpa": "tʁipote",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "t",
+              "mode": "strict",
+              "coverageType": "composite_words",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-t",
+                  "label": "/t/",
+                  "ipa": "t"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "riz",
+                  "label": "riz",
+                  "ipa": "ʁi"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "pot",
+                  "label": "pot",
+                  "ipa": "po"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "the",
+                  "label": "thé",
+                  "ipa": "te"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "t",
+                  "lemma": "t",
+                  "pos": "NOM",
+                  "frequency": 22.282,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 99,
+              "status": "research_only_exact_route",
+              "score": 1119
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "traine|tʁɛn",
+          "word": "traine",
+          "targetIpa": "tʁɛn",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "tri|tʁi",
+          "word": "tri",
+          "targetIpa": "tʁi",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "t",
+              "mode": "strict",
+              "coverageType": "composite_words",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-t",
+                  "label": "/t/",
+                  "ipa": "t"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "riz",
+                  "label": "riz",
+                  "ipa": "ʁi"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "t",
+                  "lemma": "t",
+                  "pos": "NOM",
+                  "frequency": 22.282,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 99,
+              "status": "research_only_exact_route",
+              "score": 1169
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "paraitre|paʁɛtʁ",
+          "word": "paraitre",
+          "targetIpa": "paʁɛtʁ",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "traîneau|tʁɛno",
+          "word": "traîneau",
+          "targetIpa": "tʁɛno",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "traîne|tʁɛn",
+          "word": "traîne",
+          "targetIpa": "tʁɛn",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        }
+      ]
+    },
+    {
+      "ipa": "sjɔ̃",
+      "strategy": "alternate_segmentation_required",
+      "sourceUsefulUnlocked": 20,
+      "targetCount": 20,
+      "targetsWithAlternativeRoutes": 0,
+      "targetsStillBlocked": 20,
+      "targets": [
+        {
+          "key": "mission|misjɔ̃",
+          "word": "mission",
+          "targetIpa": "misjɔ̃",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "child_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "version|vɛʁsjɔ̃",
+          "word": "version",
+          "targetIpa": "vɛʁsjɔ̃",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "school_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "passion|pasjɔ̃",
+          "word": "passion",
+          "targetIpa": "pasjɔ̃",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "school_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "opération|opeʁasjɔ̃",
+          "word": "opération",
+          "targetIpa": "opeʁasjɔ̃",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "school_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "possession|posesjɔ̃",
+          "word": "possession",
+          "targetIpa": "posesjɔ̃",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "teen_adult_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "pension|pɑ̃sjɔ̃",
+          "word": "pension",
+          "targetIpa": "pɑ̃sjɔ̃",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "teen_adult_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "génération|ʒeneʁasjɔ̃",
+          "word": "génération",
+          "targetIpa": "ʒeneʁasjɔ̃",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "libération|libeʁasjɔ̃",
+          "word": "libération",
+          "targetIpa": "libeʁasjɔ̃",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "séparation|sepaʁasjɔ̃",
+          "word": "séparation",
+          "targetIpa": "sepaʁasjɔ̃",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "démission|demisjɔ̃",
+          "word": "démission",
+          "targetIpa": "demisjɔ̃",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "apparition|apaʁisjɔ̃",
+          "word": "apparition",
+          "targetIpa": "apaʁisjɔ̃",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "potion|posjɔ̃",
+          "word": "potion",
+          "targetIpa": "posjɔ̃",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "session|sesjɔ̃",
+          "word": "session",
+          "targetIpa": "sesjɔ̃",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "citation|sitasjɔ̃",
+          "word": "citation",
+          "targetIpa": "sitasjɔ̃",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "tentation|tɑ̃tasjɔ̃",
+          "word": "tentation",
+          "targetIpa": "tɑ̃tasjɔ̃",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "agitation|aʒitasjɔ̃",
+          "word": "agitation",
+          "targetIpa": "aʒitasjɔ̃",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "occupation|okypasjɔ̃",
+          "word": "occupation",
+          "targetIpa": "okypasjɔ̃",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "imitation|imitasjɔ̃",
+          "word": "imitation",
+          "targetIpa": "imitasjɔ̃",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "assignation|asiɲasjɔ̃",
+          "word": "assignation",
+          "targetIpa": "asiɲasjɔ̃",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "ration|ʁasjɔ̃",
+          "word": "ration",
+          "targetIpa": "ʁasjɔ̃",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        }
+      ]
+    },
+    {
+      "ipa": "di",
+      "strategy": "alternate_segmentation_required",
+      "sourceUsefulUnlocked": 16,
+      "targetCount": 16,
+      "targetsWithAlternativeRoutes": 12,
+      "targetsStillBlocked": 4,
+      "targets": [
+        {
+          "key": "dîner|dine",
+          "word": "dîner",
+          "targetIpa": "dine",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "child_common",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "d",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-d",
+                  "label": "/d/",
+                  "ipa": "d"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "I",
+                  "reading": "i",
+                  "ipa": "i"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "nez",
+                  "label": "nez",
+                  "ipa": "ne"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "d",
+                  "lemma": "d",
+                  "pos": "NOM",
+                  "frequency": 11.551,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 48,
+              "status": "research_only_exact_route",
+              "score": -27
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "paradis|paʁadi",
+          "word": "paradis",
+          "targetIpa": "paʁadi",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "school_common",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "d",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "pas",
+                  "label": "pas",
+                  "ipa": "pa"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "rat",
+                  "label": "rat",
+                  "ipa": "ʁa"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-d",
+                  "label": "/d/",
+                  "ipa": "d"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "I",
+                  "reading": "i",
+                  "ipa": "i"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "d",
+                  "lemma": "d",
+                  "pos": "NOM",
+                  "frequency": 11.551,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 48,
+              "status": "research_only_exact_route",
+              "score": -52
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "midi|midi",
+          "word": "midi",
+          "targetIpa": "midi",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "school_common",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "d",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "mie",
+                  "label": "mie",
+                  "ipa": "mi"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-d",
+                  "label": "/d/",
+                  "ipa": "d"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "I",
+                  "reading": "i",
+                  "ipa": "i"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "d",
+                  "lemma": "d",
+                  "pos": "NOM",
+                  "frequency": 11.551,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 48,
+              "status": "research_only_exact_route",
+              "score": -27
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "diriger|diʁiʒe",
+          "word": "diriger",
+          "targetIpa": "diʁiʒe",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "school_common",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "d",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-d",
+                  "label": "/d/",
+                  "ipa": "d"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "I",
+                  "reading": "i",
+                  "ipa": "i"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "riz",
+                  "label": "riz",
+                  "ipa": "ʁi"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "G",
+                  "reading": "gé",
+                  "ipa": "ʒe"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "d",
+                  "lemma": "d",
+                  "pos": "NOM",
+                  "frequency": 11.551,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 48,
+              "status": "research_only_exact_route",
+              "score": -172
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "diner|dine",
+          "word": "diner",
+          "targetIpa": "dine",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "school_common",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "d",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-d",
+                  "label": "/d/",
+                  "ipa": "d"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "I",
+                  "reading": "i",
+                  "ipa": "i"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "nez",
+                  "label": "nez",
+                  "ipa": "ne"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "d",
+                  "lemma": "d",
+                  "pos": "NOM",
+                  "frequency": 11.551,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 48,
+              "status": "research_only_exact_route",
+              "score": -27
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "divers|divɛʁ",
+          "word": "divers",
+          "targetIpa": "divɛʁ",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "school_common",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "d",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-d",
+                  "label": "/d/",
+                  "ipa": "d"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "I",
+                  "reading": "i",
+                  "ipa": "i"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "ver",
+                  "label": "ver",
+                  "ipa": "vɛʁ"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "d",
+                  "lemma": "d",
+                  "pos": "NOM",
+                  "frequency": 11.551,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 48,
+              "status": "research_only_exact_route",
+              "score": -27
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "dit|di",
+          "word": "dit",
+          "targetIpa": "di",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "teen_adult_common",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "d",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-d",
+                  "label": "/d/",
+                  "ipa": "d"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "I",
+                  "reading": "i",
+                  "ipa": "i"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "d",
+                  "lemma": "d",
+                  "pos": "NOM",
+                  "frequency": 11.551,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 48,
+              "status": "research_only_exact_route",
+              "score": -2
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "diffuser|difyze",
+          "word": "diffuser",
+          "targetIpa": "difyze",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "d",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-d",
+                  "label": "/d/",
+                  "ipa": "d"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "I",
+                  "reading": "i",
+                  "ipa": "i"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "fusee",
+                  "label": "fusée",
+                  "ipa": "fyze"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "d",
+                  "lemma": "d",
+                  "pos": "NOM",
+                  "frequency": 11.551,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 48,
+              "status": "research_only_exact_route",
+              "score": -27
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "humidité|ymidite",
+          "word": "humidité",
+          "targetIpa": "ymidite",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "paddy|padi",
+          "word": "paddy",
+          "targetIpa": "padi",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "d",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "pas",
+                  "label": "pas",
+                  "ipa": "pa"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-d",
+                  "label": "/d/",
+                  "ipa": "d"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "I",
+                  "reading": "i",
+                  "ipa": "i"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "d",
+                  "lemma": "d",
+                  "pos": "NOM",
+                  "frequency": 11.551,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 48,
+              "status": "research_only_exact_route",
+              "score": -27
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "cupidité|kypidite",
+          "word": "cupidité",
+          "targetIpa": "kypidite",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "rapidité|ʁapidite",
+          "word": "rapidité",
+          "targetIpa": "ʁapidite",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "dandy|dɑ̃di",
+          "word": "dandy",
+          "targetIpa": "dɑ̃di",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "d",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "dent",
+                  "label": "dent",
+                  "ipa": "dɑ̃"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-d",
+                  "label": "/d/",
+                  "ipa": "d"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "I",
+                  "reading": "i",
+                  "ipa": "i"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "d",
+                  "lemma": "d",
+                  "pos": "NOM",
+                  "frequency": 11.551,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 48,
+              "status": "research_only_exact_route",
+              "score": -27
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "diversité|divɛʁsite",
+          "word": "diversité",
+          "targetIpa": "divɛʁsite",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule"
+        },
+        {
+          "key": "die|di",
+          "word": "die",
+          "targetIpa": "di",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "d",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-d",
+                  "label": "/d/",
+                  "ipa": "d"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "I",
+                  "reading": "i",
+                  "ipa": "i"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "d",
+                  "lemma": "d",
+                  "pos": "NOM",
+                  "frequency": 11.551,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 48,
+              "status": "research_only_exact_route",
+              "score": -2
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        },
+        {
+          "key": "caddie|kadi",
+          "word": "caddie",
+          "targetIpa": "kadi",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 1,
+          "routes": [
+            {
+              "alternativeIpa": "d",
+              "mode": "general",
+              "coverageType": "explicit_grapheme",
+              "operations": [
+                {
+                  "type": "grapheme",
+                  "grapheme": "K",
+                  "reading": "ka",
+                  "ipa": "ka"
+                },
+                {
+                  "type": "whole_word",
+                  "pieceId": "research-alt-d",
+                  "label": "/d/",
+                  "ipa": "d"
+                },
+                {
+                  "type": "grapheme",
+                  "grapheme": "I",
+                  "reading": "i",
+                  "ipa": "i"
+                }
+              ],
+              "lexicalLeads": [
+                {
+                  "word": "d",
+                  "lemma": "d",
+                  "pos": "NOM",
+                  "frequency": 11.551,
+                  "phoneticStatus": "whole_pronunciation_exact",
+                  "activationState": "research_only"
+                }
+              ],
+              "alternativeUsefulUnlocked": 48,
+              "status": "research_only_exact_route",
+              "score": -147
+            }
+          ],
+          "resolutionState": "exact_alternative_routes_found"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "canonicalSource": "https://www.lexique.org/databases/Lexique400/Lexique400.tsv",
+    "mirror": "https://github.com/dorfner/pass_the_bomb/blob/master/Lexique400/Lexique4.tsv",
+    "sha256": "0cd7de82251968cee21b730abf7c30da57d463ba8e5ec8f501ec064b032d1487",
+    "license": "CC BY-SA 4.0"
+  }
+}

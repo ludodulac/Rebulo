@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T12:20:34.641Z",
+  "generatedAt": "2026-09-08T15:32:59.502Z",
   "source": "Lexique 4",
   "lexicalEntryCount": 189832,
   "inventory": {
@@ -16390,6 +16390,69 @@
       "activation": "not_ready",
       "selectionReason": "Fort rendement pour un candidat mot-entier concret. Le tee de golf est une vraie dénomination entière /ti/ et évite une lecture partielle ou une lettre mal prononcée.",
       "namingRisk": "Connaissance lexicale dépendante de l'âge et de la familiarité avec le golf ; peut être nommé support, balle ou golf. À réserver d'abord aux profils plus âgés.",
+      "assetStatus": "not_created",
+      "nextGate": "prototype_comparison"
+    },
+    {
+      "ipa": "œʁ",
+      "label": "heure",
+      "targetCount": 59,
+      "frequencySum": 153.2079999999998,
+      "examples": [
+        {
+          "word": "ailleurs",
+          "ipa": "ajœʁ",
+          "frequency": 102.459,
+          "pieceCount": 2
+        },
+        {
+          "word": "terreur",
+          "ipa": "tɛʁœʁ",
+          "frequency": 8.291,
+          "pieceCount": 2
+        },
+        {
+          "word": "livreur",
+          "ipa": "livʁœʁ",
+          "frequency": 5.446,
+          "pieceCount": 2
+        },
+        {
+          "word": "heurté",
+          "ipa": "œʁte",
+          "frequency": 5.326,
+          "pieceCount": 2
+        },
+        {
+          "word": "boxeur",
+          "ipa": "bɔksœʁ",
+          "frequency": 4.699,
+          "pieceCount": 2
+        }
+      ],
+      "lexicalCandidates": [
+        {
+          "word": "heure",
+          "frequency": 337.025
+        },
+        {
+          "word": "heures",
+          "frequency": 271.807
+        },
+        {
+          "word": "heurts",
+          "frequency": 0.278
+        },
+        {
+          "word": "heurt",
+          "frequency": 0.146
+        }
+      ],
+      "exactLabelAttested": true,
+      "curationStatus": "research_candidate",
+      "activation": "not_ready",
+      "selectionReason": "Seule hypothèse pictogramme/scène actuellement retenue parmi les 17 cibles de recherche visuelle des segments difficiles. La cartographie phonétique mesure 12 opportunités utiles pour /œʁ/; 10 cibles restent directement dans la file visuelle du segment difficile. Le mot entier est exact, mais la scène doit faire nommer « heure » plutôt que horloge, montre ou temps.",
+      "namingRisk": "Risque élevé de dénomination concurrente : horloge, montre, temps, douze heures. Deux variantes de scène doivent être comparées en dénomination spontanée avant toute promotion.",
       "assetStatus": "not_created",
       "nextGate": "prototype_comparison"
     },

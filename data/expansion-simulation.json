@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T12:20:37.134Z",
+  "generatedAt": "2026-09-08T15:33:02.433Z",
   "lexicalUniquePronouncedForms": 171476,
   "baseline": {
     "constructibleUniqueWords": 891,
@@ -55,6 +55,13 @@
       "status": "research_candidate",
       "source": "curated_shortlist",
       "rawRank": 7
+    },
+    {
+      "label": "heure",
+      "ipa": "/œʁ/",
+      "status": "research_candidate",
+      "source": "curated_shortlist",
+      "rawRank": 8
     }
   ],
   "greedyOrder": [
@@ -132,15 +139,27 @@
     },
     {
       "step": 7,
+      "addedLabel": "heure",
+      "ipa": "/œʁ/",
+      "status": "research_candidate",
+      "source": "curated_shortlist",
+      "marginalMultiPieceUniqueWords": 12,
+      "marginalConstructibleUniqueWords": 19,
+      "cumulativeMultiPieceUniqueWords": 1036,
+      "cumulativeConstructibleUniqueWords": 1215,
+      "cumulativeWeightedMultiPiece": 1227.045
+    },
+    {
+      "step": 8,
       "addedLabel": "anse",
       "ipa": "/ɑ̃s/",
       "status": "research_candidate",
       "source": "curated_shortlist",
-      "marginalMultiPieceUniqueWords": 12,
-      "marginalConstructibleUniqueWords": 16,
-      "cumulativeMultiPieceUniqueWords": 1036,
-      "cumulativeConstructibleUniqueWords": 1212,
-      "cumulativeWeightedMultiPiece": 1224.19
+      "marginalMultiPieceUniqueWords": 16,
+      "marginalConstructibleUniqueWords": 20,
+      "cumulativeMultiPieceUniqueWords": 1052,
+      "cumulativeConstructibleUniqueWords": 1235,
+      "cumulativeWeightedMultiPiece": 1245.102
     }
   ],
   "curatedCandidateScenarios": [
@@ -580,6 +599,63 @@
           "pieces": [
             "as",
             "eau"
+          ]
+        }
+      ],
+      "note": "Gain isolé par rapport à la base active actuelle."
+    },
+    {
+      "name": "heure",
+      "added": [
+        {
+          "label": "heure",
+          "ipa": "/œʁ/",
+          "assetStatus": "not_created"
+        }
+      ],
+      "strictMultiPieceGain": 12,
+      "strictConstructibleGain": 19,
+      "weightedMultiPieceGain": 14.961,
+      "cumulativeMultiPieceUniqueWords": 772,
+      "examples": [
+        {
+          "word": "terreur",
+          "frequency": 8.291,
+          "pieces": [
+            "terre",
+            "heure"
+          ]
+        },
+        {
+          "word": "heurté",
+          "frequency": 5.326,
+          "pieces": [
+            "heure",
+            "thé"
+          ]
+        },
+        {
+          "word": "heurter",
+          "frequency": 1.87,
+          "pieces": [
+            "heure",
+            "thé"
+          ]
+        },
+        {
+          "word": "terreurs",
+          "frequency": 0.978,
+          "pieces": [
+            "terre",
+            "heure"
+          ]
+        },
+        {
+          "word": "heurtée",
+          "frequency": 0.598,
+          "pieces": [
+            "heure",
+            "thé"
           ]
         }
       ],

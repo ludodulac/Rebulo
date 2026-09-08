@@ -1,7 +1,7 @@
 # Rebulo — simulation gloutonne d’expansion
 
 - Base : 760 mots uniques en rébus de 2+ pièces.
-- Candidats testés : 7.
+- Candidats testés : 8.
 
 | Étape | Brique ajoutée | IPA | Gain marginal de vrais rébus | Total cumulatif |
 |---:|---|---|---:|---:|
@@ -11,7 +11,8 @@
 | 4 | as | /as/ | +32 | 972 |
 | 5 | or | /ɔʁ/ | +26 | 998 |
 | 6 | oie | /wa/ | +26 | 1024 |
-| 7 | anse | /ɑ̃s/ | +12 | 1036 |
+| 7 | heure | /œʁ/ | +12 | 1036 |
+| 8 | anse | /ɑ̃s/ | +16 | 1052 |
 
 ## Prototypes inactifs : impact simulé
 

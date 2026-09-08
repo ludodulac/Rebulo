@@ -2,12 +2,14 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {buildPhoneticExpansionOpportunities,buildPictogramExpansionPriorities,expansionPrioritySummary} from '../src/pictogram-expansion.js';
 
-const [coverage,lexicon,shortlist,assets,productivity]=await Promise.all([
+const [coverage,lexicon,shortlist,assets,productivity,brickMap,brickCandidates]=await Promise.all([
   readFile(new URL('../data/coverage-report.json',import.meta.url),'utf8').then(JSON.parse),
   readFile(new URL('../data/lexicon-seed.json',import.meta.url),'utf8').then(JSON.parse),
   readFile(new URL('../data/pictogram-expansion-shortlist.json',import.meta.url),'utf8').then(JSON.parse),
   readFile(new URL('../data/asset-sources.json',import.meta.url),'utf8').then(JSON.parse),
-  readFile(new URL('../data/phonetic-productivity-report.json',import.meta.url),'utf8').then(JSON.parse)
+  readFile(new URL('../data/phonetic-productivity-report.json',import.meta.url),'utf8').then(JSON.parse),
+  readFile(new URL('../data/phonetic-brick-map.json',import.meta.url),'utf8').then(JSON.parse),
+  readFile(new URL('../data/phonetic-brick-candidates.json',import.meta.url),'utf8').then(JSON.parse)
 ]);
 
 const opportunities=buildPhoneticExpansionOpportunities(coverage,lexicon,{limit:100});
@@ -26,7 +28,8 @@ const knownIpas=new Set(lexicon.filter(item=>item.ipa).map(item=>String(item.ipa
 assert.ok(priorities.every(item=>!knownIpas.has(item.normalizedIpa)),'registered or active concepts must leave the new-concept ranking');
 
 assert.equal(shortlist.status,'mixed_research_and_general');
-assert.equal(shortlist.items.length,6);
+assert.ok(shortlist.items.length>=6,'shortlist may grow but must retain the established curated base');
+assert.equal(new Set(shortlist.items.map(item=>item.label)).size,shortlist.items.length,'shortlist labels must stay unique');
 for(const item of shortlist.items){
   const ipa=String(item.ipa||'').replaceAll('/','');
   if(item.activation==='general_active'){
@@ -43,9 +46,18 @@ for(const item of shortlist.items){
     assert.equal(item.status,'research_candidate');
     assert.equal(item.activation,'not_ready');
     const lead=(productivity.expansionCurationLeads||[]).find(candidate=>String(candidate.ipa||'').replaceAll('/','')===ipa);
-    assert.ok(lead,`${item.label} must map to a fresh curation lead`);
-    assert.ok(lead.lexicalCandidates.some(candidate=>String(candidate.word).toLowerCase()===String(item.label).toLowerCase()));
-    assert.equal(item.unlockCount,lead.targetCount);
+    const bankSegment=(brickCandidates.segments||[]).find(segment=>String(segment.ipa||'').replaceAll('/','')===ipa);
+    const bankCandidate=bankSegment?.candidates?.find(candidate=>String(candidate.label).toLowerCase()===String(item.label).toLowerCase());
+    const mappedBrick=(brickMap.curatedBrickResearch||[]).find(segment=>String(segment.ipa||'').replaceAll('/','')===ipa);
+    assert.ok(lead||bankCandidate,`${item.label} must map to a reproducible research evidence source`);
+    if(bankCandidate){
+      assert.ok(mappedBrick?.coverageEvidence,`${item.label} must retain measured phonetic-brick coverage evidence`);
+      assert.equal(item.unlockCount,mappedBrick.coverageEvidence.totalUnlocked,`${item.label} shortlist gain must match the phonetic brick map`);
+    }else{
+      assert.ok(lead,`${item.label} legacy research candidate must retain its productivity lead`);
+      assert.ok(lead.lexicalCandidates.some(candidate=>String(candidate.word).toLowerCase()===String(item.label).toLowerCase()));
+      assert.equal(item.unlockCount,lead.targetCount);
+    }
     if(item.assetStatus!=='not_created'){
       const asset=assets.assets.find(candidate=>candidate.path===item.assetStatus);
       assert.ok(asset,`${item.label} research asset must be documented before naming review`);

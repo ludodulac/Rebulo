@@ -11,7 +11,7 @@ assert.match(schema.description,/not assets, naming results, activation decision
 assert.ok(schema.$defs.brief.properties.revision,'brief schema should allow an exact research revision');
 assert.ok(schema.$defs.brief.properties.supersededBy,'brief schema should preserve supersession lineage');
 const concepts=registry.briefs.map(x=>x.concept);
-for(const concept of ['dos','tas','raie','terre'])assert.ok(concepts.includes(concept),`missing prototype brief: ${concept}`);
+for(const concept of ['dos','tas','raie','terre','haie','oie','or','tee','anse','as'])assert.ok(concepts.includes(concept),`missing prototype brief: ${concept}`);
 for(const brief of registry.briefs){
   assert.equal(brief.automaticActivation,false,`${brief.concept} must never auto-activate`);
   assert.ok(brief.namingRisks.length>0,`${brief.concept} must state naming risks`);
@@ -19,6 +19,15 @@ for(const brief of registry.briefs){
   const curated=shortlist.items.find(x=>x.label===brief.concept);
   assert.ok(curated,`${brief.concept} must come from the human-curated shortlist`);
   assert.equal(curated.ipa,brief.targetIpa,`${brief.concept} whole-word IPA must stay exact`);
+}
+for(const concept of ['haie','oie','or','tee','anse','as']){
+  const curated=shortlist.items.find(x=>x.label===concept);
+  const brief=registry.briefs.find(x=>x.concept===concept);
+  assert.equal(curated.status,'research_candidate',`${concept} must remain research-only`);
+  assert.equal(curated.activation,'not_ready',`${concept} must not activate from a prototype brief`);
+  assert.equal(curated.assetStatus,'not_created',`${concept} must not claim an asset before prototype generation`);
+  assert.equal(brief.researchStatus,'prototype_design');
+  assert.equal(brief.nextGate,'prototype_comparison');
 }
 const dos=registry.briefs.find(x=>x.concept==='dos');
 assert.equal(dos.nextGate,'prototype_comparison');

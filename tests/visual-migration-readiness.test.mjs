@@ -13,15 +13,35 @@ assert.equal(report.schemaVersion,'1.0');
 assert.equal(report.baseline.strictMultiPieceUniqueWords,760);
 assert.equal(report.queue.length,24);
 assert.ok(report.queue.every((item,index,array)=>index===0||array[index-1].strictUniqueLossIfUnavailable<=item.strictUniqueLossIfUnavailable),'queue should prioritize lower dependency loss');
-for(const id of ['pluie','sol','tour','cle','mer','corps','chat','eau','pie']){
-  const item=report.queue.find(x=>x.id===id);assert.ok(item,`${id} should stay in the visual migration queue`);assert.equal(item.namingReviewAvailable,true,`${id} should have a revision-bound naming review`);assert.equal(item.nextGate,'collect_human_naming_observations',`${id} should now be ready for real human naming observations`);
+
+const observationReady=['pluie','sol','tour','cle','mer','corps','chat','eau','pie','scie','riz','mie','mat','lit','pas','nez','rat','the','de'];
+for(const id of observationReady){
+  const item=report.queue.find(x=>x.id===id);
+  assert.ok(item,`${id} should stay in the visual migration queue`);
+  assert.equal(item.provenanceDocumented,true,`${id} should have documented provenance`);
+  assert.equal(item.revisionStamped,true,`${id} should have a frozen visual revision`);
+  assert.equal(item.namingReviewAvailable,true,`${id} should have a revision-bound naming review`);
+  assert.equal(item.nextGate,'collect_human_naming_observations',`${id} should now be ready for real human naming observations`);
 }
-const mer=report.queue.find(x=>x.id==='mer');assert.equal(mer.strictUniqueLossIfUnavailable,21);assert.equal(mer.provenanceDocumented,true);assert.equal(mer.source,'rebulo_original');assert.equal(mer.artRevision,'mer-sea-v1');
-const corps=report.queue.find(x=>x.id==='corps');assert.equal(corps.artRevision,'corps-comic-v1');assert.equal(corps.strictUniqueLossIfUnavailable,37);
-const chat=report.queue.find(x=>x.id==='chat');assert.equal(chat.source,'openmoji');assert.equal(chat.artRevision,'chat-openmoji-1f431-v1');assert.equal(chat.strictUniqueLossIfUnavailable,41);
-const eau=report.queue.find(x=>x.id==='eau');assert.equal(eau.artRevision,'eau-comic-v1');assert.equal(eau.strictUniqueLossIfUnavailable,51);
-const pie=report.queue.find(x=>x.id==='pie');assert.equal(pie.source,'rebulo_original');assert.equal(pie.artRevision,'pie-magpie-v1');assert.equal(pie.strictUniqueLossIfUnavailable,63);
-const de=report.queue.find(x=>x.id==='de');assert.ok(de);assert.equal(de.dependencyRisk,'critical');assert.equal(de.strictUniqueLossIfUnavailable,170);assert.equal(de.provenanceDocumented,true);assert.equal(de.artRevision,'de-die-v1');assert.equal(de.nextGate,'add_revision_bound_naming_review');
-for(const id of ['mie','mat']){const item=report.queue.find(x=>x.id===id);assert.ok(item);assert.equal(item.provenanceDocumented,true);assert.equal(item.source,'rebulo_original');assert.ok(item.artRevision);assert.equal(item.nextGate,'add_revision_bound_naming_review');}
+
+assert.equal(report.queue.find(x=>x.id==='mer').artRevision,'mer-sea-v1');
+assert.equal(report.queue.find(x=>x.id==='chat').artRevision,'chat-openmoji-1f431-v1');
+assert.equal(report.queue.find(x=>x.id==='pie').artRevision,'pie-magpie-v1');
+assert.equal(report.queue.find(x=>x.id==='scie').artRevision,'scie-openmoji-1fa9a-v1');
+assert.equal(report.queue.find(x=>x.id==='riz').artRevision,'riz-openmoji-1f35a-v1');
+assert.equal(report.queue.find(x=>x.id==='mie').artRevision,'mie-bread-crumb-v1');
+assert.equal(report.queue.find(x=>x.id==='mat').artRevision,'mat-mast-v1');
+assert.equal(report.queue.find(x=>x.id==='de').artRevision,'de-die-v1');
+assert.equal(report.queue.find(x=>x.id==='de').strictUniqueLossIfUnavailable,170);
+
+for(const id of ['pot','dos','raie','tas','terre']){
+  const item=report.queue.find(x=>x.id===id);
+  assert.ok(item);
+  assert.equal(item.provenanceDocumented,true);
+  assert.equal(item.revisionStamped,true);
+  assert.equal(item.namingReviewAvailable,false,`${id} production revision still needs its own review rather than reusing prototype evidence`);
+  assert.equal(item.nextGate,'add_revision_bound_naming_review');
+}
+
 assert.match(report.methodology.clinicalCaution,/validation clinique|dénomination/i);
-console.log('visual migration readiness: first production review wave is ready for human observations; remaining revisions stay explicitly gated.');
+console.log('visual migration readiness: nineteen active production revisions are ready for real human naming; five same-concept production reviews remain explicitly separate from research prototypes.');

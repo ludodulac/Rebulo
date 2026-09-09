@@ -42,4 +42,15 @@ assert.ok(grouped.find(row=>row.ipa==='ɛl')?.representations.some(item=>item.la
 assert.ok(grouped.find(row=>row.ipa==='ɥit')?.representations.some(item=>item.label==='8'));
 assert.ok(grouped.find(row=>row.ipa==='la')?.representations.some(item=>item.kind==='music_note'));
 
-console.log('rebus sound catalog: source-exact mono/1–2 syllable windows, cross-word routes, shifted phoneme windows and explicit approximation scoring');
+const tiered=groupRepresentationsBySound([
+  {label:'patte',ipa:'pat',kind:'whole_word_image',status:'active'},
+  {label:'Pâques',ipa:'pak',kind:'whole_word_scene',status:'research'},
+  {label:'lait',ipa:'lɛ',kind:'whole_word_image',status:'research',match:'approximate'},
+  {label:'8',ipa:'ɥit',kind:'number_symbol',status:'research'}
+]);
+assert.equal(tiered.find(row=>row.ipa==='pat').representations[0].tier,'exact_image_ready');
+assert.equal(tiered.find(row=>row.ipa==='pak').representations[0].tier,'exact_image_research');
+assert.equal(tiered.find(row=>row.ipa==='lɛ').representations[0].tier,'approximation_research','approximate image hypotheses must never look like exact research images');
+assert.equal(tiered.find(row=>row.ipa==='ɥit').representations[0].tier,'explicit_visible_convention');
+
+console.log('rebus sound catalog: source-exact mono/1–2 syllable windows, cross-word routes, shifted phoneme windows and explicit representation tiers');

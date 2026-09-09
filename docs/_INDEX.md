@@ -18,6 +18,7 @@ Ce fichier route vers la documentation utile. **Ne pas lire tout `docs/` par dé
 
 ## Images / nommabilité
 
+- [VISUAL_WORK_HANDOFF.md](VISUAL_WORK_HANDOFF.md) — mémoire des illustrations/prototypes déjà travaillés et règle de reprise avant toute génération ou substitution d'asset.
 - [OPEN_PICTOGRAM_LIBRARY.md](OPEN_PICTOGRAM_LIBRARY.md) — bibliothèque de pictogrammes et stratégie d'assets.
 - [CLINICAL_PICTOGRAM_PLAN.md](CLINICAL_PICTOGRAM_PLAN.md) — réflexion clinique autour des pictogrammes ; ne pas confondre avec validation clinique acquise.
 - [NAMING_TEST_RUNNER.md](NAMING_TEST_RUNNER.md) — protocole/outillage pour tester la nommabilité.
@@ -34,7 +35,7 @@ Ce fichier route vers la documentation utile. **Ne pas lire tout `docs/` par dé
 ## Routage rapide
 
 - Mot phonologiquement correct mais humainement ambigu → `GUARANTEE_MODEL` → `LEXICAL_ENGINE` → documents de nommabilité si nécessaire.
-- Image/pictogramme absent ou mal exploité → `OPEN_PICTOGRAM_LIBRARY` → `NAMING_TEST_RUNNER`.
+- Image/pictogramme absent ou mal exploité → `VISUAL_WORK_HANDOFF` → `OPEN_PICTOGRAM_LIBRARY` → `NAMING_TEST_RUNNER`.
 - Couverture insuffisante → analyses de couverture → pipeline lexical.
 - Problème d'interface créateur → `CREATOR_STATES` puis code réel.
 

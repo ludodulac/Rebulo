@@ -98,6 +98,8 @@ assert.equal(creatorActivity.label,'Trouver une rime avec « pas »');
 assert.equal(creatorActivity.description.includes('mot-image déclaré'),true,'the professional must understand why the activity is proposed');
 assert.equal(creatorActivity.childInstruction,'Quel mot rime avec « pas » : tas ou pie ?');
 assert.equal(creatorActivity.sessionExpectedResponse,'tas');
+assert.equal(creatorCandidate.therapyActivities[0].id,creatorActivity.id,'the controlled pilot must be the visible default when it exists');
+assert.equal(creatorActivity.proInstruction,'Avec le mot-image « pas » du rébus, demande : « Quel mot rime avec pas : tas ou pie ? » Réponse attendue : « tas ».');
 
 const [queued]=normalizeWorksheetSet([{...creatorCandidate,activity:creatorActivity}]);
 assert.equal(queued.activity.id,creatorActivity.id,'adding to a session must retain the exact relational activity identity');

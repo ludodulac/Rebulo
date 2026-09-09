@@ -58,6 +58,8 @@ Le catalogue construit un index Lexique `prononciation entière → mots entiers
 
 Le filtrage automatique « dessinable » n'est qu'un tri grossier. Il ne prouve ni que l'image est évidente, ni que le mot sera nommé spontanément, ni que le stimulus convient à un âge ou à un usage orthophonique.
 
+La priorité visuelle ne doit pas être pilotée par la fréquence brute de tout Lexique. Le catalogue conserve l'inventaire exhaustif, mais calcule séparément l'importance dans le **vocabulaire utile Rebulo**, avec la preuve de fréquence scolaire disponible. Un son très fréquent dans des formes marginales ne doit donc pas écraser un son qui débloque de nombreuses cibles utiles.
+
 ## Cas de départ préservés
 
 Les premières hypothèses concrètes sont rangées dans `data/rebus-sound-research-seeds.json`, notamment : `aile`, `nœud`, `son`, `Pâques`, `8`, `patte`, `huile`, `cuillère`, `L`, `K`, `Q` et la note `la`.
@@ -72,14 +74,22 @@ Lancer :
 
 Le script produit :
 
-- `data/rebus-sound-catalog.json` : inventaire détaillé ;
-- `docs/REBUS_SOUND_CATALOG_REPORT.md` : rapport lisible avec statistiques, fenêtres fréquentes et file de recherche visuelle priorisée.
+- `data/rebus-sound-catalog.json` : inventaire exhaustif compact ;
+- `docs/REBUS_SOUND_CATALOG_REPORT.md` : rapport lisible avec statistiques, priorités utiles, prototypes à revoir et nouvelles images à rechercher.
+
+Le JSON généré utilise `formatVersion: 2`. Les 60 000+ lignes sonores sont stockées sous forme de tuples dans `soundRows`, avec l'ordre des colonnes décrit par `rowSchema`. Cela conserve **tous les sons** sans répéter des dizaines de noms de champs sur chaque entrée. Les files `visualResearchQueue`, `existingPrototypeReviewQueue` et `newImageResearchQueue` ne dupliquent pas les entrées : elles contiennent les IPA permettant de retrouver la ligne correspondante.
 
 Le workflow `.github/workflows/rebus-sound-catalog.yml` reconstruit ce catalogue sur le Lexique complet, vérifie que les bibliothèques existantes sont bien consolidées et publie les deux fichiers comme artefact de recherche. Sur `main`, les sorties générées sont versionnées automatiquement.
 
 ## Ordre de travail visuel
 
-La file `visualResearchQueue` classe les sons encore sans image exacte prête. Son score automatique utilise la fréquence d'apparition du son, l'intérêt d'une fenêtre de deux syllabes, la présence de mots entiers exacts à examiner et l'existence éventuelle d'un prototype déjà en recherche.
+Les files sont volontairement séparées :
+
+- `existingPrototypeReviewQueue` : une image exacte/prototype existe déjà ; la priorité est de l'examiner ou la tester avant de redessiner ;
+- `newImageResearchQueue` : aucun asset exact et aucune convention visible suffisante n'existent encore, mais un ou plusieurs noms entiers exacts peuvent être examinés ;
+- `visualResearchQueue` : vue générale de toutes les routes non prêtes.
+
+Le score automatique privilégie le vocabulaire utile Rebulo, la fréquence scolaire, le nombre de cibles utiles, l'intérêt des fenêtres de deux syllabes et les candidats lexicaux exacts. Une convention visible déjà utilisable réduit la priorité de fabrication d'une nouvelle image, sans interdire une future alternative imagée.
 
 Cette file sert à choisir quoi examiner en premier ; elle ne choisit jamais automatiquement l'image finale. À qualité égale, conserver l'ordre produit :
 

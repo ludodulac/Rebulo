@@ -47,7 +47,8 @@ assert.deepEqual(targets.map(item=>item.target),['merci','cinéma','sans-compte'
 assert.equal(targets[0].mode,'strict');
 assert.equal(targets[0].assets,'ready');
 assert.equal(targets[0].syllableCount,2);
-assert.deepEqual(targets[0].therapy,['denomination','lexical-access','phoneme-initial','phoneme-final','phoneme-segmentation','phoneme-blending','syllable-count','syllable-blending','oral-to-written']);
+assert.deepEqual(targets[0].therapy,['denomination','lexical-access','phoneme-initial','phoneme-final','phoneme-segmentation','phoneme-blending','syllable-count','oral-to-written']);
+assert.equal(targets[0].therapy.includes('syllable-blending'),false,'generated targets must not infer syllable boundaries from rebus pieces');
 assert.equal(targets[0].generated,true);
 assert.equal(targets[0].operationCount,2);
 assert.equal(targets[2].syllableCount,null);
@@ -119,6 +120,8 @@ const generated=[
 ].filter(Boolean);
 
 const merged=mergeCreatorTargets(manual,generated);
+const mergedMerci=merged.find(item=>item.target==='merci');
+assert.deepEqual(mergedMerci.therapy,['denomination','syllable-count','syllable-blending','oral-to-written'],'manual syllable blending must be preserved while generated syllable count metadata may supplement it');
 const mergedRefus=merged.find(item=>item.target==='refus');
 assert.equal(mergedRefus.mode,'rejected');
 assert.equal(mergedRefus.alternatives,undefined);

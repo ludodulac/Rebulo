@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {normalizeIPA} from '../src/phonetic-engine.js';
+import {buildRhymeJudgments,buildRhymeMatching} from '../src/rhyme-activities.js';
 
 const contract=JSON.parse(fs.readFileSync('data/rhyme-activity-contract.json','utf8'));
 
@@ -43,4 +44,17 @@ for(const relation of bank.relations){
   }
 }
 
-console.log('rhyme activity contract: explicit positive/negative relations are grounded in active lexicon IPA and remain non-clinical evidence');
+const judgments=buildRhymeJudgments(bank.relations);
+assert.equal(judgments.length,bank.relations.length,'every valid explicit relation should become a controlled judgment');
+assert.ok(judgments.some(item=>item.expectedResponse===true));
+assert.ok(judgments.some(item=>item.expectedResponse===false));
+assert.ok(judgments.every(item=>item.childInstruction&&item.proInstruction));
+
+const matching=buildRhymeMatching(bank.relations,'pas');
+assert.ok(matching,'pas has one declared rhyme and one declared non-rhyme, so matching is controllable');
+assert.equal(matching.activityId,'rhyme-matching');
+assert.equal(matching.expectedResponse,'tas');
+assert.deepEqual(matching.choices.map(item=>item.word),['tas','pie']);
+assert.equal(buildRhymeMatching(bank.relations,'pie'),null,'matching must remain unavailable without at least two explicit choices and exactly one rhyme');
+
+console.log('rhyme activities: explicit relations build controlled judgments and matching without orthographic or rebus-piece inference');

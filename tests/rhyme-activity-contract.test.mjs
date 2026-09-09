@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import {normalizeIPA} from '../src/phonetic-engine.js';
 
 const contract=JSON.parse(fs.readFileSync('data/rhyme-activity-contract.json','utf8'));
 
@@ -17,4 +18,29 @@ assert.deepEqual(contract.judgment.expectedResponseValues,[true,false]);
 assert.ok(contract.matching.minimumChoices>=2);
 assert.equal(contract.matching.requiresExactlyOneDeclaredRhyme,true);
 
-console.log('rhyme activity contract: explicit relations and controlled expected responses required before activation');
+const lexicon=JSON.parse(fs.readFileSync('data/lexicon-seed.json','utf8'));
+const byLabel=new Map(lexicon.map(item=>[item.label,item]));
+const bank=JSON.parse(fs.readFileSync('data/rhyme-relations.json','utf8'));
+assert.equal(bank.clinicalValidation,'not_claimed');
+assert.ok(bank.relations.some(item=>item.relationship==='rhyme'));
+assert.ok(bank.relations.some(item=>item.relationship==='non_rhyme'));
+for(const relation of bank.relations){
+  assert.ok(contract.allowedRelationships.includes(relation.relationship));
+  assert.equal(relation.expectedResponse,relation.relationship==='rhyme');
+  const target=byLabel.get(relation.targetWord);const candidate=byLabel.get(relation.candidateWord);
+  assert.ok(target&&candidate,`${relation.relationId} must reference words already present in the active lexicon seed`);
+  assert.equal(normalizeIPA(target.ipa),normalizeIPA(relation.targetIpa));
+  assert.equal(normalizeIPA(candidate.ipa),normalizeIPA(relation.candidateIpa));
+  assert.equal(relation.evidence?.source,'data/lexicon-seed.json');
+  assert.equal(relation.evidence?.method,'explicit_phonological_relation');
+  if(relation.relationship==='rhyme'){
+    const rime=normalizeIPA(relation.evidence?.sharedRimeIpa||'');
+    assert.ok(rime,`${relation.relationId} must declare a shared rime IPA`);
+    assert.ok(normalizeIPA(relation.targetIpa).endsWith(rime));
+    assert.ok(normalizeIPA(relation.candidateIpa).endsWith(rime));
+  }else{
+    assert.notEqual(normalizeIPA(relation.evidence?.targetRimeIpa||''),normalizeIPA(relation.evidence?.candidateRimeIpa||''));
+  }
+}
+
+console.log('rhyme activity contract: explicit positive/negative relations are grounded in active lexicon IPA and remain non-clinical evidence');

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "status": "phonological_evidence_only",
+  "source": "data/lexicon-seed.json",
+  "clinicalValidation": "not_claimed",
+  "relations": [
+    {
+      "relationId": "pas-tas-rhyme-a",
+      "targetWord": "pas",
+      "targetIpa": "pa",
+      "candidateWord": "tas",
+      "candidateIpa": "ta",
+      "relationship": "rhyme",
+      "expectedResponse": true,
+      "evidence": {
+        "source": "data/lexicon-seed.json",
+        "sharedRimeIpa": "a",
+        "method": "explicit_phonological_relation"
+      }
+    },
+    {
+      "relationId": "pie-mie-rhyme-i",
+      "targetWord": "pie",
+      "targetIpa": "pi",
+      "candidateWord": "mie",
+      "candidateIpa": "mi",
+      "relationship": "rhyme",
+      "expectedResponse": true,
+      "evidence": {
+        "source": "data/lexicon-seed.json",
+        "sharedRimeIpa": "i",
+        "method": "explicit_phonological_relation"
+      }
+    },
+    {
+      "relationId": "pas-pie-non-rhyme",
+      "targetWord": "pas",
+      "targetIpa": "pa",
+      "candidateWord": "pie",
+      "candidateIpa": "pi",
+      "relationship": "non_rhyme",
+      "expectedResponse": false,
+      "evidence": {
+        "source": "data/lexicon-seed.json",
+        "targetRimeIpa": "a",
+        "candidateRimeIpa": "i",
+        "method": "explicit_phonological_relation"
+      }
+    }
+  ]
+}

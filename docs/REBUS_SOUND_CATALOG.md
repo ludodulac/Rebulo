@@ -22,7 +22,8 @@ Ne pas recopier ce qui existe déjà :
 - `src/lexical-sound-index.js` : recherche lexicale par phonèmes ;
 - `src/french-sound-search.js` : saisie intuitive de sons français ;
 - `data/rebus-visible-conventions.json` : lettres, chiffres et autres conventions visibles ;
-- `data/rebus-sound-research-seeds.json` : hypothèses concrètes à ne pas perdre avant validation complète.
+- `data/rebus-sound-research-seeds.json` : hypothèses concrètes à ne pas perdre avant validation complète ;
+- `data/rebus-sound-visual-curation.json` : décisions éditoriales candidat par candidat issues de l'examen du catalogue réel.
 
 Le fichier généré `data/rebus-sound-catalog.json` agrège ces sources ; il n'est pas une nouvelle source éditoriale concurrente. Toute image déjà présente dans la bibliothèque ouverte doit être retrouvée avant de proposer de la redessiner.
 
@@ -60,6 +61,18 @@ Le filtrage automatique « dessinable » n'est qu'un tri grossier. Il ne prouve 
 
 La priorité visuelle ne doit pas être pilotée par la fréquence brute de tout Lexique. Le catalogue conserve l'inventaire exhaustif, mais calcule séparément l'importance dans le **vocabulaire utile Rebulo**, avec la preuve de fréquence scolaire disponible. Un son très fréquent dans des formes marginales ne doit donc pas écraser un son qui débloque de nombreuses cibles utiles.
 
+## Curation visuelle éditoriale
+
+L'expérience du catalogue complet montre qu'un nom lexicalement exact peut être un très mauvais pictogramme : une entrée rare, abstraite, grammaticale ou naturellement nommée autrement peut remonter haut sans être une bonne image. Rebulo conserve donc une couche éditoriale **au niveau du candidat, jamais comme blacklist du son**.
+
+`data/rebus-sound-visual-curation.json` accepte trois décisions :
+
+- `prototype_candidate` : le mot entier est phonétiquement exact et le concept mérite un prototype/test humain ;
+- `reject_candidate` : cette route visuelle est mauvaise, mais l'IPA reste ouverte à d'autres mots, compositions ou conventions ;
+- `defer_candidate` : route exacte mais trop abstraite, ambiguë ou peu prioritaire pour une expérimentation immédiate.
+
+Le script `scripts/apply-rebus-sound-visual-curation.mjs` valide chaque décision contre le Lexique courant avant de l'appliquer. Il ne modifie pas l'inventaire automatique : il ajoute des files curatées séparées et un rapport `docs/REBUS_SOUND_VISUAL_CURATION_REPORT.md`. Cela garde l'évidence automatique auditable tout en évitant de produire des images pour des faux bons candidats.
+
 ## Cas de départ préservés
 
 Les premières hypothèses concrètes sont rangées dans `data/rebus-sound-research-seeds.json`, notamment : `aile`, `nœud`, `son`, `Pâques`, `8`, `patte`, `huile`, `cuillère`, `L`, `K`, `Q` et la note `la`.
@@ -72,26 +85,34 @@ Lancer :
 
 `npm run build:rebus-sound-catalog`
 
-Le script produit :
+Puis, avec un Lexique compact disponible :
 
-- `data/rebus-sound-catalog.json` : inventaire exhaustif compact ;
-- `docs/REBUS_SOUND_CATALOG_REPORT.md` : rapport lisible avec statistiques, priorités utiles, prototypes à revoir et nouvelles images à rechercher.
+`npm run apply:rebus-sound-visual-curation -- data/rebus-sound-catalog.json data/lexique4.compact.json data/rebus-sound-visual-curation.json docs/REBUS_SOUND_VISUAL_CURATION_REPORT.md`
 
-Le JSON généré utilise `formatVersion: 2`. Les 60 000+ lignes sonores sont stockées sous forme de tuples dans `soundRows`, avec l'ordre des colonnes décrit par `rowSchema`. Cela conserve **tous les sons** sans répéter des dizaines de noms de champs sur chaque entrée. Les files `visualResearchQueue`, `existingPrototypeReviewQueue` et `newImageResearchQueue` ne dupliquent pas les entrées : elles contiennent les IPA permettant de retrouver la ligne correspondante.
+Le pipeline produit :
 
-Le workflow `.github/workflows/rebus-sound-catalog.yml` reconstruit ce catalogue sur le Lexique complet, vérifie que les bibliothèques existantes sont bien consolidées et publie les deux fichiers comme artefact de recherche. Sur `main`, les sorties générées sont versionnées automatiquement.
+- `data/rebus-sound-catalog.json` : inventaire exhaustif compact et files automatiques/curatées ;
+- `docs/REBUS_SOUND_CATALOG_REPORT.md` : rapport automatique avec statistiques et priorités utiles ;
+- `docs/REBUS_SOUND_VISUAL_CURATION_REPORT.md` : décisions de prototype/rejet/différé et prochaines pistes non encore revues.
+
+Le JSON généré utilise `formatVersion: 2`. Les 60 000+ lignes sonores sont stockées sous forme de tuples dans `soundRows`, avec l'ordre des colonnes décrit par `rowSchema`. Cela conserve **tous les sons** sans répéter des dizaines de noms de champs sur chaque entrée. Les files automatiques ne dupliquent pas les entrées : elles contiennent les IPA permettant de retrouver la ligne correspondante.
+
+Le workflow `.github/workflows/rebus-sound-catalog.yml` reconstruit ce catalogue sur le Lexique complet, applique la curation visuelle, vérifie les bibliothèques existantes et publie les rapports comme artefact de recherche. Sur `main`, les sorties générées sont versionnées automatiquement.
 
 ## Ordre de travail visuel
 
 Les files sont volontairement séparées :
 
 - `existingPrototypeReviewQueue` : une image exacte/prototype existe déjà ; la priorité est de l'examiner ou la tester avant de redessiner ;
-- `newImageResearchQueue` : aucun asset exact et aucune convention visible suffisante n'existent encore, mais un ou plusieurs noms entiers exacts peuvent être examinés ;
-- `visualResearchQueue` : vue générale de toutes les routes non prêtes.
+- `newImageResearchQueue` : file automatique brute, utile pour audit ;
+- `visualResearchQueue` : vue automatique générale de toutes les routes non prêtes ;
+- `visualCuration.curatedPrototypeQueue` : concepts éditorialement sélectionnés pour la prochaine expérimentation ;
+- `visualCuration.curatedNewImageResearchQueue` : file de production/recherche après application des décisions candidat par candidat ;
+- `visualCuration.nextUnreviewedImageQueue` : prochaines pistes à examiner humainement après les décisions déjà prises.
 
 Le score automatique privilégie le vocabulaire utile Rebulo, la fréquence scolaire, le nombre de cibles utiles, l'intérêt des fenêtres de deux syllabes et les candidats lexicaux exacts. Une convention visible déjà utilisable réduit la priorité de fabrication d'une nouvelle image, sans interdire une future alternative imagée.
 
-Cette file sert à choisir quoi examiner en premier ; elle ne choisit jamais automatiquement l'image finale. À qualité égale, conserver l'ordre produit :
+Ces files servent à choisir quoi examiner en premier ; elles ne choisissent jamais automatiquement l'image finale. À qualité égale, conserver l'ordre produit :
 
 `utilité corpus → fréquence du segment → nombre de cibles débloquées → évidence visuelle → stabilité de dénomination → âge/public → coût de production`
 

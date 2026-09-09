@@ -1,0 +1,27 @@
+{
+  "schemaVersion":"1.0",
+  "status":"planned_human_comprehension_tests",
+  "activationState":"inactive_until_human_review",
+  "protocol":{
+    "instruction":"Présenter une opération générale visible sans expliquer sa lecture, puis demander ce que la personne comprend que le symbole ajoute au rébus. Enregistrer d'abord la réponse spontanée, puis seulement une reformulation si nécessaire.",
+    "capture":{"firstSpontaneousResponse":true,"interpretationVerbatim":true,"hesitation":true,"noResponse":true,"misreading":true,"anonymousOnly":true},
+    "decisionGate":{"requiresHumanReview":true,"automaticPromotion":false,"clinicalValidation":false,"minimumDistinctParticipants":3,"note":"Une fréquence descriptive ne suffit pas à autoriser une opération. La promotion vers comprehension_tested exige une revue humaine explicite des verbatim et erreurs."}
+  },
+  "sets":[
+    {"setId":"grapheme-sound-v1","operationType":"grapheme_sound","status":"ready_for_human_comprehension_test","items":[
+      {"id":"D-d","grapheme":"D","ipa":"/d/","cue":"grapheme_with_sound_cue"},
+      {"id":"R-r","grapheme":"R","ipa":"/ʁ/","cue":"grapheme_with_sound_cue"},
+      {"id":"L-l","grapheme":"L","ipa":"/l/","cue":"grapheme_with_sound_cue"},
+      {"id":"N-n","grapheme":"N","ipa":"/n/","cue":"grapheme_with_sound_cue"},
+      {"id":"GN-gn","grapheme":"GN","ipa":"/ɲ/","cue":"grapheme_with_sound_cue"},
+      {"id":"Y-j","grapheme":"Y","ipa":"/j/","cue":"grapheme_with_sound_cue"}
+    ]},
+    {"setId":"contextual-grapheme-v1","operationType":"contextual_grapheme","status":"ready_for_human_comprehension_test","items":[
+      {"id":"TR-tr","grapheme":"TR","ipa":"/tʁ/","cue":"grapheme_with_source_evidence","sourceExample":{"word":"train","ipa":"/tʁɛ̃/","context":"prefix"}},
+      {"id":"MENT-man","grapheme":"MENT","ipa":"/mɑ̃/","cue":"grapheme_with_source_evidence","sourceExample":{"word":"rapidement","ipa":"/ʁapidmɑ̃/","context":"suffix"}},
+      {"id":"TION-sion","grapheme":"TION","ipa":"/sjɔ̃/","cue":"grapheme_with_source_evidence","sourceExample":{"word":"nation","ipa":"/nasjɔ̃/","context":"suffix"}},
+      {"id":"SION-sion","grapheme":"SION","ipa":"/sjɔ̃/","cue":"grapheme_with_source_evidence","sourceExample":{"word":"passion","ipa":"/pasjɔ̃/","context":"suffix"}}
+    ]}
+  ],
+  "results":[]
+}

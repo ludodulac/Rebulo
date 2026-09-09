@@ -15,8 +15,8 @@ export function buildCreatorCandidate(target,lexicon=[],therapyDefinitions=[]){
   if(!pieces)return null;
   const syllables=normalizedSyllables(target);
   const therapyActivities=[
-    ...buildTherapyActivities({...target,syllables},therapyDefinitions),
-    ...validatedCreatorRelationalActivities(target)
+    ...validatedCreatorRelationalActivities(target),
+    ...buildTherapyActivities({...target,syllables},therapyDefinitions)
   ];
   const candidate={answer:target.target,targetIpa:target.targetIpa,syllableCount:Number.isInteger(target.syllableCount)&&target.syllableCount>0?target.syllableCount:null,syllables,syllabificationStatus:syllables.length?'source_exact':target.syllabificationStatus||'needs_source_review',source:target.source||'',generated:Boolean(target.generated),pieces:pieces.map(piece=>({...piece,reading:piece.label})),therapyActivities};
   if(!validateStrictRebus(candidate).ok)return null;

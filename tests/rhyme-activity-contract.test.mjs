@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {normalizeIPA} from '../src/phonetic-engine.js';
 import {buildRhymeJudgments,buildRhymeMatching} from '../src/rhyme-activities.js';
+import {buildRelationalTherapyCatalog} from '../src/relational-therapy-catalog.js';
 
 const contract=JSON.parse(fs.readFileSync('data/rhyme-activity-contract.json','utf8'));
 
@@ -57,4 +58,18 @@ assert.equal(matching.expectedResponse,'tas');
 assert.deepEqual(matching.choices.map(item=>item.word),['tas','pie']);
 assert.equal(buildRhymeMatching(bank.relations,'pie'),null,'matching must remain unavailable without at least two explicit choices and exactly one rhyme');
 
-console.log('rhyme activities: explicit relations build controlled judgments and matching without orthographic or rebus-piece inference');
+const minimalPairs=JSON.parse(fs.readFileSync('data/minimal-pair-relations.json','utf8'));
+const phonemeOperations=JSON.parse(fs.readFileSync('data/phoneme-operation-relations.json','utf8'));
+const catalog=buildRelationalTherapyCatalog({
+  rhymeRelations:bank.relations,
+  minimalPairRelations:minimalPairs.relations,
+  phonemeOperations:phonemeOperations.operations
+});
+assert.equal(catalog.rhymeJudgments.length,3);
+assert.equal(catalog.rhymeMatching.length,1);
+assert.equal(catalog.minimalPairs.length,3);
+assert.equal(catalog.phonemeOperations.length,3);
+assert.equal(catalog.activities.length,10,'catalog must expose only activities produced from validated explicit data');
+assert.equal(buildRelationalTherapyCatalog().activities.length,0,'no relational data means no relational activity');
+
+console.log('relational therapy catalog: explicit rhyme, minimal-pair and phoneme-operation data assemble into controlled activities only');

@@ -68,7 +68,7 @@ export function buildCreatorTargets(report={}){
     const syllableCount=validSyllableCount(row.syllableCount);
     const therapy=['denomination','lexical-access','phoneme-initial','phoneme-final','phoneme-segmentation','phoneme-blending'];
     if(syllableCount)therapy.push('syllable-count');
-    therapy.push('syllable-blending','oral-to-written');
+    therapy.push('oral-to-written');
     targets.push({
       target:row.word,
       targetIpa:row.ipa,
@@ -99,27 +99,12 @@ function spatialOperationFromFrameToken(token,relation){
   return {type:'whole_word',pieceId:token};
 }
 
-function operationSignature(operation={}){
-  if(operation.type==='whole_word')return `word:${operation.pieceId||operation.label||''}`;
-  if(operation.type==='grapheme')return `grapheme:${operation.grapheme||''}:${operation.reading||''}`;
-  if(operation.type==='spatial_relation')return `spatial:${operation.relation||''}:${operation.reading||''}`;
-  if(operation.type==='repetition')return `repetition:${operation.pieceId||operation.label||''}:${Number(operation.count||0)}:${operation.reading||''}`;
-  return `${operation.type||'unknown'}:${JSON.stringify(operation)}`;
+export function buildGraphemeCreatorTargets(report={}){
+  return frameExamples(report,letterReadingForIPA,operationFromFrameToken,'coverage-report-grapheme');
 }
 
-export function creatorTargetSignature(item={}){
-  const mode=item?.mode||'unknown';
-  const ipa=normalizeIPA(item?.targetIpa||'');
-  if(mode==='strict')return `${mode}|${ipa}`;
-  if(Array.isArray(item?.operations)&&item.operations.length){
-    return `${mode}|${ipa}|${item.operations.map(operationSignature).join('+')}`;
-  }
-  return `${mode}|${ipa}|${Number(item?.operationCount||0)}`;
-}
-
-function stripAlternatives(item={}){
-  const {alternatives,...base}=item||{};
-  return base;
+export function buildSpatialCreatorTargets(report={}){
+  return frameExamples(report,spatialRelationForIPA,spatialOperationFromFrameToken,'coverage-report-spatial');
 }
 
 function frameExamples(report={},resolver,operationBuilder,source){
@@ -155,14 +140,6 @@ function frameExamples(report={},resolver,operationBuilder,source){
   return candidates;
 }
 
-export function buildGraphemeCreatorTargets(report={}){
-  return frameExamples(report,letterReadingForIPA,operationFromFrameToken,'coverage-report-grapheme');
-}
-
-export function buildSpatialCreatorTargets(report={}){
-  return frameExamples(report,spatialRelationForIPA,spatialOperationFromFrameToken,'coverage-report-spatial');
-}
-
 export function buildRepetitionCreatorTargets(report={}){
   const rows=Array.isArray(report?.constructible)?report.constructible:[];
   const candidates=[];
@@ -189,6 +166,29 @@ export function buildRepetitionCreatorTargets(report={}){
     candidates.push(candidate);
   }
   return candidates;
+}
+
+function operationSignature(operation={}){
+  if(operation.type==='whole_word')return `word:${operation.pieceId||operation.label||''}`;
+  if(operation.type==='grapheme')return `grapheme:${operation.grapheme||''}:${operation.reading||''}`;
+  if(operation.type==='spatial_relation')return `spatial:${operation.relation||''}:${operation.reading||''}`;
+  if(operation.type==='repetition')return `repetition:${operation.pieceId||operation.label||''}:${Number(operation.count||0)}:${operation.reading||''}`;
+  return `${operation.type||'unknown'}:${JSON.stringify(operation)}`;
+}
+
+export function creatorTargetSignature(item={}){
+  const mode=item?.mode||'unknown';
+  const ipa=normalizeIPA(item?.targetIpa||'');
+  if(mode==='strict')return `${mode}|${ipa}`;
+  if(Array.isArray(item?.operations)&&item.operations.length){
+    return `${mode}|${ipa}|${item.operations.map(operationSignature).join('+')}`;
+  }
+  return `${mode}|${ipa}|${Number(item?.operationCount||0)}`;
+}
+
+function stripAlternatives(item={}){
+  const {alternatives,...base}=item||{};
+  return base;
 }
 
 export function creatorTargetScore(item={}){

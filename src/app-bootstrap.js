@@ -2,6 +2,8 @@ import {buildAutomaticCreatorTargets,mergeCreatorTargets} from './creator-catalo
 import {buildNumberGapTargets,buildOpenPictogramGapTargets,mergeOpenPictograms} from './open-pictogram-library.js';
 import {buildWave2GapTargets,mergeOpenPictogramsWave2} from './open-pictogram-library-wave2.js';
 import {buildWave3GapTargets,mergeOpenPictogramsWave3} from './open-pictogram-library-wave3.js';
+import {buildRelationalTherapyCatalog} from './relational-therapy-catalog.js';
+import {attachCreatorRelationalActivities} from './relational-creator-exposure.js';
 
 const nativeFetch=window.fetch.bind(window);
 
@@ -29,14 +31,17 @@ window.fetch=async function rebuloFetch(input,init){
 
   if(!url.endsWith('data/corpus-pilot.json'))return nativeFetch(input,init);
 
-  const [corpusResponse,coverageResponse]=await Promise.all([
+  const [corpusResponse,coverageResponse,rhymeResponse]=await Promise.all([
     nativeFetch(input,init),
-    nativeFetch('data/coverage-report.json',{cache:'no-store'})
+    nativeFetch('data/coverage-report.json',{cache:'no-store'}),
+    nativeFetch('data/rhyme-relations.json',{cache:'no-store'})
   ]);
   if(!corpusResponse.ok||!coverageResponse.ok)return corpusResponse;
 
   const corpus=await corpusResponse.json();
   const coverage=await coverageResponse.json();
+  const rhymeRelations=rhymeResponse.ok?(await rhymeResponse.json()).relations||[]:[];
+  const relationalCatalog=buildRelationalTherapyCatalog({rhymeRelations});
   const manualItems=Array.isArray(corpus?.items)?corpus.items:[];
   const generatedItems=[
     ...buildAutomaticCreatorTargets(coverage),
@@ -45,7 +50,8 @@ window.fetch=async function rebuloFetch(input,init){
     ...buildWave3GapTargets(coverage),
     ...buildNumberGapTargets(coverage)
   ];
-  return jsonResponse({...corpus,items:mergeCreatorTargets(manualItems,generatedItems)});
+  const merged=mergeCreatorTargets(manualItems,generatedItems);
+  return jsonResponse({...corpus,items:merged.map(item=>attachCreatorRelationalActivities(item,relationalCatalog))});
 };
 
 hideMechanicalPlusSigns();

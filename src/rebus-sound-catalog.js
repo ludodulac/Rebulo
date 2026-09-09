@@ -3,9 +3,11 @@ import {normalizeIPA,splitIPAUnits} from './phonetic-engine.js';
 export function sourceExactSyllables(entry={}){
   const ipa=normalizeIPA(entry.ipa||entry.targetIpa||'');
   const source=String(entry.syllabification||'').trim();
-  if(!ipa||!source||!source.includes('.'))return [];
+  if(!ipa||!source)return [];
   const syllables=source.split('.').map(normalizeIPA).filter(Boolean);
   if(!syllables.length||syllables.join('')!==ipa)return [];
+  const count=Number(entry?.syllableCount);
+  if(Number.isInteger(count)&&count>0&&syllables.length!==count)return [];
   return syllables;
 }
 

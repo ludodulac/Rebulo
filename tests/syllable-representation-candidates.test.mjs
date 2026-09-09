@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import {
+  buildWholeWordCandidateIndex,
   wholeWordRepresentationCandidates,
   buildRepresentationResearchQueue,
   representationResearchStats
@@ -14,23 +15,28 @@ const entries=[
   {word:'et',lemma:'et',ipa:'e',pos:'CON',frequency:9999,syllableCount:1}
 ];
 
-const huis=wholeWordRepresentationCandidates('/ɥi/',entries);
+const index=buildWholeWordCandidateIndex(entries);
+assert.ok(index instanceof Map);
+assert.equal(index.get('kɥi')?.length,1,'the reusable index must deduplicate lemma/IPA before bulk lookups');
+
+const huis=wholeWordRepresentationCandidates('/ɥi/',index);
 assert.equal(huis.length,1);
 assert.equal(huis[0].word,'huis');
 assert.equal(huis[0].phoneticStatus,'whole_pronunciation_exact');
 assert.equal(huis[0].visualStatus,'unreviewed');
 assert.equal(huis[0].activationState,'research_only');
 
-const paques=wholeWordRepresentationCandidates('/pak/',entries);
+const paques=wholeWordRepresentationCandidates('/pak/',index);
 assert.equal(paques[0].word,'Pâques');
 assert.equal(paques[0].pos,'NOM');
 
-const cuit=wholeWordRepresentationCandidates('/kɥi/',entries);
+const cuit=wholeWordRepresentationCandidates('/kɥi/',index);
 assert.equal(cuit.length,1,'same lemma/IPA must not flood the research queue with inflections');
 assert.equal(cuit[0].word,'cuit');
 assert.equal(cuit[0].visualStatus,'unreviewed','phonetic exactness must never imply a usable image');
 
-assert.deepEqual(wholeWordRepresentationCandidates('/e/',entries),[],'function words outside the research POS set are not visual candidates');
+assert.deepEqual(wholeWordRepresentationCandidates('/e/',index),[],'function words outside the research POS set are not visual candidates');
+assert.deepEqual(wholeWordRepresentationCandidates('/pak/',entries),paques,'array input must keep the legacy API behavior');
 
 const queue=buildRepresentationResearchQueue([
   {ipa:'kɥi',targetCount:8,totalFrequency:200,minAgeBandCandidate:5,examples:['biscuit'],coverage:{coverageType:'uncovered'}},
@@ -45,4 +51,4 @@ assert.equal(queue[1].wholeWordCandidates[0].word,'huis');
 assert.equal(queue[2].wholeWordCandidates[0].word,'Pâques');
 assert.deepEqual(representationResearchStats(queue),{gaps:3,gapsWithWholeWordCandidates:3,gapsWithoutWholeWordCandidates:0});
 
-console.log('Syllable representation candidates: exact lexical matches remain research-only until visual review.');
+console.log('Syllable representation candidates: reusable exact sound index stays research-only until visual review.');

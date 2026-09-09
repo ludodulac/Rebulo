@@ -6,7 +6,7 @@ import {normalizeIPA} from '../src/phonetic-engine.js';
 
 const lexiquePath=process.argv[2]||'data/lexique4.compact.json';
 const outputPath=process.argv[3]||'data/rebus-sound-catalog.json';
-const docPath=process.argv[4]||'docs/REBUS_SOUND_CATALOG.md';
+const docPath=process.argv[4]||'docs/REBUS_SOUND_CATALOG_REPORT.md';
 
 if(!fs.existsSync(lexiquePath)){
   console.error(`Lexique compact introuvable: ${lexiquePath}`);
@@ -97,9 +97,9 @@ fs.writeFileSync(outputPath,JSON.stringify(report,null,2));
 
 const top=rows.slice().sort((a,b)=>b.occurrenceCount-a.occurrenceCount||b.representationCount-a.representationCount).slice(0,120);
 const lines=[
-  '# Rebulo — catalogue des sons de rébus',
+  '# Rebulo — rapport du catalogue des sons de rébus',
   '',
-  '> Fichier généré. La source de vérité éditoriale reste dans les bibliothèques/candidats/conventions référencés par le script.',
+  '> Fichier généré. Le contrat et les sources canoniques sont documentés dans `REBUS_SOUND_CATALOG.md`.',
   '',
   `- Fenêtres phonétiques exactes de 1–2 syllabes : ${rows.length}.`,
   `- Fenêtres disposant déjà d'au moins une représentation : ${covered.length}.`,

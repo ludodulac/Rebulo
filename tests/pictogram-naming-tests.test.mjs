@@ -47,7 +47,9 @@ assert.equal(nidPlan.comparisonRevision,'nid-v1');assert.deepEqual(nidPlan.candi
 
 const heureComparison=comparisonRegistry.comparisons.find(item=>item.concept==='heure');
 const heurePlan=planRegistry.plans.find(item=>item.concept==='heure');
-assert.ok(heureComparison);assert.ok(heurePlan);assert.equal(heureComparison.revision,'heure-v1');assert.equal(heureComparison.targetIpa,'/œʁ/');assert.equal(heureComparison.humanDecision,null);assert.equal(heureComparison.candidates.length,2);assert.ok(heureComparison.candidates.every(item=>item.availability==='pending'&&item.namingTestStatus==='not_run'));assert.deepEqual(heurePlan.candidateIds,heureComparison.candidates.map(item=>item.candidateId));assert.equal(heurePlan.status,'blocked_pending_stimuli');assert.equal(heurePlan.activationState,'inactive_until_human_decision');assert.equal(heurePlan.decisionGate.requiresHumanReview,true);assert.equal(heurePlan.decisionGate.automaticActivation,false);assert.match(heurePlan.decisionGate.note,/planche comparative/i);assert.match(heurePlan.instruction,/sans légende/i);
+assert.ok(heureComparison);assert.ok(heurePlan);assert.equal(heureComparison.revision,'heure-v1');assert.equal(heureComparison.targetIpa,'/œʁ/');assert.equal(heureComparison.humanDecision,null);assert.equal(heureComparison.candidates.length,2);assert.ok(heureComparison.candidates.every(item=>item.availability==='available'&&item.namingTestStatus==='not_run'));
+for(const candidate of heureComparison.candidates){assert.match(candidate.asset,/^assets\/research\/heure-scene-[ab]-v1\.svg$/);await access(new URL(`../${candidate.asset}`,import.meta.url));}
+assert.deepEqual(heurePlan.candidateIds,heureComparison.candidates.map(item=>item.candidateId));assert.equal(heurePlan.status,'ready_for_human_naming_test');assert.equal(heurePlan.activationState,'inactive_until_human_decision');assert.equal(heurePlan.decisionGate.requiresHumanReview,true);assert.equal(heurePlan.decisionGate.automaticActivation,false);assert.match(heurePlan.decisionGate.note,/réponses humaines réelles/i);assert.match(heurePlan.instruction,/sans légende/i);
 
 // The old comparison plans remain immutable historical research. The founder's later
 // product decision activates new comic revisions for general use only; it does not
@@ -61,4 +63,4 @@ for(const concept of ['pot','dos','raie','terre']){
   assert.match(item.image,new RegExp(`^assets/rebus/${concept}-comic\\.svg$`));
 }
 
-console.log('pictogram naming tests: historical revisions stay immutable; heure remains blocked until separate blind stimuli exist.');
+console.log('pictogram naming tests: historical revisions stay immutable; heure blind stimuli are ready for human naming and no result is fabricated.');

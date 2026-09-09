@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": "2026-09-09T07:42:01.242Z",
+  "generatedAt": "2026-09-09T07:45:40.349Z",
   "baseline": {
     "activePictogramCount": 24,
     "strictMultiPieceEntries": 911,
@@ -119,10 +119,10 @@
       "source": "rebulo_original",
       "revisionStamped": true,
       "artRevision": "terre-comic-v1",
-      "namingReviewAvailable": false,
+      "namingReviewAvailable": true,
       "clinicalStatus": "unreviewed",
-      "readinessScore": 2,
-      "nextGate": "add_revision_bound_naming_review"
+      "readinessScore": 3,
+      "nextGate": "collect_human_naming_observations"
     },
     {
       "id": "dos",
@@ -135,10 +135,10 @@
       "source": "rebulo_original",
       "revisionStamped": true,
       "artRevision": "dos-comic-v1",
-      "namingReviewAvailable": false,
+      "namingReviewAvailable": true,
       "clinicalStatus": "unreviewed",
-      "readinessScore": 2,
-      "nextGate": "add_revision_bound_naming_review"
+      "readinessScore": 3,
+      "nextGate": "collect_human_naming_observations"
     },
     {
       "id": "chat",
@@ -183,10 +183,10 @@
       "source": "rebulo_original",
       "revisionStamped": true,
       "artRevision": "pot-comic-v1",
-      "namingReviewAvailable": false,
+      "namingReviewAvailable": true,
       "clinicalStatus": "unreviewed",
-      "readinessScore": 2,
-      "nextGate": "add_revision_bound_naming_review"
+      "readinessScore": 3,
+      "nextGate": "collect_human_naming_observations"
     },
     {
       "id": "pie",
@@ -231,10 +231,10 @@
       "source": "rebulo_original",
       "revisionStamped": true,
       "artRevision": "raie-comic-v1",
-      "namingReviewAvailable": false,
+      "namingReviewAvailable": true,
       "clinicalStatus": "unreviewed",
-      "readinessScore": 2,
-      "nextGate": "add_revision_bound_naming_review"
+      "readinessScore": 3,
+      "nextGate": "collect_human_naming_observations"
     },
     {
       "id": "riz",
@@ -279,10 +279,10 @@
       "source": "rebulo_original",
       "revisionStamped": true,
       "artRevision": "tas-comic-v1",
-      "namingReviewAvailable": false,
+      "namingReviewAvailable": true,
       "clinicalStatus": "naming_test_required",
-      "readinessScore": 2,
-      "nextGate": "add_revision_bound_naming_review"
+      "readinessScore": 3,
+      "nextGate": "collect_human_naming_observations"
     },
     {
       "id": "mat",

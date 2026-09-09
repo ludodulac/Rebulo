@@ -1,5 +1,9 @@
 export function normalizeSessionAnswer(value=''){
-  return String(value||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^\p{L}\p{N}]+/gu,'');
+  return String(value||'')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300\u0301\u0302\u0308\u0327]/g,'')
+    .replace(/[^\p{L}\p{N}\p{M}]+/gu,'');
 }
 
 function scalarExpectedResponse(activity={}){
@@ -7,13 +11,34 @@ function scalarExpectedResponse(activity={}){
   return ['string','number'].includes(typeof value)?String(value).trim():'';
 }
 
+function sequenceExpectedResponse(activity={}){
+  return Array.isArray(activity?.expectedResponse)
+    ?activity.expectedResponse.map(unit=>String(unit||'').trim()).filter(Boolean)
+    :[];
+}
+
+function normalizeSessionSequence(value=''){
+  const raw=String(value||'').trim();
+  const slashUnits=[...raw.matchAll(/\/([^/]+)\//g)].map(match=>normalizeSessionAnswer(match[1])).filter(Boolean);
+  if(slashUnits.length>=2)return slashUnits;
+  return raw.split(/(?:\s*\+\s*|[.,;·‧-]|\s+)/u).map(normalizeSessionAnswer).filter(Boolean);
+}
+
 export function sessionExpectedAnswer(item={}){
   const relational=String(item?.activity?.sessionExpectedResponse||'').trim();
+  if(relational)return relational;
+  const sequence=sequenceExpectedResponse(item?.activity);
+  if(sequence.length)return sequence.join(' + ');
   const controlled=scalarExpectedResponse(item?.activity);
-  return relational||controlled||String(item?.answer||'').trim();
+  return controlled||String(item?.answer||'').trim();
 }
 
 export function sessionAnswerMatches(value,item={}){
+  const sequence=sequenceExpectedResponse(item?.activity).map(normalizeSessionAnswer).filter(Boolean);
+  if(sequence.length){
+    const actual=normalizeSessionSequence(value);
+    return actual.length===sequence.length&&actual.every((unit,index)=>unit===sequence[index]);
+  }
   const expected=normalizeSessionAnswer(sessionExpectedAnswer(item));
   return Boolean(expected)&&normalizeSessionAnswer(value)===expected;
 }

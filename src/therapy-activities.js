@@ -3,6 +3,14 @@ import {firstIPAUnit,lastIPAUnit,normalizeIPA,splitIPAUnits} from './phonetic-en
 const phonemeSequence=(target)=>splitIPAUnits(target?.targetIpa||'');
 const formatPhonemeSequence=(target)=>phonemeSequence(target).map(unit=>`/${unit}/`).join(' + ');
 const validSyllableCount=(target)=>Number.isInteger(target?.syllableCount)&&target.syllableCount>0?target.syllableCount:null;
+const sourceExactSyllables=(target)=>{
+  if(target?.syllabificationStatus!=='source_exact'||!Array.isArray(target?.syllables))return [];
+  const syllables=target.syllables.map(normalizeIPA).filter(Boolean);
+  const count=validSyllableCount(target);
+  if(!syllables.length||(count&&syllables.length!==count))return [];
+  return syllables;
+};
+const formatSyllableSequence=(target)=>sourceExactSyllables(target).map(unit=>`/${unit}/`).join(' + ');
 
 const TEMPLATES={
   'denomination':{
@@ -63,6 +71,15 @@ const TEMPLATES={
         :'Faire compter les syllabes orales du mot cible sans fournir de découpage.';
     }
   },
+  'syllable-segmentation':{
+    childInstruction:'Dis le mot obtenu, puis sépare-le en syllabes, dans l’ordre.',
+    proInstruction:(target)=>{
+      const expected=formatSyllableSequence(target);
+      return expected
+        ?`Faire segmenter oralement le mot cible selon les frontières syllabiques source validées, sans utiliser les pièces du rébus comme découpage. Réponse attendue : ${expected}.`
+        :'Faire segmenter oralement le mot cible uniquement si des frontières syllabiques source validées sont disponibles.';
+    }
+  },
   'syllable-blending':{
     childInstruction:'Prononce le nom entier de chaque image, dans l’ordre, puis enchaîne-les sans retirer ni changer de son. Quel mot obtiens-tu ?',
     proInstruction:'Faire produire les dénominations entières des images, puis les fusionner dans l’ordre sans suppression ni substitution.'
@@ -85,10 +102,12 @@ export function buildTherapyActivities(target,definitions=[]){
   const registry=therapyTargetMap(definitions);
   const hasTargetIpa=Boolean(normalizeIPA(target?.targetIpa||''));
   const syllableCount=validSyllableCount(target);
+  const syllables=sourceExactSyllables(target);
   return (target?.therapy||[])
     .filter(id=>TEMPLATES[id]&&registry.has(id))
     .filter(id=>id!=='phoneme-blending'||hasTargetIpa)
     .filter(id=>id!=='syllable-count'||syllableCount)
+    .filter(id=>id!=='syllable-segmentation'||syllables.length)
     .map(id=>{
       const definition=registry.get(id);
       const template=TEMPLATES[id];
@@ -102,7 +121,9 @@ export function buildTherapyActivities(target,definitions=[]){
               ?normalizeIPA(target?.targetIpa||'')
               :id==='syllable-count'
                 ?syllableCount
-                :'';
+                :id==='syllable-segmentation'
+                  ?syllables
+                  :'';
       const promptUnits=id==='phoneme-blending'?phonemeSequence(target):[];
       return {
         id,

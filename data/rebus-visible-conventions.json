@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.1",
   "status": "research_only",
   "policy": {
     "visibility": "A convention must be visible as itself; never hide a letter, digit or other symbol inside a strict image reading.",
@@ -20,6 +20,7 @@
     {"id":"digit-10","label":"10","ipa":"dis","kind":"number_symbol","status":"research","note":"Context variants are not silently substituted."},
     {"id":"letter-l","label":"L","ipa":"ɛl","kind":"letter_name","status":"research"},
     {"id":"letter-k","label":"K","ipa":"ka","kind":"letter_name","status":"research"},
-    {"id":"letter-q","label":"Q","ipa":"ky","kind":"letter_name","status":"research"}
+    {"id":"letter-q","label":"Q","ipa":"ky","kind":"letter_name","status":"research"},
+    {"id":"music-note-la","label":"la","ipa":"la","kind":"music_note","status":"research","note":"Visible solfège note convention; must remain visually distinct from an object pictogram."}
   ]
 }

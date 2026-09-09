@@ -4,7 +4,15 @@ Rebulo est un créateur de rébus riche, ludique et intelligent. Son cœur actue
 
 L'ambition généraliste et l'usage orthophonique sont complémentaires : Rebulo doit retrouver le plaisir immédiat des rébus de magazines tout en sachant distinguer les constructions et les illustrations qui satisfont des exigences phonétiques ou cliniques plus fortes. Les principes stables de cette architecture sont décrits dans `docs/PRODUCT_PRINCIPLES.md`.
 
-Le mode Jouer consomme désormais la couverture stricte générée par Lexique 4 : avec l'inventaire actif actuel, 760 mots uniques en rébus stricts multi-images sont exposés au jeu, au lieu de rester limités au petit catalogue historique.
+Le mode Jouer consomme la couverture stricte générée depuis les données lexicales actuelles. Les métriques courantes doivent être lues dans les rapports de `data/` ou régénérées avec les scripts du dépôt plutôt que recopiées ici comme constantes.
+
+## Continuité pour une nouvelle conversation IA
+
+Commencer par **`AI_START_HERE.md`**. C'est un routeur court vers les sources de vérité et les fichiers à lire selon la tâche.
+
+Une conversation ciblée ne doit pas relire tout `docs/` par défaut. Vérifier d'abord `main`, les changements récents, la CI et les fichiers réellement concernés, puis charger uniquement la documentation de cette zone.
+
+L'état opérationnel utile entre sessions reste dans `docs/PROJECT_HANDOFF_2026-09-01.md`. `docs/PROGRESSION.md` sert surtout d'historique et ne doit être relu que si une décision passée est nécessaire.
 
 ## Principe strict actuellement implémenté
 
@@ -21,7 +29,7 @@ Exemples explicitement refusés par le mode strict :
 - tour /tuʁ/ + nez /ne/ + sol /sɔl/ ne donne pas la prononciation usuelle de tournesol
 - pie /pi/ + rat /ʁa/ + mie /mi/ + dé /de/ ne donne pas la prononciation de pyramide
 
-Ces refus ne signifient pas que Rebulo doit rester limité à la concaténation d'images entières. Des conventions de rébus classiques pourront être ajoutées lorsqu'elles sont modélisées comme des opérations explicites et testables ; elles ne devront simplement jamais être présentées comme des solutions `strict`.
+Ces refus ne signifient pas que Rebulo doit rester limité à la concaténation d'images entières. Des conventions de rébus classiques peuvent être ajoutées lorsqu'elles sont modélisées comme des opérations explicites et testables ; elles ne doivent simplement jamais être présentées comme des solutions `strict`.
 
 ## Doctrine UX
 
@@ -44,29 +52,34 @@ Toute nouvelle fonction doit d'abord trouver sa place dans cette hiérarchie ava
 
 ## Structure
 
-- `index.html` : interface du créateur et accès au prototype jeu historique
+- `AI_START_HERE.md` : routeur sélectif pour reprendre le projet avec un minimum de contexte
+- `index.html` : interface principale
 - `styles.css` : interface responsive et impression
-- `app.js` : orchestration du créateur et du jeu historique
+- `app.js` : orchestration principale
 - `src/phonetic-engine.js` : validation et segmentation phonétiques strictes
+- `src/rebus-construction.js` : constructions et opérations explicites
+- `src/creator-runtime.js` : runtime du créateur
 - `data/corpus-pilot.json` : cibles pilotes, acceptées ou explicitement rejetées
-- `data/lexicon-seed.json` : concepts illustrables actifs
-- `data/asset-sources.json` : provenance et licences des illustrations externes
+- `data/lexicon-seed.json` : concepts illustrables structurés
+- `data/asset-sources.json` : provenance, licences et révisions d'illustrations
 - `data/rebus.json` : catalogue historique conservé
-- `assets/rebus/` : pictogrammes SVG
+- `assets/rebus/` : pictogrammes SVG de production
+- `assets/research/` : stimuli et prototypes de recherche séparés de la production
 - `docs/PRODUCT_PRINCIPLES.md` : constitution produit stable et niveaux d'exigence
-- `docs/` : recherche, couverture, plan clinique et passation
+- `docs/PROJECT_HANDOFF_2026-09-01.md` : état opérationnel concis entre sessions
+- `docs/` : contrats spécialisés, recherches et historique à charger seulement selon la tâche
 
 ## Règle de qualité
 
 Une solution `strict` est refusée dès qu'elle nécessite une suppression arbitraire, une consonne silencieuse « ressuscitée », une liaison inventée, une lecture partielle cachée ou une approximation orthographique. L'absence de solution exacte est un résultat normal du moteur strict.
 
-La bibliothèque générale et la validation clinique sont deux dimensions différentes. Une illustration peut exister pour un usage ludique sans être présentée comme cliniquement validée. Les pictogrammes destinés aux usages cliniques restent des prototypes tant que leur dénomination spontanée, leur reconnaissance visuelle et leur adéquation au public ciblé n'ont pas été validées.
+La bibliothèque générale et la validation clinique sont deux dimensions différentes. Une illustration peut exister pour un usage ludique sans être présentée comme cliniquement validée. La maturité réelle d'un stimulus doit être vérifiée dans les données et le modèle de garantie, notamment `docs/GUARANTEE_MODEL.md`.
 
 ## Illustrations et licences
 
-Les nouveaux pictogrammes `lit` et `riz` proviennent d'OpenMoji. Tous les emojis OpenMoji sont conçus par OpenMoji, projet open source d'emojis et d'icônes, et sont utilisés sous licence CC BY-SA 4.0. Les références précises de chaque fichier sont enregistrées dans `data/asset-sources.json`.
+Les références de provenance, licence et révision connues sont enregistrées dans `data/asset-sources.json`. Une provenance documentée ne prouve ni la dénomination spontanée, ni l'adéquation à l'âge, ni une validation clinique.
 
-Les autres SVG historiques du dépôt sont conservés tels quels ; leur provenance doit être auditée avant une diffusion commerciale si elle n'est pas déjà documentée.
+Avant diffusion commerciale ou changement d'asset, vérifier la fiche de provenance de la révision réellement utilisée et conserver les observations humaines liées à leur révision exacte.
 
 ## Lancer
 

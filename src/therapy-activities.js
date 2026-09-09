@@ -71,6 +71,15 @@ const TEMPLATES={
         :'Faire compter les syllabes orales du mot cible sans fournir de découpage.';
     }
   },
+  'syllable-identification':{
+    childInstruction:'Dis le mot obtenu. Quelle est sa première syllabe ?',
+    proInstruction:(target)=>{
+      const expected=sourceExactSyllables(target)[0]||'';
+      return expected
+        ?`Faire identifier la syllabe initiale du mot cible à partir des frontières syllabiques source validées, sans utiliser les pièces du rébus comme découpage. Réponse attendue : /${expected}/.`
+        :'Faire identifier la syllabe initiale uniquement si des frontières syllabiques source validées sont disponibles.';
+    }
+  },
   'syllable-segmentation':{
     childInstruction:'Dis le mot obtenu, puis sépare-le en syllabes, dans l’ordre.',
     proInstruction:(target)=>{
@@ -103,10 +112,19 @@ export function buildTherapyActivities(target,definitions=[]){
   const hasTargetIpa=Boolean(normalizeIPA(target?.targetIpa||''));
   const syllableCount=validSyllableCount(target);
   const syllables=sourceExactSyllables(target);
-  return (target?.therapy||[])
+  const ids=[...(target?.therapy||[])];
+  if(syllables.length>=2&&registry.has('syllable-identification')&&!ids.includes('syllable-identification')){
+    const segmentationIndex=ids.indexOf('syllable-segmentation');
+    const oralIndex=ids.indexOf('oral-to-written');
+    const before=segmentationIndex>=0?segmentationIndex:oralIndex;
+    if(before>=0)ids.splice(before,0,'syllable-identification');
+    else ids.push('syllable-identification');
+  }
+  return ids
     .filter(id=>TEMPLATES[id]&&registry.has(id))
     .filter(id=>id!=='phoneme-blending'||hasTargetIpa)
     .filter(id=>id!=='syllable-count'||syllableCount)
+    .filter(id=>id!=='syllable-identification'||syllables.length>=2)
     .filter(id=>id!=='syllable-segmentation'||syllables.length)
     .map(id=>{
       const definition=registry.get(id);
@@ -121,10 +139,13 @@ export function buildTherapyActivities(target,definitions=[]){
               ?normalizeIPA(target?.targetIpa||'')
               :id==='syllable-count'
                 ?syllableCount
-                :id==='syllable-segmentation'
-                  ?syllables
-                  :'';
+                :id==='syllable-identification'
+                  ?syllables[0]
+                  :id==='syllable-segmentation'
+                    ?syllables
+                    :'';
       const promptUnits=id==='phoneme-blending'?phonemeSequence(target):[];
+      const promptPosition=id==='syllable-identification'?'initial':'';
       return {
         id,
         label:definition.label,
@@ -133,7 +154,8 @@ export function buildTherapyActivities(target,definitions=[]){
         childInstruction:resolveInstruction(template.childInstruction,target),
         proInstruction:resolveInstruction(template.proInstruction,target),
         expectedResponse,
-        promptUnits
+        promptUnits,
+        promptPosition
       };
     });
 }

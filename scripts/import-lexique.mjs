@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import {validateLexiqueSyllabification} from '../src/lexique-syllabification.js';
 
 const input=process.argv[2];
 const output=process.argv[3]||'data/lexique4.compact.json';
@@ -56,10 +57,9 @@ const columns={
   pos:findColumn(['cgram','pos','categorie','categorie_grammaticale']),
   syllableCount:findColumn(['nbsyll','nb_syll','syllnb','syll_nb','syllable_count','syllables']),
   // Only accept a column that explicitly contains IPA syllabification. Lexique 4's
-  // SyllPhono column uses its legacy phonological code and must not be presented as IPA.
+  // SyllPhono column uses its legacy phonological code and must not be presented as IPA
+  // unless the documented converter validates it against the target IPA and SyllNb.
   syllabification:findColumn(['phono_ipa_syll','ipa_syll','syll_ipa','syllabation_ipa','syllabification_ipa','syll','syllabation','syllabification','syllabifie']),
-  // Preserve Lexique's documented source syllabification as evidence of boundaries,
-  // while keeping it separate from IPA until an explicit conversion is validated.
   sourceSyllabification:findColumn(['syllphono','syll_phono'])
 };
 
@@ -80,15 +80,20 @@ for(const line of lines){
   const freqRaw=columns.freq>=0?(cells[columns.freq]||'').replace(',','.'):'';
   const syllableRaw=columns.syllableCount>=0?(cells[columns.syllableCount]||'').trim():'';
   const syllableCount=syllableRaw?Number.parseInt(syllableRaw,10):null;
-  const syllabification=columns.syllabification>=0?(cells[columns.syllabification]||'').trim():'';
+  const normalizedSyllableCount=Number.isInteger(syllableCount)&&syllableCount>0?syllableCount:null;
+  const explicitSyllabification=columns.syllabification>=0?(cells[columns.syllabification]||'').trim():'';
   const sourceSyllabification=columns.sourceSyllabification>=0?(cells[columns.sourceSyllabification]||'').trim():'';
+  const converted=!explicitSyllabification&&sourceSyllabification
+    ?validateLexiqueSyllabification({sourceSyllabification,targetIpa:phon,syllableCount:normalizedSyllableCount})
+    :null;
+  const syllabification=explicitSyllabification||(converted?.ok?converted.ipaSyllabification:'');
   rows.push({
     word,
     lemma:columns.lemma>=0?(cells[columns.lemma]||'').trim():word,
     ipa:phon,
     frequency:freqRaw?Number(freqRaw)||0:0,
     pos:columns.pos>=0?(cells[columns.pos]||'').trim():'',
-    syllableCount:Number.isInteger(syllableCount)&&syllableCount>0?syllableCount:null,
+    syllableCount:normalizedSyllableCount,
     syllabification:syllabification||null,
     sourceSyllabification:sourceSyllabification||null
   });

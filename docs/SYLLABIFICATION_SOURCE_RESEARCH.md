@@ -16,21 +16,29 @@ Références :
 
 ## Décision Rebulo
 
-`SyllPhono` constitue une source documentée de **frontières syllabiques**, mais sa notation phonologique historique n’est pas de l’IPA. Rebulo doit donc conserver deux champs distincts :
+`SyllPhono` constitue une source documentée de **frontières syllabiques**, mais sa notation phonologique historique n’est pas de l’IPA. Rebulo conserve donc deux informations distinctes :
 
-- `syllabification` : uniquement une syllabification explicitement fournie en IPA ;
-- `sourceSyllabification` : la syllabation source Lexique dans sa notation d’origine.
+- `sourceSyllabification` : la syllabation Lexique originale, inchangée ;
+- `syllabification` : une syllabification IPA exploitable uniquement si elle était explicitement fournie en IPA ou si la conversion du code Lexique a passé tous les contrôles stricts.
 
-Aucune conversion automatique `SyllPhono → IPA` n’est autorisée tant qu’un mapping explicite, testé et documenté n’a pas été validé.
+Le convertisseur `src/lexique-syllabification.js` utilise uniquement la table de codes phonémiques documentée par Lexique. Il refuse les symboles inconnus et ne promeut une conversion que si :
+
+1. tous les symboles source sont explicitement mappés ;
+2. le nombre de syllabes converties correspond à `SyllNb` lorsqu’il est disponible ;
+3. la concaténation des syllabes IPA redonne exactement l’IPA cible normalisée.
+
+Un échec laisse `syllabification` indisponible ; aucune approximation n’est produite.
 
 ## Conséquences produit
 
-Cette recherche ne suffit pas à activer `syllable-segmentation`, `syllable-identification` ou `syllable-blending` sur les cibles générées. La prochaine étape technique est de construire un convertisseur de notation Lexique vers des unités IPA syllabifiées, puis de vérifier :
+Les syllabifications validées peuvent alimenter les inventaires linguistiques marqués `source_exact`. Cette étape **n’active pas** automatiquement `syllable-segmentation`, `syllable-identification` ou `syllable-blending` dans le créateur.
 
-1. que la concaténation des syllabes converties redonne exactement l’IPA cible normalisée ;
-2. que le nombre de syllabes correspond à `SyllNb` lorsqu’il est disponible ;
-3. que les cas ambigus ou non convertibles sont rejetés plutôt qu’approximés ;
-4. que les activités syllabiques ne sont activées que lorsque ces invariants sont satisfaits.
+Avant toute activation d’activité syllabique, il reste à définir pour chaque activité :
+
+- les unités présentées à l’utilisateur ;
+- la réponse attendue ;
+- les cas d’ambiguïté ou de variation ;
+- les critères de disponibilité explicites dans le runtime.
 
 ## Garde-fou
 

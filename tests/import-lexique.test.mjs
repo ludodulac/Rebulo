@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import {spawnSync} from 'node:child_process';
+import {buildTargetVocabulary} from '../src/target-vocabulary.js';
 
 function importFixture(fixture,name){
   const output=path.join(os.tmpdir(),`rebulo-lexique-${name}-${process.pid}.json`);
@@ -33,8 +34,13 @@ const maison=official.entries.find(x=>x.word==='maison');
 const cinema=official.entries.find(x=>x.word==='cinéma');
 assert.equal(maison.syllableCount,2,'26_SyllNb must be imported');
 assert.equal(cinema.syllableCount,3,'official SyllNb must drive target preselection');
-assert.equal(maison.syllabification,null,'25_SyllPhono is legacy Lexique notation, not IPA syllabification');
-assert.equal(maison.sourceSyllabification,'mE-z§','25_SyllPhono must be preserved separately as source boundary evidence');
+assert.equal(maison.sourceSyllabification,'mE-z§','25_SyllPhono must remain preserved as original source evidence');
 assert.equal(cinema.sourceSyllabification,'si-ne-ma');
+assert.equal(maison.syllabification,'mɛ.zɔ̃','validated legacy SyllPhono may be promoted to IPA syllabification');
+assert.equal(cinema.syllabification,'si.ne.ma');
 
-console.log('Lexique 4 importer: compact fixture, official SyllNb and source SyllPhono preservation passed.');
+const targetMaison=buildTargetVocabulary(official.entries).find(item=>item.target==='maison');
+assert.equal(targetMaison.syllabificationStatus,'source_exact','validated imported boundaries must reach the target vocabulary as source-exact');
+assert.deepEqual(targetMaison.syllables,['mɛ','zɔ̃']);
+
+console.log('Lexique 4 importer: validated SyllPhono reaches source-exact target vocabulary.');

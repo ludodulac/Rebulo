@@ -40,4 +40,18 @@ assert.equal(isMinimalPair({leftIpa:'pa',rightIpa:'ba',differenceIndex:0,leftPho
 assert.equal(isMinimalPair({leftIpa:'pa',rightIpa:'bu',differenceIndex:0,leftPhoneme:'p',rightPhoneme:'b'}),false,'two phoneme differences are not a minimal pair');
 assert.equal(isMinimalPair({leftIpa:'pa',rightIpa:'ba',differenceIndex:1,leftPhoneme:'a',rightPhoneme:'a'}),false,'declared index must be the unique contrast');
 
-console.log('phoneme contracts: indexed operations and explicit one-contrast minimal pairs are controllable');
+const lexicon=JSON.parse(fs.readFileSync('data/lexicon-seed.json','utf8'));
+const byLabel=new Map(lexicon.map(item=>[item.label,item]));
+const bank=JSON.parse(fs.readFileSync('data/minimal-pair-relations.json','utf8'));
+assert.equal(bank.clinicalValidation,'not_claimed');
+assert.ok(bank.relations.length>=3,'seed bank should contain several explicit relations');
+for(const relation of bank.relations){
+  assert.equal(isMinimalPair(relation),true,`${relation.relationId} must satisfy the exact one-phoneme contrast`);
+  const left=byLabel.get(relation.leftWord);const right=byLabel.get(relation.rightWord);
+  assert.ok(left&&right,`${relation.relationId} must reference labels already present in the active lexicon seed`);
+  assert.equal(normalizeIPA(left.ipa),normalizeIPA(relation.leftIpa));
+  assert.equal(normalizeIPA(right.ipa),normalizeIPA(relation.rightIpa));
+  assert.equal(relation.source,'data/lexicon-seed.json');
+}
+
+console.log('phoneme contracts: indexed operations and explicit minimal-pair bank are controllable and grounded in the active lexicon seed');

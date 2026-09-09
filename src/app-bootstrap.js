@@ -6,9 +6,57 @@ import {buildRelationalTherapyCatalog} from './relational-therapy-catalog.js';
 import {attachCreatorRelationalActivities} from './relational-creator-exposure.js';
 
 const nativeFetch=window.fetch.bind(window);
+let canonicalLexicon=[];
 
 function jsonResponse(value){
   return new Response(JSON.stringify(value),{status:200,headers:{'Content-Type':'application/json'}});
+}
+
+function normalizeWord(value=''){
+  return String(value||'').trim().toLocaleLowerCase('fr').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'');
+}
+
+function canonicalStimulus(word=''){
+  const key=normalizeWord(word);
+  if(!key)return null;
+  return canonicalLexicon.find(item=>item?.active!==false&&item?.image&&(normalizeWord(item?.label)===key||normalizeWord(item?.id)===key))||null;
+}
+
+function addStimulusImage(parent,word,{focus=false}={}){
+  const stimulus=canonicalStimulus(word);
+  if(!stimulus||parent?.dataset?.rebuloCanonicalStimulus==='true')return false;
+  const img=document.createElement('img');
+  img.src=stimulus.image;
+  img.alt='';
+  img.setAttribute('aria-hidden','true');
+  const label=document.createElement('span');
+  label.textContent=focus?`Mot à écouter : « ${word} »`:word;
+  parent.replaceChildren(img,label);
+  parent.dataset.rebuloCanonicalStimulus='true';
+  return true;
+}
+
+function decorateRhymeStimuli(){
+  const focus=document.querySelector('.session-focus-word');
+  if(focus&&focus.dataset.rebuloCanonicalStimulus!=='true'){
+    const word=focus.textContent.match(/«\s*([^»]+?)\s*»/)?.[1]?.trim()||'';
+    if(word)addStimulusImage(focus,word,{focus:true});
+  }
+  document.querySelectorAll('.session-choice-grid button').forEach(button=>{
+    if(button.dataset.rebuloCanonicalStimulus==='true')return;
+    const word=button.textContent.trim();
+    if(word)addStimulusImage(button,word);
+  });
+}
+
+function installCanonicalRhymeStimuli(){
+  if(document.getElementById('rebulo-rhyme-stimuli'))return;
+  const style=document.createElement('style');
+  style.id='rebulo-rhyme-stimuli';
+  style.textContent='.session-focus-word{display:grid;justify-items:center;gap:.4rem}.session-focus-word img{width:84px;height:84px;object-fit:contain}.session-choice-grid button{display:grid;grid-template-rows:minmax(72px,1fr) auto;justify-items:center;align-items:center;gap:.35rem;padding:.55rem}.session-choice-grid button img{width:100%;height:88px;object-fit:contain}@media(max-width:520px){.session-focus-word img{width:76px;height:76px}.session-choice-grid button img{height:96px}}';
+  document.head.appendChild(style);
+  new MutationObserver(decorateRhymeStimuli).observe(document.body,{childList:true,subtree:true});
+  decorateRhymeStimuli();
 }
 
 function hideMechanicalPlusSigns(){
@@ -26,7 +74,8 @@ window.fetch=async function rebuloFetch(input,init){
     const response=await nativeFetch(input,init);
     if(!response.ok)return response;
     const seed=await response.json();
-    return jsonResponse(mergeOpenPictogramsWave3(mergeOpenPictogramsWave2(mergeOpenPictograms(seed))));
+    canonicalLexicon=mergeOpenPictogramsWave3(mergeOpenPictogramsWave2(mergeOpenPictograms(seed)));
+    return jsonResponse(canonicalLexicon);
   }
 
   if(!url.endsWith('data/corpus-pilot.json'))return nativeFetch(input,init);
@@ -55,4 +104,5 @@ window.fetch=async function rebuloFetch(input,init){
 };
 
 hideMechanicalPlusSigns();
+installCanonicalRhymeStimuli();
 await import('../app.js');

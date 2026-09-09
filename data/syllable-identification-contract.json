@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0",
+  "status": "implementation_ready",
+  "activityId": "syllable-identification",
+  "eligibility": {
+    "syllabificationStatus": "source_exact",
+    "minimumSyllableCount": 2,
+    "requiresExplicitUnits": true
+  },
+  "prompts": [
+    {
+      "position": "initial",
+      "childInstruction": "Dis le mot obtenu. Quelle est sa première syllabe ?",
+      "expectedResponseRule": "syllables[0]"
+    },
+    {
+      "position": "final",
+      "childInstruction": "Dis le mot obtenu. Quelle est sa dernière syllabe ?",
+      "expectedResponseRule": "syllables[syllables.length - 1]"
+    }
+  ],
+  "excluded": [
+    "No medial prompt is generated without an explicit unambiguous index.",
+    "syllableCount alone never activates identification.",
+    "Rebus pieces never define syllable boundaries."
+  ]
+}

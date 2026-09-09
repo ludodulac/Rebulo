@@ -14,6 +14,6 @@ if(result){
 }
 
 window.setTimeout(()=>{
-  if(target&&!target.value.trim()&&feedback?.textContent==='Écris d’abord un mot.')feedback.textContent='';
+  if(target&&!target.value.trim()&&feedback?.textContent==='Écris un mot pour créer un rébus.')feedback.textContent='';
   syncCreatorReady();
 },0);

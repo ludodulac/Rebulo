@@ -30,14 +30,14 @@ const expectedIds=[
   'phoneme-segmentation',
   'phoneme-blending',
   'syllable-count',
-  'syllable-blending',
   'oral-to-written'
 ];
-assert.deepEqual(target.therapy,expectedIds,'the generated catalog must expose every currently implemented creator activity in its intended order');
+assert.deepEqual(target.therapy,expectedIds,'the generated catalog must expose only activities supported by generated target evidence, in its intended order');
+assert.equal(target.therapy.includes('syllable-blending'),false,'generated rebus pieces must not be treated as syllable boundaries');
 
 const candidate=buildCreatorCandidate(target,lexicon,definitions);
 assert.ok(candidate,'the generated target must survive creator runtime construction');
-assert.deepEqual(candidate.therapyActivities.map(activity=>activity.id),expectedIds,'runtime must preserve every implemented catalog activity');
+assert.deepEqual(candidate.therapyActivities.map(activity=>activity.id),expectedIds,'runtime must preserve every safe generated catalog activity');
 
 for(const id of expectedIds){
   const activity=selectTherapyActivity(candidate.therapyActivities,id);
@@ -64,4 +64,7 @@ assert.deepEqual(phonemeBlending.promptUnits,['m','ɛ','ʁ','s','i']);
 assert.equal(phonemeBlending.expectedResponse,'mɛʁsi');
 assert.equal(selectTherapyActivity(candidate.therapyActivities,'syllable-count').expectedResponse,2);
 
-console.log('activity propagation contract: generated catalog → creator → session → PDF metadata ok');
+const manualCandidate=buildCreatorCandidate({...target,generated:false,therapy:[...expectedIds.slice(0,-1),'syllable-blending','oral-to-written']},lexicon,definitions);
+assert.ok(manualCandidate.therapyActivities.some(activity=>activity.id==='syllable-blending'),'existing manual syllable-blending activity remains available pending its separate semantic migration');
+
+console.log('activity propagation contract: safe generated catalog → creator → session → PDF metadata ok');

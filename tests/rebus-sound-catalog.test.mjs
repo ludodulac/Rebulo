@@ -3,15 +3,19 @@ import fs from 'node:fs';
 import {sourceExactSyllables,buildSyllableWindowInventory,buildPhraseSyllableWindows,buildOverlappingPhonemeWindows,phonemeEditDistance,groupRepresentationsBySound} from '../src/rebus-sound-catalog.js';
 
 assert.deepEqual(sourceExactSyllables({ipa:'mɛʁsi',syllabification:'mɛʁ.si'}),['mɛʁ','si']);
+assert.deepEqual(sourceExactSyllables({ipa:'pat',syllabification:'pat',syllableCount:1}),['pat'],'source-exact monosyllables must remain available to the 1-syllable catalog');
 assert.deepEqual(sourceExactSyllables({ipa:'sinema',syllabification:'si.ne'}),[],'incomplete source boundaries must not be promoted');
+assert.deepEqual(sourceExactSyllables({ipa:'pat',syllabification:'pat',syllableCount:2}),[],'declared syllable count mismatches must remain rejected');
 
 const inventory=buildSyllableWindowInventory([
-  {word:'merci',ipa:'mɛʁsi',syllabification:'mɛʁ.si'},
-  {word:'parti',ipa:'paʁti',syllabification:'paʁ.ti'}
+  {word:'merci',ipa:'mɛʁsi',syllabification:'mɛʁ.si',syllableCount:2},
+  {word:'parti',ipa:'paʁti',syllabification:'paʁ.ti',syllableCount:2},
+  {word:'patte',ipa:'pat',syllabification:'pat',syllableCount:1}
 ]);
 assert.ok(inventory.some(row=>row.ipa==='mɛʁ'&&row.syllableSpans.includes(1)));
 assert.ok(inventory.some(row=>row.ipa==='mɛʁsi'&&row.syllableSpans.includes(2)));
 assert.ok(inventory.some(row=>row.ipa==='paʁti'&&row.syllableSpans.includes(2)));
+assert.ok(inventory.some(row=>row.ipa==='pat'&&row.examples.includes('patte')),'monosyllabic image candidates must not disappear from the inventory');
 
 const phraseWindows=buildPhraseSyllableWindows([
   {word:'elle',syllables:['ɛl']},
@@ -38,4 +42,4 @@ assert.ok(grouped.find(row=>row.ipa==='ɛl')?.representations.some(item=>item.la
 assert.ok(grouped.find(row=>row.ipa==='ɥit')?.representations.some(item=>item.label==='8'));
 assert.ok(grouped.find(row=>row.ipa==='la')?.representations.some(item=>item.kind==='music_note'));
 
-console.log('rebus sound catalog: source-exact 1–2 syllable windows, cross-word routes, shifted phoneme windows and explicit approximation scoring');
+console.log('rebus sound catalog: source-exact mono/1–2 syllable windows, cross-word routes, shifted phoneme windows and explicit approximation scoring');

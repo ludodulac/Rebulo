@@ -32,7 +32,7 @@
 | 5 | curater le mot exact existant | opération générale visible documentée | /atʁ/ | 2 | 7 | âtre | TR | — | /tʁ/ | théâtre, atroce |
 | 6 | curater le mot exact existant | opération générale visible documentée | /ɛ̃po/ | 2 | 7 | impôt | IN, UN | — | /ɛ̃/ | impossible, impoli |
 | 7 | curater le mot exact existant | opération générale visible documentée | /tʁape/ | 2 | 7 | trapper, trappé | TR | — | /tʁ/ | attraper, rattraper |
-| 8 | curater le mot exact existant | pictogramme / scène | /alɛʁ/ | 2 | 9 | alaire, allèrent, halèrent | — | — | /al/ | allergie, alerter |
+| 8 | curater le mot exact existant | pictogramme / scène | /alɛʁ/ | 2 | 9 | alaire, allèrent, halèrent | — | alaire (reject_visual_priority), allèrent (reject_visual_priority), halèrent (reject_visual_priority) | /al/ | allergie, alerter |
 | 9 | curater le mot exact existant | opération générale visible documentée | /alimɑ̃/ | 2 | 9 | aliment | MENT | — | /mɑ̃/ | alimentaire, alimenter |
 | 10 | curater le mot exact existant | opération générale visible documentée | /mɑ̃t/ | 2 | 9 | menthe, mante, mentent | MENT | — | /mɑ̃/ | documentaire, mentalité |
 | 11 | curater le mot exact existant | opération générale visible documentée | /tʁi/ | 2 | 9 | tri, trie | TR | — | /tʁ/ | patrie, tripoter |

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": "2026-09-08T15:32:56.323Z",
+  "generatedAt": "2026-09-09T07:35:37.309Z",
   "baseline": {
     "activePictogramCount": 24,
     "strictMultiPieceEntries": 911,
@@ -83,14 +83,14 @@
       "image": "assets/rebus/mer.svg",
       "strictUniqueLossIfUnavailable": 21,
       "dependencyRisk": "moderate",
-      "provenanceDocumented": false,
-      "source": "undocumented",
-      "revisionStamped": false,
-      "artRevision": null,
+      "provenanceDocumented": true,
+      "source": "rebulo_original",
+      "revisionStamped": true,
+      "artRevision": "mer-sea-v1",
       "namingReviewAvailable": false,
-      "clinicalStatus": "undocumented",
-      "readinessScore": 0,
-      "nextGate": "document_provenance"
+      "clinicalStatus": "naming_test_required",
+      "readinessScore": 2,
+      "nextGate": "add_revision_bound_naming_review"
     },
     {
       "id": "corps",
@@ -149,12 +149,12 @@
       "dependencyRisk": "high",
       "provenanceDocumented": true,
       "source": "openmoji",
-      "revisionStamped": false,
-      "artRevision": null,
+      "revisionStamped": true,
+      "artRevision": "chat-openmoji-1f431-v1",
       "namingReviewAvailable": false,
       "clinicalStatus": "prototype_priority",
-      "readinessScore": 1,
-      "nextGate": "stamp_current_revision"
+      "readinessScore": 2,
+      "nextGate": "add_revision_bound_naming_review"
     },
     {
       "id": "eau",
@@ -195,14 +195,14 @@
       "image": "assets/rebus/pie.svg",
       "strictUniqueLossIfUnavailable": 63,
       "dependencyRisk": "high",
-      "provenanceDocumented": false,
-      "source": "undocumented",
-      "revisionStamped": false,
-      "artRevision": null,
+      "provenanceDocumented": true,
+      "source": "rebulo_original",
+      "revisionStamped": true,
+      "artRevision": "pie-magpie-v1",
       "namingReviewAvailable": false,
-      "clinicalStatus": "undocumented",
-      "readinessScore": 0,
-      "nextGate": "document_provenance"
+      "clinicalStatus": "naming_test_required",
+      "readinessScore": 2,
+      "nextGate": "add_revision_bound_naming_review"
     },
     {
       "id": "scie",
@@ -213,12 +213,12 @@
       "dependencyRisk": "high",
       "provenanceDocumented": true,
       "source": "openmoji",
-      "revisionStamped": false,
-      "artRevision": null,
+      "revisionStamped": true,
+      "artRevision": "scie-openmoji-1fa9a-v1",
       "namingReviewAvailable": false,
       "clinicalStatus": "naming_test_required",
-      "readinessScore": 1,
-      "nextGate": "stamp_current_revision"
+      "readinessScore": 2,
+      "nextGate": "add_revision_bound_naming_review"
     },
     {
       "id": "raie",
@@ -245,12 +245,12 @@
       "dependencyRisk": "critical",
       "provenanceDocumented": true,
       "source": "openmoji",
-      "revisionStamped": false,
-      "artRevision": null,
+      "revisionStamped": true,
+      "artRevision": "riz-openmoji-1f35a-v1",
       "namingReviewAvailable": false,
       "clinicalStatus": "prototype_priority",
-      "readinessScore": 1,
-      "nextGate": "stamp_current_revision"
+      "readinessScore": 2,
+      "nextGate": "add_revision_bound_naming_review"
     },
     {
       "id": "mie",
@@ -259,14 +259,14 @@
       "image": "assets/rebus/mie.svg",
       "strictUniqueLossIfUnavailable": 90,
       "dependencyRisk": "critical",
-      "provenanceDocumented": false,
-      "source": "undocumented",
-      "revisionStamped": false,
-      "artRevision": null,
+      "provenanceDocumented": true,
+      "source": "rebulo_original",
+      "revisionStamped": true,
+      "artRevision": "mie-bread-crumb-v1",
       "namingReviewAvailable": false,
-      "clinicalStatus": "undocumented",
-      "readinessScore": 0,
-      "nextGate": "document_provenance"
+      "clinicalStatus": "naming_test_required",
+      "readinessScore": 2,
+      "nextGate": "add_revision_bound_naming_review"
     },
     {
       "id": "tas",
@@ -291,14 +291,14 @@
       "image": "assets/rebus/mat.svg",
       "strictUniqueLossIfUnavailable": 110,
       "dependencyRisk": "critical",
-      "provenanceDocumented": false,
-      "source": "undocumented",
-      "revisionStamped": false,
-      "artRevision": null,
+      "provenanceDocumented": true,
+      "source": "rebulo_original",
+      "revisionStamped": true,
+      "artRevision": "mat-mast-v1",
       "namingReviewAvailable": false,
-      "clinicalStatus": "undocumented",
-      "readinessScore": 0,
-      "nextGate": "document_provenance"
+      "clinicalStatus": "naming_test_required",
+      "readinessScore": 2,
+      "nextGate": "add_revision_bound_naming_review"
     },
     {
       "id": "lit",
@@ -309,12 +309,12 @@
       "dependencyRisk": "critical",
       "provenanceDocumented": true,
       "source": "openmoji",
-      "revisionStamped": false,
-      "artRevision": null,
+      "revisionStamped": true,
+      "artRevision": "lit-openmoji-1f6cf-v1",
       "namingReviewAvailable": false,
       "clinicalStatus": "prototype_priority",
-      "readinessScore": 1,
-      "nextGate": "stamp_current_revision"
+      "readinessScore": 2,
+      "nextGate": "add_revision_bound_naming_review"
     },
     {
       "id": "pas",
@@ -325,12 +325,12 @@
       "dependencyRisk": "critical",
       "provenanceDocumented": true,
       "source": "openmoji",
-      "revisionStamped": false,
-      "artRevision": null,
+      "revisionStamped": true,
+      "artRevision": "pas-openmoji-1f463-v1",
       "namingReviewAvailable": false,
       "clinicalStatus": "naming_test_required",
-      "readinessScore": 1,
-      "nextGate": "stamp_current_revision"
+      "readinessScore": 2,
+      "nextGate": "add_revision_bound_naming_review"
     },
     {
       "id": "nez",
@@ -341,12 +341,12 @@
       "dependencyRisk": "critical",
       "provenanceDocumented": true,
       "source": "openmoji",
-      "revisionStamped": false,
-      "artRevision": null,
+      "revisionStamped": true,
+      "artRevision": "nez-openmoji-1f443-v1",
       "namingReviewAvailable": false,
       "clinicalStatus": "naming_test_required",
-      "readinessScore": 1,
-      "nextGate": "stamp_current_revision"
+      "readinessScore": 2,
+      "nextGate": "add_revision_bound_naming_review"
     },
     {
       "id": "rat",
@@ -357,12 +357,12 @@
       "dependencyRisk": "critical",
       "provenanceDocumented": true,
       "source": "openmoji",
-      "revisionStamped": false,
-      "artRevision": null,
+      "revisionStamped": true,
+      "artRevision": "rat-openmoji-1f400-v1",
       "namingReviewAvailable": false,
       "clinicalStatus": "naming_test_required",
-      "readinessScore": 1,
-      "nextGate": "stamp_current_revision"
+      "readinessScore": 2,
+      "nextGate": "add_revision_bound_naming_review"
     },
     {
       "id": "the",
@@ -387,14 +387,14 @@
       "image": "assets/rebus/de.svg",
       "strictUniqueLossIfUnavailable": 170,
       "dependencyRisk": "critical",
-      "provenanceDocumented": false,
-      "source": "undocumented",
-      "revisionStamped": false,
-      "artRevision": null,
+      "provenanceDocumented": true,
+      "source": "rebulo_original",
+      "revisionStamped": true,
+      "artRevision": "de-die-v1",
       "namingReviewAvailable": false,
-      "clinicalStatus": "undocumented",
-      "readinessScore": 0,
-      "nextGate": "document_provenance"
+      "clinicalStatus": "naming_test_required",
+      "readinessScore": 2,
+      "nextGate": "add_revision_bound_naming_review"
     }
   ],
   "provenance": {

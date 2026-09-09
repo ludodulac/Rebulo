@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-08T15:32:02.966Z",
+  "generatedAt": "2026-09-09T07:34:43.895Z",
   "status": "research_only",
-  "sourceBrickMapGeneratedAt": "2026-09-08T15:31:43.798Z",
+  "sourceBrickMapGeneratedAt": "2026-09-09T07:34:24.657Z",
   "strategyVersion": "1.2.0",
-  "visualCandidateBankVersion": "0.1.0",
+  "visualCandidateBankVersion": "0.1.1",
   "routeSearchOpportunityCount": 250,
   "methodology": {
     "exactness": "Every route reconstructs the complete target IPA with complete visible operation readings.",
@@ -287,14 +287,12 @@
         "nextAction": "evaluate_spontaneous_naming_and_visual_concept_before_prototype"
       },
       "pictogramTriage": {
-        "triageClass": "lexical_candidate_needs_visual_eligibility_review",
+        "triageClass": "do_not_prototype_exact_lexical_candidate",
         "candidateLabels": [
-          "lot",
-          "los",
-          "laud"
+          "lot"
         ],
-        "authorizationStatus": "research_only_no_visual_hypothesis",
-        "nextAction": "assess_whether_any_exact_lexical_candidate_can_be_spontaneously_named_before_drawing"
+        "authorizationStatus": "research_only_visual_eligibility_rejected",
+        "nextAction": "keep_as_exact_lexical_negative_evidence_and_prefer_general_or_alternate_route"
       }
     },
     {
@@ -753,7 +751,35 @@
         "general",
         "strict"
       ],
-      "candidateBankEvidence": null,
+      "candidateBankEvidence": {
+        "recommendedRoute": "exact_lexical_candidates_reject_visual_priority",
+        "candidates": [
+          {
+            "label": "alaire",
+            "candidateType": "whole_word_candidate",
+            "visualPlausibility": "very_low",
+            "spontaneousNamingRisk": "very_high",
+            "researchDecision": "reject_visual_priority",
+            "nextGate": "keep_as_lexical_evidence_only"
+          },
+          {
+            "label": "allèrent",
+            "candidateType": "whole_word_candidate",
+            "visualPlausibility": "very_low",
+            "spontaneousNamingRisk": "very_high",
+            "researchDecision": "reject_visual_priority",
+            "nextGate": "keep_as_inflected_lexical_evidence_only"
+          },
+          {
+            "label": "halèrent",
+            "candidateType": "whole_word_candidate",
+            "visualPlausibility": "very_low",
+            "spontaneousNamingRisk": "very_high",
+            "researchDecision": "reject_visual_priority",
+            "nextGate": "keep_as_inflected_lexical_evidence_only"
+          }
+        ]
+      },
       "strategyEvidence": [
         {
           "ipa": "al",
@@ -821,14 +847,14 @@
         "nextAction": "evaluate_spontaneous_naming_and_visual_concept_before_prototype"
       },
       "pictogramTriage": {
-        "triageClass": "lexical_candidate_needs_visual_eligibility_review",
+        "triageClass": "do_not_prototype_exact_lexical_candidate",
         "candidateLabels": [
           "alaire",
           "allèrent",
           "halèrent"
         ],
-        "authorizationStatus": "research_only_no_visual_hypothesis",
-        "nextAction": "assess_whether_any_exact_lexical_candidate_can_be_spontaneously_named_before_drawing"
+        "authorizationStatus": "research_only_visual_eligibility_rejected",
+        "nextAction": "keep_as_exact_lexical_negative_evidence_and_prefer_general_or_alternate_route"
       }
     },
     {
@@ -1530,13 +1556,12 @@
         "nextAction": "evaluate_spontaneous_naming_and_visual_concept_before_prototype"
       },
       "pictogramTriage": {
-        "triageClass": "lexical_candidate_needs_visual_eligibility_review",
+        "triageClass": "do_not_prototype_exact_lexical_candidate",
         "candidateLabels": [
-          "div",
-          "dive"
+          "div"
         ],
-        "authorizationStatus": "research_only_no_visual_hypothesis",
-        "nextAction": "assess_whether_any_exact_lexical_candidate_can_be_spontaneously_named_before_drawing"
+        "authorizationStatus": "research_only_visual_eligibility_rejected",
+        "nextAction": "keep_as_exact_lexical_negative_evidence_and_prefer_general_or_alternate_route"
       }
     },
     {
@@ -2100,12 +2125,12 @@
         "nextAction": "evaluate_spontaneous_naming_and_visual_concept_before_prototype"
       },
       "pictogramTriage": {
-        "triageClass": "lexical_candidate_needs_visual_eligibility_review",
+        "triageClass": "do_not_prototype_exact_lexical_candidate",
         "candidateLabels": [
           "divers"
         ],
-        "authorizationStatus": "research_only_no_visual_hypothesis",
-        "nextAction": "assess_whether_any_exact_lexical_candidate_can_be_spontaneously_named_before_drawing"
+        "authorizationStatus": "research_only_visual_eligibility_rejected",
+        "nextAction": "keep_as_exact_lexical_negative_evidence_and_prefer_general_or_alternate_route"
       }
     },
     {

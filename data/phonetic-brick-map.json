@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T15:31:43.798Z",
+  "generatedAt": "2026-09-09T07:34:24.657Z",
   "source": "Lexique 4",
   "sourceLicense": "CC BY-SA 4.0",
   "schoolFrequencyEvidence": {
@@ -1451,6 +1451,85 @@
         ]
       },
       "curationPriorityScore": 31.475,
+      "curationPriorityStatus": "heuristic_research_only"
+    },
+    {
+      "ipa": "alɛʁ",
+      "recommendedRoute": "exact_lexical_candidates_reject_visual_priority",
+      "candidates": [
+        {
+          "label": "alaire",
+          "candidateType": "whole_word_candidate",
+          "lexicalEvidence": "lexique_exact",
+          "visualPlausibility": "very_low",
+          "spontaneousNamingRisk": "very_high",
+          "mainConfusions": [
+            "aile",
+            "anatomie",
+            "forme technique"
+          ],
+          "suggestedAgeFloor": 12,
+          "ageStatus": "editorial_hypothesis",
+          "researchDecision": "reject_visual_priority",
+          "nextGate": "keep_as_lexical_evidence_only",
+          "researchQuality": {
+            "score": 5,
+            "visualComponent": 0.5,
+            "namingComponent": 0.08,
+            "ageAccessibilityComponent": 0.55,
+            "status": "heuristic_research_only"
+          }
+        },
+        {
+          "label": "allèrent",
+          "candidateType": "whole_word_candidate",
+          "lexicalEvidence": "lexique_exact",
+          "visualPlausibility": "very_low",
+          "spontaneousNamingRisk": "very_high",
+          "mainConfusions": [
+            "aller",
+            "marcher",
+            "partir"
+          ],
+          "suggestedAgeFloor": 12,
+          "ageStatus": "editorial_hypothesis",
+          "researchDecision": "reject_visual_priority",
+          "nextGate": "keep_as_inflected_lexical_evidence_only",
+          "researchQuality": {
+            "score": 5,
+            "visualComponent": 0.5,
+            "namingComponent": 0.08,
+            "ageAccessibilityComponent": 0.55,
+            "status": "heuristic_research_only"
+          }
+        },
+        {
+          "label": "halèrent",
+          "candidateType": "whole_word_candidate",
+          "lexicalEvidence": "lexique_exact",
+          "visualPlausibility": "very_low",
+          "spontaneousNamingRisk": "very_high",
+          "mainConfusions": [
+            "tirer",
+            "tracter",
+            "bateau"
+          ],
+          "suggestedAgeFloor": 12,
+          "ageStatus": "editorial_hypothesis",
+          "researchDecision": "reject_visual_priority",
+          "nextGate": "keep_as_inflected_lexical_evidence_only",
+          "researchQuality": {
+            "score": 5,
+            "visualComponent": 0.5,
+            "namingComponent": 0.08,
+            "ageAccessibilityComponent": 0.55,
+            "status": "heuristic_research_only"
+          }
+        }
+      ],
+      "bestResearchCandidate": null,
+      "coverageEvidence": null,
+      "curationPriorityScore": 0,
       "curationPriorityStatus": "heuristic_research_only"
     },
     {

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "1.0",
+  "status": "implementation_ready",
+  "activities": ["phoneme-deletion", "phoneme-substitution"],
+  "activationPolicy": "explicit_operations_only",
+  "sharedRequirements": {
+    "targetIpaRequired": true,
+    "operationIndexRequired": true,
+    "expectedResponseRequired": true,
+    "orthographicInferenceForbidden": true,
+    "rebusPieceInferenceForbidden": true
+  },
+  "deletion": {
+    "requiredFields": ["sourceIpa", "removeIndex", "removePhoneme", "expectedIpa"],
+    "invariant": "expectedIpa equals sourceIpa with exactly one indexed phoneme removed"
+  },
+  "substitution": {
+    "requiredFields": ["sourceIpa", "replaceIndex", "fromPhoneme", "toPhoneme", "expectedIpa"],
+    "invariant": "expectedIpa equals sourceIpa with exactly one indexed phoneme replaced"
+  }
+}

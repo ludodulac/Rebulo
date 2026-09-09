@@ -15,6 +15,8 @@ Pour toute nouvelle conversation :
 
 Ne pas recopier SHA, métriques de couverture ou nombres d'assets comme vérités durables. Lire ou régénérer les rapports de `data/` quand un chiffre courant est nécessaire.
 
+Pour une autonomie longue, avancer par petites boucles observables : `objectif utilisateur → état réel → plus petit écart important → première couche responsable → modification/expérience minimale → preuve → continuer / pivoter / arrêter`. Cette méthode est documentée transversalement dans `ludodulac/Grand-p-re-/LOOP_ENGINEERING.md`; Rebulo reste toujours la source de vérité pour son code, ses données, ses tests et son état produit.
+
 ## 2. Hiérarchie de vérité
 
 1. **Comportement réel** — code + données + tests + état déployé pertinent.
@@ -57,10 +59,12 @@ Priorité produit :
 Ne pas laisser un énorme lexique faire remonter artificiellement une brique marginale uniquement parce qu'elle existe ou débloque beaucoup de formes rares. Ne charger `docs/HARD_SEGMENT_WORD_ROUTES.md` ou les grandes analyses que pour une tâche qui les concerne.
 
 ### Illustrations / bibliothèque visuelle / dénomination
-Lire : `docs/GUARANTEE_MODEL.md`, `data/asset-sources.json`, `data/lexicon-seed.json`, puis `data/production-naming-reviews.json` et/ou `data/pictogram-prototype-comparisons.json` si la dénomination est concernée. Pour les audits : `src/asset-audit.js`, `src/pictogram-guarantee.js` et leurs tests.
+Lire d'abord `docs/VISUAL_WORK_HANDOFF.md`, puis `docs/GUARANTEE_MODEL.md`, `data/asset-sources.json`, `data/lexicon-seed.json`, et seulement ensuite `data/production-naming-reviews.json` et/ou `data/pictogram-prototype-comparisons.json` si la dénomination est concernée. Pour les audits : `src/asset-audit.js`, `src/pictogram-guarantee.js` et leurs tests.
 
 Toujours distinguer :
 `illustration disponible → phonologiquement exploitable → visuellement plausible → spontanément nommable → adaptée à l'âge → humainement observée/validée selon le protocole → éventuellement cliniquement revue`.
+
+Avant de générer ou remplacer une illustration, vérifier les révisions Rebulo déjà produites/approuvées dans les registres canoniques et la passation visuelle. Une bibliothèque externe ou une image de travail sur Drive ne remplace jamais silencieusement une révision produit existante.
 
 Provenance/licence et validation humaine sont différentes. Ne jamais transférer silencieusement une observation vers une autre révision. Ne charger `docs/OPEN_PICTOGRAM_LIBRARY.md`, `docs/CLINICAL_PICTOGRAM_PLAN.md` ou les historiques de prototypes que si nécessaire.
 

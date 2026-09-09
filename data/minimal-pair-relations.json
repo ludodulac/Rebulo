@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0",
+  "status": "phonological_evidence_only",
+  "source": "data/lexicon-seed.json",
+  "clinicalValidation": "not_claimed",
+  "relations": [
+    {
+      "relationId": "pas-tas-p-t",
+      "leftWord": "pas",
+      "leftIpa": "pa",
+      "rightWord": "tas",
+      "rightIpa": "ta",
+      "differenceIndex": 0,
+      "leftPhoneme": "p",
+      "rightPhoneme": "t",
+      "source": "data/lexicon-seed.json"
+    },
+    {
+      "relationId": "pie-mie-p-m",
+      "leftWord": "pie",
+      "leftIpa": "pi",
+      "rightWord": "mie",
+      "rightIpa": "mi",
+      "differenceIndex": 0,
+      "leftPhoneme": "p",
+      "rightPhoneme": "m",
+      "source": "data/lexicon-seed.json"
+    },
+    {
+      "relationId": "lit-riz-l-r",
+      "leftWord": "lit",
+      "leftIpa": "li",
+      "rightWord": "riz",
+      "rightIpa": "ʁi",
+      "differenceIndex": 0,
+      "leftPhoneme": "l",
+      "rightPhoneme": "ʁ",
+      "source": "data/lexicon-seed.json"
+    }
+  ]
+}

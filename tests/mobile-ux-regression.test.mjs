@@ -16,5 +16,7 @@ assert.match(playCss,/data-creator-ready="false"[^}]*\.session-dock/,'session to
 assert.match(mobileCss,/\.creator-row\{grid-template-columns:1fr 1fr/,'mobile creator actions must use a stable two-column action row');
 assert.match(mobileCss,/\.creator-row input\{grid-column:1\/-1\}/,'mobile creator input must occupy its own row');
 assert.match(shellState,/MutationObserver/,'creator-ready state must follow result visibility changes');
+assert.match(shellState,/Écris un mot pour créer un rébus\./,'initial shell cleanup must stay aligned with the canonical empty creator status');
+assert.doesNotMatch(shellState,/Écris d’abord un mot\./,'initial shell cleanup must not depend on the retired creator prompt');
 
 console.log('mobile UX regression guards: ok');

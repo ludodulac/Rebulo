@@ -2,12 +2,19 @@ export function normalizeSessionAnswer(value=''){
   return String(value||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'');
 }
 
+export function sessionExpectedAnswer(item={}){
+  const relational=String(item?.activity?.sessionExpectedResponse||'').trim();
+  return relational||String(item?.answer||'').trim();
+}
+
 export function sessionAnswerMatches(value,item={}){
-  const expected=normalizeSessionAnswer(item?.answer||'');
+  const expected=normalizeSessionAnswer(sessionExpectedAnswer(item));
   return Boolean(expected)&&normalizeSessionAnswer(value)===expected;
 }
 
 export function safeSessionHint(item={}){
+  const choices=Array.isArray(item?.activity?.choices)?item.activity.choices.map(choice=>String(choice?.word||choice||'').trim()).filter(Boolean):[];
+  if(choices.length)return `Choisis parmi : ${choices.join(' ou ')}.`;
   const answer=String(item?.answer||'').trim();
   const letters=[...answer.normalize('NFC')].filter(char=>/[\p{L}\p{N}]/u.test(char));
   if(!letters.length)return '';

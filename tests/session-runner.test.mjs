@@ -1,16 +1,22 @@
 import assert from 'node:assert/strict';
-import {normalizeSessionAnswer,sessionAnswerMatches,safeSessionHint,buildSessionSummary,sessionProgress} from '../src/session-runner.js';
+import {normalizeSessionAnswer,sessionExpectedAnswer,sessionAnswerMatches,safeSessionHint,buildSessionSummary,sessionProgress} from '../src/session-runner.js';
 
 assert.equal(normalizeSessionAnswer(' Cinéma ! '),'cinema');
+assert.equal(sessionExpectedAnswer({answer:'cinéma'}),'cinéma');
 assert.equal(sessionAnswerMatches('CINEMA',{answer:'cinéma'}),true);
 assert.equal(sessionAnswerMatches('cine',{answer:'cinéma'}),false);
 const hint=safeSessionHint({answer:'cinéma'});
 assert.equal(hint,'Le mot commence par C et contient 6 lettres.');
 assert.equal(hint.includes('cinéma'),false);
+const relational={answer:'parapluie',activity:{sessionExpectedResponse:'tas',choices:[{word:'tas'},{word:'pie'}]}};
+assert.equal(sessionExpectedAnswer(relational),'tas');
+assert.equal(sessionAnswerMatches('tas',relational),true);
+assert.equal(sessionAnswerMatches('parapluie',relational),false);
+assert.equal(safeSessionHint(relational),'Choisis parmi : tas ou pie.');
 assert.deepEqual(sessionProgress(1,4),{step:2,total:4,percent:50});
 assert.deepEqual(buildSessionSummary([
   {correct:true,hintUsed:false,solutionUsed:false},
   {correct:false,hintUsed:true,solutionUsed:true},
   {correct:true,hintUsed:true,solutionUsed:false}
 ]),{total:3,correct:2,hints:2,solutions:1});
-console.log('session-runner tests: ok');
+console.log('session-runner tests: rebus and explicit relational answers are both controlled');

@@ -14,34 +14,21 @@ assert.equal(report.baseline.strictMultiPieceUniqueWords,760);
 assert.equal(report.queue.length,24);
 assert.ok(report.queue.every((item,index,array)=>index===0||array[index-1].strictUniqueLossIfUnavailable<=item.strictUniqueLossIfUnavailable),'queue should prioritize lower dependency loss');
 
-const observationReady=['pluie','sol','tour','cle','mer','corps','chat','eau','pie','scie','riz','mie','mat','lit','pas','nez','rat','the','de'];
-for(const id of observationReady){
-  const item=report.queue.find(x=>x.id===id);
-  assert.ok(item,`${id} should stay in the visual migration queue`);
-  assert.equal(item.provenanceDocumented,true,`${id} should have documented provenance`);
-  assert.equal(item.revisionStamped,true,`${id} should have a frozen visual revision`);
-  assert.equal(item.namingReviewAvailable,true,`${id} should have a revision-bound naming review`);
-  assert.equal(item.nextGate,'collect_human_naming_observations',`${id} should now be ready for real human naming observations`);
+assert.equal(report.queue.filter(item=>item.namingReviewAvailable).length,24,'every active production pictogram should now have its own revision-bound naming review');
+assert.equal(report.queue.filter(item=>item.nextGate==='collect_human_naming_observations').length,24,'all active production pictograms should now stop at the real human naming gate');
+for(const item of report.queue){
+  assert.equal(item.provenanceDocumented,true,`${item.id} should have documented provenance`);
+  assert.equal(item.revisionStamped,true,`${item.id} should have a frozen visual revision`);
+  assert.equal(item.namingReviewAvailable,true,`${item.id} should have a revision-bound production naming review`);
+  assert.equal(item.nextGate,'collect_human_naming_observations',`${item.id} should require real human naming observations next`);
 }
 
-assert.equal(report.queue.find(x=>x.id==='mer').artRevision,'mer-sea-v1');
-assert.equal(report.queue.find(x=>x.id==='chat').artRevision,'chat-openmoji-1f431-v1');
-assert.equal(report.queue.find(x=>x.id==='pie').artRevision,'pie-magpie-v1');
-assert.equal(report.queue.find(x=>x.id==='scie').artRevision,'scie-openmoji-1fa9a-v1');
-assert.equal(report.queue.find(x=>x.id==='riz').artRevision,'riz-openmoji-1f35a-v1');
-assert.equal(report.queue.find(x=>x.id==='mie').artRevision,'mie-bread-crumb-v1');
-assert.equal(report.queue.find(x=>x.id==='mat').artRevision,'mat-mast-v1');
-assert.equal(report.queue.find(x=>x.id==='de').artRevision,'de-die-v1');
+const expectedRevisions={pot:'pot-comic-v1',dos:'dos-comic-v1',raie:'raie-comic-v1',tas:'tas-comic-v1',terre:'terre-comic-v1'};
+for(const [id,revision] of Object.entries(expectedRevisions)){
+  const item=report.queue.find(x=>x.id===id);assert.ok(item);
+  assert.equal(item.artRevision,revision,`${id} readiness must follow the active production revision rather than the research comparison revision`);
+  assert.equal(item.namingReviewAvailable,true);
+}
 assert.equal(report.queue.find(x=>x.id==='de').strictUniqueLossIfUnavailable,170);
-
-for(const id of ['pot','dos','raie','tas','terre']){
-  const item=report.queue.find(x=>x.id===id);
-  assert.ok(item);
-  assert.equal(item.provenanceDocumented,true);
-  assert.equal(item.revisionStamped,true);
-  assert.equal(item.namingReviewAvailable,false,`${id} production revision still needs its own review rather than reusing prototype evidence`);
-  assert.equal(item.nextGate,'add_revision_bound_naming_review');
-}
-
 assert.match(report.methodology.clinicalCaution,/validation clinique|dénomination/i);
-console.log('visual migration readiness: nineteen active production revisions are ready for real human naming; five same-concept production reviews remain explicitly separate from research prototypes.');
+console.log('visual migration readiness: all 24 active production revisions are technically ready and now stop at the real human naming gate.');

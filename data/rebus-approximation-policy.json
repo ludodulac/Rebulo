@@ -1,0 +1,36 @@
+{
+  "version": "0.1.0",
+  "status": "research_only",
+  "scope": "general_rebus_only",
+  "principles": {
+    "strictIsolation": "A non-zero approximation score can never be presented as strict phonetic construction.",
+    "visibility": "The source word/image keeps its real complete pronunciation; the target sound and every edit remain inspectable in data/UI intended for professionals.",
+    "clinical": "No approximation tier is automatically eligible for clinical use. A professional mode must opt in explicitly if such material is ever exposed.",
+    "percentage": "The displayed percentage is an editorial weighted edit heuristic, not a scientific phonological-distance or clinical score.",
+    "shortSegments": "Short chunks are deliberately harder to approximate because one changed phoneme represents a large fraction of the sound."
+  },
+  "weights": {
+    "vowelSubstitution": 0.35,
+    "glideSubstitution": 0.45,
+    "consonantSubstitution": 0.55,
+    "crossClassSubstitution": 0.9,
+    "insertion": 0.75,
+    "deletion": 0.75
+  },
+  "tiers": {
+    "light": {
+      "maxWeightedRatio": 0.2,
+      "maxEdits": 1,
+      "minTargetUnits": 2,
+      "mode": "general",
+      "label": "petite approximation"
+    },
+    "loose": {
+      "maxWeightedRatio": 0.28,
+      "maxEdits": 2,
+      "minTargetUnits": 5,
+      "mode": "general",
+      "label": "approximation de magazine"
+    }
+  }
+}

@@ -1,23 +1,45 @@
-const SESSION_SHARE_VERSION=1;
+import {resolveSessionEntries,summarizeSessionResolution} from './session-resolution.js';
+
+const SESSION_SHARE_VERSION=2;
+const LEGACY_SESSION_SHARE_VERSION=1;
 export const SESSION_SHARE_PARAM='session';
 
 function normalizeRef(value=''){return String(value||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9-]+/g,'');}
 function validBoolean(value){return typeof value==='boolean';}
+function cleanLabel(value=''){return String(value||'').trim().slice(0,120);}
+
+function roundFromItem(item={}){
+  const targetLabel=cleanLabel(item?.targetLabel||item?.answer||item?.target);
+  const activityLabel=cleanLabel(item?.activityLabel||item?.activity?.label);
+  return {
+    target:normalizeRef(item?.answer||item?.target||targetLabel),
+    activity:normalizeRef(item?.activity?.id||item?.activityId||item?.activity),
+    targetLabel,
+    activityLabel
+  };
+}
 
 export function buildSessionSharePayload(items=[],options={}){
-  const rounds=(items||[]).slice(0,4).map(item=>({
-    target:normalizeRef(item?.answer||item?.target),
-    activity:normalizeRef(item?.activity?.id||item?.activityId)
-  }));
+  const rounds=(items||[]).slice(0,4).map(roundFromItem);
   if(!rounds.length||rounds.some(round=>!round.target))return null;
   return {v:SESSION_SHARE_VERSION,rounds,help:{hint:options.hint!==false,solution:options.solution===true}};
 }
 
 export function validateSessionSharePayload(payload){
-  if(!payload||payload.v!==SESSION_SHARE_VERSION||!Array.isArray(payload.rounds)||payload.rounds.length<1||payload.rounds.length>4)return null;
+  if(!payload||![LEGACY_SESSION_SHARE_VERSION,SESSION_SHARE_VERSION].includes(payload.v)||!Array.isArray(payload.rounds)||payload.rounds.length<1||payload.rounds.length>4)return null;
   if(!payload.help||!validBoolean(payload.help.hint)||!validBoolean(payload.help.solution))return null;
-  const rounds=payload.rounds.map(round=>({target:normalizeRef(round?.target),activity:normalizeRef(round?.activity)}));
-  if(rounds.some(round=>!round.target||round.target!==round?.target||round.activity!==String(round?.activity||'')))return null;
+  if(payload.v===LEGACY_SESSION_SHARE_VERSION){
+    const rounds=payload.rounds.map(round=>({target:normalizeRef(round?.target),activity:normalizeRef(round?.activity),targetLabel:'',activityLabel:''}));
+    if(rounds.some((round,index)=>!round.target||round.target!==payload.rounds[index]?.target||round.activity!==String(payload.rounds[index]?.activity||'')))return null;
+    return {v:LEGACY_SESSION_SHARE_VERSION,rounds,help:{hint:payload.help.hint,solution:payload.help.solution}};
+  }
+  const rounds=payload.rounds.map(round=>({
+    target:normalizeRef(round?.target),
+    activity:normalizeRef(round?.activity),
+    targetLabel:cleanLabel(round?.targetLabel),
+    activityLabel:cleanLabel(round?.activityLabel)
+  }));
+  if(rounds.some((round,index)=>!round.target||round.target!==payload.rounds[index]?.target||round.activity!==String(payload.rounds[index]?.activity||'')))return null;
   return {v:SESSION_SHARE_VERSION,rounds,help:{hint:payload.help.hint,solution:payload.help.solution}};
 }
 
@@ -34,13 +56,6 @@ export function readSessionShareFromUrl(locationLike=globalThis.location){try{re
 
 export function resolveSharedSession(payload,data={}){
   const valid=validateSessionSharePayload(payload);if(!valid)return null;
-  const corpus=Array.isArray(data.corpus)?data.corpus:[];const norm=value=>normalizeRef(value);
-  const items=[];
-  for(const round of valid.rounds){
-    const target=corpus.find(item=>norm(item?.target)===round.target&&item?.mode==='strict'&&item?.assets==='ready');if(!target)return null;
-    const candidate=data.buildCandidate?.(target);if(!candidate)return null;
-    const activities=candidate.therapyActivities||[];const activity=round.activity?activities.find(item=>norm(item?.id)===round.activity):activities[0];if(round.activity&&!activity)return null;
-    items.push({...candidate,activity:activity||null});
-  }
-  return {items,help:valid.help};
+  const entries=resolveSessionEntries(valid.rounds,data);
+  return {...summarizeSessionResolution(entries),help:valid.help};
 }

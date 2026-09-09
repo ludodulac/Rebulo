@@ -1,6 +1,6 @@
 # REBULO — PASSATION ACTIVE / POINT D’ENTRÉE UNIQUE
 
-**Dernière mise à jour : 9 septembre 2026, après fusion des PR #192–#193 et préparation de la première vague de reviews de dénomination de production.**
+**Dernière mise à jour : 9 septembre 2026, après fusion des PR #192–#197 et refresh automatique des analyses sur `main`.**
 
 Ce fichier est le point d’entrée prioritaire pour continuer Rebulo. Le journal lisible d’avancement est `docs/PROGRESSION.md`. Les principes stables restent dans `docs/PRODUCT_PRINCIPLES.md` : ne pas les recopier ici sauf si une règle durable change réellement.
 
@@ -60,6 +60,7 @@ Lire :
 - `data/production-naming-reviews.json`
 - `data/pictogram-prototype-comparisons.json`
 - `data/pictogram-naming-test-plans.json`
+- `data/visual-migration-readiness.json`
 - `src/pictogram-guarantee.js`
 - `src/asset-audit.js`
 
@@ -67,14 +68,16 @@ Garantie : ne pas confondre `general_illustration`, `phonetic_structured`, obser
 
 Validation : `npm run test:targeted:data`, `npm run audit:assets` et/ou `npm run audit:pictogram-guarantees` selon le lot. Les audits n’inventent jamais une validation humaine.
 
-État matériel courant après PR #192 :
+État matériel courant :
 - 24 SVG de production actifs dans l’inventaire ;
 - 29 SVG de recherche au total ;
-- 23 stimuli locaux actuellement disponibles dans les comparaisons de recherche actives ;
+- 23 stimuli locaux disponibles dans les comparaisons de recherche actives ;
 - les deux scènes `heure-scene-a-v1` et `heure-scene-b-v1` existent réellement et sont séparées, aveugles, sans réponse visible ;
-- `heure-prototype-comparison-v1` est désormais `ready_for_human_naming_test`, sans aucune observation fabriquée.
+- `heure-prototype-comparison-v1` est `ready_for_human_naming_test`, sans aucune observation fabriquée ;
+- les 24 pictogrammes actifs possèdent désormais chacun une review de dénomination liée à leur révision exacte dans `data/production-naming-reviews.json` ;
+- le refresh automatique de `data/visual-migration-readiness.json` après PR #197 confirme **24/24** actifs avec `namingReviewAvailable: true` et `nextGate: collect_human_naming_observations`.
 
-Après PR #193, les faux manques de provenance pour `dé`, `mer`, `pie`, `mie`, `mât` sont réparés depuis l’historique Git, et les révisions des OpenMoji actifs `scie`, `nez`, `rat`, `pas`, `lit`, `riz`, `chat` sont figées dans `data/asset-sources.json`. Cela documente les stimuli ; cela ne valide pas leur dénomination.
+La provenance des anciens faux `undocumented` (`dé`, `mer`, `pie`, `mie`, `mât`) est récupérée depuis l’historique Git, et les révisions des OpenMoji actifs sont figées dans `data/asset-sources.json`. Cela documente et versionne les stimuli ; cela ne valide pas leur dénomination.
 
 ### Opérations générales visibles
 Lire :
@@ -82,8 +85,11 @@ Lire :
 - `src/general-operation-visual.js`
 - `src/general-operation-readiness.js`
 - `src/contextual-grapheme-operation.js`
+- `src/general-operation-comprehension-session.js`
 - `data/general-operation-readiness.json`
 - `data/general-operation-comprehension-tests.json`
+- `general-operation-comprehension-test.html`
+- `general-operation-comprehension-test.js`
 - tests `general-operation-*` et `contextual-grapheme-operation.test.mjs`.
 
 Garantie : toute opération générale reste visible, explicite, non stricte et non activée automatiquement. Les niveaux de maturité sont `research_only` → `semantics_defined` → `visual_cue_defined` → `comprehension_tested` → `authorized_general`. Une opération documentée n’est pas automatiquement utilisable.
@@ -94,7 +100,9 @@ Garantie : toute opération générale reste visible, explicite, non stricte et 
 - `TR→/tʁ/`, `MENT→/mɑ̃/`, `TION/SION→/sjɔ̃/` : `visual_cue_defined` avec preuve mot source + IPA exacte au bord du mot ; pas encore autorisés ;
 - `IN/UN` : `research_only`, bloqués tant qu’un alignement graphème↔phonème fiable manque.
 
-Le protocole canonique de compréhension est `data/general-operation-comprehension-tests.json`. Il planifie 10 opérations actuellement à `visual_cue_defined`, exige des verbatim humains, interdit la promotion automatique et ne contient aucun résultat tant qu’aucune passation réelle n’a eu lieu.
+Le protocole canonique de compréhension est `data/general-operation-comprehension-tests.json`. Il planifie 10 opérations actuellement à `visual_cue_defined`, exige des verbatim humains, interdit la promotion automatique et conserve `results: []` tant qu’aucune passation réelle n’a eu lieu.
+
+Depuis PR #197, `general-operation-comprehension-test.html` rend ces 10 opérations réellement passables : ordre aléatoire, première interprétation verbatim, hésitation, absence de réponse, mauvaise lecture, session anonyme et export JSON local. Le runner n’écrit pas dans le registre canonique et ne contient aucun chemin de promotion vers `comprehension_tested`, `authorized_general` ou un statut clinique.
 
 ### UI / séance / impression
 Lire uniquement le composant ou workflow concerné et ses tests UX. Si aucune logique phonétique/canonique n’est touchée, commencer par `npm run test:fast`, puis les tests ciblés de la zone. L’écran principal doit rester simple et les fonctions existantes accessibles.
@@ -107,6 +115,7 @@ Lire uniquement le composant ou workflow concerné et ses tests UX. Si aucune lo
 - **Aucune solution exacte est acceptable** — cas négatifs stables dans `tests/phonetic-engine.test.mjs` et refus `null` de `buildStrictConstruction`.
 - **Maturité ≠ exactitude ≠ clinique** — `docs/GUARANTEE_MODEL.md`, `src/pictogram-guarantee.js`, tests `pictogram-guarantee*`.
 - **Provenance des assets** — `data/asset-sources.json`, `src/asset-audit.js`, tests d’audit/inventaire. Une licence ou provenance inconnue nécessite un jugement/document humain ; elle ne doit pas être inventée.
+- **Révision visuelle exacte** — les observations de dénomination restent liées à une révision précise. Les prototypes et les assets de production portant le même concept ne partagent pas automatiquement leurs observations.
 - **Opération documentée ≠ autorisée** — `data/general-operation-readiness.json`; aucune opération à `research_only`, `semantics_defined` ou `visual_cue_defined` ne doit entrer automatiquement dans le générateur.
 - **Compréhension humaine ≠ clinique** — `data/general-operation-comprehension-tests.json`; aucune passation de compréhension ne produit de statut clinique.
 
@@ -141,26 +150,37 @@ Dépôt : `ludodulac/Rebulo`.
 Toujours re-vérifier le HEAD de `main` avant une écriture ; les SHA cités dans l’historique ne sont jamais des références permanentes.
 
 Paquets récents importants :
-- PR #181 : `grapheme_sound` explicite, IPA-ciblé et général-only ; distinction stricte avec le nom français de la lettre ;
+- PR #181 : `grapheme_sound` explicite, IPA-ciblé et general-only ; distinction stricte avec le nom français de la lettre ;
 - PR #182 : quatre compositions générales exactes de recherche (`/dite/`, `/mid/`, `/ɲal/`, `/jœʁ/`) ; la file hard-route est passée à 0 cible nécessitant une représentation entièrement nouvelle ;
 - PR #183–#186 : tri visuel conservateur ; `heure /œʁ/` devient le seul prototype de scène prioritaire du dernier sous-lot et les pistes lexicales faibles sont fermées comme non-visuelles ;
 - PR #187 : `heure` enregistré dans le pipeline de test avec garde-fou contre les planches révélant la réponse ;
 - PR #188 : modèle de maturité des opérations générales ;
 - PR #189 : sémantique exacte et conservatrice pour `MENT`, `TION`, `SION` ;
-- PR #190 : sémantique conservatrice de `TR` au début du mot + modèle visuel générique montrant graphème, IPA cible, mot source et IPA source ;
+- PR #190 : sémantique conservatrice de `TR` au début du mot + modèle visuel générique ;
 - PR #191 : protocole canonique de compréhension humaine pour les 10 opérations `visual_cue_defined`, avec `results: []` tant qu’aucune vraie passation n’a lieu ;
 - PR #192 : création et intégration des deux vrais stimuli aveugles `heure-scene-a-v1` et `heure-scene-b-v1`; passage du plan `heure` à `ready_for_human_naming_test`; 23 stimuli de comparaison disponibles ;
-- PR #193 : réconciliation de provenance/révision des assets : `dé`, `mer`, `pie`, `mie`, `mât` ne sont plus faussement `undocumented`; révisions OpenMoji actives figées ; les scènes `heure` sont enregistrées comme prototypes de recherche.
+- PR #193 : réconciliation de provenance/révision des assets : `dé`, `mer`, `pie`, `mie`, `mât` ne sont plus faussement `undocumented`; révisions OpenMoji actives figées ; scènes `heure` enregistrées comme prototypes de recherche ;
+- PR #194 : première vague de reviews de production révisionnées (`mer`, `corps`, `chat`, `eau`, `pie`) ;
+- PR #195 : deuxième vague (`scie`, `riz`, `mie`, `mât`, `lit`, `pas`, `nez`, `rat`, `thé`, `dé`) ; 19/24 actifs prêts pour observations humaines ;
+- PR #196 : correction du routage du runner par scope + concept + révision et reviews séparées de production pour `pot`, `dos`, `raie`, `tas`, `terre` ; **24/24 actifs** prêts pour observations humaines ;
+- PR #197 : runner anonyme/local de compréhension des 10 opérations générales `visual_cue_defined` ; aucune promotion automatique.
 
-Conséquence actuelle : le principal goulot n’est plus la découverte phonétique brute ni la création du prototype `heure`, mais la **passation de dénomination des stimuli existants** et la **compréhension humaine des opérations générales**. L’infrastructure technique doit être préparée au maximum avant ces gates humains.
+Après #197, le workflow d’analyse de `main` a produit un refresh automatique (`170692c...`) des analyses Lexique/Éduscol et de la readiness visuelle. `data/visual-migration-readiness.json` est donc aligné avec les sources actuelles.
+
+Conséquence actuelle : le principal goulot est désormais réellement humain : **dénomination des stimuli** et **compréhension des opérations générales**. Il n’existe plus de blocage technique connu empêchant de lancer ces passations. Ne pas revenir à une vague de dessins ou à une nouvelle architecture tant qu’un audit ne démontre pas un nouveau manque réel.
 
 # 4. Couverture et cartographie phonétique
 
 Le travail Lexique/Éduscol distingue couverture linguistique globale et couverture utile Rebulo. Ne pas optimiser sur tous les types Lexique à poids égal.
 
-Le dernier état consolidé de la file hard-route après PR #182 était : 117 cibles visuelles non résolues, dont 100 couvertes par une opération générale documentée, 17 par recherche pictogramme/scène, 0 nécessitant une représentation entièrement nouvelle. Les paquets suivants ont réduit la partie « pictogramme à prototyper » et ont transformé les opérations générales documentées en objets testables.
+Le dernier état consolidé de la file hard-route après PR #182 était : 117 cibles visuelles non résolues, dont 100 couvertes par une opération générale documentée, 17 par recherche pictogramme/scène, 0 nécessitant une représentation entièrement nouvelle. Les paquets suivants ont réduit les blocages matériels et rendu les représentations testables.
 
-La dernière baseline technique conservée par `active-dependency-report.json` est de 24 pictogrammes actifs et 760 mots uniques stricts multi-pièces. Les PR #192–#193 n’ont pas activé ou retiré de pictogramme de production : elles ne doivent donc pas être présentées comme un gain artificiel de couverture stricte.
+Baseline technique actuelle confirmée par le refresh du 9 septembre 2026 :
+- 24 pictogrammes actifs ;
+- 911 entrées strictes multi-pièces ;
+- 760 mots uniques stricts multi-pièces.
+
+Les PR #192–#197 n’ont pas artificiellement augmenté cette couverture stricte : elles ont rendu les assets et opérations existants traçables et testables. Ne pas présenter la préparation de tests humains comme un gain phonétique.
 
 # 5. Recherche visuelle et dénomination
 
@@ -175,19 +195,21 @@ Exemple sentinelle : `cuit /kɥi/` est phonétiquement exact mais un œuf cuit s
 - `heure-prototype-comparison-v1` est `ready_for_human_naming_test` ;
 - `namingTestStatus` reste `not_run` et `humanDecision` reste `null`.
 
-Ne pas fabriquer le résultat du test. Le prochain gate `heure` est humain.
+Les cinq concepts `pot`, `dos`, `raie`, `tas`, `terre` possèdent à la fois des historiques/prototypes de recherche et une révision de production active. PR #196 garantit qu’ils sont routés séparément dans `naming-test.html`. Ne jamais transférer une observation d’une révision de recherche vers la révision de production.
+
+Ne pas fabriquer le résultat des tests. Les prochains gates visuels sont humains.
 
 # 6. Outils humains
 
-`naming-test.html` : passation simple, anonyme, code et ordre aléatoire automatiques, question « Qu’est-ce que c’est ? », export JSON local. Le runner charge à la fois les comparaisons de prototypes et les reviews de production disponibles.
+`naming-test.html` : passation simple, anonyme, code et ordre aléatoire automatiques, export JSON local. Le runner charge à la fois les comparaisons de prototypes et les reviews de production disponibles. Depuis PR #196, la sélection interne utilise scope + concept + révision, ce qui évite les collisions pour un même mot tout en gardant le trial aveugle (`Stimulus visuel`).
 
 `naming-review.html` : imports multiples liés à la révision exacte, comptages descriptifs et miniatures, aucune activation automatique.
 
-`research-gallery.html` : galerie, aperçu sans indices, zoom/navigation, curation locale et ré-import strict. Après PR #192, les deux stimuli `heure` disponibles peuvent entrer dans la galerie de recherche ; aucun stimulus `pending` ne doit être affiché comme disponible.
+`research-gallery.html` : galerie, aperçu sans indices, zoom/navigation, curation locale et ré-import strict. Les deux stimuli `heure` disponibles peuvent entrer dans la galerie de recherche ; aucun stimulus `pending` ne doit être affiché comme disponible.
 
-`data/production-naming-reviews.json` reste le registre de reviews des stimuli actifs. Après la première vague en cours, `mer`, `corps`, `chat`, `eau` et `pie` rejoignent `pluie`, `clé`, `sol` et `tour` comme reviews révisionnées prêtes à collecter de vraies observations. Ce statut ne constitue ni une observation humaine ni une validation clinique.
+`data/production-naming-reviews.json` contient désormais une review révisionnée pour chacun des 24 pictogrammes actifs. Le refresh de readiness confirme que tous sont au gate `collect_human_naming_observations`. Ce statut ne constitue ni une observation humaine ni une validation clinique.
 
-Le protocole d’opérations générales n’invente aucun résultat : il définit seulement quoi présenter et quoi capturer. Préparer une UI de passation dédiée ou réutiliser une infrastructure existante si cela reste simple et sans confusion avec la dénomination d’images.
+`general-operation-comprehension-test.html` : passation locale/anonyme des 10 opérations générales `visual_cue_defined`, ordre aléatoire et export JSON local. Elle capture première interprétation verbatim, hésitation, absence de réponse et mauvaise lecture. Les exports restent des observations à revoir humainement ; ils n’autorisent aucune opération.
 
 # 7. Statut recherche / décisions humaines
 
@@ -197,14 +219,16 @@ Pour les opérations générales, le minimum planifié est 3 participants distin
 
 Pour la dénomination visuelle, toute observation doit rester attachée à la révision exacte du stimulus. Une ancienne observation ne se transfère pas silencieusement à un dessin modifié.
 
+Les registres canoniques restent sans résultat humain tant qu’aucune vraie passation n’a eu lieu. Les runners produisent des exports locaux ; l’intégration des observations au repo doit être explicite et versionnée après vraie collecte.
+
 # 8. Direction immédiate
 
-1. Finaliser les reviews révisionnées des pictogrammes actifs dont la provenance et la révision sont désormais connues, par petits paquets à faible risque, sans modifier leurs dessins.
-2. Utiliser `naming-test.html` pour les vraies passations seulement ; ne produire aucun faux résultat et conserver les registres d’observations vides tant qu’aucune passation réelle n’a eu lieu.
-3. `heure /œʁ/` est techniquement prêt : le prochain pas est une vraie dénomination humaine des deux scènes, pas une nouvelle génération d’image.
-4. Préparer techniquement la passation de compréhension des 10 opérations générales actuellement `visual_cue_defined`; ne promouvoir aucune opération sans observation et revue humaines.
-5. Continuer le blocage propre de `IN/UN` jusqu’à disposer d’un alignement graphème↔phonème fiable ; ne pas bricoler une heuristique orthographique.
-6. Une fois les reviews de production préparées, régénérer/recalculer les rapports de readiness et la couverture utile afin de distinguer clairement : assets présents, gates humains, opérations non autorisées et véritables absences de représentation.
+1. **Gate humain visuel** : lancer de vraies passations via `naming-test.html`, en commençant par les assets les plus utiles/risqués et par `heure` selon le plan prévu. Ne jamais saisir de faux résultats.
+2. **Gate humain opérations générales** : obtenir au moins 3 participants distincts anonymes sur les 10 opérations via `general-operation-comprehension-test.html`; conserver les verbatim et erreurs.
+3. Après vraies passations, importer/versionner les observations et effectuer une revue humaine explicite. Ne promouvoir aucune opération sur simple fréquence descriptive.
+4. Après décisions humaines, recalculer la readiness et la couverture générale réellement autorisée. La couverture stricte ne change que si le lexique/pictogrammes stricts changent réellement.
+5. `IN/UN` restent `research_only`. Ne pas bricoler une heuristique orthographique ; une solution propre demande une preuve d’alignement graphème↔phonème ou équivalente.
+6. Si un stimulus échoue en dénomination, décider à partir des observations s’il faut le conserver pour usage général, le retravailler, le remplacer ou l’écarter. Ne jamais sauver une image trompeuse en modifiant la phonétique.
 
 # 9. Garde-fous
 
@@ -220,4 +244,4 @@ Lorsqu’un exemple échoue, chercher d’abord si l’absence de solution est c
 
 **Vérifier `main`, lire les principes et ce handoff, choisir la zone via le chemin rapide, travailler par petit lot, lancer FAST puis TARGETED/FULL selon le risque, et préserver strictement la séparation entre exactitude phonétique, qualité visuelle, compréhension des opérations générales et validation humaine/clinique.**
 
-État de reprise après les paquets visuels récents : **les deux scènes `heure` existent et attendent une vraie passation ; la provenance des principaux assets historiquement “undocumented” est réparée ; la priorité technique est de terminer les reviews révisionnées des assets de production et de préparer les gates humains, pas de redessiner des candidats déjà rejetés.**
+État de reprise après PR #197 et le refresh automatique de `main` : **les assets matériels nécessaires au chantier visuel courant existent ; les 24/24 pictogrammes actifs ont une review révisionnée et attendent de vraies observations ; `heure` possède ses deux stimuli aveugles ; les 10 opérations générales sont techniquement passables et attendent une compréhension humaine ; aucun de ces gates ne doit être simulé. La prochaine avancée significative demande donc de vraies passations humaines, puis une revue explicite des résultats.**

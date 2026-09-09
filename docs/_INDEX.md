@@ -13,7 +13,7 @@ Ce fichier route vers la documentation utile. **Ne pas lire tout `docs/` par dé
 - [LEXICAL_ENGINE.md](LEXICAL_ENGINE.md) — moteur lexical et responsabilités.
 - [LEXICAL_PIPELINE.md](LEXICAL_PIPELINE.md) — chaîne de préparation/exploitation lexicale.
 - [PHONETIC_BRICK_MAP.md](PHONETIC_BRICK_MAP.md) — couverture des briques phonétiques.
-- [REBUS_SOUND_CATALOG.md](REBUS_SOUND_CATALOG.md) — emplacement canonique et méthode pour les fenêtres sonores 1–2 syllabes, les découpages glissants, les représentations visuelles, conventions et approximations.
+- [REBUS_SOUND_CATALOG.md](REBUS_SOUND_CATALOG.md) — emplacement canonique et méthode pour les fenêtres sonores 1–2 syllabes, découpages glissants, représentations, conventions, approximations et curation des candidats visuels.
 - [COVERAGE_ANALYSIS.md](COVERAGE_ANALYSIS.md) et [GENERAL_COVERAGE_ANALYSIS.md](GENERAL_COVERAGE_ANALYSIS.md) — analyses de couverture ; à lire pour les questions de corpus, pas pour une modification UI.
 - [HARD_SEGMENT_WORD_ROUTES.md](HARD_SEGMENT_WORD_ROUTES.md) — document volumineux sur les segments difficiles ; ne l'ouvrir que si le problème porte réellement sur ces routes.
 
@@ -21,6 +21,7 @@ Ce fichier route vers la documentation utile. **Ne pas lire tout `docs/` par dé
 
 - [VISUAL_WORK_HANDOFF.md](VISUAL_WORK_HANDOFF.md) — mémoire des illustrations/prototypes déjà travaillés et règle de reprise avant toute génération ou substitution d'asset.
 - [OPEN_PICTOGRAM_LIBRARY.md](OPEN_PICTOGRAM_LIBRARY.md) — bibliothèque de pictogrammes et stratégie d'assets.
+- [REBUS_SOUND_VISUAL_CURATION_REPORT.md](REBUS_SOUND_VISUAL_CURATION_REPORT.md) — vue générée des candidats son→image retenus/rejetés/différés ; la source éditoriale correspondante est `data/rebus-sound-visual-curation.json`.
 - [CLINICAL_PICTOGRAM_PLAN.md](CLINICAL_PICTOGRAM_PLAN.md) — réflexion clinique autour des pictogrammes ; ne pas confondre avec validation clinique acquise.
 - [NAMING_TEST_RUNNER.md](NAMING_TEST_RUNNER.md) — protocole/outillage pour tester la nommabilité.
 
@@ -37,6 +38,7 @@ Ce fichier route vers la documentation utile. **Ne pas lire tout `docs/` par dé
 
 - Mot phonologiquement correct mais humainement ambigu → `GUARANTEE_MODEL` → `LEXICAL_ENGINE` → documents de nommabilité si nécessaire.
 - Inventaire de sons, fenêtres 1–2 syllabes, découpages traversant les mots, lettres/chiffres ou petite approximation → `REBUS_SOUND_CATALOG` → `PHONETIC_BRICK_MAP` → données/tests concernés.
+- Choix d'une nouvelle image pour un son → `REBUS_SOUND_CATALOG` + `data/rebus-sound-visual-curation.json` → vérifier `VISUAL_WORK_HANDOFF` et la bibliothèque existante → prototype → `NAMING_TEST_RUNNER`.
 - Image/pictogramme absent ou mal exploité → `VISUAL_WORK_HANDOFF` → `OPEN_PICTOGRAM_LIBRARY` → `NAMING_TEST_RUNNER`.
 - Couverture insuffisante → analyses de couverture → pipeline lexical.
 - Problème d'interface créateur → `CREATOR_STATES` puis code réel.

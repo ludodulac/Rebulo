@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import {buildAutomaticCreatorTargets,buildCreatorTargets} from '../src/creator-catalog.js';
+import {buildCreatorCandidate} from '../src/creator-runtime.js';
 
 const report={
   constructible:[
@@ -31,4 +32,15 @@ assert.equal(automatic.lemma,'avoir');
 assert.equal(automatic.pos,'VER');
 assert.equal(automatic.sourceSyllabification,'o.ʁa');
 
-console.log('creator lexical context: source identity survives coverage → creator without product filtering');
+const lexicon=[
+  {id:'eau',label:'eau',ipa:'o',image:'assets/rebus/eau.svg',active:true},
+  {id:'rat',label:'rat',ipa:'ʁa',image:'assets/rebus/rat.svg',active:true}
+];
+const runtime=buildCreatorCandidate(automatic,lexicon,[]);
+assert.ok(runtime,'strict automatic target must remain constructible at runtime');
+assert.equal(runtime.answer,'auras');
+assert.equal(runtime.lemma,'avoir');
+assert.equal(runtime.pos,'VER');
+assert.equal(runtime.sourceSyllabification,'o.ʁa');
+
+console.log('creator lexical context: source identity survives coverage → creator → runtime without product filtering');

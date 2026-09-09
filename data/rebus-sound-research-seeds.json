@@ -1,0 +1,20 @@
+{
+  "version": "0.1.0",
+  "status": "research_only",
+  "purpose": "Preserve concrete sound-to-representation hypotheses before bulk catalog generation. These rows are research seeds, not activated product rules.",
+  "entries": [
+    {"targetIpa":"ɛl","candidate":"aile","candidateIpa":"ɛl","kind":"whole_word_image","match":"exact","evidence":"common_french_hypothesis_to_confirm_in_lexique","visualPriority":"high"},
+    {"targetIpa":"nø","candidate":"nœud","candidateIpa":"nø","kind":"whole_word_image","match":"exact","evidence":"common_french_hypothesis_to_confirm_in_lexique","visualPriority":"high"},
+    {"targetIpa":"sɔ̃","candidate":"son","candidateIpa":"sɔ̃","kind":"whole_word_image_or_scene","match":"exact","evidence":"lexical_sense_and_visual_naming_require_review","visualPriority":"medium"},
+    {"targetIpa":"pak","candidate":"Pâques","candidateIpa":"pak","kind":"whole_word_scene","match":"exact","evidence":"common_french_hypothesis_to_confirm_in_lexique","visualPriority":"medium","note":"Scene naming may drift to œufs, lapin or fête."},
+    {"targetIpa":"ɥit","candidate":"8","candidateIpa":"ɥit","kind":"number_symbol","match":"exact","evidence":"visible_convention","visualPriority":"high"},
+    {"targetIpa":"le","candidate":"lait","candidateIpa":"lɛ","kind":"whole_word_image","match":"approximate","evidence":"research_only","visualPriority":"high","note":"Useful magazine-style hypothesis but not strict: /lɛ/ differs from /le/."},
+    {"targetIpa":"pat","candidate":"patte","candidateIpa":"pat","kind":"whole_word_image","match":"exact","evidence":"common_french_hypothesis_to_confirm_in_lexique","visualPriority":"high","note":"Prefer an unmistakable animal paw/leg stimulus rather than a generic foot."},
+    {"targetIpa":"ɥil","candidate":"huile","candidateIpa":"ɥil","kind":"whole_word_image","match":"exact","evidence":"common_french_hypothesis_to_confirm_in_lexique","visualPriority":"high"},
+    {"targetIpa":"kɥijɛʁ","candidate":"cuillère","candidateIpa":"kɥijɛʁ","kind":"whole_word_image","match":"exact","evidence":"cross_word_route_hypothesis","visualPriority":"high","note":"Important multi-syllable route: cuit + hier can concatenate to the whole-word reading cuillère."},
+    {"targetIpa":"ɛl","candidate":"L","candidateIpa":"ɛl","kind":"letter_name","match":"exact","evidence":"visible_convention","visualPriority":"high"},
+    {"targetIpa":"ka","candidate":"K","candidateIpa":"ka","kind":"letter_name","match":"exact","evidence":"visible_convention","visualPriority":"high"},
+    {"targetIpa":"ky","candidate":"Q","candidateIpa":"ky","kind":"letter_name","match":"exact","evidence":"visible_convention","visualPriority":"high"},
+    {"targetIpa":"la","candidate":"la (note)","candidateIpa":"la","kind":"music_note","match":"exact","evidence":"visible_convention","visualPriority":"high"}
+  ]
+}

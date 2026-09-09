@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Rebulo — compréhension des opérations générales</title>
+  <style>
+    :root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#242424;background:#f6f4ef}body{margin:0}.shell{max-width:760px;margin:0 auto;padding:24px}.panel{background:white;border:1px solid #ddd8ce;border-radius:18px;padding:24px;box-shadow:0 8px 30px rgba(0,0,0,.05)}h1{font-size:1.6rem;margin-top:0}.notice{background:#fff8df;border-radius:12px;padding:12px 14px;margin:16px 0}.cue{min-height:230px;display:grid;place-items:center;border:2px solid #d9d2c7;border-radius:18px;background:#fffdf8;margin:18px 0;padding:20px;text-align:center}.grapheme{font-size:4rem;font-weight:800;line-height:1}.ipa{font-size:2rem;margin-top:12px}.source{margin-top:20px;font-size:1.05rem}.question{font-weight:700;margin:20px 0 8px}textarea{width:100%;min-height:100px;box-sizing:border-box;border:1px solid #bbb;border-radius:12px;padding:12px;font:inherit}label.check{display:block;margin:10px 0}button{border:0;border-radius:12px;padding:12px 18px;font:inherit;font-weight:700;cursor:pointer;background:#242424;color:white}button:disabled{opacity:.5;cursor:not-allowed}.secondary{background:#ece8df;color:#242424}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.progress{font-size:.95rem;color:#666}.status{min-height:1.4em;color:#8a3b28;margin-top:12px}[hidden]{display:none!important}.context-badge{display:inline-block;padding:4px 8px;border-radius:999px;background:#ece8df;font-size:.85rem;margin-top:8px}
+  </style>
+</head>
+<body>
+<main class="shell">
+  <section class="panel" id="setupPanel">
+    <h1>Compréhension des opérations générales</h1>
+    <p>Passation locale et anonyme. Présente chaque opération telle qu’elle apparaît, sans expliquer sa lecture avant la première réponse.</p>
+    <div class="notice">Ne saisis aucun nom, âge, diagnostic ou autre donnée personnelle. Ce test mesure une compréhension d’interface : il ne valide ni une opération automatiquement ni un usage clinique.</div>
+    <button id="startSession" type="button">Lancer la passation</button>
+    <p class="status" id="status"></p>
+  </section>
+
+  <section class="panel" id="trialPanel" hidden>
+    <div class="progress" id="trialProgress"></div>
+    <div class="cue" id="operationCue" aria-label="Opération générale à interpréter"></div>
+    <p class="question">Qu’est-ce que tu comprends que ce symbole ajoute au rébus&nbsp;?</p>
+    <form id="responseForm">
+      <textarea id="interpretationVerbatim" aria-label="Première interprétation spontanée" autocomplete="off"></textarea>
+      <label class="check"><input id="hesitation" type="checkbox"> Hésitation observée</label>
+      <label class="check"><input id="misreading" type="checkbox"> Mauvaise lecture manifeste</label>
+      <label class="check"><input id="noResponse" type="checkbox"> Pas de réponse</label>
+      <div class="actions"><button type="submit">Enregistrer et continuer</button></div>
+    </form>
+    <p class="status" id="trialStatus"></p>
+  </section>
+
+  <section class="panel" id="completePanel" hidden>
+    <h1>Passation terminée</h1>
+    <p id="completeSummary"></p>
+    <div class="notice">L’export contient uniquement des observations anonymes. Il ne promeut aucune opération vers <code>comprehension_tested</code> ou <code>authorized_general</code>.</div>
+    <div class="actions"><button id="exportJson" type="button">Télécharger les réponses</button><button id="newSession" class="secondary" type="button">Nouvelle passation</button></div>
+  </section>
+</main>
+<script type="module" src="./general-operation-comprehension-test.js"></script>
+</body>
+</html>

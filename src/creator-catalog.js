@@ -9,6 +9,15 @@ function validSyllableCount(value){
   return Number.isInteger(value)&&value>0?value:null;
 }
 
+function exactSyllables(value='',count=null){
+  const raw=String(value||'').trim();
+  if(!raw)return [];
+  const syllables=raw.replace(/^[/\[]|[/\]]$/g,'').split(/[.·‧-]+/).map(normalizeIPA).filter(Boolean);
+  if(!syllables.length)return [];
+  if(count&&syllables.length!==count)return [];
+  return syllables;
+}
+
 function addSyllableCountActivity(therapy=[]){
   if(!Array.isArray(therapy)||therapy.includes('syllable-count'))return therapy;
   const next=[...therapy];
@@ -66,6 +75,7 @@ export function buildCreatorTargets(report={}){
     if(!key||seen.has(key))continue;
     seen.add(key);
     const syllableCount=validSyllableCount(row.syllableCount);
+    const syllables=exactSyllables(row.syllabification,syllableCount);
     const therapy=['denomination','lexical-access','phoneme-initial','phoneme-final','phoneme-segmentation','phoneme-blending'];
     if(syllableCount)therapy.push('syllable-count');
     therapy.push('oral-to-written');
@@ -73,6 +83,8 @@ export function buildCreatorTargets(report={}){
       target:row.word,
       targetIpa:row.ipa,
       syllableCount,
+      syllables,
+      syllabificationStatus:syllables.length?'source_exact':'needs_source_review',
       mode:'strict',
       assets:'ready',
       therapy,
@@ -271,10 +283,14 @@ export function mergeCreatorTargets(manualItems=[],generatedItems=[]){
     if(canSupplement){
       const existingCount=validSyllableCount(item?.syllableCount);
       const generatedCount=validSyllableCount(generated?.syllableCount);
-      if(!existingCount&&generatedCount){
+      const existingSyllables=Array.isArray(item?.syllables)?item.syllables.map(normalizeIPA).filter(Boolean):[];
+      const generatedSyllables=Array.isArray(generated?.syllables)?generated.syllables.map(normalizeIPA).filter(Boolean):[];
+      if((!existingCount&&generatedCount)||(!existingSyllables.length&&generatedSyllables.length)){
         next={
           ...item,
-          syllableCount:generatedCount,
+          syllableCount:existingCount||generatedCount,
+          syllables:existingSyllables.length?existingSyllables:generatedSyllables,
+          syllabificationStatus:existingSyllables.length?(item.syllabificationStatus||'source_exact'):(generatedSyllables.length?'source_exact':item.syllabificationStatus),
           therapy:Array.isArray(item?.therapy)&&generated?.therapy?.includes('syllable-count')
             ?addSyllableCountActivity(item.therapy)
             :item?.therapy

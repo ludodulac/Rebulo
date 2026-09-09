@@ -57,7 +57,10 @@ const columns={
   syllableCount:findColumn(['nbsyll','nb_syll','syllnb','syll_nb','syllable_count','syllables']),
   // Only accept a column that explicitly contains IPA syllabification. Lexique 4's
   // SyllPhono column uses its legacy phonological code and must not be presented as IPA.
-  syllabification:findColumn(['phono_ipa_syll','ipa_syll','syll_ipa','syllabation_ipa','syllabification_ipa','syll','syllabation','syllabification','syllabifie'])
+  syllabification:findColumn(['phono_ipa_syll','ipa_syll','syll_ipa','syllabation_ipa','syllabification_ipa','syll','syllabation','syllabification','syllabifie']),
+  // Preserve Lexique's documented source syllabification as evidence of boundaries,
+  // while keeping it separate from IPA until an explicit conversion is validated.
+  sourceSyllabification:findColumn(['syllphono','syll_phono'])
 };
 
 const phonColumn=columns.ipa>=0?columns.ipa:columns.phon;
@@ -78,6 +81,7 @@ for(const line of lines){
   const syllableRaw=columns.syllableCount>=0?(cells[columns.syllableCount]||'').trim():'';
   const syllableCount=syllableRaw?Number.parseInt(syllableRaw,10):null;
   const syllabification=columns.syllabification>=0?(cells[columns.syllabification]||'').trim():'';
+  const sourceSyllabification=columns.sourceSyllabification>=0?(cells[columns.sourceSyllabification]||'').trim():'';
   rows.push({
     word,
     lemma:columns.lemma>=0?(cells[columns.lemma]||'').trim():word,
@@ -85,7 +89,8 @@ for(const line of lines){
     frequency:freqRaw?Number(freqRaw)||0:0,
     pos:columns.pos>=0?(cells[columns.pos]||'').trim():'',
     syllableCount:Number.isInteger(syllableCount)&&syllableCount>0?syllableCount:null,
-    syllabification:syllabification||null
+    syllabification:syllabification||null,
+    sourceSyllabification:sourceSyllabification||null
   });
 }
 

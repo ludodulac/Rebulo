@@ -21,6 +21,7 @@ assert.equal(data.entries[0].lemma,'merci');
 assert.equal(data.entries[0].pos,'ONO');
 assert.equal(data.entries[0].syllableCount,2);
 assert.equal(data.entries[0].syllabification,'mɛʁ.si');
+assert.equal(data.entries[0].sourceSyllabification,null);
 assert.equal(data.entries.find(x=>x.word==='cinéma').syllableCount,3);
 assert.equal(data.entries.find(x=>x.word==='cinéma').syllabification,'si.ne.ma');
 assert.equal(data.entries.find(x=>x.word==='rébus').ipa,'ʁebys');
@@ -28,8 +29,12 @@ assert.equal(data.entries.find(x=>x.word==='rébus').syllableCount,2);
 assert.equal(data.entries.find(x=>x.word==='rébus').syllabification,'ʁe.bys');
 
 const official=importFixture('tests/fixtures/lexique4-official-header-mini.tsv','official');
-assert.equal(official.entries.find(x=>x.word==='maison').syllableCount,2,'26_SyllNb must be imported');
-assert.equal(official.entries.find(x=>x.word==='cinéma').syllableCount,3,'official SyllNb must drive target preselection');
-assert.equal(official.entries.find(x=>x.word==='maison').syllabification,null,'25_SyllPhono is legacy Lexique notation, not IPA syllabification');
+const maison=official.entries.find(x=>x.word==='maison');
+const cinema=official.entries.find(x=>x.word==='cinéma');
+assert.equal(maison.syllableCount,2,'26_SyllNb must be imported');
+assert.equal(cinema.syllableCount,3,'official SyllNb must drive target preselection');
+assert.equal(maison.syllabification,null,'25_SyllPhono is legacy Lexique notation, not IPA syllabification');
+assert.equal(maison.sourceSyllabification,'mE-z§','25_SyllPhono must be preserved separately as source boundary evidence');
+assert.equal(cinema.sourceSyllabification,'si-ne-ma');
 
-console.log('Lexique 4 importer: compact fixture and official SyllNb header passed.');
+console.log('Lexique 4 importer: compact fixture, official SyllNb and source SyllPhono preservation passed.');

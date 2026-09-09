@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "status": "phonological_evidence_only",
+  "source": "data/lexicon-seed.json",
+  "clinicalValidation": "not_claimed",
+  "operations": [
+    {
+      "operationId": "pas-to-tas-p-t",
+      "activityId": "phoneme-substitution",
+      "sourceWord": "pas",
+      "sourceIpa": "pa",
+      "replaceIndex": 0,
+      "fromPhoneme": "p",
+      "toPhoneme": "t",
+      "expectedWord": "tas",
+      "expectedIpa": "ta",
+      "source": "data/lexicon-seed.json"
+    },
+    {
+      "operationId": "pie-to-mie-p-m",
+      "activityId": "phoneme-substitution",
+      "sourceWord": "pie",
+      "sourceIpa": "pi",
+      "replaceIndex": 0,
+      "fromPhoneme": "p",
+      "toPhoneme": "m",
+      "expectedWord": "mie",
+      "expectedIpa": "mi",
+      "source": "data/lexicon-seed.json"
+    },
+    {
+      "operationId": "lit-to-riz-l-r",
+      "activityId": "phoneme-substitution",
+      "sourceWord": "lit",
+      "sourceIpa": "li",
+      "replaceIndex": 0,
+      "fromPhoneme": "l",
+      "toPhoneme": "ʁ",
+      "expectedWord": "riz",
+      "expectedIpa": "ʁi",
+      "source": "data/lexicon-seed.json"
+    }
+  ]
+}

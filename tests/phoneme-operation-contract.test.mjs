@@ -54,4 +54,17 @@ for(const relation of bank.relations){
   assert.equal(relation.source,'data/lexicon-seed.json');
 }
 
-console.log('phoneme contracts: indexed operations and explicit minimal-pair bank are controllable and grounded in the active lexicon seed');
+const operationBank=JSON.parse(fs.readFileSync('data/phoneme-operation-relations.json','utf8'));
+assert.equal(operationBank.clinicalValidation,'not_claimed');
+assert.ok(operationBank.operations.length>=3,'seed operation bank should contain several explicit substitutions');
+for(const operation of operationBank.operations){
+  assert.equal(operation.activityId,'phoneme-substitution');
+  assert.equal(substitution(operation),true,`${operation.operationId} must produce its exact expected IPA`);
+  const source=byLabel.get(operation.sourceWord);const expected=byLabel.get(operation.expectedWord);
+  assert.ok(source&&expected,`${operation.operationId} must reference source and result labels already present in the active lexicon seed`);
+  assert.equal(normalizeIPA(source.ipa),normalizeIPA(operation.sourceIpa));
+  assert.equal(normalizeIPA(expected.ipa),normalizeIPA(operation.expectedIpa));
+  assert.equal(operation.source,'data/lexicon-seed.json');
+}
+
+console.log('phoneme contracts: explicit substitutions and minimal-pair relations are controllable and grounded in the active lexicon seed');

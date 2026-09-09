@@ -72,13 +72,8 @@ const TEMPLATES={
     }
   },
   'syllable-identification':{
-    childInstruction:'Dis le mot obtenu. Quelle est sa première syllabe ?',
-    proInstruction:(target)=>{
-      const expected=sourceExactSyllables(target)[0]||'';
-      return expected
-        ?`Faire identifier la syllabe initiale du mot cible à partir des frontières syllabiques source validées, sans utiliser les pièces du rébus comme découpage. Réponse attendue : /${expected}/.`
-        :'Faire identifier la syllabe initiale uniquement si des frontières syllabiques source validées sont disponibles.';
-    }
+    childInstruction:'Dis le mot obtenu. Quelle syllabe est demandée ?',
+    proInstruction:'Faire identifier uniquement une syllabe explicitement positionnée à partir des frontières syllabiques source validées.'
   },
   'syllable-segmentation':{
     childInstruction:'Dis le mot obtenu, puis sépare-le en syllabes, dans l’ordre.',
@@ -101,6 +96,23 @@ const TEMPLATES={
 
 function resolveInstruction(value,target){
   return typeof value==='function'?value(target):value;
+}
+
+function syllableIdentificationActivity(definition,syllables,position){
+  const initial=position==='initial';
+  const expected=initial?syllables[0]:syllables.at(-1);
+  return {
+    id:'syllable-identification',
+    activityId:`syllable-identification-${position}`,
+    label:`${definition.label} — ${initial?'première':'dernière'} syllabe`,
+    unit:definition.unit,
+    description:`${definition.description} Position contrôlée : ${initial?'initiale':'finale'}.`,
+    childInstruction:`Dis le mot obtenu. Quelle est sa ${initial?'première':'dernière'} syllabe ?`,
+    proInstruction:`Faire identifier la syllabe ${initial?'initiale':'finale'} du mot cible à partir des frontières syllabiques source validées, sans utiliser les pièces du rébus comme découpage. Réponse attendue : /${expected}/.`,
+    expectedResponse:expected,
+    promptUnits:[],
+    promptPosition:position
+  };
 }
 
 export function therapyTargetMap(definitions=[]){
@@ -126,8 +138,14 @@ export function buildTherapyActivities(target,definitions=[]){
     .filter(id=>id!=='syllable-count'||syllableCount)
     .filter(id=>id!=='syllable-identification'||syllables.length>=2)
     .filter(id=>id!=='syllable-segmentation'||syllables.length)
-    .map(id=>{
+    .flatMap(id=>{
       const definition=registry.get(id);
+      if(id==='syllable-identification'){
+        return [
+          syllableIdentificationActivity(definition,syllables,'initial'),
+          syllableIdentificationActivity(definition,syllables,'final')
+        ];
+      }
       const template=TEMPLATES[id];
       const expectedResponse=id==='phoneme-initial'
         ?firstIPAUnit(target?.targetIpa||'')
@@ -139,15 +157,13 @@ export function buildTherapyActivities(target,definitions=[]){
               ?normalizeIPA(target?.targetIpa||'')
               :id==='syllable-count'
                 ?syllableCount
-                :id==='syllable-identification'
-                  ?syllables[0]
-                  :id==='syllable-segmentation'
-                    ?syllables
-                    :'';
+                :id==='syllable-segmentation'
+                  ?syllables
+                  :'';
       const promptUnits=id==='phoneme-blending'?phonemeSequence(target):[];
-      const promptPosition=id==='syllable-identification'?'initial':'';
       return {
         id,
+        activityId:id,
         label:definition.label,
         unit:definition.unit,
         description:definition.description,
@@ -155,7 +171,7 @@ export function buildTherapyActivities(target,definitions=[]){
         proInstruction:resolveInstruction(template.proInstruction,target),
         expectedResponse,
         promptUnits,
-        promptPosition
+        promptPosition:''
       };
     });
 }
@@ -167,6 +183,11 @@ export function activityInstruction(activity,mode='pro'){
 
 export function selectTherapyActivity(activities=[],requestedId=''){
   if(!activities.length)return null;
-  if(requestedId){const found=activities.find(item=>item.id===requestedId);if(found)return found;}
+  if(requestedId){
+    const exact=activities.find(item=>(item.activityId||item.id)===requestedId);
+    if(exact)return exact;
+    const legacy=activities.find(item=>item.id===requestedId);
+    if(legacy)return legacy;
+  }
   return activities[0];
 }

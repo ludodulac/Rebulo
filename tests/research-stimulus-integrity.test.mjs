@@ -6,9 +6,10 @@ const comparisons=(registry.comparisons||[]).filter(item=>item.activationState==
 const pending=comparisons.flatMap(item=>(item.candidates||[]).filter(candidate=>candidate.availability==='pending').map(candidate=>({...candidate,concept:item.concept})));
 const candidates=comparisons.flatMap(item=>(item.candidates||[]).filter(candidate=>candidate.availability==='available').map(candidate=>({...candidate,concept:item.concept})));
 
-assert.equal(candidates.length,21,'the active research gallery should expose only the twenty historical available stimuli plus nid-v1');
-assert.deepEqual(pending.map(item=>item.candidateId),['heure-scene-a-v1','heure-scene-b-v1'],'pending heure hypotheses must not be mistaken for real stimuli');
+assert.equal(candidates.length,23,'the active research gallery should expose the twenty-three available local research stimuli');
+assert.deepEqual(pending.map(item=>item.candidateId),[],'no research stimulus should remain falsely pending after heure integration');
 assert.equal(candidates.filter(item=>item.concept==='nid').length,1,'nid-v1 must contribute exactly one revision-bound research stimulus');
+assert.equal(candidates.filter(item=>item.concept==='heure').length,2,'heure-v1 must contribute exactly two separate blind research stimuli');
 for(const candidate of candidates){
   assert.match(candidate.asset,/\.svg$/i,`${candidate.candidateId} should use an SVG research stimulus`);
   assert.doesNotMatch(candidate.asset,/^https?:/i,`${candidate.candidateId} should be served locally`);
@@ -22,5 +23,5 @@ for(const candidate of candidates){
 }
 
 const ids=[...candidates,...pending].map(item=>item.candidateId);
-assert.equal(new Set(ids).size,ids.length,'research stimulus IDs must remain unique even while some assets are pending');
-console.log(`research stimulus integrity: ${candidates.length} available local SVGs pass; ${pending.length} pending heure hypotheses stay excluded.`);
+assert.equal(new Set(ids).size,ids.length,'research stimulus IDs must remain unique');
+console.log(`research stimulus integrity: ${candidates.length} available local SVGs pass; ${pending.length} pending stimuli remain.`);

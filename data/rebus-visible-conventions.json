@@ -1,0 +1,26 @@
+{
+  "version": "0.1.1",
+  "status": "research_only",
+  "policy": {
+    "visibility": "A convention must be visible as itself; never hide a letter, digit or other symbol inside a strict image reading.",
+    "strictness": "These entries belong to general rebus mode unless a future contract explicitly promotes a convention.",
+    "pronunciation": "The reading stored here is the name/read-out of the visible symbol, not an arbitrary phoneme assigned to its spelling.",
+    "approximation": "Approximate use is scored separately and never changes the stored reading."
+  },
+  "entries": [
+    {"id":"digit-1","label":"1","ipa":"œ̃","kind":"number_symbol","status":"research","note":"Nombre un; context variants must stay explicit."},
+    {"id":"digit-2","label":"2","ipa":"dø","kind":"number_symbol","status":"research"},
+    {"id":"digit-3","label":"3","ipa":"tʁwa","kind":"number_symbol","status":"research"},
+    {"id":"digit-4","label":"4","ipa":"katʁ","kind":"number_symbol","status":"research"},
+    {"id":"digit-5","label":"5","ipa":"sɛ̃k","kind":"number_symbol","status":"research"},
+    {"id":"digit-6","label":"6","ipa":"sis","kind":"number_symbol","status":"research","note":"Final-consonant variants are context-sensitive and are not encoded as hidden alternatives."},
+    {"id":"digit-7","label":"7","ipa":"sɛt","kind":"number_symbol","status":"research"},
+    {"id":"digit-8","label":"8","ipa":"ɥit","kind":"number_symbol","status":"research"},
+    {"id":"digit-9","label":"9","ipa":"nœf","kind":"number_symbol","status":"research"},
+    {"id":"digit-10","label":"10","ipa":"dis","kind":"number_symbol","status":"research","note":"Context variants are not silently substituted."},
+    {"id":"letter-l","label":"L","ipa":"ɛl","kind":"letter_name","status":"research"},
+    {"id":"letter-k","label":"K","ipa":"ka","kind":"letter_name","status":"research"},
+    {"id":"letter-q","label":"Q","ipa":"ky","kind":"letter_name","status":"research"},
+    {"id":"music-note-la","label":"la","ipa":"la","kind":"music_note","status":"research","note":"Visible solfège note convention; must remain visually distinct from an object pictogram."}
+  ]
+}

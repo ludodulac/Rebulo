@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import {buildPhoneticSegmentInventory,classifySegmentInventory,analyzeTargetConstructibility,buildSegmentResearchQueue,rankBrickOpportunities,rankVisualResearchLeads,buildAlternativeSegmentStrategies} from '../src/phonetic-brick-map.js';
 import {buildHardRouteOpportunitySearch} from '../src/hard-route-opportunity-search.js';
+import {buildSyllableWindowInventory,buildPhraseSyllableWindows,buildOverlappingPhonemeWindows,phonemeEditDistance} from '../src/rebus-sound-catalog.js';
 const targets=[{target:'cinéma',targetIpa:'sinema',frequency:42,ageBandCandidate:7,rebuloUtilityTier:'child_common'},{target:'K-huis',targetIpa:'kaɥi',frequency:8,ageBandCandidate:9,rebuloUtilityTier:'school_common'},{target:'bakou',targetIpa:'baku',frequency:12,ageBandCandidate:7,rebuloUtilityTier:'school_common'},{target:'kouba',targetIpa:'kuba',frequency:6,ageBandCandidate:9,rebuloUtilityTier:'teen_adult_common'}];
 const lexicon=[{id:'scie',label:'scie',ipa:'/si/',active:true,strictEligible:true},{id:'nez',label:'nez',ipa:'/ne/',active:true,strictEligible:true},{id:'mat',label:'mât',ipa:'/ma/',active:true,strictEligible:true},{id:'huis',label:'huis',ipa:'/ɥi/',active:true,strictEligible:true},{id:'bas',label:'bas',ipa:'/ba/',active:true,strictEligible:true}];
 const inventory=buildPhoneticSegmentInventory(targets,{minUnits:1,maxUnits:3});assert.ok(inventory.some(r=>r.ipa==='in'));assert.ok(inventory.some(r=>r.ipa==='ku'));assert.equal(inventory.find(r=>r.ipa==='ku').targetCount,2);
@@ -32,4 +33,13 @@ assert.equal(fallbackHardSearch.searchedResearchRowCount,3);
 assert.equal(fallbackHardSearch.opportunities.length,3,'compatibility fallback may still inspect provided rows');
 assert.ok(fallbackHardSearch.opportunities.some(row=>row.ipa==='y'));
 assert.throws(()=>buildHardRouteOpportunitySearch(hardSearchRows,hardSearchTargets,hardSearchInventory,{segments:[{ipa:'missing'}]},{maxRows:3}),/missing registered source segments/);
-console.log('Phonetic brick map: useful coverage, exact candidates, automatic alternatives and hard-target-local route search passed.');
+
+const sourceWindows=buildSyllableWindowInventory([{word:'merci',ipa:'mɛʁsi',syllabification:'mɛʁ.si'}]);
+assert.ok(sourceWindows.some(row=>row.ipa==='mɛʁsi'&&row.syllableSpans.includes(2)),'exact two-syllable windows must be retained');
+const phraseWindows=buildPhraseSyllableWindows([{word:'cuit',syllables:['kɥi']},{word:'hier',syllables:['jɛʁ']}]);
+assert.ok(phraseWindows.some(row=>row.ipa==='kɥijɛʁ'&&row.crossesWordBoundary),'two-syllable windows must cross word boundaries for magazine-style routes such as cuillère');
+const shiftedWindows=buildOverlappingPhonemeWindows('ɛlnəsɔ̃pakɥitlepat',{minUnits:2,maxUnits:4});
+assert.ok(new Set(shiftedWindows.map(row=>row.startUnit)).size>4,'sound exploration must also slide across syllable and word boundaries');
+assert.equal(phonemeEditDistance('lɛ','le').distance,1,'approximate magazine-style substitutions must remain explicitly measurable');
+
+console.log('Phonetic brick map: useful coverage, exact candidates, automatic alternatives, hard-target-local route search and overlapping sound windows passed.');

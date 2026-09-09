@@ -1,13 +1,16 @@
 {
-  "version": "0.1.1",
+  "version": "0.2.0",
   "status": "research_only",
   "policy": {
     "visibility": "A convention must be visible as itself; never hide a letter, digit or other symbol inside a strict image reading.",
     "strictness": "These entries belong to general rebus mode unless a future contract explicitly promotes a convention.",
-    "pronunciation": "The reading stored here is the name/read-out of the visible symbol, not an arbitrary phoneme assigned to its spelling.",
-    "approximation": "Approximate use is scored separately and never changes the stored reading."
+    "pronunciation": "The reading stored here is the canonical French name/read-out of the visible symbol, not an arbitrary phoneme assigned to its spelling.",
+    "approximation": "Approximate use is scored separately and never changes the stored reading.",
+    "letters": "Letter-name tiles are explicit conventions. They represent the spoken French name of the letter, never its contextual grapheme sound.",
+    "music": "Solfège entries require a visibly identifiable note-name convention; a generic musical-note glyph without pitch/name evidence is insufficient."
   },
   "entries": [
+    {"id":"digit-0","label":"0","ipa":"zeʁo","kind":"number_symbol","status":"research"},
     {"id":"digit-1","label":"1","ipa":"œ̃","kind":"number_symbol","status":"research","note":"Nombre un; context variants must stay explicit."},
     {"id":"digit-2","label":"2","ipa":"dø","kind":"number_symbol","status":"research"},
     {"id":"digit-3","label":"3","ipa":"tʁwa","kind":"number_symbol","status":"research"},
@@ -18,9 +21,41 @@
     {"id":"digit-8","label":"8","ipa":"ɥit","kind":"number_symbol","status":"research"},
     {"id":"digit-9","label":"9","ipa":"nœf","kind":"number_symbol","status":"research"},
     {"id":"digit-10","label":"10","ipa":"dis","kind":"number_symbol","status":"research","note":"Context variants are not silently substituted."},
-    {"id":"letter-l","label":"L","ipa":"ɛl","kind":"letter_name","status":"research"},
+    {"id":"number-100","label":"100","ipa":"sɑ̃","kind":"number_symbol","status":"research","note":"Cent as a visible number convention; this does not replace exact-image alternatives such as sang."},
+
+    {"id":"letter-a","label":"A","ipa":"a","kind":"letter_name","status":"research"},
+    {"id":"letter-b","label":"B","ipa":"be","kind":"letter_name","status":"research"},
+    {"id":"letter-c","label":"C","ipa":"se","kind":"letter_name","status":"research"},
+    {"id":"letter-d","label":"D","ipa":"de","kind":"letter_name","status":"research"},
+    {"id":"letter-e","label":"E","ipa":"ə","kind":"letter_name","status":"research","note":"Canonical letter-name reading; regional/phonetic variants must not be silently substituted."},
+    {"id":"letter-f","label":"F","ipa":"ɛf","kind":"letter_name","status":"research"},
+    {"id":"letter-g","label":"G","ipa":"ʒe","kind":"letter_name","status":"research"},
+    {"id":"letter-h","label":"H","ipa":"aʃ","kind":"letter_name","status":"research"},
+    {"id":"letter-i","label":"I","ipa":"i","kind":"letter_name","status":"research"},
+    {"id":"letter-j","label":"J","ipa":"ʒi","kind":"letter_name","status":"research"},
     {"id":"letter-k","label":"K","ipa":"ka","kind":"letter_name","status":"research"},
+    {"id":"letter-l","label":"L","ipa":"ɛl","kind":"letter_name","status":"research"},
+    {"id":"letter-m","label":"M","ipa":"ɛm","kind":"letter_name","status":"research"},
+    {"id":"letter-n","label":"N","ipa":"ɛn","kind":"letter_name","status":"research"},
+    {"id":"letter-o","label":"O","ipa":"o","kind":"letter_name","status":"research"},
+    {"id":"letter-p","label":"P","ipa":"pe","kind":"letter_name","status":"research"},
     {"id":"letter-q","label":"Q","ipa":"ky","kind":"letter_name","status":"research"},
-    {"id":"music-note-la","label":"la","ipa":"la","kind":"music_note","status":"research","note":"Visible solfège note convention; must remain visually distinct from an object pictogram."}
+    {"id":"letter-r","label":"R","ipa":"ɛʁ","kind":"letter_name","status":"research"},
+    {"id":"letter-s","label":"S","ipa":"ɛs","kind":"letter_name","status":"research"},
+    {"id":"letter-t","label":"T","ipa":"te","kind":"letter_name","status":"research"},
+    {"id":"letter-u","label":"U","ipa":"y","kind":"letter_name","status":"research"},
+    {"id":"letter-v","label":"V","ipa":"ve","kind":"letter_name","status":"research"},
+    {"id":"letter-w","label":"W","ipa":"dubləve","kind":"letter_name","status":"research"},
+    {"id":"letter-x","label":"X","ipa":"iks","kind":"letter_name","status":"research"},
+    {"id":"letter-y","label":"Y","ipa":"igʁɛk","kind":"letter_name","status":"research"},
+    {"id":"letter-z","label":"Z","ipa":"zɛd","kind":"letter_name","status":"research"},
+
+    {"id":"music-note-do","label":"do","ipa":"do","kind":"music_note","status":"research"},
+    {"id":"music-note-re","label":"ré","ipa":"ʁe","kind":"music_note","status":"research"},
+    {"id":"music-note-mi","label":"mi","ipa":"mi","kind":"music_note","status":"research"},
+    {"id":"music-note-fa","label":"fa","ipa":"fa","kind":"music_note","status":"research"},
+    {"id":"music-note-sol","label":"sol","ipa":"sɔl","kind":"music_note","status":"research"},
+    {"id":"music-note-la","label":"la","ipa":"la","kind":"music_note","status":"research"},
+    {"id":"music-note-si","label":"si","ipa":"si","kind":"music_note","status":"research"}
   ]
 }

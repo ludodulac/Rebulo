@@ -36,11 +36,18 @@ const laitVsLes=phonemeEditDistance('lɛ','le');
 assert.equal(laitVsLes.distance,1,'lait /lɛ/ versus les /le/ must stay explicitly approximate');
 assert.ok(laitVsLes.ratio>0);
 
-const conventions=JSON.parse(fs.readFileSync('data/rebus-visible-conventions.json','utf8')).entries;
+const conventionData=JSON.parse(fs.readFileSync('data/rebus-visible-conventions.json','utf8'));
+const conventions=conventionData.entries;
 const grouped=groupRepresentationsBySound(conventions);
 assert.ok(grouped.find(row=>row.ipa==='ɛl')?.representations.some(item=>item.label==='L'));
 assert.ok(grouped.find(row=>row.ipa==='ɥit')?.representations.some(item=>item.label==='8'));
+assert.ok(grouped.find(row=>row.ipa==='sɑ̃')?.representations.some(item=>item.label==='100'));
 assert.ok(grouped.find(row=>row.ipa==='la')?.representations.some(item=>item.kind==='music_note'));
+const letters=conventions.filter(item=>item.kind==='letter_name');
+assert.equal(letters.length,26,'all French alphabet letter names must be available as explicit general-mode conventions');
+assert.deepEqual(letters.map(item=>item.label),[...'ABCDEFGHIJKLMNOPQRSTUVWXYZ']);
+for(const label of ['do','ré','mi','fa','sol','la','si'])assert.ok(conventions.some(item=>item.kind==='music_note'&&item.label===label),`${label} solfège convention should be catalogued`);
+assert.ok(conventions.every(item=>item.status==='research'),'visible conventions remain research/general-mode data, not strict pictogram evidence');
 
 const tiered=groupRepresentationsBySound([
   {label:'patte',ipa:'pat',kind:'whole_word_image',status:'active'},
@@ -53,4 +60,4 @@ assert.equal(tiered.find(row=>row.ipa==='pak').representations[0].tier,'exact_im
 assert.equal(tiered.find(row=>row.ipa==='lɛ').representations[0].tier,'approximation_research','approximate image hypotheses must never look like exact research images');
 assert.equal(tiered.find(row=>row.ipa==='ɥit').representations[0].tier,'explicit_visible_convention');
 
-console.log('rebus sound catalog: source-exact mono/1–2 syllable windows, cross-word routes, shifted phoneme windows and explicit representation tiers');
+console.log('rebus sound catalog: exact 1–2 syllable windows, shifted routes and complete visible alphabet/number/solfège conventions');

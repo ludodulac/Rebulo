@@ -102,12 +102,14 @@ for(const entry of entries){
   const decompositions=rankDecompositions(segmentTargetWithLexicon(target,active,4));
   if(decompositions.length){
     const syllableCount=Number.isInteger(entry.syllableCount)&&entry.syllableCount>0?entry.syllableCount:null;
+    const syllabification=typeof entry.syllabification==='string'&&entry.syllabification.trim()?entry.syllabification.trim():null;
     const record={
       word:entry.word,
       ipa:entry.ipa,
       frequency:Number(entry.frequency)||0,
       pos:entry.pos||'',
       syllableCount,
+      syllabification,
       decomposition:decompositions[0].map(x=>x.id||x.label)
     };
     constructible.push(record);

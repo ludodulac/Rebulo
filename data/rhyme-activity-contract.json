@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "status": "research_ready",
+  "activities": ["rhyme-judgment", "rhyme-matching"],
+  "activationPolicy": "explicit_relations_only",
+  "requiredRelationFields": [
+    "targetWord",
+    "targetIpa",
+    "candidateWord",
+    "candidateIpa",
+    "relationship",
+    "expectedResponse",
+    "evidence"
+  ],
+  "allowedRelationships": ["rhyme", "non_rhyme"],
+  "evidenceRequirements": {
+    "explicitSharedRimeIpaForRhymes": true,
+    "sourceOrHumanReview": true,
+    "automaticOrthographicInferenceForbidden": true,
+    "automaticRebusPieceInferenceForbidden": true
+  },
+  "judgment": {
+    "promptRequiresTwoNamedWords": true,
+    "expectedResponseValues": [true, false]
+  },
+  "matching": {
+    "minimumChoices": 2,
+    "requiresExactlyOneDeclaredRhyme": true
+  }
+}

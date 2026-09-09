@@ -1,6 +1,6 @@
 # REBULO — PASSATION ACTIVE / POINT D’ENTRÉE UNIQUE
 
-**Dernière mise à jour : 9 septembre 2026, après fusion de la PR #190 et préparation du protocole de compréhension des opérations générales.**
+**Dernière mise à jour : 9 septembre 2026, après fusion des PR #192–#193 et préparation de la première vague de reviews de dénomination de production.**
 
 Ce fichier est le point d’entrée prioritaire pour continuer Rebulo. Le journal lisible d’avancement est `docs/PROGRESSION.md`. Les principes stables restent dans `docs/PRODUCT_PRINCIPLES.md` : ne pas les recopier ici sauf si une règle durable change réellement.
 
@@ -66,6 +66,15 @@ Lire :
 Garantie : ne pas confondre `general_illustration`, `phonetic_structured`, observation humaine et validation clinique. Une ambiguïté de dénomination est une donnée, pas une raison de forcer un mapping universel.
 
 Validation : `npm run test:targeted:data`, `npm run audit:assets` et/ou `npm run audit:pictogram-guarantees` selon le lot. Les audits n’inventent jamais une validation humaine.
+
+État matériel courant après PR #192 :
+- 24 SVG de production actifs dans l’inventaire ;
+- 29 SVG de recherche au total ;
+- 23 stimuli locaux actuellement disponibles dans les comparaisons de recherche actives ;
+- les deux scènes `heure-scene-a-v1` et `heure-scene-b-v1` existent réellement et sont séparées, aveugles, sans réponse visible ;
+- `heure-prototype-comparison-v1` est désormais `ready_for_human_naming_test`, sans aucune observation fabriquée.
+
+Après PR #193, les faux manques de provenance pour `dé`, `mer`, `pie`, `mie`, `mât` sont réparés depuis l’historique Git, et les révisions des OpenMoji actifs `scie`, `nez`, `rat`, `pas`, `lit`, `riz`, `chat` sont figées dans `data/asset-sources.json`. Cela documente les stimuli ; cela ne valide pas leur dénomination.
 
 ### Opérations générales visibles
 Lire :
@@ -134,19 +143,24 @@ Toujours re-vérifier le HEAD de `main` avant une écriture ; les SHA cités dan
 Paquets récents importants :
 - PR #181 : `grapheme_sound` explicite, IPA-ciblé et général-only ; distinction stricte avec le nom français de la lettre ;
 - PR #182 : quatre compositions générales exactes de recherche (`/dite/`, `/mid/`, `/ɲal/`, `/jœʁ/`) ; la file hard-route est passée à 0 cible nécessitant une représentation entièrement nouvelle ;
-- PR #183–#186 : tri visuel conservateur ; `heure /œʁ/` reste le seul prototype de scène prioritaire du dernier lot et les pistes lexicales faibles sont fermées comme non-visuelles ;
-- PR #187 : `heure` enregistré dans le pipeline de test mais ses deux vrais stimuli restent `pending`; aucune planche comparative ou image contenant la réponse n’est un stimulus valide ;
+- PR #183–#186 : tri visuel conservateur ; `heure /œʁ/` devient le seul prototype de scène prioritaire du dernier sous-lot et les pistes lexicales faibles sont fermées comme non-visuelles ;
+- PR #187 : `heure` enregistré dans le pipeline de test avec garde-fou contre les planches révélant la réponse ;
 - PR #188 : modèle de maturité des opérations générales ;
 - PR #189 : sémantique exacte et conservatrice pour `MENT`, `TION`, `SION` ;
-- PR #190 : sémantique conservatrice de `TR` au début du mot + modèle visuel générique montrant graphème, IPA cible, mot source et IPA source.
+- PR #190 : sémantique conservatrice de `TR` au début du mot + modèle visuel générique montrant graphème, IPA cible, mot source et IPA source ;
+- PR #191 : protocole canonique de compréhension humaine pour les 10 opérations `visual_cue_defined`, avec `results: []` tant qu’aucune vraie passation n’a lieu ;
+- PR #192 : création et intégration des deux vrais stimuli aveugles `heure-scene-a-v1` et `heure-scene-b-v1`; passage du plan `heure` à `ready_for_human_naming_test`; 23 stimuli de comparaison disponibles ;
+- PR #193 : réconciliation de provenance/révision des assets : `dé`, `mer`, `pie`, `mie`, `mât` ne sont plus faussement `undocumented`; révisions OpenMoji actives figées ; les scènes `heure` sont enregistrées comme prototypes de recherche.
 
-Conséquence actuelle : le principal goulot n’est plus la découverte phonétique brute mais la **validation des représentations** : compréhension des opérations générales et dénomination des rares scènes/pictogrammes encore incertains.
+Conséquence actuelle : le principal goulot n’est plus la découverte phonétique brute ni la création du prototype `heure`, mais la **passation de dénomination des stimuli existants** et la **compréhension humaine des opérations générales**. L’infrastructure technique doit être préparée au maximum avant ces gates humains.
 
 # 4. Couverture et cartographie phonétique
 
 Le travail Lexique/Éduscol distingue couverture linguistique globale et couverture utile Rebulo. Ne pas optimiser sur tous les types Lexique à poids égal.
 
-Le dernier état consolidé de la file hard-route après PR #182 était : 117 cibles visuelles non résolues, dont 100 couvertes par une opération générale documentée, 17 par recherche pictogramme/scène, 0 nécessitant une représentation entièrement nouvelle. Les paquets suivants ont réduit la partie « pictogramme à prototyper » à `heure /œʁ/` dans le tri courant et ont surtout transformé les opérations générales documentées en objets de gouvernance testables.
+Le dernier état consolidé de la file hard-route après PR #182 était : 117 cibles visuelles non résolues, dont 100 couvertes par une opération générale documentée, 17 par recherche pictogramme/scène, 0 nécessitant une représentation entièrement nouvelle. Les paquets suivants ont réduit la partie « pictogramme à prototyper » et ont transformé les opérations générales documentées en objets testables.
+
+La dernière baseline technique conservée par `active-dependency-report.json` est de 24 pictogrammes actifs et 760 mots uniques stricts multi-pièces. Les PR #192–#193 n’ont pas activé ou retiré de pictogramme de production : elles ne doivent donc pas être présentées comme un gain artificiel de couverture stricte.
 
 # 5. Recherche visuelle et dénomination
 
@@ -154,17 +168,26 @@ Ne plus créer des vagues de pictogrammes plausibles à l’aveugle. Avant dessi
 
 Exemple sentinelle : `cuit /kɥi/` est phonétiquement exact mais un œuf cuit sera spontanément nommé « œuf » ; cette piste ne doit pas être activée ni redessinée comme si elle était valide.
 
-`heure /œʁ/` reste scène de recherche à haut risque de réponses `montre`, `horloge`, `temps`. Le plan `heure-prototype-comparison-v1` est bloqué jusqu’à disponibilité de deux stimuli séparés réellement aveugles.
+`heure /œʁ/` reste une scène de recherche à haut risque de réponses `montre`, `horloge`, `temps`, mais le blocage matériel est levé :
+- `assets/research/heure-scene-a-v1.svg` existe ;
+- `assets/research/heure-scene-b-v1.svg` existe ;
+- les deux stimuli sont séparés et ne contiennent ni mot cible, ni IPA, ni légende, ni nombres ;
+- `heure-prototype-comparison-v1` est `ready_for_human_naming_test` ;
+- `namingTestStatus` reste `not_run` et `humanDecision` reste `null`.
+
+Ne pas fabriquer le résultat du test. Le prochain gate `heure` est humain.
 
 # 6. Outils humains
 
-`naming-test.html` : passation simple, anonyme, code et ordre aléatoire automatiques, question « Qu’est-ce que c’est ? », export JSON local.
+`naming-test.html` : passation simple, anonyme, code et ordre aléatoire automatiques, question « Qu’est-ce que c’est ? », export JSON local. Le runner charge à la fois les comparaisons de prototypes et les reviews de production disponibles.
 
 `naming-review.html` : imports multiples liés à la révision exacte, comptages descriptifs et miniatures, aucune activation automatique.
 
-`research-gallery.html` : galerie, aperçu sans indices, zoom/navigation, curation locale et ré-import strict. Les stimuli `pending` ne doivent jamais entrer dans la galerie active.
+`research-gallery.html` : galerie, aperçu sans indices, zoom/navigation, curation locale et ré-import strict. Après PR #192, les deux stimuli `heure` disponibles peuvent entrer dans la galerie de recherche ; aucun stimulus `pending` ne doit être affiché comme disponible.
 
-Le nouveau protocole d’opérations générales n’invente aucun résultat : il définit seulement quoi présenter et quoi capturer. Un prochain lot pourra fournir une UI de passation dédiée ou réutiliser une infrastructure existante si cela reste simple et sans confusion avec la dénomination d’images.
+`data/production-naming-reviews.json` reste le registre de reviews des stimuli actifs. Après la première vague en cours, `mer`, `corps`, `chat`, `eau` et `pie` rejoignent `pluie`, `clé`, `sol` et `tour` comme reviews révisionnées prêtes à collecter de vraies observations. Ce statut ne constitue ni une observation humaine ni une validation clinique.
+
+Le protocole d’opérations générales n’invente aucun résultat : il définit seulement quoi présenter et quoi capturer. Préparer une UI de passation dédiée ou réutiliser une infrastructure existante si cela reste simple et sans confusion avec la dénomination d’images.
 
 # 7. Statut recherche / décisions humaines
 
@@ -172,13 +195,16 @@ Ne pas fabriquer participants ou observations ; ne pas déclarer `clinical_appro
 
 Pour les opérations générales, le minimum planifié est 3 participants distincts anonymes, avec réponse spontanée verbatim, hésitation, absence de réponse et mauvaise lecture. Ce seuil ouvre une revue humaine ; il ne constitue pas à lui seul une autorisation.
 
+Pour la dénomination visuelle, toute observation doit rester attachée à la révision exacte du stimulus. Une ancienne observation ne se transfère pas silencieusement à un dessin modifié.
+
 # 8. Direction immédiate
 
-1. Finaliser et tester le registre de protocole de compréhension des 10 opérations actuellement `visual_cue_defined`.
-2. Ne produire aucun faux résultat de passation ; conserver `results: []` jusqu’à observation réelle.
-3. Après passation réelle, ajouter les observations de façon versionnée et faire une revue humaine explicite avant toute promotion.
-4. Continuer en parallèle le blocage propre de `IN/UN` jusqu’à disposer d’un alignement graphème↔phonème fiable.
-5. Revenir à `heure /œʁ/` seulement avec deux stimuli aveugles réellement séparés et exploitables.
+1. Finaliser les reviews révisionnées des pictogrammes actifs dont la provenance et la révision sont désormais connues, par petits paquets à faible risque, sans modifier leurs dessins.
+2. Utiliser `naming-test.html` pour les vraies passations seulement ; ne produire aucun faux résultat et conserver les registres d’observations vides tant qu’aucune passation réelle n’a eu lieu.
+3. `heure /œʁ/` est techniquement prêt : le prochain pas est une vraie dénomination humaine des deux scènes, pas une nouvelle génération d’image.
+4. Préparer techniquement la passation de compréhension des 10 opérations générales actuellement `visual_cue_defined`; ne promouvoir aucune opération sans observation et revue humaines.
+5. Continuer le blocage propre de `IN/UN` jusqu’à disposer d’un alignement graphème↔phonème fiable ; ne pas bricoler une heuristique orthographique.
+6. Une fois les reviews de production préparées, régénérer/recalculer les rapports de readiness et la couverture utile afin de distinguer clairement : assets présents, gates humains, opérations non autorisées et véritables absences de représentation.
 
 # 9. Garde-fous
 
@@ -193,3 +219,5 @@ Lorsqu’un exemple échoue, chercher d’abord si l’absence de solution est c
 # 11. Résumé de reprise
 
 **Vérifier `main`, lire les principes et ce handoff, choisir la zone via le chemin rapide, travailler par petit lot, lancer FAST puis TARGETED/FULL selon le risque, et préserver strictement la séparation entre exactitude phonétique, qualité visuelle, compréhension des opérations générales et validation humaine/clinique.**
+
+État de reprise après les paquets visuels récents : **les deux scènes `heure` existent et attendent une vraie passation ; la provenance des principaux assets historiquement “undocumented” est réparée ; la priorité technique est de terminer les reviews révisionnées des assets de production et de préparer les gates humains, pas de redessiner des candidats déjà rejetés.**

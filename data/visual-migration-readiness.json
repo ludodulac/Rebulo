@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": "2026-09-09T07:35:37.309Z",
+  "generatedAt": "2026-09-09T07:42:01.242Z",
   "baseline": {
     "activePictogramCount": 24,
     "strictMultiPieceEntries": 911,
@@ -87,10 +87,10 @@
       "source": "rebulo_original",
       "revisionStamped": true,
       "artRevision": "mer-sea-v1",
-      "namingReviewAvailable": false,
+      "namingReviewAvailable": true,
       "clinicalStatus": "naming_test_required",
-      "readinessScore": 2,
-      "nextGate": "add_revision_bound_naming_review"
+      "readinessScore": 3,
+      "nextGate": "collect_human_naming_observations"
     },
     {
       "id": "corps",
@@ -103,10 +103,10 @@
       "source": "rebulo_original",
       "revisionStamped": true,
       "artRevision": "corps-comic-v1",
-      "namingReviewAvailable": false,
+      "namingReviewAvailable": true,
       "clinicalStatus": "naming_test_required",
-      "readinessScore": 2,
-      "nextGate": "add_revision_bound_naming_review"
+      "readinessScore": 3,
+      "nextGate": "collect_human_naming_observations"
     },
     {
       "id": "terre",
@@ -151,10 +151,10 @@
       "source": "openmoji",
       "revisionStamped": true,
       "artRevision": "chat-openmoji-1f431-v1",
-      "namingReviewAvailable": false,
+      "namingReviewAvailable": true,
       "clinicalStatus": "prototype_priority",
-      "readinessScore": 2,
-      "nextGate": "add_revision_bound_naming_review"
+      "readinessScore": 3,
+      "nextGate": "collect_human_naming_observations"
     },
     {
       "id": "eau",
@@ -167,10 +167,10 @@
       "source": "rebulo_original",
       "revisionStamped": true,
       "artRevision": "eau-comic-v1",
-      "namingReviewAvailable": false,
+      "namingReviewAvailable": true,
       "clinicalStatus": "naming_test_required",
-      "readinessScore": 2,
-      "nextGate": "add_revision_bound_naming_review"
+      "readinessScore": 3,
+      "nextGate": "collect_human_naming_observations"
     },
     {
       "id": "pot",
@@ -199,10 +199,10 @@
       "source": "rebulo_original",
       "revisionStamped": true,
       "artRevision": "pie-magpie-v1",
-      "namingReviewAvailable": false,
+      "namingReviewAvailable": true,
       "clinicalStatus": "naming_test_required",
-      "readinessScore": 2,
-      "nextGate": "add_revision_bound_naming_review"
+      "readinessScore": 3,
+      "nextGate": "collect_human_naming_observations"
     },
     {
       "id": "scie",
@@ -215,10 +215,10 @@
       "source": "openmoji",
       "revisionStamped": true,
       "artRevision": "scie-openmoji-1fa9a-v1",
-      "namingReviewAvailable": false,
+      "namingReviewAvailable": true,
       "clinicalStatus": "naming_test_required",
-      "readinessScore": 2,
-      "nextGate": "add_revision_bound_naming_review"
+      "readinessScore": 3,
+      "nextGate": "collect_human_naming_observations"
     },
     {
       "id": "raie",
@@ -247,10 +247,10 @@
       "source": "openmoji",
       "revisionStamped": true,
       "artRevision": "riz-openmoji-1f35a-v1",
-      "namingReviewAvailable": false,
+      "namingReviewAvailable": true,
       "clinicalStatus": "prototype_priority",
-      "readinessScore": 2,
-      "nextGate": "add_revision_bound_naming_review"
+      "readinessScore": 3,
+      "nextGate": "collect_human_naming_observations"
     },
     {
       "id": "mie",
@@ -263,10 +263,10 @@
       "source": "rebulo_original",
       "revisionStamped": true,
       "artRevision": "mie-bread-crumb-v1",
-      "namingReviewAvailable": false,
+      "namingReviewAvailable": true,
       "clinicalStatus": "naming_test_required",
-      "readinessScore": 2,
-      "nextGate": "add_revision_bound_naming_review"
+      "readinessScore": 3,
+      "nextGate": "collect_human_naming_observations"
     },
     {
       "id": "tas",
@@ -295,10 +295,10 @@
       "source": "rebulo_original",
       "revisionStamped": true,
       "artRevision": "mat-mast-v1",
-      "namingReviewAvailable": false,
+      "namingReviewAvailable": true,
       "clinicalStatus": "naming_test_required",
-      "readinessScore": 2,
-      "nextGate": "add_revision_bound_naming_review"
+      "readinessScore": 3,
+      "nextGate": "collect_human_naming_observations"
     },
     {
       "id": "lit",
@@ -311,10 +311,10 @@
       "source": "openmoji",
       "revisionStamped": true,
       "artRevision": "lit-openmoji-1f6cf-v1",
-      "namingReviewAvailable": false,
+      "namingReviewAvailable": true,
       "clinicalStatus": "prototype_priority",
-      "readinessScore": 2,
-      "nextGate": "add_revision_bound_naming_review"
+      "readinessScore": 3,
+      "nextGate": "collect_human_naming_observations"
     },
     {
       "id": "pas",
@@ -327,10 +327,10 @@
       "source": "openmoji",
       "revisionStamped": true,
       "artRevision": "pas-openmoji-1f463-v1",
-      "namingReviewAvailable": false,
+      "namingReviewAvailable": true,
       "clinicalStatus": "naming_test_required",
-      "readinessScore": 2,
-      "nextGate": "add_revision_bound_naming_review"
+      "readinessScore": 3,
+      "nextGate": "collect_human_naming_observations"
     },
     {
       "id": "nez",
@@ -343,10 +343,10 @@
       "source": "openmoji",
       "revisionStamped": true,
       "artRevision": "nez-openmoji-1f443-v1",
-      "namingReviewAvailable": false,
+      "namingReviewAvailable": true,
       "clinicalStatus": "naming_test_required",
-      "readinessScore": 2,
-      "nextGate": "add_revision_bound_naming_review"
+      "readinessScore": 3,
+      "nextGate": "collect_human_naming_observations"
     },
     {
       "id": "rat",
@@ -359,10 +359,10 @@
       "source": "openmoji",
       "revisionStamped": true,
       "artRevision": "rat-openmoji-1f400-v1",
-      "namingReviewAvailable": false,
+      "namingReviewAvailable": true,
       "clinicalStatus": "naming_test_required",
-      "readinessScore": 2,
-      "nextGate": "add_revision_bound_naming_review"
+      "readinessScore": 3,
+      "nextGate": "collect_human_naming_observations"
     },
     {
       "id": "the",
@@ -375,10 +375,10 @@
       "source": "rebulo_original",
       "revisionStamped": true,
       "artRevision": "the-comic-v1",
-      "namingReviewAvailable": false,
+      "namingReviewAvailable": true,
       "clinicalStatus": "naming_test_required",
-      "readinessScore": 2,
-      "nextGate": "add_revision_bound_naming_review"
+      "readinessScore": 3,
+      "nextGate": "collect_human_naming_observations"
     },
     {
       "id": "de",
@@ -391,10 +391,10 @@
       "source": "rebulo_original",
       "revisionStamped": true,
       "artRevision": "de-die-v1",
-      "namingReviewAvailable": false,
+      "namingReviewAvailable": true,
       "clinicalStatus": "naming_test_required",
-      "readinessScore": 2,
-      "nextGate": "add_revision_bound_naming_review"
+      "readinessScore": 3,
+      "nextGate": "collect_human_naming_observations"
     }
   ],
   "provenance": {

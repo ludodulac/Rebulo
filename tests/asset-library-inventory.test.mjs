@@ -52,12 +52,42 @@ assert.equal(nidPrototype.revision, 'nid-comic-v1');
 assert.equal(nidPrototype.clinicalStatus, 'naming_test_required');
 assert.ok(!inventory.summary.activeLegacyStyle.includes(nidPrototype.path), 'inactive research prototypes must never enter active legacy migration warnings');
 
-const hourPaths=['assets/research/heure-scene-a-v1.svg','assets/research/heure-scene-b-v1.svg'];
-for(const path of hourPaths){
+const hourPaths=[['assets/research/heure-scene-a-v1.svg','heure-scene-a-v1'],['assets/research/heure-scene-b-v1.svg','heure-scene-b-v1']];
+for(const [path,revision] of hourPaths){
   const asset=inventory.assets.find(item=>item.path===path);
   assert.ok(asset,`${path} should exist as a separate research stimulus`);
   assert.equal(asset.active,false,`${path} must remain research-only before human naming review`);
+  assert.equal(asset.provenance,'rebulo_original');
+  assert.equal(asset.revision,revision);
+  assert.equal(asset.clinicalStatus,'naming_test_required');
   assert.ok(!inventory.summary.activeLegacyStyle.includes(path),`${path} must never count as active production`);
+}
+
+const recoveredOriginals=[
+  ['assets/rebus/de.svg','de-die-v1'],
+  ['assets/rebus/mer.svg','mer-sea-v1'],
+  ['assets/rebus/pie.svg','pie-magpie-v1'],
+  ['assets/rebus/mie.svg','mie-bread-crumb-v1'],
+  ['assets/rebus/mat.svg','mat-mast-v1']
+];
+for(const [path,revision] of recoveredOriginals){
+  const asset=inventory.assets.find(item=>item.path===path);
+  assert.ok(asset,`${path} must remain in production`);
+  assert.equal(asset.active,true);
+  assert.equal(asset.provenance,'rebulo_original',`${path} Git history provenance must not remain undocumented`);
+  assert.equal(asset.revision,revision,`${path} must have a frozen revision for future naming evidence`);
+  assert.equal(asset.clinicalStatus,'naming_test_required','provenance recovery must not imply human or clinical approval');
+}
+
+const frozenOpenMoji=[
+  'assets/rebus/scie.svg','assets/rebus/nez.svg','assets/rebus/rat.svg','assets/rebus/pas.svg',
+  'assets/rebus/lit.svg','assets/rebus/riz.svg','assets/rebus/chat.svg'
+];
+for(const path of frozenOpenMoji){
+  const asset=inventory.assets.find(item=>item.path===path);
+  assert.ok(asset);
+  assert.equal(asset.provenance,'openmoji');
+  assert.ok(asset.revision,`${path} should have a revision-bound visual identity`);
 }
 
 const redesignPaths = [
@@ -80,4 +110,4 @@ assert.deepEqual(inventory.summary.productionDuplicateReadings, [], 'historical 
 for (const reading of ['pot','tas','eau']) assert.ok(inventory.summary.historicalRevisionReadings.includes(reading), `${reading} should be classified as production + research history`);
 assert.ok(inventory.summary.activeLegacyStyle.includes('assets/rebus/chat.svg'), 'audit should expose active assets that still need comic migration');
 
-console.log('asset-library-inventory.test.mjs: lifecycle-aware duplicate classification includes separate blind heure research stimuli');
+console.log('asset-library-inventory.test.mjs: visual provenance, revision identity and research-only hour stimuli are coherent');

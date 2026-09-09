@@ -2,107 +2,65 @@
 
 Ce fichier est un **routeur de contexte**, pas une encyclopédie. Il ne remplace ni le code, ni les données, ni les tests, ni `docs/PRODUCT_PRINCIPLES.md`.
 
+## Contexte transversal
+
+Rebulo appartient à l'écosystème documenté dans **`ludodulac/Grand-p-re-`**. Le slug GitHub utilise des tirets à la place des caractères accentués de « Grand Père ».
+
+Dans une nouvelle conversation : ouvrir d'abord `ludodulac/Grand-p-re-` sur `main`, lire `AI_START_HERE.md`, suivre `projects/_INDEX.md` vers la fiche Rebulo et appliquer `LOOP_ENGINEERING.md` pour le travail itératif ; revenir ensuite ici. **Rebulo reste la source de vérité de son état réel. Grand Père apporte contexte transversal et méthode, jamais un substitut au code/tests/données locaux.**
+
 **Ne lire que la documentation pertinente à la zone touchée. Ne pas relire tout Rebulo par défaut.**
 
 ## 1. Avant d'agir
 
-Pour toute nouvelle conversation :
-1. vérifier le HEAD réel de `main` ;
-2. regarder commits récents, PR/issues ouvertes et CI pertinentes ;
-3. si l'interface déployée est concernée, vérifier aussi GitHub Pages ;
-4. inspecter le code, les données et les tests de la zone avant toute modification ;
-5. travailler sur une branche dédiée, jamais directement sur `main`.
-
-Ne pas recopier SHA, métriques de couverture ou nombres d'assets comme vérités durables. Lire ou régénérer les rapports de `data/` quand un chiffre courant est nécessaire.
+1. vérifier le HEAD réel de `main`, commits récents, PR/issues et CI pertinentes ;
+2. si l'interface déployée est concernée, vérifier GitHub Pages ;
+3. inspecter code, données et tests de la zone ;
+4. utiliser `docs/_INDEX.md` pour le routage local ;
+5. travailler sur une branche dédiée lorsque le workflow courant l'exige.
 
 ## 2. Hiérarchie de vérité
 
-1. **Comportement réel** — code + données + tests + état déployé pertinent.
-2. **Principes durables** — `docs/PRODUCT_PRINCIPLES.md`.
-3. **Contrats/modèles spécialisés** — par exemple `docs/GUARANTEE_MODEL.md`, `docs/LEXICAL_PIPELINE.md`, données canoniques et modules spécialisés.
-4. **État opérationnel** — `docs/PROJECT_HANDOFF_2026-09-01.md`, seulement si la tâche nécessite l'état des travaux ou des gates humains.
-5. **Historique** — `docs/PROGRESSION.md`, anciennes analyses, PR/issues et expériences datées.
-
-Si une documentation contredit le comportement réel, vérifier laquelle est périmée et la remettre en cohérence ; ne pas choisir silencieusement.
+1. code + données + tests + état déployé pertinent ;
+2. `docs/PRODUCT_PRINCIPLES.md` ;
+3. contrats/modèles spécialisés ;
+4. handoff opérationnel à revérifier ;
+5. historique.
 
 ## 3. Constitution à préserver
 
-Les détails vivent dans `docs/PRODUCT_PRINCIPLES.md`. Minimum à retenir :
-- Rebulo est un créateur de rébus riche, ludique et intelligent ;
-- le cœur `strict` repose sur la phonétique, jamais sur la simple ressemblance orthographique ;
-- une image stricte représente un mot entier et utilise sa prononciation entière ;
-- la concaténation doit correspondre exactement à la prononciation cible ;
-- `Aucune solution exacte` est un résultat normal ;
-- toute convention non stricte doit être explicite, nommée et testable ;
-- usage ludique, exactitude phonétique, plausibilité visuelle, adéquation à l'âge, observation humaine et validation clinique sont distincts ;
-- une illustration disponible ou phonétiquement exploitable n'est jamais automatiquement cliniquement validée.
+- cœur strict phonétique, jamais simple ressemblance orthographique ;
+- image stricte = mot entier + prononciation entière ;
+- concaténation exacte de la prononciation cible ;
+- `Aucune solution exacte` est normal ;
+- convention non stricte explicite, nommée et testable ;
+- phonologie, clarté lexicale, nommabilité visuelle, âge, observation humaine et validation clinique sont des niveaux distincts.
 
-Ne pas recopier la constitution dans un nouveau document.
+## 4. Routage
 
-## 4. Routage par zone
+Utiliser `docs/_INDEX.md`. En particulier :
+- moteur strict → principes + moteur phonétique/construction + tests ;
+- corpus → pipeline lexical + données réellement consommées + scripts/tests ;
+- images/dénomination → guarantee model + assets + naming reviews/tests ;
+- UX → HTML/CSS/runtime réellement chargés + tests ciblés ;
+- clinique → uniquement si la tâche est réellement clinique.
 
-### Moteur phonétique / strict
-Lire : `docs/PRODUCT_PRINCIPLES.md`, `src/phonetic-engine.js`, puis `src/rebus-construction.js` et/ou `src/creator-runtime.js` si concernés, avec leurs tests `phonetic-engine`, `rebus-construction`, `creator-runtime`.
+Priorité produit corpus : `vocabulaire utile → prononciations → décompositions → chunks → candidats lexicaux → clarté humaine → nommabilité visuelle → qualité → illustrations`.
 
-Ne pas charger la documentation clinique, la recherche visuelle ou les gros rapports lexicaux sans dépendance réelle.
+## 5. Boucle de travail
 
-### Corpus / prononciations / couverture
-Lire : `docs/LEXICAL_PIPELINE.md`, les données corpus réellement consommées, `data/lexicon-seed.json`, puis les scripts concernés (`import-lexique`, `build-target-vocabulary`, `analyze-coverage`, `build-phonetic-brick-map`) et leurs tests.
+Pour une question humaine/lexicale, préférer :
+`stimulus → réponse humaine → phonologie → clarté lexicale → représentation/nommabilité → première frontière responsable → correction minimale → nouveau test`.
 
-Les rapports générés de `data/` sont des sorties à lire/régénérer, pas des sources à corriger manuellement.
+Ne pas corriger une ambiguïté de classe par une blacklist locale avant d'avoir identifié sa cause générale. Une CI verte ne prouve ni compréhension enfant ni validation clinique.
 
-Priorité produit :
-`vocabulaire utile → âge / fréquence / commonness → prononciations → décompositions → chunks nécessaires → candidats lexicaux → candidats visuellement nommables → qualité → illustrations`.
+Après chaque boucle : preuve → CONTINUE / PIVOT / STOP. Ne pas étendre corpus ou activités uniquement parce que la technique le permet.
 
-Ne pas laisser un énorme lexique faire remonter artificiellement une brique marginale uniquement parce qu'elle existe ou débloque beaucoup de formes rares. Ne charger `docs/HARD_SEGMENT_WORD_ROUTES.md` ou les grandes analyses que pour une tâche qui les concerne.
+## 6. Validation
 
-### Illustrations / bibliothèque visuelle / dénomination
-Lire : `docs/GUARANTEE_MODEL.md`, `data/asset-sources.json`, `data/lexicon-seed.json`, puis `data/production-naming-reviews.json` et/ou `data/pictogram-prototype-comparisons.json` si la dénomination est concernée. Pour les audits : `src/asset-audit.js`, `src/pictogram-guarantee.js` et leurs tests.
+Utiliser les scripts définis par le `package.json` actuel et les tests ciblés de la zone. Pour un lot transversal/risqué, utiliser la validation complète prévue par le dépôt. Les gates humains restent explicitement humains.
 
-Toujours distinguer :
-`illustration disponible → phonologiquement exploitable → visuellement plausible → spontanément nommable → adaptée à l'âge → humainement observée/validée selon le protocole → éventuellement cliniquement revue`.
+## 7. Passation
 
-Provenance/licence et validation humaine sont différentes. Ne jamais transférer silencieusement une observation vers une autre révision. Ne charger `docs/OPEN_PICTOGRAM_LIBRARY.md`, `docs/CLINICAL_PICTOGRAM_PLAN.md` ou les historiques de prototypes que si nécessaire.
+Ne pas créer un nouveau handoff concurrent. Conserver seulement ce qui a réellement changé/vérifié, ce qui reste hypothétique ou humainement non testé, les blocages et la prochaine priorité. Une boucle en cours doit rester reconstructible par : **objectif / dernière boucle / preuve / prochaine décision**.
 
-### UX / mode Jouer / mobile
-Commencer par `docs/PRODUCT_PRINCIPLES.md`, `index.html`, `styles.css` et les CSS réellement impliqués, puis `app.js`, `src/app-bootstrap.js`, `src/creator-runtime.js` selon le flux. Utiliser les tests UX ciblés, notamment `tests/play-game.test.mjs` et `tests/mobile-ux-regression.test.mjs` quand pertinents.
-
-Préserver : scène principale claire, rébus visuellement dominant, interactions tactiles, complexité avancée cachée lorsqu'elle n'est pas utile, interface calme et lisible.
-
-### Opérations générales non strictes
-Lire : `src/rebus-construction.js`, `src/general-operation-visual.js`, `src/general-operation-readiness.js`, `src/contextual-grapheme-operation.js` si concerné, `data/general-operation-readiness.json`, `data/general-operation-comprehension-tests.json` et les tests associés.
-
-Une opération documentée ou visuellement définie n'est pas automatiquement autorisée et ne doit jamais contaminer le mode strict.
-
-### Usage clinique / orthophonique
-Ne charger cette couche que si la tâche touche réellement l'usage clinique, les séances, activités, publics ou niveaux de validation. Selon le besoin : `docs/GUARANTEE_MODEL.md`, `docs/ORTHOPHONIE_RESEARCH.md`, `docs/CLINICAL_PICTOGRAM_PLAN.md`, modules d'activités/séances et tests associés.
-
-Ne jamais présenter exactitude phonétique, illustration plausible, fréquence lexicale, CI verte ou observation de dénomination comme validation clinique.
-
-## 5. Validation proportionnée
-
-Depuis `package.json` :
-- documentation seule : vérifier chemins, cohérence des sources et diff ; pas de grosse suite métier par réflexe ;
-- itération produit : `npm run test:fast` ;
-- phonétique / construction / runtime : `npm run test:targeted:phonetic` + tests spécifiques ;
-- données / corpus / assets : `npm run test:targeted:data` + générateur/audit concerné ;
-- lot transversal ou risqué : `npm run test:full`.
-
-Avant fusion : vérifier que les artefacts générés viennent de leurs sources, qu'aucun invariant n'est affaibli et que les gates humains restent explicitement humains.
-
-## 6. Passation entre conversations
-
-Ne pas créer un nouveau handoff concurrent. `docs/PROJECT_HANDOFF_2026-09-01.md` conserve uniquement :
-- ce qui a réellement été modifié et vérifié ;
-- ce qui reste hypothétique ou humainement non testé ;
-- les blocages réels ;
-- la prochaine priorité utile ;
-- les sources à relire pour reprendre.
-
-Ne pas y recopier chronologie complète, rapports ou principes stables. `docs/PROGRESSION.md` est historique : ne le lire que si l'historique d'une décision est nécessaire.
-
-## Reprise minimale
-
-`AI_START_HERE.md → état réel de main/CI/PR → PRODUCT_PRINCIPLES.md → fichiers de la zone → tests de la zone`
-
-Tout le reste est chargé seulement si la tâche l'exige.
+Reprise minimale : `Grand Père → fiche Rebulo / LOOP_ENGINEERING → Rebulo AI_START_HERE → état réel main/CI/PR → docs/_INDEX → fichiers/tests de la zone`.

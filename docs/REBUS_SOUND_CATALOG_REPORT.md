@@ -7,8 +7,8 @@
 - Fenêtres avec une image exacte prête : 252.
 - Fenêtres avec une image exacte encore en recherche : 48.
 - Fenêtres sans image prête mais avec au moins un nom exact à examiner : 17120.
-- Fenêtres totalement non résolues : 38677.
-- Représentations agrégées : 441, dont 365 pictogrammes de la bibliothèque ouverte et 28 briques courtes existantes.
+- Fenêtres totalement non résolues : 38675.
+- Représentations agrégées : 472, dont 365 pictogrammes de la bibliothèque ouverte et 28 briques courtes existantes.
 
 ## Règles
 
@@ -24,50 +24,50 @@
 | Rang | Son IPA | 1/2 syll. | Cibles utiles | Gain utile | Éduscol | État | Candidats à examiner | Exemples utiles |
 |---:|---|---|---:|---:|---:|---|---|---|
 | 1 | /sjɔ̃/ | 1 | 365 | 12173.204 | 17 | exact_image_research | scion, cyon | mission, pression, attention, situation |
-| 2 | /a/ | 1 | 424 | 65490.68 | 79 | exact_noun_candidate_to_review | ha, hâ | alors, accord, aller, avoir |
-| 3 | /mɑ̃/ | 1 | 374 | 40752.676 | 36 | exact_noun_candidate_to_review | man, mans | vraiment, comment, moment, maman |
+| 2 | /mɑ̃/ | 1 | 374 | 40752.676 | 36 | exact_noun_candidate_to_review | man, mans | vraiment, comment, moment, maman |
+| 3 | /a/ | 1 | 424 | 65490.68 | 79 | exact_noun_candidate_to_review | ha, hâ | alors, accord, aller, avoir |
 | 4 | /ti/ | 1 | 176 | 10062.005 | 11 | exact_image_research | tee, tie | petit, partie, gentil, tirer |
 | 5 | /ɛ̃/ | 1 | 234 | 10813.404 | 19 | exact_noun_candidate_to_review | ein, eins, ain | hein, ainsi, important, intérieur |
-| 6 | /se/ | 1 | 222 | 29534.462 | 46 | exact_noun_candidate_to_review | cé | ces, ses, assez, passer |
-| 7 | /kɔ̃/ | 1 | 233 | 14231.894 | 30 | exact_noun_candidate_to_review | con | combien, confiance, content, compris |
-| 8 | /e/ | 1 | 280 | 22902.819 | 54 | exact_noun_candidate_to_review | ais, ai, et | aider, eh, hé, école |
-| 9 | /le/ | 1 | 141 | 20760.483 | 15 | exact_noun_candidate_to_review | lé, les, lez | aller, parler, laisser, télé |
-| 10 | /ko/ | 1 | 169 | 13357.568 | 12 | exact_noun_candidate_to_review | cot, côt, cots | comment, côté, colère, connaître |
-| 11 | /ʁe/ | 1 | 257 | 11492.833 | 51 | exact_noun_candidate_to_review | ré | soirée, tirer, réponse, répondre |
+| 6 | /kɔ̃/ | 1 | 233 | 14231.894 | 30 | exact_noun_candidate_to_review | con | combien, confiance, content, compris |
+| 7 | /e/ | 1 | 280 | 22902.819 | 54 | exact_noun_candidate_to_review | ais, ai, et | aider, eh, hé, école |
+| 8 | /le/ | 1 | 141 | 20760.483 | 15 | exact_noun_candidate_to_review | lé, les, lez | aller, parler, laisser, télé |
+| 9 | /ko/ | 1 | 169 | 13357.568 | 12 | exact_noun_candidate_to_review | cot, côt, cots | comment, côté, colère, connaître |
+| 10 | /ʁe/ | 1 | 257 | 11492.833 | 51 | exact_noun_candidate_to_review | ré | soirée, tirer, réponse, répondre |
+| 11 | /se/ | 1 | 222 | 29534.462 | 46 | exact_noun_candidate_to_review | cé | ces, ses, assez, passer |
 | 12 | /me/ | 1 | 135 | 12019.426 | 21 | exact_noun_candidate_to_review | maye, mée | mes, message, armée, aimer |
 | 13 | /ɑ̃/ | 1 | 188 | 24768.898 | 34 | exact_noun_candidate_to_review | an, han | encore, ensemble, endroit, enfant |
-| 14 | /pe/ | 1 | 119 | 6467.209 | 15 | exact_noun_candidate_to_review | pô, pe, pé | pays, payer, occuper, empêcher |
-| 15 | /ba/ | 1 | 86 | 4781.456 | 4 | exact_image_research | bas, bât, bats | là-bas, bateau, bas, combat |
-| 16 | /di/ | 1 | 147 | 6706.267 | 11 | exact_noun_candidate_to_review | dit, die | dîner, difficile, différent, ridicule |
-| 17 | /i/ | 1 | 111 | 20406.19 | 15 | exact_noun_candidate_to_review | hie | ici, idée, pays, i |
-| 18 | /tɑ̃/ | 1 | 90 | 16832.355 | 17 | exact_noun_candidate_to_review | temps, tan, taon | temps, tant, longtemps, autant |
-| 19 | /vi/ | 1 | 97 | 12358.737 | 15 | exact_noun_candidate_to_review | vie, vit, vy | vie, envie, avis, visage |
-| 20 | /ka/ | 1 | 176 | 9905.259 | 13 | exact_noun_candidate_to_review | cas, ka | cas, café, ca, cadeau |
-| 21 | /ʒe/ | 1 | 105 | 7516.953 | 20 | exact_noun_candidate_to_review | gé, jé | manger, génial, changer, danger |
-| 22 | /ʁo/ | 1 | 57 | 3399.031 | 4 | exact_image_research | rot, rho, rôt | bureau, héros, numéro, zéro |
-| 23 | /pʁo/ | 1 | 93 | 9159.222 | 15 | exact_noun_candidate_to_review | pro, prot | problème, propos, procès, projet |
-| 24 | /sɑ̃/ | 1 | 82 | 5248.336 | 13 | exact_noun_candidate_to_review | sang, cent, sans | sang, sentir, santé, censé |
-| 25 | /vɑ̃/ | 1 | 48 | 3891.643 | 11 | exact_image_research | vent | avant, souvent, vivant, devant |
-| 26 | /to/ | 1 | 85 | 7156.499 | 7 | exact_noun_candidate_to_review | to, taux, tau | plutôt, bientôt, tôt, photo |
-| 27 | /aʁ/ | 1 | 43 | 4332.099 | 5 | exact_image_research | art, are, hart | argent, armée, art, article |
-| 28 | /ve/ | 1 | 78 | 8923.373 | 24 | exact_noun_candidate_to_review | vés | trouver, sauver, prouver, vérité |
-| 29 | /ku/ | 1 | 55 | 10409.315 | 15 | exact_noun_candidate_to_review | coup, cou, coût | beaucoup, coup, courant, coucher |
-| 30 | /pʁe/ | 1 | 83 | 3544.329 | 15 | exact_noun_candidate_to_review | pré | présent, président, impression, présenter |
-| 31 | /paʁ/ | 1 | 55 | 15687.36 | 17 | exact_noun_candidate_to_review | part, par, parr | parler, partir, part, partie |
-| 32 | /fi/ | 1 | 85 | 3238.767 | 7 | exact_noun_candidate_to_review | phi, fy | finir, difficile, officier, profiter |
-| 33 | /ʁɑ̃/ | 1 | 70 | 5011.234 | 10 | exact_noun_candidate_to_review | rang, ran, ranc | rentrer, courant, rencontrer, rendez-vous |
-| 34 | /ni/ | 1 | 105 | 2940.704 | 2 | exact_noun_candidate_to_review | nid | niveau, unité, génie, univers |
-| 35 | /sa/ | 1 | 68 | 14353.255 | 5 | exact_noun_candidate_to_review | sas, sa | sa, savoir, salut, salope |
-| 36 | /ʃe/ | 1 | 67 | 5431.094 | 14 | exact_noun_candidate_to_review | ché | chercher, marcher, marché, coucher |
-| 37 | /lə/ | 1 | 71 | 5249.989 | 9 | exact_noun_candidate_to_review | le | seulement, tellement, enlever, lever |
-| 38 | /də/ | 1 | 54 | 9162.819 | 16 | exact_noun_candidate_to_review | de | demain, depuis, dessus, devoir |
-| 39 | /mo/ | 1 | 73 | 6126.993 | 5 | exact_noun_candidate_to_review | mot, maux | moment, mot, mauvais, moteur |
-| 40 | /sə/ | 1 | 58 | 3779.623 | 13 | exact_noun_candidate_to_review | se | semaine, seconde, secret, secours |
-| 41 | /sy/ | 1 | 65 | 5514.087 | 9 | exact_noun_candidate_to_review | su | super, sujet, dessus, sûrement |
-| 42 | /pɛʁ/ | 1 | 56 | 9209.241 | 6 | exact_noun_candidate_to_review | père, paire, pair | père, personne, super, grand-père |
-| 43 | /ga/ | 1 | 64 | 5396.251 | 4 | exact_noun_candidate_to_review | gars, ga, ghât | gars, gagner, gamin, magasin |
-| 44 | /bi/ | 1 | 65 | 2646.489 | 6 | exact_noun_candidate_to_review | by, bi, bee | bizarre, habitude, cabinet, billet |
-| 45 | /ʁə/ | 1 | 197 | 11448.376 | 32 | unresolved | — | retour, retard, revoir, recherche |
+| 14 | /ba/ | 1 | 86 | 4781.456 | 4 | exact_image_research | bas, bât, bats | là-bas, bateau, bas, combat |
+| 15 | /di/ | 1 | 147 | 6706.267 | 11 | exact_noun_candidate_to_review | dit, die | dîner, difficile, différent, ridicule |
+| 16 | /tɑ̃/ | 1 | 90 | 16832.355 | 17 | exact_noun_candidate_to_review | temps, tan, taon | temps, tant, longtemps, autant |
+| 17 | /vi/ | 1 | 97 | 12358.737 | 15 | exact_noun_candidate_to_review | vie, vit, vy | vie, envie, avis, visage |
+| 18 | /ka/ | 1 | 176 | 9905.259 | 13 | exact_noun_candidate_to_review | cas, ka | cas, café, ca, cadeau |
+| 19 | /ʁo/ | 1 | 57 | 3399.031 | 4 | exact_image_research | rot, rho, rôt | bureau, héros, numéro, zéro |
+| 20 | /pʁo/ | 1 | 93 | 9159.222 | 15 | exact_noun_candidate_to_review | pro, prot | problème, propos, procès, projet |
+| 21 | /pe/ | 1 | 119 | 6467.209 | 15 | exact_noun_candidate_to_review | pô, pe, pé | pays, payer, occuper, empêcher |
+| 22 | /i/ | 1 | 111 | 20406.19 | 15 | exact_noun_candidate_to_review | hie | ici, idée, pays, i |
+| 23 | /vɑ̃/ | 1 | 48 | 3891.643 | 11 | exact_image_research | vent | avant, souvent, vivant, devant |
+| 24 | /to/ | 1 | 85 | 7156.499 | 7 | exact_noun_candidate_to_review | to, taux, tau | plutôt, bientôt, tôt, photo |
+| 25 | /aʁ/ | 1 | 43 | 4332.099 | 5 | exact_image_research | art, are, hart | argent, armée, art, article |
+| 26 | /ku/ | 1 | 55 | 10409.315 | 15 | exact_noun_candidate_to_review | coup, cou, coût | beaucoup, coup, courant, coucher |
+| 27 | /pʁe/ | 1 | 83 | 3544.329 | 15 | exact_noun_candidate_to_review | pré | présent, président, impression, présenter |
+| 28 | /paʁ/ | 1 | 55 | 15687.36 | 17 | exact_noun_candidate_to_review | part, par, parr | parler, partir, part, partie |
+| 29 | /fi/ | 1 | 85 | 3238.767 | 7 | exact_noun_candidate_to_review | phi, fy | finir, difficile, officier, profiter |
+| 30 | /ʁɑ̃/ | 1 | 70 | 5011.234 | 10 | exact_noun_candidate_to_review | rang, ran, ranc | rentrer, courant, rencontrer, rendez-vous |
+| 31 | /ʒe/ | 1 | 105 | 7516.953 | 20 | exact_noun_candidate_to_review | gé, jé | manger, génial, changer, danger |
+| 32 | /ni/ | 1 | 105 | 2940.704 | 2 | exact_noun_candidate_to_review | nid | niveau, unité, génie, univers |
+| 33 | /sa/ | 1 | 68 | 14353.255 | 5 | exact_noun_candidate_to_review | sas, sa | sa, savoir, salut, salope |
+| 34 | /ʃe/ | 1 | 67 | 5431.094 | 14 | exact_noun_candidate_to_review | ché | chercher, marcher, marché, coucher |
+| 35 | /lə/ | 1 | 71 | 5249.989 | 9 | exact_noun_candidate_to_review | le | seulement, tellement, enlever, lever |
+| 36 | /də/ | 1 | 54 | 9162.819 | 16 | exact_noun_candidate_to_review | de | demain, depuis, dessus, devoir |
+| 37 | /mo/ | 1 | 73 | 6126.993 | 5 | exact_noun_candidate_to_review | mot, maux | moment, mot, mauvais, moteur |
+| 38 | /sə/ | 1 | 58 | 3779.623 | 13 | exact_noun_candidate_to_review | se | semaine, seconde, secret, secours |
+| 39 | /sy/ | 1 | 65 | 5514.087 | 9 | exact_noun_candidate_to_review | su | super, sujet, dessus, sûrement |
+| 40 | /pɛʁ/ | 1 | 56 | 9209.241 | 6 | exact_noun_candidate_to_review | père, paire, pair | père, personne, super, grand-père |
+| 41 | /ga/ | 1 | 64 | 5396.251 | 4 | exact_noun_candidate_to_review | gars, ga, ghât | gars, gagner, gamin, magasin |
+| 42 | /bi/ | 1 | 65 | 2646.489 | 6 | exact_noun_candidate_to_review | by, bi, bee | bizarre, habitude, cabinet, billet |
+| 43 | /ʁə/ | 1 | 197 | 11448.376 | 32 | unresolved | — | retour, retard, revoir, recherche |
+| 44 | /sɑ̃/ | 1 | 82 | 5248.336 | 13 | exact_noun_candidate_to_review | sang, cent, sans | sang, sentir, santé, censé |
+| 45 | /ve/ | 1 | 78 | 8923.373 | 24 | exact_noun_candidate_to_review | vés | trouver, sauver, prouver, vérité |
 | 46 | /su/ | 1 | 44 | 2106.432 | 12 | exact_noun_candidate_to_review | sou, saoûl, souls | souvent, souci, souvenir, sourire |
 | 47 | /lo/ | 1 | 67 | 3323.59 | 1 | exact_noun_candidate_to_review | lot, los, laud | boulot, allô, colonel, salaud |
 | 48 | /ke/ | 1 | 59 | 4112.453 | 8 | exact_noun_candidate_to_review | quais | ok, expliquer, manquer, attaquer |
@@ -75,68 +75,68 @@
 | 50 | /no/ | 1 | 63 | 4128.796 | 1 | exact_noun_candidate_to_review | nô, noe | nos, innocent, piano, no |
 | 51 | /vo/ | 1 | 47 | 7600.896 | 5 | exact_noun_candidate_to_review | veau, vaux, vau | vos, nouveau, voler, cerveau |
 | 52 | /la/ | 1 | 79 | 15976.455 | 4 | exact_noun_candidate_to_review | la | là, là-bas, relation, là-dedans |
-| 53 | /fa/ | 1 | 46 | 6205.966 | 8 | exact_noun_candidate_to_review | fa | famille, façon, facile, failli |
-| 54 | /ky/ | 1 | 63 | 3893.244 | 9 | exact_noun_candidate_to_review | cul, ku, qus | cul, occuper, discuter, procureur |
-| 55 | /pɔʁ/ | 1 | 43 | 3476.803 | 9 | exact_noun_candidate_to_review | porc, port, pore | rapport, portable, important, importance |
-| 56 | /ɔʁ/ | 1 | 30 | 2226.234 | 3 | exact_image_research | or | dehors, or, ordinateur, organiser |
-| 57 | /bu/ | 1 | 43 | 3151.159 | 2 | exact_noun_candidate_to_review | bout, boue, bou | boulot, bout, debout, bouger |
-| 58 | /be/ | 1 | 46 | 3845.032 | 4 | exact_noun_candidate_to_review | bô, bés | bébé, tomber, b, baiser |
-| 59 | /tyʁ/ | 1 | 52 | 4419.285 | 4 | exact_noun_candidate_to_review | tur | voiture, nourriture, nature, futur |
-| 60 | /bo/ | 1 | 35 | 6241.888 | 4 | exact_noun_candidate_to_review | beau, bau, baux | beaucoup, beau, bonheur, beauté |
-| 61 | /fe/ | 1 | 46 | 2202.061 | 3 | exact_noun_candidate_to_review | fée, phé | café, différent, différence, conférence |
-| 62 | /tik/ | 1 | 56 | 972.894 | 1 | exact_noun_candidate_to_review | tic, tique | politique, fantastique, romantique, boutique |
-| 63 | /ɛs/ | 1 | 36 | 2486.22 | 6 | exact_noun_candidate_to_review | aces, esse, aisse | esprit, espèce, espoir, espace |
-| 64 | /na/ | 1 | 96 | 2465.431 | 4 | exact_lexical_candidate_to_review | na | nature, journaliste, navire, canapé |
-| 65 | /lɑ̃/ | 1 | 40 | 1220.801 | 4 | exact_noun_candidate_to_review | lan, lant, lanc | excellent, talent, lancer, lendemain |
-| 66 | /y/ | 1 | 39 | 2942.05 | 7 | exact_noun_candidate_to_review | hue | réunion, humain, unique, utile |
-| 67 | /fɔʁ/ | 1 | 39 | 2161.607 | 5 | exact_noun_candidate_to_review | for, fort | fort, formidable, fortune, forcément |
-| 68 | /ɛ/ | 1 | 16 | 1346.756 | 3 | exact_image_research | haie, es, aie | erreur, ennemi, hey, no |
-| 69 | /ty/ | 1 | 42 | 839.2 | 4 | exact_noun_candidate_to_review | tue, tus | étudier, naturel, foutu, tunnel |
-| 70 | /ly/ | 1 | 34 | 3114.495 | 8 | exact_noun_candidate_to_review | lut | salut, lumière, solution, allumer |
-| 71 | /tɛ/ | 1 | 27 | 2700.072 | 6 | exact_noun_candidate_to_review | taie, têt, taît | terrible, terrain, tellement, territoire |
-| 72 | /tɔ̃/ | 1 | 29 | 11332.039 | 3 | exact_noun_candidate_to_review | ton, thon | ton, tomber, fiston, bouton |
-| 73 | /sɛ̃/ | 1 | 35 | 2303.787 | 5 | exact_noun_candidate_to_review | sein, saint, seing | sympa, médecin, simplement, assassin |
-| 74 | /tɛ̃/ | 1 | 31 | 4331.436 | 4 | exact_noun_candidate_to_review | teint, tin, tain | putain, matin, certain, certains |
-| 75 | /ʒi/ | 1 | 38 | 1295.472 | 3 | exact_noun_candidate_to_review | ji, git | énergie, magie, chirurgie, stratégie |
-| 76 | /pʁi/ | 1 | 33 | 3489.992 | 5 | exact_noun_candidate_to_review | prix, prie | prison, esprit, prix, compris |
-| 77 | /ʃɑ̃/ | 1 | 31 | 2732.745 | 6 | exact_noun_candidate_to_review | champ, chant, chand | changer, chanson, chanter, champ |
-| 78 | /tʁe/ | 1 | 27 | 4227.971 | 10 | exact_noun_candidate_to_review | tré | rentrer, entrer, montrer, entrée |
-| 79 | /ki/ | 1 | 36 | 1095.363 | 1 | exact_noun_candidate_to_review | chi, quit, quis | quitter, km, équipage, whisky |
-| 80 | /ny/ | 1 | 36 | 1901.898 | 3 | exact_noun_candidate_to_review | nu, nue | numéro, inutile, bienvenue, continue |
-| 81 | /tu/ | 1 | 22 | 13873.485 | 7 | exact_noun_candidate_to_review | tout, toux, tous | toujours, tout, partout, surtout |
-| 82 | /mə/ | 1 | 27 | 4932.389 | 7 | exact_noun_candidate_to_review | me | monsieur, emmener, ramener, amener |
-| 83 | /my/ | 1 | 31 | 1605.11 | 2 | exact_noun_candidate_to_review | mu, mue, mûs | musique, amuser, amusant, musée |
-| 84 | /kaʁ/ | 1 | 30 | 967.208 | 4 | exact_noun_candidate_to_review | quart, car, care | quartier, cardiaque, rencard, placard |
-| 85 | /da/ | 1 | 33 | 1954.286 | 5 | exact_noun_candidate_to_review | das | d'abord, soldat, mandat, davantage |
-| 86 | /kɑ̃/ | 1 | 31 | 1110.19 | 2 | exact_noun_candidate_to_review | camp, can, quant | camp, campagne, cancer, quand |
-| 87 | /fɛʁ/ | 1 | 22 | 20861.019 | 7 | exact_noun_candidate_to_review | fer | faire, affaire, enfer, fermer |
-| 88 | /sɛ/ | 1 | 26 | 2445.632 | 4 | exact_noun_candidate_to_review | saie | seigneur, procès, excellent, accès |
-| 89 | /ze/ | 1 | 85 | 3700.261 | 22 | unresolved | — | poser, excuser, épouser, amuser |
-| 90 | /py/ | 1 | 30 | 2439.889 | 1 | exact_noun_candidate_to_review | pus, pu | putain, public, populaire, réputation |
-| 91 | /ak/ | 1 | 25 | 1806.857 | 3 | exact_noun_candidate_to_review | hack, hacke, aque | accident, accepter, accès, action |
-| 92 | /mɔ̃/ | 1 | 20 | 23988.542 | 5 | exact_noun_candidate_to_review | mont | mon, montrer, monter, démon |
-| 93 | /mɛ/ | 1 | 15 | 12876.734 | 6 | exact_noun_candidate_to_review | mets, mai, meix | jamais, maison, meilleur, mets |
-| 94 | /ʒə/ | 1 | 30 | 1252.147 | 4 | exact_noun_candidate_to_review | je | jeter, dangereux, changement, jugement |
-| 95 | /tə/ | 1 | 68 | 11064.727 | 14 | unresolved | — | tenir, maintenant, lieutenant, obtenir |
-| 96 | /fy/ | 1 | 30 | 971.67 | 4 | exact_noun_candidate_to_review | fût, futs | futur, fusil, fumer, fumée |
-| 97 | /ʒɑ̃/ | 1 | 21 | 8666.425 | 3 | exact_noun_candidate_to_review | gens, gent, jan | gens, argent, agent, gentil |
-| 98 | /mɛtʁ/ | 1 | 23 | 3217.333 | 7 | exact_noun_candidate_to_review | maître, mètre, maitre | mettre, maître, remettre, km |
-| 99 | /je/ | 1 | 79 | 5364.437 | 17 | unresolved | — | payer, essayer, travailler, envoyer |
-| 100 | /vwa/ | 1 | 19 | 4335.024 | 8 | exact_noun_candidate_to_review | voix, voie, void | voiture, voix, voyage, envoyer |
-| 101 | /fo/ | 1 | 20 | 1921.289 | 5 | exact_noun_candidate_to_review | faux, faut, pho | photo, faux, folie, forêt |
-| 102 | /tʁi/ | 1 | 34 | 712.188 | 0 | exact_noun_candidate_to_review | tri | tribunal, meurtrier, tribu, industrie |
-| 103 | /maʁ/ | 1 | 25 | 1563.177 | 5 | exact_noun_candidate_to_review | mare, marc, mar | marcher, marché, marre, cauchemar |
-| 104 | /nɔ̃/ | 1 | 13 | 27899.225 | 6 | exact_noun_candidate_to_review | nom, non, nons | non, nom, nombreux, prénom |
-| 105 | /dis/ | 1 | 42 | 1931.812 | 7 | exact_noun_candidate_to_review | dix | dix, discuter, discours, distance |
-| 106 | /ʁɛs/ | 1 | 25 | 3150.962 | 4 | exact_noun_candidate_to_review | resse | rester, respect, responsable, restaurant |
-| 107 | /al/ | 1 | 15 | 475.15 | 0 | exact_image_research | ale, halle, hâle | alcool, album, idéal, altesse |
-| 108 | /va/ | 1 | 55 | 1692.908 | 3 | exact_lexical_candidate_to_review | va, va | travailler, valeur, valise, valoir |
-| 109 | /nə/ | 1 | 28 | 64055.24 | 4 | exact_lexical_candidate_to_review | ne | ne, ennemi, neveu, gouvernement |
-| 110 | /dy/ | 1 | 26 | 660.461 | 3 | exact_noun_candidate_to_review | dû, dûs, du | entendu, perdu, durer, éducation |
-| 111 | /nɛ/ | 1 | 22 | 1014.055 | 2 | exact_noun_candidate_to_review | nait, nay, naient | naissance, connaissance, cabinet, connait |
-| 112 | /ʁasjɔ̃/ | 2 | 27 | 712.465 | 0 | exact_noun_candidate_to_review | ration | opération, déclaration, génération, respiration |
-| 113 | /pu/ | 1 | 23 | 1945.884 | 4 | exact_noun_candidate_to_review | pouls, pou | pouvoir, épouser, poulet, pousser |
-| 114 | /fɛ/ | 1 | 17 | 4564.092 | 5 | exact_noun_candidate_to_review | fait, faix, fay | fait, effet, professeur, parfait |
+| 53 | /ky/ | 1 | 63 | 3893.244 | 9 | exact_noun_candidate_to_review | cul, ku, qus | cul, occuper, discuter, procureur |
+| 54 | /pɔʁ/ | 1 | 43 | 3476.803 | 9 | exact_noun_candidate_to_review | porc, port, pore | rapport, portable, important, importance |
+| 55 | /ɔʁ/ | 1 | 30 | 2226.234 | 3 | exact_image_research | or | dehors, or, ordinateur, organiser |
+| 56 | /bu/ | 1 | 43 | 3151.159 | 2 | exact_noun_candidate_to_review | bout, boue, bou | boulot, bout, debout, bouger |
+| 57 | /tyʁ/ | 1 | 52 | 4419.285 | 4 | exact_noun_candidate_to_review | tur | voiture, nourriture, nature, futur |
+| 58 | /bo/ | 1 | 35 | 6241.888 | 4 | exact_noun_candidate_to_review | beau, bau, baux | beaucoup, beau, bonheur, beauté |
+| 59 | /fe/ | 1 | 46 | 2202.061 | 3 | exact_noun_candidate_to_review | fée, phé | café, différent, différence, conférence |
+| 60 | /tik/ | 1 | 56 | 972.894 | 1 | exact_noun_candidate_to_review | tic, tique | politique, fantastique, romantique, boutique |
+| 61 | /na/ | 1 | 96 | 2465.431 | 4 | exact_lexical_candidate_to_review | na | nature, journaliste, navire, canapé |
+| 62 | /lɑ̃/ | 1 | 40 | 1220.801 | 4 | exact_noun_candidate_to_review | lan, lant, lanc | excellent, talent, lancer, lendemain |
+| 63 | /fɔʁ/ | 1 | 39 | 2161.607 | 5 | exact_noun_candidate_to_review | for, fort | fort, formidable, fortune, forcément |
+| 64 | /ɛ/ | 1 | 16 | 1346.756 | 3 | exact_image_research | haie, es, aie | erreur, ennemi, hey, no |
+| 65 | /ty/ | 1 | 42 | 839.2 | 4 | exact_noun_candidate_to_review | tue, tus | étudier, naturel, foutu, tunnel |
+| 66 | /ly/ | 1 | 34 | 3114.495 | 8 | exact_noun_candidate_to_review | lut | salut, lumière, solution, allumer |
+| 67 | /tɛ/ | 1 | 27 | 2700.072 | 6 | exact_noun_candidate_to_review | taie, têt, taît | terrible, terrain, tellement, territoire |
+| 68 | /tɔ̃/ | 1 | 29 | 11332.039 | 3 | exact_noun_candidate_to_review | ton, thon | ton, tomber, fiston, bouton |
+| 69 | /sɛ̃/ | 1 | 35 | 2303.787 | 5 | exact_noun_candidate_to_review | sein, saint, seing | sympa, médecin, simplement, assassin |
+| 70 | /tɛ̃/ | 1 | 31 | 4331.436 | 4 | exact_noun_candidate_to_review | teint, tin, tain | putain, matin, certain, certains |
+| 71 | /pʁi/ | 1 | 33 | 3489.992 | 5 | exact_noun_candidate_to_review | prix, prie | prison, esprit, prix, compris |
+| 72 | /ʃɑ̃/ | 1 | 31 | 2732.745 | 6 | exact_noun_candidate_to_review | champ, chant, chand | changer, chanson, chanter, champ |
+| 73 | /tʁe/ | 1 | 27 | 4227.971 | 10 | exact_noun_candidate_to_review | tré | rentrer, entrer, montrer, entrée |
+| 74 | /ki/ | 1 | 36 | 1095.363 | 1 | exact_noun_candidate_to_review | chi, quit, quis | quitter, km, équipage, whisky |
+| 75 | /ny/ | 1 | 36 | 1901.898 | 3 | exact_noun_candidate_to_review | nu, nue | numéro, inutile, bienvenue, continue |
+| 76 | /fa/ | 1 | 46 | 6205.966 | 8 | exact_noun_candidate_to_review | fa | famille, façon, facile, failli |
+| 77 | /tu/ | 1 | 22 | 13873.485 | 7 | exact_noun_candidate_to_review | tout, toux, tous | toujours, tout, partout, surtout |
+| 78 | /mə/ | 1 | 27 | 4932.389 | 7 | exact_noun_candidate_to_review | me | monsieur, emmener, ramener, amener |
+| 79 | /my/ | 1 | 31 | 1605.11 | 2 | exact_noun_candidate_to_review | mu, mue, mûs | musique, amuser, amusant, musée |
+| 80 | /kaʁ/ | 1 | 30 | 967.208 | 4 | exact_noun_candidate_to_review | quart, car, care | quartier, cardiaque, rencard, placard |
+| 81 | /da/ | 1 | 33 | 1954.286 | 5 | exact_noun_candidate_to_review | das | d'abord, soldat, mandat, davantage |
+| 82 | /kɑ̃/ | 1 | 31 | 1110.19 | 2 | exact_noun_candidate_to_review | camp, can, quant | camp, campagne, cancer, quand |
+| 83 | /fɛʁ/ | 1 | 22 | 20861.019 | 7 | exact_noun_candidate_to_review | fer | faire, affaire, enfer, fermer |
+| 84 | /be/ | 1 | 46 | 3845.032 | 4 | exact_noun_candidate_to_review | bô, bés | bébé, tomber, b, baiser |
+| 85 | /sɛ/ | 1 | 26 | 2445.632 | 4 | exact_noun_candidate_to_review | saie | seigneur, procès, excellent, accès |
+| 86 | /ze/ | 1 | 85 | 3700.261 | 22 | unresolved | — | poser, excuser, épouser, amuser |
+| 87 | /py/ | 1 | 30 | 2439.889 | 1 | exact_noun_candidate_to_review | pus, pu | putain, public, populaire, réputation |
+| 88 | /ak/ | 1 | 25 | 1806.857 | 3 | exact_noun_candidate_to_review | hack, hacke, aque | accident, accepter, accès, action |
+| 89 | /mɔ̃/ | 1 | 20 | 23988.542 | 5 | exact_noun_candidate_to_review | mont | mon, montrer, monter, démon |
+| 90 | /mɛ/ | 1 | 15 | 12876.734 | 6 | exact_noun_candidate_to_review | mets, mai, meix | jamais, maison, meilleur, mets |
+| 91 | /ʒə/ | 1 | 30 | 1252.147 | 4 | exact_noun_candidate_to_review | je | jeter, dangereux, changement, jugement |
+| 92 | /tə/ | 1 | 68 | 11064.727 | 14 | unresolved | — | tenir, maintenant, lieutenant, obtenir |
+| 93 | /fy/ | 1 | 30 | 971.67 | 4 | exact_noun_candidate_to_review | fût, futs | futur, fusil, fumer, fumée |
+| 94 | /ʒɑ̃/ | 1 | 21 | 8666.425 | 3 | exact_noun_candidate_to_review | gens, gent, jan | gens, argent, agent, gentil |
+| 95 | /mɛtʁ/ | 1 | 23 | 3217.333 | 7 | exact_noun_candidate_to_review | maître, mètre, maitre | mettre, maître, remettre, km |
+| 96 | /je/ | 1 | 79 | 5364.437 | 17 | unresolved | — | payer, essayer, travailler, envoyer |
+| 97 | /vwa/ | 1 | 19 | 4335.024 | 8 | exact_noun_candidate_to_review | voix, voie, void | voiture, voix, voyage, envoyer |
+| 98 | /ɛs/ | 1 | 36 | 2486.22 | 6 | exact_noun_candidate_to_review | aces, esse, aisse | esprit, espèce, espoir, espace |
+| 99 | /fo/ | 1 | 20 | 1921.289 | 5 | exact_noun_candidate_to_review | faux, faut, pho | photo, faux, folie, forêt |
+| 100 | /tʁi/ | 1 | 34 | 712.188 | 0 | exact_noun_candidate_to_review | tri | tribunal, meurtrier, tribu, industrie |
+| 101 | /maʁ/ | 1 | 25 | 1563.177 | 5 | exact_noun_candidate_to_review | mare, marc, mar | marcher, marché, marre, cauchemar |
+| 102 | /nɔ̃/ | 1 | 13 | 27899.225 | 6 | exact_noun_candidate_to_review | nom, non, nons | non, nom, nombreux, prénom |
+| 103 | /dis/ | 1 | 42 | 1931.812 | 7 | exact_noun_candidate_to_review | dix | dix, discuter, discours, distance |
+| 104 | /y/ | 1 | 39 | 2942.05 | 7 | exact_noun_candidate_to_review | hue | réunion, humain, unique, utile |
+| 105 | /ʁɛs/ | 1 | 25 | 3150.962 | 4 | exact_noun_candidate_to_review | resse | rester, respect, responsable, restaurant |
+| 106 | /al/ | 1 | 15 | 475.15 | 0 | exact_image_research | ale, halle, hâle | alcool, album, idéal, altesse |
+| 107 | /va/ | 1 | 55 | 1692.908 | 3 | exact_lexical_candidate_to_review | va, va | travailler, valeur, valise, valoir |
+| 108 | /nə/ | 1 | 28 | 64055.24 | 4 | exact_lexical_candidate_to_review | ne | ne, ennemi, neveu, gouvernement |
+| 109 | /dy/ | 1 | 26 | 660.461 | 3 | exact_noun_candidate_to_review | dû, dûs, du | entendu, perdu, durer, éducation |
+| 110 | /nɛ/ | 1 | 22 | 1014.055 | 2 | exact_noun_candidate_to_review | nait, nay, naient | naissance, connaissance, cabinet, connait |
+| 111 | /ʁasjɔ̃/ | 2 | 27 | 712.465 | 0 | exact_noun_candidate_to_review | ration | opération, déclaration, génération, respiration |
+| 112 | /pu/ | 1 | 23 | 1945.884 | 4 | exact_noun_candidate_to_review | pouls, pou | pouvoir, épouser, poulet, pousser |
+| 113 | /fɛ/ | 1 | 17 | 4564.092 | 5 | exact_noun_candidate_to_review | fait, faix, fay | fait, effet, professeur, parfait |
+| 114 | /ʒi/ | 1 | 38 | 1295.472 | 3 | exact_noun_candidate_to_review | ji, git | énergie, magie, chirurgie, stratégie |
 | 115 | /nɛʁ/ | 1 | 27 | 970.81 | 3 | exact_noun_candidate_to_review | nerf | énergie, partenaire, nerveux, extraordinaire |
 | 116 | /go/ | 1 | 28 | 418.053 | 0 | exact_noun_candidate_to_review | go, goth, gau | go, frigo, négocier, égoïste |
 | 117 | /nɑ̃/ | 1 | 18 | 6776.956 | 1 | exact_noun_candidate_to_review | nant | maintenant, lieutenant, étonnant, impressionnant |
@@ -193,106 +193,106 @@
 
 | Rang | Son IPA | 1/2 syll. | Cibles utiles | Âge min heuristique | Noms candidats | Exemples utiles |
 |---:|---|---|---:|---:|---|---|
-| 1 | /a/ | 1 | 424 | 5 | ha, hâ | alors, accord, aller, avoir |
-| 2 | /mɑ̃/ | 1 | 374 | 5 | man, mans | vraiment, comment, moment, maman |
-| 3 | /ɛ̃/ | 1 | 234 | 5 | ein, eins, ain | hein, ainsi, important, intérieur |
-| 4 | /se/ | 1 | 222 | 5 | cé | ces, ses, assez, passer |
-| 5 | /kɔ̃/ | 1 | 233 | 5 | con | combien, confiance, content, compris |
-| 6 | /le/ | 1 | 141 | 5 | lé, les, lez | aller, parler, laisser, télé |
-| 7 | /ko/ | 1 | 169 | 5 | cot, côt, cots | comment, côté, colère, connaître |
-| 8 | /me/ | 1 | 135 | 5 | maye, mée | mes, message, armée, aimer |
-| 9 | /pe/ | 1 | 119 | 5 | pô, pe, pé | pays, payer, occuper, empêcher |
-| 10 | /di/ | 1 | 147 | 5 | dit, die | dîner, difficile, différent, ridicule |
-| 11 | /i/ | 1 | 111 | 5 | hie | ici, idée, pays, i |
-| 12 | /tɑ̃/ | 1 | 90 | 5 | temps, tan, taon | temps, tant, longtemps, autant |
-| 13 | /vi/ | 1 | 97 | 5 | vie, vit, vy | vie, envie, avis, visage |
-| 14 | /ʒe/ | 1 | 105 | 5 | gé, jé | manger, génial, changer, danger |
-| 15 | /pʁo/ | 1 | 93 | 5 | pro, prot | problème, propos, procès, projet |
-| 16 | /sɑ̃/ | 1 | 82 | 5 | sang, cent, sans | sang, sentir, santé, censé |
-| 17 | /to/ | 1 | 85 | 5 | to, taux, tau | plutôt, bientôt, tôt, photo |
-| 18 | /ve/ | 1 | 78 | 5 | vés | trouver, sauver, prouver, vérité |
-| 19 | /ku/ | 1 | 55 | 5 | coup, cou, coût | beaucoup, coup, courant, coucher |
-| 20 | /pʁe/ | 1 | 83 | 5 | pré | présent, président, impression, présenter |
-| 21 | /paʁ/ | 1 | 55 | 5 | part, par, parr | parler, partir, part, partie |
-| 22 | /fi/ | 1 | 85 | 5 | phi, fy | finir, difficile, officier, profiter |
-| 23 | /ʁɑ̃/ | 1 | 70 | 5 | rang, ran, ranc | rentrer, courant, rencontrer, rendez-vous |
-| 24 | /ni/ | 1 | 105 | 5 | nid | niveau, unité, génie, univers |
-| 25 | /sa/ | 1 | 68 | 5 | sas, sa | sa, savoir, salut, salope |
-| 26 | /ʃe/ | 1 | 67 | 5 | ché | chercher, marcher, marché, coucher |
-| 27 | /lə/ | 1 | 71 | 7 | le | seulement, tellement, enlever, lever |
-| 28 | /də/ | 1 | 54 | 5 | de | demain, depuis, dessus, devoir |
-| 29 | /mo/ | 1 | 73 | 5 | mot, maux | moment, mot, mauvais, moteur |
-| 30 | /sə/ | 1 | 58 | 5 | se | semaine, seconde, secret, secours |
-| 31 | /sy/ | 1 | 65 | 5 | su | super, sujet, dessus, sûrement |
-| 32 | /pɛʁ/ | 1 | 56 | 5 | père, paire, pair | père, personne, super, grand-père |
-| 33 | /ga/ | 1 | 64 | 5 | gars, ga, ghât | gars, gagner, gamin, magasin |
-| 34 | /bi/ | 1 | 65 | 5 | by, bi, bee | bizarre, habitude, cabinet, billet |
-| 35 | /su/ | 1 | 44 | 5 | sou, saoûl, souls | souvent, souci, souvenir, sourire |
-| 36 | /lo/ | 1 | 67 | 5 | lot, los, laud | boulot, allô, colonel, salaud |
-| 37 | /ke/ | 1 | 59 | 5 | quais | ok, expliquer, manquer, attaquer |
-| 38 | /no/ | 1 | 63 | 5 | nô, noe | nos, innocent, piano, no |
-| 39 | /vo/ | 1 | 47 | 5 | veau, vaux, vau | vos, nouveau, voler, cerveau |
-| 40 | /fa/ | 1 | 46 | 5 | fa | famille, façon, facile, failli |
-| 41 | /pɔʁ/ | 1 | 43 | 5 | porc, port, pore | rapport, portable, important, importance |
-| 42 | /bu/ | 1 | 43 | 5 | bout, boue, bou | boulot, bout, debout, bouger |
-| 43 | /be/ | 1 | 46 | 5 | bô, bés | bébé, tomber, b, baiser |
-| 44 | /tyʁ/ | 1 | 52 | 5 | tur | voiture, nourriture, nature, futur |
-| 45 | /bo/ | 1 | 35 | 5 | beau, bau, baux | beaucoup, beau, bonheur, beauté |
-| 46 | /fe/ | 1 | 46 | 5 | fée, phé | café, différent, différence, conférence |
-| 47 | /tik/ | 1 | 56 | 7 | tic, tique | politique, fantastique, romantique, boutique |
-| 48 | /ɛs/ | 1 | 36 | 5 | aces, esse, aisse | esprit, espèce, espoir, espace |
-| 49 | /lɑ̃/ | 1 | 40 | 7 | lan, lant, lanc | excellent, talent, lancer, lendemain |
-| 50 | /y/ | 1 | 39 | 7 | hue | réunion, humain, unique, utile |
-| 51 | /fɔʁ/ | 1 | 39 | 5 | for, fort | fort, formidable, fortune, forcément |
-| 52 | /ty/ | 1 | 42 | 7 | tue, tus | étudier, naturel, foutu, tunnel |
-| 53 | /ly/ | 1 | 34 | 5 | lut | salut, lumière, solution, allumer |
-| 54 | /tɛ/ | 1 | 27 | 5 | taie, têt, taît | terrible, terrain, tellement, territoire |
-| 55 | /tɔ̃/ | 1 | 29 | 5 | ton, thon | ton, tomber, fiston, bouton |
-| 56 | /sɛ̃/ | 1 | 35 | 5 | sein, saint, seing | sympa, médecin, simplement, assassin |
-| 57 | /tɛ̃/ | 1 | 31 | 5 | teint, tin, tain | putain, matin, certain, certains |
-| 58 | /ʒi/ | 1 | 38 | 7 | ji, git | énergie, magie, chirurgie, stratégie |
-| 59 | /pʁi/ | 1 | 33 | 5 | prix, prie | prison, esprit, prix, compris |
-| 60 | /ʃɑ̃/ | 1 | 31 | 5 | champ, chant, chand | changer, chanson, chanter, champ |
-| 61 | /tʁe/ | 1 | 27 | 5 | tré | rentrer, entrer, montrer, entrée |
-| 62 | /ki/ | 1 | 36 | 5 | chi, quit, quis | quitter, km, équipage, whisky |
-| 63 | /ny/ | 1 | 36 | 7 | nu, nue | numéro, inutile, bienvenue, continue |
-| 64 | /tu/ | 1 | 22 | 5 | tout, toux, tous | toujours, tout, partout, surtout |
-| 65 | /mə/ | 1 | 27 | 5 | me | monsieur, emmener, ramener, amener |
-| 66 | /my/ | 1 | 31 | 5 | mu, mue, mûs | musique, amuser, amusant, musée |
-| 67 | /kaʁ/ | 1 | 30 | 5 | quart, car, care | quartier, cardiaque, rencard, placard |
-| 68 | /da/ | 1 | 33 | 5 | das | d'abord, soldat, mandat, davantage |
-| 69 | /kɑ̃/ | 1 | 31 | 5 | camp, can, quant | camp, campagne, cancer, quand |
-| 70 | /fɛʁ/ | 1 | 22 | 5 | fer | faire, affaire, enfer, fermer |
-| 71 | /sɛ/ | 1 | 26 | 5 | saie | seigneur, procès, excellent, accès |
-| 72 | /py/ | 1 | 30 | 5 | pus, pu | putain, public, populaire, réputation |
-| 73 | /ak/ | 1 | 25 | 7 | hack, hacke, aque | accident, accepter, accès, action |
-| 74 | /mɔ̃/ | 1 | 20 | 5 | mont | mon, montrer, monter, démon |
-| 75 | /mɛ/ | 1 | 15 | 5 | mets, mai, meix | jamais, maison, meilleur, mets |
-| 76 | /ʒə/ | 1 | 30 | 5 | je | jeter, dangereux, changement, jugement |
-| 77 | /fy/ | 1 | 30 | 7 | fût, futs | futur, fusil, fumer, fumée |
-| 78 | /ʒɑ̃/ | 1 | 21 | 5 | gens, gent, jan | gens, argent, agent, gentil |
-| 79 | /mɛtʁ/ | 1 | 23 | 5 | maître, mètre, maitre | mettre, maître, remettre, km |
-| 80 | /vwa/ | 1 | 19 | 5 | voix, voie, void | voiture, voix, voyage, envoyer |
-| 81 | /fo/ | 1 | 20 | 5 | faux, faut, pho | photo, faux, folie, forêt |
-| 82 | /tʁi/ | 1 | 34 | 7 | tri | tribunal, meurtrier, tribu, industrie |
-| 83 | /maʁ/ | 1 | 25 | 5 | mare, marc, mar | marcher, marché, marre, cauchemar |
-| 84 | /nɔ̃/ | 1 | 13 | 5 | nom, non, nons | non, nom, nombreux, prénom |
-| 85 | /ʁɛs/ | 1 | 25 | 5 | resse | rester, respect, responsable, restaurant |
-| 86 | /dy/ | 1 | 26 | 7 | dû, dûs, du | entendu, perdu, durer, éducation |
-| 87 | /nɛ/ | 1 | 22 | 7 | nait, nay, naient | naissance, connaissance, cabinet, connait |
-| 88 | /ʁasjɔ̃/ | 2 | 27 | 9 | ration | opération, déclaration, génération, respiration |
-| 89 | /pu/ | 1 | 23 | 5 | pouls, pou | pouvoir, épouser, poulet, pousser |
-| 90 | /fɛ/ | 1 | 17 | 5 | fait, faix, fay | fait, effet, professeur, parfait |
-| 91 | /nɛʁ/ | 1 | 27 | 7 | nerf | énergie, partenaire, nerveux, extraordinaire |
-| 92 | /go/ | 1 | 28 | 7 | go, goth, gau | go, frigo, négocier, égoïste |
-| 93 | /nɑ̃/ | 1 | 18 | 7 | nant | maintenant, lieutenant, étonnant, impressionnant |
-| 94 | /tiʁ/ | 1 | 20 | 5 | tir, tire | partir, sortir, sentir, mentir |
-| 95 | /ɛ̃tɛʁ/ | 2 | 23 | 7 | inter | interview, internet, intervention, intervenir |
-| 96 | /ʁite/ | 2 | 18 | 7 | ritter | vérité, sécurité, autorité, mériter |
-| 97 | /lɔ̃/ | 1 | 20 | 5 | long | longtemps, long, volonté, pantalon |
-| 98 | /bʁi/ | 1 | 23 | 7 | bris, bri, brie | abri, briser, brillant, briller |
-| 99 | /mu/ | 1 | 18 | 5 | mou, moue, moût | mourir, amoureux, mouvement, mourant |
-| 100 | /komɑ̃/ | 2 | 13 | 5 | comment | comment, commencer, commandant, commander |
+| 1 | /mɑ̃/ | 1 | 374 | 5 | man, mans | vraiment, comment, moment, maman |
+| 2 | /ɛ̃/ | 1 | 234 | 5 | ein, eins, ain | hein, ainsi, important, intérieur |
+| 3 | /kɔ̃/ | 1 | 233 | 5 | con | combien, confiance, content, compris |
+| 4 | /le/ | 1 | 141 | 5 | lé, les, lez | aller, parler, laisser, télé |
+| 5 | /ko/ | 1 | 169 | 5 | cot, côt, cots | comment, côté, colère, connaître |
+| 6 | /me/ | 1 | 135 | 5 | maye, mée | mes, message, armée, aimer |
+| 7 | /di/ | 1 | 147 | 5 | dit, die | dîner, difficile, différent, ridicule |
+| 8 | /tɑ̃/ | 1 | 90 | 5 | temps, tan, taon | temps, tant, longtemps, autant |
+| 9 | /vi/ | 1 | 97 | 5 | vie, vit, vy | vie, envie, avis, visage |
+| 10 | /pʁo/ | 1 | 93 | 5 | pro, prot | problème, propos, procès, projet |
+| 11 | /to/ | 1 | 85 | 5 | to, taux, tau | plutôt, bientôt, tôt, photo |
+| 12 | /ku/ | 1 | 55 | 5 | coup, cou, coût | beaucoup, coup, courant, coucher |
+| 13 | /pʁe/ | 1 | 83 | 5 | pré | présent, président, impression, présenter |
+| 14 | /paʁ/ | 1 | 55 | 5 | part, par, parr | parler, partir, part, partie |
+| 15 | /fi/ | 1 | 85 | 5 | phi, fy | finir, difficile, officier, profiter |
+| 16 | /ʁɑ̃/ | 1 | 70 | 5 | rang, ran, ranc | rentrer, courant, rencontrer, rendez-vous |
+| 17 | /ni/ | 1 | 105 | 5 | nid | niveau, unité, génie, univers |
+| 18 | /sa/ | 1 | 68 | 5 | sas, sa | sa, savoir, salut, salope |
+| 19 | /ʃe/ | 1 | 67 | 5 | ché | chercher, marcher, marché, coucher |
+| 20 | /lə/ | 1 | 71 | 7 | le | seulement, tellement, enlever, lever |
+| 21 | /də/ | 1 | 54 | 5 | de | demain, depuis, dessus, devoir |
+| 22 | /mo/ | 1 | 73 | 5 | mot, maux | moment, mot, mauvais, moteur |
+| 23 | /sə/ | 1 | 58 | 5 | se | semaine, seconde, secret, secours |
+| 24 | /sy/ | 1 | 65 | 5 | su | super, sujet, dessus, sûrement |
+| 25 | /pɛʁ/ | 1 | 56 | 5 | père, paire, pair | père, personne, super, grand-père |
+| 26 | /ga/ | 1 | 64 | 5 | gars, ga, ghât | gars, gagner, gamin, magasin |
+| 27 | /bi/ | 1 | 65 | 5 | by, bi, bee | bizarre, habitude, cabinet, billet |
+| 28 | /su/ | 1 | 44 | 5 | sou, saoûl, souls | souvent, souci, souvenir, sourire |
+| 29 | /lo/ | 1 | 67 | 5 | lot, los, laud | boulot, allô, colonel, salaud |
+| 30 | /ke/ | 1 | 59 | 5 | quais | ok, expliquer, manquer, attaquer |
+| 31 | /no/ | 1 | 63 | 5 | nô, noe | nos, innocent, piano, no |
+| 32 | /vo/ | 1 | 47 | 5 | veau, vaux, vau | vos, nouveau, voler, cerveau |
+| 33 | /pɔʁ/ | 1 | 43 | 5 | porc, port, pore | rapport, portable, important, importance |
+| 34 | /bu/ | 1 | 43 | 5 | bout, boue, bou | boulot, bout, debout, bouger |
+| 35 | /tyʁ/ | 1 | 52 | 5 | tur | voiture, nourriture, nature, futur |
+| 36 | /bo/ | 1 | 35 | 5 | beau, bau, baux | beaucoup, beau, bonheur, beauté |
+| 37 | /fe/ | 1 | 46 | 5 | fée, phé | café, différent, différence, conférence |
+| 38 | /tik/ | 1 | 56 | 7 | tic, tique | politique, fantastique, romantique, boutique |
+| 39 | /lɑ̃/ | 1 | 40 | 7 | lan, lant, lanc | excellent, talent, lancer, lendemain |
+| 40 | /fɔʁ/ | 1 | 39 | 5 | for, fort | fort, formidable, fortune, forcément |
+| 41 | /ty/ | 1 | 42 | 7 | tue, tus | étudier, naturel, foutu, tunnel |
+| 42 | /ly/ | 1 | 34 | 5 | lut | salut, lumière, solution, allumer |
+| 43 | /tɛ/ | 1 | 27 | 5 | taie, têt, taît | terrible, terrain, tellement, territoire |
+| 44 | /tɔ̃/ | 1 | 29 | 5 | ton, thon | ton, tomber, fiston, bouton |
+| 45 | /sɛ̃/ | 1 | 35 | 5 | sein, saint, seing | sympa, médecin, simplement, assassin |
+| 46 | /tɛ̃/ | 1 | 31 | 5 | teint, tin, tain | putain, matin, certain, certains |
+| 47 | /pʁi/ | 1 | 33 | 5 | prix, prie | prison, esprit, prix, compris |
+| 48 | /ʃɑ̃/ | 1 | 31 | 5 | champ, chant, chand | changer, chanson, chanter, champ |
+| 49 | /tʁe/ | 1 | 27 | 5 | tré | rentrer, entrer, montrer, entrée |
+| 50 | /ki/ | 1 | 36 | 5 | chi, quit, quis | quitter, km, équipage, whisky |
+| 51 | /ny/ | 1 | 36 | 7 | nu, nue | numéro, inutile, bienvenue, continue |
+| 52 | /tu/ | 1 | 22 | 5 | tout, toux, tous | toujours, tout, partout, surtout |
+| 53 | /mə/ | 1 | 27 | 5 | me | monsieur, emmener, ramener, amener |
+| 54 | /my/ | 1 | 31 | 5 | mu, mue, mûs | musique, amuser, amusant, musée |
+| 55 | /kaʁ/ | 1 | 30 | 5 | quart, car, care | quartier, cardiaque, rencard, placard |
+| 56 | /da/ | 1 | 33 | 5 | das | d'abord, soldat, mandat, davantage |
+| 57 | /kɑ̃/ | 1 | 31 | 5 | camp, can, quant | camp, campagne, cancer, quand |
+| 58 | /fɛʁ/ | 1 | 22 | 5 | fer | faire, affaire, enfer, fermer |
+| 59 | /sɛ/ | 1 | 26 | 5 | saie | seigneur, procès, excellent, accès |
+| 60 | /py/ | 1 | 30 | 5 | pus, pu | putain, public, populaire, réputation |
+| 61 | /ak/ | 1 | 25 | 7 | hack, hacke, aque | accident, accepter, accès, action |
+| 62 | /mɔ̃/ | 1 | 20 | 5 | mont | mon, montrer, monter, démon |
+| 63 | /mɛ/ | 1 | 15 | 5 | mets, mai, meix | jamais, maison, meilleur, mets |
+| 64 | /ʒə/ | 1 | 30 | 5 | je | jeter, dangereux, changement, jugement |
+| 65 | /fy/ | 1 | 30 | 7 | fût, futs | futur, fusil, fumer, fumée |
+| 66 | /ʒɑ̃/ | 1 | 21 | 5 | gens, gent, jan | gens, argent, agent, gentil |
+| 67 | /mɛtʁ/ | 1 | 23 | 5 | maître, mètre, maitre | mettre, maître, remettre, km |
+| 68 | /vwa/ | 1 | 19 | 5 | voix, voie, void | voiture, voix, voyage, envoyer |
+| 69 | /fo/ | 1 | 20 | 5 | faux, faut, pho | photo, faux, folie, forêt |
+| 70 | /tʁi/ | 1 | 34 | 7 | tri | tribunal, meurtrier, tribu, industrie |
+| 71 | /maʁ/ | 1 | 25 | 5 | mare, marc, mar | marcher, marché, marre, cauchemar |
+| 72 | /nɔ̃/ | 1 | 13 | 5 | nom, non, nons | non, nom, nombreux, prénom |
+| 73 | /ʁɛs/ | 1 | 25 | 5 | resse | rester, respect, responsable, restaurant |
+| 74 | /dy/ | 1 | 26 | 7 | dû, dûs, du | entendu, perdu, durer, éducation |
+| 75 | /nɛ/ | 1 | 22 | 7 | nait, nay, naient | naissance, connaissance, cabinet, connait |
+| 76 | /ʁasjɔ̃/ | 2 | 27 | 9 | ration | opération, déclaration, génération, respiration |
+| 77 | /pu/ | 1 | 23 | 5 | pouls, pou | pouvoir, épouser, poulet, pousser |
+| 78 | /fɛ/ | 1 | 17 | 5 | fait, faix, fay | fait, effet, professeur, parfait |
+| 79 | /nɛʁ/ | 1 | 27 | 7 | nerf | énergie, partenaire, nerveux, extraordinaire |
+| 80 | /go/ | 1 | 28 | 7 | go, goth, gau | go, frigo, négocier, égoïste |
+| 81 | /nɑ̃/ | 1 | 18 | 7 | nant | maintenant, lieutenant, étonnant, impressionnant |
+| 82 | /tiʁ/ | 1 | 20 | 5 | tir, tire | partir, sortir, sentir, mentir |
+| 83 | /ɛ̃tɛʁ/ | 2 | 23 | 7 | inter | interview, internet, intervention, intervenir |
+| 84 | /ʁite/ | 2 | 18 | 7 | ritter | vérité, sécurité, autorité, mériter |
+| 85 | /lɔ̃/ | 1 | 20 | 5 | long | longtemps, long, volonté, pantalon |
+| 86 | /bʁi/ | 1 | 23 | 7 | bris, bri, brie | abri, briser, brillant, briller |
+| 87 | /mu/ | 1 | 18 | 5 | mou, moue, moût | mourir, amoureux, mouvement, mourant |
+| 88 | /komɑ̃/ | 2 | 13 | 5 | comment | comment, commencer, commandant, commander |
+| 89 | /pla/ | 1 | 23 | 5 | plat, pla | planète, remplacer, plat, placard |
+| 90 | /fɔ̃/ | 1 | 20 | 5 | fond, fonds, fonts | fond, fonds, profond, profondément |
+| 91 | /lœʁ/ | 1 | 18 | 5 | leurre | leur, leurs, douleur, couleur |
+| 92 | /gʁa/ | 1 | 28 | 7 | gras | gratuit, gravité, gratuitement, gratitude |
+| 93 | /sœʁ/ | 1 | 22 | 5 | soeur | soeur, professeur, ascenseur, douceur |
+| 94 | /tʁo/ | 1 | 17 | 5 | trot | trop, contrôler, métro, traumatisme |
+| 95 | /tʁɛ/ | 1 | 13 | 5 | trés, trait | très, traitement, entraînement, trait |
+| 96 | /pɛ/ | 1 | 15 | 5 | paix, paie, pet | paix, respect, suspect, aspect |
+| 97 | /site/ | 2 | 21 | 9 | cité | capacité, publicité, cité, féliciter |
+| 98 | /tif/ | 1 | 28 | 7 | tif | objectif, motif, positif, négatif |
+| 99 | /tabl/ | 1 | 24 | 5 | table | table, portable, véritable, confortable |
+| 100 | /paʁa/ | 2 | 17 | 7 | para | paradis, apparemment, auparavant, séparation |
 
 ## Fenêtres les plus fréquentes dans Lexique
 

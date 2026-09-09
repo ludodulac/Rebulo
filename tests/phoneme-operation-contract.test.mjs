@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {splitIPAUnits,normalizeIPA} from '../src/phonetic-engine.js';
 import {buildMinimalPairActivities} from '../src/minimal-pair-activities.js';
+import {buildPhonemeOperationActivities} from '../src/phoneme-operation-activities.js';
 
 const contract=JSON.parse(fs.readFileSync('data/phoneme-operation-contract.json','utf8'));
 assert.equal(contract.activationPolicy,'explicit_operations_only');
@@ -76,5 +77,17 @@ for(const operation of operationBank.operations){
   assert.equal(normalizeIPA(expected.ipa),normalizeIPA(operation.expectedIpa));
   assert.equal(operation.source,'data/lexicon-seed.json');
 }
+const operationActivities=buildPhonemeOperationActivities(operationBank.operations);
+assert.equal(operationActivities.length,operationBank.operations.length,'every valid seeded substitution must become one controlled activity');
+for(const activity of operationActivities){
+  assert.equal(activity.activityId,'phoneme-substitution');
+  assert.ok(Number.isInteger(activity.operationIndex));
+  assert.ok(activity.expectedResponse);
+  assert.ok(activity.childInstruction&&activity.proInstruction);
+}
+const pasToTas=operationActivities.find(item=>item.sourceWord==='pas'&&item.expectedWord==='tas');
+assert.equal(pasToTas?.expectedResponse,'ta');
+assert.equal(pasToTas?.fromPhoneme,'p');
+assert.equal(pasToTas?.toPhoneme,'t');
 
-console.log('phoneme contracts: explicit substitutions and minimal-pair activities are controllable and grounded in the active lexicon seed');
+console.log('phoneme activities: explicit substitutions and minimal-pair contrasts are controllable and grounded in the active lexicon seed');

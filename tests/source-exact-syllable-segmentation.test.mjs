@@ -24,12 +24,22 @@ assert.match(activity.proInstruction,/\/mɛʁ\/ \+ \/si\//);
 assert.doesNotMatch(activity.proInstruction,/nom entier de chaque image/);
 
 const identification=selectTherapyActivity(candidate.therapyActivities,'syllable-identification');
-assert.ok(identification,'source-exact multisyllabic targets must expose syllable identification');
+assert.ok(identification,'source-exact multisyllabic targets must expose initial syllable identification');
 assert.equal(identification.promptPosition,'initial');
 assert.equal(identification.expectedResponse,'mɛʁ');
 assert.match(identification.childInstruction,/première syllabe/);
 assert.match(identification.proInstruction,/syllabe initiale/);
 assert.match(identification.proInstruction,/\/mɛʁ\//);
+
+const finalIdentification=selectTherapyActivity(candidate.therapyActivities,'syllable-identification-final');
+assert.ok(finalIdentification,'source-exact multisyllabic targets must expose the final position as a variant of the same activity family');
+assert.equal(finalIdentification.activityFamily,'syllable-identification');
+assert.equal(finalIdentification.promptPosition,'final');
+assert.equal(finalIdentification.expectedResponse,'si');
+assert.match(finalIdentification.childInstruction,/dernière syllabe/);
+assert.match(finalIdentification.proInstruction,/syllabe finale/);
+assert.match(finalIdentification.proInstruction,/\/si\//);
+assert.equal(candidate.therapyActivities.filter(item=>item.activityFamily==='syllable-identification').length,2,'only the two contract-defined positions are exposed');
 
 const [worksheet]=normalizeWorksheetSet([{...candidate,activity}]);
 const pro=worksheetActivity(worksheet.activity,'pro');
@@ -37,8 +47,12 @@ assert.equal(pro.label,'Segmentation syllabique');
 assert.match(pro.instruction,/\/mɛʁ\/ \+ \/si\//,'session/PDF metadata must retain the controlled expected segmentation');
 const [identificationWorksheet]=normalizeWorksheetSet([{...candidate,activity:identification}]);
 const identificationPro=worksheetActivity(identificationWorksheet.activity,'pro');
-assert.equal(identificationPro.label,'Identification syllabique');
+assert.match(identificationPro.label,/première syllabe/);
 assert.match(identificationPro.instruction,/\/mɛʁ\//,'session/PDF metadata must retain the exact expected initial syllable');
+const [finalWorksheet]=normalizeWorksheetSet([{...candidate,activity:finalIdentification}]);
+const finalPro=worksheetActivity(finalWorksheet.activity,'pro');
+assert.match(finalPro.label,/dernière syllabe/);
+assert.match(finalPro.instruction,/\/si\//,'session/PDF metadata must retain the exact expected final syllable');
 
 const [unsafe]=buildCreatorTargets({constructible:[{
   word:'cinéma',ipa:'sinema',frequency:50,syllableCount:3,syllabification:null,decomposition:['scie','nez','mat']
@@ -51,12 +65,13 @@ assert.deepEqual(merged.syllables,['mɛʁ','si']);
 assert.ok(merged.therapy.includes('syllable-segmentation'),'compatible manual pilots may receive the source-exact segmentation activity');
 assert.ok(merged.therapy.includes('syllable-blending'),'historical manual blending remains preserved as a separate activity');
 const mergedCandidate=buildCreatorCandidate(merged,lexicon,definitions);
-assert.ok(mergedCandidate.therapyActivities.some(item=>item.id==='syllable-identification'),'compatible manual pilots receive identification only at runtime from exact source units');
+assert.ok(mergedCandidate.therapyActivities.some(item=>item.id==='syllable-identification'),'compatible manual pilots receive initial identification only at runtime from exact source units');
+assert.ok(mergedCandidate.therapyActivities.some(item=>item.id==='syllable-identification-final'),'compatible manual pilots receive the final position from the same source-exact gate');
 
 const noSourceCandidate=buildCreatorCandidate({...generated,syllables:[],syllabificationStatus:'needs_source_review'},lexicon,definitions);
 assert.equal(noSourceCandidate.therapyActivities.some(item=>item.id==='syllable-segmentation'),false,'runtime must refuse segmentation when source-exact units disappear');
-assert.equal(noSourceCandidate.therapyActivities.some(item=>item.id==='syllable-identification'),false,'runtime must refuse identification when source-exact units disappear');
+assert.equal(noSourceCandidate.therapyActivities.some(item=>item.activityFamily==='syllable-identification'),false,'runtime must refuse every identification position when source-exact units disappear');
 const monosyllabic=buildCreatorCandidate({...generated,syllableCount:1,syllables:['mɛʁsi'],syllabificationStatus:'source_exact'},lexicon,definitions);
-assert.equal(monosyllabic.therapyActivities.some(item=>item.id==='syllable-identification'),false,'monosyllables must not expose syllable identification');
+assert.equal(monosyllabic.therapyActivities.some(item=>item.activityFamily==='syllable-identification'),false,'monosyllables must not expose syllable identification variants');
 
-console.log('source-exact syllable activities: segmentation and initial identification are gated, exact and propagated to session/PDF metadata');
+console.log('source-exact syllable activities: segmentation plus initial/final identification variants are gated and propagated to PDF metadata');

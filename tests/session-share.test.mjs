@@ -19,10 +19,22 @@ const url=createSessionShareUrl(items,{hint:false,solution:true},{href:'https://
 assert.equal(url.includes('patient'),false);assert.equal(url.includes('date'),false);
 
 const corpus=[{target:'cinéma',mode:'strict',assets:'ready'},{target:'merci',mode:'strict',assets:'ready'}];
-const candidateFor=target=>({answer:target.target,pieces:[{image:'x.svg'}],therapyActivities:target.target==='cinéma'?[{id:'oral-to-written',label:'Du son vers l’écrit'}]:[{id:'syllable-blending',label:'Fusion syllabique'}]});
+const candidateFor=target=>({answer:target.target,pieces:[{image:'x.svg'}],therapyActivities:target.target==='cinéma'?[{id:'oral-to-written',label:'Du son vers l’écrit'}]:[
+  {id:'syllable-blending',label:'Fusion syllabique'},
+  {id:'syllable-identification',label:'Identification syllabique — première syllabe',promptPosition:'initial',expectedResponse:'mɛʁ'},
+  {id:'syllable-identification-final',label:'Identification syllabique — dernière syllabe',promptPosition:'final',expectedResponse:'si'}
+]});
 const resolved=resolveSharedSession(payload,{corpus,buildCandidate:candidateFor});
 assert.equal(resolved.items.length,2);assert.equal(resolved.unavailable.length,0);assert.equal(resolved.allUsable,true);
 assert.equal(resolved.items[0].answer,'cinéma');assert.equal(resolved.items[0].activity.id,'oral-to-written');assert.deepEqual(resolved.help,{hint:true,solution:false});
+
+const finalVariantPayload=buildSessionSharePayload([{answer:'merci',activity:{id:'syllable-identification-final',label:'Identification syllabique — dernière syllabe'}}],{});
+assert.equal(finalVariantPayload.rounds[0].activity,'syllable-identification-final','final position must have a stable shareable activity reference');
+const finalVariantResolved=resolveSharedSession(finalVariantPayload,{corpus,buildCandidate:candidateFor});
+assert.equal(finalVariantResolved.items.length,1);
+assert.equal(finalVariantResolved.items[0].activity.id,'syllable-identification-final');
+assert.equal(finalVariantResolved.items[0].activity.promptPosition,'final');
+assert.equal(finalVariantResolved.items[0].activity.expectedResponse,'si');
 
 const missingTargetPayload=buildSessionSharePayload([{answer:'inconnu',activity:{id:'oral-to-written',label:'Du son vers l’écrit'}}],{});
 const missingTarget=resolveSharedSession(missingTargetPayload,{corpus,buildCandidate:candidateFor});
@@ -43,4 +55,4 @@ const legacy={v:1,rounds:[{target:'cinema',activity:'oral-to-written'}],help:{hi
 const legacyEncoded=serializeSessionShare(legacy);assert.ok(legacyEncoded);const legacyResolved=resolveSharedSession(deserializeSessionShare(legacyEncoded),{corpus,buildCandidate:candidateFor});assert.equal(legacyResolved.items.length,1,'v1 links must remain readable');
 
 assert.equal(resolveSharedSession({...payload,rounds:[...payload.rounds,payload.rounds[0],payload.rounds[0],payload.rounds[0],payload.rounds[0]]},{corpus,buildCandidate:candidateFor}),null);
-console.log('session share tests: saved descriptors survive catalog drift and unavailable entries remain visible');
+console.log('session share tests: saved descriptors and final syllable variants survive sharing and catalog drift');

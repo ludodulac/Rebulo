@@ -1,12 +1,19 @@
-import {rankDecompositions,segmentTargetWithLexicon,validateStrictRebus} from './phonetic-engine.js';
+import {normalizeIPA,rankDecompositions,segmentTargetWithLexicon,validateStrictRebus} from './phonetic-engine.js';
 import {buildExplicitDeletionOperation,buildExplicitSubstitutionOperation,buildGeneralConstruction,buildGraphemeOperation,buildRepetitionOperation,buildSpatialRelationOperation,buildStrictConstruction,buildWholeWordOperation,REBUS_OPERATION_TYPES} from './rebus-construction.js';
 import {buildTherapyActivities} from './therapy-activities.js';
+
+function normalizedSyllables(target={}){
+  const syllables=Array.isArray(target?.syllables)?target.syllables.map(normalizeIPA).filter(Boolean):[];
+  const count=Number.isInteger(target?.syllableCount)&&target.syllableCount>0?target.syllableCount:null;
+  return syllables.length&&(!count||syllables.length===count)?syllables:[];
+}
 
 export function buildCreatorCandidate(target,lexicon=[],therapyDefinitions=[]){
   if(!target||target.mode!=='strict'||target.assets!=='ready'||!target.targetIpa)return null;
   const pieces=rankDecompositions(segmentTargetWithLexicon(target.targetIpa,lexicon,4))[0]||null;
   if(!pieces)return null;
-  const candidate={answer:target.target,targetIpa:target.targetIpa,syllableCount:Number.isInteger(target.syllableCount)&&target.syllableCount>0?target.syllableCount:null,source:target.source||'',generated:Boolean(target.generated),pieces:pieces.map(piece=>({...piece,reading:piece.label})),therapyActivities:buildTherapyActivities(target,therapyDefinitions)};
+  const syllables=normalizedSyllables(target);
+  const candidate={answer:target.target,targetIpa:target.targetIpa,syllableCount:Number.isInteger(target.syllableCount)&&target.syllableCount>0?target.syllableCount:null,syllables,syllabificationStatus:syllables.length?'source_exact':target.syllabificationStatus||'needs_source_review',source:target.source||'',generated:Boolean(target.generated),pieces:pieces.map(piece=>({...piece,reading:piece.label})),therapyActivities:buildTherapyActivities({...target,syllables},therapyDefinitions)};
   if(!validateStrictRebus(candidate).ok)return null;
   const construction=buildStrictConstruction(candidate.pieces,candidate.targetIpa);
   return construction?{...candidate,construction}:null;

@@ -15,7 +15,7 @@ assert.ok(generated.every(item=>item.generated&&item.validation==='strict'));
 assert.ok(generated.every(item=>['showcase','review_needed'].includes(item.presentationStatus)));
 assert.ok(generated.every(item=>item.pieces.length>=2&&item.pieces.length<=4));
 assert.doesNotMatch(analyzer,/constructibleMultiPiece\.slice\(/,'coverage analysis must not truncate the playable strict multi-image list');
-assert.match(analyzer,/constructibleMultiPiece,\n\s*missingSounds/,'coverage report must serialize the complete multi-image list');
+assert.match(analyzer,/constructibleMultiPiece\s*,\s*missingSounds/,'coverage report must serialize the complete multi-image list');
 for(const word of ['merci','cinéma','parapluie','parasol','délit','tourner']){
   assert.ok(generated.some(item=>item.answer===word),`${word} should be available from generated strict coverage`);
 }

@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {splitIPAUnits,normalizeIPA} from '../src/phonetic-engine.js';
+import {buildMinimalPairActivities} from '../src/minimal-pair-activities.js';
 
 const contract=JSON.parse(fs.readFileSync('data/phoneme-operation-contract.json','utf8'));
 assert.equal(contract.activationPolicy,'explicit_operations_only');
@@ -53,6 +54,15 @@ for(const relation of bank.relations){
   assert.equal(normalizeIPA(right.ipa),normalizeIPA(relation.rightIpa));
   assert.equal(relation.source,'data/lexicon-seed.json');
 }
+const minimalActivities=buildMinimalPairActivities(bank.relations);
+assert.equal(minimalActivities.length,bank.relations.length,'every valid minimal-pair relation must become one controlled activity');
+for(const activity of minimalActivities){
+  assert.equal(activity.activityId,'minimal-pairs');
+  assert.equal(activity.expectedResponse.length,2);
+  assert.ok(Number.isInteger(activity.differenceIndex));
+  assert.ok(activity.childInstruction&&activity.proInstruction);
+}
+assert.deepEqual(minimalActivities.find(item=>item.leftWord==='pas'&&item.rightWord==='tas')?.expectedResponse,['p','t']);
 
 const operationBank=JSON.parse(fs.readFileSync('data/phoneme-operation-relations.json','utf8'));
 assert.equal(operationBank.clinicalValidation,'not_claimed');
@@ -67,4 +77,4 @@ for(const operation of operationBank.operations){
   assert.equal(operation.source,'data/lexicon-seed.json');
 }
 
-console.log('phoneme contracts: explicit substitutions and minimal-pair relations are controllable and grounded in the active lexicon seed');
+console.log('phoneme contracts: explicit substitutions and minimal-pair activities are controllable and grounded in the active lexicon seed');

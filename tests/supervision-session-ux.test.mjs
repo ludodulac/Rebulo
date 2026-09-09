@@ -19,6 +19,9 @@ assert.doesNotMatch(html,/id="downloadRebus"[^>]*>PDF</);
 assert.doesNotMatch(html,/id="downloadSeries"[^>]*>PDF</);
 assert.match(session,/MutationObserver/,'session progression must follow queue changes');
 assert.match(session,/session-progress/);
+assert.match(session,/buildAutomaticCreatorTargets/,'sessions must resolve the same generated strict targets as the creator');
+assert.match(session,/mergeCreatorTargets\(corpus\.items\|\|\[\],buildAutomaticCreatorTargets\(coverage\)\)/,'session corpus must merge manual and generated creator targets');
+assert.match(session,/coverage-report\.json/,'session runtime must load current generated-target evidence');
 assert.match(css,/\.play-rebus\{[^}]*flex-wrap:nowrap[^}]*overflow-x:auto/,'multi-piece play sequence must retain one reading line');
 assert.match(css,/\.session-progress/);
 

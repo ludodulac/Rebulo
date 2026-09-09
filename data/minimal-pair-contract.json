@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0",
+  "status": "implementation_ready",
+  "activityId": "minimal-pairs",
+  "activationPolicy": "explicit_relations_only",
+  "requiredFields": [
+    "relationId",
+    "leftWord",
+    "leftIpa",
+    "rightWord",
+    "rightIpa",
+    "differenceIndex",
+    "leftPhoneme",
+    "rightPhoneme",
+    "source"
+  ],
+  "invariants": [
+    "leftIpa and rightIpa must contain the same number of phoneme units",
+    "the two IPA forms must differ at exactly one phoneme index",
+    "differenceIndex must identify that unique differing position",
+    "leftPhoneme and rightPhoneme must equal the phonemes at differenceIndex",
+    "orthography must never be used to infer the contrast",
+    "rebus pieces must never be used to infer the contrast"
+  ]
+}

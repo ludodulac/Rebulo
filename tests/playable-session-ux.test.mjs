@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 
 const source=fs.readFileSync(new URL('../src/session-experience.js',import.meta.url),'utf8');
+const bootstrap=fs.readFileSync(new URL('../src/app-bootstrap.js',import.meta.url),'utf8');
 const css=fs.readFileSync(new URL('../play-mode.css',import.meta.url),'utf8');
 
 for(const text of ['Aides pendant la séance','▶ Démarrer la séance','Activité ${progress.step} sur ${progress.total}','Séance terminée'])assert.ok(source.includes(text),`missing session UX: ${text}`);
@@ -19,7 +20,12 @@ assert.ok(source.includes('id="sessionChoices"'),'controlled matching must expos
 assert.ok(source.includes('Mot à écouter : « ${current.activity?.focusWord'),'rhyme session must make the worked word explicit instead of leaving the child on the whole rebus');
 assert.ok(source.includes("button.addEventListener('click',()=>gradeSessionAnswer(choice))"),'choice buttons must submit the controlled response directly');
 assert.ok(css.includes('.session-choice-grid{display:grid'),'choice controls need a dedicated touch-friendly layout');
+assert.ok(bootstrap.includes("canonicalLexicon.find(item=>item?.active!==false&&item?.image"),'rhyme stimuli must resolve through the active canonical lexicon rather than a parallel image table');
+assert.ok(bootstrap.includes("document.querySelectorAll('.session-choice-grid button')"),'controlled rhyme choices must be decorated with canonical visual stimuli when available');
+assert.ok(bootstrap.includes("document.querySelector('.session-focus-word')"),'the worked rhyme word must reuse its canonical visual stimulus when available');
+assert.ok(bootstrap.includes("img.src=stimulus.image"),'the displayed rhyme stimulus must use the lexicon image path');
+assert.ok(bootstrap.includes("label.textContent=focus?`Mot à écouter : « ${word} »`:word"),'text must remain as support while the canonical image carries the visual stimulus');
 assert.ok(source.includes("document.querySelector('#sessionAllowHint')?.checked"),'hint availability must be chosen before/during session setup');
 assert.ok(source.includes("document.querySelector('#sessionAllowSolution')?.checked"),'solution availability must be chosen before/during session setup');
 assert.ok(css.includes('[data-session-running="true"]'),'running session must have a focused UI state');
-console.log('playable-session ux tests: unavailable rows remain visible and the controlled rhyme pilot has usable session behavior');
+console.log('playable-session ux tests: unavailable rows remain visible and the controlled rhyme pilot reuses canonical visual stimuli');

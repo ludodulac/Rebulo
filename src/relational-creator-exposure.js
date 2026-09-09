@@ -23,6 +23,7 @@ export function buildCreatorRelationalActivities(target={},catalog={}){
       unit:'rime',
       description:`Proposé parce que « ${activity.targetWord} » est un mot-image déclaré dans ce rébus et dispose de relations de rime explicites.`,
       childInstruction:`Quel mot rime avec « ${activity.targetWord} » : ${choices.join(' ou ')} ?`,
+      proInstruction:`Avec le mot-image « ${activity.targetWord} » du rébus, demande : « Quel mot rime avec ${activity.targetWord} : ${choices.join(' ou ')} ? » Réponse attendue : « ${activity.expectedResponse} ».`,
       sessionExpectedResponse:String(activity.expectedResponse),
       focusWord:activity.targetWord,
       exposureStatus:'creator_session_pilot',

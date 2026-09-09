@@ -13,6 +13,7 @@ Ce fichier route vers la documentation utile. **Ne pas lire tout `docs/` par dé
 - [LEXICAL_ENGINE.md](LEXICAL_ENGINE.md) — moteur lexical et responsabilités.
 - [LEXICAL_PIPELINE.md](LEXICAL_PIPELINE.md) — chaîne de préparation/exploitation lexicale.
 - [PHONETIC_BRICK_MAP.md](PHONETIC_BRICK_MAP.md) — couverture des briques phonétiques.
+- [REBUS_SOUND_CATALOG.md](REBUS_SOUND_CATALOG.md) — emplacement canonique et méthode pour les fenêtres sonores 1–2 syllabes, les découpages glissants, les représentations visuelles, conventions et approximations.
 - [COVERAGE_ANALYSIS.md](COVERAGE_ANALYSIS.md) et [GENERAL_COVERAGE_ANALYSIS.md](GENERAL_COVERAGE_ANALYSIS.md) — analyses de couverture ; à lire pour les questions de corpus, pas pour une modification UI.
 - [HARD_SEGMENT_WORD_ROUTES.md](HARD_SEGMENT_WORD_ROUTES.md) — document volumineux sur les segments difficiles ; ne l'ouvrir que si le problème porte réellement sur ces routes.
 
@@ -35,6 +36,7 @@ Ce fichier route vers la documentation utile. **Ne pas lire tout `docs/` par dé
 ## Routage rapide
 
 - Mot phonologiquement correct mais humainement ambigu → `GUARANTEE_MODEL` → `LEXICAL_ENGINE` → documents de nommabilité si nécessaire.
+- Inventaire de sons, fenêtres 1–2 syllabes, découpages traversant les mots, lettres/chiffres ou petite approximation → `REBUS_SOUND_CATALOG` → `PHONETIC_BRICK_MAP` → données/tests concernés.
 - Image/pictogramme absent ou mal exploité → `VISUAL_WORK_HANDOFF` → `OPEN_PICTOGRAM_LIBRARY` → `NAMING_TEST_RUNNER`.
 - Couverture insuffisante → analyses de couverture → pipeline lexical.
 - Problème d'interface créateur → `CREATOR_STATES` puis code réel.

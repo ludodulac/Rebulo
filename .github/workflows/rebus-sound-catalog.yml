@@ -77,13 +77,17 @@ jobs:
           const report=JSON.parse(fs.readFileSync(path,'utf8'));
           const sha256=fs.readFileSync('.cache/Lexique4.sha256','utf8').trim().split(/\s+/)[0];
           report.provenance={canonicalSource:'https://www.lexique.org/databases/Lexique400/Lexique400.tsv',mirror:'https://github.com/dorfner/pass_the_bomb/blob/master/Lexique400/Lexique4.tsv',sha256,license:'CC BY-SA 4.0'};
+          if(report.formatVersion!==2)throw new Error('unexpected sound catalog format');
           if(!(report.stats?.windowCount>100))throw new Error('sound-window inventory unexpectedly small');
           if(!(report.stats?.openPictogramRepresentationCount>100))throw new Error('existing open pictogram library was not consolidated');
-          if(!report.rows?.some(row=>row.syllableSpans?.includes(1)))throw new Error('monosyllabic windows missing');
-          if(!report.rows?.some(row=>row.syllableSpans?.includes(2)))throw new Error('two-syllable windows missing');
+          if(!(report.stats?.oneSyllableWindowCount>0))throw new Error('one-syllable windows missing');
+          if(!(report.stats?.twoSyllableWindowCount>0))throw new Error('two-syllable windows missing');
+          if(report.soundRows?.length!==report.stats.windowCount)throw new Error('compact exhaustive sound rows are incomplete');
           if(!(report.visualResearchQueue?.length>0))throw new Error('visual research queue missing');
-          fs.writeFileSync(path,JSON.stringify(report,null,2));
+          if(!(report.newImageResearchQueue?.length>0))throw new Error('new-image research queue missing');
+          fs.writeFileSync(path,JSON.stringify(report));
           console.log(JSON.stringify(report.stats,null,2));
+          console.log(`catalog bytes: ${fs.statSync(path).size}`);
           NODE
       - name: Upload catalog research artifact
         uses: actions/upload-artifact@v4

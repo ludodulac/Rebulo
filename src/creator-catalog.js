@@ -68,7 +68,7 @@ export function buildCreatorTargets(report={}){
     const syllableCount=validSyllableCount(row.syllableCount);
     const therapy=['denomination','lexical-access','phoneme-initial','phoneme-final','phoneme-segmentation','phoneme-blending'];
     if(syllableCount)therapy.push('syllable-count');
-    therapy.push('syllable-blending','oral-to-written');
+    therapy.push('oral-to-written');
     targets.push({
       target:row.word,
       targetIpa:row.ipa,

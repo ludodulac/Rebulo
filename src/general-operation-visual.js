@@ -1,4 +1,4 @@
-const GENERAL_VISUAL_TYPES=new Set(['grapheme_sound','explicit_deletion','explicit_substitution','repetition']);
+const GENERAL_VISUAL_TYPES=new Set(['grapheme_sound','contextual_grapheme','explicit_deletion','explicit_substitution','repetition']);
 
 export function generalOperationVisual(piece={}){
   if(!GENERAL_VISUAL_TYPES.has(piece?.operationType))return null;
@@ -7,6 +7,15 @@ export function generalOperationVisual(piece={}){
     const ipa=String(piece.ipa||'').trim();
     if(!grapheme||!ipa)return null;
     return {kind:'grapheme-sound',grapheme,ipa,reading:String(piece.reading||'').trim()||null,visual:'grapheme_with_sound_cue'};
+  }
+  if(piece.operationType==='contextual_grapheme'){
+    const grapheme=String(piece.grapheme||'').trim();
+    const ipa=String(piece.ipa||'').trim();
+    const sourceWord=String(piece.sourceWord||'').trim();
+    const sourceIpa=String(piece.sourceIpa||'').trim();
+    const context=String(piece.context||'').trim();
+    if(!grapheme||!ipa||!sourceWord||!sourceIpa||!context)return null;
+    return {kind:'contextual-grapheme',grapheme,ipa,sourceWord,sourceIpa,context,visual:'grapheme_with_source_evidence'};
   }
   if(!piece?.image)return null;
   if(piece.operationType==='explicit_deletion'){

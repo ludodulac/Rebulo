@@ -1,10 +1,16 @@
 export function normalizeSessionAnswer(value=''){
-  return String(value||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'');
+  return String(value||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^\p{L}\p{N}]+/gu,'');
+}
+
+function scalarExpectedResponse(activity={}){
+  const value=activity?.expectedResponse;
+  return ['string','number'].includes(typeof value)?String(value).trim():'';
 }
 
 export function sessionExpectedAnswer(item={}){
   const relational=String(item?.activity?.sessionExpectedResponse||'').trim();
-  return relational||String(item?.answer||'').trim();
+  const controlled=scalarExpectedResponse(item?.activity);
+  return relational||controlled||String(item?.answer||'').trim();
 }
 
 export function sessionAnswerMatches(value,item={}){

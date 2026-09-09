@@ -45,12 +45,12 @@ assert.doesNotMatch(js,/clinical_approved|active\s*[:=]\s*true/i);
 assert.match(namingHtml,/research-gallery\.html/,'naming runner should link to the curator gallery');
 
 const pending=comparisons.comparisons.filter(item=>item.candidates.some(candidate=>candidate.availability==='pending'));
-assert.deepEqual(pending.map(item=>item.concept),['heure'],'only heure should currently be registered with pending research stimuli');
+assert.deepEqual(pending.map(item=>item.concept),[],'no comparison set should remain falsely pending after heure integration');
 const live=comparisons.comparisons.filter(item=>item.activationState==='inactive_until_human_decision'&&item.candidates.every(candidate=>candidate.availability==='available'));
-assert.equal(live.length,6,'gallery should expose only comparison sets whose stimuli are actually available');
-assert.equal(live.reduce((sum,item)=>sum+item.candidates.length,0),21,'gallery should expose twenty historical stimuli plus the nid prototype');
+assert.equal(live.length,7,'gallery should expose all seven comparison sets whose stimuli are actually available');
+assert.equal(live.reduce((sum,item)=>sum+item.candidates.length,0),23,'gallery should expose twenty-three available local research stimuli');
 for(const comparison of live){
-  const expectedCount=comparison.concept==='nid'?1:4;
+  const expectedCount=comparison.concept==='nid'?1:comparison.concept==='heure'?2:4;
   assert.equal(comparison.candidates.length,expectedCount,`${comparison.concept} should expose its revision-bound candidate set`);
   for(const candidate of comparison.candidates){
     assert.ok(candidate.designIntent);
@@ -62,12 +62,12 @@ for(const comparison of live){
 }
 
 let curation=createResearchCuration({comparisons:live});
-assert.equal(curation.items.length,21);
-assert.deepEqual(researchCurationSummary(curation),{keep:0,rework:0,reject:0,unreviewed:21});
+assert.equal(curation.items.length,23);
+assert.deepEqual(researchCurationSummary(curation),{keep:0,rework:0,reject:0,unreviewed:23});
 curation=setResearchCurationDecision(curation,curation.items[0].candidateId,'keep','lisible au premier coup d’œil');
 curation=setResearchCurationDecision(curation,curation.items[1].candidateId,'rework','simplifier la silhouette');
 curation=setResearchCurationDecision(curation,curation.items[2].candidateId,'reject','trop ambigu');
-assert.deepEqual(researchCurationSummary(curation),{keep:1,rework:1,reject:1,unreviewed:18});
+assert.deepEqual(researchCurationSummary(curation),{keep:1,rework:1,reject:1,unreviewed:20});
 assert.equal(setResearchCurationDecision(curation,curation.items[3].candidateId,'clinical_approved','nope'),null,'curation must reject clinical-looking decisions');
 const exported=researchCurationExport(curation);
 assert.equal(exported.kind,'visual_research_curation');
@@ -79,7 +79,7 @@ assert.equal('humanDecision' in exported,false);
 const empty=createResearchCuration({comparisons:live});
 const restored=applyResearchCurationImport(empty,exported);
 assert.ok(restored,'a genuine Rebulo visual curation export must be importable');
-assert.deepEqual(researchCurationSummary(restored),{keep:1,rework:1,reject:1,unreviewed:18});
+assert.deepEqual(researchCurationSummary(restored),{keep:1,rework:1,reject:1,unreviewed:20});
 assert.equal(restored.items.find(item=>item.candidateId===curation.items[1].candidateId).note,'simplifier la silhouette');
 assert.equal(applyResearchCurationImport(empty,{schemaVersion:'1.0',observations:[],concept:'pot'}),null,'a naming-test shaped file must be refused');
 assert.equal(applyResearchCurationImport(empty,{...exported,clinicalStatus:'clinical_approved'}),null,'unknown clinical-looking top-level fields must be refused');
@@ -88,4 +88,4 @@ assert.equal(applyResearchCurationImport(empty,{...exported,decisions:[{...expor
 assert.equal(applyResearchCurationImport(empty,{...exported,decisions:[exported.decisions[0],exported.decisions[0]]}),null,'duplicate candidate decisions must be refused');
 assert.equal(applyResearchCurationImport(empty,{...exported,decisions:[{...exported.decisions[0],participantName:'x'}]}),null,'unexpected decision fields must be refused');
 
-console.log('research gallery: only available local stimuli enter curation; pending heure variants stay blocked.');
+console.log('research gallery: all available local stimuli, including two blind heure scenes, enter research curation without implying human validation.');

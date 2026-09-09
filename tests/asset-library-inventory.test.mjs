@@ -6,7 +6,7 @@ const inventory = await buildAssetInventory(new URL('..', import.meta.url).pathn
 assert.equal(inventory.schemaVersion, '1.1');
 assert.equal(inventory.summary.production, 24, 'production SVG count should exclude archived legacy pot');
 assert.equal(inventory.summary.prepared, 0, 'prepared comic queue should be empty after corps migration');
-assert.equal(inventory.summary.research, 27, 'research inventory should include nid plus four new redesign prototypes');
+assert.equal(inventory.summary.research, 29, 'research inventory should include nid, four redesign prototypes and two blind heure scenes');
 
 const expectedComicProduction = [
   ['the', '/te/', 'the-comic-v1'],
@@ -52,6 +52,14 @@ assert.equal(nidPrototype.revision, 'nid-comic-v1');
 assert.equal(nidPrototype.clinicalStatus, 'naming_test_required');
 assert.ok(!inventory.summary.activeLegacyStyle.includes(nidPrototype.path), 'inactive research prototypes must never enter active legacy migration warnings');
 
+const hourPaths=['assets/research/heure-scene-a-v1.svg','assets/research/heure-scene-b-v1.svg'];
+for(const path of hourPaths){
+  const asset=inventory.assets.find(item=>item.path===path);
+  assert.ok(asset,`${path} should exist as a separate research stimulus`);
+  assert.equal(asset.active,false,`${path} must remain research-only before human naming review`);
+  assert.ok(!inventory.summary.activeLegacyStyle.includes(path),`${path} must never count as active production`);
+}
+
 const redesignPaths = [
   'assets/research/mat-boat-arrow-comic-v1.svg',
   'assets/research/tour-chess-rook-comic-v1.svg',
@@ -72,4 +80,4 @@ assert.deepEqual(inventory.summary.productionDuplicateReadings, [], 'historical 
 for (const reading of ['pot','tas','eau']) assert.ok(inventory.summary.historicalRevisionReadings.includes(reading), `${reading} should be classified as production + research history`);
 assert.ok(inventory.summary.activeLegacyStyle.includes('assets/rebus/chat.svg'), 'audit should expose active assets that still need comic migration');
 
-console.log('asset-library-inventory.test.mjs: lifecycle-aware duplicate classification ok');
+console.log('asset-library-inventory.test.mjs: lifecycle-aware duplicate classification includes separate blind heure research stimuli');

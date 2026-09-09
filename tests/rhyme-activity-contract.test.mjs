@@ -3,6 +3,11 @@ import fs from 'node:fs';
 import {normalizeIPA} from '../src/phonetic-engine.js';
 import {buildRhymeJudgments,buildRhymeMatching} from '../src/rhyme-activities.js';
 import {buildRelationalTherapyCatalog} from '../src/relational-therapy-catalog.js';
+import {attachCreatorRelationalActivities} from '../src/relational-creator-exposure.js';
+import {buildCreatorCandidate} from '../src/creator-runtime.js';
+import {normalizeWorksheetSet} from '../src/pdf-export.js';
+import {buildSessionSharePayload,serializeSessionShare,deserializeSessionShare,resolveSharedSession} from '../src/session-share.js';
+import {sessionAnswerMatches,sessionExpectedAnswer,safeSessionHint} from '../src/session-runner.js';
 
 const contract=JSON.parse(fs.readFileSync('data/rhyme-activity-contract.json','utf8'));
 
@@ -72,4 +77,49 @@ assert.equal(catalog.phonemeOperations.length,3);
 assert.equal(catalog.activities.length,10,'catalog must expose only activities produced from validated explicit data');
 assert.equal(buildRelationalTherapyCatalog().activities.length,0,'no relational data means no relational activity');
 
-console.log('relational therapy catalog: explicit rhyme, minimal-pair and phoneme-operation data assemble into controlled activities only');
+const corpus=JSON.parse(fs.readFileSync('data/corpus-pilot.json','utf8')).items;
+const therapy=JSON.parse(fs.readFileSync('data/therapy-targets.json','utf8')).targets;
+const strictReady=corpus.filter(item=>item.mode==='strict'&&item.assets==='ready');
+const enriched=strictReady.map(item=>attachCreatorRelationalActivities(item,catalog));
+const exposed=enriched.filter(item=>item.relationalActivities?.length);
+assert.deepEqual(exposed.map(item=>item.target).sort(),['parapluie','parasol'],'the first creator pilot must remain limited to targets with an explicitly declared usable source piece');
+for(const target of exposed){
+  assert.ok(target.relationalActivities.every(activity=>activity.activityId==='rhyme-matching'),'no other relational type is exposed in the first creator pilot');
+  assert.ok(target.relationalActivities.every(activity=>activity.technicalValidation==='phonological_contract'));
+  assert.ok(target.relationalActivities.every(activity=>activity.pedagogicalValidation==='not_evaluated'),'technical validity must not be presented as pedagogical validation');
+}
+
+const parapluie=enriched.find(item=>item.target==='parapluie');
+const creatorCandidate=buildCreatorCandidate(parapluie,lexicon,therapy);
+const creatorActivity=creatorCandidate.therapyActivities.find(item=>item.activityId==='rhyme-matching');
+assert.ok(creatorActivity,'creator must discover the controlled rhyme matching activity');
+assert.equal(creatorActivity.focusWord,'pas');
+assert.equal(creatorActivity.label,'Trouver une rime avec « pas »');
+assert.equal(creatorActivity.description.includes('mot-image déclaré'),true,'the professional must understand why the activity is proposed');
+assert.equal(creatorActivity.childInstruction,'Quel mot rime avec « pas » : tas ou pie ?');
+assert.equal(creatorActivity.sessionExpectedResponse,'tas');
+
+const [queued]=normalizeWorksheetSet([{...creatorCandidate,activity:creatorActivity}]);
+assert.equal(queued.activity.id,creatorActivity.id,'adding to a session must retain the exact relational activity identity');
+const payload=buildSessionSharePayload([queued],{hint:true,solution:true});
+assert.equal(payload.v,2);assert.equal(payload.rounds[0].activity,'rhyme-matchingpas');assert.equal(payload.rounds[0].activityLabel,creatorActivity.label);
+const reopenedPayload=deserializeSessionShare(serializeSessionShare(payload));
+const reopened=resolveSharedSession(reopenedPayload,{corpus:enriched,buildCandidate:target=>buildCreatorCandidate(target,lexicon,therapy)});
+assert.equal(reopened.allUsable,true);assert.equal(reopened.items.length,1);
+const round=reopened.items[0];
+assert.equal(round.activity.id,creatorActivity.id,'reopened session must resolve the same controlled activity');
+assert.equal(sessionExpectedAnswer(round),'tas');
+assert.equal(sessionAnswerMatches('tas',round),true,'session must validate the relational expected word, not the rebus answer');
+assert.equal(sessionAnswerMatches('parapluie',round),false);
+assert.equal(safeSessionHint(round),'Choisis parmi : tas ou pie.');
+
+const catalogWithoutPilot=enriched.map(item=>item.target==='parapluie'?{...item,relationalActivities:[]}:item);
+const unavailable=resolveSharedSession(reopenedPayload,{corpus:catalogWithoutPilot,buildCandidate:target=>buildCreatorCandidate(target,lexicon,therapy)});
+assert.equal(unavailable.items.length,0);assert.equal(unavailable.unavailable.length,1);
+assert.equal(unavailable.unavailable[0].reason,'activity_unavailable');
+assert.equal(unavailable.unavailable[0].descriptor.targetLabel,'parapluie');
+assert.equal(unavailable.unavailable[0].descriptor.activityLabel,'Trouver une rime avec « pas »','saved session must remain intelligible when relational data disappears later');
+
+assert.equal(catalog.rhymeMatching.find(item=>item.targetWord==='pie'),undefined,'pie has no controlled matching set yet: insufficient explicit choices must remain an acceptable absence');
+
+console.log('relational creator/session pilot: controlled rhyme discovery, queue, save, reopen, use and later unavailability all pass');

@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import {spawnSync} from 'node:child_process';
+import {buildTargetVocabulary} from '../src/target-vocabulary.js';
 
 function importFixture(fixture,name){
   const output=path.join(os.tmpdir(),`rebulo-lexique-${name}-${process.pid}.json`);
@@ -38,4 +39,8 @@ assert.equal(cinema.sourceSyllabification,'si-ne-ma');
 assert.equal(maison.syllabification,'mɛ.zɔ̃','validated legacy SyllPhono may be promoted to IPA syllabification');
 assert.equal(cinema.syllabification,'si.ne.ma');
 
-console.log('Lexique 4 importer: explicit IPA and strictly validated SyllPhono conversion passed.');
+const targetMaison=buildTargetVocabulary(official.entries).find(item=>item.target==='maison');
+assert.equal(targetMaison.syllabificationStatus,'source_exact','validated imported boundaries must reach the target vocabulary as source-exact');
+assert.deepEqual(targetMaison.syllables,['mɛ','zɔ̃']);
+
+console.log('Lexique 4 importer: validated SyllPhono reaches source-exact target vocabulary.');

@@ -16,12 +16,12 @@ for(const [grapheme,ipa] of [['D','/d/'],['R','/ʁ/'],['L','/l/'],['N','/n/'],['
   assert.equal(result.authorized,false,`${grapheme} sound cue must not auto-authorize general use`);
 }
 
-for(const grapheme of ['MENT','TION','SION']){
+for(const grapheme of ['TR','MENT','TION','SION']){
   const result=operationReadiness(registry,{type:'contextual_grapheme',grapheme});
-  assert.equal(result.readiness,'semantics_defined',`${grapheme} now has conservative exact suffix semantics`);
-  assert.equal(result.authorized,false,`${grapheme} still needs visual cue and comprehension testing`);
+  assert.equal(result.readiness,'visual_cue_defined',`${grapheme} now has conservative semantics plus an explicit source-evidence visual model`);
+  assert.equal(result.authorized,false,`${grapheme} still needs human comprehension testing`);
 }
-for(const grapheme of ['TR','IN','UN']){
+for(const grapheme of ['IN','UN']){
   const result=operationReadiness(registry,{type:'contextual_grapheme_research',grapheme});
   assert.equal(result.readiness,'research_only',`${grapheme} must remain blocked research`);
   assert.equal(result.authorized,false);
@@ -42,4 +42,4 @@ assert.equal(unknown.authorized,false);
 const bad=structuredClone(registry);bad.entries[0].automaticActivation=true;
 assert.equal(validateGeneralOperationReadinessRegistry(bad).valid,false);
 
-console.log('general operation readiness: exact suffix semantics advance without authorizing contextual tiles or changing strict mode.');
+console.log('general operation readiness: TR/MENT/TION/SION have explicit visual cues but remain unauthorized pending comprehension testing.');

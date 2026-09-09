@@ -1,6 +1,6 @@
 # REBULO — PASSATION ACTIVE / POINT D’ENTRÉE UNIQUE
 
-**Dernière mise à jour : 8 septembre 2026, après fusion de la PR #155.**
+**Dernière mise à jour : 9 septembre 2026, après fusion de la PR #190 et préparation du protocole de compréhension des opérations générales.**
 
 Ce fichier est le point d’entrée prioritaire pour continuer Rebulo. Le journal lisible d’avancement est `docs/PROGRESSION.md`. Les principes stables restent dans `docs/PRODUCT_PRINCIPLES.md` : ne pas les recopier ici sauf si une règle durable change réellement.
 
@@ -59,12 +59,33 @@ Lire :
 - `data/asset-sources.json`
 - `data/production-naming-reviews.json`
 - `data/pictogram-prototype-comparisons.json`
+- `data/pictogram-naming-test-plans.json`
 - `src/pictogram-guarantee.js`
 - `src/asset-audit.js`
 
 Garantie : ne pas confondre `general_illustration`, `phonetic_structured`, observation humaine et validation clinique. Une ambiguïté de dénomination est une donnée, pas une raison de forcer un mapping universel.
 
 Validation : `npm run test:targeted:data`, `npm run audit:assets` et/ou `npm run audit:pictogram-guarantees` selon le lot. Les audits n’inventent jamais une validation humaine.
+
+### Opérations générales visibles
+Lire :
+- `src/rebus-construction.js`
+- `src/general-operation-visual.js`
+- `src/general-operation-readiness.js`
+- `src/contextual-grapheme-operation.js`
+- `data/general-operation-readiness.json`
+- `data/general-operation-comprehension-tests.json`
+- tests `general-operation-*` et `contextual-grapheme-operation.test.mjs`.
+
+Garantie : toute opération générale reste visible, explicite, non stricte et non activée automatiquement. Les niveaux de maturité sont `research_only` → `semantics_defined` → `visual_cue_defined` → `comprehension_tested` → `authorized_general`. Une opération documentée n’est pas automatiquement utilisable.
+
+État actuel :
+- `grapheme` avec nom de lettre explicite : `authorized_general` selon le comportement général historique déjà testé ;
+- `D→/d/`, `R→/ʁ/`, `L→/l/`, `N→/n/`, `GN→/ɲ/`, `Y→/j/` : `visual_cue_defined`, pas encore autorisés ;
+- `TR→/tʁ/`, `MENT→/mɑ̃/`, `TION/SION→/sjɔ̃/` : `visual_cue_defined` avec preuve mot source + IPA exacte au bord du mot ; pas encore autorisés ;
+- `IN/UN` : `research_only`, bloqués tant qu’un alignement graphème↔phonème fiable manque.
+
+Le protocole canonique de compréhension est `data/general-operation-comprehension-tests.json`. Il planifie 10 opérations actuellement à `visual_cue_defined`, exige des verbatim humains, interdit la promotion automatique et ne contient aucun résultat tant qu’aucune passation réelle n’a eu lieu.
 
 ### UI / séance / impression
 Lire uniquement le composant ou workflow concerné et ses tests UX. Si aucune logique phonétique/canonique n’est touchée, commencer par `npm run test:fast`, puis les tests ciblés de la zone. L’écran principal doit rester simple et les fonctions existantes accessibles.
@@ -77,6 +98,8 @@ Lire uniquement le composant ou workflow concerné et ses tests UX. Si aucune lo
 - **Aucune solution exacte est acceptable** — cas négatifs stables dans `tests/phonetic-engine.test.mjs` et refus `null` de `buildStrictConstruction`.
 - **Maturité ≠ exactitude ≠ clinique** — `docs/GUARANTEE_MODEL.md`, `src/pictogram-guarantee.js`, tests `pictogram-guarantee*`.
 - **Provenance des assets** — `data/asset-sources.json`, `src/asset-audit.js`, tests d’audit/inventaire. Une licence ou provenance inconnue nécessite un jugement/document humain ; elle ne doit pas être inventée.
+- **Opération documentée ≠ autorisée** — `data/general-operation-readiness.json`; aucune opération à `research_only`, `semantics_defined` ou `visual_cue_defined` ne doit entrer automatiquement dans le générateur.
+- **Compréhension humaine ≠ clinique** — `data/general-operation-comprehension-tests.json`; aucune passation de compréhension ne produit de statut clinique.
 
 ## Niveaux de validation
 
@@ -100,62 +123,73 @@ Parcours central : `Écris un mot → Créer le rébus`.
 
 Interdits en strict : lecture partielle cachée, suppression arbitraire, consonne muette ressuscitée, liaison inventée, approximation orthographique ou assouplissement destiné à gonfler la couverture.
 
-`buildStrictConstruction` et `validateStrictRebus` restent des garde-fous. `grapheme`, `spatial_relation`, `explicit_deletion`, `explicit_substitution` et `repetition` sont des conventions générales seulement et doivent être visuellement explicites.
+`buildStrictConstruction` et `validateStrictRebus` restent des garde-fous. Les opérations générales explicites restent séparées du strict et doivent être visuellement explicites.
 
-# 3. État technique
+# 3. État technique actuel
 
 Dépôt : `ludodulac/Rebulo`.
 
-Au démarrage du lot d’accélération du 8 septembre 2026, `main` était `3a892970609f703137d839696e5cb6673b0fdeed`, merge de la PR #155. Toujours re-vérifier le HEAD avant une écriture : ce SHA n’est pas une référence permanente.
+Toujours re-vérifier le HEAD de `main` avant une écriture ; les SHA cités dans l’historique ne sont jamais des références permanentes.
 
-Évolutions récentes déjà intégrées à ne pas redévelopper :
-- catalogue strict réellement exposé au mode Jouer ;
-- pratique de phrases et recommandation selon couverture visuelle ;
-- suivi des révisions exactes de stimuli et files de migration visuelle ;
-- opérations générales explicites séparées du strict ;
-- profils/difficulté et outils de séance existants ;
-- modèle explicite de garanties des pictogrammes et ambiguïtés de dénomination (`docs/GUARANTEE_MODEL.md`, PR #155).
+Paquets récents importants :
+- PR #181 : `grapheme_sound` explicite, IPA-ciblé et général-only ; distinction stricte avec le nom français de la lettre ;
+- PR #182 : quatre compositions générales exactes de recherche (`/dite/`, `/mid/`, `/ɲal/`, `/jœʁ/`) ; la file hard-route est passée à 0 cible nécessitant une représentation entièrement nouvelle ;
+- PR #183–#186 : tri visuel conservateur ; `heure /œʁ/` reste le seul prototype de scène prioritaire du dernier lot et les pistes lexicales faibles sont fermées comme non-visuelles ;
+- PR #187 : `heure` enregistré dans le pipeline de test mais ses deux vrais stimuli restent `pending`; aucune planche comparative ou image contenant la réponse n’est un stimulus valide ;
+- PR #188 : modèle de maturité des opérations générales ;
+- PR #189 : sémantique exacte et conservatrice pour `MENT`, `TION`, `SION` ;
+- PR #190 : sémantique conservatrice de `TR` au début du mot + modèle visuel générique montrant graphème, IPA cible, mot source et IPA source.
 
-# 4. Changement de méthode majeur
+Conséquence actuelle : le principal goulot n’est plus la découverte phonétique brute mais la **validation des représentations** : compréhension des opérations générales et dénomination des rares scènes/pictogrammes encore incertains.
 
-Ne plus créer des vagues de pictogrammes plausibles à l’aveugle. Priorité : collecter de vrais rébus français publiés, analyser leurs images, extraire les briques réellement utilisées, conserver lecture/source/contexte/ambiguïtés, puis chercher un asset libre ou produire une adaptation originale conforme à la convention. Les passations servent ensuite à départager les cas incertains.
+# 4. Couverture et cartographie phonétique
 
-`data/attested-rebus-corpus.json` conserve le corpus attesté et ses sources. Une attestation prouve un usage de convention dans un rébus ; elle ne constitue ni validation clinique, ni activation lexicale automatique, ni éligibilité automatique au mode Exact.
+Le travail Lexique/Éduscol distingue couverture linguistique globale et couverture utile Rebulo. Ne pas optimiser sur tous les types Lexique à poids égal.
 
-# 5. Première passation humaine réelle
+Le dernier état consolidé de la file hard-route après PR #182 était : 117 cibles visuelles non résolues, dont 100 couvertes par une opération générale documentée, 17 par recherche pictogramme/scène, 0 nécessitant une représentation entièrement nouvelle. Les paquets suivants ont réduit la partie « pictogramme à prototyper » à `heure /œʁ/` dans le tri courant et ont surtout transformé les opérations générales documentées en objets de gouvernance testables.
 
-Le 5 septembre 2026, une première personne a réalisé les cinq sessions historiques. Les réponses verbatim sont consignées dans `docs/PROGRESSION.md`.
+# 5. Recherche visuelle et dénomination
 
-Une personne ne valide aucun pictogramme. Cette passation sert surtout à réorienter la recherche visuelle.
+Ne plus créer des vagues de pictogrammes plausibles à l’aveugle. Avant dessin : exactitude phonétique du mot entier + probabilité de dénomination spontanée + simplicité visuelle + âge/utilité. Un objet simplement descriptible par le mot cible n’est pas suffisant.
 
-# 6. Conséquences iconographiques
+Exemple sentinelle : `cuit /kɥi/` est phonétiquement exact mais un œuf cuit sera spontanément nommé « œuf » ; cette piste ne doit pas être activée ni redessinée comme si elle était valide.
 
-Les décisions détaillées et observations historiques restent dans `docs/PROGRESSION.md`. Ne pas les recopier dans de nouveaux documents. Les prototypes de recherche ne doivent jamais être réactivés automatiquement ni confondus avec les assets de production.
+`heure /œʁ/` reste scène de recherche à haut risque de réponses `montre`, `horloge`, `temps`. Le plan `heure-prototype-comparison-v1` est bloqué jusqu’à disponibilité de deux stimuli séparés réellement aveugles.
 
-# 7. Outils humains
+# 6. Outils humains
 
 `naming-test.html` : passation simple, anonyme, code et ordre aléatoire automatiques, question « Qu’est-ce que c’est ? », export JSON local.
 
 `naming-review.html` : imports multiples liés à la révision exacte, comptages descriptifs et miniatures, aucune activation automatique.
 
-`research-gallery.html` : galerie, aperçu sans indices, zoom/navigation, curation locale et ré-import strict.
+`research-gallery.html` : galerie, aperçu sans indices, zoom/navigation, curation locale et ré-import strict. Les stimuli `pending` ne doivent jamais entrer dans la galerie active.
 
-# 8. Statut recherche
+Le nouveau protocole d’opérations générales n’invente aucun résultat : il définit seulement quoi présenter et quoi capturer. Un prochain lot pourra fournir une UI de passation dédiée ou réutiliser une infrastructure existante si cela reste simple et sans confusion avec la dénomination d’images.
 
-Les comparaisons et prototypes restent gouvernés par leurs fichiers canoniques et leur statut explicite. Ne pas fabriquer d’agrégat humain, de validation clinique ou de promotion à partir d’un test planifié, d’une attestation, d’un score de couverture ou d’une décision produit.
+# 7. Statut recherche / décisions humaines
 
-# 9. Direction
+Ne pas fabriquer participants ou observations ; ne pas déclarer `clinical_approved` automatiquement ; ne pas promouvoir `visual_cue_defined` vers `comprehension_tested` sans observations humaines réelles ; ne pas promouvoir `comprehension_tested` vers `authorized_general` sans décision produit humaine explicite.
 
-Construire et améliorer le vocabulaire visuel attesté de Rebulo : corpus → preuve iconographique → ambiguïtés/provenance → asset → intégration contrôlée → mesure de couverture → observation humaine quand nécessaire.
+Pour les opérations générales, le minimum planifié est 3 participants distincts anonymes, avec réponse spontanée verbatim, hésitation, absence de réponse et mauvaise lecture. Ce seuil ouvre une revue humaine ; il ne constitue pas à lui seul une autorisation.
 
-La priorité d’ingénierie est désormais aussi de rendre chaque petit lot plus rapide à reprendre et plus facile à valider sans créer d’exceptions ni de documentation parallèle.
+# 8. Direction immédiate
 
-# 10. Garde-fous
+1. Finaliser et tester le registre de protocole de compréhension des 10 opérations actuellement `visual_cue_defined`.
+2. Ne produire aucun faux résultat de passation ; conserver `results: []` jusqu’à observation réelle.
+3. Après passation réelle, ajouter les observations de façon versionnée et faire une revue humaine explicite avant toute promotion.
+4. Continuer en parallèle le blocage propre de `IN/UN` jusqu’à disposer d’un alignement graphème↔phonème fiable.
+5. Revenir à `heure /œʁ/` seulement avec deux stimuli aveugles réellement séparés et exploitables.
 
-Ne pas inventer participants ou observations ; ne pas déclarer `clinical_approved` automatiquement ; ne pas affaiblir Exact ; ne pas réintroduire de lecture partielle cachée ; ne pas recopier des illustrations protégées ; ne pas réactiver silencieusement les prototypes ; ne pas confondre attestation dans un rébus, reconnaissance spontanée d’une image et validation clinique.
+# 9. Garde-fous
+
+Ne pas inventer participants ou observations ; ne pas déclarer `clinical_approved` automatiquement ; ne pas affaiblir Exact ; ne pas réintroduire de lecture partielle cachée ; ne pas recopier des illustrations protégées ; ne pas réactiver silencieusement les prototypes ; ne pas confondre attestation dans un rébus, reconnaissance spontanée d’une image, compréhension d’une opération générale et validation clinique.
 
 Lorsqu’un exemple échoue, chercher d’abord si l’absence de solution est correcte, si la donnée est incomplète/incorrecte ou si une opération générique explicite manque. Ne jamais ajouter une exception phonétique pour sauver un mot particulier.
 
+# 10. Discipline de handoff
+
+À chaque paquet important fusionné : mettre à jour ce fichier dans la même PR ou dans le paquet immédiatement suivant avec : état produit réel, invariants touchés, nouveaux fichiers canoniques, tests sentinelles, décisions encore humaines et prochain gate. Éviter de créer de nouveaux documents si ce handoff, `PROGRESSION.md`, `PRODUCT_PRINCIPLES.md`, `GUARANTEE_MODEL.md` ou `LEXICAL_PIPELINE.md` peuvent porter l’information.
+
 # 11. Résumé de reprise
 
-**Vérifier `main`, lire les principes, choisir la zone via le chemin rapide, travailler par petit lot, lancer FAST puis TARGETED/FULL selon le risque, et préserver strictement la séparation entre exactitude phonétique, qualité visuelle et validation humaine/clinique.**
+**Vérifier `main`, lire les principes et ce handoff, choisir la zone via le chemin rapide, travailler par petit lot, lancer FAST puis TARGETED/FULL selon le risque, et préserver strictement la séparation entre exactitude phonétique, qualité visuelle, compréhension des opérations générales et validation humaine/clinique.**

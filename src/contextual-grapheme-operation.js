@@ -1,6 +1,7 @@
 import {normalizeIPA} from './phonetic-engine.js';
 
 const RULES=Object.freeze({
+  TR:Object.freeze({grapheme:'TR',position:'prefix',ipa:'tʁ'}),
   TION:Object.freeze({grapheme:'TION',position:'suffix',ipa:'sjɔ̃'}),
   SION:Object.freeze({grapheme:'SION',position:'suffix',ipa:'sjɔ̃'}),
   MENT:Object.freeze({grapheme:'MENT',position:'suffix',ipa:'mɑ̃'})
@@ -24,7 +25,9 @@ export function validateContextualGraphemeEvidence({grapheme,sourceWord,sourceIp
   if(segment!==rule.ipa)return {ok:false,reason:'segment_ipa_mismatch'};
   if(rule.position==='suffix'&&!word.endsWith(rule.grapheme))return {ok:false,reason:'orthographic_context_mismatch'};
   if(rule.position==='suffix'&&!source.endsWith(rule.ipa))return {ok:false,reason:'phonetic_context_mismatch'};
-  return {ok:true,reason:'exact_suffix_word_and_ipa_evidence',rule,sourceWord:String(sourceWord).trim(),sourceIpa:`/${source}/`,segmentIpa:`/${segment}/`};
+  if(rule.position==='prefix'&&!word.startsWith(rule.grapheme))return {ok:false,reason:'orthographic_context_mismatch'};
+  if(rule.position==='prefix'&&!source.startsWith(rule.ipa))return {ok:false,reason:'phonetic_context_mismatch'};
+  return {ok:true,reason:`exact_${rule.position}_word_and_ipa_evidence`,rule,sourceWord:String(sourceWord).trim(),sourceIpa:`/${source}/`,segmentIpa:`/${segment}/`};
 }
 
 export function buildContextualGraphemeOperation(evidence={}){
@@ -32,11 +35,12 @@ export function buildContextualGraphemeOperation(evidence={}){
   if(!validation.ok)return null;
   return {
     type:'contextual_grapheme',
+    operationType:'contextual_grapheme',
     grapheme:validation.rule.grapheme,
     ipa:`/${validation.rule.ipa}/`,
     sourceWord:validation.sourceWord,
     sourceIpa:validation.sourceIpa,
-    context:'suffix_exact_word_and_ipa_evidence',
+    context:`${validation.rule.position}_exact_word_and_ipa_evidence`,
     visual:'grapheme_with_source_evidence',
     strictCompatible:false,
     automaticActivation:false

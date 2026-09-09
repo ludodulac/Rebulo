@@ -90,10 +90,10 @@ export function phonemeEditDistance(source='',target=''){
 }
 
 export function representationTier(item={}){
-  if(item.status==='active'&&item.kind==='whole_word_image')return 'exact_image_ready';
-  if(item.kind==='whole_word_image')return 'exact_image_research';
-  if(['number_symbol','letter_name','music_note','explicit_grapheme'].includes(item.kind))return 'explicit_visible_convention';
-  if(item.kind==='approximate')return 'approximation_research';
+  if(item.match==='approximate'||item.kind==='approximate')return 'approximation_research';
+  const wholeWordKinds=new Set(['whole_word_image','whole_word_pictogram','whole_word_scene','whole_word_image_or_scene']);
+  if(wholeWordKinds.has(item.kind))return item.status==='active'?'exact_image_ready':'exact_image_research';
+  if(['number_symbol','letter_name','music_note','music_note_tile','explicit_grapheme','explicit_grapheme_tile'].includes(item.kind))return 'explicit_visible_convention';
   return 'research_candidate';
 }
 

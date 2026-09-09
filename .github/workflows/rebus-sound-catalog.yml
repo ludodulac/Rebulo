@@ -5,8 +5,10 @@ on:
     paths:
       - '.github/workflows/rebus-sound-catalog.yml'
       - 'scripts/build-rebus-sound-catalog.mjs'
+      - 'scripts/apply-rebus-sound-visual-curation.mjs'
       - 'scripts/import-lexique.mjs'
       - 'src/rebus-sound-catalog.js'
+      - 'src/rebus-sound-visual-curation.js'
       - 'src/syllable-representation-candidates.js'
       - 'src/drawable-opportunities.js'
       - 'src/pictogram-print-sheets.js'
@@ -16,15 +18,19 @@ on:
       - 'src/syllable-print-library.js'
       - 'data/rebus-visible-conventions.json'
       - 'data/rebus-sound-research-seeds.json'
+      - 'data/rebus-sound-visual-curation.json'
       - 'data/phonetic-brick-candidates.json'
       - 'tests/rebus-sound-catalog.test.mjs'
+      - 'tests/rebus-sound-visual-curation.test.mjs'
       - 'tests/syllable-representation-candidates.test.mjs'
   pull_request:
     paths:
       - '.github/workflows/rebus-sound-catalog.yml'
       - 'scripts/build-rebus-sound-catalog.mjs'
+      - 'scripts/apply-rebus-sound-visual-curation.mjs'
       - 'scripts/import-lexique.mjs'
       - 'src/rebus-sound-catalog.js'
+      - 'src/rebus-sound-visual-curation.js'
       - 'src/syllable-representation-candidates.js'
       - 'src/drawable-opportunities.js'
       - 'src/pictogram-print-sheets.js'
@@ -34,8 +40,10 @@ on:
       - 'src/syllable-print-library.js'
       - 'data/rebus-visible-conventions.json'
       - 'data/rebus-sound-research-seeds.json'
+      - 'data/rebus-sound-visual-curation.json'
       - 'data/phonetic-brick-candidates.json'
       - 'tests/rebus-sound-catalog.test.mjs'
+      - 'tests/rebus-sound-visual-curation.test.mjs'
       - 'tests/syllable-representation-candidates.test.mjs'
   workflow_dispatch:
 
@@ -56,6 +64,7 @@ jobs:
       - name: Run sound-catalog regressions
         run: |
           node tests/rebus-sound-catalog.test.mjs
+          node tests/rebus-sound-visual-curation.test.mjs
           node tests/syllable-representation-candidates.test.mjs
           node tests/syllable-print-library.test.mjs
           node tests/pictogram-print-sheets.test.mjs
@@ -69,6 +78,8 @@ jobs:
         run: node scripts/import-lexique.mjs .cache/Lexique4.tsv .cache/lexique4.compact.json
       - name: Build one-to-two-syllable sound catalog
         run: node scripts/build-rebus-sound-catalog.mjs .cache/lexique4.compact.json data/rebus-sound-catalog.json docs/REBUS_SOUND_CATALOG_REPORT.md
+      - name: Apply editorial visual curation
+        run: node scripts/apply-rebus-sound-visual-curation.mjs data/rebus-sound-catalog.json .cache/lexique4.compact.json data/rebus-sound-visual-curation.json docs/REBUS_SOUND_VISUAL_CURATION_REPORT.md
       - name: Add Lexique provenance and verify useful output
         run: |
           node --input-type=module <<'NODE'
@@ -85,8 +96,13 @@ jobs:
           if(report.soundRows?.length!==report.stats.windowCount)throw new Error('compact exhaustive sound rows are incomplete');
           if(!(report.visualResearchQueue?.length>0))throw new Error('visual research queue missing');
           if(!(report.newImageResearchQueue?.length>0))throw new Error('new-image research queue missing');
+          if(!report.visualCuration?.validation?.valid)throw new Error('visual curation validation missing');
+          if(!(report.visualCuration?.curatedPrototypeQueue?.length>0))throw new Error('curated prototype queue missing');
+          if(!(report.visualCuration?.curatedNewImageResearchQueue?.length>0))throw new Error('curated image research queue missing');
+          if(!fs.existsSync('docs/REBUS_SOUND_VISUAL_CURATION_REPORT.md'))throw new Error('visual curation report missing');
           fs.writeFileSync(path,JSON.stringify(report));
           console.log(JSON.stringify(report.stats,null,2));
+          console.log(JSON.stringify(report.visualCuration.stats,null,2));
           console.log(`catalog bytes: ${fs.statSync(path).size}`);
           NODE
       - name: Upload catalog research artifact
@@ -96,13 +112,14 @@ jobs:
           path: |
             data/rebus-sound-catalog.json
             docs/REBUS_SOUND_CATALOG_REPORT.md
+            docs/REBUS_SOUND_VISUAL_CURATION_REPORT.md
           retention-days: 14
       - name: Commit generated catalog on main
         if: github.ref == 'refs/heads/main'
         run: |
           git config user.name 'rebulo-analysis-bot'
           git config user.email 'actions@users.noreply.github.com'
-          git add data/rebus-sound-catalog.json docs/REBUS_SOUND_CATALOG_REPORT.md
+          git add data/rebus-sound-catalog.json docs/REBUS_SOUND_CATALOG_REPORT.md docs/REBUS_SOUND_VISUAL_CURATION_REPORT.md
           if git diff --cached --quiet; then echo 'No sound catalog changes to commit.'; exit 0; fi
           git commit -m 'Refresh rebus sound catalog'
           git fetch origin main

@@ -7,6 +7,12 @@ assert.deepEqual(generalOperationVisual({operationType:'grapheme_sound',grapheme
 assert.equal(generalOperationVisual({operationType:'grapheme_sound',grapheme:'D',ipa:''}),null);
 assert.equal(generalOperationVisual({operationType:'grapheme_sound',grapheme:'',ipa:'/d/'}),null);
 
+const contextual=generalOperationVisual({operationType:'contextual_grapheme',grapheme:'TION',ipa:'/sjɔ̃/',sourceWord:'nation',sourceIpa:'/nasjɔ̃/',context:'suffix_exact_word_and_ipa_evidence'});
+assert.deepEqual(contextual,{kind:'contextual-grapheme',grapheme:'TION',ipa:'/sjɔ̃/',sourceWord:'nation',sourceIpa:'/nasjɔ̃/',context:'suffix_exact_word_and_ipa_evidence',visual:'grapheme_with_source_evidence'});
+const tr=generalOperationVisual({operationType:'contextual_grapheme',grapheme:'TR',ipa:'/tʁ/',sourceWord:'train',sourceIpa:'/tʁɛ̃/',context:'prefix_exact_word_and_ipa_evidence'});
+assert.equal(tr.kind,'contextual-grapheme');assert.equal(tr.sourceWord,'train');
+assert.equal(generalOperationVisual({operationType:'contextual_grapheme',grapheme:'MENT',ipa:'/mɑ̃/',sourceWord:'rapidement',sourceIpa:'',context:'suffix_exact_word_and_ipa_evidence'}),null,'source evidence must be visible and complete');
+
 const half=generalOperationVisual({operationType:'explicit_deletion',image:'yoyo.svg',label:'yo-yo',sourceReading:'yo-yo',keep:'premier yo',remove:'second yo',reading:'yo',visual:'half'});
 assert.deepEqual(half,{kind:'deletion-half',image:'yoyo.svg',label:'yo-yo',reading:'yo',sourceReading:'yo-yo',keep:'premier yo',remove:'second yo'});
 const crossed=generalOperationVisual({operationType:'explicit_deletion',image:'yoyo.svg',label:'yo-yo',sourceReading:'yo-yo',keep:'premier yo',remove:'second yo',reading:'yo',visual:'cross_out'});
@@ -27,4 +33,4 @@ assert.equal(generalOperationVisual({operationType:'whole_word',image:'mer.svg'}
 assert.equal(generalOperationVisual({operationType:'explicit_deletion',image:'yoyo.svg',sourceReading:'yo-yo',reading:'yo'}),null);
 assert.equal(generalOperationVisual({operationType:'repetition',image:'',sourceReading:'mer',count:2,reading:'mer mer'}),null);
 
-console.log('General operation visuals: grapheme-sound, deletion, substitution and repetition expose explicit render models.');
+console.log('General operation visuals: grapheme-sound and contextual source-evidence cues stay explicit alongside deletion, substitution and repetition.');

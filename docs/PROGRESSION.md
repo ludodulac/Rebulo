@@ -1,8 +1,8 @@
 # REBULO — PROGRESSION
 
-**Dernière mise à jour : 5 septembre 2026.**
+**Journal historique. Dernière mise à jour de ce journal : 5 septembre 2026.**
 
-Ce fichier résume l'avancement produit et recherche. Il complète `docs/PROJECT_HANDOFF_2026-09-01.md`, qui reste le point d'entrée technique détaillé.
+Ce fichier conserve des étapes et observations historiques. Il **n'est pas une source de vérité sur l'état courant** et ne doit pas être lu par défaut lors d'une reprise. Commencer par `AI_START_HERE.md`, puis vérifier le comportement réel dans `main`, le code, les données et les tests. Utiliser ce journal seulement lorsqu'une décision passée ou une ancienne expérience est nécessaire.
 
 ## Cap produit
 

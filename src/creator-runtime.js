@@ -9,6 +9,17 @@ function normalizedSyllables(target={}){
   return syllables.length&&(!count||syllables.length===count)?syllables:[];
 }
 
+function lexicalContext(target={}){
+  const lemma=String(target?.lemma||'').trim();
+  const pos=String(target?.pos||'').trim();
+  const sourceSyllabification=String(target?.sourceSyllabification||'').trim();
+  return {
+    ...(lemma?{lemma}:{}),
+    ...(pos?{pos}:{}),
+    ...(sourceSyllabification?{sourceSyllabification}:{})
+  };
+}
+
 export function buildCreatorCandidate(target,lexicon=[],therapyDefinitions=[]){
   if(!target||target.mode!=='strict'||target.assets!=='ready'||!target.targetIpa)return null;
   const pieces=rankDecompositions(segmentTargetWithLexicon(target.targetIpa,lexicon,4))[0]||null;
@@ -18,7 +29,7 @@ export function buildCreatorCandidate(target,lexicon=[],therapyDefinitions=[]){
     ...validatedCreatorRelationalActivities(target),
     ...buildTherapyActivities({...target,syllables},therapyDefinitions)
   ];
-  const candidate={answer:target.target,targetIpa:target.targetIpa,syllableCount:Number.isInteger(target.syllableCount)&&target.syllableCount>0?target.syllableCount:null,syllables,syllabificationStatus:syllables.length?'source_exact':target.syllabificationStatus||'needs_source_review',source:target.source||'',generated:Boolean(target.generated),pieces:pieces.map(piece=>({...piece,reading:piece.label})),therapyActivities};
+  const candidate={answer:target.target,targetIpa:target.targetIpa,...lexicalContext(target),syllableCount:Number.isInteger(target.syllableCount)&&target.syllableCount>0?target.syllableCount:null,syllables,syllabificationStatus:syllables.length?'source_exact':target.syllabificationStatus||'needs_source_review',source:target.source||'',generated:Boolean(target.generated),pieces:pieces.map(piece=>({...piece,reading:piece.label})),therapyActivities};
   if(!validateStrictRebus(candidate).ok)return null;
   const construction=buildStrictConstruction(candidate.pieces,candidate.targetIpa);
   return construction?{...candidate,construction}:null;
@@ -67,5 +78,5 @@ export function buildGeneralCreatorCandidate(target,lexicon=[]){
   }
   const construction=buildGeneralConstruction(operations);
   if(!construction||construction.mode!=='general')return null;
-  return {answer:target.target,targetIpa:target.targetIpa||'',source:target.source||'manual-general',generated:Boolean(target.generated),pieces,therapyActivities:[],construction};
+  return {answer:target.target,targetIpa:target.targetIpa||'',...lexicalContext(target),source:target.source||'manual-general',generated:Boolean(target.generated),pieces,therapyActivities:[],construction};
 }

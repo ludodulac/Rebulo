@@ -18,12 +18,14 @@ function exactSyllables(value='',count=null){
   return syllables;
 }
 
-function addSyllableCountActivity(therapy=[]){
-  if(!Array.isArray(therapy)||therapy.includes('syllable-count'))return therapy;
+function addSyllableActivity(therapy=[],id=''){
+  if(!Array.isArray(therapy)||!id||therapy.includes(id))return therapy;
   const next=[...therapy];
-  const before=next.indexOf('syllable-blending');
-  if(before>=0)next.splice(before,0,'syllable-count');
-  else next.push('syllable-count');
+  const blending=next.indexOf('syllable-blending');
+  const oral=next.indexOf('oral-to-written');
+  const before=blending>=0?blending:oral;
+  if(before>=0)next.splice(before,0,id);
+  else next.push(id);
   return next;
 }
 
@@ -78,6 +80,7 @@ export function buildCreatorTargets(report={}){
     const syllables=exactSyllables(row.syllabification,syllableCount);
     const therapy=['denomination','lexical-access','phoneme-initial','phoneme-final','phoneme-segmentation','phoneme-blending'];
     if(syllableCount)therapy.push('syllable-count');
+    if(syllables.length)therapy.push('syllable-segmentation');
     therapy.push('oral-to-written');
     targets.push({
       target:row.word,
@@ -286,14 +289,15 @@ export function mergeCreatorTargets(manualItems=[],generatedItems=[]){
       const existingSyllables=Array.isArray(item?.syllables)?item.syllables.map(normalizeIPA).filter(Boolean):[];
       const generatedSyllables=Array.isArray(generated?.syllables)?generated.syllables.map(normalizeIPA).filter(Boolean):[];
       if((!existingCount&&generatedCount)||(!existingSyllables.length&&generatedSyllables.length)){
+        let therapy=item?.therapy;
+        if(Array.isArray(therapy)&&generated?.therapy?.includes('syllable-count'))therapy=addSyllableActivity(therapy,'syllable-count');
+        if(Array.isArray(therapy)&&generatedSyllables.length&&generated?.therapy?.includes('syllable-segmentation'))therapy=addSyllableActivity(therapy,'syllable-segmentation');
         next={
           ...item,
           syllableCount:existingCount||generatedCount,
           syllables:existingSyllables.length?existingSyllables:generatedSyllables,
           syllabificationStatus:existingSyllables.length?(item.syllabificationStatus||'source_exact'):(generatedSyllables.length?'source_exact':item.syllabificationStatus),
-          therapy:Array.isArray(item?.therapy)&&generated?.therapy?.includes('syllable-count')
-            ?addSyllableCountActivity(item.therapy)
-            :item?.therapy
+          therapy
         };
       }
     }

@@ -42,7 +42,7 @@ jobs:
       - name: Verify proof report
         run: |
           test -s docs/REBUS_REPRESENTATION_PATH_PROOF.md
-          grep -q 'merci' docs/REBUS_REPRESENTATION_PATH_PROOF.md
+          grep -q 'mɛʁsi' docs/REBUS_REPRESENTATION_PATH_PROOF.md
           grep -q 'Frontière encore manquante' docs/REBUS_REPRESENTATION_PATH_PROOF.md
       - name: Upload path proof
         uses: actions/upload-artifact@v4

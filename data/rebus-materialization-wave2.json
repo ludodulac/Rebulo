@@ -1,0 +1,34 @@
+{
+  "version": "0.2.1-materialization2",
+  "status": "research_stimuli_only",
+  "policy": {
+    "purpose": "Inspect a small set of already-curated prototypes and materialize only the cases that remain graphically simple after duplicate and ambiguity review.",
+    "proof": "exact phonetics != lexical obviousness != visual plausibility != spontaneous namability != clinical validation",
+    "storage": "New SVG stimuli remain under assets/research and are inspection stimuli, not registered production assets.",
+    "naming": "Every inspected item keeps spontaneousNamingRisk unknown, humanNamingEvidence none and clinicalEvidence none."
+  },
+  "summary": {
+    "prototypeCandidatesInspectedForProduction": 8,
+    "existingAssetsReused": 0,
+    "newAssetsCreated": 4,
+    "conceptsAbandonedAfterGraphicInspection": 1,
+    "conceptsToReworkAfterGraphicInspection": 3,
+    "stimuliNowAvailableForFutureHumanTest": 4,
+    "newResearchStimulusFiles": 4,
+    "auditedCuratedSoundsWithGraphicStimulusAdded": 4,
+    "baselineMinimumAuditedCuratedSoundsWithGraphicStimulus": 8,
+    "cumulativeMinimumAuditedCuratedSoundsWithGraphicStimulus": 12,
+    "baselineMinimumConcreteRepresentationIncludingVisibleConventions": 11,
+    "cumulativeMinimumConcreteRepresentationIncludingVisibleConventions": 15
+  },
+  "entries": [
+    {"ipa":"pɛl","candidate":"pelle","sourceWave":"wave4","decision":"new_research_stimulus_created","asset":"assets/research/pelle-stimulus-v1.svg","duplicateInspection":"No registered asset, research filename match or earlier prototype for pelle was found in the current repository tree or representation queue.","graphicInspection":"A single garden shovel stays readable with only handle, shaft and blade. The unresolved lexical competitor is bêche rather than a parasitic scene element.","ambiguities":["bêche"],"spontaneousNamingRisk":"unknown","humanNamingEvidence":"none","clinicalEvidence":"none"},
+    {"ipa":"ʁadi","candidate":"radis","sourceWave":"wave4","decision":"new_research_stimulus_created","asset":"assets/research/radis-stimulus-v1.svg","duplicateInspection":"No registered radis asset or prior radis research prototype was found.","graphicInspection":"The bulb plus a small leafy crown gives a compact stimulus. Navet/betterave/légume remain plausible readings but no extra context is needed.","ambiguities":["navet","betterave","légume"],"spontaneousNamingRisk":"unknown","humanNamingEvidence":"none","clinicalEvidence":"none"},
+    {"ipa":"kaʁe","candidate":"carré","sourceWave":"wave4","decision":"new_research_stimulus_created","asset":"assets/research/carre-stimulus-v1.svg","duplicateInspection":"No registered or research carré stimulus was found; existing geometric conventions do not duplicate this lexical route.","graphicInspection":"A single square is maximally sparse. The main uncertainty is whether a participant says carré, forme or rectangle despite equal sides.","ambiguities":["forme","rectangle"],"spontaneousNamingRisk":"unknown","humanNamingEvidence":"none","clinicalEvidence":"none"},
+    {"ipa":"fu","candidate":"fou","sourceWave":"wave4","decision":"new_research_stimulus_created","asset":"assets/research/fou-echecs-stimulus-v1.svg","duplicateInspection":"The repository contains a tour/chess research stimulus but no bishop/fou duplicate; the two chess-piece concepts are distinct.","graphicInspection":"The bishop silhouette and diagonal notch are simple enough to isolate the chess sense of fou. Pièce/pion/reine remain naming competitors to measure later.","ambiguities":["pièce d'échecs","pion","reine"],"spontaneousNamingRisk":"unknown","humanNamingEvidence":"none","clinicalEvidence":"none"},
+    {"ipa":"lu","candidate":"loup","sourceWave":"wave4","decision":"rework_after_graphic_inspection","graphicInspection":"A minimal wolf silhouette collapses toward chien; adding forest, moon or aggressive pose adds narrative cues without guaranteeing loup. Rework is preferable to a weak v1 asset.","ambiguities":["chien","canidé"],"spontaneousNamingRisk":"unknown","humanNamingEvidence":"none","clinicalEvidence":"none"},
+    {"ipa":"lœʁ","candidate":"leurre","sourceWave":"wave4","decision":"rework_after_graphic_inspection","graphicInspection":"The hook is necessary to signal fishing but then hameçon/appât dominate; removing it makes the lure look like an arbitrary small object. No clean minimal v1 was justified.","ambiguities":["hameçon","appât"],"spontaneousNamingRisk":"unknown","humanNamingEvidence":"none","clinicalEvidence":"none"},
+    {"ipa":"peʃe","candidate":"pêcher","sourceWave":"wave4","decision":"rework_after_graphic_inspection","graphicInspection":"Visible peaches make the tree species inferable but also make pêche/fruits/arbre strong responses; without fruit the species is lost. The concept remains promising but needs a naming experiment before asset production.","ambiguities":["pêche","arbre","pommier"],"spontaneousNamingRisk":"unknown","humanNamingEvidence":"none","clinicalEvidence":"none"},
+    {"ipa":"pate","candidate":"pâté","sourceWave":"wave4","decision":"abandoned_after_graphic_inspection","graphicInspection":"Terrine and sliced-meat depictions remain at least as likely to elicit terrine, charcuterie or viande; adding bread or packaging only adds distractors. No asset was created.","ambiguities":["terrine","charcuterie","viande","pâtée"],"spontaneousNamingRisk":"unknown","humanNamingEvidence":"none","clinicalEvidence":"none"}
+  ]
+}

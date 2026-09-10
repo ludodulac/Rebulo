@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0-materialization2",
+  "version": "0.2.1-materialization2",
   "status": "research_stimuli_only",
   "policy": {
     "purpose": "Inspect a small set of already-curated prototypes and materialize only the cases that remain graphically simple after duplicate and ambiguity review.",
@@ -15,7 +15,11 @@
     "conceptsToReworkAfterGraphicInspection": 3,
     "stimuliNowAvailableForFutureHumanTest": 4,
     "newResearchStimulusFiles": 4,
-    "auditedCuratedSoundsWithGraphicStimulusAdded": 4
+    "auditedCuratedSoundsWithGraphicStimulusAdded": 4,
+    "baselineMinimumAuditedCuratedSoundsWithGraphicStimulus": 8,
+    "cumulativeMinimumAuditedCuratedSoundsWithGraphicStimulus": 12,
+    "baselineMinimumConcreteRepresentationIncludingVisibleConventions": 11,
+    "cumulativeMinimumConcreteRepresentationIncludingVisibleConventions": 15
   },
   "entries": [
     {"ipa":"pɛl","candidate":"pelle","sourceWave":"wave4","decision":"new_research_stimulus_created","asset":"assets/research/pelle-stimulus-v1.svg","duplicateInspection":"No registered asset, research filename match or earlier prototype for pelle was found in the current repository tree or representation queue.","graphicInspection":"A single garden shovel stays readable with only handle, shaft and blade. The unresolved lexical competitor is bêche rather than a parasitic scene element.","ambiguities":["bêche"],"spontaneousNamingRisk":"unknown","humanNamingEvidence":"none","clinicalEvidence":"none"},

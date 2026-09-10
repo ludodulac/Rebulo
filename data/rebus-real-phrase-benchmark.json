@@ -1,0 +1,699 @@
+{
+  "schemaVersion": "1.1",
+  "generatedAt": "2026-09-10T10:19:28.213Z",
+  "status": "regression_benchmark_not_training_target",
+  "purpose": "Periodically test whether representation-bank growth creates more useful competing paths on ordinary French phrases without optimizing for one sentence.",
+  "policy": {
+    "targetPhrase": "The historical phrase « Elles ne sont pas cuites les pâtes » remains included as one benchmark among several; no scoring rule is specialized for it.",
+    "interpretation": "Route counts and partial coverage are engineering observables, not a human quality score. Human naming and orthophonic validation remain separate.",
+    "incompleteBaseline": "When no phrase has a complete route yet, bestCoverageRatio and uncovered units provide a useful non-binary baseline for measuring bank growth without pretending that a partial route is solved.",
+    "longPieces": "longestRepresentationUnitCount tracks whether longer exact pieces remain available instead of forcing syllable-by-syllable fragmentation."
+  },
+  "summary": {
+    "phraseCount": 6,
+    "pronunciationResolvedCount": 6,
+    "phrasesWithCompleteRoute": 0,
+    "phrasesWithCrossWordCompleteRoute": 0,
+    "phrasesWithAnyCrossWordRoute": 6,
+    "meanDistinctCompleteDecompositions": 0,
+    "meanBestCoverageRatio": 0.7097
+  },
+  "rows": [
+    {
+      "phrase": "Elles ne sont pas cuites les pâtes",
+      "status": "routes_found",
+      "pronunciationComplete": true,
+      "continuousIpa": "ɛlnəsɔ̃pakɥitlepat",
+      "wordCount": 7,
+      "routeCount": 20,
+      "completeRouteCount": 0,
+      "distinctCompleteDecompositionCount": 0,
+      "distinctCandidatePathCount": 20,
+      "completeCrossWordRouteCount": 0,
+      "anyCrossWordRouteCount": 9,
+      "bestCoverageRatio": 0.7647,
+      "bestUncoveredUnitCount": 4,
+      "longestRepresentationUnitCount": 3,
+      "bestRoute": {
+        "complete": false,
+        "coverageRatio": 0.7647,
+        "pieceCount": 6,
+        "crossWordOperationCount": 0,
+        "operations": [
+          {
+            "kind": "letter",
+            "label": "L",
+            "targetIpa": "ɛl",
+            "phoneticTier": "exact_convention",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "Elles"
+            ]
+          },
+          {
+            "kind": "image_approximation",
+            "label": "nez",
+            "targetIpa": "nə",
+            "phoneticTier": "light_approximation",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "ne"
+            ]
+          },
+          {
+            "kind": "gap",
+            "label": "",
+            "targetIpa": "sɔ̃",
+            "phoneticTier": "uncovered",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "sont"
+            ]
+          },
+          {
+            "kind": "image",
+            "label": "pas",
+            "targetIpa": "pa",
+            "phoneticTier": "exact",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "pas"
+            ]
+          },
+          {
+            "kind": "gap",
+            "label": "",
+            "targetIpa": "k",
+            "phoneticTier": "uncovered",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "cuites"
+            ]
+          },
+          {
+            "kind": "number",
+            "label": "8",
+            "targetIpa": "ɥit",
+            "phoneticTier": "exact_convention",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "cuites"
+            ]
+          },
+          {
+            "kind": "image_approximation",
+            "label": "lait",
+            "targetIpa": "le",
+            "phoneticTier": "light_approximation",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "les"
+            ]
+          },
+          {
+            "kind": "image",
+            "label": "pas",
+            "targetIpa": "pa",
+            "phoneticTier": "exact",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "pâtes"
+            ]
+          },
+          {
+            "kind": "gap",
+            "label": "",
+            "targetIpa": "t",
+            "phoneticTier": "uncovered",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "pâtes"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "phrase": "Elle a mis le livre sur la table",
+      "status": "routes_found",
+      "pronunciationComplete": true,
+      "continuousIpa": "ɛlamiləlivʁsyʁlatabl",
+      "wordCount": 8,
+      "routeCount": 20,
+      "completeRouteCount": 0,
+      "distinctCompleteDecompositionCount": 0,
+      "distinctCandidatePathCount": 20,
+      "completeCrossWordRouteCount": 0,
+      "anyCrossWordRouteCount": 8,
+      "bestCoverageRatio": 0.8,
+      "bestUncoveredUnitCount": 4,
+      "longestRepresentationUnitCount": 4,
+      "bestRoute": {
+        "complete": false,
+        "coverageRatio": 0.8,
+        "pieceCount": 8,
+        "crossWordOperationCount": 0,
+        "operations": [
+          {
+            "kind": "letter",
+            "label": "L",
+            "targetIpa": "ɛl",
+            "phoneticTier": "exact_convention",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "Elle"
+            ]
+          },
+          {
+            "kind": "letter",
+            "label": "A",
+            "targetIpa": "a",
+            "phoneticTier": "exact_convention",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "a"
+            ]
+          },
+          {
+            "kind": "image",
+            "label": "mie",
+            "targetIpa": "mi",
+            "phoneticTier": "exact",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "mis"
+            ]
+          },
+          {
+            "kind": "image_approximation",
+            "label": "lait",
+            "targetIpa": "lə",
+            "phoneticTier": "light_approximation",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "le"
+            ]
+          },
+          {
+            "kind": "image",
+            "label": "livre",
+            "targetIpa": "livʁ",
+            "phoneticTier": "exact",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "livre"
+            ]
+          },
+          {
+            "kind": "gap",
+            "label": "",
+            "targetIpa": "s",
+            "phoneticTier": "uncovered",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "sur"
+            ]
+          },
+          {
+            "kind": "letter",
+            "label": "U",
+            "targetIpa": "y",
+            "phoneticTier": "exact_convention",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "sur"
+            ]
+          },
+          {
+            "kind": "gap",
+            "label": "",
+            "targetIpa": "ʁ",
+            "phoneticTier": "uncovered",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "sur"
+            ]
+          },
+          {
+            "kind": "music_note",
+            "label": "la (note)",
+            "targetIpa": "la",
+            "phoneticTier": "exact_convention",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "la"
+            ]
+          },
+          {
+            "kind": "image",
+            "label": "tas",
+            "targetIpa": "ta",
+            "phoneticTier": "exact",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "table"
+            ]
+          },
+          {
+            "kind": "gap",
+            "label": "",
+            "targetIpa": "bl",
+            "phoneticTier": "uncovered",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "table"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "phrase": "Le petit chat regarde la pluie",
+      "status": "routes_found",
+      "pronunciationComplete": true,
+      "continuousIpa": "ləpətiʃaʁəgaʁdlaplɥi",
+      "wordCount": 6,
+      "routeCount": 20,
+      "completeRouteCount": 0,
+      "distinctCompleteDecompositionCount": 0,
+      "distinctCandidatePathCount": 20,
+      "completeCrossWordRouteCount": 0,
+      "anyCrossWordRouteCount": 7,
+      "bestCoverageRatio": 0.8,
+      "bestUncoveredUnitCount": 4,
+      "longestRepresentationUnitCount": 5,
+      "bestRoute": {
+        "complete": false,
+        "coverageRatio": 0.8,
+        "pieceCount": 6,
+        "crossWordOperationCount": 0,
+        "operations": [
+          {
+            "kind": "image_approximation",
+            "label": "lait",
+            "targetIpa": "lə",
+            "phoneticTier": "light_approximation",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "Le"
+            ]
+          },
+          {
+            "kind": "gap",
+            "label": "",
+            "targetIpa": "pət",
+            "phoneticTier": "uncovered",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "petit"
+            ]
+          },
+          {
+            "kind": "letter",
+            "label": "I",
+            "targetIpa": "i",
+            "phoneticTier": "exact_convention",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "petit"
+            ]
+          },
+          {
+            "kind": "image",
+            "label": "chat",
+            "targetIpa": "ʃa",
+            "phoneticTier": "exact",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "chat"
+            ]
+          },
+          {
+            "kind": "image_approximation",
+            "label": "renard",
+            "targetIpa": "ʁəgaʁ",
+            "phoneticTier": "light_approximation",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "regarde"
+            ]
+          },
+          {
+            "kind": "gap",
+            "label": "",
+            "targetIpa": "d",
+            "phoneticTier": "uncovered",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "regarde"
+            ]
+          },
+          {
+            "kind": "music_note",
+            "label": "la (note)",
+            "targetIpa": "la",
+            "phoneticTier": "exact_convention",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "la"
+            ]
+          },
+          {
+            "kind": "image",
+            "label": "pluie",
+            "targetIpa": "plɥi",
+            "phoneticTier": "exact",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "pluie"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "phrase": "On prépare un gâteau pour demain",
+      "status": "routes_found",
+      "pronunciationComplete": true,
+      "continuousIpa": "ɔ̃pʁepaʁœ̃gatopuʁdəmɛ̃",
+      "wordCount": 6,
+      "routeCount": 20,
+      "completeRouteCount": 0,
+      "distinctCompleteDecompositionCount": 0,
+      "distinctCandidatePathCount": 20,
+      "completeCrossWordRouteCount": 0,
+      "anyCrossWordRouteCount": 20,
+      "bestCoverageRatio": 0.6316,
+      "bestUncoveredUnitCount": 7,
+      "longestRepresentationUnitCount": 3,
+      "bestRoute": {
+        "complete": false,
+        "coverageRatio": 0.6316,
+        "pieceCount": 7,
+        "crossWordOperationCount": 1,
+        "operations": [
+          {
+            "kind": "gap",
+            "label": "",
+            "targetIpa": "ɔ̃p",
+            "phoneticTier": "uncovered",
+            "crossesWordBoundary": true,
+            "sourceWords": [
+              "On",
+              "prépare"
+            ]
+          },
+          {
+            "kind": "music_note",
+            "label": "ré",
+            "targetIpa": "ʁe",
+            "phoneticTier": "exact_convention",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "prépare"
+            ]
+          },
+          {
+            "kind": "image_approximation",
+            "label": "parc",
+            "targetIpa": "paʁ",
+            "phoneticTier": "light_approximation",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "prépare"
+            ]
+          },
+          {
+            "kind": "number",
+            "label": "1",
+            "targetIpa": "œ̃",
+            "phoneticTier": "exact_convention",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "un"
+            ]
+          },
+          {
+            "kind": "gap",
+            "label": "",
+            "targetIpa": "g",
+            "phoneticTier": "uncovered",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "gâteau"
+            ]
+          },
+          {
+            "kind": "letter",
+            "label": "A",
+            "targetIpa": "a",
+            "phoneticTier": "exact_convention",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "gâteau"
+            ]
+          },
+          {
+            "kind": "gap",
+            "label": "",
+            "targetIpa": "t",
+            "phoneticTier": "uncovered",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "gâteau"
+            ]
+          },
+          {
+            "kind": "image",
+            "label": "eau",
+            "targetIpa": "o",
+            "phoneticTier": "exact",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "gâteau"
+            ]
+          },
+          {
+            "kind": "gap",
+            "label": "",
+            "targetIpa": "puʁ",
+            "phoneticTier": "uncovered",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "pour"
+            ]
+          },
+          {
+            "kind": "image_approximation",
+            "label": "dé",
+            "targetIpa": "də",
+            "phoneticTier": "light_approximation",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "demain"
+            ]
+          },
+          {
+            "kind": "image",
+            "label": "main",
+            "targetIpa": "mɛ̃",
+            "phoneticTier": "exact",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "demain"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "phrase": "Tu prends le train ce matin",
+      "status": "routes_found",
+      "pronunciationComplete": true,
+      "continuousIpa": "typʁɑ̃lətʁɛ̃sømatɛ̃",
+      "wordCount": 6,
+      "routeCount": 20,
+      "completeRouteCount": 0,
+      "distinctCompleteDecompositionCount": 0,
+      "distinctCandidatePathCount": 20,
+      "completeCrossWordRouteCount": 0,
+      "anyCrossWordRouteCount": 19,
+      "bestCoverageRatio": 0.5,
+      "bestUncoveredUnitCount": 8,
+      "longestRepresentationUnitCount": 3,
+      "bestRoute": {
+        "complete": false,
+        "coverageRatio": 0.5,
+        "pieceCount": 4,
+        "crossWordOperationCount": 0,
+        "operations": [
+          {
+            "kind": "gap",
+            "label": "",
+            "targetIpa": "t",
+            "phoneticTier": "uncovered",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "Tu"
+            ]
+          },
+          {
+            "kind": "letter",
+            "label": "U",
+            "targetIpa": "y",
+            "phoneticTier": "exact_convention",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "Tu"
+            ]
+          },
+          {
+            "kind": "gap",
+            "label": "",
+            "targetIpa": "pʁɑ̃",
+            "phoneticTier": "uncovered",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "prends"
+            ]
+          },
+          {
+            "kind": "image_approximation",
+            "label": "lait",
+            "targetIpa": "lə",
+            "phoneticTier": "light_approximation",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "le"
+            ]
+          },
+          {
+            "kind": "image",
+            "label": "train",
+            "targetIpa": "tʁɛ̃",
+            "phoneticTier": "exact",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "train"
+            ]
+          },
+          {
+            "kind": "gap",
+            "label": "",
+            "targetIpa": "sø",
+            "phoneticTier": "uncovered",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "ce"
+            ]
+          },
+          {
+            "kind": "image",
+            "label": "mât",
+            "targetIpa": "ma",
+            "phoneticTier": "exact",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "matin"
+            ]
+          },
+          {
+            "kind": "gap",
+            "label": "",
+            "targetIpa": "tɛ̃",
+            "phoneticTier": "uncovered",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "matin"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "phrase": "Il range son manteau dans la voiture",
+      "status": "routes_found",
+      "pronunciationComplete": true,
+      "continuousIpa": "ilʁɑ̃ʒsɔ̃mɑ̃todɑ̃lavwatyʁ",
+      "wordCount": 7,
+      "routeCount": 20,
+      "completeRouteCount": 0,
+      "distinctCompleteDecompositionCount": 0,
+      "distinctCandidatePathCount": 20,
+      "completeCrossWordRouteCount": 0,
+      "anyCrossWordRouteCount": 20,
+      "bestCoverageRatio": 0.7619,
+      "bestUncoveredUnitCount": 5,
+      "longestRepresentationUnitCount": 6,
+      "bestRoute": {
+        "complete": false,
+        "coverageRatio": 0.7619,
+        "pieceCount": 5,
+        "crossWordOperationCount": 1,
+        "operations": [
+          {
+            "kind": "image",
+            "label": "île",
+            "targetIpa": "il",
+            "phoneticTier": "exact",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "Il"
+            ]
+          },
+          {
+            "kind": "gap",
+            "label": "",
+            "targetIpa": "ʁɑ̃ʒsɔ̃",
+            "phoneticTier": "uncovered",
+            "crossesWordBoundary": true,
+            "sourceWords": [
+              "range",
+              "son"
+            ]
+          },
+          {
+            "kind": "image",
+            "label": "manteau",
+            "targetIpa": "mɑ̃to",
+            "phoneticTier": "exact",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "manteau"
+            ]
+          },
+          {
+            "kind": "image",
+            "label": "dent",
+            "targetIpa": "dɑ̃",
+            "phoneticTier": "exact",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "dans"
+            ]
+          },
+          {
+            "kind": "music_note",
+            "label": "la (note)",
+            "targetIpa": "la",
+            "phoneticTier": "exact_convention",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "la"
+            ]
+          },
+          {
+            "kind": "image",
+            "label": "voiture",
+            "targetIpa": "vwatyʁ",
+            "phoneticTier": "exact",
+            "crossesWordBoundary": false,
+            "sourceWords": [
+              "voiture"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

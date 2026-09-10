@@ -1,0 +1,235 @@
+# Rebulo — cartographie SON → MOT → REPRÉSENTATION
+
+> Cette vue transforme le grand réservoir lexical exact en carte de décision. Elle ne convertit pas un homophone Lexique en pictogramme validé.
+
+- Sons utiles du réservoir exact à cartographier : 5504.
+- Prototypes curatés ajoutés comme étalons de calibration : 15.
+- Sons cartographiés dans cette vue : 5519.
+- Sons où la curation explicite fournit déjà une hypothèse visuelle : 15.
+- Fenêtres de deux syllabes conservées comme candidates de première classe : 3814.
+- Sons ayant aussi une convention visible explicite : 34.
+- Sons ayant une approximation légère recensée dans la source disponible : 1245.
+
+## Échelle de preuve
+
+`phonétiquement exact ≠ approximation ludique acceptable ≠ mot pertinent ≠ concept dessinable ≠ image spontanément nommable ≠ stimulus orthophonique validé`
+
+Les champs de potentiel visuel et de risque de dénomination restent `unknown` tant qu’une décision éditoriale ou une observation humaine ne les renseigne pas. Le POS `NOM` et la fréquence ne sont jamais promus au rang de preuve visuelle.
+
+## Étalons de calibration déjà disponibles
+
+| Son | Candidat | Potentiel visuel | Risque de dénomination | Cibles utiles | Prochaine étape |
+|---|---|---|---|---:|---|
+| /ni/ | nid | high | low_medium | 105 | prototype_then_naming_test |
+| /pʁe/ | pré | medium | high | 83 | compare_scene_variants_before_prototype |
+| /sɑ̃/ | sang | medium_high | medium | 82 | prototype_then_age_specific_naming_test |
+| /ku/ | cou | medium_high | medium | 55 | compare_arrow_and_no_arrow_then_naming_test |
+| /vo/ | veau | high | medium | 47 | prototype_then_naming_test |
+| /fe/ | fée | high | medium | 46 | prototype_then_naming_test |
+| /pɔʁ/ | porc | high | medium_high | 43 | prototype_then_naming_variant_test |
+| /bu/ | boue | high | medium | 43 | prototype_then_naming_test |
+| /fɔʁ/ | fort | medium_high | medium_high | 39 | compare_fort_and_fortress_scene_then_naming_test |
+| /tele/ | télé | high | medium | 13 | prototype_then_naming_variant_test |
+| /kɔ̃pa/ | compas | high | low_medium | 10 | prototype_then_school_age_naming_test |
+| /epi/ | épi | high | medium_high | 8 | prototype_then_naming_test |
+| /eʁo/ | héros | medium | high | 7 | compare_scene_variants_before_prototype |
+| /ɔʁdi/ | ordi | high | medium | 5 | prototype_then_naming_variant_test |
+| /papa/ | papa | medium_high | medium | 4 | prototype_then_family_wording_naming_test |
+
+## Priorités informatives du grand réservoir
+
+| Rang | Son | Cibles utiles | Fenêtre | Candidats exacts | Convention | Approx. | État de preuve |
+|---:|---|---:|---|---|---|---|---|
+| 1 | /a/ | 424 | 1 syll. | a [lexical_exact_only], ha [visual_route_rejected] | A | — | visible_convention_available |
+| 2 | /mɑ̃/ | 374 | 1 syll. | mens [lexical_exact_only], man [visual_route_rejected], mans [visual_route_rejected] | — | — | exact_lexical_candidates_need_visual_evidence |
+| 3 | /sjɔ̃/ | 365 | 1 syll. | scion [lexical_exact_only], cyon [lexical_exact_only], scions [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
+| 4 | /e/ | 280 | 1 syll. | ais [visual_route_rejected], ai [visual_route_rejected], et [visual_route_rejected] | — | — | difficult_sound |
+| 5 | /ʁe/ | 257 | 1 syll. | ré [lexical_exact_only], rée [lexical_exact_only] | ré | raie (15%), rai (15%) | visible_convention_available |
+| 6 | /ɛ̃/ | 234 | 1 syll. | ein [visual_route_rejected], eins [visual_route_rejected], ain [visual_route_rejected] | — | — | difficult_sound |
+| 7 | /kɔ̃/ | 233 | 1 syll. | con [visual_route_rejected] | — | gond (17.5%), gons (17.5%) | approximation_only |
+| 8 | /se/ | 222 | 1 syll. | ces [lexical_exact_only], ses [lexical_exact_only], cé [visual_route_rejected] | C | saie (15%), se (20%) | visible_convention_available |
+| 9 | /ɑ̃/ | 188 | 1 syll. | an [lexical_exact_only], han [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
+| 10 | /ti/ | 176 | 1 syll. | tee [lexical_exact_only], tie [lexical_exact_only] | — | die (17.5%), dit (17.5%) | exact_lexical_candidates_need_visual_evidence |
+| 11 | /ka/ | 176 | 1 syll. | cas [lexical_exact_only], k [lexical_exact_only], ka [lexical_exact_only] | K | gars (17.5%), ga (17.5%) | visible_convention_available |
+| 12 | /ko/ | 169 | 1 syll. | cots [lexical_exact_only], cot [visual_route_rejected] | — | go (17.5%), goth (17.5%) | exact_lexical_candidates_need_visual_evidence |
+| 13 | /di/ | 147 | 1 syll. | die [lexical_exact_only], dit [visual_route_rejected] | — | tee (17.5%), tie (17.5%) | exact_lexical_candidates_need_visual_evidence |
+| 14 | /le/ | 141 | 1 syll. | lé [visual_route_rejected], les [visual_route_rejected], lez [visual_route_rejected] | — | lait (15%), lait (15%) | approximation_only |
+| 15 | /me/ | 135 | 1 syll. | mes [lexical_exact_only], maye [visual_route_rejected], mée [visual_route_rejected] | — | mai (15%), meix (15%) | exact_lexical_candidates_need_visual_evidence |
+| 16 | /pe/ | 119 | 1 syll. | p [lexical_exact_only], pe [lexical_exact_only], pô [visual_route_rejected] | P | paix (15%), pet (15%) | visible_convention_available |
+| 17 | /i/ | 111 | 1 syll. | i [lexical_exact_only], y [lexical_exact_only], hie [visual_route_rejected] | I | — | visible_convention_available |
+| 18 | /ʒe/ | 105 | 1 syll. | g [lexical_exact_only], jé [lexical_exact_only], gé [visual_route_rejected] | G | geai (15%), jais (15%) | visible_convention_available |
+| 19 | /vi/ | 97 | 1 syll. | vie [lexical_exact_only], vit [lexical_exact_only], vy [lexical_exact_only] | — | phi (17.5%), fy (17.5%) | exact_lexical_candidates_need_visual_evidence |
+| 20 | /na/ | 96 | 1 syll. | na [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
+| 21 | /pʁo/ | 93 | 1 syll. | pro [lexical_exact_only], prot [lexical_exact_only] | — | broc (11.7%), impro (18.8%) | exact_lexical_candidates_need_visual_evidence |
+| 22 | /tɑ̃/ | 90 | 1 syll. | temps [lexical_exact_only], tan [lexical_exact_only], taon [lexical_exact_only] | — | dent (17.5%), dent (17.5%) | exact_lexical_candidates_need_visual_evidence |
+| 23 | /ba/ | 86 | 1 syll. | bas [lexical_exact_only], bât [lexical_exact_only], bats [lexical_exact_only] | — | pas (17.5%), pa (17.5%) | exact_lexical_candidates_need_visual_evidence |
+| 24 | /to/ | 85 | 1 syll. | to [lexical_exact_only], taux [lexical_exact_only], tau [lexical_exact_only] | — | dos (17.5%), do (17.5%) | exact_lexical_candidates_need_visual_evidence |
+| 25 | /fi/ | 85 | 1 syll. | fy [lexical_exact_only], fi [lexical_exact_only], phi [visual_route_rejected] | — | vie (17.5%), vy (17.5%) | exact_lexical_candidates_need_visual_evidence |
+| 26 | /la/ | 79 | 1 syll. | la [lexical_exact_only], las [lexical_exact_only] | la | — | visible_convention_available |
+| 27 | /ve/ | 78 | 1 syll. | v [lexical_exact_only], vé [lexical_exact_only], vés [visual_route_rejected] | V | vest (15%), fée (17.5%) | visible_convention_available |
+| 28 | /mo/ | 73 | 1 syll. | mot [lexical_exact_only], maux [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
+| 29 | /lə/ | 71 | 1 syll. | le [lexical_exact_only] | — | lait (20%), lait (20%) | exact_lexical_candidates_need_visual_evidence |
+| 30 | /ʁɑ̃/ | 70 | 1 syll. | rang [lexical_exact_only], ran [lexical_exact_only], ranc [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
+| 31 | /sa/ | 68 | 1 syll. | sas [lexical_exact_only], sa [lexical_exact_only], çà [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
+| 32 | /ʃe/ | 67 | 1 syll. | ché [lexical_exact_only] | — | chai (15%), gé (17.5%) | exact_lexical_candidates_need_visual_evidence |
+| 33 | /lo/ | 67 | 1 syll. | lot [lexical_exact_only], los [lexical_exact_only], laud [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
+| 34 | /sy/ | 65 | 1 syll. | su [lexical_exact_only], sue [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
+| 35 | /bi/ | 65 | 1 syll. | by [lexical_exact_only], bi [lexical_exact_only], bee [lexical_exact_only] | — | pie (17.5%), pis (17.5%) | exact_lexical_candidates_need_visual_evidence |
+| 36 | /ga/ | 64 | 1 syll. | gars [lexical_exact_only], ga [lexical_exact_only], ghât [lexical_exact_only] | — | cas (17.5%), ka (17.5%) | exact_lexical_candidates_need_visual_evidence |
+| 37 | /no/ | 63 | 1 syll. | nô [lexical_exact_only], noe [lexical_exact_only], nos [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
+| 38 | /ky/ | 63 | 1 syll. | cul [lexical_exact_only], q [lexical_exact_only], ku [lexical_exact_only], qus [lexical_exact_only] | Q | — | visible_convention_available |
+| 39 | /ke/ | 59 | 1 syll. | quais [lexical_exact_only] | — | quai (15%), quet (15%) | exact_lexical_candidates_need_visual_evidence |
+| 40 | /sə/ | 58 | 1 syll. | se [lexical_exact_only] | — | cé (20%), saie (20%) | exact_lexical_candidates_need_visual_evidence |
+| 41 | /ʁo/ | 57 | 1 syll. | rot [lexical_exact_only], rho [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
+| 42 | /pɛʁ/ | 56 | 1 syll. | père [lexical_exact_only], paire [lexical_exact_only], pair [lexical_exact_only] | — | bers (11.7%), perte (18.8%) | exact_lexical_candidates_need_visual_evidence |
+| 43 | /tik/ | 56 | 1 syll. | tic [lexical_exact_only], tique [lexical_exact_only] | — | ticket (18.8%), dyke (11.7%) | exact_lexical_candidates_need_visual_evidence |
+| 44 | /paʁ/ | 55 | 1 syll. | par [lexical_exact_only], parr [lexical_exact_only], part [visual_route_deferred] | — | parc (18.8%), bar (11.7%) | exact_lexical_candidates_need_visual_evidence |
+| 45 | /va/ | 55 | 1 syll. | va [lexical_exact_only] | — | fa (17.5%) | exact_lexical_candidates_need_visual_evidence |
+| 46 | /də/ | 54 | 1 syll. | de [lexical_exact_only] | — | dé (20%), deux (20%) | exact_lexical_candidates_need_visual_evidence |
+| 47 | /tyʁ/ | 52 | 1 syll. | tur [lexical_exact_only], turent [lexical_exact_only] | — | dur (11.7%), tuerie (18.8%) | exact_lexical_candidates_need_visual_evidence |
+| 48 | /vɑ̃/ | 48 | 1 syll. | vent [lexical_exact_only], vend [lexical_exact_only] | — | faon (17.5%), fend (17.5%) | exact_lexical_candidates_need_visual_evidence |
+| 49 | /fa/ | 46 | 1 syll. | fa [lexical_exact_only] | fa | — | visible_convention_available |
+| 50 | /be/ | 46 | 1 syll. | b [lexical_exact_only], bô [lexical_exact_only], bés [lexical_exact_only] | B | baie (15%), bey (15%) | visible_convention_available |
+| 51 | /su/ | 44 | 1 syll. | sou [lexical_exact_only], saoûl [lexical_exact_only], souls [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
+| 52 | /aʁ/ | 43 | 1 syll. | art [lexical_exact_only], are [lexical_exact_only], hart [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
+| 53 | /dis/ | 42 | 1 syll. | dix [lexical_exact_only], dissent [lexical_exact_only] | 10 | disque (18.8%), indice (18.8%) | visible_convention_available |
+| 54 | /ty/ | 42 | 1 syll. | tue [lexical_exact_only], tus [lexical_exact_only] | — | dûs (17.5%), du (17.5%) | exact_lexical_candidates_need_visual_evidence |
+| 55 | /lite/ | 41 | 2 syll. | lité [lexical_exact_only] | — | litho (16.3%), liteau (16.3%) | exact_lexical_candidates_need_visual_evidence |
+| 56 | /lɑ̃/ | 40 | 1 syll. | lan [lexical_exact_only], lant [lexical_exact_only], lanc [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
+| 57 | /y/ | 39 | 1 syll. | u [lexical_exact_only], hue [lexical_exact_only], eue [lexical_exact_only] | U | — | visible_convention_available |
+| 58 | /ʒi/ | 38 | 1 syll. | ji [lexical_exact_only], git [lexical_exact_only], gy [lexical_exact_only] | J | — | visible_convention_available |
+| 59 | /ɛs/ | 36 | 1 syll. | s [lexical_exact_only], aces [lexical_exact_only], esse [lexical_exact_only], aisse [lexical_exact_only] | S | aise (17.5%) | visible_convention_available |
+| 60 | /ny/ | 36 | 1 syll. | nu [lexical_exact_only], nue [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
+| 61 | /ki/ | 36 | 1 syll. | chi [lexical_exact_only], quit [lexical_exact_only], quis [lexical_exact_only] | — | gui (17.5%) | exact_lexical_candidates_need_visual_evidence |
+| 62 | /bo/ | 35 | 1 syll. | beau [lexical_exact_only], bau [lexical_exact_only], baux [lexical_exact_only] | — | peau (17.5%), pot (17.5%) | exact_lexical_candidates_need_visual_evidence |
+| 63 | /sɛ̃/ | 35 | 1 syll. | sein [lexical_exact_only], saint [lexical_exact_only], seing [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
+| 64 | /ly/ | 34 | 1 syll. | lut [lexical_exact_only], lu [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
+| 65 | /tʁi/ | 34 | 1 syll. | tri [lexical_exact_only], trie [lexical_exact_only] | — | trip (18.8%), trique (18.8%) | exact_lexical_candidates_need_visual_evidence |
+| 66 | /pʁi/ | 33 | 1 syll. | prix [lexical_exact_only], prie [lexical_exact_only], pris [lexical_exact_only] | — | bris (11.7%), bri (11.7%) | exact_lexical_candidates_need_visual_evidence |
+| 67 | /da/ | 33 | 1 syll. | das [lexical_exact_only], da [lexical_exact_only] | — | tas (17.5%), ta (17.5%) | exact_lexical_candidates_need_visual_evidence |
+| 68 | /syʁ/ | 31 | 1 syll. | sûr [lexical_exact_only], surent [lexical_exact_only] | — | sureau (18.8%), surin (18.8%) | exact_lexical_candidates_need_visual_evidence |
+| 69 | /tɛ̃/ | 31 | 1 syll. | teint [lexical_exact_only], tin [lexical_exact_only], tain [lexical_exact_only] | — | daim (17.5%) | exact_lexical_candidates_need_visual_evidence |
+| 70 | /ʃɑ̃/ | 31 | 1 syll. | champ [lexical_exact_only], chant [lexical_exact_only], chand [lexical_exact_only] | — | gens (17.5%), gent (17.5%) | exact_lexical_candidates_need_visual_evidence |
+| 71 | /my/ | 31 | 1 syll. | mu [lexical_exact_only], mue [lexical_exact_only], mûs [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
+| 72 | /kɑ̃/ | 31 | 1 syll. | camp [lexical_exact_only], can [lexical_exact_only], quant [lexical_exact_only] | — | gant (17.5%), gant (17.5%) | exact_lexical_candidates_need_visual_evidence |
+| 73 | /py/ | 30 | 1 syll. | pus [lexical_exact_only], pu [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
+| 74 | /ɔʁ/ | 30 | 1 syll. | or [lexical_exact_only], ord [lexical_exact_only], ort [lexical_exact_only] | — | aure (15%) | exact_lexical_candidates_need_visual_evidence |
+| 75 | /ʒə/ | 30 | 1 syll. | je [lexical_exact_only] | — | jeu (20%), geai (20%) | exact_lexical_candidates_need_visual_evidence |
+| 76 | /fy/ | 30 | 1 syll. | fût [lexical_exact_only], futs [lexical_exact_only] | — | vue (17.5%), vu (17.5%) | exact_lexical_candidates_need_visual_evidence |
+| 77 | /kaʁ/ | 30 | 1 syll. | quart [lexical_exact_only], car [lexical_exact_only], care [lexical_exact_only] | — | gare (11.7%), gare (11.7%) | exact_lexical_candidates_need_visual_evidence |
+| 78 | /tɔ̃/ | 29 | 1 syll. | ton [lexical_exact_only], thon [lexical_exact_only], tond [lexical_exact_only] | — | don (17.5%), dom (17.5%) | exact_lexical_candidates_need_visual_evidence |
+| 79 | /nə/ | 28 | 1 syll. | ne [lexical_exact_only] | — | nez (20%), nez (20%) | exact_lexical_candidates_need_visual_evidence |
+| 80 | /go/ | 28 | 1 syll. | go [lexical_exact_only], goth [lexical_exact_only], gau [lexical_exact_only] | — | cot (17.5%), côt (17.5%) | exact_lexical_candidates_need_visual_evidence |
+| 81 | /tif/ | 28 | 1 syll. | tif [lexical_exact_only] | — | diff (11.7%), typhon (18.8%) | exact_lexical_candidates_need_visual_evidence |
+| 82 | /gʁa/ | 28 | 1 syll. | gras [lexical_exact_only] | — | cra (11.7%), grand (16.7%) | exact_lexical_candidates_need_visual_evidence |
+| 83 | /mə/ | 27 | 1 syll. | me [lexical_exact_only] | — | mai (20%), maye (20%) | exact_lexical_candidates_need_visual_evidence |
+| 84 | /tʁe/ | 27 | 1 syll. | tré [lexical_exact_only] | — | trés (10%), trait (10%) | exact_lexical_candidates_need_visual_evidence |
+| 85 | /tɛ/ | 27 | 1 syll. | taie [lexical_exact_only], têt [lexical_exact_only], taît [lexical_exact_only] | — | thé (15%), té (15%) | exact_lexical_candidates_need_visual_evidence |
+| 86 | /sje/ | 27 | 1 syll. | sied [lexical_exact_only], scier [lexical_exact_only] | — | suée (15%), acier (18.8%) | exact_lexical_candidates_need_visual_evidence |
+| 87 | /nɛʁ/ | 27 | 1 syll. | nerf [lexical_exact_only] | — | naira (18.8%), nerve (18.8%) | exact_lexical_candidates_need_visual_evidence |
+| 88 | /ʁasjɔ̃/ | 27 | 2 syll. | ration [lexical_exact_only] | — | ratio (13%), passion (18%) | exact_lexical_candidates_need_visual_evidence |
+| 89 | /sɛ/ | 26 | 1 syll. | saie [lexical_exact_only], sais [lexical_exact_only] | — | cé (15%), se (20%) | exact_lexical_candidates_need_visual_evidence |
+| 90 | /kʁe/ | 26 | 1 syll. | crée [lexical_exact_only], cré [lexical_exact_only] | — | craie (10%), crêt (10%) | exact_lexical_candidates_need_visual_evidence |
+| 91 | /dy/ | 26 | 1 syll. | dû [lexical_exact_only], dûs [lexical_exact_only] | — | tus (17.5%), tue (17.5%) | exact_lexical_candidates_need_visual_evidence |
+| 92 | /ʁɛs/ | 25 | 1 syll. | resse [lexical_exact_only] | — | presse (18.8%), graisse (18.8%) | exact_lexical_candidates_need_visual_evidence |
+| 93 | /ak/ | 25 | 1 syll. | hack [lexical_exact_only], hacke [lexical_exact_only], aque [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
+| 94 | /maʁ/ | 25 | 1 syll. | mare [lexical_exact_only], marc [lexical_exact_only], mar [lexical_exact_only] | — | homard (18.8%), mari (18.8%) | exact_lexical_candidates_need_visual_evidence |
+| 95 | /tabl/ | 24 | 1 syll. | table [lexical_exact_only] | — | tableau (15%), étable (15%) | exact_lexical_candidates_need_visual_evidence |
+| 96 | /ʃi/ | 24 | 1 syll. | chie [lexical_exact_only] | — | ji (17.5%), git (17.5%) | exact_lexical_candidates_need_visual_evidence |
+| 97 | /mɛtʁ/ | 23 | 1 syll. | maître [lexical_exact_only], mètre [lexical_exact_only] | — | montre (16.3%), mitre (16.3%) | exact_lexical_candidates_need_visual_evidence |
+| 98 | /by/ | 23 | 1 syll. | bu [lexical_exact_only] | — | pus (17.5%), pu (17.5%) | exact_lexical_candidates_need_visual_evidence |
+| 99 | /pu/ | 23 | 1 syll. | pouls [lexical_exact_only], pou [lexical_exact_only], pouh [lexical_exact_only] | — | bout (17.5%), boue (17.5%) | exact_lexical_candidates_need_visual_evidence |
+| 100 | /pla/ | 23 | 1 syll. | plat [lexical_exact_only], pla [lexical_exact_only] | — | plage (18.8%), plan (16.7%) | exact_lexical_candidates_need_visual_evidence |
+| 101 | /bʁi/ | 23 | 1 syll. | bris [lexical_exact_only], bri [lexical_exact_only], brie [lexical_exact_only] | — | brique (18.8%), prix (11.7%) | exact_lexical_candidates_need_visual_evidence |
+| 102 | /ɛ̃tɛʁ/ | 23 | 2 syll. | inter [lexical_exact_only] | — | interne (15%), éther (16.3%) | exact_lexical_candidates_need_visual_evidence |
+| 103 | /fɛʁ/ | 22 | 1 syll. | fer [lexical_exact_only], faire [lexical_exact_only], ferre [lexical_exact_only] | — | ver (11.7%), verre (11.7%) | exact_lexical_candidates_need_visual_evidence |
+| 104 | /sɔ̃/ | 22 | 1 syll. | son [lexical_exact_only], sont [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
+| 105 | /tu/ | 22 | 1 syll. | tout [lexical_exact_only], toux [lexical_exact_only], tous [lexical_exact_only] | — | doux (17.5%), doue (17.5%) | exact_lexical_candidates_need_visual_evidence |
+| 106 | /sœʁ/ | 22 | 1 syll. | soeur [lexical_exact_only] | — | seure (10%), surf (18.8%) | exact_lexical_candidates_need_visual_evidence |
+| 107 | /nɛ/ | 22 | 1 syll. | nait [lexical_exact_only], nay [lexical_exact_only], naient [lexical_exact_only] | — | nez (15%), nez (15%) | exact_lexical_candidates_need_visual_evidence |
+| 108 | /lɛʁ/ | 22 | 1 syll. | laird [lexical_exact_only] | — | clair (18.8%), claire (18.8%) | exact_lexical_candidates_need_visual_evidence |
+| 109 | /ʒɑ̃/ | 21 | 1 syll. | gens [lexical_exact_only], gent [lexical_exact_only], jan [lexical_exact_only] | — | champ (17.5%), chant (17.5%) | exact_lexical_candidates_need_visual_evidence |
+| 110 | /ɛg/ | 21 | 1 syll. | aigue [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
+| 111 | /ʁəmɑ̃/ | 21 | 2 syll. | rement [lexical_exact_only] | — | raiment (10%), roman (16.3%) | exact_lexical_candidates_need_visual_evidence |
+| 112 | /site/ | 21 | 2 syll. | cité [lexical_exact_only], citer [lexical_exact_only] | — | santé (16.3%), city (16.3%) | exact_lexical_candidates_need_visual_evidence |
+| 113 | /kə/ | 21 | 1 syll. | que [lexical_exact_only] | — | queue (20%), quai (20%) | exact_lexical_candidates_need_visual_evidence |
+| 114 | /mɔ̃/ | 20 | 1 syll. | mont [lexical_exact_only], mon [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
+| 115 | /tiʁ/ | 20 | 1 syll. | tir [lexical_exact_only], tire [lexical_exact_only] | — | dire (11.7%), tyran (18.8%) | exact_lexical_candidates_need_visual_evidence |
+| 116 | /lɔ̃/ | 20 | 1 syll. | long [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
+| 117 | /fo/ | 20 | 1 syll. | faux [lexical_exact_only], faut [lexical_exact_only], pho [lexical_exact_only] | — | veau (17.5%), vaux (17.5%) | exact_lexical_candidates_need_visual_evidence |
+| 118 | /fɔ̃/ | 20 | 1 syll. | fond [lexical_exact_only], fonds [lexical_exact_only], fonts [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
+| 119 | /səmɑ̃/ | 20 | 2 syll. | semant [lexical_exact_only] | — | cément (10%), semence (15%) | exact_lexical_candidates_need_visual_evidence |
+| 120 | /lje/ | 20 | 1 syll. | lier [lexical_exact_only], lié [lexical_exact_only] | — | liais (10%), louée (15%) | exact_lexical_candidates_need_visual_evidence |
+
+## Fenêtres de deux syllabes à ne pas casser artificiellement
+
+| Rang | Son | Cibles utiles | Meilleure piste actuelle | État | Exemples |
+|---:|---|---:|---|---|---|
+| 1 | /lite/ | 41 | lité | two_syllable_candidate_exists | qualité, réalité, spécialité, égalité |
+| 2 | /ʁasjɔ̃/ | 27 | ration | two_syllable_candidate_exists | opération, déclaration, génération, respiration |
+| 3 | /ɛ̃tɛʁ/ | 23 | inter | two_syllable_candidate_exists | interview, internet, intervention, intervenir |
+| 4 | /ʁəmɑ̃/ | 21 | rement | two_syllable_candidate_exists | sûrement, clairement, enterrement, entièrement |
+| 5 | /site/ | 21 | cité | two_syllable_candidate_exists | capacité, publicité, cité, féliciter |
+| 6 | /səmɑ̃/ | 20 | semant | two_syllable_candidate_exists | doucement, commencement, lancement, emplacement |
+| 7 | /ʁite/ | 18 | ritter | two_syllable_candidate_exists | vérité, sécurité, autorité, mériter |
+| 8 | /paʁa/ | 17 | para | two_syllable_candidate_exists | paradis, apparemment, auparavant, séparation |
+| 9 | /kasjɔ̃/ | 17 | cassions | two_syllable_candidate_exists | explication, éducation, location, application |
+| 10 | /nasjɔ̃/ | 16 | nation | two_syllable_candidate_exists | nation, destination, condamnation, imagination |
+| 11 | /oto/ | 14 | auto | two_syllable_candidate_exists | autorité, auto, autoroute, automatique |
+| 12 | /komɑ̃/ | 13 | comment | two_syllable_candidate_exists | comment, commencer, commandant, commander |
+| 13 | /tele/ | 13 | télé | two_syllable_candidate_exists | télé, téléphone, télévision, téléphoner |
+| 14 | /abi/ | 13 | habit | two_syllable_candidate_exists | habitude, habiller, habiter, habitant |
+| 15 | /lize/ | 12 | lisé | two_syllable_candidate_exists | utiliser, réaliser, localiser, analyser |
+| 16 | /poze/ | 11 | poser | two_syllable_candidate_exists | poser, reposer, déposer, proposer |
+| 17 | /ʒene/ | 11 | gêner | two_syllable_candidate_exists | général, généreux, génération, génétique |
+| 18 | /vite/ | 11 | vitae | two_syllable_candidate_exists | éviter, inviter, activité, invité |
+| 19 | /ali/ | 11 | allie | two_syllable_candidate_exists | alibi, réalité, réaliser, alimentaire |
+| 20 | /masjɔ̃/ | 11 | massions | two_syllable_candidate_exists | formation, information, confirmation, transformation |
+| 21 | /mani/ | 11 | manie | two_syllable_candidate_exists | humanité, manipuler, manifestement, manifester |
+| 22 | /vəniʁ/ | 10 | venir | two_syllable_candidate_exists | venir, revenir, devenir, avenir |
+| 23 | /done/ | 10 | donné | two_syllable_candidate_exists | donner, pardonner, abandonner, coordonnées |
+| 24 | /avɑ̃/ | 10 | avant | two_syllable_candidate_exists | avant, avancer, aventure, avantage |
+| 25 | /kɔ̃pa/ | 10 | compas | two_syllable_candidate_exists | compagnie, accompagner, compagnon, compassion |
+| 26 | /ope/ | 10 | op | two_syllable_candidate_exists | opération, opérer, opéra, coopérer |
+| 27 | /bili/ | 10 | billy | two_syllable_candidate_exists | possibilité, culpabilité, stabilité, stabiliser |
+| 28 | /ləve/ | 9 | lever | two_syllable_candidate_exists | enlever, lever, élever, relever |
+| 29 | /pɔʁte/ | 9 | portée | two_syllable_candidate_exists | apporter, portée, emporter, rapporter |
+| 30 | /poli/ | 9 | poly | two_syllable_candidate_exists | politique, policier, impoli, politesse |
+| 31 | /deli/ | 9 | délit | two_syllable_candidate_exists | délicieux, délit, délicat, fidélité |
+| 32 | /sede/ | 9 | cd | two_syllable_candidate_exists | céder, posséder, accéder, obsédé |
+| 33 | /paʁti/ | 8 | partie | two_syllable_candidate_exists | partie, parti, participer, particulier |
+| 34 | /sypɛʁ/ | 8 | super | two_syllable_candidate_exists | super, supermarché, superviseur, superficiel |
+| 35 | /təniʁ/ | 8 | tenir | two_syllable_candidate_exists | tenir, obtenir, retenir, soutenir |
+| 36 | /pʁezɑ̃/ | 8 | présent | two_syllable_candidate_exists | présent, présenter, présentation, représenter |
+| 37 | /ʁea/ | 8 | réa | two_syllable_candidate_exists | réalité, réaliser, réagir, réaliste |
+| 38 | /mine/ | 8 | minè | two_syllable_candidate_exists | terminer, examiner, éliminer, dominer |
+| 39 | /komy/ | 8 | commuent | two_syllable_candidate_exists | communauté, communiquer, communication, communiste |
+| 40 | /epi/ | 8 | épi | two_syllable_candidate_exists | épisode, épicerie, épidémie, épinards |
+| 41 | /loʒi/ | 8 | logis | two_syllable_candidate_exists | technologie, logiciel, psychologie, biologie |
+| 42 | /defi/ | 8 | défi | two_syllable_candidate_exists | défi, défilé, définition, défiler |
+| 43 | /kɔ̃fɔʁ/ | 8 | confort | two_syllable_candidate_exists | confortable, confort, réconfort, réconforter |
+| 44 | /admi/ | 8 | admis | two_syllable_candidate_exists | administration, admirer, admirable, admission |
+| 45 | /mina/ | 8 | minas | two_syllable_candidate_exists | nomination, domination, détermination, criminalité |
+| 46 | /eta/ | 7 | état | two_syllable_candidate_exists | état, établir, étaler, établissement |
+| 47 | /misjɔ̃/ | 7 | mission | two_syllable_candidate_exists | mission, émission, permission, commission |
+| 48 | /dife/ | 7 | differ | two_syllable_candidate_exists | différent, différence, différemment, différents |
+| 49 | /yni/ | 7 | uni | two_syllable_candidate_exists | unité, univers, uniforme, uniquement |
+| 50 | /paʁe/ | 7 | parer | two_syllable_candidate_exists | préparer, réparer, séparer, emparer |
+| 51 | /eʁo/ | 7 | héros | two_syllable_candidate_exists | héros, aéroport, héro, héroïque |
+| 52 | /ani/ | 7 | ani | two_syllable_candidate_exists | animal, anniversaire, animer, animation |
+| 53 | /kolo/ | 7 | colo | two_syllable_candidate_exists | colonel, colonie, colocataire, psychologique |
+| 54 | /tɑ̃dy/ | 7 | tendu | two_syllable_candidate_exists | entendu, étendue, malentendu, inattendu |
+| 55 | /tʁene/ | 7 | traînée | two_syllable_candidate_exists | traîner, entraîner, traînée, trainer |
+| 56 | /vəny/ | 7 | venue | two_syllable_candidate_exists | bienvenue, venu, venue, bienvenu |
+| 57 | /vɛʁse/ | 7 | verser | two_syllable_candidate_exists | traverser, renverser, verser, inverser |
+| 58 | /mite/ | 7 | miter | two_syllable_candidate_exists | comité, intimité, proximité, imiter |
+| 59 | /file/ | 7 | filé | two_syllable_candidate_exists | filer, défilé, défiler, faufiler |
+| 60 | /kɔ̃pli/ | 7 | complies | two_syllable_candidate_exists | compliqué, compliment, complicité, compliquer |
+
+## Boucle d’apprentissage
+
+Les prototypes servent d’étalons : chaque observation de dénomination doit modifier les propriétés de sélection seulement si elle révèle un motif généralisable (fréquence, ambiguïté d’objet, concurrence lexicale, simplicité de scène, etc.). On corrige alors la curation ou le modèle de priorité avant d’industrialiser une vague graphique.
+
+## Décision
+
+**CONTINUE — cartographier largement et prototyper parcimonieusement.** La prochaine preuve utile est une meilleure séparation entre bonnes pistes visuelles et homophones exacts trompeurs, vérifiée périodiquement sur des phrases naturelles.

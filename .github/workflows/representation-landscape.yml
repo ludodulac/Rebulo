@@ -1,0 +1,69 @@
+name: Representation landscape
+
+on:
+  push:
+    branches: [main, 'research/representation-landscape']
+    paths:
+      - 'src/rebus-representation-landscape.js'
+      - 'src/rebus-representation-paths.js'
+      - 'src/rebus-phrase-phonetics.js'
+      - 'src/rebus-approximation.js'
+      - 'scripts/build-representation-landscape.mjs'
+      - 'scripts/benchmark-real-phrase-paths.mjs'
+      - 'tests/rebus-representation-landscape.test.mjs'
+      - 'data/rebus-representation-bank-audit.json'
+      - 'data/rebus-sound-visual-curation.json'
+      - 'data/rebus-visible-conventions.json'
+      - 'data/rebus-pronunciation-lexicon.json'
+      - '.github/workflows/representation-landscape.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  landscape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Guard evidence levels and long-piece competition
+        run: node tests/rebus-representation-landscape.test.mjs
+      - name: Build representation landscape
+        run: node scripts/build-representation-landscape.mjs
+      - name: Benchmark natural phrases
+        run: node scripts/benchmark-real-phrase-paths.mjs
+      - name: Verify conservative output
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const landscape=JSON.parse(fs.readFileSync('data/rebus-representation-landscape.json','utf8'));
+          const benchmark=JSON.parse(fs.readFileSync('data/rebus-real-phrase-benchmark.json','utf8'));
+          if(landscape.stats.exactLexicalBacklogSoundCount<5000)throw new Error('Expected the large exact lexical reservoir, got '+landscape.stats.exactLexicalBacklogSoundCount);
+          if(landscape.rows.some(row=>row.automaticActivation!==false||row.clinicalEvidence!=='none'))throw new Error('Landscape must never auto-activate or infer clinical evidence');
+          if(landscape.rows.flatMap(row=>row.exactCandidates||[]).some(candidate=>candidate.automaticActivation!==false||candidate.clinicalEvidence!=='none'))throw new Error('Candidate evidence leaked activation or clinical status');
+          const historical=benchmark.rows.find(row=>row.phrase==='Elles ne sont pas cuites les pâtes');
+          if(!historical?.pronunciationComplete)throw new Error('Historical end-to-end phrase is no longer lexically resolved');
+          if(!landscape.rows.some(row=>row.longWindowPotential?.coversTwoSyllables))throw new Error('Two-syllable windows disappeared from the landscape');
+          console.log(JSON.stringify({landscape:landscape.stats,benchmark:benchmark.summary},null,2));
+          NODE
+      - name: Upload landscape artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: rebulo-representation-landscape
+          path: |
+            data/rebus-representation-landscape.json
+            docs/REBUS_REPRESENTATION_LANDSCAPE.md
+            data/rebus-real-phrase-benchmark.json
+            docs/REBUS_REAL_PHRASE_BENCHMARK.md
+      - name: Commit generated landscape on main
+        if: github.ref == 'refs/heads/main' && github.actor != 'github-actions[bot]'
+        run: |
+          git config user.name 'rebulo-analysis-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/rebus-representation-landscape.json docs/REBUS_REPRESENTATION_LANDSCAPE.md data/rebus-real-phrase-benchmark.json docs/REBUS_REAL_PHRASE_BENCHMARK.md
+          git diff --cached --quiet && exit 0
+          git commit -m 'Refresh representation landscape and phrase benchmark'
+          git push

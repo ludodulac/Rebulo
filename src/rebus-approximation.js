@@ -140,7 +140,14 @@ export function approximationTier(alignment={},policy={}){
 
 export function analyzeApproximation(sourceIpa='',targetIpa='',policy={}){
   const alignment=alignApproximateIPA(sourceIpa,targetIpa,policy);
-  return {...alignment,...approximationTier(alignment,policy),strictEligible:alignment.editCount===0,clinicalDefaultEligible:alignment.editCount===0};
+  return {
+    ...alignment,
+    ...approximationTier(alignment,policy),
+    strictEligible:alignment.editCount===0,
+    clinicalDefaultEligible:false,
+    approximationAllowedByDefaultInClinicalMode:false,
+    clinicalEvidence:'none'
+  };
 }
 
 function unitCounts(units=[]){

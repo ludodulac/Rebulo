@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.2",
-  "generatedAt": "2026-09-10T21:02:16.470Z",
+  "generatedAt": "2026-09-10T21:18:05.834Z",
   "status": "research_mapping_only",
   "purpose": "Élargir de façon conservatrice la banque SON → MOT(S) → REPRÉSENTATION en faisant émerger un lot substantiel à fort rendement sans convertir des indices en preuve visuelle.",
   "policy": {
@@ -34,12 +34,12 @@
     "registeredPhoneticAssetSoundCount": 5,
     "visibleConventionSoundCount": 23,
     "likelyNewAssetSoundCount": 870,
-    "highKnownRiskSoundCount": 83,
+    "highKnownRiskSoundCount": 94,
     "approximationAvailableSoundCount": 609,
-    "informationInsufficientSoundCount": 778,
+    "informationInsufficientSoundCount": 776,
     "laneCounts": {
-      "visible_convention_preferable": 12,
-      "multiple_exact_homophones_to_compare": 510,
+      "visible_convention_preferable": 3,
+      "multiple_exact_homophones_to_compare": 519,
       "approximation_only_after_rejected_exacts": 4,
       "research_asset_lead_to_inspect": 11,
       "exact_image_candidate_precheck": 374,
@@ -71,6 +71,7 @@
       "mɑ̃",
       "sjɔ̃",
       "e",
+      "ʁe",
       "ɛ̃",
       "ɑ̃",
       "ti",
@@ -79,6 +80,9 @@
       "di",
       "le",
       "me",
+      "pe",
+      "i",
+      "ʒe",
       "vi",
       "pʁo",
       "tɑ̃",
@@ -86,6 +90,8 @@
       "to",
       "fi",
       "sɑ̃",
+      "la",
+      "ve",
       "mo",
       "ʁɑ̃",
       "sa",
@@ -102,6 +108,7 @@
       "ku",
       "tyʁ",
       "vo",
+      "be",
       "fe",
       "su",
       "aʁ",
@@ -110,7 +117,9 @@
       "dis",
       "ty",
       "lɑ̃",
+      "y",
       "fɔʁ",
+      "ɛs",
       "ny",
       "ki",
       "bo",
@@ -218,30 +227,12 @@
       "poze",
       "ʒene",
       "pas",
-      "ap",
-      "vite",
-      "dɛ",
-      "twa",
-      "ʁɛ̃",
-      "mani",
-      "sɛt",
-      "fis",
-      "done",
-      "avɑ̃"
+      "ap"
     ],
     "visibleConventionPreferable": [
       "a",
-      "ʁe",
       "se",
-      "pe",
-      "i",
-      "ʒe",
-      "la",
-      "ve",
-      "be",
-      "y",
-      "ʒi",
-      "ɛs"
+      "ʒi"
     ],
     "exactImagePrecheck": [
       "na",
@@ -732,8 +723,8 @@
     "knownRisk": [
       "a",
       "mɑ̃",
+      "sjɔ̃",
       "e",
-      "ʁe",
       "ɛ̃",
       "kɔ̃",
       "se",
@@ -748,6 +739,7 @@
       "fi",
       "pʁe",
       "ve",
+      "no",
       "tik",
       "paʁ",
       "vɑ̃",
@@ -764,6 +756,7 @@
       "bʁi",
       "mɔ̃",
       "tʁo",
+      "tal",
       "ge",
       "sɛp",
       "fɑ̃",
@@ -782,15 +775,20 @@
       "pɔʁte",
       "gɔ̃",
       "deli",
+      "sypɛʁ",
+      "mine",
       "epi",
+      "defi",
       "ʃɛʁ",
       "eʁo",
       "gɛ",
       "file",
+      "kyle",
       "deko",
       "kaʁa",
       "pɑ̃se",
       "ado",
+      "liza",
       "eko",
       "ami",
       "kɔ̃t",
@@ -798,12 +796,14 @@
       "sit",
       "vize",
       "fɛ̃",
+      "pʁese",
       "tɛʁi",
       "tɛz",
       "ʃwa",
       "gɛʁ",
       "minyt",
       "otɑ̃",
+      "vwaje",
       "ɑ̃vwa",
       "kuʃe",
       "bote",
@@ -811,8 +811,10 @@
       "kupe",
       "paʁi",
       "ʁomɑ̃",
+      "puse",
       "papi",
-      "kilo"
+      "kilo",
+      "peʁi"
     ],
     "approximationOnly": [
       "kɔ̃",
@@ -1223,30 +1225,6 @@
       "multipleExactHomophones": true,
       "exactCandidates": [
         {
-          "word": "scion",
-          "pos": "NOM",
-          "frequency": 0.089,
-          "frequencyBand": "low",
-          "syllableCount": 1,
-          "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
-          "noun": true,
-          "visualPotential": "unknown",
-          "namingRisk": "unknown",
-          "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
-          "automaticActivation": false,
-          "clinicalEvidence": "none",
-          "knownAssets": [],
-          "descriptiveFlags": {
-            "singleCharacter": false,
-            "functionLikePos": false,
-            "lowFrequency": true,
-            "noun": true
-          }
-        },
-        {
           "word": "cyon",
           "pos": "NOM",
           "frequency": 0.041,
@@ -1293,6 +1271,34 @@
             "lowFrequency": true,
             "noun": false
           }
+        },
+        {
+          "word": "scion",
+          "pos": "NOM",
+          "frequency": 0.089,
+          "frequencyBand": "low",
+          "syllableCount": 1,
+          "exactPhoneticMatch": true,
+          "representationType": "deferred_visual_route",
+          "proofStatus": "visual_route_deferred",
+          "noun": true,
+          "visualPotential": "unknown",
+          "namingRisk": "unknown",
+          "mainConfusions": [
+            "pousse",
+            "branche",
+            "tige"
+          ],
+          "nextGate": "review_existing_editorial_decision",
+          "automaticActivation": false,
+          "clinicalEvidence": "none",
+          "knownAssets": [],
+          "descriptiveFlags": {
+            "singleCharacter": false,
+            "functionLikePos": false,
+            "lowFrequency": true,
+            "noun": true
+          }
         }
       ],
       "curatedVisualHypothesisCount": 0,
@@ -1303,7 +1309,7 @@
       "researchAssetLeadCandidateCount": 0,
       "registeredPhoneticAssetCandidateCount": 0,
       "likelyNeedsNewAsset": true,
-      "highKnownVisualOrLexicalRisk": false,
+      "highKnownVisualOrLexicalRisk": true,
       "informationInsufficient": true,
       "twoSyllableFirstClass": false,
       "lane": "multiple_exact_homophones_to_compare",
@@ -1457,6 +1463,30 @@
       "multipleExactHomophones": true,
       "exactCandidates": [
         {
+          "word": "ré",
+          "pos": "NOM",
+          "frequency": 1.649,
+          "frequencyBand": "low",
+          "syllableCount": 1,
+          "exactPhoneticMatch": true,
+          "representationType": "curated_visual_hypothesis",
+          "proofStatus": "visual_hypothesis_curated",
+          "noun": true,
+          "visualPotential": "unknown",
+          "namingRisk": "unknown",
+          "mainConfusions": [],
+          "nextGate": "review_existing_editorial_decision",
+          "automaticActivation": false,
+          "clinicalEvidence": "none",
+          "knownAssets": [],
+          "descriptiveFlags": {
+            "singleCharacter": false,
+            "functionLikePos": false,
+            "lowFrequency": false,
+            "noun": true
+          }
+        },
+        {
           "word": "rée",
           "pos": "VER",
           "frequency": 0.047,
@@ -1479,37 +1509,9 @@
             "lowFrequency": true,
             "noun": false
           }
-        },
-        {
-          "word": "ré",
-          "pos": "NOM",
-          "frequency": 1.649,
-          "frequencyBand": "low",
-          "syllableCount": 1,
-          "exactPhoneticMatch": true,
-          "representationType": "deferred_visual_route",
-          "proofStatus": "visual_route_deferred",
-          "noun": true,
-          "visualPotential": "unknown",
-          "namingRisk": "unknown",
-          "mainConfusions": [
-            "note",
-            "musique",
-            "D"
-          ],
-          "nextGate": "leave_unknown_until_better_visual_route_exists",
-          "automaticActivation": false,
-          "clinicalEvidence": "none",
-          "knownAssets": [],
-          "descriptiveFlags": {
-            "singleCharacter": false,
-            "functionLikePos": false,
-            "lowFrequency": false,
-            "noun": true
-          }
         }
       ],
-      "curatedVisualHypothesisCount": 0,
+      "curatedVisualHypothesisCount": 1,
       "visibleConventions": [
         {
           "kind": "music_note",
@@ -1620,19 +1622,19 @@
       "researchAssetLeadCandidateCount": 0,
       "registeredPhoneticAssetCandidateCount": 0,
       "likelyNeedsNewAsset": false,
-      "highKnownVisualOrLexicalRisk": true,
+      "highKnownVisualOrLexicalRisk": false,
       "informationInsufficient": false,
       "twoSyllableFirstClass": false,
-      "lane": "visible_convention_preferable",
+      "lane": "multiple_exact_homophones_to_compare",
       "proofStatus": {
         "phoneticExactness": "exact_candidates_attested",
         "generalRebusApproximation": "available_separately",
         "lexicalRelevance": "not_human_validated",
-        "drawableConcept": "unknown",
+        "drawableConcept": "curated_hypothesis_only",
         "spontaneousNamability": "unknown_unless_human_observation_exists",
         "orthophonicValidation": "none"
       },
-      "nextDecision": "prefer_explicit_convention_unless_better_exact_route_is_curated",
+      "nextDecision": "compare_semantic_and_visual_routes_before_drawing",
       "automaticActivation": false
     },
     {
@@ -2289,6 +2291,30 @@
       "multipleExactHomophones": true,
       "exactCandidates": [
         {
+          "word": "k",
+          "pos": "NOM",
+          "frequency": 11.905,
+          "frequencyBand": "low",
+          "syllableCount": 1,
+          "exactPhoneticMatch": true,
+          "representationType": "curated_visual_hypothesis",
+          "proofStatus": "visual_hypothesis_curated",
+          "noun": true,
+          "visualPotential": "unknown",
+          "namingRisk": "unknown",
+          "mainConfusions": [],
+          "nextGate": "review_existing_editorial_decision",
+          "automaticActivation": false,
+          "clinicalEvidence": "none",
+          "knownAssets": [],
+          "descriptiveFlags": {
+            "singleCharacter": true,
+            "functionLikePos": false,
+            "lowFrequency": false,
+            "noun": true
+          }
+        },
+        {
           "word": "cas",
           "pos": "NOM",
           "frequency": 317.316,
@@ -2307,30 +2333,6 @@
           "knownAssets": [],
           "descriptiveFlags": {
             "singleCharacter": false,
-            "functionLikePos": false,
-            "lowFrequency": false,
-            "noun": true
-          }
-        },
-        {
-          "word": "k",
-          "pos": "NOM",
-          "frequency": 11.905,
-          "frequencyBand": "low",
-          "syllableCount": 1,
-          "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
-          "noun": true,
-          "visualPotential": "unknown",
-          "namingRisk": "unknown",
-          "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
-          "automaticActivation": false,
-          "clinicalEvidence": "none",
-          "knownAssets": [],
-          "descriptiveFlags": {
-            "singleCharacter": true,
             "functionLikePos": false,
             "lowFrequency": false,
             "noun": true
@@ -2361,7 +2363,7 @@
           }
         }
       ],
-      "curatedVisualHypothesisCount": 0,
+      "curatedVisualHypothesisCount": 1,
       "visibleConventions": [
         {
           "kind": "letter_name",
@@ -2442,7 +2444,7 @@
         "phoneticExactness": "exact_candidates_attested",
         "generalRebusApproximation": "available_separately",
         "lexicalRelevance": "not_human_validated",
-        "drawableConcept": "unknown",
+        "drawableConcept": "curated_hypothesis_only",
         "spontaneousNamability": "unknown_unless_human_observation_exists",
         "orthophonicValidation": "none"
       },
@@ -3186,13 +3188,13 @@
           "frequencyBand": "low",
           "syllableCount": 1,
           "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
+          "representationType": "curated_visual_hypothesis",
+          "proofStatus": "visual_hypothesis_curated",
           "noun": true,
           "visualPotential": "unknown",
           "namingRisk": "unknown",
           "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
+          "nextGate": "review_existing_editorial_decision",
           "automaticActivation": false,
           "clinicalEvidence": "none",
           "knownAssets": [],
@@ -3252,7 +3254,7 @@
           }
         }
       ],
-      "curatedVisualHypothesisCount": 0,
+      "curatedVisualHypothesisCount": 1,
       "visibleConventions": [
         {
           "kind": "letter_name",
@@ -3366,16 +3368,16 @@
       "highKnownVisualOrLexicalRisk": true,
       "informationInsufficient": false,
       "twoSyllableFirstClass": false,
-      "lane": "visible_convention_preferable",
+      "lane": "multiple_exact_homophones_to_compare",
       "proofStatus": {
         "phoneticExactness": "exact_candidates_attested",
         "generalRebusApproximation": "available_separately",
         "lexicalRelevance": "not_human_validated",
-        "drawableConcept": "unknown",
+        "drawableConcept": "curated_hypothesis_only",
         "spontaneousNamability": "unknown_unless_human_observation_exists",
         "orthophonicValidation": "none"
       },
-      "nextDecision": "prefer_explicit_convention_unless_better_exact_route_is_curated",
+      "nextDecision": "compare_semantic_and_visual_routes_before_drawing",
       "automaticActivation": false
     },
     {
@@ -3406,13 +3408,13 @@
           "frequencyBand": "medium",
           "syllableCount": 1,
           "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
+          "representationType": "curated_visual_hypothesis",
+          "proofStatus": "visual_hypothesis_curated",
           "noun": true,
           "visualPotential": "unknown",
           "namingRisk": "unknown",
           "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
+          "nextGate": "review_existing_editorial_decision",
           "automaticActivation": false,
           "clinicalEvidence": "none",
           "knownAssets": [],
@@ -3472,7 +3474,7 @@
           }
         }
       ],
-      "curatedVisualHypothesisCount": 0,
+      "curatedVisualHypothesisCount": 1,
       "visibleConventions": [
         {
           "kind": "letter_name",
@@ -3490,16 +3492,16 @@
       "highKnownVisualOrLexicalRisk": true,
       "informationInsufficient": false,
       "twoSyllableFirstClass": false,
-      "lane": "visible_convention_preferable",
+      "lane": "multiple_exact_homophones_to_compare",
       "proofStatus": {
         "phoneticExactness": "exact_candidates_attested",
         "generalRebusApproximation": "none_listed",
         "lexicalRelevance": "not_human_validated",
-        "drawableConcept": "unknown",
+        "drawableConcept": "curated_hypothesis_only",
         "spontaneousNamability": "unknown_unless_human_observation_exists",
         "orthophonicValidation": "none"
       },
-      "nextDecision": "prefer_explicit_convention_unless_better_exact_route_is_curated",
+      "nextDecision": "compare_semantic_and_visual_routes_before_drawing",
       "automaticActivation": false
     },
     {
@@ -3530,13 +3532,13 @@
           "frequencyBand": "low",
           "syllableCount": 1,
           "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
+          "representationType": "curated_visual_hypothesis",
+          "proofStatus": "visual_hypothesis_curated",
           "noun": true,
           "visualPotential": "unknown",
           "namingRisk": "unknown",
           "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
+          "nextGate": "review_existing_editorial_decision",
           "automaticActivation": false,
           "clinicalEvidence": "none",
           "knownAssets": [],
@@ -3596,7 +3598,7 @@
           }
         }
       ],
-      "curatedVisualHypothesisCount": 0,
+      "curatedVisualHypothesisCount": 1,
       "visibleConventions": [
         {
           "kind": "letter_name",
@@ -3691,16 +3693,16 @@
       "highKnownVisualOrLexicalRisk": true,
       "informationInsufficient": false,
       "twoSyllableFirstClass": false,
-      "lane": "visible_convention_preferable",
+      "lane": "multiple_exact_homophones_to_compare",
       "proofStatus": {
         "phoneticExactness": "exact_candidates_attested",
         "generalRebusApproximation": "available_separately",
         "lexicalRelevance": "not_human_validated",
-        "drawableConcept": "unknown",
+        "drawableConcept": "curated_hypothesis_only",
         "spontaneousNamability": "unknown_unless_human_observation_exists",
         "orthophonicValidation": "none"
       },
-      "nextDecision": "prefer_explicit_convention_unless_better_exact_route_is_curated",
+      "nextDecision": "compare_semantic_and_visual_routes_before_drawing",
       "automaticActivation": false
     },
     {
@@ -5290,13 +5292,13 @@
           "frequencyBand": "low",
           "syllableCount": 1,
           "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
+          "representationType": "curated_visual_hypothesis",
+          "proofStatus": "visual_hypothesis_curated",
           "noun": true,
           "visualPotential": "unknown",
           "namingRisk": "unknown",
           "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
+          "nextGate": "review_existing_editorial_decision",
           "automaticActivation": false,
           "clinicalEvidence": "none",
           "knownAssets": [],
@@ -5332,7 +5334,7 @@
           }
         }
       ],
-      "curatedVisualHypothesisCount": 0,
+      "curatedVisualHypothesisCount": 1,
       "visibleConventions": [
         {
           "kind": "music_note",
@@ -5350,16 +5352,16 @@
       "highKnownVisualOrLexicalRisk": false,
       "informationInsufficient": false,
       "twoSyllableFirstClass": false,
-      "lane": "visible_convention_preferable",
+      "lane": "multiple_exact_homophones_to_compare",
       "proofStatus": {
         "phoneticExactness": "exact_candidates_attested",
         "generalRebusApproximation": "none_listed",
         "lexicalRelevance": "not_human_validated",
-        "drawableConcept": "unknown",
+        "drawableConcept": "curated_hypothesis_only",
         "spontaneousNamability": "unknown_unless_human_observation_exists",
         "orthophonicValidation": "none"
       },
-      "nextDecision": "prefer_explicit_convention_unless_better_exact_route_is_curated",
+      "nextDecision": "compare_semantic_and_visual_routes_before_drawing",
       "automaticActivation": false
     },
     {
@@ -5390,13 +5392,13 @@
           "frequencyBand": "low",
           "syllableCount": 1,
           "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
+          "representationType": "curated_visual_hypothesis",
+          "proofStatus": "visual_hypothesis_curated",
           "noun": true,
           "visualPotential": "unknown",
           "namingRisk": "unknown",
           "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
+          "nextGate": "review_existing_editorial_decision",
           "automaticActivation": false,
           "clinicalEvidence": "none",
           "knownAssets": [],
@@ -5456,7 +5458,7 @@
           }
         }
       ],
-      "curatedVisualHypothesisCount": 0,
+      "curatedVisualHypothesisCount": 1,
       "visibleConventions": [
         {
           "kind": "letter_name",
@@ -5570,16 +5572,16 @@
       "highKnownVisualOrLexicalRisk": true,
       "informationInsufficient": false,
       "twoSyllableFirstClass": false,
-      "lane": "visible_convention_preferable",
+      "lane": "multiple_exact_homophones_to_compare",
       "proofStatus": {
         "phoneticExactness": "exact_candidates_attested",
         "generalRebusApproximation": "available_separately",
         "lexicalRelevance": "not_human_validated",
-        "drawableConcept": "unknown",
+        "drawableConcept": "curated_hypothesis_only",
         "spontaneousNamability": "unknown_unless_human_observation_exists",
         "orthophonicValidation": "none"
       },
-      "nextDecision": "prefer_explicit_convention_unless_better_exact_route_is_curated",
+      "nextDecision": "compare_semantic_and_visual_routes_before_drawing",
       "automaticActivation": false
     },
     {
@@ -6768,30 +6770,6 @@
       "multipleExactHomophones": true,
       "exactCandidates": [
         {
-          "word": "nô",
-          "pos": "NOM",
-          "frequency": 0.133,
-          "frequencyBand": "low",
-          "syllableCount": 1,
-          "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
-          "noun": true,
-          "visualPotential": "unknown",
-          "namingRisk": "unknown",
-          "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
-          "automaticActivation": false,
-          "clinicalEvidence": "none",
-          "knownAssets": [],
-          "descriptiveFlags": {
-            "singleCharacter": false,
-            "functionLikePos": false,
-            "lowFrequency": true,
-            "noun": true
-          }
-        },
-        {
           "word": "noe",
           "pos": "NOM",
           "frequency": 0.003,
@@ -6838,6 +6816,32 @@
             "lowFrequency": false,
             "noun": false
           }
+        },
+        {
+          "word": "nô",
+          "pos": "NOM",
+          "frequency": 0.133,
+          "frequencyBand": "low",
+          "syllableCount": 1,
+          "exactPhoneticMatch": true,
+          "representationType": "deferred_visual_route",
+          "proofStatus": "visual_route_deferred",
+          "noun": true,
+          "visualPotential": "unknown",
+          "namingRisk": "unknown",
+          "mainConfusions": [
+            "masque"
+          ],
+          "nextGate": "review_existing_editorial_decision",
+          "automaticActivation": false,
+          "clinicalEvidence": "none",
+          "knownAssets": [],
+          "descriptiveFlags": {
+            "singleCharacter": false,
+            "functionLikePos": false,
+            "lowFrequency": true,
+            "noun": true
+          }
         }
       ],
       "curatedVisualHypothesisCount": 0,
@@ -6848,7 +6852,7 @@
       "researchAssetLeadCandidateCount": 0,
       "registeredPhoneticAssetCandidateCount": 0,
       "likelyNeedsNewAsset": true,
-      "highKnownVisualOrLexicalRisk": false,
+      "highKnownVisualOrLexicalRisk": true,
       "informationInsufficient": true,
       "twoSyllableFirstClass": false,
       "lane": "multiple_exact_homophones_to_compare",
@@ -6885,6 +6889,30 @@
       "multipleExactHomophones": true,
       "exactCandidates": [
         {
+          "word": "q",
+          "pos": "NOM",
+          "frequency": 5.44,
+          "frequencyBand": "low",
+          "syllableCount": 1,
+          "exactPhoneticMatch": true,
+          "representationType": "curated_visual_hypothesis",
+          "proofStatus": "visual_hypothesis_curated",
+          "noun": true,
+          "visualPotential": "unknown",
+          "namingRisk": "unknown",
+          "mainConfusions": [],
+          "nextGate": "review_existing_editorial_decision",
+          "automaticActivation": false,
+          "clinicalEvidence": "none",
+          "knownAssets": [],
+          "descriptiveFlags": {
+            "singleCharacter": true,
+            "functionLikePos": false,
+            "lowFrequency": false,
+            "noun": true
+          }
+        },
+        {
           "word": "cul",
           "pos": "NOM",
           "frequency": 126.228,
@@ -6903,30 +6931,6 @@
           "knownAssets": [],
           "descriptiveFlags": {
             "singleCharacter": false,
-            "functionLikePos": false,
-            "lowFrequency": false,
-            "noun": true
-          }
-        },
-        {
-          "word": "q",
-          "pos": "NOM",
-          "frequency": 5.44,
-          "frequencyBand": "low",
-          "syllableCount": 1,
-          "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
-          "noun": true,
-          "visualPotential": "unknown",
-          "namingRisk": "unknown",
-          "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
-          "automaticActivation": false,
-          "clinicalEvidence": "none",
-          "knownAssets": [],
-          "descriptiveFlags": {
-            "singleCharacter": true,
             "functionLikePos": false,
             "lowFrequency": false,
             "noun": true
@@ -6981,7 +6985,7 @@
           }
         }
       ],
-      "curatedVisualHypothesisCount": 0,
+      "curatedVisualHypothesisCount": 1,
       "visibleConventions": [
         {
           "kind": "letter_name",
@@ -7004,7 +7008,7 @@
         "phoneticExactness": "exact_candidates_attested",
         "generalRebusApproximation": "none_listed",
         "lexicalRelevance": "not_human_validated",
-        "drawableConcept": "unknown",
+        "drawableConcept": "curated_hypothesis_only",
         "spontaneousNamability": "unknown_unless_human_observation_exists",
         "orthophonicValidation": "none"
       },
@@ -9141,13 +9145,13 @@
           "frequencyBand": "medium",
           "syllableCount": 1,
           "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
+          "representationType": "curated_visual_hypothesis",
+          "proofStatus": "visual_hypothesis_curated",
           "noun": true,
           "visualPotential": "unknown",
           "namingRisk": "unknown",
           "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
+          "nextGate": "review_existing_editorial_decision",
           "automaticActivation": false,
           "clinicalEvidence": "none",
           "knownAssets": [],
@@ -9207,7 +9211,7 @@
           }
         }
       ],
-      "curatedVisualHypothesisCount": 0,
+      "curatedVisualHypothesisCount": 1,
       "visibleConventions": [
         {
           "kind": "letter_name",
@@ -9321,16 +9325,16 @@
       "highKnownVisualOrLexicalRisk": false,
       "informationInsufficient": false,
       "twoSyllableFirstClass": false,
-      "lane": "visible_convention_preferable",
+      "lane": "multiple_exact_homophones_to_compare",
       "proofStatus": {
         "phoneticExactness": "exact_candidates_attested",
         "generalRebusApproximation": "available_separately",
         "lexicalRelevance": "not_human_validated",
-        "drawableConcept": "unknown",
+        "drawableConcept": "curated_hypothesis_only",
         "spontaneousNamability": "unknown_unless_human_observation_exists",
         "orthophonicValidation": "none"
       },
-      "nextDecision": "prefer_explicit_convention_unless_better_exact_route_is_curated",
+      "nextDecision": "compare_semantic_and_visual_routes_before_drawing",
       "automaticActivation": false
     },
     {
@@ -10813,13 +10817,13 @@
           "frequencyBand": "low",
           "syllableCount": 1,
           "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
+          "representationType": "curated_visual_hypothesis",
+          "proofStatus": "visual_hypothesis_curated",
           "noun": true,
           "visualPotential": "unknown",
           "namingRisk": "unknown",
           "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
+          "nextGate": "review_existing_editorial_decision",
           "automaticActivation": false,
           "clinicalEvidence": "none",
           "knownAssets": [],
@@ -10879,7 +10883,7 @@
           }
         }
       ],
-      "curatedVisualHypothesisCount": 0,
+      "curatedVisualHypothesisCount": 1,
       "visibleConventions": [
         {
           "kind": "letter_name",
@@ -10897,16 +10901,16 @@
       "highKnownVisualOrLexicalRisk": false,
       "informationInsufficient": false,
       "twoSyllableFirstClass": false,
-      "lane": "visible_convention_preferable",
+      "lane": "multiple_exact_homophones_to_compare",
       "proofStatus": {
         "phoneticExactness": "exact_candidates_attested",
         "generalRebusApproximation": "none_listed",
         "lexicalRelevance": "not_human_validated",
-        "drawableConcept": "unknown",
+        "drawableConcept": "curated_hypothesis_only",
         "spontaneousNamability": "unknown_unless_human_observation_exists",
         "orthophonicValidation": "none"
       },
-      "nextDecision": "prefer_explicit_convention_unless_better_exact_route_is_curated",
+      "nextDecision": "compare_semantic_and_visual_routes_before_drawing",
       "automaticActivation": false
     },
     {
@@ -11277,13 +11281,13 @@
           "frequencyBand": "medium",
           "syllableCount": 1,
           "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
+          "representationType": "curated_visual_hypothesis",
+          "proofStatus": "visual_hypothesis_curated",
           "noun": true,
           "visualPotential": "unknown",
           "namingRisk": "unknown",
           "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
+          "nextGate": "review_existing_editorial_decision",
           "automaticActivation": false,
           "clinicalEvidence": "none",
           "knownAssets": [],
@@ -11367,7 +11371,7 @@
           }
         }
       ],
-      "curatedVisualHypothesisCount": 0,
+      "curatedVisualHypothesisCount": 1,
       "visibleConventions": [
         {
           "kind": "letter_name",
@@ -11405,16 +11409,16 @@
       "highKnownVisualOrLexicalRisk": false,
       "informationInsufficient": false,
       "twoSyllableFirstClass": false,
-      "lane": "visible_convention_preferable",
+      "lane": "multiple_exact_homophones_to_compare",
       "proofStatus": {
         "phoneticExactness": "exact_candidates_attested",
         "generalRebusApproximation": "available_separately",
         "lexicalRelevance": "not_human_validated",
-        "drawableConcept": "unknown",
+        "drawableConcept": "curated_hypothesis_only",
         "spontaneousNamability": "unknown_unless_human_observation_exists",
         "orthophonicValidation": "none"
       },
-      "nextDecision": "prefer_explicit_convention_unless_better_exact_route_is_curated",
+      "nextDecision": "compare_semantic_and_visual_routes_before_drawing",
       "automaticActivation": false
     },
     {
@@ -23879,30 +23883,6 @@
           }
         },
         {
-          "word": "talle",
-          "pos": "NOM",
-          "frequency": 0.003,
-          "frequencyBand": "low",
-          "syllableCount": 1,
-          "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
-          "noun": true,
-          "visualPotential": "unknown",
-          "namingRisk": "unknown",
-          "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
-          "automaticActivation": false,
-          "clinicalEvidence": "none",
-          "knownAssets": [],
-          "descriptiveFlags": {
-            "singleCharacter": false,
-            "functionLikePos": false,
-            "lowFrequency": true,
-            "noun": true
-          }
-        },
-        {
           "word": "tale",
           "pos": "VER",
           "frequency": 0.114,
@@ -23924,6 +23904,34 @@
             "functionLikePos": false,
             "lowFrequency": true,
             "noun": false
+          }
+        },
+        {
+          "word": "talle",
+          "pos": "NOM",
+          "frequency": 0.003,
+          "frequencyBand": "low",
+          "syllableCount": 1,
+          "exactPhoneticMatch": true,
+          "representationType": "deferred_visual_route",
+          "proofStatus": "visual_route_deferred",
+          "noun": true,
+          "visualPotential": "unknown",
+          "namingRisk": "unknown",
+          "mainConfusions": [
+            "pousse",
+            "touffe",
+            "tige"
+          ],
+          "nextGate": "review_existing_editorial_decision",
+          "automaticActivation": false,
+          "clinicalEvidence": "none",
+          "knownAssets": [],
+          "descriptiveFlags": {
+            "singleCharacter": false,
+            "functionLikePos": false,
+            "lowFrequency": true,
+            "noun": true
           }
         }
       ],
@@ -24031,7 +24039,7 @@
       "researchAssetLeadCandidateCount": 0,
       "registeredPhoneticAssetCandidateCount": 0,
       "likelyNeedsNewAsset": true,
-      "highKnownVisualOrLexicalRisk": false,
+      "highKnownVisualOrLexicalRisk": true,
       "informationInsufficient": true,
       "twoSyllableFirstClass": false,
       "lane": "multiple_exact_homophones_to_compare",
@@ -34465,30 +34473,6 @@
       "multipleExactHomophones": true,
       "exactCandidates": [
         {
-          "word": "liser",
-          "pos": "NOM",
-          "frequency": 0.006,
-          "frequencyBand": "low",
-          "syllableCount": 2,
-          "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
-          "noun": true,
-          "visualPotential": "unknown",
-          "namingRisk": "unknown",
-          "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
-          "automaticActivation": false,
-          "clinicalEvidence": "none",
-          "knownAssets": [],
-          "descriptiveFlags": {
-            "singleCharacter": false,
-            "functionLikePos": false,
-            "lowFrequency": true,
-            "noun": true
-          }
-        },
-        {
           "word": "lisez",
           "pos": "VER",
           "frequency": 15.136,
@@ -34529,6 +34513,30 @@
             "décoration"
           ],
           "nextGate": "leave_unknown_until_lexical_sense_is_confirmed_visual",
+          "automaticActivation": false,
+          "clinicalEvidence": "none",
+          "knownAssets": [],
+          "descriptiveFlags": {
+            "singleCharacter": false,
+            "functionLikePos": false,
+            "lowFrequency": true,
+            "noun": true
+          }
+        },
+        {
+          "word": "liser",
+          "pos": "NOM",
+          "frequency": 0.006,
+          "frequencyBand": "low",
+          "syllableCount": 2,
+          "exactPhoneticMatch": true,
+          "representationType": "deferred_visual_route",
+          "proofStatus": "visual_route_deferred",
+          "noun": true,
+          "visualPotential": "unknown",
+          "namingRisk": "unknown",
+          "mainConfusions": [],
+          "nextGate": "review_existing_editorial_decision",
           "automaticActivation": false,
           "clinicalEvidence": "none",
           "knownAssets": [],
@@ -40123,30 +40131,6 @@
       "multipleExactHomophones": true,
       "exactCandidates": [
         {
-          "word": "donné",
-          "pos": "NOM",
-          "frequency": 1.899,
-          "frequencyBand": "low",
-          "syllableCount": 2,
-          "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
-          "noun": true,
-          "visualPotential": "unknown",
-          "namingRisk": "unknown",
-          "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
-          "automaticActivation": false,
-          "clinicalEvidence": "none",
-          "knownAssets": [],
-          "descriptiveFlags": {
-            "singleCharacter": false,
-            "functionLikePos": false,
-            "lowFrequency": false,
-            "noun": true
-          }
-        },
-        {
           "word": "donner",
           "pos": "VER",
           "frequency": 261.88,
@@ -40168,6 +40152,30 @@
             "functionLikePos": false,
             "lowFrequency": false,
             "noun": false
+          }
+        },
+        {
+          "word": "donné",
+          "pos": "NOM",
+          "frequency": 1.899,
+          "frequencyBand": "low",
+          "syllableCount": 2,
+          "exactPhoneticMatch": true,
+          "representationType": "deferred_visual_route",
+          "proofStatus": "visual_route_deferred",
+          "noun": true,
+          "visualPotential": "unknown",
+          "namingRisk": "unknown",
+          "mainConfusions": [],
+          "nextGate": "review_existing_editorial_decision",
+          "automaticActivation": false,
+          "clinicalEvidence": "none",
+          "knownAssets": [],
+          "descriptiveFlags": {
+            "singleCharacter": false,
+            "functionLikePos": false,
+            "lowFrequency": false,
+            "noun": true
           }
         },
         {
@@ -40339,30 +40347,6 @@
       "multipleExactHomophones": true,
       "exactCandidates": [
         {
-          "word": "avent",
-          "pos": "NOM",
-          "frequency": 0.13,
-          "frequencyBand": "low",
-          "syllableCount": 2,
-          "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
-          "noun": true,
-          "visualPotential": "unknown",
-          "namingRisk": "unknown",
-          "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
-          "automaticActivation": false,
-          "clinicalEvidence": "none",
-          "knownAssets": [],
-          "descriptiveFlags": {
-            "singleCharacter": false,
-            "functionLikePos": false,
-            "lowFrequency": true,
-            "noun": true
-          }
-        },
-        {
           "word": "havant",
           "pos": "VER",
           "frequency": 0.003,
@@ -40411,6 +40395,33 @@
             "singleCharacter": false,
             "functionLikePos": false,
             "lowFrequency": false,
+            "noun": true
+          }
+        },
+        {
+          "word": "avent",
+          "pos": "NOM",
+          "frequency": 0.13,
+          "frequencyBand": "low",
+          "syllableCount": 2,
+          "exactPhoneticMatch": true,
+          "representationType": "deferred_visual_route",
+          "proofStatus": "visual_route_deferred",
+          "noun": true,
+          "visualPotential": "unknown",
+          "namingRisk": "unknown",
+          "mainConfusions": [
+            "calendrier",
+            "Noël"
+          ],
+          "nextGate": "review_existing_editorial_decision",
+          "automaticActivation": false,
+          "clinicalEvidence": "none",
+          "knownAssets": [],
+          "descriptiveFlags": {
+            "singleCharacter": false,
+            "functionLikePos": false,
+            "lowFrequency": true,
             "noun": true
           }
         }
@@ -47362,30 +47373,6 @@
       "multipleExactHomophones": true,
       "exactCandidates": [
         {
-          "word": "super",
-          "pos": "NOM",
-          "frequency": 106,
-          "frequencyBand": "high",
-          "syllableCount": 2,
-          "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
-          "noun": true,
-          "visualPotential": "unknown",
-          "namingRisk": "unknown",
-          "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
-          "automaticActivation": false,
-          "clinicalEvidence": "none",
-          "knownAssets": [],
-          "descriptiveFlags": {
-            "singleCharacter": false,
-            "functionLikePos": false,
-            "lowFrequency": false,
-            "noun": true
-          }
-        },
-        {
           "word": "supère",
           "pos": "ADJ",
           "frequency": 0.006,
@@ -47407,6 +47394,30 @@
             "functionLikePos": true,
             "lowFrequency": true,
             "noun": false
+          }
+        },
+        {
+          "word": "super",
+          "pos": "NOM",
+          "frequency": 106,
+          "frequencyBand": "high",
+          "syllableCount": 2,
+          "exactPhoneticMatch": true,
+          "representationType": "deferred_visual_route",
+          "proofStatus": "visual_route_deferred",
+          "noun": true,
+          "visualPotential": "unknown",
+          "namingRisk": "unknown",
+          "mainConfusions": [],
+          "nextGate": "review_existing_editorial_decision",
+          "automaticActivation": false,
+          "clinicalEvidence": "none",
+          "knownAssets": [],
+          "descriptiveFlags": {
+            "singleCharacter": false,
+            "functionLikePos": false,
+            "lowFrequency": false,
+            "noun": true
           }
         }
       ],
@@ -47495,7 +47506,7 @@
       "researchAssetLeadCandidateCount": 0,
       "registeredPhoneticAssetCandidateCount": 0,
       "likelyNeedsNewAsset": true,
-      "highKnownVisualOrLexicalRisk": false,
+      "highKnownVisualOrLexicalRisk": true,
       "informationInsufficient": true,
       "twoSyllableFirstClass": true,
       "lane": "multiple_exact_homophones_to_compare",
@@ -49278,30 +49289,6 @@
       "multipleExactHomophones": true,
       "exactCandidates": [
         {
-          "word": "minè",
-          "pos": "NOM",
-          "frequency": 0.006,
-          "frequencyBand": "low",
-          "syllableCount": 2,
-          "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
-          "noun": true,
-          "visualPotential": "unknown",
-          "namingRisk": "unknown",
-          "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
-          "automaticActivation": false,
-          "clinicalEvidence": "none",
-          "knownAssets": [],
-          "descriptiveFlags": {
-            "singleCharacter": false,
-            "functionLikePos": false,
-            "lowFrequency": true,
-            "noun": true
-          }
-        },
-        {
           "word": "miner",
           "pos": "VER",
           "frequency": 0.68,
@@ -49323,6 +49310,30 @@
             "functionLikePos": false,
             "lowFrequency": true,
             "noun": false
+          }
+        },
+        {
+          "word": "minè",
+          "pos": "NOM",
+          "frequency": 0.006,
+          "frequencyBand": "low",
+          "syllableCount": 2,
+          "exactPhoneticMatch": true,
+          "representationType": "deferred_visual_route",
+          "proofStatus": "visual_route_deferred",
+          "noun": true,
+          "visualPotential": "unknown",
+          "namingRisk": "unknown",
+          "mainConfusions": [],
+          "nextGate": "review_existing_editorial_decision",
+          "automaticActivation": false,
+          "clinicalEvidence": "none",
+          "knownAssets": [],
+          "descriptiveFlags": {
+            "singleCharacter": false,
+            "functionLikePos": false,
+            "lowFrequency": true,
+            "noun": true
           }
         }
       ],
@@ -49430,7 +49441,7 @@
       "researchAssetLeadCandidateCount": 0,
       "registeredPhoneticAssetCandidateCount": 0,
       "likelyNeedsNewAsset": true,
-      "highKnownVisualOrLexicalRisk": false,
+      "highKnownVisualOrLexicalRisk": true,
       "informationInsufficient": true,
       "twoSyllableFirstClass": true,
       "lane": "multiple_exact_homophones_to_compare",
@@ -51150,30 +51161,6 @@
       "multipleExactHomophones": true,
       "exactCandidates": [
         {
-          "word": "défi",
-          "pos": "NOM",
-          "frequency": 14.924,
-          "frequencyBand": "low",
-          "syllableCount": 2,
-          "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
-          "noun": true,
-          "visualPotential": "unknown",
-          "namingRisk": "unknown",
-          "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
-          "automaticActivation": false,
-          "clinicalEvidence": "none",
-          "knownAssets": [],
-          "descriptiveFlags": {
-            "singleCharacter": false,
-            "functionLikePos": false,
-            "lowFrequency": false,
-            "noun": true
-          }
-        },
-        {
           "word": "défie",
           "pos": "VER",
           "frequency": 4.244,
@@ -51219,6 +51206,30 @@
             "functionLikePos": false,
             "lowFrequency": true,
             "noun": false
+          }
+        },
+        {
+          "word": "défi",
+          "pos": "NOM",
+          "frequency": 14.924,
+          "frequencyBand": "low",
+          "syllableCount": 2,
+          "exactPhoneticMatch": true,
+          "representationType": "deferred_visual_route",
+          "proofStatus": "visual_route_deferred",
+          "noun": true,
+          "visualPotential": "unknown",
+          "namingRisk": "unknown",
+          "mainConfusions": [],
+          "nextGate": "review_existing_editorial_decision",
+          "automaticActivation": false,
+          "clinicalEvidence": "none",
+          "knownAssets": [],
+          "descriptiveFlags": {
+            "singleCharacter": false,
+            "functionLikePos": false,
+            "lowFrequency": false,
+            "noun": true
           }
         }
       ],
@@ -51326,7 +51337,7 @@
       "researchAssetLeadCandidateCount": 0,
       "registeredPhoneticAssetCandidateCount": 0,
       "likelyNeedsNewAsset": true,
-      "highKnownVisualOrLexicalRisk": false,
+      "highKnownVisualOrLexicalRisk": true,
       "informationInsufficient": true,
       "twoSyllableFirstClass": true,
       "lane": "multiple_exact_homophones_to_compare",
@@ -59714,30 +59725,6 @@
           }
         },
         {
-          "word": "culée",
-          "pos": "NOM",
-          "frequency": 0.003,
-          "frequencyBand": "low",
-          "syllableCount": 2,
-          "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
-          "noun": true,
-          "visualPotential": "unknown",
-          "namingRisk": "unknown",
-          "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
-          "automaticActivation": false,
-          "clinicalEvidence": "none",
-          "knownAssets": [],
-          "descriptiveFlags": {
-            "singleCharacter": false,
-            "functionLikePos": false,
-            "lowFrequency": true,
-            "noun": true
-          }
-        },
-        {
           "word": "culer",
           "pos": "VER",
           "frequency": 0.016,
@@ -59760,6 +59747,34 @@
             "lowFrequency": true,
             "noun": false
           }
+        },
+        {
+          "word": "culée",
+          "pos": "NOM",
+          "frequency": 0.003,
+          "frequencyBand": "low",
+          "syllableCount": 2,
+          "exactPhoneticMatch": true,
+          "representationType": "deferred_visual_route",
+          "proofStatus": "visual_route_deferred",
+          "noun": true,
+          "visualPotential": "unknown",
+          "namingRisk": "unknown",
+          "mainConfusions": [
+            "pilier",
+            "pont",
+            "béton"
+          ],
+          "nextGate": "review_existing_editorial_decision",
+          "automaticActivation": false,
+          "clinicalEvidence": "none",
+          "knownAssets": [],
+          "descriptiveFlags": {
+            "singleCharacter": false,
+            "functionLikePos": false,
+            "lowFrequency": true,
+            "noun": true
+          }
         }
       ],
       "curatedVisualHypothesisCount": 0,
@@ -59770,7 +59785,7 @@
       "researchAssetLeadCandidateCount": 0,
       "registeredPhoneticAssetCandidateCount": 0,
       "likelyNeedsNewAsset": true,
-      "highKnownVisualOrLexicalRisk": false,
+      "highKnownVisualOrLexicalRisk": true,
       "informationInsufficient": true,
       "twoSyllableFirstClass": true,
       "lane": "multiple_exact_homophones_to_compare",
@@ -71528,30 +71543,6 @@
           }
         },
         {
-          "word": "lysat",
-          "pos": "NOM",
-          "frequency": 0.003,
-          "frequencyBand": "low",
-          "syllableCount": 2,
-          "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
-          "noun": true,
-          "visualPotential": "unknown",
-          "namingRisk": "unknown",
-          "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
-          "automaticActivation": false,
-          "clinicalEvidence": "none",
-          "knownAssets": [],
-          "descriptiveFlags": {
-            "singleCharacter": false,
-            "functionLikePos": false,
-            "lowFrequency": true,
-            "noun": true
-          }
-        },
-        {
           "word": "lysa",
           "pos": "VER",
           "frequency": 0.003,
@@ -71574,6 +71565,34 @@
             "lowFrequency": true,
             "noun": false
           }
+        },
+        {
+          "word": "lysat",
+          "pos": "NOM",
+          "frequency": 0.003,
+          "frequencyBand": "low",
+          "syllableCount": 2,
+          "exactPhoneticMatch": true,
+          "representationType": "deferred_visual_route",
+          "proofStatus": "visual_route_deferred",
+          "noun": true,
+          "visualPotential": "unknown",
+          "namingRisk": "unknown",
+          "mainConfusions": [
+            "liquide",
+            "tube",
+            "laboratoire"
+          ],
+          "nextGate": "review_existing_editorial_decision",
+          "automaticActivation": false,
+          "clinicalEvidence": "none",
+          "knownAssets": [],
+          "descriptiveFlags": {
+            "singleCharacter": false,
+            "functionLikePos": false,
+            "lowFrequency": true,
+            "noun": true
+          }
         }
       ],
       "curatedVisualHypothesisCount": 0,
@@ -71584,7 +71603,7 @@
       "researchAssetLeadCandidateCount": 0,
       "registeredPhoneticAssetCandidateCount": 0,
       "likelyNeedsNewAsset": true,
-      "highKnownVisualOrLexicalRisk": false,
+      "highKnownVisualOrLexicalRisk": true,
       "informationInsufficient": true,
       "twoSyllableFirstClass": true,
       "lane": "multiple_exact_homophones_to_compare",
@@ -97946,30 +97965,6 @@
       "multipleExactHomophones": true,
       "exactCandidates": [
         {
-          "word": "pressé",
-          "pos": "NOM",
-          "frequency": 0.335,
-          "frequencyBand": "low",
-          "syllableCount": 2,
-          "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
-          "noun": true,
-          "visualPotential": "unknown",
-          "namingRisk": "unknown",
-          "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
-          "automaticActivation": false,
-          "clinicalEvidence": "none",
-          "knownAssets": [],
-          "descriptiveFlags": {
-            "singleCharacter": false,
-            "functionLikePos": false,
-            "lowFrequency": true,
-            "noun": true
-          }
-        },
-        {
           "word": "pressée",
           "pos": "NOM",
           "frequency": 0.003,
@@ -98015,6 +98010,33 @@
             "functionLikePos": false,
             "lowFrequency": false,
             "noun": false
+          }
+        },
+        {
+          "word": "pressé",
+          "pos": "NOM",
+          "frequency": 0.335,
+          "frequencyBand": "low",
+          "syllableCount": 2,
+          "exactPhoneticMatch": true,
+          "representationType": "deferred_visual_route",
+          "proofStatus": "visual_route_deferred",
+          "noun": true,
+          "visualPotential": "unknown",
+          "namingRisk": "unknown",
+          "mainConfusions": [
+            "jus",
+            "boisson"
+          ],
+          "nextGate": "review_existing_editorial_decision",
+          "automaticActivation": false,
+          "clinicalEvidence": "none",
+          "knownAssets": [],
+          "descriptiveFlags": {
+            "singleCharacter": false,
+            "functionLikePos": false,
+            "lowFrequency": true,
+            "noun": true
           }
         }
       ],
@@ -98122,7 +98144,7 @@
       "researchAssetLeadCandidateCount": 0,
       "registeredPhoneticAssetCandidateCount": 0,
       "likelyNeedsNewAsset": true,
-      "highKnownVisualOrLexicalRisk": false,
+      "highKnownVisualOrLexicalRisk": true,
       "informationInsufficient": true,
       "twoSyllableFirstClass": true,
       "lane": "multiple_exact_homophones_to_compare",
@@ -118013,30 +118035,6 @@
       "multipleExactHomophones": true,
       "exactCandidates": [
         {
-          "word": "voyer",
-          "pos": "NOM",
-          "frequency": 0.066,
-          "frequencyBand": "low",
-          "syllableCount": 2,
-          "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
-          "noun": true,
-          "visualPotential": "unknown",
-          "namingRisk": "unknown",
-          "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
-          "automaticActivation": false,
-          "clinicalEvidence": "none",
-          "knownAssets": [],
-          "descriptiveFlags": {
-            "singleCharacter": false,
-            "functionLikePos": false,
-            "lowFrequency": true,
-            "noun": true
-          }
-        },
-        {
           "word": "voyai",
           "pos": "NOM",
           "frequency": 0.006,
@@ -118082,6 +118080,30 @@
             "functionLikePos": false,
             "lowFrequency": false,
             "noun": false
+          }
+        },
+        {
+          "word": "voyer",
+          "pos": "NOM",
+          "frequency": 0.066,
+          "frequencyBand": "low",
+          "syllableCount": 2,
+          "exactPhoneticMatch": true,
+          "representationType": "deferred_visual_route",
+          "proofStatus": "visual_route_deferred",
+          "noun": true,
+          "visualPotential": "unknown",
+          "namingRisk": "unknown",
+          "mainConfusions": [],
+          "nextGate": "review_existing_editorial_decision",
+          "automaticActivation": false,
+          "clinicalEvidence": "none",
+          "knownAssets": [],
+          "descriptiveFlags": {
+            "singleCharacter": false,
+            "functionLikePos": false,
+            "lowFrequency": true,
+            "noun": true
           }
         }
       ],
@@ -118189,7 +118211,7 @@
       "researchAssetLeadCandidateCount": 0,
       "registeredPhoneticAssetCandidateCount": 0,
       "likelyNeedsNewAsset": true,
-      "highKnownVisualOrLexicalRisk": false,
+      "highKnownVisualOrLexicalRisk": true,
       "informationInsufficient": true,
       "twoSyllableFirstClass": true,
       "lane": "multiple_exact_homophones_to_compare",
@@ -123445,6 +123467,34 @@
       "multipleExactHomophones": true,
       "exactCandidates": [
         {
+          "word": "camée",
+          "pos": "NOM",
+          "frequency": 0.516,
+          "frequencyBand": "low",
+          "syllableCount": 2,
+          "exactPhoneticMatch": true,
+          "representationType": "curated_visual_hypothesis",
+          "proofStatus": "visual_hypothesis_curated",
+          "noun": true,
+          "visualPotential": "unknown",
+          "namingRisk": "unknown",
+          "mainConfusions": [
+            "broche",
+            "médaillon",
+            "bijou"
+          ],
+          "nextGate": "review_existing_editorial_decision",
+          "automaticActivation": false,
+          "clinicalEvidence": "none",
+          "knownAssets": [],
+          "descriptiveFlags": {
+            "singleCharacter": false,
+            "functionLikePos": false,
+            "lowFrequency": true,
+            "noun": true
+          }
+        },
+        {
           "word": "camé",
           "pos": "NOM",
           "frequency": 1.354,
@@ -123465,30 +123515,6 @@
             "singleCharacter": false,
             "functionLikePos": false,
             "lowFrequency": false,
-            "noun": true
-          }
-        },
-        {
-          "word": "camée",
-          "pos": "NOM",
-          "frequency": 0.516,
-          "frequencyBand": "low",
-          "syllableCount": 2,
-          "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
-          "noun": true,
-          "visualPotential": "unknown",
-          "namingRisk": "unknown",
-          "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
-          "automaticActivation": false,
-          "clinicalEvidence": "none",
-          "knownAssets": [],
-          "descriptiveFlags": {
-            "singleCharacter": false,
-            "functionLikePos": false,
-            "lowFrequency": true,
             "noun": true
           }
         },
@@ -123517,7 +123543,7 @@
           }
         }
       ],
-      "curatedVisualHypothesisCount": 0,
+      "curatedVisualHypothesisCount": 1,
       "visibleConventions": [],
       "approximateCandidates": [
         {
@@ -123622,14 +123648,14 @@
       "registeredPhoneticAssetCandidateCount": 0,
       "likelyNeedsNewAsset": true,
       "highKnownVisualOrLexicalRisk": false,
-      "informationInsufficient": true,
+      "informationInsufficient": false,
       "twoSyllableFirstClass": true,
       "lane": "multiple_exact_homophones_to_compare",
       "proofStatus": {
         "phoneticExactness": "exact_candidates_attested",
         "generalRebusApproximation": "available_separately",
         "lexicalRelevance": "not_human_validated",
-        "drawableConcept": "unknown",
+        "drawableConcept": "curated_hypothesis_only",
         "spontaneousNamability": "unknown_unless_human_observation_exists",
         "orthophonicValidation": "none"
       },
@@ -126294,30 +126320,6 @@
       "multipleExactHomophones": true,
       "exactCandidates": [
         {
-          "word": "poussée",
-          "pos": "NOM",
-          "frequency": 2.595,
-          "frequencyBand": "low",
-          "syllableCount": 2,
-          "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
-          "noun": true,
-          "visualPotential": "unknown",
-          "namingRisk": "unknown",
-          "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
-          "automaticActivation": false,
-          "clinicalEvidence": "none",
-          "knownAssets": [],
-          "descriptiveFlags": {
-            "singleCharacter": false,
-            "functionLikePos": false,
-            "lowFrequency": false,
-            "noun": true
-          }
-        },
-        {
           "word": "poucer",
           "pos": "NOM",
           "frequency": 0.003,
@@ -126363,6 +126365,30 @@
             "functionLikePos": true,
             "lowFrequency": true,
             "noun": false
+          }
+        },
+        {
+          "word": "poussée",
+          "pos": "NOM",
+          "frequency": 2.595,
+          "frequencyBand": "low",
+          "syllableCount": 2,
+          "exactPhoneticMatch": true,
+          "representationType": "deferred_visual_route",
+          "proofStatus": "visual_route_deferred",
+          "noun": true,
+          "visualPotential": "unknown",
+          "namingRisk": "unknown",
+          "mainConfusions": [],
+          "nextGate": "review_existing_editorial_decision",
+          "automaticActivation": false,
+          "clinicalEvidence": "none",
+          "knownAssets": [],
+          "descriptiveFlags": {
+            "singleCharacter": false,
+            "functionLikePos": false,
+            "lowFrequency": false,
+            "noun": true
           }
         }
       ],
@@ -126470,7 +126496,7 @@
       "researchAssetLeadCandidateCount": 0,
       "registeredPhoneticAssetCandidateCount": 0,
       "likelyNeedsNewAsset": true,
-      "highKnownVisualOrLexicalRisk": false,
+      "highKnownVisualOrLexicalRisk": true,
       "informationInsufficient": true,
       "twoSyllableFirstClass": true,
       "lane": "multiple_exact_homophones_to_compare",
@@ -129876,13 +129902,17 @@
           "frequencyBand": "low",
           "syllableCount": 2,
           "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
+          "representationType": "curated_visual_hypothesis",
+          "proofStatus": "visual_hypothesis_curated",
           "noun": true,
           "visualPotential": "unknown",
           "namingRisk": "unknown",
-          "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
+          "mainConfusions": [
+            "thé",
+            "tisane",
+            "boisson"
+          ],
+          "nextGate": "review_existing_editorial_decision",
           "automaticActivation": false,
           "clinicalEvidence": "none",
           "knownAssets": [],
@@ -129942,7 +129972,7 @@
           }
         }
       ],
-      "curatedVisualHypothesisCount": 0,
+      "curatedVisualHypothesisCount": 1,
       "visibleConventions": [],
       "approximateCandidates": [],
       "existingAssetCandidateCount": 0,
@@ -129951,14 +129981,14 @@
       "registeredPhoneticAssetCandidateCount": 0,
       "likelyNeedsNewAsset": true,
       "highKnownVisualOrLexicalRisk": false,
-      "informationInsufficient": true,
+      "informationInsufficient": false,
       "twoSyllableFirstClass": true,
       "lane": "multiple_exact_homophones_to_compare",
       "proofStatus": {
         "phoneticExactness": "exact_candidates_attested",
         "generalRebusApproximation": "none_listed",
         "lexicalRelevance": "not_human_validated",
-        "drawableConcept": "unknown",
+        "drawableConcept": "curated_hypothesis_only",
         "spontaneousNamability": "unknown_unless_human_observation_exists",
         "orthophonicValidation": "none"
       },
@@ -134245,30 +134275,6 @@
       "multipleExactHomophones": true,
       "exactCandidates": [
         {
-          "word": "pairie",
-          "pos": "NOM",
-          "frequency": 0.025,
-          "frequencyBand": "low",
-          "syllableCount": 2,
-          "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
-          "noun": true,
-          "visualPotential": "unknown",
-          "namingRisk": "unknown",
-          "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
-          "automaticActivation": false,
-          "clinicalEvidence": "none",
-          "knownAssets": [],
-          "descriptiveFlags": {
-            "singleCharacter": false,
-            "functionLikePos": false,
-            "lowFrequency": true,
-            "noun": true
-          }
-        },
-        {
           "word": "paierie",
           "pos": "NOM",
           "frequency": 0.006,
@@ -134315,6 +134321,30 @@
             "lowFrequency": true,
             "noun": false
           }
+        },
+        {
+          "word": "pairie",
+          "pos": "NOM",
+          "frequency": 0.025,
+          "frequencyBand": "low",
+          "syllableCount": 2,
+          "exactPhoneticMatch": true,
+          "representationType": "deferred_visual_route",
+          "proofStatus": "visual_route_deferred",
+          "noun": true,
+          "visualPotential": "unknown",
+          "namingRisk": "unknown",
+          "mainConfusions": [],
+          "nextGate": "review_existing_editorial_decision",
+          "automaticActivation": false,
+          "clinicalEvidence": "none",
+          "knownAssets": [],
+          "descriptiveFlags": {
+            "singleCharacter": false,
+            "functionLikePos": false,
+            "lowFrequency": true,
+            "noun": true
+          }
         }
       ],
       "curatedVisualHypothesisCount": 0,
@@ -134325,7 +134355,7 @@
       "researchAssetLeadCandidateCount": 0,
       "registeredPhoneticAssetCandidateCount": 0,
       "likelyNeedsNewAsset": true,
-      "highKnownVisualOrLexicalRisk": false,
+      "highKnownVisualOrLexicalRisk": true,
       "informationInsufficient": true,
       "twoSyllableFirstClass": true,
       "lane": "multiple_exact_homophones_to_compare",

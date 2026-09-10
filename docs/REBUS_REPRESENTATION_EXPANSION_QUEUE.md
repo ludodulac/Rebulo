@@ -11,14 +11,14 @@
 - Sons avec asset enregistré dont l’IPA est explicitement enregistrée et exacte : 5.
 - Sons avec convention visible : 23.
 - Sons qui nécessitent probablement un nouvel asset si un concept exact est retenu : 870.
-- Sons avec risque visuel/lexical déjà documenté : 83.
+- Sons avec risque visuel/lexical déjà documenté : 94.
 - Sons avec approximation légère disponible séparément : 609.
-- Sons dont les preuves visuelles restent insuffisantes : 778.
+- Sons dont les preuves visuelles restent insuffisantes : 776.
 
 ## Répartition des décisions
 
-- convention visible préférable : 12.
-- plusieurs homophones exacts à départager : 510.
+- convention visible préférable : 3.
+- plusieurs homophones exacts à départager : 519.
 - approximation ludique seulement après rejets exacts : 4.
 - fichier de recherche à inspecter séparément : 11.
 - candidat lexical exact à préexaminer : 374.
@@ -29,7 +29,7 @@
 - Assets enregistrés à examiner : 5 sons (/vɑ̃/, /bal/, /gɑ̃/, /foto/, /kyʁi/).
 - Fichiers de recherche à inspecter séparément : 11 sons (/ni/, /fu/, /kʁwa/, /ø/, /pɛl/, /wa/, /œʁ/, /dwa/, /mat/, /ʁadi/, /kaʁe/).
 - Homophones exacts à départager : 160 sons prioritaires.
-- Conventions visibles préférables : 12 sons (/a/, /ʁe/, /se/, /pe/, /i/, /ʒe/, /la/, /ve/, /be/, /y/, /ʒi/, /ɛs/).
+- Conventions visibles préférables : 3 sons (/a/, /se/, /ʒi/).
 - Préexamen de candidat image exact : 160 sons prioritaires.
 - Fenêtres de deux syllabes à préserver : 160 sons prioritaires.
 - Pistes susceptibles de nécessiter un nouvel asset : 160 sons prioritaires.
@@ -40,22 +40,22 @@
 |---:|---|---:|---|---|---|---:|---:|---|
 | 1 | /a/ | 424 | 1 syll. | a, ha [rejet visuel] | A | 0 | 0 | convention visible préférable |
 | 2 | /mɑ̃/ | 374 | 1 syll. | mens, man [rejet visuel], mans [rejet visuel] | — | 0 | 0 | plusieurs homophones exacts à départager |
-| 3 | /sjɔ̃/ | 365 | 1 syll. | scion, cyon, scions | — | 0 | 0 | plusieurs homophones exacts à départager |
+| 3 | /sjɔ̃/ | 365 | 1 syll. | cyon, scions, scion | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 4 | /e/ | 280 | 1 syll. | ais [rejet visuel], ai [rejet visuel], et [rejet visuel] | — | 0 | 0 | plusieurs homophones exacts à départager |
-| 5 | /ʁe/ | 257 | 1 syll. | rée, ré | ré | 0 | 0 | convention visible préférable |
+| 5 | /ʁe/ | 257 | 1 syll. | ré [hypothèse curatée], rée | ré | 0 | 0 | plusieurs homophones exacts à départager |
 | 6 | /ɛ̃/ | 234 | 1 syll. | ein [rejet visuel], eins [rejet visuel], ain [rejet visuel] | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 7 | /kɔ̃/ | 233 | 1 syll. | con [rejet visuel] | — | 0 | 0 | approximation ludique seulement après rejets exacts |
 | 8 | /se/ | 222 | 1 syll. | ces, ses, cé [rejet visuel] | C | 0 | 0 | convention visible préférable |
 | 9 | /ɑ̃/ | 188 | 1 syll. | an, han | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 10 | /ti/ | 176 | 1 syll. | tee, tie | — | 0 | 0 | plusieurs homophones exacts à départager |
-| 11 | /ka/ | 176 | 1 syll. | cas, k, ka | K | 0 | 0 | plusieurs homophones exacts à départager |
+| 11 | /ka/ | 176 | 1 syll. | k [hypothèse curatée], cas, ka | K | 0 | 0 | plusieurs homophones exacts à départager |
 | 12 | /ko/ | 169 | 1 syll. | cots, cot [rejet visuel] | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 13 | /di/ | 147 | 1 syll. | die, dit [rejet visuel] | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 14 | /le/ | 141 | 1 syll. | lé [rejet visuel], les [rejet visuel], lez [rejet visuel] | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 15 | /me/ | 135 | 1 syll. | mes, maye [rejet visuel], mée [rejet visuel] | — | 0 | 0 | plusieurs homophones exacts à départager |
-| 16 | /pe/ | 119 | 1 syll. | p, pe, pô [rejet visuel] | P | 0 | 0 | convention visible préférable |
-| 17 | /i/ | 111 | 1 syll. | i, y, hie [rejet visuel] | I | 0 | 0 | convention visible préférable |
-| 18 | /ʒe/ | 105 | 1 syll. | g, jé, gé [rejet visuel] | G | 0 | 0 | convention visible préférable |
+| 16 | /pe/ | 119 | 1 syll. | p [hypothèse curatée], pe, pô [rejet visuel] | P | 0 | 0 | plusieurs homophones exacts à départager |
+| 17 | /i/ | 111 | 1 syll. | i [hypothèse curatée], y, hie [rejet visuel] | I | 0 | 0 | plusieurs homophones exacts à départager |
+| 18 | /ʒe/ | 105 | 1 syll. | g [hypothèse curatée], jé, gé [rejet visuel] | G | 0 | 0 | plusieurs homophones exacts à départager |
 | 19 | /ni/ | 105 | 1 syll. | nid [fichier recherche] [hypothèse curatée], nie | — | 0 | 1 | fichier de recherche à inspecter séparément |
 | 20 | /vi/ | 97 | 1 syll. | vie, vit, vy | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 21 | /na/ | 96 | 1 syll. | na | — | 0 | 0 | candidat lexical exact à préexaminer |
@@ -66,8 +66,8 @@
 | 26 | /fi/ | 85 | 1 syll. | fy, fi, phi [rejet visuel] | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 27 | /pʁe/ | 83 | 1 syll. | pré [hypothèse curatée] | — | 0 | 0 | candidat lexical exact à préexaminer |
 | 28 | /sɑ̃/ | 82 | 1 syll. | sang [hypothèse curatée], cent, sans | 100 | 0 | 0 | plusieurs homophones exacts à départager |
-| 29 | /la/ | 79 | 1 syll. | la, las | la | 0 | 0 | convention visible préférable |
-| 30 | /ve/ | 78 | 1 syll. | v, vé, vés [rejet visuel] | V | 0 | 0 | convention visible préférable |
+| 29 | /la/ | 79 | 1 syll. | la [hypothèse curatée], las | la | 0 | 0 | plusieurs homophones exacts à départager |
+| 30 | /ve/ | 78 | 1 syll. | v [hypothèse curatée], vé, vés [rejet visuel] | V | 0 | 0 | plusieurs homophones exacts à départager |
 | 31 | /mo/ | 73 | 1 syll. | mot, maux | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 32 | /lə/ | 71 | 1 syll. | le | — | 0 | 0 | candidat lexical exact à préexaminer |
 | 33 | /ʁɑ̃/ | 70 | 1 syll. | rang, ran, ranc | — | 0 | 0 | plusieurs homophones exacts à départager |
@@ -77,8 +77,8 @@
 | 37 | /sy/ | 65 | 1 syll. | su, sue | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 38 | /bi/ | 65 | 1 syll. | by, bi, bee | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 39 | /ga/ | 64 | 1 syll. | gars, ga, ghât | — | 0 | 0 | plusieurs homophones exacts à départager |
-| 40 | /no/ | 63 | 1 syll. | nô, noe, nos | — | 0 | 0 | plusieurs homophones exacts à départager |
-| 41 | /ky/ | 63 | 1 syll. | cul, q, ku, qus | Q | 0 | 0 | plusieurs homophones exacts à départager |
+| 40 | /no/ | 63 | 1 syll. | noe, nos, nô | — | 0 | 0 | plusieurs homophones exacts à départager |
+| 41 | /ky/ | 63 | 1 syll. | q [hypothèse curatée], cul, ku, qus | Q | 0 | 0 | plusieurs homophones exacts à départager |
 | 42 | /ke/ | 59 | 1 syll. | quais | — | 0 | 0 | candidat lexical exact à préexaminer |
 | 43 | /sə/ | 58 | 1 syll. | se | — | 0 | 0 | candidat lexical exact à préexaminer |
 | 44 | /ʁo/ | 57 | 1 syll. | rot, rho | — | 0 | 0 | plusieurs homophones exacts à départager |
@@ -92,7 +92,7 @@
 | 52 | /vɑ̃/ | 48 | 1 syll. | vend, vent [asset enregistré] | — | 1 | 0 | asset enregistré à examiner/tester |
 | 53 | /vo/ | 47 | 1 syll. | veau [hypothèse curatée], vaux, vau | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 54 | /fa/ | 46 | 1 syll. | fa | fa | 0 | 0 | candidat lexical exact à préexaminer |
-| 55 | /be/ | 46 | 1 syll. | b, bô, bés | B | 0 | 0 | convention visible préférable |
+| 55 | /be/ | 46 | 1 syll. | b [hypothèse curatée], bô, bés | B | 0 | 0 | plusieurs homophones exacts à départager |
 | 56 | /fe/ | 46 | 1 syll. | fée [hypothèse curatée], phé | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 57 | /su/ | 44 | 1 syll. | sou, saoûl, souls | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 58 | /aʁ/ | 43 | 1 syll. | art, are, hart | — | 0 | 0 | plusieurs homophones exacts à départager |
@@ -102,10 +102,10 @@
 | 62 | /ty/ | 42 | 1 syll. | tue, tus | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 63 | /lite/ | 41 | 2 syll. | lité | — | 0 | 0 | candidat lexical exact à préexaminer |
 | 64 | /lɑ̃/ | 40 | 1 syll. | lan, lant, lanc | — | 0 | 0 | plusieurs homophones exacts à départager |
-| 65 | /y/ | 39 | 1 syll. | u, hue, eue | U | 0 | 0 | convention visible préférable |
+| 65 | /y/ | 39 | 1 syll. | u [hypothèse curatée], hue, eue | U | 0 | 0 | plusieurs homophones exacts à départager |
 | 66 | /fɔʁ/ | 39 | 1 syll. | fort [hypothèse curatée], for, fore | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 67 | /ʒi/ | 38 | 1 syll. | ji, git, gy | J | 0 | 0 | convention visible préférable |
-| 68 | /ɛs/ | 36 | 1 syll. | s, aces, esse, aisse | S | 0 | 0 | convention visible préférable |
+| 68 | /ɛs/ | 36 | 1 syll. | s [hypothèse curatée], aces, esse, aisse | S | 0 | 0 | plusieurs homophones exacts à départager |
 | 69 | /ny/ | 36 | 1 syll. | nu, nue | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 70 | /ki/ | 36 | 1 syll. | chi, quit, quis | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 71 | /bo/ | 35 | 1 syll. | beau, bau, baux | — | 0 | 0 | plusieurs homophones exacts à départager |
@@ -183,7 +183,7 @@
 | 143 | /fɛ/ | 17 | 1 syll. | fait, faix, fay | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 144 | /vɛ/ | 17 | 1 syll. | vest, vais, vêt | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 145 | /u/ | 17 | 1 syll. | houx, aout, houe | — | 0 | 0 | plusieurs homophones exacts à départager |
-| 146 | /tal/ | 17 | 1 syll. | tal, talle, tale | — | 0 | 0 | plusieurs homophones exacts à départager |
+| 146 | /tal/ | 17 | 1 syll. | tal, tale, talle | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 147 | /paʁa/ | 17 | 2 syll. | para | — | 0 | 0 | candidat lexical exact à préexaminer |
 | 148 | /kasjɔ̃/ | 17 | 2 syll. | cassions | — | 0 | 0 | candidat lexical exact à préexaminer |
 | 149 | /kʁo/ | 17 | 1 syll. | croc, crot | — | 0 | 0 | plusieurs homophones exacts à départager |

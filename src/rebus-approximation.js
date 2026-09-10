@@ -58,7 +58,8 @@ export function consonantSubstitutionWeight(sourceUnit='',targetUnit='',policy={
   const source=normalizeIPA(sourceUnit),target=normalizeIPA(targetUnit);
   if(source===target)return 0;
   const weights=approximationWeights(policy);
-  return VOICING_CONSONANT_PAIRS.has(unorderedPair(source,target))?weights.nearConsonantSubstitution:weights.farConsonantSubstitution;
+  const direct=`${source}|${target}`,reverse=`${target}|${source}`;
+  return (VOICING_CONSONANT_PAIRS.has(direct)||VOICING_CONSONANT_PAIRS.has(reverse))?weights.nearConsonantSubstitution:weights.farConsonantSubstitution;
 }
 
 export function substitutionWeight(sourceUnit='',targetUnit='',policy={}){

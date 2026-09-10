@@ -3,7 +3,10 @@ import {buildKnownAssetIndex,classifyExpansionRow,buildRepresentationExpansionQu
 
 const assetIndex=buildKnownAssetIndex({
   seed:[{id:'nid',label:'nid',ipa:'/ni/',image:'nid.svg',active:true,clinicalStatus:'unreviewed'}],
-  openLibraries:[[{id:'compas',label:'compas',ipa:'/kɔ̃pa/',image:'compas.svg',active:true,strictEligible:true,clinicalStatus:'unreviewed'}]],
+  openLibraries:[[
+    {id:'compas',label:'compas',ipa:'/kɔ̃pa/',image:'compas.svg',active:true,strictEligible:true,clinicalStatus:'unreviewed'},
+    {id:'de',label:'dé',ipa:'/de/',image:'de.svg',active:true,strictEligible:true,clinicalStatus:'unreviewed'}
+  ]],
   researchAssets:[{path:'assets/research/boue-study.svg',inferredLabel:'boue'}]
 });
 
@@ -21,6 +24,9 @@ assert.equal(nid.proofStatus.orthophonicValidation,'none');
 const researchOnly=classifyExpansionRow({...base,ipa:'bu',syllableSpans:[1],exactCandidateCount:1,exactCandidates:[{word:'boue',pos:'NOM',frequency:12,proofStatus:'lexical_exact_only',visualPotential:'unknown',namingRisk:'unknown'}],visibleConventions:[],approximateCandidates:[]},assetIndex);
 assert.equal(researchOnly.lane,'asset_existing_to_review','research filename match must trigger inspection before drawing');
 assert.equal(researchOnly.registeredPhoneticAssetCandidateCount,0,'filename match must not invent registered IPA evidence');
+
+const unaccentedDe=classifyExpansionRow({...base,ipa:'də',syllableSpans:[1],exactCandidateCount:1,exactCandidates:[{word:'de',pos:'NOM',frequency:.1,proofStatus:'lexical_exact_only',visualPotential:'unknown',namingRisk:'unknown'}],visibleConventions:[],approximateCandidates:[]},assetIndex);
+assert.equal(unaccentedDe.existingAssetCandidateCount,0,'production asset label dé must not be treated as the lexical candidate de');
 
 const letter=classifyExpansionRow({...base,ipa:'a',syllableSpans:[1],exactCandidateCount:2,exactCandidates:[
   {word:'a',pos:'NOM',frequency:63,proofStatus:'lexical_exact_only',visualPotential:'unknown',namingRisk:'unknown'},

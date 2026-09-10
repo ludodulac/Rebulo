@@ -27,6 +27,14 @@ Ne pas recopier ce qui existe déjà :
 
 Le fichier généré `data/rebus-sound-catalog.json` agrège ces sources ; il n'est pas une nouvelle source éditoriale concurrente. Toute image déjà présente dans la bibliothèque ouverte doit être retrouvée avant de proposer de la redessiner.
 
+## Vue produit de la banque de représentations
+
+Le catalogue exhaustif répond à « quels segments existent ? ». La vue dérivée `data/rebus-representation-bank-audit.json`, générée par `scripts/build-rebus-representation-bank-audit.mjs`, répond à la question produit différente : **« qu'est-ce que Rebulo sait réellement représenter de façon exploitable aujourd'hui ? »**.
+
+Cette vue conserve les preuves séparées et classe chaque son utile avec des catégories qui peuvent se chevaucher : mot français exact, plusieurs mots exacts, mot exact sans visuel prêt, pictogramme exact prêt, approximation légère, composition exacte de plusieurs pictogrammes, lettre, nombre, ou aucune route raisonnable actuellement. Elle ne transforme jamais un mot Lexique en pictogramme validé et ne transforme jamais une approximation en exact.
+
+Le rapport `docs/REBUS_REPRESENTATION_BANK_AUDIT.md` est désormais la surface de décision prioritaire pour l'expansion de la banque. Il doit être consulté avant de lancer une nouvelle vague d'images ou de raffiner une heuristique phonétique : le but est de réduire d'abord les trous à forte utilité et le stock de mots exacts dont la nommabilité visuelle reste à établir.
+
 ## Fenêtres à inventorier
 
 ### 1. Fenêtres syllabiques exactes
@@ -92,12 +100,14 @@ Puis, avec un Lexique compact disponible :
 Le pipeline produit :
 
 - `data/rebus-sound-catalog.json` : inventaire exhaustif compact et files automatiques/curatées ;
+- `data/rebus-representation-bank-audit.json` : vue produit dérivée, avec catégories de couverture et files d'action ;
 - `docs/REBUS_SOUND_CATALOG_REPORT.md` : rapport automatique avec statistiques et priorités utiles ;
-- `docs/REBUS_SOUND_VISUAL_CURATION_REPORT.md` : décisions de prototype/rejet/différé et prochaines pistes non encore revues.
+- `docs/REBUS_SOUND_VISUAL_CURATION_REPORT.md` : décisions de prototype/rejet/différé et prochaines pistes non encore revues ;
+- `docs/REBUS_REPRESENTATION_BANK_AUDIT.md` : mesure A–I de la couverture réellement exploitable, compositions exactes et frontière des assets production/recherche.
 
 Le JSON généré utilise `formatVersion: 2`. Les 60 000+ lignes sonores sont stockées sous forme de tuples dans `soundRows`, avec l'ordre des colonnes décrit par `rowSchema`. Cela conserve **tous les sons** sans répéter des dizaines de noms de champs sur chaque entrée. Les files automatiques ne dupliquent pas les entrées : elles contiennent les IPA permettant de retrouver la ligne correspondante.
 
-Le workflow `.github/workflows/rebus-sound-catalog.yml` reconstruit ce catalogue sur le Lexique complet, applique la curation visuelle, vérifie les bibliothèques existantes et publie les rapports comme artefact de recherche. Sur `main`, les sorties générées sont versionnées automatiquement.
+Le workflow `.github/workflows/rebus-sound-catalog.yml` reconstruit ce catalogue sur le Lexique complet, applique la curation visuelle, construit la file d'approximation, dérive l'audit produit de la banque, vérifie les bibliothèques existantes et publie les rapports comme artefact de recherche. Sur `main`, les sorties générées sont versionnées automatiquement.
 
 ## Ordre de travail visuel
 
@@ -108,7 +118,11 @@ Les files sont volontairement séparées :
 - `visualResearchQueue` : vue automatique générale de toutes les routes non prêtes ;
 - `visualCuration.curatedPrototypeQueue` : concepts éditorialement sélectionnés pour la prochaine expérimentation ;
 - `visualCuration.curatedNewImageResearchQueue` : file de production/recherche après application des décisions candidat par candidat ;
-- `visualCuration.nextUnreviewedImageQueue` : prochaines pistes à examiner humainement après les décisions déjà prises.
+- `visualCuration.nextUnreviewedImageQueue` : prochaines pistes à examiner humainement après les décisions déjà prises ;
+- `rebus-representation-bank-audit.queues.exactWordVisualBacklog` : sons où Lexique apporte déjà un mot exact mais où la qualité visuelle n'est pas encore établie ;
+- `rebus-representation-bank-audit.queues.currentHoles` : sons utiles sans route raisonnable actuelle ;
+- `rebus-representation-bank-audit.queues.exactCompositionWithoutSingleImage` : sons déjà couvrables par plusieurs pictogrammes exacts, à ne pas compter à tort comme trous ;
+- `rebus-representation-bank-audit.queues.reusableLightApproximation` : petites approximations réutilisant un asset existant, uniquement comme pistes générales explicites.
 
 Le score automatique privilégie le vocabulaire utile Rebulo, la fréquence scolaire, le nombre de cibles utiles, l'intérêt des fenêtres de deux syllabes et les candidats lexicaux exacts. Une convention visible déjà utilisable réduit la priorité de fabrication d'une nouvelle image, sans interdire une future alternative imagée.
 

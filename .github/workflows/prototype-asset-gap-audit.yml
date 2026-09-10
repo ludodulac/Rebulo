@@ -1,0 +1,70 @@
+name: Prototype asset gap audit
+
+on:
+  push:
+    paths:
+      - '.github/workflows/prototype-asset-gap-audit.yml'
+      - 'scripts/build-prototype-asset-gap-audit.mjs'
+      - 'tests/rebus-prototype-asset-gaps.test.mjs'
+      - 'data/rebus-sound-visual-curation.json'
+      - 'data/asset-sources.json'
+      - 'data/rebus-representation-curation-batch.json'
+  pull_request:
+    paths:
+      - '.github/workflows/prototype-asset-gap-audit.yml'
+      - 'scripts/build-prototype-asset-gap-audit.mjs'
+      - 'tests/rebus-prototype-asset-gaps.test.mjs'
+      - 'data/rebus-sound-visual-curation.json'
+      - 'data/asset-sources.json'
+      - 'data/rebus-representation-curation-batch.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Guard audit semantics
+        run: node tests/rebus-prototype-asset-gaps.test.mjs
+      - name: Build prototype asset gap audit
+        run: node scripts/build-prototype-asset-gap-audit.mjs
+      - name: Verify asset gap output
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const audit=JSON.parse(fs.readFileSync('data/rebus-prototype-asset-gap-audit.json','utf8'));
+          if(audit.counts?.curatedPrototypeCount!==15)throw new Error('expected 15 curated prototype hypotheses');
+          if(!(audit.counts?.researchAssetExists>0))throw new Error('known research prototype was not recovered');
+          if(!(audit.counts?.noRegisteredAsset>0))throw new Error('missing-asset production queue was not surfaced');
+          if(audit.rows.some(row=>row.automaticActivation!==false))throw new Error('automatic activation leaked into asset audit');
+          console.log(JSON.stringify(audit.counts,null,2));
+          console.log(JSON.stringify(audit.rows,null,2));
+          NODE
+      - name: Upload prototype asset audit
+        uses: actions/upload-artifact@v4
+        with:
+          name: rebus-prototype-asset-gaps
+          path: |
+            data/rebus-prototype-asset-gap-audit.json
+            docs/REBUS_PROTOTYPE_ASSET_GAPS.md
+          retention-days: 14
+      - name: Commit generated audit on main
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git config user.name 'rebulo-analysis-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/rebus-prototype-asset-gap-audit.json docs/REBUS_PROTOTYPE_ASSET_GAPS.md
+          if git diff --cached --quiet; then echo 'No prototype asset audit changes to commit.'; exit 0; fi
+          git commit -m 'Refresh curated prototype asset audit'
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main

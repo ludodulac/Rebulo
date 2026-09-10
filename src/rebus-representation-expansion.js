@@ -3,17 +3,13 @@ import {normalizeIPA} from './phonetic-engine.js';
 function normalizeLabel(value=''){
   return String(value||'').trim().toLocaleLowerCase('fr').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[’]/g,"'").replace(/[^a-z0-9']+/g,'');
 }
-
-function candidateKey(candidate={}){
-  return `${normalizeLabel(candidate.word||candidate.label||'')}|${normalizeIPA(candidate.sourceIpa||candidate.ipa||'')}`;
-}
+function posFamily(value=''){return String(value||'').trim().toUpperCase().split(':')[0];}
 
 export function buildKnownAssetIndex({seed=[],openLibraries=[],researchAssets=[]}={}){
   const byLabel=new Map();
   const add=(label,item)=>{
     const key=normalizeLabel(label);if(!key)return;
-    const list=byLabel.get(key)||[];
-    list.push(item);byLabel.set(key,list);
+    const list=byLabel.get(key)||[];list.push(item);byLabel.set(key,list);
   };
   for(const item of seed||[]){
     if(item?.active===false||!item?.image)continue;
@@ -34,27 +30,44 @@ export function buildKnownAssetIndex({seed=[],openLibraries=[],researchAssets=[]
 
 function assetsForCandidate(candidate,assetIndex,targetIpa){
   const key=normalizeLabel(candidate.word||'');
-  const matches=assetIndex.get(key)||[];
-  return matches.map(item=>({...item,phoneticAssetMatch:Boolean(item.ipa&&normalizeIPA(item.ipa)===normalizeIPA(targetIpa))}));
+  return (assetIndex.get(key)||[]).map(item=>({...item,candidateLabelMatch:true,registeredPhoneticMatch:Boolean(item.ipa&&normalizeIPA(item.ipa)===normalizeIPA(targetIpa))}));
 }
 
 function viable(candidate={}){return !['visual_route_rejected','visual_route_deferred'].includes(candidate.proofStatus);}
 function curatedPositive(candidate={}){return candidate.proofStatus==='visual_hypothesis_curated';}
+function lexicalFlags(candidate={}){
+  const word=normalizeLabel(candidate.word||'');
+  const pos=posFamily(candidate.pos||'');
+  const frequency=Number(candidate.frequency)||0;
+  const singleCharacter=word.length===1;
+  const functionLikePos=['ADJ','ADV','ART','CON','DET','PRE','PRO'].includes(pos);
+  const lowFrequency=frequency>0&&frequency<1;
+  const noun=pos==='NOM';
+  return {singleCharacter,functionLikePos,lowFrequency,noun};
+}
+function weakPictogramLead(candidate={}){
+  const flags=candidate.descriptiveFlags||lexicalFlags(candidate);
+  return flags.singleCharacter||flags.functionLikePos||(flags.lowFrequency&&!candidate.knownAssets?.length&&!curatedPositive(candidate));
+}
 
 export function classifyExpansionRow(row={},assetIndex=new Map()){
-  const exactCandidates=(row.exactCandidates||[]).map(candidate=>({...candidate,knownAssets:assetsForCandidate(candidate,assetIndex,row.ipa)}));
+  const exactCandidates=(row.exactCandidates||[]).map(candidate=>{
+    const knownAssets=assetsForCandidate(candidate,assetIndex,row.ipa);
+    return {...candidate,knownAssets,descriptiveFlags:lexicalFlags(candidate)};
+  });
   const viableExact=exactCandidates.filter(viable);
   const existingAssetCandidates=exactCandidates.filter(candidate=>candidate.knownAssets.length>0);
-  const phoneticAssetCandidates=exactCandidates.filter(candidate=>candidate.knownAssets.some(asset=>asset.phoneticAssetMatch));
+  const registeredPhoneticAssetCandidates=exactCandidates.filter(candidate=>candidate.knownAssets.some(asset=>asset.registeredPhoneticMatch));
   const curated=exactCandidates.filter(curatedPositive);
   const rejectedOrDeferred=exactCandidates.filter(candidate=>!viable(candidate));
   const visibleConventions=row.visibleConventions||[];
   const approximations=row.approximateCandidates||[];
   const allKnownExactRoutesRejected=exactCandidates.length>0&&viableExact.length===0;
+  const conventionDominatesKnownLexicalLeads=Boolean(visibleConventions.length&&!curated.length&&viableExact.length&&viableExact.every(weakPictogramLead));
 
   let lane='insufficient_information';
-  if(phoneticAssetCandidates.length)lane='asset_existing_to_review';
-  else if(visibleConventions.length&&allKnownExactRoutesRejected)lane='visible_convention_preferable';
+  if(existingAssetCandidates.length)lane='asset_existing_to_review';
+  else if(visibleConventions.length&&(allKnownExactRoutesRejected||conventionDominatesKnownLexicalLeads))lane='visible_convention_preferable';
   else if(exactCandidates.length>1)lane='multiple_exact_homophones_to_compare';
   else if(viableExact.length)lane='exact_image_candidate_precheck';
   else if(approximations.length)lane='approximation_only_after_rejected_exacts';
@@ -68,13 +81,14 @@ export function classifyExpansionRow(row={},assetIndex=new Map()){
     usefulExamples:(row.usefulExamples||[]).slice(0,6),
     exactCandidateCount:Number(row.exactCandidateCount)||exactCandidates.length,
     retainedExactCandidateCount:exactCandidates.length,
+    additionalExactCandidateCount:Math.max(0,(Number(row.exactCandidateCount)||exactCandidates.length)-exactCandidates.length),
     multipleExactHomophones:(Number(row.exactCandidateCount)||exactCandidates.length)>1,
     exactCandidates,
     curatedVisualHypothesisCount:curated.length,
     visibleConventions,
     approximateCandidates:approximations,
     existingAssetCandidateCount:existingAssetCandidates.length,
-    phoneticAssetCandidateCount:phoneticAssetCandidates.length,
+    registeredPhoneticAssetCandidateCount:registeredPhoneticAssetCandidates.length,
     likelyNeedsNewAsset:Boolean(viableExact.length&&!existingAssetCandidates.length&&!visibleConventions.length),
     highKnownVisualOrLexicalRisk:Boolean(rejectedOrDeferred.length||exactCandidates.some(candidate=>['high','very_high','medium_high'].includes(candidate.namingRisk))),
     informationInsufficient:Boolean(!curated.length&&!existingAssetCandidates.length&&!visibleConventions.length),
@@ -100,7 +114,7 @@ function priorityCompare(a,b){
   return String(a.ipa).localeCompare(String(b.ipa));
 }
 
-export function buildRepresentationExpansionQueue(rows=[],assetIndex=new Map(),{globalLimit=600,twoSyllableReserve=300}={}){
+export function buildRepresentationExpansionQueue(rows=[],assetIndex=new Map(),{globalLimit=800,twoSyllableReserve=400}={}){
   const classified=(rows||[]).map(row=>classifyExpansionRow(row,assetIndex));
   const selected=[];const seen=new Set();
   const add=row=>{if(!row||seen.has(row.ipa))return;seen.add(row.ipa);selected.push(row);};
@@ -110,6 +124,22 @@ export function buildRepresentationExpansionQueue(rows=[],assetIndex=new Map(),{
   return selected;
 }
 
+export function buildExpansionSubqueues(rows=[]){
+  const sorted=[...rows].sort(priorityCompare);
+  const take=(predicate,limit=120)=>sorted.filter(predicate).slice(0,limit).map(row=>row.ipa);
+  return {
+    existingAssetReview:take(row=>row.lane==='asset_existing_to_review',80),
+    multipleExactHomophones:take(row=>row.lane==='multiple_exact_homophones_to_compare',160),
+    visibleConventionPreferable:take(row=>row.lane==='visible_convention_preferable',80),
+    exactImagePrecheck:take(row=>row.lane==='exact_image_candidate_precheck',160),
+    twoSyllableFirstClass:take(row=>row.twoSyllableFirstClass,160),
+    likelyNewAsset:take(row=>row.likelyNeedsNewAsset,160),
+    knownRisk:take(row=>row.highKnownVisualOrLexicalRisk,100),
+    approximationOnly:take(row=>row.lane==='approximation_only_after_rejected_exacts',80),
+    insufficientInformation:take(row=>row.informationInsufficient,160)
+  };
+}
+
 export function summarizeExpansionQueue(rows=[]){
   const laneCounts={};for(const row of rows)laneCounts[row.lane]=(laneCounts[row.lane]||0)+1;
   return {
@@ -117,7 +147,7 @@ export function summarizeExpansionQueue(rows=[]){
     twoSyllableSoundCount:rows.filter(row=>row.twoSyllableFirstClass).length,
     multipleExactHomophoneSoundCount:rows.filter(row=>row.multipleExactHomophones).length,
     existingAssetSoundCount:rows.filter(row=>row.existingAssetCandidateCount>0).length,
-    phoneticAssetSoundCount:rows.filter(row=>row.phoneticAssetCandidateCount>0).length,
+    registeredPhoneticAssetSoundCount:rows.filter(row=>row.registeredPhoneticAssetCandidateCount>0).length,
     visibleConventionSoundCount:rows.filter(row=>row.visibleConventions.length>0).length,
     likelyNewAssetSoundCount:rows.filter(row=>row.likelyNeedsNewAsset).length,
     highKnownRiskSoundCount:rows.filter(row=>row.highKnownVisualOrLexicalRisk).length,
@@ -131,8 +161,9 @@ export const REPRESENTATION_EXPANSION_POLICY=Object.freeze({
   status:'research_mapping_only',
   ranking:'Yield fields only order the review queue; they never prove visual quality, namability or clinical suitability.',
   longWindows:'Two-syllable windows receive an explicit reserve and are not penalized for length.',
-  homophones:'Several exact homophones are retained when available; the first lexical hit never settles the visual route.',
-  assets:'Exact-label asset matches are inspection leads. A filename or existing image never proves spontaneous naming.',
+  homophones:'Several exact homophones are retained when available; exactCandidateCount records when more candidates exist than the retained audit sample.',
+  assets:'Exact-label asset matches are inspection leads. Research filename matches do not claim a registered pronunciation or spontaneous naming.',
+  conventions:'An explicit convention can be marked preferable only when current exact lexical leads are rejected or descriptively weak pictogram leads; this is a review lane, not a truth score.',
   unknowns:'visualPotential and namingRisk remain unknown unless explicit curation or human evidence supplies them.',
   proof:'phonetic exactness != ludic approximation != lexical obviousness != drawable concept != spontaneous namability != orthophonic validation'
 });

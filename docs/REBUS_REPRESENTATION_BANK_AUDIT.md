@@ -25,6 +25,16 @@
 
 Les catégories se chevauchent volontairement : un son peut avoir plusieurs mots exacts, une image prête et une lettre. La catégorie I est au contraire une frontière opérationnelle conservatrice.
 
+## Nommabilité : ce qui est réellement connu
+
+- Images exactes utiles recensées dans cette vue : 222.
+- Images avec métadonnées visuelles retrouvées : 222.
+- Images avec métadonnées de design élevées (confiance et stabilité ≥ 0,85) : 15.
+- Images dont le test de dénomination est explicitement encore à faire : 222.
+- Images disposant d’une validation humaine explicite de dénomination : 0.
+
+**Important : les scores de confiance/stabilité sont des métadonnées de conception, pas des résultats humains. Rebulo ne les transforme pas en validation de dénomination.**
+
 ## Goulot d’étranglement actuel
 
 - 5504 sons utiles ont déjà au moins un mot français exact mais pas encore d’image prête/évidente : c’est le principal réservoir à curater avant d’inventer davantage d’heuristiques phonétiques.

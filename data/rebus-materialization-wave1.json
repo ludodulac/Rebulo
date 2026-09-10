@@ -1,0 +1,115 @@
+{
+  "version": "0.1.0-materialization1",
+  "status": "research_stimuli_only",
+  "policy": {
+    "purpose": "Materialize a very small set of already-curated prototype candidates into inspectable stimuli without treating asset creation as naming or clinical validation.",
+    "proof": "exact phonetics != lexical obviousness != visual plausibility != spontaneous namability != clinical validation",
+    "storage": "New SVG stimuli remain under assets/research and are therefore inspection leads, not registered production assets.",
+    "naming": "Every created stimulus keeps spontaneousNamingRisk unknown, humanNamingEvidence none and clinicalEvidence none."
+  },
+  "summary": {
+    "prototypeCandidatesInspectedForProduction": 8,
+    "existingAssetsReused": 1,
+    "newAssetsCreated": 4,
+    "conceptsAbandonedAfterGraphicInspection": 3,
+    "stimuliNowAvailableForFutureHumanTest": 5,
+    "newResearchStimulusFiles": 4,
+    "minimumAuditedCuratedSoundsWithGraphicStimulus": 8,
+    "minimumAuditedCuratedSoundsWithConcreteRepresentationIncludingVisibleConventions": 11
+  },
+  "entries": [
+    {
+      "ipa":"kyʁi",
+      "candidate":"curry",
+      "sourceWave":"wave3",
+      "decision":"reuse_existing_registered_asset",
+      "asset":"openmoji:1F35B",
+      "graphicInspection":"Existing OpenMoji bowl is already registered; no duplicate SVG is justified.",
+      "ambiguities":["ragoût","riz"],
+      "spontaneousNamingRisk":"unknown",
+      "humanNamingEvidence":"none",
+      "clinicalEvidence":"none"
+    },
+    {
+      "ipa":"kʁwa",
+      "candidate":"croix",
+      "sourceWave":"wave3",
+      "decision":"new_research_stimulus_created",
+      "asset":"assets/research/croix-stimulus-v1.svg",
+      "graphicInspection":"A single cross can be drawn with almost no parasitic context. The main unresolved reading is plus/symbole.",
+      "ambiguities":["plus","symbole"],
+      "spontaneousNamingRisk":"unknown",
+      "humanNamingEvidence":"none",
+      "clinicalEvidence":"none"
+    },
+    {
+      "ipa":"dwa",
+      "candidate":"doigt",
+      "sourceWave":"wave3",
+      "decision":"new_research_stimulus_created",
+      "asset":"assets/research/doigt-stimulus-v1.svg",
+      "graphicInspection":"The hand alone overweights main; a small arrow is required to isolate one finger. The arrow is therefore documented as a necessary focusing cue, not phonetic content.",
+      "ambiguities":["main","index"],
+      "spontaneousNamingRisk":"unknown",
+      "humanNamingEvidence":"none",
+      "clinicalEvidence":"none"
+    },
+    {
+      "ipa":"ø",
+      "candidate":"oeufs",
+      "sourceWave":"wave3",
+      "decision":"new_research_stimulus_created",
+      "asset":"assets/research/oeufs-stimulus-v1.svg",
+      "graphicInspection":"Two whole eggs keep the scene minimal but expose a singular/plural naming uncertainty and a possible stone/pebble reading if shells are too schematic.",
+      "ambiguities":["œuf","cailloux"],
+      "spontaneousNamingRisk":"unknown",
+      "humanNamingEvidence":"none",
+      "clinicalEvidence":"none"
+    },
+    {
+      "ipa":"wa",
+      "candidate":"oie",
+      "sourceWave":"wave3",
+      "decision":"new_research_stimulus_created",
+      "asset":"assets/research/oie-stimulus-v1.svg",
+      "graphicInspection":"A long neck, orange beak and webbed feet help separate the goose silhouette from a generic bird, but canard/cygne remain genuine competing readings.",
+      "ambiguities":["canard","cygne","oiseau"],
+      "spontaneousNamingRisk":"unknown",
+      "humanNamingEvidence":"none",
+      "clinicalEvidence":"none"
+    },
+    {
+      "ipa":"ɛl",
+      "candidate":"aile",
+      "sourceWave":"wave3",
+      "decision":"abandoned_after_graphic_inspection",
+      "graphicInspection":"An isolated wing becomes too close to plume; adding the whole bird makes oiseau dominate. No clean v1 stimulus was justified.",
+      "ambiguities":["plume","oiseau"],
+      "spontaneousNamingRisk":"unknown",
+      "humanNamingEvidence":"none",
+      "clinicalEvidence":"none"
+    },
+    {
+      "ipa":"plɛ",
+      "candidate":"plaie",
+      "sourceWave":"wave3",
+      "decision":"abandoned_after_graphic_inspection",
+      "graphicInspection":"A safe non-bloody depiction collapses toward égratignure/blessure; stronger cues would add unnecessary injury detail. No asset was created.",
+      "ambiguities":["blessure","égratignure","bobo"],
+      "spontaneousNamingRisk":"unknown",
+      "humanNamingEvidence":"none",
+      "clinicalEvidence":"none"
+    },
+    {
+      "ipa":"ipo",
+      "candidate":"hippo",
+      "sourceWave":"wave3",
+      "decision":"abandoned_after_graphic_inspection",
+      "graphicInspection":"The animal itself is visually excellent, but the natural graphic offers no cue favoring the short lexical form hippo over hippopotame. Drawing it now would not test the intended sound cleanly.",
+      "ambiguities":["hippopotame"],
+      "spontaneousNamingRisk":"unknown",
+      "humanNamingEvidence":"none",
+      "clinicalEvidence":"none"
+    }
+  ]
+}

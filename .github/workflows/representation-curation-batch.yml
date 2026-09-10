@@ -1,0 +1,77 @@
+name: Representation curation batch
+
+on:
+  push:
+    paths:
+      - '.github/workflows/representation-curation-batch.yml'
+      - 'src/rebus-representation-curation.js'
+      - 'scripts/build-representation-curation-batch.mjs'
+      - 'tests/rebus-representation-curation.test.mjs'
+      - 'data/rebus-representation-bank-audit.json'
+      - 'data/rebus-sound-visual-curation.json'
+      - 'data/lexicon-seed.json'
+      - 'src/pictogram-print-sheets.js'
+      - 'src/open-pictogram-library*.js'
+  pull_request:
+    paths:
+      - '.github/workflows/representation-curation-batch.yml'
+      - 'src/rebus-representation-curation.js'
+      - 'scripts/build-representation-curation-batch.mjs'
+      - 'tests/rebus-representation-curation.test.mjs'
+      - 'data/rebus-representation-bank-audit.json'
+      - 'data/rebus-sound-visual-curation.json'
+      - 'data/lexicon-seed.json'
+      - 'src/pictogram-print-sheets.js'
+      - 'src/open-pictogram-library*.js'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  curate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Guard curation semantics
+        run: node tests/rebus-representation-curation.test.mjs
+      - name: Build visual curation batch
+        run: node scripts/build-representation-curation-batch.mjs
+      - name: Verify conservative batch
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const batch=JSON.parse(fs.readFileSync('data/rebus-representation-curation-batch.json','utf8'));
+          if(batch.status!=='human_curation_queue_only')throw new Error('unexpected curation status');
+          if(!(batch.rows?.length>=100))throw new Error('curation batch unexpectedly small');
+          if(batch.rows.some(row=>row.preferredCandidate?.automaticActivation!==false))throw new Error('automatic visual activation leaked into curation queue');
+          if(batch.rows.some(row=>row.preferredCandidate?.requiresHumanNamingReview!==true))throw new Error('human naming gate missing');
+          if(!fs.existsSync('docs/REBUS_REPRESENTATION_CURATION_BATCH.md'))throw new Error('curation report missing');
+          console.log(JSON.stringify(batch.counts,null,2));
+          console.log(JSON.stringify(batch.rows.slice(0,15).map(row=>({ipa:row.ipa,candidate:row.preferredCandidate.word,route:row.preferredCandidate.visualRoute,usefulTargetCount:row.usefulTargetCount})),null,2));
+          NODE
+      - name: Upload curation batch
+        uses: actions/upload-artifact@v4
+        with:
+          name: representation-curation-batch
+          path: |
+            data/rebus-representation-curation-batch.json
+            docs/REBUS_REPRESENTATION_CURATION_BATCH.md
+          retention-days: 14
+      - name: Commit generated batch on main
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git config user.name 'rebulo-analysis-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/rebus-representation-curation-batch.json docs/REBUS_REPRESENTATION_CURATION_BATCH.md
+          if git diff --cached --quiet; then echo 'No curation batch changes to commit.'; exit 0; fi
+          git commit -m 'Refresh representation curation batch'
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main

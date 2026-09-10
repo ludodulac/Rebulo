@@ -112,7 +112,9 @@ jobs:
           if(!(report.visualCuration?.curatedPrototypeQueue?.length>0))throw new Error('curated prototype queue missing');
           if(!(report.visualCuration?.curatedNewImageResearchQueue?.length>0))throw new Error('curated image research queue missing');
           if(!(approximation.stats?.approximationCandidateWindowCount>0))throw new Error('approximation research queue missing');
-          if(!(approximation.stats?.lightCandidateWindowCount>0))throw new Error('light approximation candidates missing');
+          if(!(approximation.stats?.existingAssetCandidateWindowCount>0))throw new Error('existing pictogram approximation routes missing');
+          if(!(approximation.stats?.lightExistingAssetWindowCount>0))throw new Error('light existing-pictogram approximation routes missing');
+          if(!(approximation.stats?.lexicalNounFallbackWindowCount>0))throw new Error('lexical noun approximation fallbacks missing');
           if(!fs.existsSync('docs/REBUS_SOUND_VISUAL_CURATION_REPORT.md'))throw new Error('visual curation report missing');
           if(!fs.existsSync('docs/REBUS_APPROXIMATION_RESEARCH.md'))throw new Error('approximation research report missing');
           fs.writeFileSync(path,JSON.stringify(report));

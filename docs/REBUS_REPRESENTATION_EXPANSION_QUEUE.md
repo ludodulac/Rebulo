@@ -10,18 +10,18 @@
 - Sons avec seulement/au moins une piste issue d’un nom de fichier de recherche : 11.
 - Sons avec asset enregistré dont l’IPA est explicitement enregistrée et exacte : 5.
 - Sons avec convention visible : 23.
-- Sons qui nécessitent probablement un nouvel asset si un concept exact est retenu : 871.
-- Sons avec risque visuel/lexical déjà documenté : 71.
+- Sons qui nécessitent probablement un nouvel asset si un concept exact est retenu : 870.
+- Sons avec risque visuel/lexical déjà documenté : 83.
 - Sons avec approximation légère disponible séparément : 609.
-- Sons dont les preuves visuelles restent insuffisantes : 799.
+- Sons dont les preuves visuelles restent insuffisantes : 778.
 
 ## Répartition des décisions
 
-- convention visible préférable : 11.
-- plusieurs homophones exacts à départager : 511.
-- approximation ludique seulement après rejets exacts : 3.
+- convention visible préférable : 12.
+- plusieurs homophones exacts à départager : 510.
+- approximation ludique seulement après rejets exacts : 4.
 - fichier de recherche à inspecter séparément : 11.
-- candidat lexical exact à préexaminer : 375.
+- candidat lexical exact à préexaminer : 374.
 - asset enregistré à examiner/tester : 5.
 
 ## Files opérationnelles
@@ -29,7 +29,7 @@
 - Assets enregistrés à examiner : 5 sons (/vɑ̃/, /bal/, /gɑ̃/, /foto/, /kyʁi/).
 - Fichiers de recherche à inspecter séparément : 11 sons (/ni/, /fu/, /kʁwa/, /ø/, /pɛl/, /wa/, /œʁ/, /dwa/, /mat/, /ʁadi/, /kaʁe/).
 - Homophones exacts à départager : 160 sons prioritaires.
-- Conventions visibles préférables : 11 sons (/a/, /se/, /pe/, /i/, /ʒe/, /la/, /ve/, /be/, /y/, /ʒi/, /ɛs/).
+- Conventions visibles préférables : 12 sons (/a/, /ʁe/, /se/, /pe/, /i/, /ʒe/, /la/, /ve/, /be/, /y/, /ʒi/, /ɛs/).
 - Préexamen de candidat image exact : 160 sons prioritaires.
 - Fenêtres de deux syllabes à préserver : 160 sons prioritaires.
 - Pistes susceptibles de nécessiter un nouvel asset : 160 sons prioritaires.
@@ -42,7 +42,7 @@
 | 2 | /mɑ̃/ | 374 | 1 syll. | mens, man [rejet visuel], mans [rejet visuel] | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 3 | /sjɔ̃/ | 365 | 1 syll. | scion, cyon, scions | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 4 | /e/ | 280 | 1 syll. | ais [rejet visuel], ai [rejet visuel], et [rejet visuel] | — | 0 | 0 | plusieurs homophones exacts à départager |
-| 5 | /ʁe/ | 257 | 1 syll. | ré, rée | ré | 0 | 0 | plusieurs homophones exacts à départager |
+| 5 | /ʁe/ | 257 | 1 syll. | rée, ré | ré | 0 | 0 | convention visible préférable |
 | 6 | /ɛ̃/ | 234 | 1 syll. | ein [rejet visuel], eins [rejet visuel], ain [rejet visuel] | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 7 | /kɔ̃/ | 233 | 1 syll. | con [rejet visuel] | — | 0 | 0 | approximation ludique seulement après rejets exacts |
 | 8 | /se/ | 222 | 1 syll. | ces, ses, cé [rejet visuel] | C | 0 | 0 | convention visible préférable |
@@ -111,7 +111,7 @@
 | 71 | /bo/ | 35 | 1 syll. | beau, bau, baux | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 72 | /sɛ̃/ | 35 | 1 syll. | sein, saint, seing | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 73 | /ly/ | 34 | 1 syll. | lut, lu | — | 0 | 0 | plusieurs homophones exacts à départager |
-| 74 | /tʁi/ | 34 | 1 syll. | tri, trie | — | 0 | 0 | plusieurs homophones exacts à départager |
+| 74 | /tʁi/ | 34 | 1 syll. | trie, tri | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 75 | /pʁi/ | 33 | 1 syll. | prie, pris, prix | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 76 | /da/ | 33 | 1 syll. | das, da | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 77 | /syʁ/ | 31 | 1 syll. | sûr, surent | — | 0 | 0 | plusieurs homophones exacts à départager |
@@ -133,7 +133,7 @@
 | 93 | /tʁe/ | 27 | 1 syll. | tré | — | 0 | 0 | candidat lexical exact à préexaminer |
 | 94 | /tɛ/ | 27 | 1 syll. | taie, têt, taît | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 95 | /sje/ | 27 | 1 syll. | sied, scier | — | 0 | 0 | plusieurs homophones exacts à départager |
-| 96 | /nɛʁ/ | 27 | 1 syll. | nerf | — | 0 | 0 | candidat lexical exact à préexaminer |
+| 96 | /nɛʁ/ | 27 | 1 syll. | nerf | — | 0 | 0 | approximation ludique seulement après rejets exacts |
 | 97 | /ʁasjɔ̃/ | 27 | 2 syll. | ration | — | 0 | 0 | candidat lexical exact à préexaminer |
 | 98 | /sɛ/ | 26 | 1 syll. | saie, sais | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 99 | /kʁe/ | 26 | 1 syll. | crée, cré | — | 0 | 0 | plusieurs homophones exacts à départager |
@@ -206,7 +206,7 @@
 | 166 | /gu/ | 15 | 1 syll. | goût, gouts | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 167 | /vɛ̃/ | 15 | 1 syll. | vin, vingt, vingts | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 168 | /nik/ | 15 | 1 syll. | nique | — | 0 | 0 | candidat lexical exact à préexaminer |
-| 169 | /kʁi/ | 15 | 1 syll. | cri, crie | — | 0 | 0 | plusieurs homophones exacts à départager |
+| 169 | /kʁi/ | 15 | 1 syll. | crie, cri | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 170 | /al/ | 15 | 1 syll. | ale, halle, hâle | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 171 | /lɛk/ | 15 | 1 syll. | lek | — | 0 | 0 | candidat lexical exact à préexaminer |
 | 172 | /tʁɑ̃s/ | 15 | 1 syll. | transe, trance, trances | — | 0 | 0 | plusieurs homophones exacts à départager |
@@ -219,7 +219,7 @@
 | 179 | /kɛt/ | 14 | 1 syll. | quête, ket, quette | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 180 | /dɑ̃s/ | 14 | 1 syll. | danse [hypothèse curatée], dense | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 181 | /dja/ | 14 | 1 syll. | dias, dia | — | 0 | 0 | plusieurs homophones exacts à départager |
-| 182 | /ʃaʁ/ | 14 | 1 syll. | char, charre | — | 0 | 0 | plusieurs homophones exacts à départager |
+| 182 | /ʃaʁ/ | 14 | 1 syll. | char [hypothèse curatée], charre | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 183 | /oto/ | 14 | 2 syll. | auto | — | 0 | 0 | approximation ludique seulement après rejets exacts |
 | 184 | /ʁabl/ | 14 | 1 syll. | râble, rables | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 185 | /nɔ̃/ | 13 | 1 syll. | nom, non, nons | — | 0 | 0 | plusieurs homophones exacts à départager |

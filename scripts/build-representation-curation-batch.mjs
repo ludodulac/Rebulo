@@ -19,20 +19,23 @@ const existingAssets=[
 const rows=representationCurationCandidates(audit,curation,existingAssets,{limit:250});
 const counts={
   total:rows.length,
+  curatedPrototype:rows.filter(row=>row.preferredCandidate.visualRoute==='curated_prototype').length,
   existingExactAsset:rows.filter(row=>row.preferredCandidate.visualRoute==='existing_exact_asset').length,
-  nounVisualReview:rows.filter(row=>row.preferredCandidate.visualRoute==='noun_visual_review').length,
-  lexicalVisualReview:rows.filter(row=>row.preferredCandidate.visualRoute==='lexical_visual_review').length,
+  nounLexicalPrecheck:rows.filter(row=>row.preferredCandidate.visualRoute==='noun_lexical_precheck').length,
+  lexicalPrecheck:rows.filter(row=>row.preferredCandidate.visualRoute==='lexical_precheck').length,
   assetPhonologyConflict:rows.filter(row=>row.preferredCandidate.visualRoute==='asset_phonology_conflict').length
 };
 const output={
-  schemaVersion:'1.0',
+  schemaVersion:'1.1',
   generatedAt:new Date().toISOString(),
   status:'human_curation_queue_only',
   purpose:'Prioritize exact lexical gaps for visual curation without inflating usable coverage before naming evidence exists.',
   policy:{
-    exactness:'Every candidate comes from the exact-word visual backlog for the same IPA.',
+    exactness:'Every candidate is tied to the same complete IPA as the target sound.',
+    evidenceTiers:'Editorial prototype decisions are listed first. Uncurated exact Lexique words remain lexical prechecks, not visual hypotheses.',
     rejection:'Previously rejected or deferred candidate/IPA pairs are excluded.',
     reuse:'An existing asset is surfaced only when its stored whole-word IPA is exactly the same as the target sound.',
+    symbols:'Single-letter lexical artifacts are excluded from image curation because visible-letter conventions are modeled separately.',
     namability:'Noun status is only a research prioritization hint. It never means visually obvious or validated.',
     activation:'Nothing in this file activates a pictogram automatically.'
   },
@@ -48,20 +51,21 @@ const lines=[
   '> File de travail conservatrice : mot exact ≠ bon pictogramme. Aucun candidat de cette liste n’est activé automatiquement.',
   '',
   `- Segments proposés à la revue : ${counts.total}.`,
+  `- Hypothèses visuelles déjà curatées : ${counts.curatedPrototype}.`,
   `- Réutilisation exacte d’un asset existant détectée : ${counts.existingExactAsset}.`,
-  `- Candidat nominal à examiner visuellement : ${counts.nounVisualReview}.`,
-  `- Autre candidat lexical à examiner : ${counts.lexicalVisualReview}.`,
-  `- Conflit de phonologie avec un asset de même libellé : ${counts.assetPhonologyConflict}.`,
+  `- Noms exacts restant au stade de pré-tri lexical : ${counts.nounLexicalPrecheck}.`,
+  `- Autres mots exacts restant au stade de pré-tri lexical : ${counts.lexicalPrecheck}.`,
+  `- Conflits de phonologie avec un asset de même libellé : ${counts.assetPhonologyConflict}.`,
   '',
   '## Priorités',
   '',
-  '| Rang | Son | Cibles utiles | Candidat | POS | Route | Exemples |',
+  '| Rang | Son | Cibles utiles | Candidat | Niveau | Risque de dénomination | Exemples |',
   '|---:|---|---:|---|---|---|---|',
-  ...rows.slice(0,100).map((row,index)=>`| ${index+1} | /${row.ipa}/ | ${row.usefulTargetCount} | ${row.preferredCandidate.word} | ${row.preferredCandidate.pos||'—'} | ${row.preferredCandidate.visualRoute} | ${row.usefulExamples.slice(0,4).join(', ')||'—'} |`),
+  ...rows.slice(0,100).map((row,index)=>`| ${index+1} | /${row.ipa}/ | ${row.usefulTargetCount} | ${row.preferredCandidate.word} | ${row.preferredCandidate.visualRoute} | ${row.preferredCandidate.spontaneousNamingRisk||'à évaluer'} | ${row.usefulExamples.slice(0,4).join(', ')||'—'} |`),
   '',
   '## Règle de décision',
   '',
-  'Le prochain gain de couverture doit provenir de candidats qui restent compréhensibles sans légende. Les mots exacts abstraits, rares ou lexicalement instables restent dans la recherche même s’ils amélioreraient artificiellement un pourcentage de couverture.'
+  'Les hypothèses visuelles déjà curatées passent avant les simples homophones lexicaux. Un nom exact issu de Lexique reste un pré-tri tant qu’un concept visuel précis et ses confusions de dénomination n’ont pas été explicitement examinés.'
 ];
 fs.mkdirSync(path.dirname(reportPath),{recursive:true});
 fs.writeFileSync(reportPath,lines.join('\n')+'\n');

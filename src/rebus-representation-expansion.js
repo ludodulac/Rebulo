@@ -1,42 +1,47 @@
 import {normalizeIPA} from './phonetic-engine.js';
 
-function normalizeLabel(value=''){
-  return String(value||'').trim().toLocaleLowerCase('fr').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[’]/g,"'").replace(/[^a-z0-9']+/g,'');
+function normalizeLabelStrict(value=''){
+  return String(value||'').trim().toLocaleLowerCase('fr').normalize('NFC').replace(/[’]/g,"'").replace(/[^\p{L}\p{N}']+/gu,'');
+}
+function normalizeLabelLoose(value=''){
+  return normalizeLabelStrict(value).normalize('NFD').replace(/[\u0300-\u036f]/g,'');
 }
 function posFamily(value=''){return String(value||'').trim().toUpperCase().split(':')[0];}
 
 export function buildKnownAssetIndex({seed=[],openLibraries=[],researchAssets=[]}={}){
   const byLabel=new Map();
-  const add=(label,item)=>{
-    const key=normalizeLabel(label);if(!key)return;
-    const list=byLabel.get(key)||[];list.push(item);byLabel.set(key,list);
-  };
+  const add=(key,item)=>{if(!key)return;const list=byLabel.get(key)||[];list.push(item);byLabel.set(key,list);};
   for(const item of seed||[]){
     if(item?.active===false||!item?.image)continue;
-    add(item.label||item.id,{assetKind:'active_seed',label:item.label||item.id,ipa:normalizeIPA(item.ipa||''),image:item.image,strictEligible:item.strictEligible!==false,clinicalStatus:item.clinicalStatus||'unreviewed'});
+    const label=item.label||item.id;
+    add(`strict:${normalizeLabelStrict(label)}`,{assetKind:'active_seed',label,ipa:normalizeIPA(item.ipa||''),image:item.image,strictEligible:item.strictEligible!==false,clinicalStatus:item.clinicalStatus||'unreviewed'});
   }
   for(const library of openLibraries||[]){
     for(const item of library||[]){
       if(item?.active===false||!item?.image)continue;
-      add(item.label||item.id,{assetKind:'open_library',label:item.label||item.id,ipa:normalizeIPA(item.ipa||''),image:item.image,strictEligible:item.strictEligible!==false,clinicalStatus:item.clinicalStatus||'unreviewed'});
+      const label=item.label||item.id;
+      add(`strict:${normalizeLabelStrict(label)}`,{assetKind:'open_library',label,ipa:normalizeIPA(item.ipa||''),image:item.image,strictEligible:item.strictEligible!==false,clinicalStatus:item.clinicalStatus||'unreviewed'});
     }
   }
   for(const asset of researchAssets||[]){
-    const inferred=normalizeLabel(asset.inferredLabel||'');if(!inferred)continue;
-    add(inferred,{assetKind:'research_filename_match',label:asset.inferredLabel,path:asset.path,strictEligible:false,clinicalStatus:'unreviewed'});
+    const inferred=normalizeLabelLoose(asset.inferredLabel||'');if(!inferred)continue;
+    add(`research:${inferred}`,{assetKind:'research_filename_match',label:asset.inferredLabel,path:asset.path,strictEligible:false,clinicalStatus:'unreviewed'});
   }
   return byLabel;
 }
 
 function assetsForCandidate(candidate,assetIndex,targetIpa){
-  const key=normalizeLabel(candidate.word||'');
-  return (assetIndex.get(key)||[]).map(item=>({...item,candidateLabelMatch:true,registeredPhoneticMatch:Boolean(item.ipa&&normalizeIPA(item.ipa)===normalizeIPA(targetIpa))}));
+  const strictKey=normalizeLabelStrict(candidate.word||'');
+  const looseKey=normalizeLabelLoose(candidate.word||'');
+  const strictMatches=assetIndex.get(`strict:${strictKey}`)||[];
+  const researchMatches=assetIndex.get(`research:${looseKey}`)||[];
+  return [...strictMatches,...researchMatches].map(item=>({...item,candidateLabelMatch:true,registeredPhoneticMatch:Boolean(item.ipa&&normalizeIPA(item.ipa)===normalizeIPA(targetIpa))}));
 }
 
 function viable(candidate={}){return !['visual_route_rejected','visual_route_deferred'].includes(candidate.proofStatus);}
 function curatedPositive(candidate={}){return candidate.proofStatus==='visual_hypothesis_curated';}
 function lexicalFlags(candidate={}){
-  const word=normalizeLabel(candidate.word||'');
+  const word=normalizeLabelLoose(candidate.word||'');
   const pos=posFamily(candidate.pos||'');
   const frequency=Number(candidate.frequency)||0;
   const singleCharacter=word.length===1;
@@ -162,7 +167,7 @@ export const REPRESENTATION_EXPANSION_POLICY=Object.freeze({
   ranking:'Yield fields only order the review queue; they never prove visual quality, namability or clinical suitability.',
   longWindows:'Two-syllable windows receive an explicit reserve and are not penalized for length.',
   homophones:'Several exact homophones are retained when available; exactCandidateCount records when more candidates exist than the retained audit sample.',
-  assets:'Exact-label asset matches are inspection leads. Research filename matches do not claim a registered pronunciation or spontaneous naming.',
+  assets:'Production/open assets require accent-sensitive lexical-label equality. Research filenames use a looser accent-insensitive lookup only as an inspection lead; neither proves spontaneous naming.',
   conventions:'An explicit convention can be marked preferable only when current exact lexical leads are rejected or descriptively weak pictogram leads; this is a review lane, not a truth score.',
   unknowns:'visualPotential and namingRisk remain unknown unless explicit curation or human evidence supplies them.',
   proof:'phonetic exactness != ludic approximation != lexical obviousness != drawable concept != spontaneous namability != orthophonic validation'

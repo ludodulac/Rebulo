@@ -1,0 +1,74 @@
+name: Phrase continuous phonetics
+
+on:
+  push:
+    paths:
+      - '.github/workflows/phrase-continuous-phonetics.yml'
+      - 'src/rebus-phrase-phonetics.js'
+      - 'src/rebus-representation-paths.js'
+      - 'scripts/build-rebus-pronunciation-lexicon.mjs'
+      - 'tests/rebus-phrase-phonetics.test.mjs'
+  pull_request:
+    paths:
+      - '.github/workflows/phrase-continuous-phonetics.yml'
+      - 'src/rebus-phrase-phonetics.js'
+      - 'src/rebus-representation-paths.js'
+      - 'scripts/build-rebus-pronunciation-lexicon.mjs'
+      - 'tests/rebus-phrase-phonetics.test.mjs'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  phrase-phonetics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Guard phrase phonetics bridge
+        run: node tests/rebus-phrase-phonetics.test.mjs
+      - name: Download Lexique 4 mirror
+        run: |
+          mkdir -p .cache
+          curl --fail --location --retry 3 'https://raw.githubusercontent.com/dorfner/pass_the_bomb/master/Lexique400/Lexique4.tsv' -o .cache/Lexique4.tsv
+          test "$(wc -l < .cache/Lexique4.tsv)" -gt 180000
+      - name: Import compact lexical data
+        run: node scripts/import-lexique.mjs .cache/Lexique4.tsv .cache/lexique4.compact.json
+      - name: Build phrase pronunciation lexicon
+        run: node scripts/build-rebus-pronunciation-lexicon.mjs .cache/lexique4.compact.json data/rebus-pronunciation-lexicon.json
+      - name: Verify target phrase lexical coverage
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import {phraseToContinuousIPA} from './src/rebus-phrase-phonetics.js';
+          const lexicon=JSON.parse(fs.readFileSync('data/rebus-pronunciation-lexicon.json','utf8'));
+          if(!(lexicon.stats?.uniqueFormCount>50000))throw new Error('pronunciation lexicon unexpectedly small');
+          const probe=phraseToContinuousIPA('Elles ne sont pas cuites les pâtes',lexicon);
+          if(!probe.complete)throw new Error(`target phrase unresolved: ${probe.unresolvedWords.join(', ')}`);
+          if(!(probe.unitCount>10))throw new Error('continuous IPA unexpectedly short');
+          if(probe.words.length!==7)throw new Error('word provenance lost');
+          console.log(JSON.stringify({stats:lexicon.stats,probe:{continuousIpa:probe.continuousIpa,unitCount:probe.unitCount,words:probe.words.map(w=>({text:w.text,ipa:w.ipa,unitStart:w.unitStart,unitEnd:w.unitEnd}))}},null,2));
+          NODE
+      - name: Upload pronunciation research artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: rebus-pronunciation-lexicon
+          path: data/rebus-pronunciation-lexicon.json
+          retention-days: 14
+      - name: Commit generated pronunciation lexicon on main
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git config user.name 'rebulo-analysis-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/rebus-pronunciation-lexicon.json
+          if git diff --cached --quiet; then echo 'No pronunciation lexicon changes to commit.'; exit 0; fi
+          git commit -m 'Refresh Rebulo pronunciation lexicon'
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main

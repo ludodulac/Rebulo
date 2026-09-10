@@ -1,0 +1,18 @@
+{
+  "version": "0.3.0",
+  "status": "research_stimuli_only",
+  "purpose": "Small selective graphic confrontation after wave 6; zero new SVG is acceptable and no research file is promoted automatically.",
+  "summary": {
+    "inspectedConceptCount": 3,
+    "existingResearchAssetsInspected": 1,
+    "newAssetsCreated": 0,
+    "conceptPromisingRepresentationReworkCount": 3,
+    "conceptAbandonedCount": 0,
+    "registeredAssetsPromoted": 0
+  },
+  "entries": [
+    {"ipa":"o","candidate":"eau","decision":"concept_promising_representation_rework","asset":"assets/research/eau-openmoji-drop-1f4a7.svg","graphicObservation":"La goutte est graphiquement propre mais peut être nommée goutte plutôt que eau; elle ne doit pas être enregistrée comme preuve de nommabilité.","nextGraphicDirection":"Tester une représentation d'eau moins centrée sur une goutte unique, ou conserver O comme convention stricte séparée.","spontaneousNamingRisk":"unknown","humanNamingEvidence":"none","clinicalEvidence":"none"},
+    {"ipa":"kame","candidate":"camée","decision":"concept_promising_representation_rework","asset":null,"graphicObservation":"Un profil en relief sur broche est dessinable, mais le premier nom risque d'être broche, médaillon ou bijou; aucun SVG n'est créé avant d'avoir une silhouette plus discriminante.","nextGraphicDirection":"Chercher une forme de camée ovale avec relief suffisamment caractéristique sans texte.","spontaneousNamingRisk":"unknown","humanNamingEvidence":"none","clinicalEvidence":"none"},
+    {"ipa":"mate","candidate":"maté","decision":"concept_promising_representation_rework","asset":null,"graphicObservation":"Calebasse plus bombilla est spécifique visuellement mais peut produire thé, tisane ou boisson; pas de dessin forcé dans cette boucle.","nextGraphicDirection":"Conserver le couple calebasse+bombilla comme hypothèse avant éventuel prototype.","spontaneousNamingRisk":"unknown","humanNamingEvidence":"none","clinicalEvidence":"none"}
+  ]
+}

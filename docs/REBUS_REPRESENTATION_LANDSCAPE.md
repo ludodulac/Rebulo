@@ -5,7 +5,7 @@
 - Sons utiles du réservoir exact à cartographier : 5487.
 - Prototypes curatés ajoutés comme étalons de calibration : 32.
 - Sons cartographiés dans cette vue : 5519.
-- Sons où la curation explicite fournit déjà une hypothèse visuelle : 54.
+- Sons où la curation explicite fournit déjà une hypothèse visuelle : 80.
 - Fenêtres de deux syllabes conservées comme candidates de première classe : 3814.
 - Sons ayant aussi une convention visible explicite : 34.
 - Sons ayant une approximation légère recensée dans la source disponible : 1245.
@@ -23,12 +23,14 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | /ni/ | nid | high | low_medium | 105 | prototype_then_naming_test |
 | /pʁe/ | pré | medium | high | 83 | compare_scene_variants_before_prototype |
 | /sɑ̃/ | sang | medium_high | medium | 82 | prototype_then_age_specific_naming_test |
+| /sa/ | sas | medium | unknown | 68 | prototype_only_if_airlock_concept_is_visually_clear |
 | /tik/ | tique | medium_high | high | 56 | prototype_only_if_visual_differentiation_from_spider_is_clear |
 | /ku/ | cou | medium_high | medium | 55 | compare_arrow_and_no_arrow_then_naming_test |
 | /vo/ | veau | high | medium | 47 | prototype_then_naming_test |
 | /fe/ | fée | high | medium | 46 | prototype_then_naming_test |
 | /pɔʁ/ | porc | high | medium_high | 43 | prototype_then_naming_variant_test |
 | /bu/ | boue | high | medium | 43 | prototype_then_naming_test |
+| /dis/ | dix | high | unknown | 42 | prefer_visible_number_convention_then_composition_test |
 | /fɔʁ/ | fort | medium_high | medium_high | 39 | compare_fort_and_fortress_scene_then_naming_test |
 | /ʃɑ̃/ | champ | high | unknown | 31 | new_asset_then_human_naming_test |
 | /kɑ̃/ | camp | high | unknown | 31 | new_asset_then_human_naming_test |
@@ -41,6 +43,7 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | /pla/ | plat | medium | high | 23 | compare_service_dish_shapes_before_prototype |
 | /bʁi/ | brie | medium_high | high | 23 | compare_cheese_shape_then_naming_test |
 | /fɛʁ/ | fer | high | unknown | 22 | new_asset_then_human_naming_test |
+| /site/ | cité | medium | unknown | 21 | compare_city_scale_then_human_naming_test |
 | /ʒy/ | jus | medium_high | medium | 19 | compare_glass_only_and_fruit_cue_then_naming_test |
 | /sɛp/ | cèpe | medium_high | high | 16 | prototype_only_if_species_naming_is_plausible |
 | /bɑ̃/ | banc | high | low_medium | 16 | check_existing_open_asset_then_naming_test |
@@ -52,26 +55,49 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | /bʁa/ | bras | high | medium | 12 | compare_arrow_position_then_naming_test |
 | /pwa/ | pois | high | unknown | 12 | new_asset_then_human_naming_test |
 | /mal/ | malle | high | medium_high | 11 | compare_trunk_and_suitcase_shapes_then_naming_test |
+| /ʁwa/ | roi | high | unknown | 11 | new_asset_then_human_naming_test |
 | /twa/ | toit | high | unknown | 11 | new_asset_then_human_naming_test |
+| /kʁwa/ | croix | high | unknown | 11 | new_asset_then_human_naming_test |
 | /kɔ̃pa/ | compas | high | low_medium | 10 | prototype_then_school_age_naming_test |
+| /ø/ | oeufs | high | unknown | 9 | new_asset_then_human_naming_test |
+| /plɛ/ | plaie | medium_high | unknown | 9 | new_asset_then_human_naming_test |
+| /sede/ | cd | high | unknown | 9 | prototype_then_human_naming_test |
 | /nwa/ | noix | high | unknown | 8 | new_asset_then_human_naming_test |
 | /epi/ | épi | high | medium_high | 8 | prototype_then_naming_test |
 | /fuʁ/ | four | high | unknown | 8 | new_asset_then_human_naming_test |
 | /faʁ/ | phare | high | unknown | 8 | new_asset_then_human_naming_test |
+| /bɛ/ | baie | medium_high | unknown | 8 | compare_bay_senses_then_human_naming_test |
 | /bal/ | balle | high | unknown | 7 | reuse_registered_asset_then_human_naming_test |
 | /eʁo/ | héros | medium | high | 7 | compare_scene_variants_before_prototype |
 | /gɑ̃/ | gant | high | unknown | 7 | reuse_registered_asset_then_human_naming_test |
 | /vis/ | vis | high | unknown | 6 | new_asset_then_human_naming_test |
+| /maʒ/ | mage | medium_high | unknown | 6 | compare_character_design_then_human_naming_test |
+| /apa/ | appât | medium_high | unknown | 6 | compare_bait_scene_then_human_naming_test |
 | /ʁɛn/ | renne | high | unknown | 6 | new_asset_then_human_naming_test |
 | /ɔʁdi/ | ordi | high | medium | 5 | prototype_then_naming_variant_test |
 | /myʁ/ | mur | high | unknown | 5 | new_asset_then_human_naming_test |
+| /ɛl/ | aile | high | unknown | 5 | new_asset_then_human_naming_test |
+| /wa/ | oie | high | unknown | 5 | new_asset_then_human_naming_test |
+| /təny/ | tenue | medium | unknown | 5 | compare_outfit_display_then_human_naming_test |
+| /maʁe/ | marée | medium | unknown | 5 | compare_high_tide_scene_then_human_naming_test |
 | /papa/ | papa | medium_high | medium | 4 | prototype_then_family_wording_naming_test |
 | /ɑ̃tʁe/ | entrée | high | unknown | 4 | new_asset_then_human_naming_test |
 | /foto/ | photo | high | unknown | 4 | reuse_registered_asset_then_human_naming_test |
+| /fas/ | face | medium_high | unknown | 4 | compare_face_and_visage_cues_then_human_naming_test |
+| /kyʁi/ | curry | high | unknown | 4 | reuse_registered_asset_then_human_naming_test |
+| /alo/ | halo | medium_high | unknown | 4 | compare_halo_and_aureole_then_human_naming_test |
+| /dwa/ | doigt | high | unknown | 4 | new_asset_then_human_naming_test |
 | /ano/ | anneau | high | unknown | 4 | new_asset_then_human_naming_test |
 | /kɔk/ | coq | high | unknown | 4 | new_asset_then_human_naming_test |
+| /kɔ̃fi/ | confit | medium | unknown | 4 | prototype_only_if_confit_reading_is_plausible |
+| /ipo/ | hippo | high | unknown | 4 | test_short_form_hippo_vs_full_name |
 | /ʃəmɛ̃/ | chemin | high | unknown | 3 | new_asset_then_human_naming_test |
 | /kafe/ | café | high | unknown | 3 | new_asset_then_human_naming_test |
+| /kɔ̃te/ | comté | medium_high | unknown | 3 | compare_cheese_cues_then_human_naming_test |
+| /aʁme/ | armée | medium | unknown | 3 | compare_group_scene_then_human_naming_test |
+| /ʒəte/ | jetée | medium_high | unknown | 3 | new_asset_then_human_naming_test |
+| /ʒeni/ | génie | medium_high | unknown | 3 | compare_genie_scene_then_human_naming_test |
+| /kola/ | cola | medium_high | unknown | 3 | compare_generic_cola_cues_then_human_naming_test |
 | /abʁi/ | abri | high | unknown | 3 | new_asset_then_human_naming_test |
 | /vale/ | vallée | high | unknown | 3 | new_asset_then_human_naming_test |
 
@@ -109,7 +135,7 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | 28 | /mo/ | 73 | 1 syll. | mot [lexical_exact_only], maux [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
 | 29 | /lə/ | 71 | 1 syll. | le [lexical_exact_only] | — | lait (20%), lait (20%) | exact_lexical_candidates_need_visual_evidence |
 | 30 | /ʁɑ̃/ | 70 | 1 syll. | rang [lexical_exact_only], ran [lexical_exact_only], ranc [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
-| 31 | /sa/ | 68 | 1 syll. | sas [lexical_exact_only], sa [lexical_exact_only], çà [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
+| 31 | /sa/ | 68 | 1 syll. | sas [visual_hypothesis_curated], sa [lexical_exact_only], çà [lexical_exact_only] | — | — | curated_visual_hypothesis_available |
 | 32 | /ʃe/ | 67 | 1 syll. | ché [lexical_exact_only] | — | chai (15%), gé (17.5%) | exact_lexical_candidates_need_visual_evidence |
 | 33 | /lo/ | 67 | 1 syll. | lot [lexical_exact_only], los [lexical_exact_only], laud [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
 | 34 | /sy/ | 65 | 1 syll. | su [lexical_exact_only], sue [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
@@ -130,7 +156,7 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | 49 | /be/ | 46 | 1 syll. | b [lexical_exact_only], bô [lexical_exact_only], bés [lexical_exact_only] | B | baie (15%), bey (15%) | visible_convention_available |
 | 50 | /su/ | 44 | 1 syll. | sou [lexical_exact_only], saoûl [lexical_exact_only], souls [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
 | 51 | /aʁ/ | 43 | 1 syll. | art [lexical_exact_only], are [lexical_exact_only], hart [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
-| 52 | /dis/ | 42 | 1 syll. | dix [lexical_exact_only], dissent [lexical_exact_only] | 10 | disque (18.8%), indice (18.8%) | visible_convention_available |
+| 52 | /dis/ | 42 | 1 syll. | dix [visual_hypothesis_curated], dissent [lexical_exact_only] | 10 | disque (18.8%), indice (18.8%) | curated_visual_hypothesis_available |
 | 53 | /ty/ | 42 | 1 syll. | tue [lexical_exact_only], tus [lexical_exact_only] | — | dûs (17.5%), du (17.5%) | exact_lexical_candidates_need_visual_evidence |
 | 54 | /lite/ | 41 | 2 syll. | lité [lexical_exact_only] | — | litho (16.3%), liteau (16.3%) | exact_lexical_candidates_need_visual_evidence |
 | 55 | /lɑ̃/ | 40 | 1 syll. | lan [lexical_exact_only], lant [lexical_exact_only], lanc [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
@@ -143,7 +169,7 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | 62 | /sɛ̃/ | 35 | 1 syll. | sein [lexical_exact_only], saint [lexical_exact_only], seing [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
 | 63 | /ly/ | 34 | 1 syll. | lut [lexical_exact_only], lu [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
 | 64 | /tʁi/ | 34 | 1 syll. | tri [lexical_exact_only], trie [lexical_exact_only] | — | trip (18.8%), trique (18.8%) | exact_lexical_candidates_need_visual_evidence |
-| 65 | /pʁi/ | 33 | 1 syll. | prix [lexical_exact_only], prie [lexical_exact_only], pris [lexical_exact_only] | — | bris (11.7%), bri (11.7%) | exact_lexical_candidates_need_visual_evidence |
+| 65 | /pʁi/ | 33 | 1 syll. | prie [lexical_exact_only], pris [lexical_exact_only], prix [visual_route_deferred] | — | bris (11.7%), bri (11.7%) | exact_lexical_candidates_need_visual_evidence |
 | 66 | /da/ | 33 | 1 syll. | das [lexical_exact_only], da [lexical_exact_only] | — | tas (17.5%), ta (17.5%) | exact_lexical_candidates_need_visual_evidence |
 | 67 | /syʁ/ | 31 | 1 syll. | sûr [lexical_exact_only], surent [lexical_exact_only] | — | sureau (18.8%), surin (18.8%) | exact_lexical_candidates_need_visual_evidence |
 | 68 | /tɛ̃/ | 31 | 1 syll. | teint [lexical_exact_only], tin [lexical_exact_only], tain [lexical_exact_only] | — | daim (17.5%) | exact_lexical_candidates_need_visual_evidence |
@@ -181,7 +207,7 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | 100 | /ʒɑ̃/ | 21 | 1 syll. | gens [lexical_exact_only], gent [lexical_exact_only], jan [lexical_exact_only] | — | champ (17.5%), chant (17.5%) | exact_lexical_candidates_need_visual_evidence |
 | 101 | /ɛg/ | 21 | 1 syll. | aigue [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
 | 102 | /ʁəmɑ̃/ | 21 | 2 syll. | rement [lexical_exact_only] | — | raiment (10%), roman (16.3%) | exact_lexical_candidates_need_visual_evidence |
-| 103 | /site/ | 21 | 2 syll. | cité [lexical_exact_only], citer [lexical_exact_only] | — | santé (16.3%), city (16.3%) | exact_lexical_candidates_need_visual_evidence |
+| 103 | /site/ | 21 | 2 syll. | cité [visual_hypothesis_curated], citer [lexical_exact_only] | — | santé (16.3%), city (16.3%) | curated_visual_hypothesis_available |
 | 104 | /kə/ | 21 | 1 syll. | que [lexical_exact_only] | — | queue (20%), quai (20%) | exact_lexical_candidates_need_visual_evidence |
 | 105 | /mɔ̃/ | 20 | 1 syll. | mon [lexical_exact_only], mont [visual_route_deferred] | — | — | exact_lexical_candidates_need_visual_evidence |
 | 106 | /tiʁ/ | 20 | 1 syll. | tir [lexical_exact_only], tire [lexical_exact_only] | — | dire (11.7%), tyran (18.8%) | exact_lexical_candidates_need_visual_evidence |
@@ -218,7 +244,7 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | 12 | /komɑ̃/ | 13 | comment | two_syllable_candidate_exists | comment, commencer, commandant, commander |
 | 13 | /tele/ | 13 | télé | two_syllable_candidate_exists | télé, téléphone, télévision, téléphoner |
 | 14 | /abi/ | 13 | — | two_syllable_sound_needs_representation | habitude, habiller, habiter, habitant |
-| 15 | /lize/ | 12 | lisé | two_syllable_candidate_exists | utiliser, réaliser, localiser, analyser |
+| 15 | /lize/ | 12 | liser | two_syllable_candidate_exists | utiliser, réaliser, localiser, analyser |
 | 16 | /poze/ | 11 | poser | two_syllable_candidate_exists | poser, reposer, déposer, proposer |
 | 17 | /ʒene/ | 11 | gêner | two_syllable_candidate_exists | général, généreux, génération, génétique |
 | 18 | /vite/ | 11 | vitae | two_syllable_candidate_exists | éviter, inviter, activité, invité |
@@ -227,14 +253,14 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | 21 | /mani/ | 11 | manie | two_syllable_candidate_exists | humanité, manipuler, manifestement, manifester |
 | 22 | /vəniʁ/ | 10 | venir | two_syllable_candidate_exists | venir, revenir, devenir, avenir |
 | 23 | /done/ | 10 | donné | two_syllable_candidate_exists | donner, pardonner, abandonner, coordonnées |
-| 24 | /avɑ̃/ | 10 | avant | two_syllable_candidate_exists | avant, avancer, aventure, avantage |
+| 24 | /avɑ̃/ | 10 | avent | two_syllable_candidate_exists | avant, avancer, aventure, avantage |
 | 25 | /kɔ̃pa/ | 10 | compas | two_syllable_candidate_exists | compagnie, accompagner, compagnon, compassion |
 | 26 | /ope/ | 10 | op | two_syllable_candidate_exists | opération, opérer, opéra, coopérer |
 | 27 | /bili/ | 10 | billy | two_syllable_candidate_exists | possibilité, culpabilité, stabilité, stabiliser |
 | 28 | /ləve/ | 9 | lever | two_syllable_candidate_exists | enlever, lever, élever, relever |
-| 29 | /pɔʁte/ | 9 | portée | two_syllable_candidate_exists | apporter, portée, emporter, rapporter |
+| 29 | /pɔʁte/ | 9 | porté | two_syllable_candidate_exists | apporter, portée, emporter, rapporter |
 | 30 | /poli/ | 9 | poly | two_syllable_candidate_exists | politique, policier, impoli, politesse |
-| 31 | /deli/ | 9 | délit | two_syllable_candidate_exists | délicieux, délit, délicat, fidélité |
+| 31 | /deli/ | 9 | délie | two_syllable_candidate_exists | délicieux, délit, délicat, fidélité |
 | 32 | /sede/ | 9 | cd | two_syllable_candidate_exists | céder, posséder, accéder, obsédé |
 | 33 | /paʁti/ | 8 | partie | two_syllable_candidate_exists | partie, parti, participer, particulier |
 | 34 | /sypɛʁ/ | 8 | super | two_syllable_candidate_exists | super, supermarché, superviseur, superficiel |
@@ -262,7 +288,7 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | 56 | /vəny/ | 7 | venue | two_syllable_candidate_exists | bienvenue, venu, venue, bienvenu |
 | 57 | /vɛʁse/ | 7 | verser | two_syllable_candidate_exists | traverser, renverser, verser, inverser |
 | 58 | /mite/ | 7 | miter | two_syllable_candidate_exists | comité, intimité, proximité, imiter |
-| 59 | /file/ | 7 | filé | two_syllable_candidate_exists | filer, défilé, défiler, faufiler |
+| 59 | /file/ | 7 | feeler | two_syllable_candidate_exists | filer, défilé, défiler, faufiler |
 | 60 | /kɔ̃pli/ | 7 | complies | two_syllable_candidate_exists | compliqué, compliment, complicité, compliquer |
 
 ## Boucle d’apprentissage

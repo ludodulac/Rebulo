@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "status": "research_only",
   "scope": "general_rebus_only",
   "principles": {
@@ -7,10 +7,15 @@
     "visibility": "The source word/image keeps its real complete pronunciation; the target sound and every edit remain inspectable in data/UI intended for professionals.",
     "clinical": "No approximation tier is automatically eligible for clinical use. A professional mode must opt in explicitly if such material is ever exposed.",
     "percentage": "The displayed percentage is an editorial weighted edit heuristic, not a scientific phonological-distance or clinical score.",
-    "shortSegments": "Short chunks are deliberately harder to approximate because one changed phoneme represents a large fraction of the sound."
+    "shortSegments": "Short chunks are deliberately harder to approximate because one changed phoneme represents a large fraction of the sound.",
+    "vowelCloseness": "Vowel substitutions are not treated as interchangeable: a small aperture contrast such as /e/↔/ɛ/ costs less than a distant oral or nasal-vowel change. These classes are editorial safeguards, not a phonetic-distance model."
   },
   "weights": {
-    "vowelSubstitution": 0.35,
+    "vowelSubstitution": 0.6,
+    "nearVowelSubstitution": 0.3,
+    "schwaVowelSubstitution": 0.4,
+    "nasalizationSubstitution": 0.5,
+    "farVowelSubstitution": 0.65,
     "glideSubstitution": 0.45,
     "consonantSubstitution": 0.55,
     "crossClassSubstitution": 0.9,

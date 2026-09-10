@@ -1,0 +1,414 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-09-10T09:07:26.837Z",
+  "status": "asset_gap_audit_only",
+  "purpose": "Prevent duplicate drawing work and identify the smallest safe visual-production wave for already curated sound candidates.",
+  "counts": {
+    "curatedPrototypeCount": 15,
+    "researchAssetExists": 1,
+    "productionAssetExists": 0,
+    "historicalAssetOnly": 0,
+    "noRegisteredAsset": 14
+  },
+  "rows": [
+    {
+      "ipa": "ni",
+      "candidate": "nid",
+      "visualConcept": "Un nid d'oiseau vide ou contenant deux petits œufs, isolé sur fond clair, sans arbre dominant.",
+      "visualPlausibility": "high",
+      "spontaneousNamingRisk": "low_medium",
+      "mainConfusions": [
+        "œufs",
+        "nid d'oiseau"
+      ],
+      "usefulTargetCount": 105,
+      "usefulExamples": [
+        "niveau",
+        "unité",
+        "génie",
+        "univers",
+        "animal",
+        "uniforme"
+      ],
+      "state": "research_asset_exists",
+      "researchAssets": [
+        {
+          "path": "assets/research/nid-comic-v1.svg",
+          "artRevision": "nid-comic-v1",
+          "clinicalStatus": "naming_test_required"
+        }
+      ],
+      "productionAssets": [],
+      "historicalAssets": [],
+      "nextGate": "run_naming_test_on_existing_research_asset",
+      "automaticActivation": false
+    },
+    {
+      "ipa": "pʁe",
+      "candidate": "pré",
+      "visualConcept": "Petit pré vert clôturé avec herbe et quelques fleurs, sans maison ni animal dominant.",
+      "visualPlausibility": "medium",
+      "spontaneousNamingRisk": "high",
+      "mainConfusions": [
+        "champ",
+        "prairie",
+        "herbe"
+      ],
+      "usefulTargetCount": 83,
+      "usefulExamples": [
+        "présent",
+        "président",
+        "impression",
+        "présenter",
+        "préparer",
+        "présence"
+      ],
+      "state": "no_registered_asset",
+      "researchAssets": [],
+      "productionAssets": [],
+      "historicalAssets": [],
+      "nextGate": "create_research_prototype_then_naming_test",
+      "automaticActivation": false
+    },
+    {
+      "ipa": "sɑ̃",
+      "candidate": "sang",
+      "visualConcept": "Une petite goutte de sang rouge au bout d'un doigt avec un pansement à proximité, sans scène violente.",
+      "visualPlausibility": "medium_high",
+      "spontaneousNamingRisk": "medium",
+      "mainConfusions": [
+        "blessure",
+        "bobo",
+        "goutte"
+      ],
+      "usefulTargetCount": 82,
+      "usefulExamples": [
+        "sang",
+        "sentir",
+        "santé",
+        "censé",
+        "sentiment",
+        "semblant"
+      ],
+      "state": "no_registered_asset",
+      "researchAssets": [],
+      "productionAssets": [],
+      "historicalAssets": [],
+      "nextGate": "create_research_prototype_then_naming_test",
+      "automaticActivation": false
+    },
+    {
+      "ipa": "ku",
+      "candidate": "cou",
+      "visualConcept": "Buste de profil avec le cou clairement dégagé et une flèche discrète pointant la zone du cou.",
+      "visualPlausibility": "medium_high",
+      "spontaneousNamingRisk": "medium",
+      "mainConfusions": [
+        "gorge",
+        "nuque"
+      ],
+      "usefulTargetCount": 55,
+      "usefulExamples": [
+        "beaucoup",
+        "coup",
+        "courant",
+        "coucher",
+        "coupable",
+        "couteau"
+      ],
+      "state": "no_registered_asset",
+      "researchAssets": [],
+      "productionAssets": [],
+      "historicalAssets": [],
+      "nextGate": "create_research_prototype_then_naming_test",
+      "automaticActivation": false
+    },
+    {
+      "ipa": "vo",
+      "candidate": "veau",
+      "visualConcept": "Un jeune veau entier, seul, silhouette clairement juvénile, sans vache adulte dominante.",
+      "visualPlausibility": "high",
+      "spontaneousNamingRisk": "medium",
+      "mainConfusions": [
+        "vache",
+        "vachette"
+      ],
+      "usefulTargetCount": 47,
+      "usefulExamples": [
+        "vos",
+        "nouveau",
+        "voler",
+        "cerveau",
+        "niveau",
+        "avocat"
+      ],
+      "state": "no_registered_asset",
+      "researchAssets": [],
+      "productionAssets": [],
+      "historicalAssets": [],
+      "nextGate": "create_research_prototype_then_naming_test",
+      "automaticActivation": false
+    },
+    {
+      "ipa": "fe",
+      "candidate": "fée",
+      "visualConcept": "Une fée clairement identifiable avec ailes, baguette magique et tenue simple, seule sur fond clair.",
+      "visualPlausibility": "high",
+      "spontaneousNamingRisk": "medium",
+      "mainConfusions": [
+        "princesse",
+        "magicienne"
+      ],
+      "usefulTargetCount": 46,
+      "usefulExamples": [
+        "café",
+        "différent",
+        "différence",
+        "conférence",
+        "préféré",
+        "fêter"
+      ],
+      "state": "no_registered_asset",
+      "researchAssets": [],
+      "productionAssets": [],
+      "historicalAssets": [],
+      "nextGate": "create_research_prototype_then_naming_test",
+      "automaticActivation": false
+    },
+    {
+      "ipa": "bu",
+      "candidate": "boue",
+      "visualConcept": "Une flaque épaisse de boue brune avec éclaboussures, sans chaussure ni véhicule dominant.",
+      "visualPlausibility": "high",
+      "spontaneousNamingRisk": "medium",
+      "mainConfusions": [
+        "terre",
+        "flaque",
+        "saleté"
+      ],
+      "usefulTargetCount": 43,
+      "usefulExamples": [
+        "boulot",
+        "bout",
+        "debout",
+        "bouger",
+        "bouteille",
+        "boutique"
+      ],
+      "state": "no_registered_asset",
+      "researchAssets": [],
+      "productionAssets": [],
+      "historicalAssets": [],
+      "nextGate": "create_research_prototype_then_naming_test",
+      "automaticActivation": false
+    },
+    {
+      "ipa": "pɔʁ",
+      "candidate": "porc",
+      "visualConcept": "Un porc domestique entier de profil trois-quarts, seul, sans ferme ni nourriture.",
+      "visualPlausibility": "high",
+      "spontaneousNamingRisk": "medium_high",
+      "mainConfusions": [
+        "cochon",
+        "porcelet"
+      ],
+      "usefulTargetCount": 43,
+      "usefulExamples": [
+        "rapport",
+        "portable",
+        "important",
+        "importance",
+        "apporter",
+        "porc"
+      ],
+      "state": "no_registered_asset",
+      "researchAssets": [],
+      "productionAssets": [],
+      "historicalAssets": [],
+      "nextGate": "create_research_prototype_then_naming_test",
+      "automaticActivation": false
+    },
+    {
+      "ipa": "fɔʁ",
+      "candidate": "fort",
+      "visualConcept": "Petit fort militaire en pierre avec remparts et tours basses, sans château féerique ni drapeau textuel.",
+      "visualPlausibility": "medium_high",
+      "spontaneousNamingRisk": "medium_high",
+      "mainConfusions": [
+        "château",
+        "forteresse"
+      ],
+      "usefulTargetCount": 39,
+      "usefulExamples": [
+        "fort",
+        "formidable",
+        "fortune",
+        "forcément",
+        "effort",
+        "forcer"
+      ],
+      "state": "no_registered_asset",
+      "researchAssets": [],
+      "productionAssets": [],
+      "historicalAssets": [],
+      "nextGate": "create_research_prototype_then_naming_test",
+      "automaticActivation": false
+    },
+    {
+      "ipa": "tele",
+      "candidate": "télé",
+      "visualConcept": "Téléviseur simple vu de face avec écran allumé neutre, sans télécommande dominante.",
+      "visualPlausibility": "high",
+      "spontaneousNamingRisk": "medium",
+      "mainConfusions": [
+        "télévision",
+        "écran",
+        "TV"
+      ],
+      "usefulTargetCount": 13,
+      "usefulExamples": [
+        "télé",
+        "téléphone",
+        "télévision",
+        "téléphoner",
+        "téléphonique",
+        "télégramme"
+      ],
+      "state": "no_registered_asset",
+      "researchAssets": [],
+      "productionAssets": [],
+      "historicalAssets": [],
+      "nextGate": "create_research_prototype_then_naming_test",
+      "automaticActivation": false
+    },
+    {
+      "ipa": "kɔ̃pa",
+      "candidate": "compas",
+      "visualConcept": "Un compas scolaire ouvert avec crayon visible, isolé, sans règle ni trousse.",
+      "visualPlausibility": "high",
+      "spontaneousNamingRisk": "low_medium",
+      "mainConfusions": [
+        "compas de géométrie",
+        "outil"
+      ],
+      "usefulTargetCount": 10,
+      "usefulExamples": [
+        "compagnie",
+        "accompagner",
+        "compagnon",
+        "compassion",
+        "comparer",
+        "raccompagner"
+      ],
+      "state": "no_registered_asset",
+      "researchAssets": [],
+      "productionAssets": [],
+      "historicalAssets": [],
+      "nextGate": "create_research_prototype_then_naming_test",
+      "automaticActivation": false
+    },
+    {
+      "ipa": "epi",
+      "candidate": "épi",
+      "visualConcept": "Un unique épi de blé mûr, très grand et isolé sur fond clair.",
+      "visualPlausibility": "high",
+      "spontaneousNamingRisk": "medium_high",
+      "mainConfusions": [
+        "blé",
+        "céréale"
+      ],
+      "usefulTargetCount": 8,
+      "usefulExamples": [
+        "épisode",
+        "épicerie",
+        "épidémie",
+        "épinards",
+        "épicé",
+        "épinière"
+      ],
+      "state": "no_registered_asset",
+      "researchAssets": [],
+      "productionAssets": [],
+      "historicalAssets": [],
+      "nextGate": "create_research_prototype_then_naming_test",
+      "automaticActivation": false
+    },
+    {
+      "ipa": "eʁo",
+      "candidate": "héros",
+      "visualConcept": "Personnage héroïque générique en posture de secours, cape simple, aidant une personne, sans référence à une franchise.",
+      "visualPlausibility": "medium",
+      "spontaneousNamingRisk": "high",
+      "mainConfusions": [
+        "super-héros",
+        "personnage",
+        "sauveur"
+      ],
+      "usefulTargetCount": 7,
+      "usefulExamples": [
+        "héros",
+        "aéroport",
+        "héro",
+        "héroïque",
+        "érotique",
+        "héroïsme"
+      ],
+      "state": "no_registered_asset",
+      "researchAssets": [],
+      "productionAssets": [],
+      "historicalAssets": [],
+      "nextGate": "create_research_prototype_then_naming_test",
+      "automaticActivation": false
+    },
+    {
+      "ipa": "ɔʁdi",
+      "candidate": "ordi",
+      "visualConcept": "Ordinateur portable ouvert, seul, écran neutre, sans téléphone ni accessoires dominants.",
+      "visualPlausibility": "high",
+      "spontaneousNamingRisk": "medium",
+      "mainConfusions": [
+        "ordinateur",
+        "PC"
+      ],
+      "usefulTargetCount": 5,
+      "usefulExamples": [
+        "ordinateur",
+        "extraordinaire",
+        "ordinaire",
+        "ordi",
+        "coordination"
+      ],
+      "state": "no_registered_asset",
+      "researchAssets": [],
+      "productionAssets": [],
+      "historicalAssets": [],
+      "nextGate": "create_research_prototype_then_naming_test",
+      "automaticActivation": false
+    },
+    {
+      "ipa": "papa",
+      "candidate": "papa",
+      "visualConcept": "Un père adulte avec un jeune enfant qui l'appelle ou le serre dans ses bras, sans texte.",
+      "visualPlausibility": "medium_high",
+      "spontaneousNamingRisk": "medium",
+      "mainConfusions": [
+        "père",
+        "homme",
+        "famille"
+      ],
+      "usefulTargetCount": 4,
+      "usefulExamples": [
+        "papa",
+        "papas",
+        "grand-papa",
+        "paparazzi"
+      ],
+      "state": "no_registered_asset",
+      "researchAssets": [],
+      "productionAssets": [],
+      "historicalAssets": [],
+      "nextGate": "create_research_prototype_then_naming_test",
+      "automaticActivation": false
+    }
+  ]
+}

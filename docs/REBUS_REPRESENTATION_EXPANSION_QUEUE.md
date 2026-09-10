@@ -5,29 +5,29 @@
 - Sons sélectionnés : 916.
 - Fenêtres de deux syllabes : 400.
 - Sons avec plusieurs homophones exacts : 536.
-- Sons avec au moins une piste de fichier/asset de même libellé : 12.
+- Sons avec au moins une piste de fichier/asset de même libellé : 16.
 - Sons avec au moins un asset enregistré de même libellé : 5.
-- Sons avec seulement/au moins une piste issue d’un nom de fichier de recherche : 7.
+- Sons avec seulement/au moins une piste issue d’un nom de fichier de recherche : 11.
 - Sons avec asset enregistré dont l’IPA est explicitement enregistrée et exacte : 5.
 - Sons avec convention visible : 23.
-- Sons qui nécessitent probablement un nouvel asset si un concept exact est retenu : 875.
-- Sons avec risque visuel/lexical déjà documenté : 53.
+- Sons qui nécessitent probablement un nouvel asset si un concept exact est retenu : 871.
+- Sons avec risque visuel/lexical déjà documenté : 71.
 - Sons avec approximation légère disponible séparément : 609.
-- Sons dont les preuves visuelles restent insuffisantes : 815.
+- Sons dont les preuves visuelles restent insuffisantes : 799.
 
 ## Répartition des décisions
 
 - convention visible préférable : 11.
-- plusieurs homophones exacts à départager : 515.
+- plusieurs homophones exacts à départager : 511.
 - approximation ludique seulement après rejets exacts : 3.
-- fichier de recherche à inspecter séparément : 7.
+- fichier de recherche à inspecter séparément : 11.
 - candidat lexical exact à préexaminer : 375.
 - asset enregistré à examiner/tester : 5.
 
 ## Files opérationnelles
 
 - Assets enregistrés à examiner : 5 sons (/vɑ̃/, /bal/, /gɑ̃/, /foto/, /kyʁi/).
-- Fichiers de recherche à inspecter séparément : 7 sons (/ni/, /kʁwa/, /ø/, /wa/, /œʁ/, /dwa/, /mat/).
+- Fichiers de recherche à inspecter séparément : 11 sons (/ni/, /fu/, /kʁwa/, /ø/, /pɛl/, /wa/, /œʁ/, /dwa/, /mat/, /ʁadi/, /kaʁe/).
 - Homophones exacts à départager : 160 sons prioritaires.
 - Conventions visibles préférables : 11 sons (/a/, /se/, /pe/, /i/, /ʒe/, /la/, /ve/, /be/, /y/, /ʒi/, /ɛs/).
 - Préexamen de candidat image exact : 160 sons prioritaires.
@@ -120,7 +120,7 @@
 | 80 | /my/ | 31 | 1 syll. | mu, mue, mûs | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 81 | /kɑ̃/ | 31 | 1 syll. | camp [hypothèse curatée], can, quant | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 82 | /py/ | 30 | 1 syll. | pus, pu | — | 0 | 0 | plusieurs homophones exacts à départager |
-| 83 | /ɔʁ/ | 30 | 1 syll. | or, ord, ort | — | 0 | 0 | plusieurs homophones exacts à départager |
+| 83 | /ɔʁ/ | 30 | 1 syll. | or [hypothèse curatée], ord, ort | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 84 | /ʒə/ | 30 | 1 syll. | je | — | 0 | 0 | candidat lexical exact à préexaminer |
 | 85 | /fy/ | 30 | 1 syll. | fût, futs | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 86 | /kaʁ/ | 30 | 1 syll. | car [hypothèse curatée], quart, care | — | 0 | 0 | plusieurs homophones exacts à départager |
@@ -172,14 +172,14 @@
 | 132 | /kyl/ | 19 | 1 syll. | cule | — | 0 | 0 | candidat lexical exact à préexaminer |
 | 133 | /ʒy/ | 19 | 1 syll. | jus [hypothèse curatée] | — | 0 | 0 | candidat lexical exact à préexaminer |
 | 134 | /nɑ̃/ | 18 | 1 syll. | nant, nan | — | 0 | 0 | plusieurs homophones exacts à départager |
-| 135 | /lœʁ/ | 18 | 1 syll. | leurre, leur, leurs | — | 0 | 0 | plusieurs homophones exacts à départager |
+| 135 | /lœʁ/ | 18 | 1 syll. | leurre [hypothèse curatée], leur, leurs | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 136 | /ʁite/ | 18 | 2 syll. | ritter | — | 0 | 0 | candidat lexical exact à préexaminer |
 | 137 | /mu/ | 18 | 1 syll. | mou, moue, moût | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 138 | /fje/ | 18 | 1 syll. | fier | — | 0 | 0 | candidat lexical exact à préexaminer |
 | 139 | /kal/ | 18 | 1 syll. | cal, cale, call | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 140 | /pli/ | 18 | 1 syll. | pli, plie | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 141 | /vwaʁ/ | 17 | 1 syll. | voir, voire | — | 0 | 0 | plusieurs homophones exacts à départager |
-| 142 | /tʁo/ | 17 | 1 syll. | trot, trop | — | 0 | 0 | plusieurs homophones exacts à départager |
+| 142 | /tʁo/ | 17 | 1 syll. | trop, trot | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 143 | /fɛ/ | 17 | 1 syll. | fait, faix, fay | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 144 | /vɛ/ | 17 | 1 syll. | vest, vais, vêt | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 145 | /u/ | 17 | 1 syll. | houx, aout, houe | — | 0 | 0 | plusieurs homophones exacts à départager |
@@ -187,7 +187,7 @@
 | 147 | /paʁa/ | 17 | 2 syll. | para | — | 0 | 0 | candidat lexical exact à préexaminer |
 | 148 | /kasjɔ̃/ | 17 | 2 syll. | cassions | — | 0 | 0 | candidat lexical exact à préexaminer |
 | 149 | /kʁo/ | 17 | 1 syll. | croc, crot | — | 0 | 0 | plusieurs homophones exacts à départager |
-| 150 | /ge/ | 17 | 1 syll. | gué, gais, guée | — | 0 | 0 | plusieurs homophones exacts à départager |
+| 150 | /ge/ | 17 | 1 syll. | gais, guée, gué | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 151 | /sjø/ | 16 | 1 syll. | cieux | — | 0 | 0 | candidat lexical exact à préexaminer |
 | 152 | /sɑ̃s/ | 16 | 1 syll. | sens, cens | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 153 | /ɛ/ | 16 | 1 syll. | haie, es, aie | — | 0 | 0 | plusieurs homophones exacts à départager |
@@ -217,7 +217,7 @@
 | 177 | /pɥi/ | 14 | 1 syll. | puits [hypothèse curatée], puy, puis | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 178 | /lwa/ | 14 | 1 syll. | loi, loua | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 179 | /kɛt/ | 14 | 1 syll. | quête, ket, quette | — | 0 | 0 | plusieurs homophones exacts à départager |
-| 180 | /dɑ̃s/ | 14 | 1 syll. | danse, dense | — | 0 | 0 | plusieurs homophones exacts à départager |
+| 180 | /dɑ̃s/ | 14 | 1 syll. | danse [hypothèse curatée], dense | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 181 | /dja/ | 14 | 1 syll. | dias, dia | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 182 | /ʃaʁ/ | 14 | 1 syll. | char, charre | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 183 | /oto/ | 14 | 2 syll. | auto | — | 0 | 0 | approximation ludique seulement après rejets exacts |

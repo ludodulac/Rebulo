@@ -5,7 +5,7 @@
 - Sons utiles du réservoir exact à cartographier : 5487.
 - Prototypes curatés ajoutés comme étalons de calibration : 32.
 - Sons cartographiés dans cette vue : 5519.
-- Sons où la curation explicite fournit déjà une hypothèse visuelle : 98.
+- Sons où la curation explicite fournit déjà une hypothèse visuelle : 119.
 - Fenêtres de deux syllabes conservées comme candidates de première classe : 3814.
 - Sons ayant aussi une convention visible explicite : 34.
 - Sons ayant une approximation légère recensée dans la source disponible : 1245.
@@ -52,6 +52,7 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | /fɑ̃/ | faon | high | medium_high | 15 | prototype_then_age_specific_naming_test |
 | /pɥi/ | puits | high | unknown | 14 | new_asset_then_human_naming_test |
 | /dɑ̃s/ | danse | medium_high | unknown | 14 | prototype_then_human_naming_test |
+| /ʃaʁ/ | char | medium_high | unknown | 14 | prototype_then_human_naming_test |
 | /tele/ | télé | high | medium | 13 | prototype_then_naming_variant_test |
 | /ble/ | blé | high | medium_high | 13 | compare_grain_and_ear_grouping_then_naming_test |
 | /tʁu/ | trou | medium_high | medium | 12 | compare_arrow_and_no_arrow_then_naming_test |
@@ -59,14 +60,19 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | /fu/ | fou | high | unknown | 12 | prototype_then_human_naming_test |
 | /pwa/ | pois | high | unknown | 12 | new_asset_then_human_naming_test |
 | /mal/ | malle | high | medium_high | 11 | compare_trunk_and_suitcase_shapes_then_naming_test |
+| /lis/ | lis | medium_high | unknown | 11 | prototype_then_human_naming_test |
 | /ʁwa/ | roi | high | unknown | 11 | new_asset_then_human_naming_test |
+| /sjɛl/ | ciel | medium_high | unknown | 11 | prototype_then_human_naming_test |
 | /twa/ | toit | high | unknown | 11 | new_asset_then_human_naming_test |
 | /kʁwa/ | croix | high | unknown | 11 | new_asset_then_human_naming_test |
 | /sɛt/ | sept | high | unknown | 10 | prefer_visible_number_convention_then_composition_test |
+| /fis/ | fils | medium | unknown | 10 | prototype_then_human_naming_test |
 | /kɔ̃pa/ | compas | high | low_medium | 10 | prototype_then_school_age_naming_test |
 | /ø/ | oeufs | high | unknown | 9 | new_asset_then_human_naming_test |
 | /plɛ/ | plaie | medium_high | unknown | 9 | new_asset_then_human_naming_test |
 | /sede/ | cd | high | unknown | 9 | prototype_then_human_naming_test |
+| /tʁɔ̃/ | tronc | high | unknown | 8 | prototype_then_human_naming_test |
+| /sjɑ̃/ | cyan | medium | unknown | 8 | prototype_then_human_naming_test |
 | /lu/ | loup | high | unknown | 8 | prototype_then_human_naming_test |
 | /nwa/ | noix | high | unknown | 8 | new_asset_then_human_naming_test |
 | /epi/ | épi | high | medium_high | 8 | prototype_then_naming_test |
@@ -74,37 +80,49 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | /faʁ/ | phare | high | unknown | 8 | new_asset_then_human_naming_test |
 | /bɛ/ | baie | medium_high | unknown | 8 | compare_bay_senses_then_human_naming_test |
 | /ɛʁ/ | r | high | unknown | 7 | prefer_visible_letter_convention_then_composition_test |
+| /lɑ̃s/ | lance | high | unknown | 7 | prototype_then_human_naming_test |
 | /bal/ | balle | high | unknown | 7 | reuse_registered_asset_then_human_naming_test |
 | /eʁo/ | héros | medium | high | 7 | compare_scene_variants_before_prototype |
+| /fʁɔ̃/ | front | medium_high | unknown | 7 | prototype_then_human_naming_test |
+| /gi/ | gui | medium_high | unknown | 7 | prototype_then_human_naming_test |
 | /gɑ̃/ | gant | high | unknown | 7 | reuse_registered_asset_then_human_naming_test |
 | /ale/ | allée | medium_high | unknown | 6 | compare_allee_and_chemin_routes_then_human_naming_test |
+| /nɥi/ | nuit | medium_high | unknown | 6 | prototype_then_human_naming_test |
 | /vis/ | vis | high | unknown | 6 | new_asset_then_human_naming_test |
 | /maʒ/ | mage | medium_high | unknown | 6 | compare_character_design_then_human_naming_test |
 | /apa/ | appât | medium_high | unknown | 6 | compare_bait_scene_then_human_naming_test |
+| /liʁ/ | lyre | high | unknown | 6 | prototype_then_human_naming_test |
 | /ʁɛn/ | renne | high | unknown | 6 | new_asset_then_human_naming_test |
 | /vil/ | ville | medium_high | unknown | 5 | compare_city_scale_then_human_naming_test |
 | /pɛl/ | pelle | high | unknown | 5 | prototype_then_human_naming_test |
 | /ʁɑ̃ʒe/ | rangée | medium_high | unknown | 5 | prototype_then_human_naming_test |
 | /ɔʁdi/ | ordi | high | medium | 5 | prototype_then_naming_variant_test |
+| /sabl/ | sable | medium_high | unknown | 5 | prototype_then_human_naming_test |
 | /myʁ/ | mur | high | unknown | 5 | new_asset_then_human_naming_test |
 | /ɛl/ | aile | high | unknown | 5 | new_asset_then_human_naming_test |
+| /tas/ | tasse | high | unknown | 5 | prototype_then_human_naming_test |
 | /wa/ | oie | high | unknown | 5 | new_asset_then_human_naming_test |
 | /təny/ | tenue | medium | unknown | 5 | compare_outfit_display_then_human_naming_test |
 | /maʁe/ | marée | medium | unknown | 5 | compare_high_tide_scene_then_human_naming_test |
+| /dam/ | dame | medium_high | unknown | 4 | prototype_then_human_naming_test |
 | /papa/ | papa | medium_high | medium | 4 | prototype_then_family_wording_naming_test |
 | /ɑ̃tʁe/ | entrée | high | unknown | 4 | new_asset_then_human_naming_test |
 | /foto/ | photo | high | unknown | 4 | reuse_registered_asset_then_human_naming_test |
 | /fas/ | face | medium_high | unknown | 4 | compare_face_and_visage_cues_then_human_naming_test |
 | /kyʁi/ | curry | high | unknown | 4 | reuse_registered_asset_then_human_naming_test |
 | /alo/ | halo | medium_high | unknown | 4 | compare_halo_and_aureole_then_human_naming_test |
+| /jø/ | yeux | high | unknown | 4 | prototype_then_human_naming_test |
 | /peʃe/ | pêcher | high | unknown | 4 | prototype_then_human_naming_test |
 | /dwa/ | doigt | high | unknown | 4 | new_asset_then_human_naming_test |
+| /ʃu/ | chou | high | unknown | 4 | prototype_then_human_naming_test |
+| /gʁɛ̃/ | grain | high | unknown | 4 | prototype_then_human_naming_test |
 | /ano/ | anneau | high | unknown | 4 | new_asset_then_human_naming_test |
 | /kɔk/ | coq | high | unknown | 4 | new_asset_then_human_naming_test |
 | /pate/ | pâté | medium_high | unknown | 4 | compare_pate_and_pet_food_routes_then_human_naming_test |
 | /kɔ̃fi/ | confit | medium | unknown | 4 | prototype_only_if_confit_reading_is_plausible |
 | /ipo/ | hippo | high | unknown | 4 | test_short_form_hippo_vs_full_name |
 | /kote/ | côté | medium | unknown | 3 | prototype_only_if_arrow_focus_is_informative |
+| /ʁut/ | route | high | unknown | 3 | prototype_then_human_naming_test |
 | /maʁʃe/ | marché | medium_high | unknown | 3 | prototype_then_human_naming_test |
 | /ʃəmɛ̃/ | chemin | high | unknown | 3 | new_asset_then_human_naming_test |
 | /kafe/ | café | high | unknown | 3 | new_asset_then_human_naming_test |
@@ -115,9 +133,12 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | /ʒeni/ | génie | medium_high | unknown | 3 | compare_genie_scene_then_human_naming_test |
 | /ʁadi/ | radis | high | unknown | 3 | prototype_then_human_naming_test |
 | /kola/ | cola | medium_high | unknown | 3 | compare_generic_cola_cues_then_human_naming_test |
+| /demɔ̃/ | démon | medium_high | unknown | 3 | prototype_then_human_naming_test |
 | /abʁi/ | abri | high | unknown | 3 | new_asset_then_human_naming_test |
 | /kaʁe/ | carré | high | unknown | 3 | prototype_then_human_naming_test |
 | /vale/ | vallée | high | unknown | 3 | new_asset_then_human_naming_test |
+| /akʁo/ | accroc | medium_high | unknown | 3 | prototype_then_human_naming_test |
+| /maʁʃɑ̃/ | marchand | medium_high | unknown | 3 | prototype_then_human_naming_test |
 
 ## Priorités informatives du grand réservoir
 
@@ -127,7 +148,7 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | 2 | /mɑ̃/ | 374 | 1 syll. | mens [lexical_exact_only], man [visual_route_rejected], mans [visual_route_rejected] | — | — | exact_lexical_candidates_need_visual_evidence |
 | 3 | /sjɔ̃/ | 365 | 1 syll. | scion [lexical_exact_only], cyon [lexical_exact_only], scions [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
 | 4 | /e/ | 280 | 1 syll. | ais [visual_route_rejected], ai [visual_route_rejected], et [visual_route_rejected] | — | — | difficult_sound |
-| 5 | /ʁe/ | 257 | 1 syll. | ré [lexical_exact_only], rée [lexical_exact_only] | ré | raie (15%), rai (15%) | visible_convention_available |
+| 5 | /ʁe/ | 257 | 1 syll. | rée [lexical_exact_only], ré [visual_route_deferred] | ré | raie (15%), rai (15%) | visible_convention_available |
 | 6 | /ɛ̃/ | 234 | 1 syll. | ein [visual_route_rejected], eins [visual_route_rejected], ain [visual_route_rejected] | — | — | difficult_sound |
 | 7 | /kɔ̃/ | 233 | 1 syll. | con [visual_route_rejected] | — | gond (17.5%), gons (17.5%) | approximation_only |
 | 8 | /se/ | 222 | 1 syll. | ces [lexical_exact_only], ses [lexical_exact_only], cé [visual_route_rejected] | C | saie (15%), se (20%) | visible_convention_available |
@@ -186,7 +207,7 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | 61 | /bo/ | 35 | 1 syll. | beau [lexical_exact_only], bau [lexical_exact_only], baux [lexical_exact_only] | — | peau (17.5%), pot (17.5%) | exact_lexical_candidates_need_visual_evidence |
 | 62 | /sɛ̃/ | 35 | 1 syll. | sein [lexical_exact_only], saint [lexical_exact_only], seing [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
 | 63 | /ly/ | 34 | 1 syll. | lut [lexical_exact_only], lu [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
-| 64 | /tʁi/ | 34 | 1 syll. | tri [lexical_exact_only], trie [lexical_exact_only] | — | trip (18.8%), trique (18.8%) | exact_lexical_candidates_need_visual_evidence |
+| 64 | /tʁi/ | 34 | 1 syll. | trie [lexical_exact_only], tri [visual_route_deferred] | — | trip (18.8%), trique (18.8%) | exact_lexical_candidates_need_visual_evidence |
 | 65 | /pʁi/ | 33 | 1 syll. | prie [lexical_exact_only], pris [lexical_exact_only], prix [visual_route_deferred] | — | bris (11.7%), bri (11.7%) | exact_lexical_candidates_need_visual_evidence |
 | 66 | /da/ | 33 | 1 syll. | das [lexical_exact_only], da [lexical_exact_only] | — | tas (17.5%), ta (17.5%) | exact_lexical_candidates_need_visual_evidence |
 | 67 | /syʁ/ | 31 | 1 syll. | sûr [lexical_exact_only], surent [lexical_exact_only] | — | sureau (18.8%), surin (18.8%) | exact_lexical_candidates_need_visual_evidence |
@@ -206,7 +227,7 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | 81 | /tʁe/ | 27 | 1 syll. | tré [lexical_exact_only] | — | trés (10%), trait (10%) | exact_lexical_candidates_need_visual_evidence |
 | 82 | /tɛ/ | 27 | 1 syll. | taie [lexical_exact_only], têt [lexical_exact_only], taît [lexical_exact_only] | — | thé (15%), té (15%) | exact_lexical_candidates_need_visual_evidence |
 | 83 | /sje/ | 27 | 1 syll. | sied [lexical_exact_only], scier [lexical_exact_only] | — | suée (15%), acier (18.8%) | exact_lexical_candidates_need_visual_evidence |
-| 84 | /nɛʁ/ | 27 | 1 syll. | nerf [lexical_exact_only] | — | naira (18.8%), nerve (18.8%) | exact_lexical_candidates_need_visual_evidence |
+| 84 | /nɛʁ/ | 27 | 1 syll. | nerf [visual_route_deferred] | — | naira (18.8%), nerve (18.8%) | approximation_only |
 | 85 | /ʁasjɔ̃/ | 27 | 2 syll. | ration [lexical_exact_only] | — | ratio (13%), passion (18%) | exact_lexical_candidates_need_visual_evidence |
 | 86 | /sɛ/ | 26 | 1 syll. | saie [lexical_exact_only], sais [lexical_exact_only] | — | cé (15%), se (20%) | exact_lexical_candidates_need_visual_evidence |
 | 87 | /kʁe/ | 26 | 1 syll. | crée [lexical_exact_only], cré [lexical_exact_only] | — | craie (10%), crêt (10%) | exact_lexical_candidates_need_visual_evidence |

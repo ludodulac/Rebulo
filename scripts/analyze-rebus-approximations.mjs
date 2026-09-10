@@ -4,6 +4,7 @@ import {buildWholeWordCandidateIndex} from '../src/syllable-representation-candi
 import {buildApproximateLexicalIndex,findApproximateWholeWordCandidates} from '../src/rebus-approximation.js';
 import {buildTargetVocabulary,applySchoolFrequencyEvidence,isRebuloPriorityTarget,rebuloUtilityWeight} from '../src/target-vocabulary.js';
 import {isDrawableNamingCandidate} from '../src/drawable-opportunities.js';
+import {ALL_OPEN_PICTOGRAMS} from '../src/pictogram-print-sheets.js';
 import {normalizeIPA} from '../src/phonetic-engine.js';
 
 const lexiquePath=process.argv[2]||'data/lexique4.compact.json';
@@ -23,6 +24,22 @@ if(schoolEvidence)targets=applySchoolFrequencyEvidence(targets,schoolEvidence);
 const usefulTargets=targets.filter(isRebuloPriorityTarget).filter(target=>target.syllabificationStatus==='source_exact'&&Array.isArray(target.syllables)&&target.syllables.length);
 const exactIndex=buildWholeWordCandidateIndex(entries);
 const approximateIndex=buildApproximateLexicalIndex(exactIndex);
+
+// Existing illustrated assets are the cheapest and safest editorial leads: search them before proposing new artwork.
+const assetExactIndex=new Map();
+for(const item of ALL_OPEN_PICTOGRAMS){
+  const ipa=normalizeIPA(item?.ipa||'');
+  const label=String(item?.label||'').trim();
+  if(!ipa||!label||!item?.image||item?.active===false)continue;
+  if(!assetExactIndex.has(ipa))assetExactIndex.set(ipa,[]);
+  assetExactIndex.get(ipa).push({
+    word:label,lemma:label,pos:'NOM',frequency:0,syllableCount:null,
+    assetId:item.id||null,image:item.image,source:'open_pictogram_library',
+    visualConfidence:Number(item.visualConfidence)||null,labelStability:Number(item.labelStability)||null,
+    sourceStrictEligible:item.strictEligible!==false,clinicalStatus:item.clinicalStatus||'unreviewed'
+  });
+}
+const assetApproximateIndex=buildApproximateLexicalIndex(assetExactIndex);
 
 const rows=new Map();
 for(const target of usefulTargets){
@@ -56,17 +73,23 @@ const prioritizedRows=[...rows.values()].sort((a,b)=>
 
 const lexicalPos=value=>String(value||'').trim().toUpperCase().split(':')[0];
 const visualCandidateScore=candidate=>{
+  const existingAsset=candidate.source==='open_pictogram_library'?1:0;
   const noun=lexicalPos(candidate.pos)==='NOM'?1:0;
   const frequency=Math.max(0,Number(candidate.frequency)||0);
-  return noun*1000+Math.log10(1+frequency)*20-(Number(candidate.approximation?.weightedRatio)||1)*100;
+  const visual=Number(candidate.visualConfidence)||0;
+  const label=Number(candidate.labelStability)||0;
+  return existingAsset*10000+noun*1000+(visual+label)*80+Math.log10(1+frequency)*20-(Number(candidate.approximation?.weightedRatio)||1)*100;
 };
 
 for(const row of prioritizedRows){
-  const candidates=findApproximateWholeWordCandidates(row.ipa,exactIndex,policy,{approximateIndex,limit:48,maxLengthDelta:1})
+  const assetCandidates=findApproximateWholeWordCandidates(row.ipa,assetExactIndex,policy,{approximateIndex:assetApproximateIndex,limit:32,maxLengthDelta:1})
+    .map(candidate=>({...candidate,source:'open_pictogram_library'}));
+  const lexicalCandidates=findApproximateWholeWordCandidates(row.ipa,exactIndex,policy,{approximateIndex,limit:48,maxLengthDelta:1})
     .filter(isDrawableNamingCandidate)
-    .sort((a,b)=>visualCandidateScore(b)-visualCandidateScore(a)||a.word.localeCompare(b.word,'fr'));
+    .map(candidate=>({...candidate,source:'lexique_visual_lead'}));
+  const candidates=[...assetCandidates,...lexicalCandidates].sort((a,b)=>visualCandidateScore(b)-visualCandidateScore(a)||a.word.localeCompare(b.word,'fr'));
   for(const candidate of candidates){
-    const key=`${candidate.sourceIpa}|${String(candidate.word).toLocaleLowerCase('fr')}`;
+    const key=`${candidate.source}|${candidate.sourceIpa}|${String(candidate.word).toLocaleLowerCase('fr')}`;
     if(!row.candidateMap.has(key))row.candidateMap.set(key,candidate);
   }
 }
@@ -76,36 +99,44 @@ const compactCandidate=candidate=>({
   lemma:candidate.lemma,
   pos:candidate.pos,
   frequency:candidate.frequency,
+  source:candidate.source,
   sourceIpa:candidate.sourceIpa,
   tier:candidate.approximation.tier,
   weightedRatio:candidate.approximation.weightedRatio,
   editorialApproximationPercent:candidate.approximation.editorialApproximationPercent,
   editCount:candidate.approximation.editCount,
   nounCandidate:lexicalPos(candidate.pos)==='NOM',
+  existingAsset:candidate.source==='open_pictogram_library',
+  ...(candidate.assetId?{assetId:candidate.assetId}:{}),
+  ...(candidate.image?{image:candidate.image}:{}),
+  ...(candidate.visualConfidence?{visualConfidence:candidate.visualConfidence}:{}),
+  ...(candidate.labelStability?{labelStability:candidate.labelStability}:{}),
   operations:candidate.approximation.operations.map(operation=>({type:operation.type,sourceUnit:operation.sourceUnit,targetUnit:operation.targetUnit,sourceIndex:operation.sourceIndex,targetIndex:operation.targetIndex,cost:operation.cost}))
 });
 
 const ranked=prioritizedRows.map(row=>{
   const candidates=[...row.candidateMap.values()].map(compactCandidate);
-  candidates.sort((a,b)=>Number(b.nounCandidate)-Number(a.nounCandidate)||a.weightedRatio-b.weightedRatio||a.editCount-b.editCount||b.frequency-a.frequency||a.word.localeCompare(b.word,'fr'));
-  const nounCandidates=candidates.filter(candidate=>candidate.nounCandidate);
-  const best=nounCandidates[0]||candidates[0]||null;
+  candidates.sort((a,b)=>Number(b.existingAsset)-Number(a.existingAsset)||Number(b.nounCandidate)-Number(a.nounCandidate)||a.weightedRatio-b.weightedRatio||a.editCount-b.editCount||b.frequency-a.frequency||a.word.localeCompare(b.word,'fr'));
+  const assetCandidates=candidates.filter(candidate=>candidate.existingAsset);
+  const nounCandidates=candidates.filter(candidate=>candidate.nounCandidate&&!candidate.existingAsset);
+  const best=assetCandidates[0]||nounCandidates[0]||null;
   const utility=Number(row.usefulWeightedGain.toFixed(3));
-  const score=best?Number((Math.log10(1+utility)*150+Math.log10(1+row.usefulTargetCount)*90+(best.nounCandidate?130:0)+(best.tier==='light'?80:35)+(1-best.weightedRatio)*60).toFixed(3)):0;
-  return {ipa:row.ipa,syllableSpans:[...row.syllableSpans].sort(),usefulOccurrenceCount:row.usefulOccurrenceCount,usefulTargetCount:row.usefulTargetCount,usefulWeightedGain:utility,minAgeBandCandidate:row.minAgeBandCandidate,examples:row.examples,candidateCount:candidates.length,nounCandidateCount:nounCandidates.length,bestCandidate:best,candidates:candidates.slice(0,12),researchPriorityScore:score};
-}).filter(row=>row.nounCandidateCount>0).sort((a,b)=>b.researchPriorityScore-a.researchPriorityScore||b.usefulWeightedGain-a.usefulWeightedGain||b.usefulTargetCount-a.usefulTargetCount||a.ipa.localeCompare(b.ipa));
+  const score=best?Number((Math.log10(1+utility)*150+Math.log10(1+row.usefulTargetCount)*90+(best.existingAsset?350:0)+(best.nounCandidate?110:0)+(best.tier==='light'?80:35)+(1-best.weightedRatio)*60).toFixed(3)):0;
+  return {ipa:row.ipa,syllableSpans:[...row.syllableSpans].sort(),usefulOccurrenceCount:row.usefulOccurrenceCount,usefulTargetCount:row.usefulTargetCount,usefulWeightedGain:utility,minAgeBandCandidate:row.minAgeBandCandidate,examples:row.examples,candidateCount:candidates.length,existingAssetCandidateCount:assetCandidates.length,nounCandidateCount:nounCandidates.length,bestCandidate:best,candidates:candidates.slice(0,12),researchPriorityScore:score};
+}).filter(row=>row.bestCandidate).sort((a,b)=>b.researchPriorityScore-a.researchPriorityScore||Number(b.existingAssetCandidateCount>0)-Number(a.existingAssetCandidateCount>0)||b.usefulWeightedGain-a.usefulWeightedGain||b.usefulTargetCount-a.usefulTargetCount||a.ipa.localeCompare(b.ipa));
 
 const stats={
   usefulTargetCount:usefulTargets.length,
   usefulSoundWindowCount:rows.size,
   analyzedSoundWindowCount:prioritizedRows.length,
   approximationCandidateWindowCount:ranked.length,
-  lightCandidateWindowCount:ranked.filter(row=>row.candidates.some(candidate=>candidate.nounCandidate&&candidate.tier==='light')).length,
-  looseOnlyCandidateWindowCount:ranked.filter(row=>row.nounCandidateCount>0&&!row.candidates.some(candidate=>candidate.nounCandidate&&candidate.tier==='light')).length,
-  totalVisualCandidateCount:ranked.reduce((sum,row)=>sum+row.candidateCount,0),
-  totalNounCandidateCount:ranked.reduce((sum,row)=>sum+row.nounCandidateCount,0)
+  existingAssetCandidateWindowCount:ranked.filter(row=>row.existingAssetCandidateCount>0).length,
+  lightExistingAssetWindowCount:ranked.filter(row=>row.candidates.some(candidate=>candidate.existingAsset&&candidate.tier==='light')).length,
+  lexicalNounFallbackWindowCount:ranked.filter(row=>row.existingAssetCandidateCount===0&&row.nounCandidateCount>0).length,
+  totalExistingAssetCandidateCount:ranked.reduce((sum,row)=>sum+row.existingAssetCandidateCount,0),
+  totalLexicalNounCandidateCount:ranked.reduce((sum,row)=>sum+row.nounCandidateCount,0)
 };
-const report={generatedAt:new Date().toISOString(),status:'research_only',scope:'highest_value_useful_sound_windows_with_exact_lexical_visual_triage',policyVersion:policy.version||null,windowLimit:maxAnalyzedWindows,source:{name:lexique.source||'Lexique 4',license:lexique.license||null,entryCount:entries.length},stats,rows:ranked};
+const report={generatedAt:new Date().toISOString(),status:'research_only',scope:'highest_value_useful_sound_windows_existing_assets_first_then_lexical_visual_leads',policyVersion:policy.version||null,windowLimit:maxAnalyzedWindows,source:{name:lexique.source||'Lexique 4',license:lexique.license||null,entryCount:entries.length},stats,rows:ranked};
 fs.mkdirSync(path.dirname(outputPath),{recursive:true});
 fs.writeFileSync(outputPath,JSON.stringify(report,null,2));
 
@@ -118,20 +149,22 @@ const lines=[
   `- Cibles utiles prises en compte : ${stats.usefulTargetCount}.`,
   `- Fenêtres utiles distinctes inventoriées : ${stats.usefulSoundWindowCount}.`,
   `- Fenêtres à plus forte utilité effectivement analysées : ${stats.analyzedSoundWindowCount}.`,
-  `- Fenêtres analysées avec au moins un nom exact approximatif pouvant servir de piste visuelle : ${stats.approximationCandidateWindowCount}.`,
-  `- Fenêtres avec au moins un nom approximatif de niveau petite approximation : ${stats.lightCandidateWindowCount}.`,
-  `- Candidats nominaux conservés dans la recherche : ${stats.totalNounCandidateCount}.`,
+  `- Fenêtres avec au moins une piste approximative visuelle : ${stats.approximationCandidateWindowCount}.`,
+  `- Fenêtres pouvant réutiliser directement un pictogramme existant : ${stats.existingAssetCandidateWindowCount}.`,
+  `- Fenêtres avec un pictogramme existant dans le niveau petite approximation : ${stats.lightExistingAssetWindowCount}.`,
+  `- Fenêtres sans asset proche mais avec un nom Lexique nominal à examiner : ${stats.lexicalNounFallbackWindowCount}.`,
   '',
-  'Le rapport privilégie les noms concrets comme hypothèses d’image. Les formes verbales, déterminants et autres homophones lexicaux restent accessibles dans Lexique mais ne doivent pas dominer la file visuelle simplement parce qu’ils sont fréquents.',
-  'La recherche approximative est volontairement bornée aux fenêtres les plus utiles. Le catalogue phonétique exact reste exhaustif ; cette file est seulement une file éditoriale de pistes à examiner.',
+  'L’ordre est volontaire : **réutiliser un pictogramme déjà présent** avant de proposer un nouveau dessin. Les noms Lexique ne sont que des pistes de secours à curater humainement.',
+  'Une image existante utilisée en approximation conserve son vrai nom et sa vraie prononciation ; elle ne devient jamais une représentation stricte du son cible.',
   '',
   '## Priorités',
   '',
-  '| Rang | Son cible | Candidat visuel | Son réel | Approx. | Modifications | Cibles utiles | Exemples |',
-  '|---:|---|---|---|---:|---|---:|---|',
+  '| Rang | Son cible | Piste | Source | Son réel | Approx. | Modifications | Cibles utiles | Exemples |',
+  '|---:|---|---|---|---|---:|---|---:|---|',
   ...ranked.slice(0,200).map((row,index)=>{
     const c=row.bestCandidate;
-    return `| ${index+1} | /${row.ipa}/ | ${c.word} | /${c.sourceIpa}/ | ${c.editorialApproximationPercent}% | ${c.operations.map(opLabel).join(', ')||'—'} | ${row.usefulTargetCount} | ${row.examples.slice(0,4).join(', ')} |`;
+    const source=c.existingAsset?'pictogramme existant':'nouvelle piste lexicale';
+    return `| ${index+1} | /${row.ipa}/ | ${c.word} | ${source} | /${c.sourceIpa}/ | ${c.editorialApproximationPercent}% | ${c.operations.map(opLabel).join(', ')||'—'} | ${row.usefulTargetCount} | ${row.examples.slice(0,4).join(', ')} |`;
   })
 ];
 fs.mkdirSync(path.dirname(docPath),{recursive:true});

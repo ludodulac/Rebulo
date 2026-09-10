@@ -1,13 +1,9 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.1",
   "status": "prepared_no_human_data",
   "purpose": "Observer ultérieurement quel mot une vraie personne produit spontanément devant un stimulus isolé, sans lui suggérer la cible.",
-  "evidenceState": {
-    "humanParticipantsObserved": 0,
-    "humanNamingEvidence": "none",
-    "clinicalEvidence": "none",
-    "note": "Ce fichier prépare la collecte; il ne contient aucune réponse humaine, simulée ou générée par IA."
-  },
+  "evidenceState": {"humanParticipantsObserved":0,"humanNamingEvidence":"none","clinicalEvidence":"none","note":"Ce fichier prépare la collecte; il ne contient aucune réponse humaine, simulée ou générée par IA."},
+  "presentationOrderRule": "Utiliser un ordre aléatoire ou au minimum varié entre participants; enregistrer l'ordre réellement présenté. L'ordre n'est pas une preuve et aucune réponse n'est préremplie.",
   "procedure": [
     "Présenter un seul stimulus, sans son IPA, sans mot cible et sans liste de réponses.",
     "Demander exactement: Qu’est-ce que tu vois ?",
@@ -27,18 +23,6 @@
     {"stimulusId":"carre-v1","asset":"assets/research/carre-stimulus-v1.svg","ipa":"kaʁe","editorialTarget":"carré","knownEditorialConfusions":["forme","rectangle"],"spontaneousNamingRisk":"unknown","humanNamingEvidence":"none","clinicalEvidence":"none"},
     {"stimulusId":"fou-echecs-v1","asset":"assets/research/fou-echecs-stimulus-v1.svg","ipa":"fu","editorialTarget":"fou","knownEditorialConfusions":["pièce d'échecs","pion","autre pièce"],"spontaneousNamingRisk":"unknown","humanNamingEvidence":"none","clinicalEvidence":"none"}
   ],
-  "collectionFields": [
-    "participant_code",
-    "session_date",
-    "stimulus_id",
-    "presentation_order",
-    "spontaneous_response_literal",
-    "additional_spontaneous_words_literal",
-    "hesitation_or_comment_literal",
-    "prompt_used",
-    "hint_given_after_spontaneous_response",
-    "post_hint_response_literal",
-    "collector_note"
-  ],
+  "collectionFields": ["participant_code","session_date","stimulus_id","presentation_order","spontaneous_response_literal","additional_spontaneous_words_literal","hesitation_or_comment_literal","prompt_used","hint_given_after_spontaneous_response","post_hint_response_literal","collector_note"],
   "participantFacingRule": "editorialTarget, IPA and knownEditorialConfusions are collector metadata and must not be shown before the spontaneous response."
 }

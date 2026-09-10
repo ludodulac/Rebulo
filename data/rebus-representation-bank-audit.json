@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.1",
-  "generatedAt": "2026-09-10T15:09:41.708Z",
+  "generatedAt": "2026-09-10T17:18:24.041Z",
   "status": "product_research_mapping",
   "purpose": "SON/SEGMENT -> mots -> images/conventions/compositions -> qualite phonétique -> état visuel",
   "categoryDefinitions": {
@@ -619878,6 +619878,8 @@
           "data/asset-sources.json",
           "data/pictogram-prototype-comparisons.json",
           "data/rebus-representation-bank-audit.json",
+          "data/rebus-representation-differential-preselection.json",
+          "data/rebus-representation-expansion-queue.json",
           "docs/REBUS_REPRESENTATION_BANK_AUDIT.md",
           "tests/asset-library-inventory.test.mjs"
         ]
@@ -619892,6 +619894,8 @@
           "data/asset-sources.json",
           "data/pictogram-prototype-comparisons.json",
           "data/rebus-representation-bank-audit.json",
+          "data/rebus-representation-differential-preselection.json",
+          "data/rebus-representation-expansion-queue.json",
           "docs/REBUS_REPRESENTATION_BANK_AUDIT.md",
           "tests/asset-library-inventory.test.mjs"
         ]
@@ -619911,6 +619915,7 @@
           "data/rebus-prototype-asset-gap-audit.json",
           "data/rebus-representation-bank-audit.json",
           "data/rebus-representation-comparative-batch.json",
+          "data/rebus-representation-expansion-queue.json",
           "docs/REBUS_REPRESENTATION_BANK_AUDIT.md",
           "docs/REBUS_REPRESENTATION_COMPARATIVE_BATCH.md",
           "tests/asset-library-inventory.test.mjs",

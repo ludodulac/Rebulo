@@ -94,27 +94,69 @@ export function analyzeApproximation(sourceIpa='',targetIpa='',policy={}){
   return {...alignment,...approximationTier(alignment,policy),strictEligible:alignment.editCount===0,clinicalDefaultEligible:alignment.editCount===0};
 }
 
+function unitCounts(units=[]){
+  const counts=new Map();
+  for(const unit of units)counts.set(unit,(counts.get(unit)||0)+1);
+  return counts;
+}
+
+function multisetOverlap(aCounts,bCounts){
+  let common=0;
+  for(const [unit,count] of aCounts)common+=Math.min(count,bCounts.get(unit)||0);
+  return common;
+}
+
+export function boundedUnitEditDistance(source=[],target=[],maxEdits=2){
+  if(Math.abs(source.length-target.length)>maxEdits)return maxEdits+1;
+  let previous=Array.from({length:target.length+1},(_,index)=>index);
+  for(let i=1;i<=source.length;i++){
+    const current=new Array(target.length+1);
+    current[0]=i;
+    let rowMin=current[0];
+    for(let j=1;j<=target.length;j++){
+      current[j]=Math.min(
+        previous[j]+1,
+        current[j-1]+1,
+        previous[j-1]+(source[i-1]===target[j-1]?0:1)
+      );
+      rowMin=Math.min(rowMin,current[j]);
+    }
+    if(rowMin>maxEdits)return maxEdits+1;
+    previous=current;
+  }
+  return previous[target.length];
+}
+
 export function buildApproximateLexicalIndex(exactCandidateIndex=new Map()){
   const byLength=new Map();
   for(const [ipa,candidates] of exactCandidateIndex.entries()){
-    const unitCount=splitIPAUnits(ipa).length;
+    const units=splitIPAUnits(ipa);
+    const unitCount=units.length;
     if(!unitCount)continue;
     if(!byLength.has(unitCount))byLength.set(unitCount,[]);
-    byLength.get(unitCount).push({ipa,candidates});
+    byLength.get(unitCount).push({ipa,units,unitCounts:unitCounts(units),candidates});
   }
   return byLength;
 }
 
 export function findApproximateWholeWordCandidates(targetIpa='',exactCandidateIndex=new Map(),policy={},options={}){
-  const target=normalizeIPA(targetIpa),targetUnits=splitIPAUnits(target).length;
+  const target=normalizeIPA(targetIpa),targetUnitList=splitIPAUnits(target),targetUnits=targetUnitList.length;
   if(!target||!targetUnits)return [];
   const byLength=options.approximateIndex instanceof Map?options.approximateIndex:buildApproximateLexicalIndex(exactCandidateIndex);
   const lengthDelta=Math.max(0,Number.isInteger(options.maxLengthDelta)?options.maxLengthDelta:1);
   const candidateLimit=Math.max(1,Number.isInteger(options.limit)?options.limit:12);
+  const maxPolicyEdits=Math.max(Number(policy?.tiers?.light?.maxEdits)||1,Number(policy?.tiers?.loose?.maxEdits)||2);
+  const targetCounts=unitCounts(targetUnitList);
   const results=[];
   for(let unitCount=Math.max(1,targetUnits-lengthDelta);unitCount<=targetUnits+lengthDelta;unitCount++){
     for(const group of byLength.get(unitCount)||[]){
       if(group.ipa===target)continue;
+      const sourceUnits=Array.isArray(group.units)?group.units:splitIPAUnits(group.ipa);
+      if(Math.abs(sourceUnits.length-targetUnits)>maxPolicyEdits)continue;
+      const sourceCounts=group.unitCounts instanceof Map?group.unitCounts:unitCounts(sourceUnits);
+      const minimumShared=Math.max(0,Math.min(sourceUnits.length,targetUnits)-maxPolicyEdits);
+      if(multisetOverlap(sourceCounts,targetCounts)<minimumShared)continue;
+      if(boundedUnitEditDistance(sourceUnits,targetUnitList,maxPolicyEdits)>maxPolicyEdits)continue;
       const analysis=analyzeApproximation(group.ipa,target,policy);
       if(!analysis.eligible||analysis.tier==='exact')continue;
       for(const candidate of group.candidates||[])results.push({...candidate,sourceIpa:group.ipa,targetIpa:target,approximation:analysis});

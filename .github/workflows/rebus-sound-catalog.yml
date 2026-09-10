@@ -6,9 +6,11 @@ on:
       - '.github/workflows/rebus-sound-catalog.yml'
       - 'scripts/build-rebus-sound-catalog.mjs'
       - 'scripts/apply-rebus-sound-visual-curation.mjs'
+      - 'scripts/analyze-rebus-approximations.mjs'
       - 'scripts/import-lexique.mjs'
       - 'src/rebus-sound-catalog.js'
       - 'src/rebus-sound-visual-curation.js'
+      - 'src/rebus-approximation.js'
       - 'src/syllable-representation-candidates.js'
       - 'src/drawable-opportunities.js'
       - 'src/pictogram-print-sheets.js'
@@ -19,18 +21,22 @@ on:
       - 'data/rebus-visible-conventions.json'
       - 'data/rebus-sound-research-seeds.json'
       - 'data/rebus-sound-visual-curation.json'
+      - 'data/rebus-approximation-policy.json'
       - 'data/phonetic-brick-candidates.json'
       - 'tests/rebus-sound-catalog.test.mjs'
       - 'tests/rebus-sound-visual-curation.test.mjs'
+      - 'tests/rebus-approximation.test.mjs'
       - 'tests/syllable-representation-candidates.test.mjs'
   pull_request:
     paths:
       - '.github/workflows/rebus-sound-catalog.yml'
       - 'scripts/build-rebus-sound-catalog.mjs'
       - 'scripts/apply-rebus-sound-visual-curation.mjs'
+      - 'scripts/analyze-rebus-approximations.mjs'
       - 'scripts/import-lexique.mjs'
       - 'src/rebus-sound-catalog.js'
       - 'src/rebus-sound-visual-curation.js'
+      - 'src/rebus-approximation.js'
       - 'src/syllable-representation-candidates.js'
       - 'src/drawable-opportunities.js'
       - 'src/pictogram-print-sheets.js'
@@ -41,9 +47,11 @@ on:
       - 'data/rebus-visible-conventions.json'
       - 'data/rebus-sound-research-seeds.json'
       - 'data/rebus-sound-visual-curation.json'
+      - 'data/rebus-approximation-policy.json'
       - 'data/phonetic-brick-candidates.json'
       - 'tests/rebus-sound-catalog.test.mjs'
       - 'tests/rebus-sound-visual-curation.test.mjs'
+      - 'tests/rebus-approximation.test.mjs'
       - 'tests/syllable-representation-candidates.test.mjs'
   workflow_dispatch:
 
@@ -65,6 +73,7 @@ jobs:
         run: |
           node tests/rebus-sound-catalog.test.mjs
           node tests/rebus-sound-visual-curation.test.mjs
+          node tests/rebus-approximation.test.mjs
           node tests/syllable-representation-candidates.test.mjs
           node tests/syllable-print-library.test.mjs
           node tests/pictogram-print-sheets.test.mjs
@@ -80,12 +89,15 @@ jobs:
         run: node scripts/build-rebus-sound-catalog.mjs .cache/lexique4.compact.json data/rebus-sound-catalog.json docs/REBUS_SOUND_CATALOG_REPORT.md
       - name: Apply editorial visual curation
         run: node scripts/apply-rebus-sound-visual-curation.mjs data/rebus-sound-catalog.json .cache/lexique4.compact.json data/rebus-sound-visual-curation.json docs/REBUS_SOUND_VISUAL_CURATION_REPORT.md
+      - name: Build approximation research queue
+        run: node scripts/analyze-rebus-approximations.mjs .cache/lexique4.compact.json .cache/rebus-approximation-research.json docs/REBUS_APPROXIMATION_RESEARCH.md data/eduscol-frequency-lexicon.json data/rebus-approximation-policy.json
       - name: Add Lexique provenance and verify useful output
         run: |
           node --input-type=module <<'NODE'
           import fs from 'node:fs';
           const path='data/rebus-sound-catalog.json';
           const report=JSON.parse(fs.readFileSync(path,'utf8'));
+          const approximation=JSON.parse(fs.readFileSync('.cache/rebus-approximation-research.json','utf8'));
           const sha256=fs.readFileSync('.cache/Lexique4.sha256','utf8').trim().split(/\s+/)[0];
           report.provenance={canonicalSource:'https://www.lexique.org/databases/Lexique400/Lexique400.tsv',mirror:'https://github.com/dorfner/pass_the_bomb/blob/master/Lexique400/Lexique4.tsv',sha256,license:'CC BY-SA 4.0'};
           if(report.formatVersion!==2)throw new Error('unexpected sound catalog format');
@@ -99,11 +111,18 @@ jobs:
           if(!report.visualCuration?.validation?.valid)throw new Error('visual curation validation missing');
           if(!(report.visualCuration?.curatedPrototypeQueue?.length>0))throw new Error('curated prototype queue missing');
           if(!(report.visualCuration?.curatedNewImageResearchQueue?.length>0))throw new Error('curated image research queue missing');
+          if(!(approximation.stats?.approximationCandidateWindowCount>0))throw new Error('approximation research queue missing');
+          if(!(approximation.stats?.existingAssetCandidateWindowCount>0))throw new Error('existing pictogram approximation routes missing');
+          if(!(approximation.stats?.lightExistingAssetWindowCount>0))throw new Error('light existing-pictogram approximation routes missing');
+          if(!(approximation.stats?.lexicalNounFallbackWindowCount>0))throw new Error('lexical noun approximation fallbacks missing');
           if(!fs.existsSync('docs/REBUS_SOUND_VISUAL_CURATION_REPORT.md'))throw new Error('visual curation report missing');
+          if(!fs.existsSync('docs/REBUS_APPROXIMATION_RESEARCH.md'))throw new Error('approximation research report missing');
           fs.writeFileSync(path,JSON.stringify(report));
           console.log(JSON.stringify(report.stats,null,2));
           console.log(JSON.stringify(report.visualCuration.stats,null,2));
+          console.log(JSON.stringify(approximation.stats,null,2));
           console.log(`catalog bytes: ${fs.statSync(path).size}`);
+          console.log(`approximation research bytes: ${fs.statSync('.cache/rebus-approximation-research.json').size}`);
           NODE
       - name: Upload catalog research artifact
         uses: actions/upload-artifact@v4
@@ -111,15 +130,17 @@ jobs:
           name: rebus-sound-catalog
           path: |
             data/rebus-sound-catalog.json
+            .cache/rebus-approximation-research.json
             docs/REBUS_SOUND_CATALOG_REPORT.md
             docs/REBUS_SOUND_VISUAL_CURATION_REPORT.md
+            docs/REBUS_APPROXIMATION_RESEARCH.md
           retention-days: 14
       - name: Commit generated catalog on main
         if: github.ref == 'refs/heads/main'
         run: |
           git config user.name 'rebulo-analysis-bot'
           git config user.email 'actions@users.noreply.github.com'
-          git add data/rebus-sound-catalog.json docs/REBUS_SOUND_CATALOG_REPORT.md docs/REBUS_SOUND_VISUAL_CURATION_REPORT.md
+          git add data/rebus-sound-catalog.json docs/REBUS_SOUND_CATALOG_REPORT.md docs/REBUS_SOUND_VISUAL_CURATION_REPORT.md docs/REBUS_APPROXIMATION_RESEARCH.md
           if git diff --cached --quiet; then echo 'No sound catalog changes to commit.'; exit 0; fi
           git commit -m 'Refresh rebus sound catalog'
           git fetch origin main

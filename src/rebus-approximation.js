@@ -106,6 +106,27 @@ function multisetOverlap(aCounts,bCounts){
   return common;
 }
 
+export function boundedUnitEditDistance(source=[],target=[],maxEdits=2){
+  if(Math.abs(source.length-target.length)>maxEdits)return maxEdits+1;
+  let previous=Array.from({length:target.length+1},(_,index)=>index);
+  for(let i=1;i<=source.length;i++){
+    const current=new Array(target.length+1);
+    current[0]=i;
+    let rowMin=current[0];
+    for(let j=1;j<=target.length;j++){
+      current[j]=Math.min(
+        previous[j]+1,
+        current[j-1]+1,
+        previous[j-1]+(source[i-1]===target[j-1]?0:1)
+      );
+      rowMin=Math.min(rowMin,current[j]);
+    }
+    if(rowMin>maxEdits)return maxEdits+1;
+    previous=current;
+  }
+  return previous[target.length];
+}
+
 export function buildApproximateLexicalIndex(exactCandidateIndex=new Map()){
   const byLength=new Map();
   for(const [ipa,candidates] of exactCandidateIndex.entries()){
@@ -135,6 +156,7 @@ export function findApproximateWholeWordCandidates(targetIpa='',exactCandidateIn
       const sourceCounts=group.unitCounts instanceof Map?group.unitCounts:unitCounts(sourceUnits);
       const minimumShared=Math.max(0,Math.min(sourceUnits.length,targetUnits)-maxPolicyEdits);
       if(multisetOverlap(sourceCounts,targetCounts)<minimumShared)continue;
+      if(boundedUnitEditDistance(sourceUnits,targetUnitList,maxPolicyEdits)>maxPolicyEdits)continue;
       const analysis=analyzeApproximation(group.ipa,target,policy);
       if(!analysis.eligible||analysis.tier==='exact')continue;
       for(const candidate of group.candidates||[])results.push({...candidate,sourceIpa:group.ipa,targetIpa:target,approximation:analysis});

@@ -5,7 +5,7 @@
 - Sons utiles du réservoir exact à cartographier : 5487.
 - Prototypes curatés ajoutés comme étalons de calibration : 32.
 - Sons cartographiés dans cette vue : 5519.
-- Sons où la curation explicite fournit déjà une hypothèse visuelle : 132.
+- Sons où la curation explicite fournit déjà une hypothèse visuelle : 150.
 - Fenêtres de deux syllabes conservées comme candidates de première classe : 3814.
 - Sons ayant aussi une convention visible explicite : 34.
 - Sons ayant une approximation légère recensée dans la source disponible : 1245.
@@ -20,6 +20,7 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 
 | Son | Candidat | Potentiel visuel | Risque de dénomination | Cibles utiles | Prochaine étape |
 |---|---|---|---|---:|---|
+| /a/ | a | high | unknown | 424 | review_existing_editorial_decision |
 | /ʁe/ | ré | unknown | unknown | 257 | review_existing_editorial_decision |
 | /ka/ | k | unknown | unknown | 176 | review_existing_editorial_decision |
 | /pe/ | p | unknown | unknown | 119 | review_existing_editorial_decision |
@@ -35,6 +36,7 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | /tik/ | tique | medium_high | high | 56 | prototype_only_if_visual_differentiation_from_spider_is_clear |
 | /ku/ | cou | medium_high | medium | 55 | compare_arrow_and_no_arrow_then_naming_test |
 | /vo/ | veau | high | medium | 47 | prototype_then_naming_test |
+| /fa/ | fa | high | unknown | 46 | review_existing_editorial_decision |
 | /be/ | b | unknown | unknown | 46 | review_existing_editorial_decision |
 | /fe/ | fée | high | medium | 46 | prototype_then_naming_test |
 | /pɔʁ/ | porc | high | medium_high | 43 | prototype_then_naming_variant_test |
@@ -82,6 +84,8 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | /ø/ | oeufs | high | unknown | 9 | new_asset_then_human_naming_test |
 | /plɛ/ | plaie | medium_high | unknown | 9 | new_asset_then_human_naming_test |
 | /sede/ | cd | high | unknown | 9 | prototype_then_human_naming_test |
+| /dø/ | deux | high | unknown | 8 | review_existing_editorial_decision |
+| /sis/ | six | high | unknown | 8 | review_existing_editorial_decision |
 | /tʁɔ̃/ | tronc | high | unknown | 8 | prototype_then_human_naming_test |
 | /sjɑ̃/ | cyan | medium | unknown | 8 | prototype_then_human_naming_test |
 | /lu/ | loup | high | unknown | 8 | prototype_then_human_naming_test |
@@ -115,6 +119,7 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | /wa/ | oie | high | unknown | 5 | new_asset_then_human_naming_test |
 | /təny/ | tenue | medium | unknown | 5 | compare_outfit_display_then_human_naming_test |
 | /maʁe/ | marée | medium | unknown | 5 | compare_high_tide_scene_then_human_naming_test |
+| /tʁwa/ | trois | high | unknown | 4 | review_existing_editorial_decision |
 | /dam/ | dame | medium_high | unknown | 4 | prototype_then_human_naming_test |
 | /papa/ | papa | medium_high | medium | 4 | prototype_then_family_wording_naming_test |
 | /ɑ̃tʁe/ | entrée | high | unknown | 4 | new_asset_then_human_naming_test |
@@ -152,12 +157,25 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | /vale/ | vallée | high | unknown | 3 | new_asset_then_human_naming_test |
 | /akʁo/ | accroc | medium_high | unknown | 3 | prototype_then_human_naming_test |
 | /maʁʃɑ̃/ | marchand | medium_high | unknown | 3 | prototype_then_human_naming_test |
+| /sɛ̃k/ | cinq | high | unknown | 2 | review_existing_editorial_decision |
+| /katʁ/ | quatre | high | unknown | 1 | review_existing_editorial_decision |
+| /nœf/ | neuf | high | unknown | 1 | review_existing_editorial_decision |
+| /kuto/ | couteau | high | unknown | 1 | review_existing_editorial_decision |
+| /ɥit/ | huit | high | unknown | 1 | review_existing_editorial_decision |
+| /œ̃/ | un | high | unknown | 1 | review_existing_editorial_decision |
+| /gato/ | gâteau | high | unknown | 1 | review_existing_editorial_decision |
+| /ɛf/ | f | high | unknown | 1 | review_existing_editorial_decision |
+| /zeʁo/ | zéro | high | unknown | 1 | review_existing_editorial_decision |
+| /dʁapo/ | drapeau | high | unknown | 1 | review_existing_editorial_decision |
+| /ʁido/ | rideau | high | unknown | 1 | review_existing_editorial_decision |
+| /iks/ | x | high | unknown | 1 | review_existing_editorial_decision |
+| /zɛd/ | z | high | unknown | 1 | review_existing_editorial_decision |
 
 ## Priorités informatives du grand réservoir
 
 | Rang | Son | Cibles utiles | Fenêtre | Candidats exacts | Convention | Approx. | État de preuve |
 |---:|---|---:|---|---|---|---|---|
-| 1 | /a/ | 424 | 1 syll. | a [lexical_exact_only], ha [visual_route_rejected] | A | — | visible_convention_available |
+| 1 | /a/ | 424 | 1 syll. | a [visual_hypothesis_curated], ha [visual_route_rejected] | A | — | curated_visual_hypothesis_available |
 | 2 | /mɑ̃/ | 374 | 1 syll. | mens [lexical_exact_only], man [visual_route_rejected], mans [visual_route_rejected] | — | — | exact_lexical_candidates_need_visual_evidence |
 | 3 | /sjɔ̃/ | 365 | 1 syll. | cyon [lexical_exact_only], scions [lexical_exact_only], scion [visual_route_deferred] | — | — | exact_lexical_candidates_need_visual_evidence |
 | 4 | /e/ | 280 | 1 syll. | ais [visual_route_rejected], ai [visual_route_rejected], et [visual_route_rejected] | — | — | difficult_sound |
@@ -190,7 +208,7 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | 31 | /sa/ | 68 | 1 syll. | sas [visual_hypothesis_curated], sa [lexical_exact_only], çà [lexical_exact_only] | — | — | curated_visual_hypothesis_available |
 | 32 | /ʃe/ | 67 | 1 syll. | ché [lexical_exact_only] | — | chai (15%), gé (17.5%) | exact_lexical_candidates_need_visual_evidence |
 | 33 | /lo/ | 67 | 1 syll. | lot [lexical_exact_only], los [lexical_exact_only], laud [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
-| 34 | /sy/ | 65 | 1 syll. | su [lexical_exact_only], sue [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
+| 34 | /sy/ | 65 | 1 syll. | sue [lexical_exact_only], su [visual_route_deferred] | — | — | exact_lexical_candidates_need_visual_evidence |
 | 35 | /bi/ | 65 | 1 syll. | by [lexical_exact_only], bi [lexical_exact_only], bee [lexical_exact_only] | — | pie (17.5%), pis (17.5%) | exact_lexical_candidates_need_visual_evidence |
 | 36 | /ga/ | 64 | 1 syll. | gars [lexical_exact_only], ga [lexical_exact_only], ghât [lexical_exact_only] | — | cas (17.5%), ka (17.5%) | exact_lexical_candidates_need_visual_evidence |
 | 37 | /no/ | 63 | 1 syll. | noe [lexical_exact_only], nos [lexical_exact_only], nô [visual_route_deferred] | — | — | exact_lexical_candidates_need_visual_evidence |
@@ -202,9 +220,9 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | 43 | /paʁ/ | 55 | 1 syll. | par [lexical_exact_only], parr [lexical_exact_only], part [visual_route_deferred] | — | parc (18.8%), bar (11.7%) | exact_lexical_candidates_need_visual_evidence |
 | 44 | /va/ | 55 | 1 syll. | va [lexical_exact_only] | — | fa (17.5%) | exact_lexical_candidates_need_visual_evidence |
 | 45 | /də/ | 54 | 1 syll. | de [lexical_exact_only] | — | dé (20%), deux (20%) | exact_lexical_candidates_need_visual_evidence |
-| 46 | /tyʁ/ | 52 | 1 syll. | tur [lexical_exact_only], turent [lexical_exact_only] | — | dur (11.7%), tuerie (18.8%) | exact_lexical_candidates_need_visual_evidence |
+| 46 | /tyʁ/ | 52 | 1 syll. | turent [lexical_exact_only], tur [visual_route_deferred] | — | dur (11.7%), tuerie (18.8%) | exact_lexical_candidates_need_visual_evidence |
 | 47 | /vɑ̃/ | 48 | 1 syll. | vend [lexical_exact_only], vent [visual_route_deferred] | — | faon (17.5%), fend (17.5%) | exact_lexical_candidates_need_visual_evidence |
-| 48 | /fa/ | 46 | 1 syll. | fa [lexical_exact_only] | fa | — | visible_convention_available |
+| 48 | /fa/ | 46 | 1 syll. | fa [visual_hypothesis_curated] | fa | — | curated_visual_hypothesis_available |
 | 49 | /be/ | 46 | 1 syll. | b [visual_hypothesis_curated], bô [lexical_exact_only], bés [lexical_exact_only] | B | baie (15%), bey (15%) | curated_visual_hypothesis_available |
 | 50 | /su/ | 44 | 1 syll. | sou [lexical_exact_only], saoûl [lexical_exact_only], souls [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
 | 51 | /aʁ/ | 43 | 1 syll. | art [lexical_exact_only], are [lexical_exact_only], hart [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
@@ -314,7 +332,7 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | 30 | /poli/ | 9 | poly | two_syllable_candidate_exists | politique, policier, impoli, politesse |
 | 31 | /deli/ | 9 | délie | two_syllable_candidate_exists | délicieux, délit, délicat, fidélité |
 | 32 | /sede/ | 9 | cd | two_syllable_candidate_exists | céder, posséder, accéder, obsédé |
-| 33 | /paʁti/ | 8 | partie | two_syllable_candidate_exists | partie, parti, participer, particulier |
+| 33 | /paʁti/ | 8 | parti | two_syllable_candidate_exists | partie, parti, participer, particulier |
 | 34 | /sypɛʁ/ | 8 | supère | two_syllable_candidate_exists | super, supermarché, superviseur, superficiel |
 | 35 | /təniʁ/ | 8 | tenir | two_syllable_candidate_exists | tenir, obtenir, retenir, soutenir |
 | 36 | /pʁezɑ̃/ | 8 | présent | two_syllable_candidate_exists | présent, présenter, présentation, représenter |

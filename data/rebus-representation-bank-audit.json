@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.1",
-  "generatedAt": "2026-09-10T10:20:40.742Z",
+  "generatedAt": "2026-09-10T15:09:41.708Z",
   "status": "product_research_mapping",
   "purpose": "SON/SEGMENT -> mots -> images/conventions/compositions -> qualite phonétique -> état visuel",
   "categoryDefinitions": {
@@ -28,25 +28,25 @@
       "soundCount": 66890,
       "A_exactFrenchWord": 28208,
       "B_multipleExactFrenchWords": 6176,
-      "C_exactWordVisualNotReady": 27946,
+      "C_exactWordVisualNotReady": 27929,
       "D_obviousOrReadyPictogram": 252,
       "E_lightApproximation": 1742,
       "F_exactMultiPictogram": 711,
       "G_letter": 25,
       "H_number": 12,
-      "I_noCurrentReasonableRepresentation": 65766
+      "I_noCurrentReasonableRepresentation": 65757
     },
     "useful": {
       "soundCount": 9491,
       "A_exactFrenchWord": 5741,
       "B_multipleExactFrenchWords": 2562,
-      "C_exactWordVisualNotReady": 5504,
+      "C_exactWordVisualNotReady": 5487,
       "D_obviousOrReadyPictogram": 222,
       "E_lightApproximation": 1742,
       "F_exactMultiPictogram": 170,
       "G_letter": 23,
       "H_number": 12,
-      "I_noCurrentReasonableRepresentation": 8940
+      "I_noCurrentReasonableRepresentation": 8931
     },
     "visualEvidence": {
       "imageCount": 222,
@@ -3567,93 +3567,6 @@
         ]
       },
       {
-        "ipa": "tɔ̃",
-        "syllableSpans": [
-          1
-        ],
-        "usefulTargetCount": 29,
-        "usefulWeightedGain": 11332.039,
-        "schoolTargetCount": 3,
-        "researchPriorityScore": 739.808,
-        "visualStatus": "exact_word_unreviewed",
-        "categories": {
-          "A_exactFrenchWord": true,
-          "B_multipleExactFrenchWords": true,
-          "C_exactWordVisualNotReady": true,
-          "D_obviousOrReadyPictogram": false,
-          "E_lightApproximation": true,
-          "F_exactMultiPictogram": false,
-          "G_letter": false,
-          "H_number": false,
-          "I_noCurrentReasonableRepresentation": true
-        },
-        "exactWords": [
-          {
-            "word": "ton",
-            "pos": "NOM",
-            "frequency": 47.342,
-            "syllableCount": 1
-          },
-          {
-            "word": "thon",
-            "pos": "NOM",
-            "frequency": 5.728,
-            "syllableCount": 1
-          },
-          {
-            "word": "tond",
-            "pos": "VER",
-            "frequency": 0.345,
-            "syllableCount": 1
-          }
-        ],
-        "nounWords": [
-          {
-            "word": "ton",
-            "pos": "NOM",
-            "frequency": 47.342,
-            "syllableCount": 1
-          },
-          {
-            "word": "thon",
-            "pos": "NOM",
-            "frequency": 5.728,
-            "syllableCount": 1
-          }
-        ],
-        "exactImages": [],
-        "exactImageCombinations": [],
-        "letters": [],
-        "numbers": [],
-        "musicNotes": [],
-        "lightApproximations": [
-          {
-            "word": "don",
-            "sourceIpa": "dɔ̃",
-            "tier": "light",
-            "percent": 17.5,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "dom",
-            "sourceIpa": "dɔ̃",
-            "tier": "light",
-            "percent": 17.5,
-            "existingAsset": false,
-            "image": null
-          }
-        ],
-        "usefulExamples": [
-          "ton",
-          "tomber",
-          "fiston",
-          "bouton",
-          "retomber",
-          "bâton"
-        ]
-      },
-      {
         "ipa": "sɛ̃",
         "syllableSpans": [
           1
@@ -6317,109 +6230,6 @@
         ]
       },
       {
-        "ipa": "pu",
-        "syllableSpans": [
-          1
-        ],
-        "usefulTargetCount": 23,
-        "usefulWeightedGain": 1945.884,
-        "schoolTargetCount": 4,
-        "researchPriorityScore": 687.107,
-        "visualStatus": "exact_word_unreviewed",
-        "categories": {
-          "A_exactFrenchWord": true,
-          "B_multipleExactFrenchWords": true,
-          "C_exactWordVisualNotReady": true,
-          "D_obviousOrReadyPictogram": false,
-          "E_lightApproximation": true,
-          "F_exactMultiPictogram": false,
-          "G_letter": false,
-          "H_number": false,
-          "I_noCurrentReasonableRepresentation": true
-        },
-        "exactWords": [
-          {
-            "word": "pouls",
-            "pos": "NOM",
-            "frequency": 16.965,
-            "syllableCount": 1
-          },
-          {
-            "word": "pou",
-            "pos": "NOM",
-            "frequency": 1.826,
-            "syllableCount": 1
-          },
-          {
-            "word": "pouh",
-            "pos": "ONO",
-            "frequency": 0.066,
-            "syllableCount": 1
-          }
-        ],
-        "nounWords": [
-          {
-            "word": "pouls",
-            "pos": "NOM",
-            "frequency": 16.965,
-            "syllableCount": 1
-          },
-          {
-            "word": "pou",
-            "pos": "NOM",
-            "frequency": 1.826,
-            "syllableCount": 1
-          }
-        ],
-        "exactImages": [],
-        "exactImageCombinations": [],
-        "letters": [],
-        "numbers": [],
-        "musicNotes": [],
-        "lightApproximations": [
-          {
-            "word": "bout",
-            "sourceIpa": "bu",
-            "tier": "light",
-            "percent": 17.5,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "boue",
-            "sourceIpa": "bu",
-            "tier": "light",
-            "percent": 17.5,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "bou",
-            "sourceIpa": "bu",
-            "tier": "light",
-            "percent": 17.5,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "bouent",
-            "sourceIpa": "bu",
-            "tier": "light",
-            "percent": 17.5,
-            "existingAsset": false,
-            "image": null
-          }
-        ],
-        "usefulExamples": [
-          "pouvoir",
-          "épouser",
-          "poulet",
-          "pousser",
-          "poupée",
-          "poussière"
-        ]
-      },
-      {
         "ipa": "fɛ",
         "syllableSpans": [
           1
@@ -8011,105 +7821,6 @@
         ]
       },
       {
-        "ipa": "tabl",
-        "syllableSpans": [
-          1
-        ],
-        "usefulTargetCount": 24,
-        "usefulWeightedGain": 1090.644,
-        "schoolTargetCount": 2,
-        "researchPriorityScore": 656.421,
-        "visualStatus": "exact_word_unreviewed",
-        "categories": {
-          "A_exactFrenchWord": true,
-          "B_multipleExactFrenchWords": true,
-          "C_exactWordVisualNotReady": true,
-          "D_obviousOrReadyPictogram": false,
-          "E_lightApproximation": true,
-          "F_exactMultiPictogram": false,
-          "G_letter": false,
-          "H_number": false,
-          "I_noCurrentReasonableRepresentation": true
-        },
-        "exactWords": [
-          {
-            "word": "table",
-            "pos": "NOM",
-            "frequency": 93.728,
-            "syllableCount": 1
-          },
-          {
-            "word": "table",
-            "pos": "VER",
-            "frequency": 0.494,
-            "syllableCount": 1
-          }
-        ],
-        "nounWords": [
-          {
-            "word": "table",
-            "pos": "NOM",
-            "frequency": 93.728,
-            "syllableCount": 1
-          }
-        ],
-        "exactImages": [],
-        "exactImageCombinations": [],
-        "letters": [],
-        "numbers": [],
-        "musicNotes": [],
-        "lightApproximations": [
-          {
-            "word": "tableau",
-            "sourceIpa": "tablo",
-            "tier": "light",
-            "percent": 15,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "étable",
-            "sourceIpa": "etabl",
-            "tier": "light",
-            "percent": 15,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "tablée",
-            "sourceIpa": "table",
-            "tier": "light",
-            "percent": 15,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "tabla",
-            "sourceIpa": "tabla",
-            "tier": "light",
-            "percent": 15,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "able",
-            "sourceIpa": "abl",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          }
-        ],
-        "usefulExamples": [
-          "table",
-          "portable",
-          "véritable",
-          "confortable",
-          "inévitable",
-          "instable"
-        ]
-      },
-      {
         "ipa": "vɛ",
         "syllableSpans": [
           1
@@ -9275,7 +8986,7 @@
         "usefulWeightedGain": 682.604,
         "schoolTargetCount": 4,
         "researchPriorityScore": 637.731,
-        "visualStatus": "exact_word_unreviewed",
+        "visualStatus": "reviewed_bad_or_deferred",
         "categories": {
           "A_exactFrenchWord": true,
           "B_multipleExactFrenchWords": false,
@@ -9544,268 +9255,6 @@
           "goûter",
           "dégoûtant",
           "ragoût"
-        ]
-      },
-      {
-        "ipa": "ʒy",
-        "syllableSpans": [
-          1
-        ],
-        "usefulTargetCount": 19,
-        "usefulWeightedGain": 515.297,
-        "schoolTargetCount": 1,
-        "researchPriorityScore": 629.169,
-        "visualStatus": "exact_word_unreviewed",
-        "categories": {
-          "A_exactFrenchWord": true,
-          "B_multipleExactFrenchWords": false,
-          "C_exactWordVisualNotReady": true,
-          "D_obviousOrReadyPictogram": false,
-          "E_lightApproximation": false,
-          "F_exactMultiPictogram": false,
-          "G_letter": false,
-          "H_number": false,
-          "I_noCurrentReasonableRepresentation": true
-        },
-        "exactWords": [
-          {
-            "word": "jus",
-            "pos": "NOM",
-            "frequency": 25.041,
-            "syllableCount": 1
-          }
-        ],
-        "nounWords": [
-          {
-            "word": "jus",
-            "pos": "NOM",
-            "frequency": 25.041,
-            "syllableCount": 1
-          }
-        ],
-        "exactImages": [],
-        "exactImageCombinations": [],
-        "letters": [],
-        "numbers": [],
-        "musicNotes": [],
-        "lightApproximations": [],
-        "usefulExamples": [
-          "jury",
-          "jus",
-          "jugement",
-          "juger",
-          "judiciaire",
-          "juridique"
-        ]
-      },
-      {
-        "ipa": "mal",
-        "syllableSpans": [
-          1
-        ],
-        "usefulTargetCount": 11,
-        "usefulWeightedGain": 2914.64,
-        "schoolTargetCount": 2,
-        "researchPriorityScore": 628.834,
-        "visualStatus": "exact_word_unreviewed",
-        "categories": {
-          "A_exactFrenchWord": true,
-          "B_multipleExactFrenchWords": true,
-          "C_exactWordVisualNotReady": true,
-          "D_obviousOrReadyPictogram": false,
-          "E_lightApproximation": true,
-          "F_exactMultiPictogram": false,
-          "G_letter": false,
-          "H_number": false,
-          "I_noCurrentReasonableRepresentation": true
-        },
-        "exactWords": [
-          {
-            "word": "mal",
-            "pos": "NOM",
-            "frequency": 274.288,
-            "syllableCount": 1
-          },
-          {
-            "word": "mâle",
-            "pos": "NOM",
-            "frequency": 5.706,
-            "syllableCount": 1
-          },
-          {
-            "word": "malle",
-            "pos": "NOM",
-            "frequency": 4.253,
-            "syllableCount": 1
-          }
-        ],
-        "nounWords": [
-          {
-            "word": "mal",
-            "pos": "NOM",
-            "frequency": 274.288,
-            "syllableCount": 1
-          },
-          {
-            "word": "mâle",
-            "pos": "NOM",
-            "frequency": 5.706,
-            "syllableCount": 1
-          },
-          {
-            "word": "malle",
-            "pos": "NOM",
-            "frequency": 4.253,
-            "syllableCount": 1
-          }
-        ],
-        "exactImages": [],
-        "exactImageCombinations": [],
-        "letters": [],
-        "numbers": [],
-        "musicNotes": [],
-        "lightApproximations": [
-          {
-            "word": "malin",
-            "sourceIpa": "malɛ̃",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "malt",
-            "sourceIpa": "malt",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "small",
-            "sourceIpa": "smal",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "malais",
-            "sourceIpa": "malɛ",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "malm",
-            "sourceIpa": "malm",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          }
-        ],
-        "usefulExamples": [
-          "mal",
-          "normal",
-          "animal",
-          "mâle",
-          "normale",
-          "malchance"
-        ]
-      },
-      {
-        "ipa": "sɛp",
-        "syllableSpans": [
-          1
-        ],
-        "usefulTargetCount": 16,
-        "usefulWeightedGain": 527.06,
-        "schoolTargetCount": 1,
-        "researchPriorityScore": 628.722,
-        "visualStatus": "exact_word_unreviewed",
-        "categories": {
-          "A_exactFrenchWord": true,
-          "B_multipleExactFrenchWords": true,
-          "C_exactWordVisualNotReady": true,
-          "D_obviousOrReadyPictogram": false,
-          "E_lightApproximation": true,
-          "F_exactMultiPictogram": false,
-          "G_letter": false,
-          "H_number": false,
-          "I_noCurrentReasonableRepresentation": true
-        },
-        "exactWords": [
-          {
-            "word": "cèpe",
-            "pos": "NOM",
-            "frequency": 0.054,
-            "syllableCount": 1
-          },
-          {
-            "word": "cep",
-            "pos": "NOM",
-            "frequency": 0.051,
-            "syllableCount": 1
-          },
-          {
-            "word": "sep",
-            "pos": "NOM",
-            "frequency": 0.047,
-            "syllableCount": 1
-          }
-        ],
-        "nounWords": [
-          {
-            "word": "cèpe",
-            "pos": "NOM",
-            "frequency": 0.054,
-            "syllableCount": 1
-          },
-          {
-            "word": "cep",
-            "pos": "NOM",
-            "frequency": 0.051,
-            "syllableCount": 1
-          },
-          {
-            "word": "sep",
-            "pos": "NOM",
-            "frequency": 0.047,
-            "syllableCount": 1
-          }
-        ],
-        "exactImages": [],
-        "exactImageCombinations": [],
-        "letters": [],
-        "numbers": [],
-        "musicNotes": [],
-        "lightApproximations": [
-          {
-            "word": "septs",
-            "sourceIpa": "sɛpt",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "seps",
-            "sourceIpa": "sɛps",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          }
-        ],
-        "usefulExamples": [
-          "accepter",
-          "réception",
-          "septembre",
-          "exception",
-          "exceptionnel",
-          "déception"
         ]
       },
       {
@@ -10634,105 +10083,6 @@
           "barman",
           "débarquer",
           "embarquer"
-        ]
-      },
-      {
-        "ipa": "tʁu",
-        "syllableSpans": [
-          1
-        ],
-        "usefulTargetCount": 12,
-        "usefulWeightedGain": 3452.131,
-        "schoolTargetCount": 4,
-        "researchPriorityScore": 623.406,
-        "visualStatus": "exact_word_unreviewed",
-        "categories": {
-          "A_exactFrenchWord": true,
-          "B_multipleExactFrenchWords": true,
-          "C_exactWordVisualNotReady": true,
-          "D_obviousOrReadyPictogram": false,
-          "E_lightApproximation": true,
-          "F_exactMultiPictogram": false,
-          "G_letter": false,
-          "H_number": false,
-          "I_noCurrentReasonableRepresentation": true
-        },
-        "exactWords": [
-          {
-            "word": "trou",
-            "pos": "NOM",
-            "frequency": 69.766,
-            "syllableCount": 1
-          },
-          {
-            "word": "troue",
-            "pos": "VER",
-            "frequency": 0.804,
-            "syllableCount": 1
-          }
-        ],
-        "nounWords": [
-          {
-            "word": "trou",
-            "pos": "NOM",
-            "frequency": 69.766,
-            "syllableCount": 1
-          }
-        ],
-        "exactImages": [],
-        "exactImageCombinations": [],
-        "letters": [],
-        "numbers": [],
-        "musicNotes": [],
-        "lightApproximations": [
-          {
-            "word": "trouille",
-            "sourceIpa": "tʁuj",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "troupe",
-            "sourceIpa": "tʁup",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "trousse",
-            "sourceIpa": "tʁus",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "trouée",
-            "sourceIpa": "tʁue",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "trouve",
-            "sourceIpa": "tʁuv",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          }
-        ],
-        "usefulExamples": [
-          "trouver",
-          "trou",
-          "retrouver",
-          "troubler",
-          "troupeau",
-          "trouvé"
         ]
       },
       {
@@ -12836,99 +12186,6 @@
         ]
       },
       {
-        "ipa": "bʁa",
-        "syllableSpans": [
-          1
-        ],
-        "usefulTargetCount": 12,
-        "usefulWeightedGain": 1107.934,
-        "schoolTargetCount": 2,
-        "researchPriorityScore": 604.982,
-        "visualStatus": "exact_word_unreviewed",
-        "categories": {
-          "A_exactFrenchWord": true,
-          "B_multipleExactFrenchWords": false,
-          "C_exactWordVisualNotReady": true,
-          "D_obviousOrReadyPictogram": false,
-          "E_lightApproximation": true,
-          "F_exactMultiPictogram": false,
-          "G_letter": false,
-          "H_number": false,
-          "I_noCurrentReasonableRepresentation": true
-        },
-        "exactWords": [
-          {
-            "word": "bras",
-            "pos": "NOM",
-            "frequency": 123.984,
-            "syllableCount": 1
-          }
-        ],
-        "nounWords": [
-          {
-            "word": "bras",
-            "pos": "NOM",
-            "frequency": 123.984,
-            "syllableCount": 1
-          }
-        ],
-        "exactImages": [],
-        "exactImageCombinations": [],
-        "letters": [],
-        "numbers": [],
-        "musicNotes": [],
-        "lightApproximations": [
-          {
-            "word": "bran",
-            "sourceIpa": "bʁɑ̃",
-            "tier": "light",
-            "percent": 16.7,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "brand",
-            "sourceIpa": "bʁɑ̃",
-            "tier": "light",
-            "percent": 16.7,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "brave",
-            "sourceIpa": "bʁav",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "braille",
-            "sourceIpa": "bʁaj",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "brame",
-            "sourceIpa": "bʁam",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          }
-        ],
-        "usefulExamples": [
-          "bras",
-          "embrasser",
-          "bravo",
-          "bracelet",
-          "braquage",
-          "braquer"
-        ]
-      },
-      {
         "ipa": "by",
         "syllableSpans": [
           1
@@ -14156,99 +13413,6 @@
           "fixer",
           "fiction",
           "maléfique"
-        ]
-      },
-      {
-        "ipa": "ble",
-        "syllableSpans": [
-          1
-        ],
-        "usefulTargetCount": 13,
-        "usefulWeightedGain": 499.008,
-        "schoolTargetCount": 4,
-        "researchPriorityScore": 598.007,
-        "visualStatus": "exact_word_unreviewed",
-        "categories": {
-          "A_exactFrenchWord": true,
-          "B_multipleExactFrenchWords": false,
-          "C_exactWordVisualNotReady": true,
-          "D_obviousOrReadyPictogram": false,
-          "E_lightApproximation": true,
-          "F_exactMultiPictogram": false,
-          "G_letter": false,
-          "H_number": false,
-          "I_noCurrentReasonableRepresentation": true
-        },
-        "exactWords": [
-          {
-            "word": "blé",
-            "pos": "NOM",
-            "frequency": 11.563,
-            "syllableCount": 1
-          }
-        ],
-        "nounWords": [
-          {
-            "word": "blé",
-            "pos": "NOM",
-            "frequency": 11.563,
-            "syllableCount": 1
-          }
-        ],
-        "exactImages": [],
-        "exactImageCombinations": [],
-        "letters": [],
-        "numbers": [],
-        "musicNotes": [],
-        "lightApproximations": [
-          {
-            "word": "emblé",
-            "sourceIpa": "ɑ̃ble",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "emblée",
-            "sourceIpa": "ɑ̃ble",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "emblez",
-            "sourceIpa": "ɑ̃ble",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "blet",
-            "sourceIpa": "blɛ",
-            "tier": "light",
-            "percent": 10,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "ambler",
-            "sourceIpa": "ɑ̃ble",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          }
-        ],
-        "usefulExamples": [
-          "blesser",
-          "blessure",
-          "ressembler",
-          "sembler",
-          "trembler",
-          "troubler"
         ]
       },
       {
@@ -44404,6 +43568,807 @@
           "insignifiant",
           "inciter"
         ]
+      },
+      {
+        "ipa": "təniʁ",
+        "syllableSpans": [
+          2
+        ],
+        "usefulTargetCount": 8,
+        "usefulWeightedGain": 1012.236,
+        "schoolTargetCount": 8,
+        "researchPriorityScore": 484.057,
+        "visualStatus": "exact_word_unreviewed",
+        "categories": {
+          "A_exactFrenchWord": true,
+          "B_multipleExactFrenchWords": false,
+          "C_exactWordVisualNotReady": true,
+          "D_obviousOrReadyPictogram": false,
+          "E_lightApproximation": true,
+          "F_exactMultiPictogram": false,
+          "G_letter": false,
+          "H_number": false,
+          "I_noCurrentReasonableRepresentation": true
+        },
+        "exactWords": [
+          {
+            "word": "tenir",
+            "pos": "VER",
+            "frequency": 86.535,
+            "syllableCount": 2
+          }
+        ],
+        "nounWords": [],
+        "exactImages": [],
+        "exactImageCombinations": [],
+        "letters": [],
+        "numbers": [],
+        "musicNotes": [],
+        "lightApproximations": [
+          {
+            "word": "teneur",
+            "sourceIpa": "tənœʁ",
+            "tier": "light",
+            "percent": 13,
+            "existingAsset": false,
+            "image": null
+          }
+        ],
+        "usefulExamples": [
+          "tenir",
+          "obtenir",
+          "retenir",
+          "soutenir",
+          "maintenir",
+          "entretenir"
+        ]
+      },
+      {
+        "ipa": "plas",
+        "syllableSpans": [
+          1
+        ],
+        "usefulTargetCount": 3,
+        "usefulWeightedGain": 1597.079,
+        "schoolTargetCount": 1,
+        "researchPriorityScore": 483.606,
+        "visualStatus": "exact_word_unreviewed",
+        "categories": {
+          "A_exactFrenchWord": true,
+          "B_multipleExactFrenchWords": true,
+          "C_exactWordVisualNotReady": true,
+          "D_obviousOrReadyPictogram": false,
+          "E_lightApproximation": true,
+          "F_exactMultiPictogram": false,
+          "G_letter": false,
+          "H_number": false,
+          "I_noCurrentReasonableRepresentation": true
+        },
+        "exactWords": [
+          {
+            "word": "place",
+            "pos": "NOM",
+            "frequency": 258.778,
+            "syllableCount": 1
+          },
+          {
+            "word": "place",
+            "pos": "VER",
+            "frequency": 11.076,
+            "syllableCount": 1
+          }
+        ],
+        "nounWords": [
+          {
+            "word": "place",
+            "pos": "NOM",
+            "frequency": 258.778,
+            "syllableCount": 1
+          }
+        ],
+        "exactImages": [],
+        "exactImageCombinations": [],
+        "letters": [],
+        "numbers": [],
+        "musicNotes": [],
+        "lightApproximations": [
+          {
+            "word": "placet",
+            "sourceIpa": "plasɛ",
+            "tier": "light",
+            "percent": 15,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "plaste",
+            "sourceIpa": "plast",
+            "tier": "light",
+            "percent": 15,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "emplace",
+            "sourceIpa": "ɑ̃plas",
+            "tier": "light",
+            "percent": 15,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "plasme",
+            "sourceIpa": "plasm",
+            "tier": "light",
+            "percent": 15,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "plus",
+            "sourceIpa": "plys",
+            "tier": "light",
+            "percent": 16.3,
+            "existingAsset": false,
+            "image": null
+          }
+        ],
+        "usefulExamples": [
+          "place",
+          "plastique",
+          "plasma"
+        ]
+      },
+      {
+        "ipa": "nɛsɑ̃s",
+        "syllableSpans": [
+          2
+        ],
+        "usefulTargetCount": 4,
+        "usefulWeightedGain": 338.814,
+        "schoolTargetCount": 1,
+        "researchPriorityScore": 483.507,
+        "visualStatus": "exact_word_unreviewed",
+        "categories": {
+          "A_exactFrenchWord": true,
+          "B_multipleExactFrenchWords": false,
+          "C_exactWordVisualNotReady": true,
+          "D_obviousOrReadyPictogram": false,
+          "E_lightApproximation": true,
+          "F_exactMultiPictogram": false,
+          "G_letter": false,
+          "H_number": false,
+          "I_noCurrentReasonableRepresentation": true
+        },
+        "exactWords": [
+          {
+            "word": "naissance",
+            "pos": "NOM",
+            "frequency": 35.991,
+            "syllableCount": 2
+          }
+        ],
+        "nounWords": [
+          {
+            "word": "naissance",
+            "pos": "NOM",
+            "frequency": 35.991,
+            "syllableCount": 2
+          }
+        ],
+        "exactImages": [],
+        "exactImageCombinations": [],
+        "letters": [],
+        "numbers": [],
+        "musicNotes": [],
+        "lightApproximations": [
+          {
+            "word": "non-sens",
+            "sourceIpa": "nɔ̃sɑ̃s",
+            "tier": "light",
+            "percent": 13,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "nonsense",
+            "sourceIpa": "nɔ̃sɑ̃s",
+            "tier": "light",
+            "percent": 13,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "naissant",
+            "sourceIpa": "nɛsɑ̃",
+            "tier": "light",
+            "percent": 15,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "naissante",
+            "sourceIpa": "nɛsɑ̃t",
+            "tier": "light",
+            "percent": 18,
+            "existingAsset": false,
+            "image": null
+          }
+        ],
+        "usefulExamples": [
+          "naissance",
+          "connaissance",
+          "reconnaissance",
+          "renaissance"
+        ]
+      },
+      {
+        "ipa": "ʁɔl",
+        "syllableSpans": [
+          1
+        ],
+        "usefulTargetCount": 5,
+        "usefulWeightedGain": 309.34,
+        "schoolTargetCount": 1,
+        "researchPriorityScore": 483.298,
+        "visualStatus": "exact_word_unreviewed",
+        "categories": {
+          "A_exactFrenchWord": true,
+          "B_multipleExactFrenchWords": true,
+          "C_exactWordVisualNotReady": true,
+          "D_obviousOrReadyPictogram": false,
+          "E_lightApproximation": true,
+          "F_exactMultiPictogram": false,
+          "G_letter": false,
+          "H_number": false,
+          "I_noCurrentReasonableRepresentation": true
+        },
+        "exactWords": [
+          {
+            "word": "roll",
+            "pos": "NOM",
+            "frequency": 5.877,
+            "syllableCount": 1
+          },
+          {
+            "word": "rolle",
+            "pos": "NOM",
+            "frequency": 0.057,
+            "syllableCount": 1
+          }
+        ],
+        "nounWords": [
+          {
+            "word": "roll",
+            "pos": "NOM",
+            "frequency": 5.877,
+            "syllableCount": 1
+          },
+          {
+            "word": "rolle",
+            "pos": "NOM",
+            "frequency": 0.057,
+            "syllableCount": 1
+          }
+        ],
+        "exactImages": [],
+        "exactImageCombinations": [],
+        "letters": [],
+        "numbers": [],
+        "musicNotes": [],
+        "lightApproximations": [
+          {
+            "word": "rôle",
+            "sourceIpa": "ʁol",
+            "tier": "light",
+            "percent": 10,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "troll",
+            "sourceIpa": "tʁɔl",
+            "tier": "light",
+            "percent": 18.8,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "grolle",
+            "sourceIpa": "gʁɔl",
+            "tier": "light",
+            "percent": 18.8,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "trolle",
+            "sourceIpa": "tʁɔl",
+            "tier": "light",
+            "percent": 18.8,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "grole",
+            "sourceIpa": "gʁɔl",
+            "tier": "light",
+            "percent": 18.8,
+            "existingAsset": false,
+            "image": null
+          }
+        ],
+        "usefulExamples": [
+          "parole",
+          "roll",
+          "porte-parole",
+          "casserole",
+          "cholestérol"
+        ]
+      },
+      {
+        "ipa": "kɛs",
+        "syllableSpans": [
+          1
+        ],
+        "usefulTargetCount": 3,
+        "usefulWeightedGain": 1925.258,
+        "schoolTargetCount": 1,
+        "researchPriorityScore": 482.974,
+        "visualStatus": "exact_word_unreviewed",
+        "categories": {
+          "A_exactFrenchWord": true,
+          "B_multipleExactFrenchWords": false,
+          "C_exactWordVisualNotReady": true,
+          "D_obviousOrReadyPictogram": false,
+          "E_lightApproximation": true,
+          "F_exactMultiPictogram": false,
+          "G_letter": false,
+          "H_number": false,
+          "I_noCurrentReasonableRepresentation": true
+        },
+        "exactWords": [
+          {
+            "word": "caisse",
+            "pos": "NOM",
+            "frequency": 25.282,
+            "syllableCount": 1
+          }
+        ],
+        "nounWords": [
+          {
+            "word": "caisse",
+            "pos": "NOM",
+            "frequency": 25.282,
+            "syllableCount": 1
+          }
+        ],
+        "exactImages": [],
+        "exactImageCombinations": [],
+        "letters": [],
+        "numbers": [],
+        "musicNotes": [],
+        "lightApproximations": [
+          {
+            "word": "caisson",
+            "sourceIpa": "kɛsɔ̃",
+            "tier": "light",
+            "percent": 18.8,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "encaisse",
+            "sourceIpa": "ɑ̃kɛs",
+            "tier": "light",
+            "percent": 18.8,
+            "existingAsset": false,
+            "image": null
+          }
+        ],
+        "usefulExamples": [
+          "question",
+          "caisse",
+          "questionner"
+        ]
+      },
+      {
+        "ipa": "asɑ̃",
+        "syllableSpans": [
+          2
+        ],
+        "usefulTargetCount": 4,
+        "usefulWeightedGain": 123.463,
+        "schoolTargetCount": 0,
+        "researchPriorityScore": 482.974,
+        "visualStatus": "exact_word_unreviewed",
+        "categories": {
+          "A_exactFrenchWord": true,
+          "B_multipleExactFrenchWords": false,
+          "C_exactWordVisualNotReady": true,
+          "D_obviousOrReadyPictogram": false,
+          "E_lightApproximation": true,
+          "F_exactMultiPictogram": false,
+          "G_letter": false,
+          "H_number": false,
+          "I_noCurrentReasonableRepresentation": true
+        },
+        "exactWords": [
+          {
+            "word": "assent",
+            "pos": "NOM",
+            "frequency": 0.016,
+            "syllableCount": 2
+          }
+        ],
+        "nounWords": [
+          {
+            "word": "assent",
+            "pos": "NOM",
+            "frequency": 0.016,
+            "syllableCount": 2
+          }
+        ],
+        "exactImages": [],
+        "exactImageCombinations": [],
+        "letters": [],
+        "numbers": [],
+        "musicNotes": [],
+        "lightApproximations": [
+          {
+            "word": "hazan",
+            "sourceIpa": "azɑ̃",
+            "tier": "light",
+            "percent": 11.7,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "encens",
+            "sourceIpa": "ɑ̃sɑ̃",
+            "tier": "light",
+            "percent": 16.7,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "assa",
+            "sourceIpa": "asa",
+            "tier": "light",
+            "percent": 16.7,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "passant",
+            "sourceIpa": "pasɑ̃",
+            "tier": "light",
+            "percent": 18.8,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "chassant",
+            "sourceIpa": "ʃasɑ̃",
+            "tier": "light",
+            "percent": 18.8,
+            "existingAsset": false,
+            "image": null
+          }
+        ],
+        "usefulExamples": [
+          "ascenseur",
+          "assemblée",
+          "ascension",
+          "assembler"
+        ]
+      },
+      {
+        "ipa": "depaʁ",
+        "syllableSpans": [
+          2
+        ],
+        "usefulTargetCount": 3,
+        "usefulWeightedGain": 421.571,
+        "schoolTargetCount": 2,
+        "researchPriorityScore": 482.74,
+        "visualStatus": "exact_word_unreviewed",
+        "categories": {
+          "A_exactFrenchWord": true,
+          "B_multipleExactFrenchWords": true,
+          "C_exactWordVisualNotReady": true,
+          "D_obviousOrReadyPictogram": false,
+          "E_lightApproximation": true,
+          "F_exactMultiPictogram": false,
+          "G_letter": false,
+          "H_number": false,
+          "I_noCurrentReasonableRepresentation": true
+        },
+        "exactWords": [
+          {
+            "word": "départ",
+            "pos": "NOM",
+            "frequency": 62.411,
+            "syllableCount": 2
+          },
+          {
+            "word": "départ",
+            "pos": "VER",
+            "frequency": 0.547,
+            "syllableCount": 2
+          },
+          {
+            "word": "dépare",
+            "pos": "VER",
+            "frequency": 0.006,
+            "syllableCount": 2
+          }
+        ],
+        "nounWords": [
+          {
+            "word": "départ",
+            "pos": "NOM",
+            "frequency": 62.411,
+            "syllableCount": 2
+          }
+        ],
+        "exactImages": [],
+        "exactImageCombinations": [],
+        "letters": [],
+        "numbers": [],
+        "musicNotes": [],
+        "lightApproximations": [
+          {
+            "word": "déport",
+            "sourceIpa": "depɔʁ",
+            "tier": "light",
+            "percent": 13,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "épare",
+            "sourceIpa": "epaʁ",
+            "tier": "light",
+            "percent": 15,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "épars",
+            "sourceIpa": "epaʁ",
+            "tier": "light",
+            "percent": 15,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "épart",
+            "sourceIpa": "epaʁ",
+            "tier": "light",
+            "percent": 15,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "guépard",
+            "sourceIpa": "gepaʁ",
+            "tier": "light",
+            "percent": 18,
+            "existingAsset": false,
+            "image": null
+          }
+        ],
+        "usefulExamples": [
+          "départ",
+          "département"
+        ]
+      },
+      {
+        "ipa": "tas",
+        "syllableSpans": [
+          1
+        ],
+        "usefulTargetCount": 5,
+        "usefulWeightedGain": 238.815,
+        "schoolTargetCount": 0,
+        "researchPriorityScore": 482.296,
+        "visualStatus": "exact_word_unreviewed",
+        "categories": {
+          "A_exactFrenchWord": true,
+          "B_multipleExactFrenchWords": true,
+          "C_exactWordVisualNotReady": true,
+          "D_obviousOrReadyPictogram": false,
+          "E_lightApproximation": true,
+          "F_exactMultiPictogram": false,
+          "G_letter": false,
+          "H_number": false,
+          "I_noCurrentReasonableRepresentation": true
+        },
+        "exactWords": [
+          {
+            "word": "tasse",
+            "pos": "NOM",
+            "frequency": 20.19,
+            "syllableCount": 1
+          },
+          {
+            "word": "tasse",
+            "pos": "VER",
+            "frequency": 0.813,
+            "syllableCount": 1
+          }
+        ],
+        "nounWords": [
+          {
+            "word": "tasse",
+            "pos": "NOM",
+            "frequency": 20.19,
+            "syllableCount": 1
+          }
+        ],
+        "exactImages": [],
+        "exactImageCombinations": [],
+        "letters": [],
+        "numbers": [],
+        "musicNotes": [],
+        "lightApproximations": [
+          {
+            "word": "tase",
+            "sourceIpa": "taz",
+            "tier": "light",
+            "percent": 11.7,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "dace",
+            "sourceIpa": "das",
+            "tier": "light",
+            "percent": 11.7,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "taz",
+            "sourceIpa": "taz",
+            "tier": "light",
+            "percent": 11.7,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "tases",
+            "sourceIpa": "taz",
+            "tier": "light",
+            "percent": 11.7,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "taze",
+            "sourceIpa": "taz",
+            "tier": "light",
+            "percent": 11.7,
+            "existingAsset": false,
+            "image": null
+          }
+        ],
+        "usefulExamples": [
+          "fantastique",
+          "tasse",
+          "catastrophe",
+          "pétasse",
+          "catastrophique"
+        ]
+      },
+      {
+        "ipa": "ɑ̃vwa",
+        "syllableSpans": [
+          2
+        ],
+        "usefulTargetCount": 3,
+        "usefulWeightedGain": 455.864,
+        "schoolTargetCount": 1,
+        "researchPriorityScore": 482.185,
+        "visualStatus": "exact_word_unreviewed",
+        "categories": {
+          "A_exactFrenchWord": true,
+          "B_multipleExactFrenchWords": true,
+          "C_exactWordVisualNotReady": true,
+          "D_obviousOrReadyPictogram": false,
+          "E_lightApproximation": true,
+          "F_exactMultiPictogram": false,
+          "G_letter": false,
+          "H_number": false,
+          "I_noCurrentReasonableRepresentation": true
+        },
+        "exactWords": [
+          {
+            "word": "envoi",
+            "pos": "NOM",
+            "frequency": 4.864,
+            "syllableCount": 2
+          },
+          {
+            "word": "envoye",
+            "pos": "NOM",
+            "frequency": 1.168,
+            "syllableCount": 2
+          },
+          {
+            "word": "envoie",
+            "pos": "VER",
+            "frequency": 84.234,
+            "syllableCount": 2
+          }
+        ],
+        "nounWords": [
+          {
+            "word": "envoi",
+            "pos": "NOM",
+            "frequency": 4.864,
+            "syllableCount": 2
+          },
+          {
+            "word": "envoye",
+            "pos": "NOM",
+            "frequency": 1.168,
+            "syllableCount": 2
+          }
+        ],
+        "exactImages": [],
+        "exactImageCombinations": [],
+        "letters": [],
+        "numbers": [],
+        "musicNotes": [],
+        "lightApproximations": [
+          {
+            "word": "renvoi",
+            "sourceIpa": "ʁɑ̃vwa",
+            "tier": "light",
+            "percent": 15,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "voix",
+            "sourceIpa": "vwa",
+            "tier": "light",
+            "percent": 18.8,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "voie",
+            "sourceIpa": "vwa",
+            "tier": "light",
+            "percent": 18.8,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "void",
+            "sourceIpa": "vwa",
+            "tier": "light",
+            "percent": 18.8,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "avoua",
+            "sourceIpa": "avwa",
+            "tier": "light",
+            "percent": 12.5,
+            "existingAsset": false,
+            "image": null
+          }
+        ],
+        "usefulExamples": [
+          "envoyer",
+          "envoi",
+          "envoyé"
+        ]
       }
     ],
     "exactWordVisualBacklog": [
@@ -48797,117 +48762,6 @@
         ]
       },
       {
-        "ipa": "tik",
-        "syllableSpans": [
-          1
-        ],
-        "usefulTargetCount": 56,
-        "usefulWeightedGain": 972.894,
-        "schoolTargetCount": 1,
-        "researchPriorityScore": 757.307,
-        "visualStatus": "exact_word_unreviewed",
-        "categories": {
-          "A_exactFrenchWord": true,
-          "B_multipleExactFrenchWords": true,
-          "C_exactWordVisualNotReady": true,
-          "D_obviousOrReadyPictogram": false,
-          "E_lightApproximation": true,
-          "F_exactMultiPictogram": false,
-          "G_letter": false,
-          "H_number": false,
-          "I_noCurrentReasonableRepresentation": false
-        },
-        "exactWords": [
-          {
-            "word": "tic",
-            "pos": "NOM",
-            "frequency": 3.81,
-            "syllableCount": 1
-          },
-          {
-            "word": "tique",
-            "pos": "NOM",
-            "frequency": 0.652,
-            "syllableCount": 1
-          },
-          {
-            "word": "tique",
-            "pos": "VER",
-            "frequency": 0.089,
-            "syllableCount": 1
-          }
-        ],
-        "nounWords": [
-          {
-            "word": "tic",
-            "pos": "NOM",
-            "frequency": 3.81,
-            "syllableCount": 1
-          },
-          {
-            "word": "tique",
-            "pos": "NOM",
-            "frequency": 0.652,
-            "syllableCount": 1
-          }
-        ],
-        "exactImages": [],
-        "exactImageCombinations": [],
-        "letters": [],
-        "numbers": [],
-        "musicNotes": [],
-        "lightApproximations": [
-          {
-            "word": "ticket",
-            "sourceIpa": "tikɛ",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": true,
-            "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F3AB.svg"
-          },
-          {
-            "word": "dyke",
-            "sourceIpa": "dik",
-            "tier": "light",
-            "percent": 11.7,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "ticket",
-            "sourceIpa": "tikɛ",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "éthique",
-            "sourceIpa": "etik",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "stick",
-            "sourceIpa": "stik",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          }
-        ],
-        "usefulExamples": [
-          "politique",
-          "fantastique",
-          "romantique",
-          "boutique",
-          "plastique",
-          "pathétique"
-        ]
-      },
-      {
         "ipa": "na",
         "syllableSpans": [
           1
@@ -49378,93 +49232,6 @@
           "territoire",
           "interrompre",
           "certainement"
-        ]
-      },
-      {
-        "ipa": "tɔ̃",
-        "syllableSpans": [
-          1
-        ],
-        "usefulTargetCount": 29,
-        "usefulWeightedGain": 11332.039,
-        "schoolTargetCount": 3,
-        "researchPriorityScore": 739.808,
-        "visualStatus": "exact_word_unreviewed",
-        "categories": {
-          "A_exactFrenchWord": true,
-          "B_multipleExactFrenchWords": true,
-          "C_exactWordVisualNotReady": true,
-          "D_obviousOrReadyPictogram": false,
-          "E_lightApproximation": true,
-          "F_exactMultiPictogram": false,
-          "G_letter": false,
-          "H_number": false,
-          "I_noCurrentReasonableRepresentation": true
-        },
-        "exactWords": [
-          {
-            "word": "ton",
-            "pos": "NOM",
-            "frequency": 47.342,
-            "syllableCount": 1
-          },
-          {
-            "word": "thon",
-            "pos": "NOM",
-            "frequency": 5.728,
-            "syllableCount": 1
-          },
-          {
-            "word": "tond",
-            "pos": "VER",
-            "frequency": 0.345,
-            "syllableCount": 1
-          }
-        ],
-        "nounWords": [
-          {
-            "word": "ton",
-            "pos": "NOM",
-            "frequency": 47.342,
-            "syllableCount": 1
-          },
-          {
-            "word": "thon",
-            "pos": "NOM",
-            "frequency": 5.728,
-            "syllableCount": 1
-          }
-        ],
-        "exactImages": [],
-        "exactImageCombinations": [],
-        "letters": [],
-        "numbers": [],
-        "musicNotes": [],
-        "lightApproximations": [
-          {
-            "word": "don",
-            "sourceIpa": "dɔ̃",
-            "tier": "light",
-            "percent": 17.5,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "dom",
-            "sourceIpa": "dɔ̃",
-            "tier": "light",
-            "percent": 17.5,
-            "existingAsset": false,
-            "image": null
-          }
-        ],
-        "usefulExamples": [
-          "ton",
-          "tomber",
-          "fiston",
-          "bouton",
-          "retomber",
-          "bâton"
         ]
       },
       {
@@ -50402,123 +50169,6 @@
           "musée",
           "communauté",
           "immunité"
-        ]
-      },
-      {
-        "ipa": "kaʁ",
-        "syllableSpans": [
-          1
-        ],
-        "usefulTargetCount": 30,
-        "usefulWeightedGain": 967.208,
-        "schoolTargetCount": 4,
-        "researchPriorityScore": 726.039,
-        "visualStatus": "exact_word_unreviewed",
-        "categories": {
-          "A_exactFrenchWord": true,
-          "B_multipleExactFrenchWords": true,
-          "C_exactWordVisualNotReady": true,
-          "D_obviousOrReadyPictogram": false,
-          "E_lightApproximation": true,
-          "F_exactMultiPictogram": false,
-          "G_letter": false,
-          "H_number": false,
-          "I_noCurrentReasonableRepresentation": false
-        },
-        "exactWords": [
-          {
-            "word": "quart",
-            "pos": "NOM",
-            "frequency": 13.744,
-            "syllableCount": 1
-          },
-          {
-            "word": "car",
-            "pos": "NOM",
-            "frequency": 5.051,
-            "syllableCount": 1
-          },
-          {
-            "word": "care",
-            "pos": "NOM",
-            "frequency": 1.44,
-            "syllableCount": 1
-          }
-        ],
-        "nounWords": [
-          {
-            "word": "quart",
-            "pos": "NOM",
-            "frequency": 13.744,
-            "syllableCount": 1
-          },
-          {
-            "word": "car",
-            "pos": "NOM",
-            "frequency": 5.051,
-            "syllableCount": 1
-          },
-          {
-            "word": "care",
-            "pos": "NOM",
-            "frequency": 1.44,
-            "syllableCount": 1
-          }
-        ],
-        "exactImages": [],
-        "exactImageCombinations": [],
-        "letters": [],
-        "numbers": [],
-        "musicNotes": [],
-        "lightApproximations": [
-          {
-            "word": "gare",
-            "sourceIpa": "gaʁ",
-            "tier": "light",
-            "percent": 11.7,
-            "existingAsset": true,
-            "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F689.svg"
-          },
-          {
-            "word": "gare",
-            "sourceIpa": "gaʁ",
-            "tier": "light",
-            "percent": 11.7,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "guards",
-            "sourceIpa": "gaʁ",
-            "tier": "light",
-            "percent": 11.7,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "guars",
-            "sourceIpa": "gaʁ",
-            "tier": "light",
-            "percent": 11.7,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "guar",
-            "sourceIpa": "gaʁ",
-            "tier": "light",
-            "percent": 11.7,
-            "existingAsset": false,
-            "image": null
-          }
-        ],
-        "usefulExamples": [
-          "quartier",
-          "cardiaque",
-          "rencard",
-          "placard",
-          "écart",
-          "quart"
         ]
       },
       {
@@ -51601,123 +51251,6 @@
         ]
       },
       {
-        "ipa": "mɛtʁ",
-        "syllableSpans": [
-          1
-        ],
-        "usefulTargetCount": 23,
-        "usefulWeightedGain": 3217.333,
-        "schoolTargetCount": 7,
-        "researchPriorityScore": 703.267,
-        "visualStatus": "exact_word_unreviewed",
-        "categories": {
-          "A_exactFrenchWord": true,
-          "B_multipleExactFrenchWords": true,
-          "C_exactWordVisualNotReady": true,
-          "D_obviousOrReadyPictogram": false,
-          "E_lightApproximation": true,
-          "F_exactMultiPictogram": false,
-          "G_letter": false,
-          "H_number": false,
-          "I_noCurrentReasonableRepresentation": false
-        },
-        "exactWords": [
-          {
-            "word": "maître",
-            "pos": "NOM",
-            "frequency": 103.69,
-            "syllableCount": 1
-          },
-          {
-            "word": "mètre",
-            "pos": "NOM",
-            "frequency": 5.82,
-            "syllableCount": 1
-          },
-          {
-            "word": "maitre",
-            "pos": "NOM",
-            "frequency": 2.794,
-            "syllableCount": 1
-          }
-        ],
-        "nounWords": [
-          {
-            "word": "maître",
-            "pos": "NOM",
-            "frequency": 103.69,
-            "syllableCount": 1
-          },
-          {
-            "word": "mètre",
-            "pos": "NOM",
-            "frequency": 5.82,
-            "syllableCount": 1
-          },
-          {
-            "word": "maitre",
-            "pos": "NOM",
-            "frequency": 2.794,
-            "syllableCount": 1
-          }
-        ],
-        "exactImages": [],
-        "exactImageCombinations": [],
-        "letters": [],
-        "numbers": [],
-        "musicNotes": [],
-        "lightApproximations": [
-          {
-            "word": "montre",
-            "sourceIpa": "mɔ̃tʁ",
-            "tier": "light",
-            "percent": 16.3,
-            "existingAsset": true,
-            "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/231A.svg"
-          },
-          {
-            "word": "mitre",
-            "sourceIpa": "mitʁ",
-            "tier": "light",
-            "percent": 16.3,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "metteur",
-            "sourceIpa": "mɛtœʁ",
-            "tier": "light",
-            "percent": 18,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "mestre",
-            "sourceIpa": "mɛstʁ",
-            "tier": "light",
-            "percent": 18,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "metteure",
-            "sourceIpa": "mɛtœʁ",
-            "tier": "light",
-            "percent": 18,
-            "existingAsset": false,
-            "image": null
-          }
-        ],
-        "usefulExamples": [
-          "mettre",
-          "maître",
-          "remettre",
-          "km",
-          "permettre",
-          "admettre"
-        ]
-      },
-      {
         "ipa": "vwa",
         "syllableSpans": [
           1
@@ -52135,123 +51668,6 @@
           "industrie",
           "quatrième",
           "patrie"
-        ]
-      },
-      {
-        "ipa": "maʁ",
-        "syllableSpans": [
-          1
-        ],
-        "usefulTargetCount": 25,
-        "usefulWeightedGain": 1563.177,
-        "schoolTargetCount": 5,
-        "researchPriorityScore": 701.559,
-        "visualStatus": "exact_word_unreviewed",
-        "categories": {
-          "A_exactFrenchWord": true,
-          "B_multipleExactFrenchWords": true,
-          "C_exactWordVisualNotReady": true,
-          "D_obviousOrReadyPictogram": false,
-          "E_lightApproximation": true,
-          "F_exactMultiPictogram": false,
-          "G_letter": false,
-          "H_number": false,
-          "I_noCurrentReasonableRepresentation": false
-        },
-        "exactWords": [
-          {
-            "word": "mare",
-            "pos": "NOM",
-            "frequency": 2.949,
-            "syllableCount": 1
-          },
-          {
-            "word": "marc",
-            "pos": "NOM",
-            "frequency": 0.472,
-            "syllableCount": 1
-          },
-          {
-            "word": "mar",
-            "pos": "NOM",
-            "frequency": 0.285,
-            "syllableCount": 1
-          }
-        ],
-        "nounWords": [
-          {
-            "word": "mare",
-            "pos": "NOM",
-            "frequency": 2.949,
-            "syllableCount": 1
-          },
-          {
-            "word": "marc",
-            "pos": "NOM",
-            "frequency": 0.472,
-            "syllableCount": 1
-          },
-          {
-            "word": "mar",
-            "pos": "NOM",
-            "frequency": 0.285,
-            "syllableCount": 1
-          }
-        ],
-        "exactImages": [],
-        "exactImageCombinations": [],
-        "letters": [],
-        "numbers": [],
-        "musicNotes": [],
-        "lightApproximations": [
-          {
-            "word": "homard",
-            "sourceIpa": "ɔmaʁ",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": true,
-            "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F99E.svg"
-          },
-          {
-            "word": "mari",
-            "sourceIpa": "maʁi",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "marque",
-            "sourceIpa": "maʁk",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "marge",
-            "sourceIpa": "maʁʒ",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "mars",
-            "sourceIpa": "maʁs",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          }
-        ],
-        "usefulExamples": [
-          "marcher",
-          "marché",
-          "marre",
-          "cauchemar",
-          "mardi",
-          "remarquer"
         ]
       },
       {
@@ -53116,109 +52532,6 @@
         ]
       },
       {
-        "ipa": "pu",
-        "syllableSpans": [
-          1
-        ],
-        "usefulTargetCount": 23,
-        "usefulWeightedGain": 1945.884,
-        "schoolTargetCount": 4,
-        "researchPriorityScore": 687.107,
-        "visualStatus": "exact_word_unreviewed",
-        "categories": {
-          "A_exactFrenchWord": true,
-          "B_multipleExactFrenchWords": true,
-          "C_exactWordVisualNotReady": true,
-          "D_obviousOrReadyPictogram": false,
-          "E_lightApproximation": true,
-          "F_exactMultiPictogram": false,
-          "G_letter": false,
-          "H_number": false,
-          "I_noCurrentReasonableRepresentation": true
-        },
-        "exactWords": [
-          {
-            "word": "pouls",
-            "pos": "NOM",
-            "frequency": 16.965,
-            "syllableCount": 1
-          },
-          {
-            "word": "pou",
-            "pos": "NOM",
-            "frequency": 1.826,
-            "syllableCount": 1
-          },
-          {
-            "word": "pouh",
-            "pos": "ONO",
-            "frequency": 0.066,
-            "syllableCount": 1
-          }
-        ],
-        "nounWords": [
-          {
-            "word": "pouls",
-            "pos": "NOM",
-            "frequency": 16.965,
-            "syllableCount": 1
-          },
-          {
-            "word": "pou",
-            "pos": "NOM",
-            "frequency": 1.826,
-            "syllableCount": 1
-          }
-        ],
-        "exactImages": [],
-        "exactImageCombinations": [],
-        "letters": [],
-        "numbers": [],
-        "musicNotes": [],
-        "lightApproximations": [
-          {
-            "word": "bout",
-            "sourceIpa": "bu",
-            "tier": "light",
-            "percent": 17.5,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "boue",
-            "sourceIpa": "bu",
-            "tier": "light",
-            "percent": 17.5,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "bou",
-            "sourceIpa": "bu",
-            "tier": "light",
-            "percent": 17.5,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "bouent",
-            "sourceIpa": "bu",
-            "tier": "light",
-            "percent": 17.5,
-            "existingAsset": false,
-            "image": null
-          }
-        ],
-        "usefulExamples": [
-          "pouvoir",
-          "épouser",
-          "poulet",
-          "pousser",
-          "poupée",
-          "poussière"
-        ]
-      },
-      {
         "ipa": "fɛ",
         "syllableSpans": [
           1
@@ -54051,123 +53364,6 @@
         ]
       },
       {
-        "ipa": "bʁi",
-        "syllableSpans": [
-          1
-        ],
-        "usefulTargetCount": 23,
-        "usefulWeightedGain": 521.656,
-        "schoolTargetCount": 3,
-        "researchPriorityScore": 670.944,
-        "visualStatus": "exact_word_unreviewed",
-        "categories": {
-          "A_exactFrenchWord": true,
-          "B_multipleExactFrenchWords": true,
-          "C_exactWordVisualNotReady": true,
-          "D_obviousOrReadyPictogram": false,
-          "E_lightApproximation": true,
-          "F_exactMultiPictogram": false,
-          "G_letter": false,
-          "H_number": false,
-          "I_noCurrentReasonableRepresentation": false
-        },
-        "exactWords": [
-          {
-            "word": "bris",
-            "pos": "NOM",
-            "frequency": 1.111,
-            "syllableCount": 1
-          },
-          {
-            "word": "bri",
-            "pos": "NOM",
-            "frequency": 0.801,
-            "syllableCount": 1
-          },
-          {
-            "word": "brie",
-            "pos": "NOM",
-            "frequency": 0.418,
-            "syllableCount": 1
-          }
-        ],
-        "nounWords": [
-          {
-            "word": "bris",
-            "pos": "NOM",
-            "frequency": 1.111,
-            "syllableCount": 1
-          },
-          {
-            "word": "bri",
-            "pos": "NOM",
-            "frequency": 0.801,
-            "syllableCount": 1
-          },
-          {
-            "word": "brie",
-            "pos": "NOM",
-            "frequency": 0.418,
-            "syllableCount": 1
-          }
-        ],
-        "exactImages": [],
-        "exactImageCombinations": [],
-        "letters": [],
-        "numbers": [],
-        "musicNotes": [],
-        "lightApproximations": [
-          {
-            "word": "brique",
-            "sourceIpa": "bʁik",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": true,
-            "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F9F1.svg"
-          },
-          {
-            "word": "prix",
-            "sourceIpa": "pʁi",
-            "tier": "light",
-            "percent": 11.7,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "abri",
-            "sourceIpa": "abʁi",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "brick",
-            "sourceIpa": "bʁik",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "brique",
-            "sourceIpa": "bʁik",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          }
-        ],
-        "usefulExamples": [
-          "abri",
-          "briser",
-          "brillant",
-          "briller",
-          "brigade",
-          "cambriolage"
-        ]
-      },
-      {
         "ipa": "mu",
         "syllableSpans": [
           1
@@ -54334,111 +53530,6 @@
           "commander",
           "recommencer",
           "commandement"
-        ]
-      },
-      {
-        "ipa": "pla",
-        "syllableSpans": [
-          1
-        ],
-        "usefulTargetCount": 23,
-        "usefulWeightedGain": 895.292,
-        "schoolTargetCount": 2,
-        "researchPriorityScore": 669.094,
-        "visualStatus": "exact_word_unreviewed",
-        "categories": {
-          "A_exactFrenchWord": true,
-          "B_multipleExactFrenchWords": true,
-          "C_exactWordVisualNotReady": true,
-          "D_obviousOrReadyPictogram": false,
-          "E_lightApproximation": true,
-          "F_exactMultiPictogram": false,
-          "G_letter": false,
-          "H_number": false,
-          "I_noCurrentReasonableRepresentation": false
-        },
-        "exactWords": [
-          {
-            "word": "plat",
-            "pos": "NOM",
-            "frequency": 21.826,
-            "syllableCount": 1
-          },
-          {
-            "word": "pla",
-            "pos": "NOM",
-            "frequency": 0.674,
-            "syllableCount": 1
-          }
-        ],
-        "nounWords": [
-          {
-            "word": "plat",
-            "pos": "NOM",
-            "frequency": 21.826,
-            "syllableCount": 1
-          },
-          {
-            "word": "pla",
-            "pos": "NOM",
-            "frequency": 0.674,
-            "syllableCount": 1
-          }
-        ],
-        "exactImages": [],
-        "exactImageCombinations": [],
-        "letters": [],
-        "numbers": [],
-        "musicNotes": [],
-        "lightApproximations": [
-          {
-            "word": "plage",
-            "sourceIpa": "plaʒ",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": true,
-            "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F3D6.svg"
-          },
-          {
-            "word": "plan",
-            "sourceIpa": "plɑ̃",
-            "tier": "light",
-            "percent": 16.7,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "plant",
-            "sourceIpa": "plɑ̃",
-            "tier": "light",
-            "percent": 16.7,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "place",
-            "sourceIpa": "plas",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "plage",
-            "sourceIpa": "plaʒ",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          }
-        ],
-        "usefulExamples": [
-          "planète",
-          "remplacer",
-          "plat",
-          "placard",
-          "déplacer",
-          "plateau"
         ]
       },
       {
@@ -55674,105 +54765,6 @@
           "négatif",
           "dispositif",
           "actif"
-        ]
-      },
-      {
-        "ipa": "tabl",
-        "syllableSpans": [
-          1
-        ],
-        "usefulTargetCount": 24,
-        "usefulWeightedGain": 1090.644,
-        "schoolTargetCount": 2,
-        "researchPriorityScore": 656.421,
-        "visualStatus": "exact_word_unreviewed",
-        "categories": {
-          "A_exactFrenchWord": true,
-          "B_multipleExactFrenchWords": true,
-          "C_exactWordVisualNotReady": true,
-          "D_obviousOrReadyPictogram": false,
-          "E_lightApproximation": true,
-          "F_exactMultiPictogram": false,
-          "G_letter": false,
-          "H_number": false,
-          "I_noCurrentReasonableRepresentation": true
-        },
-        "exactWords": [
-          {
-            "word": "table",
-            "pos": "NOM",
-            "frequency": 93.728,
-            "syllableCount": 1
-          },
-          {
-            "word": "table",
-            "pos": "VER",
-            "frequency": 0.494,
-            "syllableCount": 1
-          }
-        ],
-        "nounWords": [
-          {
-            "word": "table",
-            "pos": "NOM",
-            "frequency": 93.728,
-            "syllableCount": 1
-          }
-        ],
-        "exactImages": [],
-        "exactImageCombinations": [],
-        "letters": [],
-        "numbers": [],
-        "musicNotes": [],
-        "lightApproximations": [
-          {
-            "word": "tableau",
-            "sourceIpa": "tablo",
-            "tier": "light",
-            "percent": 15,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "étable",
-            "sourceIpa": "etabl",
-            "tier": "light",
-            "percent": 15,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "tablée",
-            "sourceIpa": "table",
-            "tier": "light",
-            "percent": 15,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "tabla",
-            "sourceIpa": "tabla",
-            "tier": "light",
-            "percent": 15,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "able",
-            "sourceIpa": "abl",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          }
-        ],
-        "usefulExamples": [
-          "table",
-          "portable",
-          "véritable",
-          "confortable",
-          "inévitable",
-          "instable"
         ]
       },
       {
@@ -57140,7 +56132,7 @@
         "usefulWeightedGain": 682.604,
         "schoolTargetCount": 4,
         "researchPriorityScore": 637.731,
-        "visualStatus": "exact_word_unreviewed",
+        "visualStatus": "reviewed_bad_or_deferred",
         "categories": {
           "A_exactFrenchWord": true,
           "B_multipleExactFrenchWords": false,
@@ -57749,268 +56741,6 @@
         ]
       },
       {
-        "ipa": "ʒy",
-        "syllableSpans": [
-          1
-        ],
-        "usefulTargetCount": 19,
-        "usefulWeightedGain": 515.297,
-        "schoolTargetCount": 1,
-        "researchPriorityScore": 629.169,
-        "visualStatus": "exact_word_unreviewed",
-        "categories": {
-          "A_exactFrenchWord": true,
-          "B_multipleExactFrenchWords": false,
-          "C_exactWordVisualNotReady": true,
-          "D_obviousOrReadyPictogram": false,
-          "E_lightApproximation": false,
-          "F_exactMultiPictogram": false,
-          "G_letter": false,
-          "H_number": false,
-          "I_noCurrentReasonableRepresentation": true
-        },
-        "exactWords": [
-          {
-            "word": "jus",
-            "pos": "NOM",
-            "frequency": 25.041,
-            "syllableCount": 1
-          }
-        ],
-        "nounWords": [
-          {
-            "word": "jus",
-            "pos": "NOM",
-            "frequency": 25.041,
-            "syllableCount": 1
-          }
-        ],
-        "exactImages": [],
-        "exactImageCombinations": [],
-        "letters": [],
-        "numbers": [],
-        "musicNotes": [],
-        "lightApproximations": [],
-        "usefulExamples": [
-          "jury",
-          "jus",
-          "jugement",
-          "juger",
-          "judiciaire",
-          "juridique"
-        ]
-      },
-      {
-        "ipa": "mal",
-        "syllableSpans": [
-          1
-        ],
-        "usefulTargetCount": 11,
-        "usefulWeightedGain": 2914.64,
-        "schoolTargetCount": 2,
-        "researchPriorityScore": 628.834,
-        "visualStatus": "exact_word_unreviewed",
-        "categories": {
-          "A_exactFrenchWord": true,
-          "B_multipleExactFrenchWords": true,
-          "C_exactWordVisualNotReady": true,
-          "D_obviousOrReadyPictogram": false,
-          "E_lightApproximation": true,
-          "F_exactMultiPictogram": false,
-          "G_letter": false,
-          "H_number": false,
-          "I_noCurrentReasonableRepresentation": true
-        },
-        "exactWords": [
-          {
-            "word": "mal",
-            "pos": "NOM",
-            "frequency": 274.288,
-            "syllableCount": 1
-          },
-          {
-            "word": "mâle",
-            "pos": "NOM",
-            "frequency": 5.706,
-            "syllableCount": 1
-          },
-          {
-            "word": "malle",
-            "pos": "NOM",
-            "frequency": 4.253,
-            "syllableCount": 1
-          }
-        ],
-        "nounWords": [
-          {
-            "word": "mal",
-            "pos": "NOM",
-            "frequency": 274.288,
-            "syllableCount": 1
-          },
-          {
-            "word": "mâle",
-            "pos": "NOM",
-            "frequency": 5.706,
-            "syllableCount": 1
-          },
-          {
-            "word": "malle",
-            "pos": "NOM",
-            "frequency": 4.253,
-            "syllableCount": 1
-          }
-        ],
-        "exactImages": [],
-        "exactImageCombinations": [],
-        "letters": [],
-        "numbers": [],
-        "musicNotes": [],
-        "lightApproximations": [
-          {
-            "word": "malin",
-            "sourceIpa": "malɛ̃",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "malt",
-            "sourceIpa": "malt",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "small",
-            "sourceIpa": "smal",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "malais",
-            "sourceIpa": "malɛ",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "malm",
-            "sourceIpa": "malm",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          }
-        ],
-        "usefulExamples": [
-          "mal",
-          "normal",
-          "animal",
-          "mâle",
-          "normale",
-          "malchance"
-        ]
-      },
-      {
-        "ipa": "sɛp",
-        "syllableSpans": [
-          1
-        ],
-        "usefulTargetCount": 16,
-        "usefulWeightedGain": 527.06,
-        "schoolTargetCount": 1,
-        "researchPriorityScore": 628.722,
-        "visualStatus": "exact_word_unreviewed",
-        "categories": {
-          "A_exactFrenchWord": true,
-          "B_multipleExactFrenchWords": true,
-          "C_exactWordVisualNotReady": true,
-          "D_obviousOrReadyPictogram": false,
-          "E_lightApproximation": true,
-          "F_exactMultiPictogram": false,
-          "G_letter": false,
-          "H_number": false,
-          "I_noCurrentReasonableRepresentation": true
-        },
-        "exactWords": [
-          {
-            "word": "cèpe",
-            "pos": "NOM",
-            "frequency": 0.054,
-            "syllableCount": 1
-          },
-          {
-            "word": "cep",
-            "pos": "NOM",
-            "frequency": 0.051,
-            "syllableCount": 1
-          },
-          {
-            "word": "sep",
-            "pos": "NOM",
-            "frequency": 0.047,
-            "syllableCount": 1
-          }
-        ],
-        "nounWords": [
-          {
-            "word": "cèpe",
-            "pos": "NOM",
-            "frequency": 0.054,
-            "syllableCount": 1
-          },
-          {
-            "word": "cep",
-            "pos": "NOM",
-            "frequency": 0.051,
-            "syllableCount": 1
-          },
-          {
-            "word": "sep",
-            "pos": "NOM",
-            "frequency": 0.047,
-            "syllableCount": 1
-          }
-        ],
-        "exactImages": [],
-        "exactImageCombinations": [],
-        "letters": [],
-        "numbers": [],
-        "musicNotes": [],
-        "lightApproximations": [
-          {
-            "word": "septs",
-            "sourceIpa": "sɛpt",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "seps",
-            "sourceIpa": "sɛps",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          }
-        ],
-        "usefulExamples": [
-          "accepter",
-          "réception",
-          "septembre",
-          "exception",
-          "exceptionnel",
-          "déception"
-        ]
-      },
-      {
         "ipa": "sɑ̃s",
         "syllableSpans": [
           1
@@ -58113,89 +56843,6 @@
           "puissance",
           "essence",
           "absence"
-        ]
-      },
-      {
-        "ipa": "fɑ̃",
-        "syllableSpans": [
-          1
-        ],
-        "usefulTargetCount": 15,
-        "usefulWeightedGain": 1854.826,
-        "schoolTargetCount": 1,
-        "researchPriorityScore": 628.48,
-        "visualStatus": "exact_word_unreviewed",
-        "categories": {
-          "A_exactFrenchWord": true,
-          "B_multipleExactFrenchWords": true,
-          "C_exactWordVisualNotReady": true,
-          "D_obviousOrReadyPictogram": false,
-          "E_lightApproximation": true,
-          "F_exactMultiPictogram": false,
-          "G_letter": false,
-          "H_number": false,
-          "I_noCurrentReasonableRepresentation": false
-        },
-        "exactWords": [
-          {
-            "word": "faon",
-            "pos": "NOM",
-            "frequency": 0.373,
-            "syllableCount": 1
-          },
-          {
-            "word": "fend",
-            "pos": "VER",
-            "frequency": 1.155,
-            "syllableCount": 1
-          }
-        ],
-        "nounWords": [
-          {
-            "word": "faon",
-            "pos": "NOM",
-            "frequency": 0.373,
-            "syllableCount": 1
-          }
-        ],
-        "exactImages": [],
-        "exactImageCombinations": [],
-        "letters": [],
-        "numbers": [],
-        "musicNotes": [],
-        "lightApproximations": [
-          {
-            "word": "vent",
-            "sourceIpa": "vɑ̃",
-            "tier": "light",
-            "percent": 17.5,
-            "existingAsset": true,
-            "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F32C.svg"
-          },
-          {
-            "word": "vent",
-            "sourceIpa": "vɑ̃",
-            "tier": "light",
-            "percent": 17.5,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "vend",
-            "sourceIpa": "vɑ̃",
-            "tier": "light",
-            "percent": 17.5,
-            "existingAsset": false,
-            "image": null
-          }
-        ],
-        "usefulExamples": [
-          "enfant",
-          "fantôme",
-          "fantastique",
-          "éléphant",
-          "offenser",
-          "fantasme"
         ]
       },
       {
@@ -58623,7 +57270,7 @@
         "usefulWeightedGain": 285.697,
         "schoolTargetCount": 1,
         "researchPriorityScore": 625.493,
-        "visualStatus": "exact_word_unreviewed",
+        "visualStatus": "reviewed_bad_or_deferred",
         "categories": {
           "A_exactFrenchWord": true,
           "B_multipleExactFrenchWords": false,
@@ -58933,105 +57580,6 @@
           "barman",
           "débarquer",
           "embarquer"
-        ]
-      },
-      {
-        "ipa": "tʁu",
-        "syllableSpans": [
-          1
-        ],
-        "usefulTargetCount": 12,
-        "usefulWeightedGain": 3452.131,
-        "schoolTargetCount": 4,
-        "researchPriorityScore": 623.406,
-        "visualStatus": "exact_word_unreviewed",
-        "categories": {
-          "A_exactFrenchWord": true,
-          "B_multipleExactFrenchWords": true,
-          "C_exactWordVisualNotReady": true,
-          "D_obviousOrReadyPictogram": false,
-          "E_lightApproximation": true,
-          "F_exactMultiPictogram": false,
-          "G_letter": false,
-          "H_number": false,
-          "I_noCurrentReasonableRepresentation": true
-        },
-        "exactWords": [
-          {
-            "word": "trou",
-            "pos": "NOM",
-            "frequency": 69.766,
-            "syllableCount": 1
-          },
-          {
-            "word": "troue",
-            "pos": "VER",
-            "frequency": 0.804,
-            "syllableCount": 1
-          }
-        ],
-        "nounWords": [
-          {
-            "word": "trou",
-            "pos": "NOM",
-            "frequency": 69.766,
-            "syllableCount": 1
-          }
-        ],
-        "exactImages": [],
-        "exactImageCombinations": [],
-        "letters": [],
-        "numbers": [],
-        "musicNotes": [],
-        "lightApproximations": [
-          {
-            "word": "trouille",
-            "sourceIpa": "tʁuj",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "troupe",
-            "sourceIpa": "tʁup",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "trousse",
-            "sourceIpa": "tʁus",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "trouée",
-            "sourceIpa": "tʁue",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "trouve",
-            "sourceIpa": "tʁuv",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          }
-        ],
-        "usefulExamples": [
-          "trouver",
-          "trou",
-          "retrouver",
-          "troubler",
-          "troupeau",
-          "trouvé"
         ]
       },
       {
@@ -60752,103 +59300,6 @@
         ]
       },
       {
-        "ipa": "bɑ̃",
-        "syllableSpans": [
-          1
-        ],
-        "usefulTargetCount": 16,
-        "usefulWeightedGain": 325.159,
-        "schoolTargetCount": 2,
-        "researchPriorityScore": 610.604,
-        "visualStatus": "exact_word_unreviewed",
-        "categories": {
-          "A_exactFrenchWord": true,
-          "B_multipleExactFrenchWords": true,
-          "C_exactWordVisualNotReady": true,
-          "D_obviousOrReadyPictogram": false,
-          "E_lightApproximation": true,
-          "F_exactMultiPictogram": false,
-          "G_letter": false,
-          "H_number": false,
-          "I_noCurrentReasonableRepresentation": false
-        },
-        "exactWords": [
-          {
-            "word": "banc",
-            "pos": "NOM",
-            "frequency": 9.079,
-            "syllableCount": 1
-          },
-          {
-            "word": "ban",
-            "pos": "NOM",
-            "frequency": 1.047,
-            "syllableCount": 1
-          }
-        ],
-        "nounWords": [
-          {
-            "word": "banc",
-            "pos": "NOM",
-            "frequency": 9.079,
-            "syllableCount": 1
-          },
-          {
-            "word": "ban",
-            "pos": "NOM",
-            "frequency": 1.047,
-            "syllableCount": 1
-          }
-        ],
-        "exactImages": [],
-        "exactImageCombinations": [],
-        "letters": [],
-        "numbers": [],
-        "musicNotes": [],
-        "lightApproximations": [
-          {
-            "word": "paon",
-            "sourceIpa": "pɑ̃",
-            "tier": "light",
-            "percent": 17.5,
-            "existingAsset": true,
-            "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F99A.svg"
-          },
-          {
-            "word": "pan",
-            "sourceIpa": "pɑ̃",
-            "tier": "light",
-            "percent": 17.5,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "paon",
-            "sourceIpa": "pɑ̃",
-            "tier": "light",
-            "percent": 17.5,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "pend",
-            "sourceIpa": "pɑ̃",
-            "tier": "light",
-            "percent": 17.5,
-            "existingAsset": false,
-            "image": null
-          }
-        ],
-        "usefulExamples": [
-          "abandonner",
-          "banc",
-          "ruban",
-          "banlieue",
-          "bandit",
-          "bancaire"
-        ]
-      },
-      {
         "ipa": "diʁ",
         "syllableSpans": [
           1
@@ -61470,99 +59921,6 @@
           "poursuivre",
           "poursuite",
           "pourboire"
-        ]
-      },
-      {
-        "ipa": "bʁa",
-        "syllableSpans": [
-          1
-        ],
-        "usefulTargetCount": 12,
-        "usefulWeightedGain": 1107.934,
-        "schoolTargetCount": 2,
-        "researchPriorityScore": 604.982,
-        "visualStatus": "exact_word_unreviewed",
-        "categories": {
-          "A_exactFrenchWord": true,
-          "B_multipleExactFrenchWords": false,
-          "C_exactWordVisualNotReady": true,
-          "D_obviousOrReadyPictogram": false,
-          "E_lightApproximation": true,
-          "F_exactMultiPictogram": false,
-          "G_letter": false,
-          "H_number": false,
-          "I_noCurrentReasonableRepresentation": true
-        },
-        "exactWords": [
-          {
-            "word": "bras",
-            "pos": "NOM",
-            "frequency": 123.984,
-            "syllableCount": 1
-          }
-        ],
-        "nounWords": [
-          {
-            "word": "bras",
-            "pos": "NOM",
-            "frequency": 123.984,
-            "syllableCount": 1
-          }
-        ],
-        "exactImages": [],
-        "exactImageCombinations": [],
-        "letters": [],
-        "numbers": [],
-        "musicNotes": [],
-        "lightApproximations": [
-          {
-            "word": "bran",
-            "sourceIpa": "bʁɑ̃",
-            "tier": "light",
-            "percent": 16.7,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "brand",
-            "sourceIpa": "bʁɑ̃",
-            "tier": "light",
-            "percent": 16.7,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "brave",
-            "sourceIpa": "bʁav",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "braille",
-            "sourceIpa": "bʁaj",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "brame",
-            "sourceIpa": "bʁam",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          }
-        ],
-        "usefulExamples": [
-          "bras",
-          "embrasser",
-          "bravo",
-          "bracelet",
-          "braquage",
-          "braquer"
         ]
       },
       {
@@ -62904,99 +61262,6 @@
           "fixer",
           "fiction",
           "maléfique"
-        ]
-      },
-      {
-        "ipa": "ble",
-        "syllableSpans": [
-          1
-        ],
-        "usefulTargetCount": 13,
-        "usefulWeightedGain": 499.008,
-        "schoolTargetCount": 4,
-        "researchPriorityScore": 598.007,
-        "visualStatus": "exact_word_unreviewed",
-        "categories": {
-          "A_exactFrenchWord": true,
-          "B_multipleExactFrenchWords": false,
-          "C_exactWordVisualNotReady": true,
-          "D_obviousOrReadyPictogram": false,
-          "E_lightApproximation": true,
-          "F_exactMultiPictogram": false,
-          "G_letter": false,
-          "H_number": false,
-          "I_noCurrentReasonableRepresentation": true
-        },
-        "exactWords": [
-          {
-            "word": "blé",
-            "pos": "NOM",
-            "frequency": 11.563,
-            "syllableCount": 1
-          }
-        ],
-        "nounWords": [
-          {
-            "word": "blé",
-            "pos": "NOM",
-            "frequency": 11.563,
-            "syllableCount": 1
-          }
-        ],
-        "exactImages": [],
-        "exactImageCombinations": [],
-        "letters": [],
-        "numbers": [],
-        "musicNotes": [],
-        "lightApproximations": [
-          {
-            "word": "emblé",
-            "sourceIpa": "ɑ̃ble",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "emblée",
-            "sourceIpa": "ɑ̃ble",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "emblez",
-            "sourceIpa": "ɑ̃ble",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "blet",
-            "sourceIpa": "blɛ",
-            "tier": "light",
-            "percent": 10,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "ambler",
-            "sourceIpa": "ɑ̃ble",
-            "tier": "light",
-            "percent": 18.8,
-            "existingAsset": false,
-            "image": null
-          }
-        ],
-        "usefulExamples": [
-          "blesser",
-          "blessure",
-          "ressembler",
-          "sembler",
-          "trembler",
-          "troubler"
         ]
       },
       {
@@ -91052,6 +89317,1567 @@
           "extraterrestre",
           "extradition"
         ]
+      },
+      {
+        "ipa": "vwaje",
+        "syllableSpans": [
+          2
+        ],
+        "usefulTargetCount": 3,
+        "usefulWeightedGain": 517.592,
+        "schoolTargetCount": 1,
+        "researchPriorityScore": 494.812,
+        "visualStatus": "exact_word_unreviewed",
+        "categories": {
+          "A_exactFrenchWord": true,
+          "B_multipleExactFrenchWords": true,
+          "C_exactWordVisualNotReady": true,
+          "D_obviousOrReadyPictogram": false,
+          "E_lightApproximation": true,
+          "F_exactMultiPictogram": false,
+          "G_letter": false,
+          "H_number": false,
+          "I_noCurrentReasonableRepresentation": true
+        },
+        "exactWords": [
+          {
+            "word": "voyer",
+            "pos": "NOM",
+            "frequency": 0.066,
+            "syllableCount": 2
+          },
+          {
+            "word": "voyai",
+            "pos": "NOM",
+            "frequency": 0.006,
+            "syllableCount": 2
+          },
+          {
+            "word": "voyez",
+            "pos": "VER",
+            "frequency": 176.256,
+            "syllableCount": 2
+          }
+        ],
+        "nounWords": [
+          {
+            "word": "voyer",
+            "pos": "NOM",
+            "frequency": 0.066,
+            "syllableCount": 2
+          },
+          {
+            "word": "voyai",
+            "pos": "NOM",
+            "frequency": 0.006,
+            "syllableCount": 2
+          }
+        ],
+        "exactImages": [],
+        "exactImageCombinations": [],
+        "letters": [],
+        "numbers": [],
+        "musicNotes": [],
+        "lightApproximations": [
+          {
+            "word": "foyer",
+            "sourceIpa": "fwaje",
+            "tier": "light",
+            "percent": 7,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "envoyé",
+            "sourceIpa": "ɑ̃vwaje",
+            "tier": "light",
+            "percent": 12.5,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "voyou",
+            "sourceIpa": "vwaju",
+            "tier": "light",
+            "percent": 13,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "voya",
+            "sourceIpa": "vwaja",
+            "tier": "light",
+            "percent": 13,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "voilier",
+            "sourceIpa": "vwalje",
+            "tier": "light",
+            "percent": 15,
+            "existingAsset": false,
+            "image": null
+          }
+        ],
+        "usefulExamples": [
+          "envoyer",
+          "renvoyer",
+          "envoyé"
+        ]
+      },
+      {
+        "ipa": "kana",
+        "syllableSpans": [
+          2
+        ],
+        "usefulTargetCount": 3,
+        "usefulWeightedGain": 96.988,
+        "schoolTargetCount": 0,
+        "researchPriorityScore": 494.741,
+        "visualStatus": "exact_word_unreviewed",
+        "categories": {
+          "A_exactFrenchWord": true,
+          "B_multipleExactFrenchWords": true,
+          "C_exactWordVisualNotReady": true,
+          "D_obviousOrReadyPictogram": false,
+          "E_lightApproximation": false,
+          "F_exactMultiPictogram": false,
+          "G_letter": false,
+          "H_number": false,
+          "I_noCurrentReasonableRepresentation": true
+        },
+        "exactWords": [
+          {
+            "word": "kana",
+            "pos": "NOM",
+            "frequency": 0.639,
+            "syllableCount": 2
+          },
+          {
+            "word": "khanat",
+            "pos": "NOM",
+            "frequency": 0.06,
+            "syllableCount": 2
+          },
+          {
+            "word": "canna",
+            "pos": "NOM",
+            "frequency": 0.016,
+            "syllableCount": 2
+          }
+        ],
+        "nounWords": [
+          {
+            "word": "kana",
+            "pos": "NOM",
+            "frequency": 0.639,
+            "syllableCount": 2
+          },
+          {
+            "word": "khanat",
+            "pos": "NOM",
+            "frequency": 0.06,
+            "syllableCount": 2
+          },
+          {
+            "word": "canna",
+            "pos": "NOM",
+            "frequency": 0.016,
+            "syllableCount": 2
+          }
+        ],
+        "exactImages": [],
+        "exactImageCombinations": [],
+        "letters": [],
+        "numbers": [],
+        "musicNotes": [],
+        "lightApproximations": [],
+        "usefulExamples": [
+          "canapé",
+          "canadien",
+          "cannabis"
+        ]
+      },
+      {
+        "ipa": "tənɑ̃",
+        "syllableSpans": [
+          2
+        ],
+        "usefulTargetCount": 2,
+        "usefulWeightedGain": 6396.41,
+        "schoolTargetCount": 1,
+        "researchPriorityScore": 494.711,
+        "visualStatus": "exact_word_unreviewed",
+        "categories": {
+          "A_exactFrenchWord": true,
+          "B_multipleExactFrenchWords": true,
+          "C_exactWordVisualNotReady": true,
+          "D_obviousOrReadyPictogram": false,
+          "E_lightApproximation": true,
+          "F_exactMultiPictogram": false,
+          "G_letter": false,
+          "H_number": false,
+          "I_noCurrentReasonableRepresentation": true
+        },
+        "exactWords": [
+          {
+            "word": "tenant",
+            "pos": "NOM",
+            "frequency": 0.304,
+            "syllableCount": 2
+          },
+          {
+            "word": "tenant",
+            "pos": "VER",
+            "frequency": 4.57,
+            "syllableCount": 2
+          }
+        ],
+        "nounWords": [
+          {
+            "word": "tenant",
+            "pos": "NOM",
+            "frequency": 0.304,
+            "syllableCount": 2
+          }
+        ],
+        "exactImages": [],
+        "exactImageCombinations": [],
+        "letters": [],
+        "numbers": [],
+        "musicNotes": [],
+        "lightApproximations": [
+          {
+            "word": "tenante",
+            "sourceIpa": "tənɑ̃t",
+            "tier": "light",
+            "percent": 15,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "tenue",
+            "sourceIpa": "təny",
+            "tier": "light",
+            "percent": 16.3,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "tenon",
+            "sourceIpa": "tənɔ̃",
+            "tier": "light",
+            "percent": 16.3,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "attenant",
+            "sourceIpa": "atənɑ̃",
+            "tier": "light",
+            "percent": 15,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "tenez",
+            "sourceIpa": "təne",
+            "tier": "light",
+            "percent": 16.3,
+            "existingAsset": false,
+            "image": null
+          }
+        ],
+        "usefulExamples": [
+          "maintenant",
+          "lieutenant"
+        ]
+      },
+      {
+        "ipa": "kafe",
+        "syllableSpans": [
+          2
+        ],
+        "usefulTargetCount": 3,
+        "usefulWeightedGain": 763.726,
+        "schoolTargetCount": 0,
+        "researchPriorityScore": 494.47,
+        "visualStatus": "exact_word_unreviewed",
+        "categories": {
+          "A_exactFrenchWord": true,
+          "B_multipleExactFrenchWords": true,
+          "C_exactWordVisualNotReady": true,
+          "D_obviousOrReadyPictogram": false,
+          "E_lightApproximation": true,
+          "F_exactMultiPictogram": false,
+          "G_letter": false,
+          "H_number": false,
+          "I_noCurrentReasonableRepresentation": true
+        },
+        "exactWords": [
+          {
+            "word": "café",
+            "pos": "NOM",
+            "frequency": 124.658,
+            "syllableCount": 2
+          },
+          {
+            "word": "caffé",
+            "pos": "NOM",
+            "frequency": 0.051,
+            "syllableCount": 2
+          }
+        ],
+        "nounWords": [
+          {
+            "word": "café",
+            "pos": "NOM",
+            "frequency": 124.658,
+            "syllableCount": 2
+          },
+          {
+            "word": "caffé",
+            "pos": "NOM",
+            "frequency": 0.051,
+            "syllableCount": 2
+          }
+        ],
+        "exactImages": [],
+        "exactImageCombinations": [],
+        "letters": [],
+        "numbers": [],
+        "musicNotes": [],
+        "lightApproximations": [
+          {
+            "word": "kiffé",
+            "sourceIpa": "kife",
+            "tier": "light",
+            "percent": 16.3,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "kiffée",
+            "sourceIpa": "kife",
+            "tier": "light",
+            "percent": 16.3,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "kiffés",
+            "sourceIpa": "kife",
+            "tier": "light",
+            "percent": 16.3,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "kaf",
+            "sourceIpa": "kaf",
+            "tier": "light",
+            "percent": 18.8,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "kaph",
+            "sourceIpa": "kaf",
+            "tier": "light",
+            "percent": 18.8,
+            "existingAsset": false,
+            "image": null
+          }
+        ],
+        "usefulExamples": [
+          "café",
+          "cafétéria",
+          "caféine"
+        ]
+      },
+      {
+        "ipa": "kɔ̃sɛʁ",
+        "syllableSpans": [
+          2
+        ],
+        "usefulTargetCount": 4,
+        "usefulWeightedGain": 134.904,
+        "schoolTargetCount": 0,
+        "researchPriorityScore": 494.408,
+        "visualStatus": "exact_word_unreviewed",
+        "categories": {
+          "A_exactFrenchWord": true,
+          "B_multipleExactFrenchWords": false,
+          "C_exactWordVisualNotReady": true,
+          "D_obviousOrReadyPictogram": false,
+          "E_lightApproximation": true,
+          "F_exactMultiPictogram": false,
+          "G_letter": false,
+          "H_number": false,
+          "I_noCurrentReasonableRepresentation": true
+        },
+        "exactWords": [
+          {
+            "word": "concert",
+            "pos": "NOM",
+            "frequency": 28.009,
+            "syllableCount": 2
+          }
+        ],
+        "nounWords": [
+          {
+            "word": "concert",
+            "pos": "NOM",
+            "frequency": 28.009,
+            "syllableCount": 2
+          }
+        ],
+        "exactImages": [],
+        "exactImageCombinations": [],
+        "letters": [],
+        "numbers": [],
+        "musicNotes": [],
+        "lightApproximations": [
+          {
+            "word": "konzern",
+            "sourceIpa": "kɔ̃zɛʁ",
+            "tier": "light",
+            "percent": 7,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "conserve",
+            "sourceIpa": "kɔ̃sɛʁv",
+            "tier": "light",
+            "percent": 12.5,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "cancer",
+            "sourceIpa": "kɑ̃sɛʁ",
+            "tier": "light",
+            "percent": 13,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "consoeur",
+            "sourceIpa": "kɔ̃sœʁ",
+            "tier": "light",
+            "percent": 13,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "consort",
+            "sourceIpa": "kɔ̃sɔʁ",
+            "tier": "light",
+            "percent": 13,
+            "existingAsset": false,
+            "image": null
+          }
+        ],
+        "usefulExamples": [
+          "concert",
+          "conserver",
+          "conservateur",
+          "conservatoire"
+        ]
+      },
+      {
+        "ipa": "sabl",
+        "syllableSpans": [
+          1
+        ],
+        "usefulTargetCount": 5,
+        "usefulWeightedGain": 349.749,
+        "schoolTargetCount": 1,
+        "researchPriorityScore": 494.226,
+        "visualStatus": "exact_word_unreviewed",
+        "categories": {
+          "A_exactFrenchWord": true,
+          "B_multipleExactFrenchWords": true,
+          "C_exactWordVisualNotReady": true,
+          "D_obviousOrReadyPictogram": false,
+          "E_lightApproximation": true,
+          "F_exactMultiPictogram": false,
+          "G_letter": false,
+          "H_number": false,
+          "I_noCurrentReasonableRepresentation": false
+        },
+        "exactWords": [
+          {
+            "word": "sable",
+            "pos": "NOM",
+            "frequency": 18.383,
+            "syllableCount": 1
+          },
+          {
+            "word": "sable",
+            "pos": "VER",
+            "frequency": 0.051,
+            "syllableCount": 1
+          }
+        ],
+        "nounWords": [
+          {
+            "word": "sable",
+            "pos": "NOM",
+            "frequency": 18.383,
+            "syllableCount": 1
+          }
+        ],
+        "exactImages": [],
+        "exactImageCombinations": [],
+        "letters": [],
+        "numbers": [],
+        "musicNotes": [],
+        "lightApproximations": [
+          {
+            "word": "cible",
+            "sourceIpa": "sibl",
+            "tier": "light",
+            "percent": 16.3,
+            "existingAsset": true,
+            "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F3AF.svg"
+          },
+          {
+            "word": "sablons",
+            "sourceIpa": "sablɔ̃",
+            "tier": "light",
+            "percent": 15,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "sablés",
+            "sourceIpa": "sable",
+            "tier": "light",
+            "percent": 15,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "cible",
+            "sourceIpa": "sibl",
+            "tier": "light",
+            "percent": 16.3,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "able",
+            "sourceIpa": "abl",
+            "tier": "light",
+            "percent": 18.8,
+            "existingAsset": false,
+            "image": null
+          }
+        ],
+        "usefulExamples": [
+          "responsable",
+          "sable",
+          "indispensable",
+          "irresponsable",
+          "impensable"
+        ]
+      },
+      {
+        "ipa": "depɑ̃",
+        "syllableSpans": [
+          2
+        ],
+        "usefulTargetCount": 5,
+        "usefulWeightedGain": 71.529,
+        "schoolTargetCount": 0,
+        "researchPriorityScore": 494.168,
+        "visualStatus": "exact_word_unreviewed",
+        "categories": {
+          "A_exactFrenchWord": true,
+          "B_multipleExactFrenchWords": true,
+          "C_exactWordVisualNotReady": true,
+          "D_obviousOrReadyPictogram": false,
+          "E_lightApproximation": false,
+          "F_exactMultiPictogram": true,
+          "G_letter": false,
+          "H_number": false,
+          "I_noCurrentReasonableRepresentation": false
+        },
+        "exactWords": [
+          {
+            "word": "dépens",
+            "pos": "NOM",
+            "frequency": 1.962,
+            "syllableCount": 2
+          },
+          {
+            "word": "dépend",
+            "pos": "VER",
+            "frequency": 41.174,
+            "syllableCount": 2
+          }
+        ],
+        "nounWords": [
+          {
+            "word": "dépens",
+            "pos": "NOM",
+            "frequency": 1.962,
+            "syllableCount": 2
+          }
+        ],
+        "exactImages": [],
+        "exactImageCombinations": [
+          [
+            {
+              "id": "syllable-print:de",
+              "label": "dé",
+              "image": "assets/rebus/de.svg",
+              "source": "syllable_print_library",
+              "visualEvidence": {
+                "status": "metadata_available",
+                "visualConfidence": 0.99,
+                "labelStability": 0.99,
+                "clinicalStatus": "naming_test_required",
+                "artRevision": "de-die-v1",
+                "namingTestStatus": "not_run",
+                "humanDecision": null,
+                "namingValidated": false,
+                "namingRisks": [
+                  "cube",
+                  "dé à jouer",
+                  "jeu"
+                ],
+                "metadataSource": "production_seed",
+                "namingEvidenceSource": "production_naming_reviews"
+              }
+            },
+            {
+              "id": "open-pictogram:paon",
+              "label": "paon",
+              "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F99A.svg",
+              "source": "open_pictogram_library",
+              "visualEvidence": {
+                "status": "metadata_available",
+                "visualConfidence": 0.9,
+                "labelStability": 0.82,
+                "clinicalStatus": "unreviewed",
+                "artRevision": null,
+                "namingTestStatus": "not_run",
+                "humanDecision": null,
+                "namingValidated": false,
+                "namingRisks": [],
+                "metadataSource": "open_pictogram_library",
+                "namingEvidenceSource": null
+              }
+            }
+          ]
+        ],
+        "letters": [],
+        "numbers": [],
+        "musicNotes": [],
+        "lightApproximations": [],
+        "usefulExamples": [
+          "dépenser",
+          "indépendance",
+          "indépendant",
+          "dépendance",
+          "dépens"
+        ]
+      },
+      {
+        "ipa": "pei",
+        "syllableSpans": [
+          2
+        ],
+        "usefulTargetCount": 3,
+        "usefulWeightedGain": 1063.55,
+        "schoolTargetCount": 3,
+        "researchPriorityScore": 494.164,
+        "visualStatus": "exact_word_unreviewed",
+        "categories": {
+          "A_exactFrenchWord": true,
+          "B_multipleExactFrenchWords": false,
+          "C_exactWordVisualNotReady": true,
+          "D_obviousOrReadyPictogram": false,
+          "E_lightApproximation": true,
+          "F_exactMultiPictogram": false,
+          "G_letter": false,
+          "H_number": false,
+          "I_noCurrentReasonableRepresentation": true
+        },
+        "exactWords": [
+          {
+            "word": "pays",
+            "pos": "NOM",
+            "frequency": 171.263,
+            "syllableCount": 2
+          }
+        ],
+        "nounWords": [
+          {
+            "word": "pays",
+            "pos": "NOM",
+            "frequency": 171.263,
+            "syllableCount": 2
+          }
+        ],
+        "exactImages": [],
+        "exactImageCombinations": [],
+        "letters": [],
+        "numbers": [],
+        "musicNotes": [],
+        "lightApproximations": [
+          {
+            "word": "payse",
+            "sourceIpa": "peiz",
+            "tier": "light",
+            "percent": 18.8,
+            "existingAsset": false,
+            "image": null
+          }
+        ],
+        "usefulExamples": [
+          "pays",
+          "paysage",
+          "paysan"
+        ]
+      },
+      {
+        "ipa": "vø",
+        "syllableSpans": [
+          1
+        ],
+        "usefulTargetCount": 6,
+        "usefulWeightedGain": 273.414,
+        "schoolTargetCount": 2,
+        "researchPriorityScore": 494.043,
+        "visualStatus": "exact_word_unreviewed",
+        "categories": {
+          "A_exactFrenchWord": true,
+          "B_multipleExactFrenchWords": true,
+          "C_exactWordVisualNotReady": true,
+          "D_obviousOrReadyPictogram": false,
+          "E_lightApproximation": true,
+          "F_exactMultiPictogram": false,
+          "G_letter": false,
+          "H_number": false,
+          "I_noCurrentReasonableRepresentation": false
+        },
+        "exactWords": [
+          {
+            "word": "voeu",
+            "pos": "NOM",
+            "frequency": 13.636,
+            "syllableCount": 1
+          },
+          {
+            "word": "veux",
+            "pos": "VER",
+            "frequency": 2414.044,
+            "syllableCount": 1
+          }
+        ],
+        "nounWords": [
+          {
+            "word": "voeu",
+            "pos": "NOM",
+            "frequency": 13.636,
+            "syllableCount": 1
+          }
+        ],
+        "exactImages": [],
+        "exactImageCombinations": [],
+        "letters": [],
+        "numbers": [],
+        "musicNotes": [],
+        "lightApproximations": [
+          {
+            "word": "feu",
+            "sourceIpa": "fø",
+            "tier": "light",
+            "percent": 17.5,
+            "existingAsset": true,
+            "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F525.svg"
+          },
+          {
+            "word": "feu",
+            "sourceIpa": "fø",
+            "tier": "light",
+            "percent": 17.5,
+            "existingAsset": false,
+            "image": null
+          }
+        ],
+        "usefulExamples": [
+          "nerveux",
+          "neveu",
+          "cheveu",
+          "voeu",
+          "aveu",
+          "morveux"
+        ]
+      },
+      {
+        "ipa": "pɛl",
+        "syllableSpans": [
+          1
+        ],
+        "usefulTargetCount": 5,
+        "usefulWeightedGain": 640.625,
+        "schoolTargetCount": 1,
+        "researchPriorityScore": 494.001,
+        "visualStatus": "exact_word_unreviewed",
+        "categories": {
+          "A_exactFrenchWord": true,
+          "B_multipleExactFrenchWords": true,
+          "C_exactWordVisualNotReady": true,
+          "D_obviousOrReadyPictogram": false,
+          "E_lightApproximation": true,
+          "F_exactMultiPictogram": false,
+          "G_letter": false,
+          "H_number": false,
+          "I_noCurrentReasonableRepresentation": true
+        },
+        "exactWords": [
+          {
+            "word": "pelle",
+            "pos": "NOM",
+            "frequency": 6.962,
+            "syllableCount": 1
+          },
+          {
+            "word": "pèle",
+            "pos": "VER",
+            "frequency": 0.481,
+            "syllableCount": 1
+          },
+          {
+            "word": "pelle",
+            "pos": "VER",
+            "frequency": 0.032,
+            "syllableCount": 1
+          }
+        ],
+        "nounWords": [
+          {
+            "word": "pelle",
+            "pos": "NOM",
+            "frequency": 6.962,
+            "syllableCount": 1
+          }
+        ],
+        "exactImages": [],
+        "exactImageCombinations": [],
+        "letters": [],
+        "numbers": [],
+        "musicNotes": [],
+        "lightApproximations": [
+          {
+            "word": "belle",
+            "sourceIpa": "bɛl",
+            "tier": "light",
+            "percent": 11.7,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "belles",
+            "sourceIpa": "bɛl",
+            "tier": "light",
+            "percent": 11.7,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "appel",
+            "sourceIpa": "apɛl",
+            "tier": "light",
+            "percent": 18.8,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "pellet",
+            "sourceIpa": "pɛlɛ",
+            "tier": "light",
+            "percent": 18.8,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "épèle",
+            "sourceIpa": "epɛl",
+            "tier": "light",
+            "percent": 18.8,
+            "existingAsset": false,
+            "image": null
+          }
+        ],
+        "usefulExamples": [
+          "appel",
+          "rappel",
+          "pelle",
+          "chapelle",
+          "scalpel"
+        ]
+      },
+      {
+        "ipa": "vize",
+        "syllableSpans": [
+          2
+        ],
+        "usefulTargetCount": 5,
+        "usefulWeightedGain": 42.058,
+        "schoolTargetCount": 0,
+        "researchPriorityScore": 493.885,
+        "visualStatus": "exact_word_unreviewed",
+        "categories": {
+          "A_exactFrenchWord": true,
+          "B_multipleExactFrenchWords": true,
+          "C_exactWordVisualNotReady": true,
+          "D_obviousOrReadyPictogram": false,
+          "E_lightApproximation": false,
+          "F_exactMultiPictogram": false,
+          "G_letter": false,
+          "H_number": false,
+          "I_noCurrentReasonableRepresentation": true
+        },
+        "exactWords": [
+          {
+            "word": "visée",
+            "pos": "NOM",
+            "frequency": 0.896,
+            "syllableCount": 2
+          },
+          {
+            "word": "visé",
+            "pos": "NOM",
+            "frequency": 0.07,
+            "syllableCount": 2
+          },
+          {
+            "word": "viser",
+            "pos": "VER",
+            "frequency": 5.538,
+            "syllableCount": 2
+          }
+        ],
+        "nounWords": [
+          {
+            "word": "visée",
+            "pos": "NOM",
+            "frequency": 0.896,
+            "syllableCount": 2
+          },
+          {
+            "word": "visé",
+            "pos": "NOM",
+            "frequency": 0.07,
+            "syllableCount": 2
+          }
+        ],
+        "exactImages": [],
+        "exactImageCombinations": [],
+        "letters": [],
+        "numbers": [],
+        "musicNotes": [],
+        "lightApproximations": [],
+        "usefulExamples": [
+          "viser",
+          "réviser",
+          "diviser",
+          "improviser",
+          "superviser"
+        ]
+      },
+      {
+        "ipa": "vole",
+        "syllableSpans": [
+          2
+        ],
+        "usefulTargetCount": 4,
+        "usefulWeightedGain": 407.275,
+        "schoolTargetCount": 1,
+        "researchPriorityScore": 493.68,
+        "visualStatus": "exact_word_unreviewed",
+        "categories": {
+          "A_exactFrenchWord": true,
+          "B_multipleExactFrenchWords": true,
+          "C_exactWordVisualNotReady": true,
+          "D_obviousOrReadyPictogram": false,
+          "E_lightApproximation": true,
+          "F_exactMultiPictogram": false,
+          "G_letter": false,
+          "H_number": false,
+          "I_noCurrentReasonableRepresentation": true
+        },
+        "exactWords": [
+          {
+            "word": "volée",
+            "pos": "NOM",
+            "frequency": 1.519,
+            "syllableCount": 2
+          },
+          {
+            "word": "volé",
+            "pos": "ADJ",
+            "frequency": 4.94,
+            "syllableCount": 2
+          },
+          {
+            "word": "voler",
+            "pos": "VER",
+            "frequency": 75.731,
+            "syllableCount": 2
+          }
+        ],
+        "nounWords": [
+          {
+            "word": "volée",
+            "pos": "NOM",
+            "frequency": 1.519,
+            "syllableCount": 2
+          }
+        ],
+        "exactImages": [],
+        "exactImageCombinations": [],
+        "letters": [],
+        "numbers": [],
+        "musicNotes": [],
+        "lightApproximations": [
+          {
+            "word": "volet",
+            "sourceIpa": "volɛ",
+            "tier": "light",
+            "percent": 7.5,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "volley",
+            "sourceIpa": "volɛ",
+            "tier": "light",
+            "percent": 7.5,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "volè",
+            "sourceIpa": "vɔle",
+            "tier": "light",
+            "percent": 7.5,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "envolée",
+            "sourceIpa": "ɑ̃vole",
+            "tier": "light",
+            "percent": 15,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "volant",
+            "sourceIpa": "volɑ̃",
+            "tier": "light",
+            "percent": 16.3,
+            "existingAsset": false,
+            "image": null
+          }
+        ],
+        "usefulExamples": [
+          "voler",
+          "envoler",
+          "volé",
+          "volée"
+        ]
+      },
+      {
+        "ipa": "ide",
+        "syllableSpans": [
+          2
+        ],
+        "usefulTargetCount": 2,
+        "usefulWeightedGain": 2290.53,
+        "schoolTargetCount": 1,
+        "researchPriorityScore": 493.564,
+        "visualStatus": "exact_word_unreviewed",
+        "categories": {
+          "A_exactFrenchWord": true,
+          "B_multipleExactFrenchWords": true,
+          "C_exactWordVisualNotReady": true,
+          "D_obviousOrReadyPictogram": false,
+          "E_lightApproximation": true,
+          "F_exactMultiPictogram": false,
+          "G_letter": false,
+          "H_number": false,
+          "I_noCurrentReasonableRepresentation": true
+        },
+        "exactWords": [
+          {
+            "word": "idée",
+            "pos": "NOM",
+            "frequency": 374.823,
+            "syllableCount": 2
+          },
+          {
+            "word": "id",
+            "pos": "NOM",
+            "frequency": 0.003,
+            "syllableCount": 2
+          }
+        ],
+        "nounWords": [
+          {
+            "word": "idée",
+            "pos": "NOM",
+            "frequency": 374.823,
+            "syllableCount": 2
+          },
+          {
+            "word": "id",
+            "pos": "NOM",
+            "frequency": 0.003,
+            "syllableCount": 2
+          }
+        ],
+        "exactImages": [],
+        "exactImageCombinations": [],
+        "letters": [],
+        "numbers": [],
+        "musicNotes": [],
+        "lightApproximations": [
+          {
+            "word": "idéaux",
+            "sourceIpa": "ideo",
+            "tier": "light",
+            "percent": 18.8,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "idéé",
+            "sourceIpa": "idee",
+            "tier": "light",
+            "percent": 18.8,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "bidé",
+            "sourceIpa": "bide",
+            "tier": "light",
+            "percent": 18.8,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "idéa",
+            "sourceIpa": "idea",
+            "tier": "light",
+            "percent": 18.8,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "idéées",
+            "sourceIpa": "idee",
+            "tier": "light",
+            "percent": 18.8,
+            "existingAsset": false,
+            "image": null
+          }
+        ],
+        "usefulExamples": [
+          "idée",
+          "idéal"
+        ]
+      },
+      {
+        "ipa": "pik",
+        "syllableSpans": [
+          1
+        ],
+        "usefulTargetCount": 6,
+        "usefulWeightedGain": 79.832,
+        "schoolTargetCount": 0,
+        "researchPriorityScore": 493.145,
+        "visualStatus": "exact_word_unreviewed",
+        "categories": {
+          "A_exactFrenchWord": true,
+          "B_multipleExactFrenchWords": true,
+          "C_exactWordVisualNotReady": true,
+          "D_obviousOrReadyPictogram": false,
+          "E_lightApproximation": false,
+          "F_exactMultiPictogram": false,
+          "G_letter": false,
+          "H_number": false,
+          "I_noCurrentReasonableRepresentation": true
+        },
+        "exactWords": [
+          {
+            "word": "pic",
+            "pos": "NOM",
+            "frequency": 5.627,
+            "syllableCount": 1
+          },
+          {
+            "word": "pique",
+            "pos": "NOM",
+            "frequency": 4.228,
+            "syllableCount": 1
+          },
+          {
+            "word": "pique",
+            "pos": "VER",
+            "frequency": 6.117,
+            "syllableCount": 1
+          }
+        ],
+        "nounWords": [
+          {
+            "word": "pic",
+            "pos": "NOM",
+            "frequency": 5.627,
+            "syllableCount": 1
+          },
+          {
+            "word": "pique",
+            "pos": "NOM",
+            "frequency": 4.228,
+            "syllableCount": 1
+          }
+        ],
+        "exactImages": [],
+        "exactImageCombinations": [],
+        "letters": [],
+        "numbers": [],
+        "musicNotes": [],
+        "lightApproximations": [],
+        "usefulExamples": [
+          "typique",
+          "pique-nique",
+          "pic",
+          "pique",
+          "olympique",
+          "épique"
+        ]
+      },
+      {
+        "ipa": "piʁ",
+        "syllableSpans": [
+          1
+        ],
+        "usefulTargetCount": 5,
+        "usefulWeightedGain": 658.321,
+        "schoolTargetCount": 1,
+        "researchPriorityScore": 493.024,
+        "visualStatus": "exact_word_unreviewed",
+        "categories": {
+          "A_exactFrenchWord": true,
+          "B_multipleExactFrenchWords": false,
+          "C_exactWordVisualNotReady": true,
+          "D_obviousOrReadyPictogram": false,
+          "E_lightApproximation": true,
+          "F_exactMultiPictogram": false,
+          "G_letter": false,
+          "H_number": false,
+          "I_noCurrentReasonableRepresentation": true
+        },
+        "exactWords": [
+          {
+            "word": "pire",
+            "pos": "NOM",
+            "frequency": 48.082,
+            "syllableCount": 1
+          }
+        ],
+        "nounWords": [
+          {
+            "word": "pire",
+            "pos": "NOM",
+            "frequency": 48.082,
+            "syllableCount": 1
+          }
+        ],
+        "exactImages": [],
+        "exactImageCombinations": [],
+        "letters": [],
+        "numbers": [],
+        "musicNotes": [],
+        "lightApproximations": [
+          {
+            "word": "birr",
+            "sourceIpa": "biʁ",
+            "tier": "light",
+            "percent": 11.7,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "empire",
+            "sourceIpa": "ɑ̃piʁ",
+            "tier": "light",
+            "percent": 18.8,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "pierce",
+            "sourceIpa": "piʁs",
+            "tier": "light",
+            "percent": 18.8,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "spire",
+            "sourceIpa": "spiʁ",
+            "tier": "light",
+            "percent": 18.8,
+            "existingAsset": false,
+            "image": null
+          }
+        ],
+        "usefulExamples": [
+          "pire",
+          "vampire",
+          "empire",
+          "soupir",
+          "soupire"
+        ]
+      },
+      {
+        "ipa": "pate",
+        "syllableSpans": [
+          2
+        ],
+        "usefulTargetCount": 4,
+        "usefulWeightedGain": 49.483,
+        "schoolTargetCount": 0,
+        "researchPriorityScore": 492.959,
+        "visualStatus": "exact_word_unreviewed",
+        "categories": {
+          "A_exactFrenchWord": true,
+          "B_multipleExactFrenchWords": true,
+          "C_exactWordVisualNotReady": true,
+          "D_obviousOrReadyPictogram": false,
+          "E_lightApproximation": false,
+          "F_exactMultiPictogram": true,
+          "G_letter": false,
+          "H_number": false,
+          "I_noCurrentReasonableRepresentation": false
+        },
+        "exactWords": [
+          {
+            "word": "pâté",
+            "pos": "NOM",
+            "frequency": 4.642,
+            "syllableCount": 2
+          },
+          {
+            "word": "pâtée",
+            "pos": "NOM",
+            "frequency": 1.589,
+            "syllableCount": 2
+          },
+          {
+            "word": "paté",
+            "pos": "NOM",
+            "frequency": 0.234,
+            "syllableCount": 2
+          }
+        ],
+        "nounWords": [
+          {
+            "word": "pâté",
+            "pos": "NOM",
+            "frequency": 4.642,
+            "syllableCount": 2
+          },
+          {
+            "word": "pâtée",
+            "pos": "NOM",
+            "frequency": 1.589,
+            "syllableCount": 2
+          },
+          {
+            "word": "paté",
+            "pos": "NOM",
+            "frequency": 0.234,
+            "syllableCount": 2
+          }
+        ],
+        "exactImages": [],
+        "exactImageCombinations": [
+          [
+            {
+              "id": "syllable-print:pas",
+              "label": "pas",
+              "image": "assets/rebus/pas.svg",
+              "source": "syllable_print_library",
+              "visualEvidence": {
+                "status": "metadata_available",
+                "visualConfidence": 0.86,
+                "labelStability": 0.95,
+                "clinicalStatus": "naming_test_required",
+                "artRevision": "pas-openmoji-1f463-v1",
+                "namingTestStatus": "not_run",
+                "humanDecision": null,
+                "namingValidated": false,
+                "namingRisks": [
+                  "pieds",
+                  "empreintes",
+                  "traces"
+                ],
+                "metadataSource": "production_seed",
+                "namingEvidenceSource": "production_naming_reviews"
+              }
+            },
+            {
+              "id": "syllable-print:the",
+              "label": "thé",
+              "image": "assets/rebus/the.svg",
+              "source": "syllable_print_library",
+              "visualEvidence": {
+                "status": "metadata_available",
+                "visualConfidence": null,
+                "labelStability": null,
+                "clinicalStatus": "naming_test_required",
+                "artRevision": "the-comic-v1",
+                "namingTestStatus": "not_run",
+                "humanDecision": null,
+                "namingValidated": false,
+                "namingRisks": [
+                  "tasse",
+                  "café",
+                  "boisson",
+                  "tasse de thé"
+                ],
+                "metadataSource": "production_seed",
+                "namingEvidenceSource": "production_naming_reviews"
+              }
+            }
+          ]
+        ],
+        "letters": [],
+        "numbers": [],
+        "musicNotes": [],
+        "lightApproximations": [],
+        "usefulExamples": [
+          "pathétique",
+          "pâté",
+          "pâtée",
+          "épater"
+        ]
+      },
+      {
+        "ipa": "nwaʁ",
+        "syllableSpans": [
+          1
+        ],
+        "usefulTargetCount": 5,
+        "usefulWeightedGain": 367.885,
+        "schoolTargetCount": 2,
+        "researchPriorityScore": 492.933,
+        "visualStatus": "exact_word_unreviewed",
+        "categories": {
+          "A_exactFrenchWord": true,
+          "B_multipleExactFrenchWords": true,
+          "C_exactWordVisualNotReady": true,
+          "D_obviousOrReadyPictogram": false,
+          "E_lightApproximation": true,
+          "F_exactMultiPictogram": false,
+          "G_letter": false,
+          "H_number": false,
+          "I_noCurrentReasonableRepresentation": true
+        },
+        "exactWords": [
+          {
+            "word": "noir",
+            "pos": "NOM",
+            "frequency": 38.38,
+            "syllableCount": 1
+          },
+          {
+            "word": "noires",
+            "pos": "NOM",
+            "frequency": 0.604,
+            "syllableCount": 1
+          }
+        ],
+        "nounWords": [
+          {
+            "word": "noir",
+            "pos": "NOM",
+            "frequency": 38.38,
+            "syllableCount": 1
+          },
+          {
+            "word": "noires",
+            "pos": "NOM",
+            "frequency": 0.604,
+            "syllableCount": 1
+          }
+        ],
+        "exactImages": [],
+        "exactImageCombinations": [],
+        "letters": [],
+        "numbers": [],
+        "musicNotes": [],
+        "lightApproximations": [
+          {
+            "word": "noiraud",
+            "sourceIpa": "nwaʁo",
+            "tier": "light",
+            "percent": 15,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "noix",
+            "sourceIpa": "nwa",
+            "tier": "light",
+            "percent": 18.8,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "noiera",
+            "sourceIpa": "nwaʁa",
+            "tier": "light",
+            "percent": 15,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "noierai",
+            "sourceIpa": "nwaʁɛ",
+            "tier": "light",
+            "percent": 15,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "noierez",
+            "sourceIpa": "nwaʁe",
+            "tier": "light",
+            "percent": 15,
+            "existingAsset": false,
+            "image": null
+          }
+        ],
+        "usefulExamples": [
+          "noir",
+          "noires",
+          "manoir",
+          "noirceur",
+          "patinoire"
+        ]
       }
     ],
     "reusableLightApproximation": [
@@ -91710,11 +91536,11 @@
         "usefulWeightedGain": 972.894,
         "schoolTargetCount": 1,
         "researchPriorityScore": 757.307,
-        "visualStatus": "exact_word_unreviewed",
+        "visualStatus": "curated_prototype",
         "categories": {
           "A_exactFrenchWord": true,
           "B_multipleExactFrenchWords": true,
-          "C_exactWordVisualNotReady": true,
+          "C_exactWordVisualNotReady": false,
           "D_obviousOrReadyPictogram": false,
           "E_lightApproximation": true,
           "F_exactMultiPictogram": false,
@@ -91821,11 +91647,11 @@
         "usefulWeightedGain": 967.208,
         "schoolTargetCount": 4,
         "researchPriorityScore": 726.039,
-        "visualStatus": "exact_word_unreviewed",
+        "visualStatus": "curated_prototype",
         "categories": {
           "A_exactFrenchWord": true,
           "B_multipleExactFrenchWords": true,
-          "C_exactWordVisualNotReady": true,
+          "C_exactWordVisualNotReady": false,
           "D_obviousOrReadyPictogram": false,
           "E_lightApproximation": true,
           "F_exactMultiPictogram": false,
@@ -92136,11 +91962,11 @@
         "usefulWeightedGain": 3217.333,
         "schoolTargetCount": 7,
         "researchPriorityScore": 703.267,
-        "visualStatus": "exact_word_unreviewed",
+        "visualStatus": "curated_prototype",
         "categories": {
           "A_exactFrenchWord": true,
           "B_multipleExactFrenchWords": true,
-          "C_exactWordVisualNotReady": true,
+          "C_exactWordVisualNotReady": false,
           "D_obviousOrReadyPictogram": false,
           "E_lightApproximation": true,
           "F_exactMultiPictogram": false,
@@ -92253,11 +92079,11 @@
         "usefulWeightedGain": 1563.177,
         "schoolTargetCount": 5,
         "researchPriorityScore": 701.559,
-        "visualStatus": "exact_word_unreviewed",
+        "visualStatus": "curated_prototype",
         "categories": {
           "A_exactFrenchWord": true,
           "B_multipleExactFrenchWords": true,
-          "C_exactWordVisualNotReady": true,
+          "C_exactWordVisualNotReady": false,
           "D_obviousOrReadyPictogram": false,
           "E_lightApproximation": true,
           "F_exactMultiPictogram": false,
@@ -92573,11 +92399,11 @@
         "usefulWeightedGain": 521.656,
         "schoolTargetCount": 3,
         "researchPriorityScore": 670.944,
-        "visualStatus": "exact_word_unreviewed",
+        "visualStatus": "curated_prototype",
         "categories": {
           "A_exactFrenchWord": true,
           "B_multipleExactFrenchWords": true,
-          "C_exactWordVisualNotReady": true,
+          "C_exactWordVisualNotReady": false,
           "D_obviousOrReadyPictogram": false,
           "E_lightApproximation": true,
           "F_exactMultiPictogram": false,
@@ -92690,11 +92516,11 @@
         "usefulWeightedGain": 895.292,
         "schoolTargetCount": 2,
         "researchPriorityScore": 669.094,
-        "visualStatus": "exact_word_unreviewed",
+        "visualStatus": "curated_prototype",
         "categories": {
           "A_exactFrenchWord": true,
           "B_multipleExactFrenchWords": true,
-          "C_exactWordVisualNotReady": true,
+          "C_exactWordVisualNotReady": false,
           "D_obviousOrReadyPictogram": false,
           "E_lightApproximation": true,
           "F_exactMultiPictogram": false,
@@ -93516,11 +93342,11 @@
         "usefulWeightedGain": 1854.826,
         "schoolTargetCount": 1,
         "researchPriorityScore": 628.48,
-        "visualStatus": "exact_word_unreviewed",
+        "visualStatus": "curated_prototype",
         "categories": {
           "A_exactFrenchWord": true,
           "B_multipleExactFrenchWords": true,
-          "C_exactWordVisualNotReady": true,
+          "C_exactWordVisualNotReady": false,
           "D_obviousOrReadyPictogram": false,
           "E_lightApproximation": true,
           "F_exactMultiPictogram": false,
@@ -93599,7 +93425,7 @@
         "usefulWeightedGain": 285.697,
         "schoolTargetCount": 1,
         "researchPriorityScore": 625.493,
-        "visualStatus": "exact_word_unreviewed",
+        "visualStatus": "reviewed_bad_or_deferred",
         "categories": {
           "A_exactFrenchWord": true,
           "B_multipleExactFrenchWords": false,
@@ -93797,11 +93623,11 @@
         "usefulWeightedGain": 325.159,
         "schoolTargetCount": 2,
         "researchPriorityScore": 610.604,
-        "visualStatus": "exact_word_unreviewed",
+        "visualStatus": "curated_prototype",
         "categories": {
           "A_exactFrenchWord": true,
           "B_multipleExactFrenchWords": true,
-          "C_exactWordVisualNotReady": true,
+          "C_exactWordVisualNotReady": false,
           "D_obviousOrReadyPictogram": false,
           "E_lightApproximation": true,
           "F_exactMultiPictogram": false,
@@ -129971,11 +129797,11 @@
       "usefulWeightedGain": 972.894,
       "schoolTargetCount": 1,
       "researchPriorityScore": 757.307,
-      "visualStatus": "exact_word_unreviewed",
+      "visualStatus": "curated_prototype",
       "categories": {
         "A_exactFrenchWord": true,
         "B_multipleExactFrenchWords": true,
-        "C_exactWordVisualNotReady": true,
+        "C_exactWordVisualNotReady": false,
         "D_obviousOrReadyPictogram": false,
         "E_lightApproximation": true,
         "F_exactMultiPictogram": false,
@@ -130666,17 +130492,17 @@
       "usefulWeightedGain": 11332.039,
       "schoolTargetCount": 3,
       "researchPriorityScore": 739.808,
-      "visualStatus": "exact_word_unreviewed",
+      "visualStatus": "curated_prototype",
       "categories": {
         "A_exactFrenchWord": true,
         "B_multipleExactFrenchWords": true,
-        "C_exactWordVisualNotReady": true,
+        "C_exactWordVisualNotReady": false,
         "D_obviousOrReadyPictogram": false,
         "E_lightApproximation": true,
         "F_exactMultiPictogram": false,
         "G_letter": false,
         "H_number": false,
-        "I_noCurrentReasonableRepresentation": true
+        "I_noCurrentReasonableRepresentation": false
       },
       "exactWords": [
         {
@@ -131690,11 +131516,11 @@
       "usefulWeightedGain": 967.208,
       "schoolTargetCount": 4,
       "researchPriorityScore": 726.039,
-      "visualStatus": "exact_word_unreviewed",
+      "visualStatus": "curated_prototype",
       "categories": {
         "A_exactFrenchWord": true,
         "B_multipleExactFrenchWords": true,
-        "C_exactWordVisualNotReady": true,
+        "C_exactWordVisualNotReady": false,
         "D_obviousOrReadyPictogram": false,
         "E_lightApproximation": true,
         "F_exactMultiPictogram": false,
@@ -133036,11 +132862,11 @@
       "usefulWeightedGain": 3217.333,
       "schoolTargetCount": 7,
       "researchPriorityScore": 703.267,
-      "visualStatus": "exact_word_unreviewed",
+      "visualStatus": "curated_prototype",
       "categories": {
         "A_exactFrenchWord": true,
         "B_multipleExactFrenchWords": true,
-        "C_exactWordVisualNotReady": true,
+        "C_exactWordVisualNotReady": false,
         "D_obviousOrReadyPictogram": false,
         "E_lightApproximation": true,
         "F_exactMultiPictogram": false,
@@ -133611,11 +133437,11 @@
       "usefulWeightedGain": 1563.177,
       "schoolTargetCount": 5,
       "researchPriorityScore": 701.559,
-      "visualStatus": "exact_word_unreviewed",
+      "visualStatus": "curated_prototype",
       "categories": {
         "A_exactFrenchWord": true,
         "B_multipleExactFrenchWords": true,
-        "C_exactWordVisualNotReady": true,
+        "C_exactWordVisualNotReady": false,
         "D_obviousOrReadyPictogram": false,
         "E_lightApproximation": true,
         "F_exactMultiPictogram": false,
@@ -134589,17 +134415,17 @@
       "usefulWeightedGain": 1945.884,
       "schoolTargetCount": 4,
       "researchPriorityScore": 687.107,
-      "visualStatus": "exact_word_unreviewed",
+      "visualStatus": "curated_prototype",
       "categories": {
         "A_exactFrenchWord": true,
         "B_multipleExactFrenchWords": true,
-        "C_exactWordVisualNotReady": true,
+        "C_exactWordVisualNotReady": false,
         "D_obviousOrReadyPictogram": false,
         "E_lightApproximation": true,
         "F_exactMultiPictogram": false,
         "G_letter": false,
         "H_number": false,
-        "I_noCurrentReasonableRepresentation": true
+        "I_noCurrentReasonableRepresentation": false
       },
       "exactWords": [
         {
@@ -135595,11 +135421,11 @@
       "usefulWeightedGain": 521.656,
       "schoolTargetCount": 3,
       "researchPriorityScore": 670.944,
-      "visualStatus": "exact_word_unreviewed",
+      "visualStatus": "curated_prototype",
       "categories": {
         "A_exactFrenchWord": true,
         "B_multipleExactFrenchWords": true,
-        "C_exactWordVisualNotReady": true,
+        "C_exactWordVisualNotReady": false,
         "D_obviousOrReadyPictogram": false,
         "E_lightApproximation": true,
         "F_exactMultiPictogram": false,
@@ -135881,11 +135707,11 @@
       "usefulWeightedGain": 895.292,
       "schoolTargetCount": 2,
       "researchPriorityScore": 669.094,
-      "visualStatus": "exact_word_unreviewed",
+      "visualStatus": "curated_prototype",
       "categories": {
         "A_exactFrenchWord": true,
         "B_multipleExactFrenchWords": true,
-        "C_exactWordVisualNotReady": true,
+        "C_exactWordVisualNotReady": false,
         "D_obviousOrReadyPictogram": false,
         "E_lightApproximation": true,
         "F_exactMultiPictogram": false,
@@ -137300,17 +137126,17 @@
       "usefulWeightedGain": 1090.644,
       "schoolTargetCount": 2,
       "researchPriorityScore": 656.421,
-      "visualStatus": "exact_word_unreviewed",
+      "visualStatus": "curated_prototype",
       "categories": {
         "A_exactFrenchWord": true,
         "B_multipleExactFrenchWords": true,
-        "C_exactWordVisualNotReady": true,
+        "C_exactWordVisualNotReady": false,
         "D_obviousOrReadyPictogram": false,
         "E_lightApproximation": true,
         "F_exactMultiPictogram": false,
         "G_letter": false,
         "H_number": false,
-        "I_noCurrentReasonableRepresentation": true
+        "I_noCurrentReasonableRepresentation": false
       },
       "exactWords": [
         {
@@ -138886,7 +138712,7 @@
       "usefulWeightedGain": 682.604,
       "schoolTargetCount": 4,
       "researchPriorityScore": 637.731,
-      "visualStatus": "exact_word_unreviewed",
+      "visualStatus": "reviewed_bad_or_deferred",
       "categories": {
         "A_exactFrenchWord": true,
         "B_multipleExactFrenchWords": false,
@@ -139503,17 +139329,17 @@
       "usefulWeightedGain": 515.297,
       "schoolTargetCount": 1,
       "researchPriorityScore": 629.169,
-      "visualStatus": "exact_word_unreviewed",
+      "visualStatus": "curated_prototype",
       "categories": {
         "A_exactFrenchWord": true,
         "B_multipleExactFrenchWords": false,
-        "C_exactWordVisualNotReady": true,
+        "C_exactWordVisualNotReady": false,
         "D_obviousOrReadyPictogram": false,
         "E_lightApproximation": false,
         "F_exactMultiPictogram": false,
         "G_letter": false,
         "H_number": false,
-        "I_noCurrentReasonableRepresentation": true
+        "I_noCurrentReasonableRepresentation": false
       },
       "exactWords": [
         {
@@ -139555,17 +139381,17 @@
       "usefulWeightedGain": 2914.64,
       "schoolTargetCount": 2,
       "researchPriorityScore": 628.834,
-      "visualStatus": "exact_word_unreviewed",
+      "visualStatus": "curated_prototype",
       "categories": {
         "A_exactFrenchWord": true,
         "B_multipleExactFrenchWords": true,
-        "C_exactWordVisualNotReady": true,
+        "C_exactWordVisualNotReady": false,
         "D_obviousOrReadyPictogram": false,
         "E_lightApproximation": true,
         "F_exactMultiPictogram": false,
         "G_letter": false,
         "H_number": false,
-        "I_noCurrentReasonableRepresentation": true
+        "I_noCurrentReasonableRepresentation": false
       },
       "exactWords": [
         {
@@ -139672,17 +139498,17 @@
       "usefulWeightedGain": 527.06,
       "schoolTargetCount": 1,
       "researchPriorityScore": 628.722,
-      "visualStatus": "exact_word_unreviewed",
+      "visualStatus": "curated_prototype",
       "categories": {
         "A_exactFrenchWord": true,
         "B_multipleExactFrenchWords": true,
-        "C_exactWordVisualNotReady": true,
+        "C_exactWordVisualNotReady": false,
         "D_obviousOrReadyPictogram": false,
         "E_lightApproximation": true,
         "F_exactMultiPictogram": false,
         "G_letter": false,
         "H_number": false,
-        "I_noCurrentReasonableRepresentation": true
+        "I_noCurrentReasonableRepresentation": false
       },
       "exactWords": [
         {
@@ -139870,11 +139696,11 @@
       "usefulWeightedGain": 1854.826,
       "schoolTargetCount": 1,
       "researchPriorityScore": 628.48,
-      "visualStatus": "exact_word_unreviewed",
+      "visualStatus": "curated_prototype",
       "categories": {
         "A_exactFrenchWord": true,
         "B_multipleExactFrenchWords": true,
-        "C_exactWordVisualNotReady": true,
+        "C_exactWordVisualNotReady": false,
         "D_obviousOrReadyPictogram": false,
         "E_lightApproximation": true,
         "F_exactMultiPictogram": false,
@@ -140369,7 +140195,7 @@
       "usefulWeightedGain": 285.697,
       "schoolTargetCount": 1,
       "researchPriorityScore": 625.493,
-      "visualStatus": "exact_word_unreviewed",
+      "visualStatus": "reviewed_bad_or_deferred",
       "categories": {
         "A_exactFrenchWord": true,
         "B_multipleExactFrenchWords": false,
@@ -140769,17 +140595,17 @@
       "usefulWeightedGain": 3452.131,
       "schoolTargetCount": 4,
       "researchPriorityScore": 623.406,
-      "visualStatus": "exact_word_unreviewed",
+      "visualStatus": "curated_prototype",
       "categories": {
         "A_exactFrenchWord": true,
         "B_multipleExactFrenchWords": true,
-        "C_exactWordVisualNotReady": true,
+        "C_exactWordVisualNotReady": false,
         "D_obviousOrReadyPictogram": false,
         "E_lightApproximation": true,
         "F_exactMultiPictogram": false,
         "G_letter": false,
         "H_number": false,
-        "I_noCurrentReasonableRepresentation": true
+        "I_noCurrentReasonableRepresentation": false
       },
       "exactWords": [
         {
@@ -142727,11 +142553,11 @@
       "usefulWeightedGain": 325.159,
       "schoolTargetCount": 2,
       "researchPriorityScore": 610.604,
-      "visualStatus": "exact_word_unreviewed",
+      "visualStatus": "curated_prototype",
       "categories": {
         "A_exactFrenchWord": true,
         "B_multipleExactFrenchWords": true,
-        "C_exactWordVisualNotReady": true,
+        "C_exactWordVisualNotReady": false,
         "D_obviousOrReadyPictogram": false,
         "E_lightApproximation": true,
         "F_exactMultiPictogram": false,
@@ -143448,17 +143274,17 @@
       "usefulWeightedGain": 1107.934,
       "schoolTargetCount": 2,
       "researchPriorityScore": 604.982,
-      "visualStatus": "exact_word_unreviewed",
+      "visualStatus": "curated_prototype",
       "categories": {
         "A_exactFrenchWord": true,
         "B_multipleExactFrenchWords": false,
-        "C_exactWordVisualNotReady": true,
+        "C_exactWordVisualNotReady": false,
         "D_obviousOrReadyPictogram": false,
         "E_lightApproximation": true,
         "F_exactMultiPictogram": false,
         "G_letter": false,
         "H_number": false,
-        "I_noCurrentReasonableRepresentation": true
+        "I_noCurrentReasonableRepresentation": false
       },
       "exactWords": [
         {
@@ -144975,17 +144801,17 @@
       "usefulWeightedGain": 499.008,
       "schoolTargetCount": 4,
       "researchPriorityScore": 598.007,
-      "visualStatus": "exact_word_unreviewed",
+      "visualStatus": "curated_prototype",
       "categories": {
         "A_exactFrenchWord": true,
         "B_multipleExactFrenchWords": false,
-        "C_exactWordVisualNotReady": true,
+        "C_exactWordVisualNotReady": false,
         "D_obviousOrReadyPictogram": false,
         "E_lightApproximation": true,
         "F_exactMultiPictogram": false,
         "G_letter": false,
         "H_number": false,
-        "I_noCurrentReasonableRepresentation": true
+        "I_noCurrentReasonableRepresentation": false
       },
       "exactWords": [
         {
@@ -620084,10 +619910,13 @@
           "data/pictogram-prototype-comparisons.json",
           "data/rebus-prototype-asset-gap-audit.json",
           "data/rebus-representation-bank-audit.json",
+          "data/rebus-representation-comparative-batch.json",
           "docs/REBUS_REPRESENTATION_BANK_AUDIT.md",
+          "docs/REBUS_REPRESENTATION_COMPARATIVE_BATCH.md",
           "tests/asset-library-inventory.test.mjs",
           "tests/pictogram-expansion.test.mjs",
-          "tests/pictogram-naming-tests.test.mjs"
+          "tests/pictogram-naming-tests.test.mjs",
+          "tests/rebus-representation-comparative-batch.test.mjs"
         ]
       }
     ],

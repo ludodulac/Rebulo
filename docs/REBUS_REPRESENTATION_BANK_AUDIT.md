@@ -15,13 +15,13 @@
 |---|---:|---:|
 | A — mot français exact disponible | 5741 | 60.5% |
 | B — plusieurs mots français exacts | 2562 | 27.0% |
-| C — mot exact mais aucune image prête/évidente | 5504 | 58.0% |
+| C — mot exact mais aucune image prête/évidente | 5487 | 57.8% |
 | D — pictogramme exact déjà prêt | 222 | 2.3% |
 | E — approximation légère disponible | 1742 | 18.4% |
 | F — composition exacte de plusieurs pictogrammes | 170 | 1.8% |
 | G — lettre utilisable | 23 | 0.2% |
 | H — chiffre/nombre utilisable | 12 | 0.1% |
-| I — aucune représentation raisonnable actuellement disponible | 8940 | 94.2% |
+| I — aucune représentation raisonnable actuellement disponible | 8931 | 94.1% |
 
 Les catégories se chevauchent volontairement : un son peut avoir plusieurs mots exacts, une image prête et une lettre. La catégorie I est au contraire une frontière opérationnelle conservatrice.
 
@@ -37,8 +37,8 @@ Les catégories se chevauchent volontairement : un son peut avoir plusieurs mots
 
 ## Goulot d’étranglement actuel
 
-- 5504 sons utiles ont déjà au moins un mot français exact mais pas encore d’image prête/évidente : c’est le principal réservoir à curater avant d’inventer davantage d’heuristiques phonétiques.
-- 8940 sons utiles n’ont actuellement aucune route que la banque considère raisonnablement exploitable.
+- 5487 sons utiles ont déjà au moins un mot français exact mais pas encore d’image prête/évidente : c’est le principal réservoir à curater avant d’inventer davantage d’heuristiques phonétiques.
+- 8931 sons utiles n’ont actuellement aucune route que la banque considère raisonnablement exploitable.
 - 170 sons utiles peuvent déjà être couverts par 2–3 pictogrammes exacts, même sans pictogramme unique.
 - 1742 sons utiles ont au moins une petite approximation dans la file de recherche ; elle reste générale/non stricte.
 

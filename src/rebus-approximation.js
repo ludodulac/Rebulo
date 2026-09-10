@@ -2,6 +2,13 @@ import {normalizeIPA,splitIPAUnits} from './phonetic-engine.js';
 
 const VOWELS=new Set(['a','ɑ','e','ɛ','i','o','ɔ','u','y','ø','œ','ə','ɛ̃','ɑ̃','ɔ̃','œ̃']);
 const GLIDES=new Set(['j','w','ɥ']);
+const NEAR_VOWEL_PAIRS=new Set(['e|ɛ','o|ɔ','a|ɑ','ø|œ']);
+const SCHWA_NEIGHBORS=new Set(['e','ɛ','ø','œ']);
+const NASAL_COUNTERPARTS=new Set(['ɛ|ɛ̃','a|ɑ̃','ɑ|ɑ̃','ɔ|ɔ̃','œ|œ̃']);
+
+function unorderedPair(a='',b=''){
+  return a.localeCompare(b,'fr')<=0?`${a}|${b}`:`${b}|${a}`;
+}
 
 export function phonemeClass(unit=''){
   const value=normalizeIPA(unit);
@@ -17,8 +24,13 @@ function safeWeight(policy={},key,fallback){
 }
 
 export function approximationWeights(policy={}){
+  const legacyVowel=safeWeight(policy,'vowelSubstitution',0.6);
   return {
-    vowelSubstitution:safeWeight(policy,'vowelSubstitution',0.35),
+    vowelSubstitution:legacyVowel,
+    nearVowelSubstitution:safeWeight(policy,'nearVowelSubstitution',Math.min(legacyVowel,0.3)),
+    schwaVowelSubstitution:safeWeight(policy,'schwaVowelSubstitution',Math.min(legacyVowel,0.4)),
+    nasalizationSubstitution:safeWeight(policy,'nasalizationSubstitution',Math.min(legacyVowel,0.5)),
+    farVowelSubstitution:safeWeight(policy,'farVowelSubstitution',Math.max(legacyVowel,0.65)),
     glideSubstitution:safeWeight(policy,'glideSubstitution',0.45),
     consonantSubstitution:safeWeight(policy,'consonantSubstitution',0.55),
     crossClassSubstitution:safeWeight(policy,'crossClassSubstitution',0.9),
@@ -27,13 +39,24 @@ export function approximationWeights(policy={}){
   };
 }
 
+export function vowelSubstitutionWeight(sourceUnit='',targetUnit='',policy={}){
+  const source=normalizeIPA(sourceUnit),target=normalizeIPA(targetUnit);
+  if(source===target)return 0;
+  const weights=approximationWeights(policy);
+  const pair=unorderedPair(source,target);
+  if(NEAR_VOWEL_PAIRS.has(pair))return weights.nearVowelSubstitution;
+  if((source==='ə'&&SCHWA_NEIGHBORS.has(target))||(target==='ə'&&SCHWA_NEIGHBORS.has(source)))return weights.schwaVowelSubstitution;
+  if(NASAL_COUNTERPARTS.has(pair))return weights.nasalizationSubstitution;
+  return weights.farVowelSubstitution;
+}
+
 export function substitutionWeight(sourceUnit='',targetUnit='',policy={}){
   const source=normalizeIPA(sourceUnit),target=normalizeIPA(targetUnit);
   if(source===target)return 0;
   const weights=approximationWeights(policy);
   const sourceClass=phonemeClass(source),targetClass=phonemeClass(target);
   if(sourceClass!==targetClass)return weights.crossClassSubstitution;
-  if(sourceClass==='vowel')return weights.vowelSubstitution;
+  if(sourceClass==='vowel')return vowelSubstitutionWeight(source,target,policy);
   if(sourceClass==='glide')return weights.glideSubstitution;
   return weights.consonantSubstitution;
 }

@@ -67,6 +67,74 @@ function hideMechanicalPlusSigns(){
   document.head.appendChild(style);
 }
 
+function installSyllableIdentificationPositionSelector(){
+  const activitySelect=document.getElementById('therapyActivity');
+  if(!activitySelect||document.getElementById('syllablePosition'))return;
+
+  const initialId='syllable-identification';
+  const finalId='syllable-identification-final';
+  const field=document.createElement('label');
+  field.id='syllablePositionField';
+  field.hidden=true;
+  field.append('Position');
+  const positionSelect=document.createElement('select');
+  positionSelect.id='syllablePosition';
+  positionSelect.setAttribute('aria-label','Position de la syllabe');
+  for(const [value,label] of [['initial','Première'],['final','Dernière']]){
+    const option=document.createElement('option');
+    option.value=value;
+    option.textContent=label;
+    positionSelect.appendChild(option);
+  }
+  field.appendChild(positionSelect);
+  activitySelect.closest('label')?.after(field);
+
+  let syncing=false;
+  const optionFor=id=>[...activitySelect.options].find(option=>option.value===id)||null;
+  const showFamilySelection=()=>{
+    const initialOption=optionFor(initialId);
+    const finalOption=optionFor(finalId);
+    if(!initialOption||!finalOption){
+      field.hidden=true;
+      return;
+    }
+    const selectedFinal=activitySelect.value===finalId;
+    initialOption.textContent=initialOption.textContent.replace(/\s*—\s*première syllabe\s*$/iu,'');
+    finalOption.hidden=true;
+    if(selectedFinal){
+      positionSelect.value='final';
+      activitySelect.value=initialId;
+    }else if(activitySelect.value===initialId){
+      positionSelect.value='initial';
+    }
+    field.hidden=activitySelect.value!==initialId;
+  };
+
+  activitySelect.addEventListener('change',()=>{
+    if(syncing)return;
+    if(activitySelect.value===initialId){
+      positionSelect.value='initial';
+      field.hidden=false;
+    }else{
+      field.hidden=true;
+    }
+  });
+
+  positionSelect.addEventListener('change',()=>{
+    const requestedId=positionSelect.value==='final'?finalId:initialId;
+    if(!optionFor(requestedId))return;
+    syncing=true;
+    activitySelect.value=requestedId;
+    activitySelect.dispatchEvent(new Event('change',{bubbles:true}));
+    activitySelect.value=initialId;
+    syncing=false;
+    field.hidden=false;
+  });
+
+  new MutationObserver(showFamilySelection).observe(activitySelect,{childList:true,subtree:true});
+  showFamilySelection();
+}
+
 window.fetch=async function rebuloFetch(input,init){
   const url=typeof input==='string'?input:input?.url||'';
 
@@ -106,3 +174,4 @@ window.fetch=async function rebuloFetch(input,init){
 hideMechanicalPlusSigns();
 installCanonicalRhymeStimuli();
 await import('../app.js');
+installSyllableIdentificationPositionSelector();

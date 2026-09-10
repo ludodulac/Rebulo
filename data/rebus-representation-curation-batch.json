@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.1",
-  "generatedAt": "2026-09-10T09:04:10.061Z",
+  "generatedAt": "2026-09-10T15:08:30.370Z",
   "status": "human_curation_queue_only",
   "purpose": "Prioritize exact lexical gaps for visual curation without inflating usable coverage before naming evidence exists.",
   "policy": {
@@ -14,9 +14,9 @@
   },
   "counts": {
     "total": 250,
-    "curatedPrototype": 15,
+    "curatedPrototype": 32,
     "existingExactAsset": 0,
-    "nounLexicalPrecheck": 216,
+    "nounLexicalPrecheck": 199,
     "lexicalPrecheck": 18,
     "assetPhonologyConflict": 1
   },
@@ -559,6 +559,730 @@
       "caution": "Editorial prototype hypothesis only; it is not spontaneous-naming evidence and is never auto-activated."
     },
     {
+      "ipa": "tɔ̃",
+      "usefulTargetCount": 29,
+      "usefulWeightedGain": 11332.039,
+      "schoolTargetCount": 3,
+      "syllableSpans": [
+        1
+      ],
+      "usefulExamples": [
+        "ton",
+        "tomber",
+        "fiston",
+        "bouton",
+        "retomber",
+        "bâton"
+      ],
+      "preferredCandidate": {
+        "word": "thon",
+        "pos": "NOM",
+        "frequency": 5.728,
+        "syllableCount": 1,
+        "visualRoute": "curated_prototype",
+        "visualConcept": "Un thon entier de profil, corps fuselé et nageoires caractéristiques, seul sur fond clair.",
+        "visualPlausibility": "medium_high",
+        "spontaneousNamingRisk": "medium_high",
+        "mainConfusions": [
+          "poisson",
+          "maquereau"
+        ],
+        "existingExactAssets": [],
+        "conflictingAssets": [],
+        "requiresHumanNamingReview": true,
+        "automaticActivation": false
+      },
+      "candidates": [
+        {
+          "word": "thon",
+          "pos": "NOM",
+          "frequency": 5.728,
+          "syllableCount": 1,
+          "visualRoute": "curated_prototype",
+          "visualConcept": "Un thon entier de profil, corps fuselé et nageoires caractéristiques, seul sur fond clair.",
+          "visualPlausibility": "medium_high",
+          "spontaneousNamingRisk": "medium_high",
+          "mainConfusions": [
+            "poisson",
+            "maquereau"
+          ],
+          "existingExactAssets": [],
+          "conflictingAssets": [],
+          "requiresHumanNamingReview": true,
+          "automaticActivation": false
+        }
+      ],
+      "priorityScore": 10664.593,
+      "status": "curated_prototype_needs_naming_test",
+      "nextGate": "compare_whole_fish_and_food_context_before_naming_test",
+      "caution": "Editorial prototype hypothesis only; it is not spontaneous-naming evidence and is never auto-activated."
+    },
+    {
+      "ipa": "tik",
+      "usefulTargetCount": 56,
+      "usefulWeightedGain": 972.894,
+      "schoolTargetCount": 1,
+      "syllableSpans": [
+        1
+      ],
+      "usefulExamples": [
+        "politique",
+        "fantastique",
+        "romantique",
+        "boutique",
+        "plastique",
+        "pathétique"
+      ],
+      "preferredCandidate": {
+        "word": "tique",
+        "pos": "NOM",
+        "frequency": 0.652,
+        "syllableCount": 1,
+        "visualRoute": "curated_prototype",
+        "visualConcept": "Une tique grossie isolée, vue du dessus, huit pattes visibles, sans peau ni animal hôte.",
+        "visualPlausibility": "medium_high",
+        "spontaneousNamingRisk": "high",
+        "mainConfusions": [
+          "araignée",
+          "insecte",
+          "pou"
+        ],
+        "existingExactAssets": [],
+        "conflictingAssets": [],
+        "requiresHumanNamingReview": true,
+        "automaticActivation": false
+      },
+      "candidates": [
+        {
+          "word": "tique",
+          "pos": "NOM",
+          "frequency": 0.652,
+          "syllableCount": 1,
+          "visualRoute": "curated_prototype",
+          "visualConcept": "Une tique grossie isolée, vue du dessus, huit pattes visibles, sans peau ni animal hôte.",
+          "visualPlausibility": "medium_high",
+          "spontaneousNamingRisk": "high",
+          "mainConfusions": [
+            "araignée",
+            "insecte",
+            "pou"
+          ],
+          "existingExactAssets": [],
+          "conflictingAssets": [],
+          "requiresHumanNamingReview": true,
+          "automaticActivation": false
+        }
+      ],
+      "priorityScore": 10654.88,
+      "status": "curated_prototype_needs_naming_test",
+      "nextGate": "prototype_only_if_visual_differentiation_from_spider_is_clear",
+      "caution": "Editorial prototype hypothesis only; it is not spontaneous-naming evidence and is never auto-activated."
+    },
+    {
+      "ipa": "mɛtʁ",
+      "usefulTargetCount": 23,
+      "usefulWeightedGain": 3217.333,
+      "schoolTargetCount": 7,
+      "syllableSpans": [
+        1
+      ],
+      "usefulExamples": [
+        "mettre",
+        "maître",
+        "remettre",
+        "km",
+        "permettre",
+        "admettre"
+      ],
+      "preferredCandidate": {
+        "word": "mètre",
+        "pos": "NOM",
+        "frequency": 5.82,
+        "syllableCount": 1,
+        "visualRoute": "curated_prototype",
+        "visualConcept": "Un mètre ruban déroulé avec graduations visibles, seul, sans personne ni chantier.",
+        "visualPlausibility": "high",
+        "spontaneousNamingRisk": "medium",
+        "mainConfusions": [
+          "mètre ruban",
+          "ruban",
+          "règle"
+        ],
+        "existingExactAssets": [],
+        "conflictingAssets": [],
+        "requiresHumanNamingReview": true,
+        "automaticActivation": false
+      },
+      "candidates": [
+        {
+          "word": "mètre",
+          "pos": "NOM",
+          "frequency": 5.82,
+          "syllableCount": 1,
+          "visualRoute": "curated_prototype",
+          "visualConcept": "Un mètre ruban déroulé avec graduations visibles, seul, sans personne ni chantier.",
+          "visualPlausibility": "high",
+          "spontaneousNamingRisk": "medium",
+          "mainConfusions": [
+            "mètre ruban",
+            "ruban",
+            "règle"
+          ],
+          "existingExactAssets": [],
+          "conflictingAssets": [],
+          "requiresHumanNamingReview": true,
+          "automaticActivation": false
+        }
+      ],
+      "priorityScore": 10630.836,
+      "status": "curated_prototype_needs_naming_test",
+      "nextGate": "compare_tape_measure_and_meter_stick_then_naming_test",
+      "caution": "Editorial prototype hypothesis only; it is not spontaneous-naming evidence and is never auto-activated."
+    },
+    {
+      "ipa": "tabl",
+      "usefulTargetCount": 24,
+      "usefulWeightedGain": 1090.644,
+      "schoolTargetCount": 2,
+      "syllableSpans": [
+        1
+      ],
+      "usefulExamples": [
+        "table",
+        "portable",
+        "véritable",
+        "confortable",
+        "inévitable",
+        "instable"
+      ],
+      "preferredCandidate": {
+        "word": "table",
+        "pos": "NOM",
+        "frequency": 93.728,
+        "syllableCount": 1,
+        "visualRoute": "curated_prototype",
+        "visualConcept": "Une table simple à quatre pieds vue en légère perspective, seule sur fond clair, sans repas ni chaises.",
+        "visualPlausibility": "high",
+        "spontaneousNamingRisk": "low_medium",
+        "mainConfusions": [
+          "bureau"
+        ],
+        "existingExactAssets": [],
+        "conflictingAssets": [],
+        "requiresHumanNamingReview": true,
+        "automaticActivation": false
+      },
+      "candidates": [
+        {
+          "word": "table",
+          "pos": "NOM",
+          "frequency": 93.728,
+          "syllableCount": 1,
+          "visualRoute": "curated_prototype",
+          "visualConcept": "Une table simple à quatre pieds vue en légère perspective, seule sur fond clair, sans repas ni chaises.",
+          "visualPlausibility": "high",
+          "spontaneousNamingRisk": "low_medium",
+          "mainConfusions": [
+            "bureau"
+          ],
+          "existingExactAssets": [],
+          "conflictingAssets": [],
+          "requiresHumanNamingReview": true,
+          "automaticActivation": false
+        }
+      ],
+      "priorityScore": 10630.602,
+      "status": "curated_prototype_needs_naming_test",
+      "nextGate": "check_existing_open_asset_then_prototype_if_needed",
+      "caution": "Editorial prototype hypothesis only; it is not spontaneous-naming evidence and is never auto-activated."
+    },
+    {
+      "ipa": "kaʁ",
+      "usefulTargetCount": 30,
+      "usefulWeightedGain": 967.208,
+      "schoolTargetCount": 4,
+      "syllableSpans": [
+        1
+      ],
+      "usefulExamples": [
+        "quartier",
+        "cardiaque",
+        "rencard",
+        "placard",
+        "écart",
+        "quart"
+      ],
+      "preferredCandidate": {
+        "word": "car",
+        "pos": "NOM",
+        "frequency": 5.051,
+        "syllableCount": 1,
+        "visualRoute": "curated_prototype",
+        "visualConcept": "Un autocar de tourisme vu de trois-quarts, long véhicule avec nombreuses fenêtres et porte passagers, seul sur fond clair.",
+        "visualPlausibility": "high",
+        "spontaneousNamingRisk": "high",
+        "mainConfusions": [
+          "bus",
+          "autocar",
+          "coach"
+        ],
+        "existingExactAssets": [],
+        "conflictingAssets": [],
+        "requiresHumanNamingReview": true,
+        "automaticActivation": false
+      },
+      "candidates": [
+        {
+          "word": "car",
+          "pos": "NOM",
+          "frequency": 5.051,
+          "syllableCount": 1,
+          "visualRoute": "curated_prototype",
+          "visualConcept": "Un autocar de tourisme vu de trois-quarts, long véhicule avec nombreuses fenêtres et porte passagers, seul sur fond clair.",
+          "visualPlausibility": "high",
+          "spontaneousNamingRisk": "high",
+          "mainConfusions": [
+            "bus",
+            "autocar",
+            "coach"
+          ],
+          "existingExactAssets": [],
+          "conflictingAssets": [],
+          "requiresHumanNamingReview": true,
+          "automaticActivation": false
+        }
+      ],
+      "priorityScore": 10621.359,
+      "status": "curated_prototype_needs_naming_test",
+      "nextGate": "compare_bus_and_coach_silhouettes_then_naming_test",
+      "caution": "Editorial prototype hypothesis only; it is not spontaneous-naming evidence and is never auto-activated."
+    },
+    {
+      "ipa": "maʁ",
+      "usefulTargetCount": 25,
+      "usefulWeightedGain": 1563.177,
+      "schoolTargetCount": 5,
+      "syllableSpans": [
+        1
+      ],
+      "usefulExamples": [
+        "marcher",
+        "marché",
+        "marre",
+        "cauchemar",
+        "mardi",
+        "remarquer"
+      ],
+      "preferredCandidate": {
+        "word": "mare",
+        "pos": "NOM",
+        "frequency": 2.949,
+        "syllableCount": 1,
+        "visualRoute": "curated_prototype",
+        "visualConcept": "Petite mare ronde avec eau, quelques roseaux et une grenouille minuscule secondaire, sans paysage dominant.",
+        "visualPlausibility": "medium_high",
+        "spontaneousNamingRisk": "medium_high",
+        "mainConfusions": [
+          "étang",
+          "flaque",
+          "lac"
+        ],
+        "existingExactAssets": [],
+        "conflictingAssets": [],
+        "requiresHumanNamingReview": true,
+        "automaticActivation": false
+      },
+      "candidates": [
+        {
+          "word": "mare",
+          "pos": "NOM",
+          "frequency": 2.949,
+          "syllableCount": 1,
+          "visualRoute": "curated_prototype",
+          "visualConcept": "Petite mare ronde avec eau, quelques roseaux et une grenouille minuscule secondaire, sans paysage dominant.",
+          "visualPlausibility": "medium_high",
+          "spontaneousNamingRisk": "medium_high",
+          "mainConfusions": [
+            "étang",
+            "flaque",
+            "lac"
+          ],
+          "existingExactAssets": [],
+          "conflictingAssets": [],
+          "requiresHumanNamingReview": true,
+          "automaticActivation": false
+        }
+      ],
+      "priorityScore": 10611.739,
+      "status": "curated_prototype_needs_naming_test",
+      "nextGate": "compare_minimal_waterbody_scenes_then_naming_test",
+      "caution": "Editorial prototype hypothesis only; it is not spontaneous-naming evidence and is never auto-activated."
+    },
+    {
+      "ipa": "pla",
+      "usefulTargetCount": 23,
+      "usefulWeightedGain": 895.292,
+      "schoolTargetCount": 2,
+      "syllableSpans": [
+        1
+      ],
+      "usefulExamples": [
+        "planète",
+        "remplacer",
+        "plat",
+        "placard",
+        "déplacer",
+        "plateau"
+      ],
+      "preferredCandidate": {
+        "word": "plat",
+        "pos": "NOM",
+        "frequency": 21.826,
+        "syllableCount": 1,
+        "visualRoute": "curated_prototype",
+        "visualConcept": "Un plat de service ovale vide vu en légère perspective, seul sur fond clair.",
+        "visualPlausibility": "medium",
+        "spontaneousNamingRisk": "high",
+        "mainConfusions": [
+          "assiette",
+          "plateau",
+          "vaisselle"
+        ],
+        "existingExactAssets": [],
+        "conflictingAssets": [],
+        "requiresHumanNamingReview": true,
+        "automaticActivation": false
+      },
+      "candidates": [
+        {
+          "word": "plat",
+          "pos": "NOM",
+          "frequency": 21.826,
+          "syllableCount": 1,
+          "visualRoute": "curated_prototype",
+          "visualConcept": "Un plat de service ovale vide vu en légère perspective, seul sur fond clair.",
+          "visualPlausibility": "medium",
+          "spontaneousNamingRisk": "high",
+          "mainConfusions": [
+            "assiette",
+            "plateau",
+            "vaisselle"
+          ],
+          "existingExactAssets": [],
+          "conflictingAssets": [],
+          "requiresHumanNamingReview": true,
+          "automaticActivation": false
+        }
+      ],
+      "priorityScore": 10605.543,
+      "status": "curated_prototype_needs_naming_test",
+      "nextGate": "compare_service_dish_shapes_before_prototype",
+      "caution": "Editorial prototype hypothesis only; it is not spontaneous-naming evidence and is never auto-activated."
+    },
+    {
+      "ipa": "pu",
+      "usefulTargetCount": 23,
+      "usefulWeightedGain": 1945.884,
+      "schoolTargetCount": 4,
+      "syllableSpans": [
+        1
+      ],
+      "usefulExamples": [
+        "pouvoir",
+        "épouser",
+        "poulet",
+        "pousser",
+        "poupée",
+        "poussière"
+      ],
+      "preferredCandidate": {
+        "word": "pou",
+        "pos": "NOM",
+        "frequency": 1.826,
+        "syllableCount": 1,
+        "visualRoute": "curated_prototype",
+        "visualConcept": "Un pou grossi, isolé comme petit insecte sans cheveux ni tête humaine dominante.",
+        "visualPlausibility": "medium_high",
+        "spontaneousNamingRisk": "medium_high",
+        "mainConfusions": [
+          "insecte",
+          "puce",
+          "tique"
+        ],
+        "existingExactAssets": [],
+        "conflictingAssets": [],
+        "requiresHumanNamingReview": true,
+        "automaticActivation": false
+      },
+      "candidates": [
+        {
+          "word": "pou",
+          "pos": "NOM",
+          "frequency": 1.826,
+          "syllableCount": 1,
+          "visualRoute": "curated_prototype",
+          "visualConcept": "Un pou grossi, isolé comme petit insecte sans cheveux ni tête humaine dominante.",
+          "visualPlausibility": "medium_high",
+          "spontaneousNamingRisk": "medium_high",
+          "mainConfusions": [
+            "insecte",
+            "puce",
+            "tique"
+          ],
+          "existingExactAssets": [],
+          "conflictingAssets": [],
+          "requiresHumanNamingReview": true,
+          "automaticActivation": false
+        }
+      ],
+      "priorityScore": 10601.3,
+      "status": "curated_prototype_needs_naming_test",
+      "nextGate": "prototype_then_child_naming_test",
+      "caution": "Editorial prototype hypothesis only; it is not spontaneous-naming evidence and is never auto-activated."
+    },
+    {
+      "ipa": "tʁu",
+      "usefulTargetCount": 12,
+      "usefulWeightedGain": 3452.131,
+      "schoolTargetCount": 4,
+      "syllableSpans": [
+        1
+      ],
+      "usefulExamples": [
+        "trouver",
+        "trou",
+        "retrouver",
+        "troubler",
+        "troupeau",
+        "trouvé"
+      ],
+      "preferredCandidate": {
+        "word": "trou",
+        "pos": "NOM",
+        "frequency": 69.766,
+        "syllableCount": 1,
+        "visualRoute": "curated_prototype",
+        "visualConcept": "Une planche simple percée d'un grand trou circulaire avec une flèche pointant précisément le vide central.",
+        "visualPlausibility": "medium_high",
+        "spontaneousNamingRisk": "medium",
+        "mainConfusions": [
+          "cercle",
+          "ouverture",
+          "planche"
+        ],
+        "existingExactAssets": [],
+        "conflictingAssets": [],
+        "requiresHumanNamingReview": true,
+        "automaticActivation": false
+      },
+      "candidates": [
+        {
+          "word": "trou",
+          "pos": "NOM",
+          "frequency": 69.766,
+          "syllableCount": 1,
+          "visualRoute": "curated_prototype",
+          "visualConcept": "Une planche simple percée d'un grand trou circulaire avec une flèche pointant précisément le vide central.",
+          "visualPlausibility": "medium_high",
+          "spontaneousNamingRisk": "medium",
+          "mainConfusions": [
+            "cercle",
+            "ouverture",
+            "planche"
+          ],
+          "existingExactAssets": [],
+          "conflictingAssets": [],
+          "requiresHumanNamingReview": true,
+          "automaticActivation": false
+        }
+      ],
+      "priorityScore": 10593.082,
+      "status": "curated_prototype_needs_naming_test",
+      "nextGate": "compare_arrow_and_no_arrow_then_naming_test",
+      "caution": "Editorial prototype hypothesis only; it is not spontaneous-naming evidence and is never auto-activated."
+    },
+    {
+      "ipa": "ʒy",
+      "usefulTargetCount": 19,
+      "usefulWeightedGain": 515.297,
+      "schoolTargetCount": 1,
+      "syllableSpans": [
+        1
+      ],
+      "usefulExamples": [
+        "jury",
+        "jus",
+        "jugement",
+        "juger",
+        "judiciaire",
+        "juridique"
+      ],
+      "preferredCandidate": {
+        "word": "jus",
+        "pos": "NOM",
+        "frequency": 25.041,
+        "syllableCount": 1,
+        "visualRoute": "curated_prototype",
+        "visualConcept": "Un verre transparent rempli de jus d'orange avec une orange coupée discrète à côté, sans marque ni texte.",
+        "visualPlausibility": "medium_high",
+        "spontaneousNamingRisk": "medium",
+        "mainConfusions": [
+          "boisson",
+          "orange",
+          "jus d'orange"
+        ],
+        "existingExactAssets": [],
+        "conflictingAssets": [],
+        "requiresHumanNamingReview": true,
+        "automaticActivation": false
+      },
+      "candidates": [
+        {
+          "word": "jus",
+          "pos": "NOM",
+          "frequency": 25.041,
+          "syllableCount": 1,
+          "visualRoute": "curated_prototype",
+          "visualConcept": "Un verre transparent rempli de jus d'orange avec une orange coupée discrète à côté, sans marque ni texte.",
+          "visualPlausibility": "medium_high",
+          "spontaneousNamingRisk": "medium",
+          "mainConfusions": [
+            "boisson",
+            "orange",
+            "jus d'orange"
+          ],
+          "existingExactAssets": [],
+          "conflictingAssets": [],
+          "requiresHumanNamingReview": true,
+          "automaticActivation": false
+        }
+      ],
+      "priorityScore": 10575.945,
+      "status": "curated_prototype_needs_naming_test",
+      "nextGate": "compare_glass_only_and_fruit_cue_then_naming_test",
+      "caution": "Editorial prototype hypothesis only; it is not spontaneous-naming evidence and is never auto-activated."
+    },
+    {
+      "ipa": "bʁa",
+      "usefulTargetCount": 12,
+      "usefulWeightedGain": 1107.934,
+      "schoolTargetCount": 2,
+      "syllableSpans": [
+        1
+      ],
+      "usefulExamples": [
+        "bras",
+        "embrasser",
+        "bravo",
+        "bracelet",
+        "braquage",
+        "braquer"
+      ],
+      "preferredCandidate": {
+        "word": "bras",
+        "pos": "NOM",
+        "frequency": 123.984,
+        "syllableCount": 1,
+        "visualRoute": "curated_prototype",
+        "visualConcept": "Silhouette simple d'un haut du corps avec une flèche nette pointant un bras, sans geste particulier.",
+        "visualPlausibility": "high",
+        "spontaneousNamingRisk": "medium",
+        "mainConfusions": [
+          "main",
+          "coude",
+          "épaule"
+        ],
+        "existingExactAssets": [],
+        "conflictingAssets": [],
+        "requiresHumanNamingReview": true,
+        "automaticActivation": false
+      },
+      "candidates": [
+        {
+          "word": "bras",
+          "pos": "NOM",
+          "frequency": 123.984,
+          "syllableCount": 1,
+          "visualRoute": "curated_prototype",
+          "visualConcept": "Silhouette simple d'un haut du corps avec une flèche nette pointant un bras, sans geste particulier.",
+          "visualPlausibility": "high",
+          "spontaneousNamingRisk": "medium",
+          "mainConfusions": [
+            "main",
+            "coude",
+            "épaule"
+          ],
+          "existingExactAssets": [],
+          "conflictingAssets": [],
+          "requiresHumanNamingReview": true,
+          "automaticActivation": false
+        }
+      ],
+      "priorityScore": 10571.8,
+      "status": "curated_prototype_needs_naming_test",
+      "nextGate": "compare_arrow_position_then_naming_test",
+      "caution": "Editorial prototype hypothesis only; it is not spontaneous-naming evidence and is never auto-activated."
+    },
+    {
+      "ipa": "bʁi",
+      "usefulTargetCount": 23,
+      "usefulWeightedGain": 521.656,
+      "schoolTargetCount": 3,
+      "syllableSpans": [
+        1
+      ],
+      "usefulExamples": [
+        "abri",
+        "briser",
+        "brillant",
+        "briller",
+        "brigade",
+        "cambriolage"
+      ],
+      "preferredCandidate": {
+        "word": "brie",
+        "pos": "NOM",
+        "frequency": 0.418,
+        "syllableCount": 1,
+        "visualRoute": "curated_prototype",
+        "visualConcept": "Un quartier de brie à croûte blanche et cœur crémeux, isolé sur fond clair, sans emballage ni texte.",
+        "visualPlausibility": "medium_high",
+        "spontaneousNamingRisk": "high",
+        "mainConfusions": [
+          "fromage",
+          "camembert"
+        ],
+        "existingExactAssets": [],
+        "conflictingAssets": [],
+        "requiresHumanNamingReview": true,
+        "automaticActivation": false
+      },
+      "candidates": [
+        {
+          "word": "brie",
+          "pos": "NOM",
+          "frequency": 0.418,
+          "syllableCount": 1,
+          "visualRoute": "curated_prototype",
+          "visualConcept": "Un quartier de brie à croûte blanche et cœur crémeux, isolé sur fond clair, sans emballage ni texte.",
+          "visualPlausibility": "medium_high",
+          "spontaneousNamingRisk": "high",
+          "mainConfusions": [
+            "fromage",
+            "camembert"
+          ],
+          "existingExactAssets": [],
+          "conflictingAssets": [],
+          "requiresHumanNamingReview": true,
+          "automaticActivation": false
+        }
+      ],
+      "priorityScore": 10564.213,
+      "status": "curated_prototype_needs_naming_test",
+      "nextGate": "compare_cheese_shape_then_naming_test",
+      "caution": "Editorial prototype hypothesis only; it is not spontaneous-naming evidence and is never auto-activated."
+    },
+    {
       "ipa": "tele",
       "usefulTargetCount": 13,
       "usefulWeightedGain": 1544.888,
@@ -617,6 +1341,303 @@
       "priorityScore": 10548.442,
       "status": "curated_prototype_needs_naming_test",
       "nextGate": "prototype_then_naming_variant_test",
+      "caution": "Editorial prototype hypothesis only; it is not spontaneous-naming evidence and is never auto-activated."
+    },
+    {
+      "ipa": "mal",
+      "usefulTargetCount": 11,
+      "usefulWeightedGain": 2914.64,
+      "schoolTargetCount": 2,
+      "syllableSpans": [
+        1
+      ],
+      "usefulExamples": [
+        "mal",
+        "normal",
+        "animal",
+        "mâle",
+        "normale",
+        "malchance"
+      ],
+      "preferredCandidate": {
+        "word": "malle",
+        "pos": "NOM",
+        "frequency": 4.253,
+        "syllableCount": 1,
+        "visualRoute": "curated_prototype",
+        "visualConcept": "Une grande malle de voyage ancienne fermée, avec poignées latérales, seule sur fond clair.",
+        "visualPlausibility": "high",
+        "spontaneousNamingRisk": "medium_high",
+        "mainConfusions": [
+          "coffre",
+          "valise"
+        ],
+        "existingExactAssets": [],
+        "conflictingAssets": [],
+        "requiresHumanNamingReview": true,
+        "automaticActivation": false
+      },
+      "candidates": [
+        {
+          "word": "malle",
+          "pos": "NOM",
+          "frequency": 4.253,
+          "syllableCount": 1,
+          "visualRoute": "curated_prototype",
+          "visualConcept": "Une grande malle de voyage ancienne fermée, avec poignées latérales, seule sur fond clair.",
+          "visualPlausibility": "high",
+          "spontaneousNamingRisk": "medium_high",
+          "mainConfusions": [
+            "coffre",
+            "valise"
+          ],
+          "existingExactAssets": [],
+          "conflictingAssets": [],
+          "requiresHumanNamingReview": true,
+          "automaticActivation": false
+        }
+      ],
+      "priorityScore": 10544.504,
+      "status": "curated_prototype_needs_naming_test",
+      "nextGate": "compare_trunk_and_suitcase_shapes_then_naming_test",
+      "caution": "Editorial prototype hypothesis only; it is not spontaneous-naming evidence and is never auto-activated."
+    },
+    {
+      "ipa": "fɑ̃",
+      "usefulTargetCount": 15,
+      "usefulWeightedGain": 1854.826,
+      "schoolTargetCount": 1,
+      "syllableSpans": [
+        1
+      ],
+      "usefulExamples": [
+        "enfant",
+        "fantôme",
+        "fantastique",
+        "éléphant",
+        "offenser",
+        "fantasme"
+      ],
+      "preferredCandidate": {
+        "word": "faon",
+        "pos": "NOM",
+        "frequency": 0.373,
+        "syllableCount": 1,
+        "visualRoute": "curated_prototype",
+        "visualConcept": "Un jeune faon tacheté entier, seul, proportions juvéniles évidentes, sans adulte.",
+        "visualPlausibility": "high",
+        "spontaneousNamingRisk": "medium_high",
+        "mainConfusions": [
+          "biche",
+          "cerf",
+          "bébé cerf"
+        ],
+        "existingExactAssets": [],
+        "conflictingAssets": [],
+        "requiresHumanNamingReview": true,
+        "automaticActivation": false
+      },
+      "candidates": [
+        {
+          "word": "faon",
+          "pos": "NOM",
+          "frequency": 0.373,
+          "syllableCount": 1,
+          "visualRoute": "curated_prototype",
+          "visualConcept": "Un jeune faon tacheté entier, seul, proportions juvéniles évidentes, sans adulte.",
+          "visualPlausibility": "high",
+          "spontaneousNamingRisk": "medium_high",
+          "mainConfusions": [
+            "biche",
+            "cerf",
+            "bébé cerf"
+          ],
+          "existingExactAssets": [],
+          "conflictingAssets": [],
+          "requiresHumanNamingReview": true,
+          "automaticActivation": false
+        }
+      ],
+      "priorityScore": 10543.845,
+      "status": "curated_prototype_needs_naming_test",
+      "nextGate": "prototype_then_age_specific_naming_test",
+      "caution": "Editorial prototype hypothesis only; it is not spontaneous-naming evidence and is never auto-activated."
+    },
+    {
+      "ipa": "bɑ̃",
+      "usefulTargetCount": 16,
+      "usefulWeightedGain": 325.159,
+      "schoolTargetCount": 2,
+      "syllableSpans": [
+        1
+      ],
+      "usefulExamples": [
+        "abandonner",
+        "banc",
+        "ruban",
+        "banlieue",
+        "bandit",
+        "bancaire"
+      ],
+      "preferredCandidate": {
+        "word": "banc",
+        "pos": "NOM",
+        "frequency": 9.079,
+        "syllableCount": 1,
+        "visualRoute": "curated_prototype",
+        "visualConcept": "Un banc public simple avec dossier et pieds, seul sur fond clair, sans parc ni personnage.",
+        "visualPlausibility": "high",
+        "spontaneousNamingRisk": "low_medium",
+        "mainConfusions": [
+          "banquette"
+        ],
+        "existingExactAssets": [],
+        "conflictingAssets": [],
+        "requiresHumanNamingReview": true,
+        "automaticActivation": false
+      },
+      "candidates": [
+        {
+          "word": "banc",
+          "pos": "NOM",
+          "frequency": 9.079,
+          "syllableCount": 1,
+          "visualRoute": "curated_prototype",
+          "visualConcept": "Un banc public simple avec dossier et pieds, seul sur fond clair, sans parc ni personnage.",
+          "visualPlausibility": "high",
+          "spontaneousNamingRisk": "low_medium",
+          "mainConfusions": [
+            "banquette"
+          ],
+          "existingExactAssets": [],
+          "conflictingAssets": [],
+          "requiresHumanNamingReview": true,
+          "automaticActivation": false
+        }
+      ],
+      "priorityScore": 10542.899,
+      "status": "curated_prototype_needs_naming_test",
+      "nextGate": "check_existing_open_asset_then_naming_test",
+      "caution": "Editorial prototype hypothesis only; it is not spontaneous-naming evidence and is never auto-activated."
+    },
+    {
+      "ipa": "ble",
+      "usefulTargetCount": 13,
+      "usefulWeightedGain": 499.008,
+      "schoolTargetCount": 4,
+      "syllableSpans": [
+        1
+      ],
+      "usefulExamples": [
+        "blesser",
+        "blessure",
+        "ressembler",
+        "sembler",
+        "trembler",
+        "troubler"
+      ],
+      "preferredCandidate": {
+        "word": "blé",
+        "pos": "NOM",
+        "frequency": 11.563,
+        "syllableCount": 1,
+        "visualRoute": "curated_prototype",
+        "visualConcept": "Petit bouquet de plusieurs épis de blé mûrs, isolé sur fond clair, sans champ complet.",
+        "visualPlausibility": "high",
+        "spontaneousNamingRisk": "medium_high",
+        "mainConfusions": [
+          "épi",
+          "céréale",
+          "orge"
+        ],
+        "existingExactAssets": [],
+        "conflictingAssets": [],
+        "requiresHumanNamingReview": true,
+        "automaticActivation": false
+      },
+      "candidates": [
+        {
+          "word": "blé",
+          "pos": "NOM",
+          "frequency": 11.563,
+          "syllableCount": 1,
+          "visualRoute": "curated_prototype",
+          "visualConcept": "Petit bouquet de plusieurs épis de blé mûrs, isolé sur fond clair, sans champ complet.",
+          "visualPlausibility": "high",
+          "spontaneousNamingRisk": "medium_high",
+          "mainConfusions": [
+            "épi",
+            "céréale",
+            "orge"
+          ],
+          "existingExactAssets": [],
+          "conflictingAssets": [],
+          "requiresHumanNamingReview": true,
+          "automaticActivation": false
+        }
+      ],
+      "priorityScore": 10541.377,
+      "status": "curated_prototype_needs_naming_test",
+      "nextGate": "compare_grain_and_ear_grouping_then_naming_test",
+      "caution": "Editorial prototype hypothesis only; it is not spontaneous-naming evidence and is never auto-activated."
+    },
+    {
+      "ipa": "sɛp",
+      "usefulTargetCount": 16,
+      "usefulWeightedGain": 527.06,
+      "schoolTargetCount": 1,
+      "syllableSpans": [
+        1
+      ],
+      "usefulExamples": [
+        "accepter",
+        "réception",
+        "septembre",
+        "exception",
+        "exceptionnel",
+        "déception"
+      ],
+      "preferredCandidate": {
+        "word": "cèpe",
+        "pos": "NOM",
+        "frequency": 0.054,
+        "syllableCount": 1,
+        "visualRoute": "curated_prototype",
+        "visualConcept": "Un cèpe unique avec gros pied clair et chapeau brun, isolé, sans panier ni forêt.",
+        "visualPlausibility": "medium_high",
+        "spontaneousNamingRisk": "high",
+        "mainConfusions": [
+          "champignon",
+          "bolet"
+        ],
+        "existingExactAssets": [],
+        "conflictingAssets": [],
+        "requiresHumanNamingReview": true,
+        "automaticActivation": false
+      },
+      "candidates": [
+        {
+          "word": "cèpe",
+          "pos": "NOM",
+          "frequency": 0.054,
+          "syllableCount": 1,
+          "visualRoute": "curated_prototype",
+          "visualConcept": "Un cèpe unique avec gros pied clair et chapeau brun, isolé, sans panier ni forêt.",
+          "visualPlausibility": "medium_high",
+          "spontaneousNamingRisk": "high",
+          "mainConfusions": [
+            "champignon",
+            "bolet"
+          ],
+          "existingExactAssets": [],
+          "conflictingAssets": [],
+          "requiresHumanNamingReview": true,
+          "automaticActivation": false
+        }
+      ],
+      "priorityScore": 10521.859,
+      "status": "curated_prototype_needs_naming_test",
+      "nextGate": "prototype_only_if_species_naming_is_plausible",
       "caution": "Editorial prototype hypothesis only; it is not spontaneous-naming evidence and is never auto-activated."
     },
     {
@@ -1294,17 +2315,6 @@
           "word": "tan",
           "pos": "NOM",
           "frequency": 0.263,
-          "syllableCount": 1,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        },
-        {
-          "word": "taon",
-          "pos": "NOM",
-          "frequency": 0.073,
           "syllableCount": 1,
           "visualRoute": "noun_lexical_precheck",
           "existingExactAssets": [],
@@ -3451,73 +4461,6 @@
       "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
     },
     {
-      "ipa": "tɔ̃",
-      "usefulTargetCount": 29,
-      "usefulWeightedGain": 11332.039,
-      "schoolTargetCount": 3,
-      "syllableSpans": [
-        1
-      ],
-      "usefulExamples": [
-        "ton",
-        "tomber",
-        "fiston",
-        "bouton",
-        "retomber",
-        "bâton"
-      ],
-      "preferredCandidate": {
-        "word": "ton",
-        "pos": "NOM",
-        "frequency": 47.342,
-        "syllableCount": 1,
-        "visualRoute": "noun_lexical_precheck",
-        "existingExactAssets": [],
-        "conflictingAssets": [],
-        "requiresHumanNamingReview": true,
-        "automaticActivation": false
-      },
-      "candidates": [
-        {
-          "word": "ton",
-          "pos": "NOM",
-          "frequency": 47.342,
-          "syllableCount": 1,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        },
-        {
-          "word": "thon",
-          "pos": "NOM",
-          "frequency": 5.728,
-          "syllableCount": 1,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        },
-        {
-          "word": "tond",
-          "pos": "VER",
-          "frequency": 0.345,
-          "syllableCount": 1,
-          "visualRoute": "lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        }
-      ],
-      "priorityScore": 688.573,
-      "status": "lexical_precheck_before_visual_curation",
-      "nextGate": "human_concept_selection_before_drawing",
-      "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
-    },
-    {
       "ipa": "dis",
       "usefulTargetCount": 42,
       "usefulWeightedGain": 1931.812,
@@ -4133,62 +5076,6 @@
       "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
     },
     {
-      "ipa": "tik",
-      "usefulTargetCount": 56,
-      "usefulWeightedGain": 972.894,
-      "schoolTargetCount": 1,
-      "syllableSpans": [
-        1
-      ],
-      "usefulExamples": [
-        "politique",
-        "fantastique",
-        "romantique",
-        "boutique",
-        "plastique",
-        "pathétique"
-      ],
-      "preferredCandidate": {
-        "word": "tic",
-        "pos": "NOM",
-        "frequency": 3.81,
-        "syllableCount": 1,
-        "visualRoute": "noun_lexical_precheck",
-        "existingExactAssets": [],
-        "conflictingAssets": [],
-        "requiresHumanNamingReview": true,
-        "automaticActivation": false
-      },
-      "candidates": [
-        {
-          "word": "tic",
-          "pos": "NOM",
-          "frequency": 3.81,
-          "syllableCount": 1,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        },
-        {
-          "word": "tique",
-          "pos": "NOM",
-          "frequency": 0.652,
-          "syllableCount": 1,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        }
-      ],
-      "priorityScore": 667.876,
-      "status": "lexical_precheck_before_visual_curation",
-      "nextGate": "human_concept_selection_before_drawing",
-      "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
-    },
-    {
       "ipa": "be",
       "usefulTargetCount": 46,
       "usefulWeightedGain": 3845.032,
@@ -4307,62 +5194,6 @@
         }
       ],
       "priorityScore": 665.209,
-      "status": "lexical_precheck_before_visual_curation",
-      "nextGate": "human_concept_selection_before_drawing",
-      "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
-    },
-    {
-      "ipa": "mɛtʁ",
-      "usefulTargetCount": 23,
-      "usefulWeightedGain": 3217.333,
-      "schoolTargetCount": 7,
-      "syllableSpans": [
-        1
-      ],
-      "usefulExamples": [
-        "mettre",
-        "maître",
-        "remettre",
-        "km",
-        "permettre",
-        "admettre"
-      ],
-      "preferredCandidate": {
-        "word": "maître",
-        "pos": "NOM",
-        "frequency": 103.69,
-        "syllableCount": 1,
-        "visualRoute": "noun_lexical_precheck",
-        "existingExactAssets": [],
-        "conflictingAssets": [],
-        "requiresHumanNamingReview": true,
-        "automaticActivation": false
-      },
-      "candidates": [
-        {
-          "word": "maître",
-          "pos": "NOM",
-          "frequency": 103.69,
-          "syllableCount": 1,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        },
-        {
-          "word": "mètre",
-          "pos": "NOM",
-          "frequency": 5.82,
-          "syllableCount": 1,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        }
-      ],
-      "priorityScore": 664.047,
       "status": "lexical_precheck_before_visual_curation",
       "nextGate": "human_concept_selection_before_drawing",
       "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
@@ -5263,73 +6094,6 @@
       "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
     },
     {
-      "ipa": "kaʁ",
-      "usefulTargetCount": 30,
-      "usefulWeightedGain": 967.208,
-      "schoolTargetCount": 4,
-      "syllableSpans": [
-        1
-      ],
-      "usefulExamples": [
-        "quartier",
-        "cardiaque",
-        "rencard",
-        "placard",
-        "écart",
-        "quart"
-      ],
-      "preferredCandidate": {
-        "word": "quart",
-        "pos": "NOM",
-        "frequency": 13.744,
-        "syllableCount": 1,
-        "visualRoute": "noun_lexical_precheck",
-        "existingExactAssets": [],
-        "conflictingAssets": [],
-        "requiresHumanNamingReview": true,
-        "automaticActivation": false
-      },
-      "candidates": [
-        {
-          "word": "quart",
-          "pos": "NOM",
-          "frequency": 13.744,
-          "syllableCount": 1,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        },
-        {
-          "word": "car",
-          "pos": "NOM",
-          "frequency": 5.051,
-          "syllableCount": 1,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        },
-        {
-          "word": "care",
-          "pos": "NOM",
-          "frequency": 1.44,
-          "syllableCount": 1,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        }
-      ],
-      "priorityScore": 632.189,
-      "status": "lexical_precheck_before_visual_curation",
-      "nextGate": "human_concept_selection_before_drawing",
-      "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
-    },
-    {
       "ipa": "fwa",
       "usefulTargetCount": 11,
       "usefulWeightedGain": 7229.593,
@@ -5437,51 +6201,6 @@
         }
       ],
       "priorityScore": 631.389,
-      "status": "lexical_precheck_before_visual_curation",
-      "nextGate": "human_concept_selection_before_drawing",
-      "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
-    },
-    {
-      "ipa": "tabl",
-      "usefulTargetCount": 24,
-      "usefulWeightedGain": 1090.644,
-      "schoolTargetCount": 2,
-      "syllableSpans": [
-        1
-      ],
-      "usefulExamples": [
-        "table",
-        "portable",
-        "véritable",
-        "confortable",
-        "inévitable",
-        "instable"
-      ],
-      "preferredCandidate": {
-        "word": "table",
-        "pos": "NOM",
-        "frequency": 93.728,
-        "syllableCount": 1,
-        "visualRoute": "noun_lexical_precheck",
-        "existingExactAssets": [],
-        "conflictingAssets": [],
-        "requiresHumanNamingReview": true,
-        "automaticActivation": false
-      },
-      "candidates": [
-        {
-          "word": "table",
-          "pos": "NOM",
-          "frequency": 93.728,
-          "syllableCount": 1,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        }
-      ],
-      "priorityScore": 630.602,
       "status": "lexical_precheck_before_visual_curation",
       "nextGate": "human_concept_selection_before_drawing",
       "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
@@ -5762,73 +6481,6 @@
         }
       ],
       "priorityScore": 624.351,
-      "status": "lexical_precheck_before_visual_curation",
-      "nextGate": "human_concept_selection_before_drawing",
-      "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
-    },
-    {
-      "ipa": "pu",
-      "usefulTargetCount": 23,
-      "usefulWeightedGain": 1945.884,
-      "schoolTargetCount": 4,
-      "syllableSpans": [
-        1
-      ],
-      "usefulExamples": [
-        "pouvoir",
-        "épouser",
-        "poulet",
-        "pousser",
-        "poupée",
-        "poussière"
-      ],
-      "preferredCandidate": {
-        "word": "pouls",
-        "pos": "NOM",
-        "frequency": 16.965,
-        "syllableCount": 1,
-        "visualRoute": "noun_lexical_precheck",
-        "existingExactAssets": [],
-        "conflictingAssets": [],
-        "requiresHumanNamingReview": true,
-        "automaticActivation": false
-      },
-      "candidates": [
-        {
-          "word": "pouls",
-          "pos": "NOM",
-          "frequency": 16.965,
-          "syllableCount": 1,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        },
-        {
-          "word": "pou",
-          "pos": "NOM",
-          "frequency": 1.826,
-          "syllableCount": 1,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        },
-        {
-          "word": "pouh",
-          "pos": "ONO",
-          "frequency": 0.066,
-          "syllableCount": 1,
-          "visualRoute": "lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        }
-      ],
-      "priorityScore": 623.791,
       "status": "lexical_precheck_before_visual_curation",
       "nextGate": "human_concept_selection_before_drawing",
       "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
@@ -6321,73 +6973,6 @@
         }
       ],
       "priorityScore": 617.679,
-      "status": "lexical_precheck_before_visual_curation",
-      "nextGate": "human_concept_selection_before_drawing",
-      "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
-    },
-    {
-      "ipa": "maʁ",
-      "usefulTargetCount": 25,
-      "usefulWeightedGain": 1563.177,
-      "schoolTargetCount": 5,
-      "syllableSpans": [
-        1
-      ],
-      "usefulExamples": [
-        "marcher",
-        "marché",
-        "marre",
-        "cauchemar",
-        "mardi",
-        "remarquer"
-      ],
-      "preferredCandidate": {
-        "word": "mare",
-        "pos": "NOM",
-        "frequency": 2.949,
-        "syllableCount": 1,
-        "visualRoute": "noun_lexical_precheck",
-        "existingExactAssets": [],
-        "conflictingAssets": [],
-        "requiresHumanNamingReview": true,
-        "automaticActivation": false
-      },
-      "candidates": [
-        {
-          "word": "mare",
-          "pos": "NOM",
-          "frequency": 2.949,
-          "syllableCount": 1,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        },
-        {
-          "word": "marc",
-          "pos": "NOM",
-          "frequency": 0.472,
-          "syllableCount": 1,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        },
-        {
-          "word": "mar",
-          "pos": "NOM",
-          "frequency": 0.285,
-          "syllableCount": 1,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        }
-      ],
-      "priorityScore": 611.739,
       "status": "lexical_precheck_before_visual_curation",
       "nextGate": "human_concept_selection_before_drawing",
       "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
@@ -6931,62 +7516,6 @@
       "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
     },
     {
-      "ipa": "pla",
-      "usefulTargetCount": 23,
-      "usefulWeightedGain": 895.292,
-      "schoolTargetCount": 2,
-      "syllableSpans": [
-        1
-      ],
-      "usefulExamples": [
-        "planète",
-        "remplacer",
-        "plat",
-        "placard",
-        "déplacer",
-        "plateau"
-      ],
-      "preferredCandidate": {
-        "word": "plat",
-        "pos": "NOM",
-        "frequency": 21.826,
-        "syllableCount": 1,
-        "visualRoute": "noun_lexical_precheck",
-        "existingExactAssets": [],
-        "conflictingAssets": [],
-        "requiresHumanNamingReview": true,
-        "automaticActivation": false
-      },
-      "candidates": [
-        {
-          "word": "plat",
-          "pos": "NOM",
-          "frequency": 21.826,
-          "syllableCount": 1,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        },
-        {
-          "word": "pla",
-          "pos": "NOM",
-          "frequency": 0.674,
-          "syllableCount": 1,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        }
-      ],
-      "priorityScore": 605.543,
-      "status": "lexical_precheck_before_visual_curation",
-      "nextGate": "human_concept_selection_before_drawing",
-      "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
-    },
-    {
       "ipa": "go",
       "usefulTargetCount": 28,
       "usefulWeightedGain": 418.053,
@@ -7463,129 +7992,6 @@
         }
       ],
       "priorityScore": 593.434,
-      "status": "lexical_precheck_before_visual_curation",
-      "nextGate": "human_concept_selection_before_drawing",
-      "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
-    },
-    {
-      "ipa": "tʁu",
-      "usefulTargetCount": 12,
-      "usefulWeightedGain": 3452.131,
-      "schoolTargetCount": 4,
-      "syllableSpans": [
-        1
-      ],
-      "usefulExamples": [
-        "trouver",
-        "trou",
-        "retrouver",
-        "troubler",
-        "troupeau",
-        "trouvé"
-      ],
-      "preferredCandidate": {
-        "word": "trou",
-        "pos": "NOM",
-        "frequency": 69.766,
-        "syllableCount": 1,
-        "visualRoute": "noun_lexical_precheck",
-        "existingExactAssets": [],
-        "conflictingAssets": [],
-        "requiresHumanNamingReview": true,
-        "automaticActivation": false
-      },
-      "candidates": [
-        {
-          "word": "trou",
-          "pos": "NOM",
-          "frequency": 69.766,
-          "syllableCount": 1,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        },
-        {
-          "word": "troue",
-          "pos": "VER",
-          "frequency": 0.804,
-          "syllableCount": 1,
-          "visualRoute": "lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        }
-      ],
-      "priorityScore": 593.082,
-      "status": "lexical_precheck_before_visual_curation",
-      "nextGate": "human_concept_selection_before_drawing",
-      "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
-    },
-    {
-      "ipa": "mal",
-      "usefulTargetCount": 11,
-      "usefulWeightedGain": 2914.64,
-      "schoolTargetCount": 2,
-      "syllableSpans": [
-        1
-      ],
-      "usefulExamples": [
-        "mal",
-        "normal",
-        "animal",
-        "mâle",
-        "normale",
-        "malchance"
-      ],
-      "preferredCandidate": {
-        "word": "mal",
-        "pos": "NOM",
-        "frequency": 274.288,
-        "syllableCount": 1,
-        "visualRoute": "noun_lexical_precheck",
-        "existingExactAssets": [],
-        "conflictingAssets": [],
-        "requiresHumanNamingReview": true,
-        "automaticActivation": false
-      },
-      "candidates": [
-        {
-          "word": "mal",
-          "pos": "NOM",
-          "frequency": 274.288,
-          "syllableCount": 1,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        },
-        {
-          "word": "mâle",
-          "pos": "NOM",
-          "frequency": 5.706,
-          "syllableCount": 1,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        },
-        {
-          "word": "malle",
-          "pos": "NOM",
-          "frequency": 4.253,
-          "syllableCount": 1,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        }
-      ],
-      "priorityScore": 592.647,
       "status": "lexical_precheck_before_visual_curation",
       "nextGate": "human_concept_selection_before_drawing",
       "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
@@ -8140,51 +8546,6 @@
       "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
     },
     {
-      "ipa": "ʒy",
-      "usefulTargetCount": 19,
-      "usefulWeightedGain": 515.297,
-      "schoolTargetCount": 1,
-      "syllableSpans": [
-        1
-      ],
-      "usefulExamples": [
-        "jury",
-        "jus",
-        "jugement",
-        "juger",
-        "judiciaire",
-        "juridique"
-      ],
-      "preferredCandidate": {
-        "word": "jus",
-        "pos": "NOM",
-        "frequency": 25.041,
-        "syllableCount": 1,
-        "visualRoute": "noun_lexical_precheck",
-        "existingExactAssets": [],
-        "conflictingAssets": [],
-        "requiresHumanNamingReview": true,
-        "automaticActivation": false
-      },
-      "candidates": [
-        {
-          "word": "jus",
-          "pos": "NOM",
-          "frequency": 25.041,
-          "syllableCount": 1,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        }
-      ],
-      "priorityScore": 575.945,
-      "status": "lexical_precheck_before_visual_curation",
-      "nextGate": "human_concept_selection_before_drawing",
-      "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
-    },
-    {
       "ipa": "sɛt",
       "usefulTargetCount": 10,
       "usefulWeightedGain": 15223.237,
@@ -8292,51 +8653,6 @@
         }
       ],
       "priorityScore": 572.943,
-      "status": "lexical_precheck_before_visual_curation",
-      "nextGate": "human_concept_selection_before_drawing",
-      "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
-    },
-    {
-      "ipa": "bʁa",
-      "usefulTargetCount": 12,
-      "usefulWeightedGain": 1107.934,
-      "schoolTargetCount": 2,
-      "syllableSpans": [
-        1
-      ],
-      "usefulExamples": [
-        "bras",
-        "embrasser",
-        "bravo",
-        "bracelet",
-        "braquage",
-        "braquer"
-      ],
-      "preferredCandidate": {
-        "word": "bras",
-        "pos": "NOM",
-        "frequency": 123.984,
-        "syllableCount": 1,
-        "visualRoute": "noun_lexical_precheck",
-        "existingExactAssets": [],
-        "conflictingAssets": [],
-        "requiresHumanNamingReview": true,
-        "automaticActivation": false
-      },
-      "candidates": [
-        {
-          "word": "bras",
-          "pos": "NOM",
-          "frequency": 123.984,
-          "syllableCount": 1,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        }
-      ],
-      "priorityScore": 571.8,
       "status": "lexical_precheck_before_visual_curation",
       "nextGate": "human_concept_selection_before_drawing",
       "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
@@ -8628,73 +8944,6 @@
         }
       ],
       "priorityScore": 569.531,
-      "status": "lexical_precheck_before_visual_curation",
-      "nextGate": "human_concept_selection_before_drawing",
-      "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
-    },
-    {
-      "ipa": "bʁi",
-      "usefulTargetCount": 23,
-      "usefulWeightedGain": 521.656,
-      "schoolTargetCount": 3,
-      "syllableSpans": [
-        1
-      ],
-      "usefulExamples": [
-        "abri",
-        "briser",
-        "brillant",
-        "briller",
-        "brigade",
-        "cambriolage"
-      ],
-      "preferredCandidate": {
-        "word": "bris",
-        "pos": "NOM",
-        "frequency": 1.111,
-        "syllableCount": 1,
-        "visualRoute": "noun_lexical_precheck",
-        "existingExactAssets": [],
-        "conflictingAssets": [],
-        "requiresHumanNamingReview": true,
-        "automaticActivation": false
-      },
-      "candidates": [
-        {
-          "word": "bris",
-          "pos": "NOM",
-          "frequency": 1.111,
-          "syllableCount": 1,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        },
-        {
-          "word": "bri",
-          "pos": "NOM",
-          "frequency": 0.801,
-          "syllableCount": 1,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        },
-        {
-          "word": "brie",
-          "pos": "NOM",
-          "frequency": 0.418,
-          "syllableCount": 1,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        }
-      ],
-      "priorityScore": 569.052,
       "status": "lexical_precheck_before_visual_curation",
       "nextGate": "human_concept_selection_before_drawing",
       "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
@@ -10333,118 +10582,6 @@
       "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
     },
     {
-      "ipa": "fɑ̃",
-      "usefulTargetCount": 15,
-      "usefulWeightedGain": 1854.826,
-      "schoolTargetCount": 1,
-      "syllableSpans": [
-        1
-      ],
-      "usefulExamples": [
-        "enfant",
-        "fantôme",
-        "fantastique",
-        "éléphant",
-        "offenser",
-        "fantasme"
-      ],
-      "preferredCandidate": {
-        "word": "faon",
-        "pos": "NOM",
-        "frequency": 0.373,
-        "syllableCount": 1,
-        "visualRoute": "noun_lexical_precheck",
-        "existingExactAssets": [],
-        "conflictingAssets": [],
-        "requiresHumanNamingReview": true,
-        "automaticActivation": false
-      },
-      "candidates": [
-        {
-          "word": "faon",
-          "pos": "NOM",
-          "frequency": 0.373,
-          "syllableCount": 1,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        },
-        {
-          "word": "fend",
-          "pos": "VER",
-          "frequency": 1.155,
-          "syllableCount": 1,
-          "visualRoute": "lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        }
-      ],
-      "priorityScore": 543.845,
-      "status": "lexical_precheck_before_visual_curation",
-      "nextGate": "human_concept_selection_before_drawing",
-      "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
-    },
-    {
-      "ipa": "bɑ̃",
-      "usefulTargetCount": 16,
-      "usefulWeightedGain": 325.159,
-      "schoolTargetCount": 2,
-      "syllableSpans": [
-        1
-      ],
-      "usefulExamples": [
-        "abandonner",
-        "banc",
-        "ruban",
-        "banlieue",
-        "bandit",
-        "bancaire"
-      ],
-      "preferredCandidate": {
-        "word": "banc",
-        "pos": "NOM",
-        "frequency": 9.079,
-        "syllableCount": 1,
-        "visualRoute": "noun_lexical_precheck",
-        "existingExactAssets": [],
-        "conflictingAssets": [],
-        "requiresHumanNamingReview": true,
-        "automaticActivation": false
-      },
-      "candidates": [
-        {
-          "word": "banc",
-          "pos": "NOM",
-          "frequency": 9.079,
-          "syllableCount": 1,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        },
-        {
-          "word": "ban",
-          "pos": "NOM",
-          "frequency": 1.047,
-          "syllableCount": 1,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        }
-      ],
-      "priorityScore": 542.899,
-      "status": "lexical_precheck_before_visual_curation",
-      "nextGate": "human_concept_selection_before_drawing",
-      "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
-    },
-    {
       "ipa": "tɔʁ",
       "usefulTargetCount": 12,
       "usefulWeightedGain": 480.323,
@@ -10563,51 +10700,6 @@
         }
       ],
       "priorityScore": 541.485,
-      "status": "lexical_precheck_before_visual_curation",
-      "nextGate": "human_concept_selection_before_drawing",
-      "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
-    },
-    {
-      "ipa": "ble",
-      "usefulTargetCount": 13,
-      "usefulWeightedGain": 499.008,
-      "schoolTargetCount": 4,
-      "syllableSpans": [
-        1
-      ],
-      "usefulExamples": [
-        "blesser",
-        "blessure",
-        "ressembler",
-        "sembler",
-        "trembler",
-        "troubler"
-      ],
-      "preferredCandidate": {
-        "word": "blé",
-        "pos": "NOM",
-        "frequency": 11.563,
-        "syllableCount": 1,
-        "visualRoute": "noun_lexical_precheck",
-        "existingExactAssets": [],
-        "conflictingAssets": [],
-        "requiresHumanNamingReview": true,
-        "automaticActivation": false
-      },
-      "candidates": [
-        {
-          "word": "blé",
-          "pos": "NOM",
-          "frequency": 11.563,
-          "syllableCount": 1,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        }
-      ],
-      "priorityScore": 541.377,
       "status": "lexical_precheck_before_visual_curation",
       "nextGate": "human_concept_selection_before_drawing",
       "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
@@ -12022,73 +12114,6 @@
       "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
     },
     {
-      "ipa": "sɛp",
-      "usefulTargetCount": 16,
-      "usefulWeightedGain": 527.06,
-      "schoolTargetCount": 1,
-      "syllableSpans": [
-        1
-      ],
-      "usefulExamples": [
-        "accepter",
-        "réception",
-        "septembre",
-        "exception",
-        "exceptionnel",
-        "déception"
-      ],
-      "preferredCandidate": {
-        "word": "cèpe",
-        "pos": "NOM",
-        "frequency": 0.054,
-        "syllableCount": 1,
-        "visualRoute": "noun_lexical_precheck",
-        "existingExactAssets": [],
-        "conflictingAssets": [],
-        "requiresHumanNamingReview": true,
-        "automaticActivation": false
-      },
-      "candidates": [
-        {
-          "word": "cèpe",
-          "pos": "NOM",
-          "frequency": 0.054,
-          "syllableCount": 1,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        },
-        {
-          "word": "cep",
-          "pos": "NOM",
-          "frequency": 0.051,
-          "syllableCount": 1,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        },
-        {
-          "word": "sep",
-          "pos": "NOM",
-          "frequency": 0.047,
-          "syllableCount": 1,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        }
-      ],
-      "priorityScore": 521.859,
-      "status": "lexical_precheck_before_visual_curation",
-      "nextGate": "human_concept_selection_before_drawing",
-      "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
-    },
-    {
       "ipa": "kʁo",
       "usefulTargetCount": 17,
       "usefulWeightedGain": 294.314,
@@ -13184,51 +13209,6 @@
       "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
     },
     {
-      "ipa": "abi",
-      "usefulTargetCount": 13,
-      "usefulWeightedGain": 682.604,
-      "schoolTargetCount": 4,
-      "syllableSpans": [
-        2
-      ],
-      "usefulExamples": [
-        "habitude",
-        "habiller",
-        "habiter",
-        "habitant",
-        "habituer",
-        "habituel"
-      ],
-      "preferredCandidate": {
-        "word": "habit",
-        "pos": "NOM",
-        "frequency": 3.478,
-        "syllableCount": 2,
-        "visualRoute": "noun_lexical_precheck",
-        "existingExactAssets": [],
-        "conflictingAssets": [],
-        "requiresHumanNamingReview": true,
-        "automaticActivation": false
-      },
-      "candidates": [
-        {
-          "word": "habit",
-          "pos": "NOM",
-          "frequency": 3.478,
-          "syllableCount": 2,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        }
-      ],
-      "priorityScore": 509.945,
-      "status": "lexical_precheck_before_visual_curation",
-      "nextGate": "human_concept_selection_before_drawing",
-      "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
-    },
-    {
       "ipa": "ɛg",
       "usefulTargetCount": 21,
       "usefulWeightedGain": 2045.893,
@@ -13613,51 +13593,6 @@
         }
       ],
       "priorityScore": 505.974,
-      "status": "lexical_precheck_before_visual_curation",
-      "nextGate": "human_concept_selection_before_drawing",
-      "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
-    },
-    {
-      "ipa": "oto",
-      "usefulTargetCount": 14,
-      "usefulWeightedGain": 285.697,
-      "schoolTargetCount": 1,
-      "syllableSpans": [
-        2
-      ],
-      "usefulExamples": [
-        "autorité",
-        "auto",
-        "autoroute",
-        "automatique",
-        "autographe",
-        "autorisation"
-      ],
-      "preferredCandidate": {
-        "word": "auto",
-        "pos": "NOM",
-        "frequency": 14.177,
-        "syllableCount": 2,
-        "visualRoute": "noun_lexical_precheck",
-        "existingExactAssets": [],
-        "conflictingAssets": [],
-        "requiresHumanNamingReview": true,
-        "automaticActivation": false
-      },
-      "candidates": [
-        {
-          "word": "auto",
-          "pos": "NOM",
-          "frequency": 14.177,
-          "syllableCount": 2,
-          "visualRoute": "noun_lexical_precheck",
-          "existingExactAssets": [],
-          "conflictingAssets": [],
-          "requiresHumanNamingReview": true,
-          "automaticActivation": false
-        }
-      ],
-      "priorityScore": 505.397,
       "status": "lexical_precheck_before_visual_curation",
       "nextGate": "human_concept_selection_before_drawing",
       "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
@@ -14396,6 +14331,138 @@
         }
       ],
       "priorityScore": 498.896,
+      "status": "lexical_precheck_before_visual_curation",
+      "nextGate": "human_concept_selection_before_drawing",
+      "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
+    },
+    {
+      "ipa": "sal",
+      "usefulTargetCount": 5,
+      "usefulWeightedGain": 1281.676,
+      "schoolTargetCount": 1,
+      "syllableSpans": [
+        1
+      ],
+      "usefulExamples": [
+        "salle",
+        "sale",
+        "sal",
+        "salsa"
+      ],
+      "preferredCandidate": {
+        "word": "salle",
+        "pos": "NOM",
+        "frequency": 131.304,
+        "syllableCount": 1,
+        "visualRoute": "noun_lexical_precheck",
+        "existingExactAssets": [],
+        "conflictingAssets": [],
+        "requiresHumanNamingReview": true,
+        "automaticActivation": false
+      },
+      "candidates": [
+        {
+          "word": "salle",
+          "pos": "NOM",
+          "frequency": 131.304,
+          "syllableCount": 1,
+          "visualRoute": "noun_lexical_precheck",
+          "existingExactAssets": [],
+          "conflictingAssets": [],
+          "requiresHumanNamingReview": true,
+          "automaticActivation": false
+        },
+        {
+          "word": "sal",
+          "pos": "NOM",
+          "frequency": 5.196,
+          "syllableCount": 1,
+          "visualRoute": "noun_lexical_precheck",
+          "existingExactAssets": [],
+          "conflictingAssets": [],
+          "requiresHumanNamingReview": true,
+          "automaticActivation": false
+        },
+        {
+          "word": "sale",
+          "pos": "NOM",
+          "frequency": 0.013,
+          "syllableCount": 1,
+          "visualRoute": "noun_lexical_precheck",
+          "existingExactAssets": [],
+          "conflictingAssets": [],
+          "requiresHumanNamingReview": true,
+          "automaticActivation": false
+        }
+      ],
+      "priorityScore": 498.463,
+      "status": "lexical_precheck_before_visual_curation",
+      "nextGate": "human_concept_selection_before_drawing",
+      "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."
+    },
+    {
+      "ipa": "ale",
+      "usefulTargetCount": 6,
+      "usefulWeightedGain": 5652.222,
+      "schoolTargetCount": 1,
+      "syllableSpans": [
+        2
+      ],
+      "usefulExamples": [
+        "aller",
+        "allée",
+        "alléluia",
+        "aléatoire",
+        "allégeance",
+        "aller-retour"
+      ],
+      "preferredCandidate": {
+        "word": "aller",
+        "pos": "NOM",
+        "frequency": 24.212,
+        "syllableCount": 2,
+        "visualRoute": "noun_lexical_precheck",
+        "existingExactAssets": [],
+        "conflictingAssets": [],
+        "requiresHumanNamingReview": true,
+        "automaticActivation": false
+      },
+      "candidates": [
+        {
+          "word": "aller",
+          "pos": "NOM",
+          "frequency": 24.212,
+          "syllableCount": 2,
+          "visualRoute": "noun_lexical_precheck",
+          "existingExactAssets": [],
+          "conflictingAssets": [],
+          "requiresHumanNamingReview": true,
+          "automaticActivation": false
+        },
+        {
+          "word": "allée",
+          "pos": "NOM",
+          "frequency": 13.674,
+          "syllableCount": 2,
+          "visualRoute": "noun_lexical_precheck",
+          "existingExactAssets": [],
+          "conflictingAssets": [],
+          "requiresHumanNamingReview": true,
+          "automaticActivation": false
+        },
+        {
+          "word": "allez",
+          "pos": "NOM",
+          "frequency": 0.56,
+          "syllableCount": 2,
+          "visualRoute": "noun_lexical_precheck",
+          "existingExactAssets": [],
+          "conflictingAssets": [],
+          "requiresHumanNamingReview": true,
+          "automaticActivation": false
+        }
+      ],
+      "priorityScore": 497.02,
       "status": "lexical_precheck_before_visual_curation",
       "nextGate": "human_concept_selection_before_drawing",
       "caution": "Exact lexical evidence is not pictogram evidence. This row remains a lexical precheck until a visual concept is explicitly curated."

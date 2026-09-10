@@ -94,6 +94,16 @@ for(const row of prioritizedRows){
   }
 }
 
+const compactOperation=operation=>({
+  type:operation.type,
+  sourceUnit:operation.sourceUnit,
+  targetUnit:operation.targetUnit,
+  sourceIndex:operation.sourceIndex,
+  targetIndex:operation.targetIndex,
+  cost:operation.cost,
+  ...(operation.editPosition?{editPosition:operation.editPosition}:{})
+});
+
 const compactCandidate=candidate=>({
   word:candidate.word,
   lemma:candidate.lemma,
@@ -111,7 +121,7 @@ const compactCandidate=candidate=>({
   ...(candidate.image?{image:candidate.image}:{}),
   ...(candidate.visualConfidence?{visualConfidence:candidate.visualConfidence}:{}),
   ...(candidate.labelStability?{labelStability:candidate.labelStability}:{}),
-  operations:candidate.approximation.operations.map(operation=>({type:operation.type,sourceUnit:operation.sourceUnit,targetUnit:operation.targetUnit,sourceIndex:operation.sourceIndex,targetIndex:operation.targetIndex,cost:operation.cost}))
+  operations:candidate.approximation.operations.map(compactOperation)
 });
 
 const ranked=prioritizedRows.map(row=>{
@@ -140,7 +150,10 @@ const report={generatedAt:new Date().toISOString(),status:'research_only',scope:
 fs.mkdirSync(path.dirname(outputPath),{recursive:true});
 fs.writeFileSync(outputPath,JSON.stringify(report,null,2));
 
-const opLabel=operation=>operation.type==='substitution'?`${operation.sourceUnit}→${operation.targetUnit}`:operation.type==='insertion'?`+${operation.targetUnit}`:`−${operation.sourceUnit}`;
+const opLabel=operation=>{
+  const edit=operation.type==='substitution'?`${operation.sourceUnit}→${operation.targetUnit}`:operation.type==='insertion'?`+${operation.targetUnit}`:`−${operation.sourceUnit}`;
+  return operation.editPosition?`${edit} (${operation.editPosition==='internal'?'interne':'bord'})`:edit;
+};
 const lines=[
   '# Rebulo — recherche des approximations phonétiques',
   '',

@@ -115,6 +115,11 @@ jobs:
           if(!(approximation.stats?.existingAssetCandidateWindowCount>0))throw new Error('existing pictogram approximation routes missing');
           if(!(approximation.stats?.lightExistingAssetWindowCount>0))throw new Error('light existing-pictogram approximation routes missing');
           if(!(approximation.stats?.lexicalNounFallbackWindowCount>0))throw new Error('lexical noun approximation fallbacks missing');
+          const editOperations=approximation.rows.flatMap(row=>row.candidates||[]).flatMap(candidate=>candidate.operations||[]).filter(operation=>operation.type==='insertion'||operation.type==='deletion');
+          if(!(editOperations.length>0))throw new Error('serialized insertion/deletion approximation evidence missing');
+          if(editOperations.some(operation=>!['internal','edge'].includes(operation.editPosition)))throw new Error('serialized insertion/deletion edit position missing');
+          if(!editOperations.some(operation=>operation.editPosition==='internal'))throw new Error('serialized internal edit evidence missing');
+          if(!editOperations.some(operation=>operation.editPosition==='edge'))throw new Error('serialized edge edit evidence missing');
           if(!fs.existsSync('docs/REBUS_SOUND_VISUAL_CURATION_REPORT.md'))throw new Error('visual curation report missing');
           if(!fs.existsSync('docs/REBUS_APPROXIMATION_RESEARCH.md'))throw new Error('approximation research report missing');
           fs.writeFileSync(path,JSON.stringify(report));

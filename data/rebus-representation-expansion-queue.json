@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.2",
-  "generatedAt": "2026-09-10T16:52:51.569Z",
+  "generatedAt": "2026-09-10T17:16:51.107Z",
   "status": "research_mapping_only",
   "purpose": "Élargir de façon conservatrice la banque SON → MOT(S) → REPRÉSENTATION en faisant émerger un lot substantiel à fort rendement sans convertir des indices en preuve visuelle.",
   "policy": {
@@ -21,27 +21,27 @@
   "assetInventory": {
     "activeSeedCount": 24,
     "openLibraryCount": 365,
-    "researchFileCount": 29,
+    "researchFileCount": 33,
     "note": "Les assets enregistrés et les correspondances de nom de fichier de recherche sont comptés séparément. Les fichiers de recherche restent des pistes d’inspection uniquement."
   },
   "stats": {
     "soundCount": 916,
     "twoSyllableSoundCount": 400,
     "multipleExactHomophoneSoundCount": 536,
-    "existingAssetSoundCount": 8,
+    "existingAssetSoundCount": 12,
     "registeredAssetSoundCount": 5,
-    "researchAssetLeadSoundCount": 3,
+    "researchAssetLeadSoundCount": 7,
     "registeredPhoneticAssetSoundCount": 5,
     "visibleConventionSoundCount": 23,
-    "likelyNewAssetSoundCount": 879,
+    "likelyNewAssetSoundCount": 875,
     "highKnownRiskSoundCount": 53,
     "approximationAvailableSoundCount": 609,
     "informationInsufficientSoundCount": 815,
     "laneCounts": {
       "visible_convention_preferable": 11,
-      "multiple_exact_homophones_to_compare": 519,
+      "multiple_exact_homophones_to_compare": 515,
       "approximation_only_after_rejected_exacts": 3,
-      "research_asset_lead_to_inspect": 3,
+      "research_asset_lead_to_inspect": 7,
       "exact_image_candidate_precheck": 375,
       "asset_existing_to_review": 5
     }
@@ -56,7 +56,11 @@
     ],
     "researchAssetLeads": [
       "ni",
+      "kʁwa",
+      "ø",
+      "wa",
       "œʁ",
+      "dwa",
       "mat"
     ],
     "multipleExactHomophones": [
@@ -218,8 +222,8 @@
       "twa",
       "ʁɛ̃",
       "mani",
-      "kʁwa",
-      "sɛt"
+      "sɛt",
+      "fis"
     ],
     "visibleConventionPreferable": [
       "a",
@@ -39233,7 +39237,17 @@
           "nextGate": "new_asset_then_human_naming_test",
           "automaticActivation": false,
           "clinicalEvidence": "none",
-          "knownAssets": [],
+          "knownAssets": [
+            {
+              "assetKind": "research_filename_match",
+              "label": "croix",
+              "path": "assets/research/croix-stimulus-v1.svg",
+              "strictEligible": false,
+              "clinicalStatus": "unreviewed",
+              "candidateLabelMatch": true,
+              "registeredPhoneticMatch": false
+            }
+          ],
           "descriptiveFlags": {
             "singleCharacter": false,
             "functionLikePos": false,
@@ -39389,15 +39403,15 @@
           "clinicalEvidence": "none"
         }
       ],
-      "existingAssetCandidateCount": 0,
+      "existingAssetCandidateCount": 1,
       "registeredAssetCandidateCount": 0,
-      "researchAssetLeadCandidateCount": 0,
+      "researchAssetLeadCandidateCount": 1,
       "registeredPhoneticAssetCandidateCount": 0,
-      "likelyNeedsNewAsset": true,
+      "likelyNeedsNewAsset": false,
       "highKnownVisualOrLexicalRisk": false,
       "informationInsufficient": false,
       "twoSyllableFirstClass": false,
-      "lane": "multiple_exact_homophones_to_compare",
+      "lane": "research_asset_lead_to_inspect",
       "proofStatus": {
         "phoneticExactness": "exact_candidates_attested",
         "generalRebusApproximation": "available_separately",
@@ -39406,7 +39420,7 @@
         "spontaneousNamability": "unknown_unless_human_observation_exists",
         "orthophonicValidation": "none"
       },
-      "nextDecision": "compare_semantic_and_visual_routes_before_drawing",
+      "nextDecision": "inspect_research_file_without_treating_it_as_registered_or_exact_asset_evidence",
       "automaticActivation": false
     },
     {
@@ -42309,7 +42323,17 @@
           "nextGate": "new_asset_then_human_naming_test",
           "automaticActivation": false,
           "clinicalEvidence": "none",
-          "knownAssets": [],
+          "knownAssets": [
+            {
+              "assetKind": "research_filename_match",
+              "label": "oeufs",
+              "path": "assets/research/oeufs-stimulus-v1.svg",
+              "strictEligible": false,
+              "clinicalStatus": "unreviewed",
+              "candidateLabelMatch": true,
+              "registeredPhoneticMatch": false
+            }
+          ],
           "descriptiveFlags": {
             "singleCharacter": false,
             "functionLikePos": false,
@@ -42369,15 +42393,15 @@
       "curatedVisualHypothesisCount": 1,
       "visibleConventions": [],
       "approximateCandidates": [],
-      "existingAssetCandidateCount": 0,
+      "existingAssetCandidateCount": 1,
       "registeredAssetCandidateCount": 0,
-      "researchAssetLeadCandidateCount": 0,
+      "researchAssetLeadCandidateCount": 1,
       "registeredPhoneticAssetCandidateCount": 0,
-      "likelyNeedsNewAsset": true,
+      "likelyNeedsNewAsset": false,
       "highKnownVisualOrLexicalRisk": false,
       "informationInsufficient": false,
       "twoSyllableFirstClass": false,
-      "lane": "multiple_exact_homophones_to_compare",
+      "lane": "research_asset_lead_to_inspect",
       "proofStatus": {
         "phoneticExactness": "exact_candidates_attested",
         "generalRebusApproximation": "none_listed",
@@ -42386,7 +42410,7 @@
         "spontaneousNamability": "unknown_unless_human_observation_exists",
         "orthophonicValidation": "none"
       },
-      "nextDecision": "compare_semantic_and_visual_routes_before_drawing",
+      "nextDecision": "inspect_research_file_without_treating_it_as_registered_or_exact_asset_evidence",
       "automaticActivation": false
     },
     {
@@ -80811,7 +80835,17 @@
           "nextGate": "new_asset_then_human_naming_test",
           "automaticActivation": false,
           "clinicalEvidence": "none",
-          "knownAssets": [],
+          "knownAssets": [
+            {
+              "assetKind": "research_filename_match",
+              "label": "oie",
+              "path": "assets/research/oie-stimulus-v1.svg",
+              "strictEligible": false,
+              "clinicalStatus": "unreviewed",
+              "candidateLabelMatch": true,
+              "registeredPhoneticMatch": false
+            }
+          ],
           "descriptiveFlags": {
             "singleCharacter": false,
             "functionLikePos": false,
@@ -80871,15 +80905,15 @@
       "curatedVisualHypothesisCount": 1,
       "visibleConventions": [],
       "approximateCandidates": [],
-      "existingAssetCandidateCount": 0,
+      "existingAssetCandidateCount": 1,
       "registeredAssetCandidateCount": 0,
-      "researchAssetLeadCandidateCount": 0,
+      "researchAssetLeadCandidateCount": 1,
       "registeredPhoneticAssetCandidateCount": 0,
-      "likelyNeedsNewAsset": true,
+      "likelyNeedsNewAsset": false,
       "highKnownVisualOrLexicalRisk": false,
       "informationInsufficient": false,
       "twoSyllableFirstClass": false,
-      "lane": "multiple_exact_homophones_to_compare",
+      "lane": "research_asset_lead_to_inspect",
       "proofStatus": {
         "phoneticExactness": "exact_candidates_attested",
         "generalRebusApproximation": "none_listed",
@@ -80888,7 +80922,7 @@
         "spontaneousNamability": "unknown_unless_human_observation_exists",
         "orthophonicValidation": "none"
       },
-      "nextDecision": "compare_semantic_and_visual_routes_before_drawing",
+      "nextDecision": "inspect_research_file_without_treating_it_as_registered_or_exact_asset_evidence",
       "automaticActivation": false
     },
     {
@@ -98973,7 +99007,17 @@
           "nextGate": "new_asset_then_human_naming_test",
           "automaticActivation": false,
           "clinicalEvidence": "none",
-          "knownAssets": [],
+          "knownAssets": [
+            {
+              "assetKind": "research_filename_match",
+              "label": "doigt",
+              "path": "assets/research/doigt-stimulus-v1.svg",
+              "strictEligible": false,
+              "clinicalStatus": "unreviewed",
+              "candidateLabelMatch": true,
+              "registeredPhoneticMatch": false
+            }
+          ],
           "descriptiveFlags": {
             "singleCharacter": false,
             "functionLikePos": false,
@@ -99129,15 +99173,15 @@
           "clinicalEvidence": "none"
         }
       ],
-      "existingAssetCandidateCount": 0,
+      "existingAssetCandidateCount": 1,
       "registeredAssetCandidateCount": 0,
-      "researchAssetLeadCandidateCount": 0,
+      "researchAssetLeadCandidateCount": 1,
       "registeredPhoneticAssetCandidateCount": 0,
-      "likelyNeedsNewAsset": true,
+      "likelyNeedsNewAsset": false,
       "highKnownVisualOrLexicalRisk": false,
       "informationInsufficient": false,
       "twoSyllableFirstClass": false,
-      "lane": "multiple_exact_homophones_to_compare",
+      "lane": "research_asset_lead_to_inspect",
       "proofStatus": {
         "phoneticExactness": "exact_candidates_attested",
         "generalRebusApproximation": "available_separately",
@@ -99146,7 +99190,7 @@
         "spontaneousNamability": "unknown_unless_human_observation_exists",
         "orthophonicValidation": "none"
       },
-      "nextDecision": "compare_semantic_and_visual_routes_before_drawing",
+      "nextDecision": "inspect_research_file_without_treating_it_as_registered_or_exact_asset_evidence",
       "automaticActivation": false
     },
     {

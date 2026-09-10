@@ -5,12 +5,12 @@
 - Sons sélectionnés : 916.
 - Fenêtres de deux syllabes : 400.
 - Sons avec plusieurs homophones exacts : 536.
-- Sons avec au moins une piste de fichier/asset de même libellé : 8.
+- Sons avec au moins une piste de fichier/asset de même libellé : 12.
 - Sons avec au moins un asset enregistré de même libellé : 5.
-- Sons avec seulement/au moins une piste issue d’un nom de fichier de recherche : 3.
+- Sons avec seulement/au moins une piste issue d’un nom de fichier de recherche : 7.
 - Sons avec asset enregistré dont l’IPA est explicitement enregistrée et exacte : 5.
 - Sons avec convention visible : 23.
-- Sons qui nécessitent probablement un nouvel asset si un concept exact est retenu : 879.
+- Sons qui nécessitent probablement un nouvel asset si un concept exact est retenu : 875.
 - Sons avec risque visuel/lexical déjà documenté : 53.
 - Sons avec approximation légère disponible séparément : 609.
 - Sons dont les preuves visuelles restent insuffisantes : 815.
@@ -18,16 +18,16 @@
 ## Répartition des décisions
 
 - convention visible préférable : 11.
-- plusieurs homophones exacts à départager : 519.
+- plusieurs homophones exacts à départager : 515.
 - approximation ludique seulement après rejets exacts : 3.
-- fichier de recherche à inspecter séparément : 3.
+- fichier de recherche à inspecter séparément : 7.
 - candidat lexical exact à préexaminer : 375.
 - asset enregistré à examiner/tester : 5.
 
 ## Files opérationnelles
 
 - Assets enregistrés à examiner : 5 sons (/vɑ̃/, /bal/, /gɑ̃/, /foto/, /kyʁi/).
-- Fichiers de recherche à inspecter séparément : 3 sons (/ni/, /œʁ/, /mat/).
+- Fichiers de recherche à inspecter séparément : 7 sons (/ni/, /kʁwa/, /ø/, /wa/, /œʁ/, /dwa/, /mat/).
 - Homophones exacts à départager : 160 sons prioritaires.
 - Conventions visibles préférables : 11 sons (/a/, /se/, /pe/, /i/, /ʒe/, /la/, /ve/, /be/, /y/, /ʒi/, /ɛs/).
 - Préexamen de candidat image exact : 160 sons prioritaires.

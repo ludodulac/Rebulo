@@ -1,0 +1,52 @@
+name: Representation path research
+
+on:
+  push:
+    paths:
+      - '.github/workflows/representation-paths.yml'
+      - 'src/rebus-representation-paths.js'
+      - 'src/rebus-representation-bank.js'
+      - 'scripts/analyze-representation-paths.mjs'
+      - 'data/rebus-representation-bank-audit.json'
+      - 'tests/rebus-representation-paths.test.mjs'
+      - 'tests/rebus-representation-bank.test.mjs'
+  pull_request:
+    paths:
+      - '.github/workflows/representation-paths.yml'
+      - 'src/rebus-representation-paths.js'
+      - 'src/rebus-representation-bank.js'
+      - 'scripts/analyze-representation-paths.mjs'
+      - 'data/rebus-representation-bank-audit.json'
+      - 'tests/rebus-representation-paths.test.mjs'
+      - 'tests/rebus-representation-bank.test.mjs'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  path-proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Guard representation bank semantics
+        run: node tests/rebus-representation-bank.test.mjs
+      - name: Guard continuous IPA planner
+        run: node tests/rebus-representation-paths.test.mjs
+      - name: Analyze current representation paths
+        run: node scripts/analyze-representation-paths.mjs
+      - name: Verify proof report
+        run: |
+          test -s docs/REBUS_REPRESENTATION_PATH_PROOF.md
+          grep -q 'merci' docs/REBUS_REPRESENTATION_PATH_PROOF.md
+          grep -q 'Frontière encore manquante' docs/REBUS_REPRESENTATION_PATH_PROOF.md
+      - name: Upload path proof
+        uses: actions/upload-artifact@v4
+        with:
+          name: representation-path-proof
+          path: docs/REBUS_REPRESENTATION_PATH_PROOF.md
+          retention-days: 14

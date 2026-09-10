@@ -2,7 +2,7 @@ name: Representation landscape
 
 on:
   push:
-    branches: [main, 'research/representation-landscape', 'editorial/representation-wave2', 'editorial/representation-wave3']
+    branches: [main, 'research/representation-landscape', 'editorial/representation-wave2', 'editorial/representation-wave3', 'editorial/representation-wave4-materialization1']
     paths:
       - 'src/rebus-representation-landscape.js'
       - 'src/rebus-representation-paths.js'
@@ -15,6 +15,8 @@ on:
       - 'data/rebus-sound-visual-curation.json'
       - 'data/rebus-sound-visual-curation-wave2.json'
       - 'data/rebus-sound-visual-curation-wave3.json'
+      - 'data/rebus-sound-visual-curation-wave4.json'
+      - 'data/rebus-materialization-wave1.json'
       - 'data/rebus-visible-conventions.json'
       - 'data/rebus-pronunciation-lexicon.json'
       - '.github/workflows/representation-landscape.yml'
@@ -43,9 +45,10 @@ jobs:
           const base=JSON.parse(fs.readFileSync('data/rebus-sound-visual-curation.json','utf8'));
           const wave2=JSON.parse(fs.readFileSync('data/rebus-sound-visual-curation-wave2.json','utf8'));
           const wave3=JSON.parse(fs.readFileSync('data/rebus-sound-visual-curation-wave3.json','utf8'));
-          const merged={...base,version:`${base.version}+${wave2.version}+${wave3.version}`,entries:[...(base.entries||[]),...(wave2.entries||[]),...(wave3.entries||[])]};
+          const wave4=JSON.parse(fs.readFileSync('data/rebus-sound-visual-curation-wave4.json','utf8'));
+          const merged={...base,version:`${base.version}+${wave2.version}+${wave3.version}+${wave4.version}`,entries:[...(base.entries||[]),...(wave2.entries||[]),...(wave3.entries||[]),...(wave4.entries||[])]};
           fs.writeFileSync('.cache/rebus-sound-visual-curation-merged.json',JSON.stringify(merged,null,2)+'\n');
-          console.log(JSON.stringify({baseEntries:base.entries?.length||0,wave2Entries:wave2.entries?.length||0,wave3Entries:wave3.entries?.length||0,mergedEntries:merged.entries.length},null,2));
+          console.log(JSON.stringify({baseEntries:base.entries?.length||0,wave2Entries:wave2.entries?.length||0,wave3Entries:wave3.entries?.length||0,wave4Entries:wave4.entries?.length||0,mergedEntries:merged.entries.length},null,2));
           NODE
       - name: Build representation landscape
         run: node scripts/build-representation-landscape.mjs data/rebus-representation-bank-audit.json .cache/rebus-sound-visual-curation-merged.json
@@ -59,15 +62,27 @@ jobs:
           const benchmark=JSON.parse(fs.readFileSync('data/rebus-real-phrase-benchmark.json','utf8'));
           const wave2=JSON.parse(fs.readFileSync('data/rebus-sound-visual-curation-wave2.json','utf8'));
           const wave3=JSON.parse(fs.readFileSync('data/rebus-sound-visual-curation-wave3.json','utf8'));
+          const wave4=JSON.parse(fs.readFileSync('data/rebus-sound-visual-curation-wave4.json','utf8'));
+          const materialization=JSON.parse(fs.readFileSync('data/rebus-materialization-wave1.json','utf8'));
           if(landscape.stats.exactLexicalBacklogSoundCount<5000)throw new Error('Expected the large exact lexical reservoir, got '+landscape.stats.exactLexicalBacklogSoundCount);
           if(landscape.rows.some(row=>row.automaticActivation!==false||row.clinicalEvidence!=='none'))throw new Error('Landscape must never auto-activate or infer clinical evidence');
           if(landscape.rows.flatMap(row=>row.exactCandidates||[]).some(candidate=>candidate.automaticActivation!==false||candidate.clinicalEvidence!=='none'))throw new Error('Candidate evidence leaked activation or clinical status');
-          for(const [name,wave] of [['wave2',wave2],['wave3',wave3]])if(wave.entries.some(item=>item.humanNamingEvidence!=='none'||item.clinicalEvidence!=='none'||item.spontaneousNamingRisk!=='unknown'))throw new Error(name+' must not invent human naming or clinical evidence');
+          for(const [name,wave] of [['wave2',wave2],['wave3',wave3],['wave4',wave4]])if(wave.entries.some(item=>item.humanNamingEvidence!=='none'||item.clinicalEvidence!=='none'||item.spontaneousNamingRisk!=='unknown'))throw new Error(name+' must not invent human naming or clinical evidence');
           if(wave3.summary.examinedSoundCount<40||wave3.summary.prototypeCandidateCount<20)throw new Error('Wave 3 is not substantive enough');
+          if(wave4.summary.examinedSoundCount<30||wave4.summary.prototypeCandidateCount<15)throw new Error('Wave 4 is not substantive enough');
+          const wave4PrototypeCount=wave4.entries.filter(item=>item.decision==='prototype_candidate').length;
+          const wave4DeferredCount=wave4.entries.filter(item=>item.decision==='defer_candidate').length;
+          const wave4LexicalCount=wave4.entries.reduce((sum,item)=>sum+(item.comparedExactCandidates?.length||0),0);
+          if(wave4.entries.length!==wave4.summary.examinedSoundCount)throw new Error(`Wave 4 entry count mismatch: ${wave4.entries.length} != ${wave4.summary.examinedSoundCount}`);
+          if(wave4PrototypeCount!==wave4.summary.prototypeCandidateCount||wave4DeferredCount!==wave4.summary.deferredCandidateCount)throw new Error('Wave 4 decision counts do not match summary');
+          if(wave4LexicalCount!==wave4.summary.comparedExactLexicalCandidateCount)throw new Error(`Wave 4 lexical comparison count mismatch: ${wave4LexicalCount} != ${wave4.summary.comparedExactLexicalCandidateCount}`);
+          if(materialization.status!=='research_stimuli_only'||materialization.summary.newAssetsCreated!==4)throw new Error('Materialization wave must remain a small research stimulus batch');
+          if(materialization.entries.some(item=>item.humanNamingEvidence!=='none'||item.clinicalEvidence!=='none'||item.spontaneousNamingRisk!=='unknown'))throw new Error('Materialized SVGs must not invent naming or clinical evidence');
+          for(const item of materialization.entries.filter(item=>item.decision==='new_research_stimulus_created'))if(!fs.existsSync(item.asset))throw new Error('Missing research stimulus '+item.asset);
           const historical=benchmark.rows.find(row=>row.phrase==='Elles ne sont pas cuites les pâtes');
           if(!historical?.pronunciationComplete)throw new Error('Historical end-to-end phrase is no longer lexically resolved');
           if(!landscape.rows.some(row=>row.longWindowPotential?.coversTwoSyllables))throw new Error('Two-syllable windows disappeared from the landscape');
-          console.log(JSON.stringify({landscape:landscape.stats,benchmark:benchmark.summary,wave2Entries:wave2.entries.length,wave3:wave3.summary},null,2));
+          console.log(JSON.stringify({landscape:landscape.stats,benchmark:benchmark.summary,wave4:wave4.summary,materialization:materialization.summary},null,2));
           NODE
       - name: Upload landscape artifact
         uses: actions/upload-artifact@v4

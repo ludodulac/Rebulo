@@ -26,6 +26,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -66,4 +68,6 @@ jobs:
           git add data/rebus-representation-landscape.json docs/REBUS_REPRESENTATION_LANDSCAPE.md data/rebus-real-phrase-benchmark.json docs/REBUS_REAL_PHRASE_BENCHMARK.md
           git diff --cached --quiet && exit 0
           git commit -m 'Refresh representation landscape and phrase benchmark'
-          git push
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main

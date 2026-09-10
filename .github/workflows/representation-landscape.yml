@@ -70,6 +70,12 @@ jobs:
           for(const [name,wave] of [['wave2',wave2],['wave3',wave3],['wave4',wave4]])if(wave.entries.some(item=>item.humanNamingEvidence!=='none'||item.clinicalEvidence!=='none'||item.spontaneousNamingRisk!=='unknown'))throw new Error(name+' must not invent human naming or clinical evidence');
           if(wave3.summary.examinedSoundCount<40||wave3.summary.prototypeCandidateCount<20)throw new Error('Wave 3 is not substantive enough');
           if(wave4.summary.examinedSoundCount<30||wave4.summary.prototypeCandidateCount<15)throw new Error('Wave 4 is not substantive enough');
+          const wave4PrototypeCount=wave4.entries.filter(item=>item.decision==='prototype_candidate').length;
+          const wave4DeferredCount=wave4.entries.filter(item=>item.decision==='defer_candidate').length;
+          const wave4LexicalCount=wave4.entries.reduce((sum,item)=>sum+(item.comparedExactCandidates?.length||0),0);
+          if(wave4.entries.length!==wave4.summary.examinedSoundCount)throw new Error(`Wave 4 entry count mismatch: ${wave4.entries.length} != ${wave4.summary.examinedSoundCount}`);
+          if(wave4PrototypeCount!==wave4.summary.prototypeCandidateCount||wave4DeferredCount!==wave4.summary.deferredCandidateCount)throw new Error('Wave 4 decision counts do not match summary');
+          if(wave4LexicalCount!==wave4.summary.comparedExactLexicalCandidateCount)throw new Error(`Wave 4 lexical comparison count mismatch: ${wave4LexicalCount} != ${wave4.summary.comparedExactLexicalCandidateCount}`);
           if(materialization.status!=='research_stimuli_only'||materialization.summary.newAssetsCreated!==4)throw new Error('Materialization wave must remain a small research stimulus batch');
           if(materialization.entries.some(item=>item.humanNamingEvidence!=='none'||item.clinicalEvidence!=='none'||item.spontaneousNamingRisk!=='unknown'))throw new Error('Materialized SVGs must not invent naming or clinical evidence');
           for(const item of materialization.entries.filter(item=>item.decision==='new_research_stimulus_created'))if(!fs.existsSync(item.asset))throw new Error('Missing research stimulus '+item.asset);

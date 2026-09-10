@@ -1,14 +1,14 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": "2026-09-10T09:07:26.837Z",
+  "generatedAt": "2026-09-10T15:08:35.830Z",
   "status": "asset_gap_audit_only",
   "purpose": "Prevent duplicate drawing work and identify the smallest safe visual-production wave for already curated sound candidates.",
   "counts": {
-    "curatedPrototypeCount": 15,
+    "curatedPrototypeCount": 32,
     "researchAssetExists": 1,
     "productionAssetExists": 0,
     "historicalAssetOnly": 0,
-    "noRegisteredAsset": 14
+    "noRegisteredAsset": 31
   },
   "rows": [
     {
@@ -89,6 +89,33 @@
         "censé",
         "sentiment",
         "semblant"
+      ],
+      "state": "no_registered_asset",
+      "researchAssets": [],
+      "productionAssets": [],
+      "historicalAssets": [],
+      "nextGate": "create_research_prototype_then_naming_test",
+      "automaticActivation": false
+    },
+    {
+      "ipa": "tik",
+      "candidate": "tique",
+      "visualConcept": "Une tique grossie isolée, vue du dessus, huit pattes visibles, sans peau ni animal hôte.",
+      "visualPlausibility": "medium_high",
+      "spontaneousNamingRisk": "high",
+      "mainConfusions": [
+        "araignée",
+        "insecte",
+        "pou"
+      ],
+      "usefulTargetCount": 56,
+      "usefulExamples": [
+        "politique",
+        "fantastique",
+        "romantique",
+        "boutique",
+        "plastique",
+        "pathétique"
       ],
       "state": "no_registered_asset",
       "researchAssets": [],
@@ -255,6 +282,350 @@
       "automaticActivation": false
     },
     {
+      "ipa": "kaʁ",
+      "candidate": "car",
+      "visualConcept": "Un autocar de tourisme vu de trois-quarts, long véhicule avec nombreuses fenêtres et porte passagers, seul sur fond clair.",
+      "visualPlausibility": "high",
+      "spontaneousNamingRisk": "high",
+      "mainConfusions": [
+        "bus",
+        "autocar",
+        "coach"
+      ],
+      "usefulTargetCount": 30,
+      "usefulExamples": [
+        "quartier",
+        "cardiaque",
+        "rencard",
+        "placard",
+        "écart",
+        "quart"
+      ],
+      "state": "no_registered_asset",
+      "researchAssets": [],
+      "productionAssets": [],
+      "historicalAssets": [],
+      "nextGate": "create_research_prototype_then_naming_test",
+      "automaticActivation": false
+    },
+    {
+      "ipa": "tɔ̃",
+      "candidate": "thon",
+      "visualConcept": "Un thon entier de profil, corps fuselé et nageoires caractéristiques, seul sur fond clair.",
+      "visualPlausibility": "medium_high",
+      "spontaneousNamingRisk": "medium_high",
+      "mainConfusions": [
+        "poisson",
+        "maquereau"
+      ],
+      "usefulTargetCount": 29,
+      "usefulExamples": [
+        "ton",
+        "tomber",
+        "fiston",
+        "bouton",
+        "retomber",
+        "bâton"
+      ],
+      "state": "no_registered_asset",
+      "researchAssets": [],
+      "productionAssets": [],
+      "historicalAssets": [],
+      "nextGate": "create_research_prototype_then_naming_test",
+      "automaticActivation": false
+    },
+    {
+      "ipa": "maʁ",
+      "candidate": "mare",
+      "visualConcept": "Petite mare ronde avec eau, quelques roseaux et une grenouille minuscule secondaire, sans paysage dominant.",
+      "visualPlausibility": "medium_high",
+      "spontaneousNamingRisk": "medium_high",
+      "mainConfusions": [
+        "étang",
+        "flaque",
+        "lac"
+      ],
+      "usefulTargetCount": 25,
+      "usefulExamples": [
+        "marcher",
+        "marché",
+        "marre",
+        "cauchemar",
+        "mardi",
+        "remarquer"
+      ],
+      "state": "no_registered_asset",
+      "researchAssets": [],
+      "productionAssets": [],
+      "historicalAssets": [],
+      "nextGate": "create_research_prototype_then_naming_test",
+      "automaticActivation": false
+    },
+    {
+      "ipa": "tabl",
+      "candidate": "table",
+      "visualConcept": "Une table simple à quatre pieds vue en légère perspective, seule sur fond clair, sans repas ni chaises.",
+      "visualPlausibility": "high",
+      "spontaneousNamingRisk": "low_medium",
+      "mainConfusions": [
+        "bureau"
+      ],
+      "usefulTargetCount": 24,
+      "usefulExamples": [
+        "table",
+        "portable",
+        "véritable",
+        "confortable",
+        "inévitable",
+        "instable"
+      ],
+      "state": "no_registered_asset",
+      "researchAssets": [],
+      "productionAssets": [],
+      "historicalAssets": [],
+      "nextGate": "create_research_prototype_then_naming_test",
+      "automaticActivation": false
+    },
+    {
+      "ipa": "bʁi",
+      "candidate": "brie",
+      "visualConcept": "Un quartier de brie à croûte blanche et cœur crémeux, isolé sur fond clair, sans emballage ni texte.",
+      "visualPlausibility": "medium_high",
+      "spontaneousNamingRisk": "high",
+      "mainConfusions": [
+        "fromage",
+        "camembert"
+      ],
+      "usefulTargetCount": 23,
+      "usefulExamples": [
+        "abri",
+        "briser",
+        "brillant",
+        "briller",
+        "brigade",
+        "cambriolage"
+      ],
+      "state": "no_registered_asset",
+      "researchAssets": [],
+      "productionAssets": [],
+      "historicalAssets": [],
+      "nextGate": "create_research_prototype_then_naming_test",
+      "automaticActivation": false
+    },
+    {
+      "ipa": "mɛtʁ",
+      "candidate": "mètre",
+      "visualConcept": "Un mètre ruban déroulé avec graduations visibles, seul, sans personne ni chantier.",
+      "visualPlausibility": "high",
+      "spontaneousNamingRisk": "medium",
+      "mainConfusions": [
+        "mètre ruban",
+        "ruban",
+        "règle"
+      ],
+      "usefulTargetCount": 23,
+      "usefulExamples": [
+        "mettre",
+        "maître",
+        "remettre",
+        "km",
+        "permettre",
+        "admettre"
+      ],
+      "state": "no_registered_asset",
+      "researchAssets": [],
+      "productionAssets": [],
+      "historicalAssets": [],
+      "nextGate": "create_research_prototype_then_naming_test",
+      "automaticActivation": false
+    },
+    {
+      "ipa": "pla",
+      "candidate": "plat",
+      "visualConcept": "Un plat de service ovale vide vu en légère perspective, seul sur fond clair.",
+      "visualPlausibility": "medium",
+      "spontaneousNamingRisk": "high",
+      "mainConfusions": [
+        "assiette",
+        "plateau",
+        "vaisselle"
+      ],
+      "usefulTargetCount": 23,
+      "usefulExamples": [
+        "planète",
+        "remplacer",
+        "plat",
+        "placard",
+        "déplacer",
+        "plateau"
+      ],
+      "state": "no_registered_asset",
+      "researchAssets": [],
+      "productionAssets": [],
+      "historicalAssets": [],
+      "nextGate": "create_research_prototype_then_naming_test",
+      "automaticActivation": false
+    },
+    {
+      "ipa": "pu",
+      "candidate": "pou",
+      "visualConcept": "Un pou grossi, isolé comme petit insecte sans cheveux ni tête humaine dominante.",
+      "visualPlausibility": "medium_high",
+      "spontaneousNamingRisk": "medium_high",
+      "mainConfusions": [
+        "insecte",
+        "puce",
+        "tique"
+      ],
+      "usefulTargetCount": 23,
+      "usefulExamples": [
+        "pouvoir",
+        "épouser",
+        "poulet",
+        "pousser",
+        "poupée",
+        "poussière"
+      ],
+      "state": "no_registered_asset",
+      "researchAssets": [],
+      "productionAssets": [],
+      "historicalAssets": [],
+      "nextGate": "create_research_prototype_then_naming_test",
+      "automaticActivation": false
+    },
+    {
+      "ipa": "ʒy",
+      "candidate": "jus",
+      "visualConcept": "Un verre transparent rempli de jus d'orange avec une orange coupée discrète à côté, sans marque ni texte.",
+      "visualPlausibility": "medium_high",
+      "spontaneousNamingRisk": "medium",
+      "mainConfusions": [
+        "boisson",
+        "orange",
+        "jus d'orange"
+      ],
+      "usefulTargetCount": 19,
+      "usefulExamples": [
+        "jury",
+        "jus",
+        "jugement",
+        "juger",
+        "judiciaire",
+        "juridique"
+      ],
+      "state": "no_registered_asset",
+      "researchAssets": [],
+      "productionAssets": [],
+      "historicalAssets": [],
+      "nextGate": "create_research_prototype_then_naming_test",
+      "automaticActivation": false
+    },
+    {
+      "ipa": "bɑ̃",
+      "candidate": "banc",
+      "visualConcept": "Un banc public simple avec dossier et pieds, seul sur fond clair, sans parc ni personnage.",
+      "visualPlausibility": "high",
+      "spontaneousNamingRisk": "low_medium",
+      "mainConfusions": [
+        "banquette"
+      ],
+      "usefulTargetCount": 16,
+      "usefulExamples": [
+        "abandonner",
+        "banc",
+        "ruban",
+        "banlieue",
+        "bandit",
+        "bancaire"
+      ],
+      "state": "no_registered_asset",
+      "researchAssets": [],
+      "productionAssets": [],
+      "historicalAssets": [],
+      "nextGate": "create_research_prototype_then_naming_test",
+      "automaticActivation": false
+    },
+    {
+      "ipa": "sɛp",
+      "candidate": "cèpe",
+      "visualConcept": "Un cèpe unique avec gros pied clair et chapeau brun, isolé, sans panier ni forêt.",
+      "visualPlausibility": "medium_high",
+      "spontaneousNamingRisk": "high",
+      "mainConfusions": [
+        "champignon",
+        "bolet"
+      ],
+      "usefulTargetCount": 16,
+      "usefulExamples": [
+        "accepter",
+        "réception",
+        "septembre",
+        "exception",
+        "exceptionnel",
+        "déception"
+      ],
+      "state": "no_registered_asset",
+      "researchAssets": [],
+      "productionAssets": [],
+      "historicalAssets": [],
+      "nextGate": "create_research_prototype_then_naming_test",
+      "automaticActivation": false
+    },
+    {
+      "ipa": "fɑ̃",
+      "candidate": "faon",
+      "visualConcept": "Un jeune faon tacheté entier, seul, proportions juvéniles évidentes, sans adulte.",
+      "visualPlausibility": "high",
+      "spontaneousNamingRisk": "medium_high",
+      "mainConfusions": [
+        "biche",
+        "cerf",
+        "bébé cerf"
+      ],
+      "usefulTargetCount": 15,
+      "usefulExamples": [
+        "enfant",
+        "fantôme",
+        "fantastique",
+        "éléphant",
+        "offenser",
+        "fantasme"
+      ],
+      "state": "no_registered_asset",
+      "researchAssets": [],
+      "productionAssets": [],
+      "historicalAssets": [],
+      "nextGate": "create_research_prototype_then_naming_test",
+      "automaticActivation": false
+    },
+    {
+      "ipa": "ble",
+      "candidate": "blé",
+      "visualConcept": "Petit bouquet de plusieurs épis de blé mûrs, isolé sur fond clair, sans champ complet.",
+      "visualPlausibility": "high",
+      "spontaneousNamingRisk": "medium_high",
+      "mainConfusions": [
+        "épi",
+        "céréale",
+        "orge"
+      ],
+      "usefulTargetCount": 13,
+      "usefulExamples": [
+        "blesser",
+        "blessure",
+        "ressembler",
+        "sembler",
+        "trembler",
+        "troubler"
+      ],
+      "state": "no_registered_asset",
+      "researchAssets": [],
+      "productionAssets": [],
+      "historicalAssets": [],
+      "nextGate": "create_research_prototype_then_naming_test",
+      "automaticActivation": false
+    },
+    {
       "ipa": "tele",
       "candidate": "télé",
       "visualConcept": "Téléviseur simple vu de face avec écran allumé neutre, sans télécommande dominante.",
@@ -273,6 +644,86 @@
         "téléphoner",
         "téléphonique",
         "télégramme"
+      ],
+      "state": "no_registered_asset",
+      "researchAssets": [],
+      "productionAssets": [],
+      "historicalAssets": [],
+      "nextGate": "create_research_prototype_then_naming_test",
+      "automaticActivation": false
+    },
+    {
+      "ipa": "bʁa",
+      "candidate": "bras",
+      "visualConcept": "Silhouette simple d'un haut du corps avec une flèche nette pointant un bras, sans geste particulier.",
+      "visualPlausibility": "high",
+      "spontaneousNamingRisk": "medium",
+      "mainConfusions": [
+        "main",
+        "coude",
+        "épaule"
+      ],
+      "usefulTargetCount": 12,
+      "usefulExamples": [
+        "bras",
+        "embrasser",
+        "bravo",
+        "bracelet",
+        "braquage",
+        "braquer"
+      ],
+      "state": "no_registered_asset",
+      "researchAssets": [],
+      "productionAssets": [],
+      "historicalAssets": [],
+      "nextGate": "create_research_prototype_then_naming_test",
+      "automaticActivation": false
+    },
+    {
+      "ipa": "tʁu",
+      "candidate": "trou",
+      "visualConcept": "Une planche simple percée d'un grand trou circulaire avec une flèche pointant précisément le vide central.",
+      "visualPlausibility": "medium_high",
+      "spontaneousNamingRisk": "medium",
+      "mainConfusions": [
+        "cercle",
+        "ouverture",
+        "planche"
+      ],
+      "usefulTargetCount": 12,
+      "usefulExamples": [
+        "trouver",
+        "trou",
+        "retrouver",
+        "troubler",
+        "troupeau",
+        "trouvé"
+      ],
+      "state": "no_registered_asset",
+      "researchAssets": [],
+      "productionAssets": [],
+      "historicalAssets": [],
+      "nextGate": "create_research_prototype_then_naming_test",
+      "automaticActivation": false
+    },
+    {
+      "ipa": "mal",
+      "candidate": "malle",
+      "visualConcept": "Une grande malle de voyage ancienne fermée, avec poignées latérales, seule sur fond clair.",
+      "visualPlausibility": "high",
+      "spontaneousNamingRisk": "medium_high",
+      "mainConfusions": [
+        "coffre",
+        "valise"
+      ],
+      "usefulTargetCount": 11,
+      "usefulExamples": [
+        "mal",
+        "normal",
+        "animal",
+        "mâle",
+        "normale",
+        "malchance"
       ],
       "state": "no_registered_asset",
       "researchAssets": [],

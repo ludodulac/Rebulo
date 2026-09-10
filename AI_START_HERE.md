@@ -4,9 +4,9 @@ Ce fichier est un **routeur de contexte**, pas une encyclopédie. Il ne remplace
 
 ## Contexte transversal
 
-Rebulo appartient à l'écosystème documenté dans **`ludodulac/Grand-p-re-`**. Le slug GitHub utilise des tirets à la place des caractères accentués de « Grand Père ».
+Rebulo appartient à l'écosystème documenté dans **`ludodulac/Grand-pere`**. Grand Père est documenté dans le dépôt `ludodulac/Grand-pere`.
 
-Dans une nouvelle conversation : ouvrir d'abord `ludodulac/Grand-p-re-` sur `main`, lire `AI_START_HERE.md`, suivre `projects/_INDEX.md` vers la fiche Rebulo et appliquer `LOOP_ENGINEERING.md` pour le travail itératif ; revenir ensuite ici. **Rebulo reste la source de vérité de son état réel. Grand Père apporte contexte transversal et méthode, jamais un substitut au code/tests/données locaux.**
+Dans une nouvelle conversation : ouvrir d'abord `ludodulac/Grand-pere` sur `main`, lire `AI_START_HERE.md`, suivre `projects/_INDEX.md` vers la fiche Rebulo et appliquer `LOOP_ENGINEERING.md` pour le travail itératif ; revenir ensuite ici. **Rebulo reste la source de vérité de son état réel. Grand Père apporte contexte transversal et méthode, jamais un substitut au code/tests/données locaux.**
 
 **Ne lire que la documentation pertinente à la zone touchée. Ne pas relire tout Rebulo par défaut.**
 

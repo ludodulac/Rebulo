@@ -1,0 +1,173 @@
+{
+  "schemaVersion": "1.0",
+  "status": "research_only",
+  "purpose": "Small diversified comparison batch for confronting representation-selection hypotheses with real assets or concrete concepts before any automatic scoring is generalized to the 5504-sound exact lexical bank.",
+  "proofOrder": [
+    "phonetic_exactness",
+    "general_rebus_approximation",
+    "lexical_relevance",
+    "drawable_concept",
+    "spontaneous_namability",
+    "orthophonic_validation"
+  ],
+  "policy": {
+    "unknownIsAllowed": true,
+    "noAutomaticReliableScore": true,
+    "humanObservationRequiredForNamability": true,
+    "clinicalValidationNeverInferred": true,
+    "longWindowsRemainCompetitive": true
+  },
+  "cases": [
+    {
+      "caseId": "specific-existing-nid",
+      "profile": "concrete_specific_object_with_existing_asset",
+      "targetIpa": "ni",
+      "lexicalCandidate": "nid",
+      "phoneticRelation": "exact",
+      "representationType": "pictogram",
+      "representationPlan": "Isolated bird nest made of twigs, with no bird, tree or egg dominating the scene.",
+      "whyThisRoute": "The lexical item is concrete, category-specific and visually compact; the existing research asset already isolates the intended object strongly enough to inspect selection assumptions before redrawing anything.",
+      "asset": {
+        "exists": true,
+        "path": "assets/research/nid-comic-v1.svg",
+        "observedFeatures": [
+          "single central object",
+          "white background",
+          "twig/bowl structure dominates",
+          "no competing bird or tree",
+          "no text cue"
+        ]
+      },
+      "predictiveProperties": {
+        "lexicalCompetition": "low_to_medium_hypothesis",
+        "concreteness": "high_observed_concept",
+        "objectSpecificity": "high_observed_concept",
+        "graphicComplexity": "low_to_medium_observed_asset",
+        "cueNeed": "none_apparent_from_asset",
+        "frequency": "not_used_as_namability_proof",
+        "expectedNamingStability": "promising_hypothesis_not_human_verified"
+      },
+      "namingRisk": "unknown_without_human_observation",
+      "proofStatus": ["phonetic_exact", "lexically_relevant", "drawable_asset_exists", "namability_unverified", "clinical_unvalidated"],
+      "nextDecision": "Run a small naming observation on the existing asset before any redraw; compare responses such as nid, nid d'oiseau, panier or bol if they arise."
+    },
+    {
+      "caseId": "ambiguous-anatomy-cou",
+      "profile": "exact_word_visually_ambiguous",
+      "targetIpa": "ku",
+      "lexicalCandidate": "cou",
+      "phoneticRelation": "exact",
+      "representationType": "pictogram_or_pointed_anatomy_scene",
+      "representationPlan": "Profile bust with the neck exposed; compare an uncued version against a version with a small visual pointer.",
+      "whyThisRoute": "The word is concrete but denotes a body part whose neighboring labels compete strongly, making it useful for testing whether specificity and cue need predict naming difficulty better than concreteness alone.",
+      "asset": {"exists": false, "path": null, "observedFeatures": []},
+      "predictiveProperties": {
+        "lexicalCompetition": "high_hypothesis_gorge_nuque",
+        "concreteness": "high_observed_concept",
+        "objectSpecificity": "medium_observed_concept",
+        "graphicComplexity": "medium_hypothesis",
+        "cueNeed": "likely_compare_none_vs_pointer",
+        "frequency": "not_used_as_namability_proof",
+        "expectedNamingStability": "uncertain"
+      },
+      "namingRisk": "unknown_without_human_observation",
+      "proofStatus": ["phonetic_exact", "lexically_relevant", "drawable_concept_hypothesis", "namability_unverified", "clinical_unvalidated"],
+      "nextDecision": "Prototype only the minimal contrasted pair needed to test whether a pointer improves naming without becoming a hidden textual rule."
+    },
+    {
+      "caseId": "long-window-compas",
+      "profile": "two_syllable_exact_object",
+      "targetIpa": "kɔ̃pa",
+      "lexicalCandidate": "compas",
+      "phoneticRelation": "exact",
+      "representationType": "pictogram",
+      "representationPlan": "Open school compass with its pencil leg visible, isolated from ruler, pencil case and geometry scene.",
+      "whyThisRoute": "A single recognizable two-syllable object can be preferable to two shorter ambiguous pieces; this case calibrates the value of long exact windows independently of piece count.",
+      "asset": {"exists": false, "path": null, "observedFeatures": []},
+      "predictiveProperties": {
+        "lexicalCompetition": "low_to_medium_hypothesis_tool_vs_compas",
+        "concreteness": "high_observed_concept",
+        "objectSpecificity": "high_observed_concept",
+        "graphicComplexity": "medium_hypothesis",
+        "cueNeed": "none_expected_if_school_compass_form_is_clear",
+        "frequency": "not_used_as_namability_proof",
+        "expectedNamingStability": "promising_hypothesis_not_human_verified"
+      },
+      "namingRisk": "unknown_without_human_observation",
+      "proofStatus": ["phonetic_exact", "two_syllable_window", "lexically_relevant", "drawable_concept_hypothesis", "namability_unverified", "clinical_unvalidated"],
+      "nextDecision": "Make one restrained prototype and compare its naming performance against the alternative shorter decomposition rather than rewarding shorter pieces by default."
+    },
+    {
+      "caseId": "visible-convention-a",
+      "profile": "visible_convention_preferred_over_image",
+      "targetIpa": "a",
+      "lexicalCandidate": "ha",
+      "phoneticRelation": "exact_lexical_candidate_but_poor_visual_route",
+      "representationType": "spoken_letter_name",
+      "representationPlan": "Visible capital letter A, explicitly interpreted by the general-rebus convention as the French letter name /a/.",
+      "whyThisRoute": "The exact lexical entry does not yield a naturally nameable object, while the letter-name convention is explicit, visible and semantically honest for playful rebus mode.",
+      "asset": {"exists": false, "path": null, "observedFeatures": []},
+      "predictiveProperties": {
+        "lexicalCompetition": "not_the_primary_issue",
+        "concreteness": "not_applicable_to_letter_convention",
+        "objectSpecificity": "not_applicable",
+        "graphicComplexity": "very_low",
+        "cueNeed": "convention_must_be_explicit",
+        "frequency": "not_used_as_namability_proof",
+        "expectedNamingStability": "convention_comprehension_unknown_until_tested"
+      },
+      "namingRisk": "unknown_for_convention_comprehension",
+      "proofStatus": ["phonetic_exact_letter_name", "visible_convention_general_mode", "pictogram_route_rejected", "namability_not_applicable_as_object", "clinical_unvalidated"],
+      "nextDecision": "Keep A as an explicit convention candidate; test comprehension of the convention separately from pictogram naming."
+    },
+    {
+      "caseId": "playful-approximation-lait-les",
+      "profile": "playful_approximation_separate_from_strict",
+      "targetIpa": "le",
+      "lexicalCandidate": "lait",
+      "sourceIpa": "lɛ",
+      "phoneticRelation": "approximate",
+      "representationType": "pictogram_general_mode_only",
+      "representationPlan": "A simple glass or splash of milk intended to evoke lait, only if the approximation remains visibly marked as playful/general-mode evidence.",
+      "whyThisRoute": "The object is easy to depict, but its pronunciation differs from /le/; it is therefore useful precisely as a calibration case for keeping visual promise separate from phonetic strictness.",
+      "asset": {"exists": false, "path": null, "observedFeatures": []},
+      "predictiveProperties": {
+        "lexicalCompetition": "medium_hypothesis_lait_verre_boisson",
+        "concreteness": "high_observed_concept",
+        "objectSpecificity": "medium_to_high_observed_concept",
+        "graphicComplexity": "low_hypothesis",
+        "cueNeed": "none_for_object_but_approximation_status_must_be_explicit",
+        "frequency": "not_used_as_namability_proof",
+        "expectedNamingStability": "unknown"
+      },
+      "namingRisk": "unknown_without_human_observation",
+      "proofStatus": ["phonetic_approximation_general_only", "strict_ineligible", "drawable_concept_hypothesis", "namability_unverified", "clinical_unvalidated"],
+      "nextDecision": "Retain only as a labeled playful fallback after exact and explicit-convention routes; never let visual obviousness upgrade it to strict."
+    },
+    {
+      "caseId": "material-boue",
+      "profile": "concrete_material_with_category_ambiguity",
+      "targetIpa": "bu",
+      "lexicalCandidate": "boue",
+      "phoneticRelation": "exact",
+      "representationType": "pictogram",
+      "representationPlan": "Thick muddy puddle with splashes, with no shoe, wheel or landscape dominating.",
+      "whyThisRoute": "The referent is concrete and graphic but belongs to a material/category cluster where terre, flaque and saleté may compete, offering a contrast with the more object-specific nid case.",
+      "asset": {"exists": false, "path": null, "observedFeatures": []},
+      "predictiveProperties": {
+        "lexicalCompetition": "medium_to_high_hypothesis",
+        "concreteness": "high_observed_concept",
+        "objectSpecificity": "low_to_medium_observed_concept",
+        "graphicComplexity": "low_to_medium_hypothesis",
+        "cueNeed": "possibly_scene_texture_not_pointer",
+        "frequency": "not_used_as_namability_proof",
+        "expectedNamingStability": "uncertain"
+      },
+      "namingRisk": "unknown_without_human_observation",
+      "proofStatus": ["phonetic_exact", "lexically_relevant", "drawable_concept_hypothesis", "namability_unverified", "clinical_unvalidated"],
+      "nextDecision": "Use as a contrast case against nid: test whether lower object specificity predicts more category-label variation before encoding that property into the global map."
+    }
+  ],
+  "batchDecision": "compare_before_generalize",
+  "generalizationGate": "Only promote a predictive property into the 5504-sound landscape after several cases and, where naming is at issue, real human observations show a repeatable relationship."
+}

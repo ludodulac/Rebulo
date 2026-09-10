@@ -5,7 +5,7 @@
 - Sons utiles du réservoir exact à cartographier : 5487.
 - Prototypes curatés ajoutés comme étalons de calibration : 32.
 - Sons cartographiés dans cette vue : 5519.
-- Sons où la curation explicite fournit déjà une hypothèse visuelle : 32.
+- Sons où la curation explicite fournit déjà une hypothèse visuelle : 54.
 - Fenêtres de deux syllabes conservées comme candidates de première classe : 3814.
 - Sons ayant aussi une convention visible explicite : 34.
 - Sons ayant une approximation légère recensée dans la source disponible : 1245.
@@ -30,6 +30,8 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | /pɔʁ/ | porc | high | medium_high | 43 | prototype_then_naming_variant_test |
 | /bu/ | boue | high | medium | 43 | prototype_then_naming_test |
 | /fɔʁ/ | fort | medium_high | medium_high | 39 | compare_fort_and_fortress_scene_then_naming_test |
+| /ʃɑ̃/ | champ | high | unknown | 31 | new_asset_then_human_naming_test |
+| /kɑ̃/ | camp | high | unknown | 31 | new_asset_then_human_naming_test |
 | /kaʁ/ | car | high | high | 30 | compare_bus_and_coach_silhouettes_then_naming_test |
 | /tɔ̃/ | thon | medium_high | medium_high | 29 | compare_whole_fish_and_food_context_before_naming_test |
 | /maʁ/ | mare | medium_high | medium_high | 25 | compare_minimal_waterbody_scenes_then_naming_test |
@@ -38,20 +40,40 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | /pu/ | pou | medium_high | medium_high | 23 | prototype_then_child_naming_test |
 | /pla/ | plat | medium | high | 23 | compare_service_dish_shapes_before_prototype |
 | /bʁi/ | brie | medium_high | high | 23 | compare_cheese_shape_then_naming_test |
+| /fɛʁ/ | fer | high | unknown | 22 | new_asset_then_human_naming_test |
 | /ʒy/ | jus | medium_high | medium | 19 | compare_glass_only_and_fruit_cue_then_naming_test |
 | /sɛp/ | cèpe | medium_high | high | 16 | prototype_only_if_species_naming_is_plausible |
 | /bɑ̃/ | banc | high | low_medium | 16 | check_existing_open_asset_then_naming_test |
 | /fɑ̃/ | faon | high | medium_high | 15 | prototype_then_age_specific_naming_test |
+| /pɥi/ | puits | high | unknown | 14 | new_asset_then_human_naming_test |
 | /tele/ | télé | high | medium | 13 | prototype_then_naming_variant_test |
 | /ble/ | blé | high | medium_high | 13 | compare_grain_and_ear_grouping_then_naming_test |
 | /tʁu/ | trou | medium_high | medium | 12 | compare_arrow_and_no_arrow_then_naming_test |
 | /bʁa/ | bras | high | medium | 12 | compare_arrow_position_then_naming_test |
+| /pwa/ | pois | high | unknown | 12 | new_asset_then_human_naming_test |
 | /mal/ | malle | high | medium_high | 11 | compare_trunk_and_suitcase_shapes_then_naming_test |
+| /twa/ | toit | high | unknown | 11 | new_asset_then_human_naming_test |
 | /kɔ̃pa/ | compas | high | low_medium | 10 | prototype_then_school_age_naming_test |
+| /nwa/ | noix | high | unknown | 8 | new_asset_then_human_naming_test |
 | /epi/ | épi | high | medium_high | 8 | prototype_then_naming_test |
+| /fuʁ/ | four | high | unknown | 8 | new_asset_then_human_naming_test |
+| /faʁ/ | phare | high | unknown | 8 | new_asset_then_human_naming_test |
+| /bal/ | balle | high | unknown | 7 | reuse_registered_asset_then_human_naming_test |
 | /eʁo/ | héros | medium | high | 7 | compare_scene_variants_before_prototype |
+| /gɑ̃/ | gant | high | unknown | 7 | reuse_registered_asset_then_human_naming_test |
+| /vis/ | vis | high | unknown | 6 | new_asset_then_human_naming_test |
+| /ʁɛn/ | renne | high | unknown | 6 | new_asset_then_human_naming_test |
 | /ɔʁdi/ | ordi | high | medium | 5 | prototype_then_naming_variant_test |
+| /myʁ/ | mur | high | unknown | 5 | new_asset_then_human_naming_test |
 | /papa/ | papa | medium_high | medium | 4 | prototype_then_family_wording_naming_test |
+| /ɑ̃tʁe/ | entrée | high | unknown | 4 | new_asset_then_human_naming_test |
+| /foto/ | photo | high | unknown | 4 | reuse_registered_asset_then_human_naming_test |
+| /ano/ | anneau | high | unknown | 4 | new_asset_then_human_naming_test |
+| /kɔk/ | coq | high | unknown | 4 | new_asset_then_human_naming_test |
+| /ʃəmɛ̃/ | chemin | high | unknown | 3 | new_asset_then_human_naming_test |
+| /kafe/ | café | high | unknown | 3 | new_asset_then_human_naming_test |
+| /abʁi/ | abri | high | unknown | 3 | new_asset_then_human_naming_test |
+| /vale/ | vallée | high | unknown | 3 | new_asset_then_human_naming_test |
 
 ## Priorités informatives du grand réservoir
 
@@ -103,7 +125,7 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | 44 | /va/ | 55 | 1 syll. | va [lexical_exact_only] | — | fa (17.5%) | exact_lexical_candidates_need_visual_evidence |
 | 45 | /də/ | 54 | 1 syll. | de [lexical_exact_only] | — | dé (20%), deux (20%) | exact_lexical_candidates_need_visual_evidence |
 | 46 | /tyʁ/ | 52 | 1 syll. | tur [lexical_exact_only], turent [lexical_exact_only] | — | dur (11.7%), tuerie (18.8%) | exact_lexical_candidates_need_visual_evidence |
-| 47 | /vɑ̃/ | 48 | 1 syll. | vent [lexical_exact_only], vend [lexical_exact_only] | — | faon (17.5%), fend (17.5%) | exact_lexical_candidates_need_visual_evidence |
+| 47 | /vɑ̃/ | 48 | 1 syll. | vend [lexical_exact_only], vent [visual_route_deferred] | — | faon (17.5%), fend (17.5%) | exact_lexical_candidates_need_visual_evidence |
 | 48 | /fa/ | 46 | 1 syll. | fa [lexical_exact_only] | fa | — | visible_convention_available |
 | 49 | /be/ | 46 | 1 syll. | b [lexical_exact_only], bô [lexical_exact_only], bés [lexical_exact_only] | B | baie (15%), bey (15%) | visible_convention_available |
 | 50 | /su/ | 44 | 1 syll. | sou [lexical_exact_only], saoûl [lexical_exact_only], souls [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
@@ -125,9 +147,9 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | 66 | /da/ | 33 | 1 syll. | das [lexical_exact_only], da [lexical_exact_only] | — | tas (17.5%), ta (17.5%) | exact_lexical_candidates_need_visual_evidence |
 | 67 | /syʁ/ | 31 | 1 syll. | sûr [lexical_exact_only], surent [lexical_exact_only] | — | sureau (18.8%), surin (18.8%) | exact_lexical_candidates_need_visual_evidence |
 | 68 | /tɛ̃/ | 31 | 1 syll. | teint [lexical_exact_only], tin [lexical_exact_only], tain [lexical_exact_only] | — | daim (17.5%) | exact_lexical_candidates_need_visual_evidence |
-| 69 | /ʃɑ̃/ | 31 | 1 syll. | champ [lexical_exact_only], chant [lexical_exact_only], chand [lexical_exact_only] | — | gens (17.5%), gent (17.5%) | exact_lexical_candidates_need_visual_evidence |
+| 69 | /ʃɑ̃/ | 31 | 1 syll. | champ [visual_hypothesis_curated], chant [lexical_exact_only], chand [lexical_exact_only] | — | gens (17.5%), gent (17.5%) | curated_visual_hypothesis_available |
 | 70 | /my/ | 31 | 1 syll. | mu [lexical_exact_only], mue [lexical_exact_only], mûs [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
-| 71 | /kɑ̃/ | 31 | 1 syll. | camp [lexical_exact_only], can [lexical_exact_only], quant [lexical_exact_only] | — | gant (17.5%), gant (17.5%) | exact_lexical_candidates_need_visual_evidence |
+| 71 | /kɑ̃/ | 31 | 1 syll. | camp [visual_hypothesis_curated], can [lexical_exact_only], quant [lexical_exact_only] | — | gant (17.5%), gant (17.5%) | curated_visual_hypothesis_available |
 | 72 | /py/ | 30 | 1 syll. | pus [lexical_exact_only], pu [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
 | 73 | /ɔʁ/ | 30 | 1 syll. | or [lexical_exact_only], ord [lexical_exact_only], ort [lexical_exact_only] | — | aure (15%) | exact_lexical_candidates_need_visual_evidence |
 | 74 | /ʒə/ | 30 | 1 syll. | je [lexical_exact_only] | — | jeu (20%), geai (20%) | exact_lexical_candidates_need_visual_evidence |
@@ -150,7 +172,7 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | 91 | /ʃi/ | 24 | 1 syll. | chie [lexical_exact_only] | — | ji (17.5%), git (17.5%) | exact_lexical_candidates_need_visual_evidence |
 | 92 | /by/ | 23 | 1 syll. | bu [lexical_exact_only] | — | pus (17.5%), pu (17.5%) | exact_lexical_candidates_need_visual_evidence |
 | 93 | /ɛ̃tɛʁ/ | 23 | 2 syll. | inter [lexical_exact_only] | — | interne (15%), éther (16.3%) | exact_lexical_candidates_need_visual_evidence |
-| 94 | /fɛʁ/ | 22 | 1 syll. | fer [lexical_exact_only], faire [lexical_exact_only], ferre [lexical_exact_only] | — | ver (11.7%), verre (11.7%) | exact_lexical_candidates_need_visual_evidence |
+| 94 | /fɛʁ/ | 22 | 1 syll. | fer [visual_hypothesis_curated], faire [lexical_exact_only], ferre [lexical_exact_only] | — | ver (11.7%), verre (11.7%) | curated_visual_hypothesis_available |
 | 95 | /sɔ̃/ | 22 | 1 syll. | son [lexical_exact_only], sont [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
 | 96 | /tu/ | 22 | 1 syll. | tout [lexical_exact_only], toux [lexical_exact_only], tous [lexical_exact_only] | — | doux (17.5%), doue (17.5%) | exact_lexical_candidates_need_visual_evidence |
 | 97 | /sœʁ/ | 22 | 1 syll. | soeur [lexical_exact_only] | — | seure (10%), surf (18.8%) | exact_lexical_candidates_need_visual_evidence |
@@ -161,7 +183,7 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | 102 | /ʁəmɑ̃/ | 21 | 2 syll. | rement [lexical_exact_only] | — | raiment (10%), roman (16.3%) | exact_lexical_candidates_need_visual_evidence |
 | 103 | /site/ | 21 | 2 syll. | cité [lexical_exact_only], citer [lexical_exact_only] | — | santé (16.3%), city (16.3%) | exact_lexical_candidates_need_visual_evidence |
 | 104 | /kə/ | 21 | 1 syll. | que [lexical_exact_only] | — | queue (20%), quai (20%) | exact_lexical_candidates_need_visual_evidence |
-| 105 | /mɔ̃/ | 20 | 1 syll. | mont [lexical_exact_only], mon [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
+| 105 | /mɔ̃/ | 20 | 1 syll. | mon [lexical_exact_only], mont [visual_route_deferred] | — | — | exact_lexical_candidates_need_visual_evidence |
 | 106 | /tiʁ/ | 20 | 1 syll. | tir [lexical_exact_only], tire [lexical_exact_only] | — | dire (11.7%), tyran (18.8%) | exact_lexical_candidates_need_visual_evidence |
 | 107 | /lɔ̃/ | 20 | 1 syll. | long [lexical_exact_only] | — | — | exact_lexical_candidates_need_visual_evidence |
 | 108 | /fo/ | 20 | 1 syll. | faux [lexical_exact_only], faut [lexical_exact_only], pho [lexical_exact_only] | — | veau (17.5%), vaux (17.5%) | exact_lexical_candidates_need_visual_evidence |

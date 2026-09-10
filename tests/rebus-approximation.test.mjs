@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {alignApproximateIPA,analyzeApproximation,findApproximateWholeWordCandidates,buildApproximateLexicalIndex,vowelSubstitutionWeight} from '../src/rebus-approximation.js';
+import {alignApproximateIPA,analyzeApproximation,findApproximateWholeWordCandidates,buildApproximateLexicalIndex,vowelSubstitutionWeight,consonantSubstitutionWeight} from '../src/rebus-approximation.js';
 import {buildWholeWordCandidateIndex} from '../src/syllable-representation-candidates.js';
 
 const policy=JSON.parse(fs.readFileSync('data/rebus-approximation-policy.json','utf8'));
@@ -40,9 +40,25 @@ assert.equal(seauToSi.eligible,false);
 const schwaToE=analyzeApproximation('nə','ne',policy);
 assert.equal(schwaToE.tier,'light','a schwa-neighbor substitution may remain a small magazine approximation when the rest is identical');
 
+assert.ok(consonantSubstitutionWeight('p','b',policy)<consonantSubstitutionWeight('p','v',policy),'a pure voicing pair must cost less than an unrelated consonant change');
+assert.ok(consonantSubstitutionWeight('f','v',policy)<consonantSubstitutionWeight('f','m',policy),'explicit fricative voicing pairs must remain cheaper than unrelated substitutions');
+
+const paToBa=analyzeApproximation('pa','ba',policy);
+assert.equal(paToBa.tier,'light','a single explicit voicing contrast may remain a small general-mode approximation');
+assert.equal(paToBa.strictEligible,false);
+assert.equal(paToBa.clinicalDefaultEligible,false);
+
+const poireToVoir=analyzeApproximation('pwaʁ','vwaʁ',policy);
+assert.equal(poireToVoir.tier,'too_far','poire must not be treated as a light approximation for voir: /p/→/v/ changes more than voicing');
+assert.equal(poireToVoir.eligible,false);
+
+const cerfToMere=analyzeApproximation('sɛʁ','mɛʁ',policy);
+assert.equal(cerfToMere.tier,'too_far','cerf must not be treated as a light approximation for mère from one unrelated consonant substitution');
+assert.equal(cerfToMere.eligible,false);
+
 const consonantChange=alignApproximateIPA('pat','pak',policy);
 assert.equal(consonantChange.editCount,1);
-assert.ok(consonantChange.weightedCost>laitToLes.weightedCost,'consonant substitution should cost more than a near-vowel substitution');
+assert.ok(consonantChange.weightedCost>laitToLes.weightedCost,'unrelated consonant substitution should cost more than a near-vowel substitution');
 
 const insertion=analyzeApproximation('pa','pat',policy);
 assert.equal(insertion.strictEligible,false);
@@ -62,6 +78,8 @@ const entries=[
   {word:'les',lemma:'le',ipa:'le',pos:'ADJ',frequency:200,syllableCount:1},
   {word:'pain',lemma:'pain',ipa:'pɛ̃',pos:'NOM',frequency:150,syllableCount:1},
   {word:'pas',lemma:'pas',ipa:'pa',pos:'NOM',frequency:180,syllableCount:1},
+  {word:'poire',lemma:'poire',ipa:'pwaʁ',pos:'NOM',frequency:70,syllableCount:1},
+  {word:'voir',lemma:'voir',ipa:'vwaʁ',pos:'VER',frequency:250,syllableCount:1},
   {word:'pré',lemma:'pré',ipa:'pʁe',pos:'NOM',frequency:20,syllableCount:1},
   {word:'près',lemma:'près',ipa:'pʁɛ',pos:'ADV',frequency:100,syllableCount:1}
 ];
@@ -74,5 +92,7 @@ assert.ok(candidates.every(candidate=>candidate.approximation.strictEligible===f
 assert.ok(!candidates.some(candidate=>candidate.word==='les'),'exact candidates must not be returned as approximation candidates');
 const paCandidates=findApproximateWholeWordCandidates('pa',exactIndex,policy,{approximateIndex,limit:10});
 assert.ok(!paCandidates.some(candidate=>candidate.word==='pain'),'vowel-quality guard must remove pain from /pa/ approximation candidates');
+const voirCandidates=findApproximateWholeWordCandidates('vwaʁ',exactIndex,policy,{approximateIndex,limit:10});
+assert.ok(!voirCandidates.some(candidate=>candidate.word==='poire'),'consonant-quality guard must remove poire from /vwaʁ/ approximation candidates');
 
-console.log('rebus approximation: exact isolation, vowel-closeness safeguards, weighted edits and approximate lexical lookup');
+console.log('rebus approximation: exact isolation, vowel/consonant closeness safeguards, weighted edits and approximate lexical lookup');

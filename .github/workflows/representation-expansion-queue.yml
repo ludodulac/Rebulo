@@ -1,0 +1,62 @@
+name: Representation expansion queue
+
+on:
+  push:
+    branches: [main, 'research/**']
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  expansion:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Guard expansion evidence levels
+        run: node tests/rebus-representation-expansion.test.mjs
+      - name: Build expansion queue
+        run: node scripts/build-representation-expansion-queue.mjs
+      - name: Verify substantive conservative output
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const report=JSON.parse(fs.readFileSync('data/rebus-representation-expansion-queue.json','utf8'));
+          if(report.status!=='research_mapping_only')throw new Error('expansion output must remain research-only');
+          if(report.stats.soundCount<800)throw new Error(`expected substantial queue, got ${report.stats.soundCount}`);
+          if(report.stats.twoSyllableSoundCount<350)throw new Error(`two-syllable reserve collapsed: ${report.stats.twoSyllableSoundCount}`);
+          if(report.stats.multipleExactHomophoneSoundCount<1)throw new Error('expected multiple exact-homophone cases');
+          if(report.subqueues?.existingAssetReview?.length<1)throw new Error('expected existing assets to surface before new drawing');
+          if(report.subqueues?.twoSyllableFirstClass?.length<100)throw new Error('expected a useful long-window review queue');
+          if(report.rows.some(row=>row.proofStatus?.orthophonicValidation!=='none'))throw new Error('queue must not invent orthophonic validation');
+          if(report.rows.some(row=>row.automaticActivation!==false))throw new Error('queue must not auto-activate representations');
+          if(report.rows.some(row=>row.exactCandidates?.some(candidate=>candidate.namingRisk && candidate.namingRisk!=='unknown' && candidate.proofStatus==='lexical_exact_only')))throw new Error('uncurated lexical candidates must not receive invented naming risk');
+          if(report.rows.some(row=>row.exactCandidates?.some(candidate=>candidate.knownAssets?.some(asset=>asset.assetKind==='research_filename_match'&&asset.registeredPhoneticMatch))))throw new Error('research filenames must not invent registered IPA evidence');
+          console.log(report.stats);
+          NODE
+      - name: Upload expansion artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: rebulo-representation-expansion-queue
+          path: |
+            data/rebus-representation-expansion-queue.json
+            docs/REBUS_REPRESENTATION_EXPANSION_QUEUE.md
+      - name: Commit generated queue on main
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          if git diff --quiet -- data/rebus-representation-expansion-queue.json docs/REBUS_REPRESENTATION_EXPANSION_QUEUE.md; then
+            echo 'No generated changes.'
+            exit 0
+          fi
+          git config user.name 'rebulo-analysis-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/rebus-representation-expansion-queue.json docs/REBUS_REPRESENTATION_EXPANSION_QUEUE.md
+          git commit -m 'Refresh representation expansion queue'
+          git push

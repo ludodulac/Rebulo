@@ -13,7 +13,10 @@ for(const file of [auditPath,curationPath,conventionPath])if(!fs.existsSync(file
 const audit=JSON.parse(fs.readFileSync(auditPath,'utf8'));
 const curation=JSON.parse(fs.readFileSync(curationPath,'utf8'));
 const conventions=JSON.parse(fs.readFileSync(conventionPath,'utf8'));
-const exactBacklog=(audit.usefulRows||[]).filter(row=>row?.categories?.C_exactWordVisualNotReady);
+const usefulRows=audit.usefulRows||[];
+const exactBacklog=usefulRows.filter(row=>row?.categories?.C_exactWordVisualNotReady);
+const calibrationAnchors=usefulRows.filter(row=>row?.visualStatus==='curated_prototype');
+const mappedSourceRows=[...new Map([...exactBacklog,...calibrationAnchors].map(row=>[row.ipa,row])).values()];
 
 function approximationMapFromAudit(rows=[]){
   const map=new Map();
@@ -39,14 +42,16 @@ function approximationMapFromResearch(report={}){
   return map;
 }
 
-let approximationByIpa=approximationMapFromAudit(exactBacklog);
+let approximationByIpa=approximationMapFromAudit(mappedSourceRows);
 let approximationSource='representation_bank_audit_compact';
 if(fs.existsSync(approximationPath)){
   approximationByIpa=approximationMapFromResearch(JSON.parse(fs.readFileSync(approximationPath,'utf8')));
   approximationSource='full_approximation_research';
 }
 
-const rows=representationLandscapeRows(exactBacklog,curation,conventions,approximationByIpa,{candidateLimit:8});
+const rows=representationLandscapeRows(mappedSourceRows,curation,conventions,approximationByIpa,{candidateLimit:8});
+const backlogIpas=new Set(exactBacklog.map(row=>row.ipa));
+for(const row of rows)row.mappingRole=backlogIpas.has(row.ipa)?'exact_lexical_backlog':'curated_calibration_anchor';
 const statusCounts={};for(const row of rows)statusCounts[row.evidenceStatus]=(statusCounts[row.evidenceStatus]||0)+1;
 const twoSyllable=rows.filter(row=>row.longWindowPotential?.coversTwoSyllables);
 const curated=rows.filter(row=>row.curatedVisualHypothesisCount>0);
@@ -54,32 +59,35 @@ const conventionsOnlyOrAvailable=rows.filter(row=>row.visibleConventionCount>0);
 const approximate=rows.filter(row=>row.approximateCandidateCount>0);
 const difficult=rows.filter(row=>row.evidenceStatus==='difficult_sound');
 const output={
-  schemaVersion:'1.0',generatedAt:new Date().toISOString(),status:'research_mapping_only',
+  schemaVersion:'1.1',generatedAt:new Date().toISOString(),status:'research_mapping_only',
   purpose:'SON -> candidats lexicaux -> type de représentation -> potentiel visuel -> risque de dénomination -> rendement utile -> statut de preuve',
   proofLadder:['phonetic_exactness','general_rebus_approximation','lexical_relevance','drawable_concept','spontaneous_namability','orthophonic_validation'],
   methodology:{
-    denominator:'All useful sounds currently classified C_exactWordVisualNotReady in the representation-bank audit; this is the large exact lexical reservoir, not a list of approved images.',
+    denominator:'The main reservoir is every useful sound classified C_exactWordVisualNotReady. Curated prototypes are added separately as calibration anchors even though the audit deliberately removes them from category C once they have a visual hypothesis.',
     visualPrediction:'Only explicit curation contributes visualPotential or namingRisk. Unreviewed lexical candidates remain unknown; noun/frequency metadata are cues, not visual truth.',
     conventions:'Letters, numbers and notes are represented as explicit visible conventions and remain distinct from pictograms.',
     approximations:`Approximation evidence source: ${approximationSource}. Approximate routes never become strict or clinically eligible from this map.`,
     longWindows:'One- and two-syllable windows compete. A two-syllable exact concept is retained as a first-class route and is not downgraded merely because it covers more sound.',
+    calibration:'Curated prototypes are not counted as solved coverage. They are anchors for comparing editorial visual predictions with later human naming observations.',
     activation:'Nothing in this landscape activates an image or grants clinical status.'
   },
-  stats:{exactLexicalBacklogSoundCount:rows.length,curatedVisualHypothesisSoundCount:curated.length,twoSyllableSoundCount:twoSyllable.length,visibleConventionSoundCount:conventionsOnlyOrAvailable.length,approximationSoundCount:approximate.length,difficultSoundCount:difficult.length,statusCounts},
+  stats:{exactLexicalBacklogSoundCount:exactBacklog.length,calibrationAnchorSoundCount:calibrationAnchors.length,mappedSoundCount:rows.length,curatedVisualHypothesisSoundCount:curated.length,twoSyllableSoundCount:twoSyllable.length,visibleConventionSoundCount:conventionsOnlyOrAvailable.length,approximationSoundCount:approximate.length,difficultSoundCount:difficult.length,statusCounts},
   rows
 };
 fs.mkdirSync(path.dirname(outputPath),{recursive:true});fs.writeFileSync(outputPath,JSON.stringify(output,null,2)+'\n');
 
 const rankRows=items=>[...items].sort((a,b)=>b.usefulTargetCount-a.usefulTargetCount||b.usefulWeightedGain-a.usefulWeightedGain||a.ipa.localeCompare(b.ipa));
-const top=rankRows(rows).slice(0,120);const topTwo=rankRows(twoSyllable).slice(0,60);
+const top=rankRows(rows.filter(row=>row.mappingRole==='exact_lexical_backlog')).slice(0,120);const topTwo=rankRows(twoSyllable).slice(0,60);const anchorRows=rankRows(curated);
 const candidateCell=row=>row.exactCandidates.slice(0,4).map(item=>`${item.word} [${item.proofStatus}]`).join(', ')||'—';
 const lines=[
   '# Rebulo — cartographie SON → MOT → REPRÉSENTATION',
   '',
   '> Cette vue transforme le grand réservoir lexical exact en carte de décision. Elle ne convertit pas un homophone Lexique en pictogramme validé.',
   '',
-  `- Sons utiles avec mot exact mais représentation visuelle non prête : ${rows.length}.`,
-  `- Sons possédant déjà une hypothèse visuelle explicitement curatée : ${curated.length}.`,
+  `- Sons utiles du réservoir exact à cartographier : ${exactBacklog.length}.`,
+  `- Prototypes curatés ajoutés comme étalons de calibration : ${calibrationAnchors.length}.`,
+  `- Sons cartographiés dans cette vue : ${rows.length}.`,
+  `- Sons où la curation explicite fournit déjà une hypothèse visuelle : ${curated.length}.`,
   `- Fenêtres de deux syllabes conservées comme candidates de première classe : ${twoSyllable.length}.`,
   `- Sons ayant aussi une convention visible explicite : ${conventionsOnlyOrAvailable.length}.`,
   `- Sons ayant une approximation légère recensée dans la source disponible : ${approximate.length}.`,
@@ -90,7 +98,13 @@ const lines=[
   '',
   'Les champs de potentiel visuel et de risque de dénomination restent `unknown` tant qu’une décision éditoriale ou une observation humaine ne les renseigne pas. Le POS `NOM` et la fréquence ne sont jamais promus au rang de preuve visuelle.',
   '',
-  '## Priorités informatives',
+  '## Étalons de calibration déjà disponibles',
+  '',
+  '| Son | Candidat | Potentiel visuel | Risque de dénomination | Cibles utiles | Prochaine étape |',
+  '|---|---|---|---|---:|---|',
+  ...anchorRows.map(row=>{const c=row.exactCandidates.find(item=>item.proofStatus==='visual_hypothesis_curated')||row.exactCandidates[0]||{};return `| /${row.ipa}/ | ${c.word||'—'} | ${c.visualPotential||'unknown'} | ${c.namingRisk||'unknown'} | ${row.usefulTargetCount} | ${c.nextGate||row.nextGate} |`;}),
+  '',
+  '## Priorités informatives du grand réservoir',
   '',
   '| Rang | Son | Cibles utiles | Fenêtre | Candidats exacts | Convention | Approx. | État de preuve |',
   '|---:|---|---:|---|---|---|---|---|',

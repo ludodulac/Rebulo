@@ -1,0 +1,44 @@
+{
+  "version": "0.1.0",
+  "status": "prepared_no_human_data",
+  "purpose": "Observer ultérieurement quel mot une vraie personne produit spontanément devant un stimulus isolé, sans lui suggérer la cible.",
+  "evidenceState": {
+    "humanParticipantsObserved": 0,
+    "humanNamingEvidence": "none",
+    "clinicalEvidence": "none",
+    "note": "Ce fichier prépare la collecte; il ne contient aucune réponse humaine, simulée ou générée par IA."
+  },
+  "procedure": [
+    "Présenter un seul stimulus, sans son IPA, sans mot cible et sans liste de réponses.",
+    "Demander exactement: Qu’est-ce que tu vois ?",
+    "Noter la première réponse littérale sans corriger ni reformuler.",
+    "Si la personne hésite ou donne plusieurs mots spontanément, conserver tous les mots dans l’ordre.",
+    "Ne proposer aucun choix multiple avant la réponse spontanée.",
+    "Après la réponse spontanée seulement, un indice éventuel peut être testé dans un champ séparé; il n'est jamais fusionné avec la réponse spontanée.",
+    "Ne jamais transformer cette observation de nommage en validation clinique."
+  ],
+  "stimuli": [
+    {"stimulusId":"croix-v1","asset":"assets/research/croix-stimulus-v1.svg","ipa":"kʁwa","editorialTarget":"croix","knownEditorialConfusions":["plus","symbole"],"spontaneousNamingRisk":"unknown","humanNamingEvidence":"none","clinicalEvidence":"none"},
+    {"stimulusId":"doigt-v1","asset":"assets/research/doigt-stimulus-v1.svg","ipa":"dwa","editorialTarget":"doigt","knownEditorialConfusions":["main"],"spontaneousNamingRisk":"unknown","humanNamingEvidence":"none","clinicalEvidence":"none"},
+    {"stimulusId":"oeufs-v1","asset":"assets/research/oeufs-stimulus-v1.svg","ipa":"ø","editorialTarget":"oeufs","knownEditorialConfusions":["oeuf","deux oeufs"],"spontaneousNamingRisk":"unknown","humanNamingEvidence":"none","clinicalEvidence":"none"},
+    {"stimulusId":"oie-v1","asset":"assets/research/oie-stimulus-v1.svg","ipa":"wa","editorialTarget":"oie","knownEditorialConfusions":["canard","cygne","oiseau"],"spontaneousNamingRisk":"unknown","humanNamingEvidence":"none","clinicalEvidence":"none"},
+    {"stimulusId":"pelle-v1","asset":"assets/research/pelle-stimulus-v1.svg","ipa":"pɛl","editorialTarget":"pelle","knownEditorialConfusions":["bêche"],"spontaneousNamingRisk":"unknown","humanNamingEvidence":"none","clinicalEvidence":"none"},
+    {"stimulusId":"radis-v1","asset":"assets/research/radis-stimulus-v1.svg","ipa":"ʁadi","editorialTarget":"radis","knownEditorialConfusions":["navet","betterave","légume"],"spontaneousNamingRisk":"unknown","humanNamingEvidence":"none","clinicalEvidence":"none"},
+    {"stimulusId":"carre-v1","asset":"assets/research/carre-stimulus-v1.svg","ipa":"kaʁe","editorialTarget":"carré","knownEditorialConfusions":["forme","rectangle"],"spontaneousNamingRisk":"unknown","humanNamingEvidence":"none","clinicalEvidence":"none"},
+    {"stimulusId":"fou-echecs-v1","asset":"assets/research/fou-echecs-stimulus-v1.svg","ipa":"fu","editorialTarget":"fou","knownEditorialConfusions":["pièce d'échecs","pion","autre pièce"],"spontaneousNamingRisk":"unknown","humanNamingEvidence":"none","clinicalEvidence":"none"}
+  ],
+  "collectionFields": [
+    "participant_code",
+    "session_date",
+    "stimulus_id",
+    "presentation_order",
+    "spontaneous_response_literal",
+    "additional_spontaneous_words_literal",
+    "hesitation_or_comment_literal",
+    "prompt_used",
+    "hint_given_after_spontaneous_response",
+    "post_hint_response_literal",
+    "collector_note"
+  ],
+  "participantFacingRule": "editorialTarget, IPA and knownEditorialConfusions are collector metadata and must not be shown before the spontaneous response."
+}

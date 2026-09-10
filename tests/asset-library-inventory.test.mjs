@@ -6,7 +6,7 @@ const inventory = await buildAssetInventory(new URL('..', import.meta.url).pathn
 assert.equal(inventory.schemaVersion, '1.1');
 assert.equal(inventory.summary.production, 24, 'production SVG count should exclude archived legacy pot');
 assert.equal(inventory.summary.prepared, 0, 'prepared comic queue should be empty after corps migration');
-assert.equal(inventory.summary.research, 29, 'research inventory should include nid, four redesign prototypes and two blind heure scenes');
+assert.equal(inventory.summary.research, 33, 'research inventory should include the four selective materialization stimuli');
 
 const expectedComicProduction = [
   ['the', '/te/', 'the-comic-v1'],
@@ -63,6 +63,19 @@ for(const [path,revision] of hourPaths){
   assert.ok(!inventory.summary.activeLegacyStyle.includes(path),`${path} must never count as active production`);
 }
 
+const materializationResearchPaths = [
+  'assets/research/croix-stimulus-v1.svg',
+  'assets/research/doigt-stimulus-v1.svg',
+  'assets/research/oeufs-stimulus-v1.svg',
+  'assets/research/oie-stimulus-v1.svg'
+];
+for (const path of materializationResearchPaths) {
+  const asset = inventory.assets.find(item => item.path === path);
+  assert.ok(asset, `${path} should be visible in the research inventory`);
+  assert.equal(asset.active, false, `${path} must remain research-only before human naming review`);
+  assert.ok(!inventory.summary.activeLegacyStyle.includes(path), `${path} must never count as active production`);
+}
+
 const recoveredOriginals=[
   ['assets/rebus/de.svg','de-die-v1'],
   ['assets/rebus/mer.svg','mer-sea-v1'],
@@ -110,4 +123,4 @@ assert.deepEqual(inventory.summary.productionDuplicateReadings, [], 'historical 
 for (const reading of ['pot','tas','eau']) assert.ok(inventory.summary.historicalRevisionReadings.includes(reading), `${reading} should be classified as production + research history`);
 assert.ok(inventory.summary.activeLegacyStyle.includes('assets/rebus/chat.svg'), 'audit should expose active assets that still need comic migration');
 
-console.log('asset-library-inventory.test.mjs: visual provenance, revision identity and research-only hour stimuli are coherent');
+console.log('asset-library-inventory.test.mjs: visual provenance, revision identity and selective research materialization are coherent');

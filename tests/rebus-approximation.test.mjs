@@ -9,7 +9,9 @@ const exact=analyzeApproximation('pat','pat',policy);
 assert.equal(exact.tier,'exact');
 assert.equal(exact.mode,'strict');
 assert.equal(exact.strictEligible,true);
-assert.equal(exact.clinicalDefaultEligible,true);
+assert.equal(exact.clinicalDefaultEligible,false,'phonetic exactness must not imply clinical eligibility');
+assert.equal(exact.approximationAllowedByDefaultInClinicalMode,false);
+assert.equal(exact.clinicalEvidence,'none');
 assert.equal(exact.editorialApproximationPercent,0);
 
 const laitToLes=analyzeApproximation('lɛ','le',policy);
@@ -17,6 +19,8 @@ assert.equal(laitToLes.tier,'light');
 assert.equal(laitToLes.mode,'general');
 assert.equal(laitToLes.strictEligible,false);
 assert.equal(laitToLes.clinicalDefaultEligible,false);
+assert.equal(laitToLes.approximationAllowedByDefaultInClinicalMode,false);
+assert.equal(laitToLes.clinicalEvidence,'none');
 assert.equal(laitToLes.editCount,1);
 assert.deepEqual(laitToLes.operations.map(operation=>operation.type),['substitution']);
 assert.ok(laitToLes.editorialApproximationPercent>0&&laitToLes.editorialApproximationPercent<=20);
@@ -112,6 +116,7 @@ const candidates=findApproximateWholeWordCandidates('le',exactIndex,policy,{appr
 assert.ok(candidates.some(candidate=>candidate.word==='lait'&&candidate.sourceIpa==='lɛ'));
 assert.ok(candidates.every(candidate=>candidate.approximation.mode==='general'));
 assert.ok(candidates.every(candidate=>candidate.approximation.strictEligible===false));
+assert.ok(candidates.every(candidate=>candidate.approximation.clinicalDefaultEligible===false));
 assert.ok(!candidates.some(candidate=>candidate.word==='les'),'exact candidates must not be returned as approximation candidates');
 const paCandidates=findApproximateWholeWordCandidates('pa',exactIndex,policy,{approximateIndex,limit:10});
 assert.ok(!paCandidates.some(candidate=>candidate.word==='pain'),'vowel-quality guard must remove pain from /pa/ approximation candidates');
@@ -121,4 +126,4 @@ const parCandidates=findApproximateWholeWordCandidates('paʁ',exactIndex,policy,
 assert.ok(parCandidates.some(candidate=>candidate.word==='parc'),'edge-edit policy should retain parc as an approximation candidate for /paʁ/');
 assert.ok(!parCandidates.some(candidate=>candidate.word==='poire'),'internal-edit policy should remove poire as an approximation candidate for /paʁ/');
 
-console.log('rebus approximation: exact isolation, vowel/consonant closeness, edit-position safeguards and approximate lexical lookup');
+console.log('rebus approximation: strict exactness stays separate from clinical evidence; editorial approximation safeguards remain intact');

@@ -3,116 +3,117 @@
 > File de travail conservatrice : mot exact ≠ bon pictogramme. Aucun candidat de cette liste n’est activé automatiquement.
 
 - Segments proposés à la revue : 250.
+- Hypothèses visuelles déjà curatées : 15.
 - Réutilisation exacte d’un asset existant détectée : 0.
-- Candidat nominal à examiner visuellement : 240.
-- Autre candidat lexical à examiner : 10.
-- Conflit de phonologie avec un asset de même libellé : 0.
+- Noms exacts restant au stade de pré-tri lexical : 216.
+- Autres mots exacts restant au stade de pré-tri lexical : 18.
+- Conflits de phonologie avec un asset de même libellé : 1.
 
 ## Priorités
 
-| Rang | Son | Cibles utiles | Candidat | POS | Route | Exemples |
+| Rang | Son | Cibles utiles | Candidat | Niveau | Risque de dénomination | Exemples |
 |---:|---|---:|---|---|---|---|
-| 1 | /a/ | 424 | a | NOM | noun_visual_review | alors, accord, aller, avoir |
-| 2 | /ɑ̃/ | 188 | an | NOM | noun_visual_review | encore, ensemble, endroit, enfant |
-| 3 | /sjɔ̃/ | 365 | scion | NOM | noun_visual_review | mission, pression, attention, situation |
-| 4 | /ʁe/ | 257 | ré | NOM | noun_visual_review | soirée, tirer, réponse, répondre |
-| 5 | /ka/ | 176 | cas | NOM | noun_visual_review | cas, café, ca, cadeau |
-| 6 | /tɑ̃/ | 90 | temps | NOM | noun_visual_review | temps, tant, longtemps, autant |
-| 7 | /mɑ̃/ | 374 | mens | VER | lexical_visual_review | vraiment, comment, moment, maman |
-| 8 | /vi/ | 97 | vie | NOM | noun_visual_review | vie, envie, avis, visage |
-| 9 | /se/ | 222 | ces | ADJ:dem | lexical_visual_review | ces, ses, assez, passer |
-| 10 | /i/ | 111 | i | NOM | noun_visual_review | ici, idée, pays, i |
-| 11 | /ti/ | 176 | tee | NOM | noun_visual_review | petit, partie, gentil, tirer |
-| 12 | /ʒe/ | 105 | g | NOM | noun_visual_review | manger, génial, changer, danger |
-| 13 | /ko/ | 169 | cots | NOM | noun_visual_review | comment, côté, colère, connaître |
-| 14 | /pe/ | 119 | p | NOM | noun_visual_review | pays, payer, occuper, empêcher |
-| 15 | /di/ | 147 | die | NOM | noun_visual_review | dîner, difficile, différent, ridicule |
-| 16 | /pʁo/ | 93 | pro | NOM | noun_visual_review | problème, propos, procès, projet |
-| 17 | /ve/ | 78 | v | NOM | noun_visual_review | trouver, sauver, prouver, vérité |
-| 18 | /me/ | 135 | mes | ADJ:pos | lexical_visual_review | mes, message, armée, aimer |
-| 19 | /to/ | 85 | to | NOM | noun_visual_review | plutôt, bientôt, tôt, photo |
-| 20 | /pɛʁ/ | 56 | père | NOM | noun_visual_review | père, personne, super, grand-père |
-| 21 | /mo/ | 73 | mot | NOM | noun_visual_review | moment, mot, mauvais, moteur |
-| 22 | /ba/ | 86 | bas | NOM | noun_visual_review | là-bas, bateau, bas, combat |
-| 23 | /paʁ/ | 55 | par | NOM | noun_visual_review | parler, partir, part, partie |
-| 24 | /ga/ | 64 | gars | NOM | noun_visual_review | gars, gagner, gamin, magasin |
-| 25 | /ky/ | 63 | cul | NOM | noun_visual_review | cul, occuper, discuter, procureur |
-| 26 | /ʁɑ̃/ | 70 | rang | NOM | noun_visual_review | rentrer, courant, rencontrer, rendez-vous |
-| 27 | /la/ | 79 | la | NOM | noun_visual_review | là, là-bas, relation, là-dedans |
-| 28 | /sa/ | 68 | sas | NOM | noun_visual_review | sa, savoir, salut, salope |
-| 29 | /ʃe/ | 67 | ché | NOM | noun_visual_review | chercher, marcher, marché, coucher |
-| 30 | /vɑ̃/ | 48 | vent | NOM | noun_visual_review | avant, souvent, vivant, devant |
-| 31 | /də/ | 54 | de | NOM | noun_visual_review | demain, depuis, dessus, devoir |
-| 32 | /bi/ | 65 | by | NOM | noun_visual_review | bizarre, habitude, cabinet, billet |
-| 33 | /lə/ | 71 | le | NOM | noun_visual_review | seulement, tellement, enlever, lever |
-| 34 | /fi/ | 85 | fy | NOM | noun_visual_review | finir, difficile, officier, profiter |
-| 35 | /sy/ | 65 | su | NOM | noun_visual_review | super, sujet, dessus, sûrement |
-| 36 | /lo/ | 67 | lot | NOM | noun_visual_review | boulot, allô, colonel, salaud |
-| 37 | /ke/ | 59 | quais | NOM | noun_visual_review | ok, expliquer, manquer, attaquer |
-| 38 | /sə/ | 58 | se | NOM | noun_visual_review | semaine, seconde, secret, secours |
-| 39 | /be/ | 46 | b | NOM | noun_visual_review | bébé, tomber, b, baiser |
-| 40 | /aʁ/ | 43 | art | NOM | noun_visual_review | argent, armée, art, article |
-| 41 | /fa/ | 46 | fa | NOM | noun_visual_review | famille, façon, facile, failli |
-| 42 | /su/ | 44 | sou | NOM | noun_visual_review | souvent, souci, souvenir, sourire |
-| 43 | /tu/ | 22 | tout | NOM | noun_visual_review | toujours, tout, partout, surtout |
-| 44 | /pʁi/ | 33 | prix | NOM | noun_visual_review | prison, esprit, prix, compris |
-| 45 | /ʁo/ | 57 | rot | NOM | noun_visual_review | bureau, héros, numéro, zéro |
-| 46 | /no/ | 63 | nô | NOM | noun_visual_review | nos, innocent, piano, no |
-| 47 | /tɔ̃/ | 29 | ton | NOM | noun_visual_review | ton, tomber, fiston, bouton |
-| 48 | /dis/ | 42 | dix | NOM | noun_visual_review | dix, discuter, discours, distance |
-| 49 | /ʒɑ̃/ | 21 | gens | NOM | noun_visual_review | gens, argent, agent, gentil |
-| 50 | /y/ | 39 | u | NOM | noun_visual_review | réunion, humain, unique, utile |
-| 51 | /ɛs/ | 36 | s | NOM | noun_visual_review | esprit, espèce, espoir, espace |
-| 52 | /tyʁ/ | 52 | tur | NOM | noun_visual_review | voiture, nourriture, nature, futur |
-| 53 | /fɛʁ/ | 22 | fer | NOM | noun_visual_review | faire, affaire, enfer, fermer |
-| 54 | /bo/ | 35 | beau | NOM | noun_visual_review | beaucoup, beau, bonheur, beauté |
-| 55 | /ʃɑ̃/ | 31 | champ | NOM | noun_visual_review | changer, chanson, chanter, champ |
-| 56 | /nɔ̃/ | 13 | nom | NOM | noun_visual_review | non, nom, nombreux, prénom |
-| 57 | /sɔ̃/ | 22 | son | NOM | noun_visual_review | son, façon, garçon, chanson |
-| 58 | /sɛ̃/ | 35 | sein | NOM | noun_visual_review | sympa, médecin, simplement, assassin |
-| 59 | /tik/ | 56 | tic | NOM | noun_visual_review | politique, fantastique, romantique, boutique |
-| 60 | /nə/ | 28 | ne | ADV | lexical_visual_review | ne, ennemi, neveu, gouvernement |
-| 61 | /ɔʁ/ | 30 | or | NOM | noun_visual_review | dehors, or, ordinateur, organiser |
-| 62 | /mɛtʁ/ | 23 | maître | NOM | noun_visual_review | mettre, maître, remettre, km |
-| 63 | /fɛ/ | 17 | fait | NOM | noun_visual_review | fait, effet, professeur, parfait |
-| 64 | /vwa/ | 19 | voix | NOM | noun_visual_review | voiture, voix, voyage, envoyer |
-| 65 | /mɔ̃/ | 20 | mont | NOM | noun_visual_review | mon, montrer, monter, démon |
-| 66 | /kɑ̃/ | 31 | camp | NOM | noun_visual_review | camp, campagne, cancer, quand |
-| 67 | /tɛ̃/ | 31 | teint | NOM | noun_visual_review | putain, matin, certain, certains |
-| 68 | /ly/ | 34 | lut | NOM | noun_visual_review | salut, lumière, solution, allumer |
-| 69 | /ny/ | 36 | nu | NOM | noun_visual_review | numéro, inutile, bienvenue, continue |
-| 70 | /tiʁ/ | 20 | tir | NOM | noun_visual_review | partir, sortir, sentir, mentir |
-| 71 | /mɛ/ | 15 | mets | NOM | noun_visual_review | jamais, maison, meilleur, mets |
-| 72 | /tʁe/ | 27 | tré | NOM | noun_visual_review | rentrer, entrer, montrer, entrée |
-| 73 | /lɑ̃/ | 40 | lan | NOM | noun_visual_review | excellent, talent, lancer, lendemain |
-| 74 | /sœʁ/ | 22 | soeur | NOM | noun_visual_review | soeur, professeur, ascenseur, douceur |
-| 75 | /kaʁ/ | 30 | quart | NOM | noun_visual_review | quartier, cardiaque, rencard, placard |
-| 76 | /fwa/ | 11 | fois | NOM | noun_visual_review | fois, parfois, foi, enfoiré |
-| 77 | /mə/ | 27 | me | NOM | noun_visual_review | monsieur, emmener, ramener, amener |
-| 78 | /tabl/ | 24 | table | NOM | noun_visual_review | table, portable, véritable, confortable |
-| 79 | /na/ | 96 | na | ONO | lexical_visual_review | nature, journaliste, navire, canapé |
-| 80 | /da/ | 33 | das | NOM | noun_visual_review | d'abord, soldat, mandat, davantage |
-| 81 | /ty/ | 42 | tue | NOM | noun_visual_review | étudier, naturel, foutu, tunnel |
-| 82 | /ʒi/ | 38 | ji | NOM | noun_visual_review | énergie, magie, chirurgie, stratégie |
-| 83 | /ʒuʁ/ | 9 | jour | NOM | noun_visual_review | toujours, jour, bonjour, journée |
-| 84 | /pu/ | 23 | pouls | NOM | noun_visual_review | pouvoir, épouser, poulet, pousser |
-| 85 | /mwa/ | 14 | mois | NOM | noun_visual_review | mois, moitié, moyen, mlle |
-| 86 | /lɔ̃/ | 20 | long | NOM | noun_visual_review | longtemps, long, volonté, pantalon |
-| 87 | /tɛ/ | 27 | taie | NOM | noun_visual_review | terrible, terrain, tellement, territoire |
-| 88 | /my/ | 31 | mu | NOM | noun_visual_review | musique, amuser, amusant, musée |
-| 89 | /ki/ | 36 | chi | NOM | noun_visual_review | quitter, km, équipage, whisky |
-| 90 | /fɔ̃/ | 20 | fond | NOM | noun_visual_review | fond, fonds, profond, profondément |
-| 91 | /bɔ̃/ | 14 | bon | NOM | noun_visual_review | bon, bonjour, bonsoir, bonté |
-| 92 | /maʁ/ | 25 | mare | NOM | noun_visual_review | marcher, marché, marre, cauchemar |
-| 93 | /mɔʁ/ | 14 | mort | NOM | noun_visual_review | mort, morceau, mortel, morphine |
-| 94 | /fy/ | 30 | fût | NOM | noun_visual_review | futur, fusil, fumer, fumée |
-| 95 | /nɛʁ/ | 27 | nerf | NOM | noun_visual_review | énergie, partenaire, nerveux, extraordinaire |
-| 96 | /sɑ̃s/ | 16 | sens | NOM | noun_visual_review | sens, naissance, connaissance, puissance |
-| 97 | /py/ | 30 | pus | NOM | noun_visual_review | putain, public, populaire, réputation |
-| 98 | /lœʁ/ | 18 | leurre | NOM | noun_visual_review | leur, leurs, douleur, couleur |
-| 99 | /bjɛ̃/ | 9 | bien | NOM | noun_visual_review | bien, combien, bientôt, bienvenue |
-| 100 | /ʁɛs/ | 25 | resse | NOM | noun_visual_review | rester, respect, responsable, restaurant |
+| 1 | /sɑ̃/ | 82 | sang | curated_prototype | medium | sang, sentir, santé, censé |
+| 2 | /ku/ | 55 | cou | curated_prototype | medium | beaucoup, coup, courant, coucher |
+| 3 | /pʁe/ | 83 | pré | curated_prototype | high | présent, président, impression, présenter |
+| 4 | /ni/ | 105 | nid | curated_prototype | low_medium | niveau, unité, génie, univers |
+| 5 | /pɔʁ/ | 43 | porc | curated_prototype | medium_high | rapport, portable, important, importance |
+| 6 | /vo/ | 47 | veau | curated_prototype | medium | vos, nouveau, voler, cerveau |
+| 7 | /bu/ | 43 | boue | curated_prototype | medium | boulot, bout, debout, bouger |
+| 8 | /fe/ | 46 | fée | curated_prototype | medium | café, différent, différence, conférence |
+| 9 | /fɔʁ/ | 39 | fort | curated_prototype | medium_high | fort, formidable, fortune, forcément |
+| 10 | /tele/ | 13 | télé | curated_prototype | medium | télé, téléphone, télévision, téléphoner |
+| 11 | /eʁo/ | 7 | héros | curated_prototype | high | héros, aéroport, héro, héroïque |
+| 12 | /kɔ̃pa/ | 10 | compas | curated_prototype | low_medium | compagnie, accompagner, compagnon, compassion |
+| 13 | /papa/ | 4 | papa | curated_prototype | medium | papa, papas, grand-papa, paparazzi |
+| 14 | /epi/ | 8 | épi | curated_prototype | medium_high | épisode, épicerie, épidémie, épinards |
+| 15 | /ɔʁdi/ | 5 | ordi | curated_prototype | medium | ordinateur, extraordinaire, ordinaire, ordi |
+| 16 | /ɑ̃/ | 188 | an | noun_lexical_precheck | à évaluer | encore, ensemble, endroit, enfant |
+| 17 | /sjɔ̃/ | 365 | scion | noun_lexical_precheck | à évaluer | mission, pression, attention, situation |
+| 18 | /mɑ̃/ | 374 | mens | lexical_precheck | à évaluer | vraiment, comment, moment, maman |
+| 19 | /ʁe/ | 257 | ré | noun_lexical_precheck | à évaluer | soirée, tirer, réponse, répondre |
+| 20 | /se/ | 222 | ces | lexical_precheck | à évaluer | ces, ses, assez, passer |
+| 21 | /ka/ | 176 | cas | noun_lexical_precheck | à évaluer | cas, café, ca, cadeau |
+| 22 | /tɑ̃/ | 90 | temps | noun_lexical_precheck | à évaluer | temps, tant, longtemps, autant |
+| 23 | /vi/ | 97 | vie | noun_lexical_precheck | à évaluer | vie, envie, avis, visage |
+| 24 | /ti/ | 176 | tee | noun_lexical_precheck | à évaluer | petit, partie, gentil, tirer |
+| 25 | /me/ | 135 | mes | lexical_precheck | à évaluer | mes, message, armée, aimer |
+| 26 | /ko/ | 169 | cots | noun_lexical_precheck | à évaluer | comment, côté, colère, connaître |
+| 27 | /di/ | 147 | die | noun_lexical_precheck | à évaluer | dîner, difficile, différent, ridicule |
+| 28 | /pʁo/ | 93 | pro | noun_lexical_precheck | à évaluer | problème, propos, procès, projet |
+| 29 | /ʒe/ | 105 | jé | noun_lexical_precheck | à évaluer | manger, génial, changer, danger |
+| 30 | /pe/ | 119 | pe | noun_lexical_precheck | à évaluer | pays, payer, occuper, empêcher |
+| 31 | /to/ | 85 | to | noun_lexical_precheck | à évaluer | plutôt, bientôt, tôt, photo |
+| 32 | /pɛʁ/ | 56 | père | noun_lexical_precheck | à évaluer | père, personne, super, grand-père |
+| 33 | /mo/ | 73 | mot | noun_lexical_precheck | à évaluer | moment, mot, mauvais, moteur |
+| 34 | /ba/ | 86 | bas | noun_lexical_precheck | à évaluer | là-bas, bateau, bas, combat |
+| 35 | /paʁ/ | 55 | par | noun_lexical_precheck | à évaluer | parler, partir, part, partie |
+| 36 | /ga/ | 64 | gars | noun_lexical_precheck | à évaluer | gars, gagner, gamin, magasin |
+| 37 | /ky/ | 63 | cul | noun_lexical_precheck | à évaluer | cul, occuper, discuter, procureur |
+| 38 | /ʁɑ̃/ | 70 | rang | noun_lexical_precheck | à évaluer | rentrer, courant, rencontrer, rendez-vous |
+| 39 | /la/ | 79 | la | noun_lexical_precheck | à évaluer | là, là-bas, relation, là-dedans |
+| 40 | /sa/ | 68 | sas | noun_lexical_precheck | à évaluer | sa, savoir, salut, salope |
+| 41 | /ʃe/ | 67 | ché | noun_lexical_precheck | à évaluer | chercher, marcher, marché, coucher |
+| 42 | /vɑ̃/ | 48 | vent | noun_lexical_precheck | à évaluer | avant, souvent, vivant, devant |
+| 43 | /də/ | 54 | de | asset_phonology_conflict | à évaluer | demain, depuis, dessus, devoir |
+| 44 | /bi/ | 65 | by | noun_lexical_precheck | à évaluer | bizarre, habitude, cabinet, billet |
+| 45 | /lə/ | 71 | le | noun_lexical_precheck | à évaluer | seulement, tellement, enlever, lever |
+| 46 | /fi/ | 85 | fy | noun_lexical_precheck | à évaluer | finir, difficile, officier, profiter |
+| 47 | /sy/ | 65 | su | noun_lexical_precheck | à évaluer | super, sujet, dessus, sûrement |
+| 48 | /lo/ | 67 | lot | noun_lexical_precheck | à évaluer | boulot, allô, colonel, salaud |
+| 49 | /ke/ | 59 | quais | noun_lexical_precheck | à évaluer | ok, expliquer, manquer, attaquer |
+| 50 | /sə/ | 58 | se | noun_lexical_precheck | à évaluer | semaine, seconde, secret, secours |
+| 51 | /aʁ/ | 43 | art | noun_lexical_precheck | à évaluer | argent, armée, art, article |
+| 52 | /nə/ | 28 | ne | lexical_precheck | à évaluer | ne, ennemi, neveu, gouvernement |
+| 53 | /fa/ | 46 | fa | noun_lexical_precheck | à évaluer | famille, façon, facile, failli |
+| 54 | /su/ | 44 | sou | noun_lexical_precheck | à évaluer | souvent, souci, souvenir, sourire |
+| 55 | /ve/ | 78 | vé | lexical_precheck | à évaluer | trouver, sauver, prouver, vérité |
+| 56 | /tu/ | 22 | tout | noun_lexical_precheck | à évaluer | toujours, tout, partout, surtout |
+| 57 | /pʁi/ | 33 | prix | noun_lexical_precheck | à évaluer | prison, esprit, prix, compris |
+| 58 | /ʁo/ | 57 | rot | noun_lexical_precheck | à évaluer | bureau, héros, numéro, zéro |
+| 59 | /no/ | 63 | nô | noun_lexical_precheck | à évaluer | nos, innocent, piano, no |
+| 60 | /tɔ̃/ | 29 | ton | noun_lexical_precheck | à évaluer | ton, tomber, fiston, bouton |
+| 61 | /dis/ | 42 | dix | noun_lexical_precheck | à évaluer | dix, discuter, discours, distance |
+| 62 | /ʒɑ̃/ | 21 | gens | noun_lexical_precheck | à évaluer | gens, argent, agent, gentil |
+| 63 | /tyʁ/ | 52 | tur | noun_lexical_precheck | à évaluer | voiture, nourriture, nature, futur |
+| 64 | /fɛʁ/ | 22 | fer | noun_lexical_precheck | à évaluer | faire, affaire, enfer, fermer |
+| 65 | /bo/ | 35 | beau | noun_lexical_precheck | à évaluer | beaucoup, beau, bonheur, beauté |
+| 66 | /ʃɑ̃/ | 31 | champ | noun_lexical_precheck | à évaluer | changer, chanson, chanter, champ |
+| 67 | /nɔ̃/ | 13 | nom | noun_lexical_precheck | à évaluer | non, nom, nombreux, prénom |
+| 68 | /na/ | 96 | na | lexical_precheck | à évaluer | nature, journaliste, navire, canapé |
+| 69 | /sɔ̃/ | 22 | son | noun_lexical_precheck | à évaluer | son, façon, garçon, chanson |
+| 70 | /sɛ̃/ | 35 | sein | noun_lexical_precheck | à évaluer | sympa, médecin, simplement, assassin |
+| 71 | /tik/ | 56 | tic | noun_lexical_precheck | à évaluer | politique, fantastique, romantique, boutique |
+| 72 | /be/ | 46 | bô | noun_lexical_precheck | à évaluer | bébé, tomber, b, baiser |
+| 73 | /ɔʁ/ | 30 | or | noun_lexical_precheck | à évaluer | dehors, or, ordinateur, organiser |
+| 74 | /mɛtʁ/ | 23 | maître | noun_lexical_precheck | à évaluer | mettre, maître, remettre, km |
+| 75 | /fɛ/ | 17 | fait | noun_lexical_precheck | à évaluer | fait, effet, professeur, parfait |
+| 76 | /vwa/ | 19 | voix | noun_lexical_precheck | à évaluer | voiture, voix, voyage, envoyer |
+| 77 | /y/ | 39 | hue | noun_lexical_precheck | à évaluer | réunion, humain, unique, utile |
+| 78 | /mɔ̃/ | 20 | mont | noun_lexical_precheck | à évaluer | mon, montrer, monter, démon |
+| 79 | /kɑ̃/ | 31 | camp | noun_lexical_precheck | à évaluer | camp, campagne, cancer, quand |
+| 80 | /tɛ̃/ | 31 | teint | noun_lexical_precheck | à évaluer | putain, matin, certain, certains |
+| 81 | /ly/ | 34 | lut | noun_lexical_precheck | à évaluer | salut, lumière, solution, allumer |
+| 82 | /syʁ/ | 31 | sûr | lexical_precheck | à évaluer | sûr, surtout, surprise, sur |
+| 83 | /ny/ | 36 | nu | noun_lexical_precheck | à évaluer | numéro, inutile, bienvenue, continue |
+| 84 | /ɛs/ | 36 | aces | noun_lexical_precheck | à évaluer | esprit, espèce, espoir, espace |
+| 85 | /tiʁ/ | 20 | tir | noun_lexical_precheck | à évaluer | partir, sortir, sentir, mentir |
+| 86 | /mɛ/ | 15 | mets | noun_lexical_precheck | à évaluer | jamais, maison, meilleur, mets |
+| 87 | /tʁe/ | 27 | tré | noun_lexical_precheck | à évaluer | rentrer, entrer, montrer, entrée |
+| 88 | /lɑ̃/ | 40 | lan | noun_lexical_precheck | à évaluer | excellent, talent, lancer, lendemain |
+| 89 | /sœʁ/ | 22 | soeur | noun_lexical_precheck | à évaluer | soeur, professeur, ascenseur, douceur |
+| 90 | /kaʁ/ | 30 | quart | noun_lexical_precheck | à évaluer | quartier, cardiaque, rencard, placard |
+| 91 | /fwa/ | 11 | fois | noun_lexical_precheck | à évaluer | fois, parfois, foi, enfoiré |
+| 92 | /mə/ | 27 | me | noun_lexical_precheck | à évaluer | monsieur, emmener, ramener, amener |
+| 93 | /tabl/ | 24 | table | noun_lexical_precheck | à évaluer | table, portable, véritable, confortable |
+| 94 | /da/ | 33 | das | noun_lexical_precheck | à évaluer | d'abord, soldat, mandat, davantage |
+| 95 | /ty/ | 42 | tue | noun_lexical_precheck | à évaluer | étudier, naturel, foutu, tunnel |
+| 96 | /ʒi/ | 38 | ji | noun_lexical_precheck | à évaluer | énergie, magie, chirurgie, stratégie |
+| 97 | /ʒuʁ/ | 9 | jour | noun_lexical_precheck | à évaluer | toujours, jour, bonjour, journée |
+| 98 | /vwaʁ/ | 17 | voir | lexical_precheck | à évaluer | voir, avoir, savoir, pouvoir |
+| 99 | /pu/ | 23 | pouls | noun_lexical_precheck | à évaluer | pouvoir, épouser, poulet, pousser |
+| 100 | /mwa/ | 14 | mois | noun_lexical_precheck | à évaluer | mois, moitié, moyen, mlle |
 
 ## Règle de décision
 
-Le prochain gain de couverture doit provenir de candidats qui restent compréhensibles sans légende. Les mots exacts abstraits, rares ou lexicalement instables restent dans la recherche même s’ils amélioreraient artificiellement un pourcentage de couverture.
+Les hypothèses visuelles déjà curatées passent avant les simples homophones lexicaux. Un nom exact issu de Lexique reste un pré-tri tant qu’un concept visuel précis et ses confusions de dénomination n’ont pas été explicitement examinés.

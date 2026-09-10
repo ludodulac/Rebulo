@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.4.0",
   "status": "research_only",
   "scope": "general_rebus_only",
   "principles": {
@@ -9,7 +9,8 @@
     "percentage": "The displayed percentage is an editorial weighted edit heuristic, not a scientific phonological-distance or clinical score.",
     "shortSegments": "Short chunks are deliberately harder to approximate because one changed phoneme represents a large fraction of the sound.",
     "vowelCloseness": "Vowel substitutions are not treated as interchangeable: a small aperture contrast such as /e/↔/ɛ/ costs less than a distant oral or nasal-vowel change. These classes are editorial safeguards, not a phonetic-distance model.",
-    "consonantCloseness": "Consonant substitutions are not interchangeable either: the explicitly listed voicing pairs /p/↔/b/, /t/↔/d/, /k/↔/g/, /f/↔/v/, /s/↔/z/ and /ʃ/↔/ʒ/ receive a lower editorial cost than unrelated consonant changes. This is a conservative research safeguard, not a complete perceptual-distance model."
+    "consonantCloseness": "Consonant substitutions are not interchangeable either: the explicitly listed voicing pairs /p/↔/b/, /t/↔/d/, /k/↔/g/, /f/↔/v/, /s/↔/z/ and /ʃ/↔/ʒ/ receive a lower editorial cost than unrelated consonant changes. This is a conservative research safeguard, not a complete perceptual-distance model.",
+    "editPosition": "Insertions and deletions inside a phoneme sequence are penalized more than edge edits, because an internal edit changes the structure of the spoken chunk more strongly. This remains an editorial research rule, not a clinical distance model."
   },
   "weights": {
     "vowelSubstitution": 0.6,
@@ -23,7 +24,9 @@
     "farConsonantSubstitution": 0.9,
     "crossClassSubstitution": 0.9,
     "insertion": 0.75,
-    "deletion": 0.75
+    "deletion": 0.75,
+    "internalInsertion": 0.9,
+    "internalDeletion": 0.9
   },
   "tiers": {
     "light": {

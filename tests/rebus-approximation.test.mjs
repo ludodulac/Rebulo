@@ -60,6 +60,28 @@ const consonantChange=alignApproximateIPA('pat','pak',policy);
 assert.equal(consonantChange.editCount,1);
 assert.ok(consonantChange.weightedCost>laitToLes.weightedCost,'unrelated consonant substitution should cost more than a near-vowel substitution');
 
+const edgeDeletion=analyzeApproximation('paʁk','paʁ',policy);
+assert.equal(edgeDeletion.tier,'light','a single edge deletion may remain a small general-mode approximation');
+assert.equal(edgeDeletion.operations[0].type,'deletion');
+assert.equal(edgeDeletion.operations[0].editPosition,'edge');
+
+const internalDeletion=analyzeApproximation('pwaʁ','paʁ',policy);
+assert.equal(internalDeletion.tier,'too_far','an internal glide deletion in a short chunk must not pass the light budget');
+assert.equal(internalDeletion.eligible,false);
+assert.equal(internalDeletion.operations[0].type,'deletion');
+assert.equal(internalDeletion.operations[0].editPosition,'internal');
+
+const edgeInsertion=analyzeApproximation('bwa','bwaʁ',policy);
+assert.equal(edgeInsertion.tier,'light','a single edge insertion may remain a small general-mode approximation');
+assert.equal(edgeInsertion.operations[0].type,'insertion');
+assert.equal(edgeInsertion.operations[0].editPosition,'edge');
+
+const internalInsertion=analyzeApproximation('sɛl','sjɛl',policy);
+assert.equal(internalInsertion.tier,'too_far','an internal glide insertion in a short chunk must not pass the light budget');
+assert.equal(internalInsertion.eligible,false);
+assert.equal(internalInsertion.operations[0].type,'insertion');
+assert.equal(internalInsertion.operations[0].editPosition,'internal');
+
 const insertion=analyzeApproximation('pa','pat',policy);
 assert.equal(insertion.strictEligible,false);
 assert.equal(insertion.operations.length,1);
@@ -79,6 +101,7 @@ const entries=[
   {word:'pain',lemma:'pain',ipa:'pɛ̃',pos:'NOM',frequency:150,syllableCount:1},
   {word:'pas',lemma:'pas',ipa:'pa',pos:'NOM',frequency:180,syllableCount:1},
   {word:'poire',lemma:'poire',ipa:'pwaʁ',pos:'NOM',frequency:70,syllableCount:1},
+  {word:'parc',lemma:'parc',ipa:'paʁk',pos:'NOM',frequency:80,syllableCount:1},
   {word:'voir',lemma:'voir',ipa:'vwaʁ',pos:'VER',frequency:250,syllableCount:1},
   {word:'pré',lemma:'pré',ipa:'pʁe',pos:'NOM',frequency:20,syllableCount:1},
   {word:'près',lemma:'près',ipa:'pʁɛ',pos:'ADV',frequency:100,syllableCount:1}
@@ -94,5 +117,8 @@ const paCandidates=findApproximateWholeWordCandidates('pa',exactIndex,policy,{ap
 assert.ok(!paCandidates.some(candidate=>candidate.word==='pain'),'vowel-quality guard must remove pain from /pa/ approximation candidates');
 const voirCandidates=findApproximateWholeWordCandidates('vwaʁ',exactIndex,policy,{approximateIndex,limit:10});
 assert.ok(!voirCandidates.some(candidate=>candidate.word==='poire'),'consonant-quality guard must remove poire from /vwaʁ/ approximation candidates');
+const parCandidates=findApproximateWholeWordCandidates('paʁ',exactIndex,policy,{approximateIndex,limit:10});
+assert.ok(parCandidates.some(candidate=>candidate.word==='parc'),'edge-edit policy should retain parc as an approximation candidate for /paʁ/');
+assert.ok(!parCandidates.some(candidate=>candidate.word==='poire'),'internal-edit policy should remove poire as an approximation candidate for /paʁ/');
 
-console.log('rebus approximation: exact isolation, vowel/consonant closeness safeguards, weighted edits and approximate lexical lookup');
+console.log('rebus approximation: exact isolation, vowel/consonant closeness, edit-position safeguards and approximate lexical lookup');

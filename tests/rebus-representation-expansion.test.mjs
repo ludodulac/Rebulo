@@ -16,17 +16,24 @@ const nid=classifyExpansionRow({...base,ipa:'ni',syllableSpans:[1],exactCandidat
   {word:'nie',pos:'VER',frequency:4,proofStatus:'lexical_exact_only',visualPotential:'unknown',namingRisk:'unknown'}
 ],visibleConventions:[],approximateCandidates:[]},assetIndex);
 assert.equal(nid.lane,'asset_existing_to_review');
+assert.equal(nid.registeredAssetCandidateCount,1);
+assert.equal(nid.researchAssetLeadCandidateCount,0);
 assert.equal(nid.registeredPhoneticAssetCandidateCount,1);
 assert.equal(nid.multipleExactHomophones,true,'several homophones remain visible even when one already has an asset');
 assert.equal(nid.proofStatus.spontaneousNamability,'unknown_unless_human_observation_exists');
 assert.equal(nid.proofStatus.orthophonicValidation,'none');
 
 const researchOnly=classifyExpansionRow({...base,ipa:'bu',syllableSpans:[1],exactCandidateCount:1,exactCandidates:[{word:'boue',pos:'NOM',frequency:12,proofStatus:'lexical_exact_only',visualPotential:'unknown',namingRisk:'unknown'}],visibleConventions:[],approximateCandidates:[]},assetIndex);
-assert.equal(researchOnly.lane,'asset_existing_to_review','research filename match must trigger inspection before drawing');
+assert.equal(researchOnly.lane,'research_asset_lead_to_inspect','research filename match must stay in a separate inspection lane');
+assert.equal(researchOnly.existingAssetCandidateCount,1,'legacy broad lead count remains available');
+assert.equal(researchOnly.registeredAssetCandidateCount,0,'research filename match must not be counted as a registered asset');
+assert.equal(researchOnly.researchAssetLeadCandidateCount,1);
 assert.equal(researchOnly.registeredPhoneticAssetCandidateCount,0,'filename match must not invent registered IPA evidence');
+assert.equal(researchOnly.informationInsufficient,true,'a research filename lead does not resolve visual evidence');
 
 const unaccentedDe=classifyExpansionRow({...base,ipa:'də',syllableSpans:[1],exactCandidateCount:1,exactCandidates:[{word:'de',pos:'NOM',frequency:.1,proofStatus:'lexical_exact_only',visualPotential:'unknown',namingRisk:'unknown'}],visibleConventions:[],approximateCandidates:[]},assetIndex);
 assert.equal(unaccentedDe.existingAssetCandidateCount,0,'production asset label dé must not be treated as the lexical candidate de');
+assert.equal(unaccentedDe.registeredAssetCandidateCount,0);
 
 const letter=classifyExpansionRow({...base,ipa:'a',syllableSpans:[1],exactCandidateCount:2,exactCandidates:[
   {word:'a',pos:'NOM',frequency:63,proofStatus:'lexical_exact_only',visualPotential:'unknown',namingRisk:'unknown'},
@@ -44,6 +51,7 @@ assert.equal(letterWithConcreteAlternative.lane,'multiple_exact_homophones_to_co
 const long=classifyExpansionRow({...base,ipa:'kɔ̃pa',syllableSpans:[2],exactCandidateCount:2,exactCandidates:[{word:'compas',pos:'NOM',frequency:1.1,proofStatus:'lexical_exact_only',visualPotential:'unknown',namingRisk:'unknown'},{word:'compât',pos:'VER',frequency:.1,proofStatus:'lexical_exact_only',visualPotential:'unknown',namingRisk:'unknown'}],visibleConventions:[],approximateCandidates:[]},assetIndex);
 assert.equal(long.twoSyllableFirstClass,true);
 assert.equal(long.lane,'asset_existing_to_review');
+assert.equal(long.registeredAssetCandidateCount,1);
 
 const approximate=classifyExpansionRow({...base,ipa:'le',syllableSpans:[1],exactCandidateCount:1,exactCandidates:[{word:'les',pos:'DET',frequency:1000,proofStatus:'visual_route_rejected',visualPotential:'very_low',namingRisk:'very_high'}],visibleConventions:[],approximateCandidates:[{word:'lait',sourceIpa:'lɛ',targetIpa:'le',proofStatus:'general_rebus_approximation_only',strictEligible:false}]},new Map());
 assert.equal(approximate.lane,'approximation_only_after_rejected_exacts');
@@ -60,9 +68,13 @@ for(let i=0;i<4;i++)rows.push({...base,ipa:`long${i}`,syllableSpans:[2],usefulTa
 const queue=buildRepresentationExpansionQueue(rows,new Map(),{globalLimit:3,twoSyllableReserve:2});
 assert.equal(queue.length,5);
 assert.equal(queue.filter(row=>row.twoSyllableFirstClass).length,2,'two-syllable reserve survives even when shorter sounds dominate raw yield');
-const subqueues=buildExpansionSubqueues(queue);
+const subqueues=buildExpansionSubqueues([nid,researchOnly,...queue]);
 assert.equal(subqueues.twoSyllableFirstClass.length,2);
-const stats=summarizeExpansionQueue(queue);
-assert.equal(stats.soundCount,5);
+assert.deepEqual(subqueues.existingAssetReview,['ni'],'registered assets keep their own review queue');
+assert.deepEqual(subqueues.researchAssetLeads,['bu'],'research filename leads keep their own inspection queue');
+const stats=summarizeExpansionQueue([nid,researchOnly,...queue]);
+assert.equal(stats.soundCount,7);
 assert.equal(stats.twoSyllableSoundCount,2);
+assert.equal(stats.registeredAssetSoundCount,1);
+assert.equal(stats.researchAssetLeadSoundCount,1);
 console.log('rebus representation expansion queue: ok');

@@ -30,12 +30,15 @@ jobs:
           import fs from 'node:fs';
           const report=JSON.parse(fs.readFileSync('data/rebus-representation-expansion-queue.json','utf8'));
           if(report.status!=='research_mapping_only')throw new Error('expansion output must remain research-only');
-          if(report.stats.soundCount<600)throw new Error(`expected substantial queue, got ${report.stats.soundCount}`);
-          if(report.stats.twoSyllableSoundCount<250)throw new Error(`two-syllable reserve collapsed: ${report.stats.twoSyllableSoundCount}`);
+          if(report.stats.soundCount<800)throw new Error(`expected substantial queue, got ${report.stats.soundCount}`);
+          if(report.stats.twoSyllableSoundCount<350)throw new Error(`two-syllable reserve collapsed: ${report.stats.twoSyllableSoundCount}`);
           if(report.stats.multipleExactHomophoneSoundCount<1)throw new Error('expected multiple exact-homophone cases');
+          if(report.subqueues?.existingAssetReview?.length<1)throw new Error('expected existing assets to surface before new drawing');
+          if(report.subqueues?.twoSyllableFirstClass?.length<100)throw new Error('expected a useful long-window review queue');
           if(report.rows.some(row=>row.proofStatus?.orthophonicValidation!=='none'))throw new Error('queue must not invent orthophonic validation');
           if(report.rows.some(row=>row.automaticActivation!==false))throw new Error('queue must not auto-activate representations');
           if(report.rows.some(row=>row.exactCandidates?.some(candidate=>candidate.namingRisk && candidate.namingRisk!=='unknown' && candidate.proofStatus==='lexical_exact_only')))throw new Error('uncurated lexical candidates must not receive invented naming risk');
+          if(report.rows.some(row=>row.exactCandidates?.some(candidate=>candidate.knownAssets?.some(asset=>asset.assetKind==='research_filename_match'&&asset.registeredPhoneticMatch))))throw new Error('research filenames must not invent registered IPA evidence');
           console.log(report.stats);
           NODE
       - name: Upload expansion artifact

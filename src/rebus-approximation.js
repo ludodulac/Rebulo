@@ -27,6 +27,8 @@ function safeWeight(policy={},key,fallback){
 export function approximationWeights(policy={}){
   const legacyVowel=safeWeight(policy,'vowelSubstitution',0.6);
   const legacyConsonant=safeWeight(policy,'consonantSubstitution',0.55);
+  const insertion=safeWeight(policy,'insertion',0.75);
+  const deletion=safeWeight(policy,'deletion',0.75);
   return {
     vowelSubstitution:legacyVowel,
     nearVowelSubstitution:safeWeight(policy,'nearVowelSubstitution',Math.min(legacyVowel,0.3)),
@@ -38,8 +40,10 @@ export function approximationWeights(policy={}){
     nearConsonantSubstitution:safeWeight(policy,'nearConsonantSubstitution',Math.min(legacyConsonant,0.35)),
     farConsonantSubstitution:safeWeight(policy,'farConsonantSubstitution',Math.max(legacyConsonant,0.9)),
     crossClassSubstitution:safeWeight(policy,'crossClassSubstitution',0.9),
-    insertion:safeWeight(policy,'insertion',0.75),
-    deletion:safeWeight(policy,'deletion',0.75)
+    insertion,
+    deletion,
+    internalInsertion:safeWeight(policy,'internalInsertion',Math.max(insertion,0.9)),
+    internalDeletion:safeWeight(policy,'internalDeletion',Math.max(deletion,0.9))
   };
 }
 
@@ -73,6 +77,10 @@ export function substitutionWeight(sourceUnit='',targetUnit='',policy={}){
   return consonantSubstitutionWeight(source,target,policy);
 }
 
+function isInternalPosition(index=0,length=0){
+  return index>0&&index<length-1;
+}
+
 function candidateStep(dp,i,j,step){
   const previous=dp[i-step.di]?.[j-step.dj];
   if(!previous)return null;
@@ -99,8 +107,14 @@ export function alignApproximateIPA(sourceIpa='',targetIpa='',policy={}){
       const same=source[i-1]===target[j-1];
       best=better(best,candidateStep(dp,i,j,{di:1,dj:1,type:same?'match':'substitution',sourceUnit:source[i-1],targetUnit:target[j-1],sourceIndex:i-1,targetIndex:j-1,cost:same?0:substitutionWeight(source[i-1],target[j-1],policy),sourceClass:phonemeClass(source[i-1]),targetClass:phonemeClass(target[j-1])}));
     }
-    if(i>0)best=better(best,candidateStep(dp,i,j,{di:1,dj:0,type:'deletion',sourceUnit:source[i-1],targetUnit:null,sourceIndex:i-1,targetIndex:j,cost:weights.deletion,sourceClass:phonemeClass(source[i-1]),targetClass:'empty'}));
-    if(j>0)best=better(best,candidateStep(dp,i,j,{di:0,dj:1,type:'insertion',sourceUnit:null,targetUnit:target[j-1],sourceIndex:i,targetIndex:j-1,cost:weights.insertion,sourceClass:'empty',targetClass:phonemeClass(target[j-1])}));
+    if(i>0){
+      const internal=isInternalPosition(i-1,source.length);
+      best=better(best,candidateStep(dp,i,j,{di:1,dj:0,type:'deletion',sourceUnit:source[i-1],targetUnit:null,sourceIndex:i-1,targetIndex:j,cost:internal?weights.internalDeletion:weights.deletion,editPosition:internal?'internal':'edge',sourceClass:phonemeClass(source[i-1]),targetClass:'empty'}));
+    }
+    if(j>0){
+      const internal=isInternalPosition(j-1,target.length);
+      best=better(best,candidateStep(dp,i,j,{di:0,dj:1,type:'insertion',sourceUnit:null,targetUnit:target[j-1],sourceIndex:i,targetIndex:j-1,cost:internal?weights.internalInsertion:weights.insertion,editPosition:internal?'internal':'edge',sourceClass:'empty',targetClass:phonemeClass(target[j-1])}));
+    }
     dp[i][j]=best;
   }
   const result=dp[source.length][target.length]||{cost:Infinity,edits:Infinity,steps:[]};

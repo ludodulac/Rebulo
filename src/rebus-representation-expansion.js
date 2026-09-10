@@ -61,8 +61,10 @@ export function classifyExpansionRow(row={},assetIndex=new Map()){
     return {...candidate,knownAssets,descriptiveFlags:lexicalFlags(candidate)};
   });
   const viableExact=exactCandidates.filter(viable);
+  const registeredAssetCandidates=exactCandidates.filter(candidate=>candidate.knownAssets.some(asset=>asset.assetKind!=='research_filename_match'));
+  const researchAssetLeadCandidates=exactCandidates.filter(candidate=>candidate.knownAssets.some(asset=>asset.assetKind==='research_filename_match'));
   const existingAssetCandidates=exactCandidates.filter(candidate=>candidate.knownAssets.length>0);
-  const registeredPhoneticAssetCandidates=exactCandidates.filter(candidate=>candidate.knownAssets.some(asset=>asset.registeredPhoneticMatch));
+  const registeredPhoneticAssetCandidates=registeredAssetCandidates.filter(candidate=>candidate.knownAssets.some(asset=>asset.assetKind!=='research_filename_match'&&asset.registeredPhoneticMatch));
   const curated=exactCandidates.filter(curatedPositive);
   const rejectedOrDeferred=exactCandidates.filter(candidate=>!viable(candidate));
   const visibleConventions=row.visibleConventions||[];
@@ -71,7 +73,8 @@ export function classifyExpansionRow(row={},assetIndex=new Map()){
   const conventionDominatesKnownLexicalLeads=Boolean(visibleConventions.length&&!curated.length&&viableExact.length&&viableExact.every(weakPictogramLead));
 
   let lane='insufficient_information';
-  if(existingAssetCandidates.length)lane='asset_existing_to_review';
+  if(registeredAssetCandidates.length)lane='asset_existing_to_review';
+  else if(researchAssetLeadCandidates.length)lane='research_asset_lead_to_inspect';
   else if(visibleConventions.length&&(allKnownExactRoutesRejected||conventionDominatesKnownLexicalLeads))lane='visible_convention_preferable';
   else if(exactCandidates.length>1)lane='multiple_exact_homophones_to_compare';
   else if(viableExact.length)lane='exact_image_candidate_precheck';
@@ -93,10 +96,12 @@ export function classifyExpansionRow(row={},assetIndex=new Map()){
     visibleConventions,
     approximateCandidates:approximations,
     existingAssetCandidateCount:existingAssetCandidates.length,
+    registeredAssetCandidateCount:registeredAssetCandidates.length,
+    researchAssetLeadCandidateCount:researchAssetLeadCandidates.length,
     registeredPhoneticAssetCandidateCount:registeredPhoneticAssetCandidates.length,
     likelyNeedsNewAsset:Boolean(viableExact.length&&!existingAssetCandidates.length&&!visibleConventions.length),
     highKnownVisualOrLexicalRisk:Boolean(rejectedOrDeferred.length||exactCandidates.some(candidate=>['high','very_high','medium_high'].includes(candidate.namingRisk))),
-    informationInsufficient:Boolean(!curated.length&&!existingAssetCandidates.length&&!visibleConventions.length),
+    informationInsufficient:Boolean(!curated.length&&!registeredAssetCandidates.length&&!visibleConventions.length),
     twoSyllableFirstClass:Boolean((row.syllableSpans||[]).includes(2)),
     lane,
     proofStatus:{
@@ -107,7 +112,7 @@ export function classifyExpansionRow(row={},assetIndex=new Map()){
       spontaneousNamability:'unknown_unless_human_observation_exists',
       orthophonicValidation:'none'
     },
-    nextDecision:lane==='asset_existing_to_review'?'inspect_existing_asset_then_naming_gate':lane==='visible_convention_preferable'?'prefer_explicit_convention_unless_better_exact_route_is_curated':lane==='multiple_exact_homophones_to_compare'?'compare_semantic_and_visual_routes_before_drawing':lane==='exact_image_candidate_precheck'?'human_concept_precheck_before_new_asset':lane==='approximation_only_after_rejected_exacts'?'general_rebus_editorial_review_only':'gather_more_semantic_or_visual_evidence',
+    nextDecision:lane==='asset_existing_to_review'?'inspect_registered_asset_then_naming_gate':lane==='research_asset_lead_to_inspect'?'inspect_research_file_without_treating_it_as_registered_or_exact_asset_evidence':lane==='visible_convention_preferable'?'prefer_explicit_convention_unless_better_exact_route_is_curated':lane==='multiple_exact_homophones_to_compare'?'compare_semantic_and_visual_routes_before_drawing':lane==='exact_image_candidate_precheck'?'human_concept_precheck_before_new_asset':lane==='approximation_only_after_rejected_exacts'?'general_rebus_editorial_review_only':'gather_more_semantic_or_visual_evidence',
     automaticActivation:false
   };
 }
@@ -134,6 +139,7 @@ export function buildExpansionSubqueues(rows=[]){
   const take=(predicate,limit=120)=>sorted.filter(predicate).slice(0,limit).map(row=>row.ipa);
   return {
     existingAssetReview:take(row=>row.lane==='asset_existing_to_review',80),
+    researchAssetLeads:take(row=>row.lane==='research_asset_lead_to_inspect',80),
     multipleExactHomophones:take(row=>row.lane==='multiple_exact_homophones_to_compare',160),
     visibleConventionPreferable:take(row=>row.lane==='visible_convention_preferable',80),
     exactImagePrecheck:take(row=>row.lane==='exact_image_candidate_precheck',160),
@@ -152,6 +158,8 @@ export function summarizeExpansionQueue(rows=[]){
     twoSyllableSoundCount:rows.filter(row=>row.twoSyllableFirstClass).length,
     multipleExactHomophoneSoundCount:rows.filter(row=>row.multipleExactHomophones).length,
     existingAssetSoundCount:rows.filter(row=>row.existingAssetCandidateCount>0).length,
+    registeredAssetSoundCount:rows.filter(row=>row.registeredAssetCandidateCount>0).length,
+    researchAssetLeadSoundCount:rows.filter(row=>row.researchAssetLeadCandidateCount>0).length,
     registeredPhoneticAssetSoundCount:rows.filter(row=>row.registeredPhoneticAssetCandidateCount>0).length,
     visibleConventionSoundCount:rows.filter(row=>row.visibleConventions.length>0).length,
     likelyNewAssetSoundCount:rows.filter(row=>row.likelyNeedsNewAsset).length,
@@ -167,7 +175,7 @@ export const REPRESENTATION_EXPANSION_POLICY=Object.freeze({
   ranking:'Yield fields only order the review queue; they never prove visual quality, namability or clinical suitability.',
   longWindows:'Two-syllable windows receive an explicit reserve and are not penalized for length.',
   homophones:'Several exact homophones are retained when available; exactCandidateCount records when more candidates exist than the retained audit sample.',
-  assets:'Production/open assets require accent-sensitive lexical-label equality. Research filenames use a looser accent-insensitive lookup only as an inspection lead; neither proves spontaneous naming.',
+  assets:'Registered production/open assets require accent-sensitive lexical-label equality. Research filenames use a looser accent-insensitive lookup only as a separate inspection lead; they never enter the registered-asset lane and neither kind proves spontaneous naming.',
   conventions:'An explicit convention can be marked preferable only when current exact lexical leads are rejected or descriptively weak pictogram leads; this is a review lane, not a truth score.',
   unknowns:'visualPotential and namingRisk remain unknown unless explicit curation or human evidence supplies them.',
   proof:'phonetic exactness != ludic approximation != lexical obviousness != drawable concept != spontaneous namability != orthophonic validation'

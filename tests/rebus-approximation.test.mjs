@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {alignApproximateIPA,analyzeApproximation,findApproximateWholeWordCandidates,buildApproximateLexicalIndex} from '../src/rebus-approximation.js';
+import {alignApproximateIPA,analyzeApproximation,findApproximateWholeWordCandidates,buildApproximateLexicalIndex,vowelSubstitutionWeight} from '../src/rebus-approximation.js';
 import {buildWholeWordCandidateIndex} from '../src/syllable-representation-candidates.js';
 
 const policy=JSON.parse(fs.readFileSync('data/rebus-approximation-policy.json','utf8'));
@@ -21,9 +21,28 @@ assert.equal(laitToLes.editCount,1);
 assert.deepEqual(laitToLes.operations.map(operation=>operation.type),['substitution']);
 assert.ok(laitToLes.editorialApproximationPercent>0&&laitToLes.editorialApproximationPercent<=20);
 
+assert.ok(vowelSubstitutionWeight('ɛ','e',policy)<vowelSubstitutionWeight('a','i',policy),'near oral vowels must cost less than distant vowels');
+assert.ok(vowelSubstitutionWeight('ɛ','e',policy)<vowelSubstitutionWeight('ɛ','ɛ̃',policy),'small aperture contrast must cost less than adding nasalization');
+assert.ok(vowelSubstitutionWeight('ɛ̃','ɑ̃',policy)>=vowelSubstitutionWeight('ɛ','ɛ̃',policy),'unrelated nasal vowels must not be cheaper than oral/nasal counterparts');
+
+const painToPa=analyzeApproximation('pɛ̃','pa',policy);
+assert.equal(painToPa.tier,'too_far','pain must not be a light approximation for /pa/ just because only one vowel unit changes');
+assert.equal(painToPa.eligible,false);
+
+const mainToMan=analyzeApproximation('mɛ̃','mɑ̃',policy);
+assert.equal(mainToMan.tier,'too_far','two distinct nasal vowels must not be treated as a light shortcut on a two-unit target');
+assert.equal(mainToMan.eligible,false);
+
+const seauToSi=analyzeApproximation('so','si',policy);
+assert.equal(seauToSi.tier,'too_far','distant oral vowels on a short target must not pass the light budget');
+assert.equal(seauToSi.eligible,false);
+
+const schwaToE=analyzeApproximation('nə','ne',policy);
+assert.equal(schwaToE.tier,'light','a schwa-neighbor substitution may remain a small magazine approximation when the rest is identical');
+
 const consonantChange=alignApproximateIPA('pat','pak',policy);
 assert.equal(consonantChange.editCount,1);
-assert.ok(consonantChange.weightedCost>laitToLes.weightedCost,'consonant substitution should cost more than a within-vowel substitution');
+assert.ok(consonantChange.weightedCost>laitToLes.weightedCost,'consonant substitution should cost more than a near-vowel substitution');
 
 const insertion=analyzeApproximation('pa','pat',policy);
 assert.equal(insertion.strictEligible,false);
@@ -41,6 +60,8 @@ assert.equal(tooFar.tier,'too_far');
 const entries=[
   {word:'lait',lemma:'lait',ipa:'lɛ',pos:'NOM',frequency:90,syllableCount:1},
   {word:'les',lemma:'le',ipa:'le',pos:'ADJ',frequency:200,syllableCount:1},
+  {word:'pain',lemma:'pain',ipa:'pɛ̃',pos:'NOM',frequency:150,syllableCount:1},
+  {word:'pas',lemma:'pas',ipa:'pa',pos:'NOM',frequency:180,syllableCount:1},
   {word:'pré',lemma:'pré',ipa:'pʁe',pos:'NOM',frequency:20,syllableCount:1},
   {word:'près',lemma:'près',ipa:'pʁɛ',pos:'ADV',frequency:100,syllableCount:1}
 ];
@@ -51,5 +72,7 @@ assert.ok(candidates.some(candidate=>candidate.word==='lait'&&candidate.sourceIp
 assert.ok(candidates.every(candidate=>candidate.approximation.mode==='general'));
 assert.ok(candidates.every(candidate=>candidate.approximation.strictEligible===false));
 assert.ok(!candidates.some(candidate=>candidate.word==='les'),'exact candidates must not be returned as approximation candidates');
+const paCandidates=findApproximateWholeWordCandidates('pa',exactIndex,policy,{approximateIndex,limit:10});
+assert.ok(!paCandidates.some(candidate=>candidate.word==='pain'),'vowel-quality guard must remove pain from /pa/ approximation candidates');
 
-console.log('rebus approximation: exact isolation, weighted edits, short-segment guard and approximate lexical lookup');
+console.log('rebus approximation: exact isolation, vowel-closeness safeguards, weighted edits and approximate lexical lookup');

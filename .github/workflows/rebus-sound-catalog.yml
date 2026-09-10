@@ -14,6 +14,7 @@ on:
       - 'src/rebus-sound-visual-curation.js'
       - 'src/rebus-approximation.js'
       - 'src/rebus-representation-bank.js'
+      - 'src/rebus-visual-evidence.js'
       - 'src/syllable-representation-candidates.js'
       - 'src/drawable-opportunities.js'
       - 'src/pictogram-print-sheets.js'
@@ -22,6 +23,7 @@ on:
       - 'src/open-pictogram-library-wave3.js'
       - 'src/syllable-print-library.js'
       - 'data/lexicon-seed.json'
+      - 'data/production-naming-reviews.json'
       - 'data/asset-sources.json'
       - 'data/research-reading-sounds.json'
       - 'data/rebus-visible-conventions.json'
@@ -34,6 +36,7 @@ on:
       - 'tests/rebus-sound-visual-curation.test.mjs'
       - 'tests/rebus-approximation.test.mjs'
       - 'tests/rebus-representation-bank.test.mjs'
+      - 'tests/rebus-visual-evidence.test.mjs'
       - 'tests/syllable-representation-candidates.test.mjs'
       - 'tests/asset-library-inventory.test.mjs'
   pull_request:
@@ -49,6 +52,7 @@ on:
       - 'src/rebus-sound-visual-curation.js'
       - 'src/rebus-approximation.js'
       - 'src/rebus-representation-bank.js'
+      - 'src/rebus-visual-evidence.js'
       - 'src/syllable-representation-candidates.js'
       - 'src/drawable-opportunities.js'
       - 'src/pictogram-print-sheets.js'
@@ -57,6 +61,7 @@ on:
       - 'src/open-pictogram-library-wave3.js'
       - 'src/syllable-print-library.js'
       - 'data/lexicon-seed.json'
+      - 'data/production-naming-reviews.json'
       - 'data/asset-sources.json'
       - 'data/research-reading-sounds.json'
       - 'data/rebus-visible-conventions.json'
@@ -69,6 +74,7 @@ on:
       - 'tests/rebus-sound-visual-curation.test.mjs'
       - 'tests/rebus-approximation.test.mjs'
       - 'tests/rebus-representation-bank.test.mjs'
+      - 'tests/rebus-visual-evidence.test.mjs'
       - 'tests/syllable-representation-candidates.test.mjs'
       - 'tests/asset-library-inventory.test.mjs'
   workflow_dispatch:
@@ -93,6 +99,7 @@ jobs:
           node tests/rebus-sound-visual-curation.test.mjs
           node tests/rebus-approximation.test.mjs
           node tests/rebus-representation-bank.test.mjs
+          node tests/rebus-visual-evidence.test.mjs
           node tests/syllable-representation-candidates.test.mjs
           node tests/syllable-print-library.test.mjs
           node tests/pictogram-print-sheets.test.mjs
@@ -145,6 +152,10 @@ jobs:
           if(!editOperations.some(operation=>operation.editPosition==='edge'))throw new Error('serialized edge edit evidence missing');
           if(!(bank.stats?.useful?.soundCount>100))throw new Error('representation-bank useful denominator missing');
           for(const key of ['C_exactWordVisualNotReady','D_obviousOrReadyPictogram','E_lightApproximation','F_exactMultiPictogram','G_letter','H_number','I_noCurrentReasonableRepresentation'])if(!(bank.stats.useful[key]>0))throw new Error(`representation-bank category missing: ${key}`);
+          if(!(bank.stats?.visualEvidence?.imageCount>0))throw new Error('representation visual-evidence inventory missing');
+          if(!(bank.stats?.visualEvidence?.metadataAvailableCount>0))throw new Error('representation visual metadata was not carried forward');
+          if(!(bank.stats?.visualEvidence?.namingReviewPendingCount>0))throw new Error('pending human naming evidence was not surfaced');
+          if(!Number.isInteger(bank.stats?.visualEvidence?.namingValidatedCount))throw new Error('human naming validation count missing');
           if(!(bank.productionVisualBoundary?.shadowedOpenPictogramCount>0))throw new Error('seed/OpenMoji precedence audit missing');
           if(!(bank.productionVisualBoundary?.researchComicAssetCount>0))throw new Error('research comic recovery audit missing');
           if(!fs.existsSync('docs/REBUS_SOUND_VISUAL_CURATION_REPORT.md'))throw new Error('visual curation report missing');

@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {classifyRepresentationBank,representationBankStats} from '../src/rebus-representation-bank.js';
 import {ALL_OPEN_PICTOGRAMS} from '../src/pictogram-print-sheets.js';
+import {buildVisualEvidenceIndex,visualEvidenceForRepresentation,summarizeVisualEvidence} from '../src/rebus-visual-evidence.js';
 import {buildAssetInventory} from './audit-asset-library.mjs';
 
 const catalogPath=process.argv[2]||'data/rebus-sound-catalog.json';
@@ -13,6 +14,8 @@ for(const file of [catalogPath,approximationPath,'data/lexicon-seed.json'])if(!f
 const catalog=JSON.parse(fs.readFileSync(catalogPath,'utf8'));
 const approximation=JSON.parse(fs.readFileSync(approximationPath,'utf8'));
 const seed=JSON.parse(fs.readFileSync('data/lexicon-seed.json','utf8'));
+const namingReviews=fs.existsSync('data/production-naming-reviews.json')?JSON.parse(fs.readFileSync('data/production-naming-reviews.json','utf8')):{reviews:[]};
+const visualEvidenceIndex=buildVisualEvidenceIndex({seed,openPictograms:ALL_OPEN_PICTOGRAMS,namingReviews});
 const rows=classifyRepresentationBank(catalog,approximation);
 const stats=representationBankStats(rows);
 const usefulRows=rows.filter(row=>row.usefulTargetCount>0);
@@ -41,6 +44,7 @@ const categoryLabels={
   I_noCurrentReasonableRepresentation:'I — aucune représentation raisonnable actuellement disponible'
 };
 
+const enrichImage=item=>visualEvidenceForRepresentation({id:item.id,label:item.label,image:item.image,source:item.source},visualEvidenceIndex);
 const compactRow=row=>({
   ipa:row.ipa,
   syllableSpans:row.syllableSpans,
@@ -52,8 +56,8 @@ const compactRow=row=>({
   categories:row.categories,
   exactWords:row.exactLexicalCandidates.slice(0,5),
   nounWords:row.nounLexicalCandidates.slice(0,5),
-  exactImages:row.exactImageRepresentations.slice(0,5).map(item=>({id:item.id,label:item.label,image:item.image,source:item.source})),
-  exactImageCombinations:row.exactImageCombinations,
+  exactImages:row.exactImageRepresentations.slice(0,5).map(enrichImage),
+  exactImageCombinations:row.exactImageCombinations.map(route=>route.map(enrichImage)),
   letters:row.letterRepresentations.map(item=>item.label),
   numbers:row.numberRepresentations.map(item=>item.label),
   musicNotes:row.musicRepresentations.map(item=>item.label),
@@ -66,9 +70,13 @@ const holes=usefulRanked.filter(row=>row.categories.I_noCurrentReasonableReprese
 const exactVisualBacklog=usefulRanked.filter(row=>row.categories.C_exactWordVisualNotReady);
 const reusableApproximation=usefulRanked.filter(row=>row.lightExistingAssetCandidates.length>0);
 const compositionWins=usefulRanked.filter(row=>row.categories.F_exactMultiPictogram&&!row.categories.D_obviousOrReadyPictogram);
+const compactUsefulRows=usefulRanked.map(compactRow);
+const visualEvidenceSummary=summarizeVisualEvidence(compactUsefulRows.flatMap(row=>row.exactImages));
+const pendingNamingAssets=compactUsefulRows.flatMap(row=>row.exactImages.map(image=>({ipa:row.ipa,...image}))).filter(item=>item.visualEvidence?.namingTestStatus==='not_run').slice(0,300);
+const namingValidatedAssets=compactUsefulRows.flatMap(row=>row.exactImages.map(image=>({ipa:row.ipa,...image}))).filter(item=>item.visualEvidence?.namingValidated===true);
 
 const output={
-  schemaVersion:'1.0',
+  schemaVersion:'1.1',
   generatedAt:new Date().toISOString(),
   status:'product_research_mapping',
   purpose:'SON/SEGMENT -> mots -> images/conventions/compositions -> qualite phonétique -> état visuel',
@@ -76,19 +84,22 @@ const output={
   methodology:{
     usefulScope:'Rows with usefulTargetCount > 0 are the product-priority denominator; the exhaustive 1–2 syllable catalog remains canonical and untouched.',
     exactWords:'Lexique whole-pronunciation candidates are evidence of lexical existence, not visual approval.',
-    visual:'A ready image is distinct from an exact lexical lead. Curated prototypes remain research until naming evidence exists.',
+    visual:'A ready image is distinct from an exact lexical lead. visualConfidence/labelStability are design metadata, not observed naming evidence. Curated prototypes remain research until naming evidence exists.',
+    naming:'Human naming evidence comes only from explicit naming-review records. Missing or not-run reviews are never inferred as successful from design scores.',
     combinations:'F routes concatenate 2–3 exact ready-image pronunciations with no deletion or substitution.',
     approximations:'E only reports candidates already classified light by the existing approximation engine; strict eligibility is never inferred.',
     unresolved:'I means no current ready image, exact ready-image composition, visible letter/number/note, curated prototype, or light approximation using an existing asset. An unreviewed Lexique word alone does not count as a reasonable representation.'
   },
-  stats,
+  stats:{...stats,visualEvidence:visualEvidenceSummary},
   queues:{
     currentHoles:holes.slice(0,500).map(compactRow),
     exactWordVisualBacklog:exactVisualBacklog.slice(0,500).map(compactRow),
     reusableLightApproximation:reusableApproximation.slice(0,300).map(compactRow),
-    exactCompositionWithoutSingleImage:compositionWins.slice(0,300).map(compactRow)
+    exactCompositionWithoutSingleImage:compositionWins.slice(0,300).map(compactRow),
+    pendingNamingAssets,
+    namingValidatedAssets
   },
-  usefulRows:usefulRanked.map(compactRow),
+  usefulRows:compactUsefulRows,
   productionVisualBoundary:{
     seedEntryCount:seed.length,
     openLibraryEntryCount:ALL_OPEN_PICTOGRAMS.length,
@@ -128,6 +139,16 @@ const lines=[
   ...Object.entries(categoryLabels).map(([key,label])=>`| ${label} | ${stats.useful[key]} | ${percent(stats.useful[key],stats.useful.soundCount)} |`),
   '',
   'Les catégories se chevauchent volontairement : un son peut avoir plusieurs mots exacts, une image prête et une lettre. La catégorie I est au contraire une frontière opérationnelle conservatrice.',
+  '',
+  '## Nommabilité : ce qui est réellement connu',
+  '',
+  `- Images exactes utiles recensées dans cette vue : ${visualEvidenceSummary.imageCount}.`,
+  `- Images avec métadonnées visuelles retrouvées : ${visualEvidenceSummary.metadataAvailableCount}.`,
+  `- Images avec métadonnées de design élevées (confiance et stabilité ≥ 0,85) : ${visualEvidenceSummary.strongDesignMetadataCount}.`,
+  `- Images dont le test de dénomination est explicitement encore à faire : ${visualEvidenceSummary.namingReviewPendingCount}.`,
+  `- Images disposant d’une validation humaine explicite de dénomination : ${visualEvidenceSummary.namingValidatedCount}.`,
+  '',
+  '**Important : les scores de confiance/stabilité sont des métadonnées de conception, pas des résultats humains. Rebulo ne les transforme pas en validation de dénomination.**',
   '',
   '## Goulot d’étranglement actuel',
   '',
@@ -170,4 +191,4 @@ const lines=[
 ];
 fs.mkdirSync(path.dirname(reportPath),{recursive:true});
 fs.writeFileSync(reportPath,lines.join('\n')+'\n');
-console.log(JSON.stringify({stats,productionVisualBoundary:output.productionVisualBoundary,currentHoleCount:holes.length,exactWordVisualBacklogCount:exactVisualBacklog.length},null,2));
+console.log(JSON.stringify({stats:output.stats,productionVisualBoundary:output.productionVisualBoundary,currentHoleCount:holes.length,exactWordVisualBacklogCount:exactVisualBacklog.length},null,2));

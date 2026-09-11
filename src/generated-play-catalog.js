@@ -3,6 +3,7 @@ import {decodeSoundCatalog} from './rebus-representation-bank.js';
 import {planRepresentationPaths} from './rebus-representation-paths.js';
 
 const LOW_CONFIDENCE_PLAY_WORDS=new Set(['rara','pawnee']);
+const NUMBER_WORDS=new Map([['0','zéro'],['1','un'],['2','deux'],['3','trois'],['4','quatre'],['5','cinq'],['6','six'],['7','sept'],['8','huit'],['9','neuf'],['10','dix'],['100','cent']]);
 
 function normalizeKey(value=''){return String(value||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'');}
 function exactWordKey(value=''){return String(value||'').toLocaleLowerCase('fr-FR').normalize('NFC').trim();}
@@ -33,10 +34,16 @@ export function playableRepresentationBankRows(soundCatalog={},visibleConvention
 }
 function operationPiece(operation={},spanByIpa=new Map()){const syllableSpan=Math.max(1,Number(spanByIpa.get(normalizeIPA(operation.targetIpa)))||1);if(operation.kind==='image')return {id:operation.id||null,image:operation.image,reading:operation.label,ipa:operation.targetIpa,kind:'image',syllableSpan};return {id:`${operation.kind}:${operation.symbol||operation.label}`,image:null,reading:operation.label,symbol:operation.symbol||operation.label,ipa:operation.targetIpa,kind:operation.kind,syllableSpan};}
 function preferredCompleteRoute(routes=[]){const complete=routes.filter(route=>route.complete&&route.operations?.length>=1&&route.operations.length<=6&&route.operations.every(operation=>['exact','exact_convention'].includes(operation.phoneticTier)));const conventionRoute=complete.find(route=>route.operations.length>=2&&route.operations.some(operation=>operation.phoneticTier==='exact_convention'));return conventionRoute||complete.find(route=>route.operations.length>=2)||complete[0]||null;}
+function standaloneNumberRounds(visibleConventions={},seenWords=new Set()){
+  const out=[];
+  for(const entry of visibleConventions?.entries||[]){if(entry?.kind!=='number_symbol'||!entry?.label||!entry?.ipa)continue;const answer=NUMBER_WORDS.get(String(entry.label));if(!answer||seenWords.has(exactWordKey(answer)))continue;seenWords.add(exactWordKey(answer));out.push({id:`convention-number-${entry.label}`,answer,acceptedAnswers:[answer],targetIpa:entry.ipa,minAge:5,difficulty:1,playQuality:'default_play',presentationStatus:'showcase',source:'visible-convention',generated:true,validation:'exact_visible_convention',frequency:1,conventionCount:1,twoSyllablePieceCount:0,pieces:[{id:entry.id,image:null,reading:answer,symbol:String(entry.label),ipa:entry.ipa,kind:'number',syllableSpan:1}],hint:'Lis le nombre à voix haute.'});}
+  return out;
+}
 
 export function generatedPlayableBankRebuses(coverage={},soundCatalog={},visibleConventions={}){
   const rows=coverageRows(coverage);const bankRows=playableRepresentationBankRows(soundCatalog,visibleConventions);const spanByIpa=new Map(bankRows.map(row=>[normalizeIPA(row.ipa),Math.max(1,...(row.syllableSpans||[1]).map(Number).filter(Number.isFinite))]));const answerFormsByIpa=exactAnswerFormsByIpa(coverage);const seenWords=new Set();const rounds=[];
   for(const row of [...rows].sort((a,b)=>Number(b?.frequency||0)-Number(a?.frequency||0))){const wordKey=exactWordKey(row?.word);if(!wordKey||!row?.ipa||seenWords.has(wordKey))continue;const route=preferredCompleteRoute(planRepresentationPaths(row.ipa,bankRows,{mode:'general',limit:18,maxPieces:6,allowGaps:false}));if(!route)continue;const pieces=route.operations.map(operation=>operationPiece(operation,spanByIpa));if(pieces.some(piece=>piece.kind==='image'&&!piece.image))continue;seenWords.add(wordKey);const difficulty=difficultyFromPieces(pieces.length);const quality=playQuality(row);const conventionCount=pieces.filter(piece=>piece.kind!=='image').length;const twoSyllablePieceCount=pieces.filter(piece=>piece.syllableSpan>=2).length;rounds.push({id:`bank-${rounds.length+1}-${normalizeKey(row.word)}`,answer:row.word,acceptedAnswers:[...(answerFormsByIpa.get(normalizeIPA(row.ipa))?.values()||[row.word])],targetIpa:row.ipa,minAge:minimumAgeFromDifficulty(difficulty),difficulty,playQuality:quality,presentationStatus:quality==='default_play'?'showcase':'review_needed',source:'representation-bank',generated:true,validation:conventionCount?'exact_with_visible_convention':'strict',frequency:Number(row?.frequency||0),conventionCount,twoSyllablePieceCount,pieces,hint:conventionCount?'Lis aussi les lettres, nombres ou notes comme des sons, puis assemble tout.':'Nomme chaque image, puis assemble les sons sans en ajouter ni en retirer.'});}
+  rounds.push(...standaloneNumberRounds(visibleConventions,seenWords));
   return rounds;
 }
 

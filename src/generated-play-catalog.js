@@ -41,7 +41,7 @@ function exactAnswerFormsByIpa(coverage={}){
     if(!word||!ipa)continue;
     if(!byIpa.has(ipa))byIpa.set(ipa,new Map());
     const forms=byIpa.get(ipa);
-    const key=normalizeKey(word);
+    const key=exactWordKey(word);
     if(key&&!forms.has(key))forms.set(key,word);
   }
   return byIpa;
@@ -106,7 +106,7 @@ export function mergePlayableCatalog(manual=[],generated=[]){
     if(!byIpa.has(ipa))byIpa.set(ipa,new Map());
     const forms=byIpa.get(ipa);
     for(const form of [item.answer,...(item.acceptedAnswers||[])]){
-      const key=normalizeKey(form);
+      const key=exactWordKey(form);
       if(key&&!forms.has(key))forms.set(key,form);
     }
   }

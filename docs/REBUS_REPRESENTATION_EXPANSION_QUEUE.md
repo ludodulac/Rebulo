@@ -10,19 +10,20 @@
 - Sons avec seulement/au moins une piste issue d’un nom de fichier de recherche : 11.
 - Sons avec asset enregistré dont l’IPA est explicitement enregistrée et exacte : 5.
 - Sons avec convention visible : 23.
-- Sons qui nécessitent probablement un nouvel asset si un concept exact est retenu : 870.
-- Sons avec risque visuel/lexical déjà documenté : 115.
+- Sons qui nécessitent probablement un nouvel asset si un concept exact est retenu : 868.
+- Sons avec risque visuel/lexical déjà documenté : 117.
 - Sons avec approximation légère disponible séparément : 609.
-- Sons dont les preuves visuelles restent insuffisantes : 776.
+- Sons dont les preuves visuelles restent insuffisantes : 767.
 
 ## Répartition des décisions
 
 - plusieurs homophones exacts à départager : 520.
-- approximation ludique seulement après rejets exacts : 4.
+- approximation ludique seulement après rejets exacts : 5.
 - convention visible préférable : 2.
 - fichier de recherche à inspecter séparément : 11.
-- candidat lexical exact à préexaminer : 374.
+- candidat lexical exact à préexaminer : 372.
 - asset enregistré à examiner/tester : 5.
+- information insuffisante : 1.
 
 ## Files opérationnelles
 

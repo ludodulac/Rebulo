@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.2",
-  "generatedAt": "2026-09-11T06:47:52.876Z",
+  "generatedAt": "2026-09-11T06:53:14.661Z",
   "status": "research_mapping_only",
   "purpose": "Élargir de façon conservatrice la banque SON → MOT(S) → REPRÉSENTATION en faisant émerger un lot substantiel à fort rendement sans convertir des indices en preuve visuelle.",
   "policy": {
@@ -33,17 +33,18 @@
     "researchAssetLeadSoundCount": 11,
     "registeredPhoneticAssetSoundCount": 5,
     "visibleConventionSoundCount": 23,
-    "likelyNewAssetSoundCount": 870,
-    "highKnownRiskSoundCount": 115,
+    "likelyNewAssetSoundCount": 868,
+    "highKnownRiskSoundCount": 117,
     "approximationAvailableSoundCount": 609,
-    "informationInsufficientSoundCount": 776,
+    "informationInsufficientSoundCount": 767,
     "laneCounts": {
       "multiple_exact_homophones_to_compare": 520,
-      "approximation_only_after_rejected_exacts": 4,
+      "approximation_only_after_rejected_exacts": 5,
       "visible_convention_preferable": 2,
       "research_asset_lead_to_inspect": 11,
-      "exact_image_candidate_precheck": 374,
-      "asset_existing_to_review": 5
+      "exact_image_candidate_precheck": 372,
+      "asset_existing_to_review": 5,
+      "insufficient_information": 1
     }
   },
   "subqueues": {
@@ -297,7 +298,6 @@
       "mas",
       "vəniʁ",
       "kɔ̃pa",
-      "ope",
       "bɛʁ",
       "lɛ̃",
       "bili",
@@ -393,7 +393,8 @@
       "ʁey",
       "sabl",
       "sjɑ̃s",
-      "pɛʁso"
+      "pɛʁso",
+      "deku"
     ],
     "twoSyllableFirstClass": [
       "lite",
@@ -769,6 +770,7 @@
       "mal",
       "done",
       "avɑ̃",
+      "ope",
       "pʁɛ",
       "tʁyk",
       "ləve",
@@ -804,6 +806,7 @@
       "ami",
       "kɔ̃t",
       "ʁɛsto",
+      "labo",
       "sit",
       "vize",
       "fɛ̃",
@@ -817,15 +820,14 @@
       "mati",
       "paʁɑ̃",
       "tɛz",
-      "patʁi",
-      "tane",
-      "ʃwa"
+      "patʁi"
     ],
     "approximationOnly": [
       "kɔ̃",
       "nɛʁ",
       "oto",
-      "abi"
+      "abi",
+      "labo"
     ],
     "insufficientInformation": [
       "mɑ̃",
@@ -30279,13 +30281,13 @@
           "representationType": "deferred_visual_route",
           "proofStatus": "visual_route_deferred",
           "noun": true,
-          "visualPotential": "high",
-          "namingRisk": "high",
+          "visualPotential": "unknown",
+          "namingRisk": "unknown",
           "mainConfusions": [
             "voiture",
             "automobile"
           ],
-          "nextGate": "prefer_existing_voiture_asset_unless_auto_naming_is_observed",
+          "nextGate": "review_existing_editorial_decision",
           "automaticActivation": false,
           "clinicalEvidence": "none",
           "knownAssets": [],
@@ -38762,13 +38764,16 @@
           "frequencyBand": "low",
           "syllableCount": 1,
           "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
+          "representationType": "curated_visual_hypothesis",
+          "proofStatus": "visual_hypothesis_curated",
           "noun": true,
-          "visualPotential": "unknown",
+          "visualPotential": "medium_high",
           "namingRisk": "unknown",
-          "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
+          "mainConfusions": [
+            "organe",
+            "haricot"
+          ],
+          "nextGate": "review_existing_editorial_decision",
           "automaticActivation": false,
           "clinicalEvidence": "none",
           "knownAssets": [],
@@ -38804,7 +38809,7 @@
           }
         }
       ],
-      "curatedVisualHypothesisCount": 0,
+      "curatedVisualHypothesisCount": 1,
       "visibleConventions": [],
       "approximateCandidates": [],
       "existingAssetCandidateCount": 0,
@@ -38813,14 +38818,14 @@
       "registeredPhoneticAssetCandidateCount": 0,
       "likelyNeedsNewAsset": true,
       "highKnownVisualOrLexicalRisk": false,
-      "informationInsufficient": true,
+      "informationInsufficient": false,
       "twoSyllableFirstClass": false,
       "lane": "multiple_exact_homophones_to_compare",
       "proofStatus": {
         "phoneticExactness": "exact_candidates_attested",
         "generalRebusApproximation": "none_listed",
         "lexicalRelevance": "not_human_validated",
-        "drawableConcept": "unknown",
+        "drawableConcept": "curated_hypothesis_only",
         "spontaneousNamability": "unknown_unless_human_observation_exists",
         "orthophonicValidation": "none"
       },
@@ -41082,13 +41087,16 @@
           "frequencyBand": "low",
           "syllableCount": 2,
           "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
+          "representationType": "deferred_visual_route",
+          "proofStatus": "visual_route_deferred",
           "noun": true,
           "visualPotential": "unknown",
           "namingRisk": "unknown",
-          "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
+          "mainConfusions": [
+            "abréviation",
+            "terme spécialisé"
+          ],
+          "nextGate": "review_existing_editorial_decision",
           "automaticActivation": false,
           "clinicalEvidence": "none",
           "knownAssets": [],
@@ -41107,11 +41115,11 @@
       "registeredAssetCandidateCount": 0,
       "researchAssetLeadCandidateCount": 0,
       "registeredPhoneticAssetCandidateCount": 0,
-      "likelyNeedsNewAsset": true,
-      "highKnownVisualOrLexicalRisk": false,
+      "likelyNeedsNewAsset": false,
+      "highKnownVisualOrLexicalRisk": true,
       "informationInsufficient": true,
       "twoSyllableFirstClass": true,
-      "lane": "exact_image_candidate_precheck",
+      "lane": "insufficient_information",
       "proofStatus": {
         "phoneticExactness": "exact_candidates_attested",
         "generalRebusApproximation": "none_listed",
@@ -41120,7 +41128,7 @@
         "spontaneousNamability": "unknown_unless_human_observation_exists",
         "orthophonicValidation": "none"
       },
-      "nextDecision": "human_concept_precheck_before_new_asset",
+      "nextDecision": "gather_more_semantic_or_visual_evidence",
       "automaticActivation": false
     },
     {
@@ -44057,13 +44065,16 @@
           "frequencyBand": "low",
           "syllableCount": 1,
           "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
+          "representationType": "curated_visual_hypothesis",
+          "proofStatus": "visual_hypothesis_curated",
           "noun": true,
-          "visualPotential": "unknown",
+          "visualPotential": "high",
           "namingRisk": "unknown",
-          "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
+          "mainConfusions": [
+            "cercle",
+            "disque"
+          ],
+          "nextGate": "review_existing_editorial_decision",
           "automaticActivation": false,
           "clinicalEvidence": "none",
           "knownAssets": [],
@@ -44123,7 +44134,7 @@
           }
         }
       ],
-      "curatedVisualHypothesisCount": 0,
+      "curatedVisualHypothesisCount": 1,
       "visibleConventions": [],
       "approximateCandidates": [],
       "existingAssetCandidateCount": 0,
@@ -44132,14 +44143,14 @@
       "registeredPhoneticAssetCandidateCount": 0,
       "likelyNeedsNewAsset": true,
       "highKnownVisualOrLexicalRisk": false,
-      "informationInsufficient": true,
+      "informationInsufficient": false,
       "twoSyllableFirstClass": false,
       "lane": "multiple_exact_homophones_to_compare",
       "proofStatus": {
         "phoneticExactness": "exact_candidates_attested",
         "generalRebusApproximation": "none_listed",
         "lexicalRelevance": "not_human_validated",
-        "drawableConcept": "unknown",
+        "drawableConcept": "curated_hypothesis_only",
         "spontaneousNamability": "unknown_unless_human_observation_exists",
         "orthophonicValidation": "none"
       },
@@ -48341,13 +48352,16 @@
           "frequencyBand": "high",
           "syllableCount": 1,
           "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
+          "representationType": "curated_visual_hypothesis",
+          "proofStatus": "visual_hypothesis_curated",
           "noun": true,
-          "visualPotential": "unknown",
+          "visualPotential": "medium_high",
           "namingRisk": "unknown",
-          "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
+          "mainConfusions": [
+            "route",
+            "avenue"
+          ],
+          "nextGate": "review_existing_editorial_decision",
           "automaticActivation": false,
           "clinicalEvidence": "none",
           "knownAssets": [],
@@ -48407,7 +48421,7 @@
           }
         }
       ],
-      "curatedVisualHypothesisCount": 0,
+      "curatedVisualHypothesisCount": 1,
       "visibleConventions": [],
       "approximateCandidates": [],
       "existingAssetCandidateCount": 0,
@@ -48416,14 +48430,14 @@
       "registeredPhoneticAssetCandidateCount": 0,
       "likelyNeedsNewAsset": true,
       "highKnownVisualOrLexicalRisk": false,
-      "informationInsufficient": true,
+      "informationInsufficient": false,
       "twoSyllableFirstClass": false,
       "lane": "multiple_exact_homophones_to_compare",
       "proofStatus": {
         "phoneticExactness": "exact_candidates_attested",
         "generalRebusApproximation": "none_listed",
         "lexicalRelevance": "not_human_validated",
-        "drawableConcept": "unknown",
+        "drawableConcept": "curated_hypothesis_only",
         "spontaneousNamability": "unknown_unless_human_observation_exists",
         "orthophonicValidation": "none"
       },
@@ -72857,13 +72871,15 @@
           "frequencyBand": "low",
           "syllableCount": 1,
           "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
+          "representationType": "curated_visual_hypothesis",
+          "proofStatus": "visual_hypothesis_curated",
           "noun": true,
-          "visualPotential": "unknown",
+          "visualPotential": "high",
           "namingRisk": "unknown",
-          "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
+          "mainConfusions": [
+            "corde"
+          ],
+          "nextGate": "review_existing_editorial_decision",
           "automaticActivation": false,
           "clinicalEvidence": "none",
           "knownAssets": [],
@@ -72875,7 +72891,7 @@
           }
         }
       ],
-      "curatedVisualHypothesisCount": 0,
+      "curatedVisualHypothesisCount": 1,
       "visibleConventions": [],
       "approximateCandidates": [],
       "existingAssetCandidateCount": 0,
@@ -72884,14 +72900,14 @@
       "registeredPhoneticAssetCandidateCount": 0,
       "likelyNeedsNewAsset": true,
       "highKnownVisualOrLexicalRisk": false,
-      "informationInsufficient": true,
+      "informationInsufficient": false,
       "twoSyllableFirstClass": false,
       "lane": "exact_image_candidate_precheck",
       "proofStatus": {
         "phoneticExactness": "exact_candidates_attested",
         "generalRebusApproximation": "none_listed",
         "lexicalRelevance": "not_human_validated",
-        "drawableConcept": "unknown",
+        "drawableConcept": "curated_hypothesis_only",
         "spontaneousNamability": "unknown_unless_human_observation_exists",
         "orthophonicValidation": "none"
       },
@@ -77177,13 +77193,15 @@
           "frequencyBand": "medium",
           "syllableCount": 1,
           "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
+          "representationType": "curated_visual_hypothesis",
+          "proofStatus": "visual_hypothesis_curated",
           "noun": true,
-          "visualPotential": "unknown",
+          "visualPotential": "medium_high",
           "namingRisk": "unknown",
-          "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
+          "mainConfusions": [
+            "couleur sombre"
+          ],
+          "nextGate": "review_existing_editorial_decision",
           "automaticActivation": false,
           "clinicalEvidence": "none",
           "knownAssets": [],
@@ -77219,7 +77237,7 @@
           }
         }
       ],
-      "curatedVisualHypothesisCount": 0,
+      "curatedVisualHypothesisCount": 1,
       "visibleConventions": [],
       "approximateCandidates": [
         {
@@ -77324,14 +77342,14 @@
       "registeredPhoneticAssetCandidateCount": 0,
       "likelyNeedsNewAsset": true,
       "highKnownVisualOrLexicalRisk": false,
-      "informationInsufficient": true,
+      "informationInsufficient": false,
       "twoSyllableFirstClass": false,
       "lane": "multiple_exact_homophones_to_compare",
       "proofStatus": {
         "phoneticExactness": "exact_candidates_attested",
         "generalRebusApproximation": "available_separately",
         "lexicalRelevance": "not_human_validated",
-        "drawableConcept": "unknown",
+        "drawableConcept": "curated_hypothesis_only",
         "spontaneousNamability": "unknown_unless_human_observation_exists",
         "orthophonicValidation": "none"
       },
@@ -80151,13 +80169,16 @@
           "frequencyBand": "medium",
           "syllableCount": 2,
           "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
+          "representationType": "deferred_visual_route",
+          "proofStatus": "visual_route_deferred",
           "noun": true,
           "visualPotential": "unknown",
           "namingRisk": "unknown",
-          "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
+          "mainConfusions": [
+            "laboratoire",
+            "expérience"
+          ],
+          "nextGate": "review_existing_editorial_decision",
           "automaticActivation": false,
           "clinicalEvidence": "none",
           "knownAssets": [],
@@ -80272,11 +80293,11 @@
       "registeredAssetCandidateCount": 0,
       "researchAssetLeadCandidateCount": 0,
       "registeredPhoneticAssetCandidateCount": 0,
-      "likelyNeedsNewAsset": true,
-      "highKnownVisualOrLexicalRisk": false,
+      "likelyNeedsNewAsset": false,
+      "highKnownVisualOrLexicalRisk": true,
       "informationInsufficient": true,
       "twoSyllableFirstClass": true,
-      "lane": "exact_image_candidate_precheck",
+      "lane": "approximation_only_after_rejected_exacts",
       "proofStatus": {
         "phoneticExactness": "exact_candidates_attested",
         "generalRebusApproximation": "available_separately",
@@ -80285,7 +80306,7 @@
         "spontaneousNamability": "unknown_unless_human_observation_exists",
         "orthophonicValidation": "none"
       },
-      "nextDecision": "human_concept_precheck_before_new_asset",
+      "nextDecision": "general_rebus_editorial_review_only",
       "automaticActivation": false
     },
     {
@@ -83649,13 +83670,16 @@
           "frequencyBand": "medium",
           "syllableCount": 1,
           "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
+          "representationType": "curated_visual_hypothesis",
+          "proofStatus": "visual_hypothesis_curated",
           "noun": true,
-          "visualPotential": "unknown",
+          "visualPotential": "medium_high",
           "namingRisk": "unknown",
-          "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
+          "mainConfusions": [
+            "étang",
+            "mer"
+          ],
+          "nextGate": "review_existing_editorial_decision",
           "automaticActivation": false,
           "clinicalEvidence": "none",
           "knownAssets": [],
@@ -83715,7 +83739,7 @@
           }
         }
       ],
-      "curatedVisualHypothesisCount": 0,
+      "curatedVisualHypothesisCount": 1,
       "visibleConventions": [],
       "approximateCandidates": [
         {
@@ -83820,14 +83844,14 @@
       "registeredPhoneticAssetCandidateCount": 0,
       "likelyNeedsNewAsset": true,
       "highKnownVisualOrLexicalRisk": false,
-      "informationInsufficient": true,
+      "informationInsufficient": false,
       "twoSyllableFirstClass": false,
       "lane": "multiple_exact_homophones_to_compare",
       "proofStatus": {
         "phoneticExactness": "exact_candidates_attested",
         "generalRebusApproximation": "available_separately",
         "lexicalRelevance": "not_human_validated",
-        "drawableConcept": "unknown",
+        "drawableConcept": "curated_hypothesis_only",
         "spontaneousNamability": "unknown_unless_human_observation_exists",
         "orthophonicValidation": "none"
       },
@@ -87026,13 +87050,16 @@
           "frequencyBand": "low",
           "syllableCount": 1,
           "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
+          "representationType": "curated_visual_hypothesis",
+          "proofStatus": "visual_hypothesis_curated",
           "noun": true,
-          "visualPotential": "unknown",
+          "visualPotential": "high",
           "namingRisk": "unknown",
-          "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
+          "mainConfusions": [
+            "fil",
+            "pelote"
+          ],
+          "nextGate": "review_existing_editorial_decision",
           "automaticActivation": false,
           "clinicalEvidence": "none",
           "knownAssets": [],
@@ -87044,7 +87071,7 @@
           }
         }
       ],
-      "curatedVisualHypothesisCount": 0,
+      "curatedVisualHypothesisCount": 1,
       "visibleConventions": [],
       "approximateCandidates": [],
       "existingAssetCandidateCount": 0,
@@ -87053,14 +87080,14 @@
       "registeredPhoneticAssetCandidateCount": 0,
       "likelyNeedsNewAsset": true,
       "highKnownVisualOrLexicalRisk": false,
-      "informationInsufficient": true,
+      "informationInsufficient": false,
       "twoSyllableFirstClass": false,
       "lane": "exact_image_candidate_precheck",
       "proofStatus": {
         "phoneticExactness": "exact_candidates_attested",
         "generalRebusApproximation": "none_listed",
         "lexicalRelevance": "not_human_validated",
-        "drawableConcept": "unknown",
+        "drawableConcept": "curated_hypothesis_only",
         "spontaneousNamability": "unknown_unless_human_observation_exists",
         "orthophonicValidation": "none"
       },
@@ -98397,13 +98424,16 @@
           "frequencyBand": "low",
           "syllableCount": 1,
           "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
+          "representationType": "curated_visual_hypothesis",
+          "proofStatus": "visual_hypothesis_curated",
           "noun": true,
-          "visualPotential": "unknown",
+          "visualPotential": "medium_high",
           "namingRisk": "unknown",
-          "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
+          "mainConfusions": [
+            "vase",
+            "pot"
+          ],
+          "nextGate": "review_existing_editorial_decision",
           "automaticActivation": false,
           "clinicalEvidence": "none",
           "knownAssets": [],
@@ -98463,7 +98493,7 @@
           }
         }
       ],
-      "curatedVisualHypothesisCount": 0,
+      "curatedVisualHypothesisCount": 1,
       "visibleConventions": [],
       "approximateCandidates": [
         {
@@ -98568,14 +98598,14 @@
       "registeredPhoneticAssetCandidateCount": 0,
       "likelyNeedsNewAsset": true,
       "highKnownVisualOrLexicalRisk": false,
-      "informationInsufficient": true,
+      "informationInsufficient": false,
       "twoSyllableFirstClass": false,
       "lane": "multiple_exact_homophones_to_compare",
       "proofStatus": {
         "phoneticExactness": "exact_candidates_attested",
         "generalRebusApproximation": "available_separately",
         "lexicalRelevance": "not_human_validated",
-        "drawableConcept": "unknown",
+        "drawableConcept": "curated_hypothesis_only",
         "spontaneousNamability": "unknown_unless_human_observation_exists",
         "orthophonicValidation": "none"
       },
@@ -104510,13 +104540,16 @@
           "frequencyBand": "low",
           "syllableCount": 2,
           "exactPhoneticMatch": true,
-          "representationType": "exact_lexical_candidate",
-          "proofStatus": "lexical_exact_only",
+          "representationType": "curated_visual_hypothesis",
+          "proofStatus": "visual_hypothesis_curated",
           "noun": true,
-          "visualPotential": "unknown",
+          "visualPotential": "high",
           "namingRisk": "unknown",
-          "mainConfusions": [],
-          "nextGate": "human_concept_precheck",
+          "mainConfusions": [
+            "serre-joint",
+            "outil"
+          ],
+          "nextGate": "review_existing_editorial_decision",
           "automaticActivation": false,
           "clinicalEvidence": "none",
           "knownAssets": [],
@@ -104528,7 +104561,7 @@
           }
         }
       ],
-      "curatedVisualHypothesisCount": 0,
+      "curatedVisualHypothesisCount": 1,
       "visibleConventions": [],
       "approximateCandidates": [],
       "existingAssetCandidateCount": 0,
@@ -104537,14 +104570,14 @@
       "registeredPhoneticAssetCandidateCount": 0,
       "likelyNeedsNewAsset": true,
       "highKnownVisualOrLexicalRisk": false,
-      "informationInsufficient": true,
+      "informationInsufficient": false,
       "twoSyllableFirstClass": true,
       "lane": "exact_image_candidate_precheck",
       "proofStatus": {
         "phoneticExactness": "exact_candidates_attested",
         "generalRebusApproximation": "none_listed",
         "lexicalRelevance": "not_human_validated",
-        "drawableConcept": "unknown",
+        "drawableConcept": "curated_hypothesis_only",
         "spontaneousNamability": "unknown_unless_human_observation_exists",
         "orthophonicValidation": "none"
       },
@@ -115001,7 +115034,7 @@
             "vent",
             "météo"
           ],
-          "nextGate": "leave_unknown_until_better_visual_route_exists",
+          "nextGate": "review_existing_editorial_decision",
           "automaticActivation": false,
           "clinicalEvidence": "none",
           "knownAssets": [],

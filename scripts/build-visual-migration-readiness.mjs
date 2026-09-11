@@ -27,8 +27,9 @@ function nextGate(item){
 
 const queue=(dependencies.dependencies||[]).map(dep=>{
   const asset=assetByPath.get(dep.image)||null;
-  const source=asset?.source||null;
-  const provenanceDocumented=Boolean(asset&&source&&source!=='undocumented');
+  const embeddedOpenMoji=String(dep.assetSource||'').startsWith('openmoji:');
+  const source=asset?.source||(embeddedOpenMoji?'openmoji':null);
+  const provenanceDocumented=Boolean((asset&&source&&source!=='undocumented')||embeddedOpenMoji);
   const artRevision=asset?.artRevision||dep.artRevision||null;
   const revisionStamped=Boolean(artRevision);
   const review=revisionStamped?reviewByRevision.get(`${dep.label}:${artRevision}`)||reviewByRevision.get(`${dep.id}:${artRevision}`)||null:null;

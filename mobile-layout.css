@@ -37,6 +37,11 @@ body.keyboard-open .arena-head{min-height:28px}
 body.keyboard-open #creatorRebus .piece{min-height:76px;max-height:100px}
 body.keyboard-open #creatorRebus .piece img{width:56px;height:56px}
 body.keyboard-open .arena-actions button{min-height:40px}
+/* In play mode the game remains scrollable inside the reduced visual viewport,
+   while the answer field stays pinned immediately above the software keyboard. */
+body.keyboard-open .app-shell[data-experience="play"] #playArena.play-arena{max-height:calc(var(--app-vh) - 76px);overflow-y:auto!important;overscroll-behavior:contain}
+body.keyboard-open .app-shell[data-experience="play"] #playAnswerForm{position:sticky;bottom:0;z-index:12;background:#fff;padding:4px 0 3px;box-shadow:0 -8px 16px rgba(255,255,255,.92)}
+body.keyboard-open .app-shell[data-experience="play"] #playAnswer{scroll-margin-block:96px}
 @media(max-height:560px){
   .topbar{min-height:30px}.creator-feedback,.creator-start-hint{display:none}.single-screen{gap:4px}
   .arena-head{min-height:28px}.phonetic-proof{display:none}

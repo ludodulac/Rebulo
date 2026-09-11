@@ -7,17 +7,22 @@ const catalog=[
   {id:'lira',answer:'lira',validation:'strict',presentationStatus:'showcase',pieces:[{image:'lit.svg'},{image:'rat.svg'}]},
   {id:'merci',answer:'merci',validation:'strict',presentationStatus:'experimental_visual',pieces:[{image:'mer.svg',reading:'mer'},{image:'scie.svg',reading:'scie'}]},
   {id:'cinema',answer:'cinéma',validation:'strict',presentationStatus:'experimental_visual',pieces:[{image:'scie.svg'},{image:'nez.svg'},{image:'mat.svg'}]},
+  {id:'donne',answer:'donné',acceptedAnswers:['donné','donner'],targetIpa:'/dɔne/',validation:'strict',pieces:[{image:'x.svg'}]},
+  {id:'mari',answer:'mari',acceptedAnswers:['mari','Marie'],targetIpa:'/maʁi/',validation:'strict',pieces:[{image:'x.svg'}]},
   {id:'approx',answer:'rébus',validation:'approximate',pieces:[{image:'x.svg'}]},
   {id:'broken',answer:'cassé',validation:'strict',pieces:[{reading:'x'}]}
 ];
 assert.equal(normalizePlayAnswer(' Cinéma ! '),'cinema');
 assert.equal(playAnswerMatches('CINEMA',catalog[3]),true);
 assert.equal(playAnswerMatches('ciné',catalog[3]),false);
-assert.deepEqual(playableRebuses(catalog).map(item=>item.id),['rallye','lira','merci','cinema']);
+assert.equal(playAnswerMatches('donner',catalog[4]),true,'known exact homophone must count as correct without spelling correction');
+assert.equal(playAnswerMatches('donné',catalog[4]),true);
+assert.equal(playAnswerMatches('Marie',catalog[5]),true,'same exact sound may use another known spelling');
+assert.equal(playAnswerMatches('marine',catalog[5]),false,'different sound must remain incorrect');
+assert.deepEqual(playableRebuses(catalog).map(item=>item.id),['rallye','lira','merci','cinema','donne','mari']);
 assert.equal(choosePlayableRebus(catalog,null,()=>0).id,'rallye');
 assert.equal(choosePlayableRebus(catalog,'rallye',()=>0).id,'lira');
-assert.equal(choosePlayableRebus(catalog,null,()=>0.91).id,'merci');
-assert.equal(choosePlayableRebus(catalog,'merci',()=>0.99).id,'cinema');
+assert.equal(choosePlayableRebus(catalog,null,()=>0.91).id,'cinema');
 const hint=safePlayHint(catalog[3]);
 assert.equal(hint,'Le mot commence par C et contient 6 lettres.');
 assert.equal(hint.toLowerCase().includes('cinéma'),false);
@@ -36,4 +41,4 @@ for(const rebus of realCatalog){
   assert.equal(rebus.validation,'strict');
   assert.equal(rebus.phoneticConfidence,1);
 }
-console.log('play-game tests: ok');
+console.log('play-game tests: exact spelling and known exact homophones are accepted without turning play into a spelling test.');

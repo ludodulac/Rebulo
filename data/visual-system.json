@@ -1,5 +1,5 @@
 {
-  "version": "1.7.0",
+  "version": "1.8.0",
   "principles": ["recognition_before_decoration","one_concept_one_focal_object","consistent_rounded_geometry","no_written_answer_inside_pictogram","limited_semantic_background","adult_credible_child_friendly","semantic_cues_allowed_when_they_disambiguate_the_target"],
   "targetStyle": {"name":"Rebulo BD claire","description":"Illustrations BD chaleureuses, colorées et immédiatement lisibles, sur fond blanc ou transparent, avec contours noirs nets, silhouette dominante, ombrage léger et très peu de détails concurrents. Un indice visuel explicite comme une flèche ou un outil est autorisé lorsqu'il rend le mot conventionnel évident sans écrire la réponse.","stroke":"bold_rounded_consistent","detail":"low_to_medium","background":"white_transparent_or_semantic_only","textInsideAsset":"forbidden_unless_the_concept_is_a_grapheme","referenceDirection":"Planche BD approuvée par le fondateur le 2026-09-06; utiliser la même grammaire visuelle pour les nouveaux pictogrammes.","generationRules":["one pictogram per asset; never ship a numbered worksheet crop as a production pictogram","remove labels and item numbers from production assets","prefer the conventional French lexical reading over visual minimalism","use arrows only to point to a body part or feature when the whole character would otherwise dominate naming","context objects may disambiguate a material or relation but are never phonetic pieces","keep production assets readable at small card size"]},
   "approvedConceptDirections": [
@@ -36,6 +36,10 @@
     {"id":"terre","status":"reference_style","reason":"Nouveau tas de terre BD avec pelle contextuelle, approuvé pour l'usage général; validation clinique non présumée."},
     {"id":"tas","status":"reference_style","reason":"Nouveau tas BD `tas-comic-v1`, avec amas dominant et pelle secondaire contextuelle; usage général approuvé, ambiguïté pile/amas encore ouverte et validation clinique non présumée."},
     {"id":"eau","status":"reference_style","reason":"Nouveau verre d'eau BD `eau-comic-v1` au chemin canonique. Le risque de réponse verre reste ouvert; usage général approuvé sans validation clinique présumée."},
-    {"id":"corps","status":"reference_style","reason":"Nouveau personnage entier BD `corps-comic-v1` au chemin canonique. Le risque de réponses personne/homme/garçon reste ouvert; usage général approuvé sans validation clinique présumée."}
+    {"id":"corps","status":"reference_style","reason":"Nouveau personnage entier BD `corps-comic-v1` au chemin canonique. Le risque de réponses personne/homme/garçon reste ouvert; usage général approuvé sans validation clinique présumée."},
+    {"id":"olive","status":"reference_style","reason":"OpenMoji olive épinglé pour l'usage phonétique général. Le risque olive/fruit reste non mesuré; aucune preuve de dénomination humaine ni validation clinique n'est présumée."},
+    {"id":"aiguille","status":"reference_style","reason":"OpenMoji sewing needle épinglé pour l'usage phonétique général. Le risque aiguille/épingle reste non mesuré; aucune preuve de dénomination humaine ni validation clinique n'est présumée."},
+    {"id":"noeud","status":"reference_style","reason":"OpenMoji knot épinglé pour l'usage phonétique général. Le risque nœud/corde reste non mesuré; aucune preuve de dénomination humaine ni validation clinique n'est présumée."},
+    {"id":"couteau","status":"reference_style","reason":"OpenMoji kitchen knife épinglé pour l'usage phonétique général. Le risque couteau/couteau de cuisine reste non mesuré; aucune preuve de dénomination humaine ni validation clinique n'est présumée."}
   ]
 }

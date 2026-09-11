@@ -29,5 +29,6 @@ assert.equal(targets[0].target,'déclic');
 assert.equal(targets[0].source,'open-pictogram-wave3-gap');
 console.log('open pictogram wave 3: ok');
 
-// Keep the product-conversion boundary test in the existing full test chain.
+// Keep product-conversion boundary and visible creator exposure in the full test chain.
 await import('./planner-conversion-cohort1.test.mjs');
+await import('./creator-conversion-cohort-ui.test.mjs');

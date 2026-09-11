@@ -5,7 +5,7 @@
 - Sons utiles du réservoir exact à cartographier : 5487.
 - Prototypes curatés ajoutés comme étalons de calibration : 32.
 - Sons cartographiés dans cette vue : 5519.
-- Sons où la curation explicite fournit déjà une hypothèse visuelle : 150.
+- Sons où la curation explicite fournit déjà une hypothèse visuelle : 196.
 - Fenêtres de deux syllabes conservées comme candidates de première classe : 3814.
 - Sons ayant aussi une convention visible explicite : 34.
 - Sons ayant une approximation légère recensée dans la source disponible : 1245.
@@ -77,16 +77,19 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | /ʁwa/ | roi | high | unknown | 11 | new_asset_then_human_naming_test |
 | /sjɛl/ | ciel | medium_high | unknown | 11 | prototype_then_human_naming_test |
 | /twa/ | toit | high | unknown | 11 | new_asset_then_human_naming_test |
+| /ʁɛ̃/ | rein | medium_high | unknown | 11 | review_existing_editorial_decision |
 | /kʁwa/ | croix | high | unknown | 11 | new_asset_then_human_naming_test |
 | /sɛt/ | sept | high | unknown | 10 | prefer_visible_number_convention_then_composition_test |
 | /fis/ | fils | medium | unknown | 10 | prototype_then_human_naming_test |
 | /kɔ̃pa/ | compas | high | low_medium | 10 | prototype_then_school_age_naming_test |
 | /ø/ | oeufs | high | unknown | 9 | new_asset_then_human_naming_test |
 | /plɛ/ | plaie | medium_high | unknown | 9 | new_asset_then_human_naming_test |
+| /ʁɔ̃/ | rond | high | unknown | 9 | review_existing_editorial_decision |
 | /sede/ | cd | high | unknown | 9 | prototype_then_human_naming_test |
 | /dø/ | deux | high | unknown | 8 | review_existing_editorial_decision |
 | /sis/ | six | high | unknown | 8 | review_existing_editorial_decision |
 | /tʁɔ̃/ | tronc | high | unknown | 8 | prototype_then_human_naming_test |
+| /ʁy/ | rue | medium_high | unknown | 8 | review_existing_editorial_decision |
 | /sjɑ̃/ | cyan | medium | unknown | 8 | prototype_then_human_naming_test |
 | /lu/ | loup | high | unknown | 8 | prototype_then_human_naming_test |
 | /nwa/ | noix | high | unknown | 8 | new_asset_then_human_naming_test |
@@ -108,17 +111,21 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | /apa/ | appât | medium_high | unknown | 6 | compare_bait_scene_then_human_naming_test |
 | /liʁ/ | lyre | high | unknown | 6 | prototype_then_human_naming_test |
 | /ʁɛn/ | renne | high | unknown | 6 | new_asset_then_human_naming_test |
+| /nø/ | noeud | high | unknown | 6 | review_existing_editorial_decision |
 | /vil/ | ville | medium_high | unknown | 5 | compare_city_scale_then_human_naming_test |
 | /pɛl/ | pelle | high | unknown | 5 | prototype_then_human_naming_test |
 | /ʁɑ̃ʒe/ | rangée | medium_high | unknown | 5 | prototype_then_human_naming_test |
+| /nwaʁ/ | noir | medium_high | unknown | 5 | review_existing_editorial_decision |
 | /ɔʁdi/ | ordi | high | medium | 5 | prototype_then_naming_variant_test |
 | /sabl/ | sable | medium_high | unknown | 5 | prototype_then_human_naming_test |
 | /myʁ/ | mur | high | unknown | 5 | new_asset_then_human_naming_test |
 | /ɛl/ | aile | high | unknown | 5 | new_asset_then_human_naming_test |
 | /tas/ | tasse | high | unknown | 5 | prototype_then_human_naming_test |
 | /wa/ | oie | high | unknown | 5 | new_asset_then_human_naming_test |
+| /lak/ | lac | medium_high | unknown | 5 | review_existing_editorial_decision |
 | /təny/ | tenue | medium | unknown | 5 | compare_outfit_display_then_human_naming_test |
 | /maʁe/ | marée | medium | unknown | 5 | compare_high_tide_scene_then_human_naming_test |
+| /lɛn/ | laine | high | unknown | 5 | review_existing_editorial_decision |
 | /tʁwa/ | trois | high | unknown | 4 | review_existing_editorial_decision |
 | /dam/ | dame | medium_high | unknown | 4 | prototype_then_human_naming_test |
 | /papa/ | papa | medium_high | medium | 4 | prototype_then_family_wording_naming_test |
@@ -129,9 +136,11 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | /alo/ | halo | medium_high | unknown | 4 | compare_halo_and_aureole_then_human_naming_test |
 | /jø/ | yeux | high | unknown | 4 | prototype_then_human_naming_test |
 | /peʃe/ | pêcher | high | unknown | 4 | prototype_then_human_naming_test |
+| /ʒaʁ/ | jarre | medium_high | unknown | 4 | review_existing_editorial_decision |
 | /dwa/ | doigt | high | unknown | 4 | new_asset_then_human_naming_test |
 | /ʃu/ | chou | high | unknown | 4 | prototype_then_human_naming_test |
 | /gʁɛ̃/ | grain | high | unknown | 4 | prototype_then_human_naming_test |
+| /eto/ | étau | high | unknown | 4 | review_existing_editorial_decision |
 | /ano/ | anneau | high | unknown | 4 | new_asset_then_human_naming_test |
 | /kɔk/ | coq | high | unknown | 4 | new_asset_then_human_naming_test |
 | /pate/ | pâté | medium_high | unknown | 4 | compare_pate_and_pet_food_routes_then_human_naming_test |
@@ -157,19 +166,56 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | /vale/ | vallée | high | unknown | 3 | new_asset_then_human_naming_test |
 | /akʁo/ | accroc | medium_high | unknown | 3 | prototype_then_human_naming_test |
 | /maʁʃɑ̃/ | marchand | medium_high | unknown | 3 | prototype_then_human_naming_test |
+| /nɛ̃/ | nain | medium | unknown | 3 | review_existing_editorial_decision |
 | /sɛ̃k/ | cinq | high | unknown | 2 | review_existing_editorial_decision |
+| /nivo/ | niveau | medium_high | unknown | 2 | review_existing_editorial_decision |
+| /gʁɛn/ | graine | medium_high | unknown | 2 | review_existing_editorial_decision |
+| /ʃal/ | châle | medium_high | unknown | 2 | review_existing_editorial_decision |
 | /katʁ/ | quatre | high | unknown | 1 | review_existing_editorial_decision |
 | /nœf/ | neuf | high | unknown | 1 | review_existing_editorial_decision |
+| /egliz/ | église | medium_high | unknown | 1 | review_existing_editorial_decision |
 | /kuto/ | couteau | high | unknown | 1 | review_existing_editorial_decision |
 | /ɥit/ | huit | high | unknown | 1 | review_existing_editorial_decision |
+| /butɛj/ | bouteille | high | unknown | 1 | review_existing_editorial_decision |
 | /œ̃/ | un | high | unknown | 1 | review_existing_editorial_decision |
 | /gato/ | gâteau | high | unknown | 1 | review_existing_editorial_decision |
+| /ʒaʁdɛ̃/ | jardin | medium_high | unknown | 1 | review_existing_editorial_decision |
 | /ɛf/ | f | high | unknown | 1 | review_existing_editorial_decision |
 | /zeʁo/ | zéro | high | unknown | 1 | review_existing_editorial_decision |
+| /ɔ̃bʁ/ | ombre | medium_high | unknown | 1 | review_existing_editorial_decision |
+| /epe/ | épée | high | unknown | 1 | review_existing_editorial_decision |
+| /oʁɛj/ | oreille | high | unknown | 1 | review_existing_editorial_decision |
+| /butɔ̃/ | bouton | high | unknown | 1 | review_existing_editorial_decision |
+| /ekʁɑ̃/ | écran | high | unknown | 1 | review_existing_editorial_decision |
+| /sɛ̃tyʁ/ | ceinture | high | unknown | 1 | review_existing_editorial_decision |
 | /dʁapo/ | drapeau | high | unknown | 1 | review_existing_editorial_decision |
+| /kanɔ̃/ | canon | high | unknown | 1 | review_existing_editorial_decision |
+| /asjɛt/ | assiette | high | unknown | 1 | review_existing_editorial_decision |
+| /ɔʁlɔʒ/ | horloge | high | unknown | 1 | review_existing_editorial_decision |
+| /ʃaʁjo/ | chariot | medium_high | unknown | 1 | review_existing_editorial_decision |
 | /ʁido/ | rideau | high | unknown | 1 | review_existing_editorial_decision |
 | /iks/ | x | high | unknown | 1 | review_existing_editorial_decision |
+| /egɥij/ | aiguille | high | unknown | 1 | review_existing_editorial_decision |
+| /ʃəvij/ | cheville | medium_high | unknown | 1 | review_existing_editorial_decision |
+| /oʁɑ̃ʒ/ | orange | high | unknown | 1 | review_existing_editorial_decision |
+| /oʁaʒ/ | orage | medium_high | unknown | 1 | review_existing_editorial_decision |
+| /aʁmwaʁ/ | armoire | high | unknown | 1 | review_existing_editorial_decision |
 | /zɛd/ | z | high | unknown | 1 | review_existing_editorial_decision |
+| /ʃəvø/ | cheveu | medium_high | unknown | 1 | review_existing_editorial_decision |
+| /ʃatɔ̃/ | chaton | medium_high | unknown | 1 | review_existing_editorial_decision |
+| /om/ | heaume | medium_high | unknown | 1 | review_existing_editorial_decision |
+| /omaʁ/ | homard | high | unknown | 1 | review_existing_editorial_decision |
+| /kaje/ | cahier | high | unknown | 1 | review_existing_editorial_decision |
+| /ɔʁtɛj/ | orteil | medium_high | unknown | 1 | review_existing_editorial_decision |
+| /kaju/ | caillou | high | unknown | 1 | review_existing_editorial_decision |
+| /kobʁa/ | cobra | high | unknown | 1 | review_existing_editorial_decision |
+| /sitʁuj/ | citrouille | high | unknown | 1 | review_existing_editorial_decision |
+| /oby/ | obus | medium_high | unknown | 1 | review_existing_editorial_decision |
+| /ʃɑ̃dɛl/ | chandelle | medium_high | unknown | 1 | review_existing_editorial_decision |
+| /oliv/ | olive | high | unknown | 1 | review_existing_editorial_decision |
+| /uʁsɔ̃/ | ourson | medium_high | unknown | 1 | review_existing_editorial_decision |
+| /otʁyʃ/ | autruche | high | unknown | 1 | review_existing_editorial_decision |
+| /oval/ | ovale | high | unknown | 1 | review_existing_editorial_decision |
 
 ## Priorités informatives du grand réservoir
 
@@ -325,7 +371,7 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | 23 | /done/ | 10 | donner | two_syllable_candidate_exists | donner, pardonner, abandonner, coordonnées |
 | 24 | /avɑ̃/ | 10 | havant | two_syllable_candidate_exists | avant, avancer, aventure, avantage |
 | 25 | /kɔ̃pa/ | 10 | compas | two_syllable_candidate_exists | compagnie, accompagner, compagnon, compassion |
-| 26 | /ope/ | 10 | op | two_syllable_candidate_exists | opération, opérer, opéra, coopérer |
+| 26 | /ope/ | 10 | — | two_syllable_sound_needs_representation | opération, opérer, opéra, coopérer |
 | 27 | /bili/ | 10 | billy | two_syllable_candidate_exists | possibilité, culpabilité, stabilité, stabiliser |
 | 28 | /ləve/ | 9 | lever | two_syllable_candidate_exists | enlever, lever, élever, relever |
 | 29 | /pɔʁte/ | 9 | porté | two_syllable_candidate_exists | apporter, portée, emporter, rapporter |

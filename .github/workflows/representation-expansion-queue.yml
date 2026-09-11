@@ -64,9 +64,10 @@ jobs:
           git config user.name 'rebulo-analysis-bot'
           git config user.email 'actions@users.noreply.github.com'
 
-          # The landscape workflow can finish after this job's initial checkout/build.
-          # Rebase first, then rebuild so committed expansion artifacts reflect the
-          # latest landscape rather than merely rebasing stale generated content.
+          # The initial build above is only for validation/artifact upload. Drop those
+          # temporary generated edits before rebasing, then rebuild on the latest main
+          # so the committed queue reflects the landscape it sits on top of.
+          git reset --hard HEAD
           git fetch origin main
           git rebase origin/main
           node scripts/build-representation-expansion-queue.mjs

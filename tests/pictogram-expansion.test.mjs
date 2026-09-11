@@ -96,4 +96,4 @@ const summary=expansionPrioritySummary(priorities);
 assert.equal(summary.candidateCount,priorities.length);
 assert.ok(summary.totalPotentialUnlocks>0);
 
-console.log('PICTOGRAM_GENERAL_ACTIVATION '+JSON.stringify(Object.fromEntries(['pot','dos','raie','terre','tas'].map(id=>[id,lexicon.find(item=>item.id===id].active]))));
+console.log('PICTOGRAM_GENERAL_ACTIVATION '+JSON.stringify(Object.fromEntries(['pot','dos','raie','terre','tas'].map(id=>[id,lexicon.find(item=>item.id===id).active]))));

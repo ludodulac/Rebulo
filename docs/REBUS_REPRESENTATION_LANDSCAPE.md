@@ -7,7 +7,7 @@
 - Sons cartographiés dans cette vue : 5515.
 - Sons où la curation explicite fournit déjà une hypothèse visuelle : 192.
 - Fenêtres de deux syllabes conservées comme candidates de première classe : 3811.
-- Sons ayant aussi une convention visible explicite : 34.
+- Sons ayant aussi une convention visible explicite : 35.
 - Sons ayant une approximation légère recensée dans la source disponible : 1244.
 
 ## Échelle de preuve

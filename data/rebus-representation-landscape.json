@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.1",
-  "generatedAt": "2026-09-11T08:04:11.567Z",
+  "generatedAt": "2026-09-11T17:05:23.339Z",
   "status": "research_mapping_only",
   "purpose": "SON -> candidats lexicaux -> type de représentation -> potentiel visuel -> risque de dénomination -> rendement utile -> statut de preuve",
   "proofLadder": [
@@ -26,15 +26,15 @@
     "mappedSoundCount": 5515,
     "curatedVisualHypothesisSoundCount": 192,
     "twoSyllableSoundCount": 3811,
-    "visibleConventionSoundCount": 34,
+    "visibleConventionSoundCount": 35,
     "approximationSoundCount": 1244,
     "difficultSoundCount": 9,
     "statusCounts": {
       "curated_visual_hypothesis_available": 192,
-      "exact_lexical_candidates_need_visual_evidence": 5302,
+      "exact_lexical_candidates_need_visual_evidence": 5301,
       "difficult_sound": 9,
       "approximation_only": 8,
-      "visible_convention_available": 4
+      "visible_convention_available": 5
     }
   },
   "rows": [
@@ -294274,7 +294274,7 @@
       "exactCandidateCount": 1,
       "viableExactCandidateCount": 1,
       "curatedVisualHypothesisCount": 0,
-      "visibleConventionCount": 0,
+      "visibleConventionCount": 1,
       "approximateCandidateCount": 0,
       "exactCandidates": [
         {
@@ -294295,13 +294295,20 @@
           "clinicalEvidence": "none"
         }
       ],
-      "visibleConventions": [],
+      "visibleConventions": [
+        {
+          "kind": "number_symbol",
+          "label": "11",
+          "status": "research",
+          "source": "rebus_visible_conventions"
+        }
+      ],
       "approximateCandidates": [],
       "longWindowPotential": {
         "coversTwoSyllables": false,
         "status": "not_two_syllable_window"
       },
-      "evidenceStatus": "exact_lexical_candidates_need_visual_evidence",
+      "evidenceStatus": "visible_convention_available",
       "nextGate": "human_visual_precheck",
       "automaticActivation": false,
       "clinicalEvidence": "none",

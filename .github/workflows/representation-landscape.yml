@@ -2,7 +2,7 @@ name: Representation landscape
 
 on:
   push:
-    branches: [main, 'research/representation-landscape', 'editorial/representation-wave2', 'editorial/representation-wave3', 'editorial/representation-wave4-materialization1', 'editorial/representation-wave5-materialization2', 'editorial/bank-wave6-naming-pilot', 'editorial/representation-wave7-scale']
+    branches: [main, 'research/representation-landscape', 'editorial/representation-wave2', 'editorial/representation-wave3', 'editorial/representation-wave4-materialization1', 'editorial/representation-wave5-materialization2', 'editorial/bank-wave6-naming-pilot', 'editorial/representation-wave7-scale', 'editorial/representation-wave8-net-new']
     paths:
       - 'src/rebus-representation-landscape.js'
       - 'src/rebus-representation-paths.js'
@@ -19,6 +19,7 @@ on:
       - 'data/rebus-sound-visual-curation-wave5.json'
       - 'data/rebus-sound-visual-curation-wave6.json'
       - 'data/rebus-sound-visual-curation-wave7.json'
+      - 'data/rebus-sound-visual-curation-wave8.json'
       - 'data/rebus-materialization-wave1.json'
       - 'data/rebus-materialization-wave2.json'
       - 'data/rebus-materialization-wave3.json'
@@ -44,6 +45,7 @@ on:
       - 'data/rebus-sound-visual-curation-wave5.json'
       - 'data/rebus-sound-visual-curation-wave6.json'
       - 'data/rebus-sound-visual-curation-wave7.json'
+      - 'data/rebus-sound-visual-curation-wave8.json'
       - 'data/rebus-materialization-wave1.json'
       - 'data/rebus-materialization-wave2.json'
       - 'data/rebus-materialization-wave3.json'
@@ -81,9 +83,10 @@ jobs:
           const wave5=JSON.parse(fs.readFileSync('data/rebus-sound-visual-curation-wave5.json','utf8'));
           const wave6=JSON.parse(fs.readFileSync('data/rebus-sound-visual-curation-wave6.json','utf8'));
           const wave7=JSON.parse(fs.readFileSync('data/rebus-sound-visual-curation-wave7.json','utf8'));
-          const merged={...base,version:`${base.version}+${wave2.version}+${wave3.version}+${wave4.version}+${wave5.version}+${wave6.version}+${wave7.version}`,entries:[...(base.entries||[]),...(wave2.entries||[]),...(wave3.entries||[]),...(wave4.entries||[]),...(wave5.entries||[]),...(wave6.entries||[]),...(wave7.entries||[])]};
+          const wave8=JSON.parse(fs.readFileSync('data/rebus-sound-visual-curation-wave8.json','utf8'));
+          const merged={...base,version:`${base.version}+${wave2.version}+${wave3.version}+${wave4.version}+${wave5.version}+${wave6.version}+${wave7.version}+${wave8.version}`,entries:[...(base.entries||[]),...(wave2.entries||[]),...(wave3.entries||[]),...(wave4.entries||[]),...(wave5.entries||[]),...(wave6.entries||[]),...(wave7.entries||[]),...(wave8.entries||[])]};
           fs.writeFileSync('.cache/rebus-sound-visual-curation-merged.json',JSON.stringify(merged,null,2)+'\n');
-          console.log(JSON.stringify({baseEntries:base.entries?.length||0,wave2Entries:wave2.entries?.length||0,wave3Entries:wave3.entries?.length||0,wave4Entries:wave4.entries?.length||0,wave5Entries:wave5.entries?.length||0,wave6Entries:wave6.entries?.length||0,wave7Entries:wave7.entries?.length||0,mergedEntries:merged.entries.length},null,2));
+          console.log(JSON.stringify({baseEntries:base.entries?.length||0,wave2Entries:wave2.entries?.length||0,wave3Entries:wave3.entries?.length||0,wave4Entries:wave4.entries?.length||0,wave5Entries:wave5.entries?.length||0,wave6Entries:wave6.entries?.length||0,wave7Entries:wave7.entries?.length||0,wave8Entries:wave8.entries?.length||0,mergedEntries:merged.entries.length},null,2));
           NODE
       - name: Build representation landscape
         run: node scripts/build-representation-landscape.mjs data/rebus-representation-bank-audit.json .cache/rebus-sound-visual-curation-merged.json
@@ -101,6 +104,7 @@ jobs:
           const wave5=JSON.parse(fs.readFileSync('data/rebus-sound-visual-curation-wave5.json','utf8'));
           const wave6=JSON.parse(fs.readFileSync('data/rebus-sound-visual-curation-wave6.json','utf8'));
           const wave7=JSON.parse(fs.readFileSync('data/rebus-sound-visual-curation-wave7.json','utf8'));
+          const wave8=JSON.parse(fs.readFileSync('data/rebus-sound-visual-curation-wave8.json','utf8'));
           const materialization1=JSON.parse(fs.readFileSync('data/rebus-materialization-wave1.json','utf8'));
           const materialization2=JSON.parse(fs.readFileSync('data/rebus-materialization-wave2.json','utf8'));
           const materialization3=JSON.parse(fs.readFileSync('data/rebus-materialization-wave3.json','utf8'));
@@ -108,17 +112,18 @@ jobs:
           if(landscape.stats.exactLexicalBacklogSoundCount<5000)throw new Error('Expected the large exact lexical reservoir, got '+landscape.stats.exactLexicalBacklogSoundCount);
           if(landscape.rows.some(row=>row.automaticActivation!==false||row.clinicalEvidence!=='none'))throw new Error('Landscape must never auto-activate or infer clinical evidence');
           if(landscape.rows.flatMap(row=>row.exactCandidates||[]).some(candidate=>candidate.automaticActivation!==false||candidate.clinicalEvidence!=='none'))throw new Error('Candidate evidence leaked activation or clinical status');
-          for(const [name,wave] of [['wave2',wave2],['wave3',wave3],['wave4',wave4],['wave5',wave5],['wave6',wave6],['wave7',wave7]])if(wave.entries.some(item=>item.humanNamingEvidence!=='none'||item.clinicalEvidence!=='none'||item.spontaneousNamingRisk!=='unknown'))throw new Error(name+' must not invent human naming or clinical evidence');
+          for(const [name,wave] of [['wave2',wave2],['wave3',wave3],['wave4',wave4],['wave5',wave5],['wave6',wave6],['wave7',wave7],['wave8',wave8]])if(wave.entries.some(item=>item.humanNamingEvidence!=='none'||item.clinicalEvidence!=='none'||item.spontaneousNamingRisk!=='unknown'))throw new Error(name+' must not invent human naming or clinical evidence');
           if(wave3.summary.examinedSoundCount<40||wave3.summary.prototypeCandidateCount<20)throw new Error('Wave 3 is not substantive enough');
           if(wave4.summary.examinedSoundCount<30||wave4.summary.prototypeCandidateCount<15)throw new Error('Wave 4 is not substantive enough');
-          if(wave5.summary.examinedSoundCount<30||wave5.summary.prototypeCandidateCount<15)throw new Error('Wave 5 is not substantive enough');
-          if(wave5.summary.phoneticGapQuotaExaminedCount<10)throw new Error('Wave 5 must include a real phonetic-gap quota');
-          if(wave6.summary.examinedSoundCount<30||wave6.summary.prototypeCandidateCount<10)throw new Error('Wave 6 is not substantive enough');
-          if(wave6.summary.phoneticGapQuotaExaminedCount<10)throw new Error('Wave 6 must include a real phonetic-gap quota');
-          if(wave7.summary.examinedSoundCount<60||wave7.summary.prototypeCandidateCount<30)throw new Error('Wave 7 must test larger editorial scale');
-          if(wave7.summary.twoSyllablePrimaryExaminedCount<15||wave7.summary.phoneticGapQuotaExaminedCount<10||wave7.summary.visibleConventionExaminedCount<20)throw new Error('Wave 7 mixed-source balance disappeared');
-          if(wave7.summary.newVisibleConventionDefinitionCount!==0)throw new Error('Wave 7 must not invent opportunistic convention definitions');
-          for(const [name,wave] of [['wave4',wave4],['wave5',wave5],['wave6',wave6],['wave7',wave7]]){
+          if(wave5.summary.examinedSoundCount<30||wave5.summary.prototypeCandidateCount<15||wave5.summary.phoneticGapQuotaExaminedCount<10)throw new Error('Wave 5 balance changed');
+          if(wave6.summary.examinedSoundCount<30||wave6.summary.prototypeCandidateCount<10||wave6.summary.phoneticGapQuotaExaminedCount<10)throw new Error('Wave 6 balance changed');
+          if(wave7.summary.examinedSoundCount<60||wave7.summary.prototypeCandidateCount<30||wave7.summary.twoSyllablePrimaryExaminedCount<15||wave7.summary.phoneticGapQuotaExaminedCount<10||wave7.summary.visibleConventionExaminedCount<20||wave7.summary.newVisibleConventionDefinitionCount!==0)throw new Error('Wave 7 scale/balance changed');
+          if(wave8.summary.examinedSoundCount!==60||wave8.summary.prototypeCandidateCount!==46||wave8.summary.expectedNetNewCuratedSoundCount!==46)throw new Error('Wave 8 net-new yield changed');
+          if(wave8.summary.oInitialExaminedCount!==20||wave8.summary.oInitialPrototypeCount!==9||wave8.summary.twoSyllablePromotedCount!==33)throw new Error('Wave 8 /o…/ or two-syllable quota changed');
+          if(wave8.summary.plannerReadyPromotionCount!==0||wave8.summary.newStimulusCount!==0)throw new Error('Wave 8 must not fabricate planner promotion or materialization');
+          if(wave8.entries.some(item=>item.automaticActivation!==false))throw new Error('Wave 8 must never auto-activate');
+          if(wave8.entries.filter(item=>item.decision==='prototype_candidate').some(item=>item.netNewCoverageAtSelection!==true))throw new Error('Wave 8 prototypes must target net-new curation coverage');
+          for(const [name,wave] of [['wave4',wave4],['wave5',wave5],['wave6',wave6],['wave7',wave7],['wave8',wave8]]){
             const prototypeCount=wave.entries.filter(item=>item.decision==='prototype_candidate').length;
             const deferredCount=wave.entries.filter(item=>item.decision==='defer_candidate').length;
             const lexicalCount=wave.entries.reduce((sum,item)=>sum+(item.comparedExactCandidates?.length||0),0);
@@ -126,6 +131,7 @@ jobs:
             if(prototypeCount!==wave.summary.prototypeCandidateCount||deferredCount!==wave.summary.deferredCandidateCount)throw new Error(`${name} decision count mismatch`);
             if(lexicalCount!==wave.summary.comparedExactLexicalCandidateCount)throw new Error(`${name} lexical comparison count mismatch`);
           }
+          if(landscape.stats.curatedVisualHypothesisSoundCount<196)throw new Error('Wave 8 failed to add the expected net-new curated sounds: '+landscape.stats.curatedVisualHypothesisSoundCount);
           for(const [name,materialization] of [['materialization1',materialization1],['materialization2',materialization2],['materialization3',materialization3]]){
             if(materialization.status!=='research_stimuli_only')throw new Error(name+' left research-only status');
             if(materialization.entries.some(item=>item.humanNamingEvidence!=='none'||item.clinicalEvidence!=='none'||item.spontaneousNamingRisk!=='unknown'))throw new Error(name+' invented naming or clinical evidence');
@@ -140,7 +146,7 @@ jobs:
           const historical=benchmark.rows.find(row=>row.phrase==='Elles ne sont pas cuites les pâtes');
           if(!historical?.pronunciationComplete)throw new Error('Historical end-to-end phrase is no longer lexically resolved');
           if(!landscape.rows.some(row=>row.longWindowPotential?.coversTwoSyllables))throw new Error('Two-syllable windows disappeared from the landscape');
-          console.log(JSON.stringify({landscape:landscape.stats,benchmark:benchmark.summary,wave7:wave7.summary},null,2));
+          console.log(JSON.stringify({landscape:landscape.stats,benchmark:benchmark.summary,wave8:wave8.summary},null,2));
           NODE
       - name: Upload landscape artifact
         uses: actions/upload-artifact@v4

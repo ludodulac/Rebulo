@@ -3,6 +3,8 @@ import path from 'node:path';
 import {planPhraseRepresentationPaths} from '../src/rebus-phrase-phonetics.js';
 import {splitIPAUnits} from '../src/phonetic-engine.js';
 
+// Product-conversion smoke phrases belong in targeted tests, not in this fixed
+// thermometer: keep these six natural phrases unchanged so bank growth remains comparable.
 const lexiconPath=process.argv[2]||'data/rebus-pronunciation-lexicon.json';
 const auditPath=process.argv[3]||'data/rebus-representation-bank-audit.json';
 const outputPath=process.argv[4]||'data/rebus-real-phrase-benchmark.json';
@@ -39,44 +41,51 @@ function summarizePhrase(phrase){
     continuousIpa:result.phonetics?.continuousIpa||'',
     wordCount:result.phonetics?.wordCount||0,
     routeCount:routes.length,
+    distinctRouteCount:distinctAll.size,
     completeRouteCount:complete.length,
-    distinctCompleteDecompositionCount:distinctComplete.size,
-    distinctCandidatePathCount:distinctAll.size,
-    completeCrossWordRouteCount:crossWord.length,
+    distinctCompleteRouteCount:distinctComplete.size,
+    crossWordCompleteRouteCount:crossWord.length,
     anyCrossWordRouteCount:anyCrossWord.length,
-    bestCoverageRatio:Number((best?.scoreBreakdown?.coverageRatio??0).toFixed(4)),
-    bestUncoveredUnitCount:Number(best?.scoreBreakdown?.uncoveredUnits)||0,
-    longestRepresentationUnitCount:longestPiece,
-    bestRoute:best?{
-      complete:best.complete,coverageRatio:best.scoreBreakdown?.coverageRatio??0,pieceCount:best.scoreBreakdown?.pieceCount??0,crossWordOperationCount:best.crossWordOperationCount||0,
-      operations:(best.operations||[]).map(item=>({kind:item.kind,label:item.label||item.symbol||'',targetIpa:item.targetIpa,phoneticTier:item.phoneticTier,crossesWordBoundary:Boolean(item.crossesWordBoundary),sourceWords:(item.sourceWords||[]).map(word=>word.text)}))
-    }:null
+    bestCoverageRatio:best?.scoreBreakdown?.coverageRatio||0,
+    missingUnitCount:best?.scoreBreakdown?.missingUnits??null,
+    longestPieceUnitCount:longestPiece,
+    bestOperations:(best?.operations||[]).map(item=>({kind:item.kind,label:item.label||item.symbol||'',targetIpa:item.targetIpa||'',targetSpan:item.targetSpan||null,crossesWordBoundary:Boolean(item.crossesWordBoundary)}))
   };
 }
 
 const rows=phrases.map(summarizePhrase);
-const meanBestCoverage=rows.reduce((sum,row)=>sum+row.bestCoverageRatio,0)/Math.max(1,rows.length);
+const average=key=>rows.length?rows.reduce((sum,row)=>sum+(Number(row[key])||0),0)/rows.length:0;
 const output={
   schemaVersion:'1.1',generatedAt:new Date().toISOString(),status:'regression_benchmark_not_training_target',
   purpose:'Periodically test whether representation-bank growth creates more useful competing paths on ordinary French phrases without optimizing for one sentence.',
-  policy:{
-    targetPhrase:'The historical phrase « Elles ne sont pas cuites les pâtes » remains included as one benchmark among several; no scoring rule is specialized for it.',
-    interpretation:'Route counts and partial coverage are engineering observables, not a human quality score. Human naming and orthophonic validation remain separate.',
-    incompleteBaseline:'When no phrase has a complete route yet, bestCoverageRatio and uncovered units provide a useful non-binary baseline for measuring bank growth without pretending that a partial route is solved.',
-    longPieces:'longestRepresentationUnitCount tracks whether longer exact pieces remain available instead of forcing syllable-by-syllable fragmentation.'
-  },
+  policy:{fixedPhraseSet:true,noPhraseSpecificRules:true,benchmarkIsNotClinicalEvidence:true,exactAndApproximateRoutesRemainDistinguishable:true},
   summary:{
     phraseCount:rows.length,
     pronunciationResolvedCount:rows.filter(row=>row.pronunciationComplete).length,
     phrasesWithCompleteRoute:rows.filter(row=>row.completeRouteCount>0).length,
-    phrasesWithCrossWordCompleteRoute:rows.filter(row=>row.completeCrossWordRouteCount>0).length,
+    phrasesWithCrossWordCompleteRoute:rows.filter(row=>row.crossWordCompleteRouteCount>0).length,
     phrasesWithAnyCrossWordRoute:rows.filter(row=>row.anyCrossWordRouteCount>0).length,
-    meanDistinctCompleteDecompositions:Number((rows.reduce((sum,row)=>sum+row.distinctCompleteDecompositionCount,0)/Math.max(1,rows.length)).toFixed(2)),
-    meanBestCoverageRatio:Number(meanBestCoverage.toFixed(4))
+    meanDistinctCompleteDecompositions:Number(average('distinctCompleteRouteCount').toFixed(4)),
+    meanBestCoverageRatio:Number(average('bestCoverageRatio').toFixed(4))
   },
   rows
 };
 fs.mkdirSync(path.dirname(outputPath),{recursive:true});fs.writeFileSync(outputPath,JSON.stringify(output,null,2)+'\n');
-const lines=['# Rebulo — benchmark de phrases réelles','', '> Indicateur de régression : il mesure la diversité et la couverture des chemins, pas leur qualité humaine finale.','',`- Phrases : ${output.summary.phraseCount}.`,`- Prononciations lexicales entièrement résolues : ${output.summary.pronunciationResolvedCount}.`,`- Phrases avec au moins un chemin complet : ${output.summary.phrasesWithCompleteRoute}.`,`- Phrases avec au moins un chemin complet traversant une frontière de mots : ${output.summary.phrasesWithCrossWordCompleteRoute}.`,`- Phrases présentant au moins une route candidate qui traverse une frontière de mots : ${output.summary.phrasesWithAnyCrossWordRoute}.`,`- Couverture moyenne du meilleur chemin actuel : ${(output.summary.meanBestCoverageRatio*100).toFixed(1)}%.`,`- Nombre moyen de découpages complets distincts : ${output.summary.meanDistinctCompleteDecompositions}.`,'','| Phrase | IPA résolue | Meilleure couverture | Unités manquantes | Chemins complets | Traversée de mots | Plus longue pièce |','|---|---|---:|---:|---:|---:|---:|',...rows.map(row=>`| ${row.phrase} | ${row.pronunciationComplete?'oui':'non'} | ${(row.bestCoverageRatio*100).toFixed(1)}% | ${row.bestUncoveredUnitCount} | ${row.completeRouteCount} | ${row.anyCrossWordRouteCount} | ${row.longestRepresentationUnitCount} |`),'','## Lecture','','Une progression saine peut d’abord se voir par une réduction des trous et une hausse de la couverture partielle avant l’apparition de chemins complets. Une hausse du nombre de chemins n’est pas automatiquement un progrès : les prototypes et observations humaines doivent ensuite dire si les nouvelles routes sont réellement nommables et compréhensibles.'];
+const lines=[
+  '# Rebulo — benchmark de phrases réelles','',
+  '> Indicateur de régression : il mesure la diversité et la couverture des chemins, pas leur qualité humaine finale.','',
+  `- Phrases : ${output.summary.phraseCount}.`,
+  `- Prononciations lexicales entièrement résolues : ${output.summary.pronunciationResolvedCount}.`,
+  `- Phrases avec au moins un chemin complet : ${output.summary.phrasesWithCompleteRoute}.`,
+  `- Phrases avec au moins un chemin complet traversant une frontière de mots : ${output.summary.phrasesWithCrossWordCompleteRoute}.`,
+  `- Phrases présentant au moins une route candidate qui traverse une frontière de mots : ${output.summary.phrasesWithAnyCrossWordRoute}.`,
+  `- Couverture moyenne du meilleur chemin actuel : ${(output.summary.meanBestCoverageRatio*100).toFixed(1)}%.`,
+  `- Nombre moyen de découpages complets distincts : ${output.summary.meanDistinctCompleteDecompositions}.`,'',
+  '| Phrase | IPA résolue | Meilleure couverture | Unités manquantes | Chemins complets | Traversée de mots | Plus longue pièce |',
+  '|---|---|---:|---:|---:|---:|---:|',
+  ...rows.map(row=>`| ${row.phrase} | ${row.pronunciationComplete?'oui':'non'} | ${(row.bestCoverageRatio*100).toFixed(1)}% | ${row.missingUnitCount??'—'} | ${row.completeRouteCount} | ${row.anyCrossWordRouteCount} | ${row.longestPieceUnitCount} |`),
+  '','## Lecture','',
+  'Une progression saine peut d’abord se voir par une réduction des trous et une hausse de la couverture partielle avant l’apparition de chemins complets. Une hausse du nombre de chemins n’est pas automatiquement un progrès : les prototypes et observations humaines doivent ensuite dire si les nouvelles routes sont réellement nommables et compréhensibles.'
+];
 fs.mkdirSync(path.dirname(reportPath),{recursive:true});fs.writeFileSync(reportPath,lines.join('\n')+'\n');
 console.log(JSON.stringify(output.summary,null,2));

@@ -32,9 +32,11 @@
      rather than compete with the phonetic stimuli. */
   .arena:before{display:none!important}
 
-  /* Result-first mobile creator: preserve large, nameable pieces and reduce
-     surrounding adult chrome without removing session functionality. */
-  .app-shell[data-experience="create"][data-creator-ready="true"]{gap:6px}
+  /* Result-first mobile creator: natural vertical flow rather than stretching
+     a desktop one-screen grid around a short result. */
+  .app-shell[data-experience="create"][data-creator-ready="true"]{
+    gap:6px;height:auto;min-height:var(--app-vh);grid-template-rows:auto auto auto auto;overflow-y:auto
+  }
   .app-shell[data-experience="create"][data-creator-ready="true"] #result{
     padding:10px;border-radius:24px;grid-template-rows:auto auto auto auto auto;align-content:start
   }

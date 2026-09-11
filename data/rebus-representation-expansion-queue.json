@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.2",
-  "generatedAt": "2026-09-11T08:04:10.858Z",
+  "generatedAt": "2026-09-11T08:12:15.249Z",
   "status": "research_mapping_only",
   "purpose": "Élargir de façon conservatrice la banque SON → MOT(S) → REPRÉSENTATION en faisant émerger un lot substantiel à fort rendement sans convertir des indices en preuve visuelle.",
   "policy": {
@@ -19,13 +19,13 @@
     "note": "Union des 800 sons les plus rentables et des 400 fenêtres de deux syllabes les plus rentables; les doublons sont retirés. Aucun bonus/malus de vérité visuelle."
   },
   "assetInventory": {
-    "activeSeedCount": 24,
+    "activeSeedCount": 28,
     "openLibraryCount": 365,
     "researchFileCount": 37,
     "note": "Les assets enregistrés et les correspondances de nom de fichier de recherche sont comptés séparément. Les fichiers de recherche restent des pistes d’inspection uniquement."
   },
   "stats": {
-    "soundCount": 916,
+    "soundCount": 915,
     "twoSyllableSoundCount": 400,
     "multipleExactHomophoneSoundCount": 536,
     "existingAssetSoundCount": 16,
@@ -33,7 +33,7 @@
     "researchAssetLeadSoundCount": 11,
     "registeredPhoneticAssetSoundCount": 5,
     "visibleConventionSoundCount": 23,
-    "likelyNewAssetSoundCount": 868,
+    "likelyNewAssetSoundCount": 867,
     "highKnownRiskSoundCount": 117,
     "approximationAvailableSoundCount": 609,
     "informationInsufficientSoundCount": 767,
@@ -42,7 +42,7 @@
       "approximation_only_after_rejected_exacts": 5,
       "visible_convention_preferable": 2,
       "research_asset_lead_to_inspect": 11,
-      "exact_image_candidate_precheck": 372,
+      "exact_image_candidate_precheck": 371,
       "asset_existing_to_review": 5,
       "insufficient_information": 1
     }
@@ -378,7 +378,6 @@
       "akse",
       "bene",
       "pyl",
-      "nø",
       "ʁɛʁ",
       "mɑ̃te",
       "gʁafi",
@@ -394,7 +393,8 @@
       "sabl",
       "sjɑ̃s",
       "pɛʁso",
-      "deku"
+      "deku",
+      "pʁije"
     ],
     "twoSyllableFirstClass": [
       "lite",
@@ -14359,6 +14359,25 @@
           "clinicalEvidence": "none"
         },
         {
+          "word": "nœud",
+          "pos": "",
+          "frequency": 0,
+          "frequencyBand": "unknown",
+          "sourceIpa": "nø",
+          "targetIpa": "nə",
+          "exactPhoneticMatch": false,
+          "representationType": "approximate_lexical_candidate",
+          "proofStatus": "general_rebus_approximation_only",
+          "approximationTier": "light",
+          "editorialApproximationPercent": 20,
+          "editOperations": [],
+          "visualPotential": "unknown",
+          "namingRisk": "unknown",
+          "automaticActivation": false,
+          "strictEligible": false,
+          "clinicalEvidence": "none"
+        },
+        {
           "word": "nez",
           "pos": "",
           "frequency": 0,
@@ -14398,25 +14417,6 @@
         },
         {
           "word": "nait",
-          "pos": "",
-          "frequency": 0,
-          "frequencyBand": "unknown",
-          "sourceIpa": "nɛ",
-          "targetIpa": "nə",
-          "exactPhoneticMatch": false,
-          "representationType": "approximate_lexical_candidate",
-          "proofStatus": "general_rebus_approximation_only",
-          "approximationTier": "light",
-          "editorialApproximationPercent": 20,
-          "editOperations": [],
-          "visualPotential": "unknown",
-          "namingRisk": "unknown",
-          "automaticActivation": false,
-          "strictEligible": false,
-          "clinicalEvidence": "none"
-        },
-        {
-          "word": "nay",
           "pos": "",
           "frequency": 0,
           "frequencyBand": "unknown",
@@ -72837,77 +72837,6 @@
         "generalRebusApproximation": "none_listed",
         "lexicalRelevance": "not_human_validated",
         "drawableConcept": "unknown",
-        "spontaneousNamability": "unknown_unless_human_observation_exists",
-        "orthophonicValidation": "none"
-      },
-      "nextDecision": "human_concept_precheck_before_new_asset",
-      "automaticActivation": false
-    },
-    {
-      "ipa": "nø",
-      "syllableSpans": [
-        1
-      ],
-      "usefulTargetCount": 6,
-      "usefulWeightedGain": 58.914,
-      "schoolTargetCount": 0,
-      "usefulExamples": [
-        "noeud",
-        "lumineux",
-        "neutraliser",
-        "neurones",
-        "neurologique",
-        "haineux"
-      ],
-      "exactCandidateCount": 1,
-      "retainedExactCandidateCount": 1,
-      "additionalExactCandidateCount": 0,
-      "multipleExactHomophones": false,
-      "exactCandidates": [
-        {
-          "word": "noeud",
-          "pos": "NOM",
-          "frequency": 10.56,
-          "frequencyBand": "low",
-          "syllableCount": 1,
-          "exactPhoneticMatch": true,
-          "representationType": "curated_visual_hypothesis",
-          "proofStatus": "visual_hypothesis_curated",
-          "noun": true,
-          "visualPotential": "high",
-          "namingRisk": "unknown",
-          "mainConfusions": [
-            "corde"
-          ],
-          "nextGate": "review_existing_editorial_decision",
-          "automaticActivation": false,
-          "clinicalEvidence": "none",
-          "knownAssets": [],
-          "descriptiveFlags": {
-            "singleCharacter": false,
-            "functionLikePos": false,
-            "lowFrequency": false,
-            "noun": true
-          }
-        }
-      ],
-      "curatedVisualHypothesisCount": 1,
-      "visibleConventions": [],
-      "approximateCandidates": [],
-      "existingAssetCandidateCount": 0,
-      "registeredAssetCandidateCount": 0,
-      "researchAssetLeadCandidateCount": 0,
-      "registeredPhoneticAssetCandidateCount": 0,
-      "likelyNeedsNewAsset": true,
-      "highKnownVisualOrLexicalRisk": false,
-      "informationInsufficient": false,
-      "twoSyllableFirstClass": false,
-      "lane": "exact_image_candidate_precheck",
-      "proofStatus": {
-        "phoneticExactness": "exact_candidates_attested",
-        "generalRebusApproximation": "none_listed",
-        "lexicalRelevance": "not_human_validated",
-        "drawableConcept": "curated_hypothesis_only",
         "spontaneousNamability": "unknown_unless_human_observation_exists",
         "orthophonicValidation": "none"
       },

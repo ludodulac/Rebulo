@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": "2026-09-10T21:18:05.960Z",
+  "generatedAt": "2026-09-11T06:47:52.958Z",
   "status": "research_preselection_only",
   "purpose": "Présélectionner à grande échelle les sons où les homophones exacts, la structure lexicale, les assets ou les fenêtres longues justifient un examen éditorial humain.",
   "policy": {
@@ -18,12 +18,12 @@
   "stats": {
     "preselectedSoundCount": 220,
     "multipleExactCandidateSoundCount": 219,
-    "nounVsNonNounSoundCount": 106,
-    "multipleNounSoundCount": 113,
+    "nounVsNonNounSoundCount": 88,
+    "multipleNounSoundCount": 129,
     "registeredAssetSoundCount": 1,
     "researchAssetLeadSoundCount": 2,
     "visibleConventionSoundCount": 2,
-    "twoSyllableSoundCount": 116
+    "twoSyllableSoundCount": 100
   },
   "rows": [
     {
@@ -588,201 +588,6 @@
     },
     {
       "rank": 12,
-      "ipa": "mɔ̃te",
-      "syllableSpans": [
-        2
-      ],
-      "twoSyllableFirstClass": true,
-      "usefulTargetCount": 6,
-      "usefulWeightedGain": 505.685,
-      "exactCandidates": [
-        {
-          "word": "montée",
-          "pos": "NOM",
-          "frequency": 3.168,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        },
-        {
-          "word": "monter",
-          "pos": "VER",
-          "frequency": 71.699,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        },
-        {
-          "word": "monté",
-          "pos": "ADJ",
-          "frequency": 5.307,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        }
-      ],
-      "visibleConventions": [],
-      "registeredAssetCandidateCount": 0,
-      "researchAssetLeadCandidateCount": 0,
-      "preselectionScore": 18,
-      "preselectionSignals": [
-        "multiple_exact_candidates",
-        "noun_vs_non_noun_contrast",
-        "function_like_vs_noun",
-        "two_syllable"
-      ],
-      "candidateStructure": {
-        "viableExactCandidateCount": 3,
-        "nounCandidateCount": 1,
-        "nonNounCandidateCount": 2,
-        "functionLikeCandidateCount": 2
-      },
-      "visualDecision": "unknown",
-      "spontaneousNamingRisk": "unknown",
-      "humanNamingEvidence": "none",
-      "clinicalEvidence": "none",
-      "automaticActivation": false
-    },
-    {
-      "rank": 13,
-      "ipa": "pase",
-      "syllableSpans": [
-        2
-      ],
-      "twoSyllableFirstClass": true,
-      "usefulTargetCount": 6,
-      "usefulWeightedGain": 2743.026,
-      "exactCandidates": [
-        {
-          "word": "passé",
-          "pos": "NOM",
-          "frequency": 74.791,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        },
-        {
-          "word": "passer",
-          "pos": "VER",
-          "frequency": 358.949,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        }
-      ],
-      "visibleConventions": [],
-      "registeredAssetCandidateCount": 0,
-      "researchAssetLeadCandidateCount": 0,
-      "preselectionScore": 18,
-      "preselectionSignals": [
-        "multiple_exact_candidates",
-        "noun_vs_non_noun_contrast",
-        "function_like_vs_noun",
-        "two_syllable"
-      ],
-      "candidateStructure": {
-        "viableExactCandidateCount": 2,
-        "nounCandidateCount": 1,
-        "nonNounCandidateCount": 1,
-        "functionLikeCandidateCount": 1
-      },
-      "visualDecision": "unknown",
-      "spontaneousNamingRisk": "unknown",
-      "humanNamingEvidence": "none",
-      "clinicalEvidence": "none",
-      "automaticActivation": false
-    },
-    {
-      "rank": 14,
-      "ipa": "pasjɔ̃",
-      "syllableSpans": [
-        2
-      ],
-      "twoSyllableFirstClass": true,
-      "usefulTargetCount": 6,
-      "usefulWeightedGain": 140.088,
-      "exactCandidates": [
-        {
-          "word": "passion",
-          "pos": "NOM",
-          "frequency": 20.595,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        },
-        {
-          "word": "passions",
-          "pos": "VER",
-          "frequency": 1.06,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        }
-      ],
-      "visibleConventions": [],
-      "registeredAssetCandidateCount": 0,
-      "researchAssetLeadCandidateCount": 0,
-      "preselectionScore": 18,
-      "preselectionSignals": [
-        "multiple_exact_candidates",
-        "noun_vs_non_noun_contrast",
-        "function_like_vs_noun",
-        "two_syllable"
-      ],
-      "candidateStructure": {
-        "viableExactCandidateCount": 2,
-        "nounCandidateCount": 1,
-        "nonNounCandidateCount": 1,
-        "functionLikeCandidateCount": 1
-      },
-      "visualDecision": "unknown",
-      "spontaneousNamingRisk": "unknown",
-      "humanNamingEvidence": "none",
-      "clinicalEvidence": "none",
-      "automaticActivation": false
-    },
-    {
-      "rank": 15,
-      "ipa": "pati",
-      "syllableSpans": [
-        2
-      ],
-      "twoSyllableFirstClass": true,
-      "usefulTargetCount": 6,
-      "usefulWeightedGain": 36.039,
-      "exactCandidates": [
-        {
-          "word": "pâtis",
-          "pos": "NOM",
-          "frequency": 0.006,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        },
-        {
-          "word": "pâtit",
-          "pos": "VER",
-          "frequency": 0.177,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        }
-      ],
-      "visibleConventions": [],
-      "registeredAssetCandidateCount": 0,
-      "researchAssetLeadCandidateCount": 0,
-      "preselectionScore": 18,
-      "preselectionSignals": [
-        "multiple_exact_candidates",
-        "noun_vs_non_noun_contrast",
-        "function_like_vs_noun",
-        "two_syllable"
-      ],
-      "candidateStructure": {
-        "viableExactCandidateCount": 2,
-        "nounCandidateCount": 1,
-        "nonNounCandidateCount": 1,
-        "functionLikeCandidateCount": 1
-      },
-      "visualDecision": "unknown",
-      "spontaneousNamingRisk": "unknown",
-      "humanNamingEvidence": "none",
-      "clinicalEvidence": "none",
-      "automaticActivation": false
-    },
-    {
-      "rank": 16,
       "ipa": "pɑ̃se",
       "syllableSpans": [
         2
@@ -836,162 +641,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 17,
-      "ipa": "pybli",
-      "syllableSpans": [
-        2
-      ],
-      "twoSyllableFirstClass": true,
-      "usefulTargetCount": 6,
-      "usefulWeightedGain": 81.379,
-      "exactCandidates": [
-        {
-          "word": "publi",
-          "pos": "NOM",
-          "frequency": 0.006,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        },
-        {
-          "word": "publie",
-          "pos": "VER",
-          "frequency": 2.054,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        }
-      ],
-      "visibleConventions": [],
-      "registeredAssetCandidateCount": 0,
-      "researchAssetLeadCandidateCount": 0,
-      "preselectionScore": 18,
-      "preselectionSignals": [
-        "multiple_exact_candidates",
-        "noun_vs_non_noun_contrast",
-        "function_like_vs_noun",
-        "two_syllable"
-      ],
-      "candidateStructure": {
-        "viableExactCandidateCount": 2,
-        "nounCandidateCount": 1,
-        "nonNounCandidateCount": 1,
-        "functionLikeCandidateCount": 1
-      },
-      "visualDecision": "unknown",
-      "spontaneousNamingRisk": "unknown",
-      "humanNamingEvidence": "none",
-      "clinicalEvidence": "none",
-      "automaticActivation": false
-    },
-    {
-      "rank": 18,
-      "ipa": "tuʁne",
-      "syllableSpans": [
-        2
-      ],
-      "twoSyllableFirstClass": true,
-      "usefulTargetCount": 6,
-      "usefulWeightedGain": 876.144,
-      "exactCandidates": [
-        {
-          "word": "tournée",
-          "pos": "NOM",
-          "frequency": 22.759,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        },
-        {
-          "word": "tourner",
-          "pos": "VER",
-          "frequency": 50.38,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        },
-        {
-          "word": "tourné",
-          "pos": "ADJ",
-          "frequency": 1.937,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        }
-      ],
-      "visibleConventions": [],
-      "registeredAssetCandidateCount": 0,
-      "researchAssetLeadCandidateCount": 0,
-      "preselectionScore": 18,
-      "preselectionSignals": [
-        "multiple_exact_candidates",
-        "noun_vs_non_noun_contrast",
-        "function_like_vs_noun",
-        "two_syllable"
-      ],
-      "candidateStructure": {
-        "viableExactCandidateCount": 3,
-        "nounCandidateCount": 1,
-        "nonNounCandidateCount": 2,
-        "functionLikeCandidateCount": 2
-      },
-      "visualDecision": "unknown",
-      "spontaneousNamingRisk": "unknown",
-      "humanNamingEvidence": "none",
-      "clinicalEvidence": "none",
-      "automaticActivation": false
-    },
-    {
-      "rank": 19,
-      "ipa": "veje",
-      "syllableSpans": [
-        2
-      ],
-      "twoSyllableFirstClass": true,
-      "usefulTargetCount": 6,
-      "usefulWeightedGain": 304.688,
-      "exactCandidates": [
-        {
-          "word": "veillée",
-          "pos": "NOM",
-          "frequency": 2.794,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        },
-        {
-          "word": "veiller",
-          "pos": "VER",
-          "frequency": 10.446,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        },
-        {
-          "word": "veillé",
-          "pos": "ADJ",
-          "frequency": 0.035,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        }
-      ],
-      "visibleConventions": [],
-      "registeredAssetCandidateCount": 0,
-      "researchAssetLeadCandidateCount": 0,
-      "preselectionScore": 18,
-      "preselectionSignals": [
-        "multiple_exact_candidates",
-        "noun_vs_non_noun_contrast",
-        "function_like_vs_noun",
-        "two_syllable"
-      ],
-      "candidateStructure": {
-        "viableExactCandidateCount": 3,
-        "nounCandidateCount": 1,
-        "nonNounCandidateCount": 2,
-        "functionLikeCandidateCount": 2
-      },
-      "visualDecision": "unknown",
-      "spontaneousNamingRisk": "unknown",
-      "humanNamingEvidence": "none",
-      "clinicalEvidence": "none",
-      "automaticActivation": false
-    },
-    {
-      "rank": 20,
+      "rank": 13,
       "ipa": "depɑ̃",
       "syllableSpans": [
         2
@@ -1038,7 +688,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 21,
+      "rank": 14,
       "ipa": "eli",
       "syllableSpans": [
         2
@@ -1092,7 +742,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 22,
+      "rank": 15,
       "ipa": "komi",
       "syllableSpans": [
         2
@@ -1139,7 +789,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 23,
+      "rank": 16,
       "ipa": "limɑ̃",
       "syllableSpans": [
         2
@@ -1186,7 +836,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 24,
+      "rank": 17,
       "ipa": "sakʁe",
       "syllableSpans": [
         2
@@ -1233,7 +883,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 25,
+      "rank": 18,
       "ipa": "seʁe",
       "syllableSpans": [
         2
@@ -1287,7 +937,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 26,
+      "rank": 19,
       "ipa": "vize",
       "syllableSpans": [
         2
@@ -1341,7 +991,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 27,
+      "rank": 20,
       "ipa": "vizjɔ̃",
       "syllableSpans": [
         2
@@ -1388,7 +1038,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 28,
+      "rank": 21,
       "ipa": "ʒeʁe",
       "syllableSpans": [
         2
@@ -1435,7 +1085,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 29,
+      "rank": 22,
       "ipa": "ɑ̃nɥi",
       "syllableSpans": [
         2
@@ -1482,7 +1132,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 30,
+      "rank": 23,
       "ipa": "ɑ̃plwa",
       "syllableSpans": [
         2
@@ -1529,7 +1179,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 31,
+      "rank": 24,
       "ipa": "kole",
       "syllableSpans": [
         2
@@ -1583,7 +1233,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 32,
+      "rank": 25,
       "ipa": "maʁke",
       "syllableSpans": [
         2
@@ -1637,195 +1287,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 33,
-      "ipa": "mati",
-      "syllableSpans": [
-        2
-      ],
-      "twoSyllableFirstClass": true,
-      "usefulTargetCount": 4,
-      "usefulWeightedGain": 76.956,
-      "exactCandidates": [
-        {
-          "word": "mati",
-          "pos": "NOM",
-          "frequency": 0.009,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        },
-        {
-          "word": "matis",
-          "pos": "VER",
-          "frequency": 0.089,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        }
-      ],
-      "visibleConventions": [],
-      "registeredAssetCandidateCount": 0,
-      "researchAssetLeadCandidateCount": 0,
-      "preselectionScore": 18,
-      "preselectionSignals": [
-        "multiple_exact_candidates",
-        "noun_vs_non_noun_contrast",
-        "function_like_vs_noun",
-        "two_syllable"
-      ],
-      "candidateStructure": {
-        "viableExactCandidateCount": 2,
-        "nounCandidateCount": 1,
-        "nonNounCandidateCount": 1,
-        "functionLikeCandidateCount": 1
-      },
-      "visualDecision": "unknown",
-      "spontaneousNamingRisk": "unknown",
-      "humanNamingEvidence": "none",
-      "clinicalEvidence": "none",
-      "automaticActivation": false
-    },
-    {
-      "rank": 34,
-      "ipa": "məne",
-      "syllableSpans": [
-        2
-      ],
-      "twoSyllableFirstClass": true,
-      "usefulTargetCount": 4,
-      "usefulWeightedGain": 1007.359,
-      "exactCandidates": [
-        {
-          "word": "menée",
-          "pos": "NOM",
-          "frequency": 0.041,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        },
-        {
-          "word": "mener",
-          "pos": "VER",
-          "frequency": 25.111,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        }
-      ],
-      "visibleConventions": [],
-      "registeredAssetCandidateCount": 0,
-      "researchAssetLeadCandidateCount": 0,
-      "preselectionScore": 18,
-      "preselectionSignals": [
-        "multiple_exact_candidates",
-        "noun_vs_non_noun_contrast",
-        "function_like_vs_noun",
-        "two_syllable"
-      ],
-      "candidateStructure": {
-        "viableExactCandidateCount": 2,
-        "nounCandidateCount": 1,
-        "nonNounCandidateCount": 1,
-        "functionLikeCandidateCount": 1
-      },
-      "visualDecision": "unknown",
-      "spontaneousNamingRisk": "unknown",
-      "humanNamingEvidence": "none",
-      "clinicalEvidence": "none",
-      "automaticActivation": false
-    },
-    {
-      "rank": 35,
-      "ipa": "paʁɑ̃",
-      "syllableSpans": [
-        2
-      ],
-      "twoSyllableFirstClass": true,
-      "usefulTargetCount": 4,
-      "usefulWeightedGain": 63.09,
-      "exactCandidates": [
-        {
-          "word": "parent",
-          "pos": "NOM",
-          "frequency": 11.861,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        },
-        {
-          "word": "parant",
-          "pos": "VER",
-          "frequency": 0.035,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        }
-      ],
-      "visibleConventions": [],
-      "registeredAssetCandidateCount": 0,
-      "researchAssetLeadCandidateCount": 0,
-      "preselectionScore": 18,
-      "preselectionSignals": [
-        "multiple_exact_candidates",
-        "noun_vs_non_noun_contrast",
-        "function_like_vs_noun",
-        "two_syllable"
-      ],
-      "candidateStructure": {
-        "viableExactCandidateCount": 2,
-        "nounCandidateCount": 1,
-        "nonNounCandidateCount": 1,
-        "functionLikeCandidateCount": 1
-      },
-      "visualDecision": "unknown",
-      "spontaneousNamingRisk": "unknown",
-      "humanNamingEvidence": "none",
-      "clinicalEvidence": "none",
-      "automaticActivation": false
-    },
-    {
-      "rank": 36,
-      "ipa": "patʁi",
-      "syllableSpans": [
-        2
-      ],
-      "twoSyllableFirstClass": true,
-      "usefulTargetCount": 4,
-      "usefulWeightedGain": 35.603,
-      "exactCandidates": [
-        {
-          "word": "patrie",
-          "pos": "NOM",
-          "frequency": 7.975,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        },
-        {
-          "word": "patri",
-          "pos": "ADV",
-          "frequency": 0.104,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        }
-      ],
-      "visibleConventions": [],
-      "registeredAssetCandidateCount": 0,
-      "researchAssetLeadCandidateCount": 0,
-      "preselectionScore": 18,
-      "preselectionSignals": [
-        "multiple_exact_candidates",
-        "noun_vs_non_noun_contrast",
-        "function_like_vs_noun",
-        "two_syllable"
-      ],
-      "candidateStructure": {
-        "viableExactCandidateCount": 2,
-        "nounCandidateCount": 1,
-        "nonNounCandidateCount": 1,
-        "functionLikeCandidateCount": 1
-      },
-      "visualDecision": "unknown",
-      "spontaneousNamingRisk": "unknown",
-      "humanNamingEvidence": "none",
-      "clinicalEvidence": "none",
-      "automaticActivation": false
-    },
-    {
-      "rank": 37,
+      "rank": 26,
       "ipa": "pʁese",
       "syllableSpans": [
         2
@@ -1879,263 +1341,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 38,
-      "ipa": "ʁate",
-      "syllableSpans": [
-        2
-      ],
-      "twoSyllableFirstClass": true,
-      "usefulTargetCount": 4,
-      "usefulWeightedGain": 127.909,
-      "exactCandidates": [
-        {
-          "word": "raté",
-          "pos": "NOM",
-          "frequency": 6.883,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        },
-        {
-          "word": "rater",
-          "pos": "VER",
-          "frequency": 22.633,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        }
-      ],
-      "visibleConventions": [],
-      "registeredAssetCandidateCount": 0,
-      "researchAssetLeadCandidateCount": 0,
-      "preselectionScore": 18,
-      "preselectionSignals": [
-        "multiple_exact_candidates",
-        "noun_vs_non_noun_contrast",
-        "function_like_vs_noun",
-        "two_syllable"
-      ],
-      "candidateStructure": {
-        "viableExactCandidateCount": 2,
-        "nounCandidateCount": 1,
-        "nonNounCandidateCount": 1,
-        "functionLikeCandidateCount": 1
-      },
-      "visualDecision": "unknown",
-      "spontaneousNamingRisk": "unknown",
-      "humanNamingEvidence": "none",
-      "clinicalEvidence": "none",
-      "automaticActivation": false
-    },
-    {
-      "rank": 39,
-      "ipa": "syfi",
-      "syllableSpans": [
-        2
-      ],
-      "twoSyllableFirstClass": true,
-      "usefulTargetCount": 4,
-      "usefulWeightedGain": 159.422,
-      "exactCandidates": [
-        {
-          "word": "sufi",
-          "pos": "NOM",
-          "frequency": 0.101,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        },
-        {
-          "word": "suffit",
-          "pos": "VER",
-          "frequency": 133.943,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        }
-      ],
-      "visibleConventions": [],
-      "registeredAssetCandidateCount": 0,
-      "researchAssetLeadCandidateCount": 0,
-      "preselectionScore": 18,
-      "preselectionSignals": [
-        "multiple_exact_candidates",
-        "noun_vs_non_noun_contrast",
-        "function_like_vs_noun",
-        "two_syllable"
-      ],
-      "candidateStructure": {
-        "viableExactCandidateCount": 2,
-        "nounCandidateCount": 1,
-        "nonNounCandidateCount": 1,
-        "functionLikeCandidateCount": 1
-      },
-      "visualDecision": "unknown",
-      "spontaneousNamingRisk": "unknown",
-      "humanNamingEvidence": "none",
-      "clinicalEvidence": "none",
-      "automaticActivation": false
-    },
-    {
-      "rank": 40,
-      "ipa": "tane",
-      "syllableSpans": [
-        2
-      ],
-      "twoSyllableFirstClass": true,
-      "usefulTargetCount": 4,
-      "usefulWeightedGain": 19.78,
-      "exactCandidates": [
-        {
-          "word": "tannée",
-          "pos": "NOM",
-          "frequency": 0.12,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        },
-        {
-          "word": "tanner",
-          "pos": "VER",
-          "frequency": 1.054,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        },
-        {
-          "word": "tanné",
-          "pos": "ADJ",
-          "frequency": 0.092,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        }
-      ],
-      "visibleConventions": [],
-      "registeredAssetCandidateCount": 0,
-      "researchAssetLeadCandidateCount": 0,
-      "preselectionScore": 18,
-      "preselectionSignals": [
-        "multiple_exact_candidates",
-        "noun_vs_non_noun_contrast",
-        "function_like_vs_noun",
-        "two_syllable"
-      ],
-      "candidateStructure": {
-        "viableExactCandidateCount": 3,
-        "nounCandidateCount": 1,
-        "nonNounCandidateCount": 2,
-        "functionLikeCandidateCount": 2
-      },
-      "visualDecision": "unknown",
-      "spontaneousNamingRisk": "unknown",
-      "humanNamingEvidence": "none",
-      "clinicalEvidence": "none",
-      "automaticActivation": false
-    },
-    {
-      "rank": 41,
-      "ipa": "tiʁe",
-      "syllableSpans": [
-        2
-      ],
-      "twoSyllableFirstClass": true,
-      "usefulTargetCount": 4,
-      "usefulWeightedGain": 767.476,
-      "exactCandidates": [
-        {
-          "word": "tirée",
-          "pos": "NOM",
-          "frequency": 0.066,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        },
-        {
-          "word": "tirer",
-          "pos": "VER",
-          "frequency": 107.968,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        },
-        {
-          "word": "tiré",
-          "pos": "ADJ",
-          "frequency": 0.851,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        }
-      ],
-      "visibleConventions": [],
-      "registeredAssetCandidateCount": 0,
-      "researchAssetLeadCandidateCount": 0,
-      "preselectionScore": 18,
-      "preselectionSignals": [
-        "multiple_exact_candidates",
-        "noun_vs_non_noun_contrast",
-        "function_like_vs_noun",
-        "two_syllable"
-      ],
-      "candidateStructure": {
-        "viableExactCandidateCount": 3,
-        "nounCandidateCount": 1,
-        "nonNounCandidateCount": 2,
-        "functionLikeCandidateCount": 2
-      },
-      "visualDecision": "unknown",
-      "spontaneousNamingRisk": "unknown",
-      "humanNamingEvidence": "none",
-      "clinicalEvidence": "none",
-      "automaticActivation": false
-    },
-    {
-      "rank": 42,
-      "ipa": "vole",
-      "syllableSpans": [
-        2
-      ],
-      "twoSyllableFirstClass": true,
-      "usefulTargetCount": 4,
-      "usefulWeightedGain": 407.275,
-      "exactCandidates": [
-        {
-          "word": "volée",
-          "pos": "NOM",
-          "frequency": 1.519,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        },
-        {
-          "word": "voler",
-          "pos": "VER",
-          "frequency": 75.731,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        },
-        {
-          "word": "volé",
-          "pos": "ADJ",
-          "frequency": 4.94,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        }
-      ],
-      "visibleConventions": [],
-      "registeredAssetCandidateCount": 0,
-      "researchAssetLeadCandidateCount": 0,
-      "preselectionScore": 18,
-      "preselectionSignals": [
-        "multiple_exact_candidates",
-        "noun_vs_non_noun_contrast",
-        "function_like_vs_noun",
-        "two_syllable"
-      ],
-      "candidateStructure": {
-        "viableExactCandidateCount": 3,
-        "nounCandidateCount": 1,
-        "nonNounCandidateCount": 2,
-        "functionLikeCandidateCount": 2
-      },
-      "visualDecision": "unknown",
-      "spontaneousNamingRisk": "unknown",
-      "humanNamingEvidence": "none",
-      "clinicalEvidence": "none",
-      "automaticActivation": false
-    },
-    {
-      "rank": 43,
+      "rank": 27,
       "ipa": "apʁɛ",
       "syllableSpans": [
         2
@@ -2182,7 +1388,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 44,
+      "rank": 28,
       "ipa": "ɑ̃vwa",
       "syllableSpans": [
         2
@@ -2236,7 +1442,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 45,
+      "rank": 29,
       "ipa": "bote",
       "syllableSpans": [
         2
@@ -2290,7 +1496,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 46,
+      "rank": 30,
       "ipa": "doʁe",
       "syllableSpans": [
         2
@@ -2344,7 +1550,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 47,
+      "rank": 31,
       "ipa": "dyʁe",
       "syllableSpans": [
         2
@@ -2391,7 +1597,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 48,
+      "rank": 32,
       "ipa": "ekʁi",
       "syllableSpans": [
         2
@@ -2438,7 +1644,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 49,
+      "rank": 33,
       "ipa": "kupe",
       "syllableSpans": [
         2
@@ -2492,7 +1698,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 50,
+      "rank": 34,
       "ipa": "maʁje",
       "syllableSpans": [
         2
@@ -2539,7 +1745,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 51,
+      "rank": 35,
       "ipa": "mɑ̃da",
       "syllableSpans": [
         2
@@ -2586,7 +1792,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 52,
+      "rank": 36,
       "ipa": "mɑ̃de",
       "syllableSpans": [
         2
@@ -2633,7 +1839,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 53,
+      "rank": 37,
       "ipa": "mili",
       "syllableSpans": [
         2
@@ -2680,7 +1886,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 54,
+      "rank": 38,
       "ipa": "peʁi",
       "syllableSpans": [
         2
@@ -2734,7 +1940,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 55,
+      "rank": 39,
       "ipa": "puse",
       "syllableSpans": [
         2
@@ -2788,7 +1994,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 56,
+      "rank": 40,
       "ipa": "sɑ̃se",
       "syllableSpans": [
         2
@@ -2842,7 +2048,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 57,
+      "rank": 41,
       "ipa": "seɲe",
       "syllableSpans": [
         2
@@ -2889,7 +2095,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 58,
+      "rank": 42,
       "ipa": "sɛʁti",
       "syllableSpans": [
         2
@@ -2936,7 +2142,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 59,
+      "rank": 43,
       "ipa": "ʃɑ̃te",
       "syllableSpans": [
         2
@@ -2983,7 +2189,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 60,
+      "rank": 44,
       "ipa": "ʃɑ̃ʒe",
       "syllableSpans": [
         2
@@ -3030,7 +2236,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 61,
+      "rank": 45,
       "ipa": "ʃɛʁʃe",
       "syllableSpans": [
         2
@@ -3077,7 +2283,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 62,
+      "rank": 46,
       "ipa": "toma",
       "syllableSpans": [
         2
@@ -3124,7 +2330,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 63,
+      "rank": 47,
       "ipa": "tʁuve",
       "syllableSpans": [
         2
@@ -3171,7 +2377,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 64,
+      "rank": 48,
       "ipa": "vɛʁsjɔ̃",
       "syllableSpans": [
         2
@@ -3218,7 +2424,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 65,
+      "rank": 49,
       "ipa": "vwaje",
       "syllableSpans": [
         2
@@ -3272,115 +2478,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 66,
-      "ipa": "bɛl",
-      "syllableSpans": [
-        1
-      ],
-      "twoSyllableFirstClass": false,
-      "usefulTargetCount": 7,
-      "usefulWeightedGain": 213.826,
-      "exactCandidates": [
-        {
-          "word": "belle",
-          "pos": "NOM",
-          "frequency": 27.848,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        },
-        {
-          "word": "belles",
-          "pos": "NOM",
-          "frequency": 1.772,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        },
-        {
-          "word": "bel",
-          "pos": "ADJ",
-          "frequency": 24.253,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        }
-      ],
-      "visibleConventions": [],
-      "registeredAssetCandidateCount": 0,
-      "researchAssetLeadCandidateCount": 0,
-      "preselectionScore": 17,
-      "preselectionSignals": [
-        "multiple_exact_candidates",
-        "noun_vs_non_noun_contrast",
-        "multiple_nouns",
-        "function_like_vs_noun"
-      ],
-      "candidateStructure": {
-        "viableExactCandidateCount": 3,
-        "nounCandidateCount": 2,
-        "nonNounCandidateCount": 1,
-        "functionLikeCandidateCount": 1
-      },
-      "visualDecision": "unknown",
-      "spontaneousNamingRisk": "unknown",
-      "humanNamingEvidence": "none",
-      "clinicalEvidence": "none",
-      "automaticActivation": false
-    },
-    {
-      "rank": 67,
-      "ipa": "mɛl",
-      "syllableSpans": [
-        1
-      ],
-      "twoSyllableFirstClass": false,
-      "usefulTargetCount": 6,
-      "usefulWeightedGain": 37.1,
-      "exactCandidates": [
-        {
-          "word": "mels",
-          "pos": "NOM",
-          "frequency": 0.016,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        },
-        {
-          "word": "mesle",
-          "pos": "NOM",
-          "frequency": 0.003,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        },
-        {
-          "word": "mêle",
-          "pos": "VER",
-          "frequency": 12.703,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        }
-      ],
-      "visibleConventions": [],
-      "registeredAssetCandidateCount": 0,
-      "researchAssetLeadCandidateCount": 0,
-      "preselectionScore": 17,
-      "preselectionSignals": [
-        "multiple_exact_candidates",
-        "noun_vs_non_noun_contrast",
-        "multiple_nouns",
-        "function_like_vs_noun"
-      ],
-      "candidateStructure": {
-        "viableExactCandidateCount": 3,
-        "nounCandidateCount": 2,
-        "nonNounCandidateCount": 1,
-        "functionLikeCandidateCount": 1
-      },
-      "visualDecision": "unknown",
-      "spontaneousNamingRisk": "unknown",
-      "humanNamingEvidence": "none",
-      "clinicalEvidence": "none",
-      "automaticActivation": false
-    },
-    {
-      "rank": 68,
+      "rank": 50,
       "ipa": "sjɔ̃",
       "syllableSpans": [
         1
@@ -3434,54 +2532,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 69,
-      "ipa": "sy",
-      "syllableSpans": [
-        1
-      ],
-      "twoSyllableFirstClass": false,
-      "usefulTargetCount": 65,
-      "usefulWeightedGain": 5514.087,
-      "exactCandidates": [
-        {
-          "word": "su",
-          "pos": "NOM",
-          "frequency": 0.18,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        },
-        {
-          "word": "sue",
-          "pos": "VER",
-          "frequency": 1.006,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        }
-      ],
-      "visibleConventions": [],
-      "registeredAssetCandidateCount": 0,
-      "researchAssetLeadCandidateCount": 0,
-      "preselectionScore": 16,
-      "preselectionSignals": [
-        "multiple_exact_candidates",
-        "noun_vs_non_noun_contrast",
-        "function_like_vs_noun",
-        "high_useful_yield"
-      ],
-      "candidateStructure": {
-        "viableExactCandidateCount": 2,
-        "nounCandidateCount": 1,
-        "nonNounCandidateCount": 1,
-        "functionLikeCandidateCount": 1
-      },
-      "visualDecision": "unknown",
-      "spontaneousNamingRisk": "unknown",
-      "humanNamingEvidence": "none",
-      "clinicalEvidence": "none",
-      "automaticActivation": false
-    },
-    {
-      "rank": 70,
+      "rank": 51,
       "ipa": "no",
       "syllableSpans": [
         1
@@ -3535,54 +2586,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 71,
-      "ipa": "tyʁ",
-      "syllableSpans": [
-        1
-      ],
-      "twoSyllableFirstClass": false,
-      "usefulTargetCount": 52,
-      "usefulWeightedGain": 4419.285,
-      "exactCandidates": [
-        {
-          "word": "tur",
-          "pos": "NOM",
-          "frequency": 0.022,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        },
-        {
-          "word": "turent",
-          "pos": "VER",
-          "frequency": 0.032,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        }
-      ],
-      "visibleConventions": [],
-      "registeredAssetCandidateCount": 0,
-      "researchAssetLeadCandidateCount": 0,
-      "preselectionScore": 16,
-      "preselectionSignals": [
-        "multiple_exact_candidates",
-        "noun_vs_non_noun_contrast",
-        "function_like_vs_noun",
-        "high_useful_yield"
-      ],
-      "candidateStructure": {
-        "viableExactCandidateCount": 2,
-        "nounCandidateCount": 1,
-        "nonNounCandidateCount": 1,
-        "functionLikeCandidateCount": 1
-      },
-      "visualDecision": "unknown",
-      "spontaneousNamingRisk": "unknown",
-      "humanNamingEvidence": "none",
-      "clinicalEvidence": "none",
-      "automaticActivation": false
-    },
-    {
-      "rank": 72,
+      "rank": 52,
       "ipa": "ly",
       "syllableSpans": [
         1
@@ -3629,7 +2633,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 73,
+      "rank": 53,
       "ipa": "pʁi",
       "syllableSpans": [
         1
@@ -3683,7 +2687,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 74,
+      "rank": 54,
       "ipa": "sɛ",
       "syllableSpans": [
         1
@@ -3730,7 +2734,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 75,
+      "rank": 55,
       "ipa": "nɑ̃",
       "syllableSpans": [
         1
@@ -3776,7 +2780,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 76,
+      "rank": 56,
       "ipa": "tal",
       "syllableSpans": [
         1
@@ -3829,7 +2833,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 77,
+      "rank": 57,
       "ipa": "vɛ",
       "syllableSpans": [
         1
@@ -3882,7 +2886,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 78,
+      "rank": 58,
       "ipa": "du",
       "syllableSpans": [
         1
@@ -3928,7 +2932,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 79,
+      "rank": 59,
       "ipa": "lwa",
       "syllableSpans": [
         1
@@ -3974,7 +2978,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 80,
+      "rank": 60,
       "ipa": "gʁe",
       "syllableSpans": [
         1
@@ -4020,7 +3024,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 81,
+      "rank": 61,
       "ipa": "taʁ",
       "syllableSpans": [
         1
@@ -4066,7 +3070,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 82,
+      "rank": 62,
       "ipa": "ʒa",
       "syllableSpans": [
         1
@@ -4112,7 +3116,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 83,
+      "rank": 63,
       "ipa": "pɛk",
       "syllableSpans": [
         1
@@ -4158,7 +3162,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 84,
+      "rank": 64,
       "ipa": "naʁ",
       "syllableSpans": [
         1
@@ -4204,7 +3208,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 85,
+      "rank": 65,
       "ipa": "tʁyk",
       "syllableSpans": [
         1
@@ -4257,7 +3261,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 86,
+      "rank": 66,
       "ipa": "baj",
       "syllableSpans": [
         1
@@ -4310,7 +3314,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 87,
+      "rank": 67,
       "ipa": "fi",
       "syllableSpans": [
         1
@@ -4363,7 +3367,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 88,
+      "rank": 68,
       "ipa": "da",
       "syllableSpans": [
         1
@@ -4409,7 +3413,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 89,
+      "rank": 69,
       "ipa": "mani",
       "syllableSpans": [
         2
@@ -4462,7 +3466,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 90,
+      "rank": 70,
       "ipa": "vite",
       "syllableSpans": [
         2
@@ -4508,7 +3512,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 91,
+      "rank": 71,
       "ipa": "ləve",
       "syllableSpans": [
         2
@@ -4561,7 +3565,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 92,
+      "rank": 72,
       "ipa": "poli",
       "syllableSpans": [
         2
@@ -4607,7 +3611,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 93,
+      "rank": 73,
       "ipa": "kɔ̃fɔʁ",
       "syllableSpans": [
         2
@@ -4653,7 +3657,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 94,
+      "rank": 74,
       "ipa": "paʁti",
       "syllableSpans": [
         2
@@ -4662,13 +3666,6 @@
       "usefulTargetCount": 8,
       "usefulWeightedGain": 1669.418,
       "exactCandidates": [
-        {
-          "word": "partie",
-          "pos": "NOM",
-          "frequency": 230.408,
-          "proofStatus": "lexical_exact_only",
-          "knownAssets": []
-        },
         {
           "word": "parti",
           "pos": "NOM",
@@ -4682,6 +3679,13 @@
           "frequency": 3.981,
           "proofStatus": "lexical_exact_only",
           "knownAssets": []
+        },
+        {
+          "word": "partie",
+          "pos": "NOM",
+          "frequency": 230.408,
+          "proofStatus": "visual_route_deferred",
+          "knownAssets": []
         }
       ],
       "visibleConventions": [],
@@ -4694,8 +3698,8 @@
         "two_syllable"
       ],
       "candidateStructure": {
-        "viableExactCandidateCount": 3,
-        "nounCandidateCount": 3,
+        "viableExactCandidateCount": 2,
+        "nounCandidateCount": 2,
         "nonNounCandidateCount": 0,
         "functionLikeCandidateCount": 0
       },
@@ -4706,7 +3710,60 @@
       "automaticActivation": false
     },
     {
-      "rank": 95,
+      "rank": 75,
+      "ipa": "bɛl",
+      "syllableSpans": [
+        1
+      ],
+      "twoSyllableFirstClass": false,
+      "usefulTargetCount": 7,
+      "usefulWeightedGain": 213.826,
+      "exactCandidates": [
+        {
+          "word": "belles",
+          "pos": "NOM",
+          "frequency": 1.772,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        },
+        {
+          "word": "bel",
+          "pos": "ADJ",
+          "frequency": 24.253,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        },
+        {
+          "word": "belle",
+          "pos": "NOM",
+          "frequency": 27.848,
+          "proofStatus": "visual_route_deferred",
+          "knownAssets": []
+        }
+      ],
+      "visibleConventions": [],
+      "registeredAssetCandidateCount": 0,
+      "researchAssetLeadCandidateCount": 0,
+      "preselectionScore": 14,
+      "preselectionSignals": [
+        "multiple_exact_candidates",
+        "noun_vs_non_noun_contrast",
+        "function_like_vs_noun"
+      ],
+      "candidateStructure": {
+        "viableExactCandidateCount": 2,
+        "nounCandidateCount": 1,
+        "nonNounCandidateCount": 1,
+        "functionLikeCandidateCount": 1
+      },
+      "visualDecision": "unknown",
+      "spontaneousNamingRisk": "unknown",
+      "humanNamingEvidence": "none",
+      "clinicalEvidence": "none",
+      "automaticActivation": false
+    },
+    {
+      "rank": 76,
       "ipa": "gɛ",
       "syllableSpans": [
         1
@@ -4759,7 +3816,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 96,
+      "rank": 77,
       "ipa": "kɥi",
       "syllableSpans": [
         1
@@ -4805,7 +3862,60 @@
       "automaticActivation": false
     },
     {
-      "rank": 97,
+      "rank": 78,
+      "ipa": "mɛl",
+      "syllableSpans": [
+        1
+      ],
+      "twoSyllableFirstClass": false,
+      "usefulTargetCount": 6,
+      "usefulWeightedGain": 37.1,
+      "exactCandidates": [
+        {
+          "word": "mesle",
+          "pos": "NOM",
+          "frequency": 0.003,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        },
+        {
+          "word": "mêle",
+          "pos": "VER",
+          "frequency": 12.703,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        },
+        {
+          "word": "mels",
+          "pos": "NOM",
+          "frequency": 0.016,
+          "proofStatus": "visual_route_deferred",
+          "knownAssets": []
+        }
+      ],
+      "visibleConventions": [],
+      "registeredAssetCandidateCount": 0,
+      "researchAssetLeadCandidateCount": 0,
+      "preselectionScore": 14,
+      "preselectionSignals": [
+        "multiple_exact_candidates",
+        "noun_vs_non_noun_contrast",
+        "function_like_vs_noun"
+      ],
+      "candidateStructure": {
+        "viableExactCandidateCount": 2,
+        "nounCandidateCount": 1,
+        "nonNounCandidateCount": 1,
+        "functionLikeCandidateCount": 1
+      },
+      "visualDecision": "unknown",
+      "spontaneousNamingRisk": "unknown",
+      "humanNamingEvidence": "none",
+      "clinicalEvidence": "none",
+      "automaticActivation": false
+    },
+    {
+      "rank": 79,
       "ipa": "tɥe",
       "syllableSpans": [
         1
@@ -4851,7 +3961,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 98,
+      "rank": 80,
       "ipa": "vø",
       "syllableSpans": [
         1
@@ -4897,7 +4007,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 99,
+      "rank": 81,
       "ipa": "vu",
       "syllableSpans": [
         1
@@ -4943,7 +4053,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 100,
+      "rank": 82,
       "ipa": "ʒwa",
       "syllableSpans": [
         1
@@ -4989,7 +4099,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 101,
+      "rank": 83,
       "ipa": "mis",
       "syllableSpans": [
         1
@@ -5035,7 +4145,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 102,
+      "rank": 84,
       "ipa": "ply",
       "syllableSpans": [
         1
@@ -5088,7 +4198,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 103,
+      "rank": 85,
       "ipa": "pø",
       "syllableSpans": [
         1
@@ -5141,7 +4251,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 104,
+      "rank": 86,
       "ipa": "bin",
       "syllableSpans": [
         1
@@ -5187,7 +4297,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 105,
+      "rank": 87,
       "ipa": "fɛ̃",
       "syllableSpans": [
         1
@@ -5240,7 +4350,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 106,
+      "rank": 88,
       "ipa": "njɛʁ",
       "syllableSpans": [
         1
@@ -5286,7 +4396,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 107,
+      "rank": 89,
       "ipa": "sik",
       "syllableSpans": [
         1
@@ -5332,7 +4442,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 108,
+      "rank": 90,
       "ipa": "ʒiʁ",
       "syllableSpans": [
         1
@@ -5378,7 +4488,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 109,
+      "rank": 91,
       "ipa": "lɔʁ",
       "syllableSpans": [
         1
@@ -5431,7 +4541,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 110,
+      "rank": 92,
       "ipa": "dja",
       "syllableSpans": [
         1
@@ -5476,7 +4586,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 111,
+      "rank": 93,
       "ipa": "ɔp",
       "syllableSpans": [
         1
@@ -5521,7 +4631,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 112,
+      "rank": 94,
       "ipa": "dife",
       "syllableSpans": [
         2
@@ -5567,7 +4677,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 113,
+      "rank": 95,
       "ipa": "sele",
       "syllableSpans": [
         2
@@ -5620,7 +4730,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 114,
+      "rank": 96,
       "ipa": "tʁene",
       "syllableSpans": [
         2
@@ -5666,7 +4776,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 115,
+      "rank": 97,
       "ipa": "vəny",
       "syllableSpans": [
         2
@@ -5712,7 +4822,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 116,
+      "rank": 98,
       "ipa": "desi",
       "syllableSpans": [
         2
@@ -5758,7 +4868,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 117,
+      "rank": 99,
       "ipa": "eko",
       "syllableSpans": [
         2
@@ -5811,7 +4921,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 118,
+      "rank": 100,
       "ipa": "paʁɛtʁ",
       "syllableSpans": [
         2
@@ -5857,7 +4967,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 119,
+      "rank": 101,
       "ipa": "psiko",
       "syllableSpans": [
         2
@@ -5903,7 +5013,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 120,
+      "rank": 102,
       "ipa": "sine",
       "syllableSpans": [
         2
@@ -5949,7 +5059,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 121,
+      "rank": 103,
       "ipa": "teʁa",
       "syllableSpans": [
         2
@@ -5995,7 +5105,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 122,
+      "rank": 104,
       "ipa": "ana",
       "syllableSpans": [
         2
@@ -6048,7 +5158,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 123,
+      "rank": 105,
       "ipa": "aso",
       "syllableSpans": [
         2
@@ -6101,7 +5211,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 124,
+      "rank": 106,
       "ipa": "ego",
       "syllableSpans": [
         2
@@ -6147,7 +5257,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 125,
+      "rank": 107,
       "ipa": "ɛ̃sy",
       "syllableSpans": [
         2
@@ -6193,7 +5303,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 126,
+      "rank": 108,
       "ipa": "kɔ̃tɑ̃",
       "syllableSpans": [
         2
@@ -6239,7 +5349,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 127,
+      "rank": 109,
       "ipa": "ɔʁga",
       "syllableSpans": [
         2
@@ -6285,7 +5395,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 128,
+      "rank": 110,
       "ipa": "ʁize",
       "syllableSpans": [
         2
@@ -6331,7 +5441,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 129,
+      "rank": 111,
       "ipa": "tʁiby",
       "syllableSpans": [
         2
@@ -6377,7 +5487,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 130,
+      "rank": 112,
       "ipa": "akɔ̃",
       "syllableSpans": [
         2
@@ -6423,7 +5533,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 131,
+      "rank": 113,
       "ipa": "ata",
       "syllableSpans": [
         2
@@ -6469,7 +5579,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 132,
+      "rank": 114,
       "ipa": "ɑ̃vi",
       "syllableSpans": [
         2
@@ -6522,7 +5632,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 133,
+      "rank": 115,
       "ipa": "dina",
       "syllableSpans": [
         2
@@ -6568,7 +5678,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 134,
+      "rank": 116,
       "ipa": "gaʁɑ̃",
       "syllableSpans": [
         2
@@ -6614,7 +5724,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 135,
+      "rank": 117,
       "ipa": "maʁi",
       "syllableSpans": [
         2
@@ -6667,7 +5777,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 136,
+      "rank": 118,
       "ipa": "mat",
       "syllableSpans": [
         1
@@ -6730,7 +5840,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 137,
+      "rank": 119,
       "ipa": "nego",
       "syllableSpans": [
         2
@@ -6776,7 +5886,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 138,
+      "rank": 120,
       "ipa": "œʁ",
       "syllableSpans": [
         1
@@ -6855,7 +5965,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 139,
+      "rank": 121,
       "ipa": "pɑ̃dɑ̃",
       "syllableSpans": [
         2
@@ -6901,7 +6011,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 140,
+      "rank": 122,
       "ipa": "sena",
       "syllableSpans": [
         2
@@ -6947,7 +6057,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 141,
+      "rank": 123,
       "ipa": "tɔ̃be",
       "syllableSpans": [
         2
@@ -6993,7 +6103,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 142,
+      "rank": 124,
       "ipa": "ubli",
       "syllableSpans": [
         2
@@ -7039,7 +6149,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 143,
+      "rank": 125,
       "ipa": "aky",
       "syllableSpans": [
         2
@@ -7085,7 +6195,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 144,
+      "rank": 126,
       "ipa": "avi",
       "syllableSpans": [
         2
@@ -7138,7 +6248,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 145,
+      "rank": 127,
       "ipa": "bʁyle",
       "syllableSpans": [
         2
@@ -7184,7 +6294,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 146,
+      "rank": 128,
       "ipa": "ɛ̃ti",
       "syllableSpans": [
         2
@@ -7230,7 +6340,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 147,
+      "rank": 129,
       "ipa": "kana",
       "syllableSpans": [
         2
@@ -7283,7 +6393,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 148,
+      "rank": 130,
       "ipa": "kapa",
       "syllableSpans": [
         2
@@ -7336,7 +6446,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 149,
+      "rank": 131,
       "ipa": "lɑ̃se",
       "syllableSpans": [
         2
@@ -7382,7 +6492,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 150,
+      "rank": 132,
       "ipa": "meʁi",
       "syllableSpans": [
         2
@@ -7428,7 +6538,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 151,
+      "rank": 133,
       "ipa": "moʁal",
       "syllableSpans": [
         2
@@ -7474,7 +6584,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 152,
+      "rank": 134,
       "ipa": "nɔʁmal",
       "syllableSpans": [
         2
@@ -7520,7 +6630,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 153,
+      "rank": 135,
       "ipa": "paʁle",
       "syllableSpans": [
         2
@@ -7566,7 +6676,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 154,
+      "rank": 136,
       "ipa": "ʁɑ̃kaʁ",
       "syllableSpans": [
         2
@@ -7619,7 +6729,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 155,
+      "rank": 137,
       "ipa": "ʁɑ̃tʁe",
       "syllableSpans": [
         2
@@ -7665,7 +6775,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 156,
+      "rank": 138,
       "ipa": "ʒyʁi",
       "syllableSpans": [
         2
@@ -7718,7 +6828,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 157,
+      "rank": 139,
       "ipa": "se",
       "syllableSpans": [
         1
@@ -7778,7 +6888,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 158,
+      "rank": 140,
       "ipa": "bɛ̃",
       "syllableSpans": [
         1
@@ -7823,7 +6933,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 159,
+      "rank": 141,
       "ipa": "ɑ̃",
       "syllableSpans": [
         1
@@ -7869,7 +6979,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 160,
+      "rank": 142,
       "ipa": "ti",
       "syllableSpans": [
         1
@@ -7915,7 +7025,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 161,
+      "rank": 143,
       "ipa": "vi",
       "syllableSpans": [
         1
@@ -7968,7 +7078,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 162,
+      "rank": 144,
       "ipa": "pʁo",
       "syllableSpans": [
         1
@@ -8014,7 +7124,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 163,
+      "rank": 145,
       "ipa": "tɑ̃",
       "syllableSpans": [
         1
@@ -8067,7 +7177,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 164,
+      "rank": 146,
       "ipa": "ba",
       "syllableSpans": [
         1
@@ -8120,7 +7230,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 165,
+      "rank": 147,
       "ipa": "to",
       "syllableSpans": [
         1
@@ -8173,7 +7283,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 166,
+      "rank": 148,
       "ipa": "mo",
       "syllableSpans": [
         1
@@ -8219,7 +7329,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 167,
+      "rank": 149,
       "ipa": "ʁɑ̃",
       "syllableSpans": [
         1
@@ -8272,7 +7382,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 168,
+      "rank": 150,
       "ipa": "lo",
       "syllableSpans": [
         1
@@ -8325,7 +7435,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 169,
+      "rank": 151,
       "ipa": "bi",
       "syllableSpans": [
         1
@@ -8378,7 +7488,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 170,
+      "rank": 152,
       "ipa": "ga",
       "syllableSpans": [
         1
@@ -8431,7 +7541,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 171,
+      "rank": 153,
       "ipa": "ʁo",
       "syllableSpans": [
         1
@@ -8477,7 +7587,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 172,
+      "rank": 154,
       "ipa": "pɛʁ",
       "syllableSpans": [
         1
@@ -8530,7 +7640,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 173,
+      "rank": 155,
       "ipa": "paʁ",
       "syllableSpans": [
         1
@@ -8583,7 +7693,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 174,
+      "rank": 156,
       "ipa": "su",
       "syllableSpans": [
         1
@@ -8636,7 +7746,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 175,
+      "rank": 157,
       "ipa": "aʁ",
       "syllableSpans": [
         1
@@ -8689,7 +7799,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 176,
+      "rank": 158,
       "ipa": "ty",
       "syllableSpans": [
         1
@@ -8735,7 +7845,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 177,
+      "rank": 159,
       "ipa": "lɑ̃",
       "syllableSpans": [
         1
@@ -8788,7 +7898,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 178,
+      "rank": 160,
       "ipa": "ki",
       "syllableSpans": [
         1
@@ -8841,7 +7951,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 179,
+      "rank": 161,
       "ipa": "ny",
       "syllableSpans": [
         1
@@ -8887,7 +7997,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 180,
+      "rank": 162,
       "ipa": "bo",
       "syllableSpans": [
         1
@@ -8940,7 +8050,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 181,
+      "rank": 163,
       "ipa": "sɛ̃",
       "syllableSpans": [
         1
@@ -8993,7 +8103,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 182,
+      "rank": 164,
       "ipa": "my",
       "syllableSpans": [
         1
@@ -9046,7 +8156,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 183,
+      "rank": 165,
       "ipa": "tɛ̃",
       "syllableSpans": [
         1
@@ -9099,7 +8209,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 184,
+      "rank": 166,
       "ipa": "fy",
       "syllableSpans": [
         1
@@ -9145,7 +8255,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 185,
+      "rank": 167,
       "ipa": "py",
       "syllableSpans": [
         1
@@ -9191,7 +8301,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 186,
+      "rank": 168,
       "ipa": "go",
       "syllableSpans": [
         1
@@ -9244,7 +8354,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 187,
+      "rank": 169,
       "ipa": "tɛ",
       "syllableSpans": [
         1
@@ -9297,7 +8407,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 188,
+      "rank": 170,
       "ipa": "dy",
       "syllableSpans": [
         1
@@ -9343,7 +8453,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 189,
+      "rank": 171,
       "ipa": "ak",
       "syllableSpans": [
         1
@@ -9396,7 +8506,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 190,
+      "rank": 172,
       "ipa": "nɛ",
       "syllableSpans": [
         1
@@ -9449,7 +8559,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 191,
+      "rank": 173,
       "ipa": "sɔ̃",
       "syllableSpans": [
         1
@@ -9495,7 +8605,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 192,
+      "rank": 174,
       "ipa": "tu",
       "syllableSpans": [
         1
@@ -9548,7 +8658,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 193,
+      "rank": 175,
       "ipa": "ʒɑ̃",
       "syllableSpans": [
         1
@@ -9601,7 +8711,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 194,
+      "rank": 176,
       "ipa": "fo",
       "syllableSpans": [
         1
@@ -9654,7 +8764,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 195,
+      "rank": 177,
       "ipa": "fɔ̃",
       "syllableSpans": [
         1
@@ -9707,7 +8817,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 196,
+      "rank": 178,
       "ipa": "tiʁ",
       "syllableSpans": [
         1
@@ -9753,7 +8863,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 197,
+      "rank": 179,
       "ipa": "poze",
       "syllableSpans": [
         2
@@ -9805,7 +8915,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 198,
+      "rank": 180,
       "ipa": "ʒene",
       "syllableSpans": [
         2
@@ -9850,7 +8960,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 199,
+      "rank": 181,
       "ipa": "defi",
       "syllableSpans": [
         2
@@ -9902,7 +9012,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 200,
+      "rank": 182,
       "ipa": "vɑ̃",
       "syllableSpans": [
         1
@@ -9958,7 +9068,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 201,
+      "rank": 183,
       "ipa": "ʃo",
       "syllableSpans": [
         1
@@ -10010,7 +9120,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 202,
+      "rank": 184,
       "ipa": "vwa",
       "syllableSpans": [
         1
@@ -10062,7 +9172,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 203,
+      "rank": 185,
       "ipa": "kal",
       "syllableSpans": [
         1
@@ -10114,7 +9224,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 204,
+      "rank": 186,
       "ipa": "mu",
       "syllableSpans": [
         1
@@ -10166,7 +9276,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 205,
+      "rank": 187,
       "ipa": "pli",
       "syllableSpans": [
         1
@@ -10211,7 +9321,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 206,
+      "rank": 188,
       "ipa": "fɛ",
       "syllableSpans": [
         1
@@ -10263,7 +9373,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 207,
+      "rank": 189,
       "ipa": "kʁo",
       "syllableSpans": [
         1
@@ -10308,7 +9418,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 208,
+      "rank": 190,
       "ipa": "u",
       "syllableSpans": [
         1
@@ -10360,7 +9470,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 209,
+      "rank": 191,
       "ipa": "ɛ",
       "syllableSpans": [
         1
@@ -10412,7 +9522,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 210,
+      "rank": 192,
       "ipa": "sɑ̃s",
       "syllableSpans": [
         1
@@ -10457,7 +9567,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 211,
+      "rank": 193,
       "ipa": "tɛk",
       "syllableSpans": [
         1
@@ -10509,7 +9619,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 212,
+      "rank": 194,
       "ipa": "al",
       "syllableSpans": [
         1
@@ -10561,7 +9671,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 213,
+      "rank": 195,
       "ipa": "gu",
       "syllableSpans": [
         1
@@ -10606,7 +9716,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 214,
+      "rank": 196,
       "ipa": "mɛ",
       "syllableSpans": [
         1
@@ -10658,7 +9768,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 215,
+      "rank": 197,
       "ipa": "nu",
       "syllableSpans": [
         1
@@ -10703,7 +9813,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 216,
+      "rank": 198,
       "ipa": "pɛ",
       "syllableSpans": [
         1
@@ -10755,7 +9865,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 217,
+      "rank": 199,
       "ipa": "tʁɑ̃s",
       "syllableSpans": [
         1
@@ -10807,7 +9917,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 218,
+      "rank": 200,
       "ipa": "vɛ̃",
       "syllableSpans": [
         1
@@ -10859,7 +9969,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 219,
+      "rank": 201,
       "ipa": "bɔ̃",
       "syllableSpans": [
         1
@@ -10904,7 +10014,7 @@
       "automaticActivation": false
     },
     {
-      "rank": 220,
+      "rank": 202,
       "ipa": "kɛt",
       "syllableSpans": [
         1
@@ -10946,6 +10056,879 @@
       "candidateStructure": {
         "viableExactCandidateCount": 3,
         "nounCandidateCount": 3,
+        "nonNounCandidateCount": 0,
+        "functionLikeCandidateCount": 0
+      },
+      "visualDecision": "unknown",
+      "spontaneousNamingRisk": "unknown",
+      "humanNamingEvidence": "none",
+      "clinicalEvidence": "none",
+      "automaticActivation": false
+    },
+    {
+      "rank": 203,
+      "ipa": "mɔʁ",
+      "syllableSpans": [
+        1
+      ],
+      "twoSyllableFirstClass": false,
+      "usefulTargetCount": 14,
+      "usefulWeightedGain": 2226.651,
+      "exactCandidates": [
+        {
+          "word": "mort",
+          "pos": "NOM",
+          "frequency": 315.013,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        },
+        {
+          "word": "mors",
+          "pos": "NOM",
+          "frequency": 0.383,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        },
+        {
+          "word": "more",
+          "pos": "NOM",
+          "frequency": 0.323,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        }
+      ],
+      "visibleConventions": [],
+      "registeredAssetCandidateCount": 0,
+      "researchAssetLeadCandidateCount": 0,
+      "preselectionScore": 10,
+      "preselectionSignals": [
+        "multiple_exact_candidates",
+        "multiple_nouns"
+      ],
+      "candidateStructure": {
+        "viableExactCandidateCount": 3,
+        "nounCandidateCount": 3,
+        "nonNounCandidateCount": 0,
+        "functionLikeCandidateCount": 0
+      },
+      "visualDecision": "unknown",
+      "spontaneousNamingRisk": "unknown",
+      "humanNamingEvidence": "none",
+      "clinicalEvidence": "none",
+      "automaticActivation": false
+    },
+    {
+      "rank": 204,
+      "ipa": "mwa",
+      "syllableSpans": [
+        1
+      ],
+      "twoSyllableFirstClass": false,
+      "usefulTargetCount": 14,
+      "usefulWeightedGain": 3308.32,
+      "exactCandidates": [
+        {
+          "word": "mois",
+          "pos": "NOM",
+          "frequency": 296.063,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        },
+        {
+          "word": "moi",
+          "pos": "NOM",
+          "frequency": 22.693,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        },
+        {
+          "word": "moie",
+          "pos": "NOM",
+          "frequency": 0.009,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        }
+      ],
+      "visibleConventions": [],
+      "registeredAssetCandidateCount": 0,
+      "researchAssetLeadCandidateCount": 0,
+      "preselectionScore": 10,
+      "preselectionSignals": [
+        "multiple_exact_candidates",
+        "multiple_nouns"
+      ],
+      "candidateStructure": {
+        "viableExactCandidateCount": 3,
+        "nounCandidateCount": 3,
+        "nonNounCandidateCount": 0,
+        "functionLikeCandidateCount": 0
+      },
+      "visualDecision": "unknown",
+      "spontaneousNamingRisk": "unknown",
+      "humanNamingEvidence": "none",
+      "clinicalEvidence": "none",
+      "automaticActivation": false
+    },
+    {
+      "rank": 205,
+      "ipa": "ʁabl",
+      "syllableSpans": [
+        1
+      ],
+      "twoSyllableFirstClass": false,
+      "usefulTargetCount": 14,
+      "usefulWeightedGain": 255.497,
+      "exactCandidates": [
+        {
+          "word": "râble",
+          "pos": "NOM",
+          "frequency": 0.06,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        },
+        {
+          "word": "rables",
+          "pos": "NOM",
+          "frequency": 0.013,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        }
+      ],
+      "visibleConventions": [],
+      "registeredAssetCandidateCount": 0,
+      "researchAssetLeadCandidateCount": 0,
+      "preselectionScore": 10,
+      "preselectionSignals": [
+        "multiple_exact_candidates",
+        "multiple_nouns"
+      ],
+      "candidateStructure": {
+        "viableExactCandidateCount": 2,
+        "nounCandidateCount": 2,
+        "nonNounCandidateCount": 0,
+        "functionLikeCandidateCount": 0
+      },
+      "visualDecision": "unknown",
+      "spontaneousNamingRisk": "unknown",
+      "humanNamingEvidence": "none",
+      "clinicalEvidence": "none",
+      "automaticActivation": false
+    },
+    {
+      "rank": 206,
+      "ipa": "as",
+      "syllableSpans": [
+        1
+      ],
+      "twoSyllableFirstClass": false,
+      "usefulTargetCount": 13,
+      "usefulWeightedGain": 156.639,
+      "exactCandidates": [
+        {
+          "word": "as",
+          "pos": "NOM",
+          "frequency": 14.016,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        },
+        {
+          "word": "asse",
+          "pos": "NOM",
+          "frequency": 0.152,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        }
+      ],
+      "visibleConventions": [],
+      "registeredAssetCandidateCount": 0,
+      "researchAssetLeadCandidateCount": 0,
+      "preselectionScore": 10,
+      "preselectionSignals": [
+        "multiple_exact_candidates",
+        "multiple_nouns"
+      ],
+      "candidateStructure": {
+        "viableExactCandidateCount": 2,
+        "nounCandidateCount": 2,
+        "nonNounCandidateCount": 0,
+        "functionLikeCandidateCount": 0
+      },
+      "visualDecision": "unknown",
+      "spontaneousNamingRisk": "unknown",
+      "humanNamingEvidence": "none",
+      "clinicalEvidence": "none",
+      "automaticActivation": false
+    },
+    {
+      "rank": 207,
+      "ipa": "baʁ",
+      "syllableSpans": [
+        1
+      ],
+      "twoSyllableFirstClass": false,
+      "usefulTargetCount": 13,
+      "usefulWeightedGain": 589.855,
+      "exactCandidates": [
+        {
+          "word": "bar",
+          "pos": "NOM",
+          "frequency": 76.88,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        },
+        {
+          "word": "barre",
+          "pos": "NOM",
+          "frequency": 19.829,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        },
+        {
+          "word": "bare",
+          "pos": "NOM",
+          "frequency": 0.139,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        }
+      ],
+      "visibleConventions": [],
+      "registeredAssetCandidateCount": 0,
+      "researchAssetLeadCandidateCount": 0,
+      "preselectionScore": 10,
+      "preselectionSignals": [
+        "multiple_exact_candidates",
+        "multiple_nouns"
+      ],
+      "candidateStructure": {
+        "viableExactCandidateCount": 3,
+        "nounCandidateCount": 3,
+        "nonNounCandidateCount": 0,
+        "functionLikeCandidateCount": 0
+      },
+      "visualDecision": "unknown",
+      "spontaneousNamingRisk": "unknown",
+      "humanNamingEvidence": "none",
+      "clinicalEvidence": "none",
+      "automaticActivation": false
+    },
+    {
+      "rank": 208,
+      "ipa": "kuʁ",
+      "syllableSpans": [
+        1
+      ],
+      "twoSyllableFirstClass": false,
+      "usefulTargetCount": 13,
+      "usefulWeightedGain": 1857.32,
+      "exactCandidates": [
+        {
+          "word": "cours",
+          "pos": "NOM",
+          "frequency": 129.775,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        },
+        {
+          "word": "cour",
+          "pos": "NOM",
+          "frequency": 59.867,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        },
+        {
+          "word": "court",
+          "pos": "NOM",
+          "frequency": 14.269,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        }
+      ],
+      "visibleConventions": [],
+      "registeredAssetCandidateCount": 0,
+      "researchAssetLeadCandidateCount": 0,
+      "preselectionScore": 10,
+      "preselectionSignals": [
+        "multiple_exact_candidates",
+        "multiple_nouns"
+      ],
+      "candidateStructure": {
+        "viableExactCandidateCount": 3,
+        "nounCandidateCount": 3,
+        "nonNounCandidateCount": 0,
+        "functionLikeCandidateCount": 0
+      },
+      "visualDecision": "unknown",
+      "spontaneousNamingRisk": "unknown",
+      "humanNamingEvidence": "none",
+      "clinicalEvidence": "none",
+      "automaticActivation": false
+    },
+    {
+      "rank": 209,
+      "ipa": "nɔ̃",
+      "syllableSpans": [
+        1
+      ],
+      "twoSyllableFirstClass": false,
+      "usefulTargetCount": 13,
+      "usefulWeightedGain": 27899.225,
+      "exactCandidates": [
+        {
+          "word": "nom",
+          "pos": "NOM",
+          "frequency": 500.43,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        },
+        {
+          "word": "non",
+          "pos": "NOM",
+          "frequency": 4.579,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        },
+        {
+          "word": "nons",
+          "pos": "NOM",
+          "frequency": 0.044,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        }
+      ],
+      "visibleConventions": [],
+      "registeredAssetCandidateCount": 0,
+      "researchAssetLeadCandidateCount": 0,
+      "preselectionScore": 10,
+      "preselectionSignals": [
+        "multiple_exact_candidates",
+        "multiple_nouns"
+      ],
+      "candidateStructure": {
+        "viableExactCandidateCount": 3,
+        "nounCandidateCount": 3,
+        "nonNounCandidateCount": 0,
+        "functionLikeCandidateCount": 0
+      },
+      "visualDecision": "unknown",
+      "spontaneousNamingRisk": "unknown",
+      "humanNamingEvidence": "none",
+      "clinicalEvidence": "none",
+      "automaticActivation": false
+    },
+    {
+      "rank": 210,
+      "ipa": "tɛl",
+      "syllableSpans": [
+        1
+      ],
+      "twoSyllableFirstClass": false,
+      "usefulTargetCount": 13,
+      "usefulWeightedGain": 1012.523,
+      "exactCandidates": [
+        {
+          "word": "tell",
+          "pos": "NOM",
+          "frequency": 2.617,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        },
+        {
+          "word": "tél",
+          "pos": "NOM",
+          "frequency": 0.18,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        }
+      ],
+      "visibleConventions": [],
+      "registeredAssetCandidateCount": 0,
+      "researchAssetLeadCandidateCount": 0,
+      "preselectionScore": 10,
+      "preselectionSignals": [
+        "multiple_exact_candidates",
+        "multiple_nouns"
+      ],
+      "candidateStructure": {
+        "viableExactCandidateCount": 2,
+        "nounCandidateCount": 2,
+        "nonNounCandidateCount": 0,
+        "functionLikeCandidateCount": 0
+      },
+      "visualDecision": "unknown",
+      "spontaneousNamingRisk": "unknown",
+      "humanNamingEvidence": "none",
+      "clinicalEvidence": "none",
+      "automaticActivation": false
+    },
+    {
+      "rank": 211,
+      "ipa": "tʁɛ",
+      "syllableSpans": [
+        1
+      ],
+      "twoSyllableFirstClass": false,
+      "usefulTargetCount": 13,
+      "usefulWeightedGain": 9059.101,
+      "exactCandidates": [
+        {
+          "word": "trés",
+          "pos": "NOM",
+          "frequency": 13.25,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        },
+        {
+          "word": "trait",
+          "pos": "NOM",
+          "frequency": 4.845,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        }
+      ],
+      "visibleConventions": [],
+      "registeredAssetCandidateCount": 0,
+      "researchAssetLeadCandidateCount": 0,
+      "preselectionScore": 10,
+      "preselectionSignals": [
+        "multiple_exact_candidates",
+        "multiple_nouns"
+      ],
+      "candidateStructure": {
+        "viableExactCandidateCount": 2,
+        "nounCandidateCount": 2,
+        "nonNounCandidateCount": 0,
+        "functionLikeCandidateCount": 0
+      },
+      "visualDecision": "unknown",
+      "spontaneousNamingRisk": "unknown",
+      "humanNamingEvidence": "none",
+      "clinicalEvidence": "none",
+      "automaticActivation": false
+    },
+    {
+      "rank": 212,
+      "ipa": "dyk",
+      "syllableSpans": [
+        1
+      ],
+      "twoSyllableFirstClass": false,
+      "usefulTargetCount": 12,
+      "usefulWeightedGain": 328.822,
+      "exactCandidates": [
+        {
+          "word": "duc",
+          "pos": "NOM",
+          "frequency": 5.709,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        },
+        {
+          "word": "dunk",
+          "pos": "NOM",
+          "frequency": 0.361,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        },
+        {
+          "word": "duque",
+          "pos": "NOM",
+          "frequency": 0.013,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        }
+      ],
+      "visibleConventions": [],
+      "registeredAssetCandidateCount": 0,
+      "researchAssetLeadCandidateCount": 0,
+      "preselectionScore": 10,
+      "preselectionSignals": [
+        "multiple_exact_candidates",
+        "multiple_nouns"
+      ],
+      "candidateStructure": {
+        "viableExactCandidateCount": 3,
+        "nounCandidateCount": 3,
+        "nonNounCandidateCount": 0,
+        "functionLikeCandidateCount": 0
+      },
+      "visualDecision": "unknown",
+      "spontaneousNamingRisk": "unknown",
+      "humanNamingEvidence": "none",
+      "clinicalEvidence": "none",
+      "automaticActivation": false
+    },
+    {
+      "rank": 213,
+      "ipa": "kɛ",
+      "syllableSpans": [
+        1
+      ],
+      "twoSyllableFirstClass": false,
+      "usefulTargetCount": 12,
+      "usefulWeightedGain": 289.095,
+      "exactCandidates": [
+        {
+          "word": "quai",
+          "pos": "NOM",
+          "frequency": 9.165,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        },
+        {
+          "word": "quet",
+          "pos": "NOM",
+          "frequency": 0.022,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        }
+      ],
+      "visibleConventions": [],
+      "registeredAssetCandidateCount": 0,
+      "researchAssetLeadCandidateCount": 0,
+      "preselectionScore": 10,
+      "preselectionSignals": [
+        "multiple_exact_candidates",
+        "multiple_nouns"
+      ],
+      "candidateStructure": {
+        "viableExactCandidateCount": 2,
+        "nounCandidateCount": 2,
+        "nonNounCandidateCount": 0,
+        "functionLikeCandidateCount": 0
+      },
+      "visualDecision": "unknown",
+      "spontaneousNamingRisk": "unknown",
+      "humanNamingEvidence": "none",
+      "clinicalEvidence": "none",
+      "automaticActivation": false
+    },
+    {
+      "rank": 214,
+      "ipa": "psi",
+      "syllableSpans": [
+        1
+      ],
+      "twoSyllableFirstClass": false,
+      "usefulTargetCount": 12,
+      "usefulWeightedGain": 222.45,
+      "exactCandidates": [
+        {
+          "word": "psy",
+          "pos": "NOM",
+          "frequency": 18.491,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        },
+        {
+          "word": "psi",
+          "pos": "NOM",
+          "frequency": 0.335,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        }
+      ],
+      "visibleConventions": [],
+      "registeredAssetCandidateCount": 0,
+      "researchAssetLeadCandidateCount": 0,
+      "preselectionScore": 10,
+      "preselectionSignals": [
+        "multiple_exact_candidates",
+        "multiple_nouns"
+      ],
+      "candidateStructure": {
+        "viableExactCandidateCount": 2,
+        "nounCandidateCount": 2,
+        "nonNounCandidateCount": 0,
+        "functionLikeCandidateCount": 0
+      },
+      "visualDecision": "unknown",
+      "spontaneousNamingRisk": "unknown",
+      "humanNamingEvidence": "none",
+      "clinicalEvidence": "none",
+      "automaticActivation": false
+    },
+    {
+      "rank": 215,
+      "ipa": "siʁ",
+      "syllableSpans": [
+        1
+      ],
+      "twoSyllableFirstClass": false,
+      "usefulTargetCount": 12,
+      "usefulWeightedGain": 806.752,
+      "exactCandidates": [
+        {
+          "word": "sir",
+          "pos": "NOM",
+          "frequency": 8.244,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        },
+        {
+          "word": "sire",
+          "pos": "NOM",
+          "frequency": 5.962,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        },
+        {
+          "word": "cire",
+          "pos": "NOM",
+          "frequency": 4.601,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        }
+      ],
+      "visibleConventions": [],
+      "registeredAssetCandidateCount": 0,
+      "researchAssetLeadCandidateCount": 0,
+      "preselectionScore": 10,
+      "preselectionSignals": [
+        "multiple_exact_candidates",
+        "multiple_nouns"
+      ],
+      "candidateStructure": {
+        "viableExactCandidateCount": 3,
+        "nounCandidateCount": 3,
+        "nonNounCandidateCount": 0,
+        "functionLikeCandidateCount": 0
+      },
+      "visualDecision": "unknown",
+      "spontaneousNamingRisk": "unknown",
+      "humanNamingEvidence": "none",
+      "clinicalEvidence": "none",
+      "automaticActivation": false
+    },
+    {
+      "rank": 216,
+      "ipa": "tɔʁ",
+      "syllableSpans": [
+        1
+      ],
+      "twoSyllableFirstClass": false,
+      "usefulTargetCount": 12,
+      "usefulWeightedGain": 480.323,
+      "exactCandidates": [
+        {
+          "word": "tort",
+          "pos": "NOM",
+          "frequency": 66.456,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        },
+        {
+          "word": "tore",
+          "pos": "NOM",
+          "frequency": 0.127,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        },
+        {
+          "word": "torr",
+          "pos": "NOM",
+          "frequency": 0.022,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        }
+      ],
+      "visibleConventions": [],
+      "registeredAssetCandidateCount": 0,
+      "researchAssetLeadCandidateCount": 0,
+      "preselectionScore": 10,
+      "preselectionSignals": [
+        "multiple_exact_candidates",
+        "multiple_nouns"
+      ],
+      "candidateStructure": {
+        "viableExactCandidateCount": 3,
+        "nounCandidateCount": 3,
+        "nonNounCandidateCount": 0,
+        "functionLikeCandidateCount": 0
+      },
+      "visualDecision": "unknown",
+      "spontaneousNamingRisk": "unknown",
+      "humanNamingEvidence": "none",
+      "clinicalEvidence": "none",
+      "automaticActivation": false
+    },
+    {
+      "rank": 217,
+      "ipa": "ap",
+      "syllableSpans": [
+        1
+      ],
+      "twoSyllableFirstClass": false,
+      "usefulTargetCount": 11,
+      "usefulWeightedGain": 604.891,
+      "exactCandidates": [
+        {
+          "word": "ape",
+          "pos": "NOM",
+          "frequency": 0.459,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        },
+        {
+          "word": "happe",
+          "pos": "NOM",
+          "frequency": 0.013,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        }
+      ],
+      "visibleConventions": [],
+      "registeredAssetCandidateCount": 0,
+      "researchAssetLeadCandidateCount": 0,
+      "preselectionScore": 10,
+      "preselectionSignals": [
+        "multiple_exact_candidates",
+        "multiple_nouns"
+      ],
+      "candidateStructure": {
+        "viableExactCandidateCount": 2,
+        "nounCandidateCount": 2,
+        "nonNounCandidateCount": 0,
+        "functionLikeCandidateCount": 0
+      },
+      "visualDecision": "unknown",
+      "spontaneousNamingRisk": "unknown",
+      "humanNamingEvidence": "none",
+      "clinicalEvidence": "none",
+      "automaticActivation": false
+    },
+    {
+      "rank": 218,
+      "ipa": "dɛ",
+      "syllableSpans": [
+        1
+      ],
+      "twoSyllableFirstClass": false,
+      "usefulTargetCount": 11,
+      "usefulWeightedGain": 464.005,
+      "exactCandidates": [
+        {
+          "word": "dais",
+          "pos": "NOM",
+          "frequency": 0.139,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        },
+        {
+          "word": "dey",
+          "pos": "NOM",
+          "frequency": 0.044,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        }
+      ],
+      "visibleConventions": [],
+      "registeredAssetCandidateCount": 0,
+      "researchAssetLeadCandidateCount": 0,
+      "preselectionScore": 10,
+      "preselectionSignals": [
+        "multiple_exact_candidates",
+        "multiple_nouns"
+      ],
+      "candidateStructure": {
+        "viableExactCandidateCount": 2,
+        "nounCandidateCount": 2,
+        "nonNounCandidateCount": 0,
+        "functionLikeCandidateCount": 0
+      },
+      "visualDecision": "unknown",
+      "spontaneousNamingRisk": "unknown",
+      "humanNamingEvidence": "none",
+      "clinicalEvidence": "none",
+      "automaticActivation": false
+    },
+    {
+      "rank": 219,
+      "ipa": "fwa",
+      "syllableSpans": [
+        1
+      ],
+      "twoSyllableFirstClass": false,
+      "usefulTargetCount": 11,
+      "usefulWeightedGain": 7229.593,
+      "exactCandidates": [
+        {
+          "word": "fois",
+          "pos": "NOM",
+          "frequency": 946.456,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        },
+        {
+          "word": "foi",
+          "pos": "NOM",
+          "frequency": 41.766,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        },
+        {
+          "word": "foie",
+          "pos": "NOM",
+          "frequency": 16.278,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        }
+      ],
+      "visibleConventions": [],
+      "registeredAssetCandidateCount": 0,
+      "researchAssetLeadCandidateCount": 0,
+      "preselectionScore": 10,
+      "preselectionSignals": [
+        "multiple_exact_candidates",
+        "multiple_nouns"
+      ],
+      "candidateStructure": {
+        "viableExactCandidateCount": 3,
+        "nounCandidateCount": 3,
+        "nonNounCandidateCount": 0,
+        "functionLikeCandidateCount": 0
+      },
+      "visualDecision": "unknown",
+      "spontaneousNamingRisk": "unknown",
+      "humanNamingEvidence": "none",
+      "clinicalEvidence": "none",
+      "automaticActivation": false
+    },
+    {
+      "rank": 220,
+      "ipa": "pas",
+      "syllableSpans": [
+        1
+      ],
+      "twoSyllableFirstClass": false,
+      "usefulTargetCount": 11,
+      "usefulWeightedGain": 612.005,
+      "exactCandidates": [
+        {
+          "word": "passe",
+          "pos": "NOM",
+          "frequency": 44.968,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        },
+        {
+          "word": "pass",
+          "pos": "NOM",
+          "frequency": 2.259,
+          "proofStatus": "lexical_exact_only",
+          "knownAssets": []
+        }
+      ],
+      "visibleConventions": [],
+      "registeredAssetCandidateCount": 0,
+      "researchAssetLeadCandidateCount": 0,
+      "preselectionScore": 10,
+      "preselectionSignals": [
+        "multiple_exact_candidates",
+        "multiple_nouns"
+      ],
+      "candidateStructure": {
+        "viableExactCandidateCount": 2,
+        "nounCandidateCount": 2,
         "nonNounCandidateCount": 0,
         "functionLikeCandidateCount": 0
       },

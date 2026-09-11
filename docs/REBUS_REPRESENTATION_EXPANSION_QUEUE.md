@@ -11,15 +11,15 @@
 - Sons avec asset enregistré dont l’IPA est explicitement enregistrée et exacte : 5.
 - Sons avec convention visible : 23.
 - Sons qui nécessitent probablement un nouvel asset si un concept exact est retenu : 870.
-- Sons avec risque visuel/lexical déjà documenté : 94.
+- Sons avec risque visuel/lexical déjà documenté : 115.
 - Sons avec approximation légère disponible séparément : 609.
 - Sons dont les preuves visuelles restent insuffisantes : 776.
 
 ## Répartition des décisions
 
-- convention visible préférable : 3.
-- plusieurs homophones exacts à départager : 519.
+- plusieurs homophones exacts à départager : 520.
 - approximation ludique seulement après rejets exacts : 4.
+- convention visible préférable : 2.
 - fichier de recherche à inspecter séparément : 11.
 - candidat lexical exact à préexaminer : 374.
 - asset enregistré à examiner/tester : 5.
@@ -29,7 +29,7 @@
 - Assets enregistrés à examiner : 5 sons (/vɑ̃/, /bal/, /gɑ̃/, /foto/, /kyʁi/).
 - Fichiers de recherche à inspecter séparément : 11 sons (/ni/, /fu/, /kʁwa/, /ø/, /pɛl/, /wa/, /œʁ/, /dwa/, /mat/, /ʁadi/, /kaʁe/).
 - Homophones exacts à départager : 160 sons prioritaires.
-- Conventions visibles préférables : 3 sons (/a/, /se/, /ʒi/).
+- Conventions visibles préférables : 2 sons (/se/, /ʒi/).
 - Préexamen de candidat image exact : 160 sons prioritaires.
 - Fenêtres de deux syllabes à préserver : 160 sons prioritaires.
 - Pistes susceptibles de nécessiter un nouvel asset : 160 sons prioritaires.
@@ -38,7 +38,7 @@
 
 | Rang | Son | Cibles utiles | Fenêtre | Candidats exacts retenus | Convention | Assets enregistrés | Fichiers recherche | File de décision |
 |---:|---|---:|---|---|---|---:|---:|---|
-| 1 | /a/ | 424 | 1 syll. | a, ha [rejet visuel] | A | 0 | 0 | convention visible préférable |
+| 1 | /a/ | 424 | 1 syll. | a [hypothèse curatée], ha [rejet visuel] | A | 0 | 0 | plusieurs homophones exacts à départager |
 | 2 | /mɑ̃/ | 374 | 1 syll. | mens, man [rejet visuel], mans [rejet visuel] | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 3 | /sjɔ̃/ | 365 | 1 syll. | cyon, scions, scion | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 4 | /e/ | 280 | 1 syll. | ais [rejet visuel], ai [rejet visuel], et [rejet visuel] | — | 0 | 0 | plusieurs homophones exacts à départager |
@@ -74,7 +74,7 @@
 | 34 | /sa/ | 68 | 1 syll. | sas [hypothèse curatée], sa, çà | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 35 | /ʃe/ | 67 | 1 syll. | ché | — | 0 | 0 | candidat lexical exact à préexaminer |
 | 36 | /lo/ | 67 | 1 syll. | lot, los, laud | — | 0 | 0 | plusieurs homophones exacts à départager |
-| 37 | /sy/ | 65 | 1 syll. | su, sue | — | 0 | 0 | plusieurs homophones exacts à départager |
+| 37 | /sy/ | 65 | 1 syll. | sue, su | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 38 | /bi/ | 65 | 1 syll. | by, bi, bee | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 39 | /ga/ | 64 | 1 syll. | gars, ga, ghât | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 40 | /no/ | 63 | 1 syll. | noe, nos, nô | — | 0 | 0 | plusieurs homophones exacts à départager |
@@ -88,10 +88,10 @@
 | 48 | /ku/ | 55 | 1 syll. | cou [hypothèse curatée], coup, coût | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 49 | /va/ | 55 | 1 syll. | va | — | 0 | 0 | candidat lexical exact à préexaminer |
 | 50 | /də/ | 54 | 1 syll. | de | — | 0 | 0 | candidat lexical exact à préexaminer |
-| 51 | /tyʁ/ | 52 | 1 syll. | tur, turent | — | 0 | 0 | plusieurs homophones exacts à départager |
+| 51 | /tyʁ/ | 52 | 1 syll. | turent, tur | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 52 | /vɑ̃/ | 48 | 1 syll. | vend, vent [asset enregistré] | — | 1 | 0 | asset enregistré à examiner/tester |
 | 53 | /vo/ | 47 | 1 syll. | veau [hypothèse curatée], vaux, vau | — | 0 | 0 | plusieurs homophones exacts à départager |
-| 54 | /fa/ | 46 | 1 syll. | fa | fa | 0 | 0 | candidat lexical exact à préexaminer |
+| 54 | /fa/ | 46 | 1 syll. | fa [hypothèse curatée] | fa | 0 | 0 | candidat lexical exact à préexaminer |
 | 55 | /be/ | 46 | 1 syll. | b [hypothèse curatée], bô, bés | B | 0 | 0 | plusieurs homophones exacts à départager |
 | 56 | /fe/ | 46 | 1 syll. | fée [hypothèse curatée], phé | — | 0 | 0 | plusieurs homophones exacts à départager |
 | 57 | /su/ | 44 | 1 syll. | sou, saoûl, souls | — | 0 | 0 | plusieurs homophones exacts à départager |

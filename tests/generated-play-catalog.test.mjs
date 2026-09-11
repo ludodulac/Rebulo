@@ -23,7 +23,9 @@ for(const word of ['merci','cinéma','parapluie','parasol','délit','tourner'])a
 
 const modern=generatedPlayableBankRebuses(coverage,soundCatalog,visibleConventions);
 assert.ok(modern.length>0,'the browser product must expose the modern representation bank');
-assert.ok(modern.every(item=>item.source==='representation-bank'));
+assert.ok(modern.every(item=>['representation-bank','visible-convention'].includes(item.source)),'modern rounds must retain explicit bank or convention provenance');
+assert.ok(modern.some(item=>item.source==='representation-bank'));
+assert.ok(modern.some(item=>item.source==='visible-convention'));
 assert.ok(modern.every(item=>item.pieces.length>=1&&item.pieces.length<=6));
 assert.ok(modern.every(item=>item.pieces.every(piece=>piece.kind==='image'?Boolean(piece.image):Boolean(piece.symbol))));
 assert.ok(modern.every(item=>Array.isArray(item.acceptedAnswers)&&item.acceptedAnswers.includes(item.answer)));

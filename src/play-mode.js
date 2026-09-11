@@ -12,33 +12,20 @@ function currentProfile(){return normalizeDifficultyProfile(shell?.dataset.diffi
 function profileCatalog(items=[]){return rebusesForProfile(items,currentProfile());}
 function clearRoundState(){if(answer)answer.value='';if(feedback){feedback.textContent='';feedback.className='feedback';}if(hint){hint.hidden=true;hint.textContent='';}}
 function resetCreatorSurface(){if(creatorResult)creatorResult.hidden=true;if(creatorRebus){creatorRebus.replaceChildren();creatorRebus.classList.remove('phrase-flow');}if(creatorFeedback)creatorFeedback.textContent='';if(shell)shell.dataset.creatorReady='false';if(badge){badge.textContent='✓ Exact';badge.title='Rebulo garde tous les sons';badge.classList.remove('general-badge');}}
-function setMode(mode){const playing=mode==='play';if(shell)shell.dataset.experience=playing?'play':'create';if(createMode){createMode.setAttribute('aria-pressed',String(!playing));createMode.classList.toggle('secondary',playing);}if(playMode){playMode.setAttribute('aria-pressed',String(playing));playMode.classList.toggle('secondary',!playing);}if(description)description.textContent=playing?'Regarde les images, symboles et notes, puis assemble les sons.':'Choisis Mot ou Phrase, puis transforme ton texte en rébus.';if(arena)arena.hidden=!playing;if(playing)startRound();else resetCreatorSurface();}
+function setMode(mode){const playing=mode==='play';if(shell)shell.dataset.experience=playing?'play':'create';if(createMode){createMode.setAttribute('aria-pressed',String(!playing));createMode.classList.toggle('secondary',playing);}if(playMode){playMode.setAttribute('aria-pressed',String(playing));playMode.classList.toggle('secondary',!playing);}if(description)description.textContent=playing?'Regarde les images, lettres, nombres et notes, puis assemble les sons.':'Choisis Mot ou Phrase, puis transforme ton texte en rébus.';if(arena)arena.hidden=!playing;if(playing)startRound();else resetCreatorSurface();}
 async function loadJSON(path){const response=await fetch(path,{cache:'no-store'});if(!response.ok)throw new Error(path);return response.json();}
 async function loadCatalog(){
   if(catalog)return catalog;
-  const [manual,lexicon,coverage,soundCatalog]=await Promise.all([loadJSON('data/rebus.json'),loadJSON('data/lexicon-seed.json'),loadJSON('data/coverage-report.json'),loadJSON('data/rebus-sound-catalog.json')]);
-  let generated=generatedPlayableBankRebuses(coverage,soundCatalog);
+  const [manual,lexicon,coverage,soundCatalog,visibleConventions]=await Promise.all([loadJSON('data/rebus.json'),loadJSON('data/lexicon-seed.json'),loadJSON('data/coverage-report.json'),loadJSON('data/rebus-sound-catalog.json'),loadJSON('data/rebus-visible-conventions.json')]);
+  let generated=generatedPlayableBankRebuses(coverage,soundCatalog,visibleConventions);
   if(!generated.length)generated=generatedPlayableRebuses(coverage,lexicon);
   catalog=mergePlayableCatalog(manual,generated);
-  if(shell){
-    shell.dataset.playCatalogSize=String(catalog.length);shell.dataset.generatedPlayCatalogSize=String(generated.length);shell.dataset.playBank='representation-bank';
-    for(const profile of Object.keys(DIFFICULTY_PROFILES)){const metrics=playCatalogMetrics(rebusesForProfile(catalog,profile));shell.dataset[`play${profile[0].toUpperCase()}${profile.slice(1)}Size`]=String(metrics.roundCount);}
-  }
+  if(shell){shell.dataset.playCatalogSize=String(catalog.length);shell.dataset.generatedPlayCatalogSize=String(generated.length);shell.dataset.playBank='representation-bank';for(const profile of Object.keys(DIFFICULTY_PROFILES)){const metrics=playCatalogMetrics(rebusesForProfile(catalog,profile));shell.dataset[`play${profile[0].toUpperCase()}${profile.slice(1)}Size`]=String(metrics.roundCount);}}
   return catalog;
 }
-function renderPiece(piece,index){
-  const box=document.createElement('div');box.className='piece play-piece';
-  if(piece.kind&&piece.kind!=='image'){
-    box.classList.add('play-convention-piece',`play-${piece.kind}`);const symbol=document.createElement('strong');symbol.className='play-convention-symbol';symbol.textContent=piece.symbol||piece.reading;symbol.setAttribute('aria-label',`${piece.symbol||piece.reading}, se lit ${piece.reading}`);box.appendChild(symbol);return box;
-  }
-  const img=document.createElement('img');img.src=piece.image;img.alt=`Indice visuel ${index+1}`;img.loading='eager';img.decoding='async';box.appendChild(img);return box;
-}
+function renderPiece(piece,index){const box=document.createElement('div');box.className='piece play-piece';if(piece.kind&&piece.kind!=='image'){box.classList.add('play-convention-piece',`play-${piece.kind}`);const symbol=document.createElement('strong');symbol.className='play-convention-symbol';symbol.textContent=piece.symbol||piece.reading;symbol.setAttribute('aria-label',`${piece.symbol||piece.reading}, se lit ${piece.reading}`);box.appendChild(symbol);return box;}const img=document.createElement('img');img.src=piece.image;img.alt=`Indice visuel ${index+1}`;img.loading='eager';img.decoding='async';box.appendChild(img);return box;}
 function pieceKey(piece={}){return piece.id||piece.image||`${piece.kind||'image'}:${piece.symbol||piece.reading||''}`;}
-function chooseDiverseRound(items=[]){
-  const candidates=items.filter(item=>item?.id!==current?.id);if(!candidates.length)return choosePlayableRebus(items,current?.id);
-  const recent=new Set(recentPieceRounds.flat());const scored=candidates.map(item=>{const keys=(item.pieces||[]).map(pieceKey);const repeats=keys.filter(key=>recent.has(key)).length;const newCount=keys.length-repeats;return {item,score:repeats*10-newCount};}).sort((a,b)=>a.score-b.score||Number(b.item.frequency||0)-Number(a.item.frequency||0));
-  const bestScore=scored[0]?.score;const shortlist=scored.filter(entry=>entry.score<=bestScore+1).slice(0,18);return shortlist[Math.floor(Math.random()*shortlist.length)]?.item||scored[0]?.item||null;
-}
+function chooseDiverseRound(items=[]){const candidates=items.filter(item=>item?.id!==current?.id);if(!candidates.length)return choosePlayableRebus(items,current?.id);const recent=new Set(recentPieceRounds.flat());const scored=candidates.map(item=>{const keys=(item.pieces||[]).map(pieceKey);const repeats=keys.filter(key=>recent.has(key)).length;const newCount=keys.length-repeats;return {item,score:repeats*10-newCount};}).sort((a,b)=>a.score-b.score||Number(b.item.frequency||0)-Number(a.item.frequency||0));const bestScore=scored[0]?.score;const shortlist=scored.filter(entry=>entry.score<=bestScore+1).slice(0,18);return shortlist[Math.floor(Math.random()*shortlist.length)]?.item||scored[0]?.item||null;}
 function renderRound(rebus){current=rebus;clearRoundState();if(!current){if(feedback)feedback.textContent='Aucun rébus pour ce niveau pour le moment.';return;}recentPieceRounds.push((current.pieces||[]).map(pieceKey));recentPieceRounds=recentPieceRounds.slice(-6);if(rebusNode){rebusNode.replaceChildren();current.pieces.forEach((piece,index)=>{rebusNode.appendChild(renderPiece(piece,index));if(index<current.pieces.length-1){const plus=document.createElement('span');plus.className='plus';plus.textContent='+';rebusNode.appendChild(plus);}});}}
 async function startRound(){try{renderRound(chooseDiverseRound(profileCatalog(await loadCatalog())));}catch(error){console.error(error);if(feedback)feedback.textContent='Chargement du jeu impossible.';}}
 function syncProfileButtons(){document.querySelectorAll('#difficultyProfiles [data-profile]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.profile===currentProfile())));}

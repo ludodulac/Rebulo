@@ -3,6 +3,8 @@ import path from 'node:path';
 import {planPhraseRepresentationPaths} from '../src/rebus-phrase-phonetics.js';
 import {splitIPAUnits} from '../src/phonetic-engine.js';
 
+// Product-conversion smoke phrases belong in targeted tests, not in this fixed
+// thermometer: keep these six natural phrases unchanged so bank growth remains comparable.
 const lexiconPath=process.argv[2]||'data/rebus-pronunciation-lexicon.json';
 const auditPath=process.argv[3]||'data/rebus-representation-bank-audit.json';
 const outputPath=process.argv[4]||'data/rebus-real-phrase-benchmark.json';

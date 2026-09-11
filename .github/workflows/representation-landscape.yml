@@ -12,6 +12,7 @@ on:
       - 'scripts/benchmark-real-phrase-paths.mjs'
       - 'tests/rebus-representation-landscape.test.mjs'
       - 'data/rebus-representation-bank-audit.json'
+      - 'data/rebus-product-conversion-cohort1.json'
       - 'data/rebus-sound-visual-curation.json'
       - 'data/rebus-sound-visual-curation-wave2.json'
       - 'data/rebus-sound-visual-curation-wave3.json'
@@ -38,6 +39,7 @@ on:
       - 'scripts/benchmark-real-phrase-paths.mjs'
       - 'tests/rebus-representation-landscape.test.mjs'
       - 'data/rebus-representation-bank-audit.json'
+      - 'data/rebus-product-conversion-cohort1.json'
       - 'data/rebus-sound-visual-curation.json'
       - 'data/rebus-sound-visual-curation-wave2.json'
       - 'data/rebus-sound-visual-curation-wave3.json'
@@ -98,6 +100,7 @@ jobs:
           import fs from 'node:fs';
           const landscape=JSON.parse(fs.readFileSync('data/rebus-representation-landscape.json','utf8'));
           const benchmark=JSON.parse(fs.readFileSync('data/rebus-real-phrase-benchmark.json','utf8'));
+          const conversion=JSON.parse(fs.readFileSync('data/rebus-product-conversion-cohort1.json','utf8'));
           const wave2=JSON.parse(fs.readFileSync('data/rebus-sound-visual-curation-wave2.json','utf8'));
           const wave3=JSON.parse(fs.readFileSync('data/rebus-sound-visual-curation-wave3.json','utf8'));
           const wave4=JSON.parse(fs.readFileSync('data/rebus-sound-visual-curation-wave4.json','utf8'));
@@ -131,7 +134,10 @@ jobs:
             if(prototypeCount!==wave.summary.prototypeCandidateCount||deferredCount!==wave.summary.deferredCandidateCount)throw new Error(`${name} decision count mismatch`);
             if(lexicalCount!==wave.summary.comparedExactLexicalCandidateCount)throw new Error(`${name} lexical comparison count mismatch`);
           }
-          if(landscape.stats.curatedVisualHypothesisSoundCount<196)throw new Error('Wave 8 failed to add the expected net-new curated sounds: '+landscape.stats.curatedVisualHypothesisSoundCount);
+          const converted=conversion.newReadyForPlanner||[];
+          if(conversion.summary.newReadyForPlannerCount!==converted.length)throw new Error('Planner conversion cohort count mismatch');
+          if(converted.some(item=>item.spontaneousNamingRisk!=='unknown'||item.humanNamingEvidence!=='none'||item.clinicalEvidence!=='none'))throw new Error('Planner conversion must not invent naming or clinical evidence');
+          if(landscape.stats.curatedVisualHypothesisSoundCount+converted.length<196)throw new Error('Curated-plus-converted coverage regressed: '+landscape.stats.curatedVisualHypothesisSoundCount+' + '+converted.length);
           for(const [name,materialization] of [['materialization1',materialization1],['materialization2',materialization2],['materialization3',materialization3]]){
             if(materialization.status!=='research_stimuli_only')throw new Error(name+' left research-only status');
             if(materialization.entries.some(item=>item.humanNamingEvidence!=='none'||item.clinicalEvidence!=='none'||item.spontaneousNamingRisk!=='unknown'))throw new Error(name+' invented naming or clinical evidence');
@@ -146,7 +152,7 @@ jobs:
           const historical=benchmark.rows.find(row=>row.phrase==='Elles ne sont pas cuites les pâtes');
           if(!historical?.pronunciationComplete)throw new Error('Historical end-to-end phrase is no longer lexically resolved');
           if(!landscape.rows.some(row=>row.longWindowPotential?.coversTwoSyllables))throw new Error('Two-syllable windows disappeared from the landscape');
-          console.log(JSON.stringify({landscape:landscape.stats,benchmark:benchmark.summary,wave8:wave8.summary},null,2));
+          console.log(JSON.stringify({landscape:landscape.stats,benchmark:benchmark.summary,wave8:wave8.summary,plannerConversion:conversion.summary},null,2));
           NODE
       - name: Upload landscape artifact
         uses: actions/upload-artifact@v4

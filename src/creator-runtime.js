@@ -3,80 +3,27 @@ import {buildExplicitDeletionOperation,buildExplicitSubstitutionOperation,buildG
 import {buildTherapyActivities} from './therapy-activities.js';
 import {validatedCreatorRelationalActivities} from './relational-creator-exposure.js';
 
-function normalizedSyllables(target={}){
-  const syllables=Array.isArray(target?.syllables)?target.syllables.map(normalizeIPA).filter(Boolean):[];
-  const count=Number.isInteger(target?.syllableCount)&&target.syllableCount>0?target.syllableCount:null;
-  return syllables.length&&(!count||syllables.length===count)?syllables:[];
-}
-
-function lexicalContext(target={}){
-  const lemma=String(target?.lemma||'').trim();
-  const pos=String(target?.pos||'').trim();
-  const sourceSyllabification=String(target?.sourceSyllabification||'').trim();
-  return {
-    ...(lemma?{lemma}:{}),
-    ...(pos?{pos}:{}),
-    ...(sourceSyllabification?{sourceSyllabification}:{})
-  };
-}
+function normalizedSyllables(target={}){const syllables=Array.isArray(target?.syllables)?target.syllables.map(normalizeIPA).filter(Boolean):[];const count=Number.isInteger(target?.syllableCount)&&target.syllableCount>0?target.syllableCount:null;return syllables.length&&(!count||syllables.length===count)?syllables:[];}
+function lexicalContext(target={}){const lemma=String(target?.lemma||'').trim();const pos=String(target?.pos||'').trim();const sourceSyllabification=String(target?.sourceSyllabification||'').trim();return {...(lemma?{lemma}:{}),...(pos?{pos}:{}),...(sourceSyllabification?{sourceSyllabification}:{})};}
+function directCandidate(target={},mode='strict'){const candidate=target?.directCandidate;if(!candidate||candidate?.construction?.mode!==mode||!Array.isArray(candidate.pieces)||!candidate.pieces.length)return null;return {...candidate,answer:candidate.answer||target.target,targetIpa:candidate.targetIpa||target.targetIpa,therapyActivities:Array.isArray(candidate.therapyActivities)?candidate.therapyActivities:[]};}
 
 export function buildCreatorCandidate(target,lexicon=[],therapyDefinitions=[]){
-  if(!target||target.mode!=='strict'||target.assets!=='ready'||!target.targetIpa)return null;
-  const pieces=rankDecompositions(segmentTargetWithLexicon(target.targetIpa,lexicon,4))[0]||null;
-  if(!pieces)return null;
-  const syllables=normalizedSyllables(target);
-  const therapyActivities=[
-    ...validatedCreatorRelationalActivities(target),
-    ...buildTherapyActivities({...target,syllables},therapyDefinitions)
-  ];
-  const candidate={answer:target.target,targetIpa:target.targetIpa,...lexicalContext(target),syllableCount:Number.isInteger(target.syllableCount)&&target.syllableCount>0?target.syllableCount:null,syllables,syllabificationStatus:syllables.length?'source_exact':target.syllabificationStatus||'needs_source_review',source:target.source||'',generated:Boolean(target.generated),pieces:pieces.map(piece=>({...piece,reading:piece.label})),therapyActivities};
-  if(!validateStrictRebus(candidate).ok)return null;
-  const construction=buildStrictConstruction(candidate.pieces,candidate.targetIpa);
-  return construction?{...candidate,construction}:null;
+  if(!target||target.mode!=='strict'||target.assets!=='ready'||!target.targetIpa)return null;const direct=directCandidate(target,'strict');if(direct)return direct;
+  const pieces=rankDecompositions(segmentTargetWithLexicon(target.targetIpa,lexicon,4))[0]||null;if(!pieces)return null;const syllables=normalizedSyllables(target);const therapyActivities=[...validatedCreatorRelationalActivities(target),...buildTherapyActivities({...target,syllables},therapyDefinitions)];const candidate={answer:target.target,targetIpa:target.targetIpa,...lexicalContext(target),syllableCount:Number.isInteger(target.syllableCount)&&target.syllableCount>0?target.syllableCount:null,syllables,syllabificationStatus:syllables.length?'source_exact':target.syllabificationStatus||'needs_source_review',source:target.source||'',generated:Boolean(target.generated),pieces:pieces.map(piece=>({...piece,reading:piece.label})),therapyActivities};if(!validateStrictRebus(candidate).ok)return null;const construction=buildStrictConstruction(candidate.pieces,candidate.targetIpa);return construction?{...candidate,construction}:null;
 }
 
-function findLexiconPiece(operation,lexicon=[]){
-  const id=operation?.pieceId||'';const label=operation?.label||'';
-  return lexicon.find(piece=>piece.active!==false&&((id&&piece.id===id)||(label&&piece.label===label)))||null;
-}
-
+function findLexiconPiece(operation,lexicon=[]){const id=operation?.pieceId||'';const label=operation?.label||'';return lexicon.find(piece=>piece.active!==false&&((id&&piece.id===id)||(label&&piece.label===label)))||null;}
 export function buildGeneralCreatorCandidate(target,lexicon=[]){
-  if(!target||target.mode!=='general'||target.assets!=='ready'||!Array.isArray(target.operations)||target.operations.length===0)return null;
+  if(!target||target.mode!=='general'||target.assets!=='ready')return null;const direct=directCandidate(target,'general');if(direct)return direct;if(!Array.isArray(target.operations)||target.operations.length===0)return null;
   const operations=[];const pieces=[];
   for(const spec of target.operations){
-    if(spec?.type===REBUS_OPERATION_TYPES.WHOLE_WORD){
-      const piece=findLexiconPiece(spec,lexicon);const operation=buildWholeWordOperation(piece||{});
-      if(!operation||!piece?.image)return null;
-      operations.push(operation);pieces.push({...piece,reading:piece.label,operationType:REBUS_OPERATION_TYPES.WHOLE_WORD});continue;
-    }
-    if(spec?.type===REBUS_OPERATION_TYPES.GRAPHEME){
-      const operation=buildGraphemeOperation(spec.grapheme,spec.reading||'');
-      if(!operation)return null;
-      operations.push(operation);pieces.push({id:null,label:operation.grapheme,reading:operation.reading,grapheme:operation.grapheme,operationType:REBUS_OPERATION_TYPES.GRAPHEME});continue;
-    }
-    if(spec?.type===REBUS_OPERATION_TYPES.SPATIAL_RELATION){
-      const operation=buildSpatialRelationOperation(spec.relation);
-      if(!operation)return null;
-      operations.push(operation);pieces.push({id:null,label:operation.reading,reading:operation.reading,relation:operation.relation,operationType:REBUS_OPERATION_TYPES.SPATIAL_RELATION});continue;
-    }
-    if(spec?.type===REBUS_OPERATION_TYPES.EXPLICIT_DELETION){
-      const piece=findLexiconPiece(spec,lexicon);const operation=buildExplicitDeletionOperation(piece||{},spec);
-      if(!operation)return null;
-      operations.push(operation);pieces.push({...piece,reading:operation.reading,sourceReading:operation.sourceReading,keep:operation.keep,remove:operation.remove,visual:operation.visual,operationType:REBUS_OPERATION_TYPES.EXPLICIT_DELETION});continue;
-    }
-    if(spec?.type===REBUS_OPERATION_TYPES.EXPLICIT_SUBSTITUTION){
-      const piece=findLexiconPiece(spec,lexicon);const operation=buildExplicitSubstitutionOperation(piece||{},spec);
-      if(!operation)return null;
-      operations.push(operation);pieces.push({...piece,reading:operation.reading,sourceReading:operation.sourceReading,replace:operation.replace,replacement:operation.replacement,visual:operation.visual,operationType:REBUS_OPERATION_TYPES.EXPLICIT_SUBSTITUTION});continue;
-    }
-    if(spec?.type===REBUS_OPERATION_TYPES.REPETITION){
-      const piece=findLexiconPiece(spec,lexicon);const operation=buildRepetitionOperation(piece||{},spec);
-      if(!operation)return null;
-      operations.push(operation);pieces.push({...piece,reading:operation.reading,sourceReading:operation.sourceReading,count:operation.count,visual:operation.visual,operationType:REBUS_OPERATION_TYPES.REPETITION});continue;
-    }
+    if(spec?.type===REBUS_OPERATION_TYPES.WHOLE_WORD){const piece=findLexiconPiece(spec,lexicon);const operation=buildWholeWordOperation(piece||{});if(!operation||!piece?.image)return null;operations.push(operation);pieces.push({...piece,reading:piece.label,operationType:REBUS_OPERATION_TYPES.WHOLE_WORD});continue;}
+    if(spec?.type===REBUS_OPERATION_TYPES.GRAPHEME){const operation=buildGraphemeOperation(spec.grapheme,spec.reading||'');if(!operation)return null;operations.push(operation);pieces.push({id:null,label:operation.grapheme,reading:operation.reading,grapheme:operation.grapheme,operationType:REBUS_OPERATION_TYPES.GRAPHEME});continue;}
+    if(spec?.type===REBUS_OPERATION_TYPES.SPATIAL_RELATION){const operation=buildSpatialRelationOperation(spec.relation);if(!operation)return null;operations.push(operation);pieces.push({id:null,label:operation.reading,reading:operation.reading,relation:operation.relation,operationType:REBUS_OPERATION_TYPES.SPATIAL_RELATION});continue;}
+    if(spec?.type===REBUS_OPERATION_TYPES.EXPLICIT_DELETION){const piece=findLexiconPiece(spec,lexicon);const operation=buildExplicitDeletionOperation(piece||{},spec);if(!operation)return null;operations.push(operation);pieces.push({...piece,reading:operation.reading,sourceReading:operation.sourceReading,keep:operation.keep,remove:operation.remove,visual:operation.visual,operationType:REBUS_OPERATION_TYPES.EXPLICIT_DELETION});continue;}
+    if(spec?.type===REBUS_OPERATION_TYPES.EXPLICIT_SUBSTITUTION){const piece=findLexiconPiece(spec,lexicon);const operation=buildExplicitSubstitutionOperation(piece||{},spec);if(!operation)return null;operations.push(operation);pieces.push({...piece,reading:operation.reading,sourceReading:operation.sourceReading,replace:operation.replace,replacement:operation.replacement,visual:operation.visual,operationType:REBUS_OPERATION_TYPES.EXPLICIT_SUBSTITUTION});continue;}
+    if(spec?.type===REBUS_OPERATION_TYPES.REPETITION){const piece=findLexiconPiece(spec,lexicon);const operation=buildRepetitionOperation(piece||{},spec);if(!operation)return null;operations.push(operation);pieces.push({...piece,reading:operation.reading,sourceReading:operation.sourceReading,count:operation.count,visual:operation.visual,operationType:REBUS_OPERATION_TYPES.REPETITION});continue;}
     return null;
   }
-  const construction=buildGeneralConstruction(operations);
-  if(!construction||construction.mode!=='general')return null;
-  return {answer:target.target,targetIpa:target.targetIpa||'',...lexicalContext(target),source:target.source||'manual-general',generated:Boolean(target.generated),pieces,therapyActivities:[],construction};
+  const construction=buildGeneralConstruction(operations);if(!construction||construction.mode!=='general')return null;return {answer:target.target,targetIpa:target.targetIpa||'',...lexicalContext(target),source:target.source||'manual-general',generated:Boolean(target.generated),pieces,therapyActivities:[],construction};
 }

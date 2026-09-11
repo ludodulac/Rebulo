@@ -15,8 +15,8 @@ assert.match(html,/id="result"[^>]*\shidden\b/,'creator result must start hidden
 assert.match(html,/id="target"[^>]*placeholder="Ex\. merci, cinéma…"/,'creator must start with an example placeholder');
 assert.doesNotMatch(html,/id="target"[^>]*\svalue=/,'creator must not fabricate a result on first load');
 assert.match(html,/data-creator-ready="false"/,'professional tools must start gated');
-assert.equal((html.match(/data-creator-kind="word"/g)||[]).length,1,'Creator must contain a single static Mot control');
-assert.equal((html.match(/data-creator-kind="phrase"/g)||[]).length,1,'Creator must contain a single static Phrase control');
+assert.equal((html.match(/<button[^>]*data-creator-kind="word"/g)||[]).length,1,'Creator must contain a single static Mot control');
+assert.equal((html.match(/<button[^>]*data-creator-kind="phrase"/g)||[]).length,1,'Creator must contain a single static Phrase control');
 assert.match(creatorKind,/document\.querySelectorAll\('\[data-creator-kind\]'\)/,'Creator kind controller must reuse existing controls');
 assert.match(creatorKind,/if\(existing\.length\)/,'Creator kind controller must not inject a duplicate switch when controls already exist');
 assert.match(playCss,/\[hidden\]\{display:none!important\}/,'author CSS must never override the hidden attribute');

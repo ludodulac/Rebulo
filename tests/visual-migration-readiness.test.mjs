@@ -9,8 +9,10 @@ const output=path.join(os.tmpdir(),`rebulo-visual-migration-${process.pid}.json`
 const run=spawnSync(process.execPath,['scripts/build-visual-migration-readiness.mjs','data/active-dependency-report.json','data/asset-sources.json','data/production-naming-reviews.json',output],{cwd:root,encoding:'utf8'});
 assert.equal(run.status,0,run.stderr||run.stdout);
 const report=JSON.parse(fs.readFileSync(output,'utf8'));fs.unlinkSync(output);
+const dependencyReport=JSON.parse(fs.readFileSync(new URL('../data/active-dependency-report.json',import.meta.url),'utf8'));
 assert.equal(report.schemaVersion,'1.0');
-assert.equal(report.baseline.strictMultiPieceUniqueWords,760);
+assert.equal(report.baseline.strictMultiPieceUniqueWords,dependencyReport.baseline.strictMultiPieceUniqueWords,'visual readiness must follow the current regenerated strict dependency baseline');
+assert.ok(report.baseline.strictMultiPieceUniqueWords>=760,'strict multi-image coverage must not regress below the established baseline');
 assert.equal(report.queue.length,24);
 assert.ok(report.queue.every((item,index,array)=>index===0||array[index-1].strictUniqueLossIfUnavailable<=item.strictUniqueLossIfUnavailable),'queue should prioritize lower dependency loss');
 
@@ -31,4 +33,4 @@ for(const [id,revision] of Object.entries(expectedRevisions)){
 }
 assert.equal(report.queue.find(x=>x.id==='de').strictUniqueLossIfUnavailable,170);
 assert.match(report.methodology.clinicalCaution,/validation clinique|dénomination/i);
-console.log('visual migration readiness: all 24 active production revisions are technically ready and now stop at the real human naming gate.');
+console.log(`visual migration readiness: all 24 active production revisions are technically ready; current strict baseline=${report.baseline.strictMultiPieceUniqueWords}; human naming gate preserved.`);

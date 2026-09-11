@@ -2,13 +2,13 @@
 
 > Cette vue transforme le grand réservoir lexical exact en carte de décision. Elle ne convertit pas un homophone Lexique en pictogramme validé.
 
-- Sons utiles du réservoir exact à cartographier : 5487.
+- Sons utiles du réservoir exact à cartographier : 5483.
 - Prototypes curatés ajoutés comme étalons de calibration : 32.
-- Sons cartographiés dans cette vue : 5519.
-- Sons où la curation explicite fournit déjà une hypothèse visuelle : 196.
-- Fenêtres de deux syllabes conservées comme candidates de première classe : 3814.
+- Sons cartographiés dans cette vue : 5515.
+- Sons où la curation explicite fournit déjà une hypothèse visuelle : 192.
+- Fenêtres de deux syllabes conservées comme candidates de première classe : 3811.
 - Sons ayant aussi une convention visible explicite : 34.
-- Sons ayant une approximation légère recensée dans la source disponible : 1245.
+- Sons ayant une approximation légère recensée dans la source disponible : 1244.
 
 ## Échelle de preuve
 
@@ -111,7 +111,6 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | /apa/ | appât | medium_high | unknown | 6 | compare_bait_scene_then_human_naming_test |
 | /liʁ/ | lyre | high | unknown | 6 | prototype_then_human_naming_test |
 | /ʁɛn/ | renne | high | unknown | 6 | new_asset_then_human_naming_test |
-| /nø/ | noeud | high | unknown | 6 | review_existing_editorial_decision |
 | /vil/ | ville | medium_high | unknown | 5 | compare_city_scale_then_human_naming_test |
 | /pɛl/ | pelle | high | unknown | 5 | prototype_then_human_naming_test |
 | /ʁɑ̃ʒe/ | rangée | medium_high | unknown | 5 | prototype_then_human_naming_test |
@@ -174,7 +173,6 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | /katʁ/ | quatre | high | unknown | 1 | review_existing_editorial_decision |
 | /nœf/ | neuf | high | unknown | 1 | review_existing_editorial_decision |
 | /egliz/ | église | medium_high | unknown | 1 | review_existing_editorial_decision |
-| /kuto/ | couteau | high | unknown | 1 | review_existing_editorial_decision |
 | /ɥit/ | huit | high | unknown | 1 | review_existing_editorial_decision |
 | /butɛj/ | bouteille | high | unknown | 1 | review_existing_editorial_decision |
 | /œ̃/ | un | high | unknown | 1 | review_existing_editorial_decision |
@@ -195,7 +193,6 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | /ʃaʁjo/ | chariot | medium_high | unknown | 1 | review_existing_editorial_decision |
 | /ʁido/ | rideau | high | unknown | 1 | review_existing_editorial_decision |
 | /iks/ | x | high | unknown | 1 | review_existing_editorial_decision |
-| /egɥij/ | aiguille | high | unknown | 1 | review_existing_editorial_decision |
 | /ʃəvij/ | cheville | medium_high | unknown | 1 | review_existing_editorial_decision |
 | /oʁɑ̃ʒ/ | orange | high | unknown | 1 | review_existing_editorial_decision |
 | /oʁaʒ/ | orage | medium_high | unknown | 1 | review_existing_editorial_decision |
@@ -212,7 +209,6 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | /sitʁuj/ | citrouille | high | unknown | 1 | review_existing_editorial_decision |
 | /oby/ | obus | medium_high | unknown | 1 | review_existing_editorial_decision |
 | /ʃɑ̃dɛl/ | chandelle | medium_high | unknown | 1 | review_existing_editorial_decision |
-| /oliv/ | olive | high | unknown | 1 | review_existing_editorial_decision |
 | /uʁsɔ̃/ | ourson | medium_high | unknown | 1 | review_existing_editorial_decision |
 | /otʁyʃ/ | autruche | high | unknown | 1 | review_existing_editorial_decision |
 | /oval/ | ovale | high | unknown | 1 | review_existing_editorial_decision |
@@ -296,7 +292,7 @@ Les champs de potentiel visuel et de risque de dénomination restent `unknown` t
 | 73 | /ɔʁ/ | 30 | 1 syll. | or [visual_hypothesis_curated], ord [lexical_exact_only], ort [lexical_exact_only] | — | aure (15%) | curated_visual_hypothesis_available |
 | 74 | /ʒə/ | 30 | 1 syll. | je [lexical_exact_only] | — | jeu (20%), geai (20%) | exact_lexical_candidates_need_visual_evidence |
 | 75 | /fy/ | 30 | 1 syll. | fût [lexical_exact_only], futs [lexical_exact_only] | — | vue (17.5%), vu (17.5%) | exact_lexical_candidates_need_visual_evidence |
-| 76 | /nə/ | 28 | 1 syll. | ne [lexical_exact_only] | — | nez (20%), nez (20%) | exact_lexical_candidates_need_visual_evidence |
+| 76 | /nə/ | 28 | 1 syll. | ne [lexical_exact_only] | — | nez (20%), nœud (20%) | exact_lexical_candidates_need_visual_evidence |
 | 77 | /go/ | 28 | 1 syll. | go [lexical_exact_only], goth [lexical_exact_only], gau [lexical_exact_only] | — | cot (17.5%), côt (17.5%) | exact_lexical_candidates_need_visual_evidence |
 | 78 | /tif/ | 28 | 1 syll. | tif [lexical_exact_only] | — | diff (11.7%), typhon (18.8%) | exact_lexical_candidates_need_visual_evidence |
 | 79 | /gʁa/ | 28 | 1 syll. | gras [lexical_exact_only] | — | cra (11.7%), grand (16.7%) | exact_lexical_candidates_need_visual_evidence |

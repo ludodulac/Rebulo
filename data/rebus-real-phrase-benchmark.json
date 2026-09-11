@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.1",
-  "generatedAt": "2026-09-11T06:47:48.907Z",
+  "generatedAt": "2026-09-11T08:04:13.171Z",
   "status": "regression_benchmark_not_training_target",
   "purpose": "Periodically test whether representation-bank growth creates more useful competing paths on ordinary French phrases without optimizing for one sentence.",
   "policy": {
@@ -30,7 +30,7 @@
       "distinctCompleteDecompositionCount": 0,
       "distinctCandidatePathCount": 20,
       "completeCrossWordRouteCount": 0,
-      "anyCrossWordRouteCount": 9,
+      "anyCrossWordRouteCount": 6,
       "bestCoverageRatio": 0.7647,
       "bestUncoveredUnitCount": 4,
       "longestRepresentationUnitCount": 3,

@@ -12,7 +12,7 @@
 
 | Phrase | IPA résolue | Meilleure couverture | Unités manquantes | Chemins complets | Traversée de mots | Plus longue pièce |
 |---|---|---:|---:|---:|---:|---:|
-| Elles ne sont pas cuites les pâtes | oui | 76.5% | 4 | 0 | 9 | 3 |
+| Elles ne sont pas cuites les pâtes | oui | 76.5% | 4 | 0 | 6 | 3 |
 | Elle a mis le livre sur la table | oui | 80.0% | 4 | 0 | 8 | 4 |
 | Le petit chat regarde la pluie | oui | 80.0% | 4 | 0 | 7 | 5 |
 | On prépare un gâteau pour demain | oui | 63.2% | 7 | 0 | 20 | 3 |

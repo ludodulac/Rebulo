@@ -8,7 +8,7 @@
 - Fenêtres avec une image exacte encore en recherche : 47.
 - Fenêtres sans image prête mais avec au moins un nom exact à examiner : 17116.
 - Fenêtres totalement non résolues : 38675.
-- Représentations agrégées : 475, dont 369 pictogrammes de la bibliothèque ouverte et 28 briques courtes existantes.
+- Représentations agrégées : 476, dont 369 pictogrammes de la bibliothèque ouverte et 28 briques courtes existantes.
 
 ## Règles
 

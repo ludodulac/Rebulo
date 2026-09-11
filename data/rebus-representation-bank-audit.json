@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.1",
-  "generatedAt": "2026-09-11T08:13:37.510Z",
+  "generatedAt": "2026-09-11T17:06:38.870Z",
   "status": "product_research_mapping",
   "purpose": "SON/SEGMENT -> mots -> images/conventions/compositions -> qualite phonétique -> état visuel",
   "categoryDefinitions": {
@@ -33,8 +33,8 @@
       "E_lightApproximation": 1742,
       "F_exactMultiPictogram": 727,
       "G_letter": 25,
-      "H_number": 12,
-      "I_noCurrentReasonableRepresentation": 65736
+      "H_number": 13,
+      "I_noCurrentReasonableRepresentation": 65735
     },
     "useful": {
       "soundCount": 9491,
@@ -45,8 +45,8 @@
       "E_lightApproximation": 1742,
       "F_exactMultiPictogram": 171,
       "G_letter": 23,
-      "H_number": 12,
-      "I_noCurrentReasonableRepresentation": 8925
+      "H_number": 13,
+      "I_noCurrentReasonableRepresentation": 8924
     },
     "visualEvidence": {
       "imageCount": 226,
@@ -435336,53 +435336,6 @@
       ]
     },
     {
-      "ipa": "ɔ̃z",
-      "syllableSpans": [
-        1
-      ],
-      "usefulTargetCount": 1,
-      "usefulWeightedGain": 20.175,
-      "schoolTargetCount": 0,
-      "researchPriorityScore": 291.67,
-      "visualStatus": "exact_word_unreviewed",
-      "categories": {
-        "A_exactFrenchWord": true,
-        "B_multipleExactFrenchWords": false,
-        "C_exactWordVisualNotReady": true,
-        "D_obviousOrReadyPictogram": false,
-        "E_lightApproximation": false,
-        "F_exactMultiPictogram": false,
-        "G_letter": false,
-        "H_number": false,
-        "I_noCurrentReasonableRepresentation": true
-      },
-      "exactWords": [
-        {
-          "word": "onze",
-          "pos": "NOM",
-          "frequency": 1.63,
-          "syllableCount": 1
-        }
-      ],
-      "nounWords": [
-        {
-          "word": "onze",
-          "pos": "NOM",
-          "frequency": 1.63,
-          "syllableCount": 1
-        }
-      ],
-      "exactImages": [],
-      "exactImageCombinations": [],
-      "letters": [],
-      "numbers": [],
-      "musicNotes": [],
-      "lightApproximations": [],
-      "usefulExamples": [
-        "onze"
-      ]
-    },
-    {
       "ipa": "fɥiʁ",
       "syllableSpans": [
         1
@@ -487951,6 +487904,55 @@
       "usefulExamples": [
         "délicat",
         "délicatesse"
+      ]
+    },
+    {
+      "ipa": "ɔ̃z",
+      "syllableSpans": [
+        1
+      ],
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 20.175,
+      "schoolTargetCount": 0,
+      "researchPriorityScore": 236.67,
+      "visualStatus": "exact_word_unreviewed",
+      "categories": {
+        "A_exactFrenchWord": true,
+        "B_multipleExactFrenchWords": false,
+        "C_exactWordVisualNotReady": true,
+        "D_obviousOrReadyPictogram": false,
+        "E_lightApproximation": false,
+        "F_exactMultiPictogram": false,
+        "G_letter": false,
+        "H_number": true,
+        "I_noCurrentReasonableRepresentation": false
+      },
+      "exactWords": [
+        {
+          "word": "onze",
+          "pos": "NOM",
+          "frequency": 1.63,
+          "syllableCount": 1
+        }
+      ],
+      "nounWords": [
+        {
+          "word": "onze",
+          "pos": "NOM",
+          "frequency": 1.63,
+          "syllableCount": 1
+        }
+      ],
+      "exactImages": [],
+      "exactImageCombinations": [],
+      "letters": [],
+      "numbers": [
+        "11"
+      ],
+      "musicNotes": [],
+      "lightApproximations": [],
+      "usefulExamples": [
+        "onze"
       ]
     },
     {

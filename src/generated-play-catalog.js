@@ -1,4 +1,4 @@
-import {validateStrictRebus} from './phonetic-engine.js';
+import {normalizeIPA,validateStrictRebus} from './phonetic-engine.js';
 
 const LOW_CONFIDENCE_PLAY_WORDS=new Set([
   'rara',
@@ -32,11 +32,27 @@ function minimumAgeFromDifficulty(difficulty){
   return 5;
 }
 
+function exactAnswerFormsByIpa(coverage={}){
+  const rows=[...(coverage?.constructible||[]),...(coverage?.constructibleMultiPiece||[])];
+  const byIpa=new Map();
+  for(const row of rows){
+    const word=String(row?.word||'').trim();
+    const ipa=normalizeIPA(row?.ipa||'');
+    if(!word||!ipa)continue;
+    if(!byIpa.has(ipa))byIpa.set(ipa,new Map());
+    const forms=byIpa.get(ipa);
+    const key=normalizeKey(word);
+    if(key&&!forms.has(key))forms.set(key,word);
+  }
+  return byIpa;
+}
+
 export function generatedPlayableRebuses(coverage={},lexicon=[]){
   const rows=Array.isArray(coverage?.constructibleMultiPiece)
     ?coverage.constructibleMultiPiece
     :(Array.isArray(coverage?.constructible)?coverage.constructible:[]);
   const activeById=new Map((lexicon||[]).filter(piece=>piece?.active!==false&&piece?.id&&piece?.image).map(piece=>[piece.id,piece]));
+  const answerFormsByIpa=exactAnswerFormsByIpa(coverage);
   const seenWords=new Set();
   const rounds=[];
   for(const row of rows){
@@ -51,9 +67,11 @@ export function generatedPlayableRebuses(coverage={},lexicon=[]){
     seenWords.add(wordKey);
     const difficulty=difficultyFromPieces(pieces.length);
     const quality=playQuality(row);
+    const acceptedAnswers=[...(answerFormsByIpa.get(normalizeIPA(row.ipa))?.values()||[row.word])];
     rounds.push({
       id:`generated-${rounds.length+1}-${normalizeKey(row.word)}`,
       answer:row.word,
+      acceptedAnswers,
       targetIpa:row.ipa,
       minAge:minimumAgeFromDifficulty(difficulty),
       difficulty,
@@ -81,5 +99,20 @@ export function mergePlayableCatalog(manual=[],generated=[]){
     if(!key||byAnswer.has(key))continue;
     byAnswer.set(key,item);
   }
-  return [...byAnswer.values()];
+  const byIpa=new Map();
+  for(const item of byAnswer.values()){
+    const ipa=normalizeIPA(item?.targetIpa||'');
+    if(!ipa)continue;
+    if(!byIpa.has(ipa))byIpa.set(ipa,new Map());
+    const forms=byIpa.get(ipa);
+    for(const form of [item.answer,...(item.acceptedAnswers||[])]){
+      const key=normalizeKey(form);
+      if(key&&!forms.has(key))forms.set(key,form);
+    }
+  }
+  return [...byAnswer.values()].map(item=>{
+    const ipa=normalizeIPA(item?.targetIpa||'');
+    const forms=ipa?byIpa.get(ipa):null;
+    return forms?{...item,acceptedAnswers:[...forms.values()]}:item;
+  });
 }

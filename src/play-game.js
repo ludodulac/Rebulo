@@ -37,8 +37,10 @@ export function choosePlayableRebus(catalog=[],previousId=null,random=Math.rando
 }
 
 export function playAnswerMatches(value,rebus){
-  const expected=normalizePlayAnswer(rebus?.answer||'');
-  return Boolean(expected)&&normalizePlayAnswer(value)===expected;
+  const typed=normalizePlayAnswer(value);
+  if(!typed)return false;
+  const forms=[rebus?.answer,...(Array.isArray(rebus?.acceptedAnswers)?rebus.acceptedAnswers:[])];
+  return forms.some(form=>normalizePlayAnswer(form)===typed);
 }
 
 export function safePlayHint(rebus){

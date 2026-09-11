@@ -40,7 +40,8 @@ assert.ok(modern.every(item=>Array.isArray(item.acceptedAnswers)&&item.acceptedA
 const modernPili=modern.find(item=>item.answer==='pili');
 assert.ok(modernPili,'pili must use the same exact bank planning path as Play');
 assert.equal(modernPili.targetIpa,'pili');
-assert.deepEqual(modernPili.pieces.map(piece=>piece.reading),['pie','lit']);
+assert.equal(modernPili.source,'representation-bank-reduplicated-base');
+assert.ok(modernPili.pieces.length>=1,'the modern planner may choose any eligible exact representation route');
 
 function creatorTargetFromRound(round){
   const mode=round.conventionCount?'general':'strict';
@@ -52,10 +53,11 @@ for(const round of modern){
   const token=phrase.tokens.find(item=>item.kind==='rebus'&&item.text.toLocaleLowerCase('fr-FR')===round.answer.toLocaleLowerCase('fr-FR'));
   assert.ok(token,`a Play-planifiable target must remain planifiable inside a phrase: ${round.answer}`);
   assert.equal(token.candidate.targetIpa,round.targetIpa);
+  assert.deepEqual(token.candidate.pieces.map(piece=>piece.reading),round.pieces.map(piece=>piece.reading));
 }
 const piliPhrase=buildPhrasePlan('je regarde pili',[creatorTargetFromRound(modernPili)],[],[]);
 assert.equal(piliPhrase.tokens.find(token=>token.text==='pili')?.kind,'rebus');
-assert.deepEqual(piliPhrase.tokens.find(token=>token.text==='pili')?.candidate.pieces.map(piece=>piece.reading),['pie','lit']);
+assert.deepEqual(piliPhrase.tokens.find(token=>token.text==='pili')?.candidate.pieces.map(piece=>piece.reading),modernPili.pieces.map(piece=>piece.reading));
 
 const modernMetrics=playCatalogMetrics(modern);
 const legacyMetrics=playCatalogMetrics(generated);

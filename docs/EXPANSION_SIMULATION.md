@@ -1,18 +1,18 @@
 # Rebulo — simulation gloutonne d’expansion
 
-- Base : 760 mots uniques en rébus de 2+ pièces.
+- Base : 769 mots uniques en rébus de 2+ pièces.
 - Candidats testés : 8.
 
 | Étape | Brique ajoutée | IPA | Gain marginal de vrais rébus | Total cumulatif |
 |---:|---|---|---:|---:|
-| 1 | nid | /ni/ | +75 | 835 |
-| 2 | tee | /ti/ | +66 | 901 |
-| 3 | haie | /ɛ/ | +39 | 940 |
-| 4 | as | /as/ | +32 | 972 |
-| 5 | or | /ɔʁ/ | +26 | 998 |
-| 6 | oie | /wa/ | +26 | 1024 |
-| 7 | heure | /œʁ/ | +12 | 1036 |
-| 8 | anse | /ɑ̃s/ | +16 | 1052 |
+| 1 | nid | /ni/ | +75 | 844 |
+| 2 | tee | /ti/ | +67 | 911 |
+| 3 | haie | /ɛ/ | +41 | 952 |
+| 4 | as | /as/ | +32 | 984 |
+| 5 | or | /ɔʁ/ | +26 | 1010 |
+| 6 | oie | /wa/ | +26 | 1036 |
+| 7 | heure | /œʁ/ | +14 | 1050 |
+| 8 | anse | /ɑ̃s/ | +16 | 1066 |
 
 ## Prototypes inactifs : impact simulé
 

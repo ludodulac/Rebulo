@@ -5,19 +5,19 @@
 - Arrière-plan Lexique non prioritaire : 6041 lemmes.
 - Cibles appuyées par la liste scolaire Éduscol : 1341.
 - Segments IPA du vocabulaire utile : 25075.
-- Recherche de routes difficiles : 250 briques issues directement des 127 cibles difficiles; les 60 priorités globales restent inchangées.
+- Recherche de routes difficiles : 250 briques issues directement des 128 cibles difficiles; les 60 priorités globales restent inchangées.
 
 ## Couverture utile Rebulo
 
-- Image entière : 296 (3.7 %).
+- Image entière : 300 (3.7 %).
 - Plusieurs images : 94 (1.2 %).
 - Avec lettre explicite : 161 (2.0 %).
-- Non résolu : 7543 (93.2 %).
+- Non résolu : 7539 (93.1 %).
 
 ## Vague de prototypes actuelle
 
 - Première vague : haie /ɛ/, oie /wa/, or /ɔʁ/.
-- Simulation phonétique : +31 cibles techniquement jouables.
+- Simulation phonétique : +32 cibles techniquement jouables.
 - Vague suivante : as /as/.
 - Réserve : tee /ti/, anse /ɑ̃s/.
 
@@ -30,7 +30,7 @@
 | /œʁ/ | 11 | scene_comparison | heure | — | compare_two_scene_variants_in_blind_naming_test |
 | /aʁ/ | 8 | scene_comparison_for_older_users | art | [object Object] | grapheme_sound_general_mode_research_only |
 | /al/ | 9 | alternate_segmentation_preferred | halle, ale | [object Object], [object Object] | grapheme_sound_general_mode_research_only |
-| /tʁ/ | 29 | alternate_segmentation_required | — | TR | grapheme_cluster_general_mode_research_only |
+| /tʁ/ | 30 | alternate_segmentation_required | — | TR | grapheme_cluster_general_mode_research_only |
 | /sjɔ̃/ | 20 | alternate_segmentation_required | scion | TION, SION | contextual_grapheme_rule_not_yet_authorized |
 | /di/ | 16 | alternate_segmentation_required | dit | [object Object] | grapheme_sound_general_mode_research_only |
 
@@ -38,12 +38,12 @@
 
 | Segment difficile | Mots utiles débloqués | Autre segment | Candidat naturel | Mots communs | Exemples |
 |---|---:|---|---|---:|---|
-| /tʁ/ | 29 | /t/ | — | 9 | travers, attraper, traverser, rattraper, tracer, patrie |
+| /tʁ/ | 30 | /t/ | — | 9 | travers, attraper, traverser, rattraper, tracer, patrie |
 | /k/ | 85 | /ks/ | — | 4 | sexy, accident, lexie, maxi |
 | /t/ | 99 | /tʁ/ | — | 9 | travers, attraper, traverser, rattraper, tracer, patrie |
-| /l/ | 68 | /al/ | ale | 9 | allô, signal, allo, idéal, haleine, allergie |
+| /l/ | 69 | /al/ | ale | 9 | allô, signal, allo, idéal, haleine, allergie |
 | /s/ | 67 | /l/ | — | 5 | laisse, domicile, missile, lester, docile |
-| /p/ | 51 | /pʁ/ | — | 6 | esprit, prix, privé, pris, primaire, priver |
+| /p/ | 52 | /pʁ/ | — | 6 | esprit, prix, privé, pris, primaire, priver |
 | /ʁ/ | 86 | /aʁ/ | art | 8 | art, bagarre, are, harper, artère, mouchard |
 | /n/ | 70 | /ʁ/ | — | 6 | reine, sirène, arène, marraine, rênes, raina |
 | /b/ | 60 | /bl/ | — | 2 | obliger, obligé |
@@ -60,8 +60,8 @@
 |---:|---|---|---:|---:|---:|
 | 1 | /e/ | É | 50 | 45 | 310.373 |
 | 2 | /ʁe/ | ré | 59 | 38 | 310.02 |
-| 3 | /ɑ̃/ | AN | 50 | 22 | 170.647 |
-| 4 | /ɛ/ | haie | 85 | 12 | 169.3 |
+| 3 | /ɛ/ | haie | 85 | 13 | 179.546 |
+| 4 | /ɑ̃/ | AN | 50 | 22 | 170.647 |
 | 5 | /œʁ/ | heure | 59 | 11 | 120.647 |
 | 6 | /sjɔ̃/ | — | — | 20 | 105.551 |
 | 7 | /di/ | — | — | 16 | 87.738 |
@@ -79,28 +79,28 @@
 
 | Rang | Segment | Mots utiles débloqués | Gain utile pondéré | Gain global | Candidats à examiner |
 |---:|---|---:|---:|---:|---|
-| 1 | /e/ | 45 | 10897.495 | 78 | eh, hé, ais, est |
+| 1 | /e/ | 45 | 10897.495 | 79 | eh, hé, ais, est |
 | 2 | /ʁe/ | 38 | 2970.755 | 61 | ré, rée |
 | 3 | /sjɔ̃/ | 20 | 1198.672 | 30 | scion, cyon, scions |
 | 4 | /mɑ̃/ | 18 | 4496.016 | 29 | man, mans, mens |
 | 5 | /di/ | 16 | 858.981 | 24 | dit, die, dit |
 | 6 | /ɑ̃/ | 22 | 7323.249 | 34 | an, han |
 | 7 | /ɛ̃/ | 16 | 4589.302 | 23 | hein, ein, eins, ain |
-| 8 | /œʁ/ | 11 | 4210.431 | 12 | heure, heurt, heur |
-| 9 | /tʁ/ | 29 | 12371.48 | 51 | — |
+| 8 | /tʁ/ | 30 | 12380.404 | 52 | — |
+| 9 | /œʁ/ | 11 | 4210.431 | 12 | heure, heurt, heur |
 | 10 | /al/ | 9 | 847.595 | 14 | ale, halle, hâle, hale |
 | 11 | /aʁ/ | 8 | 437.525 | 14 | art, are, hart, arrhes |
 | 12 | /f/ | 48 | 21893 | 77 | — |
 | 13 | /k/ | 85 | 21852.369 | 136 | — |
 | 14 | /t/ | 99 | 18999.231 | 159 | — |
-| 15 | /l/ | 68 | 17169.035 | 110 | — |
+| 15 | /l/ | 69 | 17177.351 | 112 | — |
 | 16 | /s/ | 67 | 15112.669 | 108 | — |
-| 17 | /p/ | 51 | 11646.589 | 68 | — |
-| 18 | /ʁ/ | 86 | 11578.22 | 137 | — |
-| 19 | /ʁo/ | 7 | 45.224 | 17 | rot, rho, rôt, rhô |
-| 20 | /n/ | 70 | 6782.85 | 113 | — |
-| 21 | /b/ | 60 | 4891.51 | 94 | — |
-| 22 | /ɛ/ | 12 | 573.913 | 20 | hey, haie, es, aie |
+| 17 | /p/ | 52 | 11667.19 | 69 | — |
+| 18 | /ʁ/ | 86 | 11578.22 | 138 | — |
+| 19 | /ɛ/ | 13 | 577.501 | 21 | hey, haie, es, aie |
+| 20 | /ʁo/ | 7 | 45.224 | 18 | rot, rho, rôt, rhô |
+| 21 | /n/ | 70 | 6782.85 | 113 | — |
+| 22 | /b/ | 60 | 4891.51 | 94 | — |
 | 23 | /d/ | 48 | 3674.071 | 83 | — |
 | 24 | /kɔ̃/ | 11 | 983.024 | 22 | con |
 | 25 | /z/ | 20 | 602.516 | 29 | zzz, zzzz |

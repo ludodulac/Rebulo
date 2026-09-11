@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-11T08:03:52.116Z",
+  "generatedAt": "2026-09-11T08:18:18.801Z",
   "status": "research_only",
-  "sourceBrickMapGeneratedAt": "2026-09-11T08:03:32.958Z",
+  "sourceBrickMapGeneratedAt": "2026-09-11T08:18:00.653Z",
   "strategyVersion": "1.2.0",
   "visualCandidateBankVersion": "0.1.1",
   "routeSearchOpportunityCount": 250,
@@ -18,13 +18,13 @@
   },
   "stats": {
     "segmentCount": 8,
-    "targetCount": 127,
+    "targetCount": 128,
     "targetsWithAlternativeRoutes": 86,
     "targetsWithRepresentableAlternativeRoutes": 52,
     "targetsWithCuratedVisualAlternativeRoutes": 10,
-    "targetsStillBlocked": 41,
-    "targetsStillNeedingRepresentableAlternative": 75,
-    "targetsStillNeedingCuratedVisualAlternative": 117,
+    "targetsStillBlocked": 42,
+    "targetsStillNeedingRepresentableAlternative": 76,
+    "targetsStillNeedingCuratedVisualAlternative": 118,
     "strictAlternativeTargets": 37,
     "strictRepresentableAlternativeTargets": 25,
     "strictCuratedVisualAlternativeTargets": 1,
@@ -32,18 +32,18 @@
   },
   "visualResearchNeedQueueStats": {
     "groupCount": 46,
-    "unresolvedTargetCount": 117,
+    "unresolvedTargetCount": 118,
     "targetCountsByNeedType": {
       "curate_existing_lexical_candidate": 42,
       "find_lexical_or_visible_operation_for_phonetic_brick": 34,
-      "resolve_source_segment": 41
+      "resolve_source_segment": 42
     }
   },
   "visualResearchRouteSummary": {
-    "targetCount": 117,
+    "targetCount": 118,
     "targetCountsByRouteClass": {
       "research_pictogram_or_scene": 17,
-      "formalize_documented_visible_general_operation": 100,
+      "formalize_documented_visible_general_operation": 101,
       "discover_new_representation": 0
     },
     "groupCountsByRouteClass": {
@@ -3851,7 +3851,7 @@
     {
       "needType": "resolve_source_segment",
       "researchIpa": "tʁ",
-      "affectedTargetCount": 11,
+      "affectedTargetCount": 12,
       "minAgeBandCandidate": 5,
       "sourceSegments": [
         "tʁ"
@@ -3907,14 +3907,14 @@
           "ageBandCandidate": 9
         },
         {
-          "word": "litre",
-          "targetIpa": "litʁ",
+          "word": "neutre",
+          "targetIpa": "nøtʁ",
           "sourceIpa": "tʁ",
           "ageBandCandidate": 9
         },
         {
-          "word": "traine",
-          "targetIpa": "tʁɛn",
+          "word": "litre",
+          "targetIpa": "litʁ",
           "sourceIpa": "tʁ",
           "ageBandCandidate": 9
         }
@@ -10115,14 +10115,14 @@
     {
       "ipa": "tʁ",
       "strategy": "alternate_segmentation_required",
-      "sourceUsefulUnlocked": 29,
-      "targetCount": 29,
+      "sourceUsefulUnlocked": 30,
+      "targetCount": 30,
       "targetsWithAlternativeRoutes": 18,
       "targetsWithRepresentableAlternativeRoutes": 15,
       "targetsWithCuratedVisualAlternativeRoutes": 0,
-      "targetsStillBlocked": 11,
-      "targetsStillNeedingRepresentableAlternative": 14,
-      "targetsStillNeedingCuratedVisualAlternative": 29,
+      "targetsStillBlocked": 12,
+      "targetsStillNeedingRepresentableAlternative": 15,
+      "targetsStillNeedingCuratedVisualAlternative": 30,
       "targets": [
         {
           "key": "trop|tʁo",
@@ -11785,6 +11785,28 @@
             "coverageType": "composite_words",
             "representationLeads": [],
             "nextAction": "search_exact_whole_word_or_explicit_general_operation"
+          }
+        },
+        {
+          "key": "neutre|nøtʁ",
+          "word": "neutre",
+          "targetIpa": "nøtʁ",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful",
+          "alternativeRouteCount": 0,
+          "representableAlternativeRouteCount": 0,
+          "curatedVisualAlternativeRouteCount": 0,
+          "routes": [],
+          "resolutionState": "still_needs_new_representation_or_rule",
+          "representationResolutionState": "still_needs_representable_alternative",
+          "visualResolutionState": "still_needs_visual_representation",
+          "visualResearchNeed": {
+            "needType": "resolve_source_segment",
+            "researchIpa": "tʁ",
+            "routeMode": null,
+            "coverageType": "uncovered",
+            "representationLeads": [],
+            "nextAction": "compare_source_scene_lexical_and_alternate_segmentation_strategies"
           }
         },
         {

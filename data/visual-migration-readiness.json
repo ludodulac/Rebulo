@@ -1,10 +1,10 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": "2026-09-11T08:04:45.467Z",
+  "generatedAt": "2026-09-11T08:19:21.884Z",
   "baseline": {
-    "activePictogramCount": 24,
-    "strictMultiPieceEntries": 911,
-    "strictMultiPieceUniqueWords": 760
+    "activePictogramCount": 28,
+    "strictMultiPieceEntries": 922,
+    "strictMultiPieceUniqueWords": 769
   },
   "methodology": {
     "ordering": "Dépendance stricte croissante, puis maturité de traçabilité décroissante. Les petites pertes sont les meilleurs pilotes techniques, sans autoriser un remplacement automatique.",
@@ -12,6 +12,38 @@
     "clinicalCaution": "Cette file organise la migration visuelle du produit. Elle ne prouve ni stabilité de dénomination, ni efficacité thérapeutique, ni validation clinique."
   },
   "queue": [
+    {
+      "id": "olive",
+      "label": "olive",
+      "ipa": "/oliv/",
+      "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1FAD2.svg",
+      "strictUniqueLossIfUnavailable": 0,
+      "dependencyRisk": "low",
+      "provenanceDocumented": false,
+      "source": "openmoji:1FAD2",
+      "revisionStamped": false,
+      "artRevision": null,
+      "namingReviewAvailable": false,
+      "clinicalStatus": "unreviewed",
+      "readinessScore": 0,
+      "nextGate": "document_provenance"
+    },
+    {
+      "id": "couteau",
+      "label": "couteau",
+      "ipa": "/kuto/",
+      "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F52A.svg",
+      "strictUniqueLossIfUnavailable": 1,
+      "dependencyRisk": "low",
+      "provenanceDocumented": false,
+      "source": "openmoji:1F52A",
+      "revisionStamped": false,
+      "artRevision": null,
+      "namingReviewAvailable": false,
+      "clinicalStatus": "unreviewed",
+      "readinessScore": 0,
+      "nextGate": "document_provenance"
+    },
     {
       "id": "pluie",
       "label": "pluie",
@@ -27,6 +59,38 @@
       "clinicalStatus": "naming_test_required",
       "readinessScore": 3,
       "nextGate": "collect_human_naming_observations"
+    },
+    {
+      "id": "aiguille",
+      "label": "aiguille",
+      "ipa": "/egɥij/",
+      "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1FAA1.svg",
+      "strictUniqueLossIfUnavailable": 4,
+      "dependencyRisk": "low",
+      "provenanceDocumented": false,
+      "source": "openmoji:1FAA1",
+      "revisionStamped": false,
+      "artRevision": null,
+      "namingReviewAvailable": false,
+      "clinicalStatus": "unreviewed",
+      "readinessScore": 0,
+      "nextGate": "document_provenance"
+    },
+    {
+      "id": "noeud",
+      "label": "nœud",
+      "ipa": "/nø/",
+      "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1FAA2.svg",
+      "strictUniqueLossIfUnavailable": 4,
+      "dependencyRisk": "low",
+      "provenanceDocumented": false,
+      "source": "openmoji:1FAA2",
+      "revisionStamped": false,
+      "artRevision": null,
+      "namingReviewAvailable": false,
+      "clinicalStatus": "unreviewed",
+      "readinessScore": 0,
+      "nextGate": "document_provenance"
     },
     {
       "id": "sol",
@@ -157,22 +221,6 @@
       "nextGate": "collect_human_naming_observations"
     },
     {
-      "id": "eau",
-      "label": "eau",
-      "ipa": "/o/",
-      "image": "assets/rebus/eau.svg",
-      "strictUniqueLossIfUnavailable": 51,
-      "dependencyRisk": "high",
-      "provenanceDocumented": true,
-      "source": "rebulo_original",
-      "revisionStamped": true,
-      "artRevision": "eau-comic-v1",
-      "namingReviewAvailable": true,
-      "clinicalStatus": "naming_test_required",
-      "readinessScore": 3,
-      "nextGate": "collect_human_naming_observations"
-    },
-    {
       "id": "pot",
       "label": "pot",
       "ipa": "/po/",
@@ -185,6 +233,22 @@
       "artRevision": "pot-comic-v1",
       "namingReviewAvailable": true,
       "clinicalStatus": "unreviewed",
+      "readinessScore": 3,
+      "nextGate": "collect_human_naming_observations"
+    },
+    {
+      "id": "eau",
+      "label": "eau",
+      "ipa": "/o/",
+      "image": "assets/rebus/eau.svg",
+      "strictUniqueLossIfUnavailable": 55,
+      "dependencyRisk": "high",
+      "provenanceDocumented": true,
+      "source": "rebulo_original",
+      "revisionStamped": true,
+      "artRevision": "eau-comic-v1",
+      "namingReviewAvailable": true,
+      "clinicalStatus": "naming_test_required",
       "readinessScore": 3,
       "nextGate": "collect_human_naming_observations"
     },
@@ -209,7 +273,7 @@
       "label": "scie",
       "ipa": "/si/",
       "image": "assets/rebus/scie.svg",
-      "strictUniqueLossIfUnavailable": 77,
+      "strictUniqueLossIfUnavailable": 78,
       "dependencyRisk": "high",
       "provenanceDocumented": true,
       "source": "openmoji",
@@ -257,7 +321,7 @@
       "label": "mie",
       "ipa": "/mi/",
       "image": "assets/rebus/mie.svg",
-      "strictUniqueLossIfUnavailable": 90,
+      "strictUniqueLossIfUnavailable": 92,
       "dependencyRisk": "critical",
       "provenanceDocumented": true,
       "source": "rebulo_original",
@@ -337,7 +401,7 @@
       "label": "nez",
       "ipa": "/ne/",
       "image": "assets/rebus/nez.svg",
-      "strictUniqueLossIfUnavailable": 135,
+      "strictUniqueLossIfUnavailable": 139,
       "dependencyRisk": "critical",
       "provenanceDocumented": true,
       "source": "openmoji",

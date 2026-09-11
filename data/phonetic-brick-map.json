@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-11T08:03:32.958Z",
+  "generatedAt": "2026-09-11T08:18:00.653Z",
   "source": "Lexique 4",
   "sourceLicense": "CC BY-SA 4.0",
   "schoolFrequencyEvidence": {
@@ -45,37 +45,37 @@
     "needsSourceReview": 6,
     "alternatePronunciations": 5074
   },
-  "technicalInventoryCount": 383,
+  "technicalInventoryCount": 387,
   "globalLinguisticCoverage": {
     "targetCount": 14135,
     "targetCoverage": {
-      "whole_image": 352,
+      "whole_image": 357,
       "image_composition": 157,
-      "image_plus_letter": 265,
-      "unresolved": 13361
+      "image_plus_letter": 266,
+      "unresolved": 13355
     },
     "segmentInventoryCount": 39451,
     "segmentCoverageCounts": {
-      "whole_word": 221,
-      "composite_words": 389,
-      "explicit_grapheme": 812,
-      "uncovered": 38029
+      "whole_word": 225,
+      "composite_words": 395,
+      "explicit_grapheme": 814,
+      "uncovered": 38017
     }
   },
   "rebuloUsefulCoverage": {
     "targetCount": 8094,
     "targetCoverage": {
-      "whole_image": 296,
+      "whole_image": 300,
       "image_composition": 94,
       "image_plus_letter": 161,
-      "unresolved": 7543
+      "unresolved": 7539
     },
     "segmentInventoryCount": 25075,
     "segmentCoverageCounts": {
-      "whole_word": 209,
-      "composite_words": 263,
-      "explicit_grapheme": 557,
-      "uncovered": 24046
+      "whole_word": 213,
+      "composite_words": 266,
+      "explicit_grapheme": 559,
+      "uncovered": 24037
     }
   },
   "researchQueueStats": {
@@ -86,7 +86,7 @@
   "hardRouteSearch": {
     "registeredSegmentCount": 8,
     "sourceOpportunityCount": 8,
-    "hardTargetCount": 127,
+    "hardTargetCount": 128,
     "searchedResearchRowCount": 250,
     "researchPoolMode": "hard_target_segment_inventory"
   },
@@ -399,24 +399,24 @@
       }
     ],
     "baseline": {
-      "whole_image": 352,
+      "whole_image": 357,
       "image_composition": 157,
-      "image_plus_letter": 265,
-      "unresolved": 13361
+      "image_plus_letter": 266,
+      "unresolved": 13355
     },
     "withResearchWave": {
-      "whole_image": 360,
-      "image_composition": 168,
-      "image_plus_letter": 277,
-      "unresolved": 13330
+      "whole_image": 365,
+      "image_composition": 169,
+      "image_plus_letter": 278,
+      "unresolved": 13323
     },
     "delta": {
       "whole_image": 8,
-      "image_composition": 11,
+      "image_composition": 12,
       "image_plus_letter": 12,
-      "unresolved": -31
+      "unresolved": -32
     },
-    "newlyPlayable": 31,
+    "newlyPlayable": 32,
     "selectionSource": "current_wave_selection",
     "caution": "Simulation phonétique uniquement : les briques virtuelles ne sont ni activées ni validées visuellement."
   },
@@ -444,10 +444,10 @@
       ],
       "bestResearchCandidate": "É",
       "coverageEvidence": {
-        "totalUnlocked": 78,
-        "strictUnlocked": 65,
+        "totalUnlocked": 79,
+        "strictUnlocked": 66,
         "generalUnlocked": 13,
-        "weightedGain": 2003.547,
+        "weightedGain": 2004.145,
         "usefulUnlocked": 45,
         "usefulWeightedGain": 10897.495,
         "examplesUnlocked": [
@@ -528,6 +528,83 @@
       "curationPriorityStatus": "heuristic_research_only"
     },
     {
+      "ipa": "ɛ",
+      "recommendedRoute": "natural_pictogram",
+      "candidates": [
+        {
+          "label": "haie",
+          "candidateType": "whole_word_pictogram",
+          "lexicalEvidence": "lexique_exact",
+          "visualConcept": "Une haie végétale dense, isolée, vue de face avec une limite nette de jardin, sans maison dominante.",
+          "visualPlausibility": "high",
+          "spontaneousNamingRisk": "medium",
+          "mainConfusions": [
+            "buisson",
+            "arbuste",
+            "mur végétal"
+          ],
+          "suggestedAgeFloor": 7,
+          "ageStatus": "editorial_hypothesis",
+          "researchDecision": "first_wave",
+          "nextGate": "prototype_then_naming_test",
+          "researchQuality": {
+            "score": 85,
+            "visualComponent": 1,
+            "namingComponent": 0.7,
+            "ageAccessibilityComponent": 0.9,
+            "status": "heuristic_research_only"
+          }
+        },
+        {
+          "label": "hey",
+          "candidateType": "interjection_tile",
+          "lexicalEvidence": "lexique_exact",
+          "visualPlausibility": "low",
+          "spontaneousNamingRisk": "high",
+          "researchDecision": "fallback_only",
+          "nextGate": "do_not_draw_as_object",
+          "researchQuality": {
+            "score": 31,
+            "visualComponent": 0.25,
+            "namingComponent": 0.28,
+            "ageAccessibilityComponent": 0.5,
+            "status": "heuristic_research_only"
+          }
+        }
+      ],
+      "bestResearchCandidate": "haie",
+      "coverageEvidence": {
+        "totalUnlocked": 21,
+        "strictUnlocked": 10,
+        "generalUnlocked": 11,
+        "weightedGain": 148.296,
+        "usefulUnlocked": 13,
+        "usefulWeightedGain": 577.501,
+        "examplesUnlocked": [
+          "intérêt",
+          "hey",
+          "interroger",
+          "briquet",
+          "indépendant",
+          "banquet",
+          "parquet",
+          "inverser"
+        ],
+        "usefulExamplesUnlocked": [
+          "intérêt",
+          "hey",
+          "interroger",
+          "briquet",
+          "indépendant",
+          "banquet",
+          "parquet",
+          "inverser"
+        ]
+      },
+      "curationPriorityScore": 179.546,
+      "curationPriorityStatus": "heuristic_research_only"
+    },
+    {
       "ipa": "ɑ̃",
       "recommendedRoute": "explicit_grapheme_or_alternate_segmentation",
       "candidates": [
@@ -578,83 +655,6 @@
         ]
       },
       "curationPriorityScore": 170.647,
-      "curationPriorityStatus": "heuristic_research_only"
-    },
-    {
-      "ipa": "ɛ",
-      "recommendedRoute": "natural_pictogram",
-      "candidates": [
-        {
-          "label": "haie",
-          "candidateType": "whole_word_pictogram",
-          "lexicalEvidence": "lexique_exact",
-          "visualConcept": "Une haie végétale dense, isolée, vue de face avec une limite nette de jardin, sans maison dominante.",
-          "visualPlausibility": "high",
-          "spontaneousNamingRisk": "medium",
-          "mainConfusions": [
-            "buisson",
-            "arbuste",
-            "mur végétal"
-          ],
-          "suggestedAgeFloor": 7,
-          "ageStatus": "editorial_hypothesis",
-          "researchDecision": "first_wave",
-          "nextGate": "prototype_then_naming_test",
-          "researchQuality": {
-            "score": 85,
-            "visualComponent": 1,
-            "namingComponent": 0.7,
-            "ageAccessibilityComponent": 0.9,
-            "status": "heuristic_research_only"
-          }
-        },
-        {
-          "label": "hey",
-          "candidateType": "interjection_tile",
-          "lexicalEvidence": "lexique_exact",
-          "visualPlausibility": "low",
-          "spontaneousNamingRisk": "high",
-          "researchDecision": "fallback_only",
-          "nextGate": "do_not_draw_as_object",
-          "researchQuality": {
-            "score": 31,
-            "visualComponent": 0.25,
-            "namingComponent": 0.28,
-            "ageAccessibilityComponent": 0.5,
-            "status": "heuristic_research_only"
-          }
-        }
-      ],
-      "bestResearchCandidate": "haie",
-      "coverageEvidence": {
-        "totalUnlocked": 20,
-        "strictUnlocked": 9,
-        "generalUnlocked": 11,
-        "weightedGain": 146.502,
-        "usefulUnlocked": 12,
-        "usefulWeightedGain": 573.913,
-        "examplesUnlocked": [
-          "intérêt",
-          "hey",
-          "interroger",
-          "briquet",
-          "indépendant",
-          "banquet",
-          "parquet",
-          "inverser"
-        ],
-        "usefulExamplesUnlocked": [
-          "intérêt",
-          "hey",
-          "interroger",
-          "briquet",
-          "indépendant",
-          "banquet",
-          "parquet",
-          "inverser"
-        ]
-      },
-      "curationPriorityScore": 169.3,
       "curationPriorityStatus": "heuristic_research_only"
     },
     {
@@ -1360,10 +1360,10 @@
       ],
       "bestResearchCandidate": "rot",
       "coverageEvidence": {
-        "totalUnlocked": 17,
-        "strictUnlocked": 11,
+        "totalUnlocked": 18,
+        "strictUnlocked": 12,
         "generalUnlocked": 6,
-        "weightedGain": 28.04,
+        "weightedGain": 29.214,
         "usefulUnlocked": 7,
         "usefulWeightedGain": 45.224,
         "examplesUnlocked": [
@@ -1931,17 +1931,9 @@
       "strategyState": "alternate_one_brick_routes_found"
     },
     {
-      "ipa": "œʁ",
-      "researchRoute": "review_exact_lexical_candidates",
-      "usefulUnlocked": 11,
-      "hasNaturalCandidate": true,
-      "alternativeSegments": [],
-      "strategyState": "no_competing_one_brick_route_in_ranked_set"
-    },
-    {
       "ipa": "tʁ",
       "researchRoute": "search_scene_expression_or_alternate_segmentation",
-      "usefulUnlocked": 29,
+      "usefulUnlocked": 30,
       "hasNaturalCandidate": false,
       "alternativeSegments": [
         {
@@ -1971,6 +1963,14 @@
         }
       ],
       "strategyState": "alternate_one_brick_routes_found"
+    },
+    {
+      "ipa": "œʁ",
+      "researchRoute": "review_exact_lexical_candidates",
+      "usefulUnlocked": 11,
+      "hasNaturalCandidate": true,
+      "alternativeSegments": [],
+      "strategyState": "no_competing_one_brick_route_in_ranked_set"
     },
     {
       "ipa": "al",
@@ -2222,7 +2222,7 @@
     {
       "ipa": "l",
       "researchRoute": "prefer_explicit_letter_or_other_visible_operation",
-      "usefulUnlocked": 68,
+      "usefulUnlocked": 69,
       "hasNaturalCandidate": false,
       "alternativeSegments": [
         {
@@ -2364,7 +2364,7 @@
     {
       "ipa": "p",
       "researchRoute": "prefer_explicit_letter_or_other_visible_operation",
-      "usefulUnlocked": 51,
+      "usefulUnlocked": 52,
       "hasNaturalCandidate": false,
       "alternativeSegments": [
         {
@@ -2482,6 +2482,40 @@
           "researchRoute": "review_exact_lexical_candidates",
           "naturalCandidate": "ale",
           "score": 295
+        }
+      ],
+      "strategyState": "alternate_one_brick_routes_found"
+    },
+    {
+      "ipa": "ɛ",
+      "researchRoute": "review_exact_lexical_candidates",
+      "usefulUnlocked": 13,
+      "hasNaturalCandidate": true,
+      "alternativeSegments": [
+        {
+          "ipa": "ɛ̃",
+          "sharedUsefulTargets": 7,
+          "sharedExamples": [
+            "intérêt",
+            "interroger",
+            "indépendant",
+            "inverser",
+            "inciter",
+            "importuner"
+          ],
+          "researchRoute": "review_exact_lexical_candidates",
+          "naturalCandidate": "hein",
+          "score": 790
+        },
+        {
+          "ipa": "k",
+          "sharedUsefulTargets": 1,
+          "sharedExamples": [
+            "esquiver"
+          ],
+          "researchRoute": "prefer_explicit_letter_or_other_visible_operation",
+          "naturalCandidate": null,
+          "score": 125
         }
       ],
       "strategyState": "alternate_one_brick_routes_found"
@@ -2609,40 +2643,6 @@
           "sharedUsefulTargets": 1,
           "sharedExamples": [
             "bagarre"
-          ],
-          "researchRoute": "prefer_explicit_letter_or_other_visible_operation",
-          "naturalCandidate": null,
-          "score": 125
-        }
-      ],
-      "strategyState": "alternate_one_brick_routes_found"
-    },
-    {
-      "ipa": "ɛ",
-      "researchRoute": "review_exact_lexical_candidates",
-      "usefulUnlocked": 12,
-      "hasNaturalCandidate": true,
-      "alternativeSegments": [
-        {
-          "ipa": "ɛ̃",
-          "sharedUsefulTargets": 7,
-          "sharedExamples": [
-            "intérêt",
-            "interroger",
-            "indépendant",
-            "inverser",
-            "inciter",
-            "importuner"
-          ],
-          "researchRoute": "review_exact_lexical_candidates",
-          "naturalCandidate": "hein",
-          "score": 790
-        },
-        {
-          "ipa": "k",
-          "sharedUsefulTargets": 1,
-          "sharedExamples": [
-            "esquiver"
           ],
           "researchRoute": "prefer_explicit_letter_or_other_visible_operation",
           "naturalCandidate": null,
@@ -2898,14 +2898,6 @@
       "strategyState": "alternate_one_brick_routes_found"
     },
     {
-      "ipa": "v",
-      "researchRoute": "prefer_explicit_letter_or_other_visible_operation",
-      "usefulUnlocked": 32,
-      "hasNaturalCandidate": false,
-      "alternativeSegments": [],
-      "strategyState": "no_competing_one_brick_route_in_ranked_set"
-    },
-    {
       "ipa": "m",
       "researchRoute": "prefer_explicit_letter_or_other_visible_operation",
       "usefulUnlocked": 32,
@@ -2991,6 +2983,14 @@
       "strategyState": "alternate_one_brick_routes_found"
     },
     {
+      "ipa": "v",
+      "researchRoute": "prefer_explicit_letter_or_other_visible_operation",
+      "usefulUnlocked": 31,
+      "hasNaturalCandidate": false,
+      "alternativeSegments": [],
+      "strategyState": "no_competing_one_brick_route_in_ranked_set"
+    },
+    {
       "ipa": "u",
       "researchRoute": "review_exact_lexical_candidates",
       "usefulUnlocked": 4,
@@ -3007,18 +3007,18 @@
       "strategyState": "no_competing_one_brick_route_in_ranked_set"
     },
     {
-      "ipa": "ɔ̃",
-      "researchRoute": "review_exact_lexical_candidates",
-      "usefulUnlocked": 6,
-      "hasNaturalCandidate": true,
-      "alternativeSegments": [],
-      "strategyState": "no_competing_one_brick_route_in_ranked_set"
-    },
-    {
       "ipa": "je",
       "researchRoute": "search_scene_expression_or_alternate_segmentation",
       "usefulUnlocked": 14,
       "hasNaturalCandidate": false,
+      "alternativeSegments": [],
+      "strategyState": "no_competing_one_brick_route_in_ranked_set"
+    },
+    {
+      "ipa": "ɔ̃",
+      "researchRoute": "review_exact_lexical_candidates",
+      "usefulUnlocked": 6,
+      "hasNaturalCandidate": true,
       "alternativeSegments": [],
       "strategyState": "no_competing_one_brick_route_in_ranked_set"
     },
@@ -3457,10 +3457,10 @@
         }
       ],
       "researchState": "needs_visual_resolution",
-      "strictUnlocked": 65,
+      "strictUnlocked": 66,
       "generalUnlocked": 13,
-      "totalUnlocked": 78,
-      "weightedGain": 2003.547,
+      "totalUnlocked": 79,
+      "weightedGain": 2004.145,
       "usefulUnlocked": 45,
       "usefulWeightedGain": 10897.495,
       "examplesUnlocked": [
@@ -5831,6 +5831,290 @@
       }
     },
     {
+      "ipa": "tʁ",
+      "unitCount": 2,
+      "occurrenceCount": 418,
+      "targetCount": 412,
+      "totalFrequency": 16088.983,
+      "minAgeBandCandidate": 5,
+      "examples": [
+        "votre",
+        "très",
+        "être",
+        "notre",
+        "peut-être",
+        "trop",
+        "autre",
+        "trouver"
+      ],
+      "coverage": {
+        "mode": "research",
+        "coverageType": "uncovered",
+        "operations": []
+      },
+      "wholeWordCandidates": [],
+      "researchState": "needs_visual_resolution",
+      "strictUnlocked": 18,
+      "generalUnlocked": 34,
+      "totalUnlocked": 52,
+      "weightedGain": 2195.088,
+      "usefulUnlocked": 30,
+      "usefulWeightedGain": 12380.404,
+      "examplesUnlocked": [
+        "trop",
+        "autre",
+        "d'autres",
+        "quatre",
+        "lettre",
+        "travers",
+        "attraper",
+        "théâtre"
+      ],
+      "usefulExamplesUnlocked": [
+        "trop",
+        "autre",
+        "d'autres",
+        "quatre",
+        "lettre",
+        "travers",
+        "attraper",
+        "théâtre"
+      ],
+      "usefulUnlockedTargets": [
+        {
+          "key": "trop|tʁo",
+          "word": "trop",
+          "targetIpa": "tʁo",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "very_common_simple"
+        },
+        {
+          "key": "autre|otʁ",
+          "word": "autre",
+          "targetIpa": "otʁ",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "very_common_simple"
+        },
+        {
+          "key": "d'autres|dotʁ",
+          "word": "d'autres",
+          "targetIpa": "dotʁ",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "very_common_simple"
+        },
+        {
+          "key": "quatre|katʁ",
+          "word": "quatre",
+          "targetIpa": "katʁ",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "very_common_simple"
+        },
+        {
+          "key": "lettre|lɛtʁ",
+          "word": "lettre",
+          "targetIpa": "lɛtʁ",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "child_common"
+        },
+        {
+          "key": "travers|tʁavɛʁ",
+          "word": "travers",
+          "targetIpa": "tʁavɛʁ",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "child_common"
+        },
+        {
+          "key": "attraper|atʁape",
+          "word": "attraper",
+          "targetIpa": "atʁape",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "child_common"
+        },
+        {
+          "key": "théâtre|teatʁ",
+          "word": "théâtre",
+          "targetIpa": "teatʁ",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "school_common"
+        },
+        {
+          "key": "traverser|tʁavɛʁse",
+          "word": "traverser",
+          "targetIpa": "tʁavɛʁse",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "school_common"
+        },
+        {
+          "key": "rattraper|ʁatʁape",
+          "word": "rattraper",
+          "targetIpa": "ʁatʁape",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "school_common"
+        },
+        {
+          "key": "paraître|paʁɛtʁ",
+          "word": "paraître",
+          "targetIpa": "paʁɛtʁ",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "school_common"
+        },
+        {
+          "key": "apparaître|apaʁɛtʁ",
+          "word": "apparaître",
+          "targetIpa": "apaʁɛtʁ",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "school_common"
+        },
+        {
+          "key": "tracer|tʁase",
+          "word": "tracer",
+          "targetIpa": "tʁase",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "school_common"
+        },
+        {
+          "key": "chapitre|ʃapitʁ",
+          "word": "chapitre",
+          "targetIpa": "ʃapitʁ",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "teen_adult_common"
+        },
+        {
+          "key": "détresse|detʁɛs",
+          "word": "détresse",
+          "targetIpa": "detʁɛs",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common"
+        },
+        {
+          "key": "patrie|patʁi",
+          "word": "patrie",
+          "targetIpa": "patʁi",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common"
+        },
+        {
+          "key": "trauma|tʁoma",
+          "word": "trauma",
+          "targetIpa": "tʁoma",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common"
+        },
+        {
+          "key": "peintre|pɛ̃tʁ",
+          "word": "peintre",
+          "targetIpa": "pɛ̃tʁ",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common"
+        },
+        {
+          "key": "atroce|atʁɔs",
+          "word": "atroce",
+          "targetIpa": "atʁɔs",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common"
+        },
+        {
+          "key": "terrestre|tɛʁɛstʁ",
+          "word": "terrestre",
+          "targetIpa": "tɛʁɛstʁ",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "neutre|nøtʁ",
+          "word": "neutre",
+          "targetIpa": "nøtʁ",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "maestro|maɛstʁo",
+          "word": "maestro",
+          "targetIpa": "maɛstʁo",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "litre|litʁ",
+          "word": "litre",
+          "targetIpa": "litʁ",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "traversée|tʁavɛʁse",
+          "word": "traversée",
+          "targetIpa": "tʁavɛʁse",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "tripoter|tʁipote",
+          "word": "tripoter",
+          "targetIpa": "tʁipote",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "traine|tʁɛn",
+          "word": "traine",
+          "targetIpa": "tʁɛn",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "tri|tʁi",
+          "word": "tri",
+          "targetIpa": "tʁi",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "paraitre|paʁɛtʁ",
+          "word": "paraitre",
+          "targetIpa": "paʁɛtʁ",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "traîneau|tʁɛno",
+          "word": "traîneau",
+          "targetIpa": "tʁɛno",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "traîne|tʁɛn",
+          "word": "traîne",
+          "targetIpa": "tʁɛn",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful"
+        }
+      ],
+      "plausibleLexicalCandidates": [],
+      "nounCandidateCount": 0,
+      "researchRoute": "search_scene_expression_or_alternate_segmentation",
+      "researchPriorityScore": 316.04,
+      "priorityObjective": "rebulo_useful_coverage_first_global_coverage_secondary",
+      "visualAssessment": "human_review_required",
+      "spontaneousNamingAssessment": "human_review_required",
+      "ageSuitabilityAssessment": "human_review_required",
+      "clinicalAssessment": "not_assessed",
+      "hardSegmentStrategy": {
+        "ipa": "tʁ",
+        "usefulUnlockReference": 29,
+        "strategy": "alternate_segmentation_required",
+        "lexicalLeads": [],
+        "lexicalAssessment": "no_natural_exact_whole_word_candidate",
+        "visibleFallbackResearch": [
+          "TR"
+        ],
+        "fallbackStatus": "grapheme_cluster_general_mode_research_only",
+        "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
+      }
+    },
+    {
       "ipa": "œʁ",
       "unitCount": 2,
       "occurrenceCount": 271,
@@ -6096,283 +6380,6 @@
           }
         ],
         "nextGate": "compare_two_scene_variants_in_blind_naming_test"
-      }
-    },
-    {
-      "ipa": "tʁ",
-      "unitCount": 2,
-      "occurrenceCount": 418,
-      "targetCount": 412,
-      "totalFrequency": 16088.983,
-      "minAgeBandCandidate": 5,
-      "examples": [
-        "votre",
-        "très",
-        "être",
-        "notre",
-        "peut-être",
-        "trop",
-        "autre",
-        "trouver"
-      ],
-      "coverage": {
-        "mode": "research",
-        "coverageType": "uncovered",
-        "operations": []
-      },
-      "wholeWordCandidates": [],
-      "researchState": "needs_visual_resolution",
-      "strictUnlocked": 17,
-      "generalUnlocked": 34,
-      "totalUnlocked": 51,
-      "weightedGain": 2190.626,
-      "usefulUnlocked": 29,
-      "usefulWeightedGain": 12371.48,
-      "examplesUnlocked": [
-        "trop",
-        "autre",
-        "d'autres",
-        "quatre",
-        "lettre",
-        "travers",
-        "attraper",
-        "théâtre"
-      ],
-      "usefulExamplesUnlocked": [
-        "trop",
-        "autre",
-        "d'autres",
-        "quatre",
-        "lettre",
-        "travers",
-        "attraper",
-        "théâtre"
-      ],
-      "usefulUnlockedTargets": [
-        {
-          "key": "trop|tʁo",
-          "word": "trop",
-          "targetIpa": "tʁo",
-          "ageBandCandidate": 5,
-          "rebuloUtilityTier": "very_common_simple"
-        },
-        {
-          "key": "autre|otʁ",
-          "word": "autre",
-          "targetIpa": "otʁ",
-          "ageBandCandidate": 5,
-          "rebuloUtilityTier": "very_common_simple"
-        },
-        {
-          "key": "d'autres|dotʁ",
-          "word": "d'autres",
-          "targetIpa": "dotʁ",
-          "ageBandCandidate": 5,
-          "rebuloUtilityTier": "very_common_simple"
-        },
-        {
-          "key": "quatre|katʁ",
-          "word": "quatre",
-          "targetIpa": "katʁ",
-          "ageBandCandidate": 5,
-          "rebuloUtilityTier": "very_common_simple"
-        },
-        {
-          "key": "lettre|lɛtʁ",
-          "word": "lettre",
-          "targetIpa": "lɛtʁ",
-          "ageBandCandidate": 5,
-          "rebuloUtilityTier": "child_common"
-        },
-        {
-          "key": "travers|tʁavɛʁ",
-          "word": "travers",
-          "targetIpa": "tʁavɛʁ",
-          "ageBandCandidate": 5,
-          "rebuloUtilityTier": "child_common"
-        },
-        {
-          "key": "attraper|atʁape",
-          "word": "attraper",
-          "targetIpa": "atʁape",
-          "ageBandCandidate": 7,
-          "rebuloUtilityTier": "child_common"
-        },
-        {
-          "key": "théâtre|teatʁ",
-          "word": "théâtre",
-          "targetIpa": "teatʁ",
-          "ageBandCandidate": 7,
-          "rebuloUtilityTier": "school_common"
-        },
-        {
-          "key": "traverser|tʁavɛʁse",
-          "word": "traverser",
-          "targetIpa": "tʁavɛʁse",
-          "ageBandCandidate": 7,
-          "rebuloUtilityTier": "school_common"
-        },
-        {
-          "key": "rattraper|ʁatʁape",
-          "word": "rattraper",
-          "targetIpa": "ʁatʁape",
-          "ageBandCandidate": 7,
-          "rebuloUtilityTier": "school_common"
-        },
-        {
-          "key": "paraître|paʁɛtʁ",
-          "word": "paraître",
-          "targetIpa": "paʁɛtʁ",
-          "ageBandCandidate": 7,
-          "rebuloUtilityTier": "school_common"
-        },
-        {
-          "key": "apparaître|apaʁɛtʁ",
-          "word": "apparaître",
-          "targetIpa": "apaʁɛtʁ",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "school_common"
-        },
-        {
-          "key": "tracer|tʁase",
-          "word": "tracer",
-          "targetIpa": "tʁase",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "school_common"
-        },
-        {
-          "key": "chapitre|ʃapitʁ",
-          "word": "chapitre",
-          "targetIpa": "ʃapitʁ",
-          "ageBandCandidate": 7,
-          "rebuloUtilityTier": "teen_adult_common"
-        },
-        {
-          "key": "détresse|detʁɛs",
-          "word": "détresse",
-          "targetIpa": "detʁɛs",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "teen_adult_common"
-        },
-        {
-          "key": "patrie|patʁi",
-          "word": "patrie",
-          "targetIpa": "patʁi",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "teen_adult_common"
-        },
-        {
-          "key": "trauma|tʁoma",
-          "word": "trauma",
-          "targetIpa": "tʁoma",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "teen_adult_common"
-        },
-        {
-          "key": "peintre|pɛ̃tʁ",
-          "word": "peintre",
-          "targetIpa": "pɛ̃tʁ",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "teen_adult_common"
-        },
-        {
-          "key": "atroce|atʁɔs",
-          "word": "atroce",
-          "targetIpa": "atʁɔs",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "teen_adult_common"
-        },
-        {
-          "key": "terrestre|tɛʁɛstʁ",
-          "word": "terrestre",
-          "targetIpa": "tɛʁɛstʁ",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "maestro|maɛstʁo",
-          "word": "maestro",
-          "targetIpa": "maɛstʁo",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "litre|litʁ",
-          "word": "litre",
-          "targetIpa": "litʁ",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "traversée|tʁavɛʁse",
-          "word": "traversée",
-          "targetIpa": "tʁavɛʁse",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "tripoter|tʁipote",
-          "word": "tripoter",
-          "targetIpa": "tʁipote",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "traine|tʁɛn",
-          "word": "traine",
-          "targetIpa": "tʁɛn",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "tri|tʁi",
-          "word": "tri",
-          "targetIpa": "tʁi",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "paraitre|paʁɛtʁ",
-          "word": "paraitre",
-          "targetIpa": "paʁɛtʁ",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "traîneau|tʁɛno",
-          "word": "traîneau",
-          "targetIpa": "tʁɛno",
-          "ageBandCandidate": 12,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "traîne|tʁɛn",
-          "word": "traîne",
-          "targetIpa": "tʁɛn",
-          "ageBandCandidate": 12,
-          "rebuloUtilityTier": "advanced_useful"
-        }
-      ],
-      "plausibleLexicalCandidates": [],
-      "nounCandidateCount": 0,
-      "researchRoute": "search_scene_expression_or_alternate_segmentation",
-      "researchPriorityScore": 310.033,
-      "priorityObjective": "rebulo_useful_coverage_first_global_coverage_secondary",
-      "visualAssessment": "human_review_required",
-      "spontaneousNamingAssessment": "human_review_required",
-      "ageSuitabilityAssessment": "human_review_required",
-      "clinicalAssessment": "not_assessed",
-      "hardSegmentStrategy": {
-        "ipa": "tʁ",
-        "usefulUnlockReference": 29,
-        "strategy": "alternate_segmentation_required",
-        "lexicalLeads": [],
-        "lexicalAssessment": "no_natural_exact_whole_word_candidate",
-        "visibleFallbackResearch": [
-          "TR"
-        ],
-        "fallbackStatus": "grapheme_cluster_general_mode_research_only",
-        "nextGate": "use_alternative_strategy_overlap_then_define_visible_grapheme_semantics_only_if_needed"
       }
     },
     {
@@ -8883,12 +8890,12 @@
         }
       ],
       "researchState": "needs_visual_resolution",
-      "strictUnlocked": 37,
-      "generalUnlocked": 73,
-      "totalUnlocked": 110,
-      "weightedGain": 3153.277,
-      "usefulUnlocked": 68,
-      "usefulWeightedGain": 17169.035,
+      "strictUnlocked": 38,
+      "generalUnlocked": 74,
+      "totalUnlocked": 112,
+      "weightedGain": 3158.305,
+      "usefulUnlocked": 69,
+      "usefulWeightedGain": 17177.351,
       "examplesUnlocked": [
         "là",
         "mal",
@@ -9177,6 +9184,13 @@
           "rebuloUtilityTier": "advanced_useful"
         },
         {
+          "key": "lumineux|lyminø",
+          "word": "lumineux",
+          "targetIpa": "lyminø",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
           "key": "laine|lɛn",
           "word": "laine",
           "targetIpa": "lɛn",
@@ -9390,7 +9404,7 @@
       "plausibleLexicalCandidates": [],
       "nounCandidateCount": 0,
       "researchRoute": "prefer_explicit_letter_or_other_visible_operation",
-      "researchPriorityScore": 290.164,
+      "researchPriorityScore": 290.169,
       "priorityObjective": "rebulo_useful_coverage_first_global_coverage_secondary",
       "visualAssessment": "human_review_required",
       "spontaneousNamingAssessment": "human_review_required",
@@ -9979,12 +9993,12 @@
       },
       "wholeWordCandidates": [],
       "researchState": "needs_visual_resolution",
-      "strictUnlocked": 22,
+      "strictUnlocked": 23,
       "generalUnlocked": 46,
-      "totalUnlocked": 68,
-      "weightedGain": 2162.05,
-      "usefulUnlocked": 51,
-      "usefulWeightedGain": 11646.589,
+      "totalUnlocked": 69,
+      "weightedGain": 2168.917,
+      "usefulUnlocked": 52,
+      "usefulWeightedGain": 11667.19,
       "examplesUnlocked": [
         "père",
         "prêt",
@@ -10203,6 +10217,13 @@
           "rebuloUtilityTier": "teen_adult_common"
         },
         {
+          "key": "pneu|pnø",
+          "word": "pneu",
+          "targetIpa": "pnø",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common"
+        },
+        {
           "key": "cape|kap",
           "word": "cape",
           "targetIpa": "kap",
@@ -10367,7 +10388,7 @@
       "plausibleLexicalCandidates": [],
       "nounCandidateCount": 0,
       "researchRoute": "prefer_explicit_letter_or_other_visible_operation",
-      "researchPriorityScore": 286.456,
+      "researchPriorityScore": 286.473,
       "priorityObjective": "rebulo_useful_coverage_first_global_coverage_secondary",
       "visualAssessment": "human_review_required",
       "spontaneousNamingAssessment": "human_review_required",
@@ -10398,10 +10419,10 @@
       },
       "wholeWordCandidates": [],
       "researchState": "needs_visual_resolution",
-      "strictUnlocked": 54,
+      "strictUnlocked": 55,
       "generalUnlocked": 83,
-      "totalUnlocked": 137,
-      "weightedGain": 2342.773,
+      "totalUnlocked": 138,
+      "weightedGain": 2343.947,
       "usefulUnlocked": 86,
       "usefulWeightedGain": 11578.22,
       "examplesUnlocked": [
@@ -11039,6 +11060,377 @@
       "clinicalAssessment": "not_assessed"
     },
     {
+      "ipa": "ɛ",
+      "unitCount": 1,
+      "occurrenceCount": 1700,
+      "targetCount": 1617,
+      "totalFrequency": 47532.104,
+      "minAgeBandCandidate": 5,
+      "examples": [
+        "faire",
+        "cette",
+        "très",
+        "être",
+        "jamais",
+        "vraiment",
+        "quelque",
+        "merci"
+      ],
+      "coverage": {
+        "mode": "research",
+        "coverageType": "uncovered",
+        "operations": []
+      },
+      "wholeWordCandidates": [
+        {
+          "word": "haie",
+          "lemma": "haie",
+          "ipa": "ɛ",
+          "pos": "NOM",
+          "frequency": 1.209,
+          "syllableCount": 1,
+          "lexicalPriority": 0,
+          "phoneticStatus": "whole_pronunciation_exact",
+          "visualStatus": "unreviewed",
+          "namingStatus": "unreviewed",
+          "activationState": "research_only"
+        },
+        {
+          "word": "es",
+          "lemma": "es",
+          "ipa": "ɛ",
+          "pos": "NOM",
+          "frequency": 0.193,
+          "syllableCount": 1,
+          "lexicalPriority": 0,
+          "phoneticStatus": "whole_pronunciation_exact",
+          "visualStatus": "unreviewed",
+          "namingStatus": "unreviewed",
+          "activationState": "research_only"
+        },
+        {
+          "word": "aie",
+          "lemma": "aie",
+          "ipa": "ɛ",
+          "pos": "NOM",
+          "frequency": 0.149,
+          "syllableCount": 1,
+          "lexicalPriority": 0,
+          "phoneticStatus": "whole_pronunciation_exact",
+          "visualStatus": "unreviewed",
+          "namingStatus": "unreviewed",
+          "activationState": "research_only"
+        },
+        {
+          "word": "ait",
+          "lemma": "ait",
+          "ipa": "ɛ",
+          "pos": "NOM",
+          "frequency": 0.076,
+          "syllableCount": 1,
+          "lexicalPriority": 0,
+          "phoneticStatus": "whole_pronunciation_exact",
+          "visualStatus": "unreviewed",
+          "namingStatus": "unreviewed",
+          "activationState": "research_only"
+        },
+        {
+          "word": "hè",
+          "lemma": "hè",
+          "ipa": "ɛ",
+          "pos": "NOM",
+          "frequency": 0.019,
+          "syllableCount": 1,
+          "lexicalPriority": 0,
+          "phoneticStatus": "whole_pronunciation_exact",
+          "visualStatus": "unreviewed",
+          "namingStatus": "unreviewed",
+          "activationState": "research_only"
+        },
+        {
+          "word": "haient",
+          "lemma": "haient",
+          "ipa": "ɛ",
+          "pos": "NOM",
+          "frequency": 0.009,
+          "syllableCount": 1,
+          "lexicalPriority": 0,
+          "phoneticStatus": "whole_pronunciation_exact",
+          "visualStatus": "unreviewed",
+          "namingStatus": "unreviewed",
+          "activationState": "research_only"
+        },
+        {
+          "word": "hê",
+          "lemma": "hê",
+          "ipa": "ɛ",
+          "pos": "NOM",
+          "frequency": 0.003,
+          "syllableCount": 1,
+          "lexicalPriority": 0,
+          "phoneticStatus": "whole_pronunciation_exact",
+          "visualStatus": "unreviewed",
+          "namingStatus": "unreviewed",
+          "activationState": "research_only"
+        },
+        {
+          "word": "hey",
+          "lemma": "hey",
+          "ipa": "ɛ",
+          "pos": "ONO",
+          "frequency": 24.126,
+          "syllableCount": 1,
+          "lexicalPriority": 1,
+          "phoneticStatus": "whole_pronunciation_exact",
+          "visualStatus": "unreviewed",
+          "namingStatus": "unreviewed",
+          "activationState": "research_only"
+        }
+      ],
+      "researchState": "needs_visual_resolution",
+      "strictUnlocked": 10,
+      "generalUnlocked": 11,
+      "totalUnlocked": 21,
+      "weightedGain": 148.296,
+      "usefulUnlocked": 13,
+      "usefulWeightedGain": 577.501,
+      "examplesUnlocked": [
+        "intérêt",
+        "hey",
+        "interroger",
+        "briquet",
+        "indépendant",
+        "banquet",
+        "parquet",
+        "inverser"
+      ],
+      "usefulExamplesUnlocked": [
+        "intérêt",
+        "hey",
+        "interroger",
+        "briquet",
+        "indépendant",
+        "banquet",
+        "parquet",
+        "inverser"
+      ],
+      "usefulUnlockedTargets": [
+        {
+          "key": "intérêt|ɛ̃teʁɛ",
+          "word": "intérêt",
+          "targetIpa": "ɛ̃teʁɛ",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "child_common"
+        },
+        {
+          "key": "hey|ɛ",
+          "word": "hey",
+          "targetIpa": "ɛ",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "school_common"
+        },
+        {
+          "key": "interroger|ɛ̃tɛʁoʒe",
+          "word": "interroger",
+          "targetIpa": "ɛ̃tɛʁoʒe",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "school_common"
+        },
+        {
+          "key": "briquet|bʁikɛ",
+          "word": "briquet",
+          "targetIpa": "bʁikɛ",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "indépendant|ɛ̃depɑ̃dɑ̃",
+          "word": "indépendant",
+          "targetIpa": "ɛ̃depɑ̃dɑ̃",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "banquet|bɑ̃kɛ",
+          "word": "banquet",
+          "targetIpa": "bɑ̃kɛ",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "parquet|paʁkɛ",
+          "word": "parquet",
+          "targetIpa": "paʁkɛ",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "inverser|ɛ̃vɛʁse",
+          "word": "inverser",
+          "targetIpa": "ɛ̃vɛʁse",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "esquiver|ɛskive",
+          "word": "esquiver",
+          "targetIpa": "ɛskive",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "inciter|ɛ̃site",
+          "word": "inciter",
+          "targetIpa": "ɛ̃site",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "haineux|ɛnø",
+          "word": "haineux",
+          "targetIpa": "ɛnø",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "importuner|ɛ̃pɔʁtyne",
+          "word": "importuner",
+          "targetIpa": "ɛ̃pɔʁtyne",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "lycéen|liseɛ̃",
+          "word": "lycéen",
+          "targetIpa": "liseɛ̃",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful"
+        }
+      ],
+      "plausibleLexicalCandidates": [
+        {
+          "word": "hey",
+          "lemma": "hey",
+          "ipa": "ɛ",
+          "pos": "ONO",
+          "frequency": 24.126,
+          "syllableCount": 1,
+          "lexicalPriority": 1,
+          "phoneticStatus": "whole_pronunciation_exact",
+          "visualStatus": "unreviewed",
+          "namingStatus": "unreviewed",
+          "activationState": "research_only",
+          "automaticResearchScore": 43.201
+        },
+        {
+          "word": "haie",
+          "lemma": "haie",
+          "ipa": "ɛ",
+          "pos": "NOM",
+          "frequency": 1.209,
+          "syllableCount": 1,
+          "lexicalPriority": 0,
+          "phoneticStatus": "whole_pronunciation_exact",
+          "visualStatus": "unreviewed",
+          "namingStatus": "unreviewed",
+          "activationState": "research_only",
+          "automaticResearchScore": 40.754
+        },
+        {
+          "word": "es",
+          "lemma": "es",
+          "ipa": "ɛ",
+          "pos": "NOM",
+          "frequency": 0.193,
+          "syllableCount": 1,
+          "lexicalPriority": 0,
+          "phoneticStatus": "whole_pronunciation_exact",
+          "visualStatus": "unreviewed",
+          "namingStatus": "unreviewed",
+          "activationState": "research_only",
+          "automaticResearchScore": 38.613
+        },
+        {
+          "word": "aie",
+          "lemma": "aie",
+          "ipa": "ɛ",
+          "pos": "NOM",
+          "frequency": 0.149,
+          "syllableCount": 1,
+          "lexicalPriority": 0,
+          "phoneticStatus": "whole_pronunciation_exact",
+          "visualStatus": "unreviewed",
+          "namingStatus": "unreviewed",
+          "activationState": "research_only",
+          "automaticResearchScore": 38.483
+        },
+        {
+          "word": "ait",
+          "lemma": "ait",
+          "ipa": "ɛ",
+          "pos": "NOM",
+          "frequency": 0.076,
+          "syllableCount": 1,
+          "lexicalPriority": 0,
+          "phoneticStatus": "whole_pronunciation_exact",
+          "visualStatus": "unreviewed",
+          "namingStatus": "unreviewed",
+          "activationState": "research_only",
+          "automaticResearchScore": 38.254
+        },
+        {
+          "word": "hè",
+          "lemma": "hè",
+          "ipa": "ɛ",
+          "pos": "NOM",
+          "frequency": 0.019,
+          "syllableCount": 1,
+          "lexicalPriority": 0,
+          "phoneticStatus": "whole_pronunciation_exact",
+          "visualStatus": "unreviewed",
+          "namingStatus": "unreviewed",
+          "activationState": "research_only",
+          "automaticResearchScore": 38.065
+        },
+        {
+          "word": "haient",
+          "lemma": "haient",
+          "ipa": "ɛ",
+          "pos": "NOM",
+          "frequency": 0.009,
+          "syllableCount": 1,
+          "lexicalPriority": 0,
+          "phoneticStatus": "whole_pronunciation_exact",
+          "visualStatus": "unreviewed",
+          "namingStatus": "unreviewed",
+          "activationState": "research_only",
+          "automaticResearchScore": 38.031
+        },
+        {
+          "word": "hê",
+          "lemma": "hê",
+          "ipa": "ɛ",
+          "pos": "NOM",
+          "frequency": 0.003,
+          "syllableCount": 1,
+          "lexicalPriority": 0,
+          "phoneticStatus": "whole_pronunciation_exact",
+          "visualStatus": "unreviewed",
+          "namingStatus": "unreviewed",
+          "activationState": "research_only",
+          "automaticResearchScore": 38.01
+        }
+      ],
+      "nounCandidateCount": 7,
+      "researchRoute": "review_exact_lexical_candidates",
+      "researchPriorityScore": 283.754,
+      "priorityObjective": "rebulo_useful_coverage_first_global_coverage_secondary",
+      "visualAssessment": "human_review_required",
+      "spontaneousNamingAssessment": "human_review_required",
+      "ageSuitabilityAssessment": "human_review_required",
+      "clinicalAssessment": "not_assessed"
+    },
+    {
       "ipa": "ʁo",
       "unitCount": 2,
       "occurrenceCount": 214,
@@ -11128,10 +11520,10 @@
         }
       ],
       "researchState": "needs_visual_resolution",
-      "strictUnlocked": 11,
+      "strictUnlocked": 12,
       "generalUnlocked": 6,
-      "totalUnlocked": 17,
-      "weightedGain": 28.04,
+      "totalUnlocked": 18,
+      "weightedGain": 29.214,
       "usefulUnlocked": 7,
       "usefulWeightedGain": 45.224,
       "examplesUnlocked": [
@@ -11278,7 +11670,7 @@
       ],
       "nounCandidateCount": 5,
       "researchRoute": "review_exact_lexical_candidates",
-      "researchPriorityScore": 282.418,
+      "researchPriorityScore": 283.418,
       "priorityObjective": "rebulo_useful_coverage_first_global_coverage_secondary",
       "visualAssessment": "human_review_required",
       "spontaneousNamingAssessment": "human_review_required",
@@ -12327,370 +12719,6 @@
       "nounCandidateCount": 0,
       "researchRoute": "prefer_explicit_letter_or_other_visible_operation",
       "researchPriorityScore": 278.168,
-      "priorityObjective": "rebulo_useful_coverage_first_global_coverage_secondary",
-      "visualAssessment": "human_review_required",
-      "spontaneousNamingAssessment": "human_review_required",
-      "ageSuitabilityAssessment": "human_review_required",
-      "clinicalAssessment": "not_assessed"
-    },
-    {
-      "ipa": "ɛ",
-      "unitCount": 1,
-      "occurrenceCount": 1700,
-      "targetCount": 1617,
-      "totalFrequency": 47532.104,
-      "minAgeBandCandidate": 5,
-      "examples": [
-        "faire",
-        "cette",
-        "très",
-        "être",
-        "jamais",
-        "vraiment",
-        "quelque",
-        "merci"
-      ],
-      "coverage": {
-        "mode": "research",
-        "coverageType": "uncovered",
-        "operations": []
-      },
-      "wholeWordCandidates": [
-        {
-          "word": "haie",
-          "lemma": "haie",
-          "ipa": "ɛ",
-          "pos": "NOM",
-          "frequency": 1.209,
-          "syllableCount": 1,
-          "lexicalPriority": 0,
-          "phoneticStatus": "whole_pronunciation_exact",
-          "visualStatus": "unreviewed",
-          "namingStatus": "unreviewed",
-          "activationState": "research_only"
-        },
-        {
-          "word": "es",
-          "lemma": "es",
-          "ipa": "ɛ",
-          "pos": "NOM",
-          "frequency": 0.193,
-          "syllableCount": 1,
-          "lexicalPriority": 0,
-          "phoneticStatus": "whole_pronunciation_exact",
-          "visualStatus": "unreviewed",
-          "namingStatus": "unreviewed",
-          "activationState": "research_only"
-        },
-        {
-          "word": "aie",
-          "lemma": "aie",
-          "ipa": "ɛ",
-          "pos": "NOM",
-          "frequency": 0.149,
-          "syllableCount": 1,
-          "lexicalPriority": 0,
-          "phoneticStatus": "whole_pronunciation_exact",
-          "visualStatus": "unreviewed",
-          "namingStatus": "unreviewed",
-          "activationState": "research_only"
-        },
-        {
-          "word": "ait",
-          "lemma": "ait",
-          "ipa": "ɛ",
-          "pos": "NOM",
-          "frequency": 0.076,
-          "syllableCount": 1,
-          "lexicalPriority": 0,
-          "phoneticStatus": "whole_pronunciation_exact",
-          "visualStatus": "unreviewed",
-          "namingStatus": "unreviewed",
-          "activationState": "research_only"
-        },
-        {
-          "word": "hè",
-          "lemma": "hè",
-          "ipa": "ɛ",
-          "pos": "NOM",
-          "frequency": 0.019,
-          "syllableCount": 1,
-          "lexicalPriority": 0,
-          "phoneticStatus": "whole_pronunciation_exact",
-          "visualStatus": "unreviewed",
-          "namingStatus": "unreviewed",
-          "activationState": "research_only"
-        },
-        {
-          "word": "haient",
-          "lemma": "haient",
-          "ipa": "ɛ",
-          "pos": "NOM",
-          "frequency": 0.009,
-          "syllableCount": 1,
-          "lexicalPriority": 0,
-          "phoneticStatus": "whole_pronunciation_exact",
-          "visualStatus": "unreviewed",
-          "namingStatus": "unreviewed",
-          "activationState": "research_only"
-        },
-        {
-          "word": "hê",
-          "lemma": "hê",
-          "ipa": "ɛ",
-          "pos": "NOM",
-          "frequency": 0.003,
-          "syllableCount": 1,
-          "lexicalPriority": 0,
-          "phoneticStatus": "whole_pronunciation_exact",
-          "visualStatus": "unreviewed",
-          "namingStatus": "unreviewed",
-          "activationState": "research_only"
-        },
-        {
-          "word": "hey",
-          "lemma": "hey",
-          "ipa": "ɛ",
-          "pos": "ONO",
-          "frequency": 24.126,
-          "syllableCount": 1,
-          "lexicalPriority": 1,
-          "phoneticStatus": "whole_pronunciation_exact",
-          "visualStatus": "unreviewed",
-          "namingStatus": "unreviewed",
-          "activationState": "research_only"
-        }
-      ],
-      "researchState": "needs_visual_resolution",
-      "strictUnlocked": 9,
-      "generalUnlocked": 11,
-      "totalUnlocked": 20,
-      "weightedGain": 146.502,
-      "usefulUnlocked": 12,
-      "usefulWeightedGain": 573.913,
-      "examplesUnlocked": [
-        "intérêt",
-        "hey",
-        "interroger",
-        "briquet",
-        "indépendant",
-        "banquet",
-        "parquet",
-        "inverser"
-      ],
-      "usefulExamplesUnlocked": [
-        "intérêt",
-        "hey",
-        "interroger",
-        "briquet",
-        "indépendant",
-        "banquet",
-        "parquet",
-        "inverser"
-      ],
-      "usefulUnlockedTargets": [
-        {
-          "key": "intérêt|ɛ̃teʁɛ",
-          "word": "intérêt",
-          "targetIpa": "ɛ̃teʁɛ",
-          "ageBandCandidate": 7,
-          "rebuloUtilityTier": "child_common"
-        },
-        {
-          "key": "hey|ɛ",
-          "word": "hey",
-          "targetIpa": "ɛ",
-          "ageBandCandidate": 7,
-          "rebuloUtilityTier": "school_common"
-        },
-        {
-          "key": "interroger|ɛ̃tɛʁoʒe",
-          "word": "interroger",
-          "targetIpa": "ɛ̃tɛʁoʒe",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "school_common"
-        },
-        {
-          "key": "briquet|bʁikɛ",
-          "word": "briquet",
-          "targetIpa": "bʁikɛ",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "indépendant|ɛ̃depɑ̃dɑ̃",
-          "word": "indépendant",
-          "targetIpa": "ɛ̃depɑ̃dɑ̃",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "banquet|bɑ̃kɛ",
-          "word": "banquet",
-          "targetIpa": "bɑ̃kɛ",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "parquet|paʁkɛ",
-          "word": "parquet",
-          "targetIpa": "paʁkɛ",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "inverser|ɛ̃vɛʁse",
-          "word": "inverser",
-          "targetIpa": "ɛ̃vɛʁse",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "esquiver|ɛskive",
-          "word": "esquiver",
-          "targetIpa": "ɛskive",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "inciter|ɛ̃site",
-          "word": "inciter",
-          "targetIpa": "ɛ̃site",
-          "ageBandCandidate": 12,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "importuner|ɛ̃pɔʁtyne",
-          "word": "importuner",
-          "targetIpa": "ɛ̃pɔʁtyne",
-          "ageBandCandidate": 12,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "lycéen|liseɛ̃",
-          "word": "lycéen",
-          "targetIpa": "liseɛ̃",
-          "ageBandCandidate": 12,
-          "rebuloUtilityTier": "advanced_useful"
-        }
-      ],
-      "plausibleLexicalCandidates": [
-        {
-          "word": "hey",
-          "lemma": "hey",
-          "ipa": "ɛ",
-          "pos": "ONO",
-          "frequency": 24.126,
-          "syllableCount": 1,
-          "lexicalPriority": 1,
-          "phoneticStatus": "whole_pronunciation_exact",
-          "visualStatus": "unreviewed",
-          "namingStatus": "unreviewed",
-          "activationState": "research_only",
-          "automaticResearchScore": 43.201
-        },
-        {
-          "word": "haie",
-          "lemma": "haie",
-          "ipa": "ɛ",
-          "pos": "NOM",
-          "frequency": 1.209,
-          "syllableCount": 1,
-          "lexicalPriority": 0,
-          "phoneticStatus": "whole_pronunciation_exact",
-          "visualStatus": "unreviewed",
-          "namingStatus": "unreviewed",
-          "activationState": "research_only",
-          "automaticResearchScore": 40.754
-        },
-        {
-          "word": "es",
-          "lemma": "es",
-          "ipa": "ɛ",
-          "pos": "NOM",
-          "frequency": 0.193,
-          "syllableCount": 1,
-          "lexicalPriority": 0,
-          "phoneticStatus": "whole_pronunciation_exact",
-          "visualStatus": "unreviewed",
-          "namingStatus": "unreviewed",
-          "activationState": "research_only",
-          "automaticResearchScore": 38.613
-        },
-        {
-          "word": "aie",
-          "lemma": "aie",
-          "ipa": "ɛ",
-          "pos": "NOM",
-          "frequency": 0.149,
-          "syllableCount": 1,
-          "lexicalPriority": 0,
-          "phoneticStatus": "whole_pronunciation_exact",
-          "visualStatus": "unreviewed",
-          "namingStatus": "unreviewed",
-          "activationState": "research_only",
-          "automaticResearchScore": 38.483
-        },
-        {
-          "word": "ait",
-          "lemma": "ait",
-          "ipa": "ɛ",
-          "pos": "NOM",
-          "frequency": 0.076,
-          "syllableCount": 1,
-          "lexicalPriority": 0,
-          "phoneticStatus": "whole_pronunciation_exact",
-          "visualStatus": "unreviewed",
-          "namingStatus": "unreviewed",
-          "activationState": "research_only",
-          "automaticResearchScore": 38.254
-        },
-        {
-          "word": "hè",
-          "lemma": "hè",
-          "ipa": "ɛ",
-          "pos": "NOM",
-          "frequency": 0.019,
-          "syllableCount": 1,
-          "lexicalPriority": 0,
-          "phoneticStatus": "whole_pronunciation_exact",
-          "visualStatus": "unreviewed",
-          "namingStatus": "unreviewed",
-          "activationState": "research_only",
-          "automaticResearchScore": 38.065
-        },
-        {
-          "word": "haient",
-          "lemma": "haient",
-          "ipa": "ɛ",
-          "pos": "NOM",
-          "frequency": 0.009,
-          "syllableCount": 1,
-          "lexicalPriority": 0,
-          "phoneticStatus": "whole_pronunciation_exact",
-          "visualStatus": "unreviewed",
-          "namingStatus": "unreviewed",
-          "activationState": "research_only",
-          "automaticResearchScore": 38.031
-        },
-        {
-          "word": "hê",
-          "lemma": "hê",
-          "ipa": "ɛ",
-          "pos": "NOM",
-          "frequency": 0.003,
-          "syllableCount": 1,
-          "lexicalPriority": 0,
-          "phoneticStatus": "whole_pronunciation_exact",
-          "visualStatus": "unreviewed",
-          "namingStatus": "unreviewed",
-          "activationState": "research_only",
-          "automaticResearchScore": 38.01
-        }
-      ],
-      "nounCandidateCount": 7,
-      "researchRoute": "review_exact_lexical_candidates",
-      "researchPriorityScore": 277.695,
       "priorityObjective": "rebulo_useful_coverage_first_global_coverage_secondary",
       "visualAssessment": "human_review_required",
       "spontaneousNamingAssessment": "human_review_required",
@@ -15665,292 +15693,6 @@
       "clinicalAssessment": "not_assessed"
     },
     {
-      "ipa": "v",
-      "unitCount": 1,
-      "occurrenceCount": 775,
-      "targetCount": 763,
-      "totalFrequency": 22321.474,
-      "minAgeBandCandidate": 5,
-      "examples": [
-        "votre",
-        "vraiment",
-        "voir",
-        "vie",
-        "vrai",
-        "vos",
-        "avoir",
-        "savoir"
-      ],
-      "coverage": {
-        "mode": "research",
-        "coverageType": "uncovered",
-        "operations": []
-      },
-      "wholeWordCandidates": [],
-      "researchState": "needs_visual_resolution",
-      "strictUnlocked": 24,
-      "generalUnlocked": 31,
-      "totalUnlocked": 55,
-      "weightedGain": 3307.413,
-      "usefulUnlocked": 32,
-      "usefulWeightedGain": 18862.611,
-      "examplesUnlocked": [
-        "vie",
-        "vrai",
-        "vos",
-        "ville",
-        "avis",
-        "rêve",
-        "vue",
-        "vaisseau"
-      ],
-      "usefulExamplesUnlocked": [
-        "vie",
-        "vrai",
-        "vos",
-        "ville",
-        "avis",
-        "rêve",
-        "vue",
-        "vaisseau"
-      ],
-      "usefulUnlockedTargets": [
-        {
-          "key": "vie|vi",
-          "word": "vie",
-          "targetIpa": "vi",
-          "ageBandCandidate": 5,
-          "rebuloUtilityTier": "very_common_simple"
-        },
-        {
-          "key": "vrai|vʁɛ",
-          "word": "vrai",
-          "targetIpa": "vʁɛ",
-          "ageBandCandidate": 5,
-          "rebuloUtilityTier": "very_common_simple"
-        },
-        {
-          "key": "vos|vo",
-          "word": "vos",
-          "targetIpa": "vo",
-          "ageBandCandidate": 5,
-          "rebuloUtilityTier": "very_common_simple"
-        },
-        {
-          "key": "ville|vil",
-          "word": "ville",
-          "targetIpa": "vil",
-          "ageBandCandidate": 5,
-          "rebuloUtilityTier": "very_common_simple"
-        },
-        {
-          "key": "avis|avi",
-          "word": "avis",
-          "targetIpa": "avi",
-          "ageBandCandidate": 5,
-          "rebuloUtilityTier": "very_common_simple"
-        },
-        {
-          "key": "rêve|ʁɛv",
-          "word": "rêve",
-          "targetIpa": "ʁɛv",
-          "ageBandCandidate": 5,
-          "rebuloUtilityTier": "child_common"
-        },
-        {
-          "key": "vue|vy",
-          "word": "vue",
-          "targetIpa": "vy",
-          "ageBandCandidate": 5,
-          "rebuloUtilityTier": "child_common"
-        },
-        {
-          "key": "vaisseau|vɛso",
-          "word": "vaisseau",
-          "targetIpa": "vɛso",
-          "ageBandCandidate": 5,
-          "rebuloUtilityTier": "child_common"
-        },
-        {
-          "key": "avocat|avoka",
-          "word": "avocat",
-          "targetIpa": "avoka",
-          "ageBandCandidate": 7,
-          "rebuloUtilityTier": "child_common"
-        },
-        {
-          "key": "vu|vy",
-          "word": "vu",
-          "targetIpa": "vy",
-          "ageBandCandidate": 7,
-          "rebuloUtilityTier": "child_common"
-        },
-        {
-          "key": "vidéo|video",
-          "word": "vidéo",
-          "targetIpa": "video",
-          "ageBandCandidate": 7,
-          "rebuloUtilityTier": "child_common"
-        },
-        {
-          "key": "cave|kav",
-          "word": "cave",
-          "targetIpa": "kav",
-          "ageBandCandidate": 7,
-          "rebuloUtilityTier": "school_common"
-        },
-        {
-          "key": "voter|vote",
-          "word": "voter",
-          "targetIpa": "vote",
-          "ageBandCandidate": 7,
-          "rebuloUtilityTier": "teen_adult_common"
-        },
-        {
-          "key": "vive|viv",
-          "word": "vive",
-          "targetIpa": "viv",
-          "ageBandCandidate": 7,
-          "rebuloUtilityTier": "teen_adult_common"
-        },
-        {
-          "key": "vider|vide",
-          "word": "vider",
-          "targetIpa": "vide",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "teen_adult_common"
-        },
-        {
-          "key": "vaisselle|vɛsɛl",
-          "word": "vaisselle",
-          "targetIpa": "vɛsɛl",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "teen_adult_common"
-        },
-        {
-          "key": "vilain|vilɛ̃",
-          "word": "vilain",
-          "targetIpa": "vilɛ̃",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "teen_adult_common"
-        },
-        {
-          "key": "have|av",
-          "word": "have",
-          "targetIpa": "av",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "teen_adult_common"
-        },
-        {
-          "key": "veine|vɛn",
-          "word": "veine",
-          "targetIpa": "vɛn",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "teen_adult_common"
-        },
-        {
-          "key": "valet|valɛ",
-          "word": "valet",
-          "targetIpa": "valɛ",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "teen_adult_common"
-        },
-        {
-          "key": "civil|sivil",
-          "word": "civil",
-          "targetIpa": "sivil",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "teen_adult_common"
-        },
-        {
-          "key": "live|liv",
-          "word": "live",
-          "targetIpa": "liv",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "vomi|vomi",
-          "word": "vomi",
-          "targetIpa": "vomi",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "veau|vo",
-          "word": "veau",
-          "targetIpa": "vo",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "rive|ʁiv",
-          "word": "rive",
-          "targetIpa": "ʁiv",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "dérive|deʁiv",
-          "word": "dérive",
-          "targetIpa": "deʁiv",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "olive|oliv",
-          "word": "olive",
-          "targetIpa": "oliv",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "vautour|votuʁ",
-          "word": "vautour",
-          "targetIpa": "votuʁ",
-          "ageBandCandidate": 12,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "vil|vil",
-          "word": "vil",
-          "targetIpa": "vil",
-          "ageBandCandidate": 12,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "ravi|ʁavi",
-          "word": "ravi",
-          "targetIpa": "ʁavi",
-          "ageBandCandidate": 12,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "cuve|kyv",
-          "word": "cuve",
-          "targetIpa": "kyv",
-          "ageBandCandidate": 12,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "cavité|kavite",
-          "word": "cavité",
-          "targetIpa": "kavite",
-          "ageBandCandidate": 12,
-          "rebuloUtilityTier": "advanced_useful"
-        }
-      ],
-      "plausibleLexicalCandidates": [],
-      "nounCandidateCount": 0,
-      "researchRoute": "prefer_explicit_letter_or_other_visible_operation",
-      "researchPriorityScore": 206.063,
-      "priorityObjective": "rebulo_useful_coverage_first_global_coverage_secondary",
-      "visualAssessment": "human_review_required",
-      "spontaneousNamingAssessment": "human_review_required",
-      "ageSuitabilityAssessment": "human_review_required",
-      "clinicalAssessment": "not_assessed"
-    },
-    {
       "ipa": "m",
       "unitCount": 1,
       "occurrenceCount": 1587,
@@ -16554,6 +16296,285 @@
       "clinicalAssessment": "not_assessed"
     },
     {
+      "ipa": "v",
+      "unitCount": 1,
+      "occurrenceCount": 775,
+      "targetCount": 763,
+      "totalFrequency": 22321.474,
+      "minAgeBandCandidate": 5,
+      "examples": [
+        "votre",
+        "vraiment",
+        "voir",
+        "vie",
+        "vrai",
+        "vos",
+        "avoir",
+        "savoir"
+      ],
+      "coverage": {
+        "mode": "research",
+        "coverageType": "uncovered",
+        "operations": []
+      },
+      "wholeWordCandidates": [],
+      "researchState": "needs_visual_resolution",
+      "strictUnlocked": 23,
+      "generalUnlocked": 31,
+      "totalUnlocked": 54,
+      "weightedGain": 3305.413,
+      "usefulUnlocked": 31,
+      "usefulWeightedGain": 18858.611,
+      "examplesUnlocked": [
+        "vie",
+        "vrai",
+        "vos",
+        "ville",
+        "avis",
+        "rêve",
+        "vue",
+        "vaisseau"
+      ],
+      "usefulExamplesUnlocked": [
+        "vie",
+        "vrai",
+        "vos",
+        "ville",
+        "avis",
+        "rêve",
+        "vue",
+        "vaisseau"
+      ],
+      "usefulUnlockedTargets": [
+        {
+          "key": "vie|vi",
+          "word": "vie",
+          "targetIpa": "vi",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "very_common_simple"
+        },
+        {
+          "key": "vrai|vʁɛ",
+          "word": "vrai",
+          "targetIpa": "vʁɛ",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "very_common_simple"
+        },
+        {
+          "key": "vos|vo",
+          "word": "vos",
+          "targetIpa": "vo",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "very_common_simple"
+        },
+        {
+          "key": "ville|vil",
+          "word": "ville",
+          "targetIpa": "vil",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "very_common_simple"
+        },
+        {
+          "key": "avis|avi",
+          "word": "avis",
+          "targetIpa": "avi",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "very_common_simple"
+        },
+        {
+          "key": "rêve|ʁɛv",
+          "word": "rêve",
+          "targetIpa": "ʁɛv",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "child_common"
+        },
+        {
+          "key": "vue|vy",
+          "word": "vue",
+          "targetIpa": "vy",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "child_common"
+        },
+        {
+          "key": "vaisseau|vɛso",
+          "word": "vaisseau",
+          "targetIpa": "vɛso",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "child_common"
+        },
+        {
+          "key": "avocat|avoka",
+          "word": "avocat",
+          "targetIpa": "avoka",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "child_common"
+        },
+        {
+          "key": "vu|vy",
+          "word": "vu",
+          "targetIpa": "vy",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "child_common"
+        },
+        {
+          "key": "vidéo|video",
+          "word": "vidéo",
+          "targetIpa": "video",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "child_common"
+        },
+        {
+          "key": "cave|kav",
+          "word": "cave",
+          "targetIpa": "kav",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "school_common"
+        },
+        {
+          "key": "voter|vote",
+          "word": "voter",
+          "targetIpa": "vote",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "teen_adult_common"
+        },
+        {
+          "key": "vive|viv",
+          "word": "vive",
+          "targetIpa": "viv",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "teen_adult_common"
+        },
+        {
+          "key": "vider|vide",
+          "word": "vider",
+          "targetIpa": "vide",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common"
+        },
+        {
+          "key": "vaisselle|vɛsɛl",
+          "word": "vaisselle",
+          "targetIpa": "vɛsɛl",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common"
+        },
+        {
+          "key": "vilain|vilɛ̃",
+          "word": "vilain",
+          "targetIpa": "vilɛ̃",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common"
+        },
+        {
+          "key": "have|av",
+          "word": "have",
+          "targetIpa": "av",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common"
+        },
+        {
+          "key": "veine|vɛn",
+          "word": "veine",
+          "targetIpa": "vɛn",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common"
+        },
+        {
+          "key": "valet|valɛ",
+          "word": "valet",
+          "targetIpa": "valɛ",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common"
+        },
+        {
+          "key": "civil|sivil",
+          "word": "civil",
+          "targetIpa": "sivil",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common"
+        },
+        {
+          "key": "live|liv",
+          "word": "live",
+          "targetIpa": "liv",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "vomi|vomi",
+          "word": "vomi",
+          "targetIpa": "vomi",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "veau|vo",
+          "word": "veau",
+          "targetIpa": "vo",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "rive|ʁiv",
+          "word": "rive",
+          "targetIpa": "ʁiv",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "dérive|deʁiv",
+          "word": "dérive",
+          "targetIpa": "deʁiv",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "vautour|votuʁ",
+          "word": "vautour",
+          "targetIpa": "votuʁ",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "vil|vil",
+          "word": "vil",
+          "targetIpa": "vil",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "ravi|ʁavi",
+          "word": "ravi",
+          "targetIpa": "ʁavi",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "cuve|kyv",
+          "word": "cuve",
+          "targetIpa": "kyv",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "cavité|kavite",
+          "word": "cavité",
+          "targetIpa": "kavite",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful"
+        }
+      ],
+      "plausibleLexicalCandidates": [],
+      "nounCandidateCount": 0,
+      "researchRoute": "prefer_explicit_letter_or_other_visible_operation",
+      "researchPriorityScore": 200.061,
+      "priorityObjective": "rebulo_useful_coverage_first_global_coverage_secondary",
+      "visualAssessment": "human_review_required",
+      "spontaneousNamingAssessment": "human_review_required",
+      "ageSuitabilityAssessment": "human_review_required",
+      "clinicalAssessment": "not_assessed"
+    },
+    {
       "ipa": "u",
       "unitCount": 1,
       "occurrenceCount": 570,
@@ -17053,6 +17074,166 @@
       "clinicalAssessment": "not_assessed"
     },
     {
+      "ipa": "je",
+      "unitCount": 2,
+      "occurrenceCount": 216,
+      "targetCount": 216,
+      "totalFrequency": 3138.871,
+      "minAgeBandCandidate": 5,
+      "examples": [
+        "premier",
+        "dernier",
+        "payer",
+        "pied",
+        "moitié",
+        "dossier",
+        "pitié",
+        "marier"
+      ],
+      "coverage": {
+        "mode": "research",
+        "coverageType": "uncovered",
+        "operations": []
+      },
+      "wholeWordCandidates": [],
+      "researchState": "needs_visual_resolution",
+      "strictUnlocked": 21,
+      "generalUnlocked": 8,
+      "totalUnlocked": 29,
+      "weightedGain": 208.42,
+      "usefulUnlocked": 14,
+      "usefulWeightedGain": 989.599,
+      "examplesUnlocked": [
+        "payer",
+        "veiller",
+        "portier",
+        "chevalier",
+        "payé",
+        "banquier",
+        "cahier",
+        "tailler"
+      ],
+      "usefulExamplesUnlocked": [
+        "payer",
+        "veiller",
+        "portier",
+        "chevalier",
+        "payé",
+        "banquier",
+        "cahier",
+        "tailler"
+      ],
+      "usefulUnlockedTargets": [
+        {
+          "key": "payer|peje",
+          "word": "payer",
+          "targetIpa": "peje",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "very_common_simple"
+        },
+        {
+          "key": "veiller|veje",
+          "word": "veiller",
+          "targetIpa": "veje",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "school_common"
+        },
+        {
+          "key": "portier|pɔʁtje",
+          "word": "portier",
+          "targetIpa": "pɔʁtje",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "school_common"
+        },
+        {
+          "key": "chevalier|ʃəvalje",
+          "word": "chevalier",
+          "targetIpa": "ʃəvalje",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common"
+        },
+        {
+          "key": "payé|peje",
+          "word": "payé",
+          "targetIpa": "peje",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common"
+        },
+        {
+          "key": "banquier|bɑ̃kje",
+          "word": "banquier",
+          "targetIpa": "bɑ̃kje",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common"
+        },
+        {
+          "key": "cahier|kaje",
+          "word": "cahier",
+          "targetIpa": "kaje",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "tailler|taje",
+          "word": "tailler",
+          "targetIpa": "taje",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "rouillé|ʁuje",
+          "word": "rouillé",
+          "targetIpa": "ʁuje",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "veillée|veje",
+          "word": "veillée",
+          "targetIpa": "veje",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "verrouiller|veʁuje",
+          "word": "verrouiller",
+          "targetIpa": "veʁuje",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "pilier|pilje",
+          "word": "pilier",
+          "targetIpa": "pilje",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "piller|pije",
+          "word": "piller",
+          "targetIpa": "pije",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "aboyer|abwaje",
+          "word": "aboyer",
+          "targetIpa": "abwaje",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful"
+        }
+      ],
+      "plausibleLexicalCandidates": [],
+      "nounCandidateCount": 0,
+      "researchRoute": "search_scene_expression_or_alternate_segmentation",
+      "researchPriorityScore": 188.9,
+      "priorityObjective": "rebulo_useful_coverage_first_global_coverage_secondary",
+      "visualAssessment": "human_review_required",
+      "spontaneousNamingAssessment": "human_review_required",
+      "ageSuitabilityAssessment": "human_review_required",
+      "clinicalAssessment": "not_assessed"
+    },
+    {
       "ipa": "ɔ̃",
       "unitCount": 1,
       "occurrenceCount": 968,
@@ -17258,166 +17439,6 @@
       "nounCandidateCount": 2,
       "researchRoute": "review_exact_lexical_candidates",
       "researchPriorityScore": 188.558,
-      "priorityObjective": "rebulo_useful_coverage_first_global_coverage_secondary",
-      "visualAssessment": "human_review_required",
-      "spontaneousNamingAssessment": "human_review_required",
-      "ageSuitabilityAssessment": "human_review_required",
-      "clinicalAssessment": "not_assessed"
-    },
-    {
-      "ipa": "je",
-      "unitCount": 2,
-      "occurrenceCount": 216,
-      "targetCount": 216,
-      "totalFrequency": 3138.871,
-      "minAgeBandCandidate": 5,
-      "examples": [
-        "premier",
-        "dernier",
-        "payer",
-        "pied",
-        "moitié",
-        "dossier",
-        "pitié",
-        "marier"
-      ],
-      "coverage": {
-        "mode": "research",
-        "coverageType": "uncovered",
-        "operations": []
-      },
-      "wholeWordCandidates": [],
-      "researchState": "needs_visual_resolution",
-      "strictUnlocked": 20,
-      "generalUnlocked": 8,
-      "totalUnlocked": 28,
-      "weightedGain": 207.727,
-      "usefulUnlocked": 14,
-      "usefulWeightedGain": 989.599,
-      "examplesUnlocked": [
-        "payer",
-        "veiller",
-        "portier",
-        "chevalier",
-        "payé",
-        "banquier",
-        "cahier",
-        "tailler"
-      ],
-      "usefulExamplesUnlocked": [
-        "payer",
-        "veiller",
-        "portier",
-        "chevalier",
-        "payé",
-        "banquier",
-        "cahier",
-        "tailler"
-      ],
-      "usefulUnlockedTargets": [
-        {
-          "key": "payer|peje",
-          "word": "payer",
-          "targetIpa": "peje",
-          "ageBandCandidate": 5,
-          "rebuloUtilityTier": "very_common_simple"
-        },
-        {
-          "key": "veiller|veje",
-          "word": "veiller",
-          "targetIpa": "veje",
-          "ageBandCandidate": 7,
-          "rebuloUtilityTier": "school_common"
-        },
-        {
-          "key": "portier|pɔʁtje",
-          "word": "portier",
-          "targetIpa": "pɔʁtje",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "school_common"
-        },
-        {
-          "key": "chevalier|ʃəvalje",
-          "word": "chevalier",
-          "targetIpa": "ʃəvalje",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "teen_adult_common"
-        },
-        {
-          "key": "payé|peje",
-          "word": "payé",
-          "targetIpa": "peje",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "teen_adult_common"
-        },
-        {
-          "key": "banquier|bɑ̃kje",
-          "word": "banquier",
-          "targetIpa": "bɑ̃kje",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "teen_adult_common"
-        },
-        {
-          "key": "cahier|kaje",
-          "word": "cahier",
-          "targetIpa": "kaje",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "tailler|taje",
-          "word": "tailler",
-          "targetIpa": "taje",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "rouillé|ʁuje",
-          "word": "rouillé",
-          "targetIpa": "ʁuje",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "veillée|veje",
-          "word": "veillée",
-          "targetIpa": "veje",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "verrouiller|veʁuje",
-          "word": "verrouiller",
-          "targetIpa": "veʁuje",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "pilier|pilje",
-          "word": "pilier",
-          "targetIpa": "pilje",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "piller|pije",
-          "word": "piller",
-          "targetIpa": "pije",
-          "ageBandCandidate": 12,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "aboyer|abwaje",
-          "word": "aboyer",
-          "targetIpa": "abwaje",
-          "ageBandCandidate": 12,
-          "rebuloUtilityTier": "advanced_useful"
-        }
-      ],
-      "plausibleLexicalCandidates": [],
-      "nounCandidateCount": 0,
-      "researchRoute": "search_scene_expression_or_alternate_segmentation",
-      "researchPriorityScore": 187.9,
       "priorityObjective": "rebulo_useful_coverage_first_global_coverage_secondary",
       "visualAssessment": "human_review_required",
       "spontaneousNamingAssessment": "human_review_required",
@@ -19882,10 +19903,10 @@
       },
       "wholeWordCandidates": [],
       "researchState": "needs_visual_resolution",
-      "strictUnlocked": 54,
+      "strictUnlocked": 55,
       "generalUnlocked": 83,
-      "totalUnlocked": 137,
-      "weightedGain": 2342.773,
+      "totalUnlocked": 138,
+      "weightedGain": 2343.947,
       "usefulUnlocked": 86,
       "usefulWeightedGain": 11578.22,
       "examplesUnlocked": [
@@ -21756,12 +21777,12 @@
         }
       ],
       "researchState": "needs_visual_resolution",
-      "strictUnlocked": 37,
-      "generalUnlocked": 73,
-      "totalUnlocked": 110,
-      "weightedGain": 3153.277,
-      "usefulUnlocked": 68,
-      "usefulWeightedGain": 17169.035,
+      "strictUnlocked": 38,
+      "generalUnlocked": 74,
+      "totalUnlocked": 112,
+      "weightedGain": 3158.305,
+      "usefulUnlocked": 69,
+      "usefulWeightedGain": 17177.351,
       "examplesUnlocked": [
         "là",
         "mal",
@@ -22046,6 +22067,13 @@
           "key": "rouleau|ʁulo",
           "word": "rouleau",
           "targetIpa": "ʁulo",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "lumineux|lyminø",
+          "word": "lumineux",
+          "targetIpa": "lyminø",
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful"
         },
@@ -23307,12 +23335,12 @@
       },
       "wholeWordCandidates": [],
       "researchState": "needs_visual_resolution",
-      "strictUnlocked": 22,
+      "strictUnlocked": 23,
       "generalUnlocked": 46,
-      "totalUnlocked": 68,
-      "weightedGain": 2162.05,
-      "usefulUnlocked": 51,
-      "usefulWeightedGain": 11646.589,
+      "totalUnlocked": 69,
+      "weightedGain": 2168.917,
+      "usefulUnlocked": 52,
+      "usefulWeightedGain": 11667.19,
       "examplesUnlocked": [
         "père",
         "prêt",
@@ -23527,6 +23555,13 @@
           "key": "pelle|pɛl",
           "word": "pelle",
           "targetIpa": "pɛl",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common"
+        },
+        {
+          "key": "pneu|pnø",
+          "word": "pneu",
+          "targetIpa": "pnø",
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "teen_adult_common"
         },
@@ -24614,10 +24649,10 @@
         }
       ],
       "researchState": "needs_visual_resolution",
-      "strictUnlocked": 65,
+      "strictUnlocked": 66,
       "generalUnlocked": 13,
-      "totalUnlocked": 78,
-      "weightedGain": 2003.547,
+      "totalUnlocked": 79,
+      "weightedGain": 2004.145,
       "usefulUnlocked": 45,
       "usefulWeightedGain": 10897.495,
       "examplesUnlocked": [
@@ -25631,283 +25666,6 @@
       ]
     },
     {
-      "ipa": "v",
-      "unitCount": 1,
-      "occurrenceCount": 775,
-      "targetCount": 763,
-      "totalFrequency": 22321.474,
-      "minAgeBandCandidate": 5,
-      "examples": [
-        "votre",
-        "vraiment",
-        "voir",
-        "vie",
-        "vrai",
-        "vos",
-        "avoir",
-        "savoir"
-      ],
-      "coverage": {
-        "mode": "research",
-        "coverageType": "uncovered",
-        "operations": []
-      },
-      "wholeWordCandidates": [],
-      "researchState": "needs_visual_resolution",
-      "strictUnlocked": 24,
-      "generalUnlocked": 31,
-      "totalUnlocked": 55,
-      "weightedGain": 3307.413,
-      "usefulUnlocked": 32,
-      "usefulWeightedGain": 18862.611,
-      "examplesUnlocked": [
-        "vie",
-        "vrai",
-        "vos",
-        "ville",
-        "avis",
-        "rêve",
-        "vue",
-        "vaisseau"
-      ],
-      "usefulExamplesUnlocked": [
-        "vie",
-        "vrai",
-        "vos",
-        "ville",
-        "avis",
-        "rêve",
-        "vue",
-        "vaisseau"
-      ],
-      "usefulUnlockedTargets": [
-        {
-          "key": "vie|vi",
-          "word": "vie",
-          "targetIpa": "vi",
-          "ageBandCandidate": 5,
-          "rebuloUtilityTier": "very_common_simple"
-        },
-        {
-          "key": "vrai|vʁɛ",
-          "word": "vrai",
-          "targetIpa": "vʁɛ",
-          "ageBandCandidate": 5,
-          "rebuloUtilityTier": "very_common_simple"
-        },
-        {
-          "key": "vos|vo",
-          "word": "vos",
-          "targetIpa": "vo",
-          "ageBandCandidate": 5,
-          "rebuloUtilityTier": "very_common_simple"
-        },
-        {
-          "key": "ville|vil",
-          "word": "ville",
-          "targetIpa": "vil",
-          "ageBandCandidate": 5,
-          "rebuloUtilityTier": "very_common_simple"
-        },
-        {
-          "key": "avis|avi",
-          "word": "avis",
-          "targetIpa": "avi",
-          "ageBandCandidate": 5,
-          "rebuloUtilityTier": "very_common_simple"
-        },
-        {
-          "key": "rêve|ʁɛv",
-          "word": "rêve",
-          "targetIpa": "ʁɛv",
-          "ageBandCandidate": 5,
-          "rebuloUtilityTier": "child_common"
-        },
-        {
-          "key": "vue|vy",
-          "word": "vue",
-          "targetIpa": "vy",
-          "ageBandCandidate": 5,
-          "rebuloUtilityTier": "child_common"
-        },
-        {
-          "key": "vaisseau|vɛso",
-          "word": "vaisseau",
-          "targetIpa": "vɛso",
-          "ageBandCandidate": 5,
-          "rebuloUtilityTier": "child_common"
-        },
-        {
-          "key": "avocat|avoka",
-          "word": "avocat",
-          "targetIpa": "avoka",
-          "ageBandCandidate": 7,
-          "rebuloUtilityTier": "child_common"
-        },
-        {
-          "key": "vu|vy",
-          "word": "vu",
-          "targetIpa": "vy",
-          "ageBandCandidate": 7,
-          "rebuloUtilityTier": "child_common"
-        },
-        {
-          "key": "vidéo|video",
-          "word": "vidéo",
-          "targetIpa": "video",
-          "ageBandCandidate": 7,
-          "rebuloUtilityTier": "child_common"
-        },
-        {
-          "key": "cave|kav",
-          "word": "cave",
-          "targetIpa": "kav",
-          "ageBandCandidate": 7,
-          "rebuloUtilityTier": "school_common"
-        },
-        {
-          "key": "voter|vote",
-          "word": "voter",
-          "targetIpa": "vote",
-          "ageBandCandidate": 7,
-          "rebuloUtilityTier": "teen_adult_common"
-        },
-        {
-          "key": "vive|viv",
-          "word": "vive",
-          "targetIpa": "viv",
-          "ageBandCandidate": 7,
-          "rebuloUtilityTier": "teen_adult_common"
-        },
-        {
-          "key": "vider|vide",
-          "word": "vider",
-          "targetIpa": "vide",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "teen_adult_common"
-        },
-        {
-          "key": "vaisselle|vɛsɛl",
-          "word": "vaisselle",
-          "targetIpa": "vɛsɛl",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "teen_adult_common"
-        },
-        {
-          "key": "vilain|vilɛ̃",
-          "word": "vilain",
-          "targetIpa": "vilɛ̃",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "teen_adult_common"
-        },
-        {
-          "key": "have|av",
-          "word": "have",
-          "targetIpa": "av",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "teen_adult_common"
-        },
-        {
-          "key": "veine|vɛn",
-          "word": "veine",
-          "targetIpa": "vɛn",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "teen_adult_common"
-        },
-        {
-          "key": "valet|valɛ",
-          "word": "valet",
-          "targetIpa": "valɛ",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "teen_adult_common"
-        },
-        {
-          "key": "civil|sivil",
-          "word": "civil",
-          "targetIpa": "sivil",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "teen_adult_common"
-        },
-        {
-          "key": "live|liv",
-          "word": "live",
-          "targetIpa": "liv",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "vomi|vomi",
-          "word": "vomi",
-          "targetIpa": "vomi",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "veau|vo",
-          "word": "veau",
-          "targetIpa": "vo",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "rive|ʁiv",
-          "word": "rive",
-          "targetIpa": "ʁiv",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "dérive|deʁiv",
-          "word": "dérive",
-          "targetIpa": "deʁiv",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "olive|oliv",
-          "word": "olive",
-          "targetIpa": "oliv",
-          "ageBandCandidate": 9,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "vautour|votuʁ",
-          "word": "vautour",
-          "targetIpa": "votuʁ",
-          "ageBandCandidate": 12,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "vil|vil",
-          "word": "vil",
-          "targetIpa": "vil",
-          "ageBandCandidate": 12,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "ravi|ʁavi",
-          "word": "ravi",
-          "targetIpa": "ʁavi",
-          "ageBandCandidate": 12,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "cuve|kyv",
-          "word": "cuve",
-          "targetIpa": "kyv",
-          "ageBandCandidate": 12,
-          "rebuloUtilityTier": "advanced_useful"
-        },
-        {
-          "key": "cavité|kavite",
-          "word": "cavité",
-          "targetIpa": "kavite",
-          "ageBandCandidate": 12,
-          "rebuloUtilityTier": "advanced_useful"
-        }
-      ]
-    },
-    {
       "ipa": "m",
       "unitCount": 1,
       "occurrenceCount": 1587,
@@ -26193,6 +25951,276 @@
           "key": "imam|imam",
           "word": "imam",
           "targetIpa": "imam",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful"
+        }
+      ]
+    },
+    {
+      "ipa": "v",
+      "unitCount": 1,
+      "occurrenceCount": 775,
+      "targetCount": 763,
+      "totalFrequency": 22321.474,
+      "minAgeBandCandidate": 5,
+      "examples": [
+        "votre",
+        "vraiment",
+        "voir",
+        "vie",
+        "vrai",
+        "vos",
+        "avoir",
+        "savoir"
+      ],
+      "coverage": {
+        "mode": "research",
+        "coverageType": "uncovered",
+        "operations": []
+      },
+      "wholeWordCandidates": [],
+      "researchState": "needs_visual_resolution",
+      "strictUnlocked": 23,
+      "generalUnlocked": 31,
+      "totalUnlocked": 54,
+      "weightedGain": 3305.413,
+      "usefulUnlocked": 31,
+      "usefulWeightedGain": 18858.611,
+      "examplesUnlocked": [
+        "vie",
+        "vrai",
+        "vos",
+        "ville",
+        "avis",
+        "rêve",
+        "vue",
+        "vaisseau"
+      ],
+      "usefulExamplesUnlocked": [
+        "vie",
+        "vrai",
+        "vos",
+        "ville",
+        "avis",
+        "rêve",
+        "vue",
+        "vaisseau"
+      ],
+      "usefulUnlockedTargets": [
+        {
+          "key": "vie|vi",
+          "word": "vie",
+          "targetIpa": "vi",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "very_common_simple"
+        },
+        {
+          "key": "vrai|vʁɛ",
+          "word": "vrai",
+          "targetIpa": "vʁɛ",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "very_common_simple"
+        },
+        {
+          "key": "vos|vo",
+          "word": "vos",
+          "targetIpa": "vo",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "very_common_simple"
+        },
+        {
+          "key": "ville|vil",
+          "word": "ville",
+          "targetIpa": "vil",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "very_common_simple"
+        },
+        {
+          "key": "avis|avi",
+          "word": "avis",
+          "targetIpa": "avi",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "very_common_simple"
+        },
+        {
+          "key": "rêve|ʁɛv",
+          "word": "rêve",
+          "targetIpa": "ʁɛv",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "child_common"
+        },
+        {
+          "key": "vue|vy",
+          "word": "vue",
+          "targetIpa": "vy",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "child_common"
+        },
+        {
+          "key": "vaisseau|vɛso",
+          "word": "vaisseau",
+          "targetIpa": "vɛso",
+          "ageBandCandidate": 5,
+          "rebuloUtilityTier": "child_common"
+        },
+        {
+          "key": "avocat|avoka",
+          "word": "avocat",
+          "targetIpa": "avoka",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "child_common"
+        },
+        {
+          "key": "vu|vy",
+          "word": "vu",
+          "targetIpa": "vy",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "child_common"
+        },
+        {
+          "key": "vidéo|video",
+          "word": "vidéo",
+          "targetIpa": "video",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "child_common"
+        },
+        {
+          "key": "cave|kav",
+          "word": "cave",
+          "targetIpa": "kav",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "school_common"
+        },
+        {
+          "key": "voter|vote",
+          "word": "voter",
+          "targetIpa": "vote",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "teen_adult_common"
+        },
+        {
+          "key": "vive|viv",
+          "word": "vive",
+          "targetIpa": "viv",
+          "ageBandCandidate": 7,
+          "rebuloUtilityTier": "teen_adult_common"
+        },
+        {
+          "key": "vider|vide",
+          "word": "vider",
+          "targetIpa": "vide",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common"
+        },
+        {
+          "key": "vaisselle|vɛsɛl",
+          "word": "vaisselle",
+          "targetIpa": "vɛsɛl",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common"
+        },
+        {
+          "key": "vilain|vilɛ̃",
+          "word": "vilain",
+          "targetIpa": "vilɛ̃",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common"
+        },
+        {
+          "key": "have|av",
+          "word": "have",
+          "targetIpa": "av",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common"
+        },
+        {
+          "key": "veine|vɛn",
+          "word": "veine",
+          "targetIpa": "vɛn",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common"
+        },
+        {
+          "key": "valet|valɛ",
+          "word": "valet",
+          "targetIpa": "valɛ",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common"
+        },
+        {
+          "key": "civil|sivil",
+          "word": "civil",
+          "targetIpa": "sivil",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "teen_adult_common"
+        },
+        {
+          "key": "live|liv",
+          "word": "live",
+          "targetIpa": "liv",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "vomi|vomi",
+          "word": "vomi",
+          "targetIpa": "vomi",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "veau|vo",
+          "word": "veau",
+          "targetIpa": "vo",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "rive|ʁiv",
+          "word": "rive",
+          "targetIpa": "ʁiv",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "dérive|deʁiv",
+          "word": "dérive",
+          "targetIpa": "deʁiv",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "vautour|votuʁ",
+          "word": "vautour",
+          "targetIpa": "votuʁ",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "vil|vil",
+          "word": "vil",
+          "targetIpa": "vil",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "ravi|ʁavi",
+          "word": "ravi",
+          "targetIpa": "ʁavi",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "cuve|kyv",
+          "word": "cuve",
+          "targetIpa": "kyv",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "cavité|kavite",
+          "word": "cavité",
+          "targetIpa": "kavite",
           "ageBandCandidate": 12,
           "rebuloUtilityTier": "advanced_useful"
         }
@@ -26492,12 +26520,12 @@
       },
       "wholeWordCandidates": [],
       "researchState": "needs_visual_resolution",
-      "strictUnlocked": 17,
+      "strictUnlocked": 18,
       "generalUnlocked": 34,
-      "totalUnlocked": 51,
-      "weightedGain": 2190.626,
-      "usefulUnlocked": 29,
-      "usefulWeightedGain": 12371.48,
+      "totalUnlocked": 52,
+      "weightedGain": 2195.088,
+      "usefulUnlocked": 30,
+      "usefulWeightedGain": 12380.404,
       "examplesUnlocked": [
         "trop",
         "autre",
@@ -26656,6 +26684,13 @@
           "key": "terrestre|tɛʁɛstʁ",
           "word": "terrestre",
           "targetIpa": "tɛʁɛstʁ",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "neutre|nøtʁ",
+          "word": "neutre",
+          "targetIpa": "nøtʁ",
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful"
         },
@@ -29026,10 +29061,10 @@
       },
       "wholeWordCandidates": [],
       "researchState": "needs_visual_resolution",
-      "strictUnlocked": 20,
+      "strictUnlocked": 21,
       "generalUnlocked": 8,
-      "totalUnlocked": 28,
-      "weightedGain": 207.727,
+      "totalUnlocked": 29,
+      "weightedGain": 208.42,
       "usefulUnlocked": 14,
       "usefulWeightedGain": 989.599,
       "examplesUnlocked": [
@@ -29426,12 +29461,12 @@
         }
       ],
       "researchState": "needs_visual_resolution",
-      "strictUnlocked": 9,
+      "strictUnlocked": 10,
       "generalUnlocked": 11,
-      "totalUnlocked": 20,
-      "weightedGain": 146.502,
-      "usefulUnlocked": 12,
-      "usefulWeightedGain": 573.913,
+      "totalUnlocked": 21,
+      "weightedGain": 148.296,
+      "usefulUnlocked": 13,
+      "usefulWeightedGain": 577.501,
       "examplesUnlocked": [
         "intérêt",
         "hey",
@@ -29520,6 +29555,13 @@
           "key": "inciter|ɛ̃site",
           "word": "inciter",
           "targetIpa": "ɛ̃site",
+          "ageBandCandidate": 12,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "haineux|ɛnø",
+          "word": "haineux",
+          "targetIpa": "ɛnø",
           "ageBandCandidate": 12,
           "rebuloUtilityTier": "advanced_useful"
         },
@@ -30820,10 +30862,10 @@
         }
       ],
       "researchState": "needs_visual_resolution",
-      "strictUnlocked": 11,
+      "strictUnlocked": 12,
       "generalUnlocked": 6,
-      "totalUnlocked": 17,
-      "weightedGain": 28.04,
+      "totalUnlocked": 18,
+      "weightedGain": 29.214,
       "usefulUnlocked": 7,
       "usefulWeightedGain": 45.224,
       "examplesUnlocked": [
@@ -32682,9 +32724,9 @@
     {
       "ipa": "tʁ",
       "unitCount": 2,
-      "occurrenceCount": 29,
-      "targetCount": 29,
-      "totalFrequency": 2172.511,
+      "occurrenceCount": 30,
+      "targetCount": 30,
+      "totalFrequency": 2176.973,
       "minAgeBandCandidate": 5,
       "examples": [
         "trop",
@@ -32703,12 +32745,12 @@
       },
       "wholeWordCandidates": [],
       "researchState": "needs_visual_resolution",
-      "strictUnlocked": 10,
+      "strictUnlocked": 11,
       "generalUnlocked": 19,
-      "totalUnlocked": 29,
-      "weightedGain": 2172.511,
-      "usefulUnlocked": 29,
-      "usefulWeightedGain": 12371.48,
+      "totalUnlocked": 30,
+      "weightedGain": 2176.973,
+      "usefulUnlocked": 30,
+      "usefulWeightedGain": 12380.404,
       "examplesUnlocked": [
         "trop",
         "autre",
@@ -32867,6 +32909,13 @@
           "key": "terrestre|tɛʁɛstʁ",
           "word": "terrestre",
           "targetIpa": "tɛʁɛstʁ",
+          "ageBandCandidate": 9,
+          "rebuloUtilityTier": "advanced_useful"
+        },
+        {
+          "key": "neutre|nøtʁ",
+          "word": "neutre",
+          "targetIpa": "nøtʁ",
           "ageBandCandidate": 9,
           "rebuloUtilityTier": "advanced_useful"
         },
@@ -34173,9 +34222,9 @@
     {
       "ipa": "ʁ",
       "unitCount": 1,
-      "occurrenceCount": 87,
-      "targetCount": 73,
-      "totalFrequency": 3476.346,
+      "occurrenceCount": 88,
+      "targetCount": 74,
+      "totalFrequency": 3480.808,
       "minAgeBandCandidate": 5,
       "examples": [
         "trop",
@@ -34296,9 +34345,9 @@
     {
       "ipa": "t",
       "unitCount": 1,
-      "occurrenceCount": 60,
-      "targetCount": 54,
-      "totalFrequency": 2393.715,
+      "occurrenceCount": 61,
+      "targetCount": 55,
+      "totalFrequency": 2398.177,
       "minAgeBandCandidate": 5,
       "examples": [
         "trop",
@@ -37461,19 +37510,19 @@
     {
       "ipa": "n",
       "unitCount": 1,
-      "occurrenceCount": 10,
-      "targetCount": 10,
-      "totalFrequency": 130.38,
+      "occurrenceCount": 11,
+      "targetCount": 11,
+      "totalFrequency": 134.842,
       "minAgeBandCandidate": 5,
       "examples": [
         "dîner",
         "diner",
         "génération",
         "haleine",
+        "neutre",
         "arène",
         "traine",
-        "traîneau",
-        "traîne"
+        "traîneau"
       ],
       "coverage": {
         "mode": "research",

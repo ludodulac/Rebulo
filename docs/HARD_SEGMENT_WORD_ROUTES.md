@@ -1,14 +1,14 @@
 # Rebulo — routes mot-par-mot pour segments difficiles
 
 - Segments analysés : 8.
-- Cibles utiles concernées : 127.
+- Cibles utiles concernées : 128.
 - Opportunités examinées pour les routes difficiles : 250.
 - Cibles avec au moins une route phonétiquement exacte : 86.
 - Cibles dont une route exacte dispose aussi d’un candidat lexical de représentation : 52.
 - Cibles dont une route dispose déjà d’un candidat visuel curaté en recherche : 10.
-- Cibles sans aucune route exacte : 41.
-- Cibles qui nécessitent encore un candidat lexical de représentation : 75.
-- Cibles qui nécessitent encore une piste visuelle curatée : 117.
+- Cibles sans aucune route exacte : 42.
+- Cibles qui nécessitent encore un candidat lexical de représentation : 76.
+- Cibles qui nécessitent encore une piste visuelle curatée : 118.
 - Groupes de besoins visuels : 46.
 - Cibles avec route alternative stricte : 37.
 - Cibles avec route stricte et candidat lexical de représentation : 25.
@@ -20,7 +20,7 @@
 ## File priorisée des besoins visuels
 
 - Recherche pictogramme/scène : 17 cibles dans 5 groupes.
-- Opération générale visible déjà documentée à formaliser : 100 cibles dans 41 groupes.
+- Opération générale visible déjà documentée à formaliser : 101 cibles dans 41 groupes.
 - Nouvelle représentation réellement à découvrir : 0 cibles dans 0 groupes.
 
 | Rang | Besoin | Voie de recherche | Brique/segment | Cibles | Âge min. | Mots exacts | Opération visible documentée | Banque visuelle | Segments sources | Exemples |
@@ -66,7 +66,7 @@
 | 39 | trouver mot exact ou opération visible | opération générale visible documentée | /n/ | 1 | 9 | — | N | — | /al/ | haleine |
 | 40 | trouver mot exact ou opération visible | opération générale visible documentée | /t/ | 1 | 9 | — | TR | — | /tʁ/ | tri |
 | 41 | trouver mot exact ou opération visible | opération générale visible documentée | /tʁa/ | 1 | 9 | — | TR | — | /tʁ/ | tracer |
-| 42 | résoudre le segment source | opération générale visible documentée | /tʁ/ | 11 | 5 | — | TR | — | /tʁ/ | trop, autre, d'autres, quatre |
+| 42 | résoudre le segment source | opération générale visible documentée | /tʁ/ | 12 | 5 | — | TR | — | /tʁ/ | trop, autre, d'autres, quatre |
 | 43 | résoudre le segment source | pictogramme / scène | /œʁ/ | 10 | 5 | — | — | heure (second_wave), heurt (reject_visual_priority) | /œʁ/ | heure, h, erreur, terreur |
 | 44 | résoudre le segment source | opération générale visible documentée | /mɑ̃/ | 9 | 5 | — | MENT | — | /mɑ̃/ | maman, manger, man, serment |
 | 45 | résoudre le segment source | opération générale visible documentée | /sjɔ̃/ | 8 | 5 | — | TION, SION | scion (reject_visual_priority) | /sjɔ̃/ | mission, version, passion, pension |
@@ -171,7 +171,7 @@
 
 ## /tʁ/ — alternate_segmentation_required
 
-- 18/29 cibles ont une route phonétiquement exacte; 15/29 ont une piste lexicale; 0/29 ont déjà une piste visuelle curatée; 29 nécessitent encore une piste visuelle.
+- 18/30 cibles ont une route phonétiquement exacte; 15/30 ont une piste lexicale; 0/30 ont déjà une piste visuelle curatée; 30 nécessitent encore une piste visuelle.
 
 | Mot | IPA | Route exacte | Lexical | Visuel curaté | Meilleure route | Nouvelle brique | Prochaine porte |
 |---|---|---|---|---|---|---|---|
@@ -195,6 +195,7 @@
 | peintre | /pɛ̃tʁ/ | still_needs_new_representation_or_rule | still_needs_representable_alternative | still_needs_visual_representation | — | — | compare_source_scene_lexical_and_alternate_segmentation_strategies |
 | atroce | /atʁɔs/ | exact_alternative_routes_found | representable_alternative_candidate_found | lexical_candidate_needs_visual_curation | /atʁ/ /atʁ/ + os /ɔs/ | âtre | assess_visual_concept_then_naming_risk_before_prototype |
 | terrestre | /tɛʁɛstʁ/ | exact_alternative_routes_found | still_needs_representable_alternative | still_needs_visual_representation | terre /tɛʁ/ + /ɛstʁ/ /ɛstʁ/ | — | search_exact_whole_word_or_explicit_general_operation |
+| neutre | /nøtʁ/ | still_needs_new_representation_or_rule | still_needs_representable_alternative | still_needs_visual_representation | — | — | compare_source_scene_lexical_and_alternate_segmentation_strategies |
 | maestro | /maɛstʁo/ | exact_alternative_routes_found | representable_alternative_candidate_found | lexical_candidate_needs_visual_curation | mât /ma/ + S /ɛs/ + /tʁo/ /tʁo/ | trot, trop | assess_visual_concept_then_naming_risk_before_prototype |
 | litre | /litʁ/ | still_needs_new_representation_or_rule | still_needs_representable_alternative | still_needs_visual_representation | — | — | compare_source_scene_lexical_and_alternate_segmentation_strategies |
 | traversée | /tʁavɛʁse/ | exact_alternative_routes_found | representable_alternative_candidate_found | lexical_candidate_needs_visual_curation | /tʁav/ /tʁav/ + R /ɛʁ/ + C /se/ | trave | assess_visual_concept_then_naming_risk_before_prototype |

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": "2026-09-11T08:04:45.373Z",
+  "generatedAt": "2026-09-11T08:19:21.789Z",
   "source": "Lexique 4",
   "methodology": {
     "baseline": "Rébus stricts multi-images uniquement : concaténation de dénominations entières de pictogrammes actifs.",
@@ -8,9 +8,9 @@
     "clinicalCaution": "Ce classement mesure la dépendance du générateur, pas la validité clinique d’un stimulus. Une migration visuelle change la révision et exige une nouvelle vérification de dénomination avant toute revendication clinique."
   },
   "baseline": {
-    "activePictogramCount": 24,
-    "strictMultiPieceEntries": 911,
-    "strictMultiPieceUniqueWords": 760
+    "activePictogramCount": 28,
+    "strictMultiPieceEntries": 922,
+    "strictMultiPieceUniqueWords": 769
   },
   "dependencies": [
     {
@@ -24,7 +24,7 @@
       "usedByStrictMultiPieceEntries": 205,
       "usedByStrictMultiPieceUniqueWords": 170,
       "strictUniqueLossIfUnavailable": 170,
-      "strictUniqueRetentionIfUnavailable": 0.7763,
+      "strictUniqueRetentionIfUnavailable": 0.7789,
       "migrationPriority": "protect_before_visual_change"
     },
     {
@@ -38,7 +38,7 @@
       "usedByStrictMultiPieceEntries": 192,
       "usedByStrictMultiPieceUniqueWords": 150,
       "strictUniqueLossIfUnavailable": 150,
-      "strictUniqueRetentionIfUnavailable": 0.8026,
+      "strictUniqueRetentionIfUnavailable": 0.8049,
       "migrationPriority": "protect_before_visual_change"
     },
     {
@@ -52,7 +52,7 @@
       "usedByStrictMultiPieceEntries": 170,
       "usedByStrictMultiPieceUniqueWords": 146,
       "strictUniqueLossIfUnavailable": 146,
-      "strictUniqueRetentionIfUnavailable": 0.8079,
+      "strictUniqueRetentionIfUnavailable": 0.8101,
       "migrationPriority": "protect_before_visual_change"
     },
     {
@@ -63,10 +63,10 @@
       "clinicalStatus": "undocumented",
       "artRevision": null,
       "assetSource": "undocumented",
-      "usedByStrictMultiPieceEntries": 188,
-      "usedByStrictMultiPieceUniqueWords": 135,
-      "strictUniqueLossIfUnavailable": 135,
-      "strictUniqueRetentionIfUnavailable": 0.8224,
+      "usedByStrictMultiPieceEntries": 192,
+      "usedByStrictMultiPieceUniqueWords": 139,
+      "strictUniqueLossIfUnavailable": 139,
+      "strictUniqueRetentionIfUnavailable": 0.8192,
       "migrationPriority": "protect_before_visual_change"
     },
     {
@@ -80,7 +80,7 @@
       "usedByStrictMultiPieceEntries": 130,
       "usedByStrictMultiPieceUniqueWords": 116,
       "strictUniqueLossIfUnavailable": 116,
-      "strictUniqueRetentionIfUnavailable": 0.8474,
+      "strictUniqueRetentionIfUnavailable": 0.8492,
       "migrationPriority": "protect_before_visual_change"
     },
     {
@@ -94,7 +94,7 @@
       "usedByStrictMultiPieceEntries": 131,
       "usedByStrictMultiPieceUniqueWords": 115,
       "strictUniqueLossIfUnavailable": 115,
-      "strictUniqueRetentionIfUnavailable": 0.8487,
+      "strictUniqueRetentionIfUnavailable": 0.8505,
       "migrationPriority": "protect_before_visual_change"
     },
     {
@@ -108,7 +108,7 @@
       "usedByStrictMultiPieceEntries": 120,
       "usedByStrictMultiPieceUniqueWords": 110,
       "strictUniqueLossIfUnavailable": 110,
-      "strictUniqueRetentionIfUnavailable": 0.8553,
+      "strictUniqueRetentionIfUnavailable": 0.857,
       "migrationPriority": "protect_before_visual_change"
     },
     {
@@ -122,7 +122,7 @@
       "usedByStrictMultiPieceEntries": 112,
       "usedByStrictMultiPieceUniqueWords": 100,
       "strictUniqueLossIfUnavailable": 100,
-      "strictUniqueRetentionIfUnavailable": 0.8684,
+      "strictUniqueRetentionIfUnavailable": 0.87,
       "migrationPriority": "protect_before_visual_change"
     },
     {
@@ -133,10 +133,10 @@
       "clinicalStatus": "undocumented",
       "artRevision": null,
       "assetSource": "undocumented",
-      "usedByStrictMultiPieceEntries": 106,
-      "usedByStrictMultiPieceUniqueWords": 90,
-      "strictUniqueLossIfUnavailable": 90,
-      "strictUniqueRetentionIfUnavailable": 0.8816,
+      "usedByStrictMultiPieceEntries": 108,
+      "usedByStrictMultiPieceUniqueWords": 92,
+      "strictUniqueLossIfUnavailable": 92,
+      "strictUniqueRetentionIfUnavailable": 0.8804,
       "migrationPriority": "protect_before_visual_change"
     },
     {
@@ -150,7 +150,7 @@
       "usedByStrictMultiPieceEntries": 104,
       "usedByStrictMultiPieceUniqueWords": 88,
       "strictUniqueLossIfUnavailable": 88,
-      "strictUniqueRetentionIfUnavailable": 0.8842,
+      "strictUniqueRetentionIfUnavailable": 0.8856,
       "migrationPriority": "protect_before_visual_change"
     },
     {
@@ -164,7 +164,7 @@
       "usedByStrictMultiPieceEntries": 87,
       "usedByStrictMultiPieceUniqueWords": 81,
       "strictUniqueLossIfUnavailable": 81,
-      "strictUniqueRetentionIfUnavailable": 0.8934,
+      "strictUniqueRetentionIfUnavailable": 0.8947,
       "migrationPriority": "protect_before_visual_change"
     },
     {
@@ -175,10 +175,10 @@
       "clinicalStatus": "undocumented",
       "artRevision": null,
       "assetSource": "undocumented",
-      "usedByStrictMultiPieceEntries": 97,
-      "usedByStrictMultiPieceUniqueWords": 77,
-      "strictUniqueLossIfUnavailable": 77,
-      "strictUniqueRetentionIfUnavailable": 0.8987,
+      "usedByStrictMultiPieceEntries": 98,
+      "usedByStrictMultiPieceUniqueWords": 78,
+      "strictUniqueLossIfUnavailable": 78,
+      "strictUniqueRetentionIfUnavailable": 0.8986,
       "migrationPriority": "protect_before_visual_change"
     },
     {
@@ -192,7 +192,21 @@
       "usedByStrictMultiPieceEntries": 70,
       "usedByStrictMultiPieceUniqueWords": 63,
       "strictUniqueLossIfUnavailable": 63,
-      "strictUniqueRetentionIfUnavailable": 0.9171,
+      "strictUniqueRetentionIfUnavailable": 0.9181,
+      "migrationPriority": "protect_before_visual_change"
+    },
+    {
+      "id": "eau",
+      "label": "eau",
+      "ipa": "/o/",
+      "image": "assets/rebus/eau.svg",
+      "clinicalStatus": "naming_test_required",
+      "artRevision": "eau-comic-v1",
+      "assetSource": "rebulo_original:eau-comic-v1",
+      "usedByStrictMultiPieceEntries": 73,
+      "usedByStrictMultiPieceUniqueWords": 55,
+      "strictUniqueLossIfUnavailable": 55,
+      "strictUniqueRetentionIfUnavailable": 0.9285,
       "migrationPriority": "protect_before_visual_change"
     },
     {
@@ -206,21 +220,7 @@
       "usedByStrictMultiPieceEntries": 66,
       "usedByStrictMultiPieceUniqueWords": 54,
       "strictUniqueLossIfUnavailable": 54,
-      "strictUniqueRetentionIfUnavailable": 0.9289,
-      "migrationPriority": "protect_before_visual_change"
-    },
-    {
-      "id": "eau",
-      "label": "eau",
-      "ipa": "/o/",
-      "image": "assets/rebus/eau.svg",
-      "clinicalStatus": "naming_test_required",
-      "artRevision": "eau-comic-v1",
-      "assetSource": "rebulo_original:eau-comic-v1",
-      "usedByStrictMultiPieceEntries": 69,
-      "usedByStrictMultiPieceUniqueWords": 51,
-      "strictUniqueLossIfUnavailable": 51,
-      "strictUniqueRetentionIfUnavailable": 0.9329,
+      "strictUniqueRetentionIfUnavailable": 0.9298,
       "migrationPriority": "protect_before_visual_change"
     },
     {
@@ -234,7 +234,7 @@
       "usedByStrictMultiPieceEntries": 43,
       "usedByStrictMultiPieceUniqueWords": 41,
       "strictUniqueLossIfUnavailable": 41,
-      "strictUniqueRetentionIfUnavailable": 0.9461,
+      "strictUniqueRetentionIfUnavailable": 0.9467,
       "migrationPriority": "protect_before_visual_change"
     },
     {
@@ -248,7 +248,7 @@
       "usedByStrictMultiPieceEntries": 52,
       "usedByStrictMultiPieceUniqueWords": 40,
       "strictUniqueLossIfUnavailable": 40,
-      "strictUniqueRetentionIfUnavailable": 0.9474,
+      "strictUniqueRetentionIfUnavailable": 0.948,
       "migrationPriority": "protect_before_visual_change"
     },
     {
@@ -262,7 +262,7 @@
       "usedByStrictMultiPieceEntries": 45,
       "usedByStrictMultiPieceUniqueWords": 38,
       "strictUniqueLossIfUnavailable": 38,
-      "strictUniqueRetentionIfUnavailable": 0.95,
+      "strictUniqueRetentionIfUnavailable": 0.9506,
       "migrationPriority": "protect_before_visual_change"
     },
     {
@@ -276,7 +276,7 @@
       "usedByStrictMultiPieceEntries": 46,
       "usedByStrictMultiPieceUniqueWords": 37,
       "strictUniqueLossIfUnavailable": 37,
-      "strictUniqueRetentionIfUnavailable": 0.9513,
+      "strictUniqueRetentionIfUnavailable": 0.9519,
       "migrationPriority": "protect_before_visual_change"
     },
     {
@@ -290,7 +290,7 @@
       "usedByStrictMultiPieceEntries": 23,
       "usedByStrictMultiPieceUniqueWords": 21,
       "strictUniqueLossIfUnavailable": 21,
-      "strictUniqueRetentionIfUnavailable": 0.9724,
+      "strictUniqueRetentionIfUnavailable": 0.9727,
       "migrationPriority": "protect_before_visual_change"
     },
     {
@@ -304,7 +304,7 @@
       "usedByStrictMultiPieceEntries": 22,
       "usedByStrictMultiPieceUniqueWords": 21,
       "strictUniqueLossIfUnavailable": 21,
-      "strictUniqueRetentionIfUnavailable": 0.9724,
+      "strictUniqueRetentionIfUnavailable": 0.9727,
       "migrationPriority": "protect_before_visual_change"
     },
     {
@@ -318,7 +318,7 @@
       "usedByStrictMultiPieceEntries": 29,
       "usedByStrictMultiPieceUniqueWords": 18,
       "strictUniqueLossIfUnavailable": 18,
-      "strictUniqueRetentionIfUnavailable": 0.9763,
+      "strictUniqueRetentionIfUnavailable": 0.9766,
       "migrationPriority": "protect_before_visual_change"
     },
     {
@@ -332,7 +332,35 @@
       "usedByStrictMultiPieceEntries": 11,
       "usedByStrictMultiPieceUniqueWords": 10,
       "strictUniqueLossIfUnavailable": 10,
-      "strictUniqueRetentionIfUnavailable": 0.9868,
+      "strictUniqueRetentionIfUnavailable": 0.987,
+      "migrationPriority": "protect_before_visual_change"
+    },
+    {
+      "id": "aiguille",
+      "label": "aiguille",
+      "ipa": "/egɥij/",
+      "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1FAA1.svg",
+      "clinicalStatus": "unreviewed",
+      "artRevision": null,
+      "assetSource": "openmoji:1FAA1",
+      "usedByStrictMultiPieceEntries": 4,
+      "usedByStrictMultiPieceUniqueWords": 4,
+      "strictUniqueLossIfUnavailable": 4,
+      "strictUniqueRetentionIfUnavailable": 0.9948,
+      "migrationPriority": "protect_before_visual_change"
+    },
+    {
+      "id": "noeud",
+      "label": "nœud",
+      "ipa": "/nø/",
+      "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1FAA2.svg",
+      "clinicalStatus": "unreviewed",
+      "artRevision": null,
+      "assetSource": "openmoji:1FAA2",
+      "usedByStrictMultiPieceEntries": 6,
+      "usedByStrictMultiPieceUniqueWords": 4,
+      "strictUniqueLossIfUnavailable": 4,
+      "strictUniqueRetentionIfUnavailable": 0.9948,
       "migrationPriority": "protect_before_visual_change"
     },
     {
@@ -348,6 +376,34 @@
       "strictUniqueLossIfUnavailable": 2,
       "strictUniqueRetentionIfUnavailable": 0.9974,
       "migrationPriority": "protect_before_visual_change"
+    },
+    {
+      "id": "couteau",
+      "label": "couteau",
+      "ipa": "/kuto/",
+      "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F52A.svg",
+      "clinicalStatus": "unreviewed",
+      "artRevision": null,
+      "assetSource": "openmoji:1F52A",
+      "usedByStrictMultiPieceEntries": 1,
+      "usedByStrictMultiPieceUniqueWords": 1,
+      "strictUniqueLossIfUnavailable": 1,
+      "strictUniqueRetentionIfUnavailable": 0.9987,
+      "migrationPriority": "protect_before_visual_change"
+    },
+    {
+      "id": "olive",
+      "label": "olive",
+      "ipa": "/oliv/",
+      "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1FAD2.svg",
+      "clinicalStatus": "unreviewed",
+      "artRevision": null,
+      "assetSource": "openmoji:1FAD2",
+      "usedByStrictMultiPieceEntries": 0,
+      "usedByStrictMultiPieceUniqueWords": 0,
+      "strictUniqueLossIfUnavailable": 0,
+      "strictUniqueRetentionIfUnavailable": 1,
+      "migrationPriority": "low_dependency"
     }
   ],
   "provenance": {

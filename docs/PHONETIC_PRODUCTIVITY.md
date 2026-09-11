@@ -1,7 +1,7 @@
 # Rebulo — productivité phonétique des pictogrammes
 
 - Entrées Lexique analysées : 189832
-- Inventaire fusionné : 387 concepts (24 seed + 369 entrées OpenMoji avant déduplication).
+- Inventaire fusionné : 387 concepts (28 seed + 369 entrées OpenMoji avant déduplication).
 - Pièces strictement productives : 148
 - Candidats stricts sans preuve : 182
 - Concepts général seulement : 57

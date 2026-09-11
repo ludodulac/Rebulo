@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.2.1",
   "status": "research_only",
   "policy": {
     "visibility": "A convention must be visible as itself; never hide a letter, digit or other symbol inside a strict image reading.",
@@ -21,6 +21,7 @@
     {"id":"digit-8","label":"8","ipa":"ɥit","kind":"number_symbol","status":"research"},
     {"id":"digit-9","label":"9","ipa":"nœf","kind":"number_symbol","status":"research"},
     {"id":"digit-10","label":"10","ipa":"dis","kind":"number_symbol","status":"research","note":"Context variants are not silently substituted."},
+    {"id":"digit-11","label":"11","ipa":"ɔ̃z","kind":"number_symbol","status":"research","note":"Onze as an explicit visible number convention; partial overlap such as a final /ɔ̃/ remains approximate, never hidden."},
     {"id":"number-100","label":"100","ipa":"sɑ̃","kind":"number_symbol","status":"research","note":"Cent as a visible number convention; this does not replace exact-image alternatives such as sang."},
 
     {"id":"letter-a","label":"A","ipa":"a","kind":"letter_name","status":"research"},

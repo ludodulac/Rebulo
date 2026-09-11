@@ -1,0 +1,62 @@
+{
+  "version":"1.0.0",
+  "status":"editorial_conversion_audit",
+  "policy":{
+    "goal":"Convert only representations that already satisfy the existing phonetic/product boundary without inventing naming or clinical evidence.",
+    "proof":"exact phonetics != playful approximation != lexical obviousness != visual plausibility != spontaneous namability != clinical validation",
+    "humanEvidence":"No human naming observation exists in this cohort. spontaneousNamingRisk remains unknown; humanNamingEvidence and clinicalEvidence remain none.",
+    "activation":"Only category A new rows are registered as active phonetic-structured general illustrations. Category B and C never become planner routes from this audit."
+  },
+  "summary":{
+    "auditedCandidateCount":36,
+    "newReadyForPlannerCount":4,
+    "alreadyPlannerReadyDeprioritizedCount":10,
+    "needsMaterializationOrReviewCount":19,
+    "notReadyCount":3,
+    "newResearchStimulusCount":0
+  },
+  "newReadyForPlanner":[
+    {"ipa":"oliv","candidate":"olive","asset":"openmoji:1FAD2","reason":"Exact lexical reading; pinned OpenMoji olive is a specific whole-object representation.","spontaneousNamingRisk":"unknown","humanNamingEvidence":"none","clinicalEvidence":"none"},
+    {"ipa":"egɥij","candidate":"aiguille","asset":"openmoji:1FAA1","reason":"Exact lexical reading; pinned OpenMoji sewing needle visibly includes the eye/thread and is more specific than a generic pin.","spontaneousNamingRisk":"unknown","humanNamingEvidence":"none","clinicalEvidence":"none"},
+    {"ipa":"nø","candidate":"nœud","asset":"openmoji:1FAA2","reason":"Exact lexical reading; pinned OpenMoji knot is a compact whole-concept representation.","spontaneousNamingRisk":"unknown","humanNamingEvidence":"none","clinicalEvidence":"none"},
+    {"ipa":"kuto","candidate":"couteau","asset":"openmoji:1F52A","reason":"Exact lexical reading; pinned OpenMoji kitchen knife is a specific whole-object representation.","spontaneousNamingRisk":"unknown","humanNamingEvidence":"none","clinicalEvidence":"none"}
+  ],
+  "alreadyPlannerReadyDeprioritized":[
+    {"candidate":"seau","ipa":"so","reason":"Already registered in OpenMoji wave 2."},
+    {"candidate":"pain","ipa":"pɛ̃","reason":"Already registered in the base OpenMoji library."},
+    {"candidate":"roue","ipa":"ʁu","reason":"Already registered in the base OpenMoji library."},
+    {"candidate":"gâteau","ipa":"gato","reason":"Already registered in the base OpenMoji library."},
+    {"candidate":"lapin","ipa":"lapɛ̃","reason":"Already registered in the base OpenMoji library."},
+    {"candidate":"maison","ipa":"mɛzɔ̃","reason":"Already registered in the base OpenMoji library."},
+    {"candidate":"bateau","ipa":"bato","reason":"Already registered in the base OpenMoji library."},
+    {"candidate":"vélo","ipa":"velo","reason":"Already registered in the base OpenMoji library."},
+    {"candidate":"chapeau","ipa":"ʃapo","reason":"Already registered in the base OpenMoji library."},
+    {"candidate":"ciseaux","ipa":"sizo","reason":"Already registered in the base OpenMoji library."}
+  ],
+  "needsMaterializationOrReview":[
+    {"candidate":"oreille","ipa":"oʁɛj","reason":"Existing registered concept is /ɔʁɛj/; exact target IPA differs."},
+    {"candidate":"orange","ipa":"oʁɑ̃ʒ","reason":"Existing registered concept is /ɔʁɑ̃ʒ/; exact target IPA differs."},
+    {"candidate":"homard","ipa":"omaʁ","reason":"Existing registered concept is /ɔmaʁ/; exact target IPA differs."},
+    {"candidate":"autruche","ipa":"otʁyʃ","reason":"Strong concept but no exact registered asset in the current pinned libraries."},
+    {"candidate":"ovale","ipa":"oval","reason":"Simple form but needs a concrete registered stimulus and naming review against ellipse/cercle."},
+    {"candidate":"épée","ipa":"epe","reason":"Nearby sword/dagger graphics do not establish the exact lexical label épée."},
+    {"candidate":"étau","ipa":"eto","reason":"Strong object concept but no current registered exact asset."},
+    {"candidate":"écran","ipa":"ekʁɑ̃","reason":"Available device graphics tend to name ordinateur/moniteur/télévision rather than écran."},
+    {"candidate":"assiette","ipa":"asjɛt","reason":"Plate-with-cutlery imagery risks repas/couverts and needs exact stimulus review."},
+    {"candidate":"bouteille","ipa":"butɛj","reason":"No neutral current registered bottle asset with the exact lexical reading."},
+    {"candidate":"bouton","ipa":"butɔ̃","reason":"Multiple visual senses; a clothing-button stimulus must be materialized/reviewed explicitly."},
+    {"candidate":"cahier","ipa":"kaje","reason":"Notebook graphics compete with carnet/livre; exact stimulus review needed."},
+    {"candidate":"ceinture","ipa":"sɛ̃tyʁ","reason":"Strong concept but no current registered exact asset."},
+    {"candidate":"citrouille","ipa":"sitʁuj","reason":"Jack-o-lantern graphics add a face/Halloween cue; a neutral pumpkin stimulus is preferable."},
+    {"candidate":"horloge","ipa":"ɔʁlɔʒ","reason":"Clock imagery competes with pendule/montre; exact stimulus review needed."},
+    {"candidate":"orteil","ipa":"ɔʁtɛj","reason":"Likely needs a focused foot/arrow stimulus, which is not yet registered."},
+    {"candidate":"selle","ipa":"sɛl","reason":"No current exact registered saddle stimulus; horse/bicycle saddle ambiguity remains."},
+    {"candidate":"verre","ipa":"vɛʁ","reason":"Drink-container graphics compete with gobelet/tasse and need a neutral exact stimulus."},
+    {"candidate":"drapeau","ipa":"dʁapo","reason":"Available flags are semantically decorated/specific; a neutral flag stimulus needs review."}
+  ],
+  "notReady":[
+    {"candidate":"caillou","ipa":"kaju","reason":"Current rock graphics are already read/registered as rocher; pierre/rocher competition is too strong for direct activation."},
+    {"candidate":"cobra","ipa":"kobʁa","reason":"Current snake imagery establishes serpent, not the subtype cobra."},
+    {"candidate":"ourson","ipa":"uʁsɔ̃","reason":"Bear-cub imagery is likely to produce ours/nounours; no exact asset currently isolates ourson."}
+  ]
+}

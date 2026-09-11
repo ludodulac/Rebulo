@@ -1,0 +1,34 @@
+{
+  "version":"0.1.0",
+  "status":"concept_inventory_only",
+  "policy":{
+    "activation":"No entry in this file activates a production asset or grants strict eligibility by itself.",
+    "exactness":"exact means the stored visual/convention reading matches the IPA exactly; playful_near remains a separate optional class.",
+    "orthophony":"Potentially confusable distinctions are preserved, not collapsed. Locked/tolerant relations can be studied later without changing canonical IPA.",
+    "naming":"spontaneousNamingRisk remains unknown until real human naming evidence exists.",
+    "artDirection":"Descriptions are briefs only. Final assets should be simple, isolated, immediately nameable and suitable for a polished magazine-style rebus."
+  },
+  "entries":[
+    {"id":"raie-animal","ipa":"ʁɛ","label":"raie","kind":"pictorial_concept","strictness":"exact","description":"Une raie marine isolée, vue clairement de dessus ou de trois-quarts, silhouette très reconnaissable, sans décor parasite.","spontaneousNamingRisk":"unknown"},
+    {"id":"raie-trait","ipa":"ʁɛ","label":"raie","kind":"pictorial_concept","strictness":"exact","description":"Une grande raie/ligne contrastée au centre d'une surface simple, utilisée seulement si la lecture « raie » reste évidente.","spontaneousNamingRisk":"unknown"},
+    {"id":"haie","ipa":"ɛ","label":"haie","kind":"pictorial_concept","strictness":"exact","description":"Une haie de jardin taillée, seule, vue de face, forme végétale immédiatement identifiable.","spontaneousNamingRisk":"unknown"},
+    {"id":"lait","ipa":"lɛ","label":"lait","kind":"pictorial_concept","strictness":"exact","description":"Un verre de lait blanc accompagné éventuellement d'une petite bouteille de lait, sans autre aliment.","spontaneousNamingRisk":"unknown"},
+    {"id":"laid","ipa":"lɛ","label":"laid","kind":"semantic_concept","strictness":"exact","description":"Concept lexical exact mais visuellement subjectif et peu stable ; conserver comme possibilité textuelle, ne pas privilégier pour un dessin enfant.","spontaneousNamingRisk":"unknown"},
+    {"id":"huile","ipa":"ɥil","label":"huile","kind":"pictorial_concept","strictness":"exact","description":"Une bouteille d'huile avec une goutte dorée visible ; éviter tout décor de cuisine inutile.","spontaneousNamingRisk":"unknown"},
+    {"id":"cui-oisillon","ipa":"kɥi","label":"cui","kind":"sound_scene_concept","strictness":"exact","description":"Un petit oisillon dans un nid qui pépie ; une bulle sonore « cui » peut rendre explicite l'onomatopée. Concept de rébus sonore, pas preuve de dénomination spontanée.","spontaneousNamingRisk":"unknown"},
+    {"id":"oeufs-pluriel","ipa":"ø","label":"œufs","kind":"pictorial_concept","strictness":"exact","description":"Deux ou trois œufs clairement visibles ensemble pour imposer le pluriel « œufs » plutôt qu'un œuf isolé.","spontaneousNamingRisk":"unknown"},
+    {"id":"eux-groupe","ipa":"ø","label":"eux","kind":"deictic_scene_concept","strictness":"exact","description":"Une main ou un personnage désigne nettement plusieurs personnes regroupées, pour suggérer « eux » ; garder comme concept à tester car la lecture est contextuelle.","spontaneousNamingRisk":"unknown"},
+    {"id":"deux-digit","ipa":"dø","label":"2","kind":"number_symbol","strictness":"explicit_convention","description":"Le chiffre 2 seul, très lisible : lecture canonique « deux ».","spontaneousNamingRisk":"unknown"},
+    {"id":"d-letter","ipa":"de","label":"D","kind":"letter_name","strictness":"explicit_convention","description":"La lettre D seule, lisible : lecture canonique du nom de lettre « dé ».","spontaneousNamingRisk":"unknown"},
+    {"id":"d-apostrophe","ipa":"d","label":"D’","kind":"grapheme_convention","strictness":"orthophony_locked","description":"D suivi d'une apostrophe comme convention graphique explicite. Ne pas confondre avec le nom de lettre /de/ ; usage phonographique à garder séparé pour décision ultérieure.","spontaneousNamingRisk":"unknown"},
+    {"id":"un-digit","ipa":"œ̃","label":"1","kind":"number_symbol","strictness":"explicit_convention","description":"Le chiffre 1 seul : lecture canonique « un ». Les variantes proches comme « in » restent séparées.","spontaneousNamingRisk":"unknown"},
+    {"id":"onze-digit","ipa":"ɔ̃z","label":"11","kind":"number_symbol","strictness":"explicit_convention","description":"Le nombre 11 seul : lecture canonique « onze ».","spontaneousNamingRisk":"unknown"},
+    {"id":"paques","ipa":"pak","label":"Pâques","kind":"scene_concept","strictness":"exact","description":"Scène très simple de Pâques avec œufs décorés et symbole saisonnier ; concept exact mais lecture spontanée à vérifier.","spontaneousNamingRisk":"unknown"},
+    {"id":"a-letter","ipa":"a","label":"A","kind":"letter_name","strictness":"explicit_convention","description":"Lettre A seule, lecture canonique « a ».","spontaneousNamingRisk":"unknown"},
+    {"id":"i-letter","ipa":"i","label":"I","kind":"letter_name","strictness":"explicit_convention","description":"Lettre I seule, lecture canonique « i ».","spontaneousNamingRisk":"unknown"},
+    {"id":"k-letter","ipa":"ka","label":"K","kind":"letter_name","strictness":"explicit_convention","description":"Lettre K seule, lecture canonique « ka ».","spontaneousNamingRisk":"unknown"},
+    {"id":"l-letter","ipa":"ɛl","label":"L","kind":"letter_name","strictness":"explicit_convention","description":"Lettre L seule, lecture canonique « elle ».","spontaneousNamingRisk":"unknown"},
+    {"id":"z-letter","ipa":"zɛd","label":"Z","kind":"letter_name","strictness":"explicit_convention","description":"Lettre Z seule, lecture canonique « zède ».","spontaneousNamingRisk":"unknown"},
+    {"id":"un-vs-in-near","ipa":"ɛ̃","label":"1 / un","kind":"tolerance_candidate","strictness":"playful_near","description":"Tolérance ludique potentielle entre /ɛ̃/ et la convention 1=/œ̃/. Ne jamais traiter comme identité phonétique stricte ; conserver comme relation candidate séparée.","spontaneousNamingRisk":"unknown"}
+  ]
+}

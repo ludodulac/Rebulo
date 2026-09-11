@@ -16,7 +16,7 @@
 
 /* Keep long phrase compositions readable rather than shrinking stimuli. */
 .app-shell[data-experience="create"] #creatorRebus.phrase-flow{
-  min-width:0;overflow-x:auto;overflow-y:hidden;justify-content:flex-start;
+  min-width:0;overflow-x:auto;overflow-y:hidden;justify-content:flex-start;flex-wrap:nowrap!important;
   overscroll-behavior-inline:contain;scroll-snap-type:inline proximity;
   scrollbar-width:none;padding-right:22px
 }

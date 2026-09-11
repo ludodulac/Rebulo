@@ -40,20 +40,26 @@ async function selectProfile(page, profile){
   await page.waitForTimeout(220);
 }
 
+async function chooseCreatorKind(page, kind){
+  const control = page.locator(`.search-zone .creator-kind button[data-creator-kind="${kind}"]`).first();
+  await control.waitFor({state:'visible'});
+  await control.click();
+}
+
 async function createWord(page, word){
   await page.locator('#createMode').click();
-  await page.locator('[data-creator-kind="word"]').click();
+  await chooseCreatorKind(page, 'word');
   await page.locator('#target').fill(word);
   await page.locator('#creatorForm button[type="submit"]').click();
-  await page.waitForTimeout(450);
+  await page.waitForTimeout(500);
 }
 
 async function createPhrase(page, phrase){
   await page.locator('#createMode').click();
-  await page.locator('[data-creator-kind="phrase"]').click();
+  await chooseCreatorKind(page, 'phrase');
   await page.locator('#target').fill(phrase);
   await page.locator('#creatorForm button[type="submit"]').click();
-  await page.waitForTimeout(550);
+  await page.waitForTimeout(650);
 }
 
 const browser = await chromium.launch({headless:true});

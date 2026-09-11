@@ -6,9 +6,9 @@
 - Fenêtres utiles distinctes inventoriées : 9491.
 - Fenêtres à plus forte utilité effectivement analysées : 2000.
 - Fenêtres avec au moins une piste approximative visuelle : 1785.
-- Fenêtres pouvant réutiliser directement un pictogramme existant : 174.
-- Fenêtres avec un pictogramme existant dans le niveau petite approximation : 122.
-- Fenêtres sans asset proche mais avec un nom Lexique nominal à examiner : 1611.
+- Fenêtres pouvant réutiliser directement un pictogramme existant : 175.
+- Fenêtres avec un pictogramme existant dans le niveau petite approximation : 123.
+- Fenêtres sans asset proche mais avec un nom Lexique nominal à examiner : 1610.
 
 L’ordre est volontaire : **réutiliser un pictogramme déjà présent** avant de proposer un nouveau dessin. Les noms Lexique ne sont que des pistes de secours à curater humainement.
 Une image existante utilisée en approximation conserve son vrai nom et sa vraie prononciation ; elle ne devient jamais une représentation stricte du son cible.
@@ -109,111 +109,111 @@ Une image existante utilisée en approximation conserve son vrai nom et sa vraie
 | 90 | /ʒuʁne/ | journal | pictogramme existant | /ʒuʁnal/ | 23.3% | a→e, −l (bord) | 1 | journée |
 | 91 | /paʁtə/ | porte | pictogramme existant | /pɔʁt/ | 28% | ɔ→a, +ə (bord) | 5 | partenaire, appartement, département, appartenir |
 | 92 | /tjɛʁ/ | théière | pictogramme existant | /tejɛʁ/ | 18% | −e (interne) | 6 | frontière, matière, cimetière, tiers |
-| 93 | /malad/ | salade | pictogramme existant | /salad/ | 18% | s→m | 1 | malade |
-| 94 | /aksi/ | taxi | pictogramme existant | /taksi/ | 15% | −t (bord) | 1 | accident |
-| 95 | /sɛʁvis/ | cerveau | pictogramme existant | /sɛʁvo/ | 23.3% | o→i, +s (bord) | 2 | service, station-service |
-| 96 | /ado/ | cadeau | pictogramme existant | /kado/ | 18.8% | −k (bord) | 6 | adorable, adorer, ado, ados |
-| 97 | /maʁjaʒ/ | marque-page | pictogramme existant | /maʁkpaʒ/ | 25.7% | −k (interne), p→j | 1 | mariage |
-| 98 | /gaʁd/ | gare | pictogramme existant | /gaʁ/ | 18.8% | +d (bord) | 2 | garde, sauvegarde |
-| 99 | /fʁɛ/ | fraise | pictogramme existant | /fʁɛz/ | 18.8% | −z (bord) | 7 | frais, effrayant, effrayer, effrayé |
-| 100 | /damɑ̃/ | diamant | pictogramme existant | /djamɑ̃/ | 18% | −j (interne) | 3 | évidemment, précédemment, prudemment |
-| 101 | /vjɔ̃/ | avion | pictogramme existant | /avjɔ̃/ | 18.8% | −a (bord) | 1 | avion |
-| 102 | /pʁizɔ̃/ | bison | pictogramme existant | /bizɔ̃/ | 25% | b→p, +ʁ (interne) | 1 | prison |
-| 103 | /pʁo/ | broc | nouvelle piste lexicale | /bʁo/ | 11.7% | b→p | 93 | problème, propos, procès, projet |
-| 104 | /solɛj/ | soleil | pictogramme existant | /sɔlɛj/ | 6% | ɔ→o | 1 | soleil |
-| 105 | /tə/ | de | nouvelle piste lexicale | /də/ | 17.5% | d→t | 68 | tenir, maintenant, lieutenant, obtenir |
-| 106 | /pleziʁ/ | lézard | pictogramme existant | /lezaʁ/ | 23.3% | +p (bord), a→i | 1 | plaisir |
-| 107 | /lɛtʁ/ | loutre | pictogramme existant | /lutʁ/ | 16.3% | u→ɛ | 1 | lettre |
-| 108 | /di/ | tee | nouvelle piste lexicale | /ti/ | 17.5% | t→d | 147 | dîner, difficile, différent, ridicule |
-| 109 | /po/ | beau | nouvelle piste lexicale | /bo/ | 17.5% | b→p | 101 | police, propos, possible, poser |
-| 110 | /ʒe/ | geai | nouvelle piste lexicale | /ʒɛ/ | 15% | ɛ→e | 105 | manger, génial, changer, danger |
-| 111 | /bizaʁ/ | bison | pictogramme existant | /bizɔ̃/ | 28% | ɔ̃→a, +ʁ (bord) | 1 | bizarre |
-| 112 | /ve/ | vest | nouvelle piste lexicale | /vɛ/ | 15% | ɛ→e | 78 | trouver, sauver, prouver, vérité |
-| 113 | /tʁavɛʁ/ | travaux | pictogramme existant | /tʁavo/ | 23.3% | o→ɛ, +ʁ (bord) | 3 | travers, traverser, traversée |
-| 114 | /bjɛ̃/ | biais | nouvelle piste lexicale | /bjɛ/ | 16.7% | ɛ→ɛ̃ | 9 | bien, combien, bientôt, bienvenue |
-| 115 | /bil/ | pile | pictogramme existant | /pil/ | 11.7% | p→b | 7 | débile, immobile, mobile, habile |
-| 116 | /pe/ | paix | nouvelle piste lexicale | /pɛ/ | 15% | ɛ→e | 119 | pays, payer, occuper, empêcher |
-| 117 | /ku/ | goût | nouvelle piste lexicale | /gu/ | 17.5% | g→k | 55 | beaucoup, coup, courant, coucher |
-| 118 | /pɔʁtə/ | porte | pictogramme existant | /pɔʁt/ | 15% | +ə (bord) | 4 | portefeuille, comportement, porte-bonheur, porte-monnaie |
-| 119 | /paʁtu/ | porte | pictogramme existant | /pɔʁt/ | 28% | ɔ→a, +u (bord) | 1 | partout |
-| 120 | /pɛʁ/ | bers | nouvelle piste lexicale | /bɛʁ/ | 11.7% | b→p | 56 | père, personne, super, grand-père |
-| 121 | /seʁi/ | souris | pictogramme existant | /suʁi/ | 16.3% | u→e | 2 | série, sincérité |
-| 122 | /paʁɛj/ | paresseux | pictogramme existant | /paʁɛsø/ | 27.5% | s→j, −ø (bord) | 2 | pareil, appareil |
-| 123 | /poʁte/ | porte | pictogramme existant | /pɔʁt/ | 21% | ɔ→o, +e (bord) | 2 | porter, supporter |
-| 124 | /to/ | dos | nouvelle piste lexicale | /do/ | 17.5% | d→t | 85 | plutôt, bientôt, tôt, photo |
-| 125 | /talə/ | talon | pictogramme existant | /talɔ̃/ | 16.3% | ɔ̃→ə | 3 | totalement, mentalement, brutalement |
-| 126 | /kuʁs/ | ours | pictogramme existant | /uʁs/ | 18.8% | +k (bord) | 2 | course |
-| 127 | /vwaʁ/ | foire | nouvelle piste lexicale | /fwaʁ/ | 8.8% | f→v | 17 | voir, avoir, savoir, pouvoir |
-| 128 | /bablə/ | balai | pictogramme existant | /balɛ/ | 26% | +b (interne), ɛ→ə | 2 | probablement, probable |
-| 129 | /disjɔ̃/ | dossier | pictogramme existant | /dosje/ | 26% | o→i, e→ɔ̃ | 8 | condition, tradition, audition, édition |
-| 130 | /bɔ̃b/ | bonbon | pictogramme existant | /bɔ̃bɔ̃/ | 18.8% | −ɔ̃ (bord) | 1 | bombe |
-| 131 | /tu/ | doux | nouvelle piste lexicale | /du/ | 17.5% | d→t | 22 | toujours, tout, partout, surtout |
-| 132 | /kazjɔ̃/ | camion | pictogramme existant | /kamjɔ̃/ | 18% | m→z | 1 | occasion |
-| 133 | /tɔ̃/ | don | nouvelle piste lexicale | /dɔ̃/ | 17.5% | d→t | 29 | ton, tomber, fiston, bouton |
-| 134 | /kɔʁ/ | gord | nouvelle piste lexicale | /gɔʁ/ | 11.7% | g→k | 18 | encore, accord, corps, accorder |
-| 135 | /teʁjœʁ/ | théière | pictogramme existant | /tejɛʁ/ | 25.8% | +ʁ (interne), ɛ→œ | 1 | intérieur |
-| 136 | /fɔʁma/ | fourmi | pictogramme existant | /fuʁmi/ | 26% | u→ɔ, i→a | 6 | formation, information, informatique, informateur |
-| 137 | /bɔ̃swaʁ/ | baignoire | pictogramme existant | /bɛɲwaʁ/ | 25.8% | ɛ→ɔ̃, ɲ→s | 1 | bonsoir |
-| 138 | /papje/ | panier | pictogramme existant | /panje/ | 18% | n→p | 1 | papier |
-| 139 | /pɑ̃dɑ̃/ | panda | pictogramme existant | /pɑ̃da/ | 12.5% | a→ɑ̃ | 4 | cependant, pendant, indépendant, pendentif |
-| 140 | /mɔ̃stʁ/ | montre | pictogramme existant | /mɔ̃tʁ/ | 18% | +s (interne) | 1 | monstre |
-| 141 | /ɥit/ | huître | pictogramme existant | /ɥitʁ/ | 18.8% | −ʁ (bord) | 1 | huit |
-| 142 | /fɛʁme/ | fourmi | pictogramme existant | /fuʁmi/ | 26% | u→ɛ, i→e | 4 | fermer, enfermer, fermé, refermer |
-| 143 | /sɛlɑ̃/ | sel | pictogramme existant | /sɛl/ | 18.8% | +ɑ̃ (bord) | 1 | excellent |
-| 144 | /vo/ | faux | nouvelle piste lexicale | /fo/ | 17.5% | f→v | 47 | vos, nouveau, voler, cerveau |
-| 145 | /pist/ | poste | pictogramme existant | /pɔst/ | 16.3% | ɔ→i | 1 | piste |
-| 146 | /pys/ | bus | pictogramme existant | /bys/ | 11.7% | b→p | 3 | puce, campus, crépuscule |
-| 147 | /buʒe/ | bougie | pictogramme existant | /buʒi/ | 16.3% | i→e | 1 | bouger |
-| 148 | /puse/ | pousse | pictogramme existant | /pus/ | 18.8% | +e (bord) | 3 | pousser, repousser, poussée |
-| 149 | /klɛ/ | clé | pictogramme existant | /kle/ | 10% | e→ɛ | 3 | clairement, éclairage, éclaireur |
-| 150 | /ply/ | plus | nouvelle piste lexicale | /plys/ | 18.8% | −s (bord) | 5 | plus, plutôt, plusieurs, plutonium |
-| 151 | /ʃe/ | chai | nouvelle piste lexicale | /ʃɛ/ | 15% | ɛ→e | 67 | chercher, marcher, marché, coucher |
-| 152 | /ba/ | pas | nouvelle piste lexicale | /pa/ | 17.5% | p→b | 86 | là-bas, bateau, bas, combat |
-| 153 | /uvɛʁ/ | ver | pictogramme existant | /vɛʁ/ | 18.8% | +u (bord) | 3 | ouverture, ouvert, ouvertement |
-| 154 | /mɛ/ | maye | nouvelle piste lexicale | /me/ | 15% | e→ɛ | 15 | jamais, maison, meilleur, mets |
-| 155 | /ekʁiʁ/ | écrou | pictogramme existant | /ekʁu/ | 28% | u→i, +ʁ (bord) | 2 | écrire, réécrire |
-| 156 | /fɔʁmi/ | fourmi | pictogramme existant | /fuʁmi/ | 13% | u→ɔ | 1 | formidable |
-| 157 | /pal/ | balle | pictogramme existant | /bal/ | 11.7% | b→p | 3 | principal, pâle, municipal |
-| 158 | /mɛʁ/ | merde | nouvelle piste lexicale | /mɛʁd/ | 18.8% | −d (bord) | 24 | merci, mère, mer, grand-mère |
-| 159 | /ʒuʁ/ | chourre | nouvelle piste lexicale | /ʃuʁ/ | 11.7% | ʃ→ʒ | 9 | toujours, jour, bonjour, journée |
-| 160 | /ga/ | cas | nouvelle piste lexicale | /ka/ | 17.5% | k→g | 64 | gars, gagner, gamin, magasin |
-| 161 | /sɛt/ | sainte | nouvelle piste lexicale | /sɛ̃t/ | 16.7% | ɛ̃→ɛ | 10 | cette, cet, sept, cassette |
-| 162 | /siɲa/ | cygne | pictogramme existant | /siɲ/ | 18.8% | +a (bord) | 4 | signature, signaler, assignation, signalement |
-| 163 | /sø/ | se | nouvelle piste lexicale | /sə/ | 20% | ə→ø | 8 | ce, chanceux, chancelier, paresseux |
-| 164 | /aswaʁ/ | rasoir | pictogramme existant | /ʁazwaʁ/ | 18.3% | −ʁ (bord), z→s | 2 | asseoir, assoir |
-| 165 | /fyzi/ | fusée | pictogramme existant | /fyze/ | 16.3% | e→i | 2 | fusil, fusillade |
-| 166 | /siɲe/ | cygne | pictogramme existant | /siɲ/ | 18.8% | +e (bord) | 2 | signer, signé |
-| 167 | /tɑ̃te/ | tente | pictogramme existant | /tɑ̃t/ | 18.8% | +e (bord) | 3 | tenter, contenter, tenté |
-| 168 | /ʒa/ | chat | nouvelle piste lexicale | /ʃa/ | 17.5% | ʃ→ʒ | 12 | jamais, déjà, jaloux, japonais |
-| 169 | /puʁtɑ̃/ | porte | pictogramme existant | /pɔʁt/ | 28% | ɔ→u, +ɑ̃ (bord) | 1 | pourtant |
-| 170 | /syʁ/ | sureau | nouvelle piste lexicale | /syʁo/ | 18.8% | −o (bord) | 31 | sûr, surtout, surprise, sur |
-| 171 | /twal/ | étoile | pictogramme existant | /etwal/ | 15% | −e (bord) | 3 | étoile, toile |
-| 172 | /kuʁiʁ/ | curry | pictogramme existant | /kyʁi/ | 28% | y→u, +ʁ (bord) | 3 | courir, parcourir, secourir |
-| 173 | /pasjɑ̃/ | pansement | pictogramme existant | /pɑ̃smɑ̃/ | 28% | ɑ̃→a, m→j | 3 | patient, impatient, patienter |
-| 174 | /talɑ̃/ | talon | pictogramme existant | /talɔ̃/ | 16.3% | ɔ̃→ɑ̃ | 2 | talent, talentueux |
-| 175 | /ʒɑ̃/ | champ | nouvelle piste lexicale | /ʃɑ̃/ | 17.5% | ʃ→ʒ | 21 | gens, argent, agent, gentil |
-| 176 | /pʁe/ | prêt | nouvelle piste lexicale | /pʁɛ/ | 10% | ɛ→e | 83 | présent, président, impression, présenter |
-| 177 | /ʁəvwaʁ/ | rasoir | pictogramme existant | /ʁazwaʁ/ | 25.8% | a→ə, z→v | 1 | revoir |
-| 178 | /bo/ | peau | nouvelle piste lexicale | /po/ | 17.5% | p→b | 35 | beaucoup, beau, bonheur, beauté |
-| 179 | /ze/ | cé | nouvelle piste lexicale | /se/ | 17.5% | s→z | 85 | poser, excuser, épouser, amuser |
-| 180 | /tœʁ/ | hauteur | nouvelle piste lexicale | /otœʁ/ | 18.8% | −o (bord) | 93 | docteur, inspecteur, directeur, moteur |
-| 181 | /pi/ | by | nouvelle piste lexicale | /bi/ | 17.5% | b→p | 82 | pitié, capitaine, hôpital, épisode |
-| 182 | /ʃape/ | chapeau | pictogramme existant | /ʃapo/ | 16.3% | o→e | 1 | échapper |
-| 183 | /diʁ/ | tir | nouvelle piste lexicale | /tiʁ/ | 11.7% | t→d | 11 | dire, c'est-à-dire, grandir, refroidir |
-| 184 | /sɛʁviʁ/ | cerveau | pictogramme existant | /sɛʁvo/ | 23.3% | o→i, +ʁ (bord) | 1 | servir |
-| 185 | /tʁa/ | drap | nouvelle piste lexicale | /dʁa/ | 11.7% | d→t | 43 | travail, travers, contrat, travailler |
-| 186 | /tyʁ/ | dur | nouvelle piste lexicale | /dyʁ/ | 11.7% | d→t | 52 | voiture, nourriture, nature, futur |
-| 187 | /zɔ̃/ | son | nouvelle piste lexicale | /sɔ̃/ | 17.5% | s→z | 20 | maison, raison, prison, saison |
-| 188 | /konaʁ/ | canard | pictogramme existant | /kanaʁ/ | 13% | a→o | 1 | connard |
-| 189 | /ke/ | quai | nouvelle piste lexicale | /kɛ/ | 15% | ɛ→e | 59 | ok, expliquer, manquer, attaquer |
-| 190 | /bati/ | bateau | pictogramme existant | /bato/ | 16.3% | o→i | 1 | bâtiment |
-| 191 | /do/ | to | nouvelle piste lexicale | /to/ | 17.5% | t→d | 57 | donner, dos, cadeau, dossier |
-| 192 | /pɛʁt/ | porte | pictogramme existant | /pɔʁt/ | 16.3% | ɔ→ɛ | 1 | perte |
-| 193 | /pɑ̃ta/ | panda | pictogramme existant | /pɑ̃da/ | 8.8% | d→t | 1 | pantalon |
-| 194 | /suʁs/ | ours | pictogramme existant | /uʁs/ | 18.8% | +s (bord) | 1 | source |
-| 195 | /pɛʁb/ | herbe | pictogramme existant | /ɛʁb/ | 18.8% | +p (bord) | 1 | superbe |
-| 196 | /dezɔʁ/ | désert | pictogramme existant | /dezɛʁ/ | 13% | ɛ→ɔ | 1 | désormais |
-| 197 | /fi/ | vie | nouvelle piste lexicale | /vi/ | 17.5% | v→f | 85 | finir, difficile, officier, profiter |
-| 198 | /tɛʁ/ | der | nouvelle piste lexicale | /dɛʁ/ | 11.7% | d→t | 82 | terre, militaire, secrétaire, taire |
-| 199 | /ləmɑ̃/ | allemand | nouvelle piste lexicale | /aləmɑ̃/ | 15% | −a (bord) | 47 | seulement, tellement, finalement, totalement |
-| 200 | /və/ | voeu | nouvelle piste lexicale | /vø/ | 20% | ø→ə | 43 | venir, revenir, devenir, avenir |
+| 93 | /kute/ | couteau | pictogramme existant | /kuto/ | 16.3% | o→e | 2 | écouter, coûter |
+| 94 | /malad/ | salade | pictogramme existant | /salad/ | 18% | s→m | 1 | malade |
+| 95 | /aksi/ | taxi | pictogramme existant | /taksi/ | 15% | −t (bord) | 1 | accident |
+| 96 | /sɛʁvis/ | cerveau | pictogramme existant | /sɛʁvo/ | 23.3% | o→i, +s (bord) | 2 | service, station-service |
+| 97 | /ado/ | cadeau | pictogramme existant | /kado/ | 18.8% | −k (bord) | 6 | adorable, adorer, ado, ados |
+| 98 | /maʁjaʒ/ | marque-page | pictogramme existant | /maʁkpaʒ/ | 25.7% | −k (interne), p→j | 1 | mariage |
+| 99 | /gaʁd/ | gare | pictogramme existant | /gaʁ/ | 18.8% | +d (bord) | 2 | garde, sauvegarde |
+| 100 | /fʁɛ/ | fraise | pictogramme existant | /fʁɛz/ | 18.8% | −z (bord) | 7 | frais, effrayant, effrayer, effrayé |
+| 101 | /damɑ̃/ | diamant | pictogramme existant | /djamɑ̃/ | 18% | −j (interne) | 3 | évidemment, précédemment, prudemment |
+| 102 | /vjɔ̃/ | avion | pictogramme existant | /avjɔ̃/ | 18.8% | −a (bord) | 1 | avion |
+| 103 | /pʁizɔ̃/ | bison | pictogramme existant | /bizɔ̃/ | 25% | b→p, +ʁ (interne) | 1 | prison |
+| 104 | /pʁo/ | broc | nouvelle piste lexicale | /bʁo/ | 11.7% | b→p | 93 | problème, propos, procès, projet |
+| 105 | /solɛj/ | soleil | pictogramme existant | /sɔlɛj/ | 6% | ɔ→o | 1 | soleil |
+| 106 | /tə/ | de | nouvelle piste lexicale | /də/ | 17.5% | d→t | 68 | tenir, maintenant, lieutenant, obtenir |
+| 107 | /pleziʁ/ | lézard | pictogramme existant | /lezaʁ/ | 23.3% | +p (bord), a→i | 1 | plaisir |
+| 108 | /lɛtʁ/ | loutre | pictogramme existant | /lutʁ/ | 16.3% | u→ɛ | 1 | lettre |
+| 109 | /di/ | tee | nouvelle piste lexicale | /ti/ | 17.5% | t→d | 147 | dîner, difficile, différent, ridicule |
+| 110 | /po/ | beau | nouvelle piste lexicale | /bo/ | 17.5% | b→p | 101 | police, propos, possible, poser |
+| 111 | /ʒe/ | geai | nouvelle piste lexicale | /ʒɛ/ | 15% | ɛ→e | 105 | manger, génial, changer, danger |
+| 112 | /bizaʁ/ | bison | pictogramme existant | /bizɔ̃/ | 28% | ɔ̃→a, +ʁ (bord) | 1 | bizarre |
+| 113 | /ve/ | vest | nouvelle piste lexicale | /vɛ/ | 15% | ɛ→e | 78 | trouver, sauver, prouver, vérité |
+| 114 | /tʁavɛʁ/ | travaux | pictogramme existant | /tʁavo/ | 23.3% | o→ɛ, +ʁ (bord) | 3 | travers, traverser, traversée |
+| 115 | /bjɛ̃/ | biais | nouvelle piste lexicale | /bjɛ/ | 16.7% | ɛ→ɛ̃ | 9 | bien, combien, bientôt, bienvenue |
+| 116 | /bil/ | pile | pictogramme existant | /pil/ | 11.7% | p→b | 7 | débile, immobile, mobile, habile |
+| 117 | /pe/ | paix | nouvelle piste lexicale | /pɛ/ | 15% | ɛ→e | 119 | pays, payer, occuper, empêcher |
+| 118 | /ku/ | goût | nouvelle piste lexicale | /gu/ | 17.5% | g→k | 55 | beaucoup, coup, courant, coucher |
+| 119 | /pɔʁtə/ | porte | pictogramme existant | /pɔʁt/ | 15% | +ə (bord) | 4 | portefeuille, comportement, porte-bonheur, porte-monnaie |
+| 120 | /paʁtu/ | porte | pictogramme existant | /pɔʁt/ | 28% | ɔ→a, +u (bord) | 1 | partout |
+| 121 | /pɛʁ/ | bers | nouvelle piste lexicale | /bɛʁ/ | 11.7% | b→p | 56 | père, personne, super, grand-père |
+| 122 | /seʁi/ | souris | pictogramme existant | /suʁi/ | 16.3% | u→e | 2 | série, sincérité |
+| 123 | /paʁɛj/ | paresseux | pictogramme existant | /paʁɛsø/ | 27.5% | s→j, −ø (bord) | 2 | pareil, appareil |
+| 124 | /poʁte/ | porte | pictogramme existant | /pɔʁt/ | 21% | ɔ→o, +e (bord) | 2 | porter, supporter |
+| 125 | /to/ | dos | nouvelle piste lexicale | /do/ | 17.5% | d→t | 85 | plutôt, bientôt, tôt, photo |
+| 126 | /talə/ | talon | pictogramme existant | /talɔ̃/ | 16.3% | ɔ̃→ə | 3 | totalement, mentalement, brutalement |
+| 127 | /kuʁs/ | ours | pictogramme existant | /uʁs/ | 18.8% | +k (bord) | 2 | course |
+| 128 | /vwaʁ/ | foire | nouvelle piste lexicale | /fwaʁ/ | 8.8% | f→v | 17 | voir, avoir, savoir, pouvoir |
+| 129 | /bablə/ | balai | pictogramme existant | /balɛ/ | 26% | +b (interne), ɛ→ə | 2 | probablement, probable |
+| 130 | /disjɔ̃/ | dossier | pictogramme existant | /dosje/ | 26% | o→i, e→ɔ̃ | 8 | condition, tradition, audition, édition |
+| 131 | /bɔ̃b/ | bonbon | pictogramme existant | /bɔ̃bɔ̃/ | 18.8% | −ɔ̃ (bord) | 1 | bombe |
+| 132 | /tu/ | doux | nouvelle piste lexicale | /du/ | 17.5% | d→t | 22 | toujours, tout, partout, surtout |
+| 133 | /kazjɔ̃/ | camion | pictogramme existant | /kamjɔ̃/ | 18% | m→z | 1 | occasion |
+| 134 | /tɔ̃/ | don | nouvelle piste lexicale | /dɔ̃/ | 17.5% | d→t | 29 | ton, tomber, fiston, bouton |
+| 135 | /kɔʁ/ | gord | nouvelle piste lexicale | /gɔʁ/ | 11.7% | g→k | 18 | encore, accord, corps, accorder |
+| 136 | /teʁjœʁ/ | théière | pictogramme existant | /tejɛʁ/ | 25.8% | +ʁ (interne), ɛ→œ | 1 | intérieur |
+| 137 | /fɔʁma/ | fourmi | pictogramme existant | /fuʁmi/ | 26% | u→ɔ, i→a | 6 | formation, information, informatique, informateur |
+| 138 | /bɔ̃swaʁ/ | baignoire | pictogramme existant | /bɛɲwaʁ/ | 25.8% | ɛ→ɔ̃, ɲ→s | 1 | bonsoir |
+| 139 | /papje/ | panier | pictogramme existant | /panje/ | 18% | n→p | 1 | papier |
+| 140 | /pɑ̃dɑ̃/ | panda | pictogramme existant | /pɑ̃da/ | 12.5% | a→ɑ̃ | 4 | cependant, pendant, indépendant, pendentif |
+| 141 | /mɔ̃stʁ/ | montre | pictogramme existant | /mɔ̃tʁ/ | 18% | +s (interne) | 1 | monstre |
+| 142 | /ɥit/ | huître | pictogramme existant | /ɥitʁ/ | 18.8% | −ʁ (bord) | 1 | huit |
+| 143 | /fɛʁme/ | fourmi | pictogramme existant | /fuʁmi/ | 26% | u→ɛ, i→e | 4 | fermer, enfermer, fermé, refermer |
+| 144 | /sɛlɑ̃/ | sel | pictogramme existant | /sɛl/ | 18.8% | +ɑ̃ (bord) | 1 | excellent |
+| 145 | /vo/ | faux | nouvelle piste lexicale | /fo/ | 17.5% | f→v | 47 | vos, nouveau, voler, cerveau |
+| 146 | /pist/ | poste | pictogramme existant | /pɔst/ | 16.3% | ɔ→i | 1 | piste |
+| 147 | /pys/ | bus | pictogramme existant | /bys/ | 11.7% | b→p | 3 | puce, campus, crépuscule |
+| 148 | /buʒe/ | bougie | pictogramme existant | /buʒi/ | 16.3% | i→e | 1 | bouger |
+| 149 | /puse/ | pousse | pictogramme existant | /pus/ | 18.8% | +e (bord) | 3 | pousser, repousser, poussée |
+| 150 | /klɛ/ | clé | pictogramme existant | /kle/ | 10% | e→ɛ | 3 | clairement, éclairage, éclaireur |
+| 151 | /ply/ | plus | nouvelle piste lexicale | /plys/ | 18.8% | −s (bord) | 5 | plus, plutôt, plusieurs, plutonium |
+| 152 | /ʃe/ | chai | nouvelle piste lexicale | /ʃɛ/ | 15% | ɛ→e | 67 | chercher, marcher, marché, coucher |
+| 153 | /ba/ | pas | nouvelle piste lexicale | /pa/ | 17.5% | p→b | 86 | là-bas, bateau, bas, combat |
+| 154 | /uvɛʁ/ | ver | pictogramme existant | /vɛʁ/ | 18.8% | +u (bord) | 3 | ouverture, ouvert, ouvertement |
+| 155 | /mɛ/ | maye | nouvelle piste lexicale | /me/ | 15% | e→ɛ | 15 | jamais, maison, meilleur, mets |
+| 156 | /ekʁiʁ/ | écrou | pictogramme existant | /ekʁu/ | 28% | u→i, +ʁ (bord) | 2 | écrire, réécrire |
+| 157 | /fɔʁmi/ | fourmi | pictogramme existant | /fuʁmi/ | 13% | u→ɔ | 1 | formidable |
+| 158 | /pal/ | balle | pictogramme existant | /bal/ | 11.7% | b→p | 3 | principal, pâle, municipal |
+| 159 | /mɛʁ/ | merde | nouvelle piste lexicale | /mɛʁd/ | 18.8% | −d (bord) | 24 | merci, mère, mer, grand-mère |
+| 160 | /ʒuʁ/ | chourre | nouvelle piste lexicale | /ʃuʁ/ | 11.7% | ʃ→ʒ | 9 | toujours, jour, bonjour, journée |
+| 161 | /ga/ | cas | nouvelle piste lexicale | /ka/ | 17.5% | k→g | 64 | gars, gagner, gamin, magasin |
+| 162 | /sɛt/ | sainte | nouvelle piste lexicale | /sɛ̃t/ | 16.7% | ɛ̃→ɛ | 10 | cette, cet, sept, cassette |
+| 163 | /siɲa/ | cygne | pictogramme existant | /siɲ/ | 18.8% | +a (bord) | 4 | signature, signaler, assignation, signalement |
+| 164 | /sø/ | se | nouvelle piste lexicale | /sə/ | 20% | ə→ø | 8 | ce, chanceux, chancelier, paresseux |
+| 165 | /aswaʁ/ | rasoir | pictogramme existant | /ʁazwaʁ/ | 18.3% | −ʁ (bord), z→s | 2 | asseoir, assoir |
+| 166 | /fyzi/ | fusée | pictogramme existant | /fyze/ | 16.3% | e→i | 2 | fusil, fusillade |
+| 167 | /siɲe/ | cygne | pictogramme existant | /siɲ/ | 18.8% | +e (bord) | 2 | signer, signé |
+| 168 | /tɑ̃te/ | tente | pictogramme existant | /tɑ̃t/ | 18.8% | +e (bord) | 3 | tenter, contenter, tenté |
+| 169 | /ʒa/ | chat | nouvelle piste lexicale | /ʃa/ | 17.5% | ʃ→ʒ | 12 | jamais, déjà, jaloux, japonais |
+| 170 | /puʁtɑ̃/ | porte | pictogramme existant | /pɔʁt/ | 28% | ɔ→u, +ɑ̃ (bord) | 1 | pourtant |
+| 171 | /syʁ/ | sureau | nouvelle piste lexicale | /syʁo/ | 18.8% | −o (bord) | 31 | sûr, surtout, surprise, sur |
+| 172 | /twal/ | étoile | pictogramme existant | /etwal/ | 15% | −e (bord) | 3 | étoile, toile |
+| 173 | /kuʁiʁ/ | curry | pictogramme existant | /kyʁi/ | 28% | y→u, +ʁ (bord) | 3 | courir, parcourir, secourir |
+| 174 | /pasjɑ̃/ | pansement | pictogramme existant | /pɑ̃smɑ̃/ | 28% | ɑ̃→a, m→j | 3 | patient, impatient, patienter |
+| 175 | /talɑ̃/ | talon | pictogramme existant | /talɔ̃/ | 16.3% | ɔ̃→ɑ̃ | 2 | talent, talentueux |
+| 176 | /ʒɑ̃/ | champ | nouvelle piste lexicale | /ʃɑ̃/ | 17.5% | ʃ→ʒ | 21 | gens, argent, agent, gentil |
+| 177 | /pʁe/ | prêt | nouvelle piste lexicale | /pʁɛ/ | 10% | ɛ→e | 83 | présent, président, impression, présenter |
+| 178 | /ʁəvwaʁ/ | rasoir | pictogramme existant | /ʁazwaʁ/ | 25.8% | a→ə, z→v | 1 | revoir |
+| 179 | /bo/ | peau | nouvelle piste lexicale | /po/ | 17.5% | p→b | 35 | beaucoup, beau, bonheur, beauté |
+| 180 | /ze/ | cé | nouvelle piste lexicale | /se/ | 17.5% | s→z | 85 | poser, excuser, épouser, amuser |
+| 181 | /tœʁ/ | hauteur | nouvelle piste lexicale | /otœʁ/ | 18.8% | −o (bord) | 93 | docteur, inspecteur, directeur, moteur |
+| 182 | /pi/ | by | nouvelle piste lexicale | /bi/ | 17.5% | b→p | 82 | pitié, capitaine, hôpital, épisode |
+| 183 | /ʃape/ | chapeau | pictogramme existant | /ʃapo/ | 16.3% | o→e | 1 | échapper |
+| 184 | /diʁ/ | tir | nouvelle piste lexicale | /tiʁ/ | 11.7% | t→d | 11 | dire, c'est-à-dire, grandir, refroidir |
+| 185 | /sɛʁviʁ/ | cerveau | pictogramme existant | /sɛʁvo/ | 23.3% | o→i, +ʁ (bord) | 1 | servir |
+| 186 | /tʁa/ | drap | nouvelle piste lexicale | /dʁa/ | 11.7% | d→t | 43 | travail, travers, contrat, travailler |
+| 187 | /tyʁ/ | dur | nouvelle piste lexicale | /dyʁ/ | 11.7% | d→t | 52 | voiture, nourriture, nature, futur |
+| 188 | /zɔ̃/ | son | nouvelle piste lexicale | /sɔ̃/ | 17.5% | s→z | 20 | maison, raison, prison, saison |
+| 189 | /konaʁ/ | canard | pictogramme existant | /kanaʁ/ | 13% | a→o | 1 | connard |
+| 190 | /ke/ | quai | nouvelle piste lexicale | /kɛ/ | 15% | ɛ→e | 59 | ok, expliquer, manquer, attaquer |
+| 191 | /bati/ | bateau | pictogramme existant | /bato/ | 16.3% | o→i | 1 | bâtiment |
+| 192 | /do/ | to | nouvelle piste lexicale | /to/ | 17.5% | t→d | 57 | donner, dos, cadeau, dossier |
+| 193 | /pɛʁt/ | porte | pictogramme existant | /pɔʁt/ | 16.3% | ɔ→ɛ | 1 | perte |
+| 194 | /pɑ̃ta/ | panda | pictogramme existant | /pɑ̃da/ | 8.8% | d→t | 1 | pantalon |
+| 195 | /suʁs/ | ours | pictogramme existant | /uʁs/ | 18.8% | +s (bord) | 1 | source |
+| 196 | /pɛʁb/ | herbe | pictogramme existant | /ɛʁb/ | 18.8% | +p (bord) | 1 | superbe |
+| 197 | /dezɔʁ/ | désert | pictogramme existant | /dezɛʁ/ | 13% | ɛ→ɔ | 1 | désormais |
+| 198 | /fi/ | vie | nouvelle piste lexicale | /vi/ | 17.5% | v→f | 85 | finir, difficile, officier, profiter |
+| 199 | /tɛʁ/ | der | nouvelle piste lexicale | /dɛʁ/ | 11.7% | d→t | 82 | terre, militaire, secrétaire, taire |
+| 200 | /ləmɑ̃/ | allemand | nouvelle piste lexicale | /aləmɑ̃/ | 15% | −a (bord) | 47 | seulement, tellement, finalement, totalement |

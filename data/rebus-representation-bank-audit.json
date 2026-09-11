@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.1",
-  "generatedAt": "2026-09-10T20:50:28.234Z",
+  "generatedAt": "2026-09-11T07:59:00.429Z",
   "status": "product_research_mapping",
   "purpose": "SON/SEGMENT -> mots -> images/conventions/compositions -> qualite phonétique -> état visuel",
   "categoryDefinitions": {
@@ -28,31 +28,31 @@
       "soundCount": 66890,
       "A_exactFrenchWord": 28208,
       "B_multipleExactFrenchWords": 6176,
-      "C_exactWordVisualNotReady": 27929,
-      "D_obviousOrReadyPictogram": 252,
+      "C_exactWordVisualNotReady": 27925,
+      "D_obviousOrReadyPictogram": 256,
       "E_lightApproximation": 1742,
-      "F_exactMultiPictogram": 711,
+      "F_exactMultiPictogram": 727,
       "G_letter": 25,
       "H_number": 12,
-      "I_noCurrentReasonableRepresentation": 65757
+      "I_noCurrentReasonableRepresentation": 65736
     },
     "useful": {
       "soundCount": 9491,
       "A_exactFrenchWord": 5741,
       "B_multipleExactFrenchWords": 2562,
-      "C_exactWordVisualNotReady": 5487,
-      "D_obviousOrReadyPictogram": 222,
+      "C_exactWordVisualNotReady": 5483,
+      "D_obviousOrReadyPictogram": 226,
       "E_lightApproximation": 1742,
-      "F_exactMultiPictogram": 170,
+      "F_exactMultiPictogram": 171,
       "G_letter": 23,
       "H_number": 12,
-      "I_noCurrentReasonableRepresentation": 8931
+      "I_noCurrentReasonableRepresentation": 8925
     },
     "visualEvidence": {
-      "imageCount": 222,
-      "metadataAvailableCount": 222,
+      "imageCount": 226,
+      "metadataAvailableCount": 226,
       "strongDesignMetadataCount": 15,
-      "namingReviewPendingCount": 222,
+      "namingReviewPendingCount": 226,
       "namingValidatedCount": 0
     }
   },
@@ -18365,58 +18365,6 @@
           "techniquement",
           "physiquement",
           "jusque-là"
-        ]
-      },
-      {
-        "ipa": "nø",
-        "syllableSpans": [
-          1
-        ],
-        "usefulTargetCount": 6,
-        "usefulWeightedGain": 58.914,
-        "schoolTargetCount": 0,
-        "researchPriorityScore": 563.512,
-        "visualStatus": "exact_word_unreviewed",
-        "categories": {
-          "A_exactFrenchWord": true,
-          "B_multipleExactFrenchWords": false,
-          "C_exactWordVisualNotReady": true,
-          "D_obviousOrReadyPictogram": false,
-          "E_lightApproximation": false,
-          "F_exactMultiPictogram": false,
-          "G_letter": false,
-          "H_number": false,
-          "I_noCurrentReasonableRepresentation": true
-        },
-        "exactWords": [
-          {
-            "word": "noeud",
-            "pos": "NOM",
-            "frequency": 10.56,
-            "syllableCount": 1
-          }
-        ],
-        "nounWords": [
-          {
-            "word": "noeud",
-            "pos": "NOM",
-            "frequency": 10.56,
-            "syllableCount": 1
-          }
-        ],
-        "exactImages": [],
-        "exactImageCombinations": [],
-        "letters": [],
-        "numbers": [],
-        "musicNotes": [],
-        "lightApproximations": [],
-        "usefulExamples": [
-          "noeud",
-          "lumineux",
-          "neutraliser",
-          "neurones",
-          "neurologique",
-          "haineux"
         ]
       },
       {
@@ -44369,6 +44317,108 @@
           "envoi",
           "envoyé"
         ]
+      },
+      {
+        "ipa": "kɔ̃te",
+        "syllableSpans": [
+          2
+        ],
+        "usefulTargetCount": 3,
+        "usefulWeightedGain": 481.342,
+        "schoolTargetCount": 2,
+        "researchPriorityScore": 482.087,
+        "visualStatus": "exact_word_unreviewed",
+        "categories": {
+          "A_exactFrenchWord": true,
+          "B_multipleExactFrenchWords": true,
+          "C_exactWordVisualNotReady": true,
+          "D_obviousOrReadyPictogram": false,
+          "E_lightApproximation": true,
+          "F_exactMultiPictogram": false,
+          "G_letter": false,
+          "H_number": false,
+          "I_noCurrentReasonableRepresentation": true
+        },
+        "exactWords": [
+          {
+            "word": "comté",
+            "pos": "NOM",
+            "frequency": 15.573,
+            "syllableCount": 2
+          },
+          {
+            "word": "compter",
+            "pos": "VER",
+            "frequency": 41.598,
+            "syllableCount": 2
+          },
+          {
+            "word": "conter",
+            "pos": "VER",
+            "frequency": 0.706,
+            "syllableCount": 2
+          }
+        ],
+        "nounWords": [
+          {
+            "word": "comté",
+            "pos": "NOM",
+            "frequency": 15.573,
+            "syllableCount": 2
+          }
+        ],
+        "exactImages": [],
+        "exactImageCombinations": [],
+        "letters": [],
+        "numbers": [],
+        "musicNotes": [],
+        "lightApproximations": [
+          {
+            "word": "condé",
+            "sourceIpa": "kɔ̃de",
+            "tier": "light",
+            "percent": 8.8,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "cotè",
+            "sourceIpa": "kɔte",
+            "tier": "light",
+            "percent": 12.5,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "cotter",
+            "sourceIpa": "kɔte",
+            "tier": "light",
+            "percent": 12.5,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "côté",
+            "sourceIpa": "kote",
+            "tier": "light",
+            "percent": 16.3,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "content",
+            "sourceIpa": "kɔ̃tɑ̃",
+            "tier": "light",
+            "percent": 16.3,
+            "existingAsset": false,
+            "image": null
+          }
+        ],
+        "usefulExamples": [
+          "raconter",
+          "compter",
+          "comté"
+        ]
       }
     ],
     "exactWordVisualBacklog": [
@@ -52187,6 +52237,14 @@
             "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F443.svg"
           },
           {
+            "word": "nœud",
+            "sourceIpa": "nø",
+            "tier": "light",
+            "percent": 20,
+            "existingAsset": true,
+            "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1FAA2.svg"
+          },
+          {
             "word": "nez",
             "sourceIpa": "ne",
             "tier": "light",
@@ -52204,14 +52262,6 @@
           },
           {
             "word": "nait",
-            "sourceIpa": "nɛ",
-            "tier": "light",
-            "percent": 20,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "nay",
             "sourceIpa": "nɛ",
             "tier": "light",
             "percent": 20,
@@ -67240,58 +67290,6 @@
           "techniquement",
           "physiquement",
           "jusque-là"
-        ]
-      },
-      {
-        "ipa": "nø",
-        "syllableSpans": [
-          1
-        ],
-        "usefulTargetCount": 6,
-        "usefulWeightedGain": 58.914,
-        "schoolTargetCount": 0,
-        "researchPriorityScore": 563.512,
-        "visualStatus": "exact_word_unreviewed",
-        "categories": {
-          "A_exactFrenchWord": true,
-          "B_multipleExactFrenchWords": false,
-          "C_exactWordVisualNotReady": true,
-          "D_obviousOrReadyPictogram": false,
-          "E_lightApproximation": false,
-          "F_exactMultiPictogram": false,
-          "G_letter": false,
-          "H_number": false,
-          "I_noCurrentReasonableRepresentation": true
-        },
-        "exactWords": [
-          {
-            "word": "noeud",
-            "pos": "NOM",
-            "frequency": 10.56,
-            "syllableCount": 1
-          }
-        ],
-        "nounWords": [
-          {
-            "word": "noeud",
-            "pos": "NOM",
-            "frequency": 10.56,
-            "syllableCount": 1
-          }
-        ],
-        "exactImages": [],
-        "exactImageCombinations": [],
-        "letters": [],
-        "numbers": [],
-        "musicNotes": [],
-        "lightApproximations": [],
-        "usefulExamples": [
-          "noeud",
-          "lumineux",
-          "neutraliser",
-          "neurones",
-          "neurologique",
-          "haineux"
         ]
       },
       {
@@ -90878,6 +90876,97 @@
           "noirceur",
           "patinoire"
         ]
+      },
+      {
+        "ipa": "asa",
+        "syllableSpans": [
+          2
+        ],
+        "usefulTargetCount": 4,
+        "usefulWeightedGain": 174.428,
+        "schoolTargetCount": 0,
+        "researchPriorityScore": 492.792,
+        "visualStatus": "exact_word_unreviewed",
+        "categories": {
+          "A_exactFrenchWord": true,
+          "B_multipleExactFrenchWords": false,
+          "C_exactWordVisualNotReady": true,
+          "D_obviousOrReadyPictogram": false,
+          "E_lightApproximation": true,
+          "F_exactMultiPictogram": false,
+          "G_letter": false,
+          "H_number": false,
+          "I_noCurrentReasonableRepresentation": true
+        },
+        "exactWords": [
+          {
+            "word": "assa",
+            "pos": "NOM",
+            "frequency": 0.003,
+            "syllableCount": 2
+          }
+        ],
+        "nounWords": [
+          {
+            "word": "assa",
+            "pos": "NOM",
+            "frequency": 0.003,
+            "syllableCount": 2
+          }
+        ],
+        "exactImages": [],
+        "exactImageCombinations": [],
+        "letters": [],
+        "numbers": [],
+        "musicNotes": [],
+        "lightApproximations": [
+          {
+            "word": "asa",
+            "sourceIpa": "aza",
+            "tier": "light",
+            "percent": 11.7,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "asag",
+            "sourceIpa": "aza",
+            "tier": "light",
+            "percent": 11.7,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "assent",
+            "sourceIpa": "asɑ̃",
+            "tier": "light",
+            "percent": 16.7,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "açaï",
+            "sourceIpa": "asaj",
+            "tier": "light",
+            "percent": 18.8,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "yassa",
+            "sourceIpa": "jasa",
+            "tier": "light",
+            "percent": 18.8,
+            "existingAsset": false,
+            "image": null
+          }
+        ],
+        "usefulExamples": [
+          "assassin",
+          "assassinat",
+          "assassiner",
+          "assassiné"
+        ]
       }
     ],
     "reusableLightApproximation": [
@@ -92232,6 +92321,14 @@
             "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F443.svg"
           },
           {
+            "word": "nœud",
+            "sourceIpa": "nø",
+            "tier": "light",
+            "percent": 20,
+            "existingAsset": true,
+            "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1FAA2.svg"
+          },
+          {
             "word": "nez",
             "sourceIpa": "ne",
             "tier": "light",
@@ -92249,14 +92346,6 @@
           },
           {
             "word": "nait",
-            "sourceIpa": "nɛ",
-            "tier": "light",
-            "percent": 20,
-            "existingAsset": false,
-            "image": null
-          },
-          {
-            "word": "nay",
             "sourceIpa": "nɛ",
             "tier": "light",
             "percent": 20,
@@ -95996,6 +96085,119 @@
         "usefulExamples": [
           "regarder",
           "regard"
+        ]
+      },
+      {
+        "ipa": "kute",
+        "syllableSpans": [
+          2
+        ],
+        "usefulTargetCount": 2,
+        "usefulWeightedGain": 434.112,
+        "schoolTargetCount": 2,
+        "researchPriorityScore": 475.39,
+        "visualStatus": "exact_word_unreviewed",
+        "categories": {
+          "A_exactFrenchWord": true,
+          "B_multipleExactFrenchWords": true,
+          "C_exactWordVisualNotReady": true,
+          "D_obviousOrReadyPictogram": false,
+          "E_lightApproximation": true,
+          "F_exactMultiPictogram": false,
+          "G_letter": false,
+          "H_number": false,
+          "I_noCurrentReasonableRepresentation": false
+        },
+        "exactWords": [
+          {
+            "word": "couté",
+            "pos": "NOM",
+            "frequency": 1.054,
+            "syllableCount": 2
+          },
+          {
+            "word": "couter",
+            "pos": "NOM",
+            "frequency": 0.892,
+            "syllableCount": 2
+          },
+          {
+            "word": "coutez",
+            "pos": "NOM",
+            "frequency": 0.139,
+            "syllableCount": 2
+          }
+        ],
+        "nounWords": [
+          {
+            "word": "couté",
+            "pos": "NOM",
+            "frequency": 1.054,
+            "syllableCount": 2
+          },
+          {
+            "word": "couter",
+            "pos": "NOM",
+            "frequency": 0.892,
+            "syllableCount": 2
+          },
+          {
+            "word": "coutez",
+            "pos": "NOM",
+            "frequency": 0.139,
+            "syllableCount": 2
+          }
+        ],
+        "exactImages": [],
+        "exactImageCombinations": [],
+        "letters": [],
+        "numbers": [],
+        "musicNotes": [],
+        "lightApproximations": [
+          {
+            "word": "couteau",
+            "sourceIpa": "kuto",
+            "tier": "light",
+            "percent": 16.3,
+            "existingAsset": true,
+            "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F52A.svg"
+          },
+          {
+            "word": "coutait",
+            "sourceIpa": "kutɛ",
+            "tier": "light",
+            "percent": 7.5,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "coutaient",
+            "sourceIpa": "kutɛ",
+            "tier": "light",
+            "percent": 7.5,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "coutais",
+            "sourceIpa": "kutɛ",
+            "tier": "light",
+            "percent": 7.5,
+            "existingAsset": false,
+            "image": null
+          },
+          {
+            "word": "goûter",
+            "sourceIpa": "gute",
+            "tier": "light",
+            "percent": 8.8,
+            "existingAsset": false,
+            "image": null
+          }
+        ],
+        "usefulExamples": [
+          "écouter",
+          "coûter"
         ]
       },
       {
@@ -118942,6 +119144,84 @@
         ]
       },
       {
+        "ipa": "minø",
+        "syllableSpans": [
+          2
+        ],
+        "usefulTargetCount": 1,
+        "usefulWeightedGain": 8.316,
+        "schoolTargetCount": 0,
+        "researchPriorityScore": 168.446,
+        "visualStatus": "no_exact_visual_lead",
+        "categories": {
+          "A_exactFrenchWord": false,
+          "B_multipleExactFrenchWords": false,
+          "C_exactWordVisualNotReady": false,
+          "D_obviousOrReadyPictogram": false,
+          "E_lightApproximation": false,
+          "F_exactMultiPictogram": true,
+          "G_letter": false,
+          "H_number": false,
+          "I_noCurrentReasonableRepresentation": false
+        },
+        "exactWords": [],
+        "nounWords": [],
+        "exactImages": [],
+        "exactImageCombinations": [
+          [
+            {
+              "id": "syllable-print:mie",
+              "label": "mie",
+              "image": "assets/rebus/mie.svg",
+              "source": "syllable_print_library",
+              "visualEvidence": {
+                "status": "metadata_available",
+                "visualConfidence": 0.78,
+                "labelStability": 0.94,
+                "clinicalStatus": "naming_test_required",
+                "artRevision": "mie-bread-crumb-v1",
+                "namingTestStatus": "not_run",
+                "humanDecision": null,
+                "namingValidated": false,
+                "namingRisks": [
+                  "pain",
+                  "morceau de pain",
+                  "mie de pain"
+                ],
+                "metadataSource": "production_seed",
+                "namingEvidenceSource": "production_naming_reviews"
+              }
+            },
+            {
+              "id": "open-pictogram:noeud",
+              "label": "nœud",
+              "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1FAA2.svg",
+              "source": "open_pictogram_library",
+              "visualEvidence": {
+                "status": "metadata_available",
+                "visualConfidence": 0.9,
+                "labelStability": 0.82,
+                "clinicalStatus": "unreviewed",
+                "artRevision": null,
+                "namingTestStatus": "not_run",
+                "humanDecision": null,
+                "namingValidated": false,
+                "namingRisks": [],
+                "metadataSource": "open_pictogram_library",
+                "namingEvidenceSource": null
+              }
+            }
+          ]
+        ],
+        "letters": [],
+        "numbers": [],
+        "musicNotes": [],
+        "lightApproximations": [],
+        "usefulExamples": [
+          "lumineux"
+        ]
+      },
+      {
         "ipa": "mide",
         "syllableSpans": [
           2
@@ -121383,6 +121663,26 @@
         }
       },
       {
+        "ipa": "kuto",
+        "id": "open-pictogram:couteau",
+        "label": "couteau",
+        "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F52A.svg",
+        "source": "open_pictogram_library",
+        "visualEvidence": {
+          "status": "metadata_available",
+          "visualConfidence": 0.9,
+          "labelStability": 0.82,
+          "clinicalStatus": "unreviewed",
+          "artRevision": null,
+          "namingTestStatus": "not_run",
+          "humanDecision": null,
+          "namingValidated": false,
+          "namingRisks": [],
+          "metadataSource": "open_pictogram_library",
+          "namingEvidenceSource": null
+        }
+      },
+      {
         "ipa": "lyn",
         "id": "open-pictogram:lune",
         "label": "lune",
@@ -122447,6 +122747,26 @@
         }
       },
       {
+        "ipa": "nø",
+        "id": "open-pictogram:noeud",
+        "label": "nœud",
+        "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1FAA2.svg",
+        "source": "open_pictogram_library",
+        "visualEvidence": {
+          "status": "metadata_available",
+          "visualConfidence": 0.9,
+          "labelStability": 0.82,
+          "clinicalStatus": "unreviewed",
+          "artRevision": null,
+          "namingTestStatus": "not_run",
+          "humanDecision": null,
+          "namingValidated": false,
+          "namingRisks": [],
+          "metadataSource": "open_pictogram_library",
+          "namingEvidenceSource": null
+        }
+      },
+      {
         "ipa": "bʁik",
         "id": "open-pictogram:brique",
         "label": "brique",
@@ -122851,6 +123171,26 @@
         "id": "open-pictogram:marteau",
         "label": "marteau",
         "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F528.svg",
+        "source": "open_pictogram_library",
+        "visualEvidence": {
+          "status": "metadata_available",
+          "visualConfidence": 0.9,
+          "labelStability": 0.82,
+          "clinicalStatus": "unreviewed",
+          "artRevision": null,
+          "namingTestStatus": "not_run",
+          "humanDecision": null,
+          "namingValidated": false,
+          "namingRisks": [],
+          "metadataSource": "open_pictogram_library",
+          "namingEvidenceSource": null
+        }
+      },
+      {
+        "ipa": "egɥij",
+        "id": "open-pictogram:aiguille",
+        "label": "aiguille",
+        "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1FAA1.svg",
         "source": "open_pictogram_library",
         "visualEvidence": {
           "status": "metadata_available",
@@ -124331,6 +124671,26 @@
         "id": "open-pictogram:moustique",
         "label": "moustique",
         "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F99F.svg",
+        "source": "open_pictogram_library",
+        "visualEvidence": {
+          "status": "metadata_available",
+          "visualConfidence": 0.9,
+          "labelStability": 0.82,
+          "clinicalStatus": "unreviewed",
+          "artRevision": null,
+          "namingTestStatus": "not_run",
+          "humanDecision": null,
+          "namingValidated": false,
+          "namingRisks": [],
+          "metadataSource": "open_pictogram_library",
+          "namingEvidenceSource": null
+        }
+      },
+      {
+        "ipa": "oliv",
+        "id": "open-pictogram:olive",
+        "label": "olive",
+        "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1FAD2.svg",
         "source": "open_pictogram_library",
         "visualEvidence": {
           "status": "metadata_available",
@@ -134062,6 +134422,14 @@
           "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F443.svg"
         },
         {
+          "word": "nœud",
+          "sourceIpa": "nø",
+          "tier": "light",
+          "percent": 20,
+          "existingAsset": true,
+          "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1FAA2.svg"
+        },
+        {
           "word": "nez",
           "sourceIpa": "ne",
           "tier": "light",
@@ -134079,14 +134447,6 @@
         },
         {
           "word": "nait",
-          "sourceIpa": "nɛ",
-          "tier": "light",
-          "percent": 20,
-          "existingAsset": false,
-          "image": null
-        },
-        {
-          "word": "nay",
           "sourceIpa": "nɛ",
           "tier": "light",
           "percent": 20,
@@ -151096,58 +151456,6 @@
         "techniquement",
         "physiquement",
         "jusque-là"
-      ]
-    },
-    {
-      "ipa": "nø",
-      "syllableSpans": [
-        1
-      ],
-      "usefulTargetCount": 6,
-      "usefulWeightedGain": 58.914,
-      "schoolTargetCount": 0,
-      "researchPriorityScore": 563.512,
-      "visualStatus": "exact_word_unreviewed",
-      "categories": {
-        "A_exactFrenchWord": true,
-        "B_multipleExactFrenchWords": false,
-        "C_exactWordVisualNotReady": true,
-        "D_obviousOrReadyPictogram": false,
-        "E_lightApproximation": false,
-        "F_exactMultiPictogram": false,
-        "G_letter": false,
-        "H_number": false,
-        "I_noCurrentReasonableRepresentation": true
-      },
-      "exactWords": [
-        {
-          "word": "noeud",
-          "pos": "NOM",
-          "frequency": 10.56,
-          "syllableCount": 1
-        }
-      ],
-      "nounWords": [
-        {
-          "word": "noeud",
-          "pos": "NOM",
-          "frequency": 10.56,
-          "syllableCount": 1
-        }
-      ],
-      "exactImages": [],
-      "exactImageCombinations": [],
-      "letters": [],
-      "numbers": [],
-      "musicNotes": [],
-      "lightApproximations": [],
-      "usefulExamples": [
-        "noeud",
-        "lumineux",
-        "neutraliser",
-        "neurones",
-        "neurologique",
-        "haineux"
       ]
     },
     {
@@ -184689,7 +184997,7 @@
         "F_exactMultiPictogram": false,
         "G_letter": false,
         "H_number": false,
-        "I_noCurrentReasonableRepresentation": true
+        "I_noCurrentReasonableRepresentation": false
       },
       "exactWords": [
         {
@@ -184738,6 +185046,14 @@
       "musicNotes": [],
       "lightApproximations": [
         {
+          "word": "couteau",
+          "sourceIpa": "kuto",
+          "tier": "light",
+          "percent": 16.3,
+          "existingAsset": true,
+          "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F52A.svg"
+        },
+        {
           "word": "coutait",
           "sourceIpa": "kutɛ",
           "tier": "light",
@@ -184763,14 +185079,6 @@
         },
         {
           "word": "goûter",
-          "sourceIpa": "gute",
-          "tier": "light",
-          "percent": 8.8,
-          "existingAsset": false,
-          "image": null
-        },
-        {
-          "word": "gouter",
           "sourceIpa": "gute",
           "tier": "light",
           "percent": 8.8,
@@ -274389,94 +274697,6 @@
       ]
     },
     {
-      "ipa": "kuto",
-      "syllableSpans": [
-        2
-      ],
-      "usefulTargetCount": 1,
-      "usefulWeightedGain": 252.075,
-      "schoolTargetCount": 0,
-      "researchPriorityScore": 367.612,
-      "visualStatus": "exact_word_unreviewed",
-      "categories": {
-        "A_exactFrenchWord": true,
-        "B_multipleExactFrenchWords": false,
-        "C_exactWordVisualNotReady": true,
-        "D_obviousOrReadyPictogram": false,
-        "E_lightApproximation": true,
-        "F_exactMultiPictogram": false,
-        "G_letter": false,
-        "H_number": false,
-        "I_noCurrentReasonableRepresentation": true
-      },
-      "exactWords": [
-        {
-          "word": "couteau",
-          "pos": "NOM",
-          "frequency": 50.415,
-          "syllableCount": 2
-        }
-      ],
-      "nounWords": [
-        {
-          "word": "couteau",
-          "pos": "NOM",
-          "frequency": 50.415,
-          "syllableCount": 2
-        }
-      ],
-      "exactImages": [],
-      "exactImageCombinations": [],
-      "letters": [],
-      "numbers": [],
-      "musicNotes": [],
-      "lightApproximations": [
-        {
-          "word": "couté",
-          "sourceIpa": "kute",
-          "tier": "light",
-          "percent": 16.3,
-          "existingAsset": false,
-          "image": null
-        },
-        {
-          "word": "couter",
-          "sourceIpa": "kute",
-          "tier": "light",
-          "percent": 16.3,
-          "existingAsset": false,
-          "image": null
-        },
-        {
-          "word": "catho",
-          "sourceIpa": "kato",
-          "tier": "light",
-          "percent": 16.3,
-          "existingAsset": false,
-          "image": null
-        },
-        {
-          "word": "cato",
-          "sourceIpa": "kato",
-          "tier": "light",
-          "percent": 16.3,
-          "existingAsset": false,
-          "image": null
-        },
-        {
-          "word": "koto",
-          "sourceIpa": "koto",
-          "tier": "light",
-          "percent": 16.3,
-          "existingAsset": false,
-          "image": null
-        }
-      ],
-      "usefulExamples": [
-        "couteau"
-      ]
-    },
-    {
       "ipa": "pʁɔk",
       "syllableSpans": [
         1
@@ -316466,59 +316686,6 @@
       "lightApproximations": [],
       "usefulExamples": [
         "inquiétude"
-      ]
-    },
-    {
-      "ipa": "egɥij",
-      "syllableSpans": [
-        2
-      ],
-      "usefulTargetCount": 1,
-      "usefulWeightedGain": 30.855,
-      "schoolTargetCount": 0,
-      "researchPriorityScore": 341.915,
-      "visualStatus": "exact_word_unreviewed",
-      "categories": {
-        "A_exactFrenchWord": true,
-        "B_multipleExactFrenchWords": true,
-        "C_exactWordVisualNotReady": true,
-        "D_obviousOrReadyPictogram": false,
-        "E_lightApproximation": false,
-        "F_exactMultiPictogram": false,
-        "G_letter": false,
-        "H_number": false,
-        "I_noCurrentReasonableRepresentation": true
-      },
-      "exactWords": [
-        {
-          "word": "aiguille",
-          "pos": "NOM",
-          "frequency": 10.285,
-          "syllableCount": 2
-        },
-        {
-          "word": "aiguilles",
-          "pos": "VER",
-          "frequency": 0.639,
-          "syllableCount": 2
-        }
-      ],
-      "nounWords": [
-        {
-          "word": "aiguille",
-          "pos": "NOM",
-          "frequency": 10.285,
-          "syllableCount": 2
-        }
-      ],
-      "exactImages": [],
-      "exactImageCombinations": [],
-      "letters": [],
-      "numbers": [],
-      "musicNotes": [],
-      "lightApproximations": [],
-      "usefulExamples": [
-        "aiguille"
       ]
     },
     {
@@ -410365,53 +410532,6 @@
       "lightApproximations": [],
       "usefulExamples": [
         "coffret"
-      ]
-    },
-    {
-      "ipa": "oliv",
-      "syllableSpans": [
-        2
-      ],
-      "usefulTargetCount": 1,
-      "usefulWeightedGain": 4,
-      "schoolTargetCount": 0,
-      "researchPriorityScore": 302.849,
-      "visualStatus": "exact_word_unreviewed",
-      "categories": {
-        "A_exactFrenchWord": true,
-        "B_multipleExactFrenchWords": false,
-        "C_exactWordVisualNotReady": true,
-        "D_obviousOrReadyPictogram": false,
-        "E_lightApproximation": false,
-        "F_exactMultiPictogram": false,
-        "G_letter": false,
-        "H_number": false,
-        "I_noCurrentReasonableRepresentation": true
-      },
-      "exactWords": [
-        {
-          "word": "olive",
-          "pos": "NOM",
-          "frequency": 2,
-          "syllableCount": 2
-        }
-      ],
-      "nounWords": [
-        {
-          "word": "olive",
-          "pos": "NOM",
-          "frequency": 2,
-          "syllableCount": 2
-        }
-      ],
-      "exactImages": [],
-      "exactImageCombinations": [],
-      "letters": [],
-      "numbers": [],
-      "musicNotes": [],
-      "lightApproximations": [],
-      "usefulExamples": [
-        "olive"
       ]
     },
     {
@@ -553967,15 +554087,60 @@
         "C_exactWordVisualNotReady": false,
         "D_obviousOrReadyPictogram": false,
         "E_lightApproximation": false,
-        "F_exactMultiPictogram": false,
+        "F_exactMultiPictogram": true,
         "G_letter": false,
         "H_number": false,
-        "I_noCurrentReasonableRepresentation": true
+        "I_noCurrentReasonableRepresentation": false
       },
       "exactWords": [],
       "nounWords": [],
       "exactImages": [],
-      "exactImageCombinations": [],
+      "exactImageCombinations": [
+        [
+          {
+            "id": "syllable-print:mie",
+            "label": "mie",
+            "image": "assets/rebus/mie.svg",
+            "source": "syllable_print_library",
+            "visualEvidence": {
+              "status": "metadata_available",
+              "visualConfidence": 0.78,
+              "labelStability": 0.94,
+              "clinicalStatus": "naming_test_required",
+              "artRevision": "mie-bread-crumb-v1",
+              "namingTestStatus": "not_run",
+              "humanDecision": null,
+              "namingValidated": false,
+              "namingRisks": [
+                "pain",
+                "morceau de pain",
+                "mie de pain"
+              ],
+              "metadataSource": "production_seed",
+              "namingEvidenceSource": "production_naming_reviews"
+            }
+          },
+          {
+            "id": "open-pictogram:noeud",
+            "label": "nœud",
+            "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1FAA2.svg",
+            "source": "open_pictogram_library",
+            "visualEvidence": {
+              "status": "metadata_available",
+              "visualConfidence": 0.9,
+              "labelStability": 0.82,
+              "clinicalStatus": "unreviewed",
+              "artRevision": null,
+              "namingTestStatus": "not_run",
+              "humanDecision": null,
+              "namingValidated": false,
+              "namingRisks": [],
+              "metadataSource": "open_pictogram_library",
+              "namingEvidenceSource": null
+            }
+          }
+        ]
+      ],
       "letters": [],
       "numbers": [],
       "musicNotes": [],
@@ -607479,6 +607644,114 @@
       ]
     },
     {
+      "ipa": "kuto",
+      "syllableSpans": [
+        2
+      ],
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 252.075,
+      "schoolTargetCount": 0,
+      "researchPriorityScore": 0,
+      "visualStatus": "ready_image",
+      "categories": {
+        "A_exactFrenchWord": true,
+        "B_multipleExactFrenchWords": false,
+        "C_exactWordVisualNotReady": false,
+        "D_obviousOrReadyPictogram": true,
+        "E_lightApproximation": true,
+        "F_exactMultiPictogram": false,
+        "G_letter": false,
+        "H_number": false,
+        "I_noCurrentReasonableRepresentation": false
+      },
+      "exactWords": [
+        {
+          "word": "couteau",
+          "pos": "NOM",
+          "frequency": 50.415,
+          "syllableCount": 2
+        }
+      ],
+      "nounWords": [
+        {
+          "word": "couteau",
+          "pos": "NOM",
+          "frequency": 50.415,
+          "syllableCount": 2
+        }
+      ],
+      "exactImages": [
+        {
+          "id": "open-pictogram:couteau",
+          "label": "couteau",
+          "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F52A.svg",
+          "source": "open_pictogram_library",
+          "visualEvidence": {
+            "status": "metadata_available",
+            "visualConfidence": 0.9,
+            "labelStability": 0.82,
+            "clinicalStatus": "unreviewed",
+            "artRevision": null,
+            "namingTestStatus": "not_run",
+            "humanDecision": null,
+            "namingValidated": false,
+            "namingRisks": [],
+            "metadataSource": "open_pictogram_library",
+            "namingEvidenceSource": null
+          }
+        }
+      ],
+      "exactImageCombinations": [],
+      "letters": [],
+      "numbers": [],
+      "musicNotes": [],
+      "lightApproximations": [
+        {
+          "word": "couté",
+          "sourceIpa": "kute",
+          "tier": "light",
+          "percent": 16.3,
+          "existingAsset": false,
+          "image": null
+        },
+        {
+          "word": "couter",
+          "sourceIpa": "kute",
+          "tier": "light",
+          "percent": 16.3,
+          "existingAsset": false,
+          "image": null
+        },
+        {
+          "word": "catho",
+          "sourceIpa": "kato",
+          "tier": "light",
+          "percent": 16.3,
+          "existingAsset": false,
+          "image": null
+        },
+        {
+          "word": "cato",
+          "sourceIpa": "kato",
+          "tier": "light",
+          "percent": 16.3,
+          "existingAsset": false,
+          "image": null
+        },
+        {
+          "word": "koto",
+          "sourceIpa": "koto",
+          "tier": "light",
+          "percent": 16.3,
+          "existingAsset": false,
+          "image": null
+        }
+      ],
+      "usefulExamples": [
+        "couteau"
+      ]
+    },
+    {
       "ipa": "lyn",
       "syllableSpans": [
         1
@@ -611968,6 +612241,78 @@
       ]
     },
     {
+      "ipa": "nø",
+      "syllableSpans": [
+        1
+      ],
+      "usefulTargetCount": 6,
+      "usefulWeightedGain": 58.914,
+      "schoolTargetCount": 0,
+      "researchPriorityScore": 0,
+      "visualStatus": "ready_image",
+      "categories": {
+        "A_exactFrenchWord": true,
+        "B_multipleExactFrenchWords": false,
+        "C_exactWordVisualNotReady": false,
+        "D_obviousOrReadyPictogram": true,
+        "E_lightApproximation": false,
+        "F_exactMultiPictogram": false,
+        "G_letter": false,
+        "H_number": false,
+        "I_noCurrentReasonableRepresentation": false
+      },
+      "exactWords": [
+        {
+          "word": "noeud",
+          "pos": "NOM",
+          "frequency": 10.56,
+          "syllableCount": 1
+        }
+      ],
+      "nounWords": [
+        {
+          "word": "noeud",
+          "pos": "NOM",
+          "frequency": 10.56,
+          "syllableCount": 1
+        }
+      ],
+      "exactImages": [
+        {
+          "id": "open-pictogram:noeud",
+          "label": "nœud",
+          "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1FAA2.svg",
+          "source": "open_pictogram_library",
+          "visualEvidence": {
+            "status": "metadata_available",
+            "visualConfidence": 0.9,
+            "labelStability": 0.82,
+            "clinicalStatus": "unreviewed",
+            "artRevision": null,
+            "namingTestStatus": "not_run",
+            "humanDecision": null,
+            "namingValidated": false,
+            "namingRisks": [],
+            "metadataSource": "open_pictogram_library",
+            "namingEvidenceSource": null
+          }
+        }
+      ],
+      "exactImageCombinations": [],
+      "letters": [],
+      "numbers": [],
+      "musicNotes": [],
+      "lightApproximations": [],
+      "usefulExamples": [
+        "noeud",
+        "lumineux",
+        "neutraliser",
+        "neurones",
+        "neurologique",
+        "haineux"
+      ]
+    },
+    {
       "ipa": "bʁik",
       "syllableSpans": [
         1
@@ -613562,6 +613907,79 @@
       "lightApproximations": [],
       "usefulExamples": [
         "marteau"
+      ]
+    },
+    {
+      "ipa": "egɥij",
+      "syllableSpans": [
+        2
+      ],
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 30.855,
+      "schoolTargetCount": 0,
+      "researchPriorityScore": 0,
+      "visualStatus": "ready_image",
+      "categories": {
+        "A_exactFrenchWord": true,
+        "B_multipleExactFrenchWords": true,
+        "C_exactWordVisualNotReady": false,
+        "D_obviousOrReadyPictogram": true,
+        "E_lightApproximation": false,
+        "F_exactMultiPictogram": false,
+        "G_letter": false,
+        "H_number": false,
+        "I_noCurrentReasonableRepresentation": false
+      },
+      "exactWords": [
+        {
+          "word": "aiguille",
+          "pos": "NOM",
+          "frequency": 10.285,
+          "syllableCount": 2
+        },
+        {
+          "word": "aiguilles",
+          "pos": "VER",
+          "frequency": 0.639,
+          "syllableCount": 2
+        }
+      ],
+      "nounWords": [
+        {
+          "word": "aiguille",
+          "pos": "NOM",
+          "frequency": 10.285,
+          "syllableCount": 2
+        }
+      ],
+      "exactImages": [
+        {
+          "id": "open-pictogram:aiguille",
+          "label": "aiguille",
+          "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1FAA1.svg",
+          "source": "open_pictogram_library",
+          "visualEvidence": {
+            "status": "metadata_available",
+            "visualConfidence": 0.9,
+            "labelStability": 0.82,
+            "clinicalStatus": "unreviewed",
+            "artRevision": null,
+            "namingTestStatus": "not_run",
+            "humanDecision": null,
+            "namingValidated": false,
+            "namingRisks": [],
+            "metadataSource": "open_pictogram_library",
+            "namingEvidenceSource": null
+          }
+        }
+      ],
+      "exactImageCombinations": [],
+      "letters": [],
+      "numbers": [],
+      "musicNotes": [],
+      "lightApproximations": [],
+      "usefulExamples": [
+        "aiguille"
       ]
     },
     {
@@ -618835,6 +619253,73 @@
       ]
     },
     {
+      "ipa": "oliv",
+      "syllableSpans": [
+        2
+      ],
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 4,
+      "schoolTargetCount": 0,
+      "researchPriorityScore": 0,
+      "visualStatus": "ready_image",
+      "categories": {
+        "A_exactFrenchWord": true,
+        "B_multipleExactFrenchWords": false,
+        "C_exactWordVisualNotReady": false,
+        "D_obviousOrReadyPictogram": true,
+        "E_lightApproximation": false,
+        "F_exactMultiPictogram": false,
+        "G_letter": false,
+        "H_number": false,
+        "I_noCurrentReasonableRepresentation": false
+      },
+      "exactWords": [
+        {
+          "word": "olive",
+          "pos": "NOM",
+          "frequency": 2,
+          "syllableCount": 2
+        }
+      ],
+      "nounWords": [
+        {
+          "word": "olive",
+          "pos": "NOM",
+          "frequency": 2,
+          "syllableCount": 2
+        }
+      ],
+      "exactImages": [
+        {
+          "id": "open-pictogram:olive",
+          "label": "olive",
+          "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1FAD2.svg",
+          "source": "open_pictogram_library",
+          "visualEvidence": {
+            "status": "metadata_available",
+            "visualConfidence": 0.9,
+            "labelStability": 0.82,
+            "clinicalStatus": "unreviewed",
+            "artRevision": null,
+            "namingTestStatus": "not_run",
+            "humanDecision": null,
+            "namingValidated": false,
+            "namingRisks": [],
+            "metadataSource": "open_pictogram_library",
+            "namingEvidenceSource": null
+          }
+        }
+      ],
+      "exactImageCombinations": [],
+      "letters": [],
+      "numbers": [],
+      "musicNotes": [],
+      "lightApproximations": [],
+      "usefulExamples": [
+        "olive"
+      ]
+    },
+    {
       "ipa": "ʒiʁaf",
       "syllableSpans": [
         2
@@ -619588,9 +620073,9 @@
   ],
   "productionVisualBoundary": {
     "seedEntryCount": 24,
-    "openLibraryEntryCount": 365,
-    "openLibraryRuntimeAdditionCount": 359,
-    "runtimeLexiconCountBeforeOtherMerges": 383,
+    "openLibraryEntryCount": 369,
+    "openLibraryRuntimeAdditionCount": 363,
+    "runtimeLexiconCountBeforeOtherMerges": 387,
     "shadowedOpenPictogramCount": 6,
     "shadowedOpenPictograms": [
       {

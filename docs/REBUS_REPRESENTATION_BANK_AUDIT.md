@@ -6,7 +6,7 @@
 
 - Sons/fenêtres utiles distincts : 9491.
 - Catalogue exhaustif conservé : 66890 fenêtres sonores distinctes.
-- Pictogrammes OpenMoji agrégés dans la banque : 365.
+- Pictogrammes OpenMoji agrégés dans la banque : 369.
 - Entrées locales historiques/canoniques du seed : 24.
 
 ## Cartographie A–I sur les sons utiles
@@ -15,31 +15,31 @@
 |---|---:|---:|
 | A — mot français exact disponible | 5741 | 60.5% |
 | B — plusieurs mots français exacts | 2562 | 27.0% |
-| C — mot exact mais aucune image prête/évidente | 5487 | 57.8% |
-| D — pictogramme exact déjà prêt | 222 | 2.3% |
+| C — mot exact mais aucune image prête/évidente | 5483 | 57.8% |
+| D — pictogramme exact déjà prêt | 226 | 2.4% |
 | E — approximation légère disponible | 1742 | 18.4% |
-| F — composition exacte de plusieurs pictogrammes | 170 | 1.8% |
+| F — composition exacte de plusieurs pictogrammes | 171 | 1.8% |
 | G — lettre utilisable | 23 | 0.2% |
 | H — chiffre/nombre utilisable | 12 | 0.1% |
-| I — aucune représentation raisonnable actuellement disponible | 8931 | 94.1% |
+| I — aucune représentation raisonnable actuellement disponible | 8925 | 94.0% |
 
 Les catégories se chevauchent volontairement : un son peut avoir plusieurs mots exacts, une image prête et une lettre. La catégorie I est au contraire une frontière opérationnelle conservatrice.
 
 ## Nommabilité : ce qui est réellement connu
 
-- Images exactes utiles recensées dans cette vue : 222.
-- Images avec métadonnées visuelles retrouvées : 222.
+- Images exactes utiles recensées dans cette vue : 226.
+- Images avec métadonnées visuelles retrouvées : 226.
 - Images avec métadonnées de design élevées (confiance et stabilité ≥ 0,85) : 15.
-- Images dont le test de dénomination est explicitement encore à faire : 222.
+- Images dont le test de dénomination est explicitement encore à faire : 226.
 - Images disposant d’une validation humaine explicite de dénomination : 0.
 
 **Important : les scores de confiance/stabilité sont des métadonnées de conception, pas des résultats humains. Rebulo ne les transforme pas en validation de dénomination.**
 
 ## Goulot d’étranglement actuel
 
-- 5487 sons utiles ont déjà au moins un mot français exact mais pas encore d’image prête/évidente : c’est le principal réservoir à curater avant d’inventer davantage d’heuristiques phonétiques.
-- 8931 sons utiles n’ont actuellement aucune route que la banque considère raisonnablement exploitable.
-- 170 sons utiles peuvent déjà être couverts par 2–3 pictogrammes exacts, même sans pictogramme unique.
+- 5483 sons utiles ont déjà au moins un mot français exact mais pas encore d’image prête/évidente : c’est le principal réservoir à curater avant d’inventer davantage d’heuristiques phonétiques.
+- 8925 sons utiles n’ont actuellement aucune route que la banque considère raisonnablement exploitable.
+- 171 sons utiles peuvent déjà être couverts par 2–3 pictogrammes exacts, même sans pictogramme unique.
 - 1742 sons utiles ont au moins une petite approximation dans la file de recherche ; elle reste générale/non stricte.
 
 ## Premiers trous à examiner

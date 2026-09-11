@@ -4,11 +4,11 @@
 
 - Fenêtres phonétiques exactes de 1–2 syllabes inventoriées : 66890.
 - Vocabulaire utile Rebulo utilisé pour la priorité : 8094 cibles sur 14135.
-- Fenêtres avec une image exacte prête : 252.
-- Fenêtres avec une image exacte encore en recherche : 48.
-- Fenêtres sans image prête mais avec au moins un nom exact à examiner : 17120.
+- Fenêtres avec une image exacte prête : 256.
+- Fenêtres avec une image exacte encore en recherche : 47.
+- Fenêtres sans image prête mais avec au moins un nom exact à examiner : 17116.
 - Fenêtres totalement non résolues : 38675.
-- Représentations agrégées : 472, dont 365 pictogrammes de la bibliothèque ouverte et 28 briques courtes existantes.
+- Représentations agrégées : 475, dont 369 pictogrammes de la bibliothèque ouverte et 28 briques courtes existantes.
 
 ## Règles
 
@@ -166,28 +166,28 @@
 | 16 | /gɑ̃/ | 7 | gant | gant |
 | 17 | /wa/ | 5 | oie, ouah | oie, oye |
 | 18 | /ʁɛn/ | 6 | renne, reine | reine, renne, rêne |
-| 19 | /nø/ | 6 | nœud | noeud |
-| 20 | /pat/ | 5 | patte | pâte, patte, pates |
-| 21 | /midi/ | 3 | midi | midi |
-| 22 | /ʁadi/ | 3 | radis | radis |
-| 23 | /ɑ̃s/ | 4 | anse, hanse | anse, hans, hanse |
-| 24 | /ɛl/ | 5 | L, aile | aile, elle |
-| 25 | /majo/ | 2 | maillot | maillot, mayo, mayos |
-| 26 | /altɛʁ/ | 2 | haltères | haltère, alter |
-| 27 | /pus/ | 2 | pousse | pouce, pousse, poucent |
-| 28 | /tiʃœʁt/ | 2 | tee-shirt | t-shirt, tee-shirt |
-| 29 | /sak/ | 1 | sac | sac |
-| 30 | /balɔ̃/ | 1 | ballon | ballon, balon, balons |
-| 31 | /pul/ | 2 | poule | pool, poule, poulent |
-| 32 | /pupe/ | 1 | poupée | poupée |
-| 33 | /bɛzbol/ | 1 | baseball | base-ball, baseballs |
-| 34 | /pak/ | 1 | Pâques | pack, pâque, pâques |
-| 35 | /plaʒ/ | 1 | plage | plage |
-| 36 | /ɔtdɔg/ | 1 | hot-dog | hot-dog, hotdog, hotdogs |
-| 37 | /ɥil/ | 1 | huile | huile |
-| 38 | /flakɔ̃/ | 1 | flacon | flacon |
-| 39 | /ʃɔʁt/ | 1 | short | short, shorte, shortent |
-| 40 | /kɥijɛʁ/ | 0 | cuillère | cuiller, cuillère |
+| 19 | /pat/ | 5 | patte | pâte, patte, pates |
+| 20 | /midi/ | 3 | midi | midi |
+| 21 | /ʁadi/ | 3 | radis | radis |
+| 22 | /ɑ̃s/ | 4 | anse, hanse | anse, hans, hanse |
+| 23 | /ɛl/ | 5 | L, aile | aile, elle |
+| 24 | /majo/ | 2 | maillot | maillot, mayo, mayos |
+| 25 | /altɛʁ/ | 2 | haltères | haltère, alter |
+| 26 | /pus/ | 2 | pousse | pouce, pousse, poucent |
+| 27 | /tiʃœʁt/ | 2 | tee-shirt | t-shirt, tee-shirt |
+| 28 | /sak/ | 1 | sac | sac |
+| 29 | /balɔ̃/ | 1 | ballon | ballon, balon, balons |
+| 30 | /pul/ | 2 | poule | pool, poule, poulent |
+| 31 | /pupe/ | 1 | poupée | poupée |
+| 32 | /bɛzbol/ | 1 | baseball | base-ball, baseballs |
+| 33 | /pak/ | 1 | Pâques | pack, pâque, pâques |
+| 34 | /plaʒ/ | 1 | plage | plage |
+| 35 | /ɔtdɔg/ | 1 | hot-dog | hot-dog, hotdog, hotdogs |
+| 36 | /ɥil/ | 1 | huile | huile |
+| 37 | /flakɔ̃/ | 1 | flacon | flacon |
+| 38 | /ʃɔʁt/ | 1 | short | short, shorte, shortent |
+| 39 | /kɥijɛʁ/ | 0 | cuillère | cuiller, cuillère |
+| 40 | /manɛt/ | 0 | manette | manette, mannette |
 
 ## Nouvelles images — sons exacts avec noms candidats, sans image ni convention existante
 

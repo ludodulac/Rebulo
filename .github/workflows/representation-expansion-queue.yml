@@ -63,12 +63,19 @@ jobs:
         run: |
           git config user.name 'rebulo-analysis-bot'
           git config user.email 'actions@users.noreply.github.com'
+
+          # The landscape workflow can finish after this job's initial checkout/build.
+          # Rebase first, then rebuild so committed expansion artifacts reflect the
+          # latest landscape rather than merely rebasing stale generated content.
+          git fetch origin main
+          git rebase origin/main
+          node scripts/build-representation-expansion-queue.mjs
+          node scripts/build-representation-differential-preselection.mjs
+
           git add data/rebus-representation-expansion-queue.json docs/REBUS_REPRESENTATION_EXPANSION_QUEUE.md data/rebus-representation-differential-preselection.json docs/REBUS_REPRESENTATION_DIFFERENTIAL_PRESELECTION.md
           if git diff --cached --quiet; then
             echo 'No generated changes.'
             exit 0
           fi
           git commit -m 'Refresh representation expansion queue and differential preselection'
-          git fetch origin main
-          git rebase origin/main
           git push origin HEAD:main

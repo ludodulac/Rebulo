@@ -59,7 +59,7 @@ const pronunciationSource=JSON.parse(fs.readFileSync('data/rebus-pronunciation-l
 const smoke=[
   {phrase:'Il mange une olive',id:'olive'},
   {phrase:'Une aiguille tombe par terre',id:'aiguille'},
-  {phrase:'Ce nœud tient la corde',id:'noeud'},
+  {phrase:'Ce noeud tient la corde',id:'noeud'},
   {phrase:'Le couteau coupe le pain',id:'couteau'}
 ];
 const smokeResults=[];

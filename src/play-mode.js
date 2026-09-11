@@ -1,56 +1,52 @@
 import {choosePlayableRebus,playAnswerMatches,safePlayHint} from './play-game.js';
 import {DIFFICULTY_PROFILES,normalizeDifficultyProfile,rebusesForProfile} from './difficulty-profile.js';
-import {generatedPlayableRebuses,mergePlayableCatalog} from './generated-play-catalog.js';
+import {generatedPlayableBankRebuses,generatedPlayableRebuses,mergePlayableCatalog,playCatalogMetrics} from './generated-play-catalog.js';
 import './creator-kind.js';
 
 const PLAY_NOTES_KEY='rebulo-play-test-notes';
 const shell=document.querySelector('.app-shell');
-const createMode=document.querySelector('#createMode');
-const playMode=document.querySelector('#playMode');
-const description=document.querySelector('#modeDescription');
-const tagline=document.querySelector('.product-tagline');
-const arena=document.querySelector('#playArena');
-const creatorResult=document.querySelector('#result');
-const creatorRebus=document.querySelector('#creatorRebus');
-const creatorFeedback=document.querySelector('#creatorFeedback');
-const badge=document.querySelector('.strict-badge');
-const rebusNode=document.querySelector('#playRebus');
-const form=document.querySelector('#playAnswerForm');
-const answer=document.querySelector('#playAnswer');
-const feedback=document.querySelector('#playFeedback');
-const hint=document.querySelector('#playHint');
-const hintButton=document.querySelector('#playHintButton');
-const solutionButton=document.querySelector('#playSolutionButton');
-const newButton=document.querySelector('#playNewButton');
-let catalog=null;let current=null;let notesField=null;let notesStatus=null;
+const createMode=document.querySelector('#createMode');const playMode=document.querySelector('#playMode');const description=document.querySelector('#modeDescription');const tagline=document.querySelector('.product-tagline');const arena=document.querySelector('#playArena');const creatorResult=document.querySelector('#result');const creatorRebus=document.querySelector('#creatorRebus');const creatorFeedback=document.querySelector('#creatorFeedback');const badge=document.querySelector('.strict-badge');const rebusNode=document.querySelector('#playRebus');const form=document.querySelector('#playAnswerForm');const answer=document.querySelector('#playAnswer');const feedback=document.querySelector('#playFeedback');const hint=document.querySelector('#playHint');const hintButton=document.querySelector('#playHintButton');const solutionButton=document.querySelector('#playSolutionButton');const newButton=document.querySelector('#playNewButton');
+let catalog=null;let current=null;let notesField=null;let notesStatus=null;let recentPieceRounds=[];
 if(tagline)tagline.textContent='Joue avec les sons et les mots grâce aux rébus.';
 function currentProfile(){return normalizeDifficultyProfile(shell?.dataset.difficultyProfile||'discovery');}
 function profileCatalog(items=[]){return rebusesForProfile(items,currentProfile());}
 function clearRoundState(){if(answer)answer.value='';if(feedback){feedback.textContent='';feedback.className='feedback';}if(hint){hint.hidden=true;hint.textContent='';}}
 function resetCreatorSurface(){if(creatorResult)creatorResult.hidden=true;if(creatorRebus){creatorRebus.replaceChildren();creatorRebus.classList.remove('phrase-flow');}if(creatorFeedback)creatorFeedback.textContent='';if(shell)shell.dataset.creatorReady='false';if(badge){badge.textContent='✓ Exact';badge.title='Rebulo garde tous les sons';badge.classList.remove('general-badge');}}
-function setMode(mode){const playing=mode==='play';if(shell)shell.dataset.experience=playing?'play':'create';if(createMode){createMode.setAttribute('aria-pressed',String(!playing));createMode.classList.toggle('secondary',playing);}if(playMode){playMode.setAttribute('aria-pressed',String(playing));playMode.classList.toggle('secondary',!playing);}if(description)description.textContent=playing?'Regarde les images, nomme-les à voix haute, puis assemble les sons.':'Choisis Mot ou Phrase, puis transforme ton texte en rébus.';if(arena)arena.hidden=!playing;if(playing)startRound();else resetCreatorSurface();}
+function setMode(mode){const playing=mode==='play';if(shell)shell.dataset.experience=playing?'play':'create';if(createMode){createMode.setAttribute('aria-pressed',String(!playing));createMode.classList.toggle('secondary',playing);}if(playMode){playMode.setAttribute('aria-pressed',String(playing));playMode.classList.toggle('secondary',!playing);}if(description)description.textContent=playing?'Regarde les images, symboles et notes, puis assemble les sons.':'Choisis Mot ou Phrase, puis transforme ton texte en rébus.';if(arena)arena.hidden=!playing;if(playing)startRound();else resetCreatorSurface();}
 async function loadJSON(path){const response=await fetch(path,{cache:'no-store'});if(!response.ok)throw new Error(path);return response.json();}
 async function loadCatalog(){
   if(catalog)return catalog;
-  const [manual,lexicon,coverage]=await Promise.all([
-    loadJSON('data/rebus.json'),
-    loadJSON('data/lexicon-seed.json'),
-    loadJSON('data/coverage-report.json')
-  ]);
-  const generated=generatedPlayableRebuses(coverage,lexicon);
+  const [manual,lexicon,coverage,soundCatalog]=await Promise.all([loadJSON('data/rebus.json'),loadJSON('data/lexicon-seed.json'),loadJSON('data/coverage-report.json'),loadJSON('data/rebus-sound-catalog.json')]);
+  let generated=generatedPlayableBankRebuses(coverage,soundCatalog);
+  if(!generated.length)generated=generatedPlayableRebuses(coverage,lexicon);
   catalog=mergePlayableCatalog(manual,generated);
-  if(shell){shell.dataset.playCatalogSize=String(catalog.length);shell.dataset.generatedPlayCatalogSize=String(generated.length);}
+  if(shell){
+    shell.dataset.playCatalogSize=String(catalog.length);shell.dataset.generatedPlayCatalogSize=String(generated.length);shell.dataset.playBank='representation-bank';
+    for(const profile of Object.keys(DIFFICULTY_PROFILES)){const metrics=playCatalogMetrics(rebusesForProfile(catalog,profile));shell.dataset[`play${profile[0].toUpperCase()}${profile.slice(1)}Size`]=String(metrics.roundCount);}
+  }
   return catalog;
 }
-function renderPiece(piece,index){const box=document.createElement('div');box.className='piece play-piece';const img=document.createElement('img');img.src=piece.image;img.alt=`Indice visuel ${index+1}`;box.appendChild(img);return box;}
-function renderRound(rebus){current=rebus;clearRoundState();if(!current){if(feedback)feedback.textContent='Aucun rébus pour ce niveau pour le moment.';return;}if(rebusNode){rebusNode.replaceChildren();current.pieces.forEach((piece,index)=>{rebusNode.appendChild(renderPiece(piece,index));if(index<current.pieces.length-1){const plus=document.createElement('span');plus.className='plus';plus.textContent='+';rebusNode.appendChild(plus);}});}}
-async function startRound(){try{renderRound(choosePlayableRebus(profileCatalog(await loadCatalog()),current?.id));}catch(error){console.error(error);if(feedback)feedback.textContent='Chargement du jeu impossible.';}}
+function renderPiece(piece,index){
+  const box=document.createElement('div');box.className='piece play-piece';
+  if(piece.kind&&piece.kind!=='image'){
+    box.classList.add('play-convention-piece',`play-${piece.kind}`);const symbol=document.createElement('strong');symbol.className='play-convention-symbol';symbol.textContent=piece.symbol||piece.reading;symbol.setAttribute('aria-label',`${piece.symbol||piece.reading}, se lit ${piece.reading}`);box.appendChild(symbol);return box;
+  }
+  const img=document.createElement('img');img.src=piece.image;img.alt=`Indice visuel ${index+1}`;img.loading='eager';img.decoding='async';box.appendChild(img);return box;
+}
+function pieceKey(piece={}){return piece.id||piece.image||`${piece.kind||'image'}:${piece.symbol||piece.reading||''}`;}
+function chooseDiverseRound(items=[]){
+  const candidates=items.filter(item=>item?.id!==current?.id);if(!candidates.length)return choosePlayableRebus(items,current?.id);
+  const recent=new Set(recentPieceRounds.flat());const scored=candidates.map(item=>{const keys=(item.pieces||[]).map(pieceKey);const repeats=keys.filter(key=>recent.has(key)).length;const newCount=keys.length-repeats;return {item,score:repeats*10-newCount};}).sort((a,b)=>a.score-b.score||Number(b.item.frequency||0)-Number(a.item.frequency||0));
+  const bestScore=scored[0]?.score;const shortlist=scored.filter(entry=>entry.score<=bestScore+1).slice(0,18);return shortlist[Math.floor(Math.random()*shortlist.length)]?.item||scored[0]?.item||null;
+}
+function renderRound(rebus){current=rebus;clearRoundState();if(!current){if(feedback)feedback.textContent='Aucun rébus pour ce niveau pour le moment.';return;}recentPieceRounds.push((current.pieces||[]).map(pieceKey));recentPieceRounds=recentPieceRounds.slice(-6);if(rebusNode){rebusNode.replaceChildren();current.pieces.forEach((piece,index)=>{rebusNode.appendChild(renderPiece(piece,index));if(index<current.pieces.length-1){const plus=document.createElement('span');plus.className='plus';plus.textContent='+';rebusNode.appendChild(plus);}});}}
+async function startRound(){try{renderRound(chooseDiverseRound(profileCatalog(await loadCatalog())));}catch(error){console.error(error);if(feedback)feedback.textContent='Chargement du jeu impossible.';}}
 function syncProfileButtons(){document.querySelectorAll('#difficultyProfiles [data-profile]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.profile===currentProfile())));}
-function installProfileChooser(){if(!arena||document.querySelector('#difficultyProfiles'))return;const wrap=document.createElement('div');wrap.id='difficultyProfiles';wrap.className='difficulty-profiles';wrap.setAttribute('role','group');wrap.setAttribute('aria-label','Niveau de difficulté');Object.values(DIFFICULTY_PROFILES).forEach(profile=>{const button=document.createElement('button');button.type='button';button.className='secondary';button.dataset.profile=profile.id;button.textContent=profile.label;button.addEventListener('click',()=>{if(shell)shell.dataset.difficultyProfile=profile.id;try{localStorage.setItem('rebulo-difficulty-profile',profile.id);}catch{}syncProfileButtons();current=null;startRound();});wrap.appendChild(button);});arena.insertBefore(wrap,arena.children[2]||null);syncProfileButtons();}
+function installProfileChooser(){if(!arena||document.querySelector('#difficultyProfiles'))return;const wrap=document.createElement('div');wrap.id='difficultyProfiles';wrap.className='difficulty-profiles';wrap.setAttribute('role','group');wrap.setAttribute('aria-label','Niveau de difficulté');Object.values(DIFFICULTY_PROFILES).forEach(profile=>{const button=document.createElement('button');button.type='button';button.className='secondary';button.dataset.profile=profile.id;button.textContent=profile.label;button.addEventListener('click',()=>{if(shell)shell.dataset.difficultyProfile=profile.id;try{localStorage.setItem('rebulo-difficulty-profile',profile.id);}catch{}syncProfileButtons();current=null;recentPieceRounds=[];startRound();});wrap.appendChild(button);});arena.insertBefore(wrap,arena.children[2]||null);syncProfileButtons();}
 function saveNotes(){if(!notesField)return;try{localStorage.setItem(PLAY_NOTES_KEY,notesField.value);if(notesStatus)notesStatus.textContent='Notes sauvegardées sur cet appareil.';}catch{if(notesStatus)notesStatus.textContent='Notes visibles ici, mais sauvegarde locale impossible.';}}
 async function copyNotes(){if(!notesField)return;try{await navigator.clipboard.writeText(notesField.value);if(notesStatus)notesStatus.textContent='Notes copiées. Tu peux me les coller ici.';}catch{notesField.select();if(notesStatus)notesStatus.textContent='Sélectionne puis copie les notes pour me les envoyer.';}}
 function installPlayNotes(){if(!arena||document.querySelector('#playNotes'))return;const panel=document.createElement('section');panel.className='play-notes-panel';panel.setAttribute('aria-label','Notes de test');const label=document.createElement('label');label.setAttribute('for','playNotes');label.textContent='Notes pendant le test';notesField=document.createElement('textarea');notesField.id='playNotes';notesField.rows=3;notesField.placeholder='Écris ici ce que tu comprends, ce qui te gêne, ou ce que tu veux que je corrige. Ces notes restent quand tu changes de rébus.';try{notesField.value=localStorage.getItem(PLAY_NOTES_KEY)||'';}catch{}notesField.addEventListener('input',saveNotes);const row=document.createElement('div');row.className='play-notes-actions';const copy=document.createElement('button');copy.type='button';copy.className='secondary';copy.textContent='Copier mes notes';copy.addEventListener('click',copyNotes);notesStatus=document.createElement('span');notesStatus.className='play-notes-status';notesStatus.textContent='Sauvegarde locale automatique.';row.append(copy,notesStatus);panel.append(label,notesField,row);const actions=arena.querySelector('.play-actions');if(actions)actions.insertAdjacentElement('afterend',panel);else arena.appendChild(panel);}
-form?.addEventListener('submit',event=>{event.preventDefault();if(!current)return;const ok=playAnswerMatches(answer?.value||'',current);if(feedback){feedback.textContent=ok?'Bravo ! Tu as trouvé.':'Pas encore. Essaie de nommer les images à voix haute.';feedback.className=`feedback ${ok?'good':'bad'}`;}});
+form?.addEventListener('submit',event=>{event.preventDefault();if(!current)return;const ok=playAnswerMatches(answer?.value||'',current);if(feedback){feedback.textContent=ok?'Bravo ! Tu as trouvé.':'Pas encore. Essaie de nommer les éléments à voix haute.';feedback.className=`feedback ${ok?'good':'bad'}`;}});
 hintButton?.addEventListener('click',()=>{if(!current||!hint)return;hint.textContent=safePlayHint(current);hint.hidden=false;});solutionButton?.addEventListener('click',()=>{if(!current||!feedback)return;feedback.textContent=`Solution : ${current.answer}`;feedback.className='feedback';});newButton?.addEventListener('click',startRound);createMode?.addEventListener('click',()=>setMode('create'));playMode?.addEventListener('click',()=>setMode('play'));
-window.addEventListener('rebulo:agechange',event=>{if(!shell)return;const suggested=event.detail?.profile;if(suggested){shell.dataset.difficultyProfile=suggested;try{localStorage.setItem('rebulo-difficulty-profile',suggested);}catch{}}syncProfileButtons();current=null;if(shell.dataset.experience==='play')startRound();});
+window.addEventListener('rebulo:agechange',event=>{if(!shell)return;const suggested=event.detail?.profile;if(suggested){shell.dataset.difficultyProfile=suggested;try{localStorage.setItem('rebulo-difficulty-profile',suggested);}catch{}}syncProfileButtons();current=null;recentPieceRounds=[];if(shell.dataset.experience==='play')startRound();});
 let storedProfile=null;try{storedProfile=localStorage.getItem('rebulo-difficulty-profile');}catch{}if(shell)shell.dataset.difficultyProfile=normalizeDifficultyProfile(storedProfile||'discovery');installProfileChooser();installPlayNotes();setMode('play');

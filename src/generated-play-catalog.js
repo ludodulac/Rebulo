@@ -1,118 +1,83 @@
 import {normalizeIPA,validateStrictRebus} from './phonetic-engine.js';
+import {decodeSoundCatalog} from './rebus-representation-bank.js';
+import {planRepresentationPaths} from './rebus-representation-paths.js';
 
-const LOW_CONFIDENCE_PLAY_WORDS=new Set([
-  'rara',
-  'pawnee'
-]);
+const LOW_CONFIDENCE_PLAY_WORDS=new Set(['rara','pawnee']);
 
 function normalizeKey(value=''){
   return String(value||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'');
 }
-
 function exactWordKey(value=''){
   return String(value||'').toLocaleLowerCase('fr-FR').normalize('NFC').trim();
 }
-
 function playQuality(row){
-  const word=exactWordKey(row?.word);
-  const frequency=Number(row?.frequency||0);
+  const word=exactWordKey(row?.word);const frequency=Number(row?.frequency||0);
   if(!word||LOW_CONFIDENCE_PLAY_WORDS.has(word)||frequency<1)return 'review_needed';
   return 'default_play';
 }
-
-function difficultyFromPieces(count){
-  if(count>=4)return 3;
-  if(count===3)return 2;
-  return 1;
-}
-
-function minimumAgeFromDifficulty(difficulty){
-  if(difficulty>=3)return 9;
-  if(difficulty===2)return 7;
-  return 5;
-}
-
+function difficultyFromPieces(count){if(count>=5)return 3;if(count>=3)return 2;return 1;}
+function minimumAgeFromDifficulty(difficulty){if(difficulty>=3)return 9;if(difficulty===2)return 7;return 5;}
 function exactAnswerFormsByIpa(coverage={}){
-  const rows=[...(coverage?.constructible||[]),...(coverage?.constructibleMultiPiece||[])];
-  const byIpa=new Map();
-  for(const row of rows){
-    const word=String(row?.word||'').trim();
-    const ipa=normalizeIPA(row?.ipa||'');
-    if(!word||!ipa)continue;
-    if(!byIpa.has(ipa))byIpa.set(ipa,new Map());
-    const forms=byIpa.get(ipa);
-    const key=exactWordKey(word);
-    if(key&&!forms.has(key))forms.set(key,word);
-  }
+  const rows=[...(coverage?.constructible||[]),...(coverage?.constructibleMultiPiece||[])];const byIpa=new Map();
+  for(const row of rows){const word=String(row?.word||'').trim();const ipa=normalizeIPA(row?.ipa||'');if(!word||!ipa)continue;if(!byIpa.has(ipa))byIpa.set(ipa,new Map());const forms=byIpa.get(ipa);const key=exactWordKey(word);if(key&&!forms.has(key))forms.set(key,word);}
   return byIpa;
 }
 
 export function generatedPlayableRebuses(coverage={},lexicon=[]){
-  const rows=Array.isArray(coverage?.constructibleMultiPiece)
-    ?coverage.constructibleMultiPiece
-    :(Array.isArray(coverage?.constructible)?coverage.constructible:[]);
+  const rows=Array.isArray(coverage?.constructibleMultiPiece)?coverage.constructibleMultiPiece:(Array.isArray(coverage?.constructible)?coverage.constructible:[]);
   const activeById=new Map((lexicon||[]).filter(piece=>piece?.active!==false&&piece?.id&&piece?.image).map(piece=>[piece.id,piece]));
-  const answerFormsByIpa=exactAnswerFormsByIpa(coverage);
-  const seenWords=new Set();
-  const rounds=[];
+  const answerFormsByIpa=exactAnswerFormsByIpa(coverage);const seenWords=new Set();const rounds=[];
   for(const row of rows){
-    const decomposition=Array.isArray(row?.decomposition)?row.decomposition:[];
-    if(!row?.word||!row?.ipa||decomposition.length<2||decomposition.length>4)continue;
-    const wordKey=exactWordKey(row.word);
-    if(!wordKey||seenWords.has(wordKey))continue;
-    const pieces=decomposition.map(id=>activeById.get(id)||null);
-    if(pieces.some(piece=>!piece))continue;
-    const strictCandidate={answer:row.word,targetIpa:row.ipa,pieces:pieces.map(piece=>({...piece,reading:piece.label}))};
-    if(!validateStrictRebus(strictCandidate).ok)continue;
-    seenWords.add(wordKey);
-    const difficulty=difficultyFromPieces(pieces.length);
-    const quality=playQuality(row);
-    const acceptedAnswers=[...(answerFormsByIpa.get(normalizeIPA(row.ipa))?.values()||[row.word])];
-    rounds.push({
-      id:`generated-${rounds.length+1}-${normalizeKey(row.word)}`,
-      answer:row.word,
-      acceptedAnswers,
-      targetIpa:row.ipa,
-      minAge:minimumAgeFromDifficulty(difficulty),
-      difficulty,
-      playQuality:quality,
-      presentationStatus:quality==='default_play'?'showcase':'review_needed',
-      source:'coverage-report',
-      generated:true,
-      validation:'strict',
-      frequency:Number(row?.frequency||0),
-      pieces:pieces.map(piece=>({id:piece.id,image:piece.image,reading:piece.label,ipa:piece.ipa})),
-      hint:'Nomme chaque image, puis assemble les sons sans en ajouter ni en retirer.'
-    });
+    const decomposition=Array.isArray(row?.decomposition)?row.decomposition:[];if(!row?.word||!row?.ipa||decomposition.length<2||decomposition.length>4)continue;
+    const wordKey=exactWordKey(row.word);if(!wordKey||seenWords.has(wordKey))continue;const pieces=decomposition.map(id=>activeById.get(id)||null);if(pieces.some(piece=>!piece))continue;
+    const strictCandidate={answer:row.word,targetIpa:row.ipa,pieces:pieces.map(piece=>({...piece,reading:piece.label}))};if(!validateStrictRebus(strictCandidate).ok)continue;
+    seenWords.add(wordKey);const difficulty=difficultyFromPieces(pieces.length);const quality=playQuality(row);const acceptedAnswers=[...(answerFormsByIpa.get(normalizeIPA(row.ipa))?.values()||[row.word])];
+    rounds.push({id:`generated-${rounds.length+1}-${normalizeKey(row.word)}`,answer:row.word,acceptedAnswers,targetIpa:row.ipa,minAge:minimumAgeFromDifficulty(difficulty),difficulty,playQuality:quality,presentationStatus:quality==='default_play'?'showcase':'review_needed',source:'coverage-report',generated:true,validation:'strict',frequency:Number(row?.frequency||0),pieces:pieces.map(piece=>({id:piece.id,image:piece.image,reading:piece.label,ipa:piece.ipa,kind:'image',syllableSpan:1})),hint:'Nomme chaque image, puis assemble les sons sans en ajouter ni en retirer.'});
   }
   return rounds;
 }
 
+function modernBankRows(soundCatalog={}){
+  return decodeSoundCatalog(soundCatalog).filter(row=>row.representations?.some(item=>item.tier==='exact_image_ready'||item.tier==='explicit_visible_convention')).map(row=>({
+    ipa:row.ipa,
+    syllableSpans:row.syllableSpans,
+    exactImageRepresentations:row.representations.filter(item=>item.tier==='exact_image_ready'&&item.image),
+    letters:row.representations.filter(item=>item.kind==='letter_name'||item.kind==='explicit_grapheme_tile').map(item=>item.label),
+    numbers:row.representations.filter(item=>item.kind==='number_symbol').map(item=>item.label),
+    musicNotes:row.representations.filter(item=>item.kind==='music_note'||item.kind==='music_note_tile').map(item=>item.label)
+  }));
+}
+function operationPiece(operation={}){
+  const syllableSpan=Math.max(1,...(operation.syllableSpans||[1]).map(Number).filter(Number.isFinite));
+  if(operation.kind==='image')return {id:operation.id||null,image:operation.image,reading:operation.label,ipa:operation.targetIpa,kind:'image',syllableSpan};
+  return {id:`${operation.kind}:${operation.symbol||operation.label}`,image:null,reading:operation.label,symbol:operation.symbol||operation.label,ipa:operation.targetIpa,kind:operation.kind,syllableSpan};
+}
+function preferredCompleteRoute(routes=[]){
+  const complete=routes.filter(route=>route.complete&&route.operations?.length>=1&&route.operations.length<=6&&route.operations.every(operation=>['exact','exact_convention'].includes(operation.phoneticTier)));
+  return complete.find(route=>route.operations.length>=2)||complete[0]||null;
+}
+
+export function generatedPlayableBankRebuses(coverage={},soundCatalog={}){
+  const rows=Array.isArray(coverage?.constructible)?coverage.constructible:[];const bankRows=modernBankRows(soundCatalog);const answerFormsByIpa=exactAnswerFormsByIpa(coverage);const seenWords=new Set();const rounds=[];
+  for(const row of [...rows].sort((a,b)=>Number(b?.frequency||0)-Number(a?.frequency||0))){
+    const wordKey=exactWordKey(row?.word);if(!wordKey||!row?.ipa||seenWords.has(wordKey))continue;
+    const route=preferredCompleteRoute(planRepresentationPaths(row.ipa,bankRows,{mode:'general',limit:6,maxPieces:6,allowGaps:false}));if(!route)continue;
+    const pieces=route.operations.map(operationPiece);if(pieces.some(piece=>piece.kind==='image'&&!piece.image))continue;
+    seenWords.add(wordKey);const difficulty=difficultyFromPieces(pieces.length);const quality=playQuality(row);const conventionCount=pieces.filter(piece=>piece.kind!=='image').length;const twoSyllablePieceCount=pieces.filter(piece=>piece.syllableSpan>=2).length;
+    rounds.push({id:`bank-${rounds.length+1}-${normalizeKey(row.word)}`,answer:row.word,acceptedAnswers:[...(answerFormsByIpa.get(normalizeIPA(row.ipa))?.values()||[row.word])],targetIpa:row.ipa,minAge:minimumAgeFromDifficulty(difficulty),difficulty,playQuality:quality,presentationStatus:quality==='default_play'?'showcase':'review_needed',source:'representation-bank',generated:true,validation:conventionCount?'exact_with_visible_convention':'strict',frequency:Number(row?.frequency||0),conventionCount,twoSyllablePieceCount,pieces,hint:conventionCount?'Lis aussi les lettres, nombres ou notes comme des sons, puis assemble tout.':'Nomme chaque image, puis assemble les sons sans en ajouter ni en retirer.'});
+  }
+  return rounds;
+}
+
+export function playCatalogMetrics(items=[]){
+  const rounds=items||[];const pieceKeys=new Set();const frequencies=new Map();let twoSyllableRounds=0;let conventionRounds=0;const pieceCounts={one:0,two:0,three:0,fourPlus:0};
+  for(const round of rounds){const count=round.pieces?.length||0;if(count<=1)pieceCounts.one++;else if(count===2)pieceCounts.two++;else if(count===3)pieceCounts.three++;else pieceCounts.fourPlus++;if(round.pieces?.some(piece=>Number(piece.syllableSpan)>=2))twoSyllableRounds++;if(round.pieces?.some(piece=>piece.kind&&piece.kind!=='image'))conventionRounds++;for(const piece of round.pieces||[]){const key=piece.id||piece.image||`${piece.kind}:${piece.symbol||piece.reading}`;pieceKeys.add(key);frequencies.set(key,(frequencies.get(key)||0)+1);}}
+  const topRepresentations=[...frequencies.entries()].sort((a,b)=>b[1]-a[1]).slice(0,10).map(([key,count])=>({key,count,share:rounds.length?count/rounds.length:0}));
+  return {roundCount:rounds.length,answerCount:new Set(rounds.map(item=>exactWordKey(item.answer))).size,representationCount:pieceKeys.size,pieceCounts,twoSyllableRoundCount:twoSyllableRounds,conventionRoundCount:conventionRounds,topRepresentations};
+}
+
 export function mergePlayableCatalog(manual=[],generated=[]){
-  const byAnswer=new Map();
-  for(const item of generated||[]){
-    const key=exactWordKey(item?.answer);
-    if(key&&!byAnswer.has(key))byAnswer.set(key,item);
-  }
-  for(const item of manual||[]){
-    const key=exactWordKey(item?.answer);
-    if(!key||byAnswer.has(key))continue;
-    byAnswer.set(key,item);
-  }
-  const byIpa=new Map();
-  for(const item of byAnswer.values()){
-    const ipa=normalizeIPA(item?.targetIpa||'');
-    if(!ipa)continue;
-    if(!byIpa.has(ipa))byIpa.set(ipa,new Map());
-    const forms=byIpa.get(ipa);
-    for(const form of [item.answer,...(item.acceptedAnswers||[])]){
-      const key=exactWordKey(form);
-      if(key&&!forms.has(key))forms.set(key,form);
-    }
-  }
-  return [...byAnswer.values()].map(item=>{
-    const ipa=normalizeIPA(item?.targetIpa||'');
-    const forms=ipa?byIpa.get(ipa):null;
-    return forms?{...item,acceptedAnswers:[...forms.values()]}:item;
-  });
+  const byAnswer=new Map();for(const item of generated||[]){const key=exactWordKey(item?.answer);if(key&&!byAnswer.has(key))byAnswer.set(key,item);}for(const item of manual||[]){const key=exactWordKey(item?.answer);if(!key||byAnswer.has(key))continue;byAnswer.set(key,item);}
+  const byIpa=new Map();for(const item of byAnswer.values()){const ipa=normalizeIPA(item?.targetIpa||'');if(!ipa)continue;if(!byIpa.has(ipa))byIpa.set(ipa,new Map());const forms=byIpa.get(ipa);for(const form of [item.answer,...(item.acceptedAnswers||[])]){const key=exactWordKey(form);if(key&&!forms.has(key))forms.set(key,form);}}
+  return [...byAnswer.values()].map(item=>{const ipa=normalizeIPA(item?.targetIpa||'');const forms=ipa?byIpa.get(ipa):null;return forms?{...item,acceptedAnswers:[...forms.values()]}:item;});
 }

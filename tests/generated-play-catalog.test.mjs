@@ -8,6 +8,7 @@ const coverage=JSON.parse(fs.readFileSync(new URL('../data/coverage-report.json'
 const lexicon=JSON.parse(fs.readFileSync(new URL('../data/lexicon-seed.json',import.meta.url),'utf8'));
 const manual=JSON.parse(fs.readFileSync(new URL('../data/rebus.json',import.meta.url),'utf8'));
 const soundCatalog=JSON.parse(fs.readFileSync(new URL('../data/rebus-sound-catalog.json',import.meta.url),'utf8'));
+const visibleConventions=JSON.parse(fs.readFileSync(new URL('../data/rebus-visible-conventions.json',import.meta.url),'utf8'));
 const analyzer=fs.readFileSync(new URL('../scripts/analyze-coverage.mjs',import.meta.url),'utf8');
 
 const generated=generatedPlayableRebuses(coverage,lexicon);
@@ -20,7 +21,7 @@ assert.doesNotMatch(analyzer,/constructibleMultiPiece\.slice\(/,'coverage analys
 assert.match(analyzer,/constructibleMultiPiece\s*,\s*missingSounds/,'coverage report must serialize the complete multi-image list');
 for(const word of ['merci','cinéma','parapluie','parasol','délit','tourner'])assert.ok(generated.some(item=>item.answer===word),`${word} should be available from generated strict coverage`);
 
-const modern=generatedPlayableBankRebuses(coverage,soundCatalog);
+const modern=generatedPlayableBankRebuses(coverage,soundCatalog,visibleConventions);
 assert.ok(modern.length>0,'the browser product must expose the modern representation bank');
 assert.ok(modern.every(item=>item.source==='representation-bank'));
 assert.ok(modern.every(item=>item.pieces.length>=1&&item.pieces.length<=6));
@@ -30,6 +31,9 @@ const modernMetrics=playCatalogMetrics(modern);
 const legacyMetrics=playCatalogMetrics(generated);
 assert.ok(modernMetrics.representationCount>legacyMetrics.representationCount,'modern Play must expose more distinct representations than the old coverage-only path');
 assert.ok(modernMetrics.conventionRoundCount>0,'visible conventions must reach actual Play rounds');
+assert.ok(modernMetrics.conventionFamilies.letter>0,'letter-name conventions must reach actual Play rounds');
+assert.ok(modernMetrics.conventionFamilies.number>0,'number conventions must reach actual Play rounds');
+assert.ok(modernMetrics.conventionFamilies.music_note>0,'solfege conventions must reach actual Play rounds');
 assert.ok(modernMetrics.twoSyllableRoundCount>0,'two-syllable pieces must reach actual Play rounds');
 
 const merged=mergePlayableCatalog(manual,modern);

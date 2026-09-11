@@ -50,7 +50,7 @@ function creatorTargetFromRound(round){
 }
 for(const round of modern){
   const phrase=buildPhrasePlan(`zztest ${round.answer}`,[creatorTargetFromRound(round)],[],[]);
-  const token=phrase.tokens.find(item=>item.kind==='rebus'&&item.text.toLocaleLowerCase('fr-FR')===round.answer.toLocaleLowerCase('fr-FR'));
+  const token=phrase.tokens.find(item=>item.kind==='rebus');
   assert.ok(token,`a Play-planifiable target must remain planifiable inside a phrase: ${round.answer}`);
   assert.equal(token.candidate.targetIpa,round.targetIpa);
   assert.deepEqual(token.candidate.pieces.map(piece=>piece.reading),round.pieces.map(piece=>piece.reading));

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.1",
-  "generatedAt": "2026-09-11T07:59:00.429Z",
+  "generatedAt": "2026-09-11T08:13:37.510Z",
   "status": "product_research_mapping",
   "purpose": "SON/SEGMENT -> mots -> images/conventions/compositions -> qualite phonétique -> état visuel",
   "categoryDefinitions": {
@@ -119207,7 +119207,7 @@
                 "humanDecision": null,
                 "namingValidated": false,
                 "namingRisks": [],
-                "metadataSource": "open_pictogram_library",
+                "metadataSource": "production_seed",
                 "namingEvidenceSource": null
               }
             }
@@ -121678,7 +121678,7 @@
           "humanDecision": null,
           "namingValidated": false,
           "namingRisks": [],
-          "metadataSource": "open_pictogram_library",
+          "metadataSource": "production_seed",
           "namingEvidenceSource": null
         }
       },
@@ -122762,7 +122762,7 @@
           "humanDecision": null,
           "namingValidated": false,
           "namingRisks": [],
-          "metadataSource": "open_pictogram_library",
+          "metadataSource": "production_seed",
           "namingEvidenceSource": null
         }
       },
@@ -123202,7 +123202,7 @@
           "humanDecision": null,
           "namingValidated": false,
           "namingRisks": [],
-          "metadataSource": "open_pictogram_library",
+          "metadataSource": "production_seed",
           "namingEvidenceSource": null
         }
       },
@@ -124702,7 +124702,7 @@
           "humanDecision": null,
           "namingValidated": false,
           "namingRisks": [],
-          "metadataSource": "open_pictogram_library",
+          "metadataSource": "production_seed",
           "namingEvidenceSource": null
         }
       },
@@ -554135,7 +554135,7 @@
               "humanDecision": null,
               "namingValidated": false,
               "namingRisks": [],
-              "metadataSource": "open_pictogram_library",
+              "metadataSource": "production_seed",
               "namingEvidenceSource": null
             }
           }
@@ -607696,7 +607696,7 @@
             "humanDecision": null,
             "namingValidated": false,
             "namingRisks": [],
-            "metadataSource": "open_pictogram_library",
+            "metadataSource": "production_seed",
             "namingEvidenceSource": null
           }
         }
@@ -612293,7 +612293,7 @@
             "humanDecision": null,
             "namingValidated": false,
             "namingRisks": [],
-            "metadataSource": "open_pictogram_library",
+            "metadataSource": "production_seed",
             "namingEvidenceSource": null
           }
         }
@@ -613968,7 +613968,7 @@
             "humanDecision": null,
             "namingValidated": false,
             "namingRisks": [],
-            "metadataSource": "open_pictogram_library",
+            "metadataSource": "production_seed",
             "namingEvidenceSource": null
           }
         }
@@ -619305,7 +619305,7 @@
             "humanDecision": null,
             "namingValidated": false,
             "namingRisks": [],
-            "metadataSource": "open_pictogram_library",
+            "metadataSource": "production_seed",
             "namingEvidenceSource": null
           }
         }
@@ -620072,11 +620072,11 @@
     }
   ],
   "productionVisualBoundary": {
-    "seedEntryCount": 24,
+    "seedEntryCount": 28,
     "openLibraryEntryCount": 369,
-    "openLibraryRuntimeAdditionCount": 363,
+    "openLibraryRuntimeAdditionCount": 359,
     "runtimeLexiconCountBeforeOtherMerges": 387,
-    "shadowedOpenPictogramCount": 6,
+    "shadowedOpenPictogramCount": 10,
     "shadowedOpenPictograms": [
       {
         "id": "cle",
@@ -620118,6 +620118,34 @@
         "label": "pluie",
         "ipa": "/plɥi/",
         "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F327.svg",
+        "reason": "seed_id_wins"
+      },
+      {
+        "id": "olive",
+        "label": "olive",
+        "ipa": "/oliv/",
+        "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1FAD2.svg",
+        "reason": "seed_id_wins"
+      },
+      {
+        "id": "aiguille",
+        "label": "aiguille",
+        "ipa": "/egɥij/",
+        "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1FAA1.svg",
+        "reason": "seed_id_wins"
+      },
+      {
+        "id": "noeud",
+        "label": "nœud",
+        "ipa": "/nø/",
+        "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1FAA2.svg",
+        "reason": "seed_id_wins"
+      },
+      {
+        "id": "couteau",
+        "label": "couteau",
+        "ipa": "/kuto/",
+        "image": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F52A.svg",
         "reason": "seed_id_wins"
       }
     ],

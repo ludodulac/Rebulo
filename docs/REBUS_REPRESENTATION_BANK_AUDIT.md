@@ -7,7 +7,7 @@
 - Sons/fenêtres utiles distincts : 9491.
 - Catalogue exhaustif conservé : 66890 fenêtres sonores distinctes.
 - Pictogrammes OpenMoji agrégés dans la banque : 369.
-- Entrées locales historiques/canoniques du seed : 24.
+- Entrées locales historiques/canoniques du seed : 28.
 
 ## Cartographie A–I sur les sons utiles
 
@@ -179,7 +179,7 @@ Les catégories se chevauchent volontairement : un son peut avoir plusieurs mots
 
 ## Pourquoi les anciens dessins apparaissent encore
 
-Le runtime charge d’abord les 24 entrées de `data/lexicon-seed.json`, puis ajoute les vagues OpenMoji. Une entrée OpenMoji dont l’id ou le label existe déjà dans le seed est volontairement ignorée : **le seed gagne**. Il y a actuellement 6 concepts OpenMoji masqués de cette manière. C’est pourquoi remplacer ou ajouter une image dans une autre bibliothèque ne change pas automatiquement le visuel affiché pour un concept déjà présent dans le seed.
+Le runtime charge d’abord les 28 entrées de `data/lexicon-seed.json`, puis ajoute les vagues OpenMoji. Une entrée OpenMoji dont l’id ou le label existe déjà dans le seed est volontairement ignorée : **le seed gagne**. Il y a actuellement 10 concepts OpenMoji masqués de cette manière. C’est pourquoi remplacer ou ajouter une image dans une autre bibliothèque ne change pas automatiquement le visuel affiché pour un concept déjà présent dans le seed.
 
 L’audit local recense 24 SVG de production actifs. Parmi eux, 9 sont encore classés `legacy_or_external` par l’audit de style. Ils ne sont pas supprimés : ils forment une file de migration explicite.
 

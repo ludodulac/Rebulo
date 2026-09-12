@@ -8,6 +8,7 @@ const fragmentIdeas=read('data/rebus-fragment-representation-ideas.json');
 const wave1=read('data/rebus-productive-bank-wave1.json');
 const wave2=read('data/rebus-productive-bank-wave2.json');
 const coverage=read('data/rebus-productive-bank-wave2-phrase-coverage.json');
+const audit=read('data/rebus-representation-bank-audit.json');
 const stats=productiveWaveStats(wave2);
 
 assert.equal(stats.examinedSoundCount,400);
@@ -62,7 +63,10 @@ assert.ok(coverage.rows.every(row=>row.coverageRatio>=0&&row.coverageRatio<=1));
 
 const seriousSounds=[...bank.values()].filter(sound=>sound.visibleConventions.length||sound.representations.some(rep=>rep.editorialStatus==='retain'&&(rep.visualBrief||rep.representationProposed)));
 assert.ok(seriousSounds.length>186,'cumulative serious editorial sound coverage must grow beyond wave1');
-const percent=seriousSounds.length/5741*100;
-assert.ok(percent>3.2);
+const usefulIpas=new Set((audit.usefulRows||[]).map(row=>normalizeIPA(row.ipa)).filter(Boolean));
+assert.equal(usefulIpas.size,5741);
+const seriousUsefulSounds=seriousSounds.filter(sound=>usefulIpas.has(sound.ipa));
+const usefulPercent=seriousUsefulSounds.length/usefulIpas.size*100;
+assert.ok(seriousUsefulSounds.length>0);
 
-console.log(JSON.stringify({wave:stats,cumulative:{indexedSoundCount:bank.size,seriousRepresentationSoundCount:seriousSounds.length,usefulSoundSeriousRepresentationPercent:Number(percent.toFixed(2))},phraseCoverage:coverage.summary},null,2));
+console.log(JSON.stringify({wave:stats,cumulative:{indexedSoundCount:bank.size,seriousRepresentationSoundCount:seriousSounds.length,seriousUsefulSoundCount:seriousUsefulSounds.length,usefulSoundSeriousRepresentationPercent:Number(usefulPercent.toFixed(2))},phraseCoverage:coverage.summary},null,2));

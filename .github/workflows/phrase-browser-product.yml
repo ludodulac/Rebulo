@@ -1,0 +1,78 @@
+name: Phrase browser product
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/phrase-browser-product.yml'
+      - 'src/phrase-mode.js'
+      - 'src/rebus-phrase-phonetics.js'
+      - 'src/rebus-representation-paths.js'
+      - 'phrase-mode.css'
+      - 'tests/phrase-browser-product.e2e.mjs'
+      - 'tests/phrase-runtime-diagnostic.mjs'
+      - 'data/rebus-pronunciation-lexicon.json'
+      - 'data/rebus-sound-catalog.json'
+      - 'data/rebus-visible-conventions.json'
+  push:
+    branches: [main]
+    paths:
+      - 'src/phrase-mode.js'
+      - 'src/rebus-phrase-phonetics.js'
+      - 'src/rebus-representation-paths.js'
+      - 'phrase-mode.css'
+      - 'tests/phrase-browser-product.e2e.mjs'
+      - 'tests/phrase-runtime-diagnostic.mjs'
+      - 'data/rebus-pronunciation-lexicon.json'
+      - 'data/rebus-sound-catalog.json'
+      - 'data/rebus-visible-conventions.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  browser-product:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Internal runtime diagnostic
+        run: node tests/phrase-runtime-diagnostic.mjs
+      - name: Install browser harness
+        run: |
+          npm install --no-save --no-package-lock playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Reproduce currently deployed public product
+        continue-on-error: true
+        env:
+          BASE_URL: https://ludodulac.github.io/Rebulo/
+          OUTPUT_JSON: phrase-browser-public.json
+          CPU_THROTTLE: '4'
+        run: node tests/phrase-browser-product.e2e.mjs
+      - name: Start branch static site
+        run: |
+          python3 -m http.server 4173 >/tmp/rebulo-http.log 2>&1 &
+          for i in {1..20}; do curl -fsS http://127.0.0.1:4173/ >/dev/null && exit 0; sleep 1; done
+          cat /tmp/rebulo-http.log
+          exit 1
+      - name: Verify branch product in browser
+        env:
+          BASE_URL: http://127.0.0.1:4173/
+          OUTPUT_JSON: phrase-browser-branch.json
+          ASSERT_VISIBLE: '1'
+          CPU_THROTTLE: '4'
+        run: node tests/phrase-browser-product.e2e.mjs
+      - name: Upload browser diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phrase-browser-product-diagnostics
+          path: |
+            phrase-runtime-diagnostic.json
+            phrase-browser-public.json
+            phrase-browser-branch.json
+            phrase-browser-product.png
+          if-no-files-found: warn

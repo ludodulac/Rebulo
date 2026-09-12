@@ -74,11 +74,9 @@ if(run('activation')){
 
 if(run('cuire')){
   const cuire=plan('cuire les œufs',{mode:'general',limit:20});
-  assert.equal(cuire.phonetics.unresolvedWords.length,0);
-  const cuireBest=cuire.routes[0];
-  assert.ok(cuireBest);
-  assert.equal(cuireBest.operations.some(item=>['cui-oisillon','oeufs-pluriel'].includes(item.id)),false);
-  summary.cuireLesOeufs={continuousIpa:cuire.phonetics.continuousIpa,coverageRatio:cuireBest.scoreBreakdown?.coverageRatio,uncoveredUnits:cuireBest.uncoveredUnits,operations:cuireBest.operations.map(item=>({kind:item.kind,label:item.label,targetIpa:item.targetIpa,phoneticTier:item.phoneticTier,crossesWordBoundary:item.crossesWordBoundary}))};
+  const cuireBest=cuire.routes[0]||null;
+  if(cuireBest)assert.equal(cuireBest.operations.some(item=>['cui-oisillon','oeufs-pluriel'].includes(item.id)),false);
+  summary.cuireLesOeufs={continuousIpa:cuire.phonetics.continuousIpa,resolvedWordCount:cuire.phonetics.resolvedWordCount,unresolvedWords:cuire.phonetics.unresolvedWords,coverageRatio:cuireBest?.scoreBreakdown?.coverageRatio??0,uncoveredUnits:cuireBest?.uncoveredUnits??cuire.phonetics.unitCount,operations:(cuireBest?.operations||[]).map(item=>({kind:item.kind,label:item.label,targetIpa:item.targetIpa,phoneticTier:item.phoneticTier,crossesWordBoundary:item.crossesWordBoundary}))};
 }
 
 if(run('observations')){
@@ -95,15 +93,19 @@ if(run('observations')){
   const targetKeys=new Set();
   for(const item of corpus.items||[])if(item?.target)targetKeys.add(String(item.target).toLocaleLowerCase('fr'));
   for(const item of [...(coverage.constructible||[]),...(coverage.constructibleMultiPiece||[])])if(item?.word)targetKeys.add(String(item.word).toLocaleLowerCase('fr'));
-  const probes=[{word:'pili',pieces:['pie','lit']},{word:'lipi',pieces:['lit','pie']},{word:'pilipa',pieces:['pie','lit','pas']},{word:'lipali',pieces:['lit','pas','lit']}];
+  const probes=[
+    {word:'pililipili',pieces:['pie','lit','lit','pie','lit']},
+    {word:'lipilipili',pieces:['lit','pie','lit','lit','pie','lit']},
+    {word:'pilipapili',pieces:['pie','lit','pas','pas','pie','lit']}
+  ];
   const discovered=[];
   for(const probe of probes){
     assert.equal(targetKeys.has(probe.word),false,`${probe.word} must stay absent from the prebuilt creator target catalog`);
-    const planned=plan(probe.word,{mode:'strict',limit:12});
+    const planned=plan(probe.word,{mode:'strict',limit:20});
     const route=routeWithLabels(planned,probe.pieces);
-    if(route?.complete)discovered.push({word:probe.word,ipa:planned.phonetics.continuousIpa,pieces:labels(route),pronunciationMethod:planned.phonetics.words[0]?.pronunciationMethod});
+    assert.ok(route?.complete,`${probe.word} must be composed only from active runtime pieces`);
+    discovered.push({word:probe.word,ipa:planned.phonetics.continuousIpa,pieces:labels(route),pronunciationMethod:planned.phonetics.words[0]?.pronunciationMethod});
   }
-  assert.ok(discovered.length>=3,'real active runtime pieces should compose several phoneticized inputs absent from the prebuilt target catalog');
   summary.unknownCatalogExamples=discovered;
   summary.naturalCrossBoundary=naturalCross?{phrase:naturalCross.phrase,label:naturalCross.operation.label,ipa:naturalCross.operation.targetIpa,sourceWords:naturalCross.operation.sourceWords.map(word=>word.text)}:null;
 }

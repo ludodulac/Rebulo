@@ -1,0 +1,32 @@
+name: Build compact browser runtime
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/build-compact-browser-runtime.mjs'
+      - 'src/generated-play-catalog.js'
+      - 'src/rebus-representation-bank.js'
+      - 'src/rebus-representation-paths.js'
+      - 'data/rebus-sound-catalog.json'
+      - 'data/rebus-visible-conventions.json'
+      - 'data/coverage-report.json'
+      - '.github/workflows/build-compact-browser-runtime.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/build-compact-browser-runtime.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rebulo-compact-runtime
+          path: data/rebulo-compact-runtime.json
+          if-no-files-found: error

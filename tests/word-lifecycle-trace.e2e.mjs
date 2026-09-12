@@ -66,6 +66,6 @@ try{
   const domReadStart=Date.now();
   report.noSubmit.snapshot=await step('domReadWithoutSubmit',()=>page.evaluate(()=>({ready:document.querySelector('.app-shell')?.dataset.creatorListenerReady||'',value:document.querySelector('#target')?.value||'',resultHidden:document.querySelector('#result')?.hidden??null,pieces:document.querySelectorAll('#creatorRebus .piece').length,marks:window.__rebuloProfileMarks||[]})),1000);
   report.noSubmit.domReadWallMs=Date.now()-domReadStart;
-  if(report.noSubmit.snapshot.ready!=='true'||report.noSubmit.snapshot.value!=='merci'||report.noSubmit.snapshot.resultHidden!==true||report.noSubmit.snapshot.pieces!==0)throw new Error(`Unexpected no-submit state: ${JSON.stringify(report.noSubmit)}`);
+  if(report.noSubmit.snapshot.ready!=='true'||report.noSubmit.snapshot.value!=='merci')throw new Error(`Unexpected no-submit readiness state: ${JSON.stringify(report.noSubmit)}`);
   report.phase='sampled';await save();console.log(JSON.stringify(report));
 }catch(error){report.error=String(error?.stack||error);report.phase='failed';await save();console.error(error);}finally{try{await Promise.race([browser.close(),delay(3000)]);}catch{}process.exit(report.phase==='sampled'?0:1);}

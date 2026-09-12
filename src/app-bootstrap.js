@@ -8,7 +8,7 @@ import {loadStaticJSON} from './static-json-cache.js';
 
 const nativeFetch=window.fetch.bind(window);let canonicalLexicon=[];
 const creatorForm=document.querySelector('#creatorForm');const creatorShell=document.querySelector('.app-shell');const creatorInput=document.querySelector('#target');const creatorFeedback=document.querySelector('#creatorFeedback');let legacyCreatorListenerReady=false;let pendingWordSubmit=false;
-function isEarlyWordSubmission(){const value=String(creatorInput?.value||'').trim();return !legacyCreatorListenerReady&&creatorShell?.dataset.creatorKind!=='phrase'&&Boolean(value)&&!\s/.test(value);}
+function isEarlyWordSubmission(){const value=String(creatorInput?.value||'').trim();return !legacyCreatorListenerReady&&creatorShell?.dataset.creatorKind!=='phrase'&&Boolean(value)&&!/\s/.test(value);}
 creatorForm?.addEventListener('submit',event=>{if(!isEarlyWordSubmission())return;event.preventDefault();event.stopImmediatePropagation();pendingWordSubmit=true;if(creatorFeedback)creatorFeedback.textContent='Préparation du créateur de mot…';},true);
 function jsonResponse(value){return new Response(JSON.stringify(value),{status:200,headers:{'Content-Type':'application/json'}});}
 function normalizeWord(value=''){return String(value||'').trim().toLocaleLowerCase('fr').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'');}

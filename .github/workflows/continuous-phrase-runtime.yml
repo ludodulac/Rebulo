@@ -1,0 +1,60 @@
+name: Continuous phrase runtime
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/continuous-phrase-runtime.yml'
+      - 'src/phrase-mode.js'
+      - 'src/rebus-phrase-phonetics.js'
+      - 'src/rebus-representation-paths.js'
+      - 'src/generated-play-catalog.js'
+      - 'tests/continuous-phrase-runtime.test.mjs'
+      - 'data/rebus-pronunciation-lexicon.json'
+      - 'data/rebus-sound-catalog.json'
+      - 'data/rebus-visible-conventions.json'
+      - 'data/rebus-fragment-representation-ideas.json'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/continuous-phrase-runtime.yml'
+      - 'src/phrase-mode.js'
+      - 'src/rebus-phrase-phonetics.js'
+      - 'src/rebus-representation-paths.js'
+      - 'src/generated-play-catalog.js'
+      - 'tests/continuous-phrase-runtime.test.mjs'
+      - 'data/rebus-pronunciation-lexicon.json'
+      - 'data/rebus-sound-catalog.json'
+      - 'data/rebus-visible-conventions.json'
+      - 'data/rebus-fragment-representation-ideas.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  runtime:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Core dynamic composition
+        run: node tests/continuous-phrase-runtime.test.mjs core
+      - name: Editorial activation boundary
+        run: node tests/continuous-phrase-runtime.test.mjs activation
+      - name: Cuire les oeufs observation
+        run: node tests/continuous-phrase-runtime.test.mjs cuire
+      - name: Corpus observations and unknown targets
+        run: node tests/continuous-phrase-runtime.test.mjs observations
+      - name: Cached planning performance
+        run: node tests/continuous-phrase-runtime.test.mjs performance
+      - name: Capture combined runtime observation
+        run: node tests/continuous-phrase-runtime.test.mjs all > continuous-phrase-runtime-summary.txt
+      - name: Upload runtime observation
+        uses: actions/upload-artifact@v4
+        with:
+          name: continuous-phrase-runtime-summary
+          path: continuous-phrase-runtime-summary.txt
+          if-no-files-found: error

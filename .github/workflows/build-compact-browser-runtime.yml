@@ -14,17 +14,28 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
       - run: node scripts/build-compact-browser-runtime.mjs
+      - name: Commit generated compact runtime
+        if: github.event_name == 'pull_request'
+        run: |
+          git config user.name rebulo-analysis-bot
+          git config user.email actions@users.noreply.github.com
+          git add data/rebulo-compact-runtime.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Compile compact browser runtime bank"
+          git push origin HEAD:${{ github.head_ref }}
       - uses: actions/upload-artifact@v4
         with:
           name: rebulo-compact-runtime

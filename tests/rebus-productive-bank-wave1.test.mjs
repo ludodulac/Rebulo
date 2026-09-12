@@ -55,4 +55,31 @@ for(const sound of bank.values()){
   }
 }
 
-console.log(JSON.stringify(stats,null,2));
+const retainedStatuses=new Set(['retain','prototype_candidate']);
+const exactRelationKeys=new Set();
+const retainedRelationKeys=new Set();
+const briefRelationKeys=new Set();
+const soundsWithRetainedRepresentation=new Set();
+for(const sound of bank.values()){
+  for(const word of sound.exactWords)exactRelationKeys.add(`${sound.ipa}\u0000${word}`);
+  for(const representation of sound.representations){
+    const key=`${sound.ipa}\u0000${representation.word||representation.representationProposed||''}`;
+    if(retainedStatuses.has(representation.editorialStatus)){
+      retainedRelationKeys.add(key);
+      soundsWithRetainedRepresentation.add(sound.ipa);
+    }
+    if(representation.visualBrief)briefRelationKeys.add(key);
+  }
+}
+const mergedStats={
+  soundCount:bank.size,
+  exactWordRelationCount:exactRelationKeys.size,
+  retainedEditorialRelationCount:retainedRelationKeys.size,
+  soundWithRetainedRepresentationCount:soundsWithRetainedRepresentation.size,
+  visualBriefRelationCount:briefRelationKeys.size
+};
+assert.ok(mergedStats.soundCount>=200);
+assert.ok(mergedStats.retainedEditorialRelationCount>=145);
+assert.ok(mergedStats.visualBriefRelationCount>=145);
+
+console.log(JSON.stringify({wave:stats,merged:mergedStats},null,2));

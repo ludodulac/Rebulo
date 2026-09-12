@@ -7,7 +7,7 @@ const pronunciation={
   rowSchema:['form','ipa','lemma','frequency','pos','source'],
   rows:[
     ['elles','ɛl','elle',900,'PRO','fixture'],['ne','nə','ne',1000,'ADV','fixture'],['sont','sɔ̃','être',1500,'VER','fixture'],['pas','pa','pas',1400,'ADV','fixture'],['cuites','kɥit','cuire',20,'VER','fixture'],['les','le','le',2000,'DET','fixture'],['pâtes','pat','pâte',40,'NOM','fixture'],
-    ['pili','pili','pili',1,'NOM','fixture'],['papa','papa','papa',100,'NOM','fixture'],['merci','mɛʁsi','merci',100,'INT','fixture'],['inside','pata','inside',1,'NOM','fixture'],['foo','pa','foo',1,'NOM','fixture'],['bar','ta','bar',1,'NOM','fixture'],['cuire','kɥiʁ','cuire',100,'VER','fixture'],['œufs','ø','œuf',100,'NOM','fixture']
+    ['papa','papa','papa',100,'NOM','fixture'],['merci','mɛʁsi','merci',100,'INT','fixture'],['inside','pata','inside',1,'NOM','fixture'],['foo','pa','foo',1,'NOM','fixture'],['bar','ta','bar',1,'NOM','fixture'],['cuire','kɥiʁ','cuire',100,'VER','fixture'],['œufs','ø','œuf',100,'NOM','fixture']
   ]
 };
 const lookup=buildPronunciationLookup(pronunciation);
@@ -24,7 +24,12 @@ const bankRows=[
   {ipa:'le',exactImageRepresentations:[],letters:[],numbers:[],musicNotes:[],lightApproximations:[{word:'lait',sourceIpa:'lɛ',tier:'light',percent:15,existingAsset:true,image:'lait.svg'}]}
 ];
 
-// A+B: an unknown target catalog entry can still be phoneticized and composed from active pieces.
+// A+B: pili is absent from the pronunciation fixture and from any target catalog. Existing sound-query rules resolve it to /pili/, then active pieces compose it.
+assert.equal(lookup.has('pili'),false);
+const piliPhonetics=phraseToContinuousIPA('pili',lookup);
+assert.equal(piliPhonetics.complete,true);
+assert.equal(piliPhonetics.continuousIpa,'pili');
+assert.equal(piliPhonetics.words[0].pronunciationMethod,'orthographic_sound_fallback');
 const pili=planPhraseRepresentationPaths('pili',lookup,bankRows,{mode:'strict',limit:5,allowGaps:true});
 assert.equal(pili.status,'routes_found');
 assert.deepEqual(pili.routes[0].operations.filter(item=>item.kind!=='gap').map(item=>item.label),['pie','lit']);
@@ -76,4 +81,4 @@ assert.equal(planned.routes[0].complete,true);
 const cross=planned.routes[0].operations.find(item=>item.id==='cross');
 assert.ok(cross);assert.equal(cross.crossesWordBoundary,true);assert.deepEqual(cross.sourceWords.map(item=>item.text),['pas','cuites']);
 
-console.log('rebus-phrase-phonetics.test.mjs: dynamic pronunciation, internal fragments, cross-word metadata, honest gaps and runtime qualification are protected');
+console.log('rebus-phrase-phonetics.test.mjs: lexical + existing orthographic sound resolution, internal fragments, cross-word metadata, honest gaps and runtime qualification are protected');

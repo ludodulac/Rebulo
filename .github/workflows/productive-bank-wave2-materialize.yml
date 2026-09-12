@@ -1,0 +1,43 @@
+name: Materialize productive bank wave 2
+
+on:
+  push:
+    branches:
+      - productive-bank-wave2-400
+    paths:
+      - '.github/workflows/productive-bank-wave2-materialize.yml'
+      - 'scripts/build-rebus-productive-bank-wave2.mjs'
+      - 'src/rebus-productive-bank.js'
+      - 'data/rebus-productive-bank-wave1.json'
+      - 'data/rebus-representation-expansion-queue.json'
+      - 'data/rebus-representation-differential-preselection.json'
+      - 'data/rebus-representation-curation-batch.json'
+      - 'data/rebus-sound-visual-curation*.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: productive-bank-wave2-400
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build wave 2 and phrase coverage
+        run: node scripts/build-rebus-productive-bank-wave2.mjs
+      - name: Commit generated editorial data
+        run: |
+          git config user.name 'rebulo-analysis-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/rebus-productive-bank-wave2.json data/rebus-productive-bank-wave2-phrase-coverage.json docs/REBUS_PRODUCTIVE_BANK_WAVE2_REPORT.md
+          if git diff --cached --quiet; then
+            echo 'No generated changes.'
+          else
+            git commit -m 'Materialize productive bank wave 2'
+            git push origin HEAD:productive-bank-wave2-400
+          fi

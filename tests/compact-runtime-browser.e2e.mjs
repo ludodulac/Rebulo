@@ -96,18 +96,19 @@ try{
   await step('word.createState',()=>wordPage.waitForFunction(()=>document.querySelector('.app-shell')?.dataset.experience==='create',null,{timeout:5000}),7000);
   await step('word.selectWord',()=>wordPage.evaluate(()=>document.querySelector('[data-creator-kind="word"]')?.click()),8000);
   await step('word.wordState',()=>wordPage.waitForFunction(()=>document.querySelector('.app-shell')?.dataset.creatorKind==='word',null,{timeout:5000}),7000);
+  await step('word.renderCounter',()=>wordPage.evaluate(()=>{window.__rebuloWordRenderCount=0;const resultWord=document.querySelector('#resultWord');if(resultWord)new MutationObserver(()=>{if(!document.querySelector('#result')?.hidden&&document.querySelectorAll('#creatorRebus .piece').length>0)window.__rebuloWordRenderCount+=1;}).observe(resultWord,{childList:true,subtree:true,characterData:true});}),8000);
   await step('word.earlyFill',()=>wordPage.locator('#target').fill('merci'),8000);
   report.productChecks.createWordEarly={readyBeforeSubmit:await step('word.earlyReadySnapshot',()=>wordPage.evaluate(()=>document.querySelector('.app-shell')?.dataset.creatorListenerReady==='true'),8000)};
   const earlySubmitStart=now();
   await step('word.earlySubmit',()=>wordPage.evaluate(()=>document.querySelector('#creatorForm')?.requestSubmit()),8000);
-  await step('word.earlyResult',()=>wordPage.waitForFunction(()=>!document.querySelector('#result')?.hidden&&document.querySelectorAll('#creatorRebus .piece').length>0,null,{timeout:5000}),7000);
-  report.productChecks.createWordEarly={...report.productChecks.createWordEarly,...await step('word.earlySnapshot',()=>wordPage.evaluate(()=>({readyAfterResult:document.querySelector('.app-shell')?.dataset.creatorListenerReady==='true',feedback:document.querySelector('#creatorFeedback')?.textContent?.trim()||'',pieces:[...document.querySelectorAll('#creatorRebus .piece')].map(n=>n.textContent?.trim()||'').filter(Boolean)})),8000),resultVisibleMs:Number((now()-earlySubmitStart).toFixed(2))};
+  await step('word.earlyResult',()=>wordPage.waitForFunction(()=>!document.querySelector('#result')?.hidden&&document.querySelectorAll('#creatorRebus .piece').length>0&&document.querySelector('#resultWord')?.textContent?.trim().toLocaleLowerCase('fr')==='merci',null,{timeout:5000}),7000);
+  report.productChecks.createWordEarly={...report.productChecks.createWordEarly,...await step('word.earlySnapshot',()=>wordPage.evaluate(()=>({readyAfterResult:document.querySelector('.app-shell')?.dataset.creatorListenerReady==='true',feedback:document.querySelector('#creatorFeedback')?.textContent?.trim()||'',resultWord:document.querySelector('#resultWord')?.textContent?.trim()||'',pieces:[...document.querySelectorAll('#creatorRebus .piece')].map(n=>n.textContent?.trim()||'').filter(Boolean),renderCount:Number(window.__rebuloWordRenderCount||0)})),8000),resultVisibleMs:Number((now()-earlySubmitStart).toFixed(2))};
 
   await step('word.normalFill',()=>wordPage.locator('#target').fill('cinéma'),8000);
   const normalSubmitStart=now();
   await step('word.normalSubmit',()=>wordPage.evaluate(()=>document.querySelector('#creatorForm')?.requestSubmit()),8000);
-  await step('word.normalResult',()=>wordPage.waitForFunction(()=>{const pieces=[...document.querySelectorAll('#creatorRebus .piece')].map(n=>n.textContent?.trim().toLowerCase()||'');return !document.querySelector('#result')?.hidden&&pieces.length>=3&&pieces.includes('scie')&&pieces.includes('nez');},null,{timeout:5000}),7000);
-  report.productChecks.createWordNormal={...await step('word.normalSnapshot',()=>wordPage.evaluate(()=>({ready:document.querySelector('.app-shell')?.dataset.creatorListenerReady==='true',pieces:[...document.querySelectorAll('#creatorRebus .piece')].map(n=>n.textContent?.trim()||'').filter(Boolean)})),8000),resultVisibleMs:Number((now()-normalSubmitStart).toFixed(2))};
+  await step('word.normalResult',()=>wordPage.waitForFunction(()=>{const pieces=[...document.querySelectorAll('#creatorRebus .piece')].map(n=>n.textContent?.trim().toLowerCase()||'');return !document.querySelector('#result')?.hidden&&document.querySelector('#resultWord')?.textContent?.trim().toLocaleLowerCase('fr')==='cinéma'&&pieces.length>=3&&pieces.includes('scie')&&pieces.includes('nez');},null,{timeout:5000}),7000);
+  report.productChecks.createWordNormal={...await step('word.normalSnapshot',()=>wordPage.evaluate(()=>({ready:document.querySelector('.app-shell')?.dataset.creatorListenerReady==='true',resultWord:document.querySelector('#resultWord')?.textContent?.trim()||'',pieces:[...document.querySelectorAll('#creatorRebus .piece')].map(n=>n.textContent?.trim()||'').filter(Boolean),renderCount:Number(window.__rebuloWordRenderCount||0)})),8000),resultVisibleMs:Number((now()-normalSubmitStart).toFixed(2))};
   await step('word.resources',()=>collectResources(wordPage,'word'),10000);
   await step('word.close',()=>wordPage.close(),8000);
 
@@ -133,10 +134,14 @@ try{
   assert.deepEqual(merciPapa.pieces.map(p=>p.text),['mer','scie','pas','pas']);
   assert.deepEqual(papa.pieces.map(p=>p.text),['pas','pas']);
   assert.equal(report.productChecks.createWordEarly.readyBeforeSubmit,false,'early Create Word test must submit before the legacy listener is ready');
-  assert.equal(report.productChecks.createWordEarly.readyAfterResult,true,'early Create Word action must be replayed after initialization');
+  assert.equal(report.productChecks.createWordEarly.readyAfterResult,true,'early Create Word action must finish after initialization');
+  assert.equal(report.productChecks.createWordEarly.resultWord.toLocaleLowerCase('fr'),'merci','early Create Word must process the exact submitted text');
   assert.ok(report.productChecks.createWordEarly.pieces.length>0,'early Create Word submit must render pieces');
+  assert.equal(report.productChecks.createWordEarly.renderCount,1,'early Create Word intent must render exactly once');
   assert.equal(report.productChecks.createWordNormal.ready,true,'normal Create Word submit must run after initialization');
+  assert.equal(report.productChecks.createWordNormal.resultWord.toLocaleLowerCase('fr'),'cinéma','normal Create Word must process the submitted text');
   assert.ok(report.productChecks.createWordNormal.pieces.length>=3,'normal Create Word submit must render pieces');
+  assert.equal(report.productChecks.createWordNormal.renderCount,2,'normal submit must add exactly one render after the early render');
   assert.ok(report.productChecks.play.pieceCount>0&&report.productChecks.play.catalogSize>0,'Jouer must render a round');
   assert.equal(report.productChecks.play.bank,'representation-bank');
   assert.ok(report.resources.some(r=>/rebulo-compact-runtime\.json/.test(r.name)),'compact runtime must be loaded');

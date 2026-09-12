@@ -4,7 +4,7 @@ import {writeFile} from 'node:fs/promises';
 const baseUrl=process.env.BASE_URL||'http://127.0.0.1:4173/';
 const output=process.env.OUTPUT_JSON||'word-lifecycle-trace.json';
 const cpuRate=Number(process.env.CPU_THROTTLE||4);
-const report={phase:'start',baseUrl,cpuRate,marks:[],debuggerSamples:[],network:[]};
+const report={phase:'start',baseUrl,cpuRate,marks:[],debuggerSamples:[],network:[],noSubmit:{}};
 async function save(){await writeFile(output,JSON.stringify(report,null,2));}
 const delay=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 async function step(label,fn,timeoutMs=10000){report.phase=`before:${label}`;await save();console.log(`[word-profile] ${report.phase}`);let timer;try{const value=await Promise.race([Promise.resolve().then(fn),new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error(`PROFILE_TIMEOUT ${label} after ${timeoutMs} ms`)),timeoutMs);})]);report.phase=`after:${label}`;await save();console.log(`[word-profile] ${report.phase}`);return value;}finally{clearTimeout(timer);}}
@@ -36,6 +36,7 @@ try{
   await step('selectWord',()=>page.evaluate(()=>{window.__rebuloMark?.('word.select.request');document.querySelector('[data-creator-kind="word"]')?.click();window.__rebuloMark?.('word.select.return');}),4000);
   await step('wordState',()=>page.waitForFunction(()=>document.querySelector('.app-shell')?.dataset.creatorKind==='word',null,{timeout:4000}),6000);
   await step('fillMerci',()=>page.locator('#target').fill('merci'),4000);
+  const fillWallMs=Date.now();
   report.marks=await step('marksAfterFill',()=>page.evaluate(()=>window.__rebuloProfileMarks||[]),4000);
 
   async function interruptSample(label,waitMs){
@@ -60,9 +61,11 @@ try{
 
   await interruptSample('blocked+250ms',250);
   await interruptSample('blocked+750ms',500);
-  await interruptSample('blocked+1750ms',1000);
-  await interruptSample('blocked+3750ms',2000);
-  await interruptSample('blocked+7750ms',4000);
-  await interruptSample('blocked+15750ms',8000);
+  await step('readinessWithoutSubmit',()=>page.waitForFunction(()=>document.querySelector('.app-shell')?.dataset.creatorListenerReady==='true',null,{timeout:5000}),6000);
+  report.noSubmit.readinessWallMs=Date.now()-fillWallMs;
+  const domReadStart=Date.now();
+  report.noSubmit.snapshot=await step('domReadWithoutSubmit',()=>page.evaluate(()=>({ready:document.querySelector('.app-shell')?.dataset.creatorListenerReady||'',value:document.querySelector('#target')?.value||'',resultHidden:document.querySelector('#result')?.hidden??null,pieces:document.querySelectorAll('#creatorRebus .piece').length,marks:window.__rebuloProfileMarks||[]})),1000);
+  report.noSubmit.domReadWallMs=Date.now()-domReadStart;
+  if(report.noSubmit.snapshot.ready!=='true'||report.noSubmit.snapshot.value!=='merci'||report.noSubmit.snapshot.resultHidden!==true||report.noSubmit.snapshot.pieces!==0)throw new Error(`Unexpected no-submit state: ${JSON.stringify(report.noSubmit)}`);
   report.phase='sampled';await save();console.log(JSON.stringify(report));
 }catch(error){report.error=String(error?.stack||error);report.phase='failed';await save();console.error(error);}finally{try{await Promise.race([browser.close(),delay(3000)]);}catch{}process.exit(report.phase==='sampled'?0:1);}

@@ -54,6 +54,7 @@ jobs:
         env:
           BASE_URL: https://ludodulac.github.io/Rebulo/
           OUTPUT_JSON: phrase-browser-public.json
+          ASSERT_VISIBLE: ${{ github.event_name == 'push' && '1' || '0' }}
           CPU_THROTTLE: '4'
         run: node tests/phrase-browser-product.e2e.mjs
       - name: Start branch static site

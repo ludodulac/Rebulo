@@ -1,6 +1,6 @@
 import {choosePlayableRebus,playAnswerMatches,safePlayHint} from './play-game.js';
 import {DIFFICULTY_PROFILES,normalizeDifficultyProfile,rebusesForProfile} from './difficulty-profile.js';
-import {generatedPlayableBankRebuses,generatedPlayableRebuses,mergePlayableCatalog,playCatalogMetrics} from './generated-play-catalog.js';
+import {generatedPlayableRebuses,mergePlayableCatalog,playCatalogMetrics} from './generated-play-catalog.js';
 import {loadStaticJSON} from './static-json-cache.js';
 import './creator-kind.js';
 
@@ -17,8 +17,8 @@ function setMode(mode){const playing=mode==='play';if(shell)shell.dataset.experi
 async function loadJSON(path){return loadStaticJSON(path,{cache:'force-cache'});}
 async function loadCatalog(){
   if(catalog)return catalog;
-  const [manual,lexicon,coverage,soundCatalog,visibleConventions]=await Promise.all([loadJSON('data/rebus.json'),loadJSON('data/lexicon-seed.json'),loadJSON('data/coverage-report.json'),loadJSON('data/rebus-sound-catalog.json'),loadJSON('data/rebus-visible-conventions.json')]);
-  let generated=generatedPlayableBankRebuses(coverage,soundCatalog,visibleConventions);
+  const [manual,lexicon,coverage,compactRuntime]=await Promise.all([loadJSON('data/rebus.json'),loadJSON('data/lexicon-seed.json'),loadJSON('data/coverage-report.json'),loadJSON('data/rebulo-compact-runtime.json')]);
+  let generated=Array.isArray(compactRuntime?.playRebuses)?compactRuntime.playRebuses:[];
   if(!generated.length)generated=generatedPlayableRebuses(coverage,lexicon);
   catalog=mergePlayableCatalog(manual,generated);
   if(shell){shell.dataset.playCatalogSize=String(catalog.length);shell.dataset.generatedPlayCatalogSize=String(generated.length);shell.dataset.playBank='representation-bank';for(const profile of Object.keys(DIFFICULTY_PROFILES)){const metrics=playCatalogMetrics(rebusesForProfile(catalog,profile));shell.dataset[`play${profile[0].toUpperCase()}${profile.slice(1)}Size`]=String(metrics.roundCount);}}

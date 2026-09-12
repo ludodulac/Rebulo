@@ -42,8 +42,10 @@ jobs:
           node-version: '22'
       - name: Core dynamic composition
         run: node tests/continuous-phrase-runtime.test.mjs core
-      - name: Activation boundary and cuire les oeufs
+      - name: Editorial activation boundary
         run: node tests/continuous-phrase-runtime.test.mjs activation
+      - name: Cuire les oeufs observation
+        run: node tests/continuous-phrase-runtime.test.mjs cuire
       - name: Corpus observations and unknown targets
         run: node tests/continuous-phrase-runtime.test.mjs observations
       - name: Cached planning performance

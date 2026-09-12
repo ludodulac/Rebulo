@@ -96,9 +96,11 @@ try{
   await step('word.selectWord',()=>wordPage.evaluate(()=>document.querySelector('[data-creator-kind="word"]')?.click()),8000);
   await step('word.wordState',()=>wordPage.waitForFunction(()=>document.querySelector('.app-shell')?.dataset.creatorKind==='word',null,{timeout:5000}),7000);
   await step('word.fill',()=>wordPage.locator('#target').fill('merci'),8000);
-  await step('word.submit',()=>wordPage.evaluate(()=>document.querySelector('#creatorForm')?.requestSubmit()),8000);
+  const wordSubmitStart=now();
+  await step('word.submit',()=>wordPage.evaluate(()=>{setTimeout(()=>document.querySelector('#creatorForm')?.requestSubmit(),0);return true;}),8000);
   await step('word.result',()=>wordPage.waitForFunction(()=>!document.querySelector('#result')?.hidden&&document.querySelectorAll('#creatorRebus .piece').length>0,null,{timeout:15000}),18000);
-  report.productChecks.createWord=await step('word.snapshot',()=>wordPage.evaluate(()=>({result:document.querySelector('#resultWord')?.textContent?.trim()||'',pieces:[...document.querySelectorAll('#creatorRebus .piece')].map(n=>n.textContent?.trim()||'').filter(Boolean)})),8000);
+  report.productChecks.createWord=await step('word.snapshot',()=>wordPage.evaluate(()=>({result:document.querySelector('#resultWord')?.textContent?.trim()||'',pieces:[...document.querySelectorAll('#creatorRebus .piece')].map(n=>n.textContent?.trim()||'').filter(Boolean),visibleMs:Number(performance.now())})),8000);
+  report.productChecks.createWord.resultVisibleMs=Number((now()-wordSubmitStart).toFixed(2));
   await step('word.resources',()=>collectResources(wordPage,'word'),10000);
   await step('word.close',()=>wordPage.close(),8000);
 

@@ -1,9 +1,9 @@
 # Rebulo — index exhaustif de fragments phonémiques
 
 - Fragments phonémiques uniques (1–8 unités) : 423521.
-- Avec au moins une piste textuelle : 73141.
-- Sans piste textuelle actuelle : 350380.
-- Avec brief éditorial : 18.
+- Avec au moins une piste textuelle : 73143.
+- Sans piste textuelle actuelle : 350378.
+- Avec brief éditorial : 132.
 - Avec convention visible exacte : 46.
 - Avec mot entier exact dans Lexique : 73139.
 
@@ -11,24 +11,138 @@
 
 | IPA | Exemples d’origine | Concepts textuels |
 |---|---|---|
-| /a/ | pas, à, ça, a | A — Lettre A seule, lecture canonique « a ». |
-| /i/ | il, qui, y, oui | I — Lettre I seule, lecture canonique « i ». |
-| /ɛ/ | ai, mais, elle, avec | haie — Une haie de jardin taillée, seule, vue de face, forme végétale immédiatement identifiable. |
-| /d/ | de, d', dans, du | D’ — D suivi d'une apostrophe comme convention graphique explicite. Ne pas confondre avec le nom de lettre /de/ ; usage phonographique à garder séparé pour décision ultérieure. |
-| /de/ | des, déjà, aider, idée | D — La lettre D seule, lisible : lecture canonique du nom de lettre « dé ». |
-| /ʁɛ/ | très, vraiment, vrai, après | raie — Une raie marine isolée, vue clairement de dessus ou de trois-quarts, silhouette très reconnaissable, sans décor parasite.<br>raie — Une grande raie/ligne contrastée au centre d'une surface simple, utilisée seulement si la lecture « raie » reste évidente. |
-| /ɛ̃/ | bien, rien, maintenant, besoin | 1 / un — Tolérance ludique potentielle entre /ɛ̃/ et la convention 1=/œ̃/. Ne jamais traiter comme identité phonétique stricte ; conserver comme relation candidate séparée. |
-| /ka/ | cas, car, capitaine, quatre | K — Lettre K seule, lecture canonique « ka ». |
-| /ø/ | ce, veux, peux, peut | œufs — Deux ou trois œufs clairement visibles ensemble pour imposer le pluriel « œufs » plutôt qu'un œuf isolé.<br>eux — Une main ou un personnage désigne nettement plusieurs personnes regroupées, pour suggérer « eux » ; garder comme concept à tester car la lecture est contextuelle. |
-| /lɛ/ | voulais, problème, plaît, laisse | lait — Un verre de lait blanc accompagné éventuellement d'une petite bouteille de lait, sans autre aliment.<br>laid — Concept lexical exact mais visuellement subjectif et peu stable ; conserver comme possibilité textuelle, ne pas privilégier pour un dessin enfant. |
-| /ɛl/ | elle, quelque, quelqu'un, quel | L — Lettre L seule, lecture canonique « elle ». |
-| /dø/ | deux, dehors, deuxième, la plupart de | 2 — Le chiffre 2 seul, très lisible : lecture canonique « deux ». |
-| /kɥi/ | cuisine, cuisiner, cuir, cuire | cui — Un petit oisillon dans un nid qui pépie ; une bulle sonore « cui » peut rendre explicite l'onomatopée. Concept de rébus sonore, pas preuve de dénomination spontanée. |
-| /pak/ | paquet, impact, pacte, paquets | Pâques — Scène très simple de Pâques avec œufs décorés et symbole saisonnier ; concept exact mais lecture spontanée à vérifier. |
-| /œ̃/ | un, quelqu'un, aucun, l'un | 1 — Le chiffre 1 seul : lecture canonique « un ». Les variantes proches comme « in » restent séparées. |
-| /ɔ̃z/ | onze, gonzesse, bronze, gonzesses | 11 — Le nombre 11 seul : lecture canonique « onze ». |
-| /ɥil/ | celui-là, huile, huiles, tuile | huile — Une bouteille d'huile avec une goutte dorée visible ; éviter tout décor de cuisine inutile. |
-| /zɛd/ | z, schnauzers, schnitzels, trez | Z — Lettre Z seule, lecture canonique « zède ». |
+| /a/ | pas, à, ça, a | A — undefined |
+| /i/ | il, qui, y, oui | I — undefined |
+| /d/ | de, d', dans, du | D’ — undefined |
+| /ə/ | de, je, le, ne | E — undefined |
+| /o/ | au, chose, oh, aussi | eau — undefined<br>O — undefined |
+| /y/ | tu, une, du, plus | U — undefined |
+| /ʁa/ | sera, travail, aura, travailler | rat — undefined |
+| /de/ | des, déjà, aider, idée | D — undefined |
+| /ʁi/ | arrive, pris, mari, arrivé | riz — undefined |
+| /ɛʁ/ | faire, merci, père, personne | air — undefined<br>R — undefined |
+| /ʁɛ/ | très, vraiment, vrai, après | raie — undefined<br>raie — undefined |
+| /ɛ̃/ | bien, rien, maintenant, besoin | 1 / un — undefined |
+| /li/ | police, lit, oublié, livre | lit — undefined |
+| /te/ | été, tes, rester, côté | thé — undefined<br>T — undefined |
+| /ka/ | cas, car, capitaine, quatre | K — undefined |
+| /si/ | si, ici, aussi, merci | scie — undefined |
+| /pa/ | pas, par, parler, parce que | pas — undefined |
+| /mi/ | famille, ami, amis, minutes | mie — undefined |
+| /ʁɔ̃/ | patron, environ, seront, serons | rond — undefined |
+| /ø/ | ce, veux, peux, peut | œufs — undefined<br>eux — undefined |
+| /œʁ/ | leur, heure, heures, coeur | heure — undefined |
+| /ni/ | venir, fini, ni, revenir | nid — undefined |
+| /ne/ | donner, donné, venez, années | nez — undefined |
+| /il/ | il, ils, ville, facile | île — undefined |
+| /ba/ | là-bas, probablement, battre, bateau | bas — undefined |
+| /lɛ/ | voulais, problème, plaît, laisse | laid — undefined |
+| /pi/ | capitaine, hôpital, pire, stupide | pie — undefined |
+| /pɛ/ | père, personne, appelle, super | paix — undefined |
+| /ɛl/ | elle, quelque, quelqu'un, quel | aile — undefined<br>L — undefined |
+| /pe/ | pays, payer, occuper, récupérer | P — undefined |
+| /ɛn/ | semaine, capitaine, peine, semaines | N — undefined |
+| /sɑ̃/ | sans, sang, ensemble, sens | 100 — undefined<br>sang — undefined |
+| /tɛʁ/ | terre, terminé, terrible, terrain | terre — undefined |
+| /ʒi/ | agit, imagine, énergie, magie | J — undefined |
+| /po/ | police, propos, possible, suppose | pot — undefined<br>peau — undefined |
+| /ku/ | beaucoup, coup, écoute, écoutez | cou — undefined |
+| /bu/ | boulot, bout, debout, bouge | boue — undefined |
+| /pɛʁ/ | père, personne, super, perdu | père — undefined |
+| /ʁu/ | trouver, trouvé, trouve, route | roue — undefined |
+| /dis/ | disparu, dix, discuter, discours | 10 — undefined |
+| /ʃa/ | chaque, chacun, chat, chapeau | chat — undefined |
+| /ve/ | avez, savez, pouvez, trouver | V — undefined |
+| /vɛʁ/ | vers, verre, anniversaire, travers | verre — undefined<br>vert — undefined |
+| /so/ | sauver, sauf, absolument, soleil | seau — undefined<br>saut — undefined |
+| /be/ | bébé, tomber, tombé, b | B — undefined |
+| /vɑ̃/ | avant, devant, souvent, vendre | vent — undefined |
+| /pɑ̃/ | pense, pendant, pensais, penses | paon — undefined |
+| /do/ | donner, donné, d'autres, dollars | dos — undefined |
+| /dɑ̃/ | dans, pendant, président, accident | dent — undefined |
+| /fil/ | film, films, fil, file | fil — undefined |
+| /lu/ | jaloux, loup, clown, jalouse | loup — undefined |
+| /fu/ | fou, fous, foutre, fout | fou — undefined |
+| /pɔ̃/ | réponse, répondre, responsable, réponds | pont — undefined |
+| /fɛʁ/ | faire, affaire, affaires, ferme | fer — undefined |
+| /mɛʁ/ | merci, mère, merde, mer | mer — undefined<br>mère — undefined |
+| /ɛm/ | vraiment, même, aime, problème | M — undefined |
+| /sis/ | six, système, assistant, assistante | 6 — undefined |
+| /bʁa/ | bras, embrasser, bravo, embrasse | bras — undefined |
+| /dʁa/ | faudra, viendra, prendra, reviendra | drap — undefined |
+| /sœʁ/ | soeur, professeur, ascenseur, soeurs | sœur — undefined |
+| /bɑ̃/ | banque, bande, abandonner, abandonné | banc — undefined |
+| /sɛl/ | excellent, celle-là, celle-ci, celles | sel — undefined |
+| /pɛ̃/ | copain, pain, peinture, lapin | pain — undefined<br>pin — undefined |
+| /gɑ̃/ | gang, gants, gant, gangs | gant — undefined |
+| /dø/ | deux, dehors, deuxième, la plupart de | 2 — undefined |
+| /ɥit/ | suite, ensuite, huit, fuite | 8 — undefined |
+| /kle/ | clé, clés, nucléaire, clef | clé — undefined |
+| /vɛ̃/ | vin, convaincre, convaincu, vingt | 20 — undefined |
+| /ble/ | blessé, blesser, blessure, blessures | blé — undefined |
+| /kɥi/ | cuisine, cuisiner, cuir, cuire | cui — undefined |
+| /ʃu/ | chou, échoue, caoutchouc, choux | chou — undefined |
+| /mɛ̃/ | maintenant, demain, main, mains | main — undefined |
+| /pak/ | paquet, impact, pacte, paquets | Pâques — undefined |
+| /vil/ | ville, village, villes, civilisation | ville — undefined |
+| /pɥi/ | depuis, puis, puisse, puisque | puits — undefined |
+| /flœʁ/ | fleurs, fleur, flirter, fleuriste | fleur — undefined |
+| /kœʁ/ | coeur, coeurs, vainqueur, choeur | cœur — undefined |
+| /pɛl/ | appelle, rappelle, appel, appelles | pelle — undefined |
+| /ʒø/ | jeu, jeux, jeudi, courageux | jeu — undefined |
+| /sɛt/ | cette, cet, sept, c'est-à-dire | 7 — undefined |
+| /katʁ/ | quatre, quatrième, cicatrice, cicatrices | 4 — undefined |
+| /dɛ̃/ | dingue, jardin, soudain, dinde | daim — undefined |
+| /sɛ̃k/ | cinq, synchro, cinquante, cinquième | 5 — undefined |
+| /nɥi/ | nuit, ennuis, minuit, nuits | nuit — undefined |
+| /œ̃/ | un, quelqu'un, aucun, l'un | 1 — undefined |
+| /kø/ | queue, tandis que, queues, visqueux | queue — undefined |
+| /bɛ̃/ | bain, ben, bains, rabbin | bain — undefined |
+| /fø/ | feu, feux, couvre-feu, coiffeuse | feu — undefined |
+| /ɔ̃z/ | onze, gonzesse, bronze, gonzesses | 11 — undefined |
+| /tʁwa/ | trois, troisième, étroit, détroit | 3 — undefined |
+| /piʁat/ | pirates, pirate, piraté, pirater | pirate — undefined |
+| /kwɛ̃/ | coin, coincé, coincée, coincer | coin — undefined |
+| /ɥil/ | celui-là, huile, huiles, tuile | huile — undefined |
+| /wazo/ | oiseau, oiseaux, empoisonné, empoisonner | oiseau — undefined |
+| /tomat/ | automatique, tomates, tomate, automatiquement | tomate — undefined |
+| /moto/ | moto, motos, pneumothorax, motoneige | moto — undefined |
+| /avjɔ̃/ | avion, avions, savions, porte-avions | avion — undefined |
+| /bato/ | bateau, bateaux, bâtonnets, bâtonnet | bateau — undefined |
+| /banan/ | banane, bananes, banana, bananier | banane — undefined |
+| /butɛj/ | bouteille, bouteilles, embouteillages, embouteillage | bouteille — undefined |
+| /kaʁɔt/ | carottes, carotte, carotidien, carotidienne | carotte — undefined |
+| /nœf/ | neuf, neufs, dix-neuf, vingt-neuf | 9 — undefined |
+| /oʁɑ̃ʒ/ | orange, oranges, oranger, orangeade | orange — undefined |
+| /ʃapo/ | chapeau, chapeaux, chapeaute, chapeauté | chapeau — undefined |
+| /oʁaʒ/ | hémorragie, orage, forage, orages | orage — undefined |
+| /kado/ | cadeau, cadeaux, mikado, chèque-cadeau | cadeau — undefined |
+| /pwasɔ̃/ | poisson, poissons, poisson-chat, poissons-chats | poisson — undefined |
+| /balɔ̃/ | ballon, ballons, emballons, déballons | ballon — undefined |
+| /omaʁ/ | homard, homards, romarin, pommard | homard — undefined |
+| /velo/ | vélo, vélos, vélocité, vélomoteur | vélo — undefined |
+| /oʁɛj/ | oreilles, oreille, oreillette, oreillons | oreille — undefined |
+| /zɛd/ | z, schnauzers, schnitzels, trez | Z — undefined |
+| /zeʁo/ | zéro, zéros, brasero, braseros | 0 — undefined |
+| /kamjɔ̃/ | camion, camions, camion-citerne, camions-citernes | camion — undefined |
+| /maʁto/ | marteau, marteaux, marteau-piqueur, requin-marteau | marteau — undefined |
+| /sɔlɛj/ | ensoleille, roi-soleil, après-soleil, ensoleilles | soleil — undefined |
+| /kʁɛjɔ̃/ | crayon, crayons, taille-crayon, taille-crayons | crayon — undefined |
+| /plɥi/ | pluie, parapluie, pluies, parapluies | pluie — undefined |
+| /mɛzɔ̃/ | maison, maisons, maison-mère, semaison | maison — undefined |
+| /mutɔ̃/ | moutons, mouton, saute-mouton, pieds-de-mouton | mouton — undefined |
+| /sitʁɔ̃/ | citron, citrons, presse-citron, presse-citrons | citron — undefined |
+| /bœf/ | boeuf, oeil-de-boeuf, garde-boeuf | bœuf — undefined |
+| /bɔ̃bɔ̃/ | bonbons, bonbon, casse-bonbons, bombons | bonbon — undefined |
+| /domino/ | dominos, domino, abdominaux | domino — undefined |
+| /kuto/ | couteau, couteaux, couteau-scie, porte-couteau | couteau — undefined |
+| /ʁɔbo/ | nanorobots, minirobots, nanorobot, antirobots | robot — undefined |
+| /gato/ | gâteau, gâteaux, legato | gâteau — undefined |
+| /kɔʃɔ̃/ | cochons, queue-de-cochon, ricochons | cochon — undefined |
+| /abɛj/ | abeilles, abeille | abeille — undefined |
+| /lapɛ̃/ | lapin, lapins | lapin — undefined |
+| /lynɛt/ | lunettes, lunette | lunettes — undefined |
+| /sapɛ̃/ | sapin, sapins | sapin — undefined |
 
 ## 120 fragments fréquents avec une piste
 

@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - 'scripts/build-compact-browser-runtime.mjs'
+      - 'tests/compact-browser-runtime.test.mjs'
       - 'src/generated-play-catalog.js'
       - 'src/rebus-representation-bank.js'
       - 'src/rebus-representation-paths.js'
@@ -27,6 +28,8 @@ jobs:
         with:
           node-version: '22'
       - run: node scripts/build-compact-browser-runtime.mjs
+      - name: Verify semantic equivalence
+        run: node tests/compact-browser-runtime.test.mjs
       - name: Commit generated compact runtime
         if: github.event_name == 'pull_request'
         run: |

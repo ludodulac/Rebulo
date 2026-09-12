@@ -17,9 +17,10 @@
 
 - Sons indexés : 709.
 - Relations son → mot exact : 1403.
-- Sons avec au moins une représentation éditoriale sérieuse : 221.
+- Sons avec au moins une représentation éditoriale sérieuse, tous sons indexés confondus : 221.
 - Relations éditoriales sérieuses (conventions comprises) : 243.
-- Couverture des 5 741 sons utiles par au moins une représentation sérieuse : 3.85%.
+- Sons utiles avec mot exact disposant d’au moins une représentation éditoriale sérieuse : 215 / 5741.
+- Couverture correspondante : 3.74%.
 
 ## Vingt exemples de représentations intégrées
 

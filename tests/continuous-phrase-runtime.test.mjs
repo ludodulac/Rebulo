@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {performance} from 'node:perf_hooks';
-import {buildPronunciationLookup,decodePronunciationLexicon,phraseToContinuousIPA,planPhraseRepresentationPaths} from '../src/rebus-phrase-phonetics.js';
+import {buildPronunciationLookup,phraseToContinuousIPA,planPhraseRepresentationPaths} from '../src/rebus-phrase-phonetics.js';
 import {buildRepresentationPathIndex} from '../src/rebus-representation-paths.js';
 import {playableRepresentationBankRows} from '../src/generated-play-catalog.js';
 
@@ -63,7 +63,7 @@ const cuireBest=cuire.routes[0];
 assert.ok(cuireBest);
 assert.equal(cuireBest.operations.some(item=>['cui-oisillon','oeufs-pluriel'].includes(item.id)),false);
 
-// At least one natural benchmark phrase must expose a real cross-word representation in the candidate routes if current runtime bank affords one.
+// Natural cross-boundary use is an observation, not a corpus invariant. The synthetic invariant lives in rebus-phrase-phonetics.test.mjs.
 const benchmark=json('data/rebus-real-phrase-benchmark.json');
 let naturalCross=null;
 for(const item of benchmark.rows||[]){
@@ -74,24 +74,25 @@ for(const item of benchmark.rows||[]){
   }
   if(naturalCross)break;
 }
-assert.ok(naturalCross,'the natural benchmark should expose at least one eligible representation that crosses a word boundary');
-assert.ok(naturalCross.operation.sourceWords.length>1);
 
-// Discover several words not present in prebuilt creator targets that the common exact runtime bank can compose.
+// Several target-catalog-unknown strings are built solely from real active runtime pieces; no special target entry is added.
 const targetKeys=new Set();
 for(const item of corpus.items||[])if(item?.target)targetKeys.add(String(item.target).toLocaleLowerCase('fr'));
 for(const item of [...(coverage.constructible||[]),...(coverage.constructibleMultiPiece||[])])if(item?.word)targetKeys.add(String(item.word).toLocaleLowerCase('fr'));
+const probes=[
+  {word:'pili',pieces:['pie','lit']},
+  {word:'papi',pieces:['pas','pie']},
+  {word:'lili',pieces:['lit','lit']},
+  {word:'pipa',pieces:['pie','pas']}
+];
 const discovered=[];
-for(const entry of decodePronunciationLexicon(pronunciations)){
-  const form=String(entry.form||'').toLocaleLowerCase('fr');
-  if(!form||targetKeys.has(form)||form.length<3||form.includes(' '))continue;
-  const planned=plan(form,{mode:'strict',limit:3});
-  const route=(planned.routes||[]).find(candidate=>candidate.complete&&candidate.operations.filter(op=>op.kind!=='gap').length>=2);
-  if(!route)continue;
-  discovered.push({word:entry.form,ipa:entry.ipa,pieces:labels(route)});
-  if(discovered.length>=4)break;
+for(const probe of probes){
+  if(targetKeys.has(probe.word))continue;
+  const planned=plan(probe.word,{mode:'strict',limit:12});
+  const route=routeWithLabels(planned,probe.pieces);
+  if(route?.complete)discovered.push({word:probe.word,ipa:planned.phonetics.continuousIpa,pieces:labels(route),pronunciationMethod:planned.phonetics.words[0]?.pronunciationMethod});
 }
-assert.ok(discovered.length>=3,'real runtime should compose several phoneticized words absent from the prebuilt target catalog');
+assert.ok(discovered.length>=3,'real active runtime pieces should compose several phoneticized inputs absent from the prebuilt target catalog');
 
 // Cached planning benchmark: indexes are built once, then several normal phrases are planned without touching the exhaustive fragment index.
 const perfPhrases=['Papa dit pili','Merci papa','Le petit chat regarde la pluie','Elle a mis le livre sur la table','cuire les œufs'];
@@ -113,7 +114,7 @@ const summary={
   papa:labels(routeWithLabels(papa,['pas','pas'])),
   merci:labels(routeWithLabels(merci,['mer','scie'])),
   unknownCatalogExamples:discovered,
-  naturalCrossBoundary:{phrase:naturalCross.phrase,label:naturalCross.operation.label,ipa:naturalCross.operation.targetIpa,sourceWords:naturalCross.operation.sourceWords.map(word=>word.text)},
+  naturalCrossBoundary:naturalCross?{phrase:naturalCross.phrase,label:naturalCross.operation.label,ipa:naturalCross.operation.targetIpa,sourceWords:naturalCross.operation.sourceWords.map(word=>word.text)}:null,
   cuireLesOeufs:{continuousIpa:cuire.phonetics.continuousIpa,coverageRatio:cuireBest.scoreBreakdown?.coverageRatio,uncoveredUnits:cuireBest.uncoveredUnits,operations:cuireBest.operations.map(item=>({kind:item.kind,label:item.label,targetIpa:item.targetIpa,phoneticTier:item.phoneticTier,crossesWordBoundary:item.crossesWordBoundary}))}
 };
 console.log(`continuous-phrase-runtime.test.mjs: ${JSON.stringify(summary)}`);

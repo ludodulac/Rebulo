@@ -7,8 +7,10 @@ on:
     paths:
       - '.github/workflows/productive-bank-wave2-materialize.yml'
       - 'scripts/build-rebus-productive-bank-wave2.mjs'
+      - 'scripts/finalize-rebus-productive-bank-wave2-report.mjs'
       - 'src/rebus-productive-bank.js'
       - 'data/rebus-productive-bank-wave1.json'
+      - 'data/rebus-representation-bank-audit.json'
       - 'data/rebus-representation-expansion-queue.json'
       - 'data/rebus-representation-differential-preselection.json'
       - 'data/rebus-representation-curation-batch.json'
@@ -30,11 +32,13 @@ jobs:
           node-version: '22'
       - name: Build wave 2 and phrase coverage
         run: node scripts/build-rebus-productive-bank-wave2.mjs
+      - name: Finalize useful-sound coverage metric
+        run: node scripts/finalize-rebus-productive-bank-wave2-report.mjs
       - name: Commit generated editorial data
         run: |
           git config user.name 'rebulo-analysis-bot'
           git config user.email 'actions@users.noreply.github.com'
-          git add data/rebus-productive-bank-wave2.json data/rebus-productive-bank-wave2-phrase-coverage.json docs/REBUS_PRODUCTIVE_BANK_WAVE2_REPORT.md
+          git add data/rebus-productive-bank-wave2.json data/rebus-productive-bank-wave2-phrase-coverage.json data/rebus-productive-bank-wave2-useful-metrics.json docs/REBUS_PRODUCTIVE_BANK_WAVE2_REPORT.md
           if git diff --cached --quiet; then
             echo 'No generated changes.'
           else

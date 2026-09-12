@@ -4,27 +4,35 @@ on:
   pull_request:
     paths:
       - '.github/workflows/phrase-browser-product.yml'
+      - 'src/app-bootstrap.js'
+      - 'src/play-mode.js'
       - 'src/phrase-mode.js'
+      - 'src/phrase-planner-worker.js'
       - 'src/rebus-phrase-phonetics.js'
       - 'src/rebus-representation-paths.js'
       - 'phrase-mode.css'
       - 'tests/phrase-browser-product.e2e.mjs'
+      - 'tests/compact-runtime-browser.e2e.mjs'
+      - 'tests/word-lifecycle-trace.e2e.mjs'
       - 'tests/phrase-runtime-diagnostic.mjs'
+      - 'data/rebulo-compact-runtime.json'
       - 'data/rebus-pronunciation-lexicon.json'
-      - 'data/rebus-sound-catalog.json'
-      - 'data/rebus-visible-conventions.json'
   push:
     branches: [main]
     paths:
+      - 'src/app-bootstrap.js'
+      - 'src/play-mode.js'
       - 'src/phrase-mode.js'
+      - 'src/phrase-planner-worker.js'
       - 'src/rebus-phrase-phonetics.js'
       - 'src/rebus-representation-paths.js'
       - 'phrase-mode.css'
       - 'tests/phrase-browser-product.e2e.mjs'
+      - 'tests/compact-runtime-browser.e2e.mjs'
+      - 'tests/word-lifecycle-trace.e2e.mjs'
       - 'tests/phrase-runtime-diagnostic.mjs'
+      - 'data/rebulo-compact-runtime.json'
       - 'data/rebus-pronunciation-lexicon.json'
-      - 'data/rebus-sound-catalog.json'
-      - 'data/rebus-visible-conventions.json'
   workflow_dispatch:
 
 permissions:
@@ -45,26 +53,39 @@ jobs:
         run: |
           npm install --no-save --no-package-lock playwright@1.55.0
           npx playwright install --with-deps chromium
-      - name: Reproduce currently deployed public product
+      - name: Benchmark currently deployed public product before merge
+        if: github.event_name == 'pull_request'
         continue-on-error: true
         env:
           BASE_URL: https://ludodulac.github.io/Rebulo/
-          OUTPUT_JSON: phrase-browser-public.json
+          OUTPUT_JSON: phrase-browser-public-before.json
           CPU_THROTTLE: '4'
         run: node tests/phrase-browser-product.e2e.mjs
-      - name: Start branch static site
+      - name: Start checkout static site
         run: |
           python3 -m http.server 4173 >/tmp/rebulo-http.log 2>&1 &
           for i in {1..20}; do curl -fsS http://127.0.0.1:4173/ >/dev/null && exit 0; sleep 1; done
           cat /tmp/rebulo-http.log
           exit 1
-      - name: Verify branch product in browser
+      - name: Trace early Create Word lifecycle
         env:
           BASE_URL: http://127.0.0.1:4173/
-          OUTPUT_JSON: phrase-browser-branch.json
-          ASSERT_VISIBLE: '1'
+          OUTPUT_JSON: word-lifecycle-trace.json
           CPU_THROTTLE: '4'
-        run: node tests/phrase-browser-product.e2e.mjs
+        run: node tests/word-lifecycle-trace.e2e.mjs
+      - name: Verify checkout product in browser
+        env:
+          BASE_URL: http://127.0.0.1:4173/
+          OUTPUT_JSON: compact-runtime-browser-checkout.json
+          CPU_THROTTLE: '4'
+        run: node tests/compact-runtime-browser.e2e.mjs
+      - name: Verify deployed public product
+        if: github.event_name == 'push'
+        env:
+          BASE_URL: https://ludodulac.github.io/Rebulo/
+          OUTPUT_JSON: compact-runtime-browser-public.json
+          CPU_THROTTLE: '4'
+        run: node tests/compact-runtime-browser.e2e.mjs
       - name: Upload browser diagnostics
         if: always()
         uses: actions/upload-artifact@v4
@@ -72,7 +93,9 @@ jobs:
           name: phrase-browser-product-diagnostics
           path: |
             phrase-runtime-diagnostic.json
-            phrase-browser-public.json
-            phrase-browser-branch.json
+            phrase-browser-public-before.json
+            compact-runtime-browser-checkout.json
+            compact-runtime-browser-public.json
+            word-lifecycle-trace.json
             phrase-browser-*.png
           if-no-files-found: warn

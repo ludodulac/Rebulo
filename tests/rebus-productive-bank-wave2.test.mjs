@@ -63,10 +63,10 @@ assert.ok(coverage.rows.every(row=>row.coverageRatio>=0&&row.coverageRatio<=1));
 
 const seriousSounds=[...bank.values()].filter(sound=>sound.visibleConventions.length||sound.representations.some(rep=>rep.editorialStatus==='retain'&&(rep.visualBrief||rep.representationProposed)));
 assert.ok(seriousSounds.length>186,'cumulative serious editorial sound coverage must grow beyond wave1');
-const usefulIpas=new Set((audit.usefulRows||[]).map(row=>normalizeIPA(row.ipa)).filter(Boolean));
-assert.equal(usefulIpas.size,5741);
-const seriousUsefulSounds=seriousSounds.filter(sound=>usefulIpas.has(sound.ipa));
-const usefulPercent=seriousUsefulSounds.length/usefulIpas.size*100;
+const usefulExactIpas=new Set((audit.usefulRows||[]).filter(row=>(row.exactWords||[]).length>0).map(row=>normalizeIPA(row.ipa)).filter(Boolean));
+assert.equal(usefulExactIpas.size,5741);
+const seriousUsefulSounds=seriousSounds.filter(sound=>usefulExactIpas.has(sound.ipa));
+const usefulPercent=seriousUsefulSounds.length/usefulExactIpas.size*100;
 assert.ok(seriousUsefulSounds.length>0);
 
-console.log(JSON.stringify({wave:stats,cumulative:{indexedSoundCount:bank.size,seriousRepresentationSoundCount:seriousSounds.length,seriousUsefulSoundCount:seriousUsefulSounds.length,usefulSoundSeriousRepresentationPercent:Number(usefulPercent.toFixed(2))},phraseCoverage:coverage.summary},null,2));
+console.log(JSON.stringify({wave:stats,cumulative:{indexedSoundCount:bank.size,seriousRepresentationSoundCount:seriousSounds.length,seriousUsefulSoundCount:seriousUsefulSounds.length,usefulExactSoundDenominator:usefulExactIpas.size,usefulSoundSeriousRepresentationPercent:Number(usefulPercent.toFixed(2))},phraseCoverage:coverage.summary},null,2));

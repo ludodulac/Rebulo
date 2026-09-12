@@ -1,4 +1,3 @@
-import {playableRepresentationBankRows} from './generated-play-catalog.js';
 import {buildPronunciationLookup,planPhraseRepresentationPaths} from './rebus-phrase-phonetics.js';
 import {buildRepresentationPathIndex} from './rebus-representation-paths.js';
 
@@ -8,13 +7,13 @@ async function loadResources(){
   if(resourcesPromise)return resourcesPromise;
   resourcesPromise=(async()=>{
     const started=performance.now();
-    const [pronunciations,soundCatalog,visibleConventions]=await Promise.all([
+    const [pronunciations,compactRuntime]=await Promise.all([
       loadJSON('../data/rebus-pronunciation-lexicon.json'),
-      loadJSON('../data/rebus-sound-catalog.json'),
-      loadJSON('../data/rebus-visible-conventions.json')
+      loadJSON('../data/rebulo-compact-runtime.json')
     ]);
     const pronunciationLookup=buildPronunciationLookup(pronunciations);
-    const bankRows=playableRepresentationBankRows(soundCatalog,visibleConventions);
+    const bankRows=Array.isArray(compactRuntime?.bankRows)?compactRuntime.bankRows:[];
+    if(!bankRows.length)throw new Error('Compact runtime bank is empty');
     const optionIndex=buildRepresentationPathIndex(bankRows);
     return {pronunciationLookup,bankRows,optionIndex,prepareMs:performance.now()-started};
   })();

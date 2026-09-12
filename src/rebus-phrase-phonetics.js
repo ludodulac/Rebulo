@@ -1,4 +1,5 @@
 import {normalizeIPA,splitIPAUnits} from './phonetic-engine.js';
+import {resolveFrenchSoundQuery} from './french-sound-search.js';
 import {buildRepresentationPathIndex,planRepresentationPaths} from './rebus-representation-paths.js';
 
 export function normalizePhraseLexeme(value=''){
@@ -46,6 +47,12 @@ export function buildPronunciationLookup(source={}){
 }
 
 function bestPronunciation(list=[]){return list[0]||null;}
+function fallbackPronunciation(value='',key=''){
+  const resolved=resolveFrenchSoundQuery(value);
+  if(resolved.ambiguous||resolved.ipaCandidates.length!==1)return null;
+  const ipa=normalizeIPA(resolved.ipaCandidates[0]);
+  return ipa?{ipa,lemma:key,pos:'',source:'french-sound-search',frequency:0,pronunciationMethod:'orthographic_sound_fallback'}:null;
+}
 
 function phoneticSegments(words=[]){
   const segments=[];let current=null;
@@ -72,15 +79,17 @@ export function phraseToContinuousIPA(value='',source={}){
     if(token.kind!=='word')continue;
     const key=normalizePhraseLexeme(token.text);
     const candidates=lookup.get(key)||[];
-    const selected=bestPronunciation(candidates);
+    const lexical=bestPronunciation(candidates);
+    const selected=lexical||fallbackPronunciation(token.text,key);
     if(!selected){
       complete=false;
-      wordTokens.push({...token,key,resolved:false,candidates:[],ipa:'',unitStart:unitOffset,unitEnd:unitOffset});
+      wordTokens.push({...token,key,resolved:false,candidates:[],ipa:'',pronunciationMethod:'unresolved',unitStart:unitOffset,unitEnd:unitOffset});
       continue;
     }
     const ipa=normalizeIPA(selected.ipa);
     const unitCount=splitIPAUnits(ipa).length;
-    wordTokens.push({...token,key,resolved:true,ipa,lemma:selected.lemma||key,pos:selected.pos||'',source:selected.source||'',frequency:selected.frequency||0,candidates:candidates.slice(0,5),unitStart:unitOffset,unitEnd:unitOffset+unitCount});
+    const pronunciationMethod=lexical?'lexicon_exact':selected.pronunciationMethod;
+    wordTokens.push({...token,key,resolved:true,ipa,lemma:selected.lemma||key,pos:selected.pos||'',source:selected.source||'',frequency:selected.frequency||0,pronunciationMethod,candidates:candidates.slice(0,5),unitStart:unitOffset,unitEnd:unitOffset+unitCount});
     unitOffset+=unitCount;
   }
   const continuousIpa=wordTokens.filter(token=>token.resolved).map(token=>token.ipa).join('');
@@ -108,7 +117,7 @@ export function annotateRouteWordBoundaries(route={},phrasePhonetics={},context=
     const start=offset;
     const end=offset+partUnits.length;
     offset=end;
-    const touched=words.filter(word=>word.resolved&&word.unitStart<end&&word.unitEnd>start).map(word=>({text:word.text,lemma:word.lemma,unitStart:word.unitStart,unitEnd:word.unitEnd}));
+    const touched=words.filter(word=>word.resolved&&word.unitStart<end&&word.unitEnd>start).map(word=>({text:word.text,lemma:word.lemma,pronunciationMethod:word.pronunciationMethod,unitStart:word.unitStart,unitEnd:word.unitEnd}));
     return {...operation,unitStart:start,unitEnd:end,crossesWordBoundary:touched.length>1,sourceWords:touched};
   });
   return {...route,operations,crossWordOperationCount:operations.filter(operation=>operation.crossesWordBoundary&&operation.kind!=='gap').length,crossWordGapCount:operations.filter(operation=>operation.crossesWordBoundary&&operation.kind==='gap').length};

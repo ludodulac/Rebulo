@@ -9,6 +9,7 @@ on:
       - 'src/**'
       - 'tests/**'
       - 'data/rebus-fragment-representation-ideas.json'
+      - 'data/rebus-productive-bank-wave1.json'
   pull_request:
     paths:
       - 'app.js'
@@ -16,6 +17,7 @@ on:
       - 'src/**'
       - 'tests/**'
       - 'data/rebus-fragment-representation-ideas.json'
+      - 'data/rebus-productive-bank-wave1.json'
   workflow_dispatch:
 
 permissions:
@@ -36,6 +38,8 @@ jobs:
         run: npm test
       - name: Validate productive representation wave
         run: node tests/productive-representation-wave1.test.mjs
+      - name: Validate productive phonetic bank wave
+        run: node tests/rebus-productive-bank-wave1.test.mjs
       - name: Run pictogram research triage regression
         run: node tests/pictogram-research-triage.test.mjs
       - name: Verify jsPDF browser dependency

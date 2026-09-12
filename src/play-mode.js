@@ -1,6 +1,7 @@
 import {choosePlayableRebus,playAnswerMatches,safePlayHint} from './play-game.js';
 import {DIFFICULTY_PROFILES,normalizeDifficultyProfile,rebusesForProfile} from './difficulty-profile.js';
 import {generatedPlayableBankRebuses,generatedPlayableRebuses,mergePlayableCatalog,playCatalogMetrics} from './generated-play-catalog.js';
+import {loadStaticJSON} from './static-json-cache.js';
 import './creator-kind.js';
 
 const PLAY_NOTES_KEY='rebulo-play-test-notes';
@@ -13,7 +14,7 @@ function profileCatalog(items=[]){return rebusesForProfile(items,currentProfile(
 function clearRoundState(){if(answer)answer.value='';if(feedback){feedback.textContent='';feedback.className='feedback';}if(hint){hint.hidden=true;hint.textContent='';}}
 function resetCreatorSurface(){if(creatorResult)creatorResult.hidden=true;if(creatorRebus){creatorRebus.replaceChildren();creatorRebus.classList.remove('phrase-flow');}if(creatorFeedback)creatorFeedback.textContent='';if(shell)shell.dataset.creatorReady='false';if(badge){badge.textContent='✓ Exact';badge.title='Rebulo garde tous les sons';badge.classList.remove('general-badge');}}
 function setMode(mode){const playing=mode==='play';if(shell)shell.dataset.experience=playing?'play':'create';if(createMode){createMode.setAttribute('aria-pressed',String(!playing));createMode.classList.toggle('secondary',playing);}if(playMode){playMode.setAttribute('aria-pressed',String(playing));playMode.classList.toggle('secondary',!playing);}if(description)description.textContent=playing?'Regarde les images, lettres, nombres et notes, puis assemble les sons.':'Choisis Mot ou Phrase, puis transforme ton texte en rébus.';if(arena)arena.hidden=!playing;if(playing)startRound();else resetCreatorSurface();}
-async function loadJSON(path){const response=await fetch(path,{cache:'no-store'});if(!response.ok)throw new Error(path);return response.json();}
+async function loadJSON(path){return loadStaticJSON(path,{cache:'force-cache'});}
 async function loadCatalog(){
   if(catalog)return catalog;
   const [manual,lexicon,coverage,soundCatalog,visibleConventions]=await Promise.all([loadJSON('data/rebus.json'),loadJSON('data/lexicon-seed.json'),loadJSON('data/coverage-report.json'),loadJSON('data/rebus-sound-catalog.json'),loadJSON('data/rebus-visible-conventions.json')]);

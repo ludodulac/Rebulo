@@ -13,6 +13,7 @@ on:
       - 'phrase-mode.css'
       - 'tests/phrase-browser-product.e2e.mjs'
       - 'tests/compact-runtime-browser.e2e.mjs'
+      - 'tests/word-lifecycle-trace.e2e.mjs'
       - 'tests/phrase-runtime-diagnostic.mjs'
       - 'data/rebulo-compact-runtime.json'
       - 'data/rebus-pronunciation-lexicon.json'
@@ -28,6 +29,7 @@ on:
       - 'phrase-mode.css'
       - 'tests/phrase-browser-product.e2e.mjs'
       - 'tests/compact-runtime-browser.e2e.mjs'
+      - 'tests/word-lifecycle-trace.e2e.mjs'
       - 'tests/phrase-runtime-diagnostic.mjs'
       - 'data/rebulo-compact-runtime.json'
       - 'data/rebus-pronunciation-lexicon.json'
@@ -65,6 +67,12 @@ jobs:
           for i in {1..20}; do curl -fsS http://127.0.0.1:4173/ >/dev/null && exit 0; sleep 1; done
           cat /tmp/rebulo-http.log
           exit 1
+      - name: Trace early Create Word lifecycle
+        env:
+          BASE_URL: http://127.0.0.1:4173/
+          OUTPUT_JSON: word-lifecycle-trace.json
+          CPU_THROTTLE: '4'
+        run: node tests/word-lifecycle-trace.e2e.mjs
       - name: Verify checkout product in browser
         env:
           BASE_URL: http://127.0.0.1:4173/
@@ -88,5 +96,6 @@ jobs:
             phrase-browser-public-before.json
             compact-runtime-browser-checkout.json
             compact-runtime-browser-public.json
+            word-lifecycle-trace.json
             phrase-browser-*.png
           if-no-files-found: warn

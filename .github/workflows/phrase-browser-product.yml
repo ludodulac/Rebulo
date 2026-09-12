@@ -74,5 +74,5 @@ jobs:
             phrase-runtime-diagnostic.json
             phrase-browser-public.json
             phrase-browser-branch.json
-            phrase-browser-product.png
+            phrase-browser-*.png
           if-no-files-found: warn

@@ -28,6 +28,7 @@ function plan(value,{mode='general',limit=12}={}){
 }
 function labels(route={}){return (route.operations||[]).filter(item=>!['gap','unresolved_word'].includes(item.kind)).map(item=>item.label);}
 function routeWithLabels(planned,wanted=[]){return (planned.routes||[]).find(route=>wanted.every((label,index)=>labels(route)[index]===label))||null;}
+function activeImageId(id=''){return bankRows.some(row=>(row.exactImageRepresentations||[]).some(rep=>rep.id===id));}
 
 const summary={pronunciationForms:pronunciationLookup.size,runtimeBankRows:bankRows.length,runtimeOptionCount:optionIndex.optionCount,indexBuildMs:Number(buildMs.toFixed(2))};
 
@@ -54,13 +55,24 @@ if(run('core')){
 }
 
 if(run('activation')){
-  const inactiveIdeas=(ideas.entries||[]).filter(item=>item.automaticActivation===false);
-  assert.ok(inactiveIdeas.length>0);
-  for(const idea of inactiveIdeas.slice(0,20))assert.equal(bankRows.some(row=>(row.exactImageRepresentations||[]).some(rep=>rep.id===idea.id)),false,`editorial-only ${idea.id} must not appear as an active image`);
-  for(const id of ['cui-oisillon','oeufs-pluriel']){
-    const idea=(ideas.entries||[]).find(item=>item.id===id);assert.ok(idea&&idea.automaticActivation===false,`${id} must remain editorial-only`);
-    assert.equal(bankRows.some(row=>(row.exactImageRepresentations||[]).some(rep=>rep.id===id)),false);
+  assert.equal(ideas.status,'curated_textual_bank_not_automatically_active');
+  const allIdeas=ideas.entries||[];
+  assert.ok(allIdeas.length>0);
+  assert.ok(allIdeas.every(item=>item.automaticActivation===false),'#279 ideas must remain explicitly non-activating');
+  for(const id of ['cui-oisillon','oeufs-pluriel','eux-groupe','raie-trait']){
+    const idea=allIdeas.find(item=>item.id===id);assert.ok(idea&&idea.automaticActivation===false,`${id} must remain editorial-only`);
+    assert.equal(activeImageId(id),false,`${id} must not enter the active image bank without its own production asset`);
   }
+  const variant=allIdeas.find(item=>item.id==='e-letter');
+  const playful=allIdeas.find(item=>item.id==='un-vs-in-near');
+  const locked=allIdeas.find(item=>item.id==='d-apostrophe');
+  assert.equal(variant?.strictness,'variant_documented');
+  assert.equal(playful?.strictness,'playful_near');
+  assert.equal(locked?.strictness,'orthophony_locked');
+  summary.activationBoundary={allIdeasNonActivating:true,verifiedInactiveIds:['cui-oisillon','oeufs-pluriel','eux-groupe','raie-trait'],qualifiedStatuses:{variant:variant?.strictness,playful:playful?.strictness,locked:locked?.strictness}};
+}
+
+if(run('cuire')){
   const cuire=plan('cuire les œufs',{mode:'general',limit:20});
   assert.equal(cuire.phonetics.unresolvedWords.length,0);
   const cuireBest=cuire.routes[0];

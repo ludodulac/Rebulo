@@ -8,12 +8,14 @@ on:
       - 'package.json'
       - 'src/**'
       - 'tests/**'
+      - 'data/rebus-fragment-representation-ideas.json'
   pull_request:
     paths:
       - 'app.js'
       - 'package.json'
       - 'src/**'
       - 'tests/**'
+      - 'data/rebus-fragment-representation-ideas.json'
   workflow_dispatch:
 
 permissions:
@@ -32,6 +34,8 @@ jobs:
         run: node --check app.js
       - name: Run project tests
         run: npm test
+      - name: Validate productive representation wave
+        run: node tests/productive-representation-wave1.test.mjs
       - name: Run pictogram research triage regression
         run: node tests/pictogram-research-triage.test.mjs
       - name: Verify jsPDF browser dependency

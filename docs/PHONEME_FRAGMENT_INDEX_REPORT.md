@@ -6,6 +6,7 @@
 - Avec brief éditorial : 132.
 - Avec convention visible exacte : 46.
 - Avec mot entier exact dans Lexique : 73139.
+- Avec au moins deux mots lexicaux exacts distincts : 35280.
 
 ## Briefs éditoriaux actuels
 

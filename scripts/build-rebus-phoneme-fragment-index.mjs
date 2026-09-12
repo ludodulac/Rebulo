@@ -32,10 +32,12 @@ const fragments=buildPhonemeFragmentInventory(entries,{minUnits:1,maxUnits:8});
 const rows=fragments.map(fragment=>{
   const ideas=ideasForFragment(fragment.ipa,ideaGroups).map(item=>({id:item.id,label:item.label,kind:item.kind,strictness:item.strictness,description:item.description,spontaneousNamingRisk:item.spontaneousNamingRisk||'unknown',humanNamingEvidence:item.humanNamingEvidence||'none',clinicalEvidence:item.clinicalEvidence||'none'}));
   const conventions=conventionByIpa.get(fragment.ipa)||[];
-  const lexical=(lexicalByIpa.get(fragment.ipa)||[]).slice(0,6);
+  const allLexical=lexicalByIpa.get(fragment.ipa)||[];
+  const exactLexicalDistinctWordCount=new Set(allLexical.map(item=>item.word)).size;
+  const lexical=allLexical.slice(0,6);
   const nounLexical=lexical.filter(item=>nounLike(item.pos));
   const hasTextualLead=ideas.length>0||conventions.length>0||lexical.length>0;
-  return {...fragment,editorialIdeas:ideas,visibleConventions:conventions,exactLexicalCandidates:lexical,nounLexicalCandidateCount:nounLexical.length,hasTextualLead};
+  return {...fragment,editorialIdeas:ideas,visibleConventions:conventions,exactLexicalCandidates:lexical,exactLexicalDistinctWordCount,nounLexicalCandidateCount:nounLexical.length,hasTextualLead};
 });
 
 const stats={
@@ -45,6 +47,7 @@ const stats={
   withEditorialIdeaCount:rows.filter(row=>row.editorialIdeas.length>0).length,
   withVisibleConventionCount:rows.filter(row=>row.visibleConventions.length>0).length,
   withExactLexicalCandidateCount:rows.filter(row=>row.exactLexicalCandidates.length>0).length,
+  withMultipleExactLexicalWordsCount:rows.filter(row=>row.exactLexicalDistinctWordCount>=2).length,
   wholeWordFragmentCount:rows.filter(row=>row.categories.includes('whole_word')).length,
   wholeSyllableFragmentCount:rows.filter(row=>row.categories.includes('whole_syllable')).length,
   multiSyllableFragmentCount:rows.filter(row=>row.categories.includes('multi_syllable')).length,
@@ -52,16 +55,16 @@ const stats={
   crossSyllableFragmentCount:rows.filter(row=>row.categories.includes('cross_syllable_fragment')).length
 };
 
-const rowSchema=['ipa','occurrenceCount','unitCounts','categories','positions','examples','wholeWordExamples','hasTextualLead','nounLexicalCandidateCount','exactLexicalCandidates','visibleConventions','editorialIdeas'];
+const rowSchema=['ipa','occurrenceCount','unitCounts','categories','positions','examples','wholeWordExamples','hasTextualLead','nounLexicalCandidateCount','exactLexicalDistinctWordCount','exactLexicalCandidates','visibleConventions','editorialIdeas'];
 const compactRows=rows.map(row=>[
-  row.ipa,row.occurrenceCount,row.unitCounts,row.categories,row.positions,row.examples,row.wholeWordExamples,row.hasTextualLead,row.nounLexicalCandidateCount,
+  row.ipa,row.occurrenceCount,row.unitCounts,row.categories,row.positions,row.examples,row.wholeWordExamples,row.hasTextualLead,row.nounLexicalCandidateCount,row.exactLexicalDistinctWordCount,
   row.exactLexicalCandidates.map(item=>[item.word,item.pos,item.frequency,item.syllableCount]),
   row.visibleConventions.map(item=>[item.id,item.label,item.kind,item.status]),
   row.editorialIdeas.map(item=>[item.id,item.label,item.kind,item.strictness,item.description,item.spontaneousNamingRisk,item.humanNamingEvidence,item.clinicalEvidence])
 ]);
 
 const report={
-  formatVersion:1,
+  formatVersion:2,
   generatedAt:new Date().toISOString(),
   status:'research_mapping_only',
   scope:'all_source_exact_contiguous_phoneme_fragments_up_to_eight_units',
@@ -80,6 +83,6 @@ fs.writeFileSync(outputPath,JSON.stringify(report));
 
 const promising=rows.filter(row=>row.hasTextualLead).sort((a,b)=>b.occurrenceCount-a.occurrenceCount||b.editorialIdeas.length-a.editorialIdeas.length||a.ipa.localeCompare(b.ipa)).slice(0,120);
 const editorial=rows.filter(row=>row.editorialIdeas.length>0).sort((a,b)=>b.occurrenceCount-a.occurrenceCount||a.ipa.localeCompare(b.ipa));
-const lines=['# Rebulo — index exhaustif de fragments phonémiques','',`- Fragments phonémiques uniques (1–8 unités) : ${stats.fragmentCount}.`,`- Avec au moins une piste textuelle : ${stats.withTextualLeadCount}.`,`- Sans piste textuelle actuelle : ${stats.withoutTextualLeadCount}.`,`- Avec brief éditorial : ${stats.withEditorialIdeaCount}.`,`- Avec convention visible exacte : ${stats.withVisibleConventionCount}.`,`- Avec mot entier exact dans Lexique : ${stats.withExactLexicalCandidateCount}.`,'','## Briefs éditoriaux actuels','', '| IPA | Exemples d’origine | Concepts textuels |','|---|---|---|',...editorial.map(row=>`| /${row.ipa}/ | ${row.examples.slice(0,4).join(', ')||'—'} | ${row.editorialIdeas.map(item=>`${item.label} — ${item.description}`).join('<br>')} |`),'','## 120 fragments fréquents avec une piste','', '| IPA | Occurrences | Catégories | Candidats lexicaux / conventions |','|---|---:|---|---|',...promising.map(row=>`| /${row.ipa}/ | ${row.occurrenceCount} | ${row.categories.join(', ')} | ${[...row.exactLexicalCandidates.slice(0,3).map(item=>item.word),...row.visibleConventions.slice(0,3).map(item=>item.label)].join(', ')||'—'} |`),'','> Cet index est un répertoire de recherche et de conception. Une piste lexicale ou éditoriale n’est pas un dessin validé, et une approximation ludique ne devient jamais exacte par présence dans ce fichier.'];
+const lines=['# Rebulo — index exhaustif de fragments phonémiques','',`- Fragments phonémiques uniques (1–8 unités) : ${stats.fragmentCount}.`,`- Avec au moins une piste textuelle : ${stats.withTextualLeadCount}.`,`- Sans piste textuelle actuelle : ${stats.withoutTextualLeadCount}.`,`- Avec brief éditorial : ${stats.withEditorialIdeaCount}.`,`- Avec convention visible exacte : ${stats.withVisibleConventionCount}.`,`- Avec mot entier exact dans Lexique : ${stats.withExactLexicalCandidateCount}.`,`- Avec au moins deux mots lexicaux exacts distincts : ${stats.withMultipleExactLexicalWordsCount}.`,'','## Briefs éditoriaux actuels','', '| IPA | Exemples d’origine | Concepts textuels |','|---|---|---|',...editorial.map(row=>`| /${row.ipa}/ | ${row.examples.slice(0,4).join(', ')||'—'} | ${row.editorialIdeas.map(item=>`${item.label} — ${item.description}`).join('<br>')} |`),'','## 120 fragments fréquents avec une piste','', '| IPA | Occurrences | Catégories | Candidats lexicaux / conventions |','|---|---:|---|---|',...promising.map(row=>`| /${row.ipa}/ | ${row.occurrenceCount} | ${row.categories.join(', ')} | ${[...row.exactLexicalCandidates.slice(0,3).map(item=>item.word),...row.visibleConventions.slice(0,3).map(item=>item.label)].join(', ')||'—'} |`),'','> Cet index est un répertoire de recherche et de conception. Une piste lexicale ou éditoriale n’est pas un dessin validé, et une approximation ludique ne devient jamais exacte par présence dans ce fichier.'];
 fs.mkdirSync(path.dirname(docPath),{recursive:true});fs.writeFileSync(docPath,lines.join('\n')+'\n');
 console.log(JSON.stringify(stats,null,2));

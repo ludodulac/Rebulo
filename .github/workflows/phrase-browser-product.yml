@@ -4,27 +4,31 @@ on:
   pull_request:
     paths:
       - '.github/workflows/phrase-browser-product.yml'
+      - 'src/app-bootstrap.js'
+      - 'src/play-mode.js'
       - 'src/phrase-mode.js'
+      - 'src/phrase-planner-worker.js'
       - 'src/rebus-phrase-phonetics.js'
       - 'src/rebus-representation-paths.js'
       - 'phrase-mode.css'
       - 'tests/phrase-browser-product.e2e.mjs'
       - 'tests/phrase-runtime-diagnostic.mjs'
+      - 'data/rebulo-compact-runtime.json'
       - 'data/rebus-pronunciation-lexicon.json'
-      - 'data/rebus-sound-catalog.json'
-      - 'data/rebus-visible-conventions.json'
   push:
     branches: [main]
     paths:
+      - 'src/app-bootstrap.js'
+      - 'src/play-mode.js'
       - 'src/phrase-mode.js'
+      - 'src/phrase-planner-worker.js'
       - 'src/rebus-phrase-phonetics.js'
       - 'src/rebus-representation-paths.js'
       - 'phrase-mode.css'
       - 'tests/phrase-browser-product.e2e.mjs'
       - 'tests/phrase-runtime-diagnostic.mjs'
+      - 'data/rebulo-compact-runtime.json'
       - 'data/rebus-pronunciation-lexicon.json'
-      - 'data/rebus-sound-catalog.json'
-      - 'data/rebus-visible-conventions.json'
   workflow_dispatch:
 
 permissions:

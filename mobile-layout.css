@@ -7,11 +7,13 @@ button,.dock-panel>summary,.queue-mini{touch-action:manipulation;-webkit-tap-hig
 .creator-start-hint{margin:4px 2px 0;text-align:center;font-size:.74rem;color:#667085}
 @media(max-width:560px){
   .single-screen{padding-left:max(8px,env(safe-area-inset-left));padding-right:max(8px,env(safe-area-inset-right));grid-template-rows:auto auto minmax(0,1fr) auto;gap:6px}
+  .app-shell[data-experience="create"]{grid-template-rows:auto auto auto minmax(0,1fr) auto}
   .topbar{min-height:34px}.topbar h1{font-size:1.34rem}.strict-badge{padding:5px 8px}
   .creator-feedback{height:14px;margin-top:2px;font-size:.67rem}
   .creator-row{grid-template-columns:1fr 1fr;gap:6px}.creator-row input{grid-column:1/-1}.creator-row input,.creator-row button{min-height:48px}.creator-row button{min-width:0;width:100%}.creator-start-hint{font-size:.7rem}
   .arena{min-height:0;overflow:hidden}
   #creatorRebus.rebus-row{min-height:0;align-content:center;overflow:hidden}
+  #creatorRebus.phrase-continuous-flow{overflow-x:auto!important;overflow-y:hidden!important;align-content:normal}
   .arena-actions button,.mini-mode,.session-pdf{min-height:46px}
   .session-dock{min-height:48px;grid-template-columns:auto minmax(0,1fr) auto;gap:6px;padding:6px}
   .session-pdf{grid-column:auto;min-width:58px;padding:0 9px}
@@ -29,6 +31,7 @@ button,.dock-panel>summary,.queue-mini{touch-action:manipulation;-webkit-tap-hig
   .queue-actions strong{font-size:.72rem}.queue-actions span{font-size:.62rem}.queue-item{min-width:84px}
 }
 body.keyboard-open .single-screen{padding-bottom:8px;grid-template-rows:auto auto minmax(0,1fr)}
+body.keyboard-open .app-shell[data-experience="create"]{grid-template-rows:auto auto auto minmax(0,1fr)}
 body.keyboard-open .bottom-nav,body.keyboard-open .session-dock{display:none}
 body.keyboard-open .topbar{min-height:30px}
 body.keyboard-open .creator-feedback,body.keyboard-open .creator-start-hint{display:none}

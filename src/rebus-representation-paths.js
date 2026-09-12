@@ -75,12 +75,25 @@ function signature(route={}){
   return (route.operations||[]).map(item=>`${item.kind}:${item.targetIpa}:${item.sourceIpa||''}:${item.id||item.label||item.symbol||''}`).join('|');
 }
 function optionKindRank(kind=''){return kind==='image'?0:kind==='letter'||kind==='number'||kind==='music_note'?1:kind==='image_approximation'?2:3;}
+function eligibleOption(option={},mode='general'){return mode==='general'||(mode==='strict'&&option.mode==='strict'&&option.phoneticTier==='exact');}
+function sortPreparedOptions(items=[]){items.sort((a,b)=>b._units.length-a._units.length||optionKindRank(a.kind)-optionKindRank(b.kind)||String(a.label).localeCompare(String(b.label),'fr'));return items;}
+function indexOptions(items=[]){const byFirstUnit=new Map();for(const option of items){const first=option._units[0];if(!first)continue;const bucket=byFirstUnit.get(first)||[];bucket.push(option);byFirstUnit.set(first,bucket);}for(const bucket of byFirstUnit.values())sortPreparedOptions(bucket);return byFirstUnit;}
 
-export function planRepresentationPaths(targetIpa='',bankRows=[],{mode='general',limit=10,maxPieces=12,allowGaps=true}={}){
+export function buildRepresentationPathIndex(bankRows=[],{includeLexicalApproximation=false}={}){
+  const prepared=representationOptionsFromBankRows(bankRows,{includeLexicalApproximation}).map(option=>({...option,_units:units(option.targetIpa)})).filter(option=>option._units.length);
+  const general=sortPreparedOptions(prepared.filter(option=>eligibleOption(option,'general')));
+  const strict=sortPreparedOptions(prepared.filter(option=>eligibleOption(option,'strict')));
+  return {kind:'representation_path_index',general:indexOptions(general),strict:indexOptions(strict),optionCount:prepared.length,generalOptionCount:general.length,strictOptionCount:strict.length};
+}
+
+function optionBucket(index={},mode='general',firstUnit=''){
+  const map=mode==='strict'?index.strict:index.general;
+  return map instanceof Map?(map.get(firstUnit)||[]):[];
+}
+
+export function planRepresentationPaths(targetIpa='',bankRows=[],{mode='general',limit=10,maxPieces=12,allowGaps=true,optionIndex=null}={}){
   const normalized=normalizeIPA(targetIpa);const target=units(normalized);if(!target.length)return [];
-  const rawOptions=representationOptionsFromBankRows(bankRows,{includeLexicalApproximation:false});
-  const options=rawOptions.map(option=>({...option,_units:units(option.targetIpa)})).filter(option=>option._units.length&&((mode==='strict'&&option.mode==='strict'&&option.phoneticTier==='exact')||mode==='general'));
-  options.sort((a,b)=>b._units.length-a._units.length||optionKindRank(a.kind)-optionKindRank(b.kind)||String(a.label).localeCompare(String(b.label),'fr'));
+  const index=optionIndex?.kind==='representation_path_index'?optionIndex:buildRepresentationPathIndex(bankRows,{includeLexicalApproximation:false});
   const beamWidth=Math.max(40,limit*20);
   let states=[{offset:0,operations:[],coverageUnits:0,uncoveredUnits:0,pieceCount:0}];
   while(states.length){
@@ -88,6 +101,7 @@ export function planRepresentationPaths(targetIpa='',bankRows=[],{mode='general'
     const next=[];
     for(const state of states){
       if(state.offset===target.length){next.push(state);continue;}
+      const options=optionBucket(index,mode,target[state.offset]);
       for(const option of options){
         if(state.pieceCount>=maxPieces||!eqAt(target,state.offset,option._units))continue;
         const {_units,...serializable}=option;

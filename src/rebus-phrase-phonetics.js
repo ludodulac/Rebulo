@@ -119,7 +119,7 @@ function unresolvedOperation(segment={}){
   return {kind:'unresolved_word',mode:'uncovered',phoneticTier:'unresolved_pronunciation',targetIpa:'',sourceIpa:'',label:word.text||segment.text||'',text:word.text||segment.text||'',unitCount:0,unitStart:segment.unitStart||0,unitEnd:segment.unitEnd||segment.unitStart||0,crossesWordBoundary:false,sourceWords:[{text:word.text||segment.text||'',lemma:'',unitStart:segment.unitStart||0,unitEnd:segment.unitEnd||segment.unitStart||0}]};
 }
 
-function combinePartialSpanRoutes(phonetics={},plannedSegments=[]){
+function combinePartialSpanRoutes(phonetics={},plannedSegments=[],{mode='general'}={}){
   const operations=[];let coverageUnits=0;let uncoveredUnits=0;let score=0;
   for(const item of plannedSegments){
     if(item.segment.kind==='unresolved_word'){operations.push(unresolvedOperation(item.segment));continue;}
@@ -132,7 +132,7 @@ function combinePartialSpanRoutes(phonetics={},plannedSegments=[]){
   const crossWordOperationCount=operations.filter(operation=>operation.crossesWordBoundary&&operation.kind!=='gap').length;
   const crossWordGapCount=operations.filter(operation=>operation.crossesWordBoundary&&operation.kind==='gap').length;
   const complete=unresolvedWordCount===0&&uncoveredUnits===0&&coverageUnits===targetUnits;
-  return {targetIpa:phonetics.continuousIpa,targetUnits,coverageUnits,uncoveredUnits,unresolvedWordCount,complete,exact:complete&&operations.every(operation=>operation.phoneticTier==='exact'),mode:'general',operations,crossWordOperationCount,crossWordGapCount,scoreBreakdown:{coverageRatio:targetUnits?Number((coverageUnits/targetUnits).toFixed(4)):0,uncoveredUnits,unresolvedWordCount,pieceCount:operations.filter(operation=>!['gap','unresolved_word'].includes(operation.kind)).length},score:Number(score.toFixed(4))};
+  return {targetIpa:phonetics.continuousIpa,targetUnits,coverageUnits,uncoveredUnits,unresolvedWordCount,complete,exact:complete&&operations.every(operation=>operation.phoneticTier==='exact'),mode,operations,crossWordOperationCount,crossWordGapCount,scoreBreakdown:{coverageRatio:targetUnits?Number((coverageUnits/targetUnits).toFixed(4)):0,uncoveredUnits,unresolvedWordCount,pieceCount:operations.filter(operation=>!['gap','unresolved_word'].includes(operation.kind)).length},score:Number(score.toFixed(4))};
 }
 
 export function planPhraseRepresentationPaths(value='',pronunciationSource={},bankRows=[],options={}){
@@ -150,6 +150,6 @@ export function planPhraseRepresentationPaths(value='',pronunciationSource={},ba
     const route=planRepresentationPaths(segment.ipa,bankRows,plannerOptions)[0]||null;
     return {segment,route:route?annotateRouteWordBoundaries(route,phonetics,{words:segment.words,unitStart:segment.unitStart}):null};
   });
-  const combined=combinePartialSpanRoutes(phonetics,plannedSegments);
+  const combined=combinePartialSpanRoutes(phonetics,plannedSegments,{mode:options.mode||'general'});
   return {phonetics,routes:[combined],status:'partial_phrase_pronunciation',optionIndexStats:{optionCount:optionIndex.optionCount,generalOptionCount:optionIndex.generalOptionCount,strictOptionCount:optionIndex.strictOptionCount}};
 }

@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {performance} from 'node:perf_hooks';
-import {buildPronunciationLookup,decodePronunciationLexicon,planPhraseRepresentationPaths} from '../src/rebus-phrase-phonetics.js';
+import {buildPronunciationLookup,decodePronunciationLexicon,phraseToContinuousIPA,planPhraseRepresentationPaths} from '../src/rebus-phrase-phonetics.js';
 import {buildRepresentationPathIndex} from '../src/rebus-representation-paths.js';
 import {playableRepresentationBankRows} from '../src/generated-play-catalog.js';
 
@@ -27,8 +27,11 @@ function plan(value,{mode='general',limit=12}={}){
 function labels(route={}){return (route.operations||[]).filter(item=>!['gap','unresolved_word'].includes(item.kind)).map(item=>item.label);}
 function routeWithLabels(planned,wanted=[]){return (planned.routes||[]).find(route=>wanted.every((label,index)=>labels(route)[index]===label))||null;}
 
-// Real runtime regression: no creator target for "pili" is required; pronunciation + active bank are sufficient.
-assert.ok(pronunciationLookup.has('pili'),'the real pronunciation lexicon must resolve pili for dynamic creator use');
+// Real runtime regression: no creator target or dedicated pronunciation entry for "pili" is required.
+const piliPhonetics=phraseToContinuousIPA('pili',pronunciationLookup);
+assert.equal(piliPhonetics.complete,true);
+assert.equal(piliPhonetics.continuousIpa,'pili');
+if(!pronunciationLookup.has('pili'))assert.equal(piliPhonetics.words[0].pronunciationMethod,'orthographic_sound_fallback');
 const pili=plan('pili',{mode:'strict'});
 const piliRoute=routeWithLabels(pili,['pie','lit']);
 assert.ok(piliRoute&&piliRoute.complete,'real runtime must compose /pili/ from active pie + lit');
@@ -101,6 +104,7 @@ assert.ok(meanPlanMs<100,`cached phrase planning should remain comfortably inter
 
 const summary={
   pronunciationForms:pronunciationLookup.size,
+  piliPronunciationMethod:piliPhonetics.words[0].pronunciationMethod,
   runtimeBankRows:bankRows.length,
   runtimeOptionCount:optionIndex.optionCount,
   indexBuildMs:Number(buildMs.toFixed(2)),

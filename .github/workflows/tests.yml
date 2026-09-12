@@ -7,17 +7,29 @@ on:
       - 'app.js'
       - 'package.json'
       - 'src/**'
+      - 'scripts/build-rebus-productive-bank-wave2.mjs'
       - 'tests/**'
       - 'data/rebus-fragment-representation-ideas.json'
       - 'data/rebus-productive-bank-wave1.json'
+      - 'data/rebus-productive-bank-wave2.json'
+      - 'data/rebus-productive-bank-wave2-phrase-coverage.json'
+      - 'data/rebus-representation-expansion-queue.json'
+      - 'data/rebus-representation-differential-preselection.json'
+      - 'data/rebus-sound-visual-curation*.json'
   pull_request:
     paths:
       - 'app.js'
       - 'package.json'
       - 'src/**'
+      - 'scripts/build-rebus-productive-bank-wave2.mjs'
       - 'tests/**'
       - 'data/rebus-fragment-representation-ideas.json'
       - 'data/rebus-productive-bank-wave1.json'
+      - 'data/rebus-productive-bank-wave2.json'
+      - 'data/rebus-productive-bank-wave2-phrase-coverage.json'
+      - 'data/rebus-representation-expansion-queue.json'
+      - 'data/rebus-representation-differential-preselection.json'
+      - 'data/rebus-sound-visual-curation*.json'
   workflow_dispatch:
 
 permissions:
@@ -34,12 +46,16 @@ jobs:
           node-version: '22'
       - name: Check browser entry syntax
         run: node --check app.js
+      - name: Generate productive phonetic bank wave 2
+        run: node scripts/build-rebus-productive-bank-wave2.mjs
       - name: Run project tests
         run: npm test
       - name: Validate productive representation wave
         run: node tests/productive-representation-wave1.test.mjs
       - name: Validate productive phonetic bank wave
         run: node tests/rebus-productive-bank-wave1.test.mjs
+      - name: Validate productive phonetic bank wave 2
+        run: node tests/rebus-productive-bank-wave2.test.mjs
       - name: Run pictogram research triage regression
         run: node tests/pictogram-research-triage.test.mjs
       - name: Verify jsPDF browser dependency

@@ -81,13 +81,13 @@ for(const item of corpus.items||[])if(item?.target)targetKeys.add(String(item.ta
 for(const item of [...(coverage.constructible||[]),...(coverage.constructibleMultiPiece||[])])if(item?.word)targetKeys.add(String(item.word).toLocaleLowerCase('fr'));
 const probes=[
   {word:'pili',pieces:['pie','lit']},
-  {word:'papi',pieces:['pas','pie']},
-  {word:'lili',pieces:['lit','lit']},
-  {word:'pipa',pieces:['pie','pas']}
+  {word:'lipi',pieces:['lit','pie']},
+  {word:'pilipa',pieces:['pie','lit','pas']},
+  {word:'lipali',pieces:['lit','pas','lit']}
 ];
 const discovered=[];
 for(const probe of probes){
-  if(targetKeys.has(probe.word))continue;
+  assert.equal(targetKeys.has(probe.word),false,`${probe.word} must stay absent from the prebuilt creator target catalog`);
   const planned=plan(probe.word,{mode:'strict',limit:12});
   const route=routeWithLabels(planned,probe.pieces);
   if(route?.complete)discovered.push({word:probe.word,ipa:planned.phonetics.continuousIpa,pieces:labels(route),pronunciationMethod:planned.phonetics.words[0]?.pronunciationMethod});

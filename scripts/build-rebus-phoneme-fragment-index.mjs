@@ -64,7 +64,7 @@ const compactRows=rows.map(row=>[
 ]);
 
 const report={
-  formatVersion:2,
+  formatVersion:1,
   generatedAt:new Date().toISOString(),
   status:'research_mapping_only',
   scope:'all_source_exact_contiguous_phoneme_fragments_up_to_eight_units',

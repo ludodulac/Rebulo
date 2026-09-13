@@ -1,0 +1,22 @@
+name: B to C industrial final verify
+
+on:
+  push:
+    branches:
+      - analysis/b-to-c-industrial-sample-2000
+    paths:
+      - tests/b-to-c-industrial-sample.test.mjs
+      - data/b-to-c-industrial-sample-2000-rescue-editorial-review.json
+      - .github/workflows/b-to-c-industrial-final-verify.yml
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: analysis/b-to-c-industrial-sample-2000
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/b-to-c-industrial-sample.test.mjs

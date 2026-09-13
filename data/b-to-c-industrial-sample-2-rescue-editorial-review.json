@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0",
+  "status": "analysis_only",
+  "reviewedStratum": "low_score_rescue",
+  "reviewedRelations": 360,
+  "automaticAB": 0,
+  "editorialSeriousRecovered": 4,
+  "editorialSeriousRecoveredPercent": 1.1,
+  "humanNamingEvidence": "none",
+  "recovered": [
+    {
+      "sampleId":"B2C-I2-0968","ipa":"myʁ","exactWord":"mûres","senseId":"noun.fruit_mure","conceptLabel":"mûres","conceptCategory":"aliment","conceptDescription":"Quelques mûres noires isolées, reconnaissables comme fruits.",
+      "scores":{"concreteness":4,"drawability":4,"expectedNameability":3,"alternativeNameResistance":2,"visualAmbiguityResistance":3,"visualSimplicity":4,"lexicalFamiliarity":2,"phoneticReuse":1,"compactness":4,"multiRepresentationValue":2},
+      "aggregateScore":74.5,"provisionalClass":"B","anticipatedAlternativeNames":["baies","fruits rouges"],"anticipatedNamingRisk":"medium","falseNegativeCause":"sens concret absent: lexicalEntries ne conserve ici que l'adjectif mûr; le nom pluriel mûres = fruits est un sens usuel distinct.","causeCategory":"sens_concret_absent","humanNamingEvidence":"none","editorialReview":"concept_reviewed"
+    },
+    {
+      "sampleId":"B2C-I2-1039","ipa":"afʁo","exactWord":"afro","senseId":"noun.coiffure_afro","conceptLabel":"afro","conceptCategory":"corps_style","conceptDescription":"Une coiffure afro volumineuse, isolée comme forme capillaire distinctive.",
+      "scores":{"concreteness":3,"drawability":4,"expectedNameability":3,"alternativeNameResistance":3,"visualAmbiguityResistance":3,"visualSimplicity":4,"lexicalFamiliarity":2,"phoneticReuse":1,"compactness":2,"multiRepresentationValue":0},
+      "aggregateScore":71.0,"provisionalClass":"B","anticipatedAlternativeNames":["coiffure","cheveux afro"],"anticipatedNamingRisk":"medium","falseNegativeCause":"mauvais POS / sens concret absent: le miroir ne fournit que l'adjectif, alors que l'usage nominal coiffure afro est visuel et courant.","causeCategory":"mauvais_POS_sens_concret_absent","humanNamingEvidence":"none","editorialReview":"concept_reviewed"
+    },
+    {
+      "sampleId":"B2C-I2-1049","ipa":"minœʁ","exactWord":"mineur","senseId":"noun.travailleur_mine","conceptLabel":"mineur","conceptCategory":"personne_rôle","conceptDescription":"Un mineur avec casque-lampe et équipement de mine, sans texte.",
+      "scores":{"concreteness":4,"drawability":4,"expectedNameability":3,"alternativeNameResistance":2,"visualAmbiguityResistance":3,"visualSimplicity":3,"lexicalFamiliarity":2,"phoneticReuse":1,"compactness":2,"multiRepresentationValue":2},
+      "aggregateScore":70.5,"provisionalClass":"B","anticipatedAlternativeNames":["ouvrier","travailleur de mine"],"anticipatedNamingRisk":"medium","falseNegativeCause":"mauvais POS / sens concret absent: lexicalEntries ne fournit que l'adjectif mineur et manque le nom de métier.","causeCategory":"mauvais_POS_sens_concret_absent","humanNamingEvidence":"none","editorialReview":"concept_reviewed"
+    },
+    {
+      "sampleId":"B2C-I2-1130","ipa":"luʃ","exactWord":"louche","senseId":"noun.ustensile_louche","conceptLabel":"louche","conceptCategory":"outil","conceptDescription":"Une louche de cuisine seule, manche et cuilleron profond clairement visibles.",
+      "scores":{"concreteness":4,"drawability":4,"expectedNameability":3,"alternativeNameResistance":2,"visualAmbiguityResistance":3,"visualSimplicity":4,"lexicalFamiliarity":3,"phoneticReuse":1,"compactness":4,"multiRepresentationValue":2},
+      "aggregateScore":77.0,"provisionalClass":"B","anticipatedAlternativeNames":["cuillère","grande cuillère"],"anticipatedNamingRisk":"medium","falseNegativeCause":"mauvais POS / sens concret absent: le miroir ne fournit que l'adjectif louche et manque le nom d'ustensile.","causeCategory":"mauvais_POS_sens_concret_absent","humanNamingEvidence":"none","editorialReview":"concept_reviewed"
+    }
+  ],
+  "reviewedNearMisses":[
+    {"sampleId":"B2C-I2-0884","exactWord":"jumelle","decision":"C","reason":"sens nominal plausible mais image d'une sœur jumelle est plus spontanément nommée fille/femme/sœur"},
+    {"sampleId":"B2C-I2-0994","exactWord":"lotion","decision":"C","reason":"objet concret mais flacon/crème dominent probablement la dénomination"},
+    {"sampleId":"B2C-I2-0998","exactWord":"automne","decision":"C","reason":"saison dessinable par scène mais nommage spontané trop contextuel"},
+    {"sampleId":"B2C-I2-1008","exactWord":"ânesse","decision":"C","reason":"animal concret mais âne domine probablement le nommage"},
+    {"sampleId":"B2C-I2-1067","exactWord":"menotte","decision":"C","reason":"sens concret possible mais main/menottes au pluriel dominent"},
+    {"sampleId":"B2C-I2-1117","exactWord":"marron","decision":"C","reason":"fruit concret mais châtaigne concurrence fortement le nom cible"}
+  ],
+  "causeCounts":{"sens_concret_absent":1,"mauvais_POS_sens_concret_absent":3}
+}

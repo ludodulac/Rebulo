@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "2.0",
+  "status": "analysis_only",
+  "sourceMainSha": "95d1fbc62148767c3fe5a71cb9084e8990e565dd",
+  "selectedRelations": 2000,
+  "newRelations": 2000,
+  "overlapRelations": 0,
+  "overlapReasons": [],
+  "examinedRelations": 2000,
+  "conceptualUnitsBaseline": 2000,
+  "distinctIpaCount": 1641,
+  "distribution": {
+    "A": 0,
+    "B": 78,
+    "C": 1093,
+    "D": 829
+  },
+  "AB": 78,
+  "ABPercent": 3.9,
+  "ABMonosyllable": 77,
+  "ABBisyllable": 1,
+  "ABShortIpa": 73,
+  "multiSeriousConceptSoundCount": 2,
+  "lowScoreThreshold": 6,
+  "rescueBaseline": {
+    "selected": 360,
+    "automaticAB": 0
+  },
+  "byStratum": {
+    "concrete_priority": {
+      "quota": 460,
+      "selected": 460,
+      "examined": 460,
+      "A": 0,
+      "B": 78,
+      "C": 382,
+      "D": 0,
+      "AB": 78,
+      "ABPercent": 17
+    },
+    "low_frequency_concrete": {
+      "quota": 320,
+      "selected": 320,
+      "examined": 320,
+      "A": 0,
+      "B": 0,
+      "C": 320,
+      "D": 0,
+      "AB": 0,
+      "ABPercent": 0
+    },
+    "low_score_rescue": {
+      "quota": 360,
+      "selected": 360,
+      "examined": 360,
+      "A": 0,
+      "B": 0,
+      "C": 11,
+      "D": 349,
+      "AB": 0,
+      "ABPercent": 0
+    },
+    "pos_sense_risk": {
+      "quota": 260,
+      "selected": 260,
+      "examined": 260,
+      "A": 0,
+      "B": 0,
+      "C": 79,
+      "D": 181,
+      "AB": 0,
+      "ABPercent": 0
+    },
+    "multi_concept_ipa": {
+      "quota": 260,
+      "selected": 260,
+      "examined": 260,
+      "A": 0,
+      "B": 0,
+      "C": 196,
+      "D": 64,
+      "AB": 0,
+      "ABPercent": 0
+    },
+    "negative_control": {
+      "quota": 220,
+      "selected": 220,
+      "examined": 220,
+      "A": 0,
+      "B": 0,
+      "C": 32,
+      "D": 188,
+      "AB": 0,
+      "ABPercent": 0
+    },
+    "two_syllable_control": {
+      "quota": 120,
+      "selected": 120,
+      "examined": 120,
+      "A": 0,
+      "B": 0,
+      "C": 73,
+      "D": 47,
+      "AB": 0,
+      "ABPercent": 0
+    }
+  },
+  "rejectCauses": {
+    "aggregate_weakness": 1063,
+    "low_expected_nameability": 857,
+    "low_drawability": 349,
+    "alternative_names": 9,
+    "abstract_concept": 15
+  },
+  "humanNamingEvidence": "none"
+}

@@ -15,7 +15,7 @@ assert.equal(REBULO_VISIBLE_BATCH1.length,23);
 assert.deepEqual(visibleBatch1Stats(),{count:23,oneSyllable:18,twoSyllable:5});
 assert.equal(new Set(REBULO_VISIBLE_BATCH1.map(item=>item.id)).size,23);
 assert.equal(new Set(REBULO_VISIBLE_BATCH1.map(item=>normalizeIPA(item.ipa))).size,23);
-assert.ok(fs.existsSync('assets/rebus/visible-batch1/sprite.svg'));
+assert.ok(fs.existsSync('assets/visible-batch1/sprite.svg'));
 
 for(const item of REBULO_VISIBLE_BATCH1){
   assert.equal(item.active,true);
@@ -23,7 +23,7 @@ for(const item of REBULO_VISIBLE_BATCH1){
   assert.equal(item.spontaneousNamingRisk,'unknown');
   assert.equal(item.humanNamingEvidence,'none');
   assert.equal(item.clinicalEvidence,'none');
-  assert.match(item.image,/^assets\/rebus\/visible-batch1\/sprite\.svg\?asset=/);
+  assert.match(item.image,/^assets\/visible-batch1\/sprite\.svg\?asset=/);
   assert.ok(item.sourceCuration);
 }
 

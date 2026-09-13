@@ -6,6 +6,7 @@ on:
       - '.github/workflows/phrase-browser-product.yml'
       - 'src/app-bootstrap.js'
       - 'src/play-mode.js'
+      - 'src/play-game.js'
       - 'src/phrase-mode.js'
       - 'src/phrase-planner-worker.js'
       - 'src/rebus-phrase-phonetics.js'
@@ -16,6 +17,7 @@ on:
       - 'phrase-mode.css'
       - 'tests/phrase-browser-product.e2e.mjs'
       - 'tests/compact-runtime-browser.e2e.mjs'
+      - 'tests/phrase-mobile-readability.e2e.mjs'
       - 'tests/word-lifecycle-trace.e2e.mjs'
       - 'tests/phrase-runtime-diagnostic.mjs'
       - 'tests/rebulo-visible-batch1.e2e.mjs'
@@ -26,6 +28,7 @@ on:
     paths:
       - 'src/app-bootstrap.js'
       - 'src/play-mode.js'
+      - 'src/play-game.js'
       - 'src/phrase-mode.js'
       - 'src/phrase-planner-worker.js'
       - 'src/rebus-phrase-phonetics.js'
@@ -36,6 +39,7 @@ on:
       - 'phrase-mode.css'
       - 'tests/phrase-browser-product.e2e.mjs'
       - 'tests/compact-runtime-browser.e2e.mjs'
+      - 'tests/phrase-mobile-readability.e2e.mjs'
       - 'tests/word-lifecycle-trace.e2e.mjs'
       - 'tests/phrase-runtime-diagnostic.mjs'
       - 'tests/rebulo-visible-batch1.e2e.mjs'
@@ -87,6 +91,10 @@ jobs:
           OUTPUT_JSON: compact-runtime-browser-checkout.json
           CPU_THROTTLE: '4'
         run: node tests/compact-runtime-browser.e2e.mjs
+      - name: Verify long phrase readability on mobile
+        env:
+          BASE_URL: http://127.0.0.1:4173/
+        run: node tests/phrase-mobile-readability.e2e.mjs
       - name: Verify visible Rebulo batch on mobile and desktop
         env:
           BASE_URL: http://127.0.0.1:4173/

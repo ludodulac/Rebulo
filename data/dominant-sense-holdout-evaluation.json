@@ -1,0 +1,1015 @@
+{
+  "schemaVersion": "1.0",
+  "status": "sealed_holdout_final_no_further_model_tuning",
+  "baseSha": "b45854e82f85d8028075d7809d99c30212225ea9",
+  "frozenModelSha": "9905d76216194ae6d8b8868c78c5e8383b543a15",
+  "modelVersion": "dominant-sense-semantic-v4",
+  "taxonomy": [
+    "physical_object",
+    "animal",
+    "plant",
+    "food",
+    "body_part",
+    "person_role",
+    "vehicle",
+    "place",
+    "clothing",
+    "tool",
+    "material",
+    "event",
+    "action",
+    "abstract",
+    "relation",
+    "symbol",
+    "text",
+    "quantity",
+    "other"
+  ],
+  "source": {
+    "sourceId": "frwiktionary-kaikki-2026-09-08",
+    "sourceName": "French Wiktionary via Wiktextract/Kaikki",
+    "sourceVersion": "frwiktionary dump 2026-09-01; Kaikki extraction 2026-09-08; wiktextract ccec6f1 + 4deed51",
+    "license": "CC-BY-SA + GFDL",
+    "sourceRoot": "https://kaikki.org/frwiktionary/Fran%C3%A7ais/meaning/"
+  },
+  "n": 90,
+  "positive": 17,
+  "negative": 73,
+  "coverage": {
+    "relationsWithObservedSense": 88,
+    "percent": 97.8,
+    "averageObservedSenseCount": 5.7,
+    "positiveWithObservedSense": 17,
+    "positiveWithObservedSensePercent": 100,
+    "negativeBlocked": 71,
+    "negativeBlockedPercent": 97.3
+  },
+  "primaryMetricsSenseAligned": {
+    "n": 90,
+    "tp": 2,
+    "fp": 0,
+    "tn": 73,
+    "fn": 15,
+    "precision": 100,
+    "recall": 11.8,
+    "f1": 21.1
+  },
+  "relationLevelMetrics": {
+    "n": 90,
+    "tp": 3,
+    "fp": 2,
+    "tn": 71,
+    "fn": 14,
+    "precision": 60,
+    "recall": 17.6,
+    "f1": 27.3
+  },
+  "semanticTypeAccuracy": {
+    "evaluated": 88,
+    "correct": 41,
+    "percent": 46.6
+  },
+  "senseRanking": {
+    "definition": "Pre-source expected visual senses are considered rank-compatible when the deterministic semanticType of an observed sense matches an expected semantic type. This is a conservative type-level proxy, not exact sense identity when same-type polysemy remains.",
+    "top1": {
+      "count": 8,
+      "denominator": 17,
+      "percent": 47.1
+    },
+    "top2": {
+      "count": 9,
+      "denominator": 17,
+      "percent": 52.9
+    },
+    "top3": {
+      "count": 10,
+      "denominator": 17,
+      "percent": 58.8
+    }
+  },
+  "automaticGreens": [
+    {
+      "goldId": "DSG-H-018",
+      "word": "chanteur",
+      "goldPositive": true,
+      "selectedSenseCompatible": true,
+      "selectedDefinition": "Personne qui fait métier de chanter.",
+      "semanticType": "person_role",
+      "score": 74
+    },
+    {
+      "goldId": "DSG-H-056",
+      "word": "halo",
+      "goldPositive": false,
+      "selectedSenseCompatible": false,
+      "selectedDefinition": "Aréole ou cercle coloré qui entoure le mamelon du sein.",
+      "semanticType": "body_part",
+      "score": 72
+    },
+    {
+      "goldId": "DSG-H-060",
+      "word": "canne",
+      "goldPositive": true,
+      "selectedSenseCompatible": false,
+      "selectedDefinition": "Espèce de roseau, telle que le roseau, la canne d’Inde, la canne à sucre, le bambou, etc.",
+      "semanticType": "plant",
+      "score": 80
+    },
+    {
+      "goldId": "DSG-H-064",
+      "word": "mousse",
+      "goldPositive": true,
+      "selectedSenseCompatible": true,
+      "selectedDefinition": "Plante rase des lieux humides formant des tapis spongieux composés de plusieurs individus.",
+      "semanticType": "plant",
+      "score": 80
+    },
+    {
+      "goldId": "DSG-H-068",
+      "word": "fierté",
+      "goldPositive": false,
+      "selectedSenseCompatible": false,
+      "selectedDefinition": "Caractère de celui qui est fier, de celle qui est fière, de ce qui est fier.",
+      "semanticType": "symbol",
+      "score": 78
+    }
+  ],
+  "falsePositives": [
+    {
+      "goldId": "DSG-H-056",
+      "word": "halo",
+      "ipa": "alo",
+      "selected": {
+        "definition": "Aréole ou cercle coloré qui entoure le mamelon du sein.",
+        "semanticType": "body_part",
+        "sourceOrder": 3,
+        "score": 72
+      },
+      "decisionReason": "ranked_observed_sense_passes_general_guards",
+      "goldReason": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
+    },
+    {
+      "goldId": "DSG-H-068",
+      "word": "fierté",
+      "ipa": "fjɛʁte",
+      "selected": {
+        "definition": "Caractère de celui qui est fier, de celle qui est fière, de ce qui est fier.",
+        "semanticType": "symbol",
+        "sourceOrder": 1,
+        "score": 78
+      },
+      "decisionReason": "ranked_observed_sense_passes_general_guards",
+      "goldReason": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
+    }
+  ],
+  "falseNegatives": [
+    {
+      "goldId": "DSG-H-015",
+      "word": "quartier",
+      "ipa": "kaʁtje",
+      "expectedVisualSenses": [
+        {
+          "goldSenseId": "DSG-H-015-S1",
+          "conceptLabel": "quartier",
+          "semanticType": "place",
+          "description": "quartier urbain reconnaissable"
+        }
+      ],
+      "observedSenseCount": 20,
+      "compatibleSenseRank": 5,
+      "selected": {
+        "definition": "Division de certains fruits.",
+        "semanticType": "plant",
+        "sourceOrder": 3,
+        "score": 72
+      },
+      "decisionReason": "source_order_above_2_for_plant",
+      "observedTop5": [
+        {
+          "rank": 1,
+          "definition": "Division de certains fruits.",
+          "semanticType": "plant",
+          "sourceOrder": 3,
+          "score": 72
+        },
+        {
+          "rank": 2,
+          "definition": "Quart, une des quatre parties plus ou moins égales d'un tout.",
+          "semanticType": "other",
+          "sourceOrder": 1,
+          "score": 66
+        },
+        {
+          "rank": 3,
+          "definition": "Bois fendu.",
+          "semanticType": "other",
+          "sourceOrder": 4,
+          "score": 52
+        },
+        {
+          "rank": 4,
+          "definition": "Partie importante d'un tout.",
+          "semanticType": "other",
+          "sourceOrder": 5,
+          "score": 50
+        },
+        {
+          "rank": 5,
+          "definition": "Quartier à problèmes, mal fréquenté.",
+          "semanticType": "place",
+          "sourceOrder": 8,
+          "score": 50
+        }
+      ]
+    },
+    {
+      "goldId": "DSG-H-016",
+      "word": "casier",
+      "ipa": "kazje",
+      "expectedVisualSenses": [
+        {
+          "goldSenseId": "DSG-H-016-S1",
+          "conceptLabel": "casier",
+          "semanticType": "physical_object",
+          "description": "casier / compartiment de rangement"
+        }
+      ],
+      "observedSenseCount": 7,
+      "compatibleSenseRank": null,
+      "selected": {
+        "definition": "Nasse pour prendre, selon la taille de l’ouverture, les gros crustacés ou les crevettes.",
+        "semanticType": "other",
+        "sourceOrder": 1,
+        "score": 68
+      },
+      "decisionReason": "semantic_type_not_safely_visual",
+      "observedTop5": [
+        {
+          "rank": 1,
+          "definition": "Nasse pour prendre, selon la taille de l’ouverture, les gros crustacés ou les crevettes.",
+          "semanticType": "other",
+          "sourceOrder": 1,
+          "score": 68
+        },
+        {
+          "rank": 2,
+          "definition": "Ensemble de cases, de compartiments d’un meuble de rangement, de bureau, de bibliothèque.",
+          "semanticType": "other",
+          "sourceOrder": 2,
+          "score": 62
+        },
+        {
+          "rank": 3,
+          "definition": "Niche placée sous les pupitres d’écolier.",
+          "semanticType": "other",
+          "sourceOrder": 3,
+          "score": 58
+        },
+        {
+          "rank": 4,
+          "definition": "Ellipse de casier judiciaire : relevé des condamnations prononcées contre quelqu’un. Service qui établit ce relevé.",
+          "semanticType": "other",
+          "sourceOrder": 4,
+          "score": 54
+        },
+        {
+          "rank": 5,
+          "definition": "Parcelle d′une rizière.",
+          "semanticType": "other",
+          "sourceOrder": 5,
+          "score": 52
+        }
+      ]
+    },
+    {
+      "goldId": "DSG-H-019",
+      "word": "seigneur",
+      "ipa": "sɛɲœʁ",
+      "expectedVisualSenses": [
+        {
+          "goldSenseId": "DSG-H-019-S1",
+          "conceptLabel": "seigneur",
+          "semanticType": "person_role",
+          "description": "seigneur en contexte historique"
+        }
+      ],
+      "observedSenseCount": 6,
+      "compatibleSenseRank": null,
+      "selected": {
+        "definition": "Maître, possesseur d’un pays, d’un État, d’une terre.",
+        "semanticType": "other",
+        "sourceOrder": 1,
+        "score": 68
+      },
+      "decisionReason": "semantic_type_not_safely_visual",
+      "observedTop5": [
+        {
+          "rank": 1,
+          "definition": "Maître, possesseur d’un pays, d’un État, d’une terre.",
+          "semanticType": "other",
+          "sourceOrder": 1,
+          "score": 68
+        },
+        {
+          "rank": 2,
+          "definition": "Titre que l’on donne à quelques personnes distinguées par leur dignité ou par leur rang, pour leur faire plus d’honneur.",
+          "semanticType": "other",
+          "sourceOrder": 2,
+          "score": 64
+        },
+        {
+          "rank": 3,
+          "definition": "Par plaisanterie, une femme dit de son mari :",
+          "semanticType": "other",
+          "sourceOrder": 3,
+          "score": 58
+        },
+        {
+          "rank": 4,
+          "definition": "Dieu.",
+          "semanticType": "other",
+          "sourceOrder": 4,
+          "score": 54
+        },
+        {
+          "rank": 5,
+          "definition": "Jésus-Christ considéré comme Dieu.",
+          "semanticType": "other",
+          "sourceOrder": 5,
+          "score": 52
+        }
+      ]
+    },
+    {
+      "goldId": "DSG-H-022",
+      "word": "chantier",
+      "ipa": "ʃɑ̃tje",
+      "expectedVisualSenses": [
+        {
+          "goldSenseId": "DSG-H-022-S1",
+          "conceptLabel": "chantier",
+          "semanticType": "place",
+          "description": "site de construction"
+        }
+      ],
+      "observedSenseCount": 13,
+      "compatibleSenseRank": 3,
+      "selected": {
+        "definition": "Pièce de bois qui sert de support, d’étai.",
+        "semanticType": "other",
+        "sourceOrder": 1,
+        "score": 66
+      },
+      "decisionReason": "semantic_type_not_safely_visual",
+      "observedTop5": [
+        {
+          "rank": 1,
+          "definition": "Pièce de bois qui sert de support, d’étai.",
+          "semanticType": "other",
+          "sourceOrder": 1,
+          "score": 66
+        },
+        {
+          "rank": 2,
+          "definition": "Pièce de bois qui sert de support, d’étai.",
+          "semanticType": "other",
+          "sourceOrder": 2,
+          "score": 64
+        },
+        {
+          "rank": 3,
+          "definition": "Lieu où l’on range, où l’on entasse des piles de gros bois, à brûler, de charpente ou de charronnage.",
+          "semanticType": "place",
+          "sourceOrder": 3,
+          "score": 58
+        },
+        {
+          "rank": 4,
+          "definition": "Lieu où l’on travaille le bois ou la pierre afin de pouvoir les employer à un bâtiment.",
+          "semanticType": "place",
+          "sourceOrder": 4,
+          "score": 56
+        },
+        {
+          "rank": 5,
+          "definition": "Lieu où l’on travaille le bois ou la pierre afin de pouvoir les employer à un bâtiment.",
+          "semanticType": "place",
+          "sourceOrder": 5,
+          "score": 52
+        }
+      ]
+    },
+    {
+      "goldId": "DSG-H-024",
+      "word": "joue",
+      "ipa": "ʒu",
+      "expectedVisualSenses": [
+        {
+          "goldSenseId": "DSG-H-024-S1",
+          "conceptLabel": "joue",
+          "semanticType": "body_part",
+          "description": "joue du visage"
+        }
+      ],
+      "observedSenseCount": 9,
+      "compatibleSenseRank": 1,
+      "selected": {
+        "definition": "Partie du visage de l’humain qui est au-dessous des tempes et des yeux, et qui s’étend de chaque côté du nez jusqu’au menton dont la peau ferme latéralement la bouche.",
+        "semanticType": "body_part",
+        "sourceOrder": 1,
+        "score": 40
+      },
+      "decisionReason": "B_POS_mismatch",
+      "observedTop5": [
+        {
+          "rank": 1,
+          "definition": "Partie du visage de l’humain qui est au-dessous des tempes et des yeux, et qui s’étend de chaque côté du nez jusqu’au menton dont la peau ferme latéralement la bouche.",
+          "semanticType": "body_part",
+          "sourceOrder": 1,
+          "score": 40
+        },
+        {
+          "rank": 2,
+          "definition": "Partie arrondie de la coque d’un navire qui est comprise entre le mât de misaine et l’étrave.",
+          "semanticType": "other",
+          "sourceOrder": 2,
+          "score": 24
+        },
+        {
+          "rank": 3,
+          "definition": "Pièce de bœuf, que l’on fait mijoter dans une sauce au vin.",
+          "semanticType": "other",
+          "sourceOrder": 3,
+          "score": 18
+        },
+        {
+          "rank": 4,
+          "definition": "Face latérale extérieure de la caisse d'une poulie.",
+          "semanticType": "other",
+          "sourceOrder": 4,
+          "score": 16
+        },
+        {
+          "rank": 5,
+          "definition": "Première personne du singulier de l’indicatif présent de jouer.",
+          "semanticType": "action",
+          "sourceOrder": 5,
+          "score": 14
+        }
+      ]
+    },
+    {
+      "goldId": "DSG-H-030",
+      "word": "pêcher",
+      "ipa": "peʃe",
+      "expectedVisualSenses": [
+        {
+          "goldSenseId": "DSG-H-030-S1",
+          "conceptLabel": "pêcher",
+          "semanticType": "action",
+          "description": "personne qui pêche"
+        }
+      ],
+      "observedSenseCount": 5,
+      "compatibleSenseRank": 1,
+      "selected": {
+        "definition": "Prendre du poisson.",
+        "semanticType": "action",
+        "sourceOrder": 2,
+        "score": 54
+      },
+      "decisionReason": "semantic_type_not_safely_visual",
+      "observedTop5": [
+        {
+          "rank": 1,
+          "definition": "Prendre du poisson.",
+          "semanticType": "action",
+          "sourceOrder": 2,
+          "score": 54
+        },
+        {
+          "rank": 2,
+          "definition": "Tirer quelque chose de l’eau.",
+          "semanticType": "action",
+          "sourceOrder": 3,
+          "score": 52
+        },
+        {
+          "rank": 3,
+          "definition": "Arbre de la famille des Rosacées, qui produit les pêches.",
+          "semanticType": "plant",
+          "sourceOrder": 1,
+          "score": 40
+        },
+        {
+          "rank": 4,
+          "definition": "Saisir pour s’approvisionner.",
+          "semanticType": "action",
+          "sourceOrder": 4,
+          "score": 18
+        },
+        {
+          "rank": 5,
+          "definition": "Trouver, en sous-entendant que c’est erroné.",
+          "semanticType": "action",
+          "sourceOrder": 5,
+          "score": 14
+        }
+      ]
+    },
+    {
+      "goldId": "DSG-H-033",
+      "word": "voler",
+      "ipa": "vole",
+      "expectedVisualSenses": [
+        {
+          "goldSenseId": "DSG-H-033-S1",
+          "conceptLabel": "voler dans les airs",
+          "semanticType": "action",
+          "description": "être en vol"
+        },
+        {
+          "goldSenseId": "DSG-H-033-S2",
+          "conceptLabel": "voler dérober",
+          "semanticType": "action",
+          "description": "action de dérober"
+        }
+      ],
+      "observedSenseCount": 13,
+      "compatibleSenseRank": 1,
+      "selected": {
+        "definition": "Se maintenir dans les airs en battant des ailes.",
+        "semanticType": "action",
+        "sourceOrder": 1,
+        "score": 60
+      },
+      "decisionReason": "semantic_type_not_safely_visual",
+      "observedTop5": [
+        {
+          "rank": 1,
+          "definition": "Se maintenir dans les airs en battant des ailes.",
+          "semanticType": "action",
+          "sourceOrder": 1,
+          "score": 60
+        },
+        {
+          "rank": 2,
+          "definition": "Se mouvoir dans l’air, en parlant des aéronefs.",
+          "semanticType": "action",
+          "sourceOrder": 2,
+          "score": 56
+        },
+        {
+          "rank": 3,
+          "definition": "Piloter un avion.",
+          "semanticType": "action",
+          "sourceOrder": 3,
+          "score": 52
+        },
+        {
+          "rank": 4,
+          "definition": "Se mouvoir dans l’air avec une grande vitesse.",
+          "semanticType": "action",
+          "sourceOrder": 4,
+          "score": 48
+        },
+        {
+          "rank": 5,
+          "definition": "Envoyer en l’air.",
+          "semanticType": "action",
+          "sourceOrder": 5,
+          "score": 42
+        }
+      ]
+    },
+    {
+      "goldId": "DSG-H-034",
+      "word": "toucher",
+      "ipa": "tuʃe",
+      "expectedVisualSenses": [
+        {
+          "goldSenseId": "DSG-H-034-S1",
+          "conceptLabel": "toucher",
+          "semanticType": "action",
+          "description": "contact volontaire de la main"
+        }
+      ],
+      "observedSenseCount": 40,
+      "compatibleSenseRank": 1,
+      "selected": {
+        "definition": "Mettre la main sur quelque chose.",
+        "semanticType": "action",
+        "sourceOrder": 1,
+        "score": 60
+      },
+      "decisionReason": "semantic_type_not_safely_visual",
+      "observedTop5": [
+        {
+          "rank": 1,
+          "definition": "Mettre la main sur quelque chose.",
+          "semanticType": "action",
+          "sourceOrder": 1,
+          "score": 60
+        },
+        {
+          "rank": 2,
+          "definition": "Toucher les parties sexuelles d'une personne.",
+          "semanticType": "action",
+          "sourceOrder": 2,
+          "score": 56
+        },
+        {
+          "rank": 3,
+          "definition": "Jouer, faire résonner, en parlant de certains instruments de musique.",
+          "semanticType": "action",
+          "sourceOrder": 3,
+          "score": 52
+        },
+        {
+          "rank": 4,
+          "definition": "Avoir la maîtrise d’un sujet, d’un domaine. (voir toucher sa bille)",
+          "semanticType": "action",
+          "sourceOrder": 4,
+          "score": 48
+        },
+        {
+          "rank": 5,
+          "definition": "Mettre en contact avec un objet, de quelque autre manière que ce soit.",
+          "semanticType": "action",
+          "sourceOrder": 5,
+          "score": 44
+        }
+      ]
+    },
+    {
+      "goldId": "DSG-H-039",
+      "word": "alien",
+      "ipa": "aljɛn",
+      "expectedVisualSenses": [
+        {
+          "goldSenseId": "DSG-H-039-S1",
+          "conceptLabel": "alien",
+          "semanticType": "other",
+          "description": "créature extraterrestre"
+        }
+      ],
+      "observedSenseCount": 2,
+      "compatibleSenseRank": 1,
+      "selected": {
+        "definition": "Extraterrestre.",
+        "semanticType": "other",
+        "sourceOrder": 1,
+        "score": 64
+      },
+      "decisionReason": "semantic_type_not_safely_visual",
+      "observedTop5": [
+        {
+          "rank": 1,
+          "definition": "Extraterrestre.",
+          "semanticType": "other",
+          "sourceOrder": 1,
+          "score": 64
+        },
+        {
+          "rank": 2,
+          "definition": "D'autrui, étranger.",
+          "semanticType": "abstract",
+          "sourceOrder": 2,
+          "score": -24
+        }
+      ]
+    },
+    {
+      "goldId": "DSG-H-042",
+      "word": "cachette",
+      "ipa": "kaʃɛt",
+      "expectedVisualSenses": [
+        {
+          "goldSenseId": "DSG-H-042-S1",
+          "conceptLabel": "cachette",
+          "semanticType": "place",
+          "description": "endroit servant à se cacher"
+        }
+      ],
+      "observedSenseCount": 5,
+      "compatibleSenseRank": null,
+      "selected": {
+        "definition": "Petite cache.",
+        "semanticType": "other",
+        "sourceOrder": 1,
+        "score": 64
+      },
+      "decisionReason": "semantic_type_not_safely_visual",
+      "observedTop5": [
+        {
+          "rank": 1,
+          "definition": "Petite cache.",
+          "semanticType": "other",
+          "sourceOrder": 1,
+          "score": 64
+        },
+        {
+          "rank": 2,
+          "definition": "Cachotterie.",
+          "semanticType": "other",
+          "sourceOrder": 2,
+          "score": 60
+        },
+        {
+          "rank": 3,
+          "definition": "Cache-cache.",
+          "semanticType": "other",
+          "sourceOrder": 3,
+          "score": 56
+        },
+        {
+          "rank": 4,
+          "definition": "Première personne du présent de l’indicatif du verbe cacheter.",
+          "semanticType": "action",
+          "sourceOrder": 4,
+          "score": -22
+        },
+        {
+          "rank": 5,
+          "definition": "Troisième personne du présent de l’indicatif du verbe cacheter.",
+          "semanticType": "action",
+          "sourceOrder": 5,
+          "score": -26
+        }
+      ]
+    },
+    {
+      "goldId": "DSG-H-048",
+      "word": "shampoing",
+      "ipa": "ʃɑ̃pwɛ̃",
+      "expectedVisualSenses": [
+        {
+          "goldSenseId": "DSG-H-048-S1",
+          "conceptLabel": "shampoing",
+          "semanticType": "material",
+          "description": "produit de shampoing clairement contextualisé"
+        }
+      ],
+      "observedSenseCount": 3,
+      "compatibleSenseRank": null,
+      "selected": {
+        "definition": "Variante orthographique de shampooing, lavage des cheveux.",
+        "semanticType": "other",
+        "sourceOrder": 1,
+        "score": 66
+      },
+      "decisionReason": "semantic_type_not_safely_visual",
+      "observedTop5": [
+        {
+          "rank": 1,
+          "definition": "Variante orthographique de shampooing, lavage des cheveux.",
+          "semanticType": "other",
+          "sourceOrder": 1,
+          "score": 66
+        },
+        {
+          "rank": 2,
+          "definition": "Variante orthographique de shampooing (« produit qui sert au lavage des cheveux »).",
+          "semanticType": "other",
+          "sourceOrder": 2,
+          "score": 32
+        },
+        {
+          "rank": 3,
+          "definition": "Fellation.",
+          "semanticType": "other",
+          "sourceOrder": 3,
+          "score": 28
+        }
+      ]
+    },
+    {
+      "goldId": "DSG-H-060",
+      "word": "canne",
+      "ipa": "kan",
+      "expectedVisualSenses": [
+        {
+          "goldSenseId": "DSG-H-060-S1",
+          "conceptLabel": "canne",
+          "semanticType": "physical_object",
+          "description": "canne de marche"
+        }
+      ],
+      "observedSenseCount": 16,
+      "compatibleSenseRank": 2,
+      "selected": {
+        "definition": "Espèce de roseau, telle que le roseau, la canne d’Inde, la canne à sucre, le bambou, etc.",
+        "semanticType": "plant",
+        "sourceOrder": 1,
+        "score": 80
+      },
+      "decisionReason": "ranked_observed_sense_passes_general_guards",
+      "observedTop5": [
+        {
+          "rank": 1,
+          "definition": "Espèce de roseau, telle que le roseau, la canne d’Inde, la canne à sucre, le bambou, etc.",
+          "semanticType": "plant",
+          "sourceOrder": 1,
+          "score": 80
+        },
+        {
+          "rank": 2,
+          "definition": "Bâton léger sur lequel on s’appuie de la main en marchant, souvent fait de roseau, de jonc ou de bois.",
+          "semanticType": "physical_object",
+          "sourceOrder": 3,
+          "score": 70
+        },
+        {
+          "rank": 3,
+          "definition": "Instrument long et cylindrique dont les usages diffèrent.",
+          "semanticType": "tool",
+          "sourceOrder": 4,
+          "score": 66
+        },
+        {
+          "rank": 4,
+          "definition": "Canne à pêche",
+          "semanticType": "other",
+          "sourceOrder": 5,
+          "score": 50
+        },
+        {
+          "rank": 5,
+          "definition": "Mesure de longueur employée en divers pays, particulièrement en Italie, et dont la valeur n’est pas constante ; celle de Naples vaut deux mètres vingt-neuf centimètres.",
+          "semanticType": "other",
+          "sourceOrder": 6,
+          "score": 48
+        }
+      ]
+    },
+    {
+      "goldId": "DSG-H-063",
+      "word": "charriots",
+      "ipa": "ʃaʁjo",
+      "expectedVisualSenses": [
+        {
+          "goldSenseId": "DSG-H-063-S1",
+          "conceptLabel": "charriots",
+          "semanticType": "vehicle",
+          "description": "plusieurs chariots"
+        }
+      ],
+      "observedSenseCount": 1,
+      "compatibleSenseRank": null,
+      "selected": {
+        "definition": "Pluriel de charriot.",
+        "semanticType": "other",
+        "sourceOrder": 1,
+        "score": 36
+      },
+      "decisionReason": "usage_or_form_penalty",
+      "observedTop5": [
+        {
+          "rank": 1,
+          "definition": "Pluriel de charriot.",
+          "semanticType": "other",
+          "sourceOrder": 1,
+          "score": 36
+        }
+      ]
+    },
+    {
+      "goldId": "DSG-H-065",
+      "word": "micro",
+      "ipa": "mikʁo",
+      "expectedVisualSenses": [
+        {
+          "goldSenseId": "DSG-H-065-S1",
+          "conceptLabel": "micro",
+          "semanticType": "physical_object",
+          "description": "microphone"
+        }
+      ],
+      "observedSenseCount": 4,
+      "compatibleSenseRank": null,
+      "selected": {
+        "definition": "Microphone.",
+        "semanticType": "other",
+        "sourceOrder": 1,
+        "score": 64
+      },
+      "decisionReason": "semantic_type_not_safely_visual",
+      "observedTop5": [
+        {
+          "rank": 1,
+          "definition": "Microphone.",
+          "semanticType": "other",
+          "sourceOrder": 1,
+          "score": 64
+        },
+        {
+          "rank": 2,
+          "definition": "Micro-ordinateur.",
+          "semanticType": "other",
+          "sourceOrder": 3,
+          "score": 58
+        },
+        {
+          "rank": 3,
+          "definition": "Micro-informatique.",
+          "semanticType": "other",
+          "sourceOrder": 4,
+          "score": 54
+        },
+        {
+          "rank": 4,
+          "definition": "Microphone d’un journaliste qui pose des questions.",
+          "semanticType": "other",
+          "sourceOrder": 2,
+          "score": 32
+        }
+      ]
+    },
+    {
+      "goldId": "DSG-H-081",
+      "word": "chasseur",
+      "ipa": "ʃasœʁ",
+      "expectedVisualSenses": [
+        {
+          "goldSenseId": "DSG-H-081-S1",
+          "conceptLabel": "chasseur",
+          "semanticType": "person_role",
+          "description": "chasseur identifiable"
+        }
+      ],
+      "observedSenseCount": 11,
+      "compatibleSenseRank": 1,
+      "selected": {
+        "definition": "Celui qui pratique la chasse.",
+        "semanticType": "person_role",
+        "sourceOrder": 6,
+        "score": 46
+      },
+      "decisionReason": "semantic_type_not_safely_visual",
+      "observedTop5": [
+        {
+          "rank": 1,
+          "definition": "Celui qui pratique la chasse.",
+          "semanticType": "person_role",
+          "sourceOrder": 6,
+          "score": 46
+        },
+        {
+          "rank": 2,
+          "definition": "Vaisseau léger, armé pour la course.",
+          "semanticType": "other",
+          "sourceOrder": 7,
+          "score": 42
+        },
+        {
+          "rank": 3,
+          "definition": "Avion de chasse.",
+          "semanticType": "other",
+          "sourceOrder": 8,
+          "score": 36
+        },
+        {
+          "rank": 4,
+          "definition": "Domestique qui montait derrière le carrosse de son maître ou sur le siège d’une automobile à côté du chauffeur.",
+          "semanticType": "other",
+          "sourceOrder": 9,
+          "score": 34
+        },
+        {
+          "rank": 5,
+          "definition": "Groom d’un restaurant ou d’un hôtel, en livrée, chargé de faire les courses, les commissions.",
+          "semanticType": "other",
+          "sourceOrder": 10,
+          "score": 30
+        }
+      ]
+    }
+  ],
+  "wrongSenseGreens": [
+    {
+      "goldId": "DSG-H-060",
+      "word": "canne",
+      "expectedTypes": [
+        "physical_object"
+      ],
+      "selectedType": "plant",
+      "selectedDefinition": "Espèce de roseau, telle que le roseau, la canne d’Inde, la canne à sucre, le bambou, etc.",
+      "decisionReason": "ranked_observed_sense_passes_general_guards"
+    }
+  ],
+  "guardReasons": {
+    "no_observed_sense": 2,
+    "usage_or_form_penalty": 17,
+    "semantic_type_not_safely_visual": 61,
+    "B_POS_mismatch": 2,
+    "source_order_above_2_for_plant": 1,
+    "cross_type_rank_ambiguity": 1,
+    "source_order_above_1_for_tool": 1
+  },
+  "notes": [
+    "Holdout selection and editorial labels were sealed before any semantic-source lookup.",
+    "Model v4 was frozen after development at the recorded SHA before this holdout script was added or run.",
+    "No holdout result may be used to change v4 while retaining these metrics as independent evidence.",
+    "senseObserved, semanticType, and visualEligibility remain distinct."
+  ]
+}

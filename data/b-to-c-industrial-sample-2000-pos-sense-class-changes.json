@@ -1,0 +1,542 @@
+{
+  "count": 13,
+  "potentialFalsePositives": [
+    {
+      "sampleId": "B2C-I1-0388",
+      "ipa": "gu",
+      "exactWord": "gouts",
+      "baseline": {
+        "lemma": "goût",
+        "pos": "NOM",
+        "provisionalClass": "B"
+      },
+      "corrected": {
+        "lemma": "gouts",
+        "pos": "NOM",
+        "frequency": 0.297,
+        "conceptCategory": "nom_concret_à_vérifier",
+        "scores": {
+          "concreteness": 3,
+          "drawability": 3,
+          "expectedNameability": 2,
+          "alternativeNameResistance": 3,
+          "visualAmbiguityResistance": 3,
+          "visualSimplicity": 3,
+          "lexicalFamiliarity": 1,
+          "phoneticReuse": 3,
+          "compactness": 4,
+          "multiRepresentationValue": 0
+        },
+        "aggregateScore": 62.5,
+        "provisionalClass": "C"
+      },
+      "lexicalEntries": [
+        {
+          "form": "gouts",
+          "ipa": "gu",
+          "lemma": "gouts",
+          "frequency": 0.297,
+          "pos": "NOM",
+          "sourceRowCount": 1
+        }
+      ],
+      "direction": "potential_false_positive"
+    },
+    {
+      "sampleId": "B2C-I1-0629",
+      "ipa": "la",
+      "exactWord": "la",
+      "baseline": {
+        "lemma": "là",
+        "pos": "ADV",
+        "provisionalClass": "B"
+      },
+      "corrected": {
+        "lemma": "la",
+        "pos": "ART",
+        "frequency": 40.165,
+        "conceptCategory": "fonction_ou_qualité",
+        "scores": {
+          "concreteness": 0,
+          "drawability": 3,
+          "expectedNameability": 3,
+          "alternativeNameResistance": 2,
+          "visualAmbiguityResistance": 2,
+          "visualSimplicity": 3,
+          "lexicalFamiliarity": 3,
+          "phoneticReuse": 4,
+          "compactness": 4,
+          "multiRepresentationValue": 0
+        },
+        "aggregateScore": 63,
+        "provisionalClass": "C"
+      },
+      "lexicalEntries": [
+        {
+          "form": "la",
+          "ipa": "la",
+          "lemma": "la",
+          "frequency": 40.165,
+          "pos": "ART",
+          "sourceRowCount": 1
+        }
+      ],
+      "direction": "potential_false_positive"
+    }
+  ],
+  "potentialFalseNegatives": [
+    {
+      "sampleId": "B2C-I1-0082",
+      "ipa": "maʁʃe",
+      "exactWord": "marché",
+      "baseline": {
+        "lemma": "marchè",
+        "pos": "NOM",
+        "provisionalClass": "C"
+      },
+      "corrected": {
+        "lemma": "marché",
+        "pos": "NOM",
+        "frequency": 83.259,
+        "conceptCategory": "lieu",
+        "scores": {
+          "concreteness": 4,
+          "drawability": 3,
+          "expectedNameability": 3,
+          "alternativeNameResistance": 2,
+          "visualAmbiguityResistance": 2,
+          "visualSimplicity": 3,
+          "lexicalFamiliarity": 3,
+          "phoneticReuse": 2,
+          "compactness": 2,
+          "multiRepresentationValue": 2
+        },
+        "aggregateScore": 69,
+        "provisionalClass": "B"
+      },
+      "lexicalEntries": [
+        {
+          "form": "marché",
+          "ipa": "maʁʃe",
+          "lemma": "marché",
+          "frequency": 83.259,
+          "pos": "NOM",
+          "sourceRowCount": 1
+        }
+      ],
+      "direction": "potential_false_negative"
+    },
+    {
+      "sampleId": "B2C-I1-0713",
+      "ipa": "nɛ",
+      "exactWord": "nait",
+      "baseline": {
+        "lemma": "naître",
+        "pos": "VER",
+        "provisionalClass": "C"
+      },
+      "corrected": {
+        "lemma": "nait",
+        "pos": "NOM",
+        "frequency": 0.351,
+        "conceptCategory": "nom_concret_à_vérifier",
+        "scores": {
+          "concreteness": 3,
+          "drawability": 3,
+          "expectedNameability": 2,
+          "alternativeNameResistance": 3,
+          "visualAmbiguityResistance": 3,
+          "visualSimplicity": 3,
+          "lexicalFamiliarity": 1,
+          "phoneticReuse": 4,
+          "compactness": 4,
+          "multiRepresentationValue": 2
+        },
+        "aggregateScore": 65.8,
+        "provisionalClass": "B"
+      },
+      "lexicalEntries": [
+        {
+          "form": "nait",
+          "ipa": "nɛ",
+          "lemma": "nait",
+          "frequency": 0.351,
+          "pos": "NOM",
+          "sourceRowCount": 1
+        }
+      ],
+      "direction": "potential_false_negative"
+    },
+    {
+      "sampleId": "B2C-I1-1270",
+      "ipa": "kal",
+      "exactWord": "cale",
+      "baseline": {
+        "lemma": "câle",
+        "pos": "NOM",
+        "provisionalClass": "C"
+      },
+      "corrected": {
+        "lemma": "cale",
+        "pos": "NOM",
+        "frequency": 2.481,
+        "conceptCategory": "nom_concret_à_vérifier",
+        "scores": {
+          "concreteness": 3,
+          "drawability": 3,
+          "expectedNameability": 2,
+          "alternativeNameResistance": 3,
+          "visualAmbiguityResistance": 3,
+          "visualSimplicity": 3,
+          "lexicalFamiliarity": 2,
+          "phoneticReuse": 3,
+          "compactness": 4,
+          "multiRepresentationValue": 0
+        },
+        "aggregateScore": 65,
+        "provisionalClass": "B"
+      },
+      "lexicalEntries": [
+        {
+          "form": "cale",
+          "ipa": "kal",
+          "lemma": "cale",
+          "frequency": 2.481,
+          "pos": "NOM",
+          "sourceRowCount": 1
+        }
+      ],
+      "direction": "potential_false_negative"
+    },
+    {
+      "sampleId": "B2C-I1-1611",
+      "ipa": "tʁɛ",
+      "exactWord": "trés",
+      "baseline": {
+        "lemma": "très",
+        "pos": "ADV",
+        "provisionalClass": "D"
+      },
+      "corrected": {
+        "lemma": "trés",
+        "pos": "NOM",
+        "frequency": 13.25,
+        "conceptCategory": "nom_concret_à_vérifier",
+        "scores": {
+          "concreteness": 3,
+          "drawability": 3,
+          "expectedNameability": 2,
+          "alternativeNameResistance": 3,
+          "visualAmbiguityResistance": 3,
+          "visualSimplicity": 3,
+          "lexicalFamiliarity": 2,
+          "phoneticReuse": 3,
+          "compactness": 4,
+          "multiRepresentationValue": 0
+        },
+        "aggregateScore": 65,
+        "provisionalClass": "B"
+      },
+      "lexicalEntries": [
+        {
+          "form": "trés",
+          "ipa": "tʁɛ",
+          "lemma": "trés",
+          "frequency": 13.25,
+          "pos": "NOM",
+          "sourceRowCount": 1
+        }
+      ],
+      "direction": "potential_false_negative"
+    }
+  ],
+  "otherChanges": [
+    {
+      "sampleId": "B2C-I1-0914",
+      "ipa": "bwat",
+      "exactWord": "boites",
+      "baseline": {
+        "lemma": "boîte",
+        "pos": "NOM",
+        "provisionalClass": "C"
+      },
+      "corrected": {
+        "lemma": "boiter",
+        "pos": "VER",
+        "frequency": 3.484,
+        "conceptCategory": "action",
+        "scores": {
+          "concreteness": 2,
+          "drawability": 2,
+          "expectedNameability": 1,
+          "alternativeNameResistance": 2,
+          "visualAmbiguityResistance": 2,
+          "visualSimplicity": 2,
+          "lexicalFamiliarity": 2,
+          "phoneticReuse": 1,
+          "compactness": 4,
+          "multiRepresentationValue": 0
+        },
+        "aggregateScore": 42.5,
+        "provisionalClass": "D"
+      },
+      "lexicalEntries": [
+        {
+          "form": "boites",
+          "ipa": "bwat",
+          "lemma": "boiter",
+          "frequency": 3.484,
+          "pos": "VER",
+          "sourceRowCount": 1
+        }
+      ],
+      "direction": "within_band_change"
+    },
+    {
+      "sampleId": "B2C-I1-1515",
+      "ipa": "fɛt",
+      "exactWord": "faites",
+      "baseline": {
+        "lemma": "faîte",
+        "pos": "VER",
+        "provisionalClass": "D"
+      },
+      "corrected": {
+        "lemma": "faire",
+        "pos": "VER",
+        "frequency": 508.047,
+        "conceptCategory": "action",
+        "scores": {
+          "concreteness": 2,
+          "drawability": 2,
+          "expectedNameability": 2,
+          "alternativeNameResistance": 2,
+          "visualAmbiguityResistance": 2,
+          "visualSimplicity": 2,
+          "lexicalFamiliarity": 4,
+          "phoneticReuse": 2,
+          "compactness": 4,
+          "multiRepresentationValue": 0
+        },
+        "aggregateScore": 55.5,
+        "provisionalClass": "C"
+      },
+      "lexicalEntries": [
+        {
+          "form": "faites",
+          "ipa": "fɛt",
+          "lemma": "faire",
+          "frequency": 508.047,
+          "pos": "VER",
+          "sourceRowCount": 1
+        }
+      ],
+      "direction": "within_band_change"
+    },
+    {
+      "sampleId": "B2C-I1-1771",
+      "ipa": "ʒite",
+      "exactWord": "giter",
+      "baseline": {
+        "lemma": "gîter",
+        "pos": "VER",
+        "provisionalClass": "D"
+      },
+      "corrected": {
+        "lemma": "giter",
+        "pos": "NOM",
+        "frequency": 0.003,
+        "conceptCategory": "nom_concret_à_vérifier",
+        "scores": {
+          "concreteness": 3,
+          "drawability": 3,
+          "expectedNameability": 2,
+          "alternativeNameResistance": 3,
+          "visualAmbiguityResistance": 3,
+          "visualSimplicity": 3,
+          "lexicalFamiliarity": 1,
+          "phoneticReuse": 1,
+          "compactness": 2,
+          "multiRepresentationValue": 0
+        },
+        "aggregateScore": 57,
+        "provisionalClass": "C"
+      },
+      "lexicalEntries": [
+        {
+          "form": "giter",
+          "ipa": "ʒite",
+          "lemma": "giter",
+          "frequency": 0.003,
+          "pos": "NOM",
+          "sourceRowCount": 1
+        }
+      ],
+      "direction": "within_band_change"
+    },
+    {
+      "sampleId": "B2C-I1-1854",
+      "ipa": "ʁənɛ",
+      "exactWord": "renait",
+      "baseline": {
+        "lemma": "renaître",
+        "pos": "VER",
+        "provisionalClass": "D"
+      },
+      "corrected": {
+        "lemma": "renait",
+        "pos": "NOM",
+        "frequency": 0.111,
+        "conceptCategory": "nom_concret_à_vérifier",
+        "scores": {
+          "concreteness": 3,
+          "drawability": 3,
+          "expectedNameability": 2,
+          "alternativeNameResistance": 3,
+          "visualAmbiguityResistance": 3,
+          "visualSimplicity": 3,
+          "lexicalFamiliarity": 1,
+          "phoneticReuse": 1,
+          "compactness": 2,
+          "multiRepresentationValue": 0
+        },
+        "aggregateScore": 57,
+        "provisionalClass": "C"
+      },
+      "lexicalEntries": [
+        {
+          "form": "renait",
+          "ipa": "ʁənɛ",
+          "lemma": "renait",
+          "frequency": 0.111,
+          "pos": "NOM",
+          "sourceRowCount": 1
+        }
+      ],
+      "direction": "within_band_change"
+    },
+    {
+      "sampleId": "B2C-I1-1919",
+      "ipa": "meʃa",
+      "exactWord": "mecha",
+      "baseline": {
+        "lemma": "mécher",
+        "pos": "VER",
+        "provisionalClass": "D"
+      },
+      "corrected": {
+        "lemma": "mecha",
+        "pos": "NOM",
+        "frequency": 0.022,
+        "conceptCategory": "nom_concret_à_vérifier",
+        "scores": {
+          "concreteness": 3,
+          "drawability": 3,
+          "expectedNameability": 2,
+          "alternativeNameResistance": 3,
+          "visualAmbiguityResistance": 3,
+          "visualSimplicity": 3,
+          "lexicalFamiliarity": 1,
+          "phoneticReuse": 1,
+          "compactness": 2,
+          "multiRepresentationValue": 0
+        },
+        "aggregateScore": 57,
+        "provisionalClass": "C"
+      },
+      "lexicalEntries": [
+        {
+          "form": "mecha",
+          "ipa": "meʃa",
+          "lemma": "mecha",
+          "frequency": 0.022,
+          "pos": "NOM",
+          "sourceRowCount": 1
+        }
+      ],
+      "direction": "within_band_change"
+    },
+    {
+      "sampleId": "B2C-I1-1956",
+      "ipa": "kʁea",
+      "exactWord": "créat",
+      "baseline": {
+        "lemma": "créer",
+        "pos": "VER",
+        "provisionalClass": "D"
+      },
+      "corrected": {
+        "lemma": "créat",
+        "pos": "NOM",
+        "frequency": 0.019,
+        "conceptCategory": "nom_concret_à_vérifier",
+        "scores": {
+          "concreteness": 3,
+          "drawability": 3,
+          "expectedNameability": 2,
+          "alternativeNameResistance": 3,
+          "visualAmbiguityResistance": 3,
+          "visualSimplicity": 3,
+          "lexicalFamiliarity": 1,
+          "phoneticReuse": 2,
+          "compactness": 2,
+          "multiRepresentationValue": 0
+        },
+        "aggregateScore": 58.8,
+        "provisionalClass": "C"
+      },
+      "lexicalEntries": [
+        {
+          "form": "créat",
+          "ipa": "kʁea",
+          "lemma": "créat",
+          "frequency": 0.019,
+          "pos": "NOM",
+          "sourceRowCount": 1
+        }
+      ],
+      "direction": "within_band_change"
+    },
+    {
+      "sampleId": "B2C-I1-1959",
+      "ipa": "dinje",
+      "exactWord": "diniez",
+      "baseline": {
+        "lemma": "dîner",
+        "pos": "VER",
+        "provisionalClass": "D"
+      },
+      "corrected": {
+        "lemma": "diniez",
+        "pos": "NOM",
+        "frequency": 0.035,
+        "conceptCategory": "nom_concret_à_vérifier",
+        "scores": {
+          "concreteness": 3,
+          "drawability": 3,
+          "expectedNameability": 2,
+          "alternativeNameResistance": 3,
+          "visualAmbiguityResistance": 3,
+          "visualSimplicity": 3,
+          "lexicalFamiliarity": 1,
+          "phoneticReuse": 1,
+          "compactness": 2,
+          "multiRepresentationValue": 0
+        },
+        "aggregateScore": 57,
+        "provisionalClass": "C"
+      },
+      "lexicalEntries": [
+        {
+          "form": "diniez",
+          "ipa": "dinje",
+          "lemma": "diniez",
+          "frequency": 0.035,
+          "pos": "NOM",
+          "sourceRowCount": 1
+        }
+      ],
+      "direction": "within_band_change"
+    }
+  ]
+}

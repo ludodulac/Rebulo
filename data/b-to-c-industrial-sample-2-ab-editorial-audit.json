@@ -1,0 +1,16 @@
+{
+  "schemaVersion":"1.0",
+  "status":"analysis_only",
+  "auditedAutomaticAB":78,
+  "automaticA":0,
+  "automaticB":78,
+  "falsePositivesFound":32,
+  "falsePositiveRatePercent":41.0,
+  "humanNamingEvidence":"none",
+  "interpretation":"Complete editorial audit of all automatic A/B rows in sample 2. A false positive means the deterministic proxy promoted a relation to B although the reviewed visual concept is not presently strong enough under the unchanged #290 criteria. No baseline row is rewritten.",
+  "falsePositives":[
+    {"exactWord":"job","cause":"abstract_or_role_generic"},{"exactWord":"soin","cause":"scene_or_action_not_autonomous"},{"exactWord":"calme","cause":"abstract_quality"},{"exactWord":"offre","cause":"abstract_text_dependent"},{"exactWord":"gaffe","cause":"sense_ambiguity"},{"exactWord":"gauche","cause":"relational_direction"},{"exactWord":"ex","cause":"role_generic"},{"exactWord":"force","cause":"abstract"},{"exactWord":"zone","cause":"generic_spatial_concept"},{"exactWord":"acte","cause":"abstract_or_text_dependent"},{"exactWord":"risque","cause":"abstract"},{"exactWord":"fuite","cause":"event_or_ambiguous"},{"exactWord":"base","cause":"sense_ambiguity"},{"exactWord":"membre","cause":"sense_ambiguity"},{"exactWord":"peuple","cause":"collective_generic"},{"exactWord":"honte","cause":"abstract"},{"exactWord":"crime","cause":"scene_not_nameable"},{"exactWord":"nombre","cause":"text_or_symbol_dependent"},{"exactWord":"code","cause":"text_or_symbol_dependent"},{"exactWord":"style","cause":"abstract"},{"exactWord":"rôle","cause":"abstract_role"},{"exactWord":"ouest","cause":"direction_symbol_dependent"},{"exactWord":"gloire","cause":"abstract"},{"exactWord":"matin","cause":"scene_contextual"},{"exactWord":"m","cause":"text_symbol"},{"exactWord":"j","cause":"text_symbol"},{"exactWord":"souffle","cause":"event_not_nameable"},{"exactWord":"titre","cause":"text_dependent"},{"exactWord":"genre","cause":"abstract"},{"exactWord":"doute","cause":"abstract"},{"exactWord":"preuve","cause":"abstract_or_contextual"},{"exactWord":"blague","cause":"abstract_or_contextual"}
+  ],
+  "causeCounts":{"abstract_or_contextual":11,"text_or_symbol_dependent":7,"sense_or_visual_ambiguity":6,"generic_role_or_collective":4,"scene_or_event_not_nameable":4},
+  "notes":["The 78 automatic B rows are concentrated in concrete_priority and are not a random sample of B.","The high false-positive rate mainly exposes the broad fallback category nom_concret_à_vérifier; it does not justify changing #290 weights.","phoneticReuse did not override the #290 nameability guards; the problem is upstream semantic categorization and concept specificity."]
+}

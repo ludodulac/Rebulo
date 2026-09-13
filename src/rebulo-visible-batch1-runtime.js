@@ -84,6 +84,14 @@ function queueDecoration(){
   });
 }
 
+function decorateDelayedRenders(duration=1200){
+  const started=performance.now();
+  const timer=setInterval(()=>{
+    decorate(document);
+    if(performance.now()-started>=duration)clearInterval(timer);
+  },40);
+}
+
 const observer=new MutationObserver(records=>{
   for(const record of records){
     for(const node of record.addedNodes){
@@ -94,12 +102,7 @@ const observer=new MutationObserver(records=>{
   queueDecoration();
 });
 observer.observe(document.documentElement,{childList:true,subtree:true});
-document.addEventListener('submit',()=>{
-  queueDecoration();
-  setTimeout(()=>decorate(document),0);
-  setTimeout(()=>decorate(document),50);
-  setTimeout(()=>decorate(document),150);
-},true);
+document.addEventListener('submit',()=>{queueDecoration();decorateDelayedRenders();},true);
 decorate(document);
 
 if(!document.getElementById('rebulo-visible-batch1-style')){

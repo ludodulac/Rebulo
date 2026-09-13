@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "status": "development_only_tuning_allowed",
   "baseSha": "b45854e82f85d8028075d7809d99c30212225ea9",
-  "modelVersion": "dominant-sense-semantic-v1",
+  "modelVersion": "dominant-sense-semantic-v2",
   "taxonomy": [
     "physical_object",
     "animal",
@@ -43,43 +43,43 @@
   },
   "metrics": {
     "n": 135,
-    "tp": 18,
-    "fp": 24,
-    "tn": 80,
-    "fn": 13,
-    "precision": 42.9,
-    "recall": 58.1,
-    "f1": 49.3
+    "tp": 17,
+    "fp": 16,
+    "tn": 88,
+    "fn": 14,
+    "precision": 51.5,
+    "recall": 54.8,
+    "f1": 53.1
   },
   "semanticTypeAccuracy": {
     "evaluated": 132,
-    "correct": 66,
-    "percent": 50
+    "correct": 74,
+    "percent": 56.1
   },
   "senseRankingOperationalization": "A gold-compatible observed sense is one whose deterministic semanticType matches one of the pre-source expected visual semantic types; this does not claim dictionary order is real-world frequency.",
   "senseRanking": {
     "top1": {
-      "count": 15,
-      "percent": 48.4
-    },
-    "top2": {
       "count": 17,
       "percent": 54.8
     },
+    "top2": {
+      "count": 18,
+      "percent": 58.1
+    },
     "top3": {
-      "count": 19,
-      "percent": 61.3
+      "count": 18,
+      "percent": 58.1
     }
   },
   "greens": [
     {
-      "goldId": "DSG-D-006",
-      "word": "tannique",
+      "goldId": "DSG-D-004",
+      "word": "suisse",
       "gold": false,
       "top": {
-        "definition": "Relatif au tan.",
-        "type": "material",
-        "score": 45
+        "definition": "Celui qui est chargé de la police d’une église, qui précède le clergé dans les processions, etc.",
+        "type": "person_role",
+        "score": 56
       }
     },
     {
@@ -87,19 +87,9 @@
       "word": "essence",
       "gold": true,
       "top": {
-        "definition": "Mélange de divers hydrocarbures d’origine végétale.",
-        "type": "material",
-        "score": 48
-      }
-    },
-    {
-      "goldId": "DSG-D-011",
-      "word": "portion",
-      "gold": false,
-      "top": {
-        "definition": "Quantité de pain, de viande, etc., qu’on donne, dans le repas, à chacun en particulier; surtout en parlant des collèges, des communautés religieuses.",
-        "type": "food",
-        "score": 52
+        "definition": "Espèce apte à produire du bois.",
+        "type": "plant",
+        "score": 60
       }
     },
     {
@@ -108,8 +98,8 @@
       "gold": false,
       "top": {
         "definition": "Personne qui donne son sang en vue de transfusion ou un organe en vue de transplantation sur un receveur.",
-        "type": "body_part",
-        "score": 58
+        "type": "person_role",
+        "score": 62
       }
     },
     {
@@ -117,9 +107,9 @@
       "word": "compteur",
       "gold": true,
       "top": {
-        "definition": "Instrument de mesure qui indique un nombre, souvent assorti d’une unité, mesurant une quantité ou un taux spécifique. L’indication peut-être soit instantanée, soit cumulative sur une période donnée.",
-        "type": "tool",
-        "score": 54
+        "definition": "Celui qui compte.",
+        "type": "person_role",
+        "score": 60
       }
     },
     {
@@ -127,9 +117,9 @@
       "word": "danseur",
       "gold": true,
       "top": {
-        "definition": "Celui qui aime à danser, qui danse souvent, ou qui fait profession de danser.",
+        "definition": "Celui qui danse.",
         "type": "person_role",
-        "score": 54
+        "score": 60
       }
     },
     {
@@ -139,7 +129,7 @@
       "top": {
         "definition": "Instrument d’astronomie, qui a moins d’étendue que le quart de cercle.",
         "type": "tool",
-        "score": 56
+        "score": 60
       }
     },
     {
@@ -149,7 +139,7 @@
       "top": {
         "definition": "Boisson également mélangée de cidre et d’eau.",
         "type": "food",
-        "score": 55
+        "score": 56
       }
     },
     {
@@ -157,9 +147,19 @@
       "word": "broyeur",
       "gold": true,
       "top": {
-        "definition": "Ouvrier qui fait le métier de broyer.",
+        "definition": "Celle qui broie.",
         "type": "person_role",
-        "score": 57
+        "score": 60
+      }
+    },
+    {
+      "goldId": "DSG-D-026",
+      "word": "facteur",
+      "gold": true,
+      "top": {
+        "definition": "Celui qui fabrique quelque chose.",
+        "type": "person_role",
+        "score": 50
       }
     },
     {
@@ -167,9 +167,9 @@
       "word": "sorcier",
       "gold": true,
       "top": {
-        "definition": "Personne qui prétend pratiquer une magie, soit pour guérir, soit pour envoûter.",
+        "definition": "Personne à qui on attribue le pouvoir surnaturel de lancer des sorts, des sortilèges.",
         "type": "person_role",
-        "score": 52
+        "score": 58
       }
     },
     {
@@ -179,7 +179,7 @@
       "top": {
         "definition": "Personne dont le métier est de couper et coiffer les cheveux, et éventuellement la barbe.",
         "type": "person_role",
-        "score": 56
+        "score": 62
       }
     },
     {
@@ -189,7 +189,7 @@
       "top": {
         "definition": "Ornement, bijou qui fait le tour du cou.",
         "type": "physical_object",
-        "score": 55
+        "score": 62
       }
     },
     {
@@ -198,8 +198,8 @@
       "gold": true,
       "top": {
         "definition": "Habitation sommaire rappelant le gîte d’un animal.",
-        "type": "animal",
-        "score": 54
+        "type": "place",
+        "score": 58
       }
     },
     {
@@ -209,7 +209,7 @@
       "top": {
         "definition": "Personne qui ment, qui a l’habitude de mentir.",
         "type": "person_role",
-        "score": 54
+        "score": 58
       }
     },
     {
@@ -218,18 +218,8 @@
       "gold": false,
       "top": {
         "definition": "Nom usuel des arbres du genre Juglans, Grands arbres à feuilles caduques alternes imparipennées, aux petites fleurs femelles verdâtres réunies par deux à quatre et donnant des noix (drupes indéhiscentes). (Note : utilisé seul en Europe francophone, le mot noyer désigne généralement Juglans regia ou noyer commun, noyer royal.)",
-        "type": "symbol",
-        "score": 55
-      }
-    },
-    {
-      "goldId": "DSG-D-052",
-      "word": "manuel",
-      "gold": true,
-      "top": {
-        "definition": "Livre destiné à l’apprentissage d’un métier ou de toute activité.",
-        "type": "person_role",
-        "score": 50
+        "type": "plant",
+        "score": 62
       }
     },
     {
@@ -239,17 +229,7 @@
       "top": {
         "definition": "Herbe fauchée et séchée qui sert principalement à la nourriture des chevaux et des bestiaux.",
         "type": "plant",
-        "score": 56
-      }
-    },
-    {
-      "goldId": "DSG-D-057",
-      "word": "azote",
-      "gold": false,
-      "top": {
-        "definition": "Élément chimique de numéro atomique 7 et de symbole N (venant de nitrogène, un ancien nom de l’azote parfois encore utilisé dans des traductions depuis l’anglais). C’est un non-métal, plus spécifiquement un pnictogène.",
-        "type": "material",
-        "score": 59
+        "score": 62
       }
     },
     {
@@ -259,17 +239,7 @@
       "top": {
         "definition": "Doigt le plus proche du pouce, parce que c’est celui-là dont on se sert ordinairement pour indiquer, pour montrer quelque chose.",
         "type": "body_part",
-        "score": 58
-      }
-    },
-    {
-      "goldId": "DSG-D-061",
-      "word": "tore",
-      "gold": false,
-      "top": {
-        "definition": "Réceptacle, fond du calice d'une fleur.",
-        "type": "plant",
-        "score": 51
+        "score": 64
       }
     },
     {
@@ -279,37 +249,7 @@
       "top": {
         "definition": "Collision brusque, impact d’un corps avec un autre corps.",
         "type": "event",
-        "score": 56
-      }
-    },
-    {
-      "goldId": "DSG-D-065",
-      "word": "bulle",
-      "gold": true,
-      "top": {
-        "definition": "Petite poche de gaz qui s’élève à la surface des liquides, notamment lors de l’ébullition ou de la fermentation.",
-        "type": "material",
-        "score": 56
-      }
-    },
-    {
-      "goldId": "DSG-D-066",
-      "word": "aide",
-      "gold": false,
-      "top": {
-        "definition": "Personne qui est auprès de quelqu’un pour travailler ou servir conjointement avec lui et sous sa responsabilité.",
-        "type": "person_role",
-        "score": 48
-      }
-    },
-    {
-      "goldId": "DSG-D-068",
-      "word": "bet",
-      "gold": false,
-      "top": {
-        "definition": "Autre orthographe de bèt ou de beth (lettre de l’alphabet hébreu).",
-        "type": "symbol",
-        "score": 55
+        "score": 62
       }
     },
     {
@@ -319,27 +259,37 @@
       "top": {
         "definition": "Personne qui doute.",
         "type": "person_role",
-        "score": 49
+        "score": 52
       }
     },
     {
-      "goldId": "DSG-D-078",
-      "word": "ola",
+      "goldId": "DSG-D-082",
+      "word": "track",
       "gold": false,
       "top": {
-        "definition": "Mouvement de foule ayant lieu surtout pendant les évènements sportifs, où des spectateurs se mettent debout chacun à leur tour en levant les bras, évoquant une vague traversant la foule.",
+        "definition": "Voie, route, trace.",
         "type": "place",
-        "score": 58
+        "score": 60
       }
     },
     {
-      "goldId": "DSG-D-081",
-      "word": "rolle",
+      "goldId": "DSG-D-083",
+      "word": "soiffe",
       "gold": false,
       "top": {
-        "definition": "Genre d'oiseau assez trapu, à plumage irisé de coloration variable, à gueule largement fendue et dont la tête paraît exagérément grosse par rapport au reste du corps, comprenant quatre espèces de la famille des coraciidés exclusives à l'Ancien Monde, voisines des rolliers, et habitant l'Afrique, l'Asie et l'Australasie (genre Eurystomus).",
+        "definition": "Toxostome.",
         "type": "animal",
-        "score": 49
+        "score": 62
+      }
+    },
+    {
+      "goldId": "DSG-D-086",
+      "word": "q",
+      "gold": true,
+      "top": {
+        "definition": "Symbole du quintal.",
+        "type": "symbol",
+        "score": 54
       }
     },
     {
@@ -349,7 +299,7 @@
       "top": {
         "definition": "Endroit le plus bas, le plus intérieur d’une chose creuse.",
         "type": "place",
-        "score": 56
+        "score": 62
       }
     },
     {
@@ -357,9 +307,9 @@
       "word": "pair",
       "gold": false,
       "top": {
-        "definition": "Seigneur qui possédait des terres érigées en pairies et qui avaient droit de séance au parlement de Paris.",
+        "definition": "Personne de même condition et de même rang dans l’état.",
         "type": "person_role",
-        "score": 54
+        "score": 62
       }
     },
     {
@@ -369,17 +319,17 @@
       "top": {
         "definition": "Personne qui a une parfaite ressemblance avec une autre.",
         "type": "person_role",
-        "score": 56
+        "score": 62
       }
     },
     {
-      "goldId": "DSG-D-095",
-      "word": "cloque",
-      "gold": false,
+      "goldId": "DSG-D-097",
+      "word": "cheveu",
+      "gold": true,
       "top": {
-        "definition": "Ampoule ; boursouflure sur la peau.",
+        "definition": "Filament organique synthétisé par l’épiderme du crâne humain.",
         "type": "body_part",
-        "score": 54
+        "score": 64
       }
     },
     {
@@ -389,7 +339,7 @@
       "top": {
         "definition": "Officier municipal en Angleterre, chargé de différentes fonctions de police et de justice.",
         "type": "person_role",
-        "score": 56
+        "score": 60
       }
     },
     {
@@ -398,38 +348,8 @@
       "gold": true,
       "top": {
         "definition": "Organe en forme de roue par le moyen duquel on donne la direction à un véhicule automobile.",
-        "type": "body_part",
-        "score": 50
-      }
-    },
-    {
-      "goldId": "DSG-D-102",
-      "word": "doit",
-      "gold": false,
-      "top": {
-        "definition": "S’emploie dans les livres de compte, par opposition au mot avoir, et désigne la partie d’un compte où l’on porte ce qu’une personne doit, ce qu’elle a reçu.",
-        "type": "symbol",
-        "score": 56
-      }
-    },
-    {
-      "goldId": "DSG-D-103",
-      "word": "crypter",
-      "gold": false,
-      "top": {
-        "definition": "Encapsuler ou retenir un ion, un élément chimique, dans une structure moléculaire (une crypte).",
-        "type": "material",
-        "score": 52
-      }
-    },
-    {
-      "goldId": "DSG-D-107",
-      "word": "hiver",
-      "gold": true,
-      "top": {
-        "definition": "L’une des quatre saisons de l’année. Dans l’hémisphère nord, l’hiver astronomique s’étend du 7 novembre au 7 février, le solstice d’hiver représentant le milieu de l’hiver. L’hiver météorologique comprend les mois les plus froids de l’année, soit les mois de décembre, janvier et février. L’hiver calendaire français, enfin, s’étend du 21 décembre (solstice d’hiver) au 20 mars (équinoxe de printemps). Dans l’hémisphère sud, ce découpage correspond à la saison d’été.",
-        "type": "event",
-        "score": 53
+        "type": "physical_object",
+        "score": 48
       }
     },
     {
@@ -437,9 +357,9 @@
       "word": "cordé",
       "gold": false,
       "top": {
-        "definition": "Animal appartenant au groupe des Cordés, caractérisé par la présence d’une chorde au moins à un stade de son développement.",
-        "type": "animal",
-        "score": 48
+        "definition": "Se dit d’une feuille qui a la forme d’un cœur.",
+        "type": "plant",
+        "score": 56
       }
     },
     {
@@ -449,27 +369,27 @@
       "top": {
         "definition": "Plat d’origine indienne réalisé à base de lentilles, de pois ou de haricots.",
         "type": "food",
-        "score": 58
+        "score": 64
       }
     },
     {
-      "goldId": "DSG-D-118",
-      "word": "quête",
-      "gold": false,
-      "top": {
-        "definition": "Ton de chasse que l’on sonne pour exciter les chiens à trouver l’animal qu'on veut leur faire chasser.",
-        "type": "animal",
-        "score": 52
-      }
-    },
-    {
-      "goldId": "DSG-D-120",
-      "word": "chandelle",
+      "goldId": "DSG-D-114",
+      "word": "nord",
       "gold": true,
       "top": {
-        "definition": "Figure consistant à soulever l'avant ou l'arrière du bateau, souvent à la faveur d'une vague.",
-        "type": "vehicle",
-        "score": 53
+        "definition": "Celui des quatre points cardinaux opposé au sud et qui correspond à la direction de l’étoile polaire ; direction du pôle de l'hémisphère boréal et correspondant à l'azimut 360°.",
+        "type": "person_role",
+        "score": 64
+      }
+    },
+    {
+      "goldId": "DSG-D-119",
+      "word": "bégueule",
+      "gold": false,
+      "top": {
+        "definition": "Personne d’une pruderie excessive et affectée.",
+        "type": "person_role",
+        "score": 62
       }
     },
     {
@@ -479,17 +399,7 @@
       "top": {
         "definition": "Endroit où un chemin change de direction.",
         "type": "place",
-        "score": 55
-      }
-    },
-    {
-      "goldId": "DSG-D-128",
-      "word": "halle",
-      "gold": true,
-      "top": {
-        "definition": "Le quartier des Halles, à Paris, dont les marchandes étaient connues pour leur langage cru et grossier.",
-        "type": "place",
-        "score": 50
+        "score": 58
       }
     }
   ],

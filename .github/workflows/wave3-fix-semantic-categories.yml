@@ -6,6 +6,7 @@ on:
       - productive-bank-wave3-yield
     paths:
       - '.github/workflows/wave3-fix-semantic-categories.yml'
+      - 'scripts/patch-wave3-semantic-categories.py'
   workflow_dispatch:
 
 permissions:
@@ -22,33 +23,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Replace substring classifier with lexical categories
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          p=Path('scripts/build-rebus-productive-bank-wave3.mjs')
-          s=p.read_text()
-          start=s.index('function semanticCategory(')
-          end=s.index('function detailedBrief', start)
-          replacement="""function semanticCategory(word,pos,concept=''){
- const w=String(word||'').toLocaleLowerCase('fr');
- const animals=new Set(['chien','chat','oiseau','poisson','loup','lion','ours','vache','cheval','mouche','poule','coq','canard','âne','lapin','rat']);
- const body=new Set(['main','bras','pied','tête','oeil','œil','yeux','nez','dent','bouche','dos','cou','jambe','visage']);
- const foods=new Set(['pain','lait','riz','thé','café','pomme','poire','fruit','gâteau','soupe','fromage','beurre','sel','sucre','jus','blé','dîner']);
- const places=new Set(['route','rue','gare','port','mer','parc','pré','ville','maison','école','jardin','champ','plage']);
- const people=new Set(['père','mère','fils','fille','bébé','roi','reine','homme','femme','enfant','mec','acteur','garde','nain']);
- const actions=new Set(['jouer','sortir']);
- if(animals.has(w))return'animal';
- if(body.has(w))return'body_part';
- if(foods.has(w))return'food';
- if(places.has(w))return'place_or_landscape';
- if(people.has(w))return'person';
- if(actions.has(w)||String(pos||'').toUpperCase().startsWith('VER'))return'drawable_action';
- return'concrete_object_or_scene';
-}
-"""
-          p.write_text(s[:start]+replacement+s[end:])
-          PY
+      - name: Patch semantic classifier source
+        run: python scripts/patch-wave3-semantic-categories.py
       - name: Regenerate wave 3
         run: node scripts/build-rebus-productive-bank-wave3.mjs
       - name: Validate wave 3

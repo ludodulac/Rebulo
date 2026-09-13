@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "status": "analysis_only",
+  "relations": 2000,
+  "baselineDistribution": {
+    "A": 7,
+    "B": 675,
+    "C": 818,
+    "D": 500
+  },
+  "exactOrthographyDistribution": {
+    "A": 7,
+    "B": 677,
+    "C": 822,
+    "D": 494
+  },
+  "relationsChangingClassAfterExactOrthographyFix": 13,
+  "potentialFalsePositivesCorrected": 2,
+  "potentialFalseNegativesCorrectedByExactOrthography": 4,
+  "additionalVisualConceptsFromEditorialSenseReview": 3,
+  "sameConceptEditorialReclassifications": 1,
+  "editorialConceptDistribution": {
+    "A": 7,
+    "B": 681,
+    "C": 821,
+    "D": 494
+  },
+  "totalConceptUnitsAfterReviewedSenseExpansion": 2003,
+  "notes": [
+    "No relation was reselected; the same 2,000 sample IDs are retained.",
+    "The #290 weights and guards are unchanged.",
+    "Same-POS polysemy is not inferred from Lexique rows; only explicit reviewed senses become extra concept units.",
+    "Technical duplicates are collapsed by exact lemma+POS and do not create concept units.",
+    "humanNamingEvidence remains none."
+  ]
+}

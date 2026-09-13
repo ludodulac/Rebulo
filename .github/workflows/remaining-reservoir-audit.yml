@@ -1,0 +1,31 @@
+name: Remaining reservoir audit
+
+on:
+  push:
+    branches: [audit-remaining-reservoir-after-wave5]
+    paths:
+      - 'scripts/audit-rebus-remaining-reservoir.mjs'
+      - '.github/workflows/remaining-reservoir-audit.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: audit-remaining-reservoir-after-wave5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run remaining reservoir audit
+        run: node scripts/audit-rebus-remaining-reservoir.mjs
+      - name: Commit audit outputs
+        run: |
+          git config user.name 'rebulo-analysis-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/rebus-remaining-reservoir-audit-diagnostic.json docs/REBUS_REMAINING_RESERVOIR_DIAGNOSTIC.md
+          git commit -m 'Materialize remaining reservoir diagnostic' || exit 0
+          git push origin HEAD:audit-remaining-reservoir-after-wave5

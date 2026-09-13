@@ -68,20 +68,32 @@ function applyBatchImage(img){
 }
 
 function decorate(root=document){
+  if(root instanceof HTMLImageElement)applyBatchImage(root);
+  if(root instanceof Element&&root.matches('.piece'))root.querySelectorAll('img').forEach(applyBatchImage);
   root.querySelectorAll?.('.piece img').forEach(applyBatchImage);
+}
+
+let decorateQueued=false;
+function queueDecoration(){
+  if(decorateQueued)return;
+  decorateQueued=true;
+  queueMicrotask(()=>{
+    decorateQueued=false;
+    decorate(document);
+  });
 }
 
 const observer=new MutationObserver(records=>{
   for(const record of records){
     for(const node of record.addedNodes){
       if(!(node instanceof Element))continue;
-      if(node.matches?.('.piece img'))applyBatchImage(node);
       decorate(node);
     }
   }
+  queueDecoration();
 });
 observer.observe(document.documentElement,{childList:true,subtree:true});
-decorate();
+decorate(document);
 
 if(!document.getElementById('rebulo-visible-batch1-style')){
   const style=document.createElement('style');

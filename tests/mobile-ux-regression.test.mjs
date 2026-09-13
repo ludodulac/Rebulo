@@ -26,7 +26,7 @@ assert.match(mobileCss,/\.creator-row input\{grid-column:1\/-1\}/,'mobile creato
 assert.match(mobileCss,/keyboard-open[^}]*#playArena\.play-arena\{[^}]*overflow-y:auto!important/,'keyboard-open play must stay scrollable inside the visible phone viewport');
 assert.match(mobileCss,/keyboard-open[^}]*#playAnswerForm\{[^}]*position:sticky[^}]*bottom:0/,'the play answer field must stay reachable immediately above the mobile keyboard');
 assert.match(phraseCss,/\.phrase-rebus-token[^}]*max-width:100%[^}]*overflow-x:auto/,'long rebus groups must scroll inside their own width instead of overlapping');
-assert.match(phraseCss,/@media\(max-width:520px\)[\s\S]*\.phrase-continuous-flow[^}]*overflow-x:auto/,'long continuous phrase routes must be horizontally scrollable on phones');
+assert.match(phraseCss,/@media\(max-width:520px\)[\s\S]*\.phrase-continuous-flow[^}]*flex-wrap:wrap[^}]*overflow-x:hidden/,'continuous phrase pieces must wrap inside the phone viewport instead of being pushed off-screen');
 assert.match(phraseMode,/Pièces du rébus/,'partial phrase UI must label represented pieces');
 assert.match(phraseMode,/Texte \/ sons non représentés/,'partial phrase UI must label uncovered text separately');
 assert.match(phraseMode,/proof\.dataset\.debugDetails/,'technical phrase diagnostics must remain available without dominating the child-facing copy');
@@ -38,4 +38,4 @@ assert.match(bootstrap,/finalOption\.hidden=true/,'final syllable must not appea
 assert.match(bootstrap,/activitySelect\.dispatchEvent\(new Event\('change'/,'position changes must reuse the canonical activity change path');
 assert.match(bootstrap,/activitySelect\.value=initialId/,'the visible activity selector must stay on the single syllable-identification family entry');
 
-console.log('mobile UX regression guards: one Creator switch, readable partial phrases, scroll-safe phone layout.');
+console.log('mobile UX regression guards: one Creator switch, readable partial phrases, viewport-safe phone layout.');

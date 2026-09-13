@@ -5,78 +5,19 @@
   "usefulExactSoundDenominator": 5741,
   "priorSeriousUsefulSoundCount": 236,
   "unrepresentedUsefulExactSoundCount": 5452,
-  "imageableCandidateSoundCount": 232,
+  "netNewCandidateSoundCount": 4638,
+  "imageableCandidateSoundCount": 211,
   "shortFragmentState": {
     "oneSyllable": 1600,
     "twoSyllable": 3852,
     "oneOrTwoSyllable": 5452,
     "shortCombinable": 4582,
-    "imageableOneSyllable": 108,
-    "imageableTwoSyllable": 124,
-    "imageableShortCombinable": 214
+    "imageableOneSyllable": 95,
+    "imageableTwoSyllable": 116,
+    "imageableShortCombinable": 193
   },
   "preselectedSoundCount": 200,
   "rows": [
-    {
-      "ipa": "ʒy",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 19,
-      "usefulWeightedGain": 515.297,
-      "schoolTargetCount": 1,
-      "usefulExamples": [
-        "jury",
-        "jus",
-        "jugement",
-        "juger",
-        "judiciaire",
-        "juridique"
-      ],
-      "exactWords": [
-        {
-          "word": "jus",
-          "pos": "NOM",
-          "frequency": 25.041,
-          "syllableCount": 1,
-          "category": "food",
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Un verre transparent rempli de jus d'orange avec une orange coupée discrète à côté, sans marque ni texte.",
-            "confusions": [
-              "boisson",
-              "orange",
-              "jus d'orange"
-            ],
-            "risk": "medium",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 231.155
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "jus",
-          "pos": "NOM",
-          "frequency": 25.041,
-          "syllableCount": 1,
-          "category": "food",
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Un verre transparent rempli de jus d'orange avec une orange coupée discrète à côté, sans marque ni texte.",
-            "confusions": [
-              "boisson",
-              "orange",
-              "jus d'orange"
-            ],
-            "risk": "medium",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 231.155
-        }
-      ],
-      "goodVisualCandidateCount": 1,
-      "selectionScore": 336.601
-    },
     {
       "ipa": "ʃɛn",
       "unitCount": 3,
@@ -215,78 +156,6 @@
       ],
       "goodVisualCandidateCount": 1,
       "selectionScore": 322.035
-    },
-    {
-      "ipa": "pwɛ̃",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 8,
-      "usefulWeightedGain": 1493.157,
-      "schoolTargetCount": 2,
-      "usefulExamples": [
-        "point",
-        "poing",
-        "pointer",
-        "shampoing",
-        "pointure",
-        "pointu"
-      ],
-      "exactWords": [
-        {
-          "word": "point",
-          "pos": "NOM",
-          "frequency": 232.013,
-          "syllableCount": 1,
-          "category": "shape",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 189.218
-        },
-        {
-          "word": "point",
-          "pos": "VER",
-          "frequency": 5.804,
-          "syllableCount": 1,
-          "category": "shape",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 100.68
-        },
-        {
-          "word": "poing",
-          "pos": "NOM",
-          "frequency": 13.139,
-          "syllableCount": 1,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 66.383
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "point",
-          "pos": "NOM",
-          "frequency": 232.013,
-          "syllableCount": 1,
-          "category": "shape",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 189.218
-        },
-        {
-          "word": "point",
-          "pos": "VER",
-          "frequency": 5.804,
-          "syllableCount": 1,
-          "category": "shape",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 100.68
-        }
-      ],
-      "goodVisualCandidateCount": 2,
-      "selectionScore": 312.652
     },
     {
       "ipa": "sɛ̃tyʁ",
@@ -472,151 +341,6 @@
       ],
       "goodVisualCandidateCount": 1,
       "selectionScore": 306.277
-    },
-    {
-      "ipa": "fam",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 3,
-      "usefulWeightedGain": 3009.354,
-      "schoolTargetCount": 1,
-      "usefulExamples": [
-        "femme",
-        "infâme",
-        "sage-femme"
-      ],
-      "exactWords": [
-        {
-          "word": "femme",
-          "pos": "NOM",
-          "frequency": 499.927,
-          "syllableCount": 1,
-          "category": "person",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 201.463
-        },
-        {
-          "word": "fam",
-          "pos": "NOM",
-          "frequency": 0.114,
-          "syllableCount": 1,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 15.727
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "femme",
-          "pos": "NOM",
-          "frequency": 499.927,
-          "syllableCount": 1,
-          "category": "person",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 201.463
-        }
-      ],
-      "goodVisualCandidateCount": 1,
-      "selectionScore": 304.612
-    },
-    {
-      "ipa": "fij",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 3,
-      "usefulWeightedGain": 2550.567,
-      "schoolTargetCount": 1,
-      "usefulExamples": [
-        "fille",
-        "petite-fille",
-        "belle-fille"
-      ],
-      "exactWords": [
-        {
-          "word": "fille",
-          "pos": "NOM",
-          "frequency": 420.924,
-          "syllableCount": 1,
-          "category": "person",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 198.717
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "fille",
-          "pos": "NOM",
-          "frequency": 420.924,
-          "syllableCount": 1,
-          "category": "person",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 198.717
-        }
-      ],
-      "goodVisualCandidateCount": 1,
-      "selectionScore": 300.874
-    },
-    {
-      "ipa": "ʃɑ̃bʁ",
-      "unitCount": 4,
-      "syllableSpan": 1,
-      "usefulTargetCount": 2,
-      "usefulWeightedGain": 1394.228,
-      "schoolTargetCount": 2,
-      "usefulExamples": [
-        "chambre"
-      ],
-      "exactWords": [
-        {
-          "word": "chambre",
-          "pos": "NOM",
-          "frequency": 231.772,
-          "syllableCount": 1,
-          "category": "place",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 189.201
-        },
-        {
-          "word": "chambre",
-          "pos": "VER",
-          "frequency": 0.899,
-          "syllableCount": 1,
-          "category": "place",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 80.261
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "chambre",
-          "pos": "NOM",
-          "frequency": 231.772,
-          "syllableCount": 1,
-          "category": "place",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 189.201
-        },
-        {
-          "word": "chambre",
-          "pos": "VER",
-          "frequency": 0.899,
-          "syllableCount": 1,
-          "category": "place",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 80.261
-        }
-      ],
-      "goodVisualCandidateCount": 2,
-      "selectionScore": 296.435
     },
     {
       "ipa": "pɔʁt",
@@ -1002,63 +726,6 @@
       ],
       "goodVisualCandidateCount": 1,
       "selectionScore": 284.456
-    },
-    {
-      "ipa": "liɲ",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 2,
-      "usefulWeightedGain": 461.157,
-      "schoolTargetCount": 2,
-      "usefulExamples": [
-        "ligne"
-      ],
-      "exactWords": [
-        {
-          "word": "ligne",
-          "pos": "NOM",
-          "frequency": 91.601,
-          "syllableCount": 1,
-          "category": "shape",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 174.453
-        },
-        {
-          "word": "ligne",
-          "pos": "VER",
-          "frequency": 0.788,
-          "syllableCount": 1,
-          "category": "shape",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 79.298
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "ligne",
-          "pos": "NOM",
-          "frequency": 91.601,
-          "syllableCount": 1,
-          "category": "shape",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 174.453
-        },
-        {
-          "word": "ligne",
-          "pos": "VER",
-          "frequency": 0.788,
-          "syllableCount": 1,
-          "category": "shape",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 79.298
-        }
-      ],
-      "goodVisualCandidateCount": 2,
-      "selectionScore": 282.057
     },
     {
       "ipa": "gʁɛn",
@@ -1447,78 +1114,6 @@
       ],
       "goodVisualCandidateCount": 2,
       "selectionScore": 273.04
-    },
-    {
-      "ipa": "ʒu",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 6,
-      "usefulWeightedGain": 180.833,
-      "schoolTargetCount": 2,
-      "usefulExamples": [
-        "ajouter",
-        "joue",
-        "bijou",
-        "rajouter",
-        "bijouterie",
-        "joujou"
-      ],
-      "exactWords": [
-        {
-          "word": "joue",
-          "pos": "VER",
-          "frequency": 100.956,
-          "syllableCount": 1,
-          "category": "body",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 161.993
-        },
-        {
-          "word": "joue",
-          "pos": "NOM",
-          "frequency": 17.304,
-          "syllableCount": 1,
-          "category": "body",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 140.514
-        },
-        {
-          "word": "joug",
-          "pos": "NOM",
-          "frequency": 1.187,
-          "syllableCount": 1,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 26.52
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "joue",
-          "pos": "VER",
-          "frequency": 100.956,
-          "syllableCount": 1,
-          "category": "body",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 161.993
-        },
-        {
-          "word": "joue",
-          "pos": "NOM",
-          "frequency": 17.304,
-          "syllableCount": 1,
-          "category": "body",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 140.514
-        }
-      ],
-      "goodVisualCandidateCount": 2,
-      "selectionScore": 270.779
     },
     {
       "ipa": "ʃjɛ̃",
@@ -3000,66 +2595,6 @@
       "selectionScore": 239.916
     },
     {
-      "ipa": "tiʁe",
-      "unitCount": 4,
-      "syllableSpan": 2,
-      "usefulTargetCount": 4,
-      "usefulWeightedGain": 767.476,
-      "schoolTargetCount": 3,
-      "usefulExamples": [
-        "tirer",
-        "retirer",
-        "attirer",
-        "soutirer"
-      ],
-      "exactWords": [
-        {
-          "word": "tirer",
-          "pos": "VER",
-          "frequency": 107.968,
-          "syllableCount": 2,
-          "category": "action",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 153.057
-        },
-        {
-          "word": "tiré",
-          "pos": "ADJ",
-          "frequency": 0.851,
-          "syllableCount": 2,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 9.852
-        },
-        {
-          "word": "tirée",
-          "pos": "NOM",
-          "frequency": 0.066,
-          "syllableCount": 2,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": -4.977
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "tirer",
-          "pos": "VER",
-          "frequency": 107.968,
-          "syllableCount": 2,
-          "category": "action",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 153.057
-        }
-      ],
-      "goodVisualCandidateCount": 1,
-      "selectionScore": 238.799
-    },
-    {
       "ipa": "sɛ̃ʒ",
       "unitCount": 3,
       "syllableSpan": 1,
@@ -3621,48 +3156,6 @@
       "selectionScore": 233.185
     },
     {
-      "ipa": "oto",
-      "unitCount": 3,
-      "syllableSpan": 2,
-      "usefulTargetCount": 14,
-      "usefulWeightedGain": 285.697,
-      "schoolTargetCount": 1,
-      "usefulExamples": [
-        "autorité",
-        "auto",
-        "autoroute",
-        "automatique",
-        "autographe",
-        "autorisation"
-      ],
-      "exactWords": [
-        {
-          "word": "auto",
-          "pos": "NOM",
-          "frequency": 14.177,
-          "syllableCount": 2,
-          "category": "vehicle",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 137.516
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "auto",
-          "pos": "NOM",
-          "frequency": 14.177,
-          "syllableCount": 2,
-          "category": "vehicle",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 137.516
-        }
-      ],
-      "goodVisualCandidateCount": 1,
-      "selectionScore": 233.131
-    },
-    {
       "ipa": "foʁɛ",
       "unitCount": 4,
       "syllableSpan": 2,
@@ -3843,65 +3336,6 @@
       "selectionScore": 232.145
     },
     {
-      "ipa": "pys",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 3,
-      "usefulWeightedGain": 144.9,
-      "schoolTargetCount": 0,
-      "usefulExamples": [
-        "puce",
-        "campus",
-        "crépuscule"
-      ],
-      "exactWords": [
-        {
-          "word": "puce",
-          "pos": "NOM",
-          "frequency": 26.133,
-          "syllableCount": 1,
-          "category": "animal",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 146.812
-        },
-        {
-          "word": "pucent",
-          "pos": "NOM",
-          "frequency": 0.003,
-          "syllableCount": 1,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": -5.952
-        },
-        {
-          "word": "pusse",
-          "pos": "VER",
-          "frequency": 0.013,
-          "syllableCount": 1,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": -19.793
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "puce",
-          "pos": "NOM",
-          "frequency": 26.133,
-          "syllableCount": 1,
-          "category": "animal",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 146.812
-        }
-      ],
-      "goodVisualCandidateCount": 1,
-      "selectionScore": 231.8
-    },
-    {
       "ipa": "fœj",
       "unitCount": 3,
       "syllableSpan": 1,
@@ -4072,134 +3506,6 @@
       ],
       "goodVisualCandidateCount": 2,
       "selectionScore": 230.58
-    },
-    {
-      "ipa": "site",
-      "unitCount": 4,
-      "syllableSpan": 2,
-      "usefulTargetCount": 21,
-      "usefulWeightedGain": 419.94,
-      "schoolTargetCount": 0,
-      "usefulExamples": [
-        "capacité",
-        "publicité",
-        "cité",
-        "féliciter",
-        "excité",
-        "université"
-      ],
-      "exactWords": [
-        {
-          "word": "cité",
-          "pos": "NOM",
-          "frequency": 9.051,
-          "syllableCount": 2,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Une petite cité stylisée avec plusieurs immeubles et rues, sans texte.",
-            "confusions": [
-              "ville",
-              "quartier"
-            ],
-            "risk": "unknown",
-            "source": "data/rebus-sound-visual-curation-wave3.json"
-          },
-          "wordScore": 135.923
-        },
-        {
-          "word": "citer",
-          "pos": "VER",
-          "frequency": 4.978,
-          "syllableCount": 2,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 28.609
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "cité",
-          "pos": "NOM",
-          "frequency": 9.051,
-          "syllableCount": 2,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Une petite cité stylisée avec plusieurs immeubles et rues, sans texte.",
-            "confusions": [
-              "ville",
-              "quartier"
-            ],
-            "risk": "unknown",
-            "source": "data/rebus-sound-visual-curation-wave3.json"
-          },
-          "wordScore": 135.923
-        }
-      ],
-      "goodVisualCandidateCount": 1,
-      "selectionScore": 229.906
-    },
-    {
-      "ipa": "vole",
-      "unitCount": 4,
-      "syllableSpan": 2,
-      "usefulTargetCount": 4,
-      "usefulWeightedGain": 407.275,
-      "schoolTargetCount": 1,
-      "usefulExamples": [
-        "voler",
-        "envoler",
-        "volé",
-        "volée"
-      ],
-      "exactWords": [
-        {
-          "word": "voler",
-          "pos": "VER",
-          "frequency": 75.731,
-          "syllableCount": 2,
-          "category": "action",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 147.445
-        },
-        {
-          "word": "volée",
-          "pos": "NOM",
-          "frequency": 1.519,
-          "syllableCount": 2,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 28.782
-        },
-        {
-          "word": "volé",
-          "pos": "ADJ",
-          "frequency": 4.94,
-          "syllableCount": 2,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 28.507
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "voler",
-          "pos": "VER",
-          "frequency": 75.731,
-          "syllableCount": 2,
-          "category": "action",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 147.445
-        }
-      ],
-      "goodVisualCandidateCount": 1,
-      "selectionScore": 229.392
     },
     {
       "ipa": "poʁte",
@@ -4483,46 +3789,6 @@
       ],
       "goodVisualCandidateCount": 1,
       "selectionScore": 227.441
-    },
-    {
-      "ipa": "bɔl",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 4,
-      "usefulWeightedGain": 182.328,
-      "schoolTargetCount": 0,
-      "usefulExamples": [
-        "football",
-        "bol",
-        "symbole",
-        "ras-le-bol"
-      ],
-      "exactWords": [
-        {
-          "word": "bol",
-          "pos": "NOM",
-          "frequency": 15.351,
-          "syllableCount": 1,
-          "category": "object",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 138.709
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "bol",
-          "pos": "NOM",
-          "frequency": 15.351,
-          "syllableCount": 1,
-          "category": "object",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 138.709
-        }
-      ],
-      "goodVisualCandidateCount": 1,
-      "selectionScore": 226.852
     },
     {
       "ipa": "dɔʁmiʁ",
@@ -5573,92 +4839,6 @@
       ],
       "goodVisualCandidateCount": 2,
       "selectionScore": 217.685
-    },
-    {
-      "ipa": "myze",
-      "unitCount": 4,
-      "syllableSpan": 2,
-      "usefulTargetCount": 2,
-      "usefulWeightedGain": 300.219,
-      "schoolTargetCount": 1,
-      "usefulExamples": [
-        "amuser",
-        "musée"
-      ],
-      "exactWords": [
-        {
-          "word": "musée",
-          "pos": "NOM",
-          "frequency": 18.646,
-          "syllableCount": 2,
-          "category": "place",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 141.646
-        },
-        {
-          "word": "muser",
-          "pos": "VER",
-          "frequency": 0.009,
-          "syllableCount": 2,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": -19.857
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "musée",
-          "pos": "NOM",
-          "frequency": 18.646,
-          "syllableCount": 2,
-          "category": "place",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 141.646
-        }
-      ],
-      "goodVisualCandidateCount": 1,
-      "selectionScore": 217.682
-    },
-    {
-      "ipa": "motœʁ",
-      "unitCount": 5,
-      "syllableSpan": 2,
-      "usefulTargetCount": 2,
-      "usefulWeightedGain": 105.076,
-      "schoolTargetCount": 0,
-      "usefulExamples": [
-        "moteur",
-        "promoteur"
-      ],
-      "exactWords": [
-        {
-          "word": "moteur",
-          "pos": "NOM",
-          "frequency": 25.323,
-          "syllableCount": 2,
-          "category": "object",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 146.327
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "moteur",
-          "pos": "NOM",
-          "frequency": 25.323,
-          "syllableCount": 2,
-          "category": "object",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 146.327
-        }
-      ],
-      "goodVisualCandidateCount": 1,
-      "selectionScore": 216.101
     },
     {
       "ipa": "kadʁ",
@@ -6783,65 +5963,6 @@
       "selectionScore": 207.088
     },
     {
-      "ipa": "kupe",
-      "unitCount": 4,
-      "syllableSpan": 2,
-      "usefulTargetCount": 3,
-      "usefulWeightedGain": 224.565,
-      "schoolTargetCount": 1,
-      "usefulExamples": [
-        "couper",
-        "découper",
-        "coupé"
-      ],
-      "exactWords": [
-        {
-          "word": "couper",
-          "pos": "VER",
-          "frequency": 41.861,
-          "syllableCount": 2,
-          "category": "action",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 130.127
-        },
-        {
-          "word": "coupé",
-          "pos": "NOM",
-          "frequency": 1.826,
-          "syllableCount": 2,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 30.622
-        },
-        {
-          "word": "coupée",
-          "pos": "NOM",
-          "frequency": 0.203,
-          "syllableCount": 2,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 16.957
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "couper",
-          "pos": "VER",
-          "frequency": 41.861,
-          "syllableCount": 2,
-          "category": "action",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 130.127
-        }
-      ],
-      "goodVisualCandidateCount": 1,
-      "selectionScore": 206.729
-    },
-    {
       "ipa": "ol",
       "unitCount": 2,
       "syllableSpan": 1,
@@ -6914,48 +6035,6 @@
       ],
       "goodVisualCandidateCount": 1,
       "selectionScore": 206.335
-    },
-    {
-      "ipa": "pyl",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 6,
-      "usefulWeightedGain": 62.861,
-      "schoolTargetCount": 0,
-      "usefulExamples": [
-        "pull",
-        "impulsion",
-        "pulmonaire",
-        "crapule",
-        "propulsion",
-        "impulsif"
-      ],
-      "exactWords": [
-        {
-          "word": "pull",
-          "pos": "NOM",
-          "frequency": 9.627,
-          "syllableCount": 1,
-          "category": "clothing",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 121.814
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "pull",
-          "pos": "NOM",
-          "frequency": 9.627,
-          "syllableCount": 1,
-          "category": "clothing",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 121.814
-        }
-      ],
-      "goodVisualCandidateCount": 1,
-      "selectionScore": 206.322
     },
     {
       "ipa": "taʁt",
@@ -7435,67 +6514,6 @@
       "selectionScore": 199.212
     },
     {
-      "ipa": "pat",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 5,
-      "usefulWeightedGain": 70.818,
-      "schoolTargetCount": 0,
-      "usefulExamples": [
-        "psychopathe",
-        "pâte",
-        "patte",
-        "sociopathe",
-        "télépathe"
-      ],
-      "exactWords": [
-        {
-          "word": "pâte",
-          "pos": "NOM",
-          "frequency": 5.987,
-          "syllableCount": 1,
-          "category": "food",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 115.105
-        },
-        {
-          "word": "patte",
-          "pos": "NOM",
-          "frequency": 5.665,
-          "syllableCount": 1,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 44.35
-        },
-        {
-          "word": "pates",
-          "pos": "NOM",
-          "frequency": 0.263,
-          "syllableCount": 1,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 17.736
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "pâte",
-          "pos": "NOM",
-          "frequency": 5.987,
-          "syllableCount": 1,
-          "category": "food",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 115.105
-        }
-      ],
-      "goodVisualCandidateCount": 1,
-      "selectionScore": 199.084
-    },
-    {
       "ipa": "tigʁ",
       "unitCount": 4,
       "syllableSpan": 1,
@@ -7722,55 +6740,6 @@
       ],
       "goodVisualCandidateCount": 2,
       "selectionScore": 195.951
-    },
-    {
-      "ipa": "meʁi",
-      "unitCount": 4,
-      "syllableSpan": 2,
-      "usefulTargetCount": 3,
-      "usefulWeightedGain": 185.791,
-      "schoolTargetCount": 1,
-      "usefulExamples": [
-        "américain",
-        "mériter",
-        "mairie"
-      ],
-      "exactWords": [
-        {
-          "word": "mairie",
-          "pos": "NOM",
-          "frequency": 8.753,
-          "syllableCount": 2,
-          "category": "place",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 120.441
-        },
-        {
-          "word": "meri",
-          "pos": "NOM",
-          "frequency": 0.003,
-          "syllableCount": 2,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": -5.952
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "mairie",
-          "pos": "NOM",
-          "frequency": 8.753,
-          "syllableCount": 2,
-          "category": "place",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 120.441
-        }
-      ],
-      "goodVisualCandidateCount": 1,
-      "selectionScore": 195.911
     },
     {
       "ipa": "ʃəvij",
@@ -8710,65 +7679,6 @@
       ],
       "goodVisualCandidateCount": 2,
       "selectionScore": 185.69
-    },
-    {
-      "ipa": "buk",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 3,
-      "usefulWeightedGain": 17.468,
-      "schoolTargetCount": 0,
-      "usefulExamples": [
-        "bouc",
-        "bookmaker",
-        "book"
-      ],
-      "exactWords": [
-        {
-          "word": "bouc",
-          "pos": "NOM",
-          "frequency": 4.756,
-          "syllableCount": 1,
-          "category": "animal",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 112.004
-        },
-        {
-          "word": "book",
-          "pos": "NOM",
-          "frequency": 1.842,
-          "syllableCount": 1,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 30.712
-        },
-        {
-          "word": "booke",
-          "pos": "NOM",
-          "frequency": 0.016,
-          "syllableCount": 1,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": -5.746
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "bouc",
-          "pos": "NOM",
-          "frequency": 4.756,
-          "syllableCount": 1,
-          "category": "animal",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 112.004
-        }
-      ],
-      "goodVisualCandidateCount": 1,
-      "selectionScore": 184.591
     },
     {
       "ipa": "ʃal",
@@ -9810,44 +8720,6 @@
       ],
       "goodVisualCandidateCount": 1,
       "selectionScore": 176.676
-    },
-    {
-      "ipa": "bwaʁ",
-      "unitCount": 4,
-      "syllableSpan": 1,
-      "usefulTargetCount": 2,
-      "usefulWeightedGain": 612.048,
-      "schoolTargetCount": 1,
-      "usefulExamples": [
-        "boire",
-        "pourboire"
-      ],
-      "exactWords": [
-        {
-          "word": "boire",
-          "pos": "NOM",
-          "frequency": 2.104,
-          "syllableCount": 1,
-          "category": "action",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 92.123
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "boire",
-          "pos": "NOM",
-          "frequency": 2.104,
-          "syllableCount": 1,
-          "category": "action",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 92.123
-        }
-      ],
-      "goodVisualCandidateCount": 1,
-      "selectionScore": 176.423
     },
     {
       "ipa": "etɑ̃",
@@ -10346,69 +9218,993 @@
       ],
       "goodVisualCandidateCount": 1,
       "selectionScore": 170.393
-    }
-  ],
-  "topImageableReservoirRows": [
+    },
     {
-      "ipa": "ʒy",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 19,
-      "usefulWeightedGain": 515.297,
-      "schoolTargetCount": 1,
+      "ipa": "sonɛt",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 16.803,
+      "schoolTargetCount": 0,
       "usefulExamples": [
-        "jury",
-        "jus",
-        "jugement",
-        "juger",
-        "judiciaire",
-        "juridique"
+        "sonnette"
       ],
       "exactWords": [
         {
-          "word": "jus",
+          "word": "sonnette",
           "pos": "NOM",
-          "frequency": 25.041,
-          "syllableCount": 1,
-          "category": "food",
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Un verre transparent rempli de jus d'orange avec une orange coupée discrète à côté, sans marque ni texte.",
-            "confusions": [
-              "boisson",
-              "orange",
-              "jus d'orange"
-            ],
-            "risk": "medium",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 231.155
+          "frequency": 5.601,
+          "syllableCount": 2,
+          "category": "object",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 114.196
         }
       ],
       "visualCandidates": [
         {
-          "word": "jus",
+          "word": "sonnette",
           "pos": "NOM",
-          "frequency": 25.041,
-          "syllableCount": 1,
-          "category": "food",
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Un verre transparent rempli de jus d'orange avec une orange coupée discrète à côté, sans marque ni texte.",
-            "confusions": [
-              "boisson",
-              "orange",
-              "jus d'orange"
-            ],
-            "risk": "medium",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 231.155
+          "frequency": 5.601,
+          "syllableCount": 2,
+          "category": "object",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 114.196
         }
       ],
       "goodVisualCandidateCount": 1,
-      "selectionScore": 336.601
+      "selectionScore": 170.017
     },
+    {
+      "ipa": "ʃɑ̃dɛl",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 5.392,
+      "schoolTargetCount": 0,
+      "usefulExamples": [
+        "chandelle"
+      ],
+      "exactWords": [
+        {
+          "word": "chandelle",
+          "pos": "NOM",
+          "frequency": 2.696,
+          "syllableCount": 2,
+          "category": null,
+          "hasPriorPrototype": true,
+          "priorPrototype": {
+            "visualConcept": "Une chandelle fine allumée dans un petit bougeoir.",
+            "confusions": [
+              "bougie"
+            ],
+            "risk": "unknown",
+            "source": "data/rebus-sound-visual-curation-wave8.json"
+          },
+          "wordScore": 119.916
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "chandelle",
+          "pos": "NOM",
+          "frequency": 2.696,
+          "syllableCount": 2,
+          "category": null,
+          "hasPriorPrototype": true,
+          "priorPrototype": {
+            "visualConcept": "Une chandelle fine allumée dans un petit bougeoir.",
+            "confusions": [
+              "bougie"
+            ],
+            "risk": "unknown",
+            "source": "data/rebus-sound-visual-curation-wave8.json"
+          },
+          "wordScore": 119.916
+        }
+      ],
+      "goodVisualCandidateCount": 1,
+      "selectionScore": 169.591
+    },
+    {
+      "ipa": "ʁənaʁ",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 16.074,
+      "schoolTargetCount": 0,
+      "usefulExamples": [
+        "renard"
+      ],
+      "exactWords": [
+        {
+          "word": "renard",
+          "pos": "NOM",
+          "frequency": 5.358,
+          "syllableCount": 2,
+          "category": "animal",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 113.595
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "renard",
+          "pos": "NOM",
+          "frequency": 5.358,
+          "syllableCount": 2,
+          "category": "animal",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 113.595
+        }
+      ],
+      "goodVisualCandidateCount": 1,
+      "selectionScore": 169.166
+    },
+    {
+      "ipa": "kaskad",
+      "unitCount": 6,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 6.936,
+      "schoolTargetCount": 0,
+      "usefulExamples": [
+        "cascade"
+      ],
+      "exactWords": [
+        {
+          "word": "cascade",
+          "pos": "NOM",
+          "frequency": 3.468,
+          "syllableCount": 2,
+          "category": "nature",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 107.951
+        },
+        {
+          "word": "cascade",
+          "pos": "VER",
+          "frequency": 0.019,
+          "syllableCount": 2,
+          "category": "nature",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 50.301
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "cascade",
+          "pos": "NOM",
+          "frequency": 3.468,
+          "syllableCount": 2,
+          "category": "nature",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 107.951
+        },
+        {
+          "word": "cascade",
+          "pos": "VER",
+          "frequency": 0.019,
+          "syllableCount": 2,
+          "category": "nature",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 50.301
+        }
+      ],
+      "goodVisualCandidateCount": 2,
+      "selectionScore": 168.925
+    },
+    {
+      "ipa": "om",
+      "unitCount": 2,
+      "syllableSpan": 1,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 15.618,
+      "schoolTargetCount": 0,
+      "usefulExamples": [
+        "home"
+      ],
+      "exactWords": [
+        {
+          "word": "heaume",
+          "pos": "NOM",
+          "frequency": 0.218,
+          "syllableCount": 1,
+          "category": null,
+          "hasPriorPrototype": true,
+          "priorPrototype": {
+            "visualConcept": "Un heaume médiéval fermé, isolé, visière et fentes nettement visibles.",
+            "confusions": [
+              "casque",
+              "armure"
+            ],
+            "risk": "unknown",
+            "source": "data/rebus-sound-visual-curation-wave8.json"
+          },
+          "wordScore": 102.155
+        },
+        {
+          "word": "home",
+          "pos": "NOM",
+          "frequency": 5.206,
+          "syllableCount": 1,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 43.208
+        },
+        {
+          "word": "ohm",
+          "pos": "NOM",
+          "frequency": 0.009,
+          "syllableCount": 1,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": -5.857
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "heaume",
+          "pos": "NOM",
+          "frequency": 0.218,
+          "syllableCount": 1,
+          "category": null,
+          "hasPriorPrototype": true,
+          "priorPrototype": {
+            "visualConcept": "Un heaume médiéval fermé, isolé, visière et fentes nettement visibles.",
+            "confusions": [
+              "casque",
+              "armure"
+            ],
+            "risk": "unknown",
+            "source": "data/rebus-sound-visual-curation-wave8.json"
+          },
+          "wordScore": 102.155
+        }
+      ],
+      "goodVisualCandidateCount": 1,
+      "selectionScore": 168.563
+    },
+    {
+      "ipa": "ʁɛzɛ̃",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 15.198,
+      "schoolTargetCount": 0,
+      "usefulExamples": [
+        "raisin"
+      ],
+      "exactWords": [
+        {
+          "word": "raisin",
+          "pos": "NOM",
+          "frequency": 5.066,
+          "syllableCount": 2,
+          "category": "food",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 112.843
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "raisin",
+          "pos": "NOM",
+          "frequency": 5.066,
+          "syllableCount": 2,
+          "category": "food",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 112.843
+        }
+      ],
+      "goodVisualCandidateCount": 1,
+      "selectionScore": 168.098
+    },
+    {
+      "ipa": "bonɛ",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 15.039,
+      "schoolTargetCount": 0,
+      "usefulExamples": [
+        "bonnet"
+      ],
+      "exactWords": [
+        {
+          "word": "bonnet",
+          "pos": "NOM",
+          "frequency": 5.013,
+          "syllableCount": 2,
+          "category": "clothing",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 112.703
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "bonnet",
+          "pos": "NOM",
+          "frequency": 5.013,
+          "syllableCount": 2,
+          "category": "clothing",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 112.703
+        }
+      ],
+      "goodVisualCandidateCount": 1,
+      "selectionScore": 167.898
+    },
+    {
+      "ipa": "ʃɔʁt",
+      "unitCount": 4,
+      "syllableSpan": 1,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 8.956,
+      "schoolTargetCount": 0,
+      "usefulExamples": [
+        "short"
+      ],
+      "exactWords": [
+        {
+          "word": "short",
+          "pos": "NOM",
+          "frequency": 4.478,
+          "syllableCount": 1,
+          "category": "clothing",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 111.212
+        },
+        {
+          "word": "shorte",
+          "pos": "NOM",
+          "frequency": 0.006,
+          "syllableCount": 1,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": -5.904
+        },
+        {
+          "word": "shortent",
+          "pos": "NOM",
+          "frequency": 0.003,
+          "syllableCount": 1,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": -5.952
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "short",
+          "pos": "NOM",
+          "frequency": 4.478,
+          "syllableCount": 1,
+          "category": "clothing",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 111.212
+        }
+      ],
+      "goodVisualCandidateCount": 1,
+      "selectionScore": 167.546
+    },
+    {
+      "ipa": "sitʁuj",
+      "unitCount": 6,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 7.088,
+      "schoolTargetCount": 0,
+      "usefulExamples": [
+        "citrouille"
+      ],
+      "exactWords": [
+        {
+          "word": "citrouille",
+          "pos": "NOM",
+          "frequency": 3.544,
+          "syllableCount": 2,
+          "category": null,
+          "hasPriorPrototype": true,
+          "priorPrototype": {
+            "visualConcept": "Une citrouille orange entière, isolée, sans visage sculpté.",
+            "confusions": [
+              "potiron"
+            ],
+            "risk": "unknown",
+            "source": "data/rebus-sound-visual-curation-wave8.json"
+          },
+          "wordScore": 123.221
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "citrouille",
+          "pos": "NOM",
+          "frequency": 3.544,
+          "syllableCount": 2,
+          "category": null,
+          "hasPriorPrototype": true,
+          "priorPrototype": {
+            "visualConcept": "Une citrouille orange entière, isolée, sans visage sculpté.",
+            "confusions": [
+              "potiron"
+            ],
+            "risk": "unknown",
+            "source": "data/rebus-sound-visual-curation-wave8.json"
+          },
+          "wordScore": 123.221
+        }
+      ],
+      "goodVisualCandidateCount": 1,
+      "selectionScore": 166.308
+    },
+    {
+      "ipa": "ɔɲɔ̃",
+      "unitCount": 3,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 6.07,
+      "schoolTargetCount": 0,
+      "usefulExamples": [
+        "oignon"
+      ],
+      "exactWords": [
+        {
+          "word": "oignon",
+          "pos": "NOM",
+          "frequency": 3.035,
+          "syllableCount": 2,
+          "category": "food",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 106.32
+        },
+        {
+          "word": "ognon",
+          "pos": "NOM",
+          "frequency": 0.009,
+          "syllableCount": 2,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": -5.857
+        },
+        {
+          "word": "oignons",
+          "pos": "VER",
+          "frequency": 0.051,
+          "syllableCount": 2,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": -19.204
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "oignon",
+          "pos": "NOM",
+          "frequency": 3.035,
+          "syllableCount": 2,
+          "category": "food",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 106.32
+        }
+      ],
+      "goodVisualCandidateCount": 1,
+      "selectionScore": 163.6
+    },
+    {
+      "ipa": "pɔ̃pje",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 8.886,
+      "schoolTargetCount": 0,
+      "usefulExamples": [
+        "pompier"
+      ],
+      "exactWords": [
+        {
+          "word": "pompier",
+          "pos": "NOM",
+          "frequency": 4.443,
+          "syllableCount": 2,
+          "category": "person",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 111.109
+        },
+        {
+          "word": "pompiez",
+          "pos": "VER",
+          "frequency": 0.003,
+          "syllableCount": 2,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": -19.952
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "pompier",
+          "pos": "NOM",
+          "frequency": 4.443,
+          "syllableCount": 2,
+          "category": "person",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 111.109
+        }
+      ],
+      "goodVisualCandidateCount": 1,
+      "selectionScore": 163.401
+    },
+    {
+      "ipa": "uʁsɔ̃",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 3.64,
+      "schoolTargetCount": 0,
+      "usefulExamples": [
+        "ourson"
+      ],
+      "exactWords": [
+        {
+          "word": "ourson",
+          "pos": "NOM",
+          "frequency": 1.82,
+          "syllableCount": 2,
+          "category": null,
+          "hasPriorPrototype": true,
+          "priorPrototype": {
+            "visualConcept": "Un jeune ours entier, seul, proportions juvéniles visibles.",
+            "confusions": [
+              "ours",
+              "nounours"
+            ],
+            "risk": "unknown",
+            "source": "data/rebus-sound-visual-curation-wave8.json"
+          },
+          "wordScore": 115.588
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "ourson",
+          "pos": "NOM",
+          "frequency": 1.82,
+          "syllableCount": 2,
+          "category": null,
+          "hasPriorPrototype": true,
+          "priorPrototype": {
+            "visualConcept": "Un jeune ours entier, seul, proportions juvéniles visibles.",
+            "confusions": [
+              "ours",
+              "nounours"
+            ],
+            "risk": "unknown",
+            "source": "data/rebus-sound-visual-curation-wave8.json"
+          },
+          "wordScore": 115.588
+        }
+      ],
+      "goodVisualCandidateCount": 1,
+      "selectionScore": 163.341
+    },
+    {
+      "ipa": "buʃɔ̃",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 8.57,
+      "schoolTargetCount": 0,
+      "usefulExamples": [
+        "bouchon"
+      ],
+      "exactWords": [
+        {
+          "word": "bouchon",
+          "pos": "NOM",
+          "frequency": 4.285,
+          "syllableCount": 2,
+          "category": "object",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 110.638
+        },
+        {
+          "word": "bouchons",
+          "pos": "VER",
+          "frequency": 0.028,
+          "syllableCount": 2,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": -19.558
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "bouchon",
+          "pos": "NOM",
+          "frequency": 4.285,
+          "syllableCount": 2,
+          "category": "object",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 110.638
+        }
+      ],
+      "goodVisualCandidateCount": 1,
+      "selectionScore": 162.735
+    },
+    {
+      "ipa": "patat",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 8.488,
+      "schoolTargetCount": 0,
+      "usefulExamples": [
+        "patate"
+      ],
+      "exactWords": [
+        {
+          "word": "patate",
+          "pos": "NOM",
+          "frequency": 4.244,
+          "syllableCount": 2,
+          "category": "food",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 110.513
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "patate",
+          "pos": "NOM",
+          "frequency": 4.244,
+          "syllableCount": 2,
+          "category": "food",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 110.513
+        }
+      ],
+      "goodVisualCandidateCount": 1,
+      "selectionScore": 162.558
+    },
+    {
+      "ipa": "pul",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 24.51,
+      "schoolTargetCount": 0,
+      "usefulExamples": [
+        "poules",
+        "ampoule"
+      ],
+      "exactWords": [
+        {
+          "word": "poule",
+          "pos": "NOM",
+          "frequency": 0.453,
+          "syllableCount": 1,
+          "category": "animal",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 89.978
+        },
+        {
+          "word": "pool",
+          "pos": "NOM",
+          "frequency": 0.937,
+          "syllableCount": 1,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 24.578
+        },
+        {
+          "word": "poulent",
+          "pos": "NOM",
+          "frequency": 0.009,
+          "syllableCount": 1,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": -5.857
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "poule",
+          "pos": "NOM",
+          "frequency": 0.453,
+          "syllableCount": 1,
+          "category": "animal",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 89.978
+        }
+      ],
+      "goodVisualCandidateCount": 1,
+      "selectionScore": 162.201
+    },
+    {
+      "ipa": "otʁyʃ",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 3.108,
+      "schoolTargetCount": 0,
+      "usefulExamples": [
+        "autruche"
+      ],
+      "exactWords": [
+        {
+          "word": "autruche",
+          "pos": "NOM",
+          "frequency": 1.554,
+          "syllableCount": 2,
+          "category": null,
+          "hasPriorPrototype": true,
+          "priorPrototype": {
+            "visualConcept": "Une autruche entière de profil, long cou et grandes pattes visibles.",
+            "confusions": [
+              "émeu",
+              "oiseau"
+            ],
+            "risk": "unknown",
+            "source": "data/rebus-sound-visual-curation-wave8.json"
+          },
+          "wordScore": 114.003
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "autruche",
+          "pos": "NOM",
+          "frequency": 1.554,
+          "syllableCount": 2,
+          "category": null,
+          "hasPriorPrototype": true,
+          "priorPrototype": {
+            "visualConcept": "Une autruche entière de profil, long cou et grandes pattes visibles.",
+            "confusions": [
+              "émeu",
+              "oiseau"
+            ],
+            "risk": "unknown",
+            "source": "data/rebus-sound-visual-curation-wave8.json"
+          },
+          "wordScore": 114.003
+        }
+      ],
+      "goodVisualCandidateCount": 1,
+      "selectionScore": 161.026
+    },
+    {
+      "ipa": "ʃosɛt",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 7.386,
+      "schoolTargetCount": 0,
+      "usefulExamples": [
+        "chaussette"
+      ],
+      "exactWords": [
+        {
+          "word": "chaussette",
+          "pos": "NOM",
+          "frequency": 3.693,
+          "syllableCount": 2,
+          "category": "clothing",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 108.737
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "chaussette",
+          "pos": "NOM",
+          "frequency": 3.693,
+          "syllableCount": 2,
+          "category": "clothing",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 108.737
+        }
+      ],
+      "goodVisualCandidateCount": 1,
+      "selectionScore": 160.042
+    },
+    {
+      "ipa": "fɛʁmje",
+      "unitCount": 6,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 15.084,
+      "schoolTargetCount": 0,
+      "usefulExamples": [
+        "fermier"
+      ],
+      "exactWords": [
+        {
+          "word": "fermier",
+          "pos": "NOM",
+          "frequency": 5.028,
+          "syllableCount": 2,
+          "category": "person",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 112.743
+        },
+        {
+          "word": "fermiez",
+          "pos": "VER",
+          "frequency": 0.516,
+          "syllableCount": 2,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 6.657
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "fermier",
+          "pos": "NOM",
+          "frequency": 5.028,
+          "syllableCount": 2,
+          "category": "person",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 112.743
+        }
+      ],
+      "goodVisualCandidateCount": 1,
+      "selectionScore": 159.955
+    },
+    {
+      "ipa": "ibu",
+      "unitCount": 3,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 4.626,
+      "schoolTargetCount": 0,
+      "usefulExamples": [
+        "hibou"
+      ],
+      "exactWords": [
+        {
+          "word": "hibou",
+          "pos": "NOM",
+          "frequency": 2.313,
+          "syllableCount": 2,
+          "category": "animal",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 103.166
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "hibou",
+          "pos": "NOM",
+          "frequency": 2.313,
+          "syllableCount": 2,
+          "category": "animal",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 103.166
+        }
+      ],
+      "goodVisualCandidateCount": 1,
+      "selectionScore": 159.076
+    },
+    {
+      "ipa": "səʁiz",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 6.594,
+      "schoolTargetCount": 0,
+      "usefulExamples": [
+        "cerise"
+      ],
+      "exactWords": [
+        {
+          "word": "cerise",
+          "pos": "NOM",
+          "frequency": 3.297,
+          "syllableCount": 2,
+          "category": "food",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 107.327
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "cerise",
+          "pos": "NOM",
+          "frequency": 3.297,
+          "syllableCount": 2,
+          "category": "food",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 107.327
+        }
+      ],
+      "goodVisualCandidateCount": 1,
+      "selectionScore": 158.036
+    },
+    {
+      "ipa": "vaʃ",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 5.526,
+      "schoolTargetCount": 0,
+      "usefulExamples": [
+        "vache"
+      ],
+      "exactWords": [
+        {
+          "word": "vache",
+          "pos": "NOM",
+          "frequency": 1.12,
+          "syllableCount": 1,
+          "category": "animal",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 96.023
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "vache",
+          "pos": "NOM",
+          "frequency": 1.12,
+          "syllableCount": 1,
+          "category": "animal",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 96.023
+        }
+      ],
+      "goodVisualCandidateCount": 1,
+      "selectionScore": 156.823
+    }
+  ],
+  "topImageableReservoirRows": [
     {
       "ipa": "ʃɛn",
       "unitCount": 3,
@@ -10547,78 +10343,6 @@
       ],
       "goodVisualCandidateCount": 1,
       "selectionScore": 322.035
-    },
-    {
-      "ipa": "pwɛ̃",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 8,
-      "usefulWeightedGain": 1493.157,
-      "schoolTargetCount": 2,
-      "usefulExamples": [
-        "point",
-        "poing",
-        "pointer",
-        "shampoing",
-        "pointure",
-        "pointu"
-      ],
-      "exactWords": [
-        {
-          "word": "point",
-          "pos": "NOM",
-          "frequency": 232.013,
-          "syllableCount": 1,
-          "category": "shape",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 189.218
-        },
-        {
-          "word": "point",
-          "pos": "VER",
-          "frequency": 5.804,
-          "syllableCount": 1,
-          "category": "shape",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 100.68
-        },
-        {
-          "word": "poing",
-          "pos": "NOM",
-          "frequency": 13.139,
-          "syllableCount": 1,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 66.383
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "point",
-          "pos": "NOM",
-          "frequency": 232.013,
-          "syllableCount": 1,
-          "category": "shape",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 189.218
-        },
-        {
-          "word": "point",
-          "pos": "VER",
-          "frequency": 5.804,
-          "syllableCount": 1,
-          "category": "shape",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 100.68
-        }
-      ],
-      "goodVisualCandidateCount": 2,
-      "selectionScore": 312.652
     },
     {
       "ipa": "sɛ̃tyʁ",
@@ -10804,151 +10528,6 @@
       ],
       "goodVisualCandidateCount": 1,
       "selectionScore": 306.277
-    },
-    {
-      "ipa": "fam",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 3,
-      "usefulWeightedGain": 3009.354,
-      "schoolTargetCount": 1,
-      "usefulExamples": [
-        "femme",
-        "infâme",
-        "sage-femme"
-      ],
-      "exactWords": [
-        {
-          "word": "femme",
-          "pos": "NOM",
-          "frequency": 499.927,
-          "syllableCount": 1,
-          "category": "person",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 201.463
-        },
-        {
-          "word": "fam",
-          "pos": "NOM",
-          "frequency": 0.114,
-          "syllableCount": 1,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 15.727
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "femme",
-          "pos": "NOM",
-          "frequency": 499.927,
-          "syllableCount": 1,
-          "category": "person",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 201.463
-        }
-      ],
-      "goodVisualCandidateCount": 1,
-      "selectionScore": 304.612
-    },
-    {
-      "ipa": "fij",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 3,
-      "usefulWeightedGain": 2550.567,
-      "schoolTargetCount": 1,
-      "usefulExamples": [
-        "fille",
-        "petite-fille",
-        "belle-fille"
-      ],
-      "exactWords": [
-        {
-          "word": "fille",
-          "pos": "NOM",
-          "frequency": 420.924,
-          "syllableCount": 1,
-          "category": "person",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 198.717
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "fille",
-          "pos": "NOM",
-          "frequency": 420.924,
-          "syllableCount": 1,
-          "category": "person",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 198.717
-        }
-      ],
-      "goodVisualCandidateCount": 1,
-      "selectionScore": 300.874
-    },
-    {
-      "ipa": "ʃɑ̃bʁ",
-      "unitCount": 4,
-      "syllableSpan": 1,
-      "usefulTargetCount": 2,
-      "usefulWeightedGain": 1394.228,
-      "schoolTargetCount": 2,
-      "usefulExamples": [
-        "chambre"
-      ],
-      "exactWords": [
-        {
-          "word": "chambre",
-          "pos": "NOM",
-          "frequency": 231.772,
-          "syllableCount": 1,
-          "category": "place",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 189.201
-        },
-        {
-          "word": "chambre",
-          "pos": "VER",
-          "frequency": 0.899,
-          "syllableCount": 1,
-          "category": "place",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 80.261
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "chambre",
-          "pos": "NOM",
-          "frequency": 231.772,
-          "syllableCount": 1,
-          "category": "place",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 189.201
-        },
-        {
-          "word": "chambre",
-          "pos": "VER",
-          "frequency": 0.899,
-          "syllableCount": 1,
-          "category": "place",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 80.261
-        }
-      ],
-      "goodVisualCandidateCount": 2,
-      "selectionScore": 296.435
     },
     {
       "ipa": "pɔʁt",
@@ -11334,63 +10913,6 @@
       ],
       "goodVisualCandidateCount": 1,
       "selectionScore": 284.456
-    },
-    {
-      "ipa": "liɲ",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 2,
-      "usefulWeightedGain": 461.157,
-      "schoolTargetCount": 2,
-      "usefulExamples": [
-        "ligne"
-      ],
-      "exactWords": [
-        {
-          "word": "ligne",
-          "pos": "NOM",
-          "frequency": 91.601,
-          "syllableCount": 1,
-          "category": "shape",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 174.453
-        },
-        {
-          "word": "ligne",
-          "pos": "VER",
-          "frequency": 0.788,
-          "syllableCount": 1,
-          "category": "shape",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 79.298
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "ligne",
-          "pos": "NOM",
-          "frequency": 91.601,
-          "syllableCount": 1,
-          "category": "shape",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 174.453
-        },
-        {
-          "word": "ligne",
-          "pos": "VER",
-          "frequency": 0.788,
-          "syllableCount": 1,
-          "category": "shape",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 79.298
-        }
-      ],
-      "goodVisualCandidateCount": 2,
-      "selectionScore": 282.057
     },
     {
       "ipa": "gʁɛn",
@@ -11779,78 +11301,6 @@
       ],
       "goodVisualCandidateCount": 2,
       "selectionScore": 273.04
-    },
-    {
-      "ipa": "ʒu",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 6,
-      "usefulWeightedGain": 180.833,
-      "schoolTargetCount": 2,
-      "usefulExamples": [
-        "ajouter",
-        "joue",
-        "bijou",
-        "rajouter",
-        "bijouterie",
-        "joujou"
-      ],
-      "exactWords": [
-        {
-          "word": "joue",
-          "pos": "VER",
-          "frequency": 100.956,
-          "syllableCount": 1,
-          "category": "body",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 161.993
-        },
-        {
-          "word": "joue",
-          "pos": "NOM",
-          "frequency": 17.304,
-          "syllableCount": 1,
-          "category": "body",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 140.514
-        },
-        {
-          "word": "joug",
-          "pos": "NOM",
-          "frequency": 1.187,
-          "syllableCount": 1,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 26.52
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "joue",
-          "pos": "VER",
-          "frequency": 100.956,
-          "syllableCount": 1,
-          "category": "body",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 161.993
-        },
-        {
-          "word": "joue",
-          "pos": "NOM",
-          "frequency": 17.304,
-          "syllableCount": 1,
-          "category": "body",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 140.514
-        }
-      ],
-      "goodVisualCandidateCount": 2,
-      "selectionScore": 270.779
     },
     {
       "ipa": "ʃjɛ̃",
@@ -13332,66 +12782,6 @@
       "selectionScore": 239.916
     },
     {
-      "ipa": "tiʁe",
-      "unitCount": 4,
-      "syllableSpan": 2,
-      "usefulTargetCount": 4,
-      "usefulWeightedGain": 767.476,
-      "schoolTargetCount": 3,
-      "usefulExamples": [
-        "tirer",
-        "retirer",
-        "attirer",
-        "soutirer"
-      ],
-      "exactWords": [
-        {
-          "word": "tirer",
-          "pos": "VER",
-          "frequency": 107.968,
-          "syllableCount": 2,
-          "category": "action",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 153.057
-        },
-        {
-          "word": "tiré",
-          "pos": "ADJ",
-          "frequency": 0.851,
-          "syllableCount": 2,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 9.852
-        },
-        {
-          "word": "tirée",
-          "pos": "NOM",
-          "frequency": 0.066,
-          "syllableCount": 2,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": -4.977
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "tirer",
-          "pos": "VER",
-          "frequency": 107.968,
-          "syllableCount": 2,
-          "category": "action",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 153.057
-        }
-      ],
-      "goodVisualCandidateCount": 1,
-      "selectionScore": 238.799
-    },
-    {
       "ipa": "sɛ̃ʒ",
       "unitCount": 3,
       "syllableSpan": 1,
@@ -13953,48 +13343,6 @@
       "selectionScore": 233.185
     },
     {
-      "ipa": "oto",
-      "unitCount": 3,
-      "syllableSpan": 2,
-      "usefulTargetCount": 14,
-      "usefulWeightedGain": 285.697,
-      "schoolTargetCount": 1,
-      "usefulExamples": [
-        "autorité",
-        "auto",
-        "autoroute",
-        "automatique",
-        "autographe",
-        "autorisation"
-      ],
-      "exactWords": [
-        {
-          "word": "auto",
-          "pos": "NOM",
-          "frequency": 14.177,
-          "syllableCount": 2,
-          "category": "vehicle",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 137.516
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "auto",
-          "pos": "NOM",
-          "frequency": 14.177,
-          "syllableCount": 2,
-          "category": "vehicle",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 137.516
-        }
-      ],
-      "goodVisualCandidateCount": 1,
-      "selectionScore": 233.131
-    },
-    {
       "ipa": "foʁɛ",
       "unitCount": 4,
       "syllableSpan": 2,
@@ -14175,65 +13523,6 @@
       "selectionScore": 232.145
     },
     {
-      "ipa": "pys",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 3,
-      "usefulWeightedGain": 144.9,
-      "schoolTargetCount": 0,
-      "usefulExamples": [
-        "puce",
-        "campus",
-        "crépuscule"
-      ],
-      "exactWords": [
-        {
-          "word": "puce",
-          "pos": "NOM",
-          "frequency": 26.133,
-          "syllableCount": 1,
-          "category": "animal",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 146.812
-        },
-        {
-          "word": "pucent",
-          "pos": "NOM",
-          "frequency": 0.003,
-          "syllableCount": 1,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": -5.952
-        },
-        {
-          "word": "pusse",
-          "pos": "VER",
-          "frequency": 0.013,
-          "syllableCount": 1,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": -19.793
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "puce",
-          "pos": "NOM",
-          "frequency": 26.133,
-          "syllableCount": 1,
-          "category": "animal",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 146.812
-        }
-      ],
-      "goodVisualCandidateCount": 1,
-      "selectionScore": 231.8
-    },
-    {
       "ipa": "fœj",
       "unitCount": 3,
       "syllableSpan": 1,
@@ -14404,134 +13693,6 @@
       ],
       "goodVisualCandidateCount": 2,
       "selectionScore": 230.58
-    },
-    {
-      "ipa": "site",
-      "unitCount": 4,
-      "syllableSpan": 2,
-      "usefulTargetCount": 21,
-      "usefulWeightedGain": 419.94,
-      "schoolTargetCount": 0,
-      "usefulExamples": [
-        "capacité",
-        "publicité",
-        "cité",
-        "féliciter",
-        "excité",
-        "université"
-      ],
-      "exactWords": [
-        {
-          "word": "cité",
-          "pos": "NOM",
-          "frequency": 9.051,
-          "syllableCount": 2,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Une petite cité stylisée avec plusieurs immeubles et rues, sans texte.",
-            "confusions": [
-              "ville",
-              "quartier"
-            ],
-            "risk": "unknown",
-            "source": "data/rebus-sound-visual-curation-wave3.json"
-          },
-          "wordScore": 135.923
-        },
-        {
-          "word": "citer",
-          "pos": "VER",
-          "frequency": 4.978,
-          "syllableCount": 2,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 28.609
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "cité",
-          "pos": "NOM",
-          "frequency": 9.051,
-          "syllableCount": 2,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Une petite cité stylisée avec plusieurs immeubles et rues, sans texte.",
-            "confusions": [
-              "ville",
-              "quartier"
-            ],
-            "risk": "unknown",
-            "source": "data/rebus-sound-visual-curation-wave3.json"
-          },
-          "wordScore": 135.923
-        }
-      ],
-      "goodVisualCandidateCount": 1,
-      "selectionScore": 229.906
-    },
-    {
-      "ipa": "vole",
-      "unitCount": 4,
-      "syllableSpan": 2,
-      "usefulTargetCount": 4,
-      "usefulWeightedGain": 407.275,
-      "schoolTargetCount": 1,
-      "usefulExamples": [
-        "voler",
-        "envoler",
-        "volé",
-        "volée"
-      ],
-      "exactWords": [
-        {
-          "word": "voler",
-          "pos": "VER",
-          "frequency": 75.731,
-          "syllableCount": 2,
-          "category": "action",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 147.445
-        },
-        {
-          "word": "volée",
-          "pos": "NOM",
-          "frequency": 1.519,
-          "syllableCount": 2,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 28.782
-        },
-        {
-          "word": "volé",
-          "pos": "ADJ",
-          "frequency": 4.94,
-          "syllableCount": 2,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 28.507
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "voler",
-          "pos": "VER",
-          "frequency": 75.731,
-          "syllableCount": 2,
-          "category": "action",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 147.445
-        }
-      ],
-      "goodVisualCandidateCount": 1,
-      "selectionScore": 229.392
     },
     {
       "ipa": "poʁte",
@@ -14815,46 +13976,6 @@
       ],
       "goodVisualCandidateCount": 1,
       "selectionScore": 227.441
-    },
-    {
-      "ipa": "bɔl",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 4,
-      "usefulWeightedGain": 182.328,
-      "schoolTargetCount": 0,
-      "usefulExamples": [
-        "football",
-        "bol",
-        "symbole",
-        "ras-le-bol"
-      ],
-      "exactWords": [
-        {
-          "word": "bol",
-          "pos": "NOM",
-          "frequency": 15.351,
-          "syllableCount": 1,
-          "category": "object",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 138.709
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "bol",
-          "pos": "NOM",
-          "frequency": 15.351,
-          "syllableCount": 1,
-          "category": "object",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 138.709
-        }
-      ],
-      "goodVisualCandidateCount": 1,
-      "selectionScore": 226.852
     },
     {
       "ipa": "dɔʁmiʁ",
@@ -15905,92 +15026,6 @@
       ],
       "goodVisualCandidateCount": 2,
       "selectionScore": 217.685
-    },
-    {
-      "ipa": "myze",
-      "unitCount": 4,
-      "syllableSpan": 2,
-      "usefulTargetCount": 2,
-      "usefulWeightedGain": 300.219,
-      "schoolTargetCount": 1,
-      "usefulExamples": [
-        "amuser",
-        "musée"
-      ],
-      "exactWords": [
-        {
-          "word": "musée",
-          "pos": "NOM",
-          "frequency": 18.646,
-          "syllableCount": 2,
-          "category": "place",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 141.646
-        },
-        {
-          "word": "muser",
-          "pos": "VER",
-          "frequency": 0.009,
-          "syllableCount": 2,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": -19.857
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "musée",
-          "pos": "NOM",
-          "frequency": 18.646,
-          "syllableCount": 2,
-          "category": "place",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 141.646
-        }
-      ],
-      "goodVisualCandidateCount": 1,
-      "selectionScore": 217.682
-    },
-    {
-      "ipa": "motœʁ",
-      "unitCount": 5,
-      "syllableSpan": 2,
-      "usefulTargetCount": 2,
-      "usefulWeightedGain": 105.076,
-      "schoolTargetCount": 0,
-      "usefulExamples": [
-        "moteur",
-        "promoteur"
-      ],
-      "exactWords": [
-        {
-          "word": "moteur",
-          "pos": "NOM",
-          "frequency": 25.323,
-          "syllableCount": 2,
-          "category": "object",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 146.327
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "moteur",
-          "pos": "NOM",
-          "frequency": 25.323,
-          "syllableCount": 2,
-          "category": "object",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 146.327
-        }
-      ],
-      "goodVisualCandidateCount": 1,
-      "selectionScore": 216.101
     },
     {
       "ipa": "kadʁ",
@@ -17115,65 +16150,6 @@
       "selectionScore": 207.088
     },
     {
-      "ipa": "kupe",
-      "unitCount": 4,
-      "syllableSpan": 2,
-      "usefulTargetCount": 3,
-      "usefulWeightedGain": 224.565,
-      "schoolTargetCount": 1,
-      "usefulExamples": [
-        "couper",
-        "découper",
-        "coupé"
-      ],
-      "exactWords": [
-        {
-          "word": "couper",
-          "pos": "VER",
-          "frequency": 41.861,
-          "syllableCount": 2,
-          "category": "action",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 130.127
-        },
-        {
-          "word": "coupé",
-          "pos": "NOM",
-          "frequency": 1.826,
-          "syllableCount": 2,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 30.622
-        },
-        {
-          "word": "coupée",
-          "pos": "NOM",
-          "frequency": 0.203,
-          "syllableCount": 2,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 16.957
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "couper",
-          "pos": "VER",
-          "frequency": 41.861,
-          "syllableCount": 2,
-          "category": "action",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 130.127
-        }
-      ],
-      "goodVisualCandidateCount": 1,
-      "selectionScore": 206.729
-    },
-    {
       "ipa": "ol",
       "unitCount": 2,
       "syllableSpan": 1,
@@ -17246,48 +16222,6 @@
       ],
       "goodVisualCandidateCount": 1,
       "selectionScore": 206.335
-    },
-    {
-      "ipa": "pyl",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 6,
-      "usefulWeightedGain": 62.861,
-      "schoolTargetCount": 0,
-      "usefulExamples": [
-        "pull",
-        "impulsion",
-        "pulmonaire",
-        "crapule",
-        "propulsion",
-        "impulsif"
-      ],
-      "exactWords": [
-        {
-          "word": "pull",
-          "pos": "NOM",
-          "frequency": 9.627,
-          "syllableCount": 1,
-          "category": "clothing",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 121.814
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "pull",
-          "pos": "NOM",
-          "frequency": 9.627,
-          "syllableCount": 1,
-          "category": "clothing",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 121.814
-        }
-      ],
-      "goodVisualCandidateCount": 1,
-      "selectionScore": 206.322
     },
     {
       "ipa": "taʁt",
@@ -17767,67 +16701,6 @@
       "selectionScore": 199.212
     },
     {
-      "ipa": "pat",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 5,
-      "usefulWeightedGain": 70.818,
-      "schoolTargetCount": 0,
-      "usefulExamples": [
-        "psychopathe",
-        "pâte",
-        "patte",
-        "sociopathe",
-        "télépathe"
-      ],
-      "exactWords": [
-        {
-          "word": "pâte",
-          "pos": "NOM",
-          "frequency": 5.987,
-          "syllableCount": 1,
-          "category": "food",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 115.105
-        },
-        {
-          "word": "patte",
-          "pos": "NOM",
-          "frequency": 5.665,
-          "syllableCount": 1,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 44.35
-        },
-        {
-          "word": "pates",
-          "pos": "NOM",
-          "frequency": 0.263,
-          "syllableCount": 1,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 17.736
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "pâte",
-          "pos": "NOM",
-          "frequency": 5.987,
-          "syllableCount": 1,
-          "category": "food",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 115.105
-        }
-      ],
-      "goodVisualCandidateCount": 1,
-      "selectionScore": 199.084
-    },
-    {
       "ipa": "tigʁ",
       "unitCount": 4,
       "syllableSpan": 1,
@@ -18054,55 +16927,6 @@
       ],
       "goodVisualCandidateCount": 2,
       "selectionScore": 195.951
-    },
-    {
-      "ipa": "meʁi",
-      "unitCount": 4,
-      "syllableSpan": 2,
-      "usefulTargetCount": 3,
-      "usefulWeightedGain": 185.791,
-      "schoolTargetCount": 1,
-      "usefulExamples": [
-        "américain",
-        "mériter",
-        "mairie"
-      ],
-      "exactWords": [
-        {
-          "word": "mairie",
-          "pos": "NOM",
-          "frequency": 8.753,
-          "syllableCount": 2,
-          "category": "place",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 120.441
-        },
-        {
-          "word": "meri",
-          "pos": "NOM",
-          "frequency": 0.003,
-          "syllableCount": 2,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": -5.952
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "mairie",
-          "pos": "NOM",
-          "frequency": 8.753,
-          "syllableCount": 2,
-          "category": "place",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 120.441
-        }
-      ],
-      "goodVisualCandidateCount": 1,
-      "selectionScore": 195.911
     },
     {
       "ipa": "ʃəvij",
@@ -19042,65 +17866,6 @@
       ],
       "goodVisualCandidateCount": 2,
       "selectionScore": 185.69
-    },
-    {
-      "ipa": "buk",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 3,
-      "usefulWeightedGain": 17.468,
-      "schoolTargetCount": 0,
-      "usefulExamples": [
-        "bouc",
-        "bookmaker",
-        "book"
-      ],
-      "exactWords": [
-        {
-          "word": "bouc",
-          "pos": "NOM",
-          "frequency": 4.756,
-          "syllableCount": 1,
-          "category": "animal",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 112.004
-        },
-        {
-          "word": "book",
-          "pos": "NOM",
-          "frequency": 1.842,
-          "syllableCount": 1,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 30.712
-        },
-        {
-          "word": "booke",
-          "pos": "NOM",
-          "frequency": 0.016,
-          "syllableCount": 1,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": -5.746
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "bouc",
-          "pos": "NOM",
-          "frequency": 4.756,
-          "syllableCount": 1,
-          "category": "animal",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 112.004
-        }
-      ],
-      "goodVisualCandidateCount": 1,
-      "selectionScore": 184.591
     },
     {
       "ipa": "ʃal",
@@ -20142,44 +18907,6 @@
       ],
       "goodVisualCandidateCount": 1,
       "selectionScore": 176.676
-    },
-    {
-      "ipa": "bwaʁ",
-      "unitCount": 4,
-      "syllableSpan": 1,
-      "usefulTargetCount": 2,
-      "usefulWeightedGain": 612.048,
-      "schoolTargetCount": 1,
-      "usefulExamples": [
-        "boire",
-        "pourboire"
-      ],
-      "exactWords": [
-        {
-          "word": "boire",
-          "pos": "NOM",
-          "frequency": 2.104,
-          "syllableCount": 1,
-          "category": "action",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 92.123
-        }
-      ],
-      "visualCandidates": [
-        {
-          "word": "boire",
-          "pos": "NOM",
-          "frequency": 2.104,
-          "syllableCount": 1,
-          "category": "action",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 92.123
-        }
-      ],
-      "goodVisualCandidateCount": 1,
-      "selectionScore": 176.423
     },
     {
       "ipa": "etɑ̃",

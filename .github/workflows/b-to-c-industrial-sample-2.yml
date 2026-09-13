@@ -7,6 +7,10 @@ on:
     paths:
       - scripts/build-b-to-c-industrial-sample-2.mjs
       - scripts/prepare-b-to-c-sample-2-editorial-audits.mjs
+      - scripts/summarize-b-to-c-industrial-sample-2.mjs
+      - tests/b-to-c-industrial-sample-2.test.mjs
+      - data/b-to-c-industrial-sample-2-rescue-editorial-review.json
+      - data/b-to-c-industrial-sample-2-ab-editorial-audit.json
       - .github/workflows/b-to-c-industrial-sample-2.yml
 
 permissions:
@@ -26,14 +30,18 @@ jobs:
         run: node scripts/build-b-to-c-industrial-sample-2.mjs
       - name: Prepare editorial audit sheets
         run: node scripts/prepare-b-to-c-sample-2-editorial-audits.mjs
+      - name: Summarize audited sample 2
+        run: node scripts/summarize-b-to-c-industrial-sample-2.mjs
+      - name: Validate sample 2
+        run: node tests/b-to-c-industrial-sample-2.test.mjs
       - name: Commit generated artifacts
         run: |
           git config user.name "rebulo-analysis-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/b-to-c-industrial-sample-2-2000.jsonl data/b-to-c-industrial-sample-2-metrics.json data/b-to-c-industrial-sample-2-rescue-candidates.json data/b-to-c-industrial-sample-2-ab-audit-candidates.json docs/B_TO_C_SAMPLE_2_RESCUE_REVIEW_SHEET.md docs/B_TO_C_SAMPLE_2_AB_AUDIT_SHEET.md
+          git add data/b-to-c-industrial-sample-2-2000.jsonl data/b-to-c-industrial-sample-2-metrics.json data/b-to-c-industrial-sample-2-rescue-candidates.json data/b-to-c-industrial-sample-2-ab-audit-candidates.json data/b-to-c-industrial-sample-2-summary.json docs/B_TO_C_SAMPLE_2_RESCUE_REVIEW_SHEET.md docs/B_TO_C_SAMPLE_2_AB_AUDIT_SHEET.md
           if git diff --cached --quiet; then
             echo "No changes"
           else
-            git commit -m "Materialize sample 2 editorial audit sheets"
+            git commit -m "Materialize audited B-to-C sample 2 summary"
             git push origin HEAD:analysis/b-to-c-industrial-sample-2
           fi

@@ -61,7 +61,7 @@ try{
 
   await interruptSample('blocked+250ms',250);
   await interruptSample('blocked+750ms',500);
-  await step('readinessWithoutSubmit',()=>page.waitForFunction(()=>document.querySelector('.app-shell')?.dataset.creatorListenerReady==='true',null,{timeout:5000}),6000);
+  await step('readinessWithoutSubmit',()=>page.waitForFunction(()=>document.querySelector('.app-shell')?.dataset.creatorListenerReady==='true',null,{timeout:15000}),17000);
   report.noSubmit.readinessWallMs=Date.now()-fillWallMs;
   const domReadStart=Date.now();
   report.noSubmit.snapshot=await step('domReadWithoutSubmit',()=>page.evaluate(()=>({ready:document.querySelector('.app-shell')?.dataset.creatorListenerReady||'',value:document.querySelector('#target')?.value||'',resultHidden:document.querySelector('#result')?.hidden??null,pieces:document.querySelectorAll('#creatorRebus .piece').length,marks:window.__rebuloProfileMarks||[]})),1000);

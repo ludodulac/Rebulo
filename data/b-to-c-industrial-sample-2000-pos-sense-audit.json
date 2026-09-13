@@ -1,0 +1,3716 @@
+{
+  "schemaVersion": "1.1",
+  "status": "analysis_only",
+  "sampleSize": 2000,
+  "cause": {
+    "overwrite": "Builder used Map.set(key, singleEntry), so later Lexique rows replace earlier rows.",
+    "identityCollision": "The key used accent-folded norm(form), merging distinct exact spellings such as mur/mûr before lookup.",
+    "sourceGap": "Some ordinary noun senses (basse instrument, enceinte speaker, portable phone) are absent from the current pronunciation mirror for those exact graphies, so preserving Lexique rows alone cannot recover them."
+  },
+  "oldFoldedPotentiallyTouchedCount": 67,
+  "exactOrthographyPotentiallyTouchedCount": 0,
+  "exactMultiplePosCount": 0,
+  "exactSamePosMultipleLemmaCount": 0,
+  "accentFoldCollisionCount": 67,
+  "technicalDuplicateRelationCount": 0,
+  "technicalDuplicateLexiqueRows": 0,
+  "touchedByCurrentClass": {
+    "A": 0,
+    "B": 0,
+    "C": 0,
+    "D": 0
+  },
+  "additionalVisualSenseCount": 3,
+  "sameSenseEditorialCorrectionCount": 1,
+  "additionalVisualSenses": [
+    {
+      "sampleId": "B2C-I1-1719",
+      "ipa": "bas",
+      "exactWord": "basse",
+      "senseId": "objet.instrument_basse",
+      "conceptLabel": "basse",
+      "conceptCategory": "instrument",
+      "conceptDescription": "Une guitare basse isolée, avec quatre cordes visibles et silhouette d’instrument électrique.",
+      "relationToBaseline": "additional_visual_sense",
+      "reviewStatus": "concept_reviewed"
+    },
+    {
+      "sampleId": "B2C-I1-1780",
+      "ipa": "ɑ̃sɛ̃t",
+      "exactWord": "enceinte",
+      "senseId": "objet.haut_parleur",
+      "conceptLabel": "enceinte",
+      "conceptCategory": "objet",
+      "conceptDescription": "Une enceinte audio autonome, grille de haut-parleur nettement visible.",
+      "relationToBaseline": "additional_visual_sense",
+      "reviewStatus": "concept_reviewed"
+    },
+    {
+      "sampleId": "B2C-I1-1899",
+      "ipa": "pɔʁtabl",
+      "exactWord": "portable",
+      "senseId": "objet.telephone_portable",
+      "conceptLabel": "portable",
+      "conceptCategory": "objet",
+      "conceptDescription": "Un téléphone portable seul, cadré comme appareil.",
+      "relationToBaseline": "additional_visual_sense",
+      "reviewStatus": "concept_reviewed"
+    }
+  ],
+  "sameSenseCorrections": [
+    {
+      "sampleId": "B2C-I1-1889",
+      "ipa": "ʁatyʁ",
+      "exactWord": "rature",
+      "senseId": "objet.marque_barree",
+      "conceptLabel": "rature",
+      "conceptCategory": "objet_visuel",
+      "conceptDescription": "Une trace ou inscription barrée constituant une rature.",
+      "relationToBaseline": "same_visual_sense_reviewed",
+      "reviewStatus": "concept_reviewed"
+    }
+  ],
+  "targets": [
+    {
+      "sampleId": "B2C-I1-1719",
+      "ipa": "bas",
+      "exactWord": "basse",
+      "currentLemma": "bas",
+      "currentPos": "ADJ",
+      "currentClass": "D",
+      "oldFolded": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "ADJ"
+        ],
+        "distinctLemmas": [
+          "bas"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "basse",
+            "ipa": "bas",
+            "lemma": "bas",
+            "pos": "ADJ",
+            "rawPos": "ADJ",
+            "frequency": 9.462
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "ADJ"
+        ],
+        "distinctLemmas": [
+          "bas"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "basse",
+            "ipa": "bas",
+            "lemma": "bas",
+            "pos": "ADJ",
+            "rawPos": "ADJ",
+            "frequency": 9.462
+          }
+        ]
+      },
+      "accentFoldCollision": false,
+      "inflectionLikely": true,
+      "orthographicVariantLikely": false,
+      "reviewedSenseCandidates": [
+        {
+          "senseId": "objet.instrument_basse",
+          "conceptLabel": "basse",
+          "conceptCategory": "instrument",
+          "conceptDescription": "Une guitare basse isolée, avec quatre cordes visibles et silhouette d’instrument électrique.",
+          "relationToBaseline": "additional_visual_sense",
+          "reviewStatus": "concept_reviewed"
+        }
+      ]
+    },
+    {
+      "sampleId": "B2C-I1-1780",
+      "ipa": "ɑ̃sɛ̃t",
+      "exactWord": "enceinte",
+      "currentLemma": "enceinte",
+      "currentPos": "ADJ",
+      "currentClass": "D",
+      "oldFolded": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "ADJ"
+        ],
+        "distinctLemmas": [
+          "enceinte"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "enceinte",
+            "ipa": "ɑ̃sɛ̃t",
+            "lemma": "enceinte",
+            "pos": "ADJ",
+            "rawPos": "ADJ",
+            "frequency": 58.791
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "ADJ"
+        ],
+        "distinctLemmas": [
+          "enceinte"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "enceinte",
+            "ipa": "ɑ̃sɛ̃t",
+            "lemma": "enceinte",
+            "pos": "ADJ",
+            "rawPos": "ADJ",
+            "frequency": 58.791
+          }
+        ]
+      },
+      "accentFoldCollision": false,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": false,
+      "reviewedSenseCandidates": [
+        {
+          "senseId": "objet.haut_parleur",
+          "conceptLabel": "enceinte",
+          "conceptCategory": "objet",
+          "conceptDescription": "Une enceinte audio autonome, grille de haut-parleur nettement visible.",
+          "relationToBaseline": "additional_visual_sense",
+          "reviewStatus": "concept_reviewed"
+        }
+      ]
+    },
+    {
+      "sampleId": "B2C-I1-1889",
+      "ipa": "ʁatyʁ",
+      "exactWord": "rature",
+      "currentLemma": "rature",
+      "currentPos": "NOM",
+      "currentClass": "C",
+      "oldFolded": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "rature"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "rature",
+            "ipa": "ʁatyʁ",
+            "lemma": "rature",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.041
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "rature"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "rature",
+            "ipa": "ʁatyʁ",
+            "lemma": "rature",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.041
+          }
+        ]
+      },
+      "accentFoldCollision": false,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": false,
+      "reviewedSenseCandidates": [
+        {
+          "senseId": "objet.marque_barree",
+          "conceptLabel": "rature",
+          "conceptCategory": "objet_visuel",
+          "conceptDescription": "Une trace ou inscription barrée constituant une rature.",
+          "relationToBaseline": "same_visual_sense_reviewed",
+          "reviewStatus": "concept_reviewed"
+        }
+      ]
+    },
+    {
+      "sampleId": "B2C-I1-1899",
+      "ipa": "pɔʁtabl",
+      "exactWord": "portable",
+      "currentLemma": "portable",
+      "currentPos": "ADJ",
+      "currentClass": "D",
+      "oldFolded": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "ADJ"
+        ],
+        "distinctLemmas": [
+          "portable"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "portable",
+            "ipa": "pɔʁtabl",
+            "lemma": "portable",
+            "pos": "ADJ",
+            "rawPos": "ADJ",
+            "frequency": 53.962
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "ADJ"
+        ],
+        "distinctLemmas": [
+          "portable"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "portable",
+            "ipa": "pɔʁtabl",
+            "lemma": "portable",
+            "pos": "ADJ",
+            "rawPos": "ADJ",
+            "frequency": 53.962
+          }
+        ]
+      },
+      "accentFoldCollision": false,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": false,
+      "reviewedSenseCandidates": [
+        {
+          "senseId": "objet.telephone_portable",
+          "conceptLabel": "portable",
+          "conceptCategory": "objet",
+          "conceptDescription": "Un téléphone portable seul, cadré comme appareil.",
+          "relationToBaseline": "additional_visual_sense",
+          "reviewStatus": "concept_reviewed"
+        }
+      ]
+    }
+  ],
+  "examples": [],
+  "accentFoldCollisionExamples": [
+    {
+      "sampleId": "B2C-I1-0008",
+      "ipa": "kote",
+      "exactWord": "côté",
+      "currentLemma": "côté",
+      "currentPos": "NOM",
+      "currentClass": "B",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "ADJ",
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "coté",
+          "côté"
+        ],
+        "hasMultiplePos": true,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "coté",
+            "ipa": "kote",
+            "lemma": "coté",
+            "pos": "ADJ",
+            "rawPos": "ADJ",
+            "frequency": 10.415
+          },
+          {
+            "form": "côté",
+            "ipa": "kote",
+            "lemma": "côté",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 251.38
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "côté"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "côté",
+            "ipa": "kote",
+            "lemma": "côté",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 251.38
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": false,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0059",
+      "ipa": "pate",
+      "exactWord": "pâté",
+      "currentLemma": "pâté",
+      "currentPos": "NOM",
+      "currentClass": "C",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "paté",
+          "pâté"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": true,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "paté",
+            "ipa": "pate",
+            "lemma": "paté",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.234
+          },
+          {
+            "form": "pâté",
+            "ipa": "pate",
+            "lemma": "pâté",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 4.642
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "pâté"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "pâté",
+            "ipa": "pate",
+            "lemma": "pâté",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 4.642
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": false,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0074",
+      "ipa": "peʃe",
+      "exactWord": "pêcher",
+      "currentLemma": "pêcher",
+      "currentPos": "VER",
+      "currentClass": "C",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "VER"
+        ],
+        "distinctLemmas": [
+          "pécher",
+          "pêcher"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": true,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "pécher",
+            "ipa": "peʃe",
+            "lemma": "pécher",
+            "pos": "VER",
+            "rawPos": "VER",
+            "frequency": 1
+          },
+          {
+            "form": "pêcher",
+            "ipa": "peʃe",
+            "lemma": "pêcher",
+            "pos": "VER",
+            "rawPos": "VER",
+            "frequency": 8.703
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "VER"
+        ],
+        "distinctLemmas": [
+          "pêcher"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "pêcher",
+            "ipa": "peʃe",
+            "lemma": "pêcher",
+            "pos": "VER",
+            "rawPos": "VER",
+            "frequency": 8.703
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": true,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0082",
+      "ipa": "maʁʃe",
+      "exactWord": "marché",
+      "currentLemma": "marchè",
+      "currentPos": "NOM",
+      "currentClass": "C",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "marché",
+          "marchè"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": true,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "marché",
+            "ipa": "maʁʃe",
+            "lemma": "marché",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 83.259
+          },
+          {
+            "form": "marchè",
+            "ipa": "maʁʃe",
+            "lemma": "marchè",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.041
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "marché"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "marché",
+            "ipa": "maʁʃe",
+            "lemma": "marché",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 83.259
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": false,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0087",
+      "ipa": "myʁ",
+      "exactWord": "mur",
+      "currentLemma": "mûr",
+      "currentPos": "ADJ",
+      "currentClass": "B",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "NOM",
+          "ADJ"
+        ],
+        "distinctLemmas": [
+          "mur",
+          "mûr"
+        ],
+        "hasMultiplePos": true,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "mur",
+            "ipa": "myʁ",
+            "lemma": "mur",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 59.146
+          },
+          {
+            "form": "mûr",
+            "ipa": "myʁ",
+            "lemma": "mûr",
+            "pos": "ADJ",
+            "rawPos": "ADJ",
+            "frequency": 2.949
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "mur"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "mur",
+            "ipa": "myʁ",
+            "lemma": "mur",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 59.146
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": true,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0183",
+      "ipa": "mɛtʁ",
+      "exactWord": "maître",
+      "currentLemma": "maître",
+      "currentPos": "NOM",
+      "currentClass": "B",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "maitre",
+          "maître"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": true,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "maitre",
+            "ipa": "mɛtʁ",
+            "lemma": "maitre",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 2.794
+          },
+          {
+            "form": "maître",
+            "ipa": "mɛtʁ",
+            "lemma": "maître",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 103.69
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "maître"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "maître",
+            "ipa": "mɛtʁ",
+            "lemma": "maître",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 103.69
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": false,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0253",
+      "ipa": "gu",
+      "exactWord": "goût",
+      "currentLemma": "goût",
+      "currentPos": "NOM",
+      "currentClass": "B",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "gout",
+          "goût"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": true,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "gout",
+            "ipa": "gu",
+            "lemma": "gout",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 2.06
+          },
+          {
+            "form": "goût",
+            "ipa": "gu",
+            "lemma": "goût",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 43.351
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "goût"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "goût",
+            "ipa": "gu",
+            "lemma": "goût",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 43.351
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": true,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0289",
+      "ipa": "ku",
+      "exactWord": "coût",
+      "currentLemma": "coût",
+      "currentPos": "NOM",
+      "currentClass": "B",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "cout",
+          "coût"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": true,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "cout",
+            "ipa": "ku",
+            "lemma": "cout",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.123
+          },
+          {
+            "form": "coût",
+            "ipa": "ku",
+            "lemma": "coût",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 4.785
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "coût"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "coût",
+            "ipa": "ku",
+            "lemma": "coût",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 4.785
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": false,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0302",
+      "ipa": "ʃal",
+      "exactWord": "châle",
+      "currentLemma": "châle",
+      "currentPos": "NOM",
+      "currentClass": "C",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "chale",
+          "châle"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": true,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "chale",
+            "ipa": "ʃal",
+            "lemma": "chale",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.019
+          },
+          {
+            "form": "châle",
+            "ipa": "ʃal",
+            "lemma": "châle",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 1.386
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "châle"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "châle",
+            "ipa": "ʃal",
+            "lemma": "châle",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 1.386
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": false,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0311",
+      "ipa": "tɛt",
+      "exactWord": "tête",
+      "currentLemma": "tête",
+      "currentPos": "NOM",
+      "currentClass": "B",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "VER",
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "téter",
+          "tête"
+        ],
+        "hasMultiplePos": true,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "tète",
+            "ipa": "tɛt",
+            "lemma": "téter",
+            "pos": "VER",
+            "rawPos": "VER",
+            "frequency": 0.892
+          },
+          {
+            "form": "tête",
+            "ipa": "tɛt",
+            "lemma": "tête",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 400.934
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "tête"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "tête",
+            "ipa": "tɛt",
+            "lemma": "tête",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 400.934
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": true,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0344",
+      "ipa": "aʒ",
+      "exactWord": "âge",
+      "currentLemma": "âge",
+      "currentPos": "NOM",
+      "currentClass": "B",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "age",
+          "âge"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": true,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "age",
+            "ipa": "aʒ",
+            "lemma": "age",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 7.193
+          },
+          {
+            "form": "âge",
+            "ipa": "aʒ",
+            "lemma": "âge",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 107.377
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "âge"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "âge",
+            "ipa": "aʒ",
+            "lemma": "âge",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 107.377
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": false,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0388",
+      "ipa": "gu",
+      "exactWord": "gouts",
+      "currentLemma": "goût",
+      "currentPos": "NOM",
+      "currentClass": "B",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "gouts",
+          "goût"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": true,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "gouts",
+            "ipa": "gu",
+            "lemma": "gouts",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.297
+          },
+          {
+            "form": "goûts",
+            "ipa": "gu",
+            "lemma": "goût",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 6.196
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "gouts"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "gouts",
+            "ipa": "gu",
+            "lemma": "gouts",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.297
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": true,
+      "orthographicVariantLikely": true,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0391",
+      "ipa": "mal",
+      "exactWord": "mâle",
+      "currentLemma": "mâle",
+      "currentPos": "NOM",
+      "currentClass": "B",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "ADJ",
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "mal",
+          "mâle"
+        ],
+        "hasMultiplePos": true,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "male",
+            "ipa": "mal",
+            "lemma": "mal",
+            "pos": "ADJ",
+            "rawPos": "ADJ",
+            "frequency": 0.491
+          },
+          {
+            "form": "mâle",
+            "ipa": "mal",
+            "lemma": "mâle",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 5.706
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "mâle"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "mâle",
+            "ipa": "mal",
+            "lemma": "mâle",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 5.706
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": true,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0427",
+      "ipa": "bebe",
+      "exactWord": "bébé",
+      "currentLemma": "bébé",
+      "currentPos": "NOM",
+      "currentClass": "B",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "bebe",
+          "bébé"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": true,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "bebe",
+            "ipa": "bebe",
+            "lemma": "bebe",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 1.082
+          },
+          {
+            "form": "bébé",
+            "ipa": "bebe",
+            "lemma": "bébé",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 274.712
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "bébé"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "bébé",
+            "ipa": "bebe",
+            "lemma": "bébé",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 274.712
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": false,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0466",
+      "ipa": "dine",
+      "exactWord": "dîner",
+      "currentLemma": "dîner",
+      "currentPos": "NOM",
+      "currentClass": "B",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "diner",
+          "dîner"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": true,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "diner",
+            "ipa": "dine",
+            "lemma": "diner",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 16.256
+          },
+          {
+            "form": "dîner",
+            "ipa": "dine",
+            "lemma": "dîner",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 81.193
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "dîner"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "dîner",
+            "ipa": "dine",
+            "lemma": "dîner",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 81.193
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": true,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0468",
+      "ipa": "bwat",
+      "exactWord": "boîte",
+      "currentLemma": "boîte",
+      "currentPos": "NOM",
+      "currentClass": "B",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "VER",
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "boiter",
+          "boîte"
+        ],
+        "hasMultiplePos": true,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "boite",
+            "ipa": "bwat",
+            "lemma": "boiter",
+            "pos": "VER",
+            "rawPos": "VER",
+            "frequency": 18.829
+          },
+          {
+            "form": "boîte",
+            "ipa": "bwat",
+            "lemma": "boîte",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 77.614
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "boîte"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "boîte",
+            "ipa": "bwat",
+            "lemma": "boîte",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 77.614
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": true,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0475",
+      "ipa": "am",
+      "exactWord": "âme",
+      "currentLemma": "âme",
+      "currentPos": "NOM",
+      "currentClass": "B",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "ame",
+          "âme"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": true,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "ame",
+            "ipa": "am",
+            "lemma": "ame",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 1.104
+          },
+          {
+            "form": "âme",
+            "ipa": "am",
+            "lemma": "âme",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 73.56
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "âme"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "âme",
+            "ipa": "am",
+            "lemma": "âme",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 73.56
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": false,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0534",
+      "ipa": "foʁɛ",
+      "exactWord": "forêt",
+      "currentLemma": "forêt",
+      "currentPos": "NOM",
+      "currentClass": "B",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "foret",
+          "forêt"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": true,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "foret",
+            "ipa": "foʁɛ",
+            "lemma": "foret",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 1.275
+          },
+          {
+            "form": "forêt",
+            "ipa": "foʁɛ",
+            "lemma": "forêt",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 27.684
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "forêt"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "forêt",
+            "ipa": "foʁɛ",
+            "lemma": "forêt",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 27.684
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": false,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0556",
+      "ipa": "taʃ",
+      "exactWord": "tâche",
+      "currentLemma": "tâche",
+      "currentPos": "NOM",
+      "currentClass": "B",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "tache",
+          "tâche"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": true,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "tache",
+            "ipa": "taʃ",
+            "lemma": "tache",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 9.69
+          },
+          {
+            "form": "tâche",
+            "ipa": "taʃ",
+            "lemma": "tâche",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 22.354
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "tâche"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "tâche",
+            "ipa": "taʃ",
+            "lemma": "tâche",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 22.354
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": false,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0597",
+      "ipa": "tʁene",
+      "exactWord": "traînée",
+      "currentLemma": "traînée",
+      "currentPos": "NOM",
+      "currentClass": "C",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "trainée",
+          "traînée"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": true,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "trainée",
+            "ipa": "tʁene",
+            "lemma": "trainée",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 1.788
+          },
+          {
+            "form": "traînée",
+            "ipa": "tʁene",
+            "lemma": "traînée",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 6.734
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "traînée"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "traînée",
+            "ipa": "tʁene",
+            "lemma": "traînée",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 6.734
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": false,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0600",
+      "ipa": "pat",
+      "exactWord": "pates",
+      "currentLemma": "pâte",
+      "currentPos": "NOM",
+      "currentClass": "C",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "pates",
+          "pâte"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": true,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "pates",
+            "ipa": "pat",
+            "lemma": "pates",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.263
+          },
+          {
+            "form": "pâtes",
+            "ipa": "pat",
+            "lemma": "pâte",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 6.196
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "pates"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "pates",
+            "ipa": "pat",
+            "lemma": "pates",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.263
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": true,
+      "orthographicVariantLikely": true,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0602",
+      "ipa": "pat",
+      "exactWord": "pâte",
+      "currentLemma": "pâte",
+      "currentPos": "NOM",
+      "currentClass": "C",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "pate",
+          "pâte"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": true,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "pate",
+            "ipa": "pat",
+            "lemma": "pate",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.117
+          },
+          {
+            "form": "pâte",
+            "ipa": "pat",
+            "lemma": "pâte",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 5.987
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "pâte"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "pâte",
+            "ipa": "pat",
+            "lemma": "pâte",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 5.987
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": true,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0624",
+      "ipa": "dy",
+      "exactWord": "dû",
+      "currentLemma": "devoir",
+      "currentPos": "VER",
+      "currentClass": "C",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "ART",
+          "VER"
+        ],
+        "distinctLemmas": [
+          "du",
+          "devoir"
+        ],
+        "hasMultiplePos": true,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "du",
+            "ipa": "dy",
+            "lemma": "du",
+            "pos": "ART",
+            "rawPos": "ART:def",
+            "frequency": 4123.684
+          },
+          {
+            "form": "dû",
+            "ipa": "dy",
+            "lemma": "devoir",
+            "pos": "VER",
+            "rawPos": "VER",
+            "frequency": 393.63
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "VER"
+        ],
+        "distinctLemmas": [
+          "devoir"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "dû",
+            "ipa": "dy",
+            "lemma": "devoir",
+            "pos": "VER",
+            "rawPos": "VER",
+            "frequency": 393.63
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": true,
+      "orthographicVariantLikely": false,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0627",
+      "ipa": "a",
+      "exactWord": "a",
+      "currentLemma": "à",
+      "currentPos": "PRE",
+      "currentClass": "B",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "AUX",
+          "PRE"
+        ],
+        "distinctLemmas": [
+          "avoir",
+          "à"
+        ],
+        "hasMultiplePos": true,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "a",
+            "ipa": "a",
+            "lemma": "avoir",
+            "pos": "AUX",
+            "rawPos": "AUX",
+            "frequency": 6777.323
+          },
+          {
+            "form": "à",
+            "ipa": "a",
+            "lemma": "à",
+            "pos": "PRE",
+            "rawPos": "PRE",
+            "frequency": 12764.038
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "AUX"
+        ],
+        "distinctLemmas": [
+          "avoir"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "a",
+            "ipa": "a",
+            "lemma": "avoir",
+            "pos": "AUX",
+            "rawPos": "AUX",
+            "frequency": 6777.323
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": false,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0629",
+      "ipa": "la",
+      "exactWord": "la",
+      "currentLemma": "là",
+      "currentPos": "ADV",
+      "currentClass": "B",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "ART",
+          "ADV"
+        ],
+        "distinctLemmas": [
+          "la",
+          "là"
+        ],
+        "hasMultiplePos": true,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "la",
+            "ipa": "la",
+            "lemma": "la",
+            "pos": "ART",
+            "rawPos": "ART:def",
+            "frequency": 40.165
+          },
+          {
+            "form": "là",
+            "ipa": "la",
+            "lemma": "là",
+            "pos": "ADV",
+            "rawPos": "ADV",
+            "frequency": 1979.25
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "ART"
+        ],
+        "distinctLemmas": [
+          "la"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "la",
+            "ipa": "la",
+            "lemma": "la",
+            "pos": "ART",
+            "rawPos": "ART:def",
+            "frequency": 40.165
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": true,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0634",
+      "ipa": "plɛ",
+      "exactWord": "plaît",
+      "currentLemma": "plaire",
+      "currentPos": "VER",
+      "currentClass": "C",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "ADV",
+          "VER"
+        ],
+        "distinctLemmas": [
+          "plait",
+          "plaire"
+        ],
+        "hasMultiplePos": true,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "plait",
+            "ipa": "plɛ",
+            "lemma": "plait",
+            "pos": "ADV",
+            "rawPos": "ADV",
+            "frequency": 0.009
+          },
+          {
+            "form": "plaît",
+            "ipa": "plɛ",
+            "lemma": "plaire",
+            "pos": "VER",
+            "rawPos": "VER",
+            "frequency": 408.623
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "VER"
+        ],
+        "distinctLemmas": [
+          "plaire"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "plaît",
+            "ipa": "plɛ",
+            "lemma": "plaire",
+            "pos": "VER",
+            "rawPos": "VER",
+            "frequency": 408.623
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": true,
+      "orthographicVariantLikely": false,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0713",
+      "ipa": "nɛ",
+      "exactWord": "nait",
+      "currentLemma": "naître",
+      "currentPos": "VER",
+      "currentClass": "C",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "NOM",
+          "VER"
+        ],
+        "distinctLemmas": [
+          "nait",
+          "naître"
+        ],
+        "hasMultiplePos": true,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "nait",
+            "ipa": "nɛ",
+            "lemma": "nait",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.351
+          },
+          {
+            "form": "naît",
+            "ipa": "nɛ",
+            "lemma": "naître",
+            "pos": "VER",
+            "rawPos": "VER",
+            "frequency": 2.934
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "nait"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "nait",
+            "ipa": "nɛ",
+            "lemma": "nait",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.351
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": true,
+      "orthographicVariantLikely": false,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0742",
+      "ipa": "fy",
+      "exactWord": "futs",
+      "currentLemma": "fût",
+      "currentPos": "NOM",
+      "currentClass": "C",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "futs",
+          "fût"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": true,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "futs",
+            "ipa": "fy",
+            "lemma": "futs",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.025
+          },
+          {
+            "form": "fûts",
+            "ipa": "fy",
+            "lemma": "fût",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.696
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "futs"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "futs",
+            "ipa": "fy",
+            "lemma": "futs",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.025
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": true,
+      "orthographicVariantLikely": false,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0749",
+      "ipa": "su",
+      "exactWord": "saoûl",
+      "currentLemma": "saoûl",
+      "currentPos": "NOM",
+      "currentClass": "B",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "ADJ",
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "saoul",
+          "saoûl"
+        ],
+        "hasMultiplePos": true,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "saoul",
+            "ipa": "su",
+            "lemma": "saoul",
+            "pos": "ADJ",
+            "rawPos": "ADJ",
+            "frequency": 8.07
+          },
+          {
+            "form": "saoûl",
+            "ipa": "su",
+            "lemma": "saoûl",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.446
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "saoûl"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "saoûl",
+            "ipa": "su",
+            "lemma": "saoûl",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.446
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": false,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0756",
+      "ipa": "dy",
+      "exactWord": "dûs",
+      "currentLemma": "dûs",
+      "currentPos": "NOM",
+      "currentClass": "C",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "VER",
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "devoir",
+          "dûs"
+        ],
+        "hasMultiplePos": true,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "dus",
+            "ipa": "dy",
+            "lemma": "devoir",
+            "pos": "VER",
+            "rawPos": "VER",
+            "frequency": 1.535
+          },
+          {
+            "form": "dûs",
+            "ipa": "dy",
+            "lemma": "dûs",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.275
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "dûs"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "dûs",
+            "ipa": "dy",
+            "lemma": "dûs",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.275
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": false,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0758",
+      "ipa": "ba",
+      "exactWord": "bât",
+      "currentLemma": "bât",
+      "currentPos": "NOM",
+      "currentClass": "C",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "VER",
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "battre",
+          "bât"
+        ],
+        "hasMultiplePos": true,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "bat",
+            "ipa": "ba",
+            "lemma": "battre",
+            "pos": "VER",
+            "rawPos": "VER",
+            "frequency": 26.408
+          },
+          {
+            "form": "bât",
+            "ipa": "ba",
+            "lemma": "bât",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.25
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "bât"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "bât",
+            "ipa": "ba",
+            "lemma": "bât",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.25
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": true,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0768",
+      "ipa": "pe",
+      "exactWord": "pe",
+      "currentLemma": "pé",
+      "currentPos": "NOM",
+      "currentClass": "C",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "pe",
+          "pé"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": true,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "pe",
+            "ipa": "pe",
+            "lemma": "pe",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.282
+          },
+          {
+            "form": "pé",
+            "ipa": "pe",
+            "lemma": "pé",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.127
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "pe"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "pe",
+            "ipa": "pe",
+            "lemma": "pe",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.282
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": true,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0775",
+      "ipa": "ʁo",
+      "exactWord": "rot",
+      "currentLemma": "rôt",
+      "currentPos": "NOM",
+      "currentClass": "B",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "rot",
+          "rôt"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": true,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "rot",
+            "ipa": "ʁo",
+            "lemma": "rot",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 1.047
+          },
+          {
+            "form": "rôt",
+            "ipa": "ʁo",
+            "lemma": "rôt",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.073
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "rot"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "rot",
+            "ipa": "ʁo",
+            "lemma": "rot",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 1.047
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": false,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0794",
+      "ipa": "my",
+      "exactWord": "mûs",
+      "currentLemma": "mûs",
+      "currentPos": "NOM",
+      "currentClass": "C",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "VER",
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "mouvoir",
+          "mûs"
+        ],
+        "hasMultiplePos": true,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "mus",
+            "ipa": "my",
+            "lemma": "mouvoir",
+            "pos": "VER",
+            "rawPos": "VER",
+            "frequency": 0.092
+          },
+          {
+            "form": "mûs",
+            "ipa": "my",
+            "lemma": "mûs",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.013
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "mûs"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "mûs",
+            "ipa": "my",
+            "lemma": "mûs",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.013
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": true,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0798",
+      "ipa": "mate",
+      "exactWord": "maté",
+      "currentLemma": "mâter",
+      "currentPos": "VER",
+      "currentClass": "C",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "VER"
+        ],
+        "distinctLemmas": [
+          "mater",
+          "mâter"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": true,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "maté",
+            "ipa": "mate",
+            "lemma": "mater",
+            "pos": "VER",
+            "rawPos": "VER",
+            "frequency": 0.848
+          },
+          {
+            "form": "mâté",
+            "ipa": "mate",
+            "lemma": "mâter",
+            "pos": "VER",
+            "rawPos": "VER",
+            "frequency": 0.009
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "VER"
+        ],
+        "distinctLemmas": [
+          "mater"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "maté",
+            "ipa": "mate",
+            "lemma": "mater",
+            "pos": "VER",
+            "rawPos": "VER",
+            "frequency": 0.848
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": true,
+      "orthographicVariantLikely": true,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0799",
+      "ipa": "ba",
+      "exactWord": "bats",
+      "currentLemma": "bât",
+      "currentPos": "NOM",
+      "currentClass": "C",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "VER",
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "battre",
+          "bât"
+        ],
+        "hasMultiplePos": true,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "bats",
+            "ipa": "ba",
+            "lemma": "battre",
+            "pos": "VER",
+            "rawPos": "VER",
+            "frequency": 15.604
+          },
+          {
+            "form": "bâts",
+            "ipa": "ba",
+            "lemma": "bât",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.009
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "VER"
+        ],
+        "distinctLemmas": [
+          "battre"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "bats",
+            "ipa": "ba",
+            "lemma": "battre",
+            "pos": "VER",
+            "rawPos": "VER",
+            "frequency": 15.604
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": true,
+      "orthographicVariantLikely": true,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0803",
+      "ipa": "my",
+      "exactWord": "mue",
+      "currentLemma": "mûe",
+      "currentPos": "NOM",
+      "currentClass": "C",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "mue",
+          "mûe"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": true,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "mue",
+            "ipa": "my",
+            "lemma": "mue",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.297
+          },
+          {
+            "form": "mûe",
+            "ipa": "my",
+            "lemma": "mûe",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.003
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "mue"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "mue",
+            "ipa": "my",
+            "lemma": "mue",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.297
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": true,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0808",
+      "ipa": "ʁo",
+      "exactWord": "rho",
+      "currentLemma": "rhô",
+      "currentPos": "NOM",
+      "currentClass": "B",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "rho",
+          "rhô"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": true,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "rho",
+            "ipa": "ʁo",
+            "lemma": "rho",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.231
+          },
+          {
+            "form": "rhô",
+            "ipa": "ʁo",
+            "lemma": "rhô",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.003
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "rho"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "rho",
+            "ipa": "ʁo",
+            "lemma": "rho",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.231
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": false,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0810",
+      "ipa": "tɛ",
+      "exactWord": "taît",
+      "currentLemma": "taît",
+      "currentPos": "NOM",
+      "currentClass": "B",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "VER",
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "taire",
+          "taît"
+        ],
+        "hasMultiplePos": true,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "tait",
+            "ipa": "tɛ",
+            "lemma": "taire",
+            "pos": "VER",
+            "rawPos": "VER",
+            "frequency": 4.677
+          },
+          {
+            "form": "taît",
+            "ipa": "tɛ",
+            "lemma": "taît",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.003
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "taît"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "taît",
+            "ipa": "tɛ",
+            "lemma": "taît",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.003
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": false,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0868",
+      "ipa": "tʁene",
+      "exactWord": "trainer",
+      "currentLemma": "traîner",
+      "currentPos": "VER",
+      "currentClass": "C",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "NOM",
+          "VER"
+        ],
+        "distinctLemmas": [
+          "trainer",
+          "traîner"
+        ],
+        "hasMultiplePos": true,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "trainer",
+            "ipa": "tʁene",
+            "lemma": "trainer",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 5.108
+          },
+          {
+            "form": "traîner",
+            "ipa": "tʁene",
+            "lemma": "traîner",
+            "pos": "VER",
+            "rawPos": "VER",
+            "frequency": 23.775
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "trainer"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "trainer",
+            "ipa": "tʁene",
+            "lemma": "trainer",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 5.108
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": false,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0870",
+      "ipa": "bʁyle",
+      "exactWord": "bruler",
+      "currentLemma": "brûler",
+      "currentPos": "VER",
+      "currentClass": "C",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "NOM",
+          "VER"
+        ],
+        "distinctLemmas": [
+          "bruler",
+          "brûler"
+        ],
+        "hasMultiplePos": true,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "bruler",
+            "ipa": "bʁyle",
+            "lemma": "bruler",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 1.291
+          },
+          {
+            "form": "brûler",
+            "ipa": "bʁyle",
+            "lemma": "brûler",
+            "pos": "VER",
+            "rawPos": "VER",
+            "frequency": 23.006
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "bruler"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "bruler",
+            "ipa": "bʁyle",
+            "lemma": "bruler",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 1.291
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": true,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0906",
+      "ipa": "tʁɛtʁ",
+      "exactWord": "traître",
+      "currentLemma": "traître",
+      "currentPos": "NOM",
+      "currentClass": "C",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "traitre",
+          "traître"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": true,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "traitre",
+            "ipa": "tʁɛtʁ",
+            "lemma": "traitre",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 2.215
+          },
+          {
+            "form": "traître",
+            "ipa": "tʁɛtʁ",
+            "lemma": "traître",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 14.962
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "traître"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "traître",
+            "ipa": "tʁɛtʁ",
+            "lemma": "traître",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 14.962
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": true,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0914",
+      "ipa": "bwat",
+      "exactWord": "boites",
+      "currentLemma": "boîte",
+      "currentPos": "NOM",
+      "currentClass": "C",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "VER",
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "boiter",
+          "boîte"
+        ],
+        "hasMultiplePos": true,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "boites",
+            "ipa": "bwat",
+            "lemma": "boiter",
+            "pos": "VER",
+            "rawPos": "VER",
+            "frequency": 3.484
+          },
+          {
+            "form": "boîtes",
+            "ipa": "bwat",
+            "lemma": "boîte",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 13.658
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "VER"
+        ],
+        "distinctLemmas": [
+          "boiter"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "boites",
+            "ipa": "bwat",
+            "lemma": "boiter",
+            "pos": "VER",
+            "rawPos": "VER",
+            "frequency": 3.484
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": true,
+      "orthographicVariantLikely": true,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0917",
+      "ipa": "sjɛkl",
+      "exactWord": "siecles",
+      "currentLemma": "siècle",
+      "currentPos": "NOM",
+      "currentClass": "C",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "siecles",
+          "siècle"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": true,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "siecles",
+            "ipa": "sjɛkl",
+            "lemma": "siecles",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.127
+          },
+          {
+            "form": "siècles",
+            "ipa": "sjɛkl",
+            "lemma": "siècle",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 13.516
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "siecles"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "siecles",
+            "ipa": "sjɛkl",
+            "lemma": "siecles",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.127
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": true,
+      "orthographicVariantLikely": true,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-0930",
+      "ipa": "bataʁ",
+      "exactWord": "bâtard",
+      "currentLemma": "bâtard",
+      "currentPos": "NOM",
+      "currentClass": "C",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "batard",
+          "bâtard"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": true,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "batard",
+            "ipa": "bataʁ",
+            "lemma": "batard",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 1.367
+          },
+          {
+            "form": "bâtard",
+            "ipa": "bataʁ",
+            "lemma": "bâtard",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 12.123
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "bâtard"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "bâtard",
+            "ipa": "bataʁ",
+            "lemma": "bâtard",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 12.123
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": true,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-1127",
+      "ipa": "kalɛ̃",
+      "exactWord": "câlin",
+      "currentLemma": "câlin",
+      "currentPos": "NOM",
+      "currentClass": "C",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "calin",
+          "câlin"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": true,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "calin",
+            "ipa": "kalɛ̃",
+            "lemma": "calin",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 1.263
+          },
+          {
+            "form": "câlin",
+            "ipa": "kalɛ̃",
+            "lemma": "câlin",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 10.386
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "câlin"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "câlin",
+            "ipa": "kalɛ̃",
+            "lemma": "câlin",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 10.386
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": true,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-1190",
+      "ipa": "pikyʁ",
+      "exactWord": "piqûre",
+      "currentLemma": "piqûre",
+      "currentPos": "NOM",
+      "currentClass": "C",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "piqure",
+          "piqûre"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": true,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "piqure",
+            "ipa": "pikyʁ",
+            "lemma": "piqure",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.636
+          },
+          {
+            "form": "piqûre",
+            "ipa": "pikyʁ",
+            "lemma": "piqûre",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 6.386
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "piqûre"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "piqûre",
+            "ipa": "pikyʁ",
+            "lemma": "piqûre",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 6.386
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": true,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-1213",
+      "ipa": "gʁɛ",
+      "exactWord": "grès",
+      "currentLemma": "grès",
+      "currentPos": "NOM",
+      "currentClass": "C",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "gré",
+          "grès"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": true,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "grés",
+            "ipa": "gʁɛ",
+            "lemma": "gré",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.019
+          },
+          {
+            "form": "grès",
+            "ipa": "gʁɛ",
+            "lemma": "grès",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.361
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "grès"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "grès",
+            "ipa": "gʁɛ",
+            "lemma": "grès",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.361
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": false,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-1223",
+      "ipa": "tɛl",
+      "exactWord": "tél",
+      "currentLemma": "tél",
+      "currentPos": "NOM",
+      "currentClass": "C",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "ADJ",
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "tel",
+          "tél"
+        ],
+        "hasMultiplePos": true,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "tel",
+            "ipa": "tɛl",
+            "lemma": "tel",
+            "pos": "ADJ",
+            "rawPos": "ADJ:ind",
+            "frequency": 59.57
+          },
+          {
+            "form": "tél",
+            "ipa": "tɛl",
+            "lemma": "tél",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.18
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "tél"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "tél",
+            "ipa": "tɛl",
+            "lemma": "tél",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.18
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": false,
+      "reviewedSenseCandidates": []
+    },
+    {
+      "sampleId": "B2C-I1-1246",
+      "ipa": "ʁabl",
+      "exactWord": "râble",
+      "currentLemma": "râble",
+      "currentPos": "NOM",
+      "currentClass": "C",
+      "oldFolded": {
+        "lexiqueRowCount": 2,
+        "uniqueLexicalEntryCount": 2,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "rable",
+          "râble"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": true,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "rable",
+            "ipa": "ʁabl",
+            "lemma": "rable",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.035
+          },
+          {
+            "form": "râble",
+            "ipa": "ʁabl",
+            "lemma": "râble",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.06
+          }
+        ]
+      },
+      "exactOrthography": {
+        "lexiqueRowCount": 1,
+        "uniqueLexicalEntryCount": 1,
+        "distinctPos": [
+          "NOM"
+        ],
+        "distinctLemmas": [
+          "râble"
+        ],
+        "hasMultiplePos": false,
+        "hasSamePosMultipleLemma": false,
+        "technicalDuplicateCount": 0,
+        "lexicalEntries": [
+          {
+            "form": "râble",
+            "ipa": "ʁabl",
+            "lemma": "râble",
+            "pos": "NOM",
+            "rawPos": "NOM",
+            "frequency": 0.06
+          }
+        ]
+      },
+      "accentFoldCollision": true,
+      "inflectionLikely": false,
+      "orthographicVariantLikely": true,
+      "reviewedSenseCandidates": []
+    }
+  ]
+}

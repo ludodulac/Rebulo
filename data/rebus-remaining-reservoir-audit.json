@@ -1,0 +1,5957 @@
+{
+  "version": "remaining-reservoir-audit-final-1",
+  "sourceMainHead": "4015af269d1698d11c6ae8441f426f148799aee9",
+  "denominatorUsefulExact": 5741,
+  "currentBank": {
+    "indexedSounds": 1365,
+    "exactRelations": 2384
+  },
+  "remainingNotSeriouslyCovered": {
+    "total": 5197,
+    "oneSyllable": 1485,
+    "twoSyllable": 3712,
+    "atMost5Units": 4348,
+    "homophonesAtLeast2": 1594,
+    "homophonesAtLeast3": 483,
+    "homophonesAtLeast4": 0
+  },
+  "remainingNetNew": {
+    "total": 4376,
+    "oneSyllable": 1056,
+    "twoSyllable": 3320,
+    "atMost5Units": 3551,
+    "homophonesAtLeast2": 1111,
+    "homophonesAtLeast3": 285,
+    "homophonesAtLeast4": 0
+  },
+  "editorialPotentialGrades": {
+    "A": 21,
+    "B": 19,
+    "C": 1612,
+    "D": 2724
+  },
+  "falseNegativeConcreteCount": 51,
+  "falseNegativeConcreteTop": [
+    {
+      "ipa": "mamɑ̃",
+      "word": "maman",
+      "frequency": 470.582,
+      "grade": "A",
+      "category": "person",
+      "reason": "very common generic person; visual naming plausible",
+      "syllableSpan": 2,
+      "unitCount": 4
+    },
+    {
+      "ipa": "byʁo",
+      "word": "bureau",
+      "frequency": 207.434,
+      "grade": "A",
+      "category": "object_place",
+      "reason": "common desk/office homonym; concrete and frequent",
+      "syllableSpan": 2,
+      "unitCount": 4
+    },
+    {
+      "ipa": "pʁizɔ̃",
+      "word": "prison",
+      "frequency": 163.864,
+      "grade": "A",
+      "category": "place",
+      "reason": "distinctive place, common lexical item",
+      "syllableSpan": 2,
+      "unitCount": 5
+    },
+    {
+      "ipa": "tuʁ",
+      "word": "tour",
+      "frequency": 149.402,
+      "grade": "A",
+      "category": "place_object",
+      "reason": "tower is concrete, short and highly reusable",
+      "syllableSpan": 1,
+      "unitCount": 3
+    },
+    {
+      "ipa": "vizaʒ",
+      "word": "visage",
+      "frequency": 125.12,
+      "grade": "A",
+      "category": "body",
+      "reason": "high-frequency body concept, visually direct",
+      "syllableSpan": 2,
+      "unitCount": 5
+    },
+    {
+      "ipa": "byt",
+      "word": "but",
+      "frequency": 77.231,
+      "grade": "A",
+      "category": "object_scene",
+      "reason": "football goal is clear and short",
+      "syllableSpan": 1,
+      "unitCount": 3
+    },
+    {
+      "ipa": "dosje",
+      "word": "dossier",
+      "frequency": 76.943,
+      "grade": "A",
+      "category": "object",
+      "reason": "folder/file object is common and drawable without text",
+      "syllableSpan": 2,
+      "unitCount": 5
+    },
+    {
+      "ipa": "vɛso",
+      "word": "vaisseau",
+      "frequency": 74.335,
+      "grade": "A",
+      "category": "vehicle",
+      "reason": "spaceship/ship route is concrete and visually strong",
+      "syllableSpan": 2,
+      "unitCount": 4
+    },
+    {
+      "ipa": "sɛʁvo",
+      "word": "cerveau",
+      "frequency": 71.272,
+      "grade": "A",
+      "category": "body",
+      "reason": "anatomically direct, common",
+      "syllableSpan": 2,
+      "unitCount": 5
+    },
+    {
+      "ipa": "ʒuʁnal",
+      "word": "journal",
+      "frequency": 67.528,
+      "grade": "A",
+      "category": "object",
+      "reason": "newspaper object, common and compact",
+      "syllableSpan": 2,
+      "unitCount": 6
+    },
+    {
+      "ipa": "planɛt",
+      "word": "planète",
+      "frequency": 56.927,
+      "grade": "A",
+      "category": "nature",
+      "reason": "clear astronomical object, common",
+      "syllableSpan": 2,
+      "unitCount": 6
+    },
+    {
+      "ipa": "vilaʒ",
+      "word": "village",
+      "frequency": 54.639,
+      "grade": "A",
+      "category": "place",
+      "reason": "concrete place with clear compact scene",
+      "syllableSpan": 2,
+      "unitCount": 5
+    },
+    {
+      "ipa": "papje",
+      "word": "papier",
+      "frequency": 49.823,
+      "grade": "A",
+      "category": "object",
+      "reason": "very common object/material; sheet route is simple",
+      "syllableSpan": 2,
+      "unitCount": 5
+    },
+    {
+      "ipa": "mɔ̃stʁ",
+      "word": "monstre",
+      "frequency": 49.589,
+      "grade": "A",
+      "category": "character",
+      "reason": "highly imageable generic character",
+      "syllableSpan": 1,
+      "unitCount": 5
+    },
+    {
+      "ipa": "ɔs",
+      "word": "os",
+      "frequency": 40.785,
+      "grade": "A",
+      "category": "body",
+      "reason": "short, direct body object",
+      "syllableSpan": 1,
+      "unitCount": 2
+    },
+    {
+      "ipa": "batɔ̃",
+      "word": "bâton",
+      "frequency": 13.845,
+      "grade": "A",
+      "category": "object",
+      "reason": "very common, short, direct",
+      "syllableSpan": 2,
+      "unitCount": 4
+    },
+    {
+      "ipa": "gut",
+      "word": "goutte",
+      "frequency": 12.165,
+      "grade": "A",
+      "category": "nature_shape",
+      "reason": "simple droplet, short and direct",
+      "syllableSpan": 1,
+      "unitCount": 3
+    },
+    {
+      "ipa": "məsjø",
+      "word": "monsieur",
+      "frequency": 525.665,
+      "grade": "B",
+      "category": "person",
+      "reason": "common but likely named homme/monsieur interchangeably",
+      "syllableSpan": 2,
+      "unitCount": 5
+    },
+    {
+      "ipa": "famij",
+      "word": "famille",
+      "frequency": 412.193,
+      "grade": "B",
+      "category": "person_scene",
+      "reason": "common simple group scene, but composition varies",
+      "syllableSpan": 2,
+      "unitCount": 5
+    },
+    {
+      "ipa": "ʃɛf",
+      "word": "chef",
+      "frequency": 205.877,
+      "grade": "B",
+      "category": "person",
+      "reason": "recognizable only with role cues; chef/boss ambiguity",
+      "syllableSpan": 1,
+      "unitCount": 3
+    },
+    {
+      "ipa": "film",
+      "word": "film",
+      "frequency": 152.392,
+      "grade": "B",
+      "category": "object_media",
+      "reason": "film reel/screen route possible; movie/image naming ambiguity",
+      "syllableSpan": 1,
+      "unitCount": 4
+    },
+    {
+      "ipa": "pjɛs",
+      "word": "pièce",
+      "frequency": 117.291,
+      "grade": "B",
+      "category": "object_place",
+      "reason": "coin/room/piece polysemy gives options but naming ambiguity",
+      "syllableSpan": 1,
+      "unitCount": 4
+    },
+    {
+      "ipa": "klœb",
+      "word": "club",
+      "frequency": 84.38,
+      "grade": "B",
+      "category": "object_place",
+      "reason": "club object or venue; exact naming needs control",
+      "syllableSpan": 1,
+      "unitCount": 4
+    },
+    {
+      "ipa": "gamɛ̃",
+      "word": "gamin",
+      "frequency": 62.079,
+      "grade": "B",
+      "category": "person",
+      "reason": "child is drawable; lexical choice enfant/gamin remains a risk",
+      "syllableSpan": 2,
+      "unitCount": 4
+    },
+    {
+      "ipa": "gʁɑ̃mɛʁ",
+      "word": "grand-mère",
+      "frequency": 59.18,
+      "grade": "B",
+      "category": "person",
+      "reason": "common but kinship naming requires context",
+      "syllableSpan": 2,
+      "unitCount": 6
+    },
+    {
+      "ipa": "gʁɑ̃pɛʁ",
+      "word": "grand-père",
+      "frequency": 51.832,
+      "grade": "B",
+      "category": "person",
+      "reason": "common but kinship naming requires context",
+      "syllableSpan": 2,
+      "unitCount": 6
+    },
+    {
+      "ipa": "gɔs",
+      "word": "gosse",
+      "frequency": 51.687,
+      "grade": "B",
+      "category": "person",
+      "reason": "child is clear; lexical competition enfant/gamin",
+      "syllableSpan": 1,
+      "unitCount": 3
+    },
+    {
+      "ipa": "siɲal",
+      "word": "signal",
+      "frequency": 43.063,
+      "grade": "B",
+      "category": "object_symbol",
+      "reason": "traffic signal route plausible; naming competition feu/panneau",
+      "syllableSpan": 2,
+      "unitCount": 5
+    },
+    {
+      "ipa": "ʃeʁif",
+      "word": "shérif",
+      "frequency": 43.003,
+      "grade": "B",
+      "category": "person",
+      "reason": "badge/hat route possible without text, but western cues needed",
+      "syllableSpan": 2,
+      "unitCount": 5
+    },
+    {
+      "ipa": "kɑ̃paɲ",
+      "word": "campagne",
+      "frequency": 41.835,
+      "grade": "B",
+      "category": "place_nature",
+      "reason": "landscape is clear but may be named champ/paysage",
+      "syllableSpan": 2,
+      "unitCount": 5
+    },
+    {
+      "ipa": "desɛ̃",
+      "word": "dessin",
+      "frequency": 15.047,
+      "grade": "B",
+      "category": "object",
+      "reason": "requires a drawing-within-drawing; target may be image",
+      "syllableSpan": 2,
+      "unitCount": 4
+    },
+    {
+      "ipa": "kit",
+      "word": "kit",
+      "frequency": 11.231,
+      "grade": "B",
+      "category": "object",
+      "reason": "set of tools/items, exact naming depends on context",
+      "syllableSpan": 1,
+      "unitCount": 3
+    },
+    {
+      "ipa": "aʒɑ̃",
+      "word": "agent",
+      "frequency": 149.899,
+      "grade": "C",
+      "category": "person",
+      "reason": "role underspecified without context",
+      "syllableSpan": 2,
+      "unitCount": 3
+    },
+    {
+      "ipa": "patʁɔ̃",
+      "word": "patron",
+      "frequency": 106.949,
+      "grade": "C",
+      "category": "person",
+      "reason": "role is context-dependent",
+      "syllableSpan": 2,
+      "unitCount": 5
+    },
+    {
+      "ipa": "ɔ̃kl",
+      "word": "oncle",
+      "frequency": 100.152,
+      "grade": "C",
+      "category": "person",
+      "reason": "kinship cannot be read from isolated portrait",
+      "syllableSpan": 1,
+      "unitCount": 3
+    },
+    {
+      "ipa": "ʃɑ̃sɔ̃",
+      "word": "chanson",
+      "frequency": 76.073,
+      "grade": "C",
+      "category": "sound_concept",
+      "reason": "visual route indirect",
+      "syllableSpan": 2,
+      "unitCount": 4
+    },
+    {
+      "ipa": "flik",
+      "word": "flic",
+      "frequency": 74.307,
+      "grade": "C",
+      "category": "person",
+      "reason": "colloquial and likely named policier",
+      "syllableSpan": 1,
+      "unitCount": 4
+    },
+    {
+      "ipa": "temwɛ̃",
+      "word": "témoin",
+      "frequency": 63.889,
+      "grade": "C",
+      "category": "person",
+      "reason": "role not visually self-evident",
+      "syllableSpan": 2,
+      "unitCount": 5
+    },
+    {
+      "ipa": "tɑ̃t",
+      "word": "tante",
+      "frequency": 58.744,
+      "grade": "C",
+      "category": "person",
+      "reason": "kinship cannot be read from isolated portrait",
+      "syllableSpan": 1,
+      "unitCount": 3
+    },
+    {
+      "ipa": "matʃ",
+      "word": "match",
+      "frequency": 58.19,
+      "grade": "C",
+      "category": "scene",
+      "reason": "sports scene likely named football/jeu rather than match",
+      "syllableSpan": 1,
+      "unitCount": 4
+    },
+    {
+      "ipa": "spɛktakl",
+      "word": "spectacle",
+      "frequency": 55.127,
+      "grade": "C",
+      "category": "scene",
+      "reason": "scene is drawable but target word is not spontaneous",
+      "syllableSpan": 2,
+      "unitCount": 8
+    },
+    {
+      "ipa": "kopɛ̃",
+      "word": "copain",
+      "frequency": 51.655,
+      "grade": "C",
+      "category": "person_relation",
+      "reason": "relationship is not visible from one person",
+      "syllableSpan": 2,
+      "unitCount": 4
+    },
+    {
+      "ipa": "mɔʁso",
+      "word": "morceau",
+      "frequency": 42.022,
+      "grade": "C",
+      "category": "object",
+      "reason": "too generic unless a specific material is chosen",
+      "syllableSpan": 2,
+      "unitCount": 5
+    },
+    {
+      "ipa": "staʁ",
+      "word": "star",
+      "frequency": 41.541,
+      "grade": "C",
+      "category": "person_symbol",
+      "reason": "celebrity route needs context; star also English borrowing",
+      "syllableSpan": 1,
+      "unitCount": 4
+    },
+    {
+      "ipa": "syspɛ",
+      "word": "suspect",
+      "frequency": 39.614,
+      "grade": "C",
+      "category": "person",
+      "reason": "role requires narrative cues",
+      "syllableSpan": 2,
+      "unitCount": 5
+    },
+    {
+      "ipa": "ministʁ",
+      "word": "ministre",
+      "frequency": 39.054,
+      "grade": "C",
+      "category": "person",
+      "reason": "role is not visually stable without symbols/context",
+      "syllableSpan": 2,
+      "unitCount": 7
+    },
+    {
+      "ipa": "mɑ̃bʁ",
+      "word": "membre",
+      "frequency": 38.598,
+      "grade": "C",
+      "category": "body_person",
+      "reason": "polysemy and generic body-part meaning",
+      "syllableSpan": 1,
+      "unitCount": 4
+    },
+    {
+      "ipa": "aʁtikl",
+      "word": "article",
+      "frequency": 38.168,
+      "grade": "C",
+      "category": "object_abstract",
+      "reason": "newspaper/article route generally requires text",
+      "syllableSpan": 2,
+      "unitCount": 6
+    },
+    {
+      "ipa": "lyt",
+      "word": "lutte",
+      "frequency": 18.646,
+      "grade": "C",
+      "category": "action",
+      "reason": "action naming may vary combat/bagarre",
+      "syllableSpan": 1,
+      "unitCount": 3
+    },
+    {
+      "ipa": "pan",
+      "word": "panne",
+      "frequency": 17.25,
+      "grade": "C",
+      "category": "scene_object",
+      "reason": "breakdown scene likely named voiture cassée/problème",
+      "syllableSpan": 1,
+      "unitCount": 3
+    },
+    {
+      "ipa": "pɑ̃sjɔ̃",
+      "word": "pension",
+      "frequency": 12.228,
+      "grade": "C",
+      "category": "place_abstract",
+      "reason": "multiple senses and context dependence",
+      "syllableSpan": 2,
+      "unitCount": 5
+    }
+  ],
+  "top100": [
+    {
+      "ipa": "tuʁ",
+      "grade": "A",
+      "score": 566.991,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 22,
+      "usefulWeightedGain": 3452.428,
+      "bestWord": "tour",
+      "bestWordFrequency": 149.402,
+      "bestCategory": "place_object",
+      "bestReason": "tower is concrete, short and highly reusable",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "tour",
+          "pos": "NOM",
+          "frequency": 149.402,
+          "grade": "A",
+          "category": "place_object",
+          "reason": "tower is concrete, short and highly reusable",
+          "manualConcrete": true
+        },
+        {
+          "word": "tourd",
+          "pos": "NOM",
+          "frequency": 0.006,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        },
+        {
+          "word": "toure",
+          "pos": "VER",
+          "frequency": 0.006,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "mamɑ̃",
+      "grade": "A",
+      "score": 550.402,
+      "syllableSpan": 2,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 2823.492,
+      "bestWord": "maman",
+      "bestWordFrequency": 470.582,
+      "bestCategory": "person",
+      "bestReason": "very common generic person; visual naming plausible",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "maman",
+          "pos": "NOM",
+          "frequency": 470.582,
+          "grade": "A",
+          "category": "person",
+          "reason": "very common generic person; visual naming plausible",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "byt",
+      "grade": "A",
+      "score": 546.921,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 386.155,
+      "bestWord": "but",
+      "bestWordFrequency": 77.231,
+      "bestCategory": "object_scene",
+      "bestReason": "football goal is clear and short",
+      "concreteCandidateCount": 2,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "but",
+          "pos": "NOM",
+          "frequency": 77.231,
+          "grade": "A",
+          "category": "object_scene",
+          "reason": "football goal is clear and short",
+          "manualConcrete": true
+        },
+        {
+          "word": "butte",
+          "pos": "NOM",
+          "frequency": 0.915,
+          "grade": "B",
+          "category": "nature",
+          "reason": "small hill; naming hill/mound competition",
+          "manualConcrete": true
+        },
+        {
+          "word": "butes",
+          "pos": "NOM",
+          "frequency": 0.003,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "byʁo",
+      "grade": "A",
+      "score": 535.692,
+      "syllableSpan": 2,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 1244.604,
+      "bestWord": "bureau",
+      "bestWordFrequency": 207.434,
+      "bestCategory": "object_place",
+      "bestReason": "common desk/office homonym; concrete and frequent",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "bureau",
+          "pos": "NOM",
+          "frequency": 207.434,
+          "grade": "A",
+          "category": "object_place",
+          "reason": "common desk/office homonym; concrete and frequent",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "pʁizɔ̃",
+      "grade": "A",
+      "score": 531.464,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 983.184,
+      "bestWord": "prison",
+      "bestWordFrequency": 163.864,
+      "bestCategory": "place",
+      "bestReason": "distinctive place, common lexical item",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 2,
+      "words": [
+        {
+          "word": "prison",
+          "pos": "NOM",
+          "frequency": 163.864,
+          "grade": "A",
+          "category": "place",
+          "reason": "distinctive place, common lexical item",
+          "manualConcrete": true
+        },
+        {
+          "word": "prisons",
+          "pos": "VER",
+          "frequency": 0.013,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "ɔs",
+      "grade": "A",
+      "score": 527.431,
+      "syllableSpan": 1,
+      "unitCount": 2,
+      "usefulTargetCount": 6,
+      "usefulWeightedGain": 244.457,
+      "bestWord": "os",
+      "bestWordFrequency": 40.785,
+      "bestCategory": "body",
+      "bestReason": "short, direct body object",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "os",
+          "pos": "NOM",
+          "frequency": 40.785,
+          "grade": "A",
+          "category": "body",
+          "reason": "short, direct body object",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "vizaʒ",
+      "grade": "A",
+      "score": 526.633,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 750.72,
+      "bestWord": "visage",
+      "bestWordFrequency": 125.12,
+      "bestCategory": "body",
+      "bestReason": "high-frequency body concept, visually direct",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "visage",
+          "pos": "NOM",
+          "frequency": 125.12,
+          "grade": "A",
+          "category": "body",
+          "reason": "high-frequency body concept, visually direct",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "sɛʁvo",
+      "grade": "A",
+      "score": 518.396,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 360.454,
+      "bestWord": "cerveau",
+      "bestWordFrequency": 71.272,
+      "bestCategory": "body",
+      "bestReason": "anatomically direct, common",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "cerveau",
+          "pos": "NOM",
+          "frequency": 71.272,
+          "grade": "A",
+          "category": "body",
+          "reason": "anatomically direct, common",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "dosje",
+      "grade": "A",
+      "score": 516.854,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 384.715,
+      "bestWord": "dossier",
+      "bestWordFrequency": 76.943,
+      "bestCategory": "object",
+      "bestReason": "folder/file object is common and drawable without text",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "dossier",
+          "pos": "NOM",
+          "frequency": 76.943,
+          "grade": "A",
+          "category": "object",
+          "reason": "folder/file object is common and drawable without text",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "vɛso",
+      "grade": "A",
+      "score": 516.24,
+      "syllableSpan": 2,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 371.675,
+      "bestWord": "vaisseau",
+      "bestWordFrequency": 74.335,
+      "bestCategory": "vehicle",
+      "bestReason": "spaceship/ship route is concrete and visually strong",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "vaisseau",
+          "pos": "NOM",
+          "frequency": 74.335,
+          "grade": "A",
+          "category": "vehicle",
+          "reason": "spaceship/ship route is concrete and visually strong",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "mɔ̃stʁ",
+      "grade": "A",
+      "score": 515.04,
+      "syllableSpan": 1,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 247.945,
+      "bestWord": "monstre",
+      "bestWordFrequency": 49.589,
+      "bestCategory": "character",
+      "bestReason": "highly imageable generic character",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "monstre",
+          "pos": "NOM",
+          "frequency": 49.589,
+          "grade": "A",
+          "category": "character",
+          "reason": "highly imageable generic character",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "vilaʒ",
+      "grade": "A",
+      "score": 510.762,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 273.195,
+      "bestWord": "village",
+      "bestWordFrequency": 54.639,
+      "bestCategory": "place",
+      "bestReason": "concrete place with clear compact scene",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "village",
+          "pos": "NOM",
+          "frequency": 54.639,
+          "grade": "A",
+          "category": "place",
+          "reason": "concrete place with clear compact scene",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "papje",
+      "grade": "A",
+      "score": 509.124,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 249.115,
+      "bestWord": "papier",
+      "bestWordFrequency": 49.823,
+      "bestCategory": "object",
+      "bestReason": "very common object/material; sheet route is simple",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "papier",
+          "pos": "NOM",
+          "frequency": 49.823,
+          "grade": "A",
+          "category": "object",
+          "reason": "very common object/material; sheet route is simple",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "ʒuʁnal",
+      "grade": "A",
+      "score": 504.529,
+      "syllableSpan": 2,
+      "unitCount": 6,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 337.64,
+      "bestWord": "journal",
+      "bestWordFrequency": 67.528,
+      "bestCategory": "object",
+      "bestReason": "newspaper object, common and compact",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "journal",
+          "pos": "NOM",
+          "frequency": 67.528,
+          "grade": "A",
+          "category": "object",
+          "reason": "newspaper object, common and compact",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "planɛt",
+      "grade": "A",
+      "score": 501.491,
+      "syllableSpan": 2,
+      "unitCount": 6,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 284.635,
+      "bestWord": "planète",
+      "bestWordFrequency": 56.927,
+      "bestCategory": "nature",
+      "bestReason": "clear astronomical object, common",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 2,
+      "words": [
+        {
+          "word": "planète",
+          "pos": "NOM",
+          "frequency": 56.927,
+          "grade": "A",
+          "category": "nature",
+          "reason": "clear astronomical object, common",
+          "manualConcrete": true
+        },
+        {
+          "word": "planette",
+          "pos": "NOM",
+          "frequency": 0.019,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "gut",
+      "grade": "A",
+      "score": 495.214,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 48.66,
+      "bestWord": "goutte",
+      "bestWordFrequency": 12.165,
+      "bestCategory": "nature_shape",
+      "bestReason": "simple droplet, short and direct",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "goutte",
+          "pos": "NOM",
+          "frequency": 12.165,
+          "grade": "A",
+          "category": "nature_shape",
+          "reason": "simple droplet, short and direct",
+          "manualConcrete": true
+        },
+        {
+          "word": "goute",
+          "pos": "NOM",
+          "frequency": 0.278,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        },
+        {
+          "word": "goutes",
+          "pos": "NOM",
+          "frequency": 0.063,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "bat",
+      "grade": "A",
+      "score": 487.408,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 25.311,
+      "bestWord": "batte",
+      "bestWordFrequency": 8.437,
+      "bestCategory": "object",
+      "bestReason": "bat object, short and direct",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "batte",
+          "pos": "NOM",
+          "frequency": 8.437,
+          "grade": "A",
+          "category": "object",
+          "reason": "bat object, short and direct",
+          "manualConcrete": true
+        },
+        {
+          "word": "bath",
+          "pos": "ADJ",
+          "frequency": 0.313,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        },
+        {
+          "word": "baht",
+          "pos": "NOM",
+          "frequency": 0.161,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "bʁik",
+      "grade": "A",
+      "score": 484.206,
+      "syllableSpan": 1,
+      "unitCount": 4,
+      "usefulTargetCount": 4,
+      "usefulWeightedGain": 50.636,
+      "bestWord": "brique",
+      "bestWordFrequency": 3.984,
+      "bestCategory": "object",
+      "bestReason": "very common, compact, visually distinctive",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "brique",
+          "pos": "NOM",
+          "frequency": 3.984,
+          "grade": "A",
+          "category": "object",
+          "reason": "very common, compact, visually distinctive",
+          "manualConcrete": true
+        },
+        {
+          "word": "brick",
+          "pos": "NOM",
+          "frequency": 7.149,
+          "grade": "C",
+          "category": "unreviewed_noun",
+          "reason": "noun with some frequency but no controlled concrete classification",
+          "manualConcrete": false
+        },
+        {
+          "word": "bric",
+          "pos": "NOM",
+          "frequency": 0.076,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "batɔ̃",
+      "grade": "A",
+      "score": 483.726,
+      "syllableSpan": 2,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 41.535,
+      "bestWord": "bâton",
+      "bestWordFrequency": 13.845,
+      "bestCategory": "object",
+      "bestReason": "very common, short, direct",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "bâton",
+          "pos": "NOM",
+          "frequency": 13.845,
+          "grade": "A",
+          "category": "object",
+          "reason": "very common, short, direct",
+          "manualConcrete": true
+        },
+        {
+          "word": "battons",
+          "pos": "VER",
+          "frequency": 3.278,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        },
+        {
+          "word": "bâtons",
+          "pos": "VER",
+          "frequency": 0.035,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "tʁap",
+      "grade": "A",
+      "score": 476.998,
+      "syllableSpan": 1,
+      "unitCount": 4,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 28.099,
+      "bestWord": "trappe",
+      "bestWordFrequency": 3.905,
+      "bestCategory": "object",
+      "bestReason": "distinct hatch/trapdoor object, compact",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "trappe",
+          "pos": "NOM",
+          "frequency": 3.905,
+          "grade": "A",
+          "category": "object",
+          "reason": "distinct hatch/trapdoor object, compact",
+          "manualConcrete": true
+        },
+        {
+          "word": "trap",
+          "pos": "NOM",
+          "frequency": 0.054,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        },
+        {
+          "word": "trape",
+          "pos": "NOM",
+          "frequency": 0.013,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "filɛ",
+      "grade": "A",
+      "score": 475.493,
+      "syllableSpan": 2,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 25.443,
+      "bestWord": "filet",
+      "bestWordFrequency": 8.481,
+      "bestCategory": "object",
+      "bestReason": "net object, common and visually distinctive",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "filet",
+          "pos": "NOM",
+          "frequency": 8.481,
+          "grade": "A",
+          "category": "object",
+          "reason": "net object, common and visually distinctive",
+          "manualConcrete": true
+        },
+        {
+          "word": "filait",
+          "pos": "VER",
+          "frequency": 1.013,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        },
+        {
+          "word": "feelais",
+          "pos": "NOM",
+          "frequency": 0.009,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "məsjø",
+      "grade": "B",
+      "score": 452.391,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 3153.99,
+      "bestWord": "monsieur",
+      "bestWordFrequency": 525.665,
+      "bestCategory": "person",
+      "bestReason": "common but likely named homme/monsieur interchangeably",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "monsieur",
+          "pos": "NOM",
+          "frequency": 525.665,
+          "grade": "B",
+          "category": "person",
+          "reason": "common but likely named homme/monsieur interchangeably",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "famij",
+      "grade": "B",
+      "score": 448.021,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 2473.158,
+      "bestWord": "famille",
+      "bestWordFrequency": 412.193,
+      "bestCategory": "person_scene",
+      "bestReason": "common simple group scene, but composition varies",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "famille",
+          "pos": "NOM",
+          "frequency": 412.193,
+          "grade": "B",
+          "category": "person_scene",
+          "reason": "common simple group scene, but composition varies",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "ʃɛf",
+      "grade": "B",
+      "score": 447.557,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 1235.262,
+      "bestWord": "chef",
+      "bestWordFrequency": 205.877,
+      "bestCategory": "person",
+      "bestReason": "recognizable only with role cues; chef/boss ambiguity",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 2,
+      "words": [
+        {
+          "word": "chef",
+          "pos": "NOM",
+          "frequency": 205.877,
+          "grade": "B",
+          "category": "person",
+          "reason": "recognizable only with role cues; chef/boss ambiguity",
+          "manualConcrete": true
+        },
+        {
+          "word": "cheffe",
+          "pos": "NOM",
+          "frequency": 0.158,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "film",
+      "grade": "B",
+      "score": 436.164,
+      "syllableSpan": 1,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 914.352,
+      "bestWord": "film",
+      "bestWordFrequency": 152.392,
+      "bestCategory": "object_media",
+      "bestReason": "film reel/screen route possible; movie/image naming ambiguity",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 2,
+      "words": [
+        {
+          "word": "film",
+          "pos": "NOM",
+          "frequency": 152.392,
+          "grade": "B",
+          "category": "object_media",
+          "reason": "film reel/screen route possible; movie/image naming ambiguity",
+          "manualConcrete": true
+        },
+        {
+          "word": "filme",
+          "pos": "VER",
+          "frequency": 5.307,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "pjɛs",
+      "grade": "B",
+      "score": 430.385,
+      "syllableSpan": 1,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 586.455,
+      "bestWord": "pièce",
+      "bestWordFrequency": 117.291,
+      "bestCategory": "object_place",
+      "bestReason": "coin/room/piece polysemy gives options but naming ambiguity",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "pièce",
+          "pos": "NOM",
+          "frequency": 117.291,
+          "grade": "B",
+          "category": "object_place",
+          "reason": "coin/room/piece polysemy gives options but naming ambiguity",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "klœb",
+      "grade": "B",
+      "score": 424.5,
+      "syllableSpan": 1,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 421.9,
+      "bestWord": "club",
+      "bestWordFrequency": 84.38,
+      "bestCategory": "object_place",
+      "bestReason": "club object or venue; exact naming needs control",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "club",
+          "pos": "NOM",
+          "frequency": 84.38,
+          "grade": "B",
+          "category": "object_place",
+          "reason": "club object or venue; exact naming needs control",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "gɔs",
+      "grade": "B",
+      "score": 421.775,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 258.435,
+      "bestWord": "gosse",
+      "bestWordFrequency": 51.687,
+      "bestCategory": "person",
+      "bestReason": "child is clear; lexical competition enfant/gamin",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 2,
+      "words": [
+        {
+          "word": "gosse",
+          "pos": "NOM",
+          "frequency": 51.687,
+          "grade": "B",
+          "category": "person",
+          "reason": "child is clear; lexical competition enfant/gamin",
+          "manualConcrete": true
+        },
+        {
+          "word": "gossent",
+          "pos": "NOM",
+          "frequency": 0.009,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "gamɛ̃",
+      "grade": "B",
+      "score": 413.031,
+      "syllableSpan": 2,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 310.395,
+      "bestWord": "gamin",
+      "bestWordFrequency": 62.079,
+      "bestCategory": "person",
+      "bestReason": "child is drawable; lexical choice enfant/gamin remains a risk",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "gamin",
+          "pos": "NOM",
+          "frequency": 62.079,
+          "grade": "B",
+          "category": "person",
+          "reason": "child is drawable; lexical choice enfant/gamin remains a risk",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "siɲal",
+      "grade": "B",
+      "score": 406.54,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 215.315,
+      "bestWord": "signal",
+      "bestWordFrequency": 43.063,
+      "bestCategory": "object_symbol",
+      "bestReason": "traffic signal route plausible; naming competition feu/panneau",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 2,
+      "words": [
+        {
+          "word": "signal",
+          "pos": "NOM",
+          "frequency": 43.063,
+          "grade": "B",
+          "category": "object_symbol",
+          "reason": "traffic signal route plausible; naming competition feu/panneau",
+          "manualConcrete": true
+        },
+        {
+          "word": "signale",
+          "pos": "VER",
+          "frequency": 5.367,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "ʃeʁif",
+      "grade": "B",
+      "score": 406.515,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 215.015,
+      "bestWord": "shérif",
+      "bestWordFrequency": 43.003,
+      "bestCategory": "person",
+      "bestReason": "badge/hat route possible without text, but western cues needed",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "shérif",
+          "pos": "NOM",
+          "frequency": 43.003,
+          "grade": "B",
+          "category": "person",
+          "reason": "badge/hat route possible without text, but western cues needed",
+          "manualConcrete": true
+        },
+        {
+          "word": "shériff",
+          "pos": "NOM",
+          "frequency": 0.674,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        },
+        {
+          "word": "chérif",
+          "pos": "NOM",
+          "frequency": 0.294,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "kɑ̃paɲ",
+      "grade": "B",
+      "score": 406.028,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 209.175,
+      "bestWord": "campagne",
+      "bestWordFrequency": 41.835,
+      "bestCategory": "place_nature",
+      "bestReason": "landscape is clear but may be named champ/paysage",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "campagne",
+          "pos": "NOM",
+          "frequency": 41.835,
+          "grade": "B",
+          "category": "place_nature",
+          "reason": "landscape is clear but may be named champ/paysage",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "gʁɑ̃mɛʁ",
+      "grade": "B",
+      "score": 402.18,
+      "syllableSpan": 2,
+      "unitCount": 6,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 295.9,
+      "bestWord": "grand-mère",
+      "bestWordFrequency": 59.18,
+      "bestCategory": "person",
+      "bestReason": "common but kinship naming requires context",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "grand-mère",
+          "pos": "NOM",
+          "frequency": 59.18,
+          "grade": "B",
+          "category": "person",
+          "reason": "common but kinship naming requires context",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "gʁɑ̃pɛʁ",
+      "grade": "B",
+      "score": 399.825,
+      "syllableSpan": 2,
+      "unitCount": 6,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 259.16,
+      "bestWord": "grand-père",
+      "bestWordFrequency": 51.832,
+      "bestCategory": "person",
+      "bestReason": "common but kinship naming requires context",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "grand-père",
+          "pos": "NOM",
+          "frequency": 51.832,
+          "grade": "B",
+          "category": "person",
+          "reason": "common but kinship naming requires context",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "kit",
+      "grade": "B",
+      "score": 397.65,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 52.803,
+      "bestWord": "kit",
+      "bestWordFrequency": 11.231,
+      "bestCategory": "object",
+      "bestReason": "set of tools/items, exact naming depends on context",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "kit",
+          "pos": "NOM",
+          "frequency": 11.231,
+          "grade": "B",
+          "category": "object",
+          "reason": "set of tools/items, exact naming depends on context",
+          "manualConcrete": true
+        },
+        {
+          "word": "quitte",
+          "pos": "ADJ",
+          "frequency": 6.37,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        },
+        {
+          "word": "kite",
+          "pos": "NOM",
+          "frequency": 0.089,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "desɛ̃",
+      "grade": "B",
+      "score": 390.122,
+      "syllableSpan": 2,
+      "unitCount": 4,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 64.858,
+      "bestWord": "dessin",
+      "bestWordFrequency": 15.047,
+      "bestCategory": "object",
+      "bestReason": "requires a drawing-within-drawing; target may be image",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 2,
+      "words": [
+        {
+          "word": "dessin",
+          "pos": "NOM",
+          "frequency": 15.047,
+          "grade": "B",
+          "category": "object",
+          "reason": "requires a drawing-within-drawing; target may be image",
+          "manualConcrete": true
+        },
+        {
+          "word": "dessein",
+          "pos": "NOM",
+          "frequency": 2.335,
+          "grade": "C",
+          "category": "unreviewed_noun",
+          "reason": "noun with some frequency but no controlled concrete classification",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "aʁa",
+      "grade": "B",
+      "score": 381.043,
+      "syllableSpan": 2,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 54.14,
+      "bestWord": "ara",
+      "bestWordFrequency": 0.411,
+      "bestCategory": "animal",
+      "bestReason": "parrot species, visually strong but exact word less common",
+      "concreteCandidateCount": 2,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "ara",
+          "pos": "NOM",
+          "frequency": 0.411,
+          "grade": "B",
+          "category": "animal",
+          "reason": "parrot species, visually strong but exact word less common",
+          "manualConcrete": true
+        },
+        {
+          "word": "haras",
+          "pos": "NOM",
+          "frequency": 0.329,
+          "grade": "B",
+          "category": "place",
+          "reason": "horse-breeding place; requires multiple cues",
+          "manualConcrete": true
+        },
+        {
+          "word": "hara",
+          "pos": "NOM",
+          "frequency": 0.054,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "kaʃɛt",
+      "grade": "B",
+      "score": 377.683,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 29.031,
+      "bestWord": "cachette",
+      "bestWordFrequency": 9.677,
+      "bestCategory": "place_scene",
+      "bestReason": "simple hiding place scene but naming may vary",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "cachette",
+          "pos": "NOM",
+          "frequency": 9.677,
+          "grade": "B",
+          "category": "place_scene",
+          "reason": "simple hiding place scene but naming may vary",
+          "manualConcrete": true
+        },
+        {
+          "word": "cachète",
+          "pos": "NOM",
+          "frequency": 0.025,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        },
+        {
+          "word": "cachètent",
+          "pos": "NOM",
+          "frequency": 0.003,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "lyt",
+      "grade": "B",
+      "score": 371.492,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 74.584,
+      "bestWord": "luth",
+      "bestWordFrequency": 0.478,
+      "bestCategory": "object",
+      "bestReason": "instrument is concrete but rare",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "luth",
+          "pos": "NOM",
+          "frequency": 0.478,
+          "grade": "B",
+          "category": "object",
+          "reason": "instrument is concrete but rare",
+          "manualConcrete": true
+        },
+        {
+          "word": "lutte",
+          "pos": "NOM",
+          "frequency": 18.646,
+          "grade": "C",
+          "category": "action",
+          "reason": "action naming may vary combat/bagarre",
+          "manualConcrete": true
+        },
+        {
+          "word": "luts",
+          "pos": "NOM",
+          "frequency": 0.003,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "maki",
+      "grade": "B",
+      "score": 364.652,
+      "syllableSpan": 2,
+      "unitCount": 4,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 41.034,
+      "bestWord": "maki",
+      "bestWordFrequency": 1.405,
+      "bestCategory": "food",
+      "bestReason": "sushi item is concrete and compact",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "maki",
+          "pos": "NOM",
+          "frequency": 1.405,
+          "grade": "B",
+          "category": "food",
+          "reason": "sushi item is concrete and compact",
+          "manualConcrete": true
+        },
+        {
+          "word": "maquis",
+          "pos": "NOM",
+          "frequency": 1.367,
+          "grade": "C",
+          "category": "nature_place",
+          "reason": "vegetation/Resistance polysemy and naming risk",
+          "manualConcrete": true
+        },
+        {
+          "word": "maqui",
+          "pos": "NOM",
+          "frequency": 0.003,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "ta",
+      "grade": "C",
+      "score": 375.977,
+      "syllableSpan": 1,
+      "unitCount": 2,
+      "usefulTargetCount": 139,
+      "usefulWeightedGain": 10901.179,
+      "bestWord": "tas",
+      "bestWordFrequency": 61.411,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 2,
+      "words": [
+        {
+          "word": "tas",
+          "pos": "NOM",
+          "frequency": 61.411,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        },
+        {
+          "word": "ta",
+          "pos": "NOM",
+          "frequency": 0.022,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "bəzwɛ̃",
+      "grade": "C",
+      "score": 364.91,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 6327.228,
+      "bestWord": "besoin",
+      "bestWordFrequency": 1054.538,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "besoin",
+          "pos": "NOM",
+          "frequency": 1054.538,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "pøʁ",
+      "grade": "C",
+      "score": 360.82,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 2585.658,
+      "bestWord": "peur",
+      "bestWordFrequency": 430.943,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "peur",
+          "pos": "NOM",
+          "frequency": 430.943,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "ʒɑ̃ʁ",
+      "grade": "C",
+      "score": 354.539,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 1822.746,
+      "bestWord": "genre",
+      "bestWordFrequency": 303.791,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "genre",
+          "pos": "NOM",
+          "frequency": 303.791,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        },
+        {
+          "word": "genré",
+          "pos": "NOM",
+          "frequency": 0.003,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        },
+        {
+          "word": "genrés",
+          "pos": "NOM",
+          "frequency": 0.003,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "momɑ̃",
+      "grade": "C",
+      "score": 351.052,
+      "syllableSpan": 2,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 2927.466,
+      "bestWord": "moment",
+      "bestWordFrequency": 487.911,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "moment",
+          "pos": "NOM",
+          "frequency": 487.911,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        },
+        {
+          "word": "môman",
+          "pos": "NOM",
+          "frequency": 0.168,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        },
+        {
+          "word": "moman",
+          "pos": "NOM",
+          "frequency": 0.066,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "bɔ̃ʒuʁ",
+      "grade": "C",
+      "score": 350.845,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 2893.992,
+      "bestWord": "bonjour",
+      "bestWordFrequency": 482.332,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "bonjour",
+          "pos": "NOM",
+          "frequency": 482.332,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "pytɛ̃",
+      "grade": "C",
+      "score": 340.868,
+      "syllableSpan": 2,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 1660.728,
+      "bestWord": "putain",
+      "bestWordFrequency": 276.788,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "putain",
+          "pos": "NOM",
+          "frequency": 276.788,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "saly",
+      "grade": "C",
+      "score": 340.772,
+      "syllableSpan": 2,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 1651.86,
+      "bestWord": "salut",
+      "bestWordFrequency": 275.31,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 2,
+      "words": [
+        {
+          "word": "salut",
+          "pos": "NOM",
+          "frequency": 275.31,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        },
+        {
+          "word": "salue",
+          "pos": "VER",
+          "frequency": 9.636,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "ɑ̃dʁwa",
+      "grade": "C",
+      "score": 339.994,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 1581.834,
+      "bestWord": "endroit",
+      "bestWordFrequency": 263.639,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "endroit",
+          "pos": "NOM",
+          "frequency": 263.639,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "pʁoblɛm",
+      "grade": "C",
+      "score": 339.273,
+      "syllableSpan": 2,
+      "unitCount": 7,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 2651.694,
+      "bestWord": "problème",
+      "bestWordFrequency": 441.949,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "problème",
+          "pos": "NOM",
+          "frequency": 441.949,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "mjø",
+      "grade": "C",
+      "score": 339.143,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 3450.228,
+      "bestWord": "mieux",
+      "bestWordFrequency": 60.418,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "mieux",
+          "pos": "NOM",
+          "frequency": 60.418,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "matɛ̃",
+      "grade": "C",
+      "score": 338.759,
+      "syllableSpan": 2,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 1476.624,
+      "bestWord": "matin",
+      "bestWordFrequency": 246.104,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 2,
+      "words": [
+        {
+          "word": "matin",
+          "pos": "NOM",
+          "frequency": 246.104,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        },
+        {
+          "word": "mâtin",
+          "pos": "NOM",
+          "frequency": 0.051,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "tʁavaj",
+      "grade": "C",
+      "score": 337.912,
+      "syllableSpan": 2,
+      "unitCount": 6,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 2458.158,
+      "bestWord": "travail",
+      "bestWordFrequency": 409.693,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 2,
+      "words": [
+        {
+          "word": "travail",
+          "pos": "NOM",
+          "frequency": 409.693,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        },
+        {
+          "word": "travaille",
+          "pos": "VER",
+          "frequency": 151.19,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "sœl",
+      "grade": "C",
+      "score": 337.538,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 2392.194,
+      "bestWord": "seul",
+      "bestWordFrequency": 63.522,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 2,
+      "words": [
+        {
+          "word": "seul",
+          "pos": "NOM",
+          "frequency": 63.522,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        },
+        {
+          "word": "seules",
+          "pos": "NOM",
+          "frequency": 0.911,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "aʒɑ̃",
+      "grade": "C",
+      "score": 335.868,
+      "syllableSpan": 2,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 899.394,
+      "bestWord": "agent",
+      "bestWordFrequency": 149.899,
+      "bestCategory": "person",
+      "bestReason": "role underspecified without context",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "agent",
+          "pos": "NOM",
+          "frequency": 149.899,
+          "grade": "C",
+          "category": "person",
+          "reason": "role underspecified without context",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "səmɛn",
+      "grade": "C",
+      "score": 335.468,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 1229.184,
+      "bestWord": "semaine",
+      "bestWordFrequency": 204.864,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "semaine",
+          "pos": "NOM",
+          "frequency": 204.864,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "vjø",
+      "grade": "C",
+      "score": 335.323,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 938.412,
+      "bestWord": "vieux",
+      "bestWordFrequency": 84.623,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "vieux",
+          "pos": "NOM",
+          "frequency": 84.623,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "ʒuʁne",
+      "grade": "C",
+      "score": 334.991,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 1196.886,
+      "bestWord": "journée",
+      "bestWordFrequency": 199.481,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "journée",
+          "pos": "NOM",
+          "frequency": 199.481,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "tɑ̃t",
+      "grade": "C",
+      "score": 334.525,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 5,
+      "usefulWeightedGain": 467.86,
+      "bestWord": "tante",
+      "bestWordFrequency": 58.744,
+      "bestCategory": "person",
+      "bestReason": "kinship cannot be read from isolated portrait",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 2,
+      "words": [
+        {
+          "word": "tante",
+          "pos": "NOM",
+          "frequency": 58.744,
+          "grade": "C",
+          "category": "person",
+          "reason": "kinship cannot be read from isolated portrait",
+          "manualConcrete": true
+        },
+        {
+          "word": "tente",
+          "pos": "VER",
+          "frequency": 19.066,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "mœʁtʁ",
+      "grade": "C",
+      "score": 333.619,
+      "syllableSpan": 1,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 793.218,
+      "bestWord": "meurtre",
+      "bestWordFrequency": 132.203,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "meurtre",
+          "pos": "NOM",
+          "frequency": 132.203,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "ɔ̃kl",
+      "grade": "C",
+      "score": 333.56,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 500.76,
+      "bestWord": "oncle",
+      "bestWordFrequency": 100.152,
+      "bestCategory": "person",
+      "bestReason": "kinship cannot be read from isolated portrait",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "oncle",
+          "pos": "NOM",
+          "frequency": 100.152,
+          "grade": "C",
+          "category": "person",
+          "reason": "kinship cannot be read from isolated portrait",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "ɛst",
+      "grade": "C",
+      "score": 333.44,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 497.39,
+      "bestWord": "est",
+      "bestWordFrequency": 99.478,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "est",
+          "pos": "NOM",
+          "frequency": 99.478,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        },
+        {
+          "word": "este",
+          "pos": "NOM",
+          "frequency": 0.199,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        },
+        {
+          "word": "ests",
+          "pos": "NOM",
+          "frequency": 0.019,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "kɛstjɔ̃",
+      "grade": "C",
+      "score": 332.484,
+      "syllableSpan": 2,
+      "unitCount": 6,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 1817.148,
+      "bestWord": "question",
+      "bestWordFrequency": 302.858,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "question",
+          "pos": "NOM",
+          "frequency": 302.858,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "istwaʁ",
+      "grade": "C",
+      "score": 332.421,
+      "syllableSpan": 2,
+      "unitCount": 6,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 1810.764,
+      "bestWord": "histoire",
+      "bestWordFrequency": 301.794,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "histoire",
+          "pos": "NOM",
+          "frequency": 301.794,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "pɛʁsɔn",
+      "grade": "C",
+      "score": 330.091,
+      "syllableSpan": 2,
+      "unitCount": 6,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 1590.396,
+      "bestWord": "personne",
+      "bestWordFrequency": 265.066,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "personne",
+          "pos": "NOM",
+          "frequency": 265.066,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "efɛ",
+      "grade": "C",
+      "score": 329.162,
+      "syllableSpan": 2,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 547.69,
+      "bestWord": "effet",
+      "bestWordFrequency": 109.538,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "effet",
+          "pos": "NOM",
+          "frequency": 109.538,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "syʒɛ",
+      "grade": "C",
+      "score": 329.144,
+      "syllableSpan": 2,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 863.736,
+      "bestWord": "sujet",
+      "bestWordFrequency": 143.956,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "sujet",
+          "pos": "NOM",
+          "frequency": 143.956,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "ɔʁdʁ",
+      "grade": "C",
+      "score": 328.145,
+      "syllableSpan": 1,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 517.405,
+      "bestWord": "ordre",
+      "bestWordFrequency": 103.481,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "ordre",
+          "pos": "NOM",
+          "frequency": 103.481,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "swɛ̃",
+      "grade": "C",
+      "score": 328.031,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 367.34,
+      "bestWord": "soin",
+      "bestWordFrequency": 73.468,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "soin",
+          "pos": "NOM",
+          "frequency": 73.468,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "ɛspʁi",
+      "grade": "C",
+      "score": 327.557,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 790.5,
+      "bestWord": "esprit",
+      "bestWordFrequency": 131.75,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "esprit",
+          "pos": "NOM",
+          "frequency": 131.75,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "ɔ̃t",
+      "grade": "C",
+      "score": 327.426,
+      "syllableSpan": 1,
+      "unitCount": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 355.08,
+      "bestWord": "honte",
+      "bestWordFrequency": 71.016,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "honte",
+          "pos": "NOM",
+          "frequency": 71.016,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "kʁim",
+      "grade": "C",
+      "score": 327.325,
+      "syllableSpan": 1,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 494.21,
+      "bestWord": "crime",
+      "bestWordFrequency": 98.842,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "crime",
+          "pos": "NOM",
+          "frequency": 98.842,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "mesaʒ",
+      "grade": "C",
+      "score": 326.142,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 730.404,
+      "bestWord": "message",
+      "bestWordFrequency": 121.734,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "message",
+          "pos": "NOM",
+          "frequency": 121.734,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "swaʁe",
+      "grade": "C",
+      "score": 326.138,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 730.218,
+      "bestWord": "soirée",
+      "bestWordFrequency": 121.703,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 2,
+      "words": [
+        {
+          "word": "soirée",
+          "pos": "NOM",
+          "frequency": 121.703,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        },
+        {
+          "word": "soiré",
+          "pos": "NOM",
+          "frequency": 0.044,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "kɔ̃fjɑ̃s",
+      "grade": "C",
+      "score": 325.827,
+      "syllableSpan": 2,
+      "unitCount": 6,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 1254.054,
+      "bestWord": "confiance",
+      "bestWordFrequency": 209.009,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "confiance",
+          "pos": "NOM",
+          "frequency": 209.009,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "m",
+      "grade": "C",
+      "score": 324.777,
+      "syllableSpan": 1,
+      "unitCount": 1,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 305.995,
+      "bestWord": "m",
+      "bestWordFrequency": 61.199,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "m",
+          "pos": "NOM",
+          "frequency": 61.199,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "ɛʁœʁ",
+      "grade": "C",
+      "score": 324.685,
+      "syllableSpan": 2,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 596.39,
+      "bestWord": "erreur",
+      "bestWordFrequency": 119.278,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "erreur",
+          "pos": "NOM",
+          "frequency": 119.278,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "onœʁ",
+      "grade": "C",
+      "score": 324.198,
+      "syllableSpan": 2,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 580.38,
+      "bestWord": "honneur",
+      "bestWordFrequency": 116.076,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "honneur",
+          "pos": "NOM",
+          "frequency": 116.076,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "ʁol",
+      "grade": "C",
+      "score": 324.183,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 295.95,
+      "bestWord": "rôle",
+      "bestWordFrequency": 59.19,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "rôle",
+          "pos": "NOM",
+          "frequency": 59.19,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "tɥœʁ",
+      "grade": "C",
+      "score": 324.136,
+      "syllableSpan": 1,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 413.37,
+      "bestWord": "tueur",
+      "bestWordFrequency": 82.674,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "tueur",
+          "pos": "NOM",
+          "frequency": 82.674,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "apɛl",
+      "grade": "C",
+      "score": 323.933,
+      "syllableSpan": 2,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 571.835,
+      "bestWord": "appel",
+      "bestWordFrequency": 114.367,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 2,
+      "words": [
+        {
+          "word": "appel",
+          "pos": "NOM",
+          "frequency": 114.367,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        },
+        {
+          "word": "appelle",
+          "pos": "VER",
+          "frequency": 425.44,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "siʁka",
+      "grade": "C",
+      "score": 323.727,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 565.285,
+      "bestWord": "ca",
+      "bestWordFrequency": 113.057,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 2,
+      "words": [
+        {
+          "word": "ca",
+          "pos": "NOM",
+          "frequency": 113.057,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        },
+        {
+          "word": "circa",
+          "pos": "NOM",
+          "frequency": 0.032,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "maʁjaʒ",
+      "grade": "C",
+      "score": 323.408,
+      "syllableSpan": 2,
+      "unitCount": 6,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 1095.798,
+      "bestWord": "mariage",
+      "bestWordFrequency": 182.633,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "mariage",
+          "pos": "NOM",
+          "frequency": 182.633,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "goʃ",
+      "grade": "C",
+      "score": 322.972,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 276.455,
+      "bestWord": "gauche",
+      "bestWordFrequency": 55.291,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "gauche",
+          "pos": "NOM",
+          "frequency": 55.291,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "patʁɔ̃",
+      "grade": "C",
+      "score": 322.734,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 534.745,
+      "bestWord": "patron",
+      "bestWordFrequency": 106.949,
+      "bestCategory": "person",
+      "bestReason": "role is context-dependent",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "patron",
+          "pos": "NOM",
+          "frequency": 106.949,
+          "grade": "C",
+          "category": "person",
+          "reason": "role is context-dependent",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "flik",
+      "grade": "C",
+      "score": 322.233,
+      "syllableSpan": 1,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 371.535,
+      "bestWord": "flic",
+      "bestWordFrequency": 74.307,
+      "bestCategory": "person",
+      "bestReason": "colloquial and likely named policier",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 2,
+      "words": [
+        {
+          "word": "flic",
+          "pos": "NOM",
+          "frequency": 74.307,
+          "grade": "C",
+          "category": "person",
+          "reason": "colloquial and likely named policier",
+          "manualConcrete": true
+        },
+        {
+          "word": "flique",
+          "pos": "VER",
+          "frequency": 0.022,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "ljɛ̃",
+      "grade": "C",
+      "score": 321.796,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 238.186,
+      "bestWord": "lien",
+      "bestWordFrequency": 42.389,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "lien",
+          "pos": "NOM",
+          "frequency": 42.389,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "djabl",
+      "grade": "C",
+      "score": 320.78,
+      "syllableSpan": 1,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 342.435,
+      "bestWord": "diable",
+      "bestWordFrequency": 68.487,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "diable",
+          "pos": "NOM",
+          "frequency": 68.487,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "kolɛʁ",
+      "grade": "C",
+      "score": 320.506,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 472.055,
+      "bestWord": "colère",
+      "bestWordFrequency": 94.411,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 2,
+      "words": [
+        {
+          "word": "colère",
+          "pos": "NOM",
+          "frequency": 94.411,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        },
+        {
+          "word": "collèrent",
+          "pos": "VER",
+          "frequency": 0.003,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "pleziʁ",
+      "grade": "C",
+      "score": 319.933,
+      "syllableSpan": 2,
+      "unitCount": 6,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 902.64,
+      "bestWord": "plaisir",
+      "bestWordFrequency": 150.44,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "plaisir",
+          "pos": "NOM",
+          "frequency": 150.44,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "bjɛʁ",
+      "grade": "C",
+      "score": 319.849,
+      "syllableSpan": 1,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 325,
+      "bestWord": "bière",
+      "bestWordFrequency": 65,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 2,
+      "words": [
+        {
+          "word": "bière",
+          "pos": "NOM",
+          "frequency": 65,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        },
+        {
+          "word": "bierres",
+          "pos": "NOM",
+          "frequency": 0.041,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "ʁepɔ̃s",
+      "grade": "C",
+      "score": 319.495,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 446.09,
+      "bestWord": "réponse",
+      "bestWordFrequency": 89.218,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "réponse",
+          "pos": "NOM",
+          "frequency": 89.218,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "mɛjœʁ",
+      "grade": "C",
+      "score": 319.194,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 767.124,
+      "bestWord": "meilleur",
+      "bestWordFrequency": 66.12,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "meilleur",
+          "pos": "NOM",
+          "frequency": 66.12,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "sɛks",
+      "grade": "C",
+      "score": 318.997,
+      "syllableSpan": 1,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 309.81,
+      "bestWord": "sexe",
+      "bestWordFrequency": 61.962,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 2,
+      "words": [
+        {
+          "word": "sexe",
+          "pos": "NOM",
+          "frequency": 61.962,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        },
+        {
+          "word": "sexent",
+          "pos": "VER",
+          "frequency": 0.006,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "ɛspɛs",
+      "grade": "C",
+      "score": 318.898,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 431.41,
+      "bestWord": "espèce",
+      "bestWordFrequency": 86.282,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "espèce",
+          "pos": "NOM",
+          "frequency": 86.282,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "mɔd",
+      "grade": "C",
+      "score": 318.171,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 158.31,
+      "bestWord": "mode",
+      "bestWordFrequency": 38.304,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 2,
+      "words": [
+        {
+          "word": "mode",
+          "pos": "NOM",
+          "frequency": 38.304,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        },
+        {
+          "word": "mod",
+          "pos": "NOM",
+          "frequency": 0.085,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "fʁik",
+      "grade": "C",
+      "score": 318.015,
+      "syllableSpan": 1,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 293.165,
+      "bestWord": "fric",
+      "bestWordFrequency": 58.633,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 2,
+      "words": [
+        {
+          "word": "fric",
+          "pos": "NOM",
+          "frequency": 58.633,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        },
+        {
+          "word": "frique",
+          "pos": "NOM",
+          "frequency": 0.044,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "matʃ",
+      "grade": "C",
+      "score": 317.881,
+      "syllableSpan": 1,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 290.95,
+      "bestWord": "match",
+      "bestWordFrequency": 58.19,
+      "bestCategory": "scene",
+      "bestReason": "sports scene likely named football/jeu rather than match",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 2,
+      "words": [
+        {
+          "word": "match",
+          "pos": "NOM",
+          "frequency": 58.19,
+          "grade": "C",
+          "category": "scene",
+          "reason": "sports scene likely named football/jeu rather than match",
+          "manualConcrete": true
+        },
+        {
+          "word": "matche",
+          "pos": "VER",
+          "frequency": 0.06,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "dɑ̃ʒe",
+      "grade": "C",
+      "score": 317.634,
+      "syllableSpan": 2,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 401.9,
+      "bestWord": "danger",
+      "bestWordFrequency": 80.38,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "danger",
+          "pos": "NOM",
+          "frequency": 80.38,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "mwajɛ̃",
+      "grade": "C",
+      "score": 317.077,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 389.555,
+      "bestWord": "moyen",
+      "bestWordFrequency": 77.911,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "moyen",
+          "pos": "NOM",
+          "frequency": 77.911,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    }
+  ],
+  "top30Monosyllables": [
+    {
+      "ipa": "tuʁ",
+      "grade": "A",
+      "score": 566.991,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 22,
+      "usefulWeightedGain": 3452.428,
+      "bestWord": "tour",
+      "bestWordFrequency": 149.402,
+      "bestCategory": "place_object",
+      "bestReason": "tower is concrete, short and highly reusable",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "tour",
+          "pos": "NOM",
+          "frequency": 149.402,
+          "grade": "A",
+          "category": "place_object",
+          "reason": "tower is concrete, short and highly reusable",
+          "manualConcrete": true
+        },
+        {
+          "word": "tourd",
+          "pos": "NOM",
+          "frequency": 0.006,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        },
+        {
+          "word": "toure",
+          "pos": "VER",
+          "frequency": 0.006,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "byt",
+      "grade": "A",
+      "score": 546.921,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 386.155,
+      "bestWord": "but",
+      "bestWordFrequency": 77.231,
+      "bestCategory": "object_scene",
+      "bestReason": "football goal is clear and short",
+      "concreteCandidateCount": 2,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "but",
+          "pos": "NOM",
+          "frequency": 77.231,
+          "grade": "A",
+          "category": "object_scene",
+          "reason": "football goal is clear and short",
+          "manualConcrete": true
+        },
+        {
+          "word": "butte",
+          "pos": "NOM",
+          "frequency": 0.915,
+          "grade": "B",
+          "category": "nature",
+          "reason": "small hill; naming hill/mound competition",
+          "manualConcrete": true
+        },
+        {
+          "word": "butes",
+          "pos": "NOM",
+          "frequency": 0.003,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "ɔs",
+      "grade": "A",
+      "score": 527.431,
+      "syllableSpan": 1,
+      "unitCount": 2,
+      "usefulTargetCount": 6,
+      "usefulWeightedGain": 244.457,
+      "bestWord": "os",
+      "bestWordFrequency": 40.785,
+      "bestCategory": "body",
+      "bestReason": "short, direct body object",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "os",
+          "pos": "NOM",
+          "frequency": 40.785,
+          "grade": "A",
+          "category": "body",
+          "reason": "short, direct body object",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "mɔ̃stʁ",
+      "grade": "A",
+      "score": 515.04,
+      "syllableSpan": 1,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 247.945,
+      "bestWord": "monstre",
+      "bestWordFrequency": 49.589,
+      "bestCategory": "character",
+      "bestReason": "highly imageable generic character",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "monstre",
+          "pos": "NOM",
+          "frequency": 49.589,
+          "grade": "A",
+          "category": "character",
+          "reason": "highly imageable generic character",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "gut",
+      "grade": "A",
+      "score": 495.214,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 48.66,
+      "bestWord": "goutte",
+      "bestWordFrequency": 12.165,
+      "bestCategory": "nature_shape",
+      "bestReason": "simple droplet, short and direct",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "goutte",
+          "pos": "NOM",
+          "frequency": 12.165,
+          "grade": "A",
+          "category": "nature_shape",
+          "reason": "simple droplet, short and direct",
+          "manualConcrete": true
+        },
+        {
+          "word": "goute",
+          "pos": "NOM",
+          "frequency": 0.278,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        },
+        {
+          "word": "goutes",
+          "pos": "NOM",
+          "frequency": 0.063,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "bat",
+      "grade": "A",
+      "score": 487.408,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 25.311,
+      "bestWord": "batte",
+      "bestWordFrequency": 8.437,
+      "bestCategory": "object",
+      "bestReason": "bat object, short and direct",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "batte",
+          "pos": "NOM",
+          "frequency": 8.437,
+          "grade": "A",
+          "category": "object",
+          "reason": "bat object, short and direct",
+          "manualConcrete": true
+        },
+        {
+          "word": "bath",
+          "pos": "ADJ",
+          "frequency": 0.313,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        },
+        {
+          "word": "baht",
+          "pos": "NOM",
+          "frequency": 0.161,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "bʁik",
+      "grade": "A",
+      "score": 484.206,
+      "syllableSpan": 1,
+      "unitCount": 4,
+      "usefulTargetCount": 4,
+      "usefulWeightedGain": 50.636,
+      "bestWord": "brique",
+      "bestWordFrequency": 3.984,
+      "bestCategory": "object",
+      "bestReason": "very common, compact, visually distinctive",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "brique",
+          "pos": "NOM",
+          "frequency": 3.984,
+          "grade": "A",
+          "category": "object",
+          "reason": "very common, compact, visually distinctive",
+          "manualConcrete": true
+        },
+        {
+          "word": "brick",
+          "pos": "NOM",
+          "frequency": 7.149,
+          "grade": "C",
+          "category": "unreviewed_noun",
+          "reason": "noun with some frequency but no controlled concrete classification",
+          "manualConcrete": false
+        },
+        {
+          "word": "bric",
+          "pos": "NOM",
+          "frequency": 0.076,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "tʁap",
+      "grade": "A",
+      "score": 476.998,
+      "syllableSpan": 1,
+      "unitCount": 4,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 28.099,
+      "bestWord": "trappe",
+      "bestWordFrequency": 3.905,
+      "bestCategory": "object",
+      "bestReason": "distinct hatch/trapdoor object, compact",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "trappe",
+          "pos": "NOM",
+          "frequency": 3.905,
+          "grade": "A",
+          "category": "object",
+          "reason": "distinct hatch/trapdoor object, compact",
+          "manualConcrete": true
+        },
+        {
+          "word": "trap",
+          "pos": "NOM",
+          "frequency": 0.054,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        },
+        {
+          "word": "trape",
+          "pos": "NOM",
+          "frequency": 0.013,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "ʃɛf",
+      "grade": "B",
+      "score": 447.557,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 1235.262,
+      "bestWord": "chef",
+      "bestWordFrequency": 205.877,
+      "bestCategory": "person",
+      "bestReason": "recognizable only with role cues; chef/boss ambiguity",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 2,
+      "words": [
+        {
+          "word": "chef",
+          "pos": "NOM",
+          "frequency": 205.877,
+          "grade": "B",
+          "category": "person",
+          "reason": "recognizable only with role cues; chef/boss ambiguity",
+          "manualConcrete": true
+        },
+        {
+          "word": "cheffe",
+          "pos": "NOM",
+          "frequency": 0.158,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "film",
+      "grade": "B",
+      "score": 436.164,
+      "syllableSpan": 1,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 914.352,
+      "bestWord": "film",
+      "bestWordFrequency": 152.392,
+      "bestCategory": "object_media",
+      "bestReason": "film reel/screen route possible; movie/image naming ambiguity",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 2,
+      "words": [
+        {
+          "word": "film",
+          "pos": "NOM",
+          "frequency": 152.392,
+          "grade": "B",
+          "category": "object_media",
+          "reason": "film reel/screen route possible; movie/image naming ambiguity",
+          "manualConcrete": true
+        },
+        {
+          "word": "filme",
+          "pos": "VER",
+          "frequency": 5.307,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "pjɛs",
+      "grade": "B",
+      "score": 430.385,
+      "syllableSpan": 1,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 586.455,
+      "bestWord": "pièce",
+      "bestWordFrequency": 117.291,
+      "bestCategory": "object_place",
+      "bestReason": "coin/room/piece polysemy gives options but naming ambiguity",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "pièce",
+          "pos": "NOM",
+          "frequency": 117.291,
+          "grade": "B",
+          "category": "object_place",
+          "reason": "coin/room/piece polysemy gives options but naming ambiguity",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "klœb",
+      "grade": "B",
+      "score": 424.5,
+      "syllableSpan": 1,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 421.9,
+      "bestWord": "club",
+      "bestWordFrequency": 84.38,
+      "bestCategory": "object_place",
+      "bestReason": "club object or venue; exact naming needs control",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "club",
+          "pos": "NOM",
+          "frequency": 84.38,
+          "grade": "B",
+          "category": "object_place",
+          "reason": "club object or venue; exact naming needs control",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "gɔs",
+      "grade": "B",
+      "score": 421.775,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 258.435,
+      "bestWord": "gosse",
+      "bestWordFrequency": 51.687,
+      "bestCategory": "person",
+      "bestReason": "child is clear; lexical competition enfant/gamin",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 2,
+      "words": [
+        {
+          "word": "gosse",
+          "pos": "NOM",
+          "frequency": 51.687,
+          "grade": "B",
+          "category": "person",
+          "reason": "child is clear; lexical competition enfant/gamin",
+          "manualConcrete": true
+        },
+        {
+          "word": "gossent",
+          "pos": "NOM",
+          "frequency": 0.009,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "kit",
+      "grade": "B",
+      "score": 397.65,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 52.803,
+      "bestWord": "kit",
+      "bestWordFrequency": 11.231,
+      "bestCategory": "object",
+      "bestReason": "set of tools/items, exact naming depends on context",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "kit",
+          "pos": "NOM",
+          "frequency": 11.231,
+          "grade": "B",
+          "category": "object",
+          "reason": "set of tools/items, exact naming depends on context",
+          "manualConcrete": true
+        },
+        {
+          "word": "quitte",
+          "pos": "ADJ",
+          "frequency": 6.37,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        },
+        {
+          "word": "kite",
+          "pos": "NOM",
+          "frequency": 0.089,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "lyt",
+      "grade": "B",
+      "score": 371.492,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 74.584,
+      "bestWord": "luth",
+      "bestWordFrequency": 0.478,
+      "bestCategory": "object",
+      "bestReason": "instrument is concrete but rare",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "luth",
+          "pos": "NOM",
+          "frequency": 0.478,
+          "grade": "B",
+          "category": "object",
+          "reason": "instrument is concrete but rare",
+          "manualConcrete": true
+        },
+        {
+          "word": "lutte",
+          "pos": "NOM",
+          "frequency": 18.646,
+          "grade": "C",
+          "category": "action",
+          "reason": "action naming may vary combat/bagarre",
+          "manualConcrete": true
+        },
+        {
+          "word": "luts",
+          "pos": "NOM",
+          "frequency": 0.003,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "ta",
+      "grade": "C",
+      "score": 375.977,
+      "syllableSpan": 1,
+      "unitCount": 2,
+      "usefulTargetCount": 139,
+      "usefulWeightedGain": 10901.179,
+      "bestWord": "tas",
+      "bestWordFrequency": 61.411,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 2,
+      "words": [
+        {
+          "word": "tas",
+          "pos": "NOM",
+          "frequency": 61.411,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        },
+        {
+          "word": "ta",
+          "pos": "NOM",
+          "frequency": 0.022,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "pøʁ",
+      "grade": "C",
+      "score": 360.82,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 2585.658,
+      "bestWord": "peur",
+      "bestWordFrequency": 430.943,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "peur",
+          "pos": "NOM",
+          "frequency": 430.943,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "ʒɑ̃ʁ",
+      "grade": "C",
+      "score": 354.539,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 1822.746,
+      "bestWord": "genre",
+      "bestWordFrequency": 303.791,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "genre",
+          "pos": "NOM",
+          "frequency": 303.791,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        },
+        {
+          "word": "genré",
+          "pos": "NOM",
+          "frequency": 0.003,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        },
+        {
+          "word": "genrés",
+          "pos": "NOM",
+          "frequency": 0.003,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "mjø",
+      "grade": "C",
+      "score": 339.143,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 3450.228,
+      "bestWord": "mieux",
+      "bestWordFrequency": 60.418,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "mieux",
+          "pos": "NOM",
+          "frequency": 60.418,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "sœl",
+      "grade": "C",
+      "score": 337.538,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 2392.194,
+      "bestWord": "seul",
+      "bestWordFrequency": 63.522,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 2,
+      "words": [
+        {
+          "word": "seul",
+          "pos": "NOM",
+          "frequency": 63.522,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        },
+        {
+          "word": "seules",
+          "pos": "NOM",
+          "frequency": 0.911,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "vjø",
+      "grade": "C",
+      "score": 335.323,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 938.412,
+      "bestWord": "vieux",
+      "bestWordFrequency": 84.623,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "vieux",
+          "pos": "NOM",
+          "frequency": 84.623,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "tɑ̃t",
+      "grade": "C",
+      "score": 334.525,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 5,
+      "usefulWeightedGain": 467.86,
+      "bestWord": "tante",
+      "bestWordFrequency": 58.744,
+      "bestCategory": "person",
+      "bestReason": "kinship cannot be read from isolated portrait",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 2,
+      "words": [
+        {
+          "word": "tante",
+          "pos": "NOM",
+          "frequency": 58.744,
+          "grade": "C",
+          "category": "person",
+          "reason": "kinship cannot be read from isolated portrait",
+          "manualConcrete": true
+        },
+        {
+          "word": "tente",
+          "pos": "VER",
+          "frequency": 19.066,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "mœʁtʁ",
+      "grade": "C",
+      "score": 333.619,
+      "syllableSpan": 1,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 793.218,
+      "bestWord": "meurtre",
+      "bestWordFrequency": 132.203,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "meurtre",
+          "pos": "NOM",
+          "frequency": 132.203,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "ɔ̃kl",
+      "grade": "C",
+      "score": 333.56,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 500.76,
+      "bestWord": "oncle",
+      "bestWordFrequency": 100.152,
+      "bestCategory": "person",
+      "bestReason": "kinship cannot be read from isolated portrait",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "oncle",
+          "pos": "NOM",
+          "frequency": 100.152,
+          "grade": "C",
+          "category": "person",
+          "reason": "kinship cannot be read from isolated portrait",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "ɛst",
+      "grade": "C",
+      "score": 333.44,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 497.39,
+      "bestWord": "est",
+      "bestWordFrequency": 99.478,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "est",
+          "pos": "NOM",
+          "frequency": 99.478,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        },
+        {
+          "word": "este",
+          "pos": "NOM",
+          "frequency": 0.199,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        },
+        {
+          "word": "ests",
+          "pos": "NOM",
+          "frequency": 0.019,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "ɔʁdʁ",
+      "grade": "C",
+      "score": 328.145,
+      "syllableSpan": 1,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 517.405,
+      "bestWord": "ordre",
+      "bestWordFrequency": 103.481,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "ordre",
+          "pos": "NOM",
+          "frequency": 103.481,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "swɛ̃",
+      "grade": "C",
+      "score": 328.031,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 367.34,
+      "bestWord": "soin",
+      "bestWordFrequency": 73.468,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "soin",
+          "pos": "NOM",
+          "frequency": 73.468,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "ɔ̃t",
+      "grade": "C",
+      "score": 327.426,
+      "syllableSpan": 1,
+      "unitCount": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 355.08,
+      "bestWord": "honte",
+      "bestWordFrequency": 71.016,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "honte",
+          "pos": "NOM",
+          "frequency": 71.016,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "kʁim",
+      "grade": "C",
+      "score": 327.325,
+      "syllableSpan": 1,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 494.21,
+      "bestWord": "crime",
+      "bestWordFrequency": 98.842,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "crime",
+          "pos": "NOM",
+          "frequency": 98.842,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "m",
+      "grade": "C",
+      "score": 324.777,
+      "syllableSpan": 1,
+      "unitCount": 1,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 305.995,
+      "bestWord": "m",
+      "bestWordFrequency": 61.199,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "m",
+          "pos": "NOM",
+          "frequency": 61.199,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    }
+  ],
+  "top30Bisyllables": [
+    {
+      "ipa": "mamɑ̃",
+      "grade": "A",
+      "score": 550.402,
+      "syllableSpan": 2,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 2823.492,
+      "bestWord": "maman",
+      "bestWordFrequency": 470.582,
+      "bestCategory": "person",
+      "bestReason": "very common generic person; visual naming plausible",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "maman",
+          "pos": "NOM",
+          "frequency": 470.582,
+          "grade": "A",
+          "category": "person",
+          "reason": "very common generic person; visual naming plausible",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "byʁo",
+      "grade": "A",
+      "score": 535.692,
+      "syllableSpan": 2,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 1244.604,
+      "bestWord": "bureau",
+      "bestWordFrequency": 207.434,
+      "bestCategory": "object_place",
+      "bestReason": "common desk/office homonym; concrete and frequent",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "bureau",
+          "pos": "NOM",
+          "frequency": 207.434,
+          "grade": "A",
+          "category": "object_place",
+          "reason": "common desk/office homonym; concrete and frequent",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "pʁizɔ̃",
+      "grade": "A",
+      "score": 531.464,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 983.184,
+      "bestWord": "prison",
+      "bestWordFrequency": 163.864,
+      "bestCategory": "place",
+      "bestReason": "distinctive place, common lexical item",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 2,
+      "words": [
+        {
+          "word": "prison",
+          "pos": "NOM",
+          "frequency": 163.864,
+          "grade": "A",
+          "category": "place",
+          "reason": "distinctive place, common lexical item",
+          "manualConcrete": true
+        },
+        {
+          "word": "prisons",
+          "pos": "VER",
+          "frequency": 0.013,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "vizaʒ",
+      "grade": "A",
+      "score": 526.633,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 750.72,
+      "bestWord": "visage",
+      "bestWordFrequency": 125.12,
+      "bestCategory": "body",
+      "bestReason": "high-frequency body concept, visually direct",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "visage",
+          "pos": "NOM",
+          "frequency": 125.12,
+          "grade": "A",
+          "category": "body",
+          "reason": "high-frequency body concept, visually direct",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "sɛʁvo",
+      "grade": "A",
+      "score": 518.396,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 360.454,
+      "bestWord": "cerveau",
+      "bestWordFrequency": 71.272,
+      "bestCategory": "body",
+      "bestReason": "anatomically direct, common",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "cerveau",
+          "pos": "NOM",
+          "frequency": 71.272,
+          "grade": "A",
+          "category": "body",
+          "reason": "anatomically direct, common",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "dosje",
+      "grade": "A",
+      "score": 516.854,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 384.715,
+      "bestWord": "dossier",
+      "bestWordFrequency": 76.943,
+      "bestCategory": "object",
+      "bestReason": "folder/file object is common and drawable without text",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "dossier",
+          "pos": "NOM",
+          "frequency": 76.943,
+          "grade": "A",
+          "category": "object",
+          "reason": "folder/file object is common and drawable without text",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "vɛso",
+      "grade": "A",
+      "score": 516.24,
+      "syllableSpan": 2,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 371.675,
+      "bestWord": "vaisseau",
+      "bestWordFrequency": 74.335,
+      "bestCategory": "vehicle",
+      "bestReason": "spaceship/ship route is concrete and visually strong",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "vaisseau",
+          "pos": "NOM",
+          "frequency": 74.335,
+          "grade": "A",
+          "category": "vehicle",
+          "reason": "spaceship/ship route is concrete and visually strong",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "vilaʒ",
+      "grade": "A",
+      "score": 510.762,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 273.195,
+      "bestWord": "village",
+      "bestWordFrequency": 54.639,
+      "bestCategory": "place",
+      "bestReason": "concrete place with clear compact scene",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "village",
+          "pos": "NOM",
+          "frequency": 54.639,
+          "grade": "A",
+          "category": "place",
+          "reason": "concrete place with clear compact scene",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "papje",
+      "grade": "A",
+      "score": 509.124,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 249.115,
+      "bestWord": "papier",
+      "bestWordFrequency": 49.823,
+      "bestCategory": "object",
+      "bestReason": "very common object/material; sheet route is simple",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "papier",
+          "pos": "NOM",
+          "frequency": 49.823,
+          "grade": "A",
+          "category": "object",
+          "reason": "very common object/material; sheet route is simple",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "ʒuʁnal",
+      "grade": "A",
+      "score": 504.529,
+      "syllableSpan": 2,
+      "unitCount": 6,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 337.64,
+      "bestWord": "journal",
+      "bestWordFrequency": 67.528,
+      "bestCategory": "object",
+      "bestReason": "newspaper object, common and compact",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "journal",
+          "pos": "NOM",
+          "frequency": 67.528,
+          "grade": "A",
+          "category": "object",
+          "reason": "newspaper object, common and compact",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "planɛt",
+      "grade": "A",
+      "score": 501.491,
+      "syllableSpan": 2,
+      "unitCount": 6,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 284.635,
+      "bestWord": "planète",
+      "bestWordFrequency": 56.927,
+      "bestCategory": "nature",
+      "bestReason": "clear astronomical object, common",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 2,
+      "words": [
+        {
+          "word": "planète",
+          "pos": "NOM",
+          "frequency": 56.927,
+          "grade": "A",
+          "category": "nature",
+          "reason": "clear astronomical object, common",
+          "manualConcrete": true
+        },
+        {
+          "word": "planette",
+          "pos": "NOM",
+          "frequency": 0.019,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "batɔ̃",
+      "grade": "A",
+      "score": 483.726,
+      "syllableSpan": 2,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 41.535,
+      "bestWord": "bâton",
+      "bestWordFrequency": 13.845,
+      "bestCategory": "object",
+      "bestReason": "very common, short, direct",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "bâton",
+          "pos": "NOM",
+          "frequency": 13.845,
+          "grade": "A",
+          "category": "object",
+          "reason": "very common, short, direct",
+          "manualConcrete": true
+        },
+        {
+          "word": "battons",
+          "pos": "VER",
+          "frequency": 3.278,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        },
+        {
+          "word": "bâtons",
+          "pos": "VER",
+          "frequency": 0.035,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "filɛ",
+      "grade": "A",
+      "score": 475.493,
+      "syllableSpan": 2,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 25.443,
+      "bestWord": "filet",
+      "bestWordFrequency": 8.481,
+      "bestCategory": "object",
+      "bestReason": "net object, common and visually distinctive",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "filet",
+          "pos": "NOM",
+          "frequency": 8.481,
+          "grade": "A",
+          "category": "object",
+          "reason": "net object, common and visually distinctive",
+          "manualConcrete": true
+        },
+        {
+          "word": "filait",
+          "pos": "VER",
+          "frequency": 1.013,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        },
+        {
+          "word": "feelais",
+          "pos": "NOM",
+          "frequency": 0.009,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "məsjø",
+      "grade": "B",
+      "score": 452.391,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 3153.99,
+      "bestWord": "monsieur",
+      "bestWordFrequency": 525.665,
+      "bestCategory": "person",
+      "bestReason": "common but likely named homme/monsieur interchangeably",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "monsieur",
+          "pos": "NOM",
+          "frequency": 525.665,
+          "grade": "B",
+          "category": "person",
+          "reason": "common but likely named homme/monsieur interchangeably",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "famij",
+      "grade": "B",
+      "score": 448.021,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 2473.158,
+      "bestWord": "famille",
+      "bestWordFrequency": 412.193,
+      "bestCategory": "person_scene",
+      "bestReason": "common simple group scene, but composition varies",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "famille",
+          "pos": "NOM",
+          "frequency": 412.193,
+          "grade": "B",
+          "category": "person_scene",
+          "reason": "common simple group scene, but composition varies",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "gamɛ̃",
+      "grade": "B",
+      "score": 413.031,
+      "syllableSpan": 2,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 310.395,
+      "bestWord": "gamin",
+      "bestWordFrequency": 62.079,
+      "bestCategory": "person",
+      "bestReason": "child is drawable; lexical choice enfant/gamin remains a risk",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "gamin",
+          "pos": "NOM",
+          "frequency": 62.079,
+          "grade": "B",
+          "category": "person",
+          "reason": "child is drawable; lexical choice enfant/gamin remains a risk",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "siɲal",
+      "grade": "B",
+      "score": 406.54,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 215.315,
+      "bestWord": "signal",
+      "bestWordFrequency": 43.063,
+      "bestCategory": "object_symbol",
+      "bestReason": "traffic signal route plausible; naming competition feu/panneau",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 2,
+      "words": [
+        {
+          "word": "signal",
+          "pos": "NOM",
+          "frequency": 43.063,
+          "grade": "B",
+          "category": "object_symbol",
+          "reason": "traffic signal route plausible; naming competition feu/panneau",
+          "manualConcrete": true
+        },
+        {
+          "word": "signale",
+          "pos": "VER",
+          "frequency": 5.367,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "ʃeʁif",
+      "grade": "B",
+      "score": 406.515,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 215.015,
+      "bestWord": "shérif",
+      "bestWordFrequency": 43.003,
+      "bestCategory": "person",
+      "bestReason": "badge/hat route possible without text, but western cues needed",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "shérif",
+          "pos": "NOM",
+          "frequency": 43.003,
+          "grade": "B",
+          "category": "person",
+          "reason": "badge/hat route possible without text, but western cues needed",
+          "manualConcrete": true
+        },
+        {
+          "word": "shériff",
+          "pos": "NOM",
+          "frequency": 0.674,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        },
+        {
+          "word": "chérif",
+          "pos": "NOM",
+          "frequency": 0.294,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "kɑ̃paɲ",
+      "grade": "B",
+      "score": 406.028,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 209.175,
+      "bestWord": "campagne",
+      "bestWordFrequency": 41.835,
+      "bestCategory": "place_nature",
+      "bestReason": "landscape is clear but may be named champ/paysage",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "campagne",
+          "pos": "NOM",
+          "frequency": 41.835,
+          "grade": "B",
+          "category": "place_nature",
+          "reason": "landscape is clear but may be named champ/paysage",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "gʁɑ̃mɛʁ",
+      "grade": "B",
+      "score": 402.18,
+      "syllableSpan": 2,
+      "unitCount": 6,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 295.9,
+      "bestWord": "grand-mère",
+      "bestWordFrequency": 59.18,
+      "bestCategory": "person",
+      "bestReason": "common but kinship naming requires context",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "grand-mère",
+          "pos": "NOM",
+          "frequency": 59.18,
+          "grade": "B",
+          "category": "person",
+          "reason": "common but kinship naming requires context",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "gʁɑ̃pɛʁ",
+      "grade": "B",
+      "score": 399.825,
+      "syllableSpan": 2,
+      "unitCount": 6,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 259.16,
+      "bestWord": "grand-père",
+      "bestWordFrequency": 51.832,
+      "bestCategory": "person",
+      "bestReason": "common but kinship naming requires context",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "grand-père",
+          "pos": "NOM",
+          "frequency": 51.832,
+          "grade": "B",
+          "category": "person",
+          "reason": "common but kinship naming requires context",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "desɛ̃",
+      "grade": "B",
+      "score": 390.122,
+      "syllableSpan": 2,
+      "unitCount": 4,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 64.858,
+      "bestWord": "dessin",
+      "bestWordFrequency": 15.047,
+      "bestCategory": "object",
+      "bestReason": "requires a drawing-within-drawing; target may be image",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 2,
+      "words": [
+        {
+          "word": "dessin",
+          "pos": "NOM",
+          "frequency": 15.047,
+          "grade": "B",
+          "category": "object",
+          "reason": "requires a drawing-within-drawing; target may be image",
+          "manualConcrete": true
+        },
+        {
+          "word": "dessein",
+          "pos": "NOM",
+          "frequency": 2.335,
+          "grade": "C",
+          "category": "unreviewed_noun",
+          "reason": "noun with some frequency but no controlled concrete classification",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "aʁa",
+      "grade": "B",
+      "score": 381.043,
+      "syllableSpan": 2,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 54.14,
+      "bestWord": "ara",
+      "bestWordFrequency": 0.411,
+      "bestCategory": "animal",
+      "bestReason": "parrot species, visually strong but exact word less common",
+      "concreteCandidateCount": 2,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "ara",
+          "pos": "NOM",
+          "frequency": 0.411,
+          "grade": "B",
+          "category": "animal",
+          "reason": "parrot species, visually strong but exact word less common",
+          "manualConcrete": true
+        },
+        {
+          "word": "haras",
+          "pos": "NOM",
+          "frequency": 0.329,
+          "grade": "B",
+          "category": "place",
+          "reason": "horse-breeding place; requires multiple cues",
+          "manualConcrete": true
+        },
+        {
+          "word": "hara",
+          "pos": "NOM",
+          "frequency": 0.054,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "kaʃɛt",
+      "grade": "B",
+      "score": 377.683,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 29.031,
+      "bestWord": "cachette",
+      "bestWordFrequency": 9.677,
+      "bestCategory": "place_scene",
+      "bestReason": "simple hiding place scene but naming may vary",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "cachette",
+          "pos": "NOM",
+          "frequency": 9.677,
+          "grade": "B",
+          "category": "place_scene",
+          "reason": "simple hiding place scene but naming may vary",
+          "manualConcrete": true
+        },
+        {
+          "word": "cachète",
+          "pos": "NOM",
+          "frequency": 0.025,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        },
+        {
+          "word": "cachètent",
+          "pos": "NOM",
+          "frequency": 0.003,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "maki",
+      "grade": "B",
+      "score": 364.652,
+      "syllableSpan": 2,
+      "unitCount": 4,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 41.034,
+      "bestWord": "maki",
+      "bestWordFrequency": 1.405,
+      "bestCategory": "food",
+      "bestReason": "sushi item is concrete and compact",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "maki",
+          "pos": "NOM",
+          "frequency": 1.405,
+          "grade": "B",
+          "category": "food",
+          "reason": "sushi item is concrete and compact",
+          "manualConcrete": true
+        },
+        {
+          "word": "maquis",
+          "pos": "NOM",
+          "frequency": 1.367,
+          "grade": "C",
+          "category": "nature_place",
+          "reason": "vegetation/Resistance polysemy and naming risk",
+          "manualConcrete": true
+        },
+        {
+          "word": "maqui",
+          "pos": "NOM",
+          "frequency": 0.003,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "bəzwɛ̃",
+      "grade": "C",
+      "score": 364.91,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 6327.228,
+      "bestWord": "besoin",
+      "bestWordFrequency": 1054.538,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "besoin",
+          "pos": "NOM",
+          "frequency": 1054.538,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "momɑ̃",
+      "grade": "C",
+      "score": 351.052,
+      "syllableSpan": 2,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 2927.466,
+      "bestWord": "moment",
+      "bestWordFrequency": 487.911,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "moment",
+          "pos": "NOM",
+          "frequency": 487.911,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        },
+        {
+          "word": "môman",
+          "pos": "NOM",
+          "frequency": 0.168,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        },
+        {
+          "word": "moman",
+          "pos": "NOM",
+          "frequency": 0.066,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "bɔ̃ʒuʁ",
+      "grade": "C",
+      "score": 350.845,
+      "syllableSpan": 2,
+      "unitCount": 5,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 2893.992,
+      "bestWord": "bonjour",
+      "bestWordFrequency": 482.332,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "bonjour",
+          "pos": "NOM",
+          "frequency": 482.332,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "pytɛ̃",
+      "grade": "C",
+      "score": 340.868,
+      "syllableSpan": 2,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 1660.728,
+      "bestWord": "putain",
+      "bestWordFrequency": 276.788,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 1,
+      "words": [
+        {
+          "word": "putain",
+          "pos": "NOM",
+          "frequency": 276.788,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        }
+      ]
+    },
+    {
+      "ipa": "saly",
+      "grade": "C",
+      "score": 340.772,
+      "syllableSpan": 2,
+      "unitCount": 4,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 1651.86,
+      "bestWord": "salut",
+      "bestWordFrequency": 275.31,
+      "bestCategory": "unreviewed_frequent_noun",
+      "bestReason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 2,
+      "words": [
+        {
+          "word": "salut",
+          "pos": "NOM",
+          "frequency": 275.31,
+          "grade": "C",
+          "category": "unreviewed_frequent_noun",
+          "reason": "frequent noun missed by explicit concrete lexicon; semantic/imageability review still needed",
+          "manualConcrete": false
+        },
+        {
+          "word": "salue",
+          "pos": "VER",
+          "frequency": 9.636,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ]
+    }
+  ],
+  "multiRepresentationCases": [
+    {
+      "ipa": "byt",
+      "grade": "A",
+      "score": 546.921,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 386.155,
+      "bestWord": "but",
+      "bestWordFrequency": 77.231,
+      "bestCategory": "object_scene",
+      "bestReason": "football goal is clear and short",
+      "concreteCandidateCount": 2,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "but",
+          "pos": "NOM",
+          "frequency": 77.231,
+          "grade": "A",
+          "category": "object_scene",
+          "reason": "football goal is clear and short",
+          "manualConcrete": true
+        },
+        {
+          "word": "butte",
+          "pos": "NOM",
+          "frequency": 0.915,
+          "grade": "B",
+          "category": "nature",
+          "reason": "small hill; naming hill/mound competition",
+          "manualConcrete": true
+        },
+        {
+          "word": "butes",
+          "pos": "NOM",
+          "frequency": 0.003,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ],
+      "plausibleWords": [
+        {
+          "word": "but",
+          "pos": "NOM",
+          "frequency": 77.231,
+          "grade": "A",
+          "category": "object_scene",
+          "reason": "football goal is clear and short",
+          "manualConcrete": true
+        },
+        {
+          "word": "butte",
+          "pos": "NOM",
+          "frequency": 0.915,
+          "grade": "B",
+          "category": "nature",
+          "reason": "small hill; naming hill/mound competition",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "aʁa",
+      "grade": "B",
+      "score": 381.043,
+      "syllableSpan": 2,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 54.14,
+      "bestWord": "ara",
+      "bestWordFrequency": 0.411,
+      "bestCategory": "animal",
+      "bestReason": "parrot species, visually strong but exact word less common",
+      "concreteCandidateCount": 2,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "ara",
+          "pos": "NOM",
+          "frequency": 0.411,
+          "grade": "B",
+          "category": "animal",
+          "reason": "parrot species, visually strong but exact word less common",
+          "manualConcrete": true
+        },
+        {
+          "word": "haras",
+          "pos": "NOM",
+          "frequency": 0.329,
+          "grade": "B",
+          "category": "place",
+          "reason": "horse-breeding place; requires multiple cues",
+          "manualConcrete": true
+        },
+        {
+          "word": "hara",
+          "pos": "NOM",
+          "frequency": 0.054,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ],
+      "plausibleWords": [
+        {
+          "word": "ara",
+          "pos": "NOM",
+          "frequency": 0.411,
+          "grade": "B",
+          "category": "animal",
+          "reason": "parrot species, visually strong but exact word less common",
+          "manualConcrete": true
+        },
+        {
+          "word": "haras",
+          "pos": "NOM",
+          "frequency": 0.329,
+          "grade": "B",
+          "category": "place",
+          "reason": "horse-breeding place; requires multiple cues",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "lyt",
+      "grade": "B",
+      "score": 371.492,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 74.584,
+      "bestWord": "luth",
+      "bestWordFrequency": 0.478,
+      "bestCategory": "object",
+      "bestReason": "instrument is concrete but rare",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "luth",
+          "pos": "NOM",
+          "frequency": 0.478,
+          "grade": "B",
+          "category": "object",
+          "reason": "instrument is concrete but rare",
+          "manualConcrete": true
+        },
+        {
+          "word": "lutte",
+          "pos": "NOM",
+          "frequency": 18.646,
+          "grade": "C",
+          "category": "action",
+          "reason": "action naming may vary combat/bagarre",
+          "manualConcrete": true
+        },
+        {
+          "word": "luts",
+          "pos": "NOM",
+          "frequency": 0.003,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ],
+      "plausibleWords": [
+        {
+          "word": "luth",
+          "pos": "NOM",
+          "frequency": 0.478,
+          "grade": "B",
+          "category": "object",
+          "reason": "instrument is concrete but rare",
+          "manualConcrete": true
+        },
+        {
+          "word": "lutte",
+          "pos": "NOM",
+          "frequency": 18.646,
+          "grade": "C",
+          "category": "action",
+          "reason": "action naming may vary combat/bagarre",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "maki",
+      "grade": "B",
+      "score": 364.652,
+      "syllableSpan": 2,
+      "unitCount": 4,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 41.034,
+      "bestWord": "maki",
+      "bestWordFrequency": 1.405,
+      "bestCategory": "food",
+      "bestReason": "sushi item is concrete and compact",
+      "concreteCandidateCount": 1,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "maki",
+          "pos": "NOM",
+          "frequency": 1.405,
+          "grade": "B",
+          "category": "food",
+          "reason": "sushi item is concrete and compact",
+          "manualConcrete": true
+        },
+        {
+          "word": "maquis",
+          "pos": "NOM",
+          "frequency": 1.367,
+          "grade": "C",
+          "category": "nature_place",
+          "reason": "vegetation/Resistance polysemy and naming risk",
+          "manualConcrete": true
+        },
+        {
+          "word": "maqui",
+          "pos": "NOM",
+          "frequency": 0.003,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ],
+      "plausibleWords": [
+        {
+          "word": "maki",
+          "pos": "NOM",
+          "frequency": 1.405,
+          "grade": "B",
+          "category": "food",
+          "reason": "sushi item is concrete and compact",
+          "manualConcrete": true
+        },
+        {
+          "word": "maquis",
+          "pos": "NOM",
+          "frequency": 1.367,
+          "grade": "C",
+          "category": "nature_place",
+          "reason": "vegetation/Resistance polysemy and naming risk",
+          "manualConcrete": true
+        }
+      ]
+    },
+    {
+      "ipa": "pan",
+      "grade": "C",
+      "score": 301.193,
+      "syllableSpan": 1,
+      "unitCount": 3,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 69,
+      "bestWord": "panne",
+      "bestWordFrequency": 17.25,
+      "bestCategory": "scene_object",
+      "bestReason": "breakdown scene likely named voiture cassée/problème",
+      "concreteCandidateCount": 0,
+      "exactWordCount": 3,
+      "words": [
+        {
+          "word": "panne",
+          "pos": "NOM",
+          "frequency": 17.25,
+          "grade": "C",
+          "category": "scene_object",
+          "reason": "breakdown scene likely named voiture cassée/problème",
+          "manualConcrete": true
+        },
+        {
+          "word": "paonne",
+          "pos": "NOM",
+          "frequency": 0.006,
+          "grade": "C",
+          "category": "animal",
+          "reason": "very rare lexical target",
+          "manualConcrete": true
+        },
+        {
+          "word": "pane",
+          "pos": "VER",
+          "frequency": 0.063,
+          "grade": "D",
+          "category": "low_visual_evidence",
+          "reason": "no strong concrete/imageable evidence in this audit",
+          "manualConcrete": false
+        }
+      ],
+      "plausibleWords": [
+        {
+          "word": "panne",
+          "pos": "NOM",
+          "frequency": 17.25,
+          "grade": "C",
+          "category": "scene_object",
+          "reason": "breakdown scene likely named voiture cassée/problème",
+          "manualConcrete": true
+        },
+        {
+          "word": "paonne",
+          "pos": "NOM",
+          "frequency": 0.006,
+          "grade": "C",
+          "category": "animal",
+          "reason": "very rare lexical target",
+          "manualConcrete": true
+        }
+      ]
+    }
+  ],
+  "methodRecommendation": {
+    "summary": "Do not launch a broad blind Wave 6. First expand the semantic/imageability lexicon from audited false negatives, then select a small word-first cohort dominated by A and upper-B candidates, with a dedicated multi-homophone lane.",
+    "suggestedCohort": "60–100 sounds maximum, split into: 35–50 A candidates, 15–30 B candidates, plus up to 20 multi-representation IPA when at least two distinct concrete words survive naming-control review.",
+    "stopRule": "Stop if fewer than 40 A/B sounds survive human editorial review or if acceptance falls below roughly 50%; return to semantic discovery rather than consuming C/D reservoir."
+  }
+}

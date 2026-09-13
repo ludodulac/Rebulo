@@ -1,0 +1,46 @@
+name: Structured sense source prototype
+
+on:
+  push:
+    branches:
+      - analysis/structured-sense-source-prototype
+    paths:
+      - scripts/select-independent-sense-gold.mjs
+      - scripts/build-structured-sense-prototype.mjs
+      - tests/structured-sense-source-prototype.test.mjs
+      - .github/workflows/structured-sense-prototype.yml
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: analysis/structured-sense-source-prototype
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Freeze independent gold selection
+        run: node scripts/select-independent-sense-gold.mjs
+      - name: Build structured source prototype
+        if: ${{ hashFiles('scripts/build-structured-sense-prototype.mjs') != '' }}
+        run: node scripts/build-structured-sense-prototype.mjs
+      - name: Validate
+        if: ${{ hashFiles('tests/structured-sense-source-prototype.test.mjs') != '' }}
+        run: node tests/structured-sense-source-prototype.test.mjs
+      - name: Commit generated artifacts
+        run: |
+          git config user.name "rebulo-analysis-bot"
+          git config user.email "actions@users.noreply.github.com"
+          for f in data/independent-sense-gold-150.json data/structured-sense-*.json data/structured-sense-*.jsonl; do
+            [ -e "$f" ] && git add -f "$f"
+          done
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Materialize structured sense source prototype"
+            git push origin HEAD:analysis/structured-sense-source-prototype
+          fi

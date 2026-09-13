@@ -1,0 +1,43 @@
+name: Productive bank wave 4
+
+on:
+  push:
+    branches: [productive-bank-wave4-imageability]
+    paths:
+      - 'scripts/build-rebus-productive-bank-wave4.mjs'
+      - 'tests/rebus-productive-bank-wave4.test.mjs'
+      - '.github/workflows/productive-bank-wave4-materialize.yml'
+  pull_request:
+    paths:
+      - 'data/rebus-productive-bank-wave4*.json'
+      - 'scripts/build-rebus-productive-bank-wave4*.mjs'
+      - 'tests/rebus-productive-bank-wave4.test.mjs'
+      - 'data/rebus-sound-visual-curation-wave10.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  wave4:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || 'productive-bank-wave4-imageability' }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build wave 4
+        run: node scripts/build-rebus-productive-bank-wave4.mjs
+      - name: Validate wave 4
+        run: node tests/rebus-productive-bank-wave4.test.mjs
+      - name: Commit generated outputs on branch
+        if: github.event_name != 'pull_request'
+        run: |
+          git config user.name 'rebulo-analysis-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/rebus-productive-bank-wave4.json data/rebus-productive-bank-wave4-benchmarks.json data/rebus-productive-bank-wave4-metrics.json docs/REBUS_PRODUCTIVE_BANK_WAVE4_REPORT.md
+          git commit -m 'Materialize productive bank wave 4' || exit 0
+          git push origin HEAD:productive-bank-wave4-imageability

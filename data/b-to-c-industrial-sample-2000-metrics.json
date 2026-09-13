@@ -1,0 +1,313 @@
+{
+  "schemaVersion": "1.0",
+  "status": "analysis_only",
+  "sourceMainSha": "4d8655f3aae5e8b91f4de51afe32cbb53acd52c7",
+  "selectedRelations": 2000,
+  "examinedRelations": 2000,
+  "conceptualUnits": 2000,
+  "distinctIpaCount": 1567,
+  "distribution": {
+    "A": 7,
+    "B": 675,
+    "C": 818,
+    "D": 500
+  },
+  "AB": 682,
+  "ABPercent": 34.1,
+  "imageableCount": 1298,
+  "imageablePercent": 64.9,
+  "ABMonosyllable": 378,
+  "ABBisyllable": 304,
+  "ABShortIpa": 488,
+  "multiSeriousConceptSoundCount": 144,
+  "multiSeriousConceptSounds": [
+    "ʁwa",
+    "kɑ̃",
+    "ʃɑ̃",
+    "fɛʁ",
+    "kote",
+    "fas",
+    "kafe",
+    "site",
+    "ɑ̃tʁe",
+    "demɔ̃",
+    "pɥi",
+    "plɛ",
+    "ʃaʁ",
+    "faʁ",
+    "lis",
+    "kɔ̃te",
+    "ɛʁ",
+    "vis",
+    "kɔk",
+    "maʁe",
+    "wa",
+    "kyʁi",
+    "ʁɛn",
+    "sede",
+    "liʁ",
+    "sɛt",
+    "i",
+    "ku",
+    "ɛs",
+    "ka",
+    "fe",
+    "mɛtʁ",
+    "ky",
+    "vo",
+    "bɑ̃",
+    "ʁɔ̃",
+    "ʁɛ̃",
+    "tɑ̃",
+    "vi",
+    "ʒɑ̃",
+    "ga",
+    "ɛf",
+    "ɔ̃bʁ",
+    "pwɛ̃",
+    "sɑ̃s",
+    "aʁ",
+    "go",
+    "pɔʁ",
+    "iks",
+    "œʁ",
+    "maʁi",
+    "fɛ̃",
+    "plɑ̃",
+    "kɔ̃t",
+    "sɛn",
+    "pɛ",
+    "tɔʁ",
+    "ja",
+    "ʃo",
+    "bi",
+    "pu",
+    "sɛ̃",
+    "ʁɑ̃",
+    "pʁo",
+    "lo",
+    "su",
+    "tik",
+    "tɛ̃",
+    "akɔʁ",
+    "mɛk",
+    "ɑ̃fɑ̃",
+    "ɛd",
+    "bulo",
+    "ʃɛf",
+    "pɛn",
+    "swaʁe",
+    "kaʁt",
+    "siʁka",
+    "kwɛ̃",
+    "bɔʁ"
+  ],
+  "lowScoreThreshold": 7,
+  "rescue": {
+    "selected": 260,
+    "seriousRecovered": 0,
+    "seriousRecoveredPercent": 0,
+    "categories": []
+  },
+  "byStratum": {
+    "legacy_v1_v5": {
+      "quota": 160,
+      "selected": 136,
+      "examined": 136,
+      "A": 0,
+      "B": 70,
+      "C": 56,
+      "D": 10,
+      "AB": 70,
+      "ABPercent": 51.5
+    },
+    "concrete_priority": {
+      "quota": 480,
+      "selected": 480,
+      "examined": 480,
+      "A": 7,
+      "B": 373,
+      "C": 100,
+      "D": 0,
+      "AB": 380,
+      "ABPercent": 79.2
+    },
+    "multi_homophone": {
+      "quota": 320,
+      "selected": 320,
+      "examined": 320,
+      "A": 0,
+      "B": 47,
+      "C": 265,
+      "D": 8,
+      "AB": 47,
+      "ABPercent": 14.7
+    },
+    "two_syllable": {
+      "quota": 260,
+      "selected": 260,
+      "examined": 260,
+      "A": 0,
+      "B": 157,
+      "C": 77,
+      "D": 26,
+      "AB": 157,
+      "ABPercent": 60.4
+    },
+    "low_frequency_concrete": {
+      "quota": 180,
+      "selected": 180,
+      "examined": 180,
+      "A": 0,
+      "B": 24,
+      "C": 156,
+      "D": 0,
+      "AB": 24,
+      "ABPercent": 13.3
+    },
+    "ambiguous_control": {
+      "quota": 180,
+      "selected": 180,
+      "examined": 180,
+      "A": 0,
+      "B": 0,
+      "C": 114,
+      "D": 66,
+      "AB": 0,
+      "ABPercent": 0
+    },
+    "abstract_control": {
+      "quota": 160,
+      "selected": 160,
+      "examined": 160,
+      "A": 0,
+      "B": 3,
+      "C": 3,
+      "D": 154,
+      "AB": 3,
+      "ABPercent": 1.9
+    },
+    "low_score_rescue_random": {
+      "quota": 260,
+      "selected": 260,
+      "examined": 260,
+      "A": 0,
+      "B": 0,
+      "C": 28,
+      "D": 232,
+      "AB": 0,
+      "ABPercent": 0
+    },
+    "deterministic_fill": {
+      "quota": 24,
+      "selected": 24,
+      "examined": 24,
+      "A": 0,
+      "B": 1,
+      "C": 19,
+      "D": 4,
+      "AB": 1,
+      "ABPercent": 4.2
+    }
+  },
+  "rejectCauses": {
+    "alternative_names": 117,
+    "variant_or_inflection": 467,
+    "low_expected_nameability": 565,
+    "low_drawability": 288,
+    "aggregate_weakness": 398,
+    "abstract_concept": 97
+  },
+  "categoryStats": {
+    "nom_concret_à_vérifier": {
+      "n": 1221,
+      "AB": 584,
+      "ABPercent": 47.8
+    },
+    "personne": {
+      "n": 13,
+      "AB": 13,
+      "ABPercent": 100
+    },
+    "lieu": {
+      "n": 16,
+      "AB": 15,
+      "ABPercent": 93.8
+    },
+    "corps": {
+      "n": 9,
+      "AB": 9,
+      "ABPercent": 100
+    },
+    "aliment": {
+      "n": 11,
+      "AB": 10,
+      "ABPercent": 90.9
+    },
+    "objet": {
+      "n": 29,
+      "AB": 26,
+      "ABPercent": 89.7
+    },
+    "nature": {
+      "n": 9,
+      "AB": 8,
+      "ABPercent": 88.9
+    },
+    "animal": {
+      "n": 7,
+      "AB": 5,
+      "ABPercent": 71.4
+    },
+    "outil": {
+      "n": 1,
+      "AB": 1,
+      "ABPercent": 100
+    },
+    "action": {
+      "n": 291,
+      "AB": 0,
+      "ABPercent": 0
+    },
+    "vêtement": {
+      "n": 3,
+      "AB": 3,
+      "ABPercent": 100
+    },
+    "fonction_ou_qualité": {
+      "n": 202,
+      "AB": 6,
+      "ABPercent": 3
+    },
+    "personne_rôle_candidat": {
+      "n": 88,
+      "AB": 0,
+      "ABPercent": 0
+    },
+    "véhicule": {
+      "n": 2,
+      "AB": 2,
+      "ABPercent": 100
+    },
+    "autre": {
+      "n": 1,
+      "AB": 0,
+      "ABPercent": 0
+    },
+    "abstrait": {
+      "n": 97,
+      "AB": 0,
+      "ABPercent": 0
+    }
+  },
+  "projection": {
+    "basis": "stratified sample; not population-random",
+    "observedSeriousPer2000": 682,
+    "cautiousFullBRange": [
+      29866,
+      56894
+    ],
+    "warning": "Intentional enrichment makes direct extrapolation biased; range is a planning bracket, not an estimate of truth."
+  },
+  "humanNamingEvidence": "none"
+}

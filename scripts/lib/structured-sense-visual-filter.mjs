@@ -1,5 +1,5 @@
 const LITERAL_REJECT_TAGS=new Set(['figuratively','metonymically','analogy','broadly','form-of','inflection-template','misspelling','obsolete','rare']);
-const STRONG_VISUAL_TOPICS=new Set(['anatomy','architecture','astronomy','botany','clothing','food','nautical','transport','vehicles','zoology']);
+const STRONG_VISUAL_TOPICS=new Set(['anatomy','architecture','astronomy','botany','clothing','food','nautical','vehicles','zoology']);
 const STRONG_VISUAL_GLOSS_RE=/\b(?:animal|mammifère|oiseau|poisson|insecte|plante|arbre|fruit|légume|aliment|nourriture|boisson|objet|instrument|outil|appareil|machine|récipient|vêtement|chaussure|organe|partie du corps|véhicule|bateau|bâtiment|édifice|minéral|roche|étoile|astre|cours d[’']eau)\b/iu;
 
 export function assessObservedSenseVisuality(senseCandidate){
@@ -16,4 +16,4 @@ export function assessObservedSenseVisuality(senseCandidate){
   return {status:'unresolved',visualConceptCandidate:false,confidence:0.68,ruleId:'observed-sense-without-strong-visual-proof'};
 }
 
-export const FILTER_VERSION='structured-visual-filter-v2.1';
+export const FILTER_VERSION='structured-visual-filter-v2.2';

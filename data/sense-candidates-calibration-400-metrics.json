@@ -1,0 +1,139 @@
+{
+  "schemaVersion": "1.1",
+  "status": "analysis_only",
+  "baseSha": "b41f086f997e75fafc077a60057700137402af85",
+  "corpusSize": 400,
+  "labeledEvaluationSize": 99,
+  "formula290": "unchanged",
+  "humanNamingEvidence": "none",
+  "senseCandidateSchema": [
+    "senseId",
+    "label",
+    "description",
+    "pos",
+    "provenance",
+    "provenanceStatus",
+    "confidence",
+    "concreteCategory",
+    "visualConceptCandidate",
+    "evidence",
+    "rationale",
+    "ambiguityNotes"
+  ],
+  "provenanceStatusDefinitions": {
+    "observed": "information réellement présente dans une source structurée",
+    "editorial_added": "sens ajouté après revue éditoriale explicite",
+    "inferred_candidate": "proposition automatique; jamais assimilée à une vérité observée"
+  },
+  "counts": {
+    "observed": 35,
+    "editorial_added": 8,
+    "inferred_candidate": 400
+  },
+  "routes": {
+    "green": 43,
+    "orange": 89,
+    "red": 268
+  },
+  "automaticSenseGateSelected": 102,
+  "afterSenseResolutionSelected": 132,
+  "unresolvedCases": 268,
+  "greenRouteEligible": 43,
+  "before": {
+    "n": 99,
+    "tp": 46,
+    "fp": 32,
+    "tn": 13,
+    "fn": 8,
+    "precision": 59,
+    "recall": 85.2,
+    "falsePositiveRate": 71.1,
+    "falseNegativeRate": 14.8
+  },
+  "automaticSenseGate": {
+    "n": 99,
+    "tp": 23,
+    "fp": 0,
+    "tn": 45,
+    "fn": 31,
+    "precision": 100,
+    "recall": 42.6,
+    "falsePositiveRate": 0,
+    "falseNegativeRate": 57.4
+  },
+  "afterSenseResolution": {
+    "n": 99,
+    "tp": 31,
+    "fp": 0,
+    "tn": 45,
+    "fn": 23,
+    "precision": 100,
+    "recall": 57.4,
+    "falsePositiveRate": 0,
+    "falseNegativeRate": 42.6
+  },
+  "greenRouteOnLabeled": {
+    "n": 99,
+    "tp": 8,
+    "fp": 0,
+    "tn": 45,
+    "fn": 46,
+    "precision": 100,
+    "recall": 14.8,
+    "falsePositiveRate": 0,
+    "falseNegativeRate": 85.2
+  },
+  "sample2KnownABFalsePositiveRatePercent": 41,
+  "examples": {
+    "knownFalsePositives": [
+      "job",
+      "soin",
+      "calme",
+      "offre",
+      "gaffe",
+      "gauche",
+      "ex",
+      "force",
+      "zone",
+      "acte",
+      "risque",
+      "fuite",
+      "base",
+      "membre",
+      "peuple",
+      "honte",
+      "crime",
+      "nombre",
+      "code",
+      "style",
+      "rôle",
+      "ouest",
+      "gloire",
+      "matin",
+      "m",
+      "j",
+      "souffle",
+      "titre",
+      "genre",
+      "doute",
+      "preuve",
+      "blague"
+    ],
+    "rescuedConcepts": [
+      "basse",
+      "enceinte",
+      "rature",
+      "portable",
+      "mûres",
+      "afro",
+      "mineur",
+      "louche"
+    ]
+  },
+  "notes": [
+    "Primary precision/recall are computed only on independently labeled cases from complete #292 A/B audit plus #291/#292 rescue reviews and near-miss reviews.",
+    "The automatic semantic guard does not contain the known #292 false-positive token list and does not contain the eight rescue concepts as positive exceptions.",
+    "Pilot #290 and other sample rows are stress/calibration proxies and are excluded from primary gold metrics.",
+    "No inferred_candidate is converted to observed; green route requires evidence-backed observed/editorial_added sense evidence."
+  ]
+}

@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "status": "development_only_tuning_allowed",
   "baseSha": "b45854e82f85d8028075d7809d99c30212225ea9",
-  "modelVersion": "dominant-sense-semantic-v3",
+  "modelVersion": "dominant-sense-semantic-v4",
   "taxonomy": [
     "physical_object",
     "animal",
@@ -43,13 +43,13 @@
   },
   "metrics": {
     "n": 135,
-    "tp": 14,
-    "fp": 8,
-    "tn": 96,
-    "fn": 17,
-    "precision": 63.6,
-    "recall": 45.2,
-    "f1": 52.8
+    "tp": 12,
+    "fp": 0,
+    "tn": 104,
+    "fn": 19,
+    "precision": 100,
+    "recall": 38.7,
+    "f1": 55.8
   },
   "semanticTypeAccuracy": {
     "evaluated": 132,
@@ -59,12 +59,12 @@
   "senseRankingOperationalization": "A gold-compatible observed sense is one whose deterministic semanticType matches one of the pre-source expected visual semantic types; this is a type-compatible operationalization, not a claim that dictionary order equals real-world frequency.",
   "senseRanking": {
     "top1": {
-      "count": 17,
-      "percent": 54.8
+      "count": 16,
+      "percent": 51.6
     },
     "top2": {
-      "count": 17,
-      "percent": 54.8
+      "count": 16,
+      "percent": 51.6
     },
     "top3": {
       "count": 17,
@@ -85,51 +85,15 @@
       }
     },
     {
-      "goldId": "DSG-D-019",
-      "word": "donneur",
-      "gold": false,
-      "decision": "ranked_observed_sense_passes_general_guards",
-      "top": {
-        "definition": "Personne qui donne son sang en vue de transfusion ou un organe en vue de transplantation sur un receveur.",
-        "type": "person_role",
-        "score": 78,
-        "sourceOrder": 2
-      }
-    },
-    {
       "goldId": "DSG-D-021",
       "word": "danseur",
       "gold": true,
       "decision": "ranked_observed_sense_passes_general_guards",
       "top": {
-        "definition": "Celui qui danse.",
+        "definition": "Celui qui aime à danser, qui danse souvent, ou qui fait profession de danser.",
         "type": "person_role",
-        "score": 76,
-        "sourceOrder": 1
-      }
-    },
-    {
-      "goldId": "DSG-D-022",
-      "word": "secteur",
-      "gold": false,
-      "decision": "ranked_observed_sense_passes_general_guards",
-      "top": {
-        "definition": "Instrument d’astronomie, qui a moins d’étendue que le quart de cercle.",
-        "type": "tool",
-        "score": 76,
+        "score": 74,
         "sourceOrder": 2
-      }
-    },
-    {
-      "goldId": "DSG-D-023",
-      "word": "maintien",
-      "gold": false,
-      "decision": "ranked_observed_sense_passes_general_guards",
-      "top": {
-        "definition": "Boisson également mélangée de cidre et d’eau.",
-        "type": "food",
-        "score": 72,
-        "sourceOrder": 3
       }
     },
     {
@@ -138,21 +102,9 @@
       "gold": true,
       "decision": "ranked_observed_sense_passes_general_guards",
       "top": {
-        "definition": "Celle qui broie.",
+        "definition": "Ouvrier qui fait le métier de broyer.",
         "type": "person_role",
         "score": 76,
-        "sourceOrder": 1
-      }
-    },
-    {
-      "goldId": "DSG-D-028",
-      "word": "sorcier",
-      "gold": true,
-      "decision": "ranked_observed_sense_passes_general_guards",
-      "top": {
-        "definition": "Personne à qui on attribue le pouvoir surnaturel de lancer des sorts, des sortilèges.",
-        "type": "person_role",
-        "score": 74,
         "sourceOrder": 2
       }
     },
@@ -188,18 +140,6 @@
       "top": {
         "definition": "Habitation sommaire rappelant le gîte d’un animal.",
         "type": "place",
-        "score": 74,
-        "sourceOrder": 2
-      }
-    },
-    {
-      "goldId": "DSG-D-033",
-      "word": "menteur",
-      "gold": false,
-      "decision": "ranked_observed_sense_passes_general_guards",
-      "top": {
-        "definition": "Personne qui ment, qui a l’habitude de mentir.",
-        "type": "person_role",
         "score": 74,
         "sourceOrder": 2
       }
@@ -241,42 +181,6 @@
       }
     },
     {
-      "goldId": "DSG-D-087",
-      "word": "fond",
-      "gold": false,
-      "decision": "ranked_observed_sense_passes_general_guards",
-      "top": {
-        "definition": "Endroit le plus bas, le plus intérieur d’une chose creuse.",
-        "type": "place",
-        "score": 78,
-        "sourceOrder": 1
-      }
-    },
-    {
-      "goldId": "DSG-D-091",
-      "word": "pair",
-      "gold": false,
-      "decision": "ranked_observed_sense_passes_general_guards",
-      "top": {
-        "definition": "Personne de même condition et de même rang dans l’état.",
-        "type": "person_role",
-        "score": 78,
-        "sourceOrder": 1
-      }
-    },
-    {
-      "goldId": "DSG-D-092",
-      "word": "sosie",
-      "gold": false,
-      "decision": "ranked_observed_sense_passes_general_guards",
-      "top": {
-        "definition": "Personne qui a une parfaite ressemblance avec une autre.",
-        "type": "person_role",
-        "score": 78,
-        "sourceOrder": 1
-      }
-    },
-    {
       "goldId": "DSG-D-097",
       "word": "cheveu",
       "gold": true,
@@ -311,40 +215,17 @@
         "score": 64,
         "sourceOrder": 5
       }
-    },
-    {
-      "goldId": "DSG-D-114",
-      "word": "nord",
-      "gold": true,
-      "decision": "ranked_observed_sense_passes_general_guards",
-      "top": {
-        "definition": "Celui des quatre points cardinaux opposé au sud et qui correspond à la direction de l’étoile polaire ; direction du pôle de l'hémisphère boréal et correspondant à l'azimut 360°.",
-        "type": "person_role",
-        "score": 80,
-        "sourceOrder": 1
-      }
-    },
-    {
-      "goldId": "DSG-D-127",
-      "word": "détour",
-      "gold": false,
-      "decision": "ranked_observed_sense_passes_general_guards",
-      "top": {
-        "definition": "Endroit où un chemin change de direction.",
-        "type": "place",
-        "score": 74,
-        "sourceOrder": 2
-      }
     }
   ],
   "rejections": {
-    "semantic_type_not_safely_visual": 78,
+    "semantic_type_not_safely_visual": 89,
     "usage_or_form_penalty": 24,
-    "rank_score_below_62": 2,
-    "cross_type_rank_ambiguity": 2,
+    "source_order_above_1_for_tool": 2,
+    "source_order_above_2_for_food": 1,
     "no_observed_sense": 3,
-    "low_frequency_for_competitive_name_class": 2,
-    "B_POS_mismatch": 2
+    "B_POS_mismatch": 2,
+    "rank_score_below_62": 1,
+    "low_frequency_for_competitive_name_class": 1
   },
   "notes": [
     "Development partition only. Rules may be changed after inspecting these results. Holdout has not been fetched by this script.",

@@ -11,6 +11,7 @@ on:
       - scripts/probe-kaikki-endpoint.mjs
       - scripts/inspect-kaikki-record.mjs
       - scripts/build-structured-sense-prototype.mjs
+      - scripts/diagnose-structured-sense-filter.mjs
       - tests/structured-sense-source-prototype.test.mjs
       - .github/workflows/structured-sense-prototype.yml
 
@@ -38,8 +39,9 @@ jobs:
       - name: Inspect Kaikki record schema
         run: node scripts/inspect-kaikki-record.mjs
       - name: Build structured source prototype
-        if: ${{ hashFiles('scripts/build-structured-sense-prototype.mjs') != '' }}
         run: node scripts/build-structured-sense-prototype.mjs
+      - name: Diagnose filter
+        run: node scripts/diagnose-structured-sense-filter.mjs
       - name: Validate
         if: ${{ hashFiles('tests/structured-sense-source-prototype.test.mjs') != '' }}
         run: node tests/structured-sense-source-prototype.test.mjs

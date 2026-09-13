@@ -1,0 +1,29 @@
+name: Wave 4 audit shape diagnostic
+
+on:
+  push:
+    branches: [productive-bank-wave4-imageability]
+    paths: ['.github/workflows/wave4-diagnose-audit.yml']
+  workflow_dispatch:
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Inspect audit and bank shapes
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import {buildProductiveBank} from './src/rebus-productive-bank.js';
+          const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
+          const audit=read('data/rebus-representation-bank-audit.json');
+          const fragmentIdeas=read('data/rebus-fragment-representation-ideas.json');
+          const waves=[1,2,3].map(n=>read(`data/rebus-productive-bank-wave${n}.json`));
+          const bank=buildProductiveBank({fragmentIdeas,productiveWaves:waves});
+          const serious=s=>s.visibleConventions.length>0||s.representations.some(r=>['retain','prototype_candidate'].includes(r.editorialStatus)&&(r.visualBrief||r.representationProposed));
+          console.log(JSON.stringify({schema:audit.soundRowSchema,usefulCount:(audit.usefulRows||[]).length,first:(audit.usefulRows||[])[0],second:(audit.usefulRows||[])[1],bankSize:bank.size,seriousCount:[...bank.values()].filter(serious).length,firstSerious:[...bank.values()].filter(serious).slice(0,3).map(s=>({ipa:s.ipa,reps:s.representations.slice(0,2)}))},null,2));
+          NODE

@@ -29,16 +29,24 @@ jobs:
           sed -i 's/,lowScoreThreshold,rescue:/,lowScoreThreshold:lowThreshold,rescue:/' scripts/build-b-to-c-industrial-sample.mjs
       - name: Build industrial B-to-C sample
         run: node scripts/build-b-to-c-industrial-sample.mjs
+      - name: Extract compact rescue review set
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const rows=fs.readFileSync('data/b-to-c-industrial-sample-2000.jsonl','utf8').trim().split('\n').map(JSON.parse);
+          const rescue=rows.filter(r=>r.selectionStratum==='low_score_rescue_random').map(r=>({sampleId:r.sampleId,ipa:r.ipa,exactWord:r.exactWord,lemma:r.lemma,pos:r.pos,frequency:r.frequency,preselectionScore:r.preselectionScore,conceptCategory:r.conceptCategory,anticipatedAlternativeNames:r.anticipatedAlternativeNames,scores:r.scores,aggregateScore:r.aggregateScore,provisionalClass:r.provisionalClass,inflectionLikely:r.inflectionLikely,orthographicVariantLikely:r.orthographicVariantLikely,humanNamingEvidence:r.humanNamingEvidence}));
+          fs.writeFileSync('data/b-to-c-industrial-sample-2000-rescue-candidates.json',JSON.stringify({count:rescue.length,rows:rescue},null,2)+'\n');
+          NODE
       - name: Validate sample and calibration guards
         run: node tests/b-to-c-industrial-sample.test.mjs
       - name: Commit generated analysis artifacts
         run: |
           git config user.name "rebulo-analysis-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add scripts/build-b-to-c-industrial-sample.mjs data/b-to-c-industrial-sample-2000.jsonl data/b-to-c-industrial-sample-2000-metrics.json docs/B_TO_C_INDUSTRIAL_SAMPLE_REPORT.md
+          git add scripts/build-b-to-c-industrial-sample.mjs data/b-to-c-industrial-sample-2000.jsonl data/b-to-c-industrial-sample-2000-metrics.json data/b-to-c-industrial-sample-2000-rescue-candidates.json docs/B_TO_C_INDUSTRIAL_SAMPLE_REPORT.md
           if git diff --cached --quiet; then
             echo "No generated changes"
           else
-            git commit -m "Materialize B-to-C industrial sample"
+            git commit -m "Refresh B-to-C industrial sample review set"
             git push origin HEAD:analysis/b-to-c-industrial-sample-2000
           fi

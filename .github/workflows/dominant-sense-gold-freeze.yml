@@ -6,6 +6,7 @@ on:
       - analysis/dominant-sense-semantic-ranking
     paths:
       - scripts/select-dominant-sense-gold-225.mjs
+      - scripts/apply-dominant-sense-gold-review.mjs
       - .github/workflows/dominant-sense-gold-freeze.yml
 
 permissions:
@@ -23,7 +24,9 @@ jobs:
           node-version: '22'
       - name: Select and partition gold before source lookup
         run: node scripts/select-dominant-sense-gold-225.mjs
-      - name: Commit frozen selection
+      - name: Apply independent editorial labels before source lookup
+        run: node scripts/apply-dominant-sense-gold-review.mjs
+      - name: Commit sealed gold
         run: |
           git config user.name "rebulo-analysis-bot"
           git config user.email "actions@users.noreply.github.com"
@@ -31,6 +34,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes"
           else
-            git commit -m "Freeze dominant-sense gold selection before source lookup"
+            git commit -m "Seal dominant-sense gold before source lookup"
             git push origin HEAD:analysis/dominant-sense-semantic-ranking
           fi

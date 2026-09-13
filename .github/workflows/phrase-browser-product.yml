@@ -10,11 +10,15 @@ on:
       - 'src/phrase-planner-worker.js'
       - 'src/rebus-phrase-phonetics.js'
       - 'src/rebus-representation-paths.js'
+      - 'src/creator-kind.js'
+      - 'src/rebulo-visible-batch1-*.js'
+      - 'assets/rebus/visible-batch1/**'
       - 'phrase-mode.css'
       - 'tests/phrase-browser-product.e2e.mjs'
       - 'tests/compact-runtime-browser.e2e.mjs'
       - 'tests/word-lifecycle-trace.e2e.mjs'
       - 'tests/phrase-runtime-diagnostic.mjs'
+      - 'tests/rebulo-visible-batch1.e2e.mjs'
       - 'data/rebulo-compact-runtime.json'
       - 'data/rebus-pronunciation-lexicon.json'
   push:
@@ -26,11 +30,15 @@ on:
       - 'src/phrase-planner-worker.js'
       - 'src/rebus-phrase-phonetics.js'
       - 'src/rebus-representation-paths.js'
+      - 'src/creator-kind.js'
+      - 'src/rebulo-visible-batch1-*.js'
+      - 'assets/rebus/visible-batch1/**'
       - 'phrase-mode.css'
       - 'tests/phrase-browser-product.e2e.mjs'
       - 'tests/compact-runtime-browser.e2e.mjs'
       - 'tests/word-lifecycle-trace.e2e.mjs'
       - 'tests/phrase-runtime-diagnostic.mjs'
+      - 'tests/rebulo-visible-batch1.e2e.mjs'
       - 'data/rebulo-compact-runtime.json'
       - 'data/rebus-pronunciation-lexicon.json'
   workflow_dispatch:
@@ -79,6 +87,11 @@ jobs:
           OUTPUT_JSON: compact-runtime-browser-checkout.json
           CPU_THROTTLE: '4'
         run: node tests/compact-runtime-browser.e2e.mjs
+      - name: Verify visible Rebulo batch on mobile and desktop
+        env:
+          BASE_URL: http://127.0.0.1:4173/
+          OUTPUT_JSON: visible-batch1-browser.json
+        run: node tests/rebulo-visible-batch1.e2e.mjs
       - name: Verify deployed public product
         if: github.event_name == 'push'
         env:
@@ -86,6 +99,12 @@ jobs:
           OUTPUT_JSON: compact-runtime-browser-public.json
           CPU_THROTTLE: '4'
         run: node tests/compact-runtime-browser.e2e.mjs
+      - name: Verify visible batch on deployed public product
+        if: github.event_name == 'push'
+        env:
+          BASE_URL: https://ludodulac.github.io/Rebulo/
+          OUTPUT_JSON: visible-batch1-public.json
+        run: node tests/rebulo-visible-batch1.e2e.mjs
       - name: Upload browser diagnostics
         if: always()
         uses: actions/upload-artifact@v4
@@ -97,5 +116,8 @@ jobs:
             compact-runtime-browser-checkout.json
             compact-runtime-browser-public.json
             word-lifecycle-trace.json
+            visible-batch1-browser.json
+            visible-batch1-public.json
             phrase-browser-*.png
+            visible-batch1-*.png
           if-no-files-found: warn

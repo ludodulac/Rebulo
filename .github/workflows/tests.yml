@@ -7,6 +7,7 @@ on:
       - 'app.js'
       - 'package.json'
       - 'src/**'
+      - 'assets/rebus/visible-batch1/**'
       - 'scripts/build-rebus-productive-bank-wave2.mjs'
       - 'scripts/build-rebus-productive-bank-wave4*.mjs'
       - 'scripts/build-rebus-productive-bank-wave5*.mjs'
@@ -26,6 +27,7 @@ on:
       - 'app.js'
       - 'package.json'
       - 'src/**'
+      - 'assets/rebus/visible-batch1/**'
       - 'scripts/build-rebus-productive-bank-wave2.mjs'
       - 'scripts/build-rebus-productive-bank-wave4*.mjs'
       - 'scripts/build-rebus-productive-bank-wave5*.mjs'
@@ -70,6 +72,8 @@ jobs:
         run: node tests/rebus-productive-bank-wave4.test.mjs
       - name: Validate productive phonetic bank wave 5
         run: node tests/rebus-productive-bank-wave5.test.mjs
+      - name: Validate visible Rebulo batch 1
+        run: node tests/rebulo-visible-batch1.test.mjs
       - name: Run pictogram research triage regression
         run: node tests/pictogram-research-triage.test.mjs
       - name: Verify jsPDF browser dependency

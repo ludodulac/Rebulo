@@ -1,5 +1,6 @@
 import {buildPronunciationLookup,planPhraseRepresentationPaths} from './rebus-phrase-phonetics.js';
 import {buildRepresentationPathIndex} from './rebus-representation-paths.js';
+import {applyVisibleBatch1ToBankRows} from './rebulo-visible-batch1-assets.js';
 
 let resourcesPromise=null;
 async function loadJSON(relativePath){const url=new URL(relativePath,import.meta.url);const response=await fetch(url,{cache:'force-cache'});if(!response.ok)throw new Error(`${relativePath}: ${response.status}`);return response.json();}
@@ -12,7 +13,8 @@ async function loadResources(){
       loadJSON('../data/rebulo-compact-runtime.json')
     ]);
     const pronunciationLookup=buildPronunciationLookup(pronunciations);
-    const bankRows=Array.isArray(compactRuntime?.bankRows)?compactRuntime.bankRows:[];
+    const baseBankRows=Array.isArray(compactRuntime?.bankRows)?compactRuntime.bankRows:[];
+    const bankRows=applyVisibleBatch1ToBankRows(baseBankRows);
     if(!bankRows.length)throw new Error('Compact runtime bank is empty');
     const optionIndex=buildRepresentationPathIndex(bankRows);
     return {pronunciationLookup,bankRows,optionIndex,prepareMs:performance.now()-started};

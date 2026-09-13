@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import crypto from 'node:crypto';
+import path from 'node:path';
 
 const BASE_SHA='09ff8bf77f113b1db436c635cb8abf9522846b9f';
 const input=fs.readFileSync('data/sense-candidates-calibration-400.jsonl','utf8').trim().split('\n').filter(Boolean).map(JSON.parse);
@@ -7,6 +8,20 @@ const labeled=input.filter(r=>typeof r.goldSerious==='boolean');
 const falseNegatives=labeled.filter(r=>r.goldSerious===true && !r.afterSenseResolutionSerious);
 const falsePositives=labeled.filter(r=>r.goldSerious===false && r.afterSenseResolutionSerious);
 const hash=s=>crypto.createHash('sha256').update(`rebulo-sense-coverage-stress-v1|${s}`).digest('hex');
+const exact=s=>String(s||'').trim().toLocaleLowerCase('fr').replace(/[’]/g,"'");
+
+const legacyFiles=['data/rebus-fragment-representation-ideas-wave1-preserved.json','data/rebus-sound-visual-curation-wave2.json','data/rebus-sound-visual-curation-wave3.json','data/rebus-sound-visual-curation-wave4.json','data/rebus-sound-visual-curation-wave5.json'];
+const legacyMatches=[];
+function walkLegacy(node,file){
+  if(Array.isArray(node)){for(const x of node)walkLegacy(x,file);return;}
+  if(!node||typeof node!=='object')return;
+  const ipa=node.ipa||node.sound||node.phoneme||'';
+  const word=node.candidate||node.word||node.label||node.exactWord||'';
+  if(ipa&&word)legacyMatches.push({file:path.basename(file),ipa,word,decision:node.decision||node.status||node.proofStatus||node.editorialReview||'mentioned',namingRisk:node.spontaneousNamingRisk||node.namingRisk||null,visualPlausibility:node.visualPlausibility||node.visualPotential||null,conceptDescription:node.conceptDescription||node.description||null,mainConfusions:node.mainConfusions||[]});
+  for(const v of Object.values(node))walkLegacy(v,file);
+}
+for(const file of legacyFiles)if(fs.existsSync(file))walkLegacy(JSON.parse(fs.readFileSync(file,'utf8')),file);
+function legacyFor(row){return legacyMatches.filter(x=>x.ipa===row.ipa&&exact(x.word)===exact(row.exactWord));}
 
 function cause(row){
   const inferred=(row.senseCandidates||[]).find(s=>s.provenanceStatus==='inferred_candidate');
@@ -36,7 +51,8 @@ const fnAudit=falseNegatives.map(r=>({
   lexicalEntries:r.lexicalEntries,
   currentSenseCandidates:r.senseCandidates,
   refusalReason:cause(r),
-  currentProvenanceStatuses:[...new Set((r.senseCandidates||[]).map(s=>s.provenanceStatus))]
+  currentProvenanceStatuses:[...new Set((r.senseCandidates||[]).map(s=>s.provenanceStatus))],
+  historicalStructuredMatches:legacyFor(r)
 }));
 
 const stressPool=input.filter(r=>typeof r.goldSerious!=='boolean');
@@ -53,6 +69,6 @@ for(const [name,pred] of Object.entries(buckets)){
   let n=0; for(const r of rows){const k=`${r.ipa}|${r.exactWord}`; if(seen.has(k))continue; seen.add(k); picked.push({calibrationId:r.calibrationId,ipa:r.ipa,exactWord:r.exactWord,baseline:r.baseline,calibrationGroup:r.calibrationGroup,currentSenseCandidates:r.senseCandidates,stressGroup:name}); if(++n>=targetPer[name])break;}
 }
 
-const out={schemaVersion:'1.0',status:'analysis_only',baseSha:BASE_SHA,labeledCount:labeled.length,falseNegativeCount:falseNegatives.length,falsePositiveCount:falsePositives.length,falseNegatives:fnAudit,causeCounts:Object.fromEntries([...new Set(fnAudit.map(x=>x.refusalReason))].map(c=>[c,fnAudit.filter(x=>x.refusalReason===c).length])),stressCandidates:picked.slice(0,250),stressCount:Math.min(250,picked.length),notes:['No #290 score or threshold is changed.','This audit only materializes current evidence and deterministic stress candidates; it does not promote any sense.']};
+const out={schemaVersion:'1.1',status:'analysis_only',baseSha:BASE_SHA,labeledCount:labeled.length,falseNegativeCount:falseNegatives.length,falsePositiveCount:falsePositives.length,falseNegatives:fnAudit,causeCounts:Object.fromEntries([...new Set(fnAudit.map(x=>x.refusalReason))].map(c=>[c,fnAudit.filter(x=>x.refusalReason===c).length])),historicalMatchCount:fnAudit.filter(x=>x.historicalStructuredMatches.length).length,stressCandidates:picked.slice(0,250),stressCount:Math.min(250,picked.length),notes:['No #290 score or threshold is changed.','Historical evidence is matched only on exact IPA + exact graphy (case-folded, diacritics preserved).','This audit only materializes current evidence and deterministic stress candidates; it does not promote any sense.']};
 fs.writeFileSync('data/sense-coverage-fn-audit.json',JSON.stringify(out,null,2)+'\n');
-console.log(JSON.stringify({falseNegativeCount:out.falseNegativeCount,causeCounts:out.causeCounts,stressCount:out.stressCount},null,2));
+console.log(JSON.stringify({falseNegativeCount:out.falseNegativeCount,causeCounts:out.causeCounts,historicalMatchCount:out.historicalMatchCount,stressCount:out.stressCount},null,2));

@@ -1,3 +1,5 @@
+import './rebulo-visible-batch1-runtime.js';
+
 const shell=document.querySelector('.app-shell');
 const input=document.querySelector('#target');
 const surprise=document.querySelector('#phraseSurprise');

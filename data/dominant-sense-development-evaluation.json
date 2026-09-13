@@ -43,368 +43,312 @@
   },
   "metrics": {
     "n": 135,
-    "tp": 17,
-    "fp": 16,
-    "tn": 88,
-    "fn": 14,
-    "precision": 51.5,
-    "recall": 54.8,
-    "f1": 53.1
+    "tp": 14,
+    "fp": 8,
+    "tn": 96,
+    "fn": 17,
+    "precision": 63.6,
+    "recall": 45.2,
+    "f1": 52.8
   },
   "semanticTypeAccuracy": {
     "evaluated": 132,
-    "correct": 74,
-    "percent": 56.1
+    "correct": 81,
+    "percent": 61.4
   },
-  "senseRankingOperationalization": "A gold-compatible observed sense is one whose deterministic semanticType matches one of the pre-source expected visual semantic types; this does not claim dictionary order is real-world frequency.",
+  "senseRankingOperationalization": "A gold-compatible observed sense is one whose deterministic semanticType matches one of the pre-source expected visual semantic types; this is a type-compatible operationalization, not a claim that dictionary order equals real-world frequency.",
   "senseRanking": {
     "top1": {
       "count": 17,
       "percent": 54.8
     },
     "top2": {
-      "count": 18,
-      "percent": 58.1
+      "count": 17,
+      "percent": 54.8
     },
     "top3": {
-      "count": 18,
-      "percent": 58.1
+      "count": 17,
+      "percent": 54.8
     }
   },
   "greens": [
     {
-      "goldId": "DSG-D-004",
-      "word": "suisse",
-      "gold": false,
-      "top": {
-        "definition": "Celui qui est chargé de la police d’une église, qui précède le clergé dans les processions, etc.",
-        "type": "person_role",
-        "score": 56
-      }
-    },
-    {
       "goldId": "DSG-D-008",
       "word": "essence",
       "gold": true,
+      "decision": "ranked_observed_sense_passes_general_guards",
       "top": {
         "definition": "Espèce apte à produire du bois.",
         "type": "plant",
-        "score": 60
+        "score": 76,
+        "sourceOrder": 2
       }
     },
     {
       "goldId": "DSG-D-019",
       "word": "donneur",
       "gold": false,
+      "decision": "ranked_observed_sense_passes_general_guards",
       "top": {
         "definition": "Personne qui donne son sang en vue de transfusion ou un organe en vue de transplantation sur un receveur.",
         "type": "person_role",
-        "score": 62
-      }
-    },
-    {
-      "goldId": "DSG-D-020",
-      "word": "compteur",
-      "gold": true,
-      "top": {
-        "definition": "Celui qui compte.",
-        "type": "person_role",
-        "score": 60
+        "score": 78,
+        "sourceOrder": 2
       }
     },
     {
       "goldId": "DSG-D-021",
       "word": "danseur",
       "gold": true,
+      "decision": "ranked_observed_sense_passes_general_guards",
       "top": {
         "definition": "Celui qui danse.",
         "type": "person_role",
-        "score": 60
+        "score": 76,
+        "sourceOrder": 1
       }
     },
     {
       "goldId": "DSG-D-022",
       "word": "secteur",
       "gold": false,
+      "decision": "ranked_observed_sense_passes_general_guards",
       "top": {
         "definition": "Instrument d’astronomie, qui a moins d’étendue que le quart de cercle.",
         "type": "tool",
-        "score": 60
+        "score": 76,
+        "sourceOrder": 2
       }
     },
     {
       "goldId": "DSG-D-023",
       "word": "maintien",
       "gold": false,
+      "decision": "ranked_observed_sense_passes_general_guards",
       "top": {
         "definition": "Boisson également mélangée de cidre et d’eau.",
         "type": "food",
-        "score": 56
+        "score": 72,
+        "sourceOrder": 3
       }
     },
     {
       "goldId": "DSG-D-025",
       "word": "broyeur",
       "gold": true,
+      "decision": "ranked_observed_sense_passes_general_guards",
       "top": {
         "definition": "Celle qui broie.",
         "type": "person_role",
-        "score": 60
-      }
-    },
-    {
-      "goldId": "DSG-D-026",
-      "word": "facteur",
-      "gold": true,
-      "top": {
-        "definition": "Celui qui fabrique quelque chose.",
-        "type": "person_role",
-        "score": 50
+        "score": 76,
+        "sourceOrder": 1
       }
     },
     {
       "goldId": "DSG-D-028",
       "word": "sorcier",
       "gold": true,
+      "decision": "ranked_observed_sense_passes_general_guards",
       "top": {
         "definition": "Personne à qui on attribue le pouvoir surnaturel de lancer des sorts, des sortilèges.",
         "type": "person_role",
-        "score": 58
+        "score": 74,
+        "sourceOrder": 2
       }
     },
     {
       "goldId": "DSG-D-029",
       "word": "coiffeur",
       "gold": true,
+      "decision": "ranked_observed_sense_passes_general_guards",
       "top": {
         "definition": "Personne dont le métier est de couper et coiffer les cheveux, et éventuellement la barbe.",
         "type": "person_role",
-        "score": 62
+        "score": 78,
+        "sourceOrder": 1
       }
     },
     {
       "goldId": "DSG-D-030",
       "word": "collier",
       "gold": true,
+      "decision": "ranked_observed_sense_passes_general_guards",
       "top": {
         "definition": "Ornement, bijou qui fait le tour du cou.",
         "type": "physical_object",
-        "score": 62
+        "score": 78,
+        "sourceOrder": 1
       }
     },
     {
       "goldId": "DSG-D-032",
       "word": "tanière",
       "gold": true,
+      "decision": "ranked_observed_sense_passes_general_guards",
       "top": {
         "definition": "Habitation sommaire rappelant le gîte d’un animal.",
         "type": "place",
-        "score": 58
+        "score": 74,
+        "sourceOrder": 2
       }
     },
     {
       "goldId": "DSG-D-033",
       "word": "menteur",
       "gold": false,
+      "decision": "ranked_observed_sense_passes_general_guards",
       "top": {
         "definition": "Personne qui ment, qui a l’habitude de mentir.",
         "type": "person_role",
-        "score": 58
-      }
-    },
-    {
-      "goldId": "DSG-D-036",
-      "word": "noyer",
-      "gold": false,
-      "top": {
-        "definition": "Nom usuel des arbres du genre Juglans, Grands arbres à feuilles caduques alternes imparipennées, aux petites fleurs femelles verdâtres réunies par deux à quatre et donnant des noix (drupes indéhiscentes). (Note : utilisé seul en Europe francophone, le mot noyer désigne généralement Juglans regia ou noyer commun, noyer royal.)",
-        "type": "plant",
-        "score": 62
+        "score": 74,
+        "sourceOrder": 2
       }
     },
     {
       "goldId": "DSG-D-056",
       "word": "foin",
       "gold": true,
+      "decision": "ranked_observed_sense_passes_general_guards",
       "top": {
         "definition": "Herbe fauchée et séchée qui sert principalement à la nourriture des chevaux et des bestiaux.",
         "type": "plant",
-        "score": 62
+        "score": 78,
+        "sourceOrder": 1
       }
     },
     {
       "goldId": "DSG-D-059",
       "word": "index",
       "gold": true,
+      "decision": "ranked_observed_sense_passes_general_guards",
       "top": {
         "definition": "Doigt le plus proche du pouce, parce que c’est celui-là dont on se sert ordinairement pour indiquer, pour montrer quelque chose.",
         "type": "body_part",
-        "score": 64
+        "score": 80,
+        "sourceOrder": 1
       }
     },
     {
       "goldId": "DSG-D-062",
       "word": "choc",
       "gold": true,
+      "decision": "ranked_observed_sense_passes_general_guards",
       "top": {
         "definition": "Collision brusque, impact d’un corps avec un autre corps.",
         "type": "event",
-        "score": 62
-      }
-    },
-    {
-      "goldId": "DSG-D-069",
-      "word": "sceptique",
-      "gold": false,
-      "top": {
-        "definition": "Personne qui doute.",
-        "type": "person_role",
-        "score": 52
-      }
-    },
-    {
-      "goldId": "DSG-D-082",
-      "word": "track",
-      "gold": false,
-      "top": {
-        "definition": "Voie, route, trace.",
-        "type": "place",
-        "score": 60
-      }
-    },
-    {
-      "goldId": "DSG-D-083",
-      "word": "soiffe",
-      "gold": false,
-      "top": {
-        "definition": "Toxostome.",
-        "type": "animal",
-        "score": 62
-      }
-    },
-    {
-      "goldId": "DSG-D-086",
-      "word": "q",
-      "gold": true,
-      "top": {
-        "definition": "Symbole du quintal.",
-        "type": "symbol",
-        "score": 54
+        "score": 78,
+        "sourceOrder": 1
       }
     },
     {
       "goldId": "DSG-D-087",
       "word": "fond",
       "gold": false,
+      "decision": "ranked_observed_sense_passes_general_guards",
       "top": {
         "definition": "Endroit le plus bas, le plus intérieur d’une chose creuse.",
         "type": "place",
-        "score": 62
+        "score": 78,
+        "sourceOrder": 1
       }
     },
     {
       "goldId": "DSG-D-091",
       "word": "pair",
       "gold": false,
+      "decision": "ranked_observed_sense_passes_general_guards",
       "top": {
         "definition": "Personne de même condition et de même rang dans l’état.",
         "type": "person_role",
-        "score": 62
+        "score": 78,
+        "sourceOrder": 1
       }
     },
     {
       "goldId": "DSG-D-092",
       "word": "sosie",
       "gold": false,
+      "decision": "ranked_observed_sense_passes_general_guards",
       "top": {
         "definition": "Personne qui a une parfaite ressemblance avec une autre.",
         "type": "person_role",
-        "score": 62
+        "score": 78,
+        "sourceOrder": 1
       }
     },
     {
       "goldId": "DSG-D-097",
       "word": "cheveu",
       "gold": true,
+      "decision": "ranked_observed_sense_passes_general_guards",
       "top": {
         "definition": "Filament organique synthétisé par l’épiderme du crâne humain.",
         "type": "body_part",
-        "score": 64
+        "score": 80,
+        "sourceOrder": 1
       }
     },
     {
       "goldId": "DSG-D-098",
       "word": "shérif",
       "gold": true,
+      "decision": "ranked_observed_sense_passes_general_guards",
       "top": {
         "definition": "Officier municipal en Angleterre, chargé de différentes fonctions de police et de justice.",
         "type": "person_role",
-        "score": 60
+        "score": 76,
+        "sourceOrder": 2
       }
     },
     {
       "goldId": "DSG-D-100",
       "word": "volant",
       "gold": true,
+      "decision": "ranked_observed_sense_passes_general_guards",
       "top": {
         "definition": "Organe en forme de roue par le moyen duquel on donne la direction à un véhicule automobile.",
         "type": "physical_object",
-        "score": 48
-      }
-    },
-    {
-      "goldId": "DSG-D-108",
-      "word": "cordé",
-      "gold": false,
-      "top": {
-        "definition": "Se dit d’une feuille qui a la forme d’un cœur.",
-        "type": "plant",
-        "score": 56
-      }
-    },
-    {
-      "goldId": "DSG-D-109",
-      "word": "dal",
-      "gold": false,
-      "top": {
-        "definition": "Plat d’origine indienne réalisé à base de lentilles, de pois ou de haricots.",
-        "type": "food",
-        "score": 64
+        "score": 64,
+        "sourceOrder": 5
       }
     },
     {
       "goldId": "DSG-D-114",
       "word": "nord",
       "gold": true,
+      "decision": "ranked_observed_sense_passes_general_guards",
       "top": {
         "definition": "Celui des quatre points cardinaux opposé au sud et qui correspond à la direction de l’étoile polaire ; direction du pôle de l'hémisphère boréal et correspondant à l'azimut 360°.",
         "type": "person_role",
-        "score": 64
-      }
-    },
-    {
-      "goldId": "DSG-D-119",
-      "word": "bégueule",
-      "gold": false,
-      "top": {
-        "definition": "Personne d’une pruderie excessive et affectée.",
-        "type": "person_role",
-        "score": 62
+        "score": 80,
+        "sourceOrder": 1
       }
     },
     {
       "goldId": "DSG-D-127",
       "word": "détour",
       "gold": false,
+      "decision": "ranked_observed_sense_passes_general_guards",
       "top": {
         "definition": "Endroit où un chemin change de direction.",
         "type": "place",
-        "score": 58
+        "score": 74,
+        "sourceOrder": 2
       }
     }
   ],
+  "rejections": {
+    "semantic_type_not_safely_visual": 78,
+    "usage_or_form_penalty": 24,
+    "rank_score_below_62": 2,
+    "cross_type_rank_ambiguity": 2,
+    "no_observed_sense": 3,
+    "low_frequency_for_competitive_name_class": 2,
+    "B_POS_mismatch": 2
+  },
   "notes": [
     "Development partition only. Rules may be changed after inspecting these results. Holdout has not been fetched by this script.",
-    "senseObserved, semanticType, and visualEligibility are separate fields/stages."
+    "senseObserved, semanticType, and visualEligibility are separate fields/stages.",
+    "Project B POS and Lexique frequency are general ranking/guard signals; frequency never independently proves visual eligibility."
   ]
 }

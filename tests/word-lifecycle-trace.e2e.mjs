@@ -4,7 +4,7 @@ import {writeFile} from 'node:fs/promises';
 const baseUrl=process.env.BASE_URL||'http://127.0.0.1:4173/';
 const output=process.env.OUTPUT_JSON||'word-lifecycle-trace.json';
 const cpuRate=Number(process.env.CPU_THROTTLE||4);
-const report={phase:'start',baseUrl,cpuRate,marks:[],debuggerSamples:[],network:[],noSubmit:{}};
+const report={phase:'start',baseUrl,cpuRate,marks:[],network:[],noSubmit:{}};
 async function save(){await writeFile(output,JSON.stringify(report,null,2));}
 const delay=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 async function step(label,fn,timeoutMs=10000){report.phase=`before:${label}`;await save();console.log(`[word-profile] ${report.phase}`);let timer;try{const value=await Promise.race([Promise.resolve().then(fn),new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error(`PROFILE_TIMEOUT ${label} after ${timeoutMs} ms`)),timeoutMs);})]);report.phase=`after:${label}`;await save();console.log(`[word-profile] ${report.phase}`);return value;}finally{clearTimeout(timer);}}
@@ -15,7 +15,6 @@ const page=await context.newPage();
 try{
   const session=await context.newCDPSession(page);
   await session.send('Emulation.setCPUThrottlingRate',{rate:cpuRate});
-  await session.send('Debugger.enable');
   await session.send('Network.enable');
   const networkById=new Map();
   session.on('Network.responseReceived',event=>{const url=event.response?.url||'';if(!url.includes('/data/'))return;networkById.set(event.requestId,{url,status:event.response.status,mimeType:event.response.mimeType,encodedDataLength:event.response.encodedDataLength||0,responseTs:event.timestamp});});
@@ -38,29 +37,6 @@ try{
   await step('fillMerci',()=>page.locator('#target').fill('merci'),4000);
   const fillWallMs=Date.now();
   report.marks=await step('marksAfterFill',()=>page.evaluate(()=>window.__rebuloProfileMarks||[]),4000);
-
-  async function interruptSample(label,waitMs){
-    await delay(waitMs);
-    const sample={label,requestedAtWallMs:Date.now()};
-    let pausedResolve;
-    const pausedPromise=new Promise(resolve=>{pausedResolve=resolve;});
-    const onPaused=event=>pausedResolve(event);
-    session.once('Debugger.paused',onPaused);
-    try{
-      const pauseSend=session.send('Debugger.pause');
-      const paused=await Promise.race([pausedPromise,delay(5000).then(()=>null)]);
-      if(!paused){sample.error='Debugger.paused timeout';report.debuggerSamples.push(sample);await save();return;}
-      sample.reason=paused.reason;
-      sample.callFrames=(paused.callFrames||[]).slice(0,20).map(frame=>({functionName:frame.functionName||'(anonymous)',url:frame.url||'',lineNumber:Number(frame.location?.lineNumber||0)+1,columnNumber:Number(frame.location?.columnNumber||0)+1}));
-      sample.hitAtWallMs=Date.now();
-      report.debuggerSamples.push(sample);await save();console.log(`[word-profile] ${label} ${sample.callFrames.slice(0,6).map(f=>`${f.functionName}@${f.url.split('/').pop()}:${f.lineNumber}`).join(' <- ')}`);
-      await session.send('Debugger.resume');
-      await Promise.race([pauseSend,delay(1000)]).catch(()=>{});
-    }catch(error){sample.error=String(error);report.debuggerSamples.push(sample);await save();}
-  }
-
-  await interruptSample('blocked+250ms',250);
-  await interruptSample('blocked+750ms',500);
   await step('readinessWithoutSubmit',()=>page.waitForFunction(()=>document.querySelector('.app-shell')?.dataset.creatorListenerReady==='true',null,{timeout:15000}),17000);
   report.noSubmit.readinessWallMs=Date.now()-fillWallMs;
   const domReadStart=Date.now();

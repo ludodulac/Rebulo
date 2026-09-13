@@ -1,0 +1,2314 @@
+{
+  "schemaVersion": "1.0",
+  "status": "sealed_gold_reviewed_before_source_lookup",
+  "filterFrozenSha": "81b2a12f89e59b186e62caa5a8a11ade9e20239d",
+  "filterVersion": "structured-visual-filter-v2.2",
+  "selectionSeed": "rebulo-structured-sense-holdout-v1",
+  "selectedCount": 75,
+  "sourceLookedAt": false,
+  "excludedDevelopmentGold": 150,
+  "excludedCalibration": 400,
+  "historicalFNExcluded": [
+    "club",
+    "oeuvre",
+    "star",
+    "drogue",
+    "mu",
+    "course",
+    "perte",
+    "chasse",
+    "pub",
+    "rêve",
+    "lettre",
+    "chose",
+    "droite",
+    "vote",
+    "geste"
+  ],
+  "stratumCounts": {
+    "abstract": 10,
+    "roles_people": 8,
+    "events_actions": 10,
+    "polysemy_homographs": 10,
+    "low_frequency": 8,
+    "deceptive_concrete": 12,
+    "deterministic_fill": 17
+  },
+  "rows": [
+    {
+      "holdoutId": "ISH-001",
+      "ipa": "atif",
+      "exactWord": "hâtif",
+      "lemma": "hâtif",
+      "pos": "ADJ",
+      "frequency": 0.421,
+      "sourceSampleId": "B2C-I1-1824",
+      "sourceStratum": "low_score_rescue_random",
+      "selectionStratum": "abstract",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 27.8
+      },
+      "proxyContext": {
+        "conceptLabel": "hâtif",
+        "conceptCategory": "fonction_ou_qualité",
+        "conceptDescription": "Concept lexical « hâtif » sans objet autonome garanti.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-002",
+      "ipa": "puʁ",
+      "exactWord": "pour",
+      "lemma": "pour",
+      "pos": "PRE",
+      "frequency": 7716.873,
+      "sourceSampleId": "B2C-I1-1604",
+      "sourceStratum": "abstract_control",
+      "selectionStratum": "abstract",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 40.8
+      },
+      "proxyContext": {
+        "conceptLabel": "pour",
+        "conceptCategory": "fonction_ou_qualité",
+        "conceptDescription": "Concept lexical « pour » sans objet autonome garanti.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-003",
+      "ipa": "kɛl",
+      "exactWord": "quelle",
+      "lemma": "quelle",
+      "pos": "ADJ",
+      "frequency": 396.573,
+      "sourceSampleId": "B2C-I1-1669",
+      "sourceStratum": "abstract_control",
+      "selectionStratum": "abstract",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 39
+      },
+      "proxyContext": {
+        "conceptLabel": "quelle",
+        "conceptCategory": "fonction_ou_qualité",
+        "conceptDescription": "Concept lexical « quelle » sans objet autonome garanti.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-004",
+      "ipa": "i",
+      "exactWord": "y",
+      "lemma": "y",
+      "pos": "PRO",
+      "frequency": 4046.437,
+      "sourceSampleId": "B2C-I1-1565",
+      "sourceStratum": "abstract_control",
+      "selectionStratum": "abstract",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 44
+      },
+      "proxyContext": {
+        "conceptLabel": "y",
+        "conceptCategory": "fonction_ou_qualité",
+        "conceptDescription": "Concept lexical « y » sans objet autonome garanti.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-005",
+      "ipa": "ʁutje",
+      "exactWord": "routier",
+      "lemma": "routier",
+      "pos": "ADJ",
+      "frequency": 1.722,
+      "sourceSampleId": "B2C-I1-1720",
+      "sourceStratum": "low_score_rescue_random",
+      "selectionStratum": "abstract",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 27.8
+      },
+      "proxyContext": {
+        "conceptLabel": "routier",
+        "conceptCategory": "fonction_ou_qualité",
+        "conceptDescription": "Concept lexical « routier » sans objet autonome garanti.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-006",
+      "ipa": "aʒɑ̃s",
+      "exactWord": "agence",
+      "lemma": "agence",
+      "pos": "NOM",
+      "frequency": 27.294,
+      "sourceSampleId": "B2C-I1-1635",
+      "sourceStratum": "abstract_control",
+      "selectionStratum": "abstract",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 35.3
+      },
+      "proxyContext": {
+        "conceptLabel": "agence",
+        "conceptCategory": "abstrait",
+        "conceptDescription": "Concept lexical « agence » sans objet autonome garanti.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-007",
+      "ipa": "kɔ̃fjɑ̃",
+      "exactWord": "confiant",
+      "lemma": "confiant",
+      "pos": "ADJ",
+      "frequency": 3.987,
+      "sourceSampleId": "B2C-I2-1213",
+      "sourceStratum": "pos_sense_risk",
+      "selectionStratum": "abstract",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 30.3
+      },
+      "proxyContext": {
+        "conceptLabel": "confiant",
+        "conceptCategory": "fonction_ou_qualité",
+        "conceptDescription": "Concept lexical « confiant » sans objet autonome garanti.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-008",
+      "ipa": "viʁtɥɛl",
+      "exactWord": "virtuel",
+      "lemma": "virtuel",
+      "pos": "ADJ",
+      "frequency": 2.13,
+      "sourceSampleId": "B2C-I2-0823",
+      "sourceStratum": "low_score_rescue",
+      "selectionStratum": "abstract",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 30.3
+      },
+      "proxyContext": {
+        "conceptLabel": "virtuel",
+        "conceptCategory": "fonction_ou_qualité",
+        "conceptDescription": "Concept lexical « virtuel » sans objet autonome garanti.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-009",
+      "ipa": "sɛʁmɑ̃",
+      "exactWord": "serment",
+      "lemma": "serment",
+      "pos": "NOM",
+      "frequency": 16.108,
+      "sourceSampleId": "B2C-I1-1686",
+      "sourceStratum": "abstract_control",
+      "selectionStratum": "abstract",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 32.8
+      },
+      "proxyContext": {
+        "conceptLabel": "serment",
+        "conceptCategory": "abstrait",
+        "conceptDescription": "Concept lexical « serment » sans objet autonome garanti.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-010",
+      "ipa": "kʁysjal",
+      "exactWord": "crucial",
+      "lemma": "crucial",
+      "pos": "ADJ",
+      "frequency": 3.813,
+      "sourceSampleId": "B2C-I2-1131",
+      "sourceStratum": "low_score_rescue",
+      "selectionStratum": "abstract",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 30.3
+      },
+      "proxyContext": {
+        "conceptLabel": "crucial",
+        "conceptCategory": "fonction_ou_qualité",
+        "conceptDescription": "Concept lexical « crucial » sans objet autonome garanti.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-011",
+      "ipa": "ɛʁœʁ",
+      "exactWord": "erreur",
+      "lemma": "erreur",
+      "pos": "NOM",
+      "frequency": 119.278,
+      "sourceSampleId": "B2C-I1-0939",
+      "sourceStratum": "two_syllable",
+      "selectionStratum": "roles_people",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 43.5
+      },
+      "proxyContext": {
+        "conceptLabel": "erreur",
+        "conceptCategory": "personne_rôle_candidat",
+        "conceptDescription": "Concept candidat « erreur » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-012",
+      "ipa": "fɛʁmje",
+      "exactWord": "fermier",
+      "lemma": "fermier",
+      "pos": "NOM",
+      "frequency": 5.028,
+      "sourceSampleId": "B2C-I1-1411",
+      "sourceStratum": "ambiguous_control",
+      "selectionStratum": "roles_people",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 38.5
+      },
+      "proxyContext": {
+        "conceptLabel": "fermier",
+        "conceptCategory": "personne_rôle_candidat",
+        "conceptDescription": "Concept candidat « fermier » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": true,
+        "expectedConcept": "fermier (personne travaillant dans une ferme)",
+        "risk": "low",
+        "rationale": "Concept autonome, concret ou incarné, avec représentation visuelle directe et dénomination lexicalement plausible."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-013",
+      "ipa": "fij",
+      "exactWord": "fille",
+      "lemma": "fille",
+      "pos": "NOM",
+      "frequency": 420.924,
+      "sourceSampleId": "B2C-I1-0309",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "roles_people",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 77
+      },
+      "proxyContext": {
+        "conceptLabel": "fille",
+        "conceptCategory": "personne",
+        "conceptDescription": "Concept candidat « fille » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "low"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": true,
+        "expectedConcept": "fille (personne de sexe féminin, enfant ou jeune femme)",
+        "risk": "low",
+        "rationale": "Concept autonome, concret ou incarné, avec représentation visuelle directe et dénomination lexicalement plausible."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-014",
+      "ipa": "gɛʁje",
+      "exactWord": "guerrier",
+      "lemma": "guerrier",
+      "pos": "NOM",
+      "frequency": 9.152,
+      "sourceSampleId": "B2C-I1-1531",
+      "sourceStratum": "ambiguous_control",
+      "selectionStratum": "roles_people",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 38.5
+      },
+      "proxyContext": {
+        "conceptLabel": "guerrier",
+        "conceptCategory": "personne_rôle_candidat",
+        "conceptDescription": "Concept candidat « guerrier » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": true,
+        "expectedConcept": "guerrier (personne combattante)",
+        "risk": "low",
+        "rationale": "Concept autonome, concret ou incarné, avec représentation visuelle directe et dénomination lexicalement plausible."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-015",
+      "ipa": "ʁɛn",
+      "exactWord": "reine",
+      "lemma": "reine",
+      "pos": "NOM",
+      "frequency": 26.478,
+      "sourceSampleId": "B2C-I1-0367",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "roles_people",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 77.5
+      },
+      "proxyContext": {
+        "conceptLabel": "reine",
+        "conceptCategory": "personne",
+        "conceptDescription": "Concept candidat « reine » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "low"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": true,
+        "expectedConcept": "reine (souveraine)",
+        "risk": "low",
+        "rationale": "Concept autonome, concret ou incarné, avec représentation visuelle directe et dénomination lexicalement plausible."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-016",
+      "ipa": "sɥœʁ",
+      "exactWord": "sueur",
+      "lemma": "sueur",
+      "pos": "NOM",
+      "frequency": 8.206,
+      "sourceSampleId": "B2C-I1-1535",
+      "sourceStratum": "ambiguous_control",
+      "selectionStratum": "roles_people",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 40.5
+      },
+      "proxyContext": {
+        "conceptLabel": "sueur",
+        "conceptCategory": "personne_rôle_candidat",
+        "conceptDescription": "Concept candidat « sueur » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-017",
+      "ipa": "volœʁ",
+      "exactWord": "voleur",
+      "lemma": "voleur",
+      "pos": "NOM",
+      "frequency": 26.839,
+      "sourceSampleId": "B2C-I1-1061",
+      "sourceStratum": "two_syllable",
+      "selectionStratum": "roles_people",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 41
+      },
+      "proxyContext": {
+        "conceptLabel": "voleur",
+        "conceptCategory": "personne_rôle_candidat",
+        "conceptDescription": "Concept candidat « voleur » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": true,
+        "expectedConcept": "voleur (personne qui vole)",
+        "risk": "low",
+        "rationale": "Concept autonome, concret ou incarné, avec représentation visuelle directe et dénomination lexicalement plausible."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-018",
+      "ipa": "savœʁ",
+      "exactWord": "saveur",
+      "lemma": "saveur",
+      "pos": "NOM",
+      "frequency": 2.608,
+      "sourceSampleId": "B2C-I2-1733",
+      "sourceStratum": "negative_control",
+      "selectionStratum": "roles_people",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 38.5
+      },
+      "proxyContext": {
+        "conceptLabel": "saveur",
+        "conceptCategory": "personne_rôle_candidat",
+        "conceptDescription": "Concept candidat « saveur » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-019",
+      "ipa": "pyʁe",
+      "exactWord": "puerai",
+      "lemma": "puer",
+      "pos": "VER",
+      "frequency": 0.006,
+      "sourceSampleId": "B2C-I2-1050",
+      "sourceStratum": "low_score_rescue",
+      "selectionStratum": "events_actions",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 39.5
+      },
+      "proxyContext": {
+        "conceptLabel": "puer",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « puer », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-020",
+      "ipa": "eʃɑ̃",
+      "exactWord": "échant",
+      "lemma": "écher",
+      "pos": "VER",
+      "frequency": 0.006,
+      "sourceSampleId": "B2C-I2-1149",
+      "sourceStratum": "pos_sense_risk",
+      "selectionStratum": "events_actions",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 38
+      },
+      "proxyContext": {
+        "conceptLabel": "écher",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « écher », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-021",
+      "ipa": "səla",
+      "exactWord": "celas",
+      "lemma": "celer",
+      "pos": "VER",
+      "frequency": 0.079,
+      "sourceSampleId": "B2C-I2-1153",
+      "sourceStratum": "pos_sense_risk",
+      "selectionStratum": "events_actions",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 39.5
+      },
+      "proxyContext": {
+        "conceptLabel": "celer",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « celer », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-022",
+      "ipa": "lɑ̃se",
+      "exactWord": "lancer",
+      "lemma": "lancer",
+      "pos": "VER",
+      "frequency": 28.826,
+      "sourceSampleId": "B2C-I1-0858",
+      "sourceStratum": "multi_homophone",
+      "selectionStratum": "events_actions",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 51
+      },
+      "proxyContext": {
+        "conceptLabel": "lancer",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « lancer », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-023",
+      "ipa": "tape",
+      "exactWord": "tapé",
+      "lemma": "taper",
+      "pos": "VER",
+      "frequency": 7.728,
+      "sourceSampleId": "B2C-I2-1458",
+      "sourceStratum": "multi_concept_ipa",
+      "selectionStratum": "events_actions",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 43.5
+      },
+      "proxyContext": {
+        "conceptLabel": "taper",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « taper », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-024",
+      "ipa": "ʁɔ̃py",
+      "exactWord": "rompu",
+      "lemma": "rompre",
+      "pos": "VER",
+      "frequency": 22.902,
+      "sourceSampleId": "B2C-I2-1274",
+      "sourceStratum": "pos_sense_risk",
+      "selectionStratum": "events_actions",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 49.3
+      },
+      "proxyContext": {
+        "conceptLabel": "rompre",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « rompre », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-025",
+      "ipa": "kʁwaze",
+      "exactWord": "croisée",
+      "lemma": "croiser",
+      "pos": "VER",
+      "frequency": 1.009,
+      "sourceSampleId": "B2C-I2-1147",
+      "sourceStratum": "pos_sense_risk",
+      "selectionStratum": "events_actions",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 41
+      },
+      "proxyContext": {
+        "conceptLabel": "croiser",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « croiser », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-026",
+      "ipa": "bʁize",
+      "exactWord": "brisé",
+      "lemma": "briser",
+      "pos": "VER",
+      "frequency": 19.715,
+      "sourceSampleId": "B2C-I2-1394",
+      "sourceStratum": "pos_sense_risk",
+      "selectionStratum": "events_actions",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 42
+      },
+      "proxyContext": {
+        "conceptLabel": "briser",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « briser », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-027",
+      "ipa": "ʁekʁe",
+      "exactWord": "récrée",
+      "lemma": "récréer",
+      "pos": "VER",
+      "frequency": 0.044,
+      "sourceSampleId": "B2C-I2-1105",
+      "sourceStratum": "low_score_rescue",
+      "selectionStratum": "events_actions",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 39.5
+      },
+      "proxyContext": {
+        "conceptLabel": "récréer",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « récréer », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-028",
+      "ipa": "njɛʁ",
+      "exactWord": "nièrent",
+      "lemma": "nier",
+      "pos": "VER",
+      "frequency": 0.009,
+      "sourceSampleId": "B2C-I2-1199",
+      "sourceStratum": "pos_sense_risk",
+      "selectionStratum": "events_actions",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 43.3
+      },
+      "proxyContext": {
+        "conceptLabel": "nier",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « nier », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-029",
+      "ipa": "ana",
+      "exactWord": "ana",
+      "lemma": "ana",
+      "pos": "NOM",
+      "frequency": 1.266,
+      "sourceSampleId": "B2C-I1-1490",
+      "sourceStratum": "ambiguous_control",
+      "selectionStratum": "polysemy_homographs",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 58.8
+      },
+      "proxyContext": {
+        "conceptLabel": "ana",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « ana » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-030",
+      "ipa": "tʁiby",
+      "exactWord": "tribut",
+      "lemma": "tribut",
+      "pos": "NOM",
+      "frequency": 1.054,
+      "sourceSampleId": "B2C-I2-0342",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "polysemy_homographs",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 58.8
+      },
+      "proxyContext": {
+        "conceptLabel": "tribut",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « tribut » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-031",
+      "ipa": "tʁɛnœʁ",
+      "exactWord": "trainers",
+      "lemma": "trainers",
+      "pos": "NOM",
+      "frequency": 0.013,
+      "sourceSampleId": "B2C-I2-1635",
+      "sourceStratum": "multi_concept_ipa",
+      "selectionStratum": "polysemy_homographs",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 60
+      },
+      "proxyContext": {
+        "conceptLabel": "trainers",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « trainers » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-032",
+      "ipa": "ʁəpɛʁ",
+      "exactWord": "repaire",
+      "lemma": "repaire",
+      "pos": "NOM",
+      "frequency": 3.456,
+      "sourceSampleId": "B2C-I2-0214",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "polysemy_homographs",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 61
+      },
+      "proxyContext": {
+        "conceptLabel": "repaire",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « repaire » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": true,
+        "expectedConcept": "repaire (lieu servant de refuge ou cachette)",
+        "risk": "low",
+        "rationale": "Concept autonome, concret ou incarné, avec représentation visuelle directe et dénomination lexicalement plausible."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-033",
+      "ipa": "maʁe",
+      "exactWord": "marae",
+      "lemma": "marae",
+      "pos": "NOM",
+      "frequency": 0.009,
+      "sourceSampleId": "B2C-I2-0730",
+      "sourceStratum": "low_frequency_concrete",
+      "selectionStratum": "polysemy_homographs",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 60.3
+      },
+      "proxyContext": {
+        "conceptLabel": "marae",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « marae » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": true,
+        "expectedConcept": "marae (lieu cérémoniel polynésien)",
+        "risk": "medium",
+        "rationale": "Concept visuel sérieux mais avec synonymie, polysémie ou contexte à surveiller."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-034",
+      "ipa": "tag",
+      "exactWord": "tag",
+      "lemma": "tag",
+      "pos": "NOM",
+      "frequency": 1.627,
+      "sourceSampleId": "B2C-I2-0528",
+      "sourceStratum": "low_frequency_concrete",
+      "selectionStratum": "polysemy_homographs",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 62
+      },
+      "proxyContext": {
+        "conceptLabel": "tag",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « tag » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": true,
+        "expectedConcept": "tag (inscription ou marque graphique)",
+        "risk": "medium",
+        "rationale": "Concept visuel sérieux mais avec synonymie, polysémie ou contexte à surveiller."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-035",
+      "ipa": "kʁɛ",
+      "exactWord": "crêt",
+      "lemma": "crêt",
+      "pos": "NOM",
+      "frequency": 0.013,
+      "sourceSampleId": "B2C-I1-1274",
+      "sourceStratum": "low_frequency_concrete",
+      "selectionStratum": "polysemy_homographs",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 62.5
+      },
+      "proxyContext": {
+        "conceptLabel": "crêt",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « crêt » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": true,
+        "expectedConcept": "crêt (relief rocheux ou sommet allongé)",
+        "risk": "low",
+        "rationale": "Concept autonome, concret ou incarné, avec représentation visuelle directe et dénomination lexicalement plausible."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-036",
+      "ipa": "pʁijɛʁ",
+      "exactWord": "prière",
+      "lemma": "prière",
+      "pos": "NOM",
+      "frequency": 12.956,
+      "sourceSampleId": "B2C-I1-0922",
+      "sourceStratum": "multi_homophone",
+      "selectionStratum": "polysemy_homographs",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 59.5
+      },
+      "proxyContext": {
+        "conceptLabel": "prière",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « prière » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-037",
+      "ipa": "lɔb",
+      "exactWord": "lobe",
+      "lemma": "lobe",
+      "pos": "NOM",
+      "frequency": 2.75,
+      "sourceSampleId": "B2C-I1-1461",
+      "sourceStratum": "ambiguous_control",
+      "selectionStratum": "polysemy_homographs",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 61.5
+      },
+      "proxyContext": {
+        "conceptLabel": "lobe",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « lobe » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": true,
+        "expectedConcept": "lobe (partie anatomique arrondie)",
+        "risk": "low",
+        "rationale": "Concept autonome, concret ou incarné, avec représentation visuelle directe et dénomination lexicalement plausible."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-038",
+      "ipa": "apa",
+      "exactWord": "appât",
+      "lemma": "appât",
+      "pos": "NOM",
+      "frequency": 7.991,
+      "sourceSampleId": "B2C-I1-0053",
+      "sourceStratum": "legacy_v1_v5",
+      "selectionStratum": "polysemy_homographs",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 64
+      },
+      "proxyContext": {
+        "conceptLabel": "appât",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « appât » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [
+          "hameçon",
+          "ver"
+        ],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": true,
+        "expectedConcept": "appât (élément destiné à attirer une prise)",
+        "risk": "medium",
+        "rationale": "Concept visuel sérieux mais avec synonymie, polysémie ou contexte à surveiller."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-039",
+      "ipa": "wa",
+      "exactWord": "oye",
+      "lemma": "oye",
+      "pos": "NOM",
+      "frequency": 0.665,
+      "sourceSampleId": "B2C-I1-1307",
+      "sourceStratum": "low_frequency_concrete",
+      "selectionStratum": "low_frequency",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 62.3
+      },
+      "proxyContext": {
+        "conceptLabel": "oye",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « oye » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-040",
+      "ipa": "ava",
+      "exactWord": "hava",
+      "lemma": "haver",
+      "pos": "VER",
+      "frequency": 0.092,
+      "sourceSampleId": "B2C-I1-1902",
+      "sourceStratum": "low_score_rescue_random",
+      "selectionStratum": "low_frequency",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 39.8
+      },
+      "proxyContext": {
+        "conceptLabel": "haver",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « haver », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-041",
+      "ipa": "lise",
+      "exactWord": "lisser",
+      "lemma": "lisser",
+      "pos": "VER",
+      "frequency": 0.301,
+      "sourceSampleId": "B2C-I2-1532",
+      "sourceStratum": "multi_concept_ipa",
+      "selectionStratum": "low_frequency",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 41
+      },
+      "proxyContext": {
+        "conceptLabel": "lisser",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « lisser », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-042",
+      "ipa": "ʁɛsta",
+      "exactWord": "resta",
+      "lemma": "rester",
+      "pos": "VER",
+      "frequency": 1.449,
+      "sourceSampleId": "B2C-I2-0869",
+      "sourceStratum": "low_score_rescue",
+      "selectionStratum": "low_frequency",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 38
+      },
+      "proxyContext": {
+        "conceptLabel": "rester",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « rester », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-043",
+      "ipa": "zɛl",
+      "exactWord": "zèle",
+      "lemma": "zèle",
+      "pos": "NOM",
+      "frequency": 1.987,
+      "sourceSampleId": "B2C-I2-0324",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "low_frequency",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 60.8
+      },
+      "proxyContext": {
+        "conceptLabel": "zèle",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « zèle » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-044",
+      "ipa": "miʁ",
+      "exactWord": "myrrhe",
+      "lemma": "myrrhe",
+      "pos": "NOM",
+      "frequency": 0.316,
+      "sourceSampleId": "B2C-I1-1335",
+      "sourceStratum": "low_frequency_concrete",
+      "selectionStratum": "low_frequency",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 60.8
+      },
+      "proxyContext": {
+        "conceptLabel": "myrrhe",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « myrrhe » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": true,
+        "expectedConcept": "myrrhe (résine aromatique)",
+        "risk": "low",
+        "rationale": "Concept autonome, concret ou incarné, avec représentation visuelle directe et dénomination lexicalement plausible."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-045",
+      "ipa": "bʁwa",
+      "exactWord": "broie",
+      "lemma": "broyer",
+      "pos": "VER",
+      "frequency": 0.563,
+      "sourceSampleId": "B2C-I1-1744",
+      "sourceStratum": "low_score_rescue_random",
+      "selectionStratum": "low_frequency",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 40
+      },
+      "proxyContext": {
+        "conceptLabel": "broyer",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « broyer », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-046",
+      "ipa": "bi",
+      "exactWord": "bee",
+      "lemma": "bee",
+      "pos": "NOM",
+      "frequency": 0.149,
+      "sourceSampleId": "B2C-I1-0764",
+      "sourceStratum": "multi_homophone",
+      "selectionStratum": "low_frequency",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 67.3
+      },
+      "proxyContext": {
+        "conceptLabel": "bee",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « bee » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-047",
+      "ipa": "pʁe",
+      "exactWord": "pré",
+      "lemma": "pré",
+      "pos": "NOM",
+      "frequency": 2.551,
+      "sourceSampleId": "B2C-I1-0171",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "deceptive_concrete",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 55.5
+      },
+      "proxyContext": {
+        "conceptLabel": "pré",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « pré » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [
+          "champ",
+          "prairie",
+          "herbe"
+        ],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": true,
+        "expectedConcept": "pré (terrain couvert d’herbe)",
+        "risk": "low",
+        "rationale": "Concept autonome, concret ou incarné, avec représentation visuelle directe et dénomination lexicalement plausible."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-048",
+      "ipa": "sezi",
+      "exactWord": "saisie",
+      "lemma": "saisie",
+      "pos": "NOM",
+      "frequency": 2.323,
+      "sourceSampleId": "B2C-I2-0298",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "deceptive_concrete",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 61
+      },
+      "proxyContext": {
+        "conceptLabel": "saisie",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « saisie » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-049",
+      "ipa": "mis",
+      "exactWord": "miss",
+      "lemma": "miss",
+      "pos": "NOM",
+      "frequency": 47.06,
+      "sourceSampleId": "B2C-I1-0354",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "deceptive_concrete",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 72
+      },
+      "proxyContext": {
+        "conceptLabel": "miss",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « miss » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "low"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": true,
+        "expectedConcept": "miss (jeune femme titrée dans un concours)",
+        "risk": "medium",
+        "rationale": "Concept visuel sérieux mais avec synonymie, polysémie ou contexte à surveiller."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-050",
+      "ipa": "mɑ̃tɔ̃",
+      "exactWord": "menton",
+      "lemma": "menton",
+      "pos": "NOM",
+      "frequency": 6.155,
+      "sourceSampleId": "B2C-I1-1193",
+      "sourceStratum": "two_syllable",
+      "selectionStratum": "deceptive_concrete",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 59.5
+      },
+      "proxyContext": {
+        "conceptLabel": "menton",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « menton » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": true,
+        "expectedConcept": "menton (partie du visage)",
+        "risk": "low",
+        "rationale": "Concept autonome, concret ou incarné, avec représentation visuelle directe et dénomination lexicalement plausible."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-051",
+      "ipa": "ɛf",
+      "exactWord": "f",
+      "lemma": "f",
+      "pos": "NOM",
+      "frequency": 34.472,
+      "sourceSampleId": "B2C-I1-0186",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "deceptive_concrete",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 75
+      },
+      "proxyContext": {
+        "conceptLabel": "f",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « f » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "low"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-052",
+      "ipa": "təny",
+      "exactWord": "tenue",
+      "lemma": "tenue",
+      "pos": "NOM",
+      "frequency": 19.994,
+      "sourceSampleId": "B2C-I1-0047",
+      "sourceStratum": "legacy_v1_v5",
+      "selectionStratum": "deceptive_concrete",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 62.5
+      },
+      "proxyContext": {
+        "conceptLabel": "tenue",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « tenue » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [
+          "vêtements",
+          "habit"
+        ],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": true,
+        "expectedConcept": "tenue (ensemble de vêtements)",
+        "risk": "medium",
+        "rationale": "Concept visuel sérieux mais avec synonymie, polysémie ou contexte à surveiller."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-053",
+      "ipa": "klijɑ̃",
+      "exactWord": "client",
+      "lemma": "client",
+      "pos": "NOM",
+      "frequency": 68.405,
+      "sourceSampleId": "B2C-I1-0964",
+      "sourceStratum": "two_syllable",
+      "selectionStratum": "deceptive_concrete",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 68.3
+      },
+      "proxyContext": {
+        "conceptLabel": "client",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « client » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "low"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": true,
+        "expectedConcept": "client (personne acheteuse ou usagère)",
+        "risk": "medium",
+        "rationale": "Concept visuel sérieux mais avec synonymie, polysémie ou contexte à surveiller."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-054",
+      "ipa": "kɔ̃tʁa",
+      "exactWord": "contrat",
+      "lemma": "contrat",
+      "pos": "NOM",
+      "frequency": 50.136,
+      "sourceSampleId": "B2C-I1-0099",
+      "sourceStratum": "legacy_v1_v5",
+      "selectionStratum": "deceptive_concrete",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 55.5
+      },
+      "proxyContext": {
+        "conceptLabel": "contrat",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « contrat » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [
+          "document",
+          "signature",
+          "accord"
+        ],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": true,
+        "expectedConcept": "contrat (document matérialisant un accord)",
+        "risk": "medium",
+        "rationale": "Concept visuel sérieux mais avec synonymie, polysémie ou contexte à surveiller."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-055",
+      "ipa": "bujɔ̃",
+      "exactWord": "bouillon",
+      "lemma": "bouillon",
+      "pos": "NOM",
+      "frequency": 2.367,
+      "sourceSampleId": "B2C-I2-0294",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "deceptive_concrete",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 61
+      },
+      "proxyContext": {
+        "conceptLabel": "bouillon",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « bouillon » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": true,
+        "expectedConcept": "bouillon (préparation liquide alimentaire)",
+        "risk": "low",
+        "rationale": "Concept autonome, concret ou incarné, avec représentation visuelle directe et dénomination lexicalement plausible."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-056",
+      "ipa": "y",
+      "exactWord": "u",
+      "lemma": "u",
+      "pos": "NOM",
+      "frequency": 10.421,
+      "sourceSampleId": "B2C-I1-0155",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "deceptive_concrete",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 73
+      },
+      "proxyContext": {
+        "conceptLabel": "u",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « u » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "low"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-057",
+      "ipa": "swa",
+      "exactWord": "soie",
+      "lemma": "soie",
+      "pos": "NOM",
+      "frequency": 7.589,
+      "sourceSampleId": "B2C-I1-0591",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "deceptive_concrete",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 63.3
+      },
+      "proxyContext": {
+        "conceptLabel": "soie",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « soie » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": true,
+        "expectedConcept": "soie (matière textile)",
+        "risk": "low",
+        "rationale": "Concept autonome, concret ou incarné, avec représentation visuelle directe et dénomination lexicalement plausible."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-058",
+      "ipa": "sɔʁt",
+      "exactWord": "sorte",
+      "lemma": "sorte",
+      "pos": "NOM",
+      "frequency": 129.323,
+      "sourceSampleId": "B2C-I1-0449",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "deceptive_concrete",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 72.8
+      },
+      "proxyContext": {
+        "conceptLabel": "sorte",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « sorte » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "low"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-059",
+      "ipa": "nuʁis",
+      "exactWord": "nourrice",
+      "lemma": "nourrice",
+      "pos": "NOM",
+      "frequency": 3.139,
+      "sourceSampleId": "B2C-I2-0240",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "deterministic_fill",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 61
+      },
+      "proxyContext": {
+        "conceptLabel": "nourrice",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « nourrice » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": true,
+        "expectedConcept": "nourrice (personne qui garde ou allaite un enfant)",
+        "risk": "low",
+        "rationale": "Concept autonome, concret ou incarné, avec représentation visuelle directe et dénomination lexicalement plausible."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-060",
+      "ipa": "pif",
+      "exactWord": "pif",
+      "lemma": "pif",
+      "pos": "NOM",
+      "frequency": 1.516,
+      "sourceSampleId": "B2C-I2-0554",
+      "sourceStratum": "low_frequency_concrete",
+      "selectionStratum": "deterministic_fill",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 60.5
+      },
+      "proxyContext": {
+        "conceptLabel": "pif",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « pif » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": true,
+        "expectedConcept": "pif (nez, registre familier)",
+        "risk": "low",
+        "rationale": "Concept autonome, concret ou incarné, avec représentation visuelle directe et dénomination lexicalement plausible."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-061",
+      "ipa": "zɔ̃bi",
+      "exactWord": "zombie",
+      "lemma": "zombie",
+      "pos": "NOM",
+      "frequency": 8.918,
+      "sourceSampleId": "B2C-I1-1146",
+      "sourceStratum": "two_syllable",
+      "selectionStratum": "deterministic_fill",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 59.5
+      },
+      "proxyContext": {
+        "conceptLabel": "zombie",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « zombie » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": true,
+        "expectedConcept": "zombie (créature morte-vivante)",
+        "risk": "low",
+        "rationale": "Concept autonome, concret ou incarné, avec représentation visuelle directe et dénomination lexicalement plausible."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-062",
+      "ipa": "ʁəvjɛ̃",
+      "exactWord": "reviens",
+      "lemma": "revenir",
+      "pos": "VER",
+      "frequency": 138.791,
+      "sourceSampleId": "B2C-I1-0822",
+      "sourceStratum": "multi_homophone",
+      "selectionStratum": "deterministic_fill",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 51.8
+      },
+      "proxyContext": {
+        "conceptLabel": "revenir",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « revenir », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-063",
+      "ipa": "pwazɔ̃",
+      "exactWord": "poison",
+      "lemma": "poison",
+      "pos": "NOM",
+      "frequency": 19.538,
+      "sourceSampleId": "B2C-I2-0350",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "deterministic_fill",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 59.5
+      },
+      "proxyContext": {
+        "conceptLabel": "poison",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « poison » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": true,
+        "expectedConcept": "poison (substance toxique)",
+        "risk": "medium",
+        "rationale": "Concept visuel sérieux mais avec synonymie, polysémie ou contexte à surveiller."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-064",
+      "ipa": "be",
+      "exactWord": "bô",
+      "lemma": "bô",
+      "pos": "NOM",
+      "frequency": 0.022,
+      "sourceSampleId": "B2C-I1-0786",
+      "sourceStratum": "multi_homophone",
+      "selectionStratum": "deterministic_fill",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 64.3
+      },
+      "proxyContext": {
+        "conceptLabel": "bô",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « bô » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-065",
+      "ipa": "zik",
+      "exactWord": "zique",
+      "lemma": "zique",
+      "pos": "NOM",
+      "frequency": 0.082,
+      "sourceSampleId": "B2C-I2-0630",
+      "sourceStratum": "low_frequency_concrete",
+      "selectionStratum": "deterministic_fill",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 62.3
+      },
+      "proxyContext": {
+        "conceptLabel": "zique",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « zique » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-066",
+      "ipa": "mama",
+      "exactWord": "mamas",
+      "lemma": "mamas",
+      "pos": "NOM",
+      "frequency": 0.051,
+      "sourceSampleId": "B2C-I2-1930",
+      "sourceStratum": "two_syllable_control",
+      "selectionStratum": "deterministic_fill",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 58.5
+      },
+      "proxyContext": {
+        "conceptLabel": "mamas",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « mamas » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-067",
+      "ipa": "gik",
+      "exactWord": "geek",
+      "lemma": "geek",
+      "pos": "NOM",
+      "frequency": 2.851,
+      "sourceSampleId": "B2C-I2-0264",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "deterministic_fill",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 63
+      },
+      "proxyContext": {
+        "conceptLabel": "geek",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « geek » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": true,
+        "expectedConcept": "geek (personne passionnée de technologie/culture spécialisée)",
+        "risk": "medium",
+        "rationale": "Concept visuel sérieux mais avec synonymie, polysémie ou contexte à surveiller."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-068",
+      "ipa": "fyʁjø",
+      "exactWord": "furieux",
+      "lemma": "furieux",
+      "pos": "ADJ",
+      "frequency": 16.209,
+      "sourceSampleId": "B2C-I2-1021",
+      "sourceStratum": "low_score_rescue",
+      "selectionStratum": "deterministic_fill",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 30.3
+      },
+      "proxyContext": {
+        "conceptLabel": "furieux",
+        "conceptCategory": "fonction_ou_qualité",
+        "conceptDescription": "Concept lexical « furieux » sans objet autonome garanti.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-069",
+      "ipa": "ʁize",
+      "exactWord": "risée",
+      "lemma": "risée",
+      "pos": "NOM",
+      "frequency": 1.816,
+      "sourceSampleId": "B2C-I2-0327",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "deterministic_fill",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 60.3
+      },
+      "proxyContext": {
+        "conceptLabel": "risée",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « risée » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-070",
+      "ipa": "ɑ̃te",
+      "exactWord": "hanté",
+      "lemma": "hanter",
+      "pos": "VER",
+      "frequency": 2.658,
+      "sourceSampleId": "B2C-I2-1735",
+      "sourceStratum": "negative_control",
+      "selectionStratum": "deterministic_fill",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 43.8
+      },
+      "proxyContext": {
+        "conceptLabel": "hanter",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « hanter », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-071",
+      "ipa": "myze",
+      "exactWord": "musée",
+      "lemma": "musée",
+      "pos": "NOM",
+      "frequency": 18.646,
+      "sourceSampleId": "B2C-I1-0882",
+      "sourceStratum": "multi_homophone",
+      "selectionStratum": "deterministic_fill",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 61
+      },
+      "proxyContext": {
+        "conceptLabel": "musée",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « musée » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": true,
+        "expectedConcept": "musée (bâtiment ou institution d’exposition)",
+        "risk": "low",
+        "rationale": "Concept autonome, concret ou incarné, avec représentation visuelle directe et dénomination lexicalement plausible."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-072",
+      "ipa": "ʁido",
+      "exactWord": "rideau",
+      "lemma": "rideau",
+      "pos": "NOM",
+      "frequency": 7.842,
+      "sourceSampleId": "B2C-I1-0279",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "deterministic_fill",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 64
+      },
+      "proxyContext": {
+        "conceptLabel": "rideau",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « rideau » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [
+          "tenture"
+        ],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": true,
+        "expectedConcept": "rideau (pièce de tissu suspendue)",
+        "risk": "low",
+        "rationale": "Concept autonome, concret ou incarné, avec représentation visuelle directe et dénomination lexicalement plausible."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-073",
+      "ipa": "ko",
+      "exactWord": "cots",
+      "lemma": "cots",
+      "pos": "NOM",
+      "frequency": 0.003,
+      "sourceSampleId": "B2C-I1-0804",
+      "sourceStratum": "multi_homophone",
+      "selectionStratum": "deterministic_fill",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 64.3
+      },
+      "proxyContext": {
+        "conceptLabel": "cots",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « cots » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-074",
+      "ipa": "fɛ",
+      "exactWord": "fay",
+      "lemma": "fay",
+      "pos": "NOM",
+      "frequency": 0.009,
+      "sourceSampleId": "B2C-I1-1278",
+      "sourceStratum": "low_frequency_concrete",
+      "selectionStratum": "deterministic_fill",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 64
+      },
+      "proxyContext": {
+        "conceptLabel": "fay",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « fay » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "holdoutId": "ISH-075",
+      "ipa": "imɑ̃s",
+      "exactWord": "immense",
+      "lemma": "immense",
+      "pos": "ADJ",
+      "frequency": 13.234,
+      "sourceSampleId": "B2C-I1-1842",
+      "sourceStratum": "low_score_rescue_random",
+      "selectionStratum": "deterministic_fill",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 30.3
+      },
+      "proxyContext": {
+        "conceptLabel": "immense",
+        "conceptCategory": "fonction_ou_qualité",
+        "conceptDescription": "Concept lexical « immense » sans objet autonome garanti.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "sealed_editorial_review_before_source_lookup",
+        "seriousVisualConcept": false,
+        "expectedConcept": null,
+        "risk": "high",
+        "rationale": "Pas de concept visuel autonome assez stable pour ce mot dans ce corpus : abstraction, flexion, événement, rareté ou concurrence de dénomination trop forte."
+      },
+      "humanNamingEvidence": "none"
+    }
+  ],
+  "editorialReview": {
+    "reviewerKind": "project_editorial_analysis",
+    "reviewedCount": 75,
+    "positiveCount": 27,
+    "negativeCount": 48,
+    "humanNamingEvidence": "none",
+    "reviewCompletedBeforeStructuredSourceLookup": true,
+    "filterFrozenSha": "81b2a12f89e59b186e62caa5a8a11ade9e20239d"
+  }
+}

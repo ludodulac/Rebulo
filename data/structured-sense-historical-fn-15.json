@@ -1,0 +1,1485 @@
+{
+  "schemaVersion": "1.0",
+  "source": {
+    "sourceId": "frwiktionary-kaikki-2026-09-08",
+    "sourceName": "French Wiktionary via Wiktextract/Kaikki",
+    "sourceVersion": "frwiktionary dump 2026-09-01; Kaikki extraction 2026-09-08; wiktextract ccec6f1 + 4deed51",
+    "license": "Same licenses as Wiktionary: CC-BY-SA and GFDL",
+    "sourceRoot": "https://kaikki.org/frwiktionary/Fran%C3%A7ais/meaning/"
+  },
+  "rows": [
+    {
+      "word": "club",
+      "ipa": "klœb",
+      "sourceMatchStatus": "matched",
+      "observedSenseCount": 4,
+      "observedSenses": [
+        {
+          "sourceSenseId": "kaikki.d6e73e04dde91fd1",
+          "definition": "Association groupant des membres ayant des activités collectives, des intérêts communs.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.e3060b1394178c96",
+          "definition": "Groupe politique durant la Révolution.",
+          "pos": "noun",
+          "tags": [
+            "especially"
+          ],
+          "topics": [
+            "history"
+          ],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.03bdc962f5ebd432",
+          "definition": "Canne à spatule de bois ou d’acier, utilisée pour frapper la balle de golf.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [
+            "golf"
+          ],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.2248528c24561e0e",
+          "definition": "Boîte de nuit.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        }
+      ],
+      "filteredGreen": false,
+      "outcome": "remains_orange"
+    },
+    {
+      "word": "oeuvre",
+      "ipa": "œvʁ",
+      "sourceMatchStatus": "matched",
+      "observedSenseCount": 1,
+      "observedSenses": [
+        {
+          "sourceSenseId": "kaikki.7a726680466e7cc6",
+          "definition": "Variante par contrainte typographique d’œuvre.",
+          "pos": "typographic variant",
+          "tags": [
+            "alt-of"
+          ],
+          "topics": [],
+          "visualAssessment": {
+            "status": "rejected",
+            "visualConceptCandidate": false,
+            "confidence": 0.92,
+            "ruleId": "noun-pos-required"
+          }
+        }
+      ],
+      "filteredGreen": false,
+      "outcome": "remains_orange"
+    },
+    {
+      "word": "star",
+      "ipa": "staʁ",
+      "sourceMatchStatus": "matched",
+      "observedSenseCount": 1,
+      "observedSenses": [
+        {
+          "sourceSenseId": "kaikki.6c784ba4d3d955a8",
+          "definition": "Vedette, en particulier dans le monde du spectacle.",
+          "pos": "noun",
+          "tags": [
+            "Anglicism"
+          ],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        }
+      ],
+      "filteredGreen": false,
+      "outcome": "remains_orange"
+    },
+    {
+      "word": "drogue",
+      "ipa": "dʁɔg",
+      "sourceMatchStatus": "matched",
+      "observedSenseCount": 17,
+      "observedSenses": [
+        {
+          "sourceSenseId": "kaikki.b3d59d44a8f6c858",
+          "definition": "Substance psychotrope provoquant le plus souvent une dépendance et utilisée pour modifier son état mental, en particulier substance illégale dont l’usage est réprouvé.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.a20ce6afea8c05bf",
+          "definition": "Psychotrope quelconque, même s’il est vendu légalement et socialement acceptable.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.77bd5ce4c49e79b7",
+          "definition": "Dépendance, habitude, période pendant laquelle on prend des psychotropes.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.40bfb045b78a5954",
+          "definition": "Chose qui intoxique, qui provoque comme une dépendance ; passe-temps très prenant.",
+          "pos": "noun",
+          "tags": [
+            "broadly"
+          ],
+          "topics": [],
+          "visualAssessment": {
+            "status": "rejected",
+            "visualConceptCandidate": false,
+            "confidence": 0.9,
+            "ruleId": "nonliteral-or-form-tag"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.b340ada5375e5f6b",
+          "definition": "Nom générique de divers ingrédients qui s’emploient surtout en pharmacie, pour la teinture et aussi dans le monde rural pour désigner les traitements phytosanitaires.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.2161e05eeac6ec18",
+          "definition": "Nom générique de divers ingrédients qui s’emploient surtout en pharmacie, pour la teinture et aussi dans le monde rural pour désigner les traitements phytosanitaires.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.4ec0871b73ce4f0b",
+          "definition": "Chose qui n’a pas de valeur.",
+          "pos": "noun",
+          "tags": [
+            "dated",
+            "familiar"
+          ],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.75f1e5be8a27a044",
+          "definition": "Vieille ferraille.",
+          "pos": "noun",
+          "tags": [
+            "obsolete"
+          ],
+          "topics": [],
+          "visualAssessment": {
+            "status": "rejected",
+            "visualConceptCandidate": false,
+            "confidence": 0.9,
+            "ruleId": "nonliteral-or-form-tag"
+          }
+        }
+      ],
+      "filteredGreen": false,
+      "outcome": "remains_orange"
+    },
+    {
+      "word": "mu",
+      "ipa": "my",
+      "sourceMatchStatus": "matched",
+      "observedSenseCount": 4,
+      "observedSenses": [
+        {
+          "sourceSenseId": "kaikki.5738db5d17ea8274",
+          "definition": "μ, Μ, douzième lettre et huitième consonne de l’alphabet grec.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.6054bf3df9ffc430",
+          "definition": "Synonyme de muon.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.b98db935bc330f0b",
+          "definition": "Mot utilisé pour apporter une réponse dénégatoire. Il marque le désaccord avec les présupposés d’une question.",
+          "pos": "adv",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "rejected",
+            "visualConceptCandidate": false,
+            "confidence": 0.92,
+            "ruleId": "noun-pos-required"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.cd73edb6640baa71",
+          "definition": "Variante orthographique de mû.",
+          "pos": "verb",
+          "tags": [
+            "alt-of"
+          ],
+          "topics": [],
+          "visualAssessment": {
+            "status": "rejected",
+            "visualConceptCandidate": false,
+            "confidence": 0.92,
+            "ruleId": "noun-pos-required"
+          }
+        }
+      ],
+      "filteredGreen": false,
+      "outcome": "remains_orange"
+    },
+    {
+      "word": "course",
+      "ipa": "kuʁs",
+      "sourceMatchStatus": "matched",
+      "observedSenseCount": 17,
+      "observedSenses": [
+        {
+          "sourceSenseId": "kaikki.633b5d7bbf64bc94",
+          "definition": "Action de courir, mouvement de celui qui court.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.5901eb0b9e5498c2",
+          "definition": "Toute épreuve sportive où la vitesse est en jeu.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [
+            "sports"
+          ],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.9f8b96a5b2540046",
+          "definition": "Cours, mouvement apparent des astres.",
+          "pos": "noun",
+          "tags": [
+            "formal",
+            "poetic"
+          ],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.a5253f2896478f25",
+          "definition": "Actes d’hostilité que l’on faisait en courant les mers ou en entrant dans le pays ennemi. Note d’usage : On dit maintenant incursion, reconnaissance, pointe, etc.",
+          "pos": "noun",
+          "tags": [
+            "dated"
+          ],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.671c904d2cf18b38",
+          "definition": "En parlant des corsaires, se disait des bâtiments armés en guerre par des particuliers et autorisés par un gouvernement à courir sur les navires marchands ennemis.",
+          "pos": "noun",
+          "tags": [
+            "especially"
+          ],
+          "topics": [
+            "nautical"
+          ],
+          "visualAssessment": {
+            "status": "inferred_candidate",
+            "visualConceptCandidate": true,
+            "confidence": 0.85,
+            "ruleId": "literal-noun-strong-semantic-cue",
+            "evidence": [
+              "strong_visual_topic"
+            ]
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.1fc994b6c7b29533",
+          "definition": "Allées et venues, sorties que l’on fait dans la journée.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.7c0474cd275375e1",
+          "definition": "Objet de ces allées et venues d’où achats, emplettes.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "inferred_candidate",
+            "visualConceptCandidate": true,
+            "confidence": 0.85,
+            "ruleId": "literal-noun-strong-semantic-cue",
+            "evidence": [
+              "strong_visual_gloss_hypernym"
+            ]
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.dc550ef5ea2e409f",
+          "definition": "Trajet que fait une voiture, une automobile de place en transportant une ou plusieurs personnes d’un lieu à un autre.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        }
+      ],
+      "filteredGreen": false,
+      "outcome": "remains_orange"
+    },
+    {
+      "word": "perte",
+      "ipa": "pɛʁt",
+      "sourceMatchStatus": "matched",
+      "observedSenseCount": 14,
+      "observedSenses": [
+        {
+          "sourceSenseId": "kaikki.33d11ca47c01aea5",
+          "definition": "Privation de quelque chose de précieux, d’agréable, de commode, qu’on avait.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.1dafcae00269eaf1",
+          "definition": "Don des mises après échec.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [
+            "games"
+          ],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.30c0d51534eebf45",
+          "definition": "Disparition de personnes dont on est privé par la mort.",
+          "pos": "noun",
+          "tags": [
+            "especially"
+          ],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.e230a525542a317b",
+          "definition": "Soldats tués ou blessés dans une bataille.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [
+            "military"
+          ],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.361f9468d4e0095e",
+          "definition": "Ce qui s’échappe ; ce qui se perd.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.acce125178625f83",
+          "definition": "Lieu où un cours d’eau disparaît en sous-sol.",
+          "pos": "noun",
+          "tags": [
+            "especially"
+          ],
+          "topics": [
+            "geomorphology",
+            "hydrology"
+          ],
+          "visualAssessment": {
+            "status": "inferred_candidate",
+            "visualConceptCandidate": true,
+            "confidence": 0.85,
+            "ruleId": "literal-noun-strong-semantic-cue",
+            "evidence": [
+              "strong_visual_gloss_hypernym"
+            ]
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.b2251738c287750e",
+          "definition": "Hémorragie ; menstrues ou règles abondantes.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.cc99e22179866099",
+          "definition": "Dommage, diminution de bien, de profit.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        }
+      ],
+      "filteredGreen": false,
+      "outcome": "remains_orange"
+    },
+    {
+      "word": "chasse",
+      "ipa": "ʃas",
+      "sourceMatchStatus": "matched",
+      "observedSenseCount": 24,
+      "observedSenses": [
+        {
+          "sourceSenseId": "kaikki.d4821d79a70b7f2a",
+          "definition": "Action de chasser, c’est-à-dire poursuivre pour capturer ou tuer.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.bfb2733945225f8c",
+          "definition": "Activité humaine qui consiste à poursuivre ou surveiller le gibier en forêt ou en nature pour le tuer.",
+          "pos": "noun",
+          "tags": [
+            "especially"
+          ],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.eae4c50e077b7266",
+          "definition": "Réserve, terre ou domaine consacré à la chasse.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.441178794e6a616b",
+          "definition": "Collectivement, les chasseurs, les chiens et tout l’équipage qui chasse.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.1a714771673ac3e3",
+          "definition": "Gibier que l’on prend.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.a091fafc03627d5a",
+          "definition": "Poursuite.",
+          "pos": "noun",
+          "tags": [
+            "broadly"
+          ],
+          "topics": [],
+          "visualAssessment": {
+            "status": "rejected",
+            "visualConceptCandidate": false,
+            "confidence": 0.9,
+            "ruleId": "nonliteral-or-form-tag"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.6b4c20658cffe0ee",
+          "definition": "Dimension variable d’un caractère typographique, mesurée dans un plan parallèle à la surface imprimante parallèlement à la ligne de base.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [
+            "typography"
+          ],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.b43c3ab8173568f7",
+          "definition": "Facilité plus ou moins grande qu’une voiture, ou tout autre véhicule, a de se porter en avant.",
+          "pos": "noun",
+          "tags": [
+            "dated"
+          ],
+          "topics": [],
+          "visualAssessment": {
+            "status": "inferred_candidate",
+            "visualConceptCandidate": true,
+            "confidence": 0.85,
+            "ruleId": "literal-noun-strong-semantic-cue",
+            "evidence": [
+              "strong_visual_gloss_hypernym"
+            ]
+          }
+        }
+      ],
+      "filteredGreen": false,
+      "outcome": "remains_orange"
+    },
+    {
+      "word": "pub",
+      "ipa": "pœb",
+      "sourceMatchStatus": "matched",
+      "observedSenseCount": 2,
+      "observedSenses": [
+        {
+          "sourceSenseId": "kaikki.86bf9918e0f450d7",
+          "definition": "Message publicitaire.",
+          "pos": "noun",
+          "tags": [
+            "familiar"
+          ],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.d5eebb26359d601a",
+          "definition": "Bar, brasserie, café, dont le cadre, le décor évoque l’Angleterre.",
+          "pos": "noun",
+          "tags": [
+            "Anglicism"
+          ],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        }
+      ],
+      "filteredGreen": false,
+      "outcome": "remains_orange"
+    },
+    {
+      "word": "rêve",
+      "ipa": "ʁɛv",
+      "sourceMatchStatus": "matched",
+      "observedSenseCount": 10,
+      "observedSenses": [
+        {
+          "sourceSenseId": "kaikki.67c925ca2604a474",
+          "definition": "Expérience illusoire, souvent absurde, agréable ou désagréable, vécue à la faveur d'une activité cérébrale pendant le sommeil.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.05e49e691d2eea58",
+          "definition": "Chose plaisante par opposition à cauchemar (pendant le sommeil ou non).",
+          "pos": "noun",
+          "tags": [
+            "especially"
+          ],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.21199e0967bfa868",
+          "definition": "Projet sans fondement, chimère, utopie.",
+          "pos": "noun",
+          "tags": [
+            "broadly",
+            "figuratively"
+          ],
+          "topics": [],
+          "visualAssessment": {
+            "status": "rejected",
+            "visualConceptCandidate": false,
+            "confidence": 0.9,
+            "ruleId": "nonliteral-or-form-tag"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.86878eb2e3534ed6",
+          "definition": "Désir, espérance.",
+          "pos": "noun",
+          "tags": [
+            "figuratively"
+          ],
+          "topics": [],
+          "visualAssessment": {
+            "status": "rejected",
+            "visualConceptCandidate": false,
+            "confidence": 0.9,
+            "ruleId": "nonliteral-or-form-tag"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.0a9ebeb3940fb119",
+          "definition": "Interjection exprimant un refus ou une négation forte.",
+          "pos": "intj",
+          "tags": [
+            "familiar"
+          ],
+          "topics": [],
+          "visualAssessment": {
+            "status": "rejected",
+            "visualConceptCandidate": false,
+            "confidence": 0.92,
+            "ruleId": "noun-pos-required"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.f018ede9e8416ea0",
+          "definition": "Première personne du singulier du présent de l’indicatif de rêver.",
+          "pos": "verb",
+          "tags": [
+            "form-of"
+          ],
+          "topics": [],
+          "visualAssessment": {
+            "status": "rejected",
+            "visualConceptCandidate": false,
+            "confidence": 0.92,
+            "ruleId": "noun-pos-required"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.905c0abcc7f973a4",
+          "definition": "Troisième personne du singulier du présent de l’indicatif de rêver.",
+          "pos": "verb",
+          "tags": [
+            "form-of"
+          ],
+          "topics": [],
+          "visualAssessment": {
+            "status": "rejected",
+            "visualConceptCandidate": false,
+            "confidence": 0.92,
+            "ruleId": "noun-pos-required"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.3656b105e225f9ce",
+          "definition": "Première personne du singulier du présent du subjonctif de rêver.",
+          "pos": "verb",
+          "tags": [
+            "form-of"
+          ],
+          "topics": [],
+          "visualAssessment": {
+            "status": "rejected",
+            "visualConceptCandidate": false,
+            "confidence": 0.92,
+            "ruleId": "noun-pos-required"
+          }
+        }
+      ],
+      "filteredGreen": false,
+      "outcome": "remains_orange"
+    },
+    {
+      "word": "lettre",
+      "ipa": "lɛtʁ",
+      "sourceMatchStatus": "matched",
+      "observedSenseCount": 12,
+      "observedSenses": [
+        {
+          "sourceSenseId": "kaikki.f5accb6780df4780",
+          "definition": "Chacun des caractères d’un alphabet représentant un son, voyelle ou consonne.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.90f295065ac1ec82",
+          "definition": "Police de caractères ou manière de représenter les lettres.",
+          "pos": "noun",
+          "tags": [
+            "broadly"
+          ],
+          "topics": [
+            "typography"
+          ],
+          "visualAssessment": {
+            "status": "rejected",
+            "visualConceptCandidate": false,
+            "confidence": 0.9,
+            "ruleId": "nonliteral-or-form-tag"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.42409028df6eebec",
+          "definition": "Chacun des caractères individuels d’une police.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [
+            "typography"
+          ],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.aa2d46ea692113f1",
+          "definition": "Message écrit sur du papier, expédié à un destinataire, généralement sous pli.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.1bd0eb56e19d28a9",
+          "definition": "Caractère de métal, alliage de plomb, d’antimoine et d’étain, représentant en relief une des lettres de l’alphabet.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.7af643c5eb36072b",
+          "definition": "En parlant d’un texte, se dit du sens littéral, par opposition au sens figuré ou extensif.",
+          "pos": "noun",
+          "tags": [
+            "metonymically"
+          ],
+          "topics": [],
+          "visualAssessment": {
+            "status": "rejected",
+            "visualConceptCandidate": false,
+            "confidence": 0.9,
+            "ruleId": "nonliteral-or-form-tag"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.b54cfb7e3b47daac",
+          "definition": "Pâte alimentaire en forme de lettre, utilisée dans la soupe à la place du vermicelle. (généralement au pluriel)",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.6a7b8b038a218254",
+          "definition": "Première personne du singulier du présent de l’indicatif de lettrer.",
+          "pos": "verb",
+          "tags": [
+            "form-of"
+          ],
+          "topics": [],
+          "visualAssessment": {
+            "status": "rejected",
+            "visualConceptCandidate": false,
+            "confidence": 0.92,
+            "ruleId": "noun-pos-required"
+          }
+        }
+      ],
+      "filteredGreen": false,
+      "outcome": "remains_orange"
+    },
+    {
+      "word": "chose",
+      "ipa": "ʃoz",
+      "sourceMatchStatus": "matched",
+      "observedSenseCount": 22,
+      "observedSenses": [
+        {
+          "sourceSenseId": "kaikki.251492e8d8208e80",
+          "definition": "Objet, idée ou abstraction quelconque, sans pouvoir, vouloir, ou devoir l’identifier ou la nommer. Note d’usage : La signification du mot chose se déduit par la manière dont on l’emploie dans la phrase, où il remplace ce qu’il n’est pas possible (ou pas souhaitable) de nommer. Peut aussi remplacer un ensemble d’objets inanimés (ou d’idées) qu’on devine par le contexte.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "inferred_candidate",
+            "visualConceptCandidate": true,
+            "confidence": 0.85,
+            "ruleId": "literal-noun-strong-semantic-cue",
+            "evidence": [
+              "strong_visual_gloss_hypernym"
+            ]
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.25b01c0838c8f2c8",
+          "definition": "Mot, idée, évènement ou énumération dont on parle.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.82c8e31245e127cb",
+          "definition": "Concept, idée, ce qui a été, est, ou sera dit ou fait.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.80eb4189cee7082c",
+          "definition": "Événements (voire des forces) qui dépassent l'entendement et que des mots ne sauraient retranscrire.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.e92ba02d6b9b7b68",
+          "definition": "Dans des expressions.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.04c216204222b395",
+          "definition": "Inanimé par opposition à la personne.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.34280a2f461be723",
+          "definition": "Ce qui est réel, par opposition au nom ou au mot.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.8a40ca91d39866b2",
+          "definition": "Personne.",
+          "pos": "noun",
+          "tags": [
+            "dated"
+          ],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        }
+      ],
+      "filteredGreen": false,
+      "outcome": "remains_orange"
+    },
+    {
+      "word": "droite",
+      "ipa": "dʁwat",
+      "sourceMatchStatus": "matched",
+      "observedSenseCount": 9,
+      "observedSenses": [
+        {
+          "sourceSenseId": "kaikki.1a4d289e96aeac76",
+          "definition": "Côté droit.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.af475dd588860e4f",
+          "definition": "Voie à droite du conducteur.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.58c902c26447e739",
+          "definition": "Main droite.",
+          "pos": "noun",
+          "tags": [
+            "ellipsis"
+          ],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.9877ffe9ffd8853d",
+          "definition": "Coup donné avec la main.",
+          "pos": "noun",
+          "tags": [
+            "broadly",
+            "familiar"
+          ],
+          "topics": [],
+          "visualAssessment": {
+            "status": "rejected",
+            "visualConceptCandidate": false,
+            "confidence": 0.9,
+            "ruleId": "nonliteral-or-form-tag"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.47328132f334282d",
+          "definition": "Terme regroupant divers courants politiques manifestant un attachement à la liberté, à l’ordre, considéré comme juste ou comme un moindre mal, réprouvant les changements brusques sur les questions de société et les questions éthiques, ainsi nommé parce qu’il s’est principalement manifesté à l’origine par les partis conservateurs ou réactionnaires qui siégeaient originellement (à partir de la Révolution) à droite du président de l’assemblée.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [
+            "politics",
+            "sociology"
+          ],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.9a21bc1f932c2ca5",
+          "definition": "Direction vers la fin d’une phrase.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [
+            "linguistic"
+          ],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.b21840ce80c2992c",
+          "definition": "Trait résultant de la relation algébrique entre des variables, ellipse de ligne droite.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [
+            "algebra",
+            "geometry"
+          ],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.1fe9093c9ccd1c3d",
+          "definition": "Espace vectoriel de dimension un.",
+          "pos": "noun",
+          "tags": [
+            "figuratively"
+          ],
+          "topics": [
+            "algebra"
+          ],
+          "visualAssessment": {
+            "status": "rejected",
+            "visualConceptCandidate": false,
+            "confidence": 0.9,
+            "ruleId": "nonliteral-or-form-tag"
+          }
+        }
+      ],
+      "filteredGreen": false,
+      "outcome": "remains_orange"
+    },
+    {
+      "word": "vote",
+      "ipa": "vɔt",
+      "sourceMatchStatus": "matched",
+      "observedSenseCount": 8,
+      "observedSenses": [
+        {
+          "sourceSenseId": "kaikki.971c1923e431d338",
+          "definition": "Opinion exprimée, suffrage donné dans un corps politique, dans une assemblée délibérante, dans un collège électoral, dans une compagnie.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [
+            "politics"
+          ],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.5ccd973af9d558a9",
+          "definition": "Action de voter, acte par lequel un citoyen participe, en se prononçant dans un sens déterminé, au choix de ses représentants ou à une prise d'une décision.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [
+            "law"
+          ],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.52c13cecb74ffdc3",
+          "definition": "Langue parlée (et non écrite) appartenant à la branche fennique de la famille des langues finno-ougriennes parlée par les Votes, en Ingrie.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [
+            "linguistic"
+          ],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.d593bd1b41c1450b",
+          "definition": "Première personne du singulier du présent de l’indicatif de voter.",
+          "pos": "verb",
+          "tags": [
+            "form-of"
+          ],
+          "topics": [],
+          "visualAssessment": {
+            "status": "rejected",
+            "visualConceptCandidate": false,
+            "confidence": 0.92,
+            "ruleId": "noun-pos-required"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.1a8312b9529744cd",
+          "definition": "Troisième personne du singulier du présent de l’indicatif de voter.",
+          "pos": "verb",
+          "tags": [
+            "form-of"
+          ],
+          "topics": [],
+          "visualAssessment": {
+            "status": "rejected",
+            "visualConceptCandidate": false,
+            "confidence": 0.92,
+            "ruleId": "noun-pos-required"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.d4d6b6488ebc1bc1",
+          "definition": "Première personne du singulier du présent du subjonctif de voter.",
+          "pos": "verb",
+          "tags": [
+            "form-of"
+          ],
+          "topics": [],
+          "visualAssessment": {
+            "status": "rejected",
+            "visualConceptCandidate": false,
+            "confidence": 0.92,
+            "ruleId": "noun-pos-required"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.6776e931275857ec",
+          "definition": "Troisième personne du singulier du présent du subjonctif de voter.",
+          "pos": "verb",
+          "tags": [
+            "form-of"
+          ],
+          "topics": [],
+          "visualAssessment": {
+            "status": "rejected",
+            "visualConceptCandidate": false,
+            "confidence": 0.92,
+            "ruleId": "noun-pos-required"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.38f2bdebeece134c",
+          "definition": "Deuxième personne du singulier de l’impératif de voter.",
+          "pos": "verb",
+          "tags": [
+            "form-of"
+          ],
+          "topics": [],
+          "visualAssessment": {
+            "status": "rejected",
+            "visualConceptCandidate": false,
+            "confidence": 0.92,
+            "ruleId": "noun-pos-required"
+          }
+        }
+      ],
+      "filteredGreen": false,
+      "outcome": "remains_orange"
+    },
+    {
+      "word": "geste",
+      "ipa": "ʒɛst",
+      "sourceMatchStatus": "matched",
+      "observedSenseCount": 7,
+      "observedSenses": [
+        {
+          "sourceSenseId": "kaikki.be6540706d9b5a35",
+          "definition": "Action et mouvement du corps et particulièrement des bras et des mains, action et mouvement employés à signifier quelque chose.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.9257debc8168f2ff",
+          "definition": "Mouvements de la tête, du torse, et surtout des bras, comme les pas sont les mouvements des pieds.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [
+            "dance"
+          ],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.45213a682aace316",
+          "definition": "Simple mouvement du bras, ou du corps, de la tête.",
+          "pos": "noun",
+          "tags": [],
+          "topics": [],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.3ee0b74b1fb0b2c1",
+          "definition": "Action, généralement spontanée, et d’ailleurs bonne ou mauvaise, qui frappe l’esprit, qui attire l’attention.",
+          "pos": "noun",
+          "tags": [
+            "figuratively"
+          ],
+          "topics": [],
+          "visualAssessment": {
+            "status": "rejected",
+            "visualConceptCandidate": false,
+            "confidence": 0.9,
+            "ruleId": "nonliteral-or-form-tag"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.119c481757312c75",
+          "definition": "Ensemble de poèmes en vers du Moyen Âge, dans lequel est racontée d’une façon légendaire l’histoire de personnages historiques et particulièrement de Charlemagne et de ses preux.",
+          "pos": "noun",
+          "tags": [
+            "literary"
+          ],
+          "topics": [
+            "history"
+          ],
+          "visualAssessment": {
+            "status": "unresolved",
+            "visualConceptCandidate": false,
+            "confidence": 0.68,
+            "ruleId": "observed-sense-without-strong-visual-proof"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.54d3390da61c8af5",
+          "definition": "Récit à la gloire de quelqu’un, d’un ensemble de personnes, d’un peuple, etc.",
+          "pos": "noun",
+          "tags": [
+            "broadly"
+          ],
+          "topics": [],
+          "visualAssessment": {
+            "status": "rejected",
+            "visualConceptCandidate": false,
+            "confidence": 0.9,
+            "ruleId": "nonliteral-or-form-tag"
+          }
+        },
+        {
+          "sourceSenseId": "kaikki.e40e606f836ab359",
+          "definition": "Ensemble des règles, souvent non écrites, qui régissent le fonctionnement identitaire d’un groupe, d’une association …",
+          "pos": "noun",
+          "tags": [
+            "broadly"
+          ],
+          "topics": [],
+          "visualAssessment": {
+            "status": "rejected",
+            "visualConceptCandidate": false,
+            "confidence": 0.9,
+            "ruleId": "nonliteral-or-form-tag"
+          }
+        }
+      ],
+      "filteredGreen": false,
+      "outcome": "remains_orange"
+    }
+  ]
+}

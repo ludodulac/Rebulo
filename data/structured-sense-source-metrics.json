@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "1.0",
+  "status": "analysis_only",
+  "baseSha": "a604f9f7fe74c2868babfac4d098abc8fd026eb8",
+  "formula290": "unchanged",
+  "humanNamingEvidence": "none",
+  "source": {
+    "sourceId": "frwiktionary-kaikki-2026-09-08",
+    "sourceName": "French Wiktionary via Wiktextract/Kaikki",
+    "sourceVersion": "frwiktionary dump 2026-09-01; Kaikki extraction 2026-09-08; wiktextract ccec6f1 + 4deed51",
+    "license": "Same licenses as Wiktionary: CC-BY-SA and GFDL",
+    "sourceRoot": "https://kaikki.org/frwiktionary/Fran%C3%A7ais/meaning/"
+  },
+  "filterVersion": "structured-visual-filter-v2.2",
+  "scope": {
+    "independentGold": 150,
+    "historicalFN": 15,
+    "distinctWordsFetched": 165,
+    "totalObservedSensesIngested": 1222
+  },
+  "goldComposition": {
+    "positive": 48,
+    "negative": 102
+  },
+  "states": {
+    "A_baseline": {
+      "n": 150,
+      "tp": 0,
+      "fp": 0,
+      "tn": 102,
+      "fn": 48,
+      "precision": 100,
+      "recall": 0,
+      "f1": 0
+    },
+    "B_observed_ingested_no_visual_inference": {
+      "n": 150,
+      "tp": 0,
+      "fp": 0,
+      "tn": 102,
+      "fn": 48,
+      "precision": 100,
+      "recall": 0,
+      "f1": 0
+    },
+    "C_observed_plus_deterministic_filter": {
+      "n": 150,
+      "tp": 23,
+      "fp": 2,
+      "tn": 100,
+      "fn": 25,
+      "precision": 92,
+      "recall": 47.9,
+      "f1": 63
+    }
+  },
+  "coverage": {
+    "relationsWithAtLeastOneObservedSense": 148,
+    "relationsWithAtLeastOneObservedSensePercent": 98.7,
+    "averageObservedSensesPerRelation": 7.13,
+    "seriousConceptsWithCompatibleObservedSenseProxy": 29,
+    "seriousConceptsWithCompatibleObservedSenseProxyPercent": 60.4,
+    "falsePositivesBlockedDespiteObservedSense": 98,
+    "falsePositivesWithObservedSense": 100,
+    "sourceCreatedAmbiguityCases": 126,
+    "unmatchedCleanly": 2
+  },
+  "routes": {
+    "baselineGreen": 0,
+    "filteredGreen": 25,
+    "newGreenFromObserved": 25
+  },
+  "notes": [
+    "State B intentionally has the same visual decision as A: lexical observed evidence alone never proves visual suitability.",
+    "State C uses only general POS/tag/topic/gloss rules; no gold word, old false-positive blacklist or historical-FN whitelist is part of the filter.",
+    "The compatible-observed metric is a deterministic proxy: an observed sense is counted compatible when the general visual filter finds semantic evidence consistent with a visual concept; it is not a post-source human relabel."
+  ]
+}

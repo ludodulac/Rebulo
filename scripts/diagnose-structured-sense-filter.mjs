@@ -1,0 +1,5 @@
+import fs from 'node:fs';
+const rows=fs.readFileSync('data/structured-sense-kaikki-bounded.jsonl','utf8').trim().split('\n').filter(Boolean).map(JSON.parse).filter(r=>r.unitKind==='independent_gold');
+const pick=r=>({goldId:r.goldId,word:r.exactWord,ipa:r.ipa,gold:r.goldReview.seriousVisualConcept,baselineClass:r.baseline.provisionalClass,inferences:r.senseCandidates.filter(s=>s.visualAssessment?.visualConceptCandidate).map(s=>({definition:s.sourceDefinition,pos:s.sourcePOS,tags:s.sourceTags,topics:s.sourceTopics,ruleId:s.visualAssessment.ruleId}))});
+const out={falsePositives:rows.filter(r=>!r.goldReview.seriousVisualConcept&&r.states.C_deterministicFilteredGreen).map(pick),truePositives:rows.filter(r=>r.goldReview.seriousVisualConcept&&r.states.C_deterministicFilteredGreen).map(pick),falseNegatives:rows.filter(r=>r.goldReview.seriousVisualConcept&&!r.states.C_deterministicFilteredGreen).map(pick)};
+fs.writeFileSync('data/structured-sense-filter-diagnostics.json',JSON.stringify(out,null,2)+'\n');

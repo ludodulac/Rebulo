@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "1.0",
+  "status": "sealed_holdout_evaluation",
+  "filterFrozenBeforeHoldoutSelection": true,
+  "filterFrozenSha": "81b2a12f89e59b186e62caa5a8a11ade9e20239d",
+  "filterVersion": "structured-visual-filter-v2.2 + dominant-literal-noun-v1",
+  "source": {
+    "sourceId": "frwiktionary-kaikki-2026-09-08",
+    "sourceName": "French Wiktionary via Wiktextract/Kaikki",
+    "sourceVersion": "frwiktionary dump 2026-09-01; Kaikki extraction 2026-09-08; wiktextract ccec6f1 + 4deed51",
+    "license": "Same licenses as Wiktionary: CC-BY-SA and GFDL",
+    "sourceRoot": "https://kaikki.org/frwiktionary/Fran%C3%A7ais/meaning/"
+  },
+  "goldComposition": {
+    "positive": 27,
+    "negative": 48
+  },
+  "states": {
+    "A_baseline": {
+      "n": 75,
+      "tp": 0,
+      "fp": 0,
+      "tn": 48,
+      "fn": 27,
+      "precision": 100,
+      "recall": 0,
+      "f1": 0
+    },
+    "B_source_observed_no_visual_inference": {
+      "n": 75,
+      "tp": 0,
+      "fp": 0,
+      "tn": 48,
+      "fn": 27,
+      "precision": 100,
+      "recall": 0,
+      "f1": 0
+    },
+    "C_frozen_source_filter": {
+      "n": 75,
+      "tp": 0,
+      "fp": 0,
+      "tn": 48,
+      "fn": 27,
+      "precision": 100,
+      "recall": 0,
+      "f1": 0
+    }
+  },
+  "coverage": {
+    "relationsWithAtLeastOneObservedSense": 71,
+    "relationsWithAtLeastOneObservedSensePercent": 94.7,
+    "averageObservedSensesPerRelation": 5.07,
+    "totalObservedSensesIngested": 380,
+    "seriousConceptsWithCompatibleDominantObservedSense": 3,
+    "seriousConceptsWithCompatibleDominantObservedSensePercent": 11.1,
+    "falsePositivesBlockedDespiteObservedSense": 44,
+    "falsePositivesWithObservedSense": 44,
+    "sourceCreatedAmbiguityCases": 60,
+    "unmatchedCleanly": 4
+  },
+  "routes": {
+    "baselineGreen": 0,
+    "filteredGreen": 0,
+    "newGreenFromObserved": 0,
+    "newGreenWords": [],
+    "falsePositiveWords": []
+  },
+  "notes": [
+    "This 75-case holdout was selected and editorially labeled after filter v2.2 was frozen and before any Kaikki lookup for these 75 graphies.",
+    "No rule changes are permitted after this evaluation if these metrics are used as the independent claim.",
+    "Observed lexical senses remain visualConceptCandidate=false; the visual decision is a separate deterministic inference."
+  ]
+}

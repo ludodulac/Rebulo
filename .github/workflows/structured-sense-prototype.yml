@@ -6,6 +6,7 @@ on:
       - analysis/structured-sense-source-prototype
     paths:
       - scripts/select-independent-sense-gold.mjs
+      - scripts/emit-independent-gold-review-sheet.mjs
       - scripts/build-structured-sense-prototype.mjs
       - tests/structured-sense-source-prototype.test.mjs
       - .github/workflows/structured-sense-prototype.yml
@@ -25,6 +26,8 @@ jobs:
           node-version: '22'
       - name: Freeze independent gold selection
         run: node scripts/select-independent-sense-gold.mjs
+      - name: Emit compact review sheet
+        run: node scripts/emit-independent-gold-review-sheet.mjs
       - name: Build structured source prototype
         if: ${{ hashFiles('scripts/build-structured-sense-prototype.mjs') != '' }}
         run: node scripts/build-structured-sense-prototype.mjs
@@ -35,7 +38,7 @@ jobs:
         run: |
           git config user.name "rebulo-analysis-bot"
           git config user.email "actions@users.noreply.github.com"
-          for f in data/independent-sense-gold-150.json data/structured-sense-*.json data/structured-sense-*.jsonl; do
+          for f in data/independent-sense-gold-150.json data/independent-sense-gold-150-review-sheet.tsv data/structured-sense-*.json data/structured-sense-*.jsonl; do
             [ -e "$f" ] && git add -f "$f"
           done
           if git diff --cached --quiet; then

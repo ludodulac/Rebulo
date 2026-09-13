@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "status": "analysis_only",
+  "sourceMainSha": "95d1fbc62148767c3fe5a71cb9084e8990e565dd",
+  "relations": 2000,
+  "newRelations": 2000,
+  "overlapRelations": 0,
+  "baselineConceptUnits": 2000,
+  "additionalReviewedSenseConcepts": 4,
+  "totalConceptUnitsAfterReviewedSenseExpansion": 2004,
+  "baselineDistribution": {
+    "A": 0,
+    "B": 78,
+    "C": 1090,
+    "D": 832
+  },
+  "baselineAB": 78,
+  "baselineABPercent": 3.9,
+  "editoriallySupportedSeriousMinimum": 50,
+  "editoriallySupportedSeriousMinimumPercent": 2.5,
+  "automaticABFalsePositives": 32,
+  "automaticABFalsePositiveRatePercent": 41,
+  "rescueReviewed": 360,
+  "rescueRecovered": 4,
+  "rescueFalseNegativeRatePercent": 1.1,
+  "lexicalMultipleEntryRelations": 0,
+  "lexicalMultiplePosRelations": 0,
+  "lexicalMissingEntryRelations": 0,
+  "confirmedMultiSeriousVisualSoundCount": 0,
+  "confirmedMultiSeriousVisualSounds": [],
+  "sample1Comparison": {
+    "sample1AB": 682,
+    "sample1ABPercent": 34.1,
+    "sample1RescueSelected": 260,
+    "sample1AutomaticRescueAB": 0,
+    "sample1DistinctIpaCount": 1567,
+    "sample1MultiSeriousProxy": 144
+  },
+  "notes": [
+    "Sample 2 is deliberately harder and excludes all sample-1 relations; global yields are not directly comparable as iid samples.",
+    "The editorially supported serious minimum only audits all automatic A/B and the rescue stratum; it is not a full editorial reclassification of all C/D.",
+    "Confirmed multi-serious visual sounds are computed only from audited automatic A/B survivors plus reviewed rescue concepts."
+  ]
+}

@@ -189,7 +189,7 @@
 | B2C-I2-0965 | lwɛ̃ | loin | loin | ADV | 229.756 | fonction_ou_qualité | 4 | D | loin:ADV:229.756 |
 | B2C-I2-0966 | tape | tapée | taper | VER | 0.81 | action | 6 | D | taper:VER:0.81 |
 | B2C-I2-0967 | ɔ̃ | hon | hon | ONO | 0.516 | fonction_ou_qualité | 2 | D | hon:ONO:0.516 |
-| B2C-I2-0968 | myʁ | mûres | mûr | ADJ | 1.142 | objet | 6 | C | mûr:ADJ:1.142 |
+| B2C-I2-0968 | myʁ | mûres | mûr | ADJ | 1.142 | fonction_ou_qualité | 3 | D | mûr:ADJ:1.142 |
 | B2C-I2-0969 | bim | bim | bim | ONO | 0.44 | fonction_ou_qualité | 0 | D | bim:ONO:0.44 |
 | B2C-I2-0970 | tɛʁmik | thermique | thermique | ADJ | 2.282 | fonction_ou_qualité | 2 | D | thermique:ADJ:2.282 |
 | B2C-I2-0971 | pybli | publi | publi | NOM | 0.006 | nom_concret_à_vérifier | 5 | C | publi:NOM:0.006 |
@@ -240,7 +240,7 @@
 | B2C-I2-1016 | le | les | les | PRO | 1112.592 | fonction_ou_qualité | 4 | D | les:PRO:1112.592 |
 | B2C-I2-1017 | mwɛ̃ | moins | moins | ADV | 465.361 | fonction_ou_qualité | 5 | D | moins:ADV:465.361 |
 | B2C-I2-1018 | ʃjɑ̃ | chiant | chiant | ADJ | 7.25 | fonction_ou_qualité | 2 | D | chiant:ADJ:7.25 |
-| B2C-I2-1019 | sykʁe | sucré | sucré | ADJ | 2.165 | aliment | 6 | C | sucré:ADJ:2.165 |
+| B2C-I2-1019 | sykʁe | sucré | sucré | ADJ | 2.165 | fonction_ou_qualité | 3 | D | sucré:ADJ:2.165 |
 | B2C-I2-1020 | ʁobyst | robuste | robuste | ADJ | 2.206 | fonction_ou_qualité | 2 | D | robuste:ADJ:2.206 |
 | B2C-I2-1021 | fyʁjø | furieux | furieux | ADJ | 16.209 | fonction_ou_qualité | 2 | D | furieux:ADJ:16.209 |
 | B2C-I2-1022 | somɔ̃ | sommons | sommer | VER | 0.019 | action | 6 | D | sommer:VER:0.019 |

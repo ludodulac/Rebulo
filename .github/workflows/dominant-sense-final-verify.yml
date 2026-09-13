@@ -1,0 +1,22 @@
+name: Dominant sense final verify
+on:
+  push:
+    branches: [analysis/dominant-sense-semantic-ranking]
+    paths:
+      - tests/dominant-sense-semantic-ranking.test.mjs
+      - docs/DOMINANT_SENSE_SEMANTIC_RANKING_REPORT.md
+      - .github/workflows/dominant-sense-final-verify.yml
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: analysis/dominant-sense-semantic-ranking
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run dominant-sense integrity test
+        run: node tests/dominant-sense-semantic-ranking.test.mjs

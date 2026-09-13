@@ -1,0 +1,33 @@
+name: Wave 4 imageability preselection
+
+on:
+  push:
+    branches: [productive-bank-wave4-imageability]
+    paths:
+      - 'scripts/build-rebus-productive-bank-wave4-preselection.mjs'
+      - '.github/workflows/wave4-preselection.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  preselect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: productive-bank-wave4-imageability
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build imageability-first preselection
+        run: node scripts/build-rebus-productive-bank-wave4-preselection.mjs
+      - name: Commit preselection outputs
+        run: |
+          git config user.name 'rebulo-analysis-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/rebus-productive-bank-wave4-preselection.json docs/REBUS_PRODUCTIVE_BANK_WAVE4_PRESELECTION.md
+          git commit -m 'Materialize wave 4 imageability preselection' || exit 0
+          git push origin HEAD:productive-bank-wave4-imageability

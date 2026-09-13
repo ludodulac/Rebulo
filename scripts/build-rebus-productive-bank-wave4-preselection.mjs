@@ -7,7 +7,7 @@ const audit=read('data/rebus-representation-bank-audit.json');
 const fragmentIdeas=read('data/rebus-fragment-representation-ideas.json');
 const waves=[1,2,3].map(n=>read(`data/rebus-productive-bank-wave${n}.json`));
 const bank=buildProductiveBank({fragmentIdeas,productiveWaves:waves});
-const serious=s=>s.visibleConventions.length>0||s.representations.some(r=>r.editorialStatus==='retain'&&(r.visualBrief||r.representationProposed));
+const serious=s=>s.visibleConventions.length>0||s.representations.some(r=>['retain','prototype_candidate'].includes(r.editorialStatus)&&(r.visualBrief||r.representationProposed));
 const represented=new Set([...bank.values()].filter(serious).map(s=>normalizeIPA(s.ipa)));
 const visualFiles=['data/rebus-sound-visual-curation.json',...Array.from({length:9},(_,i)=>`data/rebus-sound-visual-curation-wave${i+1}.json`)].filter(fs.existsSync);
 const proto=new Map();for(const file of visualFiles){for(const e of read(file).entries||[]){if(e.decision!=='prototype_candidate')continue;const ipa=normalizeIPA(e.ipa),word=String(e.candidate||'').trim();if(ipa&&word)proto.set(`${ipa}\0${word}`,{...e,sourceFile:file});}}

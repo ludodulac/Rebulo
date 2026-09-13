@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import {normalizeIPA,splitIPAUnits} from '../src/phonetic-engine.js';
+import {buildProductiveBank} from '../src/rebus-productive-bank.js';
+const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
+const audit=read('data/rebus-representation-bank-audit.json');
+const fragmentIdeas=read('data/rebus-fragment-representation-ideas.json');
+const waves=[1,2,3,4].map(n=>read(`data/rebus-productive-bank-wave${n}.json`));
+const bank=buildProductiveBank({fragmentIdeas,productiveWaves:waves});const indexed=new Set([...bank.keys()].map(normalizeIPA));
+const rows=[];for(const r of audit.usefulRows||[]){const ipa=normalizeIPA(r.ipa);if(!ipa||indexed.has(ipa)||!r?.categories?.A_exactFrenchWord)continue;const words=[...new Map((r.exactWords||[]).filter(x=>x?.word).map(x=>[String(x.word).toLocaleLowerCase('fr'),{word:String(x.word),pos:x.pos||'',frequency:Number(x.frequency)||0}])).values()];const nouns=words.filter(x=>String(x.pos).toUpperCase().startsWith('NOM'));if(nouns.length<2)continue;const spans=(r.syllableSpans||[]).map(Number).filter(Number.isFinite);rows.push({ipa,unitCount:splitIPAUnits(ipa).length,syllableSpan:spans.length?Math.min(...spans):null,usefulTargetCount:Number(r.usefulTargetCount)||0,usefulWeightedGain:Number(r.usefulWeightedGain)||0,nouns:nouns.sort((a,b)=>b.frequency-a.frequency),allExactWords:words});}
+rows.sort((a,b)=>Math.log1p(b.nouns.reduce((s,x)=>s+x.frequency,0))+Math.log1p(b.usefulWeightedGain)-Math.log1p(a.nouns.reduce((s,x)=>s+x.frequency,0))-Math.log1p(a.usefulWeightedGain));
+fs.writeFileSync('data/rebus-productive-bank-wave5-multi-homophone-audit.json',JSON.stringify({count:rows.length,rows:rows.slice(0,250)},null,2)+'\n');
+const md=['# Vague 5 — audit des IPA net-new à noms homophones multiples','',`Total : ${rows.length}.`,'','| IPA | syll. | unités | noms exacts distincts |','|---|---:|---:|---|'];for(const r of rows.slice(0,120))md.push(`| /${r.ipa}/ | ${r.syllableSpan??'—'} | ${r.unitCount} | ${r.nouns.slice(0,8).map(x=>`${x.word} (${x.frequency})`).join(', ')} |`);fs.writeFileSync('docs/REBUS_PRODUCTIVE_BANK_WAVE5_MULTI_HOMOPHONES.md',md.join('\n')+'\n');console.log(JSON.stringify({count:rows.length,top:rows.slice(0,80)},null,2));

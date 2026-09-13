@@ -1,0 +1,34 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {buildProductiveBank} from '../src/rebus-productive-bank.js';
+import {normalizeIPA} from '../src/phonetic-engine.js';
+const read=p=>JSON.parse(fs.readFileSync(new URL(`../${p}`,import.meta.url),'utf8'));
+const fragmentIdeas=read('data/rebus-fragment-representation-ideas.json');
+const waves=[1,2,3,4].map(n=>read(`data/rebus-productive-bank-wave${n}.json`));
+const pre=read('data/rebus-productive-bank-wave4-preselection.json');
+const metrics=read('data/rebus-productive-bank-wave4-metrics.json');
+const benches=read('data/rebus-productive-bank-wave4-benchmarks.json');
+const w4=waves[3],schema=w4.soundRowSchema;
+assert.equal(pre.usefulExactSoundDenominator,5741);
+assert.equal(pre.preselectedSoundCount,200);
+assert.ok(pre.shortFragmentState.oneSyllable>0&&pre.shortFragmentState.twoSyllable>0&&pre.shortFragmentState.shortCombinable>0);
+assert.ok(metrics.examinedSoundCount>=150&&metrics.examinedSoundCount<=250);
+assert.equal(metrics.examinedSoundCount,180);
+assert.ok(metrics.editorialAcceptanceRate>0.10,'wave4 acceptance must be clearly above wave3 5.25%');
+assert.ok(metrics.enrichedSoundCount>=20);
+assert.ok(metrics.retainedRepresentationCount>=metrics.enrichedSoundCount);
+assert.equal(metrics.visualBriefCount,metrics.retainedRepresentationCount);
+assert.equal(metrics.runtimeActivationCount,0);
+assert.equal(w4.representationDefaults.spontaneousNamingRisk,'unknown');
+assert.equal(w4.representationDefaults.humanNamingEvidence,'none');
+assert.equal(w4.representationDefaults.clinicalEvidence,'none');
+assert.equal(w4.representationDefaults.runtimeStatus,'inactive_editorial');
+const sets=waves.map(w=>{const s=w.soundRowSchema||[];return new Set((w.soundRows||[]).map(r=>normalizeIPA(r[s.indexOf('ipa')])));});
+for(const ipa of sets[3])for(let i=0;i<3;i++)assert.ok(!sets[i].has(ipa),`wave4 duplicate IPA ${ipa}`);
+const bank=buildProductiveBank({fragmentIdeas,productiveWaves:waves});
+for(const raw of w4.soundRows){const row=Object.fromEntries(schema.map((k,i)=>[k,raw[i]]));const sound=bank.get(normalizeIPA(row.ipa));assert.ok(sound);for(const word of row.exactWords){assert.ok(sound.exactWords.includes(word),`${row.ipa} missing ${word}`);const rel=sound.representations.find(r=>r.word===word&&r.source==='Lexique 4');assert.ok(rel,`${row.ipa}/${word} missing lexical relation`);assert.equal(rel.matchStatus,'exact');assert.equal(rel.spontaneousNamingRisk,'unknown');assert.equal(rel.humanNamingEvidence,'none');assert.equal(rel.clinicalEvidence,'none');assert.equal(rel.runtimeStatus,'inactive_editorial');}}
+const repPairs=new Set();for(const r of w4.representations){const key=`${normalizeIPA(r.ipa)}\0${r.word}`;assert.ok(!repPairs.has(key));repPairs.add(key);assert.ok(r.brief?.length>120,`brief too short ${key}`);assert.ok(Array.isArray(r.confusions));}
+assert.equal(benches.historical.rows.length,20);assert.equal(benches.control.rows.length,20);assert.equal(benches.status,'thermometer_only_not_selection_signal');
+assert.ok(Object.values(metrics.representationCategoryCounts).reduce((a,b)=>a+b,0)===metrics.retainedRepresentationCount);
+assert.ok(metrics.newOneSyllableRepresentationCount>0);assert.ok(metrics.newTwoSyllableRepresentationCount>0);
+console.log(JSON.stringify({metrics,historical:benches.historical,control:benches.control},null,2));

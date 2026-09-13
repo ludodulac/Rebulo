@@ -1,0 +1,39 @@
+name: Wave 4 net-new IPA gate
+
+on:
+  push:
+    branches: [productive-bank-wave4-imageability]
+    paths:
+      - 'scripts/patch-wave4-net-new.py'
+      - '.github/workflows/wave4-net-new-fix.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: productive-bank-wave4-imageability
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Apply net-new gate
+        run: python scripts/patch-wave4-net-new.py
+      - name: Rebuild preselection
+        run: node scripts/build-rebus-productive-bank-wave4-preselection.mjs
+      - name: Build wave 4
+        run: node scripts/build-rebus-productive-bank-wave4.mjs
+      - name: Validate wave 4
+        run: node tests/rebus-productive-bank-wave4.test.mjs
+      - name: Commit corrected source and outputs
+        run: |
+          git config user.name 'rebulo-analysis-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add scripts/build-rebus-productive-bank-wave4-preselection.mjs data/rebus-productive-bank-wave4-preselection.json docs/REBUS_PRODUCTIVE_BANK_WAVE4_PRESELECTION.md data/rebus-productive-bank-wave4.json data/rebus-productive-bank-wave4-benchmarks.json data/rebus-productive-bank-wave4-metrics.json docs/REBUS_PRODUCTIVE_BANK_WAVE4_REPORT.md
+          git commit -m 'Require net-new IPA in productive wave 4' || exit 0
+          git push origin HEAD:productive-bank-wave4-imageability

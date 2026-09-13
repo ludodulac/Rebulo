@@ -1,0 +1,4584 @@
+{
+  "schemaVersion": "1.0",
+  "status": "frozen_before_source_ingestion",
+  "baseSha": "a604f9f7fe74c2868babfac4d098abc8fd026eb8",
+  "selectionSeed": "rebulo-independent-gold-v1",
+  "selectedCount": 150,
+  "excludedCalibrationCount": 400,
+  "historicalFNExcluded": [
+    "club",
+    "oeuvre",
+    "star",
+    "drogue",
+    "mu",
+    "course",
+    "perte",
+    "chasse",
+    "pub",
+    "rêve",
+    "lettre",
+    "chose",
+    "droite",
+    "vote",
+    "geste"
+  ],
+  "stratumCounts": {
+    "obvious_concrete": 21,
+    "abstract": 20,
+    "roles_people": 15,
+    "places": 6,
+    "events_actions": 20,
+    "polysemy_homographs": 20,
+    "low_frequency": 15,
+    "deceptive_concrete": 20,
+    "deterministic_fill": 13
+  },
+  "sourceLookedAt": false,
+  "rows": [
+    {
+      "goldId": "ISG-001",
+      "ipa": "solɛj",
+      "exactWord": "soleil",
+      "lemma": "soleil",
+      "pos": "NOM",
+      "frequency": 78.456,
+      "sourceSampleId": "B2C-I1-0951",
+      "sourceStratum": "two_syllable",
+      "selectionStratum": "obvious_concrete",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 70.8
+      },
+      "proxyContext": {
+        "conceptLabel": "soleil",
+        "conceptCategory": "nature",
+        "conceptDescription": "Concept candidat « soleil » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "low"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-002",
+      "ipa": "ʁivjɛʁ",
+      "exactWord": "rivière",
+      "lemma": "rivière",
+      "pos": "NOM",
+      "frequency": 29.092,
+      "sourceSampleId": "B2C-I1-1048",
+      "sourceStratum": "two_syllable",
+      "selectionStratum": "obvious_concrete",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 70.8
+      },
+      "proxyContext": {
+        "conceptLabel": "rivière",
+        "conceptCategory": "nature",
+        "conceptDescription": "Concept candidat « rivière » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "low"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-003",
+      "ipa": "tɛt",
+      "exactWord": "tête",
+      "lemma": "tête",
+      "pos": "NOM",
+      "frequency": 400.934,
+      "sourceSampleId": "B2C-I1-0311",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "obvious_concrete",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 75.3
+      },
+      "proxyContext": {
+        "conceptLabel": "tête",
+        "conceptCategory": "corps",
+        "conceptDescription": "Concept candidat « tête » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "low"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-004",
+      "ipa": "naviʁ",
+      "exactWord": "navire",
+      "lemma": "navire",
+      "pos": "NOM",
+      "frequency": 23.921,
+      "sourceSampleId": "B2C-I1-1075",
+      "sourceStratum": "two_syllable",
+      "selectionStratum": "obvious_concrete",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 70.8
+      },
+      "proxyContext": {
+        "conceptLabel": "navire",
+        "conceptCategory": "véhicule",
+        "conceptDescription": "Concept candidat « navire » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "low"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-005",
+      "ipa": "sɑ̃",
+      "exactWord": "sang",
+      "lemma": "sang",
+      "pos": "NOM",
+      "frequency": 321.009,
+      "sourceSampleId": "B2C-I1-0137",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "obvious_concrete",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 69.3
+      },
+      "proxyContext": {
+        "conceptLabel": "sang",
+        "conceptCategory": "corps",
+        "conceptDescription": "Concept candidat « sang » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [
+          "blessure",
+          "bobo",
+          "goutte"
+        ],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-006",
+      "ipa": "asjɛt",
+      "exactWord": "assiette",
+      "lemma": "assiette",
+      "pos": "NOM",
+      "frequency": 10.861,
+      "sourceSampleId": "B2C-I1-0271",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "obvious_concrete",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 66.5
+      },
+      "proxyContext": {
+        "conceptLabel": "assiette",
+        "conceptCategory": "objet",
+        "conceptDescription": "Concept candidat « assiette » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [
+          "plat"
+        ],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-007",
+      "ipa": "bʁa",
+      "exactWord": "bras",
+      "lemma": "bras",
+      "pos": "NOM",
+      "frequency": 123.984,
+      "sourceSampleId": "B2C-I1-0146",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "obvious_concrete",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 70.8
+      },
+      "proxyContext": {
+        "conceptLabel": "bras",
+        "conceptCategory": "corps",
+        "conceptDescription": "Concept candidat « bras » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [
+          "main",
+          "coude",
+          "épaule"
+        ],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-008",
+      "ipa": "oʁɛj",
+      "exactWord": "oreille",
+      "lemma": "oreille",
+      "pos": "NOM",
+      "frequency": 27.38,
+      "sourceSampleId": "B2C-I1-0212",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "obvious_concrete",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 69
+      },
+      "proxyContext": {
+        "conceptLabel": "oreille",
+        "conceptCategory": "corps",
+        "conceptDescription": "Concept candidat « oreille » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [
+          "oreille",
+          "partie du visage"
+        ],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-009",
+      "ipa": "bwat",
+      "exactWord": "boîte",
+      "lemma": "boîte",
+      "pos": "NOM",
+      "frequency": 77.614,
+      "sourceSampleId": "B2C-I1-0468",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "obvious_concrete",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 72.8
+      },
+      "proxyContext": {
+        "conceptLabel": "boîte",
+        "conceptCategory": "objet",
+        "conceptDescription": "Concept candidat « boîte » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "low"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-010",
+      "ipa": "sup",
+      "exactWord": "soupe",
+      "lemma": "soupe",
+      "pos": "NOM",
+      "frequency": 24.218,
+      "sourceSampleId": "B2C-I1-0548",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "obvious_concrete",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 74.5
+      },
+      "proxyContext": {
+        "conceptLabel": "soupe",
+        "conceptCategory": "aliment",
+        "conceptDescription": "Concept candidat « soupe » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "low"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-011",
+      "ipa": "ɔʁlɔʒ",
+      "exactWord": "horloge",
+      "lemma": "horloge",
+      "pos": "NOM",
+      "frequency": 10.829,
+      "sourceSampleId": "B2C-I1-0272",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "obvious_concrete",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 66.5
+      },
+      "proxyContext": {
+        "conceptLabel": "horloge",
+        "conceptCategory": "objet",
+        "conceptDescription": "Concept candidat « horloge » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [
+          "pendule",
+          "montre"
+        ],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-012",
+      "ipa": "vo",
+      "exactWord": "veau",
+      "lemma": "veau",
+      "pos": "NOM",
+      "frequency": 4.63,
+      "sourceSampleId": "B2C-I1-0160",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "obvious_concrete",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 69
+      },
+      "proxyContext": {
+        "conceptLabel": "veau",
+        "conceptCategory": "animal",
+        "conceptDescription": "Concept candidat « veau » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [
+          "vache",
+          "vachette"
+        ],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-013",
+      "ipa": "sak",
+      "exactWord": "sac",
+      "lemma": "sac",
+      "pos": "NOM",
+      "frequency": 111.684,
+      "sourceSampleId": "B2C-I1-0342",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "obvious_concrete",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 75.3
+      },
+      "proxyContext": {
+        "conceptLabel": "sac",
+        "conceptCategory": "objet",
+        "conceptDescription": "Concept candidat « sac » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "low"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-014",
+      "ipa": "ʃəmiz",
+      "exactWord": "chemise",
+      "lemma": "chemise",
+      "pos": "NOM",
+      "frequency": 30.636,
+      "sourceSampleId": "B2C-I1-1042",
+      "sourceStratum": "two_syllable",
+      "selectionStratum": "obvious_concrete",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 70.8
+      },
+      "proxyContext": {
+        "conceptLabel": "chemise",
+        "conceptCategory": "vêtement",
+        "conceptDescription": "Concept candidat « chemise » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "low"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-015",
+      "ipa": "butɛj",
+      "exactWord": "bouteille",
+      "lemma": "bouteille",
+      "pos": "NOM",
+      "frequency": 42.459,
+      "sourceSampleId": "B2C-I1-0207",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "obvious_concrete",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 69
+      },
+      "proxyContext": {
+        "conceptLabel": "bouteille",
+        "conceptCategory": "objet",
+        "conceptDescription": "Concept candidat « bouteille » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [
+          "flacon"
+        ],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-016",
+      "ipa": "lak",
+      "exactWord": "lac",
+      "lemma": "lac",
+      "pos": "NOM",
+      "frequency": 24.886,
+      "sourceSampleId": "B2C-I1-0165",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "obvious_concrete",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 69.5
+      },
+      "proxyContext": {
+        "conceptLabel": "lac",
+        "conceptCategory": "nature",
+        "conceptDescription": "Concept candidat « lac » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [
+          "étang",
+          "mer"
+        ],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-017",
+      "ipa": "pjɛʁ",
+      "exactWord": "pierre",
+      "lemma": "pierre",
+      "pos": "NOM",
+      "frequency": 34.028,
+      "sourceSampleId": "B2C-I1-0515",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "obvious_concrete",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 74.3
+      },
+      "proxyContext": {
+        "conceptLabel": "pierre",
+        "conceptCategory": "nature",
+        "conceptDescription": "Concept candidat « pierre » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "low"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-018",
+      "ipa": "fʁomaʒ",
+      "exactWord": "fromage",
+      "lemma": "fromage",
+      "pos": "NOM",
+      "frequency": 27.415,
+      "sourceSampleId": "B2C-I1-1057",
+      "sourceStratum": "two_syllable",
+      "selectionStratum": "obvious_concrete",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 70.8
+      },
+      "proxyContext": {
+        "conceptLabel": "fromage",
+        "conceptCategory": "aliment",
+        "conceptDescription": "Concept candidat « fromage » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "low"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-019",
+      "ipa": "balɔ̃",
+      "exactWord": "ballon",
+      "lemma": "ballon",
+      "pos": "NOM",
+      "frequency": 21.478,
+      "sourceSampleId": "B2C-I1-0560",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "obvious_concrete",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 70.8
+      },
+      "proxyContext": {
+        "conceptLabel": "ballon",
+        "conceptCategory": "objet",
+        "conceptDescription": "Concept candidat « ballon » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "low"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-020",
+      "ipa": "sɛ̃tyʁ",
+      "exactWord": "ceinture",
+      "lemma": "ceinture",
+      "pos": "NOM",
+      "frequency": 21.905,
+      "sourceSampleId": "B2C-I1-0217",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "obvious_concrete",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 69
+      },
+      "proxyContext": {
+        "conceptLabel": "ceinture",
+        "conceptCategory": "vêtement",
+        "conceptDescription": "Concept candidat « ceinture » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [
+          "sangle"
+        ],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-021",
+      "ipa": "foʁɛ",
+      "exactWord": "forêt",
+      "lemma": "forêt",
+      "pos": "NOM",
+      "frequency": 27.684,
+      "sourceSampleId": "B2C-I1-0534",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "obvious_concrete",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 70.8
+      },
+      "proxyContext": {
+        "conceptLabel": "forêt",
+        "conceptCategory": "nature",
+        "conceptDescription": "Concept candidat « forêt » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "low"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-022",
+      "ipa": "ɑ̃klɛ̃",
+      "exactWord": "enclin",
+      "lemma": "enclin",
+      "pos": "ADJ",
+      "frequency": 1.652,
+      "sourceSampleId": "B2C-I2-1100",
+      "sourceStratum": "low_score_rescue",
+      "selectionStratum": "abstract",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 27.8
+      },
+      "proxyContext": {
+        "conceptLabel": "enclin",
+        "conceptCategory": "fonction_ou_qualité",
+        "conceptDescription": "Concept lexical « enclin » sans objet autonome garanti.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-023",
+      "ipa": "zɛ̃",
+      "exactWord": "zain",
+      "lemma": "zain",
+      "pos": "ADJ",
+      "frequency": 0.032,
+      "sourceSampleId": "B2C-I1-1943",
+      "sourceStratum": "low_score_rescue_random",
+      "selectionStratum": "abstract",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 31.5
+      },
+      "proxyContext": {
+        "conceptLabel": "zain",
+        "conceptCategory": "fonction_ou_qualité",
+        "conceptDescription": "Concept lexical « zain » sans objet autonome garanti.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-024",
+      "ipa": "buji",
+      "exactWord": "bouilli",
+      "lemma": "bouilli",
+      "pos": "ADJ",
+      "frequency": 0.453,
+      "sourceSampleId": "B2C-I1-1810",
+      "sourceStratum": "low_score_rescue_random",
+      "selectionStratum": "abstract",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 27.8
+      },
+      "proxyContext": {
+        "conceptLabel": "bouilli",
+        "conceptCategory": "fonction_ou_qualité",
+        "conceptDescription": "Concept lexical « bouilli » sans objet autonome garanti.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-025",
+      "ipa": "gʁi",
+      "exactWord": "gris",
+      "lemma": "gris",
+      "pos": "ADJ",
+      "frequency": 7.918,
+      "sourceSampleId": "B2C-I2-1869",
+      "sourceStratum": "negative_control",
+      "selectionStratum": "abstract",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 35.8
+      },
+      "proxyContext": {
+        "conceptLabel": "gris",
+        "conceptCategory": "fonction_ou_qualité",
+        "conceptDescription": "Concept lexical « gris » sans objet autonome garanti.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-026",
+      "ipa": "fyʁaks",
+      "exactWord": "furax",
+      "lemma": "furax",
+      "pos": "ADJ",
+      "frequency": 3.506,
+      "sourceSampleId": "B2C-I1-1759",
+      "sourceStratum": "low_score_rescue_random",
+      "selectionStratum": "abstract",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 30.3
+      },
+      "proxyContext": {
+        "conceptLabel": "furax",
+        "conceptCategory": "fonction_ou_qualité",
+        "conceptDescription": "Concept lexical « furax » sans objet autonome garanti.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-027",
+      "ipa": "ʃo",
+      "exactWord": "chaud",
+      "lemma": "chaud",
+      "pos": "ADJ",
+      "frequency": 42.807,
+      "sourceSampleId": "B2C-I1-1677",
+      "sourceStratum": "abstract_control",
+      "selectionStratum": "abstract",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 39.8
+      },
+      "proxyContext": {
+        "conceptLabel": "chaud",
+        "conceptCategory": "fonction_ou_qualité",
+        "conceptDescription": "Concept lexical « chaud » sans objet autonome garanti.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-028",
+      "ipa": "diʁɛkt",
+      "exactWord": "direct",
+      "lemma": "direct",
+      "pos": "ADJ",
+      "frequency": 18.149,
+      "sourceSampleId": "B2C-I1-1740",
+      "sourceStratum": "low_score_rescue_random",
+      "selectionStratum": "abstract",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 30.3
+      },
+      "proxyContext": {
+        "conceptLabel": "direct",
+        "conceptCategory": "fonction_ou_qualité",
+        "conceptDescription": "Concept lexical « direct » sans objet autonome garanti.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-029",
+      "ipa": "idø",
+      "exactWord": "hideux",
+      "lemma": "hideux",
+      "pos": "ADJ",
+      "frequency": 1.927,
+      "sourceSampleId": "B2C-I2-1082",
+      "sourceStratum": "low_score_rescue",
+      "selectionStratum": "abstract",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 27.8
+      },
+      "proxyContext": {
+        "conceptLabel": "hideux",
+        "conceptCategory": "fonction_ou_qualité",
+        "conceptDescription": "Concept lexical « hideux » sans objet autonome garanti.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-030",
+      "ipa": "uf",
+      "exactWord": "ouf",
+      "lemma": "ouf",
+      "pos": "ONO",
+      "frequency": 5.731,
+      "sourceSampleId": "B2C-I1-1967",
+      "sourceStratum": "low_score_rescue_random",
+      "selectionStratum": "abstract",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 32.3
+      },
+      "proxyContext": {
+        "conceptLabel": "ouf",
+        "conceptCategory": "fonction_ou_qualité",
+        "conceptDescription": "Concept lexical « ouf » sans objet autonome garanti.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-031",
+      "ipa": "tʁɛ",
+      "exactWord": "trés",
+      "lemma": "très",
+      "pos": "ADV",
+      "frequency": 1435.576,
+      "sourceSampleId": "B2C-I1-1611",
+      "sourceStratum": "abstract_control",
+      "selectionStratum": "abstract",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 40.8
+      },
+      "proxyContext": {
+        "conceptLabel": "très",
+        "conceptCategory": "fonction_ou_qualité",
+        "conceptDescription": "Concept lexical « très » sans objet autonome garanti.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-032",
+      "ipa": "avɑ̃s",
+      "exactWord": "avance",
+      "lemma": "avance",
+      "pos": "NOM",
+      "frequency": 59.658,
+      "sourceSampleId": "B2C-I1-1625",
+      "sourceStratum": "abstract_control",
+      "selectionStratum": "abstract",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 35.3
+      },
+      "proxyContext": {
+        "conceptLabel": "avance",
+        "conceptCategory": "abstrait",
+        "conceptDescription": "Concept lexical « avance » sans objet autonome garanti.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-033",
+      "ipa": "sə",
+      "exactWord": "se",
+      "lemma": "se",
+      "pos": "PRO",
+      "frequency": 2685.443,
+      "sourceSampleId": "B2C-I1-1609",
+      "sourceStratum": "abstract_control",
+      "selectionStratum": "abstract",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 42.5
+      },
+      "proxyContext": {
+        "conceptLabel": "se",
+        "conceptCategory": "fonction_ou_qualité",
+        "conceptDescription": "Concept lexical « se » sans objet autonome garanti.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-034",
+      "ipa": "sik",
+      "exactWord": "sic",
+      "lemma": "sic",
+      "pos": "ADV",
+      "frequency": 0.209,
+      "sourceSampleId": "B2C-I1-1896",
+      "sourceStratum": "low_score_rescue_random",
+      "selectionStratum": "abstract",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 31.5
+      },
+      "proxyContext": {
+        "conceptLabel": "sic",
+        "conceptCategory": "fonction_ou_qualité",
+        "conceptDescription": "Concept lexical « sic » sans objet autonome garanti.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-035",
+      "ipa": "ʁadɛ̃",
+      "exactWord": "radin",
+      "lemma": "radin",
+      "pos": "ADJ",
+      "frequency": 1.975,
+      "sourceSampleId": "B2C-I1-1752",
+      "sourceStratum": "low_score_rescue_random",
+      "selectionStratum": "abstract",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 27.8
+      },
+      "proxyContext": {
+        "conceptLabel": "radin",
+        "conceptCategory": "fonction_ou_qualité",
+        "conceptDescription": "Concept lexical « radin » sans objet autonome garanti.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-036",
+      "ipa": "oʁik",
+      "exactWord": "aurique",
+      "lemma": "aurique",
+      "pos": "ADJ",
+      "frequency": 0.022,
+      "sourceSampleId": "B2C-I1-1746",
+      "sourceStratum": "low_score_rescue_random",
+      "selectionStratum": "abstract",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 27.8
+      },
+      "proxyContext": {
+        "conceptLabel": "aurique",
+        "conceptCategory": "fonction_ou_qualité",
+        "conceptDescription": "Concept lexical « aurique » sans objet autonome garanti.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-037",
+      "ipa": "myskle",
+      "exactWord": "musclé",
+      "lemma": "musclé",
+      "pos": "ADJ",
+      "frequency": 1.851,
+      "sourceSampleId": "B2C-I2-0933",
+      "sourceStratum": "low_score_rescue",
+      "selectionStratum": "abstract",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 27.8
+      },
+      "proxyContext": {
+        "conceptLabel": "musclé",
+        "conceptCategory": "fonction_ou_qualité",
+        "conceptDescription": "Concept lexical « musclé » sans objet autonome garanti.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-038",
+      "ipa": "ʁys",
+      "exactWord": "russe",
+      "lemma": "russe",
+      "pos": "ADJ",
+      "frequency": 18.231,
+      "sourceSampleId": "B2C-I1-1918",
+      "sourceStratum": "low_score_rescue_random",
+      "selectionStratum": "abstract",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 34
+      },
+      "proxyContext": {
+        "conceptLabel": "russe",
+        "conceptCategory": "fonction_ou_qualité",
+        "conceptDescription": "Concept lexical « russe » sans objet autonome garanti.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-039",
+      "ipa": "tʁɛz",
+      "exactWord": "treize",
+      "lemma": "treize",
+      "pos": "ADJ",
+      "frequency": 3.206,
+      "sourceSampleId": "B2C-I2-1763",
+      "sourceStratum": "negative_control",
+      "selectionStratum": "abstract",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 32.3
+      },
+      "proxyContext": {
+        "conceptLabel": "treize",
+        "conceptCategory": "fonction_ou_qualité",
+        "conceptDescription": "Concept lexical « treize » sans objet autonome garanti.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-040",
+      "ipa": "sypɛʁb",
+      "exactWord": "superbe",
+      "lemma": "superbe",
+      "pos": "ADJ",
+      "frequency": 36.614,
+      "sourceSampleId": "B2C-I1-1745",
+      "sourceStratum": "low_score_rescue_random",
+      "selectionStratum": "abstract",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 32.8
+      },
+      "proxyContext": {
+        "conceptLabel": "superbe",
+        "conceptCategory": "fonction_ou_qualité",
+        "conceptDescription": "Concept lexical « superbe » sans objet autonome garanti.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-041",
+      "ipa": "fiksjɔ̃",
+      "exactWord": "fiction",
+      "lemma": "fiction",
+      "pos": "NOM",
+      "frequency": 5.934,
+      "sourceSampleId": "B2C-I1-1649",
+      "sourceStratum": "abstract_control",
+      "selectionStratum": "abstract",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 32.8
+      },
+      "proxyContext": {
+        "conceptLabel": "fiction",
+        "conceptCategory": "abstrait",
+        "conceptDescription": "Concept lexical « fiction » sans objet autonome garanti.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-042",
+      "ipa": "pastœʁ",
+      "exactWord": "pasteur",
+      "lemma": "pasteur",
+      "pos": "NOM",
+      "frequency": 10.801,
+      "sourceSampleId": "B2C-I1-1125",
+      "sourceStratum": "two_syllable",
+      "selectionStratum": "roles_people",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 38.5
+      },
+      "proxyContext": {
+        "conceptLabel": "pasteur",
+        "conceptCategory": "personne_rôle_candidat",
+        "conceptDescription": "Concept candidat « pasteur » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-043",
+      "ipa": "asje",
+      "exactWord": "acier",
+      "lemma": "acier",
+      "pos": "NOM",
+      "frequency": 12.753,
+      "sourceSampleId": "B2C-I1-0925",
+      "sourceStratum": "multi_homophone",
+      "selectionStratum": "roles_people",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 38.5
+      },
+      "proxyContext": {
+        "conceptLabel": "acier",
+        "conceptCategory": "personne_rôle_candidat",
+        "conceptDescription": "Concept candidat « acier » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-044",
+      "ipa": "malœʁ",
+      "exactWord": "malheur",
+      "lemma": "malheur",
+      "pos": "NOM",
+      "frequency": 20.962,
+      "sourceSampleId": "B2C-I1-1110",
+      "sourceStratum": "two_syllable",
+      "selectionStratum": "roles_people",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 41
+      },
+      "proxyContext": {
+        "conceptLabel": "malheur",
+        "conceptCategory": "personne_rôle_candidat",
+        "conceptDescription": "Concept candidat « malheur » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-045",
+      "ipa": "ʁymœʁ",
+      "exactWord": "rumeur",
+      "lemma": "rumeur",
+      "pos": "NOM",
+      "frequency": 14.547,
+      "sourceSampleId": "B2C-I1-1514",
+      "sourceStratum": "ambiguous_control",
+      "selectionStratum": "roles_people",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 38.5
+      },
+      "proxyContext": {
+        "conceptLabel": "rumeur",
+        "conceptCategory": "personne_rôle_candidat",
+        "conceptDescription": "Concept candidat « rumeur » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-046",
+      "ipa": "dusœʁ",
+      "exactWord": "douceur",
+      "lemma": "douceur",
+      "pos": "NOM",
+      "frequency": 9.854,
+      "sourceSampleId": "B2C-I1-1528",
+      "sourceStratum": "ambiguous_control",
+      "selectionStratum": "roles_people",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 38.5
+      },
+      "proxyContext": {
+        "conceptLabel": "douceur",
+        "conceptCategory": "personne_rôle_candidat",
+        "conceptDescription": "Concept candidat « douceur » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-047",
+      "ipa": "tʁɛnœʁ",
+      "exactWord": "traîneur",
+      "lemma": "traîneur",
+      "pos": "NOM",
+      "frequency": 0.003,
+      "sourceSampleId": "B2C-I2-1630",
+      "sourceStratum": "multi_concept_ipa",
+      "selectionStratum": "roles_people",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 39
+      },
+      "proxyContext": {
+        "conceptLabel": "traîneur",
+        "conceptCategory": "personne_rôle_candidat",
+        "conceptDescription": "Concept candidat « traîneur » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-048",
+      "ipa": "gʁɑ̃dœʁ",
+      "exactWord": "grandeur",
+      "lemma": "grandeur",
+      "pos": "NOM",
+      "frequency": 6.003,
+      "sourceSampleId": "B2C-I1-1545",
+      "sourceStratum": "ambiguous_control",
+      "selectionStratum": "roles_people",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 38.5
+      },
+      "proxyContext": {
+        "conceptLabel": "grandeur",
+        "conceptCategory": "personne_rôle_candidat",
+        "conceptDescription": "Concept candidat « grandeur » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-049",
+      "ipa": "kulœʁ",
+      "exactWord": "couleur",
+      "lemma": "couleur",
+      "pos": "NOM",
+      "frequency": 44.959,
+      "sourceSampleId": "B2C-I1-1006",
+      "sourceStratum": "two_syllable",
+      "selectionStratum": "roles_people",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 41
+      },
+      "proxyContext": {
+        "conceptLabel": "couleur",
+        "conceptCategory": "personne_rôle_candidat",
+        "conceptDescription": "Concept candidat « couleur » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-050",
+      "ipa": "sovœʁ",
+      "exactWord": "sauveur",
+      "lemma": "sauveur",
+      "pos": "NOM",
+      "frequency": 5.174,
+      "sourceSampleId": "B2C-I1-1552",
+      "sourceStratum": "ambiguous_control",
+      "selectionStratum": "roles_people",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 38.5
+      },
+      "proxyContext": {
+        "conceptLabel": "sauveur",
+        "conceptCategory": "personne_rôle_candidat",
+        "conceptDescription": "Concept candidat « sauveur » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-051",
+      "ipa": "valœʁ",
+      "exactWord": "valeur",
+      "lemma": "valeur",
+      "pos": "NOM",
+      "frequency": 38.848,
+      "sourceSampleId": "B2C-I1-1020",
+      "sourceStratum": "two_syllable",
+      "selectionStratum": "roles_people",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 41
+      },
+      "proxyContext": {
+        "conceptLabel": "valeur",
+        "conceptCategory": "personne_rôle_candidat",
+        "conceptDescription": "Concept candidat « valeur » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-052",
+      "ipa": "pɔ̃pje",
+      "exactWord": "pompier",
+      "lemma": "pompier",
+      "pos": "NOM",
+      "frequency": 4.443,
+      "sourceSampleId": "B2C-I2-0168",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "roles_people",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 62
+      },
+      "proxyContext": {
+        "conceptLabel": "pompier",
+        "conceptCategory": "personne",
+        "conceptDescription": "Concept candidat « pompier » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-053",
+      "ipa": "mɛʁdje",
+      "exactWord": "merdier",
+      "lemma": "merdier",
+      "pos": "NOM",
+      "frequency": 5.747,
+      "sourceSampleId": "B2C-I1-1403",
+      "sourceStratum": "ambiguous_control",
+      "selectionStratum": "roles_people",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 38.5
+      },
+      "proxyContext": {
+        "conceptLabel": "merdier",
+        "conceptCategory": "personne_rôle_candidat",
+        "conceptDescription": "Concept candidat « merdier » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-054",
+      "ipa": "kaje",
+      "exactWord": "cahier",
+      "lemma": "cahier",
+      "pos": "NOM",
+      "frequency": 4.212,
+      "sourceSampleId": "B2C-I1-0617",
+      "sourceStratum": "multi_homophone",
+      "selectionStratum": "roles_people",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 58
+      },
+      "proxyContext": {
+        "conceptLabel": "cahier",
+        "conceptCategory": "personne_rôle_candidat",
+        "conceptDescription": "Concept candidat « cahier » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [
+          "carnet",
+          "livre"
+        ],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-055",
+      "ipa": "sjœʁ",
+      "exactWord": "sieur",
+      "lemma": "sieur",
+      "pos": "NOM",
+      "frequency": 4.348,
+      "sourceSampleId": "B2C-I1-1423",
+      "sourceStratum": "ambiguous_control",
+      "selectionStratum": "roles_people",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 42
+      },
+      "proxyContext": {
+        "conceptLabel": "sieur",
+        "conceptCategory": "personne_rôle_candidat",
+        "conceptDescription": "Concept candidat « sieur » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-056",
+      "ipa": "gʁənje",
+      "exactWord": "grenier",
+      "lemma": "grenier",
+      "pos": "NOM",
+      "frequency": 7.465,
+      "sourceSampleId": "B2C-I1-1537",
+      "sourceStratum": "ambiguous_control",
+      "selectionStratum": "roles_people",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 38.5
+      },
+      "proxyContext": {
+        "conceptLabel": "grenier",
+        "conceptCategory": "personne_rôle_candidat",
+        "conceptDescription": "Concept candidat « grenier » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-057",
+      "ipa": "pʁizɔ̃",
+      "exactWord": "prisons",
+      "lemma": "prison",
+      "pos": "NOM",
+      "frequency": 4.326,
+      "sourceSampleId": "B2C-I2-0171",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "places",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 62
+      },
+      "proxyContext": {
+        "conceptLabel": "prison",
+        "conceptCategory": "lieu",
+        "conceptDescription": "Concept candidat « prison » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-058",
+      "ipa": "pɔʁ",
+      "exactWord": "port",
+      "lemma": "port",
+      "pos": "NOM",
+      "frequency": 20.839,
+      "sourceSampleId": "B2C-I1-0218",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "places",
+      "baseline": {
+        "provisionalClass": "A",
+        "aggregateScore": 81
+      },
+      "proxyContext": {
+        "conceptLabel": "port",
+        "conceptCategory": "lieu",
+        "conceptDescription": "Concept candidat « port » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "low"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-059",
+      "ipa": "ʃɑ̃bʁ",
+      "exactWord": "chambre",
+      "lemma": "chambre",
+      "pos": "NOM",
+      "frequency": 231.772,
+      "sourceSampleId": "B2C-I1-0431",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "places",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 75.3
+      },
+      "proxyContext": {
+        "conceptLabel": "chambre",
+        "conceptCategory": "lieu",
+        "conceptDescription": "Concept candidat « chambre » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "low"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-060",
+      "ipa": "maʁʃe",
+      "exactWord": "marché",
+      "lemma": "marchè",
+      "pos": "NOM",
+      "frequency": 0.041,
+      "sourceSampleId": "B2C-I1-0082",
+      "sourceStratum": "legacy_v1_v5",
+      "selectionStratum": "places",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 64
+      },
+      "proxyContext": {
+        "conceptLabel": "marchè",
+        "conceptCategory": "lieu",
+        "conceptDescription": "Concept candidat « marchè » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [
+          "marché",
+          "stand",
+          "magasin"
+        ],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-061",
+      "ipa": "ʒaʁdɛ̃",
+      "exactWord": "jardin",
+      "lemma": "jardin",
+      "pos": "NOM",
+      "frequency": 37.88,
+      "sourceSampleId": "B2C-I1-0209",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "places",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 65.8
+      },
+      "proxyContext": {
+        "conceptLabel": "jardin",
+        "conceptCategory": "lieu",
+        "conceptDescription": "Concept candidat « jardin » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [
+          "parc",
+          "potager"
+        ],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-062",
+      "ipa": "ʁy",
+      "exactWord": "rue",
+      "lemma": "rue",
+      "pos": "NOM",
+      "frequency": 106.006,
+      "sourceSampleId": "B2C-I1-0138",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "places",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 73.8
+      },
+      "proxyContext": {
+        "conceptLabel": "rue",
+        "conceptCategory": "lieu",
+        "conceptDescription": "Concept candidat « rue » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [
+          "route",
+          "avenue"
+        ],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-063",
+      "ipa": "ʒwe",
+      "exactWord": "joué",
+      "lemma": "jouer",
+      "pos": "VER",
+      "frequency": 78.171,
+      "sourceSampleId": "B2C-I1-1497",
+      "sourceStratum": "ambiguous_control",
+      "selectionStratum": "events_actions",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 51.3
+      },
+      "proxyContext": {
+        "conceptLabel": "jouer",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « jouer », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-064",
+      "ipa": "gʁimas",
+      "exactWord": "grimasse",
+      "lemma": "grimer",
+      "pos": "VER",
+      "frequency": 0.003,
+      "sourceSampleId": "B2C-I2-1086",
+      "sourceStratum": "low_score_rescue",
+      "selectionStratum": "events_actions",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 39.5
+      },
+      "proxyContext": {
+        "conceptLabel": "grimer",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « grimer », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-065",
+      "ipa": "bite",
+      "exactWord": "bitté",
+      "lemma": "bitter",
+      "pos": "VER",
+      "frequency": 0.003,
+      "sourceSampleId": "B2C-I2-1910",
+      "sourceStratum": "two_syllable_control",
+      "selectionStratum": "events_actions",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 39.5
+      },
+      "proxyContext": {
+        "conceptLabel": "bitter",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « bitter », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-066",
+      "ipa": "fose",
+      "exactWord": "fausser",
+      "lemma": "fausser",
+      "pos": "VER",
+      "frequency": 0.538,
+      "sourceSampleId": "B2C-I2-0955",
+      "sourceStratum": "low_score_rescue",
+      "selectionStratum": "events_actions",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 39.5
+      },
+      "proxyContext": {
+        "conceptLabel": "fausser",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « fausser », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-067",
+      "ipa": "dane",
+      "exactWord": "damner",
+      "lemma": "damner",
+      "pos": "VER",
+      "frequency": 0.307,
+      "sourceSampleId": "B2C-I1-1732",
+      "sourceStratum": "low_score_rescue_random",
+      "selectionStratum": "events_actions",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 38
+      },
+      "proxyContext": {
+        "conceptLabel": "damner",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « damner », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-068",
+      "ipa": "defɛʁ",
+      "exactWord": "déferre",
+      "lemma": "déferrer",
+      "pos": "VER",
+      "frequency": 0.006,
+      "sourceSampleId": "B2C-I2-1152",
+      "sourceStratum": "pos_sense_risk",
+      "selectionStratum": "events_actions",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 41
+      },
+      "proxyContext": {
+        "conceptLabel": "déferrer",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « déferrer », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-069",
+      "ipa": "fɔ̃se",
+      "exactWord": "foncer",
+      "lemma": "foncer",
+      "pos": "VER",
+      "frequency": 3.576,
+      "sourceSampleId": "B2C-I2-1872",
+      "sourceStratum": "negative_control",
+      "selectionStratum": "events_actions",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 43.8
+      },
+      "proxyContext": {
+        "conceptLabel": "foncer",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « foncer », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-070",
+      "ipa": "kut",
+      "exactWord": "coûte",
+      "lemma": "coûter",
+      "pos": "VER",
+      "frequency": 27.731,
+      "sourceSampleId": "B2C-I1-1503",
+      "sourceStratum": "ambiguous_control",
+      "selectionStratum": "events_actions",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 51.3
+      },
+      "proxyContext": {
+        "conceptLabel": "coûter",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « coûter », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-071",
+      "ipa": "ɑ̃ta",
+      "exactWord": "anta",
+      "lemma": "anter",
+      "pos": "VER",
+      "frequency": 0.082,
+      "sourceSampleId": "B2C-I2-0792",
+      "sourceStratum": "low_score_rescue",
+      "selectionStratum": "events_actions",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 41
+      },
+      "proxyContext": {
+        "conceptLabel": "anter",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « anter », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-072",
+      "ipa": "muje",
+      "exactWord": "mouiller",
+      "lemma": "mouiller",
+      "pos": "VER",
+      "frequency": 3.316,
+      "sourceSampleId": "B2C-I2-1835",
+      "sourceStratum": "negative_control",
+      "selectionStratum": "events_actions",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 42
+      },
+      "proxyContext": {
+        "conceptLabel": "mouiller",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « mouiller », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-073",
+      "ipa": "ale",
+      "exactWord": "allée",
+      "lemma": "aller",
+      "pos": "VER",
+      "frequency": 56.418,
+      "sourceSampleId": "B2C-I1-0065",
+      "sourceStratum": "legacy_v1_v5",
+      "selectionStratum": "events_actions",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 57.5
+      },
+      "proxyContext": {
+        "conceptLabel": "aller",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « aller », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [
+          "chemin",
+          "route"
+        ],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-074",
+      "ipa": "lese",
+      "exactWord": "laisser",
+      "lemma": "laisser",
+      "pos": "VER",
+      "frequency": 296.003,
+      "sourceSampleId": "B2C-I1-0816",
+      "sourceStratum": "multi_homophone",
+      "selectionStratum": "events_actions",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 51.8
+      },
+      "proxyContext": {
+        "conceptLabel": "laisser",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « laisser », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-075",
+      "ipa": "ose",
+      "exactWord": "hausser",
+      "lemma": "hausser",
+      "pos": "VER",
+      "frequency": 0.421,
+      "sourceSampleId": "B2C-I2-1756",
+      "sourceStratum": "negative_control",
+      "selectionStratum": "events_actions",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 38
+      },
+      "proxyContext": {
+        "conceptLabel": "hausser",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « hausser », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-076",
+      "ipa": "piʒe",
+      "exactWord": "piger",
+      "lemma": "piger",
+      "pos": "VER",
+      "frequency": 1.5,
+      "sourceSampleId": "B2C-I1-1778",
+      "sourceStratum": "low_score_rescue_random",
+      "selectionStratum": "events_actions",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 38
+      },
+      "proxyContext": {
+        "conceptLabel": "piger",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « piger », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-077",
+      "ipa": "devwa",
+      "exactWord": "dévoie",
+      "lemma": "dévoyer",
+      "pos": "VER",
+      "frequency": 0.003,
+      "sourceSampleId": "B2C-I2-1812",
+      "sourceStratum": "negative_control",
+      "selectionStratum": "events_actions",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 39.5
+      },
+      "proxyContext": {
+        "conceptLabel": "dévoyer",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « dévoyer », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-078",
+      "ipa": "taʁde",
+      "exactWord": "tarder",
+      "lemma": "tarder",
+      "pos": "VER",
+      "frequency": 11.639,
+      "sourceSampleId": "B2C-I2-1232",
+      "sourceStratum": "pos_sense_risk",
+      "selectionStratum": "events_actions",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 40.5
+      },
+      "proxyContext": {
+        "conceptLabel": "tarder",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « tarder », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-079",
+      "ipa": "fɛʁme",
+      "exactWord": "fermé",
+      "lemma": "fermer",
+      "pos": "VER",
+      "frequency": 32.56,
+      "sourceSampleId": "B2C-I1-0854",
+      "sourceStratum": "multi_homophone",
+      "selectionStratum": "events_actions",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 51
+      },
+      "proxyContext": {
+        "conceptLabel": "fermer",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « fermer », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-080",
+      "ipa": "skɔtʃ",
+      "exactWord": "scotche",
+      "lemma": "scotcher",
+      "pos": "VER",
+      "frequency": 0.177,
+      "sourceSampleId": "B2C-I2-0982",
+      "sourceStratum": "low_score_rescue",
+      "selectionStratum": "events_actions",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 39
+      },
+      "proxyContext": {
+        "conceptLabel": "scotcher",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « scotcher », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-081",
+      "ipa": "ʁaviʁ",
+      "exactWord": "ravir",
+      "lemma": "ravir",
+      "pos": "VER",
+      "frequency": 1.649,
+      "sourceSampleId": "B2C-I2-0853",
+      "sourceStratum": "low_score_rescue",
+      "selectionStratum": "events_actions",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 38
+      },
+      "proxyContext": {
+        "conceptLabel": "ravir",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « ravir », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-082",
+      "ipa": "ni",
+      "exactWord": "nie",
+      "lemma": "nier",
+      "pos": "VER",
+      "frequency": 4.972,
+      "sourceSampleId": "B2C-I1-0694",
+      "sourceStratum": "multi_homophone",
+      "selectionStratum": "events_actions",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 47.8
+      },
+      "proxyContext": {
+        "conceptLabel": "nier",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « nier », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-083",
+      "ipa": "tʁik",
+      "exactWord": "trick",
+      "lemma": "trick",
+      "pos": "NOM",
+      "frequency": 1.563,
+      "sourceSampleId": "B2C-I1-1486",
+      "sourceStratum": "ambiguous_control",
+      "selectionStratum": "polysemy_homographs",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 63.8
+      },
+      "proxyContext": {
+        "conceptLabel": "trick",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « trick » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-084",
+      "ipa": "mat",
+      "exactWord": "matte",
+      "lemma": "matte",
+      "pos": "NOM",
+      "frequency": 0.522,
+      "sourceSampleId": "B2C-I1-1316",
+      "sourceStratum": "low_frequency_concrete",
+      "selectionStratum": "polysemy_homographs",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 63.8
+      },
+      "proxyContext": {
+        "conceptLabel": "matte",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « matte » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-085",
+      "ipa": "buʃɔ̃",
+      "exactWord": "bouchon",
+      "lemma": "bouchon",
+      "pos": "NOM",
+      "frequency": 4.285,
+      "sourceSampleId": "B2C-I2-0176",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "polysemy_homographs",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 61
+      },
+      "proxyContext": {
+        "conceptLabel": "bouchon",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « bouchon » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-086",
+      "ipa": "ful",
+      "exactWord": "full",
+      "lemma": "full",
+      "pos": "NOM",
+      "frequency": 2.503,
+      "sourceSampleId": "B2C-I2-0286",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "polysemy_homographs",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 61.5
+      },
+      "proxyContext": {
+        "conceptLabel": "full",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « full » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-087",
+      "ipa": "kit",
+      "exactWord": "kit",
+      "lemma": "kit",
+      "pos": "NOM",
+      "frequency": 11.231,
+      "sourceSampleId": "B2C-I1-1383",
+      "sourceStratum": "ambiguous_control",
+      "selectionStratum": "polysemy_homographs",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 61.5
+      },
+      "proxyContext": {
+        "conceptLabel": "kit",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « kit » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-088",
+      "ipa": "paʁti",
+      "exactWord": "party",
+      "lemma": "party",
+      "pos": "NOM",
+      "frequency": 3.981,
+      "sourceSampleId": "B2C-I1-0395",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "polysemy_homographs",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 64.5
+      },
+      "proxyContext": {
+        "conceptLabel": "party",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « party » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-089",
+      "ipa": "man",
+      "exactWord": "maund",
+      "lemma": "maund",
+      "pos": "NOM",
+      "frequency": 0.003,
+      "sourceSampleId": "B2C-I2-1530",
+      "sourceStratum": "multi_concept_ipa",
+      "selectionStratum": "polysemy_homographs",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 63.8
+      },
+      "proxyContext": {
+        "conceptLabel": "maund",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « maund » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-090",
+      "ipa": "bin",
+      "exactWord": "binne",
+      "lemma": "binne",
+      "pos": "NOM",
+      "frequency": 0.003,
+      "sourceSampleId": "B2C-I2-0758",
+      "sourceStratum": "low_frequency_concrete",
+      "selectionStratum": "polysemy_homographs",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 62.3
+      },
+      "proxyContext": {
+        "conceptLabel": "binne",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « binne » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-091",
+      "ipa": "vizɔ̃",
+      "exactWord": "vison",
+      "lemma": "vison",
+      "pos": "NOM",
+      "frequency": 1.693,
+      "sourceSampleId": "B2C-I2-0514",
+      "sourceStratum": "low_frequency_concrete",
+      "selectionStratum": "polysemy_homographs",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 58.5
+      },
+      "proxyContext": {
+        "conceptLabel": "vison",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « vison » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-092",
+      "ipa": "blœf",
+      "exactWord": "bluff",
+      "lemma": "bluff",
+      "pos": "NOM",
+      "frequency": 3.18,
+      "sourceSampleId": "B2C-I2-0235",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "polysemy_homographs",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 63
+      },
+      "proxyContext": {
+        "conceptLabel": "bluff",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « bluff » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-093",
+      "ipa": "zɛl",
+      "exactWord": "zelle",
+      "lemma": "zelle",
+      "pos": "NOM",
+      "frequency": 0.668,
+      "sourceSampleId": "B2C-I1-1306",
+      "sourceStratum": "low_frequency_concrete",
+      "selectionStratum": "polysemy_homographs",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 62.3
+      },
+      "proxyContext": {
+        "conceptLabel": "zelle",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « zelle » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-094",
+      "ipa": "koʁe",
+      "exactWord": "chorée",
+      "lemma": "chorée",
+      "pos": "NOM",
+      "frequency": 0.063,
+      "sourceSampleId": "B2C-I2-0641",
+      "sourceStratum": "low_frequency_concrete",
+      "selectionStratum": "polysemy_homographs",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 60.3
+      },
+      "proxyContext": {
+        "conceptLabel": "chorée",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « chorée » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-095",
+      "ipa": "ʒaʁ",
+      "exactWord": "jar",
+      "lemma": "jar",
+      "pos": "NOM",
+      "frequency": 0.589,
+      "sourceSampleId": "B2C-I1-1312",
+      "sourceStratum": "low_frequency_concrete",
+      "selectionStratum": "polysemy_homographs",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 60.8
+      },
+      "proxyContext": {
+        "conceptLabel": "jar",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « jar » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-096",
+      "ipa": "kɑ̃",
+      "exactWord": "can",
+      "lemma": "can",
+      "pos": "NOM",
+      "frequency": 8.481,
+      "sourceSampleId": "B2C-I1-0278",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "polysemy_homographs",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 69.8
+      },
+      "proxyContext": {
+        "conceptLabel": "can",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « can » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-097",
+      "ipa": "kloz",
+      "exactWord": "clause",
+      "lemma": "clause",
+      "pos": "NOM",
+      "frequency": 3.228,
+      "sourceSampleId": "B2C-I2-0227",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "polysemy_homographs",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 63
+      },
+      "proxyContext": {
+        "conceptLabel": "clause",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « clause » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-098",
+      "ipa": "faks",
+      "exactWord": "fax",
+      "lemma": "fax",
+      "pos": "NOM",
+      "frequency": 6.415,
+      "sourceSampleId": "B2C-I2-0119",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "polysemy_homographs",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 63
+      },
+      "proxyContext": {
+        "conceptLabel": "fax",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « fax » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-099",
+      "ipa": "ɛʁ",
+      "exactWord": "ère",
+      "lemma": "ère",
+      "pos": "NOM",
+      "frequency": 9.712,
+      "sourceSampleId": "B2C-I1-0583",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "polysemy_homographs",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 59.8
+      },
+      "proxyContext": {
+        "conceptLabel": "ère",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « ère » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-100",
+      "ipa": "pɔk",
+      "exactWord": "pokent",
+      "lemma": "pokent",
+      "pos": "NOM",
+      "frequency": 0.009,
+      "sourceSampleId": "B2C-I2-1607",
+      "sourceStratum": "multi_concept_ipa",
+      "selectionStratum": "polysemy_homographs",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 62
+      },
+      "proxyContext": {
+        "conceptLabel": "pokent",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « pokent » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-101",
+      "ipa": "mwa",
+      "exactWord": "moie",
+      "lemma": "moie",
+      "pos": "NOM",
+      "frequency": 0.009,
+      "sourceSampleId": "B2C-I1-1282",
+      "sourceStratum": "low_frequency_concrete",
+      "selectionStratum": "polysemy_homographs",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 62.5
+      },
+      "proxyContext": {
+        "conceptLabel": "moie",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « moie » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-102",
+      "ipa": "mama",
+      "exactWord": "mama",
+      "lemma": "mama",
+      "pos": "NOM",
+      "frequency": 2.101,
+      "sourceSampleId": "B2C-I2-0315",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "polysemy_homographs",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 61
+      },
+      "proxyContext": {
+        "conceptLabel": "mama",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « mama » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-103",
+      "ipa": "klɛʁsiʁ",
+      "exactWord": "claircir",
+      "lemma": "claircir",
+      "pos": "NOM",
+      "frequency": 0.006,
+      "sourceSampleId": "B2C-I2-1989",
+      "sourceStratum": "two_syllable_control",
+      "selectionStratum": "low_frequency",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 57
+      },
+      "proxyContext": {
+        "conceptLabel": "claircir",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « claircir » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-104",
+      "ipa": "tif",
+      "exactWord": "tif",
+      "lemma": "tif",
+      "pos": "NOM",
+      "frequency": 0.079,
+      "sourceSampleId": "B2C-I1-1245",
+      "sourceStratum": "low_frequency_concrete",
+      "selectionStratum": "low_frequency",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 64.3
+      },
+      "proxyContext": {
+        "conceptLabel": "tif",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « tif » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-105",
+      "ipa": "ɥi",
+      "exactWord": "hui",
+      "lemma": "hui",
+      "pos": "NOM",
+      "frequency": 1.301,
+      "sourceSampleId": "B2C-I2-0575",
+      "sourceStratum": "low_frequency_concrete",
+      "selectionStratum": "low_frequency",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 60.5
+      },
+      "proxyContext": {
+        "conceptLabel": "hui",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « hui » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-106",
+      "ipa": "eli",
+      "exactWord": "élis",
+      "lemma": "élis",
+      "pos": "NOM",
+      "frequency": 0.003,
+      "sourceSampleId": "B2C-I2-0773",
+      "sourceStratum": "low_frequency_concrete",
+      "selectionStratum": "low_frequency",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 61.8
+      },
+      "proxyContext": {
+        "conceptLabel": "élis",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « élis » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-107",
+      "ipa": "sɔʁ",
+      "exactWord": "sore",
+      "lemma": "sore",
+      "pos": "NOM",
+      "frequency": 0.085,
+      "sourceSampleId": "B2C-I1-1242",
+      "sourceStratum": "low_frequency_concrete",
+      "selectionStratum": "low_frequency",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 62.5
+      },
+      "proxyContext": {
+        "conceptLabel": "sore",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « sore » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-108",
+      "ipa": "ʁoze",
+      "exactWord": "rosé",
+      "lemma": "rosé",
+      "pos": "NOM",
+      "frequency": 0.434,
+      "sourceSampleId": "B2C-I2-1426",
+      "sourceStratum": "multi_concept_ipa",
+      "selectionStratum": "low_frequency",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 60
+      },
+      "proxyContext": {
+        "conceptLabel": "rosé",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « rosé » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-109",
+      "ipa": "pʁu",
+      "exactWord": "proue",
+      "lemma": "proue",
+      "pos": "NOM",
+      "frequency": 1.225,
+      "sourceSampleId": "B2C-I2-0581",
+      "sourceStratum": "low_frequency_concrete",
+      "selectionStratum": "low_frequency",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 60.8
+      },
+      "proxyContext": {
+        "conceptLabel": "proue",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « proue » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-110",
+      "ipa": "sjɔ̃",
+      "exactWord": "cyon",
+      "lemma": "cyon",
+      "pos": "NOM",
+      "frequency": 0.041,
+      "sourceSampleId": "B2C-I1-0781",
+      "sourceStratum": "multi_homophone",
+      "selectionStratum": "low_frequency",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 64.3
+      },
+      "proxyContext": {
+        "conceptLabel": "cyon",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « cyon » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-111",
+      "ipa": "pate",
+      "exactWord": "pâtée",
+      "lemma": "pâtée",
+      "pos": "NOM",
+      "frequency": 1.589,
+      "sourceSampleId": "B2C-I2-0330",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "low_frequency",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 58.8
+      },
+      "proxyContext": {
+        "conceptLabel": "pâtée",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « pâtée » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-112",
+      "ipa": "tiktak",
+      "exactWord": "tictaque",
+      "lemma": "tictaquer",
+      "pos": "VER",
+      "frequency": 0.022,
+      "sourceSampleId": "B2C-I2-0836",
+      "sourceStratum": "low_score_rescue",
+      "selectionStratum": "low_frequency",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 39.5
+      },
+      "proxyContext": {
+        "conceptLabel": "tictaquer",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « tictaquer », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-113",
+      "ipa": "doʁa",
+      "exactWord": "dora",
+      "lemma": "dorer",
+      "pos": "VER",
+      "frequency": 0.006,
+      "sourceSampleId": "B2C-I2-1807",
+      "sourceStratum": "negative_control",
+      "selectionStratum": "low_frequency",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 38
+      },
+      "proxyContext": {
+        "conceptLabel": "dorer",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « dorer », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-114",
+      "ipa": "ljɛ",
+      "exactWord": "liais",
+      "lemma": "lier",
+      "pos": "VER",
+      "frequency": 0.032,
+      "sourceSampleId": "B2C-I2-1751",
+      "sourceStratum": "negative_control",
+      "selectionStratum": "low_frequency",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 41.5
+      },
+      "proxyContext": {
+        "conceptLabel": "lier",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « lier », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-115",
+      "ipa": "ʒa",
+      "exactWord": "jas",
+      "lemma": "jas",
+      "pos": "NOM",
+      "frequency": 0.326,
+      "sourceSampleId": "B2C-I1-1215",
+      "sourceStratum": "low_frequency_concrete",
+      "selectionStratum": "low_frequency",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 62.5
+      },
+      "proxyContext": {
+        "conceptLabel": "jas",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « jas » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-116",
+      "ipa": "ata",
+      "exactWord": "hata",
+      "lemma": "hata",
+      "pos": "NOM",
+      "frequency": 0.006,
+      "sourceSampleId": "B2C-I2-0754",
+      "sourceStratum": "low_frequency_concrete",
+      "selectionStratum": "low_frequency",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 60.3
+      },
+      "proxyContext": {
+        "conceptLabel": "hata",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « hata » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-117",
+      "ipa": "ɑ̃fla",
+      "exactWord": "enfla",
+      "lemma": "enfler",
+      "pos": "VER",
+      "frequency": 0.016,
+      "sourceSampleId": "B2C-I2-0891",
+      "sourceStratum": "low_score_rescue",
+      "selectionStratum": "low_frequency",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 38
+      },
+      "proxyContext": {
+        "conceptLabel": "enfler",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « enfler », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-118",
+      "ipa": "kasɛt",
+      "exactWord": "cassette",
+      "lemma": "cassette",
+      "pos": "NOM",
+      "frequency": 17.456,
+      "sourceSampleId": "B2C-I2-0374",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "deceptive_concrete",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 59.5
+      },
+      "proxyContext": {
+        "conceptLabel": "cassette",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « cassette » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-119",
+      "ipa": "ɛspas",
+      "exactWord": "espace",
+      "lemma": "espace",
+      "pos": "NOM",
+      "frequency": 52.503,
+      "sourceSampleId": "B2C-I1-0988",
+      "sourceStratum": "two_syllable",
+      "selectionStratum": "deceptive_concrete",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 68.3
+      },
+      "proxyContext": {
+        "conceptLabel": "espace",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « espace » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "low"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-120",
+      "ipa": "valiz",
+      "exactWord": "valise",
+      "lemma": "valise",
+      "pos": "NOM",
+      "frequency": 18.614,
+      "sourceSampleId": "B2C-I2-0359",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "deceptive_concrete",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 59.5
+      },
+      "proxyContext": {
+        "conceptLabel": "valise",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « valise » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-121",
+      "ipa": "kolɛg",
+      "exactWord": "collègue",
+      "lemma": "collègue",
+      "pos": "NOM",
+      "frequency": 19.108,
+      "sourceSampleId": "B2C-I2-0355",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "deceptive_concrete",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 59.5
+      },
+      "proxyContext": {
+        "conceptLabel": "collègue",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « collègue » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-122",
+      "ipa": "menaʒ",
+      "exactWord": "ménage",
+      "lemma": "ménage",
+      "pos": "NOM",
+      "frequency": 21.905,
+      "sourceSampleId": "B2C-I1-1101",
+      "sourceStratum": "two_syllable",
+      "selectionStratum": "deceptive_concrete",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 68.3
+      },
+      "proxyContext": {
+        "conceptLabel": "ménage",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « ménage » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "low"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-123",
+      "ipa": "tʁɑ̃spɔʁ",
+      "exactWord": "transport",
+      "lemma": "transport",
+      "pos": "NOM",
+      "frequency": 13.089,
+      "sourceSampleId": "B2C-I1-1121",
+      "sourceStratum": "two_syllable",
+      "selectionStratum": "deceptive_concrete",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 61.3
+      },
+      "proxyContext": {
+        "conceptLabel": "transport",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « transport » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-124",
+      "ipa": "opjɔm",
+      "exactWord": "opium",
+      "lemma": "opium",
+      "pos": "NOM",
+      "frequency": 3.006,
+      "sourceSampleId": "B2C-I2-1943",
+      "sourceStratum": "two_syllable_control",
+      "selectionStratum": "deceptive_concrete",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 59.5
+      },
+      "proxyContext": {
+        "conceptLabel": "opium",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « opium » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-125",
+      "ipa": "ʃɑ̃paɲ",
+      "exactWord": "champagne",
+      "lemma": "champagne",
+      "pos": "NOM",
+      "frequency": 23.259,
+      "sourceSampleId": "B2C-I1-1087",
+      "sourceStratum": "two_syllable",
+      "selectionStratum": "deceptive_concrete",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 68.3
+      },
+      "proxyContext": {
+        "conceptLabel": "champagne",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « champagne » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "low"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-126",
+      "ipa": "aʁʒɑ̃",
+      "exactWord": "argent",
+      "lemma": "argent",
+      "pos": "NOM",
+      "frequency": 487.497,
+      "sourceSampleId": "B2C-I1-0418",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "deceptive_concrete",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 70.8
+      },
+      "proxyContext": {
+        "conceptLabel": "argent",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « argent » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "low"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-127",
+      "ipa": "kjɔsk",
+      "exactWord": "kiosque",
+      "lemma": "kiosque",
+      "pos": "NOM",
+      "frequency": 2.028,
+      "sourceSampleId": "B2C-I1-1479",
+      "sourceStratum": "ambiguous_control",
+      "selectionStratum": "deceptive_concrete",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 60.5
+      },
+      "proxyContext": {
+        "conceptLabel": "kiosque",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « kiosque » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-128",
+      "ipa": "kupyʁ",
+      "exactWord": "coupure",
+      "lemma": "coupure",
+      "pos": "NOM",
+      "frequency": 6.297,
+      "sourceSampleId": "B2C-I2-1899",
+      "sourceStratum": "two_syllable_control",
+      "selectionStratum": "deceptive_concrete",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 59.5
+      },
+      "proxyContext": {
+        "conceptLabel": "coupure",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « coupure » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-129",
+      "ipa": "kam",
+      "exactWord": "came",
+      "lemma": "came",
+      "pos": "NOM",
+      "frequency": 8.668,
+      "sourceSampleId": "B2C-I1-1387",
+      "sourceStratum": "ambiguous_control",
+      "selectionStratum": "deceptive_concrete",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 64.5
+      },
+      "proxyContext": {
+        "conceptLabel": "came",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « came » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-130",
+      "ipa": "bʁyt",
+      "exactWord": "brute",
+      "lemma": "brute",
+      "pos": "NOM",
+      "frequency": 6.81,
+      "sourceSampleId": "B2C-I2-0112",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "deceptive_concrete",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 61.5
+      },
+      "proxyContext": {
+        "conceptLabel": "brute",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « brute » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-131",
+      "ipa": "gazɔ̃",
+      "exactWord": "gazon",
+      "lemma": "gazon",
+      "pos": "NOM",
+      "frequency": 3.193,
+      "sourceSampleId": "B2C-I2-0230",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "deceptive_concrete",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 61
+      },
+      "proxyContext": {
+        "conceptLabel": "gazon",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « gazon » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-132",
+      "ipa": "apaʁt",
+      "exactWord": "appart",
+      "lemma": "appart",
+      "pos": "NOM",
+      "frequency": 16.848,
+      "sourceSampleId": "B2C-I2-0389",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "deceptive_concrete",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 59.5
+      },
+      "proxyContext": {
+        "conceptLabel": "appart",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « appart » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-133",
+      "ipa": "tʁi",
+      "exactWord": "tri",
+      "lemma": "tri",
+      "pos": "NOM",
+      "frequency": 2.111,
+      "sourceSampleId": "B2C-I1-0097",
+      "sourceStratum": "legacy_v1_v5",
+      "selectionStratum": "deceptive_concrete",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 52.3
+      },
+      "proxyContext": {
+        "conceptLabel": "tri",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « tri » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [
+          "rangement",
+          "classement"
+        ],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-134",
+      "ipa": "migʁɛn",
+      "exactWord": "migraine",
+      "lemma": "migraine",
+      "pos": "NOM",
+      "frequency": 6.127,
+      "sourceSampleId": "B2C-I2-1911",
+      "sourceStratum": "two_syllable_control",
+      "selectionStratum": "deceptive_concrete",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 59.5
+      },
+      "proxyContext": {
+        "conceptLabel": "migraine",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « migraine » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-135",
+      "ipa": "skip",
+      "exactWord": "skip",
+      "lemma": "skip",
+      "pos": "NOM",
+      "frequency": 3.184,
+      "sourceSampleId": "B2C-I2-0234",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "deceptive_concrete",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 63
+      },
+      "proxyContext": {
+        "conceptLabel": "skip",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « skip » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-136",
+      "ipa": "ʁətuʁ",
+      "exactWord": "retour",
+      "lemma": "retour",
+      "pos": "NOM",
+      "frequency": 169.544,
+      "sourceSampleId": "B2C-I1-0329",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "deceptive_concrete",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 72.5
+      },
+      "proxyContext": {
+        "conceptLabel": "retour",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « retour » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "low"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-137",
+      "ipa": "ide",
+      "exactWord": "idée",
+      "lemma": "idée",
+      "pos": "NOM",
+      "frequency": 374.823,
+      "sourceSampleId": "B2C-I1-0312",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "deceptive_concrete",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 70.8
+      },
+      "proxyContext": {
+        "conceptLabel": "idée",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « idée » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "low"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-138",
+      "ipa": "mizɛʁ",
+      "exactWord": "misère",
+      "lemma": "misère",
+      "pos": "NOM",
+      "frequency": 9.652,
+      "sourceSampleId": "B2C-I1-1134",
+      "sourceStratum": "two_syllable",
+      "selectionStratum": "deterministic_fill",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 59.5
+      },
+      "proxyContext": {
+        "conceptLabel": "misère",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « misère » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-139",
+      "ipa": "plɛ",
+      "exactWord": "plaît",
+      "lemma": "plaire",
+      "pos": "VER",
+      "frequency": 408.623,
+      "sourceSampleId": "B2C-I1-0634",
+      "sourceStratum": "multi_homophone",
+      "selectionStratum": "deterministic_fill",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 58.8
+      },
+      "proxyContext": {
+        "conceptLabel": "plaire",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « plaire », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-140",
+      "ipa": "sɔʁti",
+      "exactWord": "sortie",
+      "lemma": "sortie",
+      "pos": "NOM",
+      "frequency": 49.867,
+      "sourceSampleId": "B2C-I1-0494",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "deterministic_fill",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 68.3
+      },
+      "proxyContext": {
+        "conceptLabel": "sortie",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « sortie » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "low"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-141",
+      "ipa": "mɔl",
+      "exactWord": "mole",
+      "lemma": "mole",
+      "pos": "NOM",
+      "frequency": 0.38,
+      "sourceSampleId": "B2C-I2-1465",
+      "sourceStratum": "multi_concept_ipa",
+      "selectionStratum": "deterministic_fill",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 62
+      },
+      "proxyContext": {
+        "conceptLabel": "mole",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « mole » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-142",
+      "ipa": "tʁas",
+      "exactWord": "trass",
+      "lemma": "trass",
+      "pos": "NOM",
+      "frequency": 0.003,
+      "sourceSampleId": "B2C-I2-1148",
+      "sourceStratum": "pos_sense_risk",
+      "selectionStratum": "deterministic_fill",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 59
+      },
+      "proxyContext": {
+        "conceptLabel": "trass",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « trass » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-143",
+      "ipa": "gaʁaʒ",
+      "exactWord": "garage",
+      "lemma": "garage",
+      "pos": "NOM",
+      "frequency": 27.478,
+      "sourceSampleId": "B2C-I1-1056",
+      "sourceStratum": "two_syllable",
+      "selectionStratum": "deterministic_fill",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 68.3
+      },
+      "proxyContext": {
+        "conceptLabel": "garage",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « garage » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "low"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-144",
+      "ipa": "stoke",
+      "exactWord": "stocker",
+      "lemma": "stocker",
+      "pos": "VER",
+      "frequency": 1.88,
+      "sourceSampleId": "B2C-I2-1498",
+      "sourceStratum": "multi_concept_ipa",
+      "selectionStratum": "deterministic_fill",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 41
+      },
+      "proxyContext": {
+        "conceptLabel": "stocker",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « stocker », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-145",
+      "ipa": "ʁoti",
+      "exactWord": "rôti",
+      "lemma": "rôti",
+      "pos": "NOM",
+      "frequency": 3.174,
+      "sourceSampleId": "B2C-I2-0236",
+      "sourceStratum": "concrete_priority",
+      "selectionStratum": "deterministic_fill",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 59.5
+      },
+      "proxyContext": {
+        "conceptLabel": "rôti",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « rôti » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-146",
+      "ipa": "fɛs",
+      "exactWord": "faisse",
+      "lemma": "faisse",
+      "pos": "NOM",
+      "frequency": 0.009,
+      "sourceSampleId": "B2C-I1-1279",
+      "sourceStratum": "low_frequency_concrete",
+      "selectionStratum": "deterministic_fill",
+      "baseline": {
+        "provisionalClass": "B",
+        "aggregateScore": 65.5
+      },
+      "proxyContext": {
+        "conceptLabel": "faisse",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « faisse » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-147",
+      "ipa": "bʁɛk",
+      "exactWord": "break",
+      "lemma": "break",
+      "pos": "NOM",
+      "frequency": 7.022,
+      "sourceSampleId": "B2C-I1-1394",
+      "sourceStratum": "ambiguous_control",
+      "selectionStratum": "deterministic_fill",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 61.5
+      },
+      "proxyContext": {
+        "conceptLabel": "break",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « break » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-148",
+      "ipa": "koʁe",
+      "exactWord": "coré",
+      "lemma": "coré",
+      "pos": "NOM",
+      "frequency": 0.009,
+      "sourceSampleId": "B2C-I2-0727",
+      "sourceStratum": "low_frequency_concrete",
+      "selectionStratum": "deterministic_fill",
+      "baseline": {
+        "provisionalClass": "C",
+        "aggregateScore": 60.3
+      },
+      "proxyContext": {
+        "conceptLabel": "coré",
+        "conceptCategory": "nom_concret_à_vérifier",
+        "conceptDescription": "Concept candidat « coré » traité comme entité visuelle potentielle, sans preuve humaine de dénomination.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "medium"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-149",
+      "ipa": "mɛʁde",
+      "exactWord": "merder",
+      "lemma": "merder",
+      "pos": "VER",
+      "frequency": 1.424,
+      "sourceSampleId": "B2C-I2-0997",
+      "sourceStratum": "low_score_rescue",
+      "selectionStratum": "deterministic_fill",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 38
+      },
+      "proxyContext": {
+        "conceptLabel": "merder",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « merder », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "ISG-150",
+      "ipa": "kif",
+      "exactWord": "kiffe",
+      "lemma": "kiffer",
+      "pos": "VER",
+      "frequency": 1.683,
+      "sourceSampleId": "B2C-I2-1643",
+      "sourceStratum": "multi_concept_ipa",
+      "selectionStratum": "deterministic_fill",
+      "baseline": {
+        "provisionalClass": "D",
+        "aggregateScore": 43
+      },
+      "proxyContext": {
+        "conceptLabel": "kiffer",
+        "conceptCategory": "action",
+        "conceptDescription": "Action « kiffer », à représenter par une scène minimale si elle reste nommable.",
+        "anticipatedAlternativeNames": [],
+        "anticipatedNamingRisk": "high"
+      },
+      "goldReview": {
+        "status": "pending",
+        "seriousVisualConcept": null,
+        "expectedConcept": null,
+        "risk": null,
+        "rationale": null
+      },
+      "humanNamingEvidence": "none"
+    }
+  ]
+}

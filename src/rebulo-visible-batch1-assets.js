@@ -28,11 +28,15 @@ const ROWS=Object.freeze([
   ['nez','nez','/ne/',1,'data/lexicon-seed.json']
 ]);
 
+const SPRITE_URL='assets/rebus/visible-batch1/sprite.webp';
 const key=value=>String(value||'').toLocaleLowerCase('fr').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'');
 
-export const REBULO_VISIBLE_BATCH1=Object.freeze(ROWS.map(([id,label,ipa,syllableSpan,sourceCuration])=>Object.freeze({
+export const REBULO_VISIBLE_BATCH1=Object.freeze(ROWS.map(([id,label,ipa,syllableSpan,sourceCuration],index)=>Object.freeze({
   id,label,ipa,syllableSpan,sourceCuration,
-  image:`assets/rebus/visible-batch1/${id}.png`,
+  image:`${SPRITE_URL}?asset=${id}`,
+  spriteUrl:SPRITE_URL,
+  spriteColumn:index%5,
+  spriteRow:Math.floor(index/5),
   active:true,
   strictEligible:true,
   clinicalStatus:'naming_test_required',

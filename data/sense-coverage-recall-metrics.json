@@ -1,0 +1,222 @@
+{
+  "schemaVersion": "1.1",
+  "status": "analysis_only",
+  "baseSha": "09ff8bf77f113b1db436c635cb8abf9522846b9f",
+  "formula290": "unchanged",
+  "humanNamingEvidence": "none",
+  "originalCorpusSize": 400,
+  "labeledEvaluationSize": 99,
+  "newStressCases": 250,
+  "extendedCorpusSize": 650,
+  "stressOverlapWithOriginal": 0,
+  "stressRequestedQuotas": {
+    "obvious_concrete": 60,
+    "abstract_contextual": 50,
+    "role_action": 50,
+    "ambiguity_polysemy": 50,
+    "low_frequency_other": 40
+  },
+  "stressActualQuotas": {
+    "obvious_concrete": 48,
+    "abstract_contextual": 50,
+    "role_action": 50,
+    "ambiguity_polysemy": 50,
+    "low_frequency_other": 40,
+    "deterministic_fill": 12
+  },
+  "before": {
+    "n": 99,
+    "tp": 31,
+    "fp": 0,
+    "tn": 45,
+    "fn": 23,
+    "precision": 100,
+    "recall": 57.4,
+    "f1": 72.9
+  },
+  "after": {
+    "n": 99,
+    "tp": 39,
+    "fp": 0,
+    "tn": 45,
+    "fn": 15,
+    "precision": 100,
+    "recall": 72.2,
+    "f1": 83.9
+  },
+  "falseNegativesRecovered": 8,
+  "falsePositivesIntroduced": 0,
+  "originalRoutesBefore": {
+    "green": 43,
+    "orange": 89,
+    "red": 268
+  },
+  "originalRoutesAfter": {
+    "green": 51,
+    "orange": 104,
+    "red": 245
+  },
+  "labeledRoutesBefore": {
+    "green": 8,
+    "orange": 23,
+    "red": 68
+  },
+  "labeledRoutesAfter": {
+    "green": 16,
+    "orange": 38,
+    "red": 45
+  },
+  "extendedRoutes": {
+    "green": 53,
+    "orange": 151,
+    "red": 446
+  },
+  "provenanceTotals": {
+    "observed": 37,
+    "editorial_added": 16,
+    "inferred_candidate": 650
+  },
+  "newStressProvenance": {
+    "observed": 2,
+    "editorial_added": 0,
+    "inferred_candidate": 250
+  },
+  "newObservedFromStress": 2,
+  "newEditorialAdded": 8,
+  "newInferredCandidates": 250,
+  "recovered": [
+    {
+      "word": "diable",
+      "ipa": "djabl",
+      "evidenceType": "editorial_added"
+    },
+    {
+      "word": "ligne",
+      "ipa": "liɲ",
+      "evidenceType": "editorial_added"
+    },
+    {
+      "word": "prof",
+      "ipa": "pʁɔf",
+      "evidenceType": "editorial_added"
+    },
+    {
+      "word": "siège",
+      "ipa": "sjɛʒ",
+      "evidenceType": "editorial_added"
+    },
+    {
+      "word": "flingue",
+      "ipa": "flɛ̃g",
+      "evidenceType": "editorial_added"
+    },
+    {
+      "word": "couple",
+      "ipa": "kupl",
+      "evidenceType": "editorial_added"
+    },
+    {
+      "word": "gorge",
+      "ipa": "gɔʁʒ",
+      "evidenceType": "editorial_added"
+    },
+    {
+      "word": "monstre",
+      "ipa": "mɔ̃stʁ",
+      "evidenceType": "editorial_added"
+    }
+  ],
+  "unresolved": [
+    {
+      "word": "club",
+      "ipa": "klœb",
+      "route": "orange_review"
+    },
+    {
+      "word": "oeuvre",
+      "ipa": "œvʁ",
+      "route": "orange_review"
+    },
+    {
+      "word": "star",
+      "ipa": "staʁ",
+      "route": "orange_review"
+    },
+    {
+      "word": "drogue",
+      "ipa": "dʁɔg",
+      "route": "orange_review"
+    },
+    {
+      "word": "mu",
+      "ipa": "my",
+      "route": "orange_review"
+    },
+    {
+      "word": "course",
+      "ipa": "kuʁs",
+      "route": "orange_review"
+    },
+    {
+      "word": "perte",
+      "ipa": "pɛʁt",
+      "route": "orange_review"
+    },
+    {
+      "word": "chasse",
+      "ipa": "ʃas",
+      "route": "orange_review"
+    },
+    {
+      "word": "pub",
+      "ipa": "pœb",
+      "route": "orange_review"
+    },
+    {
+      "word": "rêve",
+      "ipa": "ʁɛv",
+      "route": "orange_review"
+    },
+    {
+      "word": "lettre",
+      "ipa": "lɛtʁ",
+      "route": "orange_review"
+    },
+    {
+      "word": "chose",
+      "ipa": "ʃoz",
+      "route": "orange_review"
+    },
+    {
+      "word": "droite",
+      "ipa": "dʁwat",
+      "route": "orange_review"
+    },
+    {
+      "word": "vote",
+      "ipa": "vɔt",
+      "route": "orange_review"
+    },
+    {
+      "word": "geste",
+      "ipa": "ʒɛst",
+      "route": "orange_review"
+    }
+  ],
+  "reviewCauseSummary": {
+    "missing_positive_sense_evidence": 16,
+    "event_or_action_nominalization": 2,
+    "person_or_character_visual_concept": 1,
+    "collective_or_relational_concept": 1,
+    "polysemy_or_context_dependence": 1,
+    "abstract_with_visualizable_scene": 1,
+    "polysemy_text_symbol_object": 1
+  },
+  "notes": [
+    "No #290 score, weight, threshold or hard guard is changed.",
+    "The eight recovered false negatives are editorial_added, never observed.",
+    "The 250 stress cases are exact IPA+graphy relations not present in the original 400 calibration corpus.",
+    "Green requires observed or editorial_added evidence; inferred candidates may be orange but never green.",
+    "The 250 stress cases are not independently gold-labeled; they measure bounded route behavior and provenance coverage, not an independent precision estimate."
+  ]
+}

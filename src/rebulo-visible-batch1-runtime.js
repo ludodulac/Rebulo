@@ -3,12 +3,13 @@ import {
   mergeVisibleBatch1Lexicon,
   applyVisibleBatch1ToBankRows,
   applyVisibleBatch1ToPlayCatalog,
-  applyVisibleBatch1ToCreatorTargets,
-  visibleBatch1AssetForPiece
+  applyVisibleBatch1ToCreatorTargets
 } from './rebulo-visible-batch1-assets.js';
 
 const previousFetch=window.fetch.bind(window);
-const BY_ID=new Map(REBULO_VISIBLE_BATCH1.map(item=>[item.id,item]));
+const key=value=>String(value||'').toLocaleLowerCase('fr').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'');
+const BY_ID=new Map(REBULO_VISIBLE_BATCH1.map(item=>[key(item.id),item]));
+const BY_LABEL=new Map(REBULO_VISIBLE_BATCH1.map(item=>[key(item.label),item]));
 const TRANSPARENT_PIXEL='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="1" height="1"/%3E';
 
 function responseFor(value){
@@ -38,14 +39,14 @@ window.fetch=async function rebuloVisibleBatch1Fetch(input,init){
 };
 
 function assetFromImage(img){
-  const existing=BY_ID.get(img?.dataset?.rebuloVisibleBatch1||'');
+  const existing=BY_ID.get(key(img?.dataset?.rebuloVisibleBatch1));
   if(existing)return existing;
   const raw=String(img?.getAttribute?.('src')||'');
   const fromQuery=raw.match(/[?&]asset=([^&#]+)/)?.[1];
-  if(fromQuery&&BY_ID.has(decodeURIComponent(fromQuery)))return BY_ID.get(decodeURIComponent(fromQuery));
+  if(fromQuery){const byQuery=BY_ID.get(key(decodeURIComponent(fromQuery)));if(byQuery)return byQuery;}
   const parent=img?.closest?.('.piece');
   const label=String(img?.alt||parent?.querySelector('span')?.textContent||'').trim();
-  return label?visibleBatch1AssetForPiece({label,reading:label}):null;
+  return BY_LABEL.get(key(label))||null;
 }
 
 function paintSprite(img,asset){
@@ -93,6 +94,12 @@ const observer=new MutationObserver(records=>{
   queueDecoration();
 });
 observer.observe(document.documentElement,{childList:true,subtree:true});
+document.addEventListener('submit',()=>{
+  queueDecoration();
+  setTimeout(()=>decorate(document),0);
+  setTimeout(()=>decorate(document),50);
+  setTimeout(()=>decorate(document),150);
+},true);
 decorate(document);
 
 if(!document.getElementById('rebulo-visible-batch1-style')){

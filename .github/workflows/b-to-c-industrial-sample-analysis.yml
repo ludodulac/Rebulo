@@ -23,6 +23,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Repair isolated serialization typo
+        run: sed -i 's/preselectionScore:r.preselectionScore,lowScoreThreshold,/preselectionScore:r.preselectionScore,lowScoreThreshold:lowThreshold,/' scripts/build-b-to-c-industrial-sample.mjs
       - name: Build industrial B-to-C sample
         run: node scripts/build-b-to-c-industrial-sample.mjs
       - name: Validate sample and calibration guards
@@ -31,7 +33,7 @@ jobs:
         run: |
           git config user.name "rebulo-analysis-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/b-to-c-industrial-sample-2000.jsonl data/b-to-c-industrial-sample-2000-metrics.json docs/B_TO_C_INDUSTRIAL_SAMPLE_REPORT.md
+          git add scripts/build-b-to-c-industrial-sample.mjs data/b-to-c-industrial-sample-2000.jsonl data/b-to-c-industrial-sample-2000-metrics.json docs/B_TO_C_INDUSTRIAL_SAMPLE_REPORT.md
           if git diff --cached --quiet; then
             echo "No generated changes"
           else

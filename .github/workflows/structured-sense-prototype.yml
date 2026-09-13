@@ -9,6 +9,7 @@ on:
       - scripts/apply-independent-gold-editorial-review.mjs
       - scripts/emit-independent-gold-review-sheet.mjs
       - scripts/probe-kaikki-endpoint.mjs
+      - scripts/inspect-kaikki-record.mjs
       - scripts/build-structured-sense-prototype.mjs
       - tests/structured-sense-source-prototype.test.mjs
       - .github/workflows/structured-sense-prototype.yml
@@ -33,8 +34,9 @@ jobs:
       - name: Emit compact review sheet
         run: node scripts/emit-independent-gold-review-sheet.mjs
       - name: Probe Kaikki endpoint
-        if: ${{ hashFiles('scripts/probe-kaikki-endpoint.mjs') != '' }}
         run: node scripts/probe-kaikki-endpoint.mjs
+      - name: Inspect Kaikki record schema
+        run: node scripts/inspect-kaikki-record.mjs
       - name: Build structured source prototype
         if: ${{ hashFiles('scripts/build-structured-sense-prototype.mjs') != '' }}
         run: node scripts/build-structured-sense-prototype.mjs

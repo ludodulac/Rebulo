@@ -1,0 +1,39 @@
+name: Wave 3 final materialization
+
+on:
+  push:
+    branches:
+      - productive-bank-wave3-yield
+    paths:
+      - '.github/workflows/wave3-materialize-final.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: productive-bank-wave3-yield
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build yield-oriented wave 3
+        run: node scripts/build-rebus-productive-bank-wave3.mjs
+      - name: Validate wave 3
+        run: node tests/rebus-productive-bank-wave3.test.mjs
+      - name: Commit generated wave 3 data
+        run: |
+          git config user.name 'rebulo-analysis-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/rebus-productive-bank-wave3.json data/rebus-productive-bank-wave3-impact-ranking.json data/rebus-productive-bank-wave3-benchmarks.json data/rebus-productive-bank-wave3-useful-metrics.json docs/REBUS_PRODUCTIVE_BANK_WAVE3_REPORT.md
+          if git diff --cached --quiet; then
+            echo 'No generated changes.'
+          else
+            git commit -m 'Materialize yield-oriented productive bank wave 3'
+            git push origin HEAD:productive-bank-wave3-yield
+          fi

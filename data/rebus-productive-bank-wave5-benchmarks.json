@@ -1,0 +1,369 @@
+{
+  "status": "thermometer_only_not_selection_signal",
+  "historical": {
+    "before": {
+      "phraseCount": 20,
+      "meanCoverageRatio": 0.7218,
+      "medianCoverageRatio": 0.7434,
+      "minCoverageRatio": 0.5,
+      "maxCoverageRatio": 0.9048
+    },
+    "after": {
+      "phraseCount": 20,
+      "meanCoverageRatio": 0.7354,
+      "medianCoverageRatio": 0.7632,
+      "minCoverageRatio": 0.5,
+      "maxCoverageRatio": 0.9048
+    },
+    "gainPoints": 1.36,
+    "rows": [
+      {
+        "phrase": "Le chien dort près de la porte",
+        "pronunciationComplete": true,
+        "continuousIpa": "ləʃjɛ̃dɔʁpʁɛdəlapɔʁt",
+        "unresolvedWords": [],
+        "before": 0.7894736842105263,
+        "after": 0.7894736842105263
+      },
+      {
+        "phrase": "Marie pose le livre sur la table",
+        "pronunciationComplete": true,
+        "continuousIpa": "maʁipozləlivʁsyʁlatabl",
+        "unresolvedWords": [],
+        "before": 0.6818181818181818,
+        "after": 0.7272727272727273
+      },
+      {
+        "phrase": "Nous mangeons du pain avec du fromage",
+        "pronunciationComplete": true,
+        "continuousIpa": "numɑ̃ʒɔ̃dypɛ̃avɛkdyfʁomaʒ",
+        "unresolvedWords": [],
+        "before": 0.6818181818181818,
+        "after": 0.6818181818181818
+      },
+      {
+        "phrase": "Le train arrive demain matin",
+        "pronunciationComplete": true,
+        "continuousIpa": "lətʁɛ̃aʁivdəmɛ̃matɛ̃",
+        "unresolvedWords": [],
+        "before": 0.7647058823529411,
+        "after": 0.8235294117647058
+      },
+      {
+        "phrase": "Paul regarde la mer depuis le port",
+        "pronunciationComplete": true,
+        "continuousIpa": "pɔlʁəgaʁdlamɛʁdəpɥiləpɔʁ",
+        "unresolvedWords": [],
+        "before": 0.6666666666666666,
+        "after": 0.6666666666666666
+      },
+      {
+        "phrase": "La pluie tombe sur le toit",
+        "pronunciationComplete": true,
+        "continuousIpa": "laplɥitɔ̃bsyʁlətwa",
+        "unresolvedWords": [],
+        "before": 0.6470588235294118,
+        "after": 0.6470588235294118
+      },
+      {
+        "phrase": "Un chat noir traverse la rue",
+        "pronunciationComplete": true,
+        "continuousIpa": "œ̃ʃanwaʁtʁavɛʁslaʁy",
+        "unresolvedWords": [],
+        "before": 0.8888888888888888,
+        "after": 0.8888888888888888
+      },
+      {
+        "phrase": "Les enfants jouent dans le jardin",
+        "pronunciationComplete": true,
+        "continuousIpa": "leɑ̃fɑ̃ʒudɑ̃ləʒaʁdɛ̃",
+        "unresolvedWords": [],
+        "before": 0.6875,
+        "after": 0.6875
+      },
+      {
+        "phrase": "Je bois un verre d'eau",
+        "pronunciationComplete": false,
+        "continuousIpa": "ʒəbwaœ̃vɛʁ",
+        "unresolvedWords": [
+          "d'eau"
+        ],
+        "before": 0.8888888888888888,
+        "after": 0.8888888888888888
+      },
+      {
+        "phrase": "Le facteur apporte une lettre",
+        "pronunciationComplete": true,
+        "continuousIpa": "ləfaktœʁapɔʁtynlɛtʁ",
+        "unresolvedWords": [],
+        "before": 0.7894736842105263,
+        "after": 0.8947368421052632
+      },
+      {
+        "phrase": "Ma sœur prépare une soupe chaude",
+        "pronunciationComplete": false,
+        "continuousIpa": "mapʁepaʁynsupʃod",
+        "unresolvedWords": [
+          "sœur"
+        ],
+        "before": 0.75,
+        "after": 0.8125
+      },
+      {
+        "phrase": "Il met son manteau avant de sortir",
+        "pronunciationComplete": true,
+        "continuousIpa": "ilmɛsɔ̃mɑ̃toavɑ̃dəsɔʁtiʁ",
+        "unresolvedWords": [],
+        "before": 0.9047619047619048,
+        "after": 0.9047619047619048
+      },
+      {
+        "phrase": "La voiture roule sur la route",
+        "pronunciationComplete": true,
+        "continuousIpa": "lavwatyʁʁulsyʁlaʁut",
+        "unresolvedWords": [],
+        "before": 0.8421052631578947,
+        "after": 0.8421052631578947
+      },
+      {
+        "phrase": "Le bébé tient la main de sa mère",
+        "pronunciationComplete": true,
+        "continuousIpa": "ləbebetjɛ̃lamɛ̃dəsamɛʁ",
+        "unresolvedWords": [],
+        "before": 0.8,
+        "after": 0.8
+      },
+      {
+        "phrase": "Un oiseau construit son nid",
+        "pronunciationComplete": true,
+        "continuousIpa": "œ̃wazokɔ̃stʁɥisɔ̃ni",
+        "unresolvedWords": [],
+        "before": 0.5,
+        "after": 0.5
+      },
+      {
+        "phrase": "Le bateau quitte le port",
+        "pronunciationComplete": true,
+        "continuousIpa": "ləbatokitləpɔʁ",
+        "unresolvedWords": [],
+        "before": 0.5,
+        "after": 0.5
+      },
+      {
+        "phrase": "Elle coupe une pomme avec un couteau",
+        "pronunciationComplete": true,
+        "continuousIpa": "ɛlkupynpɔmavɛkœ̃kuto",
+        "unresolvedWords": [],
+        "before": 0.7368421052631579,
+        "after": 0.7368421052631579
+      },
+      {
+        "phrase": "Nous prenons le bus après l'école",
+        "pronunciationComplete": false,
+        "continuousIpa": "nupʁənɔ̃ləbysapʁɛ",
+        "unresolvedWords": [
+          "l'école"
+        ],
+        "before": 0.5,
+        "after": 0.5
+      },
+      {
+        "phrase": "Le soleil se lève derrière la maison",
+        "pronunciationComplete": true,
+        "continuousIpa": "ləsolɛjsəlɛvdɛʁjɛʁlamɛzɔ̃",
+        "unresolvedWords": [],
+        "before": 0.8333333333333334,
+        "after": 0.8333333333333334
+      },
+      {
+        "phrase": "Grand-père lit le journal dans le salon",
+        "pronunciationComplete": true,
+        "continuousIpa": "gʁɑ̃pɛʁliləʒuʁnaldɑ̃ləsalɔ̃",
+        "unresolvedWords": [],
+        "before": 0.5833333333333334,
+        "after": 0.5833333333333334
+      }
+    ]
+  },
+  "control": {
+    "before": {
+      "phraseCount": 20,
+      "meanCoverageRatio": 0.7475,
+      "medianCoverageRatio": 0.755,
+      "minCoverageRatio": 0.56,
+      "maxCoverageRatio": 0.9474
+    },
+    "after": {
+      "phraseCount": 20,
+      "meanCoverageRatio": 0.7647,
+      "medianCoverageRatio": 0.755,
+      "minCoverageRatio": 0.6087,
+      "maxCoverageRatio": 0.9474
+    },
+    "gainPoints": 1.72,
+    "rows": [
+      {
+        "phrase": "Le garçon ferme doucement la fenêtre",
+        "pronunciationComplete": true,
+        "continuousIpa": "ləgaʁsɔ̃fɛʁmdusəmɑ̃lafənɛtʁ",
+        "unresolvedWords": [],
+        "before": 0.8,
+        "after": 0.8
+      },
+      {
+        "phrase": "Une petite fille dessine un arbre",
+        "pronunciationComplete": true,
+        "continuousIpa": "ynpətitfijdesinœ̃aʁbʁ",
+        "unresolvedWords": [],
+        "before": 0.65,
+        "after": 0.65
+      },
+      {
+        "phrase": "Mon voisin promène son chien au parc",
+        "pronunciationComplete": true,
+        "continuousIpa": "mɔ̃vwazɛ̃pʁomɛnsɔ̃ʃjɛ̃opaʁk",
+        "unresolvedWords": [],
+        "before": 0.6086956521739131,
+        "after": 0.6086956521739131
+      },
+      {
+        "phrase": "Nous préparons le dîner dans la cuisine",
+        "pronunciationComplete": true,
+        "continuousIpa": "nupʁepaʁɔ̃lədinedɑ̃lakɥizin",
+        "unresolvedWords": [],
+        "before": 0.84,
+        "after": 0.84
+      },
+      {
+        "phrase": "La cloche sonne à la fin de la classe",
+        "pronunciationComplete": true,
+        "continuousIpa": "laklɔʃsɔnalafɛ̃dəlaklas",
+        "unresolvedWords": [],
+        "before": 0.8181818181818182,
+        "after": 0.8181818181818182
+      },
+      {
+        "phrase": "Papa cherche ses clés dans son sac",
+        "pronunciationComplete": true,
+        "continuousIpa": "papaʃɛʁʃsekledɑ̃sɔ̃sak",
+        "unresolvedWords": [],
+        "before": 0.8,
+        "after": 0.8
+      },
+      {
+        "phrase": "Le vent pousse les feuilles sur le chemin",
+        "pronunciationComplete": true,
+        "continuousIpa": "ləvɑ̃puslefœjsyʁləʃəmɛ̃",
+        "unresolvedWords": [],
+        "before": 0.5714285714285714,
+        "after": 0.7142857142857143
+      },
+      {
+        "phrase": "Un poisson nage près du bateau",
+        "pronunciationComplete": true,
+        "continuousIpa": "œ̃pwasɔ̃naʒpʁɛdybato",
+        "unresolvedWords": [],
+        "before": 0.8333333333333334,
+        "after": 0.8333333333333334
+      },
+      {
+        "phrase": "Elle écrit une carte pour son ami",
+        "pronunciationComplete": true,
+        "continuousIpa": "ɛlekʁiynkaʁtpuʁsɔ̃ami",
+        "unresolvedWords": [],
+        "before": 0.75,
+        "after": 0.75
+      },
+      {
+        "phrase": "Le médecin ouvre la porte du cabinet",
+        "pronunciationComplete": true,
+        "continuousIpa": "ləmɛdsɛ̃uvʁlapɔʁtdykabinɛ",
+        "unresolvedWords": [],
+        "before": 0.7083333333333334,
+        "after": 0.7083333333333334
+      },
+      {
+        "phrase": "Deux vélos passent devant la maison",
+        "pronunciationComplete": true,
+        "continuousIpa": "døvelopasdəvɑ̃lamɛzɔ̃",
+        "unresolvedWords": [],
+        "before": 0.9473684210526315,
+        "after": 0.9473684210526315
+      },
+      {
+        "phrase": "La maîtresse raconte une histoire courte",
+        "pronunciationComplete": true,
+        "continuousIpa": "lamɛtʁɛsʁakɔ̃tynistwaʁkuʁt",
+        "unresolvedWords": [],
+        "before": 0.56,
+        "after": 0.68
+      },
+      {
+        "phrase": "Le lapin mange une carotte dans l’herbe",
+        "pronunciationComplete": false,
+        "continuousIpa": "ləlapɛ̃mɑ̃ʒynkaʁɔtdɑ̃",
+        "unresolvedWords": [
+          "l’herbe"
+        ],
+        "before": 0.7222222222222222,
+        "after": 0.7222222222222222
+      },
+      {
+        "phrase": "Ils regardent les étoiles après le repas",
+        "pronunciationComplete": true,
+        "continuousIpa": "ilʁəgaʁdleetwalapʁɛləʁəpa",
+        "unresolvedWords": [],
+        "before": 0.76,
+        "after": 0.76
+      },
+      {
+        "phrase": "Ma grand-mère arrose les fleurs du jardin",
+        "pronunciationComplete": true,
+        "continuousIpa": "magʁɑ̃mɛʁaʁozleflœʁdyʒaʁdɛ̃",
+        "unresolvedWords": [],
+        "before": 0.68,
+        "after": 0.72
+      },
+      {
+        "phrase": "Le camion livre des boîtes au magasin",
+        "pronunciationComplete": true,
+        "continuousIpa": "ləkamjɔ̃livʁdebwatomagazɛ̃",
+        "unresolvedWords": [],
+        "before": 0.8333333333333334,
+        "after": 0.875
+      },
+      {
+        "phrase": "Un enfant met ses chaussures avant de partir",
+        "pronunciationComplete": true,
+        "continuousIpa": "œ̃ɑ̃fɑ̃mɛseʃosyʁavɑ̃dəpaʁtiʁ",
+        "unresolvedWords": [],
+        "before": 0.7916666666666666,
+        "after": 0.7916666666666666
+      },
+      {
+        "phrase": "La lune éclaire la route pendant la nuit",
+        "pronunciationComplete": true,
+        "continuousIpa": "lalyneklɛʁlaʁutpɑ̃dɑ̃lanɥi",
+        "unresolvedWords": [],
+        "before": 0.875,
+        "after": 0.875
+      },
+      {
+        "phrase": "Nous entendons un oiseau derrière la porte",
+        "pronunciationComplete": true,
+        "continuousIpa": "nuɑ̃tɑ̃dɔ̃œ̃wazodɛʁjɛʁlapɔʁt",
+        "unresolvedWords": [],
+        "before": 0.7083333333333334,
+        "after": 0.7083333333333334
+      },
+      {
+        "phrase": "Le chat saute sur une chaise près de la table",
+        "pronunciationComplete": true,
+        "continuousIpa": "ləʃasotsyʁynʃɛzpʁɛdəlatabl",
+        "unresolvedWords": [],
+        "before": 0.6923076923076923,
+        "after": 0.6923076923076923
+      }
+    ]
+  }
+}

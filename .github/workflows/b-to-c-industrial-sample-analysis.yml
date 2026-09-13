@@ -23,8 +23,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Repair isolated serialization typo
-        run: sed -i 's/preselectionScore:r.preselectionScore,lowScoreThreshold,/preselectionScore:r.preselectionScore,lowScoreThreshold:lowThreshold,/' scripts/build-b-to-c-industrial-sample.mjs
+      - name: Repair isolated threshold serialization references
+        run: |
+          sed -i 's/preselectionScore:r.preselectionScore,lowScoreThreshold,/preselectionScore:r.preselectionScore,lowScoreThreshold:lowThreshold,/' scripts/build-b-to-c-industrial-sample.mjs
+          sed -i 's/,lowScoreThreshold,rescue:/,lowScoreThreshold:lowThreshold,rescue:/' scripts/build-b-to-c-industrial-sample.mjs
       - name: Build industrial B-to-C sample
         run: node scripts/build-b-to-c-industrial-sample.mjs
       - name: Validate sample and calibration guards

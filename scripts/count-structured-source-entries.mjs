@@ -1,8 +1,0 @@
-import fs from 'node:fs';
-const rows=fs.readFileSync('data/structured-sense-kaikki-bounded.jsonl','utf8').trim().split('\n').filter(Boolean).map(JSON.parse);
-async function mapLimit(items,limit,fn){const out=new Array(items.length);let next=0;async function worker(){while(true){const i=next++;if(i>=items.length)return;out[i]=await fn(items[i]);}}await Promise.all(Array.from({length:Math.min(limit,items.length)},worker));return out;}
-const targets=[...new Map(rows.map(r=>[r.exactWord,{word:r.exactWord,url:r.sourceUrl}])).values()];
-const counts=await mapLimit(targets,12,async t=>{try{const rr=await fetch(t.url);if(!rr.ok)return {...t,httpStatus:rr.status,entryCount:0,senseCount:0};const text=await rr.text();const entries=text.trim().split('\n').filter(Boolean).map(JSON.parse).filter(e=>e.word===t.word&&e.lang_code==='fr');return {...t,httpStatus:rr.status,entryCount:entries.length,senseCount:entries.reduce((n,e)=>n+(e.senses||[]).filter(s=>(s.glosses||[]).length).length,0)}catch(e){return {...t,httpStatus:null,entryCount:0,senseCount:0,error:String(e)}}});
-const out={schemaVersion:'1.0',targetGraphies:targets.length,matchedGraphies:counts.filter(x=>x.entryCount>0).length,unmatchedGraphies:counts.filter(x=>x.entryCount===0).length,rawSourceEntriesIngested:counts.reduce((n,x)=>n+x.entryCount,0),sourceSensesWithGlossIngested:counts.reduce((n,x)=>n+x.senseCount,0),perTarget:counts};
-fs.writeFileSync('data/structured-sense-source-entry-stats.json',JSON.stringify(out,null,2)+'\n');
-console.log(JSON.stringify({...out,perTarget:undefined},null,2));

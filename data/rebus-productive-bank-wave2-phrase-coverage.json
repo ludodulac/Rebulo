@@ -1,0 +1,397 @@
+{
+  "schemaVersion": "1.0",
+  "status": "editorial_bank_coverage_not_runtime",
+  "policy": {
+    "independence": "The twenty phrases are fixed ordinary French sentences chosen independently of the selected wave2 sounds. No phrase-specific representation rule exists.",
+    "interpretation": "Coverage uses only IPA pieces with a retained editorial representation or canonical visible convention. Runtime activation is irrelevant and remains unchanged."
+  },
+  "summary": {
+    "phraseCount": 20,
+    "pronunciationResolvedCount": 17,
+    "meanCoverageRatio": 0.5935,
+    "phrasesAtLeastHalfCovered": 16,
+    "phrasesFullyCovered": 0
+  },
+  "rows": [
+    {
+      "phrase": "Le chien dort près de la porte",
+      "pronunciationComplete": true,
+      "continuousIpa": "ləʃjɛ̃dɔʁpʁɛdəlapɔʁt",
+      "unresolvedWords": [],
+      "unitCount": 19,
+      "coveredUnitCount": 9,
+      "coverageRatio": 0.4737,
+      "pieces": [
+        "ə",
+        "ɛ̃",
+        "d",
+        "ʁɛ",
+        "d",
+        "ə",
+        "la"
+      ],
+      "uncoveredUnitCount": 10
+    },
+    {
+      "phrase": "Marie pose le livre sur la table",
+      "pronunciationComplete": true,
+      "continuousIpa": "maʁipozləlivʁsyʁlatabl",
+      "unresolvedWords": [],
+      "unitCount": 22,
+      "coveredUnitCount": 12,
+      "coverageRatio": 0.5455,
+      "pieces": [
+        "a",
+        "ʁi",
+        "po",
+        "ə",
+        "li",
+        "y",
+        "la",
+        "a"
+      ],
+      "uncoveredUnitCount": 10
+    },
+    {
+      "phrase": "Nous mangeons du pain avec du fromage",
+      "pronunciationComplete": true,
+      "continuousIpa": "numɑ̃ʒɔ̃dypɛ̃avɛkdyfʁomaʒ",
+      "unresolvedWords": [],
+      "unitCount": 22,
+      "coveredUnitCount": 11,
+      "coverageRatio": 0.5,
+      "pieces": [
+        "d",
+        "y",
+        "pɛ̃",
+        "a",
+        "d",
+        "y",
+        "o",
+        "maʒ"
+      ],
+      "uncoveredUnitCount": 11
+    },
+    {
+      "phrase": "Le train arrive demain matin",
+      "pronunciationComplete": true,
+      "continuousIpa": "lətʁɛ̃aʁivdəmɛ̃matɛ̃",
+      "unresolvedWords": [],
+      "unitCount": 17,
+      "coveredUnitCount": 12,
+      "coverageRatio": 0.7059,
+      "pieces": [
+        "ə",
+        "ʁɛ̃",
+        "a",
+        "ʁi",
+        "d",
+        "ə",
+        "mɛ̃",
+        "a",
+        "ɛ̃"
+      ],
+      "uncoveredUnitCount": 5
+    },
+    {
+      "phrase": "Paul regarde la mer depuis le port",
+      "pronunciationComplete": true,
+      "continuousIpa": "pɔlʁəgaʁdlamɛʁdəpɥiləpɔʁ",
+      "unresolvedWords": [],
+      "unitCount": 24,
+      "coveredUnitCount": 14,
+      "coverageRatio": 0.5833,
+      "pieces": [
+        "ə",
+        "a",
+        "d",
+        "la",
+        "mɛʁ",
+        "d",
+        "ə",
+        "ɥil",
+        "ə"
+      ],
+      "uncoveredUnitCount": 10
+    },
+    {
+      "phrase": "La pluie tombe sur le toit",
+      "pronunciationComplete": true,
+      "continuousIpa": "laplɥitɔ̃bsyʁlətwa",
+      "unresolvedWords": [],
+      "unitCount": 17,
+      "coveredUnitCount": 11,
+      "coverageRatio": 0.6471,
+      "pieces": [
+        "la",
+        "plɥi",
+        "y",
+        "ə",
+        "twa"
+      ],
+      "uncoveredUnitCount": 6
+    },
+    {
+      "phrase": "Un chat noir traverse la rue",
+      "pronunciationComplete": true,
+      "continuousIpa": "œ̃ʃanwaʁtʁavɛʁslaʁy",
+      "unresolvedWords": [],
+      "unitCount": 18,
+      "coveredUnitCount": 16,
+      "coverageRatio": 0.8889,
+      "pieces": [
+        "œ̃",
+        "ʃa",
+        "nwaʁ",
+        "ʁa",
+        "vɛʁ",
+        "la",
+        "ʁy"
+      ],
+      "uncoveredUnitCount": 2
+    },
+    {
+      "phrase": "Les enfants jouent dans le jardin",
+      "pronunciationComplete": true,
+      "continuousIpa": "leɑ̃fɑ̃ʒudɑ̃ləʒaʁdɛ̃",
+      "unresolvedWords": [],
+      "unitCount": 16,
+      "coveredUnitCount": 8,
+      "coverageRatio": 0.5,
+      "pieces": [
+        "dɑ̃",
+        "ə",
+        "ʒaʁ",
+        "dɛ̃"
+      ],
+      "uncoveredUnitCount": 8
+    },
+    {
+      "phrase": "Je bois un verre d'eau",
+      "pronunciationComplete": false,
+      "continuousIpa": "ʒəbwaœ̃vɛʁ",
+      "unresolvedWords": [
+        "d'eau"
+      ],
+      "unitCount": 9,
+      "coveredUnitCount": 7,
+      "coverageRatio": 0.7778,
+      "pieces": [
+        "ə",
+        "wa",
+        "œ̃",
+        "vɛʁ"
+      ],
+      "uncoveredUnitCount": 2
+    },
+    {
+      "phrase": "Le facteur apporte une lettre",
+      "pronunciationComplete": true,
+      "continuousIpa": "ləfaktœʁapɔʁtynlɛtʁ",
+      "unresolvedWords": [],
+      "unitCount": 19,
+      "coveredUnitCount": 9,
+      "coverageRatio": 0.4737,
+      "pieces": [
+        "ə",
+        "fa",
+        "œʁ",
+        "a",
+        "y",
+        "lɛ"
+      ],
+      "uncoveredUnitCount": 10
+    },
+    {
+      "phrase": "Ma sœur prépare une soupe chaude",
+      "pronunciationComplete": false,
+      "continuousIpa": "mapʁepaʁynsupʃod",
+      "unresolvedWords": [
+        "sœur"
+      ],
+      "unitCount": 16,
+      "coveredUnitCount": 9,
+      "coverageRatio": 0.5625,
+      "pieces": [
+        "a",
+        "ʁe",
+        "pa",
+        "ʁy",
+        "o",
+        "d"
+      ],
+      "uncoveredUnitCount": 7
+    },
+    {
+      "phrase": "Il met son manteau avant de sortir",
+      "pronunciationComplete": true,
+      "continuousIpa": "ilmɛsɔ̃mɑ̃toavɑ̃dəsɔʁtiʁ",
+      "unresolvedWords": [],
+      "unitCount": 21,
+      "coveredUnitCount": 11,
+      "coverageRatio": 0.5238,
+      "pieces": [
+        "il",
+        "ɛs",
+        "o",
+        "a",
+        "vɑ̃",
+        "d",
+        "ə",
+        "i"
+      ],
+      "uncoveredUnitCount": 10
+    },
+    {
+      "phrase": "La voiture roule sur la route",
+      "pronunciationComplete": true,
+      "continuousIpa": "lavwatyʁʁulsyʁlaʁut",
+      "unresolvedWords": [],
+      "unitCount": 19,
+      "coveredUnitCount": 13,
+      "coverageRatio": 0.6842,
+      "pieces": [
+        "la",
+        "wa",
+        "y",
+        "ʁu",
+        "y",
+        "la",
+        "ʁut"
+      ],
+      "uncoveredUnitCount": 6
+    },
+    {
+      "phrase": "Le bébé tient la main de sa mère",
+      "pronunciationComplete": true,
+      "continuousIpa": "ləbebetjɛ̃lamɛ̃dəsamɛʁ",
+      "unresolvedWords": [],
+      "unitCount": 20,
+      "coveredUnitCount": 16,
+      "coverageRatio": 0.8,
+      "pieces": [
+        "ə",
+        "be",
+        "be",
+        "ɛ̃",
+        "la",
+        "mɛ̃",
+        "d",
+        "ə",
+        "a",
+        "mɛʁ"
+      ],
+      "uncoveredUnitCount": 4
+    },
+    {
+      "phrase": "Un oiseau construit son nid",
+      "pronunciationComplete": true,
+      "continuousIpa": "œ̃wazokɔ̃stʁɥisɔ̃ni",
+      "unresolvedWords": [],
+      "unitCount": 16,
+      "coveredUnitCount": 8,
+      "coverageRatio": 0.5,
+      "pieces": [
+        "œ̃",
+        "wazo",
+        "i",
+        "ni"
+      ],
+      "uncoveredUnitCount": 8
+    },
+    {
+      "phrase": "Le bateau quitte le port",
+      "pronunciationComplete": true,
+      "continuousIpa": "ləbatokitləpɔʁ",
+      "unresolvedWords": [],
+      "unitCount": 14,
+      "coveredUnitCount": 7,
+      "coverageRatio": 0.5,
+      "pieces": [
+        "ə",
+        "bato",
+        "i",
+        "ə"
+      ],
+      "uncoveredUnitCount": 7
+    },
+    {
+      "phrase": "Elle coupe une pomme avec un couteau",
+      "pronunciationComplete": true,
+      "continuousIpa": "ɛlkupynpɔmavɛkœ̃kuto",
+      "unresolvedWords": [],
+      "unitCount": 19,
+      "coveredUnitCount": 11,
+      "coverageRatio": 0.5789,
+      "pieces": [
+        "ɛl",
+        "ku",
+        "y",
+        "a",
+        "œ̃",
+        "kuto"
+      ],
+      "uncoveredUnitCount": 8
+    },
+    {
+      "phrase": "Nous prenons le bus après l'école",
+      "pronunciationComplete": false,
+      "continuousIpa": "nupʁənɔ̃ləbysapʁɛ",
+      "unresolvedWords": [
+        "l'école"
+      ],
+      "unitCount": 16,
+      "coveredUnitCount": 6,
+      "coverageRatio": 0.375,
+      "pieces": [
+        "ə",
+        "ə",
+        "y",
+        "a",
+        "ʁɛ"
+      ],
+      "uncoveredUnitCount": 10
+    },
+    {
+      "phrase": "Le soleil se lève derrière la maison",
+      "pronunciationComplete": true,
+      "continuousIpa": "ləsolɛjsəlɛvdɛʁjɛʁlamɛzɔ̃",
+      "unresolvedWords": [],
+      "unitCount": 24,
+      "coveredUnitCount": 19,
+      "coverageRatio": 0.7917,
+      "pieces": [
+        "ə",
+        "so",
+        "lɛ",
+        "ə",
+        "lɛ",
+        "d",
+        "ɛʁ",
+        "ɛʁ",
+        "la",
+        "mɛzɔ̃"
+      ],
+      "uncoveredUnitCount": 5
+    },
+    {
+      "phrase": "Grand-père lit le journal dans le salon",
+      "pronunciationComplete": true,
+      "continuousIpa": "gʁɑ̃pɛʁliləʒuʁnaldɑ̃ləsalɔ̃",
+      "unresolvedWords": [],
+      "unitCount": 24,
+      "coveredUnitCount": 11,
+      "coverageRatio": 0.4583,
+      "pieces": [
+        "pɛʁ",
+        "il",
+        "ə",
+        "a",
+        "dɑ̃",
+        "ə",
+        "a"
+      ],
+      "uncoveredUnitCount": 13
+    }
+  ]
+}

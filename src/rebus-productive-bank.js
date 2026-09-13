@@ -21,7 +21,69 @@ const uniquePush=(array,value,key=value=>JSON.stringify(value))=>{
   if(!array.some(item=>key(item)===token))array.push(value);
 };
 
-export function buildProductiveBank({fragmentIdeas=null,productiveWave=null}={}){
+function applyProductiveWave(index,productiveWave){
+  if(!productiveWave)return;
+  const soundSchema=productiveWave.soundRowSchema||[];
+  const repByKey=new Map((productiveWave.representations||[]).map(rep=>[`${normalizeIPA(rep.ipa)}\u0000${rep.word}`,rep]));
+  const deferredByKey=new Map((productiveWave.explicitDeferrals||[]).map(row=>[`${normalizeIPA(row[0])}\u0000${row[1]}`,row]));
+  const rejectedByKey=new Map((productiveWave.explicitRejections||[]).map(row=>[`${normalizeIPA(row[0])}\u0000${row[1]}`,row]));
+  const defaults=productiveWave.representationDefaults||{};
+
+  for(const rawRow of productiveWave.soundRows||[]){
+    const row=tupleObject(soundSchema,rawRow);
+    const sound=ensureSound(index,row.ipa);
+    if(!sound)continue;
+    sound.priority={queueRank:Number(row.rank)||null,usefulTargetCount:Number(row.usefulTargetCount)||0,selectionScore:Number(row.selectionScore)||null};
+    sound.syllableSpan=Number(row.syllableSpan)||null;
+    const metadataByWord=new Map((row.exactCandidateMetadata||[]).map(item=>[String(item?.[0]||''),{pos:item?.[1]||null,frequency:Number(item?.[2])||0}]));
+    for(const word of row.exactWords||[]){
+      uniquePush(sound.exactWords,word,String);
+      const key=`${sound.ipa}\u0000${word}`;
+      const retained=repByKey.get(key);
+      const deferred=deferredByKey.get(key);
+      const rejected=rejectedByKey.get(key);
+      const lexicalMetadata=metadataByWord.get(String(word))||{};
+      const relation={
+        word,
+        wordIpa:sound.ipa,
+        matchStatus:defaults.matchStatus||'exact',
+        source:defaults.source||'Lexique 4',
+        frequency:retained?.frequency??lexicalMetadata.frequency??null,
+        pos:lexicalMetadata.pos||null,
+        priority:sound.priority,
+        semanticCategory:retained?.semanticCategory||'lexical_exact_unresolved',
+        representationPotential:retained?'editorial_candidate':(deferred?'deferred':(rejected?'rejected':'none_retained_this_wave')),
+        representationType:retained?.type||null,
+        representationProposed:retained?.word||null,
+        visualBrief:retained?.brief||null,
+        anticipatedNamingRisk:retained?.anticipatedNamingRisk||(deferred?'high':'high'),
+        probableConfusions:retained?.confusions||deferred?.[2]||rejected?.[2]||[],
+        spontaneousNamingRisk:defaults.spontaneousNamingRisk||'unknown',
+        humanNamingEvidence:defaults.humanNamingEvidence||'none',
+        clinicalEvidence:defaults.clinicalEvidence||'none',
+        editorialStatus:retained?.editorialStatus||(deferred?'defer_candidate':(rejected?'reject_candidate':'reject_candidate')),
+        editorialReason:retained?.sourceReason||deferred?.[3]||rejected?.[3]||null,
+        runtimeStatus:defaults.runtimeStatus||'inactive_editorial'
+      };
+      uniquePush(sound.representations,relation,item=>`${item.word}|${item.source}`);
+    }
+
+    for(const label of productiveWave.visibleConventionReferences?.[sound.ipa]||[]){
+      uniquePush(sound.visibleConventions,{
+        label,
+        matchStatus:'convention',
+        source:'data/rebus-visible-conventions.json',
+        editorialStatus:'existing_canonical_reference',
+        runtimeStatus:'unchanged_by_productive_wave',
+        spontaneousNamingRisk:'unknown',
+        humanNamingEvidence:'none',
+        clinicalEvidence:'none'
+      },item=>item.label);
+    }
+  }
+}
+
+export function buildProductiveBank({fragmentIdeas=null,productiveWave=null,productiveWaves=null}={}){
   const index=new Map();
 
   for(const idea of fragmentIdeas?.entries||[]){
@@ -48,61 +110,8 @@ export function buildProductiveBank({fragmentIdeas=null,productiveWave=null}={})
     },item=>`${item.word}|${item.matchStatus}|${item.source}`);
   }
 
-  if(productiveWave){
-    const soundSchema=productiveWave.soundRowSchema||[];
-    const repByKey=new Map((productiveWave.representations||[]).map(rep=>[`${normalizeIPA(rep.ipa)}\u0000${rep.word}`,rep]));
-    const deferredByKey=new Map((productiveWave.explicitDeferrals||[]).map(row=>[`${normalizeIPA(row[0])}\u0000${row[1]}`,row]));
-    const defaults=productiveWave.representationDefaults||{};
-
-    for(const rawRow of productiveWave.soundRows||[]){
-      const row=tupleObject(soundSchema,rawRow);
-      const sound=ensureSound(index,row.ipa);
-      if(!sound)continue;
-      sound.priority={queueRank:Number(row.rank)||null,usefulTargetCount:Number(row.usefulTargetCount)||0};
-      sound.syllableSpan=Number(row.syllableSpan)||null;
-      for(const word of row.exactWords||[]){
-        uniquePush(sound.exactWords,word,String);
-        const key=`${sound.ipa}\u0000${word}`;
-        const retained=repByKey.get(key);
-        const deferred=deferredByKey.get(key);
-        const relation={
-          word,
-          wordIpa:sound.ipa,
-          matchStatus:defaults.matchStatus||'exact',
-          source:defaults.source||'Lexique 4',
-          frequency:null,
-          priority:sound.priority,
-          semanticCategory:retained?.semanticCategory||'lexical_exact_unresolved',
-          representationPotential:retained?'editorial_candidate':(deferred?'deferred':'none_retained_this_wave'),
-          representationType:retained?.type||null,
-          representationProposed:retained?.word||null,
-          visualBrief:retained?.brief||null,
-          anticipatedNamingRisk:retained?.anticipatedNamingRisk||(deferred?'high':'high'),
-          probableConfusions:retained?.confusions||deferred?.[2]||[],
-          spontaneousNamingRisk:defaults.spontaneousNamingRisk||'unknown',
-          humanNamingEvidence:defaults.humanNamingEvidence||'none',
-          clinicalEvidence:defaults.clinicalEvidence||'none',
-          editorialStatus:retained?.editorialStatus||(deferred?'defer_candidate':'reject_candidate'),
-          runtimeStatus:defaults.runtimeStatus||'inactive_editorial'
-        };
-        uniquePush(sound.representations,relation,item=>`${item.word}|${item.source}`);
-      }
-
-      for(const label of productiveWave.visibleConventionReferences?.[sound.ipa]||[]){
-        uniquePush(sound.visibleConventions,{
-          label,
-          matchStatus:'convention',
-          source:'data/rebus-visible-conventions.json',
-          editorialStatus:'existing_canonical_reference',
-          runtimeStatus:'unchanged_by_productive_wave',
-          spontaneousNamingRisk:'unknown',
-          humanNamingEvidence:'none',
-          clinicalEvidence:'none'
-        },item=>item.label);
-      }
-    }
-  }
-
+  const waves=Array.isArray(productiveWaves)?productiveWaves:(productiveWave?[productiveWave]:[]);
+  for(const wave of waves)applyProductiveWave(index,wave);
   return index;
 }
 
@@ -140,14 +149,17 @@ export function productiveWaveStats(productiveWave){
   const deferredCount=(productiveWave?.explicitDeferrals||[]).length;
   const retainedWordKeys=new Set((productiveWave?.representations||[]).map(rep=>`${normalizeIPA(rep.ipa)}\u0000${rep.word}`));
   const deferredWordKeys=new Set((productiveWave?.explicitDeferrals||[]).map(row=>`${normalizeIPA(row[0])}\u0000${row[1]}`));
-  let rejectedCandidateCount=0;
+  const explicitRejectedWordKeys=new Set((productiveWave?.explicitRejections||[]).map(row=>`${normalizeIPA(row[0])}\u0000${row[1]}`));
+  let rejectedCandidateCount=explicitRejectedWordKeys.size;
   const representedIpas=new Set((productiveWave?.representations||[]).map(rep=>normalizeIPA(rep.ipa)));
   const conventionIpas=new Set(Object.keys(productiveWave?.visibleConventionReferences||{}).map(normalizeIPA));
-  for(const row of rows){
-    const ipa=normalizeIPA(row.ipa);
-    for(const word of new Set(row.exactWords||[])){
-      const key=`${ipa}\u0000${word}`;
-      if(!retainedWordKeys.has(key)&&!deferredWordKeys.has(key))rejectedCandidateCount++;
+  if(!explicitRejectedWordKeys.size){
+    for(const row of rows){
+      const ipa=normalizeIPA(row.ipa);
+      for(const word of new Set(row.exactWords||[])){
+        const key=`${ipa}\u0000${word}`;
+        if(!retainedWordKeys.has(key)&&!deferredWordKeys.has(key))rejectedCandidateCount++;
+      }
     }
   }
   const soundWithoutGoodRepresentationCount=rows.filter(row=>{

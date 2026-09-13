@@ -1,0 +1,47 @@
+name: Wave 3 integrate curation
+
+on:
+  push:
+    branches:
+      - productive-bank-wave3-yield
+    paths:
+      - '.github/workflows/wave3-integrate-curation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: productive-bank-wave3-yield
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Register visual curation wave 9
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('scripts/build-rebus-productive-bank-wave3.mjs')
+          s=p.read_text()
+          old='const visualSources=[1,2,3,4,5,6,7,8].map'
+          new='const visualSources=[1,2,3,4,5,6,7,8,9].map'
+          if old not in s:
+              raise SystemExit('expected visual source declaration not found')
+          p.write_text(s.replace(old,new,1))
+          PY
+      - name: Build curated wave 3
+        run: node scripts/build-rebus-productive-bank-wave3.mjs
+      - name: Validate curated wave 3
+        run: node tests/rebus-productive-bank-wave3.test.mjs
+      - name: Commit source and generated outputs
+        run: |
+          git config user.name 'rebulo-analysis-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add scripts/build-rebus-productive-bank-wave3.mjs data/rebus-productive-bank-wave3.json data/rebus-productive-bank-wave3-impact-ranking.json data/rebus-productive-bank-wave3-benchmarks.json data/rebus-productive-bank-wave3-useful-metrics.json docs/REBUS_PRODUCTIVE_BANK_WAVE3_REPORT.md
+          git commit -m 'Integrate curated visual concepts into productive wave 3' || exit 0
+          git push origin HEAD:productive-bank-wave3-yield

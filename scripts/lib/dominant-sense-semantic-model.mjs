@@ -1,5 +1,5 @@
 export const TAXONOMY=['physical_object','animal','plant','food','body_part','person_role','vehicle','place','clothing','tool','material','event','action','abstract','relation','symbol','text','quantity','other'];
-export const MODEL_VERSION='dominant-sense-semantic-v3';
+export const MODEL_VERSION='dominant-sense-semantic-v4';
 const lower=x=>String(x??'').toLocaleLowerCase('fr');
 const BAD_TAG=/\b(?:obsolete|archaic|rare|dated|historical|figurative|figuratively|metonymic|metonymically|form-of|inflection|misspelling|nonstandard)\b/iu;
 const topicText=s=>(s.sourceTopics||[]).map(lower).join(' ');
@@ -26,7 +26,8 @@ export function semanticType(s){
  if(starts(d,/^(?:lieu|endroit|bâtiment|édifice|habitation|local|site|quartier|voie|terrain)\b/u))return 'place';
  if(starts(d,/^(?:vêtement|chaussure|habit|pièce de vêtement)\b/u))return 'clothing';
  if(starts(d,/^(?:instrument|outil|machine|appareil|ustensile|dispositif)\b/u))return 'tool';
- if(starts(d,/^(?:objet|récipient|meuble|bijou|ornement|élément mécanique|organe en forme|pièce mécanique)\b/u))return 'physical_object';
+ if(starts(d,/^(?:objet|récipient|meuble|bijou|ornement|élément mécanique|organe en forme|pièce mécanique|bâton|baguette|récipient)\b/u))return 'physical_object';
+ if(starts(d,/^(?:abréviation|forme abrégée).{0,45}\b(?:microphone|appareil|instrument)\b/u))return 'physical_object';
  if(starts(d,/^(?:substance|matière|matériau|minéral|mélange|liquide|gaz\b|élément chimique|produit)\b/u))return 'material';
  if(starts(d,/^(?:livre|document|texte|ouvrage|poème|journal|lettre écrite|bande dessinée)\b/u))return 'text';
  if(starts(d,/^(?:lettre (?:de|d['’])|caractère|symbole|signe|glyphe|notation)\b/u))return 'symbol';
@@ -39,11 +40,15 @@ export function semanticType(s){
  return 'other';
 }
 
-const SAFE_VISUAL_TYPES=new Set(['physical_object','animal','plant','food','body_part','person_role','vehicle','place','clothing','tool']);
 export function visualEligibility(s){
  const type=semanticType(s),tags=(s.sourceTags||[]).map(lower),d=defText(s);
  if(tags.some(x=>BAD_TAG.test(x)))return {eligible:false,type,reason:'usage_or_form_penalty'};
- if(SAFE_VISUAL_TYPES.has(type))return {eligible:true,type,reason:'safe_concrete_semantic_type'};
+ if(['physical_object','animal','body_part','vehicle','clothing'].includes(type))return {eligible:true,type,reason:'strong_concrete_semantic_type'};
+ if(type==='tool'&&starts(d,/^(?:instrument|outil|machine|appareil|ustensile|dispositif)\b/u))return {eligible:true,type,reason:'tool_head_hypernym'};
+ if(type==='place'&&starts(d,/^(?:bâtiment|édifice|habitation|local|site|quartier|terrain)\b/u))return {eligible:true,type,reason:'bounded_place_head_hypernym'};
+ if(type==='plant'&&(starts(d,/^(?:plante|arbre|arbuste|herbe|végétal|nom usuel des arbres|genre d['’]arbre)\b/u)||/\bbotany\b/u.test(topicText(s))))return {eligible:true,type,reason:'plant_head_or_topic'};
+ if(type==='food'&&starts(d,/^(?:aliment|nourriture|boisson|plat|préparation culinaire)\b/u))return {eligible:true,type,reason:'food_head_hypernym'};
+ if(type==='person_role'&&/(?:\bmétier\b|\bprofession\b|\bofficier\b|\bprofessionnel\b|\bouvrier\b|\btravailleur\b|\bchargé de\b|\bfonction de\b)/u.test(d))return {eligible:true,type,reason:'institutional_or_occupational_role'};
  if(type==='symbol')return {eligible:true,type,reason:'autonomous_symbol'};
  if(type==='event'&&starts(d,/^(?:collision|orage|pique-nique)\b/u))return {eligible:true,type,reason:'directly_depictable_event'};
  return {eligible:false,type,reason:'semantic_type_not_safely_visual'};
@@ -67,6 +72,8 @@ export function decideVisualEligibility(ranked,context={}){
  if(a.posCompatibility?.known&&!a.posCompatibility.match)return {eligible:false,reason:'B_POS_mismatch',top};
  if(a.score<62)return {eligible:false,reason:'rank_score_below_62',top};
  const second=ranked[1];if(second&&second.semanticAnalysis.type!==a.type&&(a.score-second.semanticAnalysis.score)<6)return {eligible:false,reason:'cross_type_rank_ambiguity',top,second};
+ const maxOrder={person_role:2,place:2,tool:1,food:2,plant:2,symbol:2,event:2,physical_object:5,animal:4,body_part:5,vehicle:5,clothing:4}[a.type]??2;
+ if(a.sourceOrder>maxOrder)return {eligible:false,reason:`source_order_above_${maxOrder}_for_${a.type}`,top};
  const f=Number(context.frequency);if(Number.isFinite(f)){
   const risky=new Set(['person_role','place','food','plant','symbol','event']);
   if(risky.has(a.type)&&f<0.5)return {eligible:false,reason:'low_frequency_for_competitive_name_class',top};

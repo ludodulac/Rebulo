@@ -1,0 +1,76 @@
+holdoutId	exactWord	ipa	stratum	category	baseline	risk	alternatives
+ISH-001	hâtif	atif	abstract	fonction_ou_qualité	D	high	
+ISH-002	pour	puʁ	abstract	fonction_ou_qualité	D	high	
+ISH-003	quelle	kɛl	abstract	fonction_ou_qualité	D	high	
+ISH-004	y	i	abstract	fonction_ou_qualité	D	high	
+ISH-005	routier	ʁutje	abstract	fonction_ou_qualité	D	high	
+ISH-006	agence	aʒɑ̃s	abstract	abstrait	D	high	
+ISH-007	confiant	kɔ̃fjɑ̃	abstract	fonction_ou_qualité	D	high	
+ISH-008	virtuel	viʁtɥɛl	abstract	fonction_ou_qualité	D	high	
+ISH-009	serment	sɛʁmɑ̃	abstract	abstrait	D	high	
+ISH-010	crucial	kʁysjal	abstract	fonction_ou_qualité	D	high	
+ISH-011	erreur	ɛʁœʁ	roles_people	personne_rôle_candidat	D	high	
+ISH-012	fermier	fɛʁmje	roles_people	personne_rôle_candidat	D	high	
+ISH-013	fille	fij	roles_people	personne	B	low	
+ISH-014	guerrier	gɛʁje	roles_people	personne_rôle_candidat	D	high	
+ISH-015	reine	ʁɛn	roles_people	personne	B	low	
+ISH-016	sueur	sɥœʁ	roles_people	personne_rôle_candidat	D	high	
+ISH-017	voleur	volœʁ	roles_people	personne_rôle_candidat	D	high	
+ISH-018	saveur	savœʁ	roles_people	personne_rôle_candidat	D	high	
+ISH-019	puerai	pyʁe	events_actions	action	D	high	
+ISH-020	échant	eʃɑ̃	events_actions	action	D	high	
+ISH-021	celas	səla	events_actions	action	D	high	
+ISH-022	lancer	lɑ̃se	events_actions	action	C	medium	
+ISH-023	tapé	tape	events_actions	action	D	high	
+ISH-024	rompu	ʁɔ̃py	events_actions	action	C	medium	
+ISH-025	croisée	kʁwaze	events_actions	action	D	high	
+ISH-026	brisé	bʁize	events_actions	action	D	high	
+ISH-027	récrée	ʁekʁe	events_actions	action	D	high	
+ISH-028	nièrent	njɛʁ	events_actions	action	D	high	
+ISH-029	ana	ana	polysemy_homographs	nom_concret_à_vérifier	C	medium	
+ISH-030	tribut	tʁiby	polysemy_homographs	nom_concret_à_vérifier	C	medium	
+ISH-031	trainers	tʁɛnœʁ	polysemy_homographs	nom_concret_à_vérifier	C	medium	
+ISH-032	repaire	ʁəpɛʁ	polysemy_homographs	nom_concret_à_vérifier	C	medium	
+ISH-033	marae	maʁe	polysemy_homographs	nom_concret_à_vérifier	C	medium	
+ISH-034	tag	tag	polysemy_homographs	nom_concret_à_vérifier	C	medium	
+ISH-035	crêt	kʁɛ	polysemy_homographs	nom_concret_à_vérifier	C	medium	
+ISH-036	prière	pʁijɛʁ	polysemy_homographs	nom_concret_à_vérifier	C	medium	
+ISH-037	lobe	lɔb	polysemy_homographs	nom_concret_à_vérifier	C	medium	
+ISH-038	appât	apa	polysemy_homographs	nom_concret_à_vérifier	C	medium	hameçon|ver
+ISH-039	oye	wa	low_frequency	nom_concret_à_vérifier	C	medium	
+ISH-040	hava	ava	low_frequency	action	D	high	
+ISH-041	lisser	lise	low_frequency	action	D	high	
+ISH-042	resta	ʁɛsta	low_frequency	action	D	high	
+ISH-043	zèle	zɛl	low_frequency	nom_concret_à_vérifier	C	medium	
+ISH-044	myrrhe	miʁ	low_frequency	nom_concret_à_vérifier	C	medium	
+ISH-045	broie	bʁwa	low_frequency	action	D	high	
+ISH-046	bee	bi	low_frequency	nom_concret_à_vérifier	B	medium	
+ISH-047	pré	pʁe	deceptive_concrete	nom_concret_à_vérifier	C	high	champ|prairie|herbe
+ISH-048	saisie	sezi	deceptive_concrete	nom_concret_à_vérifier	C	medium	
+ISH-049	miss	mis	deceptive_concrete	nom_concret_à_vérifier	B	low	
+ISH-050	menton	mɑ̃tɔ̃	deceptive_concrete	nom_concret_à_vérifier	C	medium	
+ISH-051	f	ɛf	deceptive_concrete	nom_concret_à_vérifier	B	low	
+ISH-052	tenue	təny	deceptive_concrete	nom_concret_à_vérifier	C	medium	vêtements|habit
+ISH-053	client	klijɑ̃	deceptive_concrete	nom_concret_à_vérifier	B	low	
+ISH-054	contrat	kɔ̃tʁa	deceptive_concrete	nom_concret_à_vérifier	C	medium	document|signature|accord
+ISH-055	bouillon	bujɔ̃	deceptive_concrete	nom_concret_à_vérifier	C	medium	
+ISH-056	u	y	deceptive_concrete	nom_concret_à_vérifier	B	low	
+ISH-057	soie	swa	deceptive_concrete	nom_concret_à_vérifier	C	medium	
+ISH-058	sorte	sɔʁt	deceptive_concrete	nom_concret_à_vérifier	B	low	
+ISH-059	nourrice	nuʁis	deterministic_fill	nom_concret_à_vérifier	C	medium	
+ISH-060	pif	pif	deterministic_fill	nom_concret_à_vérifier	C	medium	
+ISH-061	zombie	zɔ̃bi	deterministic_fill	nom_concret_à_vérifier	C	medium	
+ISH-062	reviens	ʁəvjɛ̃	deterministic_fill	action	C	medium	
+ISH-063	poison	pwazɔ̃	deterministic_fill	nom_concret_à_vérifier	C	medium	
+ISH-064	bô	be	deterministic_fill	nom_concret_à_vérifier	C	medium	
+ISH-065	zique	zik	deterministic_fill	nom_concret_à_vérifier	C	medium	
+ISH-066	mamas	mama	deterministic_fill	nom_concret_à_vérifier	C	medium	
+ISH-067	geek	gik	deterministic_fill	nom_concret_à_vérifier	C	medium	
+ISH-068	furieux	fyʁjø	deterministic_fill	fonction_ou_qualité	D	high	
+ISH-069	risée	ʁize	deterministic_fill	nom_concret_à_vérifier	C	medium	
+ISH-070	hanté	ɑ̃te	deterministic_fill	action	D	high	
+ISH-071	musée	myze	deterministic_fill	nom_concret_à_vérifier	C	medium	
+ISH-072	rideau	ʁido	deterministic_fill	nom_concret_à_vérifier	C	medium	tenture
+ISH-073	cots	ko	deterministic_fill	nom_concret_à_vérifier	C	medium	
+ISH-074	fay	fɛ	deterministic_fill	nom_concret_à_vérifier	C	medium	
+ISH-075	immense	imɑ̃s	deterministic_fill	fonction_ou_qualité	D	high	

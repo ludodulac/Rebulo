@@ -11,7 +11,7 @@
     "license": "Same licenses as Wiktionary: CC-BY-SA and GFDL",
     "sourceRoot": "https://kaikki.org/frwiktionary/Fran%C3%A7ais/meaning/"
   },
-  "filterVersion": "structured-visual-filter-v1",
+  "filterVersion": "structured-visual-filter-v2",
   "scope": {
     "independentGold": 150,
     "historicalFN": 15,
@@ -45,30 +45,30 @@
     },
     "C_observed_plus_deterministic_filter": {
       "n": 150,
-      "tp": 25,
-      "fp": 4,
-      "tn": 98,
-      "fn": 23,
-      "precision": 86.2,
-      "recall": 52.1,
-      "f1": 64.9
+      "tp": 23,
+      "fp": 2,
+      "tn": 100,
+      "fn": 25,
+      "precision": 92,
+      "recall": 47.9,
+      "f1": 63
     }
   },
   "coverage": {
     "relationsWithAtLeastOneObservedSense": 148,
     "relationsWithAtLeastOneObservedSensePercent": 98.7,
     "averageObservedSensesPerRelation": 7.13,
-    "seriousConceptsWithCompatibleObservedSenseProxy": 36,
-    "seriousConceptsWithCompatibleObservedSenseProxyPercent": 75,
-    "falsePositivesBlockedDespiteObservedSense": 96,
+    "seriousConceptsWithCompatibleObservedSenseProxy": 29,
+    "seriousConceptsWithCompatibleObservedSenseProxyPercent": 60.4,
+    "falsePositivesBlockedDespiteObservedSense": 98,
     "falsePositivesWithObservedSense": 100,
     "sourceCreatedAmbiguityCases": 126,
     "unmatchedCleanly": 2
   },
   "routes": {
     "baselineGreen": 0,
-    "filteredGreen": 29,
-    "newGreenFromObserved": 29
+    "filteredGreen": 25,
+    "newGreenFromObserved": 25
   },
   "notes": [
     "State B intentionally has the same visual decision as A: lexical observed evidence alone never proves visual suitability.",

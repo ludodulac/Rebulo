@@ -1,31 +1,6 @@
 {
   "falsePositives": [
     {
-      "goldId": "ISG-096",
-      "word": "can",
-      "ipa": "kɑ̃",
-      "gold": false,
-      "baselineClass": "B",
-      "inferences": [
-        {
-          "definition": "Face la moins large d’une pièce de bois ou d'une tôle métallique.",
-          "pos": "noun",
-          "tags": [],
-          "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
-        },
-        {
-          "definition": "un petit plateau de calcaire posé sur le schiste, délimité par des vallées.",
-          "pos": "noun",
-          "tags": [],
-          "topics": [
-            "geography"
-          ],
-          "ruleId": "literal-noun-semantic-cue"
-        }
-      ]
-    },
-    {
       "goldId": "ISG-136",
       "word": "retour",
       "ipa": "ʁətuʁ",
@@ -33,47 +8,13 @@
       "baselineClass": "B",
       "inferences": [
         {
-          "definition": "Arrivée au lieu d’où l’on était parti.",
-          "pos": "noun",
-          "tags": [],
-          "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
-        },
-        {
-          "definition": "Renvoi qui est fait d’un effet impayé, du lieu sur lequel il était tiré à celui d’où il a été tiré.",
-          "pos": "noun",
-          "tags": [],
-          "topics": [
-            "business"
-          ],
-          "ruleId": "literal-noun-semantic-cue"
-        },
-        {
           "definition": "Encoignure d’un bâtiment, de l’angle formé par une partie de construction qui fait saillie en avant d’une autre.",
           "pos": "noun",
           "tags": [],
           "topics": [
             "architecture"
           ],
-          "ruleId": "literal-noun-topic-and-gloss"
-        }
-      ]
-    },
-    {
-      "goldId": "ISG-137",
-      "word": "idée",
-      "ipa": "ide",
-      "gold": false,
-      "baselineClass": "B",
-      "inferences": [
-        {
-          "definition": "Les visions chimériques, les choses qui ne sauraient avoir lieu, qui ne peuvent se réaliser.",
-          "pos": "noun",
-          "tags": [
-            "plural"
-          ],
-          "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-topic-and-gloss"
         }
       ]
     },
@@ -85,22 +26,13 @@
       "baselineClass": "B",
       "inferences": [
         {
-          "definition": "Passage d’un lieu dans un autre, en parlant des marchandises qu’on transporte.",
-          "pos": "noun",
-          "tags": [],
-          "topics": [
-            "commerce"
-          ],
-          "ruleId": "literal-noun-semantic-cue"
-        },
-        {
           "definition": "Vêtement que l’on porte pour sortir.",
           "pos": "noun",
           "tags": [],
           "topics": [
             "clothing"
           ],
-          "ruleId": "literal-noun-topic-and-gloss"
+          "ruleId": "literal-noun-strong-topic-and-gloss"
         },
         {
           "definition": "Signal ou puissance qu’un appareil délivre pour agir sur un autre élément.",
@@ -110,14 +42,14 @@
             "electricity",
             "metrology"
           ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "(aéronautique) Mission de combat accomplie par un appareil militaire.",
           "pos": "noun",
           "tags": [],
           "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         }
       ]
     }
@@ -137,7 +69,7 @@
           "topics": [
             "astronomy"
           ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Plante herbacée à haute tige, qui porte de grandes fleurs jaunes radiées, et qu’on appelle également tournesol.",
@@ -148,7 +80,7 @@
           "topics": [
             "botany"
           ],
-          "ruleId": "literal-noun-topic-and-gloss"
+          "ruleId": "literal-noun-strong-topic-and-gloss"
         },
         {
           "definition": "Synonyme de beauclaire de roche.",
@@ -157,7 +89,7 @@
           "topics": [
             "ichthyology"
           ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Meuble représentant l’astre du même nom dans les armoiries. Il est généralement représenté plein avec 16 rayons dont la moitié droit, l’autre moitié ondulée. Il est toujours représenté figuré (un visage est visible avec yeux, nez et bouche). S’il n’est figuré, on le précise dans le blasonnement en utilisant : soleil non figuré ou ombre de soleil. Si le nombre de rais diffère de l’ordinaire, il faut le préciser. À rapprocher de ombre de soleil, soleil couchant, soleil éclipsé, soleil éteint, soleil levant, soleil non figuré, soleil rayonnant, soleil vidé et soleil virgulé.",
@@ -166,7 +98,7 @@
           "topics": [
             "heraldry"
           ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         }
       ]
     },
@@ -184,7 +116,7 @@
           "topics": [
             "hydrology"
           ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Se dit spécialement d’un cours d’eau qui se jette dans un autre.",
@@ -193,7 +125,7 @@
           "topics": [
             "geography"
           ],
-          "ruleId": "literal-noun-topic-and-gloss"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Meuble héraldique représentant le cours d’eau du même nom dans les armoiries. Bien qu’adoptant la forme des pièces (champagne, bande, pal, fasce…), ce meuble doit être blasonné comme courante en suivi du nom de la pièce dont elle adopte la disposition. Elle est généralement représentée ondée (il n’est pas nécessaire de le blasonner). De plus, pour bien la distinguer des autres pièces, on lui ajoute des traits pour représenter des vagues à sa surface. Elle est dite agitée quand les vagues sont d'un émail particulier. Elle peut apparaître en nombre sur l’écu.",
@@ -202,7 +134,7 @@
           "topics": [
             "heraldry"
           ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         }
       ]
     },
@@ -220,23 +152,7 @@
           "topics": [
             "anatomy"
           ],
-          "ruleId": "literal-noun-semantic-cue"
-        },
-        {
-          "definition": "Individu, personne.",
-          "pos": "noun",
-          "tags": [],
-          "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
-        },
-        {
-          "definition": "Côté où est l’effigie d'une monnaie.",
-          "pos": "noun",
-          "tags": [],
-          "topics": [
-            "numismatics"
-          ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Extrémité supérieure d’un mât.",
@@ -247,7 +163,7 @@
           "topics": [
             "nautical"
           ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Extrémité de certains os qui est ronde et soutenue par une partie plus rétrécie nommée col.",
@@ -256,7 +172,7 @@
           "topics": [
             "anatomy"
           ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Partie supérieure d’un instrument à cordes où sont fixées les chevilles.",
@@ -265,7 +181,7 @@
           "topics": [
             "music"
           ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Nébulosité plus ou moins lumineuse, et généralement de figure ovoïde, qui semble former le corps d’une comète, par opposition à la traînée lumineuse qui l’accompagne ordinairement du côté opposé au soleil, et que l’on appelle la queue.",
@@ -274,7 +190,7 @@
           "topics": [
             "astronomy"
           ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Partie antérieure d’un élément architectural.",
@@ -283,7 +199,7 @@
           "topics": [
             "architecture"
           ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Épaisseur d’un mur à son extrémité.",
@@ -292,25 +208,7 @@
           "topics": [
             "architecture"
           ],
-          "ruleId": "literal-noun-semantic-cue"
-        },
-        {
-          "definition": "Partie du camp qui regarde le terrain où les troupes doivent être mises en bataille.",
-          "pos": "noun",
-          "tags": [],
-          "topics": [
-            "military"
-          ],
-          "ruleId": "literal-noun-semantic-cue"
-        },
-        {
-          "definition": "Personne intelligente, douée dans un ou plusieurs domaines intellectuels.",
-          "pos": "noun",
-          "tags": [
-            "familiar"
-          ],
-          "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Meuble représentant la tête d'un animal dans les armoiries. Elle est représentée de différente façon selon l’animal dont elle est extraite. Une tête de lion sera de profil tandis que celle d'un léopard sera de front. Contrairement au caboché ou au rencontre, le cou est visible en tout ou partie. À rapprocher de caboché, hure, massacre, massacre crucifère et rencontre.",
@@ -319,7 +217,7 @@
           "topics": [
             "heraldry"
           ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         }
       ]
     },
@@ -335,7 +233,7 @@
           "pos": "noun",
           "tags": [],
           "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Meuble représentant un bâtiment de fort tonnage dans les armoiries. Sa représentation est si variée que le blasonnement doit être exhaustif pour éviter les erreurs. Il faut préciser le nombre de mâts ou le type de navire auquel on fait référence. Si les voiles sont d’une couleur autre que le navire, on le dit habillé. S’il est représenté avec son agrès, il est dit équipé. Si des pavillons sont visibles en haut des mâts, on le dit flammé. S’il est posé sur une onde (mer, rivière…), on le dit flottant ou voguant. À rapprocher de bateau, drakkar, flobard, gabarot, galère, nef et vaisseau.",
@@ -344,7 +242,7 @@
           "topics": [
             "heraldry"
           ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         }
       ]
     },
@@ -362,16 +260,7 @@
           "topics": [
             "anatomy"
           ],
-          "ruleId": "literal-noun-topic-and-gloss"
-        },
-        {
-          "definition": "Personne à qui l’on fait confiance, que l’on peut considérer comme faisant partie de sa famille.",
-          "pos": "noun",
-          "tags": [
-            "familiar"
-          ],
-          "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-topic-and-gloss"
         }
       ]
     },
@@ -389,7 +278,7 @@
           "topics": [
             "nautical"
           ],
-          "ruleId": "literal-noun-topic-and-gloss"
+          "ruleId": "literal-noun-strong-topic-and-gloss"
         }
       ]
     },
@@ -407,7 +296,7 @@
           "topics": [
             "anatomy"
           ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Chez certains échinodermes à symétrie radiaire, notamment les étoiles de mer, les ophiures et les crinoïdes, prolongement du corps disposé autour d’une région centrale.",
@@ -416,7 +305,7 @@
           "topics": [
             "zoology"
           ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Chez les céphalopodes, appendice mobile entourant la bouche, généralement muni de ventouses, distinct des tentacules chez les seiches et les calmars.",
@@ -425,30 +314,21 @@
           "topics": [
             "zoology"
           ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "(Suivi d'un adjectif ou d'un complément de nom caractérisant la nature du pouvoir en cause) Instrument (d'une entité plus grande) jouant un rôle concret dans un domaine particulier.",
           "pos": "noun",
           "tags": [],
           "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
-        },
-        {
-          "definition": "Subdivision latérale d’un fleuve ou d’une rivière qu’une île sépare de son cours principal.",
-          "pos": "noun",
-          "tags": [],
-          "topics": [
-            "geography"
-          ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Ramification s’écartant du tronc d’un arbre en espalier ou d’un cep de vigne.",
           "pos": "noun",
           "tags": [],
           "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Cordage fixé à l’extrémité d’une vergue afin de la faire pivoter en fonction du vent.",
@@ -457,7 +337,7 @@
           "topics": [
             "nautical"
           ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Cordage situé au vent qui permet de régler l’écartement d’une voile d’avant, contre-écoute.",
@@ -466,7 +346,7 @@
           "topics": [
             "nautical"
           ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         }
       ]
     },
@@ -484,28 +364,28 @@
           "topics": [
             "anatomy"
           ],
-          "ruleId": "literal-noun-topic-and-gloss"
+          "ruleId": "literal-noun-strong-topic-and-gloss"
         },
         {
           "definition": "Organe de l’ouïe, placé de chaque côté de la tête.",
           "pos": "noun",
           "tags": [],
           "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Ce qui évoque, par sa forme ou par sa position, l’auricule d’un humain ou d’un animal :",
           "pos": "noun",
           "tags": [],
           "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Ce qui évoque, par sa forme ou par sa position, l’auricule d’un humain ou d’un animal :",
           "pos": "noun",
           "tags": [],
           "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Ce qui évoque, par sa forme ou par sa position, l’auricule d’un humain ou d’un animal :",
@@ -514,7 +394,7 @@
             "dated"
           ],
           "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Ce qui évoque, par sa forme ou par sa position, l’auricule d’un humain ou d’un animal :",
@@ -523,7 +403,7 @@
             "dated"
           ],
           "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Ce qui évoque, par sa forme ou par sa position, l’auricule d’un humain ou d’un animal :",
@@ -532,7 +412,7 @@
             "dated"
           ],
           "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Ce qui évoque, par sa forme ou par sa position, l’auricule d’un humain ou d’un animal :",
@@ -541,7 +421,7 @@
           "topics": [
             "botany"
           ],
-          "ruleId": "literal-noun-topic-and-gloss"
+          "ruleId": "literal-noun-strong-topic-and-gloss"
         },
         {
           "definition": "Ce qui évoque, par sa forme ou par sa position, l’auricule d’un humain ou d’un animal :",
@@ -550,7 +430,7 @@
           "topics": [
             "cooking"
           ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         }
       ]
     },
@@ -566,16 +446,7 @@
           "pos": "noun",
           "tags": [],
           "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
-        },
-        {
-          "definition": "Lieu de travail ; entreprise.",
-          "pos": "noun",
-          "tags": [
-            "familiar"
-          ],
-          "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Variante rare de boette (appât pour le poisson).",
@@ -584,7 +455,7 @@
           "topics": [
             "fishing"
           ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         }
       ]
     },
@@ -600,7 +471,7 @@
           "pos": "noun",
           "tags": [],
           "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Appareil muni d'un grand cadran à aiguilles placé dans un endroit apparent et destiné à marquer et à sonner les heures.",
@@ -609,14 +480,14 @@
             "especially"
           ],
           "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Appareil horaire placé dans une gaine ou dans une boîte.",
           "pos": "noun",
           "tags": [],
           "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         }
       ]
     },
@@ -634,16 +505,7 @@
           "topics": [
             "zoology"
           ],
-          "ruleId": "literal-noun-semantic-cue"
-        },
-        {
-          "definition": "Masse de glace qui se détache d'un iceberg.",
-          "pos": "noun",
-          "tags": [],
-          "topics": [
-            "geography"
-          ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         }
       ]
     },
@@ -661,7 +523,7 @@
           "topics": [
             "clothing"
           ],
-          "ruleId": "literal-noun-topic-and-gloss"
+          "ruleId": "literal-noun-strong-topic-and-gloss"
         },
         {
           "definition": "Enveloppe d’un aliment pour le cuire ou le présenter.",
@@ -670,7 +532,7 @@
           "topics": [
             "cuisine"
           ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Mur de protection entourant un élément fortifié.",
@@ -680,7 +542,7 @@
             "architecture",
             "military"
           ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         }
       ]
     },
@@ -696,14 +558,14 @@
           "pos": "noun",
           "tags": [],
           "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Récipient rigide servant à stocker un gaz sous pression.",
           "pos": "noun",
           "tags": [],
           "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Saillie en charpente, sur les cotés arrières du navire, et qui servaient de latrines. ^([2])",
@@ -713,7 +575,7 @@
             "history",
             "nautical"
           ],
-          "ruleId": "literal-noun-topic-and-gloss"
+          "ruleId": "literal-noun-strong-topic-and-gloss"
         },
         {
           "definition": "Variété de courge. ^([2])",
@@ -724,7 +586,7 @@
           "topics": [
             "botany"
           ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         }
       ]
     },
@@ -742,21 +604,21 @@
             "common"
           ],
           "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Bloc de roche employé dans la construction des édifices.",
           "pos": "noun",
           "tags": [],
           "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Bloc de taille variable ; quartier de roche, caillou.",
           "pos": "noun",
           "tags": [],
           "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Pierre précieuse, en particulier diamant.",
@@ -765,7 +627,7 @@
             "ellipsis"
           ],
           "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Pierre tombale, dalle recouvrant la tombe d’un mort.",
@@ -774,7 +636,7 @@
             "ellipsis"
           ],
           "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Objet sphérique en granite et muni d’une poignée servant à jouer au curling",
@@ -783,7 +645,7 @@
           "topics": [
             "curling"
           ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Pierre à eau, ancêtre de l’évier en faïence, dans laquelle les ménagères faisaient la vaisselle et tous les lavages relatifs à la préparation de la cuisine.",
@@ -792,16 +654,7 @@
             "dated"
           ],
           "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
-        },
-        {
-          "definition": "(Afrique francophone) Argent, monnaie.",
-          "pos": "noun",
-          "tags": [
-            "slang"
-          ],
-          "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         }
       ]
     },
@@ -817,7 +670,7 @@
           "pos": "noun",
           "tags": [],
           "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         }
       ]
     },
@@ -833,37 +686,28 @@
           "pos": "noun",
           "tags": [],
           "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Objet de forme sphérique, généralement composée d’une vessie gonflée d’air et recouverte de cuir ou de plastique et servant à jouer.",
           "pos": "noun",
           "tags": [],
           "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Objet servant à stocker.",
           "pos": "noun",
           "tags": [],
           "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
-        },
-        {
-          "definition": "Sommet arrondi d’une montagne.",
-          "pos": "noun",
-          "tags": [],
-          "topics": [
-            "geography"
-          ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Navire à rames, dont on se servait au Siam, sur les fleuves et sur les mers ^([1]).",
           "pos": "noun",
           "tags": [],
           "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Meuble représentant le véhicule du même nom dans les armoiries. Il est généralement représenté guttiforme renversé (en forme de goutte à l’envers) avec une nacelle suspendue par des câbles. À rapprocher de aéroplane, avion et montgolfière.",
@@ -872,7 +716,7 @@
           "topics": [
             "heraldry"
           ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         }
       ]
     },
@@ -890,7 +734,7 @@
           "topics": [
             "architecture"
           ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Poutraison en bois ou en béton posée sur les murs d’un bâtiment et servant d’assise à la charpente.",
@@ -899,7 +743,7 @@
           "topics": [
             "construction"
           ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Ruban de soie, de fil ou de cordon, bande de cuir, ou autre chose semblable, dont on se ceint la taille.",
@@ -908,7 +752,7 @@
           "topics": [
             "clothing"
           ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Partie d’un vêtement qui serre la taille.",
@@ -917,7 +761,7 @@
           "topics": [
             "clothing"
           ],
-          "ruleId": "literal-noun-topic-and-gloss"
+          "ruleId": "literal-noun-strong-topic-and-gloss"
         },
         {
           "definition": "Endroit du corps où l’on situe la taille.",
@@ -926,14 +770,7 @@
           "topics": [
             "anatomy"
           ],
-          "ruleId": "literal-noun-semantic-cue"
-        },
-        {
-          "definition": "Dispositif de maintien ou de sécurité d’une personne. → voir ceinture de sécurité et ceinture de chasteté",
-          "pos": "noun",
-          "tags": [],
-          "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         }
       ]
     },
@@ -954,7 +791,7 @@
             "ecology",
             "forestry"
           ],
-          "ruleId": "literal-noun-topic-and-gloss"
+          "ruleId": "literal-noun-strong-semantic-cue"
         }
       ]
     },
@@ -970,16 +807,7 @@
           "pos": "noun",
           "tags": [],
           "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
-        },
-        {
-          "definition": "Col des Pyrénées.",
-          "pos": "noun",
-          "tags": [],
-          "topics": [
-            "geography"
-          ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Apparence naturelle d’une plante (→ voir habitus).",
@@ -988,25 +816,7 @@
           "topics": [
             "botany"
           ],
-          "ruleId": "literal-noun-topic-and-gloss"
-        }
-      ]
-    },
-    {
-      "goldId": "ISG-059",
-      "word": "chambre",
-      "ipa": "ʃɑ̃bʁ",
-      "gold": true,
-      "baselineClass": "B",
-      "inferences": [
-        {
-          "definition": "Toute pièce habitable d’une maison et principalement une chambre à coucher.",
-          "pos": "noun",
-          "tags": [],
-          "topics": [
-            "construction"
-          ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-topic-and-gloss"
         }
       ]
     },
@@ -1018,20 +828,13 @@
       "baselineClass": "B",
       "inferences": [
         {
-          "definition": "Lieu ordinairement clos de murailles, de haies, de fossés, dans lequel on cultive des légumes, des fleurs, des arbres, etc.",
-          "pos": "noun",
-          "tags": [],
-          "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
-        },
-        {
           "definition": "Sorte de couronnement en forme de galerie, qui orne la sole supérieure ou le plancher d’en haut des bouteilles des vaisseaux.",
           "pos": "noun",
           "tags": [],
           "topics": [
             "nautical"
           ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         }
       ]
     },
@@ -1043,27 +846,13 @@
       "baselineClass": "B",
       "inferences": [
         {
-          "definition": "Voie de circulation d'une ville, d'un bourg, d'un village, etc., généralement bordée de maisons ou de propriétés closes.",
-          "pos": "noun",
-          "tags": [],
-          "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
-        },
-        {
-          "definition": "(Au singulier, précédé de l'article défini « la ») La rue vue comme lieu de manifestation populaire.",
-          "pos": "noun",
-          "tags": [],
-          "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
-        },
-        {
           "definition": "Plante dicotylédone herbacée ou ligneuse vivace de la famille des Rutacées, à fleurs jaunes. Nom vernaculaire de la plante Ruta graveolens :",
           "pos": "noun",
           "tags": [],
           "topics": [
             "botany"
           ],
-          "ruleId": "literal-noun-topic-and-gloss"
+          "ruleId": "literal-noun-strong-topic-and-gloss"
         }
       ]
     },
@@ -1081,53 +870,7 @@
           "topics": [
             "astronomy"
           ],
-          "ruleId": "literal-noun-semantic-cue"
-        },
-        {
-          "definition": "Lieu créés par l’imagination hors du monde réel, pour y placer des chimères.",
-          "pos": "noun",
-          "tags": [],
-          "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
-        },
-        {
-          "definition": "Petite pièce de fonte, plus basse que la lettre, qui sert à séparer les mots l’un de l’autre.",
-          "pos": "noun",
-          "tags": [],
-          "topics": [
-            "typography"
-          ],
-          "ruleId": "literal-noun-semantic-cue"
-        }
-      ]
-    },
-    {
-      "goldId": "ISG-126",
-      "word": "argent",
-      "ipa": "aʁʒɑ̃",
-      "gold": true,
-      "baselineClass": "B",
-      "inferences": [
-        {
-          "definition": "Ressource monétaire sous forme de pièces de monnaie dans ce métal.",
-          "pos": "noun",
-          "tags": [
-            "dated"
-          ],
-          "topics": [
-            "money",
-            "numismatics"
-          ],
-          "ruleId": "literal-noun-semantic-cue"
-        },
-        {
-          "definition": "Métal servant à décrire la couleur blanche d’un élément des armoiries : écu, partition, pièce, meuble, etc.",
-          "pos": "noun",
-          "tags": [],
-          "topics": [
-            "heraldry"
-          ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         }
       ]
     },
@@ -1145,25 +888,7 @@
           "topics": [
             "construction"
           ],
-          "ruleId": "literal-noun-semantic-cue"
-        },
-        {
-          "definition": "Action de mettre des wagons à l’abri ou en réserve sur une partie de la voie ferrée disposée à cet effet.",
-          "pos": "noun",
-          "tags": [],
-          "topics": [
-            "railways"
-          ],
-          "ruleId": "literal-noun-semantic-cue"
-        },
-        {
-          "definition": "Entreprise ou lieu spécialisé dans le stockage, la vente, l'entretien, la réparation des véhicules automobiles, ou des utilitaires de transport.",
-          "pos": "noun",
-          "tags": [],
-          "topics": [
-            "commerce"
-          ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Action de faire entrer un bateau dans une gare maritime. On dit aussi garaie.",
@@ -1172,16 +897,7 @@
           "topics": [
             "nautical"
           ],
-          "ruleId": "literal-noun-topic-and-gloss"
-        },
-        {
-          "definition": "Personne qui dissimule et abrite les membres d’une équipe-feu après leur forfait.",
-          "pos": "noun",
-          "tags": [
-            "slang"
-          ],
-          "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-topic-and-gloss"
         }
       ]
     }
@@ -1217,17 +933,7 @@
       "ipa": "pastœʁ",
       "gold": true,
       "baselineClass": "D",
-      "inferences": [
-        {
-          "definition": "Personne qui a la fonction de ministre du culte dans la religion protestante. — Dans ce sens, il admet pour féminin pasteure, pastoresse, pastrice, ou reste tel quel.",
-          "pos": "noun",
-          "tags": [],
-          "topics": [
-            "Protestantism"
-          ],
-          "ruleId": "literal-noun-semantic-cue"
-        }
-      ]
+      "inferences": []
     },
     {
       "goldId": "ISG-052",
@@ -1235,17 +941,7 @@
       "ipa": "pɔ̃pje",
       "gold": true,
       "baselineClass": "C",
-      "inferences": [
-        {
-          "definition": "Ouvrier tailleur travaillant en atelier, chargé des retouches, ou du montage des manches, et payé au temps travaillé, par opposition à l’apiéceur, travaillant à domicile et payé à la pièce.",
-          "pos": "noun",
-          "tags": [],
-          "topics": [
-            "sewing"
-          ],
-          "ruleId": "literal-noun-semantic-cue"
-        }
-      ]
+      "inferences": []
     },
     {
       "goldId": "ISG-054",
@@ -1264,31 +960,20 @@
       "inferences": []
     },
     {
+      "goldId": "ISG-059",
+      "word": "chambre",
+      "ipa": "ʃɑ̃bʁ",
+      "gold": true,
+      "baselineClass": "B",
+      "inferences": []
+    },
+    {
       "goldId": "ISG-060",
       "word": "marché",
       "ipa": "maʁʃe",
       "gold": true,
       "baselineClass": "C",
-      "inferences": [
-        {
-          "definition": "Lieu public où s’achètent et se vendent les denrées, les marchandises, les objets d’usage courant. → voir marché-gare et place du marché",
-          "pos": "noun",
-          "tags": [],
-          "topics": [
-            "commerce"
-          ],
-          "ruleId": "literal-noun-semantic-cue"
-        },
-        {
-          "definition": "Lieu où l’on fixe ces valeurs.",
-          "pos": "noun",
-          "tags": [],
-          "topics": [
-            "finance"
-          ],
-          "ruleId": "literal-noun-semantic-cue"
-        }
-      ]
+      "inferences": []
     },
     {
       "goldId": "ISG-073",
@@ -1296,15 +981,7 @@
       "ipa": "ale",
       "gold": true,
       "baselineClass": "C",
-      "inferences": [
-        {
-          "definition": "Lieu propre à se promener, qui s’étend en longueur et qui est bordé d’arbres ou de verdure.",
-          "pos": "noun",
-          "tags": [],
-          "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
-        }
-      ]
+      "inferences": []
     },
     {
       "goldId": "ISG-085",
@@ -1318,14 +995,7 @@
           "pos": "noun",
           "tags": [],
           "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
-        },
-        {
-          "definition": "Ce qui obstrue une voie de circulation.",
-          "pos": "noun",
-          "tags": [],
-          "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         }
       ]
     },
@@ -1351,7 +1021,7 @@
           "topics": [
             "mammalogy"
           ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         }
       ]
     },
@@ -1361,19 +1031,7 @@
       "ipa": "faks",
       "gold": true,
       "baselineClass": "C",
-      "inferences": [
-        {
-          "definition": "Document numérisé, transmis par liaison téléphonique, puis imprimé par le matériel de réception.",
-          "pos": "noun",
-          "tags": [
-            "Anglicism"
-          ],
-          "topics": [
-            "telecommunications"
-          ],
-          "ruleId": "literal-noun-semantic-cue"
-        }
-      ]
+      "inferences": []
     },
     {
       "goldId": "ISG-108",
@@ -1389,14 +1047,14 @@
           "topics": [
             "botany"
           ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Ton rose d’un visage, d’une fleur, d’un objet.",
           "pos": "noun",
           "tags": [],
           "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         }
       ]
     },
@@ -1423,7 +1081,7 @@
             "familiar"
           ],
           "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         }
       ]
     },
@@ -1452,6 +1110,14 @@
       "inferences": []
     },
     {
+      "goldId": "ISG-126",
+      "word": "argent",
+      "ipa": "aʁʒɑ̃",
+      "gold": true,
+      "baselineClass": "B",
+      "inferences": []
+    },
+    {
       "goldId": "ISG-127",
       "word": "kiosque",
       "ipa": "kjɔsk",
@@ -1465,7 +1131,7 @@
           "topics": [
             "nautical"
           ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         }
       ]
     },
@@ -1483,14 +1149,14 @@
           "topics": [
             "botany"
           ],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         },
         {
           "definition": "Motte ou plaque de terre couverte d’herbe que l’on découpe à la bêche ou avec une machine et qui sert à recouvrir une surface dépourvue de végétation.",
           "pos": "noun",
           "tags": [],
           "topics": [],
-          "ruleId": "literal-noun-semantic-cue"
+          "ruleId": "literal-noun-strong-semantic-cue"
         }
       ]
     },

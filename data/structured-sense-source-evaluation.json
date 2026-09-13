@@ -1,0 +1,390 @@
+{
+  "schemaVersion": "1.0",
+  "status": "analysis_only",
+  "baseSha": "a604f9f7fe74c2868babfac4d098abc8fd026eb8",
+  "formula290": "unchanged",
+  "humanNamingEvidence": "none",
+  "source": {
+    "sourceId": "frwiktionary-kaikki-2026-09-08",
+    "sourceName": "French Wiktionary via Wiktextract/Kaikki",
+    "sourceVersion": "frwiktionary dump 2026-09-01; Kaikki extraction 2026-09-08; wiktextract ccec6f1 + 4deed51",
+    "license": "Same licenses as Wiktionary: CC-BY-SA and GFDL",
+    "sourceRoot": "https://kaikki.org/frwiktionary/Fran%C3%A7ais/meaning/"
+  },
+  "filterVersion": "structured-visual-filter-v2 + dominant-literal-noun-v1",
+  "scope": {
+    "independentGold": 150,
+    "historicalFN": 15,
+    "distinctWordsFetched": 165,
+    "totalObservedSensesIngested": 1222
+  },
+  "goldComposition": {
+    "positive": 48,
+    "negative": 102
+  },
+  "states": {
+    "A_baseline": {
+      "n": 150,
+      "tp": 0,
+      "fp": 0,
+      "tn": 102,
+      "fn": 48,
+      "precision": 100,
+      "recall": 0,
+      "f1": 0
+    },
+    "B_source_observed_no_visual_inference": {
+      "n": 150,
+      "tp": 0,
+      "fp": 0,
+      "tn": 102,
+      "fn": 48,
+      "precision": 100,
+      "recall": 0,
+      "f1": 0
+    },
+    "C_source_plus_general_filter": {
+      "n": 150,
+      "tp": 16,
+      "fp": 0,
+      "tn": 102,
+      "fn": 32,
+      "precision": 100,
+      "recall": 33.3,
+      "f1": 50
+    }
+  },
+  "coverage": {
+    "relationsWithAtLeastOneObservedSense": 148,
+    "relationsWithAtLeastOneObservedSensePercent": 98.7,
+    "averageObservedSensesPerRelation": 7.13,
+    "seriousConceptsWithCompatibleObservedSenseProxy": 29,
+    "seriousConceptsWithCompatibleObservedSenseProxyPercent": 60.4,
+    "falsePositivesBlockedDespiteObservedSense": 100,
+    "falsePositivesWithObservedSense": 100,
+    "sourceCreatedAmbiguityCases": 126,
+    "unmatchedCleanly": 2,
+    "seriousConceptsWithCompatibleDominantObservedSense": 19,
+    "seriousConceptsWithCompatibleDominantObservedSensePercent": 39.6
+  },
+  "routes": {
+    "baselineGreen": 0,
+    "newFilteredGreen": 16,
+    "newGreenFromObserved": 16,
+    "newGreenWords": [
+      "soleil",
+      "rivière",
+      "tête",
+      "navire",
+      "sang",
+      "bras",
+      "oreille",
+      "boîte",
+      "horloge",
+      "chemise",
+      "bouteille",
+      "pierre",
+      "fromage",
+      "ballon",
+      "forêt",
+      "garage"
+    ],
+    "falsePositiveWords": []
+  },
+  "historicalFN15": [
+    {
+      "word": "club",
+      "ipa": "klœb",
+      "observedSenseCount": 4,
+      "dominantObservedSense": {
+        "definition": "Association groupant des membres ayant des activités collectives, des intérêts communs.",
+        "pos": "noun",
+        "tags": [],
+        "topics": [],
+        "visualAssessment": {
+          "status": "unresolved",
+          "visualConceptCandidate": false,
+          "confidence": 0.68,
+          "ruleId": "observed-sense-without-strong-visual-proof"
+        }
+      },
+      "strictFilteredGreen": false,
+      "outcome": "remains_orange"
+    },
+    {
+      "word": "oeuvre",
+      "ipa": "œvʁ",
+      "observedSenseCount": 1,
+      "dominantObservedSense": null,
+      "strictFilteredGreen": false,
+      "outcome": "remains_orange"
+    },
+    {
+      "word": "star",
+      "ipa": "staʁ",
+      "observedSenseCount": 1,
+      "dominantObservedSense": {
+        "definition": "Vedette, en particulier dans le monde du spectacle.",
+        "pos": "noun",
+        "tags": [
+          "Anglicism"
+        ],
+        "topics": [],
+        "visualAssessment": {
+          "status": "unresolved",
+          "visualConceptCandidate": false,
+          "confidence": 0.68,
+          "ruleId": "observed-sense-without-strong-visual-proof"
+        }
+      },
+      "strictFilteredGreen": false,
+      "outcome": "remains_orange"
+    },
+    {
+      "word": "drogue",
+      "ipa": "dʁɔg",
+      "observedSenseCount": 17,
+      "dominantObservedSense": {
+        "definition": "Substance psychotrope provoquant le plus souvent une dépendance et utilisée pour modifier son état mental, en particulier substance illégale dont l’usage est réprouvé.",
+        "pos": "noun",
+        "tags": [],
+        "topics": [],
+        "visualAssessment": {
+          "status": "unresolved",
+          "visualConceptCandidate": false,
+          "confidence": 0.68,
+          "ruleId": "observed-sense-without-strong-visual-proof"
+        }
+      },
+      "strictFilteredGreen": false,
+      "outcome": "remains_orange"
+    },
+    {
+      "word": "mu",
+      "ipa": "my",
+      "observedSenseCount": 4,
+      "dominantObservedSense": {
+        "definition": "μ, Μ, douzième lettre et huitième consonne de l’alphabet grec.",
+        "pos": "noun",
+        "tags": [],
+        "topics": [],
+        "visualAssessment": {
+          "status": "unresolved",
+          "visualConceptCandidate": false,
+          "confidence": 0.68,
+          "ruleId": "observed-sense-without-strong-visual-proof"
+        }
+      },
+      "strictFilteredGreen": false,
+      "outcome": "remains_orange"
+    },
+    {
+      "word": "course",
+      "ipa": "kuʁs",
+      "observedSenseCount": 17,
+      "dominantObservedSense": {
+        "definition": "Action de courir, mouvement de celui qui court.",
+        "pos": "noun",
+        "tags": [],
+        "topics": [],
+        "visualAssessment": {
+          "status": "unresolved",
+          "visualConceptCandidate": false,
+          "confidence": 0.68,
+          "ruleId": "observed-sense-without-strong-visual-proof"
+        }
+      },
+      "strictFilteredGreen": false,
+      "outcome": "remains_orange"
+    },
+    {
+      "word": "perte",
+      "ipa": "pɛʁt",
+      "observedSenseCount": 14,
+      "dominantObservedSense": {
+        "definition": "Privation de quelque chose de précieux, d’agréable, de commode, qu’on avait.",
+        "pos": "noun",
+        "tags": [],
+        "topics": [],
+        "visualAssessment": {
+          "status": "unresolved",
+          "visualConceptCandidate": false,
+          "confidence": 0.68,
+          "ruleId": "observed-sense-without-strong-visual-proof"
+        }
+      },
+      "strictFilteredGreen": false,
+      "outcome": "remains_orange"
+    },
+    {
+      "word": "chasse",
+      "ipa": "ʃas",
+      "observedSenseCount": 24,
+      "dominantObservedSense": {
+        "definition": "Action de chasser, c’est-à-dire poursuivre pour capturer ou tuer.",
+        "pos": "noun",
+        "tags": [],
+        "topics": [],
+        "visualAssessment": {
+          "status": "unresolved",
+          "visualConceptCandidate": false,
+          "confidence": 0.68,
+          "ruleId": "observed-sense-without-strong-visual-proof"
+        }
+      },
+      "strictFilteredGreen": false,
+      "outcome": "remains_orange"
+    },
+    {
+      "word": "pub",
+      "ipa": "pœb",
+      "observedSenseCount": 2,
+      "dominantObservedSense": {
+        "definition": "Message publicitaire.",
+        "pos": "noun",
+        "tags": [
+          "familiar"
+        ],
+        "topics": [],
+        "visualAssessment": {
+          "status": "unresolved",
+          "visualConceptCandidate": false,
+          "confidence": 0.68,
+          "ruleId": "observed-sense-without-strong-visual-proof"
+        }
+      },
+      "strictFilteredGreen": false,
+      "outcome": "remains_orange"
+    },
+    {
+      "word": "rêve",
+      "ipa": "ʁɛv",
+      "observedSenseCount": 10,
+      "dominantObservedSense": {
+        "definition": "Expérience illusoire, souvent absurde, agréable ou désagréable, vécue à la faveur d'une activité cérébrale pendant le sommeil.",
+        "pos": "noun",
+        "tags": [],
+        "topics": [],
+        "visualAssessment": {
+          "status": "unresolved",
+          "visualConceptCandidate": false,
+          "confidence": 0.68,
+          "ruleId": "observed-sense-without-strong-visual-proof"
+        }
+      },
+      "strictFilteredGreen": false,
+      "outcome": "remains_orange"
+    },
+    {
+      "word": "lettre",
+      "ipa": "lɛtʁ",
+      "observedSenseCount": 12,
+      "dominantObservedSense": {
+        "definition": "Chacun des caractères d’un alphabet représentant un son, voyelle ou consonne.",
+        "pos": "noun",
+        "tags": [],
+        "topics": [],
+        "visualAssessment": {
+          "status": "unresolved",
+          "visualConceptCandidate": false,
+          "confidence": 0.68,
+          "ruleId": "observed-sense-without-strong-visual-proof"
+        }
+      },
+      "strictFilteredGreen": false,
+      "outcome": "remains_orange"
+    },
+    {
+      "word": "chose",
+      "ipa": "ʃoz",
+      "observedSenseCount": 22,
+      "dominantObservedSense": {
+        "definition": "Objet, idée ou abstraction quelconque, sans pouvoir, vouloir, ou devoir l’identifier ou la nommer. Note d’usage : La signification du mot chose se déduit par la manière dont on l’emploie dans la phrase, où il remplace ce qu’il n’est pas possible (ou pas souhaitable) de nommer. Peut aussi remplacer un ensemble d’objets inanimés (ou d’idées) qu’on devine par le contexte.",
+        "pos": "noun",
+        "tags": [],
+        "topics": [],
+        "visualAssessment": {
+          "status": "inferred_candidate",
+          "visualConceptCandidate": true,
+          "confidence": 0.85,
+          "ruleId": "literal-noun-strong-semantic-cue",
+          "evidence": [
+            "strong_visual_gloss_hypernym"
+          ]
+        }
+      },
+      "strictFilteredGreen": false,
+      "outcome": "remains_orange"
+    },
+    {
+      "word": "droite",
+      "ipa": "dʁwat",
+      "observedSenseCount": 9,
+      "dominantObservedSense": {
+        "definition": "Côté droit.",
+        "pos": "noun",
+        "tags": [],
+        "topics": [],
+        "visualAssessment": {
+          "status": "unresolved",
+          "visualConceptCandidate": false,
+          "confidence": 0.68,
+          "ruleId": "observed-sense-without-strong-visual-proof"
+        }
+      },
+      "strictFilteredGreen": false,
+      "outcome": "remains_orange"
+    },
+    {
+      "word": "vote",
+      "ipa": "vɔt",
+      "observedSenseCount": 8,
+      "dominantObservedSense": {
+        "definition": "Opinion exprimée, suffrage donné dans un corps politique, dans une assemblée délibérante, dans un collège électoral, dans une compagnie.",
+        "pos": "noun",
+        "tags": [],
+        "topics": [
+          "politics"
+        ],
+        "visualAssessment": {
+          "status": "unresolved",
+          "visualConceptCandidate": false,
+          "confidence": 0.68,
+          "ruleId": "observed-sense-without-strong-visual-proof"
+        }
+      },
+      "strictFilteredGreen": false,
+      "outcome": "remains_orange"
+    },
+    {
+      "word": "geste",
+      "ipa": "ʒɛst",
+      "observedSenseCount": 7,
+      "dominantObservedSense": {
+        "definition": "Action et mouvement du corps et particulièrement des bras et des mains, action et mouvement employés à signifier quelque chose.",
+        "pos": "noun",
+        "tags": [],
+        "topics": [],
+        "visualAssessment": {
+          "status": "unresolved",
+          "visualConceptCandidate": false,
+          "confidence": 0.68,
+          "ruleId": "observed-sense-without-strong-visual-proof"
+        }
+      },
+      "strictFilteredGreen": false,
+      "outcome": "remains_orange"
+    }
+  ],
+  "decisionRuleSummary": [
+    "Exact graphy match to observed Wiktionary senses.",
+    "IPA identity remains supplied by B, not by semantic source.",
+    "Observed lexical sense never sets visualConceptCandidate=true.",
+    "Green expansion requires unchanged #290 class A/B plus a deterministic visual inference on the dominant literal noun sense.",
+    "No lexical exceptions, whitelists or blacklists are used."
+  ],
+  "notes": [
+    "The dominant-sense constraint is general: secondary concrete senses do not green an otherwise nonvisual lexical item.",
+    "No post-source editorial labels are used to produce C predictions."
+  ]
+}

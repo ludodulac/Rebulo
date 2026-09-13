@@ -28,7 +28,7 @@ const ROWS=Object.freeze([
   ['nez','nez','/ne/',1,'data/lexicon-seed.json']
 ]);
 
-const SPRITE_URL='assets/rebus/visible-batch1/sprite.svg';
+const SPRITE_URL='assets/visible-batch1/sprite.svg';
 const key=value=>String(value||'').toLocaleLowerCase('fr').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'');
 
 export const REBULO_VISIBLE_BATCH1=Object.freeze(ROWS.map(([id,label,ipa,syllableSpan,sourceCuration],index)=>Object.freeze({

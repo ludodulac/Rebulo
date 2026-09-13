@@ -23,14 +23,14 @@ const landscape=JSON.parse(fs.readFileSync(landscapePath,'utf8'));
 const seed=JSON.parse(fs.readFileSync(seedPath,'utf8'));
 const researchAssets=listResearchAssets();
 const assetIndex=buildKnownAssetIndex({seed,openLibraries:[OPEN_PICTOGRAMS,OPEN_PICTOGRAMS_WAVE_2,OPEN_PICTOGRAMS_WAVE_3],researchAssets});
-const queue=buildRepresentationExpansionQueue(landscape.rows||[],assetIndex,{globalLimit:800,twoSyllableReserve:400});
+const queue=buildRepresentationExpansionQueue(landscape.rows||[],assetIndex,{globalLimit:1200,twoSyllableReserve:600});
 const stats=summarizeExpansionQueue(queue);
 const subqueues=buildExpansionSubqueues(queue);
 const output={
   schemaVersion:'1.2',generatedAt:new Date().toISOString(),status:'research_mapping_only',
   purpose:'Élargir de façon conservatrice la banque SON → MOT(S) → REPRÉSENTATION en faisant émerger un lot substantiel à fort rendement sans convertir des indices en preuve visuelle.',
   policy:REPRESENTATION_EXPANSION_POLICY,
-  selection:{globalYieldLimit:800,twoSyllableReserve:400,note:'Union des 800 sons les plus rentables et des 400 fenêtres de deux syllabes les plus rentables; les doublons sont retirés. Aucun bonus/malus de vérité visuelle.'},
+  selection:{globalYieldLimit:1200,twoSyllableReserve:600,note:'Union des 1200 sons les plus rentables et des 600 fenêtres de deux syllabes les plus rentables; les doublons sont retirés. Aucun bonus/malus de vérité visuelle.'},
   assetInventory:{activeSeedCount:seed.filter(item=>item?.active!==false&&item?.image).length,openLibraryCount:OPEN_PICTOGRAMS.length+OPEN_PICTOGRAMS_WAVE_2.length+OPEN_PICTOGRAMS_WAVE_3.length,researchFileCount:researchAssets.length,note:'Les assets enregistrés et les correspondances de nom de fichier de recherche sont comptés séparément. Les fichiers de recherche restent des pistes d’inspection uniquement.'},
   stats,subqueues,rows:queue
 };

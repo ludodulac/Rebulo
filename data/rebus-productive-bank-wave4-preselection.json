@@ -4,12 +4,12 @@
   "method": "word-first: lexical frequency + concrete/imageable category + naming plausibility proxy + IPA reuse/shortness; benchmark excluded from primary score",
   "reservoirUsefulExactDenominator": 5741,
   "alreadySeriousUsefulApprox": 236,
-  "eligibleUnrepresentedCandidateSoundCount": 1099,
+  "eligibleUnrepresentedCandidateSoundCount": 1046,
   "shortFragmentState": {
-    "oneSyllable": 545,
-    "twoSyllable": 554,
-    "shortCombinable": 1059,
-    "oneOrTwoSyllable": 1099
+    "oneSyllable": 493,
+    "twoSyllable": 553,
+    "shortCombinable": 1006,
+    "oneOrTwoSyllable": 1046
   },
   "preselectedSoundCount": 220,
   "rows": [
@@ -428,160 +428,6 @@
       "goodConcreteCandidateCount": 0
     },
     {
-      "ipa": "pʁe",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 83,
-      "usefulWeightedGain": 3544.329,
-      "selectionScore": 410.017,
-      "candidates": [
-        {
-          "word": "pré",
-          "pos": "NOM",
-          "frequency": 2.551,
-          "category": "nature",
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Petit pré vert clôturé avec herbe et quelques fleurs, sans maison ni animal dominant.",
-            "confusions": [
-              "champ",
-              "prairie",
-              "herbe"
-            ],
-            "risk": "high",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 155.81
-        }
-      ],
-      "exactWordCount": 1,
-      "goodConcreteCandidateCount": 1
-    },
-    {
-      "ipa": "pɔʁ",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 43,
-      "usefulWeightedGain": 3476.803,
-      "selectionScore": 377.251,
-      "candidates": [
-        {
-          "word": "porc",
-          "pos": "NOM",
-          "frequency": 21.585,
-          "category": "animal",
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Un porc domestique entier de profil trois-quarts, seul, sans ferme ni nourriture.",
-            "confusions": [
-              "cochon",
-              "porcelet"
-            ],
-            "risk": "medium_high",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 199.111
-        },
-        {
-          "word": "port",
-          "pos": "NOM",
-          "frequency": 20.839,
-          "category": "place",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 128.507
-        },
-        {
-          "word": "pore",
-          "pos": "NOM",
-          "frequency": 0.123,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 20.088
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 2
-    },
-    {
-      "ipa": "kɑ̃",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 31,
-      "usefulWeightedGain": 1110.19,
-      "selectionScore": 366.911,
-      "candidates": [
-        {
-          "word": "camp",
-          "pos": "NOM",
-          "frequency": 84.937,
-          "category": "place",
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Deux ou trois tentes de camping regroupées, sans texte.",
-            "confusions": [
-              "camping",
-              "tentes"
-            ],
-            "risk": "unknown",
-            "source": "data/rebus-sound-visual-curation-wave2.json"
-          },
-          "wordScore": 231.165
-        },
-        {
-          "word": "can",
-          "pos": "NOM",
-          "frequency": 8.481,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 58.487
-        },
-        {
-          "word": "quant",
-          "pos": "NOM",
-          "frequency": 7.358,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 56.218
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 1
-    },
-    {
-      "ipa": "mo",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 73,
-      "usefulWeightedGain": 6126.993,
-      "selectionScore": 361.862,
-      "candidates": [
-        {
-          "word": "mot",
-          "pos": "NOM",
-          "frequency": 162.478,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 127.74
-        },
-        {
-          "word": "maux",
-          "pos": "NOM",
-          "frequency": 7.054,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 55.551
-        }
-      ],
-      "exactWordCount": 2,
-      "goodConcreteCandidateCount": 0
-    },
-    {
       "ipa": "ga",
       "unitCount": 2,
       "syllableSpan": 1,
@@ -690,176 +536,6 @@
       "goodConcreteCandidateCount": 0
     },
     {
-      "ipa": "ʃɑ̃",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 31,
-      "usefulWeightedGain": 2732.745,
-      "selectionScore": 348.21,
-      "candidates": [
-        {
-          "word": "champ",
-          "pos": "NOM",
-          "frequency": 38.807,
-          "category": "nature",
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Un champ cultivé avec rangées de culture et horizon discret.",
-            "confusions": [
-              "pré",
-              "campagne"
-            ],
-            "risk": "unknown",
-            "source": "data/rebus-sound-visual-curation-wave2.json"
-          },
-          "wordScore": 209.313
-        },
-        {
-          "word": "chant",
-          "pos": "NOM",
-          "frequency": 10.959,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 72.667
-        },
-        {
-          "word": "chand",
-          "pos": "NOM",
-          "frequency": 0.149,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 20.5
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 1
-    },
-    {
-      "ipa": "tabl",
-      "unitCount": 4,
-      "syllableSpan": 1,
-      "usefulTargetCount": 24,
-      "usefulWeightedGain": 1090.644,
-      "selectionScore": 344.202,
-      "candidates": [
-        {
-          "word": "table",
-          "pos": "NOM",
-          "frequency": 93.728,
-          "category": "tool",
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Une table simple à quatre pieds vue en légère perspective, seule sur fond clair, sans repas ni chaises.",
-            "confusions": [
-              "bureau"
-            ],
-            "risk": "low_medium",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 232.918
-        }
-      ],
-      "exactWordCount": 1,
-      "goodConcreteCandidateCount": 1
-    },
-    {
-      "ipa": "sa",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 68,
-      "usefulWeightedGain": 14353.255,
-      "selectionScore": 342.854,
-      "candidates": [
-        {
-          "word": "sas",
-          "pos": "NOM",
-          "frequency": 3.94,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Un sas avec deux portes successives dans un petit vestibule, vue en coupe simple.",
-            "confusions": [
-              "entrée",
-              "couloir",
-              "porte"
-            ],
-            "risk": "unknown",
-            "source": "data/rebus-sound-visual-curation-wave3.json"
-          },
-          "wordScore": 116.753
-        },
-        {
-          "word": "sa",
-          "pos": "NOM",
-          "frequency": 0.032,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 0.567
-        },
-        {
-          "word": "çà",
-          "pos": "ONO",
-          "frequency": 0.133,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": -5.752
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "vo",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 47,
-      "usefulWeightedGain": 7600.896,
-      "selectionScore": 341.783,
-      "candidates": [
-        {
-          "word": "veau",
-          "pos": "NOM",
-          "frequency": 4.63,
-          "category": "animal",
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Un jeune veau entier, seul, silhouette clairement juvénile, sans vache adulte dominante.",
-            "confusions": [
-              "vache",
-              "vachette"
-            ],
-            "risk": "medium",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 164.106
-        },
-        {
-          "word": "vaux",
-          "pos": "NOM",
-          "frequency": 0.484,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 25.105
-        },
-        {
-          "word": "vau",
-          "pos": "NOM",
-          "frequency": 0.028,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 0.497
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 1
-    },
-    {
       "ipa": "paʁ",
       "unitCount": 3,
       "syllableSpan": 1,
@@ -893,54 +569,6 @@
           "hasPriorPrototype": false,
           "priorPrototype": null,
           "wordScore": 24.438
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "ɔʁ",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 30,
-      "usefulWeightedGain": 2226.234,
-      "selectionScore": 319.633,
-      "candidates": [
-        {
-          "word": "or",
-          "pos": "NOM",
-          "frequency": 73.744,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Une petite pépite d'or et un lingot sans texte, cadrés ensemble mais sans monnaie.",
-            "confusions": [
-              "lingot",
-              "métal",
-              "trésor"
-            ],
-            "risk": "unknown",
-            "source": "data/rebus-sound-visual-curation-wave4.json"
-          },
-          "wordScore": 183.653
-        },
-        {
-          "word": "ord",
-          "pos": "ADJ",
-          "frequency": 0.25,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": -20.983
-        },
-        {
-          "word": "ort",
-          "pos": "ADJ",
-          "frequency": 0.092,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": -41.416
         }
       ],
       "exactWordCount": 3,
@@ -1037,92 +665,6 @@
       "goodConcreteCandidateCount": 1
     },
     {
-      "ipa": "tɔ̃",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 29,
-      "usefulWeightedGain": 11332.039,
-      "selectionScore": 306.787,
-      "candidates": [
-        {
-          "word": "thon",
-          "pos": "NOM",
-          "frequency": 5.728,
-          "category": "animal",
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Un thon entier de profil, corps fuselé et nageoires caractéristiques, seul sur fond clair.",
-            "confusions": [
-              "poisson",
-              "maquereau"
-            ],
-            "risk": "medium_high",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 167.313
-        },
-        {
-          "word": "ton",
-          "pos": "NOM",
-          "frequency": 47.342,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 97.809
-        },
-        {
-          "word": "tond",
-          "pos": "VER",
-          "frequency": 0.345,
-          "category": "action_uncertain",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 16.335
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 1
-    },
-    {
-      "ipa": "ʁɑ̃",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 70,
-      "usefulWeightedGain": 5011.234,
-      "selectionScore": 305.005,
-      "candidates": [
-        {
-          "word": "rang",
-          "pos": "NOM",
-          "frequency": 15.25,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 78.186
-        },
-        {
-          "word": "ran",
-          "pos": "NOM",
-          "frequency": 1,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 30.477
-        },
-        {
-          "word": "ranc",
-          "pos": "NOM",
-          "frequency": 0.013,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 0.232
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 0
-    },
-    {
       "ipa": "nə",
       "unitCount": 2,
       "syllableSpan": 1,
@@ -1141,91 +683,6 @@
         }
       ],
       "exactWordCount": 1,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "fe",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 46,
-      "usefulWeightedGain": 2202.061,
-      "selectionScore": 301.209,
-      "candidates": [
-        {
-          "word": "fée",
-          "pos": "NOM",
-          "frequency": 9.351,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Une fée clairement identifiable avec ailes, baguette magique et tenue simple, seule sur fond clair.",
-            "confusions": [
-              "princesse",
-              "magicienne"
-            ],
-            "risk": "medium",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 130.067
-        },
-        {
-          "word": "phé",
-          "pos": "NOM",
-          "frequency": 0.009,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 0.161
-        }
-      ],
-      "exactWordCount": 2,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "fɔʁ",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 39,
-      "usefulWeightedGain": 2161.607,
-      "selectionScore": 300.901,
-      "candidates": [
-        {
-          "word": "fort",
-          "pos": "NOM",
-          "frequency": 12.785,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Petit fort militaire en pierre avec remparts et tours basses, sans château féerique ni drapeau textuel.",
-            "confusions": [
-              "château",
-              "forteresse"
-            ],
-            "risk": "medium_high",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 145.224
-        },
-        {
-          "word": "for",
-          "pos": "NOM",
-          "frequency": 18.047,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 81.044
-        },
-        {
-          "word": "fore",
-          "pos": "VER",
-          "frequency": 0.218,
-          "category": "action_uncertain",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 14.55
-        }
-      ],
-      "exactWordCount": 3,
       "goodConcreteCandidateCount": 0
     },
     {
@@ -1256,93 +713,6 @@
         }
       ],
       "exactWordCount": 2,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "kaʁ",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 30,
-      "usefulWeightedGain": 967.208,
-      "selectionScore": 298.468,
-      "candidates": [
-        {
-          "word": "car",
-          "pos": "NOM",
-          "frequency": 5.051,
-          "category": "vehicle",
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Un autocar de tourisme vu de trois-quarts, long véhicule avec nombreuses fenêtres et porte passagers, seul sur fond clair.",
-            "confusions": [
-              "bus",
-              "autocar",
-              "coach"
-            ],
-            "risk": "high",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 165.404
-        },
-        {
-          "word": "quart",
-          "pos": "NOM",
-          "frequency": 13.744,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 76.435
-        },
-        {
-          "word": "care",
-          "pos": "NOM",
-          "frequency": 1.44,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 34.056
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 1
-    },
-    {
-      "ipa": "lo",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 67,
-      "usefulWeightedGain": 3323.59,
-      "selectionScore": 294.699,
-      "candidates": [
-        {
-          "word": "lot",
-          "pos": "NOM",
-          "frequency": 13.326,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 75.917
-        },
-        {
-          "word": "los",
-          "pos": "NOM",
-          "frequency": 0.918,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 29.723
-        },
-        {
-          "word": "laud",
-          "pos": "NOM",
-          "frequency": 0.013,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 0.232
-        }
-      ],
-      "exactWordCount": 3,
       "goodConcreteCandidateCount": 0
     },
     {
@@ -1382,45 +752,6 @@
         }
       ],
       "exactWordCount": 3,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "tik",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 56,
-      "usefulWeightedGain": 972.894,
-      "selectionScore": 287.321,
-      "candidates": [
-        {
-          "word": "tique",
-          "pos": "NOM",
-          "frequency": 0.652,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Une tique grossie isolée, vue du dessus, huit pattes visibles, sans peau ni animal hôte.",
-            "confusions": [
-              "araignée",
-              "insecte",
-              "pou"
-            ],
-            "risk": "high",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 97.036
-        },
-        {
-          "word": "tic",
-          "pos": "NOM",
-          "frequency": 3.81,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 46.273
-        }
-      ],
-      "exactWordCount": 2,
       "goodConcreteCandidateCount": 0
     },
     {
@@ -1541,45 +872,6 @@
       "goodConcreteCandidateCount": 0
     },
     {
-      "ipa": "pla",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 23,
-      "usefulWeightedGain": 895.292,
-      "selectionScore": 271.696,
-      "candidates": [
-        {
-          "word": "plat",
-          "pos": "NOM",
-          "frequency": 21.826,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Un plat de service ovale vide vu en légère perspective, seul sur fond clair.",
-            "confusions": [
-              "assiette",
-              "plateau",
-              "vaisselle"
-            ],
-            "risk": "high",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 154.302
-        },
-        {
-          "word": "pla",
-          "pos": "NOM",
-          "frequency": 0.674,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 27.274
-        }
-      ],
-      "exactWordCount": 2,
-      "goodConcreteCandidateCount": 0
-    },
-    {
       "ipa": "fam",
       "unitCount": 3,
       "syllableSpan": 1,
@@ -1646,36 +938,6 @@
         }
       ],
       "exactWordCount": 3,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "tele",
-      "unitCount": 4,
-      "syllableSpan": 2,
-      "usefulTargetCount": 13,
-      "usefulWeightedGain": 1544.888,
-      "selectionScore": 268.43,
-      "candidates": [
-        {
-          "word": "télé",
-          "pos": "NOM",
-          "frequency": 75.741,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Téléviseur simple vu de face avec écran allumé neutre, sans télécommande dominante.",
-            "confusions": [
-              "télévision",
-              "écran",
-              "TV"
-            ],
-            "risk": "medium",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 184.128
-        }
-      ],
-      "exactWordCount": 1,
       "goodConcreteCandidateCount": 0
     },
     {
@@ -1796,113 +1058,6 @@
         }
       ],
       "exactWordCount": 2,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "mɔ̃",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 20,
-      "usefulWeightedGain": 23988.542,
-      "selectionScore": 263.273,
-      "candidates": [
-        {
-          "word": "mon",
-          "pos": "ADJ:pos",
-          "frequency": 3716.462,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 140.974
-        },
-        {
-          "word": "mont",
-          "pos": "NOM",
-          "frequency": 7.934,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 57.418
-        }
-      ],
-      "exactWordCount": 2,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "dɑ̃s",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 14,
-      "usefulWeightedGain": 529.964,
-      "selectionScore": 263.082,
-      "candidates": [
-        {
-          "word": "danse",
-          "pos": "NOM",
-          "frequency": 46.047,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Deux personnes en posture de danse clairement synchronisée, sans scène ni costume spécialisé.",
-            "confusions": [
-              "danser",
-              "couple"
-            ],
-            "risk": "unknown",
-            "source": "data/rebus-sound-visual-curation-wave4.json"
-          },
-          "wordScore": 167.321
-        },
-        {
-          "word": "dense",
-          "pos": "ADJ",
-          "frequency": 1.959,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": -5.473
-        }
-      ],
-      "exactWordCount": 2,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "tu",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 22,
-      "usefulWeightedGain": 13873.485,
-      "selectionScore": 262.956,
-      "candidates": [
-        {
-          "word": "tout",
-          "pos": "NOM",
-          "frequency": 290.88,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 138.174
-        },
-        {
-          "word": "toux",
-          "pos": "NOM",
-          "frequency": 5.009,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 50.279
-        },
-        {
-          "word": "tous",
-          "pos": "NOM",
-          "frequency": 0.016,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 0.286
-        }
-      ],
-      "exactWordCount": 3,
       "goodConcreteCandidateCount": 0
     },
     {
@@ -2051,84 +1206,6 @@
       ],
       "exactWordCount": 3,
       "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "baʁ",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 13,
-      "usefulWeightedGain": 589.855,
-      "selectionScore": 253.328,
-      "candidates": [
-        {
-          "word": "bar",
-          "pos": "NOM",
-          "frequency": 76.88,
-          "category": "place",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 159.393
-        },
-        {
-          "word": "barre",
-          "pos": "NOM",
-          "frequency": 19.829,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 82.654
-        },
-        {
-          "word": "bare",
-          "pos": "NOM",
-          "frequency": 0.139,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 20.343
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 1
-    },
-    {
-      "ipa": "kuʁ",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 13,
-      "usefulWeightedGain": 1857.32,
-      "selectionScore": 252.902,
-      "candidates": [
-        {
-          "word": "cour",
-          "pos": "NOM",
-          "frequency": 59.867,
-          "category": "place",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 154.956
-        },
-        {
-          "word": "cours",
-          "pos": "NOM",
-          "frequency": 129.775,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 123.723
-        },
-        {
-          "word": "court",
-          "pos": "NOM",
-          "frequency": 14.269,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 77.065
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 1
     },
     {
       "ipa": "pø",
@@ -2323,45 +1400,6 @@
       "goodConcreteCandidateCount": 0
     },
     {
-      "ipa": "mɔʁ",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 14,
-      "usefulWeightedGain": 2226.651,
-      "selectionScore": 240.384,
-      "candidates": [
-        {
-          "word": "mort",
-          "pos": "NOM",
-          "frequency": 315.013,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 139.604
-        },
-        {
-          "word": "mors",
-          "pos": "NOM",
-          "frequency": 0.383,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 23.837
-        },
-        {
-          "word": "more",
-          "pos": "NOM",
-          "frequency": 0.323,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 23.038
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 0
-    },
-    {
       "ipa": "ʃe",
       "unitCount": 2,
       "syllableSpan": 1,
@@ -2434,93 +1472,6 @@
       "goodConcreteCandidateCount": 0
     },
     {
-      "ipa": "maʁ",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 25,
-      "usefulWeightedGain": 1563.177,
-      "selectionScore": 236.465,
-      "candidates": [
-        {
-          "word": "mare",
-          "pos": "NOM",
-          "frequency": 2.949,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Petite mare ronde avec eau, quelques roseaux et une grenouille minuscule secondaire, sans paysage dominant.",
-            "confusions": [
-              "étang",
-              "flaque",
-              "lac"
-            ],
-            "risk": "medium_high",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 112.722
-        },
-        {
-          "word": "marc",
-          "pos": "NOM",
-          "frequency": 0.472,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 24.959
-        },
-        {
-          "word": "mar",
-          "pos": "NOM",
-          "frequency": 0.285,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 22.514
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "mɛtʁ",
-      "unitCount": 4,
-      "syllableSpan": 1,
-      "usefulTargetCount": 23,
-      "usefulWeightedGain": 3217.333,
-      "selectionScore": 235.425,
-      "candidates": [
-        {
-          "word": "mètre",
-          "pos": "NOM",
-          "frequency": 5.82,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Un mètre ruban déroulé avec graduations visibles, seul, sans personne ni chantier.",
-            "confusions": [
-              "mètre ruban",
-              "ruban",
-              "règle"
-            ],
-            "risk": "medium",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 122.557
-        },
-        {
-          "word": "maître",
-          "pos": "NOM",
-          "frequency": 103.69,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 119.718
-        }
-      ],
-      "exactWordCount": 2,
-      "goodConcreteCandidateCount": 0
-    },
-    {
       "ipa": "mɔ̃d",
       "unitCount": 3,
       "syllableSpan": 1,
@@ -2540,66 +1491,6 @@
       ],
       "exactWordCount": 1,
       "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "vwa",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 19,
-      "usefulWeightedGain": 4335.024,
-      "selectionScore": 234.792,
-      "candidates": [
-        {
-          "word": "voix",
-          "pos": "NOM",
-          "frequency": 109.446,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 120.681
-        },
-        {
-          "word": "voie",
-          "pos": "NOM",
-          "frequency": 46.035,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 97.316
-        },
-        {
-          "word": "void",
-          "pos": "NOM",
-          "frequency": 0.019,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 0.339
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "ʁiʁ",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 15,
-      "usefulWeightedGain": 2138.265,
-      "selectionScore": 232.258,
-      "candidates": [
-        {
-          "word": "rire",
-          "pos": "NOM",
-          "frequency": 21.975,
-          "category": "action",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 129.419
-        }
-      ],
-      "exactWordCount": 1,
-      "goodConcreteCandidateCount": 1
     },
     {
       "ipa": "liɲ",
@@ -2641,45 +1532,6 @@
         }
       ],
       "exactWordCount": 1,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "fɔ̃",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 20,
-      "usefulWeightedGain": 918.209,
-      "selectionScore": 228.124,
-      "candidates": [
-        {
-          "word": "fond",
-          "pos": "NOM",
-          "frequency": 90.234,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 117.242
-        },
-        {
-          "word": "fonds",
-          "pos": "NOM",
-          "frequency": 23.38,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 85.488
-        },
-        {
-          "word": "fonts",
-          "pos": "NOM",
-          "frequency": 0.114,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 19.943
-        }
-      ],
-      "exactWordCount": 3,
       "goodConcreteCandidateCount": 0
     },
     {
@@ -2781,93 +1633,6 @@
       "goodConcreteCandidateCount": 0
     },
     {
-      "ipa": "pu",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 23,
-      "usefulWeightedGain": 1945.884,
-      "selectionScore": 226.809,
-      "candidates": [
-        {
-          "word": "pou",
-          "pos": "NOM",
-          "frequency": 1.826,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Un pou grossi, isolé comme petit insecte sans cheveux ni tête humaine dominante.",
-            "confusions": [
-              "insecte",
-              "puce",
-              "tique"
-            ],
-            "risk": "medium_high",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 106.7
-        },
-        {
-          "word": "pouls",
-          "pos": "NOM",
-          "frequency": 16.965,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 79.992
-        },
-        {
-          "word": "pouh",
-          "pos": "ONO",
-          "frequency": 0.066,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": -24.85
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "su",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 44,
-      "usefulWeightedGain": 2106.432,
-      "selectionScore": 226.653,
-      "candidates": [
-        {
-          "word": "sou",
-          "pos": "NOM",
-          "frequency": 9.351,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 60.067
-        },
-        {
-          "word": "saoûl",
-          "pos": "NOM",
-          "frequency": 0.446,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 24.638
-        },
-        {
-          "word": "souls",
-          "pos": "NOM",
-          "frequency": 0.123,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 20.088
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 0
-    },
-    {
       "ipa": "sɛ̃",
       "unitCount": 2,
       "syllableSpan": 1,
@@ -2934,53 +1699,6 @@
         }
       ],
       "exactWordCount": 2,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "lœʁ",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 18,
-      "usefulWeightedGain": 5410.578,
-      "selectionScore": 224.722,
-      "candidates": [
-        {
-          "word": "leurre",
-          "pos": "NOM",
-          "frequency": 2.801,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Un leurre de pêche artificiel coloré avec un hameçon, isolé, sans poisson.",
-            "confusions": [
-              "hameçon",
-              "appât"
-            ],
-            "risk": "unknown",
-            "source": "data/rebus-sound-visual-curation-wave4.json"
-          },
-          "wordScore": 112.035
-        },
-        {
-          "word": "leur",
-          "pos": "ADJ:pos",
-          "frequency": 467.481,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 103.691
-        },
-        {
-          "word": "leurs",
-          "pos": "ADJ:pos",
-          "frequency": 256.699,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 92.932
-        }
-      ],
-      "exactWordCount": 3,
       "goodConcreteCandidateCount": 0
     },
     {
@@ -3092,36 +1810,6 @@
       "goodConcreteCandidateCount": 0
     },
     {
-      "ipa": "bɔ̃",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 14,
-      "usefulWeightedGain": 9234.248,
-      "selectionScore": 219.461,
-      "candidates": [
-        {
-          "word": "bon",
-          "pos": "NOM",
-          "frequency": 73.949,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 113.703
-        },
-        {
-          "word": "bond",
-          "pos": "NOM",
-          "frequency": 3.345,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 44.442
-        }
-      ],
-      "exactWordCount": 2,
-      "goodConcreteCandidateCount": 0
-    },
-    {
       "ipa": "tɥe",
       "unitCount": 3,
       "syllableSpan": 1,
@@ -3146,44 +1834,6 @@
           "hasPriorPrototype": false,
           "priorPrototype": null,
           "wordScore": 43.11
-        }
-      ],
-      "exactWordCount": 2,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "ʃaʁ",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 14,
-      "usefulWeightedGain": 299.04,
-      "selectionScore": 218.154,
-      "candidates": [
-        {
-          "word": "char",
-          "pos": "NOM",
-          "frequency": 6.551,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Un char d’assaut de profil, tourelle et chenilles visibles, sans décor militaire.",
-            "confusions": [
-              "tank",
-              "blindé"
-            ],
-            "risk": "unknown",
-            "source": "data/rebus-sound-visual-curation-wave5.json"
-          },
-          "wordScore": 124.39
-        },
-        {
-          "word": "charre",
-          "pos": "NOM",
-          "frequency": 0.035,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 0.619
         }
       ],
       "exactWordCount": 2,
@@ -3706,53 +2356,6 @@
           "hasPriorPrototype": false,
           "priorPrototype": null,
           "wordScore": 21.973
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "bʁi",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 23,
-      "usefulWeightedGain": 521.656,
-      "selectionScore": 209.792,
-      "candidates": [
-        {
-          "word": "brie",
-          "pos": "NOM",
-          "frequency": 0.418,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Un quartier de brie à croûte blanche et cœur crémeux, isolé sur fond clair, sans emballage ni texte.",
-            "confusions": [
-              "fromage",
-              "camembert"
-            ],
-            "risk": "high",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 94.286
-        },
-        {
-          "word": "bris",
-          "pos": "NOM",
-          "frequency": 1.111,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 31.449
-        },
-        {
-          "word": "bri",
-          "pos": "NOM",
-          "frequency": 0.801,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 28.59
         }
       ],
       "exactWordCount": 3,
@@ -4632,36 +3235,6 @@
       "goodConcreteCandidateCount": 0
     },
     {
-      "ipa": "tʁɛ",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 13,
-      "usefulWeightedGain": 9059.101,
-      "selectionScore": 198.272,
-      "candidates": [
-        {
-          "word": "trait",
-          "pos": "NOM",
-          "frequency": 4.845,
-          "category": "shape",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 94.781
-        },
-        {
-          "word": "trés",
-          "pos": "NOM",
-          "frequency": 13.25,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 75.822
-        }
-      ],
-      "exactWordCount": 2,
-      "goodConcreteCandidateCount": 1
-    },
-    {
       "ipa": "ekʁiʁ",
       "unitCount": 5,
       "syllableSpan": 2,
@@ -4851,45 +3424,6 @@
         }
       ],
       "exactWordCount": 1,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "fɑ̃",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 15,
-      "usefulWeightedGain": 1854.826,
-      "selectionScore": 196.047,
-      "candidates": [
-        {
-          "word": "faon",
-          "pos": "NOM",
-          "frequency": 0.373,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Un jeune faon tacheté entier, seul, proportions juvéniles évidentes, sans adulte.",
-            "confusions": [
-              "biche",
-              "cerf",
-              "bébé cerf"
-            ],
-            "risk": "medium_high",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 93.706
-        },
-        {
-          "word": "fend",
-          "pos": "VER",
-          "frequency": 1.155,
-          "category": "action_uncertain",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 24.82
-        }
-      ],
-      "exactWordCount": 2,
       "goodConcreteCandidateCount": 0
     },
     {
@@ -5154,45 +3688,6 @@
         }
       ],
       "exactWordCount": 2,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "ʃo",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 19,
-      "usefulWeightedGain": 703.606,
-      "selectionScore": 193.012,
-      "candidates": [
-        {
-          "word": "show",
-          "pos": "NOM",
-          "frequency": 23.073,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 85.26
-        },
-        {
-          "word": "chaud",
-          "pos": "NOM",
-          "frequency": 10.032,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 71.214
-        },
-        {
-          "word": "chaux",
-          "pos": "NOM",
-          "frequency": 0.753,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 28.104
-        }
-      ],
-      "exactWordCount": 3,
       "goodConcreteCandidateCount": 0
     },
     {
@@ -5662,36 +4157,6 @@
       ],
       "exactWordCount": 2,
       "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "sje",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 27,
-      "usefulWeightedGain": 1622.741,
-      "selectionScore": 186.704,
-      "candidates": [
-        {
-          "word": "scier",
-          "pos": "VER",
-          "frequency": 0.785,
-          "category": "action",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 58.43
-        },
-        {
-          "word": "sied",
-          "pos": "VER",
-          "frequency": 1.035,
-          "category": "action_uncertain",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 23.789
-        }
-      ],
-      "exactWordCount": 2,
-      "goodConcreteCandidateCount": 1
     },
     {
       "ipa": "pas",
@@ -6531,36 +4996,6 @@
       "goodConcreteCandidateCount": 0
     },
     {
-      "ipa": "tʁi",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 34,
-      "usefulWeightedGain": 712.188,
-      "selectionScore": 179.223,
-      "candidates": [
-        {
-          "word": "tri",
-          "pos": "NOM",
-          "frequency": 2.111,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 38.429
-        },
-        {
-          "word": "trie",
-          "pos": "VER",
-          "frequency": 0.595,
-          "category": "action_uncertain",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 19.404
-        }
-      ],
-      "exactWordCount": 2,
-      "goodConcreteCandidateCount": 0
-    },
-    {
       "ipa": "nɛʁ",
       "unitCount": 3,
       "syllableSpan": 1,
@@ -6756,45 +5191,6 @@
       "goodConcreteCandidateCount": 0
     },
     {
-      "ipa": "my",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 31,
-      "usefulWeightedGain": 1605.11,
-      "selectionScore": 174.977,
-      "candidates": [
-        {
-          "word": "mu",
-          "pos": "NOM",
-          "frequency": 2.028,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 37.942
-        },
-        {
-          "word": "mue",
-          "pos": "NOM",
-          "frequency": 0.297,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 22.681
-        },
-        {
-          "word": "mûs",
-          "pos": "NOM",
-          "frequency": 0.013,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 0.232
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 0
-    },
-    {
       "ipa": "piʁ",
       "unitCount": 3,
       "syllableSpan": 1,
@@ -6894,6 +5290,1146 @@
         }
       ],
       "exactWordCount": 3,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "eme",
+      "unitCount": 3,
+      "syllableSpan": 2,
+      "usefulTargetCount": 3,
+      "usefulWeightedGain": 400.843,
+      "selectionScore": 174.053,
+      "candidates": [
+        {
+          "word": "aimer",
+          "pos": "VER",
+          "frequency": 77.199,
+          "category": "action_uncertain",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 107.467
+        },
+        {
+          "word": "aimé",
+          "pos": "ADJ",
+          "frequency": 4.165,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 4.554
+        }
+      ],
+      "exactWordCount": 2,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "syfi",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 4,
+      "usefulWeightedGain": 159.422,
+      "selectionScore": 173.859,
+      "candidates": [
+        {
+          "word": "suffit",
+          "pos": "VER",
+          "frequency": 133.943,
+          "category": "action_uncertain",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 117.287
+        },
+        {
+          "word": "sufi",
+          "pos": "NOM",
+          "frequency": 0.101,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 19.732
+        }
+      ],
+      "exactWordCount": 2,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "dəsy",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 3,
+      "usefulWeightedGain": 1054.628,
+      "selectionScore": 173.241,
+      "candidates": [
+        {
+          "word": "dessus",
+          "pos": "NOM",
+          "frequency": 68.231,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 112.274
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "ete",
+      "unitCount": 3,
+      "syllableSpan": 2,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 303.384,
+      "selectionScore": 173.07,
+      "candidates": [
+        {
+          "word": "été",
+          "pos": "NOM",
+          "frequency": 58.858,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 109.656
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "oke",
+      "unitCount": 3,
+      "syllableSpan": 2,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 2561.602,
+      "selectionScore": 172.888,
+      "candidates": [
+        {
+          "word": "ok",
+          "pos": "ADJ",
+          "frequency": 425.883,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 102.017
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "ʁaʒ",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 13,
+      "usefulWeightedGain": 526.418,
+      "selectionScore": 172.696,
+      "candidates": [
+        {
+          "word": "rage",
+          "pos": "NOM",
+          "frequency": 16.152,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 79.158
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "səgɔ̃d",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 442.713,
+      "selectionScore": 172.521,
+      "candidates": [
+        {
+          "word": "seconde",
+          "pos": "NOM",
+          "frequency": 87.965,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 116.788
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "gaɲe",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 3,
+      "usefulWeightedGain": 561.789,
+      "selectionScore": 172.365,
+      "candidates": [
+        {
+          "word": "gagner",
+          "pos": "VER",
+          "frequency": 108.949,
+          "category": "action_uncertain",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 113.6
+        },
+        {
+          "word": "gagné",
+          "pos": "ADJ",
+          "frequency": 4.718,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 6.385
+        }
+      ],
+      "exactWordCount": 2,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "mis",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 5,
+      "usefulWeightedGain": 361.465,
+      "selectionScore": 172.329,
+      "candidates": [
+        {
+          "word": "miss",
+          "pos": "NOM",
+          "frequency": 47.06,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 97.704
+        },
+        {
+          "word": "misses",
+          "pos": "VER",
+          "frequency": 0.022,
+          "category": "action_uncertain",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": -6.608
+        }
+      ],
+      "exactWordCount": 2,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "ʒwa",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 6,
+      "usefulWeightedGain": 353.226,
+      "selectionScore": 171.746,
+      "candidates": [
+        {
+          "word": "joie",
+          "pos": "NOM",
+          "frequency": 40.358,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 95.001
+        },
+        {
+          "word": "joua",
+          "pos": "VER",
+          "frequency": 0.342,
+          "category": "action_uncertain",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 16.295
+        }
+      ],
+      "exactWordCount": 2,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "mɔ̃te",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 6,
+      "usefulWeightedGain": 505.685,
+      "selectionScore": 171.152,
+      "candidates": [
+        {
+          "word": "monter",
+          "pos": "VER",
+          "frequency": 71.699,
+          "category": "action_uncertain",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 106.154
+        },
+        {
+          "word": "montée",
+          "pos": "NOM",
+          "frequency": 3.168,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 43.694
+        },
+        {
+          "word": "monté",
+          "pos": "ADJ",
+          "frequency": 5.307,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 8.15
+        }
+      ],
+      "exactWordCount": 3,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "tut",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 639.488,
+      "selectionScore": 171.031,
+      "candidates": [
+        {
+          "word": "toute",
+          "pos": "ADJ",
+          "frequency": 402.722,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 101.013
+        },
+        {
+          "word": "toutes",
+          "pos": "ADJ:ind",
+          "frequency": 14.481,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 34.313
+        }
+      ],
+      "exactWordCount": 2,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "kɔ̃sɛj",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 411.709,
+      "selectionScore": 170.939,
+      "candidates": [
+        {
+          "word": "conseil",
+          "pos": "NOM",
+          "frequency": 81.633,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 115.459
+        },
+        {
+          "word": "conseille",
+          "pos": "VER",
+          "frequency": 11.861,
+          "category": "action_uncertain",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 66.976
+        }
+      ],
+      "exactWordCount": 2,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "dɔ̃",
+      "unitCount": 2,
+      "syllableSpan": 1,
+      "usefulTargetCount": 6,
+      "usefulWeightedGain": 1290.82,
+      "selectionScore": 170.457,
+      "candidates": [
+        {
+          "word": "don",
+          "pos": "NOM",
+          "frequency": 28.937,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 89.184
+        },
+        {
+          "word": "dom",
+          "pos": "NOM",
+          "frequency": 0.68,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 27.338
+        }
+      ],
+      "exactWordCount": 2,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "aʒi",
+      "unitCount": 3,
+      "syllableSpan": 2,
+      "usefulTargetCount": 3,
+      "usefulWeightedGain": 23.494,
+      "selectionScore": 170.202,
+      "candidates": [
+        {
+          "word": "agit",
+          "pos": "VER",
+          "frequency": 107.782,
+          "category": "action_uncertain",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 113.408
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "sɥivʁ",
+      "unitCount": 5,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 527.067,
+      "selectionScore": 169.919,
+      "candidates": [
+        {
+          "word": "suivre",
+          "pos": "VER",
+          "frequency": 86.927,
+          "category": "action_uncertain",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 109.577
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "bʁɥi",
+      "unitCount": 4,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 328.617,
+      "selectionScore": 169.812,
+      "candidates": [
+        {
+          "word": "bruit",
+          "pos": "NOM",
+          "frequency": 63.927,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 111.119
+        },
+        {
+          "word": "bruis",
+          "pos": "VER",
+          "frequency": 0.022,
+          "category": "action_uncertain",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": -6.608
+        }
+      ],
+      "exactWordCount": 2,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "sɑ̃te",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 390.935,
+      "selectionScore": 169.797,
+      "candidates": [
+        {
+          "word": "santé",
+          "pos": "NOM",
+          "frequency": 77.335,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 114.498
+        },
+        {
+          "word": "sentez",
+          "pos": "VER",
+          "frequency": 32.997,
+          "category": "action_uncertain",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 84.473
+        }
+      ],
+      "exactWordCount": 2,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "psi",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 12,
+      "usefulWeightedGain": 222.45,
+      "selectionScore": 169.791,
+      "candidates": [
+        {
+          "word": "psy",
+          "pos": "NOM",
+          "frequency": 18.491,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 81.459
+        },
+        {
+          "word": "psi",
+          "pos": "NOM",
+          "frequency": 0.335,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 23.201
+        }
+      ],
+      "exactWordCount": 2,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "da",
+      "unitCount": 2,
+      "syllableSpan": 1,
+      "usefulTargetCount": 33,
+      "usefulWeightedGain": 1954.286,
+      "selectionScore": 169.456,
+      "candidates": [
+        {
+          "word": "da",
+          "pos": "ONO",
+          "frequency": 6.12,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 27.332
+        },
+        {
+          "word": "das",
+          "pos": "NOM",
+          "frequency": 0.491,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 25.19
+        }
+      ],
+      "exactWordCount": 2,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "səkʁɛ",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 383.942,
+      "selectionScore": 169.182,
+      "candidates": [
+        {
+          "word": "secret",
+          "pos": "NOM",
+          "frequency": 74.968,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 113.946
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "ɑ̃fɛʁ",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 414.703,
+      "selectionScore": 169.163,
+      "candidates": [
+        {
+          "word": "enfer",
+          "pos": "NOM",
+          "frequency": 73.763,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 113.658
+        },
+        {
+          "word": "enferre",
+          "pos": "VER",
+          "frequency": 0.028,
+          "category": "action_uncertain",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": -6.503
+        }
+      ],
+      "exactWordCount": 2,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "tim",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 8,
+      "usefulWeightedGain": 703.696,
+      "selectionScore": 168.494,
+      "candidates": [
+        {
+          "word": "team",
+          "pos": "NOM",
+          "frequency": 22.652,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 84.942
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "finiʁ",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 500.368,
+      "selectionScore": 167.976,
+      "candidates": [
+        {
+          "word": "finir",
+          "pos": "VER",
+          "frequency": 98.57,
+          "category": "action_uncertain",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 111.815
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "ja",
+      "unitCount": 2,
+      "syllableSpan": 1,
+      "usefulTargetCount": 8,
+      "usefulWeightedGain": 250.735,
+      "selectionScore": 167.876,
+      "candidates": [
+        {
+          "word": "ya",
+          "pos": "NOM",
+          "frequency": 26.918,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 87.927
+        },
+        {
+          "word": "hia",
+          "pos": "NOM",
+          "frequency": 0.028,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 0.497
+        },
+        {
+          "word": "yaa",
+          "pos": "NOM",
+          "frequency": 0.003,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 0.054
+        }
+      ],
+      "exactWordCount": 3,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "kɛt",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 14,
+      "usefulWeightedGain": 535.881,
+      "selectionScore": 167.622,
+      "candidates": [
+        {
+          "word": "quête",
+          "pos": "NOM",
+          "frequency": 10.411,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 71.822
+        },
+        {
+          "word": "ket",
+          "pos": "NOM",
+          "frequency": 0.016,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 0.286
+        },
+        {
+          "word": "quette",
+          "pos": "NOM",
+          "frequency": 0.009,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 0.161
+        }
+      ],
+      "exactWordCount": 3,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "ly",
+      "unitCount": 2,
+      "syllableSpan": 1,
+      "usefulTargetCount": 34,
+      "usefulWeightedGain": 3114.495,
+      "selectionScore": 167.371,
+      "candidates": [
+        {
+          "word": "lut",
+          "pos": "NOM",
+          "frequency": 0.209,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 21.416
+        },
+        {
+          "word": "lu",
+          "pos": "ADJ",
+          "frequency": 0.978,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": -12.722
+        }
+      ],
+      "exactWordCount": 2,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "klijɑ̃",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 350.589,
+      "selectionScore": 167.238,
+      "candidates": [
+        {
+          "word": "client",
+          "pos": "NOM",
+          "frequency": 68.405,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 112.319
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "ɑ̃vwa",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 3,
+      "usefulWeightedGain": 455.864,
+      "selectionScore": 167.052,
+      "candidates": [
+        {
+          "word": "envoie",
+          "pos": "VER",
+          "frequency": 84.234,
+          "category": "action_uncertain",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 109.017
+        },
+        {
+          "word": "envoi",
+          "pos": "NOM",
+          "frequency": 4.864,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 49.839
+        },
+        {
+          "word": "envoye",
+          "pos": "NOM",
+          "frequency": 1.168,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 31.928
+        }
+      ],
+      "exactWordCount": 3,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "vole",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 4,
+      "usefulWeightedGain": 407.275,
+      "selectionScore": 166.968,
+      "candidates": [
+        {
+          "word": "voler",
+          "pos": "VER",
+          "frequency": 75.731,
+          "category": "action_uncertain",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 107.126
+        },
+        {
+          "word": "volée",
+          "pos": "NOM",
+          "frequency": 1.519,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 34.63
+        },
+        {
+          "word": "volé",
+          "pos": "ADJ",
+          "frequency": 4.94,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 7.071
+        }
+      ],
+      "exactWordCount": 3,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "pat",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 5,
+      "usefulWeightedGain": 70.818,
+      "selectionScore": 166.952,
+      "candidates": [
+        {
+          "word": "pâte",
+          "pos": "NOM",
+          "frequency": 5.987,
+          "category": "food",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 97.993
+        },
+        {
+          "word": "patte",
+          "pos": "NOM",
+          "frequency": 5.665,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 52.144
+        },
+        {
+          "word": "pates",
+          "pos": "NOM",
+          "frequency": 0.263,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 22.203
+        }
+      ],
+      "exactWordCount": 3,
+      "goodConcreteCandidateCount": 1
+    },
+    {
+      "ipa": "gʁo",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 6,
+      "usefulWeightedGain": 1238.966,
+      "selectionScore": 166.928,
+      "candidates": [
+        {
+          "word": "gros",
+          "pos": "NOM",
+          "frequency": 23.804,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 85.798
+        },
+        {
+          "word": "grau",
+          "pos": "NOM",
+          "frequency": 0.006,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 0.108
+        }
+      ],
+      "exactWordCount": 2,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "tuʁne",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 6,
+      "usefulWeightedGain": 876.144,
+      "selectionScore": 166.824,
+      "candidates": [
+        {
+          "word": "tourner",
+          "pos": "VER",
+          "frequency": 50.38,
+          "category": "action_uncertain",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 99.906
+        },
+        {
+          "word": "tournée",
+          "pos": "NOM",
+          "frequency": 22.759,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 85.023
+        },
+        {
+          "word": "tourné",
+          "pos": "ADJ",
+          "frequency": 1.937,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": -5.607
+        }
+      ],
+      "exactWordCount": 3,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "kɔ̃ba",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 337.832,
+      "selectionScore": 166.5,
+      "candidates": [
+        {
+          "word": "combat",
+          "pos": "NOM",
+          "frequency": 66.098,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 111.711
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "mœʁ",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 7,
+      "usefulWeightedGain": 328.799,
+      "selectionScore": 166.421,
+      "candidates": [
+        {
+          "word": "meurt",
+          "pos": "VER",
+          "frequency": 39.731,
+          "category": "action_uncertain",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 87.726
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "sjø",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 16,
+      "usefulWeightedGain": 3446.097,
+      "selectionScore": 166.326,
+      "candidates": [
+        {
+          "word": "cieux",
+          "pos": "NOM",
+          "frequency": 9.095,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 59.617
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "sɑ̃tiʁ",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 3,
+      "usefulWeightedGain": 462.873,
+      "selectionScore": 166.161,
+      "candidates": [
+        {
+          "word": "sentir",
+          "pos": "VER",
+          "frequency": 79.873,
+          "category": "action_uncertain",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 108.072
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "bɛl",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 7,
+      "usefulWeightedGain": 213.826,
+      "selectionScore": 165.711,
+      "candidates": [
+        {
+          "word": "belle",
+          "pos": "NOM",
+          "frequency": 27.848,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 88.517
+        },
+        {
+          "word": "bel",
+          "pos": "ADJ",
+          "frequency": 24.253,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 43.121
+        },
+        {
+          "word": "belles",
+          "pos": "NOM",
+          "frequency": 1.772,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 36.352
+        }
+      ],
+      "exactWordCount": 3,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "tʁavɛʁ",
+      "unitCount": 6,
+      "syllableSpan": 2,
+      "usefulTargetCount": 3,
+      "usefulWeightedGain": 515.54,
+      "selectionScore": 165.564,
+      "candidates": [
+        {
+          "word": "travers",
+          "pos": "NOM",
+          "frequency": 79.994,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 115.099
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "vɑ̃dʁ",
+      "unitCount": 4,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 370.116,
+      "selectionScore": 165.495,
+      "candidates": [
+        {
+          "word": "vendre",
+          "pos": "VER",
+          "frequency": 72.646,
+          "category": "action_uncertain",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 106.387
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "poʁte",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 531.444,
+      "selectionScore": 165.12,
+      "candidates": [
+        {
+          "word": "porter",
+          "pos": "VER",
+          "frequency": 82.972,
+          "category": "action_uncertain",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 108.749
+        }
+      ],
+      "exactWordCount": 1,
       "goodConcreteCandidateCount": 0
     }
   ],
@@ -7313,160 +6849,6 @@
       "goodConcreteCandidateCount": 0
     },
     {
-      "ipa": "pʁe",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 83,
-      "usefulWeightedGain": 3544.329,
-      "selectionScore": 410.017,
-      "candidates": [
-        {
-          "word": "pré",
-          "pos": "NOM",
-          "frequency": 2.551,
-          "category": "nature",
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Petit pré vert clôturé avec herbe et quelques fleurs, sans maison ni animal dominant.",
-            "confusions": [
-              "champ",
-              "prairie",
-              "herbe"
-            ],
-            "risk": "high",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 155.81
-        }
-      ],
-      "exactWordCount": 1,
-      "goodConcreteCandidateCount": 1
-    },
-    {
-      "ipa": "pɔʁ",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 43,
-      "usefulWeightedGain": 3476.803,
-      "selectionScore": 377.251,
-      "candidates": [
-        {
-          "word": "porc",
-          "pos": "NOM",
-          "frequency": 21.585,
-          "category": "animal",
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Un porc domestique entier de profil trois-quarts, seul, sans ferme ni nourriture.",
-            "confusions": [
-              "cochon",
-              "porcelet"
-            ],
-            "risk": "medium_high",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 199.111
-        },
-        {
-          "word": "port",
-          "pos": "NOM",
-          "frequency": 20.839,
-          "category": "place",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 128.507
-        },
-        {
-          "word": "pore",
-          "pos": "NOM",
-          "frequency": 0.123,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 20.088
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 2
-    },
-    {
-      "ipa": "kɑ̃",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 31,
-      "usefulWeightedGain": 1110.19,
-      "selectionScore": 366.911,
-      "candidates": [
-        {
-          "word": "camp",
-          "pos": "NOM",
-          "frequency": 84.937,
-          "category": "place",
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Deux ou trois tentes de camping regroupées, sans texte.",
-            "confusions": [
-              "camping",
-              "tentes"
-            ],
-            "risk": "unknown",
-            "source": "data/rebus-sound-visual-curation-wave2.json"
-          },
-          "wordScore": 231.165
-        },
-        {
-          "word": "can",
-          "pos": "NOM",
-          "frequency": 8.481,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 58.487
-        },
-        {
-          "word": "quant",
-          "pos": "NOM",
-          "frequency": 7.358,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 56.218
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 1
-    },
-    {
-      "ipa": "mo",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 73,
-      "usefulWeightedGain": 6126.993,
-      "selectionScore": 361.862,
-      "candidates": [
-        {
-          "word": "mot",
-          "pos": "NOM",
-          "frequency": 162.478,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 127.74
-        },
-        {
-          "word": "maux",
-          "pos": "NOM",
-          "frequency": 7.054,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 55.551
-        }
-      ],
-      "exactWordCount": 2,
-      "goodConcreteCandidateCount": 0
-    },
-    {
       "ipa": "ga",
       "unitCount": 2,
       "syllableSpan": 1,
@@ -7575,176 +6957,6 @@
       "goodConcreteCandidateCount": 0
     },
     {
-      "ipa": "ʃɑ̃",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 31,
-      "usefulWeightedGain": 2732.745,
-      "selectionScore": 348.21,
-      "candidates": [
-        {
-          "word": "champ",
-          "pos": "NOM",
-          "frequency": 38.807,
-          "category": "nature",
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Un champ cultivé avec rangées de culture et horizon discret.",
-            "confusions": [
-              "pré",
-              "campagne"
-            ],
-            "risk": "unknown",
-            "source": "data/rebus-sound-visual-curation-wave2.json"
-          },
-          "wordScore": 209.313
-        },
-        {
-          "word": "chant",
-          "pos": "NOM",
-          "frequency": 10.959,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 72.667
-        },
-        {
-          "word": "chand",
-          "pos": "NOM",
-          "frequency": 0.149,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 20.5
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 1
-    },
-    {
-      "ipa": "tabl",
-      "unitCount": 4,
-      "syllableSpan": 1,
-      "usefulTargetCount": 24,
-      "usefulWeightedGain": 1090.644,
-      "selectionScore": 344.202,
-      "candidates": [
-        {
-          "word": "table",
-          "pos": "NOM",
-          "frequency": 93.728,
-          "category": "tool",
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Une table simple à quatre pieds vue en légère perspective, seule sur fond clair, sans repas ni chaises.",
-            "confusions": [
-              "bureau"
-            ],
-            "risk": "low_medium",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 232.918
-        }
-      ],
-      "exactWordCount": 1,
-      "goodConcreteCandidateCount": 1
-    },
-    {
-      "ipa": "sa",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 68,
-      "usefulWeightedGain": 14353.255,
-      "selectionScore": 342.854,
-      "candidates": [
-        {
-          "word": "sas",
-          "pos": "NOM",
-          "frequency": 3.94,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Un sas avec deux portes successives dans un petit vestibule, vue en coupe simple.",
-            "confusions": [
-              "entrée",
-              "couloir",
-              "porte"
-            ],
-            "risk": "unknown",
-            "source": "data/rebus-sound-visual-curation-wave3.json"
-          },
-          "wordScore": 116.753
-        },
-        {
-          "word": "sa",
-          "pos": "NOM",
-          "frequency": 0.032,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 0.567
-        },
-        {
-          "word": "çà",
-          "pos": "ONO",
-          "frequency": 0.133,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": -5.752
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "vo",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 47,
-      "usefulWeightedGain": 7600.896,
-      "selectionScore": 341.783,
-      "candidates": [
-        {
-          "word": "veau",
-          "pos": "NOM",
-          "frequency": 4.63,
-          "category": "animal",
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Un jeune veau entier, seul, silhouette clairement juvénile, sans vache adulte dominante.",
-            "confusions": [
-              "vache",
-              "vachette"
-            ],
-            "risk": "medium",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 164.106
-        },
-        {
-          "word": "vaux",
-          "pos": "NOM",
-          "frequency": 0.484,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 25.105
-        },
-        {
-          "word": "vau",
-          "pos": "NOM",
-          "frequency": 0.028,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 0.497
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 1
-    },
-    {
       "ipa": "paʁ",
       "unitCount": 3,
       "syllableSpan": 1,
@@ -7778,54 +6990,6 @@
           "hasPriorPrototype": false,
           "priorPrototype": null,
           "wordScore": 24.438
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "ɔʁ",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 30,
-      "usefulWeightedGain": 2226.234,
-      "selectionScore": 319.633,
-      "candidates": [
-        {
-          "word": "or",
-          "pos": "NOM",
-          "frequency": 73.744,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Une petite pépite d'or et un lingot sans texte, cadrés ensemble mais sans monnaie.",
-            "confusions": [
-              "lingot",
-              "métal",
-              "trésor"
-            ],
-            "risk": "unknown",
-            "source": "data/rebus-sound-visual-curation-wave4.json"
-          },
-          "wordScore": 183.653
-        },
-        {
-          "word": "ord",
-          "pos": "ADJ",
-          "frequency": 0.25,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": -20.983
-        },
-        {
-          "word": "ort",
-          "pos": "ADJ",
-          "frequency": 0.092,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": -41.416
         }
       ],
       "exactWordCount": 3,
@@ -7922,92 +7086,6 @@
       "goodConcreteCandidateCount": 1
     },
     {
-      "ipa": "tɔ̃",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 29,
-      "usefulWeightedGain": 11332.039,
-      "selectionScore": 306.787,
-      "candidates": [
-        {
-          "word": "thon",
-          "pos": "NOM",
-          "frequency": 5.728,
-          "category": "animal",
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Un thon entier de profil, corps fuselé et nageoires caractéristiques, seul sur fond clair.",
-            "confusions": [
-              "poisson",
-              "maquereau"
-            ],
-            "risk": "medium_high",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 167.313
-        },
-        {
-          "word": "ton",
-          "pos": "NOM",
-          "frequency": 47.342,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 97.809
-        },
-        {
-          "word": "tond",
-          "pos": "VER",
-          "frequency": 0.345,
-          "category": "action_uncertain",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 16.335
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 1
-    },
-    {
-      "ipa": "ʁɑ̃",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 70,
-      "usefulWeightedGain": 5011.234,
-      "selectionScore": 305.005,
-      "candidates": [
-        {
-          "word": "rang",
-          "pos": "NOM",
-          "frequency": 15.25,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 78.186
-        },
-        {
-          "word": "ran",
-          "pos": "NOM",
-          "frequency": 1,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 30.477
-        },
-        {
-          "word": "ranc",
-          "pos": "NOM",
-          "frequency": 0.013,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 0.232
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 0
-    },
-    {
       "ipa": "nə",
       "unitCount": 2,
       "syllableSpan": 1,
@@ -8026,91 +7104,6 @@
         }
       ],
       "exactWordCount": 1,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "fe",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 46,
-      "usefulWeightedGain": 2202.061,
-      "selectionScore": 301.209,
-      "candidates": [
-        {
-          "word": "fée",
-          "pos": "NOM",
-          "frequency": 9.351,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Une fée clairement identifiable avec ailes, baguette magique et tenue simple, seule sur fond clair.",
-            "confusions": [
-              "princesse",
-              "magicienne"
-            ],
-            "risk": "medium",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 130.067
-        },
-        {
-          "word": "phé",
-          "pos": "NOM",
-          "frequency": 0.009,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 0.161
-        }
-      ],
-      "exactWordCount": 2,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "fɔʁ",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 39,
-      "usefulWeightedGain": 2161.607,
-      "selectionScore": 300.901,
-      "candidates": [
-        {
-          "word": "fort",
-          "pos": "NOM",
-          "frequency": 12.785,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Petit fort militaire en pierre avec remparts et tours basses, sans château féerique ni drapeau textuel.",
-            "confusions": [
-              "château",
-              "forteresse"
-            ],
-            "risk": "medium_high",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 145.224
-        },
-        {
-          "word": "for",
-          "pos": "NOM",
-          "frequency": 18.047,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 81.044
-        },
-        {
-          "word": "fore",
-          "pos": "VER",
-          "frequency": 0.218,
-          "category": "action_uncertain",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 14.55
-        }
-      ],
-      "exactWordCount": 3,
       "goodConcreteCandidateCount": 0
     },
     {
@@ -8141,93 +7134,6 @@
         }
       ],
       "exactWordCount": 2,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "kaʁ",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 30,
-      "usefulWeightedGain": 967.208,
-      "selectionScore": 298.468,
-      "candidates": [
-        {
-          "word": "car",
-          "pos": "NOM",
-          "frequency": 5.051,
-          "category": "vehicle",
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Un autocar de tourisme vu de trois-quarts, long véhicule avec nombreuses fenêtres et porte passagers, seul sur fond clair.",
-            "confusions": [
-              "bus",
-              "autocar",
-              "coach"
-            ],
-            "risk": "high",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 165.404
-        },
-        {
-          "word": "quart",
-          "pos": "NOM",
-          "frequency": 13.744,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 76.435
-        },
-        {
-          "word": "care",
-          "pos": "NOM",
-          "frequency": 1.44,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 34.056
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 1
-    },
-    {
-      "ipa": "lo",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 67,
-      "usefulWeightedGain": 3323.59,
-      "selectionScore": 294.699,
-      "candidates": [
-        {
-          "word": "lot",
-          "pos": "NOM",
-          "frequency": 13.326,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 75.917
-        },
-        {
-          "word": "los",
-          "pos": "NOM",
-          "frequency": 0.918,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 29.723
-        },
-        {
-          "word": "laud",
-          "pos": "NOM",
-          "frequency": 0.013,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 0.232
-        }
-      ],
-      "exactWordCount": 3,
       "goodConcreteCandidateCount": 0
     },
     {
@@ -8267,45 +7173,6 @@
         }
       ],
       "exactWordCount": 3,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "tik",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 56,
-      "usefulWeightedGain": 972.894,
-      "selectionScore": 287.321,
-      "candidates": [
-        {
-          "word": "tique",
-          "pos": "NOM",
-          "frequency": 0.652,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Une tique grossie isolée, vue du dessus, huit pattes visibles, sans peau ni animal hôte.",
-            "confusions": [
-              "araignée",
-              "insecte",
-              "pou"
-            ],
-            "risk": "high",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 97.036
-        },
-        {
-          "word": "tic",
-          "pos": "NOM",
-          "frequency": 3.81,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 46.273
-        }
-      ],
-      "exactWordCount": 2,
       "goodConcreteCandidateCount": 0
     },
     {
@@ -8426,45 +7293,6 @@
       "goodConcreteCandidateCount": 0
     },
     {
-      "ipa": "pla",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 23,
-      "usefulWeightedGain": 895.292,
-      "selectionScore": 271.696,
-      "candidates": [
-        {
-          "word": "plat",
-          "pos": "NOM",
-          "frequency": 21.826,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Un plat de service ovale vide vu en légère perspective, seul sur fond clair.",
-            "confusions": [
-              "assiette",
-              "plateau",
-              "vaisselle"
-            ],
-            "risk": "high",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 154.302
-        },
-        {
-          "word": "pla",
-          "pos": "NOM",
-          "frequency": 0.674,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 27.274
-        }
-      ],
-      "exactWordCount": 2,
-      "goodConcreteCandidateCount": 0
-    },
-    {
       "ipa": "fam",
       "unitCount": 3,
       "syllableSpan": 1,
@@ -8531,36 +7359,6 @@
         }
       ],
       "exactWordCount": 3,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "tele",
-      "unitCount": 4,
-      "syllableSpan": 2,
-      "usefulTargetCount": 13,
-      "usefulWeightedGain": 1544.888,
-      "selectionScore": 268.43,
-      "candidates": [
-        {
-          "word": "télé",
-          "pos": "NOM",
-          "frequency": 75.741,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Téléviseur simple vu de face avec écran allumé neutre, sans télécommande dominante.",
-            "confusions": [
-              "télévision",
-              "écran",
-              "TV"
-            ],
-            "risk": "medium",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 184.128
-        }
-      ],
-      "exactWordCount": 1,
       "goodConcreteCandidateCount": 0
     },
     {
@@ -8681,113 +7479,6 @@
         }
       ],
       "exactWordCount": 2,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "mɔ̃",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 20,
-      "usefulWeightedGain": 23988.542,
-      "selectionScore": 263.273,
-      "candidates": [
-        {
-          "word": "mon",
-          "pos": "ADJ:pos",
-          "frequency": 3716.462,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 140.974
-        },
-        {
-          "word": "mont",
-          "pos": "NOM",
-          "frequency": 7.934,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 57.418
-        }
-      ],
-      "exactWordCount": 2,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "dɑ̃s",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 14,
-      "usefulWeightedGain": 529.964,
-      "selectionScore": 263.082,
-      "candidates": [
-        {
-          "word": "danse",
-          "pos": "NOM",
-          "frequency": 46.047,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Deux personnes en posture de danse clairement synchronisée, sans scène ni costume spécialisé.",
-            "confusions": [
-              "danser",
-              "couple"
-            ],
-            "risk": "unknown",
-            "source": "data/rebus-sound-visual-curation-wave4.json"
-          },
-          "wordScore": 167.321
-        },
-        {
-          "word": "dense",
-          "pos": "ADJ",
-          "frequency": 1.959,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": -5.473
-        }
-      ],
-      "exactWordCount": 2,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "tu",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 22,
-      "usefulWeightedGain": 13873.485,
-      "selectionScore": 262.956,
-      "candidates": [
-        {
-          "word": "tout",
-          "pos": "NOM",
-          "frequency": 290.88,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 138.174
-        },
-        {
-          "word": "toux",
-          "pos": "NOM",
-          "frequency": 5.009,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 50.279
-        },
-        {
-          "word": "tous",
-          "pos": "NOM",
-          "frequency": 0.016,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 0.286
-        }
-      ],
-      "exactWordCount": 3,
       "goodConcreteCandidateCount": 0
     },
     {
@@ -8936,84 +7627,6 @@
       ],
       "exactWordCount": 3,
       "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "baʁ",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 13,
-      "usefulWeightedGain": 589.855,
-      "selectionScore": 253.328,
-      "candidates": [
-        {
-          "word": "bar",
-          "pos": "NOM",
-          "frequency": 76.88,
-          "category": "place",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 159.393
-        },
-        {
-          "word": "barre",
-          "pos": "NOM",
-          "frequency": 19.829,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 82.654
-        },
-        {
-          "word": "bare",
-          "pos": "NOM",
-          "frequency": 0.139,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 20.343
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 1
-    },
-    {
-      "ipa": "kuʁ",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 13,
-      "usefulWeightedGain": 1857.32,
-      "selectionScore": 252.902,
-      "candidates": [
-        {
-          "word": "cour",
-          "pos": "NOM",
-          "frequency": 59.867,
-          "category": "place",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 154.956
-        },
-        {
-          "word": "cours",
-          "pos": "NOM",
-          "frequency": 129.775,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 123.723
-        },
-        {
-          "word": "court",
-          "pos": "NOM",
-          "frequency": 14.269,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 77.065
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 1
     },
     {
       "ipa": "pø",
@@ -9208,45 +7821,6 @@
       "goodConcreteCandidateCount": 0
     },
     {
-      "ipa": "mɔʁ",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 14,
-      "usefulWeightedGain": 2226.651,
-      "selectionScore": 240.384,
-      "candidates": [
-        {
-          "word": "mort",
-          "pos": "NOM",
-          "frequency": 315.013,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 139.604
-        },
-        {
-          "word": "mors",
-          "pos": "NOM",
-          "frequency": 0.383,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 23.837
-        },
-        {
-          "word": "more",
-          "pos": "NOM",
-          "frequency": 0.323,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 23.038
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 0
-    },
-    {
       "ipa": "ʃe",
       "unitCount": 2,
       "syllableSpan": 1,
@@ -9319,93 +7893,6 @@
       "goodConcreteCandidateCount": 0
     },
     {
-      "ipa": "maʁ",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 25,
-      "usefulWeightedGain": 1563.177,
-      "selectionScore": 236.465,
-      "candidates": [
-        {
-          "word": "mare",
-          "pos": "NOM",
-          "frequency": 2.949,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Petite mare ronde avec eau, quelques roseaux et une grenouille minuscule secondaire, sans paysage dominant.",
-            "confusions": [
-              "étang",
-              "flaque",
-              "lac"
-            ],
-            "risk": "medium_high",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 112.722
-        },
-        {
-          "word": "marc",
-          "pos": "NOM",
-          "frequency": 0.472,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 24.959
-        },
-        {
-          "word": "mar",
-          "pos": "NOM",
-          "frequency": 0.285,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 22.514
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "mɛtʁ",
-      "unitCount": 4,
-      "syllableSpan": 1,
-      "usefulTargetCount": 23,
-      "usefulWeightedGain": 3217.333,
-      "selectionScore": 235.425,
-      "candidates": [
-        {
-          "word": "mètre",
-          "pos": "NOM",
-          "frequency": 5.82,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Un mètre ruban déroulé avec graduations visibles, seul, sans personne ni chantier.",
-            "confusions": [
-              "mètre ruban",
-              "ruban",
-              "règle"
-            ],
-            "risk": "medium",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 122.557
-        },
-        {
-          "word": "maître",
-          "pos": "NOM",
-          "frequency": 103.69,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 119.718
-        }
-      ],
-      "exactWordCount": 2,
-      "goodConcreteCandidateCount": 0
-    },
-    {
       "ipa": "mɔ̃d",
       "unitCount": 3,
       "syllableSpan": 1,
@@ -9425,66 +7912,6 @@
       ],
       "exactWordCount": 1,
       "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "vwa",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 19,
-      "usefulWeightedGain": 4335.024,
-      "selectionScore": 234.792,
-      "candidates": [
-        {
-          "word": "voix",
-          "pos": "NOM",
-          "frequency": 109.446,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 120.681
-        },
-        {
-          "word": "voie",
-          "pos": "NOM",
-          "frequency": 46.035,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 97.316
-        },
-        {
-          "word": "void",
-          "pos": "NOM",
-          "frequency": 0.019,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 0.339
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "ʁiʁ",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 15,
-      "usefulWeightedGain": 2138.265,
-      "selectionScore": 232.258,
-      "candidates": [
-        {
-          "word": "rire",
-          "pos": "NOM",
-          "frequency": 21.975,
-          "category": "action",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 129.419
-        }
-      ],
-      "exactWordCount": 1,
-      "goodConcreteCandidateCount": 1
     },
     {
       "ipa": "liɲ",
@@ -9526,45 +7953,6 @@
         }
       ],
       "exactWordCount": 1,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "fɔ̃",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 20,
-      "usefulWeightedGain": 918.209,
-      "selectionScore": 228.124,
-      "candidates": [
-        {
-          "word": "fond",
-          "pos": "NOM",
-          "frequency": 90.234,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 117.242
-        },
-        {
-          "word": "fonds",
-          "pos": "NOM",
-          "frequency": 23.38,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 85.488
-        },
-        {
-          "word": "fonts",
-          "pos": "NOM",
-          "frequency": 0.114,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 19.943
-        }
-      ],
-      "exactWordCount": 3,
       "goodConcreteCandidateCount": 0
     },
     {
@@ -9666,93 +8054,6 @@
       "goodConcreteCandidateCount": 0
     },
     {
-      "ipa": "pu",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 23,
-      "usefulWeightedGain": 1945.884,
-      "selectionScore": 226.809,
-      "candidates": [
-        {
-          "word": "pou",
-          "pos": "NOM",
-          "frequency": 1.826,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Un pou grossi, isolé comme petit insecte sans cheveux ni tête humaine dominante.",
-            "confusions": [
-              "insecte",
-              "puce",
-              "tique"
-            ],
-            "risk": "medium_high",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 106.7
-        },
-        {
-          "word": "pouls",
-          "pos": "NOM",
-          "frequency": 16.965,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 79.992
-        },
-        {
-          "word": "pouh",
-          "pos": "ONO",
-          "frequency": 0.066,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": -24.85
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "su",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 44,
-      "usefulWeightedGain": 2106.432,
-      "selectionScore": 226.653,
-      "candidates": [
-        {
-          "word": "sou",
-          "pos": "NOM",
-          "frequency": 9.351,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 60.067
-        },
-        {
-          "word": "saoûl",
-          "pos": "NOM",
-          "frequency": 0.446,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 24.638
-        },
-        {
-          "word": "souls",
-          "pos": "NOM",
-          "frequency": 0.123,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 20.088
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 0
-    },
-    {
       "ipa": "sɛ̃",
       "unitCount": 2,
       "syllableSpan": 1,
@@ -9819,53 +8120,6 @@
         }
       ],
       "exactWordCount": 2,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "lœʁ",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 18,
-      "usefulWeightedGain": 5410.578,
-      "selectionScore": 224.722,
-      "candidates": [
-        {
-          "word": "leurre",
-          "pos": "NOM",
-          "frequency": 2.801,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Un leurre de pêche artificiel coloré avec un hameçon, isolé, sans poisson.",
-            "confusions": [
-              "hameçon",
-              "appât"
-            ],
-            "risk": "unknown",
-            "source": "data/rebus-sound-visual-curation-wave4.json"
-          },
-          "wordScore": 112.035
-        },
-        {
-          "word": "leur",
-          "pos": "ADJ:pos",
-          "frequency": 467.481,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 103.691
-        },
-        {
-          "word": "leurs",
-          "pos": "ADJ:pos",
-          "frequency": 256.699,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 92.932
-        }
-      ],
-      "exactWordCount": 3,
       "goodConcreteCandidateCount": 0
     },
     {
@@ -9977,36 +8231,6 @@
       "goodConcreteCandidateCount": 0
     },
     {
-      "ipa": "bɔ̃",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 14,
-      "usefulWeightedGain": 9234.248,
-      "selectionScore": 219.461,
-      "candidates": [
-        {
-          "word": "bon",
-          "pos": "NOM",
-          "frequency": 73.949,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 113.703
-        },
-        {
-          "word": "bond",
-          "pos": "NOM",
-          "frequency": 3.345,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 44.442
-        }
-      ],
-      "exactWordCount": 2,
-      "goodConcreteCandidateCount": 0
-    },
-    {
       "ipa": "tɥe",
       "unitCount": 3,
       "syllableSpan": 1,
@@ -10031,44 +8255,6 @@
           "hasPriorPrototype": false,
           "priorPrototype": null,
           "wordScore": 43.11
-        }
-      ],
-      "exactWordCount": 2,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "ʃaʁ",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 14,
-      "usefulWeightedGain": 299.04,
-      "selectionScore": 218.154,
-      "candidates": [
-        {
-          "word": "char",
-          "pos": "NOM",
-          "frequency": 6.551,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Un char d’assaut de profil, tourelle et chenilles visibles, sans décor militaire.",
-            "confusions": [
-              "tank",
-              "blindé"
-            ],
-            "risk": "unknown",
-            "source": "data/rebus-sound-visual-curation-wave5.json"
-          },
-          "wordScore": 124.39
-        },
-        {
-          "word": "charre",
-          "pos": "NOM",
-          "frequency": 0.035,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 0.619
         }
       ],
       "exactWordCount": 2,
@@ -10591,53 +8777,6 @@
           "hasPriorPrototype": false,
           "priorPrototype": null,
           "wordScore": 21.973
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "bʁi",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 23,
-      "usefulWeightedGain": 521.656,
-      "selectionScore": 209.792,
-      "candidates": [
-        {
-          "word": "brie",
-          "pos": "NOM",
-          "frequency": 0.418,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Un quartier de brie à croûte blanche et cœur crémeux, isolé sur fond clair, sans emballage ni texte.",
-            "confusions": [
-              "fromage",
-              "camembert"
-            ],
-            "risk": "high",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 94.286
-        },
-        {
-          "word": "bris",
-          "pos": "NOM",
-          "frequency": 1.111,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 31.449
-        },
-        {
-          "word": "bri",
-          "pos": "NOM",
-          "frequency": 0.801,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 28.59
         }
       ],
       "exactWordCount": 3,
@@ -11517,36 +9656,6 @@
       "goodConcreteCandidateCount": 0
     },
     {
-      "ipa": "tʁɛ",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 13,
-      "usefulWeightedGain": 9059.101,
-      "selectionScore": 198.272,
-      "candidates": [
-        {
-          "word": "trait",
-          "pos": "NOM",
-          "frequency": 4.845,
-          "category": "shape",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 94.781
-        },
-        {
-          "word": "trés",
-          "pos": "NOM",
-          "frequency": 13.25,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 75.822
-        }
-      ],
-      "exactWordCount": 2,
-      "goodConcreteCandidateCount": 1
-    },
-    {
       "ipa": "ekʁiʁ",
       "unitCount": 5,
       "syllableSpan": 2,
@@ -11736,45 +9845,6 @@
         }
       ],
       "exactWordCount": 1,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "fɑ̃",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 15,
-      "usefulWeightedGain": 1854.826,
-      "selectionScore": 196.047,
-      "candidates": [
-        {
-          "word": "faon",
-          "pos": "NOM",
-          "frequency": 0.373,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Un jeune faon tacheté entier, seul, proportions juvéniles évidentes, sans adulte.",
-            "confusions": [
-              "biche",
-              "cerf",
-              "bébé cerf"
-            ],
-            "risk": "medium_high",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 93.706
-        },
-        {
-          "word": "fend",
-          "pos": "VER",
-          "frequency": 1.155,
-          "category": "action_uncertain",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 24.82
-        }
-      ],
-      "exactWordCount": 2,
       "goodConcreteCandidateCount": 0
     },
     {
@@ -12039,45 +10109,6 @@
         }
       ],
       "exactWordCount": 2,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "ʃo",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 19,
-      "usefulWeightedGain": 703.606,
-      "selectionScore": 193.012,
-      "candidates": [
-        {
-          "word": "show",
-          "pos": "NOM",
-          "frequency": 23.073,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 85.26
-        },
-        {
-          "word": "chaud",
-          "pos": "NOM",
-          "frequency": 10.032,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 71.214
-        },
-        {
-          "word": "chaux",
-          "pos": "NOM",
-          "frequency": 0.753,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 28.104
-        }
-      ],
-      "exactWordCount": 3,
       "goodConcreteCandidateCount": 0
     },
     {
@@ -12547,36 +10578,6 @@
       ],
       "exactWordCount": 2,
       "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "sje",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 27,
-      "usefulWeightedGain": 1622.741,
-      "selectionScore": 186.704,
-      "candidates": [
-        {
-          "word": "scier",
-          "pos": "VER",
-          "frequency": 0.785,
-          "category": "action",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 58.43
-        },
-        {
-          "word": "sied",
-          "pos": "VER",
-          "frequency": 1.035,
-          "category": "action_uncertain",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 23.789
-        }
-      ],
-      "exactWordCount": 2,
-      "goodConcreteCandidateCount": 1
     },
     {
       "ipa": "pas",
@@ -13416,36 +11417,6 @@
       "goodConcreteCandidateCount": 0
     },
     {
-      "ipa": "tʁi",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 34,
-      "usefulWeightedGain": 712.188,
-      "selectionScore": 179.223,
-      "candidates": [
-        {
-          "word": "tri",
-          "pos": "NOM",
-          "frequency": 2.111,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 38.429
-        },
-        {
-          "word": "trie",
-          "pos": "VER",
-          "frequency": 0.595,
-          "category": "action_uncertain",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 19.404
-        }
-      ],
-      "exactWordCount": 2,
-      "goodConcreteCandidateCount": 0
-    },
-    {
       "ipa": "nɛʁ",
       "unitCount": 3,
       "syllableSpan": 1,
@@ -13641,45 +11612,6 @@
       "goodConcreteCandidateCount": 0
     },
     {
-      "ipa": "my",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 31,
-      "usefulWeightedGain": 1605.11,
-      "selectionScore": 174.977,
-      "candidates": [
-        {
-          "word": "mu",
-          "pos": "NOM",
-          "frequency": 2.028,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 37.942
-        },
-        {
-          "word": "mue",
-          "pos": "NOM",
-          "frequency": 0.297,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 22.681
-        },
-        {
-          "word": "mûs",
-          "pos": "NOM",
-          "frequency": 0.013,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 0.232
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 0
-    },
-    {
       "ipa": "piʁ",
       "unitCount": 3,
       "syllableSpan": 1,
@@ -13836,36 +11768,6 @@
           "hasPriorPrototype": false,
           "priorPrototype": null,
           "wordScore": 19.732
-        }
-      ],
-      "exactWordCount": 2,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "kʁi",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 15,
-      "usefulWeightedGain": 476.253,
-      "selectionScore": 173.712,
-      "candidates": [
-        {
-          "word": "crie",
-          "pos": "VER",
-          "frequency": 20.38,
-          "category": "action_uncertain",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 76.124
-        },
-        {
-          "word": "cri",
-          "pos": "NOM",
-          "frequency": 12.07,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 74.266
         }
       ],
       "exactWordCount": 2,
@@ -14106,53 +12008,6 @@
       "goodConcreteCandidateCount": 0
     },
     {
-      "ipa": "sɛp",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 16,
-      "usefulWeightedGain": 527.06,
-      "selectionScore": 171.089,
-      "candidates": [
-        {
-          "word": "cèpe",
-          "pos": "NOM",
-          "frequency": 0.054,
-          "category": null,
-          "hasPriorPrototype": true,
-          "priorPrototype": {
-            "visualConcept": "Un cèpe unique avec gros pied clair et chapeau brun, isolé, sans panier ni forêt.",
-            "confusions": [
-              "champignon",
-              "bolet"
-            ],
-            "risk": "high",
-            "source": "data/rebus-sound-visual-curation.json"
-          },
-          "wordScore": 70.947
-        },
-        {
-          "word": "cep",
-          "pos": "NOM",
-          "frequency": 0.051,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 0.895
-        },
-        {
-          "word": "sep",
-          "pos": "NOM",
-          "frequency": 0.047,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 0.827
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 0
-    },
-    {
       "ipa": "tut",
       "unitCount": 3,
       "syllableSpan": 1,
@@ -14241,45 +12096,6 @@
       ],
       "exactWordCount": 2,
       "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "u",
-      "unitCount": 1,
-      "syllableSpan": 1,
-      "usefulTargetCount": 17,
-      "usefulWeightedGain": 1058.621,
-      "selectionScore": 170.374,
-      "candidates": [
-        {
-          "word": "houe",
-          "pos": "NOM",
-          "frequency": 0.155,
-          "category": "tool",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 65.594
-        },
-        {
-          "word": "houx",
-          "pos": "NOM",
-          "frequency": 0.364,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 23.588
-        },
-        {
-          "word": "aout",
-          "pos": "NOM",
-          "frequency": 0.291,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 22.598
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 1
     },
     {
       "ipa": "aʒi",
@@ -14666,36 +12482,6 @@
       "goodConcreteCandidateCount": 0
     },
     {
-      "ipa": "fy",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 30,
-      "usefulWeightedGain": 971.67,
-      "selectionScore": 167.062,
-      "candidates": [
-        {
-          "word": "fût",
-          "pos": "NOM",
-          "frequency": 1.43,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 33.982
-        },
-        {
-          "word": "futs",
-          "pos": "NOM",
-          "frequency": 0.025,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 0.444
-        }
-      ],
-      "exactWordCount": 2,
-      "goodConcreteCandidateCount": 0
-    },
-    {
       "ipa": "ɑ̃vwa",
       "unitCount": 4,
       "syllableSpan": 2,
@@ -14963,36 +12749,6 @@
         }
       ],
       "exactWordCount": 1,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "as",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 13,
-      "usefulWeightedGain": 156.639,
-      "selectionScore": 166.075,
-      "candidates": [
-        {
-          "word": "as",
-          "pos": "NOM",
-          "frequency": 14.016,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 76.764
-        },
-        {
-          "word": "asse",
-          "pos": "NOM",
-          "frequency": 0.152,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 20.547
-        }
-      ],
-      "exactWordCount": 2,
       "goodConcreteCandidateCount": 0
     },
     {
@@ -15411,45 +13167,6 @@
       ],
       "exactWordCount": 1,
       "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "al",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 15,
-      "usefulWeightedGain": 475.15,
-      "selectionScore": 163.756,
-      "candidates": [
-        {
-          "word": "halle",
-          "pos": "NOM",
-          "frequency": 0.193,
-          "category": "place",
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 66.176
-        },
-        {
-          "word": "ale",
-          "pos": "NOM",
-          "frequency": 1.142,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 31.711
-        },
-        {
-          "word": "hâle",
-          "pos": "NOM",
-          "frequency": 0.038,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 0.671
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 1
     },
     {
       "ipa": "fo",
@@ -16469,45 +14186,6 @@
         }
       ],
       "exactWordCount": 1,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "tɛ",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 27,
-      "usefulWeightedGain": 2700.072,
-      "selectionScore": 155.389,
-      "candidates": [
-        {
-          "word": "taie",
-          "pos": "NOM",
-          "frequency": 0.503,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 25.334
-        },
-        {
-          "word": "têt",
-          "pos": "NOM",
-          "frequency": 0.13,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 20.2
-        },
-        {
-          "word": "taît",
-          "pos": "NOM",
-          "frequency": 0.003,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 0.054
-        }
-      ],
-      "exactWordCount": 3,
       "goodConcreteCandidateCount": 0
     },
     {
@@ -17987,45 +15665,6 @@
       "goodConcreteCandidateCount": 0
     },
     {
-      "ipa": "mu",
-      "unitCount": 2,
-      "syllableSpan": 1,
-      "usefulTargetCount": 18,
-      "usefulWeightedGain": 1835.484,
-      "selectionScore": 145.541,
-      "candidates": [
-        {
-          "word": "mou",
-          "pos": "NOM",
-          "frequency": 1.816,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 36.636
-        },
-        {
-          "word": "moue",
-          "pos": "NOM",
-          "frequency": 0.949,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 30.012
-        },
-        {
-          "word": "moût",
-          "pos": "NOM",
-          "frequency": 0.035,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 0.619
-        }
-      ],
-      "exactWordCount": 3,
-      "goodConcreteCandidateCount": 0
-    },
-    {
       "ipa": "vɛj",
       "unitCount": 3,
       "syllableSpan": 1,
@@ -19280,36 +16919,6 @@
       "goodConcreteCandidateCount": 0
     },
     {
-      "ipa": "pli",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 18,
-      "usefulWeightedGain": 251.999,
-      "selectionScore": 138.235,
-      "candidates": [
-        {
-          "word": "pli",
-          "pos": "NOM",
-          "frequency": 1.759,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 36.268
-        },
-        {
-          "word": "plie",
-          "pos": "NOM",
-          "frequency": 0.133,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 20.248
-        }
-      ],
-      "exactWordCount": 2,
-      "goodConcreteCandidateCount": 0
-    },
-    {
       "ipa": "aso",
       "unitCount": 3,
       "syllableSpan": 2,
@@ -19907,45 +17516,6 @@
         }
       ],
       "exactWordCount": 2,
-      "goodConcreteCandidateCount": 0
-    },
-    {
-      "ipa": "ɛ",
-      "unitCount": 1,
-      "syllableSpan": 1,
-      "usefulTargetCount": 16,
-      "usefulWeightedGain": 1346.756,
-      "selectionScore": 135.688,
-      "candidates": [
-        {
-          "word": "haie",
-          "pos": "NOM",
-          "frequency": 1.209,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 32.266
-        },
-        {
-          "word": "es",
-          "pos": "NOM",
-          "frequency": 0.193,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 21.176
-        },
-        {
-          "word": "aie",
-          "pos": "NOM",
-          "frequency": 0.149,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 20.5
-        }
-      ],
-      "exactWordCount": 3,
       "goodConcreteCandidateCount": 0
     },
     {
@@ -21065,36 +18635,6 @@
       "goodConcreteCandidateCount": 0
     },
     {
-      "ipa": "kʁo",
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 17,
-      "usefulWeightedGain": 294.314,
-      "selectionScore": 127.923,
-      "candidates": [
-        {
-          "word": "croc",
-          "pos": "NOM",
-          "frequency": 0.706,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 27.615
-        },
-        {
-          "word": "crot",
-          "pos": "NOM",
-          "frequency": 0.006,
-          "category": null,
-          "hasPriorPrototype": false,
-          "priorPrototype": null,
-          "wordScore": 0.108
-        }
-      ],
-      "exactWordCount": 2,
-      "goodConcreteCandidateCount": 0
-    },
-    {
       "ipa": "mɛs",
       "unitCount": 3,
       "syllableSpan": 1,
@@ -21554,6 +19094,1476 @@
           "hasPriorPrototype": false,
           "priorPrototype": null,
           "wordScore": 56.114
+        }
+      ],
+      "exactWordCount": 2,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "tɛk",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 16,
+      "usefulWeightedGain": 617.09,
+      "selectionScore": 125.566,
+      "candidates": [
+        {
+          "word": "tech",
+          "pos": "NOM",
+          "frequency": 0.465,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 24.873
+        },
+        {
+          "word": "teck",
+          "pos": "NOM",
+          "frequency": 0.297,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 22.681
+        },
+        {
+          "word": "tek",
+          "pos": "NOM",
+          "frequency": 0.101,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 19.732
+        }
+      ],
+      "exactWordCount": 3,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "kid",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 5,
+      "usefulWeightedGain": 133.608,
+      "selectionScore": 125.493,
+      "candidates": [
+        {
+          "word": "kid",
+          "pos": "NOM",
+          "frequency": 6.528,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 54.335
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "ʒa",
+      "unitCount": 2,
+      "syllableSpan": 1,
+      "usefulTargetCount": 12,
+      "usefulWeightedGain": 12361.218,
+      "selectionScore": 125.457,
+      "candidates": [
+        {
+          "word": "jas",
+          "pos": "NOM",
+          "frequency": 0.326,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 23.079
+        },
+        {
+          "word": "jà",
+          "pos": "ADV",
+          "frequency": 0.313,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": -20.098
+        }
+      ],
+      "exactWordCount": 2,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "kɔ̃stʁɥiʁ",
+      "unitCount": 8,
+      "syllableSpan": 2,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 129.319,
+      "selectionScore": 125.379,
+      "candidates": [
+        {
+          "word": "construire",
+          "pos": "VER",
+          "frequency": 28.525,
+          "category": "action_uncertain",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 81.934
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "kilo",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 3,
+      "usefulWeightedGain": 52.039,
+      "selectionScore": 125.359,
+      "candidates": [
+        {
+          "word": "kg",
+          "pos": "NOM",
+          "frequency": 12.509,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 74.86
+        },
+        {
+          "word": "kilo",
+          "pos": "NOM",
+          "frequency": 3.506,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 45.097
+        }
+      ],
+      "exactWordCount": 2,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "seʁe",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 5,
+      "usefulWeightedGain": 175.391,
+      "selectionScore": 125.195,
+      "candidates": [
+        {
+          "word": "serrer",
+          "pos": "VER",
+          "frequency": 11.244,
+          "category": "action_uncertain",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 66.091
+        },
+        {
+          "word": "séré",
+          "pos": "NOM",
+          "frequency": 0.003,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 0.054
+        },
+        {
+          "word": "serrés",
+          "pos": "ADJ",
+          "frequency": 1.747,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": -6.811
+        }
+      ],
+      "exactWordCount": 3,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "pis",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 6,
+      "usefulWeightedGain": 148.949,
+      "selectionScore": 125.073,
+      "candidates": [
+        {
+          "word": "pisse",
+          "pos": "NOM",
+          "frequency": 5.373,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 51.337
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "øʁø",
+      "unitCount": 3,
+      "syllableSpan": 2,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 1024.204,
+      "selectionScore": 124.972,
+      "candidates": [
+        {
+          "word": "heureux",
+          "pos": "NOM",
+          "frequency": 7.88,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 57.308
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "mɑ̃te",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 6,
+      "usefulWeightedGain": 53.251,
+      "selectionScore": 124.929,
+      "candidates": [
+        {
+          "word": "mentez",
+          "pos": "VER",
+          "frequency": 12.427,
+          "category": "action_uncertain",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 67.751
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "tal",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 17,
+      "usefulWeightedGain": 852.445,
+      "selectionScore": 124.662,
+      "candidates": [
+        {
+          "word": "tal",
+          "pos": "NOM",
+          "frequency": 0.158,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 20.64
+        },
+        {
+          "word": "tale",
+          "pos": "VER",
+          "frequency": 0.114,
+          "category": "action_uncertain",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 12.943
+        },
+        {
+          "word": "talle",
+          "pos": "NOM",
+          "frequency": 0.003,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 0.054
+        }
+      ],
+      "exactWordCount": 3,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "sɑ̃se",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 3,
+      "usefulWeightedGain": 361.411,
+      "selectionScore": 124.555,
+      "candidates": [
+        {
+          "word": "censé",
+          "pos": "ADJ",
+          "frequency": 61.142,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 67.33
+        },
+        {
+          "word": "sensé",
+          "pos": "ADJ",
+          "frequency": 9.899,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 17.996
+        },
+        {
+          "word": "censes",
+          "pos": "NOM",
+          "frequency": 0.025,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 0.444
+        }
+      ],
+      "exactWordCount": 3,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "ʁys",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 3,
+      "usefulWeightedGain": 192.722,
+      "selectionScore": 124.338,
+      "candidates": [
+        {
+          "word": "russe",
+          "pos": "NOM",
+          "frequency": 7.399,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 56.306
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "tʁɑ̃s",
+      "unitCount": 4,
+      "syllableSpan": 1,
+      "usefulTargetCount": 15,
+      "usefulWeightedGain": 286.648,
+      "selectionScore": 124.325,
+      "candidates": [
+        {
+          "word": "transe",
+          "pos": "NOM",
+          "frequency": 1.956,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 37.509
+        },
+        {
+          "word": "trance",
+          "pos": "NOM",
+          "frequency": 0.133,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 20.248
+        },
+        {
+          "word": "trances",
+          "pos": "NOM",
+          "frequency": 0.009,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 0.161
+        }
+      ],
+      "exactWordCount": 3,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "wi",
+      "unitCount": 2,
+      "syllableSpan": 1,
+      "usefulTargetCount": 4,
+      "usefulWeightedGain": 18921.574,
+      "selectionScore": 124.27,
+      "candidates": [
+        {
+          "word": "ouïe",
+          "pos": "NOM",
+          "frequency": 2.038,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 38.002
+        },
+        {
+          "word": "oui",
+          "pos": "NOM",
+          "frequency": 0.041,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 0.723
+        }
+      ],
+      "exactWordCount": 2,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "tɛste",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 4,
+      "usefulWeightedGain": 79.711,
+      "selectionScore": 124.169,
+      "candidates": [
+        {
+          "word": "tester",
+          "pos": "VER",
+          "frequency": 14.215,
+          "category": "action_uncertain",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 70.001
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "pik",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 6,
+      "usefulWeightedGain": 79.832,
+      "selectionScore": 123.614,
+      "candidates": [
+        {
+          "word": "pic",
+          "pos": "NOM",
+          "frequency": 5.627,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 52.041
+        },
+        {
+          "word": "pique",
+          "pos": "NOM",
+          "frequency": 4.228,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 47.773
+        }
+      ],
+      "exactWordCount": 2,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "pʁofi",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 134.843,
+      "selectionScore": 123.213,
+      "candidates": [
+        {
+          "word": "profit",
+          "pos": "NOM",
+          "frequency": 10.285,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 71.623
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "ləve",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 9,
+      "usefulWeightedGain": 586.285,
+      "selectionScore": 122.863,
+      "candidates": [
+        {
+          "word": "lever",
+          "pos": "NOM",
+          "frequency": 5.168,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 50.749
+        },
+        {
+          "word": "levée",
+          "pos": "NOM",
+          "frequency": 1,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 30.477
+        },
+        {
+          "word": "levé",
+          "pos": "NOM",
+          "frequency": 0.522,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 25.56
+        }
+      ],
+      "exactWordCount": 3,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "tak",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 6,
+      "usefulWeightedGain": 660.777,
+      "selectionScore": 122.678,
+      "candidates": [
+        {
+          "word": "tac",
+          "pos": "NOM",
+          "frequency": 3.18,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 43.746
+        },
+        {
+          "word": "tack",
+          "pos": "NOM",
+          "frequency": 0.016,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 0.286
+        },
+        {
+          "word": "taque",
+          "pos": "NOM",
+          "frequency": 0.009,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 0.161
+        }
+      ],
+      "exactWordCount": 3,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "ase",
+      "unitCount": 3,
+      "syllableSpan": 2,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 2511.561,
+      "selectionScore": 122.469,
+      "candidates": [
+        {
+          "word": "ac",
+          "pos": "NOM",
+          "frequency": 5.491,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 51.667
+        },
+        {
+          "word": "asser",
+          "pos": "NOM",
+          "frequency": 0.101,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 19.732
+        },
+        {
+          "word": "assés",
+          "pos": "NOM",
+          "frequency": 0.006,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 0.108
+        }
+      ],
+      "exactWordCount": 3,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "vəny",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 7,
+      "usefulWeightedGain": 210.042,
+      "selectionScore": 122.384,
+      "candidates": [
+        {
+          "word": "venue",
+          "pos": "NOM",
+          "frequency": 8.358,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 58.252
+        },
+        {
+          "word": "venu",
+          "pos": "NOM",
+          "frequency": 0.032,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 0.567
+        }
+      ],
+      "exactWordCount": 2,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "sɛ̃t",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 303.157,
+      "selectionScore": 122.174,
+      "candidates": [
+        {
+          "word": "sainte",
+          "pos": "NOM",
+          "frequency": 6.709,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 54.763
+        },
+        {
+          "word": "ceinte",
+          "pos": "ADJ",
+          "frequency": 0.003,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": -42.946
+        }
+      ],
+      "exactWordCount": 2,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "gaʒ",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 3,
+      "usefulWeightedGain": 96.544,
+      "selectionScore": 122.152,
+      "candidates": [
+        {
+          "word": "gage",
+          "pos": "NOM",
+          "frequency": 7.5,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 56.521
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "pʁɔpʁ",
+      "unitCount": 5,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 885.652,
+      "selectionScore": 122.096,
+      "candidates": [
+        {
+          "word": "propre",
+          "pos": "NOM",
+          "frequency": 9.278,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 59.94
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "kʁɛ",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 9,
+      "usefulWeightedGain": 467.125,
+      "selectionScore": 122,
+      "candidates": [
+        {
+          "word": "craie",
+          "pos": "NOM",
+          "frequency": 1.984,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 37.679
+        },
+        {
+          "word": "crêt",
+          "pos": "NOM",
+          "frequency": 0.013,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 0.232
+        },
+        {
+          "word": "crai",
+          "pos": "NOM",
+          "frequency": 0.009,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 0.161
+        }
+      ],
+      "exactWordCount": 3,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "dik",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 15,
+      "usefulWeightedGain": 188.723,
+      "selectionScore": 121.942,
+      "candidates": [
+        {
+          "word": "dyke",
+          "pos": "NOM",
+          "frequency": 0.703,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 27.583
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "kɔ̃tɑ̃",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 5,
+      "usefulWeightedGain": 548.378,
+      "selectionScore": 121.92,
+      "candidates": [
+        {
+          "word": "content",
+          "pos": "NOM",
+          "frequency": 8.668,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 58.839
+        },
+        {
+          "word": "comptant",
+          "pos": "NOM",
+          "frequency": 0.538,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 25.749
+        }
+      ],
+      "exactWordCount": 2,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "səgɔ̃",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 96.091,
+      "selectionScore": 121.906,
+      "candidates": [
+        {
+          "word": "second",
+          "pos": "NOM",
+          "frequency": 10.203,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 71.491
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "mak",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 4,
+      "usefulWeightedGain": 71.196,
+      "selectionScore": 121.616,
+      "candidates": [
+        {
+          "word": "mac",
+          "pos": "NOM",
+          "frequency": 6.741,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 54.838
+        },
+        {
+          "word": "mach",
+          "pos": "NOM",
+          "frequency": 0.266,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 22.246
+        },
+        {
+          "word": "maque",
+          "pos": "NOM",
+          "frequency": 0.073,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 1.268
+        }
+      ],
+      "exactWordCount": 3,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "deʒa",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 3982.167,
+      "selectionScore": 121.409,
+      "candidates": [
+        {
+          "word": "déja",
+          "pos": "NOM",
+          "frequency": 8.225,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 57.995
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "ʁjɛ̃",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 5,
+      "usefulWeightedGain": 57.808,
+      "selectionScore": 121.253,
+      "candidates": [
+        {
+          "word": "rien",
+          "pos": "NOM",
+          "frequency": 5.987,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 52.993
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "tjɛʁ",
+      "unitCount": 4,
+      "syllableSpan": 1,
+      "usefulTargetCount": 6,
+      "usefulWeightedGain": 265.637,
+      "selectionScore": 121.222,
+      "candidates": [
+        {
+          "word": "tiers",
+          "pos": "NOM",
+          "frequency": 6.585,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 54.471
+        },
+        {
+          "word": "thiers",
+          "pos": "NOM",
+          "frequency": 0.003,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 0.054
+        }
+      ],
+      "exactWordCount": 2,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "dɛl",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 7,
+      "usefulWeightedGain": 667.388,
+      "selectionScore": 121.105,
+      "candidates": [
+        {
+          "word": "del",
+          "pos": "NOM",
+          "frequency": 2.383,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 39.938
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "mit",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 4,
+      "usefulWeightedGain": 116.258,
+      "selectionScore": 120.831,
+      "candidates": [
+        {
+          "word": "mythe",
+          "pos": "NOM",
+          "frequency": 5.744,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 52.356
+        },
+        {
+          "word": "mite",
+          "pos": "NOM",
+          "frequency": 0.354,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 23.455
+        }
+      ],
+      "exactWordCount": 2,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "nyl",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 335.983,
+      "selectionScore": 120.681,
+      "candidates": [
+        {
+          "word": "nulle",
+          "pos": "ADJ:ind",
+          "frequency": 42.503,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 52.911
+        },
+        {
+          "word": "nul",
+          "pos": "NOM",
+          "frequency": 2.193,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 38.897
+        },
+        {
+          "word": "nuls",
+          "pos": "ADJ:ind",
+          "frequency": 0.5,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": -17.702
+        }
+      ],
+      "exactWordCount": 3,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "onɛt",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 311.023,
+      "selectionScore": 120.671,
+      "candidates": [
+        {
+          "word": "honnête",
+          "pos": "ADJ",
+          "frequency": 57.266,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 66.17
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "libɛʁ",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 311.836,
+      "selectionScore": 120.38,
+      "candidates": [
+        {
+          "word": "libère",
+          "pos": "VER",
+          "frequency": 11.095,
+          "category": "action_uncertain",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 65.87
+        },
+        {
+          "word": "liber",
+          "pos": "NOM",
+          "frequency": 0.051,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 0.895
+        }
+      ],
+      "exactWordCount": 2,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "eko",
+      "unitCount": 3,
+      "syllableSpan": 2,
+      "usefulTargetCount": 6,
+      "usefulWeightedGain": 93.341,
+      "selectionScore": 120.206,
+      "candidates": [
+        {
+          "word": "écho",
+          "pos": "NOM",
+          "frequency": 5.646,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 52.092
+        },
+        {
+          "word": "éco",
+          "pos": "NOM",
+          "frequency": 0.766,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 28.237
+        },
+        {
+          "word": "écot",
+          "pos": "NOM",
+          "frequency": 0.047,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 0.827
+        }
+      ],
+      "exactWordCount": 3,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "tit",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 3,
+      "usefulWeightedGain": 45.23,
+      "selectionScore": 120.166,
+      "candidates": [
+        {
+          "word": "tit",
+          "pos": "NOM",
+          "frequency": 7.801,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 57.148
+        },
+        {
+          "word": "tits",
+          "pos": "NOM",
+          "frequency": 0.889,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 29.449
+        }
+      ],
+      "exactWordCount": 2,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "bese",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 3,
+      "usefulWeightedGain": 59.676,
+      "selectionScore": 119.654,
+      "candidates": [
+        {
+          "word": "baisser",
+          "pos": "VER",
+          "frequency": 13.142,
+          "category": "action_uncertain",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 68.685
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "komɑ̃",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 13,
+      "usefulWeightedGain": 6739.451,
+      "selectionScore": 119.44,
+      "candidates": [
+        {
+          "word": "comment",
+          "pos": "NOM",
+          "frequency": 0.946,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 29.984
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "gʁi",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 9,
+      "usefulWeightedGain": 94.353,
+      "selectionScore": 119.173,
+      "candidates": [
+        {
+          "word": "gris",
+          "pos": "NOM",
+          "frequency": 2.475,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 40.421
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "tʁene",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 7,
+      "usefulWeightedGain": 214.606,
+      "selectionScore": 119.028,
+      "candidates": [
+        {
+          "word": "traînée",
+          "pos": "NOM",
+          "frequency": 6.734,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 54.821
+        },
+        {
+          "word": "trainer",
+          "pos": "NOM",
+          "frequency": 5.108,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 50.573
+        }
+      ],
+      "exactWordCount": 2,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "fly",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 3,
+      "usefulWeightedGain": 89.685,
+      "selectionScore": 118.987,
+      "candidates": [
+        {
+          "word": "flux",
+          "pos": "NOM",
+          "frequency": 6.231,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 53.611
+        },
+        {
+          "word": "flue",
+          "pos": "VER",
+          "frequency": 0.003,
+          "category": "action_uncertain",
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": -6.946
+        }
+      ],
+      "exactWordCount": 2,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "tʁɑ̃spɔʁ",
+      "unitCount": 7,
+      "syllableSpan": 2,
+      "usefulTargetCount": 3,
+      "usefulWeightedGain": 66.371,
+      "selectionScore": 118.953,
+      "candidates": [
+        {
+          "word": "transport",
+          "pos": "NOM",
+          "frequency": 13.089,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 75.617
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "paʁa",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 17,
+      "usefulWeightedGain": 586.673,
+      "selectionScore": 118.8,
+      "candidates": [
+        {
+          "word": "para",
+          "pos": "NOM",
+          "frequency": 0.851,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 29.083
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "loʒik",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 6,
+      "usefulWeightedGain": 135.562,
+      "selectionScore": 118.574,
+      "candidates": [
+        {
+          "word": "logique",
+          "pos": "NOM",
+          "frequency": 8.313,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 58.165
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "dja",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 14,
+      "usefulWeightedGain": 337.626,
+      "selectionScore": 118.473,
+      "candidates": [
+        {
+          "word": "dias",
+          "pos": "NOM",
+          "frequency": 0.418,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 24.286
+        },
+        {
+          "word": "dia",
+          "pos": "ONO",
+          "frequency": 1.123,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 5.551
+        }
+      ],
+      "exactWordCount": 2,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "kɔ̃fɔʁ",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 8,
+      "usefulWeightedGain": 97.007,
+      "selectionScore": 118.469,
+      "candidates": [
+        {
+          "word": "confort",
+          "pos": "NOM",
+          "frequency": 6.734,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 54.821
+        },
+        {
+          "word": "comfort",
+          "pos": "NOM",
+          "frequency": 0.18,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 20.979
+        }
+      ],
+      "exactWordCount": 2,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "kapabl",
+      "unitCount": 6,
+      "syllableSpan": 2,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 434.218,
+      "selectionScore": 118.258,
+      "candidates": [
+        {
+          "word": "capable",
+          "pos": "ADJ",
+          "frequency": 73.494,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 70.593
+        }
+      ],
+      "exactWordCount": 1,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "miʁ",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 5,
+      "usefulWeightedGain": 669.811,
+      "selectionScore": 117.812,
+      "candidates": [
+        {
+          "word": "mire",
+          "pos": "NOM",
+          "frequency": 2.595,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 41.032
+        },
+        {
+          "word": "myrrhe",
+          "pos": "NOM",
+          "frequency": 0.316,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 22.943
+        },
+        {
+          "word": "mir",
+          "pos": "NOM",
+          "frequency": 0.165,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 20.749
+        }
+      ],
+      "exactWordCount": 3,
+      "goodConcreteCandidateCount": 0
+    },
+    {
+      "ipa": "ego",
+      "unitCount": 3,
+      "syllableSpan": 2,
+      "usefulTargetCount": 5,
+      "usefulWeightedGain": 67.434,
+      "selectionScore": 117.802,
+      "candidates": [
+        {
+          "word": "ego",
+          "pos": "NOM",
+          "frequency": 5.994,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 53.011
+        },
+        {
+          "word": "égaux",
+          "pos": "NOM",
+          "frequency": 1.161,
+          "category": null,
+          "hasPriorPrototype": false,
+          "priorPrototype": null,
+          "wordScore": 31.87
         }
       ],
       "exactWordCount": 2,

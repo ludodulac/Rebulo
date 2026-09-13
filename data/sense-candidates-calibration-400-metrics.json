@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0",
+  "schemaVersion": "1.1",
   "status": "analysis_only",
   "baseSha": "b41f086f997e75fafc077a60057700137402af85",
   "corpusSize": 400,
@@ -30,6 +30,13 @@
     "editorial_added": 8,
     "inferred_candidate": 400
   },
+  "routes": {
+    "green": 43,
+    "orange": 89,
+    "red": 268
+  },
+  "automaticSenseGateSelected": 102,
+  "afterSenseResolutionSelected": 132,
   "unresolvedCases": 268,
   "greenRouteEligible": 43,
   "before": {
@@ -45,14 +52,14 @@
   },
   "automaticSenseGate": {
     "n": 99,
-    "tp": 25,
+    "tp": 23,
     "fp": 0,
     "tn": 45,
-    "fn": 29,
+    "fn": 31,
     "precision": 100,
-    "recall": 46.3,
+    "recall": 42.6,
     "falsePositiveRate": 0,
-    "falseNegativeRate": 53.7
+    "falseNegativeRate": 57.4
   },
   "afterSenseResolution": {
     "n": 99,
@@ -76,6 +83,7 @@
     "falsePositiveRate": 0,
     "falseNegativeRate": 85.2
   },
+  "sample2KnownABFalsePositiveRatePercent": 41,
   "examples": {
     "knownFalsePositives": [
       "job",
@@ -124,6 +132,7 @@
   },
   "notes": [
     "Primary precision/recall are computed only on independently labeled cases from complete #292 A/B audit plus #291/#292 rescue reviews and near-miss reviews.",
+    "The automatic semantic guard does not contain the known #292 false-positive token list and does not contain the eight rescue concepts as positive exceptions.",
     "Pilot #290 and other sample rows are stress/calibration proxies and are excluded from primary gold metrics.",
     "No inferred_candidate is converted to observed; green route requires evidence-backed observed/editorial_added sense evidence."
   ]

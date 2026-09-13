@@ -34,6 +34,8 @@ assert.equal(benches.historical.after.rows.length,20);
 assert.equal(benches.control.after.rows.length,20);
 assert.ok(benches.historical.after.summary.meanCoverageRatio>=benches.historical.before.summary.meanCoverageRatio);
 assert.ok(benches.control.after.summary.meanCoverageRatio>=benches.control.before.summary.meanCoverageRatio-0.0001);
+assert.ok(benches.historical.gainPoints>0,'wave3 must improve the fixed historical benchmark');
+assert.ok(benches.control.gainPoints>0,'wave3 must also improve the independent control benchmark');
 assert.equal(metrics.usefulExactSoundDenominator,5741);
 assert.ok(metrics.seriousUsefulExactSoundCount>=215);
 assert.ok(metrics.usefulExactSoundSeriousRepresentationPercent>=3.74);

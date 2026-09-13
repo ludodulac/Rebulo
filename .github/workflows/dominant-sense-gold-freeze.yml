@@ -1,0 +1,36 @@
+name: Dominant sense gold freeze
+
+on:
+  push:
+    branches:
+      - analysis/dominant-sense-semantic-ranking
+    paths:
+      - scripts/select-dominant-sense-gold-225.mjs
+      - .github/workflows/dominant-sense-gold-freeze.yml
+
+permissions:
+  contents: write
+
+jobs:
+  freeze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: analysis/dominant-sense-semantic-ranking
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Select and partition gold before source lookup
+        run: node scripts/select-dominant-sense-gold-225.mjs
+      - name: Commit frozen selection
+        run: |
+          git config user.name "rebulo-analysis-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/dominant-sense-gold-225.json data/dominant-sense-gold-225-review.tsv
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Freeze dominant-sense gold selection before source lookup"
+            git push origin HEAD:analysis/dominant-sense-semantic-ranking
+          fi

@@ -26,7 +26,7 @@ jobs:
         run: node scripts/build-rebus-b-to-c-method-sample.mjs
       - name: Commit generated analysis sample
         run: |
-          if git diff --quiet -- data/rebus-b-to-c-method-sample.json docs/REBUS_B_TO_C_SAMPLE_SELECTION.md; then
+          if [ -z "$(git status --porcelain -- data/rebus-b-to-c-method-sample.json docs/REBUS_B_TO_C_SAMPLE_SELECTION.md)" ]; then
             echo 'No generated changes.'
             exit 0
           fi

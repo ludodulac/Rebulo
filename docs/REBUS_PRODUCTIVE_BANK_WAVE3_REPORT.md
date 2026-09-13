@@ -57,23 +57,23 @@
 |---|---|---|---|---|
 | /tɛt/ | tête | body_part | medium | visage, figure, cheveux |
 | /mɛk/ | mec | person | high | homme, monsieur, garçon |
-| /ɑ̃fɑ̃/ | enfant | body_part | medium | garçon, fille, élève |
-| /ʒwe/ | jouer | body_part | high | jeu, jouets, construire |
-| /gʁup/ | groupe | person | medium_high | gens, équipe, amis |
-| /kaʁt/ | carte | place_or_landscape | medium | plan, carte routière, papier |
-| /dine/ | dîner | body_part | medium_high | repas, manger, déjeuner |
-| /gaʁd/ | garde | concrete_object_or_scene | medium_high | policier, gardien, soldat |
-| /bwat/ | boîte | body_part | low_medium | carton, caisse |
-| /nivo/ | niveau | food | medium | règle, outil, niveau à bulle |
-| /bɑ̃d/ | bande | person | medium_high | ruban, tissu, écharpe |
-| /sɔʁti/ | sortie | place_or_landscape | high | porte, dehors, partir |
+| /ɑ̃fɑ̃/ | enfant | person | medium | garçon, fille, élève |
+| /ʒwe/ | jouer | drawable_action | high | jeu, jouets, construire |
+| /gʁup/ | groupe | concrete_object_or_scene | medium_high | gens, équipe, amis |
+| /kaʁt/ | carte | concrete_object_or_scene | medium | plan, carte routière, papier |
+| /dine/ | dîner | food | medium_high | repas, manger, déjeuner |
+| /gaʁd/ | garde | person | medium_high | policier, gardien, soldat |
+| /bwat/ | boîte | concrete_object_or_scene | low_medium | carton, caisse |
+| /nivo/ | niveau | concrete_object_or_scene | medium | règle, outil, niveau à bulle |
+| /bɑ̃d/ | bande | concrete_object_or_scene | medium_high | ruban, tissu, écharpe |
+| /sɔʁti/ | sortie | concrete_object_or_scene | high | porte, dehors, partir |
 | /sup/ | soupe | food | medium | bol, potage, repas |
-| /aktœʁ/ | acteur | body_part | medium_high | comédien, théâtre, personnage |
-| /ʃyt/ | chute | person | high | tomber, glisser, accident |
-| /poz/ | pose | body_part | high | photo, sourire, poser |
-| /sɔʁtiʁ/ | sortir | body_part | high | partir, dehors, sortie |
-| /nɛ̃/ | nain | place_or_landscape | medium | nain de jardin, lutin, gnome |
-| /sɑ̃dʁ/ | cendre | person | medium | poussière, charbon, feu |
+| /aktœʁ/ | acteur | person | medium_high | comédien, théâtre, personnage |
+| /ʃyt/ | chute | concrete_object_or_scene | high | tomber, glisser, accident |
+| /poz/ | pose | concrete_object_or_scene | high | photo, sourire, poser |
+| /sɔʁtiʁ/ | sortir | drawable_action | high | partir, dehors, sortie |
+| /nɛ̃/ | nain | person | medium | nain de jardin, lutin, gnome |
+| /sɑ̃dʁ/ | cendre | concrete_object_or_scene | medium | poussière, charbon, feu |
 | /ʒɔ̃/ | jonc | concrete_object_or_scene | high | roseau, herbe, plante |
 
 ## Benchmark historique — après

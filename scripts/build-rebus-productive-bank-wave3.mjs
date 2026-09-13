@@ -65,13 +65,19 @@ impactRows.forEach(add);
 if(chosen.length!==400)throw new Error(`Expected 400 wave3 sounds, got ${chosen.length}`);
 
 function semanticCategory(word,pos,concept=''){
- const t=`${word} ${concept}`.toLocaleLowerCase('fr');
- if(/chien|chat|oiseau|poisson|insecte|animal|loup|lion|ours|vache|cheval|mouche|poule|coq|canard|âne|lapin|rat/.test(t))return'animal';
- if(/main|bras|pied|tête|oeil|œil|yeux|nez|dent|bouche|dos|cou|jambe|corps|visage/.test(t))return'body_part';
- if(/pain|lait|riz|thé|café|pomme|poire|fruit|gâteau|soupe|fromage|beurre|sel|sucre|jus|vin|blé/.test(t))return'food';
- if(/route|rue|gare|port|mer|parc|pré|ville|maison|école|jardin|champ|plage/.test(t))return'place_or_landscape';
- if(/père|mère|fils|fille|bébé|roi|reine|homme|femme|enfant|personne/.test(t))return'person';
- if(String(pos||'').toUpperCase().startsWith('VER'))return'drawable_action';
+ const w=String(word||'').toLocaleLowerCase('fr');
+ const animals=new Set(['chien','chat','oiseau','poisson','loup','lion','ours','vache','cheval','mouche','poule','coq','canard','âne','lapin','rat']);
+ const body=new Set(['main','bras','pied','tête','oeil','œil','yeux','nez','dent','bouche','dos','cou','jambe','visage']);
+ const foods=new Set(['pain','lait','riz','thé','café','pomme','poire','fruit','gâteau','soupe','fromage','beurre','sel','sucre','jus','blé','dîner']);
+ const places=new Set(['route','rue','gare','port','mer','parc','pré','ville','maison','école','jardin','champ','plage']);
+ const people=new Set(['père','mère','fils','fille','bébé','roi','reine','homme','femme','enfant','mec','acteur','garde','nain']);
+ const actions=new Set(['jouer','sortir']);
+ if(animals.has(w))return'animal';
+ if(body.has(w))return'body_part';
+ if(foods.has(w))return'food';
+ if(places.has(w))return'place_or_landscape';
+ if(people.has(w))return'person';
+ if(actions.has(w)||String(pos||'').toUpperCase().startsWith('VER'))return'drawable_action';
  return'concrete_object_or_scene';
 }
 function detailedBrief(e,word){const base=String(e.visualConcept||e.brief||'').trim();const conf=(e.mainConfusions||e.confusions||[]).filter(Boolean);const avoid=conf.length?` Éviter une composition qui ferait répondre « ${conf.join(' », « ')} » plutôt que « ${word} ».`:'';return `${base}${base&&/[.!?]$/.test(base)?'':' .'}`.replace(' .','.').trim()+` Illustration jeunesse de rébus, sujet principal unique ou scène minimale, cadrage centré, forme immédiatement lisible, fond simple, aucun texte ni symbole parasite.${avoid}`;}

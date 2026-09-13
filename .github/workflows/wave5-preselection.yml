@@ -5,6 +5,7 @@ on:
     branches: [productive-bank-wave5-imageability]
     paths:
       - 'scripts/build-rebus-productive-bank-wave5-preselection.mjs'
+      - 'scripts/analyze-wave5-multi-homophones.mjs'
       - '.github/workflows/wave5-preselection.yml'
 
 permissions:
@@ -22,10 +23,12 @@ jobs:
           node-version: '22'
       - name: Build wave 5 preselection
         run: node scripts/build-rebus-productive-bank-wave5-preselection.mjs
+      - name: Audit multi-homophone residual
+        run: node scripts/analyze-wave5-multi-homophones.mjs
       - name: Commit outputs
         run: |
           git config user.name 'rebulo-analysis-bot'
           git config user.email 'actions@users.noreply.github.com'
-          git add data/rebus-productive-bank-wave5-preselection.json docs/REBUS_PRODUCTIVE_BANK_WAVE5_PRESELECTION.md
+          git add data/rebus-productive-bank-wave5-preselection.json docs/REBUS_PRODUCTIVE_BANK_WAVE5_PRESELECTION.md data/rebus-productive-bank-wave5-multi-homophone-audit.json docs/REBUS_PRODUCTIVE_BANK_WAVE5_MULTI_HOMOPHONES.md
           git commit -m 'Materialize wave 5 imageability preselection' || exit 0
           git push origin HEAD:productive-bank-wave5-imageability

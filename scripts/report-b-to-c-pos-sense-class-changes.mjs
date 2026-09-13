@@ -1,0 +1,6 @@
+import fs from 'node:fs';
+const rows=fs.readFileSync('data/b-to-c-industrial-sample-2000-pos-sense-preserved.jsonl','utf8').trim().split('\n').filter(Boolean).map(JSON.parse);
+const changes=rows.filter(r=>r.baselineInterpretation.provisionalClass!==r.exactOrthographyInterpretation.provisionalClass).map(r=>({sampleId:r.sampleId,ipa:r.ipa,exactWord:r.exactWord,baseline:r.baselineInterpretation,corrected:r.exactOrthographyInterpretation,lexicalEntries:r.lexicalEntries,direction:['A','B'].includes(r.baselineInterpretation.provisionalClass)&&['C','D'].includes(r.exactOrthographyInterpretation.provisionalClass)?'potential_false_positive':['C','D'].includes(r.baselineInterpretation.provisionalClass)&&['A','B'].includes(r.exactOrthographyInterpretation.provisionalClass)?'potential_false_negative':'within_band_change'}));
+const result={count:changes.length,potentialFalsePositives:changes.filter(x=>x.direction==='potential_false_positive'),potentialFalseNegatives:changes.filter(x=>x.direction==='potential_false_negative'),otherChanges:changes.filter(x=>x.direction==='within_band_change')};
+fs.writeFileSync('data/b-to-c-industrial-sample-2000-pos-sense-class-changes.json',JSON.stringify(result,null,2)+'\n');
+console.log(JSON.stringify(result,null,2));

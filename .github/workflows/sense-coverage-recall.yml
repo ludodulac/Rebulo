@@ -1,0 +1,44 @@
+name: Sense coverage recall audit
+
+on:
+  push:
+    branches:
+      - analysis/sense-coverage-recall
+    paths:
+      - scripts/audit-sense-coverage-recall.mjs
+      - scripts/build-sense-coverage-recall.mjs
+      - tests/sense-coverage-recall.test.mjs
+      - .github/workflows/sense-coverage-recall.yml
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: analysis/sense-coverage-recall
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Audit remaining false negatives
+        run: node scripts/audit-sense-coverage-recall.mjs
+      - name: Build improved coverage
+        if: ${{ hashFiles('scripts/build-sense-coverage-recall.mjs') != '' }}
+        run: node scripts/build-sense-coverage-recall.mjs
+      - name: Validate
+        if: ${{ hashFiles('tests/sense-coverage-recall.test.mjs') != '' }}
+        run: node tests/sense-coverage-recall.test.mjs
+      - name: Commit generated artifacts
+        run: |
+          git config user.name "rebulo-analysis-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/sense-coverage-*.json data/sense-coverage-*.jsonl 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Materialize sense coverage recall audit"
+            git push origin HEAD:analysis/sense-coverage-recall
+          fi

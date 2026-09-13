@@ -13,7 +13,10 @@ on:
       - scripts/build-structured-sense-prototype.mjs
       - scripts/diagnose-structured-sense-filter.mjs
       - scripts/finalize-structured-sense-evaluation.mjs
-      - scripts/count-structured-source-entries.mjs
+      - scripts/select-structured-sense-holdout-75.mjs
+      - scripts/apply-structured-sense-holdout-review.mjs
+      - scripts/emit-structured-sense-holdout-sheet.mjs
+      - scripts/build-structured-sense-holdout-evaluation.mjs
       - scripts/lib/structured-sense-visual-filter.mjs
       - tests/structured-sense-source-prototype.test.mjs
       - .github/workflows/structured-sense-prototype.yml
@@ -37,6 +40,15 @@ jobs:
         run: node scripts/apply-independent-gold-editorial-review.mjs
       - name: Emit compact review sheet
         run: node scripts/emit-independent-gold-review-sheet.mjs
+      - name: Freeze sealed holdout selection
+        if: ${{ hashFiles('scripts/select-structured-sense-holdout-75.mjs') != '' }}
+        run: node scripts/select-structured-sense-holdout-75.mjs
+      - name: Apply sealed holdout editorial labels
+        if: ${{ hashFiles('scripts/apply-structured-sense-holdout-review.mjs') != '' }}
+        run: node scripts/apply-structured-sense-holdout-review.mjs
+      - name: Emit sealed holdout sheet
+        if: ${{ hashFiles('scripts/emit-structured-sense-holdout-sheet.mjs') != '' }}
+        run: node scripts/emit-structured-sense-holdout-sheet.mjs
       - name: Probe Kaikki endpoint
         run: node scripts/probe-kaikki-endpoint.mjs
       - name: Inspect Kaikki record schema
@@ -45,8 +57,9 @@ jobs:
         run: node scripts/build-structured-sense-prototype.mjs
       - name: Final strict evaluation
         run: node scripts/finalize-structured-sense-evaluation.mjs
-      - name: Count raw source entries
-        run: node scripts/count-structured-source-entries.mjs
+      - name: Build sealed holdout evaluation
+        if: ${{ hashFiles('scripts/build-structured-sense-holdout-evaluation.mjs') != '' }}
+        run: node scripts/build-structured-sense-holdout-evaluation.mjs
       - name: Diagnose filter
         run: node scripts/diagnose-structured-sense-filter.mjs
       - name: Validate
@@ -55,7 +68,7 @@ jobs:
         run: |
           git config user.name "rebulo-analysis-bot"
           git config user.email "actions@users.noreply.github.com"
-          for f in data/independent-sense-gold-150.json data/independent-sense-gold-150-review-sheet.tsv data/structured-sense-*.json data/structured-sense-*.jsonl; do
+          for f in data/independent-sense-gold-150.json data/independent-sense-gold-150-review-sheet.tsv data/structured-sense-holdout-75.json data/structured-sense-holdout-75-review-sheet.tsv data/structured-sense-*.json data/structured-sense-*.jsonl; do
             [ -e "$f" ] && git add -f "$f"
           done
           if git diff --cached --quiet; then

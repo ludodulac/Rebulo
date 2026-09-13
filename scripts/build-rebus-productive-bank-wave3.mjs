@@ -1,3 +1,4 @@
+// Wave 3: benchmark-informed ranking only; no benchmark-specific representation rule.
 import fs from 'node:fs';
 import {normalizeIPA,splitIPAUnits} from '../src/phonetic-engine.js';
 import {buildProductiveBank} from '../src/rebus-productive-bank.js';
@@ -56,7 +57,6 @@ for(const row of eligible){const piece={ipa:row.ipa,units:splitIPAUnits(row.ipa)
 }
 impactRows.sort((a,b)=>b.selectionScore-a.selectionScore||b.marginalUnits-a.marginalUnits||b.usefulTargetCount-a.usefulTargetCount||a.ipa.localeCompare(b.ipa,'fr'));
 
-// Cohort: yield first, with a real reserve for longer 1–2 syllable blocks.
 const chosen=[];const chosenSet=new Set();const add=x=>{if(x&&!chosenSet.has(x.ipa)&&chosen.length<400){chosen.push(x);chosenSet.add(x.ipa);}};
 impactRows.slice(0,300).forEach(add);
 impactRows.filter(x=>x.lane==='B_long_clear_block'&&x.unitCount>=4).slice(0,140).forEach(add);

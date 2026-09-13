@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "status": "selected_and_partitioned_before_semantic_source_lookup",
+  "status": "editorially_reviewed_and_sealed_before_semantic_source_lookup",
   "baseSha": "b45854e82f85d8028075d7809d99c30212225ea9",
   "selectionSeed": "rebulo-dominant-sense-gold-v1",
   "sourceLookedAt": false,
@@ -38,12 +38,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -70,12 +70,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -102,12 +102,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -134,12 +134,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -166,12 +166,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "event",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -198,12 +198,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "material",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -230,12 +230,19 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-D-007-S1",
+            "conceptLabel": "personne nue",
+            "semanticType": "other",
+            "description": "personne sans vêtements"
+          }
+        ],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -262,12 +269,19 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-D-008-S1",
+            "conceptLabel": "essence carburant",
+            "semanticType": "material",
+            "description": "carburant liquide / pompe à essence"
+          }
+        ],
+        "primarySemanticType": "material",
+        "risk": "medium",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -294,12 +308,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -326,12 +340,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "quantity",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -358,12 +372,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "quantity",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -390,12 +404,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -422,12 +436,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -454,12 +468,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "relation",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -486,12 +500,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -518,12 +532,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "symbol",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -550,12 +564,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "symbol",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -582,12 +596,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "quantity",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -614,12 +628,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -646,12 +660,19 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-D-020-S1",
+            "conceptLabel": "compteur appareil",
+            "semanticType": "physical_object",
+            "description": "appareil de comptage"
+          }
+        ],
+        "primarySemanticType": "physical_object",
+        "risk": "low",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -678,12 +699,19 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-D-021-S1",
+            "conceptLabel": "danseur",
+            "semanticType": "person_role",
+            "description": "personne en train de danser"
+          }
+        ],
+        "primarySemanticType": "person_role",
+        "risk": "medium",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -710,12 +738,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "relation",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -742,12 +770,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -774,12 +802,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "quantity",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -806,12 +834,19 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-D-025-S1",
+            "conceptLabel": "broyeur machine",
+            "semanticType": "tool",
+            "description": "machine qui broie"
+          }
+        ],
+        "primarySemanticType": "tool",
+        "risk": "low",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -838,12 +873,19 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-D-026-S1",
+            "conceptLabel": "facteur",
+            "semanticType": "person_role",
+            "description": "facteur postal identifiable"
+          }
+        ],
+        "primarySemanticType": "person_role",
+        "risk": "medium",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -870,12 +912,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -902,12 +944,19 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-D-028-S1",
+            "conceptLabel": "sorcier",
+            "semanticType": "person_role",
+            "description": "personnage de sorcier"
+          }
+        ],
+        "primarySemanticType": "person_role",
+        "risk": "medium",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -934,12 +983,19 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-D-029-S1",
+            "conceptLabel": "coiffeur",
+            "semanticType": "person_role",
+            "description": "profession de coiffure"
+          }
+        ],
+        "primarySemanticType": "person_role",
+        "risk": "medium",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -966,12 +1022,19 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-D-030-S1",
+            "conceptLabel": "collier",
+            "semanticType": "physical_object",
+            "description": "bijou porté autour du cou"
+          }
+        ],
+        "primarySemanticType": "physical_object",
+        "risk": "low",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -998,12 +1061,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -1030,12 +1093,19 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-D-032-S1",
+            "conceptLabel": "tanière",
+            "semanticType": "place",
+            "description": "abri d’un animal"
+          }
+        ],
+        "primarySemanticType": "place",
+        "risk": "medium",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -1062,12 +1132,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -1094,12 +1164,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -1126,12 +1196,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -1158,12 +1228,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -1190,12 +1260,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -1222,12 +1292,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -1254,12 +1324,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -1286,12 +1356,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -1318,12 +1388,19 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-D-041-S1",
+            "conceptLabel": "chanter",
+            "semanticType": "action",
+            "description": "personne qui chante"
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "medium",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -1350,12 +1427,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -1382,12 +1459,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -1414,12 +1491,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -1446,12 +1523,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -1478,12 +1555,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -1510,12 +1587,19 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-D-047-S1",
+            "conceptLabel": "botter",
+            "semanticType": "action",
+            "description": "donner un coup de pied"
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "medium",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -1542,12 +1626,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -1574,12 +1658,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -1606,12 +1690,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -1638,12 +1722,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -1670,12 +1754,19 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-D-052-S1",
+            "conceptLabel": "manuel",
+            "semanticType": "text",
+            "description": "livre manuel"
+          }
+        ],
+        "primarySemanticType": "text",
+        "risk": "medium",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -1702,12 +1793,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -1734,12 +1825,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -1766,12 +1857,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -1798,12 +1889,19 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-D-056-S1",
+            "conceptLabel": "foin",
+            "semanticType": "plant",
+            "description": "foin / herbe sèche"
+          }
+        ],
+        "primarySemanticType": "plant",
+        "risk": "medium",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -1830,12 +1928,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "material",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -1862,12 +1960,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -1894,12 +1992,19 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-D-059-S1",
+            "conceptLabel": "index doigt",
+            "semanticType": "body_part",
+            "description": "doigt index"
+          }
+        ],
+        "primarySemanticType": "body_part",
+        "risk": "low",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -1926,12 +2031,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -1958,12 +2063,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "symbol",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -1990,12 +2095,19 @@
         "anticipatedNamingRisk": "low"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-D-062-S1",
+            "conceptLabel": "choc",
+            "semanticType": "event",
+            "description": "collision / impact"
+          }
+        ],
+        "primarySemanticType": "event",
+        "risk": "medium",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -2022,12 +2134,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -2058,12 +2170,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -2090,12 +2202,19 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-D-065-S1",
+            "conceptLabel": "bulle",
+            "semanticType": "physical_object",
+            "description": "bulle visible"
+          }
+        ],
+        "primarySemanticType": "physical_object",
+        "risk": "low",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -2122,12 +2241,12 @@
         "anticipatedNamingRisk": "low"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -2154,12 +2273,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -2186,12 +2305,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -2218,12 +2337,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -2250,12 +2369,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -2282,12 +2401,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "symbol",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -2314,12 +2433,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -2346,12 +2465,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -2378,12 +2497,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -2410,12 +2529,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -2442,12 +2561,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -2474,12 +2593,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -2506,12 +2625,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -2538,12 +2657,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "material",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -2570,12 +2689,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "text",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -2602,12 +2721,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -2634,12 +2753,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -2666,12 +2785,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -2698,12 +2817,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -2730,12 +2849,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -2762,12 +2881,19 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-D-086-S1",
+            "conceptLabel": "lettre Q",
+            "semanticType": "symbol",
+            "description": "caractère Q"
+          }
+        ],
+        "primarySemanticType": "symbol",
+        "risk": "medium",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -2794,12 +2920,12 @@
         "anticipatedNamingRisk": "low"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "relation",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -2826,12 +2952,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "text",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -2858,12 +2984,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "event",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -2890,12 +3016,19 @@
         "anticipatedNamingRisk": "low"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-D-090-S1",
+            "conceptLabel": "lumière",
+            "semanticType": "other",
+            "description": "source ou faisceau lumineux"
+          }
+        ],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -2922,12 +3055,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "relation",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -2954,12 +3087,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -2986,12 +3119,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -3018,12 +3151,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "text",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -3050,12 +3183,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "body_part",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -3082,12 +3215,25 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-D-096-S1",
+            "conceptLabel": "natte cheveux",
+            "semanticType": "physical_object",
+            "description": "tresse de cheveux"
+          },
+          {
+            "goldSenseId": "DSG-D-096-S2",
+            "conceptLabel": "natte tapis",
+            "semanticType": "physical_object",
+            "description": "natte posée au sol"
+          }
+        ],
+        "primarySemanticType": "physical_object",
+        "risk": "high",
+        "rationale": "Plusieurs sens visuels autonomes plausibles, à distinguer par le ranking."
       },
       "humanNamingEvidence": "none"
     },
@@ -3117,12 +3263,19 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-D-097-S1",
+            "conceptLabel": "cheveu",
+            "semanticType": "body_part",
+            "description": "cheveu isolé ou chevelure ciblée"
+          }
+        ],
+        "primarySemanticType": "body_part",
+        "risk": "low",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -3149,12 +3302,19 @@
         "anticipatedNamingRisk": "low"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-D-098-S1",
+            "conceptLabel": "shérif",
+            "semanticType": "person_role",
+            "description": "shérif identifiable"
+          }
+        ],
+        "primarySemanticType": "person_role",
+        "risk": "medium",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -3181,12 +3341,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -3213,12 +3373,19 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-D-100-S1",
+            "conceptLabel": "volant",
+            "semanticType": "physical_object",
+            "description": "volant de véhicule"
+          }
+        ],
+        "primarySemanticType": "physical_object",
+        "risk": "low",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -3245,12 +3412,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -3277,12 +3444,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -3309,12 +3476,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -3341,12 +3508,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -3373,12 +3540,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -3405,12 +3572,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "quantity",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -3437,12 +3604,19 @@
         "anticipatedNamingRisk": "low"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-D-107-S1",
+            "conceptLabel": "hiver",
+            "semanticType": "event",
+            "description": "scène hivernale"
+          }
+        ],
+        "primarySemanticType": "event",
+        "risk": "medium",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -3469,12 +3643,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -3501,12 +3675,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -3533,12 +3707,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -3565,12 +3739,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -3597,12 +3771,12 @@
         "anticipatedNamingRisk": "low"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -3629,12 +3803,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "relation",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -3661,12 +3835,19 @@
         "anticipatedNamingRisk": "low"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-D-114-S1",
+            "conceptLabel": "nord",
+            "semanticType": "relation",
+            "description": "direction nord indiquée"
+          }
+        ],
+        "primarySemanticType": "relation",
+        "risk": "medium",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -3697,12 +3878,19 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-D-115-S1",
+            "conceptLabel": "orage",
+            "semanticType": "event",
+            "description": "orage visible"
+          }
+        ],
+        "primarySemanticType": "event",
+        "risk": "medium",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -3729,12 +3917,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -3761,12 +3949,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -3793,12 +3981,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "event",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -3825,12 +4013,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -3859,12 +4047,19 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-D-120-S1",
+            "conceptLabel": "chandelle",
+            "semanticType": "physical_object",
+            "description": "bougie / chandelle"
+          }
+        ],
+        "primarySemanticType": "physical_object",
+        "risk": "low",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -3891,12 +4086,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -3923,12 +4118,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -3955,12 +4150,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -3987,12 +4182,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -4019,12 +4214,19 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-D-125-S1",
+            "conceptLabel": "pieu",
+            "semanticType": "tool",
+            "description": "pieu planté"
+          }
+        ],
+        "primarySemanticType": "tool",
+        "risk": "low",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -4051,12 +4253,19 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-D-126-S1",
+            "conceptLabel": "couvent",
+            "semanticType": "place",
+            "description": "bâtiment de couvent"
+          }
+        ],
+        "primarySemanticType": "place",
+        "risk": "medium",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -4083,12 +4292,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "relation",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -4115,12 +4324,19 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-D-128-S1",
+            "conceptLabel": "halle",
+            "semanticType": "place",
+            "description": "halle couverte"
+          }
+        ],
+        "primarySemanticType": "place",
+        "risk": "medium",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -4147,12 +4363,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -4179,12 +4395,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -4211,12 +4427,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -4243,12 +4459,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -4275,12 +4491,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -4307,12 +4523,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -4339,12 +4555,19 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-D-135-S1",
+            "conceptLabel": "pique-nique",
+            "semanticType": "event",
+            "description": "scène de pique-nique"
+          }
+        ],
+        "primarySemanticType": "event",
+        "risk": "medium",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -4371,12 +4594,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -4403,12 +4626,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -4435,12 +4658,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -4467,12 +4690,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -4499,12 +4722,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "relation",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -4531,12 +4754,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -4563,12 +4786,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -4595,12 +4818,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "relation",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -4627,12 +4850,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -4659,12 +4882,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -4691,12 +4914,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "event",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -4723,12 +4946,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -4755,12 +4978,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "physical_object",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -4787,12 +5010,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -4819,12 +5042,19 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-H-015-S1",
+            "conceptLabel": "quartier",
+            "semanticType": "place",
+            "description": "quartier urbain reconnaissable"
+          }
+        ],
+        "primarySemanticType": "place",
+        "risk": "medium",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -4851,12 +5081,19 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-H-016-S1",
+            "conceptLabel": "casier",
+            "semanticType": "physical_object",
+            "description": "casier / compartiment de rangement"
+          }
+        ],
+        "primarySemanticType": "physical_object",
+        "risk": "low",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -4883,12 +5120,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -4915,12 +5152,19 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-H-018-S1",
+            "conceptLabel": "chanteur",
+            "semanticType": "person_role",
+            "description": "personne chantant au micro"
+          }
+        ],
+        "primarySemanticType": "person_role",
+        "risk": "medium",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -4947,12 +5191,19 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-H-019-S1",
+            "conceptLabel": "seigneur",
+            "semanticType": "person_role",
+            "description": "seigneur en contexte historique"
+          }
+        ],
+        "primarySemanticType": "person_role",
+        "risk": "medium",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -4979,12 +5230,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -5011,12 +5262,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -5043,12 +5294,19 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-H-022-S1",
+            "conceptLabel": "chantier",
+            "semanticType": "place",
+            "description": "site de construction"
+          }
+        ],
+        "primarySemanticType": "place",
+        "risk": "medium",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -5075,12 +5333,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -5107,12 +5365,19 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-H-024-S1",
+            "conceptLabel": "joue",
+            "semanticType": "body_part",
+            "description": "joue du visage"
+          }
+        ],
+        "primarySemanticType": "body_part",
+        "risk": "low",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -5139,12 +5404,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -5171,12 +5436,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -5203,12 +5468,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -5235,12 +5500,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -5267,12 +5532,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -5303,12 +5568,19 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-H-030-S1",
+            "conceptLabel": "pêcher",
+            "semanticType": "action",
+            "description": "personne qui pêche"
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "medium",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -5335,12 +5607,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -5367,12 +5639,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -5399,12 +5671,25 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-H-033-S1",
+            "conceptLabel": "voler dans les airs",
+            "semanticType": "action",
+            "description": "être en vol"
+          },
+          {
+            "goldSenseId": "DSG-H-033-S2",
+            "conceptLabel": "voler dérober",
+            "semanticType": "action",
+            "description": "action de dérober"
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Plusieurs sens visuels autonomes plausibles, à distinguer par le ranking."
       },
       "humanNamingEvidence": "none"
     },
@@ -5431,12 +5716,19 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-H-034-S1",
+            "conceptLabel": "toucher",
+            "semanticType": "action",
+            "description": "contact volontaire de la main"
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "medium",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -5463,12 +5755,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "animal",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -5495,12 +5787,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -5527,12 +5819,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "body_part",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -5559,12 +5851,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "event",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -5591,12 +5883,19 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-H-039-S1",
+            "conceptLabel": "alien",
+            "semanticType": "other",
+            "description": "créature extraterrestre"
+          }
+        ],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -5623,12 +5922,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "relation",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -5655,12 +5954,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "relation",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -5687,12 +5986,19 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-H-042-S1",
+            "conceptLabel": "cachette",
+            "semanticType": "place",
+            "description": "endroit servant à se cacher"
+          }
+        ],
+        "primarySemanticType": "place",
+        "risk": "medium",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -5719,12 +6025,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -5751,12 +6057,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -5783,12 +6089,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "relation",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -5815,12 +6121,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "physical_object",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -5847,12 +6153,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "relation",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -5879,12 +6185,19 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-H-048-S1",
+            "conceptLabel": "shampoing",
+            "semanticType": "material",
+            "description": "produit de shampoing clairement contextualisé"
+          }
+        ],
+        "primarySemanticType": "material",
+        "risk": "medium",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -5911,12 +6224,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -5943,12 +6256,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -5975,12 +6288,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -6007,12 +6320,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "relation",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -6039,12 +6352,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "relation",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -6071,12 +6384,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "quantity",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -6103,12 +6416,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -6138,12 +6451,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -6170,12 +6483,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -6202,12 +6515,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -6234,12 +6547,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "food",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -6266,12 +6579,19 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-H-060-S1",
+            "conceptLabel": "canne",
+            "semanticType": "physical_object",
+            "description": "canne de marche"
+          }
+        ],
+        "primarySemanticType": "physical_object",
+        "risk": "low",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -6298,12 +6618,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -6330,12 +6650,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "event",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -6362,12 +6682,19 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-H-063-S1",
+            "conceptLabel": "charriots",
+            "semanticType": "vehicle",
+            "description": "plusieurs chariots"
+          }
+        ],
+        "primarySemanticType": "vehicle",
+        "risk": "low",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -6394,12 +6721,25 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-H-064-S1",
+            "conceptLabel": "mousse végétale",
+            "semanticType": "plant",
+            "description": "mousse sur une surface"
+          },
+          {
+            "goldSenseId": "DSG-H-064-S2",
+            "conceptLabel": "mousse écume",
+            "semanticType": "material",
+            "description": "mousse / écume visible"
+          }
+        ],
+        "primarySemanticType": "plant",
+        "risk": "high",
+        "rationale": "Plusieurs sens visuels autonomes plausibles, à distinguer par le ranking."
       },
       "humanNamingEvidence": "none"
     },
@@ -6426,12 +6766,19 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-H-065-S1",
+            "conceptLabel": "micro",
+            "semanticType": "physical_object",
+            "description": "microphone"
+          }
+        ],
+        "primarySemanticType": "physical_object",
+        "risk": "low",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -6458,12 +6805,12 @@
         "anticipatedNamingRisk": "low"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "place",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -6490,12 +6837,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -6522,12 +6869,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -6554,12 +6901,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "material",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -6586,12 +6933,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -6618,12 +6965,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -6650,12 +6997,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -6682,12 +7029,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -6714,12 +7061,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -6746,12 +7093,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -6778,12 +7125,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -6810,12 +7157,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -6842,12 +7189,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -6874,12 +7221,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -6906,12 +7253,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     },
@@ -6938,12 +7285,19 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
-        "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "DSG-H-081-S1",
+            "conceptLabel": "chasseur",
+            "semanticType": "person_role",
+            "description": "chasseur identifiable"
+          }
+        ],
+        "primarySemanticType": "person_role",
+        "risk": "medium",
+        "rationale": "Concept visuel autonome plausible avec une dénomination cible crédible avant consultation de la source."
       },
       "humanNamingEvidence": "none"
     },
@@ -6970,12 +7324,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -7002,12 +7356,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -7034,12 +7388,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -7066,12 +7420,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "text",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -7098,12 +7452,12 @@
         "anticipatedNamingRisk": "low"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -7130,12 +7484,12 @@
         "anticipatedNamingRisk": "low"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -7162,12 +7516,12 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "symbol",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -7194,12 +7548,12 @@
         "anticipatedNamingRisk": "medium"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Forme ou sens trop ambigu, rare, contextuel ou insuffisamment nommable pour être un candidat visuel sérieux."
       },
       "humanNamingEvidence": "none"
     },
@@ -7226,14 +7580,46 @@
         "anticipatedNamingRisk": "high"
       },
       "goldReview": {
-        "status": "pending_pre_source",
-        "seriousVisualConcept": null,
+        "status": "editorial_reviewed_and_sealed_pre_source",
+        "seriousVisualConcept": false,
         "expectedVisualSenses": [],
-        "primarySemanticType": null,
-        "risk": null,
-        "rationale": null
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Sens principalement abstrait, relationnel ou quantitatif; pas de concept visuel autonome assez sûr."
       },
       "humanNamingEvidence": "none"
     }
-  ]
+  ],
+  "annotationMethod": "independent editorial labels based only on exact graphy, IPA, and pre-existing B/proxy context; no Kaikki/Wiktextract lookup",
+  "taxonomy": [
+    "physical_object",
+    "animal",
+    "plant",
+    "food",
+    "body_part",
+    "person_role",
+    "vehicle",
+    "place",
+    "clothing",
+    "tool",
+    "material",
+    "event",
+    "action",
+    "abstract",
+    "relation",
+    "symbol",
+    "text",
+    "quantity",
+    "other"
+  ],
+  "counts": {
+    "development": {
+      "n": 135,
+      "positive": 31
+    },
+    "holdout": {
+      "n": 90,
+      "positive": 17
+    }
+  }
 }

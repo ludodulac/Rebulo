@@ -1,4 +1,4 @@
-import {choosePlayableRebus,playAnswerMatches,safePlayHint} from './play-game.js';
+import {choosePlayableRebus,playAnswerMatches,playableRebuses,safePlayHint} from './play-game.js';
 import {DIFFICULTY_PROFILES,normalizeDifficultyProfile,rebusesForProfile} from './difficulty-profile.js';
 import {mergePlayableCatalog,playCatalogMetrics} from './generated-play-catalog.js';
 import {loadStaticJSON} from './static-json-cache.js';
@@ -19,7 +19,7 @@ async function loadCatalog(){
   if(catalog)return catalog;
   const [manual,compactRuntime]=await Promise.all([loadJSON('data/rebus.json'),loadJSON('data/rebulo-compact-runtime.json')]);
   const generated=Array.isArray(compactRuntime?.playRebuses)?compactRuntime.playRebuses:[];
-  catalog=mergePlayableCatalog(manual,generated);
+  catalog=playableRebuses(mergePlayableCatalog(manual,generated));
   if(shell){shell.dataset.playCatalogSize=String(catalog.length);shell.dataset.generatedPlayCatalogSize=String(generated.length);shell.dataset.playBank='representation-bank';for(const profile of Object.keys(DIFFICULTY_PROFILES)){const metrics=playCatalogMetrics(rebusesForProfile(catalog,profile));shell.dataset[`play${profile[0].toUpperCase()}${profile.slice(1)}Size`]=String(metrics.roundCount);}}
   return catalog;
 }

@@ -46,20 +46,24 @@ jobs:
         run: node scripts/import-lexique.mjs .cache/Lexique4.tsv .cache/lexique4.compact.json
       - name: Build exhaustive fragment index
         run: node scripts/build-rebus-phoneme-fragment-index.mjs .cache/lexique4.compact.json data/rebus-phoneme-fragment-index.json docs/PHONEME_FRAGMENT_INDEX_REPORT.md
-      - name: Verify index scale and proof boundaries
+      - name: Verify exact SOUND to WORD exhaustivity and proof boundaries
         run: |
           node --input-type=module <<'NODE'
           import fs from 'node:fs';
           const report=JSON.parse(fs.readFileSync('data/rebus-phoneme-fragment-index.json','utf8'));
-          if(report.formatVersion!==1)throw new Error('unexpected fragment index format');
+          if(report.formatVersion!==2)throw new Error('unexpected fragment index format');
           if(!(report.stats?.fragmentCount>10000))throw new Error(`fragment inventory unexpectedly small: ${report.stats?.fragmentCount}`);
           if(!(report.stats?.withinSyllableFragmentCount>0))throw new Error('within-syllable fragments missing');
           if(!(report.stats?.crossSyllableFragmentCount>0))throw new Error('cross-syllable fragments missing');
           if(!(report.stats?.withExactLexicalCandidateCount>0))throw new Error('exact lexical leads missing');
+          if(!(report.stats?.exactLexicalRelationCount>=report.stats.withExactLexicalCandidateCount))throw new Error('exact lexical relation count is inconsistent');
           if(!(report.stats?.withEditorialIdeaCount>0))throw new Error('editorial textual briefs missing');
           if(!(report.stats?.withVisibleConventionCount>0))throw new Error('visible conventions missing');
-          const schema=report.rowSchema;const ipaIndex=schema.indexOf('ipa');const ideasIndex=schema.indexOf('editorialIdeas');
+          const schema=report.rowSchema;const ipaIndex=schema.indexOf('ipa');const countIndex=schema.indexOf('exactLexicalDistinctWordCount');const candidatesIndex=schema.indexOf('exactLexicalCandidates');const ideasIndex=schema.indexOf('editorialIdeas');
           const byIpa=new Map(report.fragmentRows.map(row=>[row[ipaIndex],row]));
+          let serializedRelations=0;
+          for(const row of report.fragmentRows){const count=row[countIndex]||0;const candidates=row[candidatesIndex]||[];if(candidates.length!==count)throw new Error(`exact homophones truncated for /${row[ipaIndex]}/: ${candidates.length}/${count}`);serializedRelations+=candidates.length;}
+          if(serializedRelations!==report.stats.exactLexicalRelationCount)throw new Error(`relation total mismatch: ${serializedRelations}/${report.stats.exactLexicalRelationCount}`);
           for(const ipa of ['ʁɛ','lɛ','ɥil','kɥi','ø','dø','œ̃','ɔ̃z'])if(!byIpa.has(ipa))throw new Error(`expected fragment missing: /${ipa}/`);
           const near=byIpa.get('ɛ̃')?.[ideasIndex]||[];
           if(!near.some(tuple=>tuple[3]==='playful_near'))throw new Error('near un/in relation was not kept separate');

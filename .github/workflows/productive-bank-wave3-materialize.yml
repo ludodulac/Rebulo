@@ -1,0 +1,48 @@
+name: Materialize productive bank wave 3
+
+on:
+  push:
+    branches:
+      - productive-bank-wave3-yield
+    paths:
+      - '.github/workflows/productive-bank-wave3-materialize.yml'
+      - 'scripts/build-rebus-productive-bank-wave3.mjs'
+      - 'src/rebus-productive-bank.js'
+      - 'data/rebus-productive-bank-wave1.json'
+      - 'data/rebus-productive-bank-wave2.json'
+      - 'data/rebus-productive-bank-wave2-phrase-coverage.json'
+      - 'data/rebus-representation-expansion-queue.json'
+      - 'data/rebus-representation-curation-batch.json'
+      - 'data/rebus-representation-bank-audit.json'
+      - 'data/rebus-sound-visual-curation*.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: productive-bank-wave3-yield
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build wave 3 and benchmarks
+        run: node scripts/build-rebus-productive-bank-wave3.mjs
+      - name: Validate wave 3
+        run: node tests/rebus-productive-bank-wave3.test.mjs
+      - name: Commit generated editorial data
+        run: |
+          git config user.name 'rebulo-analysis-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/rebus-productive-bank-wave3.json data/rebus-productive-bank-wave3-impact-ranking.json data/rebus-productive-bank-wave3-benchmarks.json data/rebus-productive-bank-wave3-useful-metrics.json docs/REBUS_PRODUCTIVE_BANK_WAVE3_REPORT.md
+          if git diff --cached --quiet; then
+            echo 'No generated changes.'
+          else
+            git commit -m 'Materialize productive bank wave 3'
+            git push origin HEAD:productive-bank-wave3-yield
+          fi

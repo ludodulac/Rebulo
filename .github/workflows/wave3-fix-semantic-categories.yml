@@ -1,0 +1,38 @@
+name: Wave 3 semantic category correction
+
+on:
+  push:
+    branches:
+      - productive-bank-wave3-yield
+    paths:
+      - '.github/workflows/wave3-fix-semantic-categories.yml'
+      - 'scripts/patch-wave3-semantic-categories.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: productive-bank-wave3-yield
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Patch semantic classifier source
+        run: python scripts/patch-wave3-semantic-categories.py
+      - name: Regenerate wave 3
+        run: node scripts/build-rebus-productive-bank-wave3.mjs
+      - name: Validate wave 3
+        run: node tests/rebus-productive-bank-wave3.test.mjs
+      - name: Commit corrected metadata
+        run: |
+          git config user.name 'rebulo-analysis-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add scripts/build-rebus-productive-bank-wave3.mjs data/rebus-productive-bank-wave3.json data/rebus-productive-bank-wave3-benchmarks.json data/rebus-productive-bank-wave3-useful-metrics.json docs/REBUS_PRODUCTIVE_BANK_WAVE3_REPORT.md
+          git commit -m 'Correct wave 3 semantic categories' || exit 0
+          git push origin HEAD:productive-bank-wave3-yield

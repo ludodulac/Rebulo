@@ -2,35 +2,35 @@
 
 > Cette sortie est une file d’exploration, pas un score de vérité. Fréquence, POS, rendement et présence d’un asset servent à organiser l’examen; ils ne prouvent ni dessinabilité ni nommabilité.
 
-- Sons sélectionnés : 915.
-- Fenêtres de deux syllabes : 400.
-- Sons avec plusieurs homophones exacts : 536.
+- Sons sélectionnés : 1258.
+- Fenêtres de deux syllabes : 600.
+- Sons avec plusieurs homophones exacts : 685.
 - Sons avec au moins une piste de fichier/asset de même libellé : 16.
 - Sons avec au moins un asset enregistré de même libellé : 5.
 - Sons avec seulement/au moins une piste issue d’un nom de fichier de recherche : 11.
 - Sons avec asset enregistré dont l’IPA est explicitement enregistrée et exacte : 5.
-- Sons avec convention visible : 23.
-- Sons qui nécessitent probablement un nouvel asset si un concept exact est retenu : 867.
-- Sons avec risque visuel/lexical déjà documenté : 117.
-- Sons avec approximation légère disponible séparément : 609.
-- Sons dont les preuves visuelles restent insuffisantes : 767.
+- Sons avec convention visible : 25.
+- Sons qui nécessitent probablement un nouvel asset si un concept exact est retenu : 1206.
+- Sons avec risque visuel/lexical déjà documenté : 121.
+- Sons avec approximation légère disponible séparément : 805.
+- Sons dont les preuves visuelles restent insuffisantes : 1106.
 
 ## Répartition des décisions
 
-- plusieurs homophones exacts à départager : 520.
-- approximation ludique seulement après rejets exacts : 5.
-- convention visible préférable : 2.
+- plusieurs homophones exacts à départager : 668.
+- approximation ludique seulement après rejets exacts : 6.
+- convention visible préférable : 3.
 - fichier de recherche à inspecter séparément : 11.
-- candidat lexical exact à préexaminer : 371.
+- candidat lexical exact à préexaminer : 563.
 - asset enregistré à examiner/tester : 5.
-- information insuffisante : 1.
+- information insuffisante : 2.
 
 ## Files opérationnelles
 
 - Assets enregistrés à examiner : 5 sons (/vɑ̃/, /bal/, /gɑ̃/, /foto/, /kyʁi/).
 - Fichiers de recherche à inspecter séparément : 11 sons (/ni/, /fu/, /kʁwa/, /ø/, /pɛl/, /wa/, /œʁ/, /dwa/, /mat/, /ʁadi/, /kaʁe/).
 - Homophones exacts à départager : 160 sons prioritaires.
-- Conventions visibles préférables : 2 sons (/se/, /ʒi/).
+- Conventions visibles préférables : 3 sons (/se/, /ʒi/, /ɛm/).
 - Préexamen de candidat image exact : 160 sons prioritaires.
 - Fenêtres de deux syllabes à préserver : 160 sons prioritaires.
 - Pistes susceptibles de nécessiter un nouvel asset : 160 sons prioritaires.

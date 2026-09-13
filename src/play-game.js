@@ -1,3 +1,5 @@
+import {normalizeIPA,validateStrictRebus} from './phonetic-engine.js';
+
 export function normalizePlayAnswer(value=''){
   return String(value||'')
     .toLowerCase()
@@ -6,15 +8,57 @@ export function normalizePlayAnswer(value=''){
     .replace(/[^a-z0-9]+/g,'');
 }
 
+export function playRoundPhoneticStatus(rebus={}){
+  const validation=String(rebus?.validation||'');
+  if(validation==='strict')return 'exact_phonetic';
+  if(validation==='exact_visible_convention'||validation==='exact_with_visible_convention')return 'exact_visible_convention';
+  if(validation==='variant_documented'||validation==='variant_explicit')return 'variant_explicit';
+  if(validation==='playful_approximation'||validation==='playful_near')return 'playful_approximation';
+  return 'unclassified';
+}
+
+export function provePlayRound(rebus={}){
+  const phonetic=validateStrictRebus(rebus);
+  const status=playRoundPhoneticStatus(rebus);
+  const exactClaim=status==='exact_phonetic'||status==='exact_visible_convention';
+  return {
+    ok:exactClaim&&phonetic.ok,
+    exact:phonetic.ok,
+    status,
+    exactClaim,
+    builtIpa:normalizeIPA(phonetic.builtIpa||''),
+    targetIpa:normalizeIPA(phonetic.targetIpa||''),
+    reason:!exactClaim?'non_exact_round_not_playable':phonetic.reason
+  };
+}
+
+export function assertExactPlayableRounds(catalog=[],context='play catalog'){
+  const invalid=[];
+  for(const item of catalog||[]){
+    const proof=provePlayRound(item);
+    if(!proof.ok)invalid.push({id:item?.id||null,answer:item?.answer||null,...proof});
+  }
+  if(invalid.length){
+    const error=new Error(`${context}: ${invalid.length} round(s) sans preuve phonétique exacte`);
+    error.code='REBULO_PLAY_PHONETIC_INVARIANT';
+    error.invalidRounds=invalid;
+    throw error;
+  }
+  return true;
+}
+
 export function playableRebuses(catalog=[]){
   return (catalog||[]).filter(item=>
     item&&
-    item.validation==='strict'&&
+    provePlayRound(item).ok&&
     typeof item.answer==='string'&&
     item.answer.trim()&&
     Array.isArray(item.pieces)&&
     item.pieces.length>0&&
-    item.pieces.every(piece=>piece&&typeof piece.image==='string'&&piece.image.trim())
+    item.pieces.every(piece=>piece&&(
+      (piece.kind&&piece.kind!=='image')||
+      (typeof piece.image==='string'&&piece.image.trim())
+    ))
   );
 }
 
@@ -24,8 +68,6 @@ export function choosePlayableRebus(catalog=[],previousId=null,random=Math.rando
   const showcase=pool.filter(item=>item.presentationStatus==='showcase');
   const sample=Number(random?.());
   const safe=Number.isFinite(sample)?Math.min(0.999999,Math.max(0,sample)):0;
-  // Give the polished rounds most first impressions while keeping every strict
-  // legacy round reachable so the catalog loses no existing functionality.
   const preferShowcase=showcase.length>0&&safe<0.8;
   const preferredPool=preferShowcase?showcase:pool;
   const alternatives=previousId&&preferredPool.length>1?preferredPool.filter(item=>item.id!==previousId):preferredPool;

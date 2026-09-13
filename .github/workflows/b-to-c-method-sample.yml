@@ -1,0 +1,37 @@
+name: B to C method sample
+
+on:
+  push:
+    branches:
+      - analysis/b-to-c-representability-method
+    paths:
+      - scripts/build-rebus-b-to-c-method-sample.mjs
+      - .github/workflows/b-to-c-method-sample.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sample:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: analysis/b-to-c-representability-method
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build deterministic B to C method sample
+        run: node scripts/build-rebus-b-to-c-method-sample.mjs
+      - name: Commit generated analysis sample
+        run: |
+          if git diff --quiet -- data/rebus-b-to-c-method-sample.json docs/REBUS_B_TO_C_SAMPLE_SELECTION.md; then
+            echo 'No generated changes.'
+            exit 0
+          fi
+          git config user.name rebulo-analysis-bot
+          git config user.email actions@users.noreply.github.com
+          git add data/rebus-b-to-c-method-sample.json docs/REBUS_B_TO_C_SAMPLE_SELECTION.md
+          git commit -m 'Materialize B to C method sample'
+          git push

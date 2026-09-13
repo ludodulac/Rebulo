@@ -16,15 +16,18 @@ await page.evaluate(()=>document.querySelector('#creatorForm')?.requestSubmit())
 await page.waitForFunction(value=>!document.querySelector('#result')?.hidden&&document.querySelector('#resultWord')?.textContent===value,phrase,{timeout:15000});
 const snapshot=await page.evaluate(()=>{
   const row=document.querySelector('#creatorRebus');const rr=row.getBoundingClientRect();
-  const children=[...row.children].map(node=>{const r=node.getBoundingClientRect();return{className:node.className,text:node.textContent?.trim()||'',left:r.left,right:r.right,top:r.top,bottom:r.bottom,visible:Boolean(node.getClientRects().length)};});
+  const inspect=node=>{const r=node.getBoundingClientRect();return{tag:node.tagName,className:node.className,text:node.textContent?.trim()||'',left:r.left,right:r.right,width:r.width,clientWidth:node.clientWidth,scrollWidth:node.scrollWidth,visible:Boolean(node.getClientRects().length)};};
+  const children=[...row.children].map(node=>{const r=node.getBoundingClientRect();return{className:node.className,text:node.textContent?.trim()||'',left:r.left,right:r.right,top:r.top,bottom:r.bottom,width:r.width,clientWidth:node.clientWidth,scrollWidth:node.scrollWidth,visible:Boolean(node.getClientRects().length)};});
+  const descendants=[...row.querySelectorAll('*')].map(inspect).filter(item=>item.scrollWidth>item.clientWidth+1||item.left<rr.left-1||item.right>rr.right+1);
   const gaps=[...row.querySelectorAll('.phrase-sound-gap')].map(node=>({
     title:node.title,
     pseudo:getComputedStyle(node,'::after').content,
     wordDisplay:getComputedStyle(node.querySelector('strong')).display,
     tagDisplay:getComputedStyle(node.querySelector('small')).display
   }));
-  return{viewport:innerWidth,row:{left:rr.left,right:rr.right,width:rr.width,clientWidth:row.clientWidth,scrollWidth:row.scrollWidth},children,gaps,bodyScrollWidth:document.documentElement.scrollWidth};
+  return{viewport:innerWidth,row:{left:rr.left,right:rr.right,width:rr.width,clientWidth:row.clientWidth,scrollWidth:row.scrollWidth},children,descendants,gaps,bodyScrollWidth:document.documentElement.scrollWidth};
 });
+console.log(JSON.stringify({phrase,...snapshot}));
 assert.equal(errors.length,0,errors.join('\n'));
 assert.ok(snapshot.children.length>0,'phrase result must contain readable operations');
 assert.ok(snapshot.children.every(item=>item.visible),'every phrase operation must be rendered');
@@ -37,5 +40,4 @@ for(const gap of snapshot.gaps){
   assert.equal(gap.wordDisplay,'none','orthographic source word must not be presented as the missing sound');
   assert.equal(gap.tagDisplay,'none');
 }
-console.log(JSON.stringify({phrase,...snapshot}));
 await browser.close();

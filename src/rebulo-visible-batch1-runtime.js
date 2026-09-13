@@ -8,7 +8,8 @@ import {
 } from './rebulo-visible-batch1-assets.js';
 
 const previousFetch=window.fetch.bind(window);
-const assetLabelIndex=new Map(REBULO_VISIBLE_BATCH1.map(item=>[String(item.label).toLocaleLowerCase('fr'),item]));
+const BY_ID=new Map(REBULO_VISIBLE_BATCH1.map(item=>[item.id,item]));
+const TRANSPARENT_PIXEL='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="1" height="1"/%3E';
 
 function responseFor(value){
   return new Response(JSON.stringify(value),{status:200,headers:{'Content-Type':'application/json','Cache-Control':'no-store'}});
@@ -36,15 +37,34 @@ window.fetch=async function rebuloVisibleBatch1Fetch(input,init){
   return response;
 };
 
+function assetFromImage(img){
+  const existing=BY_ID.get(img?.dataset?.rebuloVisibleBatch1||'');
+  if(existing)return existing;
+  const raw=String(img?.getAttribute?.('src')||'');
+  const fromQuery=raw.match(/[?&]asset=([^&#]+)/)?.[1];
+  if(fromQuery&&BY_ID.has(decodeURIComponent(fromQuery)))return BY_ID.get(decodeURIComponent(fromQuery));
+  const parent=img?.closest?.('.piece');
+  const label=String(img?.alt||parent?.querySelector('span')?.textContent||'').trim();
+  return label?visibleBatch1AssetForPiece({label,reading:label}):null;
+}
+
+function paintSprite(img,asset){
+  img.dataset.rebuloVisibleBatch1=asset.id;
+  img.src=TRANSPARENT_PIXEL;
+  img.style.backgroundImage=`url("${asset.spriteUrl}")`;
+  img.style.backgroundSize='500% 500%';
+  img.style.backgroundPosition=`${asset.spriteColumn*25}% ${asset.spriteRow*25}%`;
+  img.style.backgroundRepeat='no-repeat';
+  img.style.backgroundColor='#fff';
+  img.style.borderRadius='18px';
+}
+
 function applyBatchImage(img){
   if(!(img instanceof HTMLImageElement))return;
-  const parent=img.closest('.piece');
-  const label=String(img.alt||parent?.querySelector('span')?.textContent||'').trim();
-  if(!label)return;
-  const asset=visibleBatch1AssetForPiece({label,reading:label});
-  if(!asset||img.getAttribute('src')===asset.image)return;
-  img.src=asset.image;
-  img.dataset.rebuloVisibleBatch1=asset.id;
+  const asset=assetFromImage(img);
+  if(!asset)return;
+  if(img.dataset.rebuloVisibleBatch1===asset.id&&img.style.backgroundImage)return;
+  paintSprite(img,asset);
 }
 
 function decorate(root=document){
@@ -67,9 +87,9 @@ if(!document.getElementById('rebulo-visible-batch1-style')){
   const style=document.createElement('style');
   style.id='rebulo-visible-batch1-style';
   style.textContent=`
-    .piece img[src*="assets/rebus/visible-batch1/"]{width:min(23vw,102px);height:min(23vw,102px);border-radius:18px;object-fit:cover}
+    .piece img[data-rebulo-visible-batch1]{width:min(23vw,102px);height:min(23vw,102px);object-fit:cover;filter:none;box-shadow:0 4px 12px rgba(33,43,66,.08)}
     .app-shell[data-experience="create"][data-creator-ready="true"] .session-dock{display:none}
-    @media(max-width:560px){.piece img[src*="assets/rebus/visible-batch1/"]{width:min(24vw,88px);height:min(24vw,88px);border-radius:16px}}
+    @media(max-width:560px){.piece img[data-rebulo-visible-batch1]{width:min(24vw,88px);height:min(24vw,88px);border-radius:16px}}
   `;
   document.head.appendChild(style);
 }

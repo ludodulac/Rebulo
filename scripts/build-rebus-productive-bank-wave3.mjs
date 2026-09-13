@@ -13,7 +13,7 @@ const pronunciation=read('data/rebus-pronunciation-lexicon.json');
 const historical=read('data/rebus-productive-bank-wave2-phrase-coverage.json');
 const audit=read('data/rebus-representation-bank-audit.json');
 const curationBatch=read('data/rebus-representation-curation-batch.json');
-const visualSources=[1,2,3,4,5,6,7,8].map(n=>n===1?'data/rebus-sound-visual-curation.json':`data/rebus-sound-visual-curation-wave${n}.json`).filter(fs.existsSync);
+const visualSources=[1,2,3,4,5,6,7,8,9].map(n=>n===1?'data/rebus-sound-visual-curation.json':`data/rebus-sound-visual-curation-wave${n}.json`).filter(fs.existsSync);
 const visualDocs=visualSources.map(file=>({file,data:read(file)}));
 
 const outPath='data/rebus-productive-bank-wave3.json';

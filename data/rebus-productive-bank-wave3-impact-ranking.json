@@ -32,9 +32,9 @@
       "usefulWeightedGain": 2041.623,
       "exactWordCount": 1,
       "nounCandidateCount": 1,
-      "hasPriorPrototype": false,
+      "hasPriorPrototype": true,
       "lane": "B_long_clear_block",
-      "selectionScore": 535286.597
+      "selectionScore": 543286.597
     },
     {
       "ipa": "sɔʁti",
@@ -47,9 +47,9 @@
       "usefulWeightedGain": 253.543,
       "exactWordCount": 2,
       "nounCandidateCount": 1,
-      "hasPriorPrototype": false,
+      "hasPriorPrototype": true,
       "lane": "B_long_clear_block",
-      "selectionScore": 438161.841
+      "selectionScore": 446161.841
     },
     {
       "ipa": "ɑ̃fɑ̃",
@@ -62,9 +62,9 @@
       "usefulWeightedGain": 1490.478,
       "exactWordCount": 2,
       "nounCandidateCount": 2,
-      "hasPriorPrototype": false,
+      "hasPriorPrototype": true,
       "lane": "A_raw_productive",
-      "selectionScore": 347692.257
+      "selectionScore": 355692.257
     },
     {
       "ipa": "sup",
@@ -77,9 +77,9 @@
       "usefulWeightedGain": 107.974,
       "exactWordCount": 1,
       "nounCandidateCount": 1,
-      "hasPriorPrototype": false,
+      "hasPriorPrototype": true,
       "lane": "A_raw_productive",
-      "selectionScore": 343657.333
+      "selectionScore": 351657.333
     },
     {
       "ipa": "ʁəgaʁ",
@@ -107,9 +107,9 @@
       "usefulWeightedGain": 392.797,
       "exactWordCount": 2,
       "nounCandidateCount": 2,
-      "hasPriorPrototype": false,
+      "hasPriorPrototype": true,
       "lane": "A_raw_productive",
-      "selectionScore": 247292.751
+      "selectionScore": 255292.751
     },
     {
       "ipa": "ʒɔ̃",
@@ -122,9 +122,9 @@
       "usefulWeightedGain": 29.035,
       "exactWordCount": 1,
       "nounCandidateCount": 1,
-      "hasPriorPrototype": false,
+      "hasPriorPrototype": true,
       "lane": "A_raw_productive",
-      "selectionScore": 243270.709
+      "selectionScore": 251270.709
     },
     {
       "ipa": "ʁapɔʁ",
@@ -157,6 +157,21 @@
       "selectionScore": 162279.83
     },
     {
+      "ipa": "poz",
+      "marginalUnits": 1,
+      "phraseHitCount": 1,
+      "occurrenceCount": 1,
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 272.276,
+      "exactWordCount": 2,
+      "nounCandidateCount": 2,
+      "hasPriorPrototype": true,
+      "lane": "A_raw_productive",
+      "selectionScore": 155183.145
+    },
+    {
       "ipa": "jɛʁ",
       "marginalUnits": 1,
       "phraseHitCount": 1,
@@ -170,21 +185,6 @@
       "hasPriorPrototype": false,
       "lane": "A_raw_productive",
       "selectionScore": 147660.441
-    },
-    {
-      "ipa": "poz",
-      "marginalUnits": 1,
-      "phraseHitCount": 1,
-      "occurrenceCount": 1,
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 2,
-      "usefulWeightedGain": 272.276,
-      "exactWordCount": 2,
-      "nounCandidateCount": 2,
-      "hasPriorPrototype": false,
-      "lane": "A_raw_productive",
-      "selectionScore": 147183.145
     },
     {
       "ipa": "liv",
@@ -215,6 +215,21 @@
       "hasPriorPrototype": false,
       "lane": "A_raw_productive",
       "selectionScore": 143601.559
+    },
+    {
+      "ipa": "aktœʁ",
+      "marginalUnits": 1,
+      "phraseHitCount": 1,
+      "occurrenceCount": 1,
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 108.909,
+      "exactWordCount": 1,
+      "nounCandidateCount": 1,
+      "hasPriorPrototype": true,
+      "lane": "B_long_clear_block",
+      "selectionScore": 142409.896
     },
     {
       "ipa": "is",
@@ -262,21 +277,6 @@
       "selectionScore": 134956.464
     },
     {
-      "ipa": "aktœʁ",
-      "marginalUnits": 1,
-      "phraseHitCount": 1,
-      "occurrenceCount": 1,
-      "unitCount": 5,
-      "syllableSpan": 2,
-      "usefulTargetCount": 2,
-      "usefulWeightedGain": 108.909,
-      "exactWordCount": 1,
-      "nounCandidateCount": 1,
-      "hasPriorPrototype": false,
-      "lane": "B_long_clear_block",
-      "selectionScore": 134409.896
-    },
-    {
       "ipa": "am",
       "marginalUnits": 0,
       "phraseHitCount": 0,
@@ -290,6 +290,171 @@
       "hasPriorPrototype": false,
       "lane": "A_raw_productive",
       "selectionScore": 41031.533
+    },
+    {
+      "ipa": "tɛt",
+      "marginalUnits": 0,
+      "phraseHitCount": 0,
+      "occurrenceCount": 0,
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 2410.122,
+      "exactWordCount": 3,
+      "nounCandidateCount": 3,
+      "hasPriorPrototype": true,
+      "lane": "A_raw_productive",
+      "selectionScore": 32836.354
+    },
+    {
+      "ipa": "mɛk",
+      "marginalUnits": 0,
+      "phraseHitCount": 0,
+      "occurrenceCount": 0,
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 2207.126,
+      "exactWordCount": 2,
+      "nounCandidateCount": 2,
+      "hasPriorPrototype": true,
+      "lane": "A_raw_productive",
+      "selectionScore": 32809.97
+    },
+    {
+      "ipa": "ʒwe",
+      "marginalUnits": 0,
+      "phraseHitCount": 0,
+      "occurrenceCount": 0,
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 1292.65,
+      "exactWordCount": 3,
+      "nounCandidateCount": 1,
+      "hasPriorPrototype": true,
+      "lane": "A_raw_productive",
+      "selectionScore": 32649.567
+    },
+    {
+      "ipa": "pɛn",
+      "marginalUnits": 0,
+      "phraseHitCount": 0,
+      "occurrenceCount": 0,
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 980.326,
+      "exactWordCount": 3,
+      "nounCandidateCount": 3,
+      "hasPriorPrototype": true,
+      "lane": "A_raw_productive",
+      "selectionScore": 32566.671
+    },
+    {
+      "ipa": "bɑ̃d",
+      "marginalUnits": 0,
+      "phraseHitCount": 0,
+      "occurrenceCount": 0,
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 3,
+      "usefulWeightedGain": 300.565,
+      "exactWordCount": 2,
+      "nounCandidateCount": 2,
+      "hasPriorPrototype": true,
+      "lane": "A_raw_productive",
+      "selectionScore": 32462.696
+    },
+    {
+      "ipa": "sɑ̃dʁ",
+      "marginalUnits": 0,
+      "phraseHitCount": 0,
+      "occurrenceCount": 0,
+      "unitCount": 4,
+      "syllableSpan": 1,
+      "usefulTargetCount": 3,
+      "usefulWeightedGain": 257.05,
+      "exactWordCount": 3,
+      "nounCandidateCount": 2,
+      "hasPriorPrototype": true,
+      "lane": "A_raw_productive",
+      "selectionScore": 32415.946
+    },
+    {
+      "ipa": "gʁup",
+      "marginalUnits": 0,
+      "phraseHitCount": 0,
+      "occurrenceCount": 0,
+      "unitCount": 4,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 592.081,
+      "exactWordCount": 2,
+      "nounCandidateCount": 2,
+      "hasPriorPrototype": true,
+      "lane": "A_raw_productive",
+      "selectionScore": 32415.599
+    },
+    {
+      "ipa": "kaʁt",
+      "marginalUnits": 0,
+      "phraseHitCount": 0,
+      "occurrenceCount": 0,
+      "unitCount": 4,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 575.925,
+      "exactWordCount": 3,
+      "nounCandidateCount": 3,
+      "hasPriorPrototype": true,
+      "lane": "A_raw_productive",
+      "selectionScore": 32407.314
+    },
+    {
+      "ipa": "ʃyt",
+      "marginalUnits": 0,
+      "phraseHitCount": 0,
+      "occurrenceCount": 0,
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 3,
+      "usefulWeightedGain": 207.856,
+      "exactWordCount": 2,
+      "nounCandidateCount": 2,
+      "hasPriorPrototype": true,
+      "lane": "A_raw_productive",
+      "selectionScore": 32352.494
+    },
+    {
+      "ipa": "dine",
+      "marginalUnits": 0,
+      "phraseHitCount": 0,
+      "occurrenceCount": 0,
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 470.989,
+      "exactWordCount": 2,
+      "nounCandidateCount": 2,
+      "hasPriorPrototype": true,
+      "lane": "A_raw_productive",
+      "selectionScore": 32347.087
+    },
+    {
+      "ipa": "bwat",
+      "marginalUnits": 0,
+      "phraseHitCount": 0,
+      "occurrenceCount": 0,
+      "unitCount": 4,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 463.386,
+      "exactWordCount": 2,
+      "nounCandidateCount": 2,
+      "hasPriorPrototype": true,
+      "lane": "A_raw_productive",
+      "selectionScore": 32342.215
     },
     {
       "ipa": "nivo",
@@ -427,21 +592,6 @@
       "selectionScore": 24848.717
     },
     {
-      "ipa": "tɛt",
-      "marginalUnits": 0,
-      "phraseHitCount": 0,
-      "occurrenceCount": 0,
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 2,
-      "usefulWeightedGain": 2410.122,
-      "exactWordCount": 3,
-      "nounCandidateCount": 3,
-      "hasPriorPrototype": false,
-      "lane": "A_raw_productive",
-      "selectionScore": 24836.354
-    },
-    {
       "ipa": "ide",
       "marginalUnits": 0,
       "phraseHitCount": 0,
@@ -457,21 +607,6 @@
       "selectionScore": 24821.092
     },
     {
-      "ipa": "mɛk",
-      "marginalUnits": 0,
-      "phraseHitCount": 0,
-      "occurrenceCount": 0,
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 2,
-      "usefulWeightedGain": 2207.126,
-      "exactWordCount": 2,
-      "nounCandidateCount": 2,
-      "hasPriorPrototype": false,
-      "lane": "A_raw_productive",
-      "selectionScore": 24809.97
-    },
-    {
       "ipa": "amuʁ",
       "marginalUnits": 0,
       "phraseHitCount": 0,
@@ -485,21 +620,6 @@
       "hasPriorPrototype": false,
       "lane": "A_raw_productive",
       "selectionScore": 24767.716
-    },
-    {
-      "ipa": "ʒwe",
-      "marginalUnits": 0,
-      "phraseHitCount": 0,
-      "occurrenceCount": 0,
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 2,
-      "usefulWeightedGain": 1292.65,
-      "exactWordCount": 3,
-      "nounCandidateCount": 1,
-      "hasPriorPrototype": false,
-      "lane": "A_raw_productive",
-      "selectionScore": 24649.567
     },
     {
       "ipa": "aʁe",
@@ -530,21 +650,6 @@
       "hasPriorPrototype": false,
       "lane": "A_raw_productive",
       "selectionScore": 24583.591
-    },
-    {
-      "ipa": "pɛn",
-      "marginalUnits": 0,
-      "phraseHitCount": 0,
-      "occurrenceCount": 0,
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 2,
-      "usefulWeightedGain": 980.326,
-      "exactWordCount": 3,
-      "nounCandidateCount": 3,
-      "hasPriorPrototype": false,
-      "lane": "A_raw_productive",
-      "selectionScore": 24566.671
     },
     {
       "ipa": "fʁiʁ",
@@ -592,66 +697,6 @@
       "selectionScore": 24466.176
     },
     {
-      "ipa": "bɑ̃d",
-      "marginalUnits": 0,
-      "phraseHitCount": 0,
-      "occurrenceCount": 0,
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 3,
-      "usefulWeightedGain": 300.565,
-      "exactWordCount": 2,
-      "nounCandidateCount": 2,
-      "hasPriorPrototype": false,
-      "lane": "A_raw_productive",
-      "selectionScore": 24462.696
-    },
-    {
-      "ipa": "sɑ̃dʁ",
-      "marginalUnits": 0,
-      "phraseHitCount": 0,
-      "occurrenceCount": 0,
-      "unitCount": 4,
-      "syllableSpan": 1,
-      "usefulTargetCount": 3,
-      "usefulWeightedGain": 257.05,
-      "exactWordCount": 3,
-      "nounCandidateCount": 2,
-      "hasPriorPrototype": false,
-      "lane": "A_raw_productive",
-      "selectionScore": 24415.946
-    },
-    {
-      "ipa": "gʁup",
-      "marginalUnits": 0,
-      "phraseHitCount": 0,
-      "occurrenceCount": 0,
-      "unitCount": 4,
-      "syllableSpan": 1,
-      "usefulTargetCount": 2,
-      "usefulWeightedGain": 592.081,
-      "exactWordCount": 2,
-      "nounCandidateCount": 2,
-      "hasPriorPrototype": false,
-      "lane": "A_raw_productive",
-      "selectionScore": 24415.599
-    },
-    {
-      "ipa": "kaʁt",
-      "marginalUnits": 0,
-      "phraseHitCount": 0,
-      "occurrenceCount": 0,
-      "unitCount": 4,
-      "syllableSpan": 1,
-      "usefulTargetCount": 2,
-      "usefulWeightedGain": 575.925,
-      "exactWordCount": 3,
-      "nounCandidateCount": 3,
-      "hasPriorPrototype": false,
-      "lane": "A_raw_productive",
-      "selectionScore": 24407.314
-    },
-    {
       "ipa": "kul",
       "marginalUnits": 0,
       "phraseHitCount": 0,
@@ -680,51 +725,6 @@
       "hasPriorPrototype": false,
       "lane": "A_raw_productive",
       "selectionScore": 24382.836
-    },
-    {
-      "ipa": "ʃyt",
-      "marginalUnits": 0,
-      "phraseHitCount": 0,
-      "occurrenceCount": 0,
-      "unitCount": 3,
-      "syllableSpan": 1,
-      "usefulTargetCount": 3,
-      "usefulWeightedGain": 207.856,
-      "exactWordCount": 2,
-      "nounCandidateCount": 2,
-      "hasPriorPrototype": false,
-      "lane": "A_raw_productive",
-      "selectionScore": 24352.494
-    },
-    {
-      "ipa": "dine",
-      "marginalUnits": 0,
-      "phraseHitCount": 0,
-      "occurrenceCount": 0,
-      "unitCount": 4,
-      "syllableSpan": 2,
-      "usefulTargetCount": 2,
-      "usefulWeightedGain": 470.989,
-      "exactWordCount": 2,
-      "nounCandidateCount": 2,
-      "hasPriorPrototype": false,
-      "lane": "A_raw_productive",
-      "selectionScore": 24347.087
-    },
-    {
-      "ipa": "bwat",
-      "marginalUnits": 0,
-      "phraseHitCount": 0,
-      "occurrenceCount": 0,
-      "unitCount": 4,
-      "syllableSpan": 1,
-      "usefulTargetCount": 2,
-      "usefulWeightedGain": 463.386,
-      "exactWordCount": 2,
-      "nounCandidateCount": 2,
-      "hasPriorPrototype": false,
-      "lane": "A_raw_productive",
-      "selectionScore": 24342.215
     },
     {
       "ipa": "in",

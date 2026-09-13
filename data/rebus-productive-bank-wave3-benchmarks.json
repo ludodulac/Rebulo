@@ -402,8 +402,8 @@
       "summary": {
         "phraseCount": 20,
         "pronunciationResolvedCount": 17,
-        "meanCoverageRatio": 0.5935,
-        "medianCoverageRatio": 0.554,
+        "meanCoverageRatio": 0.6378,
+        "medianCoverageRatio": 0.6569,
         "minCoverageRatio": 0.375,
         "maxCoverageRatio": 0.8889
       },
@@ -433,19 +433,19 @@
           "continuousIpa": "maʁipozləlivʁsyʁlatabl",
           "unresolvedWords": [],
           "unitCount": 22,
-          "coveredUnitCount": 12,
-          "coverageRatio": 0.5454545454545454,
+          "coveredUnitCount": 13,
+          "coverageRatio": 0.5909090909090909,
           "pieces": [
             "a",
             "ʁi",
-            "po",
+            "poz",
             "ə",
             "li",
             "y",
             "la",
             "a"
           ],
-          "uncoveredUnitCount": 10
+          "uncoveredUnitCount": 9
         },
         {
           "phrase": "Nous mangeons du pain avec du fromage",
@@ -453,9 +453,10 @@
           "continuousIpa": "numɑ̃ʒɔ̃dypɛ̃avɛkdyfʁomaʒ",
           "unresolvedWords": [],
           "unitCount": 22,
-          "coveredUnitCount": 11,
-          "coverageRatio": 0.5,
+          "coveredUnitCount": 13,
+          "coverageRatio": 0.5909090909090909,
           "pieces": [
+            "ʒɔ̃",
             "d",
             "y",
             "pɛ̃",
@@ -465,7 +466,7 @@
             "o",
             "maʒ"
           ],
-          "uncoveredUnitCount": 11
+          "uncoveredUnitCount": 9
         },
         {
           "phrase": "Le train arrive demain matin",
@@ -494,12 +495,11 @@
           "continuousIpa": "pɔlʁəgaʁdlamɛʁdəpɥiləpɔʁ",
           "unresolvedWords": [],
           "unitCount": 24,
-          "coveredUnitCount": 14,
-          "coverageRatio": 0.5833333333333334,
+          "coveredUnitCount": 16,
+          "coverageRatio": 0.6666666666666666,
           "pieces": [
             "ə",
-            "a",
-            "d",
+            "gaʁd",
             "la",
             "mɛʁ",
             "d",
@@ -507,7 +507,7 @@
             "ɥil",
             "ə"
           ],
-          "uncoveredUnitCount": 10
+          "uncoveredUnitCount": 8
         },
         {
           "phrase": "La pluie tombe sur le toit",
@@ -551,15 +551,16 @@
           "continuousIpa": "leɑ̃fɑ̃ʒudɑ̃ləʒaʁdɛ̃",
           "unresolvedWords": [],
           "unitCount": 16,
-          "coveredUnitCount": 8,
-          "coverageRatio": 0.5,
+          "coveredUnitCount": 11,
+          "coverageRatio": 0.6875,
           "pieces": [
+            "ɑ̃fɑ̃",
             "dɑ̃",
             "ə",
             "ʒaʁ",
             "dɛ̃"
           ],
-          "uncoveredUnitCount": 8
+          "uncoveredUnitCount": 5
         },
         {
           "phrase": "Je bois un verre d'eau",
@@ -585,17 +586,16 @@
           "continuousIpa": "ləfaktœʁapɔʁtynlɛtʁ",
           "unresolvedWords": [],
           "unitCount": 19,
-          "coveredUnitCount": 9,
-          "coverageRatio": 0.47368421052631576,
+          "coveredUnitCount": 10,
+          "coverageRatio": 0.5263157894736842,
           "pieces": [
             "ə",
-            "fa",
-            "œʁ",
+            "aktœʁ",
             "a",
             "y",
             "lɛ"
           ],
-          "uncoveredUnitCount": 10
+          "uncoveredUnitCount": 9
         },
         {
           "phrase": "Ma sœur prépare une soupe chaude",
@@ -605,17 +605,18 @@
             "sœur"
           ],
           "unitCount": 16,
-          "coveredUnitCount": 9,
-          "coverageRatio": 0.5625,
+          "coveredUnitCount": 12,
+          "coverageRatio": 0.75,
           "pieces": [
             "a",
             "ʁe",
             "pa",
             "ʁy",
+            "sup",
             "o",
             "d"
           ],
-          "uncoveredUnitCount": 7
+          "uncoveredUnitCount": 4
         },
         {
           "phrase": "Il met son manteau avant de sortir",
@@ -623,8 +624,8 @@
           "continuousIpa": "ilmɛsɔ̃mɑ̃toavɑ̃dəsɔʁtiʁ",
           "unresolvedWords": [],
           "unitCount": 21,
-          "coveredUnitCount": 11,
-          "coverageRatio": 0.5238095238095238,
+          "coveredUnitCount": 16,
+          "coverageRatio": 0.7619047619047619,
           "pieces": [
             "il",
             "ɛs",
@@ -633,9 +634,9 @@
             "vɑ̃",
             "d",
             "ə",
-            "i"
+            "sɔʁtiʁ"
           ],
-          "uncoveredUnitCount": 10
+          "uncoveredUnitCount": 5
         },
         {
           "phrase": "La voiture roule sur la route",
@@ -790,7 +791,7 @@
         }
       ]
     },
-    "gainPoints": 0
+    "gainPoints": 4.43
   },
   "control": {
     "before": {
@@ -1209,8 +1210,8 @@
       "summary": {
         "phraseCount": 20,
         "pronunciationResolvedCount": 19,
-        "meanCoverageRatio": 0.6201,
-        "medianCoverageRatio": 0.6098,
+        "meanCoverageRatio": 0.6396,
+        "medianCoverageRatio": 0.6582,
         "minCoverageRatio": 0.4,
         "maxCoverageRatio": 0.9474
       },
@@ -1286,9 +1287,7 @@
             "pa",
             "ʁɔ̃",
             "ə",
-            "d",
-            "i",
-            "ne",
+            "dine",
             "dɑ̃",
             "la",
             "kɥi",
@@ -1376,17 +1375,17 @@
           "continuousIpa": "ɛlekʁiynkaʁtpuʁsɔ̃ami",
           "unresolvedWords": [],
           "unitCount": 20,
-          "coveredUnitCount": 10,
-          "coverageRatio": 0.5,
+          "coveredUnitCount": 12,
+          "coverageRatio": 0.6,
           "pieces": [
             "ɛl",
             "ʁi",
             "y",
-            "ka",
+            "kaʁt",
             "a",
             "mi"
           ],
-          "uncoveredUnitCount": 10
+          "uncoveredUnitCount": 8
         },
         {
           "phrase": "Le médecin ouvre la porte du cabinet",
@@ -1472,13 +1471,12 @@
           "continuousIpa": "ilʁəgaʁdleetwalapʁɛləʁəpa",
           "unresolvedWords": [],
           "unitCount": 25,
-          "coveredUnitCount": 16,
-          "coverageRatio": 0.64,
+          "coveredUnitCount": 18,
+          "coverageRatio": 0.72,
           "pieces": [
             "il",
             "ə",
-            "a",
-            "d",
+            "gaʁd",
             "twa",
             "la",
             "ɛl",
@@ -1486,7 +1484,7 @@
             "ə",
             "pa"
           ],
-          "uncoveredUnitCount": 9
+          "uncoveredUnitCount": 7
         },
         {
           "phrase": "Ma grand-mère arrose les fleurs du jardin",
@@ -1515,20 +1513,20 @@
           "continuousIpa": "ləkamjɔ̃livʁdebwatomagazɛ̃",
           "unresolvedWords": [],
           "unitCount": 24,
-          "coveredUnitCount": 16,
-          "coverageRatio": 0.6666666666666666,
+          "coveredUnitCount": 18,
+          "coverageRatio": 0.75,
           "pieces": [
             "ə",
             "kamjɔ̃",
             "li",
             "de",
-            "wa",
+            "bwat",
             "o",
             "a",
             "a",
             "ɛ̃"
           ],
-          "uncoveredUnitCount": 8
+          "uncoveredUnitCount": 6
         },
         {
           "phrase": "Un enfant met ses chaussures avant de partir",
@@ -1536,10 +1534,11 @@
           "continuousIpa": "œ̃ɑ̃fɑ̃mɛseʃosyʁavɑ̃dəpaʁtiʁ",
           "unresolvedWords": [],
           "unitCount": 24,
-          "coveredUnitCount": 14,
-          "coverageRatio": 0.5833333333333334,
+          "coveredUnitCount": 17,
+          "coverageRatio": 0.7083333333333334,
           "pieces": [
             "œ̃",
+            "ɑ̃fɑ̃",
             "se",
             "o",
             "y",
@@ -1550,7 +1549,7 @@
             "pa",
             "i"
           ],
-          "uncoveredUnitCount": 10
+          "uncoveredUnitCount": 7
         },
         {
           "phrase": "La lune éclaire la route pendant la nuit",
@@ -1617,6 +1616,6 @@
         }
       ]
     },
-    "gainPoints": 0
+    "gainPoints": 1.95
   }
 }

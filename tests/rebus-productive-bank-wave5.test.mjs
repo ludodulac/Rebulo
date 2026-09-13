@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {normalizeIPA} from '../src/phonetic-engine.js';
+const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
+const w=read('data/rebus-productive-bank-wave5.json');const m=read('data/rebus-productive-bank-wave5-metrics.json');
+assert.equal(w.representationDefaults.spontaneousNamingRisk,'unknown');assert.equal(w.representationDefaults.humanNamingEvidence,'none');assert.equal(w.representationDefaults.clinicalEvidence,'none');assert.equal(w.representationDefaults.runtimeStatus,'inactive_editorial');
+assert.ok(m.examinedSoundCount>0&&m.examinedSoundCount<=120);assert.ok(m.editorialAcceptanceRate>=0.5,'wave5 acceptance unexpectedly low');assert.equal(m.runtimeActivationCount,0);assert.equal(m.usefulExactSoundDenominator,5741);assert.equal(m.visualBriefCount,m.retainedRepresentationCount);assert.ok(m.retainedRepresentationCount>0);assert.ok(m.cumulativeUsefulSeriousSoundCount>=407);assert.ok(m.cumulativeIndexedSoundCount>=1289);assert.ok(m.cumulativeExactWordRelationCount>=2252);
+const prior=new Set();for(const n of [1,2,3,4]){const p=read(`data/rebus-productive-bank-wave${n}.json`);for(const r of p.soundRows||[])prior.add(normalizeIPA(r[1]));}for(const r of w.soundRows||[])assert.ok(!prior.has(normalizeIPA(r[1])),`wave5 duplicate IPA ${r[1]}`);
+for(const r of w.representations){assert.equal(r.editorialStatus,'retain');assert.ok(r.brief&&r.brief.length>160);assert.ok(r.brief.includes('Cadrage'));assert.ok(r.brief.includes('Éléments indispensables'));assert.ok(r.brief.includes('À éviter'));assert.ok(r.brief.includes('Confusions probables'));}
+assert.ok(m.multipleGoodRepresentationSoundCount>=1,'expected at least one multi-representation IPA');assert.equal(m.alternativeRepresentationCount,m.retainedRepresentationCount-m.enrichedSoundCount);console.log(JSON.stringify(m,null,2));

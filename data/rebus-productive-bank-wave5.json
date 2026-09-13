@@ -1,0 +1,3345 @@
+{
+  "version": "5.0.0-wave5",
+  "status": "curated_editorial_not_runtime_active",
+  "policy": {
+    "selection": "Word-first imageability + lexical frequency + sound usefulness + reusability. Multi-homophone concrete IPAs receive explicit priority. Phrase benchmarks are excluded from selection.",
+    "homophones": "All exact lexical words for every examined IPA remain indexed. Every distinct retained concrete homophone is preserved as an alternative representation.",
+    "evidence": "spontaneousNamingRisk unknown; humanNamingEvidence none; clinicalEvidence none; runtime inactive."
+  },
+  "representationDefaults": {
+    "matchStatus": "exact",
+    "source": "Lexique 4",
+    "spontaneousNamingRisk": "unknown",
+    "humanNamingEvidence": "none",
+    "clinicalEvidence": "none",
+    "runtimeStatus": "inactive_editorial"
+  },
+  "soundRowSchema": [
+    "rank",
+    "ipa",
+    "usefulTargetCount",
+    "usefulWeightedGain",
+    "syllableSpan",
+    "exactWords",
+    "exactCandidateMetadata",
+    "selectionScore"
+  ],
+  "soundRows": [
+    [
+      1,
+      "sɛʁ",
+      41,
+      4087.141,
+      1,
+      [
+        "cerf",
+        "serre",
+        "serf"
+      ],
+      [
+        [
+          "cerf",
+          "NOM",
+          4.949,
+          1
+        ],
+        [
+          "serre",
+          "NOM",
+          3.085,
+          1
+        ],
+        [
+          "serf",
+          "NOM",
+          0.294,
+          1
+        ]
+      ],
+      270.514
+    ],
+    [
+      2,
+      "ma",
+      181,
+      15008.327,
+      1,
+      [
+        "mât",
+        "mas",
+        "ma"
+      ],
+      [
+        [
+          "mât",
+          "NOM",
+          1.633,
+          1
+        ],
+        [
+          "mas",
+          "NOM",
+          0.747,
+          1
+        ],
+        [
+          "ma",
+          "NOM",
+          0.12,
+          1
+        ]
+      ],
+      231.514
+    ],
+    [
+      3,
+      "van",
+      2,
+      96.537,
+      1,
+      [
+        "van",
+        "vanne",
+        "wan"
+      ],
+      [
+        [
+          "van",
+          "NOM",
+          17.598,
+          1
+        ],
+        [
+          "vanne",
+          "NOM",
+          1.301,
+          1
+        ],
+        [
+          "wan",
+          "NOM",
+          0.057,
+          1
+        ]
+      ],
+      198.41
+    ],
+    [
+      4,
+      "pus",
+      2,
+      50.535,
+      1,
+      [
+        "pouce",
+        "pousse",
+        "poucent"
+      ],
+      [
+        [
+          "pouce",
+          "NOM",
+          11.269,
+          1
+        ],
+        [
+          "pousse",
+          "NOM",
+          5.576,
+          1
+        ],
+        [
+          "poucent",
+          "NOM",
+          0.009,
+          1
+        ]
+      ],
+      185.625
+    ],
+    [
+      5,
+      "palɛ",
+      1,
+      70.088,
+      2,
+      [
+        "palais",
+        "palet"
+      ],
+      [
+        [
+          "palais",
+          "NOM",
+          17.522,
+          2
+        ],
+        [
+          "palet",
+          "NOM",
+          1.038,
+          2
+        ]
+      ],
+      179.465
+    ],
+    [
+      6,
+      "kan",
+      2,
+      26.25,
+      1,
+      [
+        "canne",
+        "khan",
+        "kan"
+      ],
+      [
+        [
+          "canne",
+          "NOM",
+          6.794,
+          1
+        ],
+        [
+          "khan",
+          "NOM",
+          1.155,
+          1
+        ],
+        [
+          "kan",
+          "NOM",
+          0.557,
+          1
+        ]
+      ],
+      172.09
+    ],
+    [
+      7,
+      "dɔktœʁ",
+      1,
+      1272.816,
+      2,
+      [
+        "docteur",
+        "docteure",
+        "docteures"
+      ],
+      [
+        [
+          "docteur",
+          "NOM",
+          212.136,
+          2
+        ],
+        [
+          "docteure",
+          "NOM",
+          0.196,
+          2
+        ],
+        [
+          "docteures",
+          "NOM",
+          0.013,
+          2
+        ]
+      ],
+      193.525
+    ],
+    [
+      8,
+      "maʁʃ",
+      2,
+      158.734,
+      1,
+      [
+        "marche",
+        "marche"
+      ],
+      [
+        [
+          "marche",
+          "NOM",
+          37.889,
+          1
+        ],
+        [
+          "marche",
+          "VER",
+          147.187,
+          1
+        ]
+      ],
+      191.372
+    ],
+    [
+      9,
+      "lɛtʁ",
+      1,
+      408.48,
+      1,
+      [
+        "lettre"
+      ],
+      [
+        [
+          "lettre",
+          "NOM",
+          81.696,
+          1
+        ]
+      ],
+      182.646
+    ],
+    [
+      10,
+      "ʁadjo",
+      3,
+      314.131,
+      2,
+      [
+        "radio",
+        "radiaux"
+      ],
+      [
+        [
+          "radio",
+          "NOM",
+          61.573,
+          2
+        ],
+        [
+          "radiaux",
+          "ADJ",
+          0.022,
+          2
+        ]
+      ],
+      175.474
+    ],
+    [
+      11,
+      "fɑ̃tom",
+      1,
+      144.964,
+      2,
+      [
+        "fantôme",
+        "phantôme",
+        "phantômes"
+      ],
+      [
+        [
+          "fantôme",
+          "NOM",
+          36.241,
+          2
+        ],
+        [
+          "phantôme",
+          "NOM",
+          0.006,
+          2
+        ],
+        [
+          "phantômes",
+          "NOM",
+          0.006,
+          2
+        ]
+      ],
+      153.47
+    ],
+    [
+      12,
+      "gaʁaʒ",
+      1,
+      109.912,
+      2,
+      [
+        "garage"
+      ],
+      [
+        [
+          "garage",
+          "NOM",
+          27.478,
+          2
+        ]
+      ],
+      146.182
+    ],
+    [
+      13,
+      "dezɛʁ",
+      2,
+      87.776,
+      2,
+      [
+        "désert"
+      ],
+      [
+        [
+          "désert",
+          "NOM",
+          21.123,
+          2
+        ]
+      ],
+      143.223
+    ],
+    [
+      14,
+      "sɛʁpɑ̃",
+      1,
+      78.052,
+      2,
+      [
+        "serpent",
+        "serpant"
+      ],
+      [
+        [
+          "serpent",
+          "NOM",
+          19.513,
+          2
+        ],
+        [
+          "serpant",
+          "VER",
+          0.003,
+          2
+        ]
+      ],
+      137.25
+    ],
+    [
+      15,
+      "eʃɛl",
+      1,
+      67.416,
+      2,
+      [
+        "échelle",
+        "échèle"
+      ],
+      [
+        [
+          "échelle",
+          "NOM",
+          16.854,
+          2
+        ],
+        [
+          "échèle",
+          "NOM",
+          0.006,
+          2
+        ]
+      ],
+      133.462
+    ],
+    [
+      16,
+      "staty",
+      2,
+      64.842,
+      2,
+      [
+        "statue",
+        "statut",
+        "statu"
+      ],
+      [
+        [
+          "statue",
+          "NOM",
+          12.266,
+          2
+        ],
+        [
+          "statut",
+          "NOM",
+          9.348,
+          2
+        ],
+        [
+          "statu",
+          "NOM",
+          0.038,
+          2
+        ]
+      ],
+      130.902
+    ],
+    [
+      17,
+      "pɛ̃dʁ",
+      2,
+      35.1,
+      1,
+      [
+        "peindre"
+      ],
+      [
+        [
+          "peindre",
+          "VER",
+          10.468,
+          1
+        ]
+      ],
+      129.783
+    ],
+    [
+      18,
+      "ʁevɛj",
+      1,
+      42.855,
+      2,
+      [
+        "réveil",
+        "réveille"
+      ],
+      [
+        [
+          "réveil",
+          "NOM",
+          14.285,
+          2
+        ],
+        [
+          "réveille",
+          "VER",
+          46.693,
+          2
+        ]
+      ],
+      127.242
+    ],
+    [
+      19,
+      "an",
+      1,
+      23.07,
+      1,
+      [
+        "âne",
+        "hane"
+      ],
+      [
+        [
+          "âne",
+          "NOM",
+          7.69,
+          1
+        ],
+        [
+          "hane",
+          "NOM",
+          0.032,
+          1
+        ]
+      ],
+      124.749
+    ],
+    [
+      20,
+      "ʁɔk",
+      2,
+      111.056,
+      1,
+      [
+        "rock",
+        "roc",
+        "roque"
+      ],
+      [
+        [
+          "rock",
+          "NOM",
+          26.231,
+          1
+        ],
+        [
+          "roc",
+          "NOM",
+          3.066,
+          1
+        ],
+        [
+          "roque",
+          "NOM",
+          0.339,
+          1
+        ]
+      ],
+      123.974
+    ],
+    [
+      21,
+      "kolin",
+      1,
+      46.128,
+      2,
+      [
+        "colline"
+      ],
+      [
+        [
+          "colline",
+          "NOM",
+          11.532,
+          2
+        ]
+      ],
+      123.774
+    ],
+    [
+      22,
+      "talɔ̃",
+      3,
+      150.742,
+      2,
+      [
+        "talon",
+        "talons",
+        "tallons"
+      ],
+      [
+        [
+          "talon",
+          "NOM",
+          3.63,
+          2
+        ],
+        [
+          "talons",
+          "VER",
+          0.047,
+          2
+        ],
+        [
+          "tallons",
+          "VER",
+          0.006,
+          2
+        ]
+      ],
+      118.283
+    ],
+    [
+      23,
+      "dʒin",
+      2,
+      37.68,
+      1,
+      [
+        "gin",
+        "jean",
+        "djinn"
+      ],
+      [
+        [
+          "gin",
+          "NOM",
+          7.44,
+          1
+        ],
+        [
+          "jean",
+          "NOM",
+          5.12,
+          1
+        ],
+        [
+          "djinn",
+          "NOM",
+          0.579,
+          1
+        ]
+      ],
+      117.706
+    ],
+    [
+      24,
+      "pɔst",
+      2,
+      390.784,
+      1,
+      [
+        "poste",
+        "posts",
+        "poste"
+      ],
+      [
+        [
+          "poste",
+          "NOM",
+          77.544,
+          1
+        ],
+        [
+          "posts",
+          "NOM",
+          0.247,
+          1
+        ],
+        [
+          "poste",
+          "VER",
+          1.696,
+          1
+        ]
+      ],
+      117.518
+    ],
+    [
+      25,
+      "plɑ̃te",
+      1,
+      28.044,
+      2,
+      [
+        "planté",
+        "planter"
+      ],
+      [
+        [
+          "planté",
+          "ADJ",
+          1.424,
+          2
+        ],
+        [
+          "planter",
+          "VER",
+          9.348,
+          2
+        ]
+      ],
+      116.556
+    ],
+    [
+      26,
+      "maʁɛ̃",
+      2,
+      39.426,
+      2,
+      [
+        "marin"
+      ],
+      [
+        [
+          "marin",
+          "NOM",
+          6.101,
+          2
+        ]
+      ],
+      114.989
+    ],
+    [
+      27,
+      "tɔʁty",
+      2,
+      40.737,
+      2,
+      [
+        "tortue",
+        "tortu"
+      ],
+      [
+        [
+          "tortue",
+          "NOM",
+          5.763,
+          2
+        ],
+        [
+          "tortu",
+          "ADJ",
+          0.003,
+          2
+        ]
+      ],
+      114.237
+    ],
+    [
+      28,
+      "gʁɛ̃pe",
+      1,
+      22.311,
+      2,
+      [
+        "grimpée",
+        "grimper"
+      ],
+      [
+        [
+          "grimpée",
+          "NOM",
+          0.006,
+          2
+        ],
+        [
+          "grimper",
+          "VER",
+          7.437,
+          2
+        ]
+      ],
+      110.933
+    ],
+    [
+      29,
+      "seʁyʁ",
+      1,
+      21.75,
+      2,
+      [
+        "serrure"
+      ],
+      [
+        [
+          "serrure",
+          "NOM",
+          7.25,
+          2
+        ]
+      ],
+      110.315
+    ],
+    [
+      30,
+      "sufle",
+      1,
+      23.1,
+      2,
+      [
+        "soufflé",
+        "souffler"
+      ],
+      [
+        [
+          "soufflé",
+          "NOM",
+          1.19,
+          2
+        ],
+        [
+          "souffler",
+          "VER",
+          5.775,
+          2
+        ]
+      ],
+      106.779
+    ],
+    [
+      31,
+      "mustaʃ",
+      1,
+      28.254,
+      2,
+      [
+        "moustache"
+      ],
+      [
+        [
+          "moustache",
+          "NOM",
+          9.418,
+          2
+        ]
+      ],
+      106.741
+    ],
+    [
+      32,
+      "pilɔt",
+      2,
+      95.07,
+      2,
+      [
+        "pilote",
+        "pilote"
+      ],
+      [
+        [
+          "pilote",
+          "NOM",
+          22.905,
+          2
+        ],
+        [
+          "pilote",
+          "VER",
+          1.949,
+          2
+        ]
+      ],
+      103.472
+    ],
+    [
+      33,
+      "ʁənaʁ",
+      1,
+      16.074,
+      2,
+      [
+        "renard"
+      ],
+      [
+        [
+          "renard",
+          "NOM",
+          5.358,
+          2
+        ]
+      ],
+      103.095
+    ],
+    [
+      34,
+      "ʃɔʁt",
+      1,
+      8.956,
+      1,
+      [
+        "short",
+        "shorte",
+        "shortent"
+      ],
+      [
+        [
+          "short",
+          "NOM",
+          4.478,
+          1
+        ],
+        [
+          "shorte",
+          "NOM",
+          0.006,
+          1
+        ],
+        [
+          "shortent",
+          "NOM",
+          0.003,
+          1
+        ]
+      ],
+      102.34
+    ],
+    [
+      35,
+      "ʁɛzɛ̃",
+      1,
+      15.198,
+      2,
+      [
+        "raisin"
+      ],
+      [
+        [
+          "raisin",
+          "NOM",
+          5.066,
+          2
+        ]
+      ],
+      101.787
+    ],
+    [
+      36,
+      "bonɛ",
+      1,
+      15.039,
+      2,
+      [
+        "bonnet"
+      ],
+      [
+        [
+          "bonnet",
+          "NOM",
+          5.013,
+          2
+        ]
+      ],
+      101.542
+    ],
+    [
+      37,
+      "ɔ̃gl",
+      1,
+      6.158,
+      1,
+      [
+        "ongle"
+      ],
+      [
+        [
+          "ongle",
+          "NOM",
+          3.079,
+          1
+        ]
+      ],
+      101.133
+    ],
+    [
+      38,
+      "vagɔ̃",
+      1,
+      9.012,
+      2,
+      [
+        "wagon",
+        "vagon"
+      ],
+      [
+        [
+          "wagon",
+          "NOM",
+          4.506,
+          2
+        ],
+        [
+          "vagon",
+          "NOM",
+          0.016,
+          2
+        ]
+      ],
+      96.482
+    ],
+    [
+      39,
+      "pɔ̃pje",
+      1,
+      8.886,
+      2,
+      [
+        "pompier",
+        "pompiez"
+      ],
+      [
+        [
+          "pompier",
+          "NOM",
+          4.443,
+          2
+        ],
+        [
+          "pompiez",
+          "VER",
+          0.003,
+          2
+        ]
+      ],
+      96.163
+    ],
+    [
+      40,
+      "buʃɔ̃",
+      1,
+      8.57,
+      2,
+      [
+        "bouchon",
+        "bouchons"
+      ],
+      [
+        [
+          "bouchon",
+          "NOM",
+          4.285,
+          2
+        ],
+        [
+          "bouchons",
+          "VER",
+          0.028,
+          2
+        ]
+      ],
+      95.346
+    ],
+    [
+      41,
+      "vɔlkɑ̃",
+      1,
+      8.556,
+      2,
+      [
+        "volcan"
+      ],
+      [
+        [
+          "volcan",
+          "NOM",
+          4.278,
+          2
+        ]
+      ],
+      95.309
+    ],
+    [
+      42,
+      "lezaʁ",
+      1,
+      8.488,
+      2,
+      [
+        "lézard"
+      ],
+      [
+        [
+          "lézard",
+          "NOM",
+          4.244,
+          2
+        ]
+      ],
+      95.13
+    ],
+    [
+      43,
+      "patat",
+      1,
+      8.488,
+      2,
+      [
+        "patate"
+      ],
+      [
+        [
+          "patate",
+          "NOM",
+          4.244,
+          2
+        ]
+      ],
+      95.13
+    ],
+    [
+      44,
+      "ɔɲɔ̃",
+      1,
+      6.07,
+      2,
+      [
+        "oignon",
+        "ognon",
+        "oignons"
+      ],
+      [
+        [
+          "oignon",
+          "NOM",
+          3.035,
+          2
+        ],
+        [
+          "ognon",
+          "NOM",
+          0.009,
+          2
+        ],
+        [
+          "oignons",
+          "VER",
+          0.051,
+          2
+        ]
+      ],
+      94.829
+    ],
+    [
+      45,
+      "biskɥi",
+      1,
+      16.11,
+      2,
+      [
+        "biscuit"
+      ],
+      [
+        [
+          "biscuit",
+          "NOM",
+          5.37,
+          2
+        ]
+      ],
+      93.148
+    ],
+    [
+      46,
+      "ʃosɛt",
+      1,
+      7.386,
+      2,
+      [
+        "chaussette"
+      ],
+      [
+        [
+          "chaussette",
+          "NOM",
+          3.693,
+          2
+        ]
+      ],
+      92.046
+    ],
+    [
+      47,
+      "jauʁt",
+      1,
+      7.36,
+      2,
+      [
+        "yaourt",
+        "yahourt"
+      ],
+      [
+        [
+          "yaourt",
+          "NOM",
+          3.68,
+          2
+        ],
+        [
+          "yahourt",
+          "NOM",
+          0.206,
+          2
+        ]
+      ],
+      91.968
+    ],
+    [
+      48,
+      "kusɛ̃",
+      1,
+      7.342,
+      2,
+      [
+        "coussin"
+      ],
+      [
+        [
+          "coussin",
+          "NOM",
+          3.671,
+          2
+        ]
+      ],
+      91.915
+    ],
+    [
+      49,
+      "fɛʁmje",
+      1,
+      15.084,
+      2,
+      [
+        "fermier",
+        "fermiez"
+      ],
+      [
+        [
+          "fermier",
+          "NOM",
+          5.028,
+          2
+        ],
+        [
+          "fermiez",
+          "VER",
+          0.516,
+          2
+        ]
+      ],
+      91.611
+    ],
+    [
+      50,
+      "tapi",
+      2,
+      90.128,
+      2,
+      [
+        "tapis",
+        "tapis"
+      ],
+      [
+        [
+          "tapis",
+          "NOM",
+          21.924,
+          2
+        ],
+        [
+          "tapis",
+          "VER",
+          0.608,
+          2
+        ]
+      ],
+      90.973
+    ],
+    [
+      51,
+      "səʁiz",
+      1,
+      6.594,
+      2,
+      [
+        "cerise"
+      ],
+      [
+        [
+          "cerise",
+          "NOM",
+          3.297,
+          2
+        ]
+      ],
+      89.588
+    ],
+    [
+      52,
+      "ibu",
+      1,
+      4.626,
+      2,
+      [
+        "hibou"
+      ],
+      [
+        [
+          "hibou",
+          "NOM",
+          2.313,
+          2
+        ]
+      ],
+      89.287
+    ],
+    [
+      53,
+      "fuʁʃɛt",
+      1,
+      9.532,
+      2,
+      [
+        "fourchette"
+      ],
+      [
+        [
+          "fourchette",
+          "NOM",
+          4.766,
+          2
+        ]
+      ],
+      87.759
+    ],
+    [
+      54,
+      "vaʃ",
+      1,
+      5.526,
+      1,
+      [
+        "vache"
+      ],
+      [
+        [
+          "vache",
+          "NOM",
+          1.12,
+          1
+        ]
+      ],
+      87.397
+    ],
+    [
+      55,
+      "tʁijɑ̃gl",
+      1,
+      9.354,
+      2,
+      [
+        "triangle"
+      ],
+      [
+        [
+          "triangle",
+          "NOM",
+          4.677,
+          2
+        ]
+      ],
+      87.328
+    ],
+    [
+      56,
+      "baʁo",
+      1,
+      5.842,
+      2,
+      [
+        "barreau",
+        "barrot"
+      ],
+      [
+        [
+          "barreau",
+          "NOM",
+          2.921,
+          2
+        ],
+        [
+          "barrot",
+          "NOM",
+          0.003,
+          2
+        ]
+      ],
+      87.027
+    ],
+    [
+      57,
+      "amɑ̃d",
+      1,
+      24,
+      2,
+      [
+        "amende",
+        "amande",
+        "amende"
+      ],
+      [
+        [
+          "amende",
+          "NOM",
+          8,
+          2
+        ],
+        [
+          "amande",
+          "NOM",
+          1.092,
+          2
+        ],
+        [
+          "amende",
+          "VER",
+          0.111,
+          2
+        ]
+      ],
+      83.533
+    ],
+    [
+      58,
+      "dofɛ̃",
+      1,
+      4.86,
+      2,
+      [
+        "dauphin"
+      ],
+      [
+        [
+          "dauphin",
+          "NOM",
+          2.43,
+          2
+        ]
+      ],
+      83.267
+    ],
+    [
+      59,
+      "pʁeʁi",
+      1,
+      4.664,
+      2,
+      [
+        "prairie"
+      ],
+      [
+        [
+          "prairie",
+          "NOM",
+          2.332,
+          2
+        ]
+      ],
+      82.449
+    ],
+    [
+      60,
+      "tʁam",
+      1,
+      3.792,
+      1,
+      [
+        "tram",
+        "trame",
+        "trame"
+      ],
+      [
+        [
+          "tram",
+          "NOM",
+          1.478,
+          1
+        ],
+        [
+          "trame",
+          "NOM",
+          0.652,
+          1
+        ],
+        [
+          "trame",
+          "VER",
+          1.896,
+          1
+        ]
+      ],
+      81.356
+    ],
+    [
+      61,
+      "klavje",
+      1,
+      6.482,
+      2,
+      [
+        "clavier"
+      ],
+      [
+        [
+          "clavier",
+          "NOM",
+          3.241,
+          2
+        ]
+      ],
+      79.222
+    ],
+    [
+      62,
+      "ʒiʁaf",
+      1,
+      3.842,
+      2,
+      [
+        "girafe"
+      ],
+      [
+        [
+          "girafe",
+          "NOM",
+          1.921,
+          2
+        ]
+      ],
+      78.718
+    ],
+    [
+      63,
+      "pɛ̃so",
+      1,
+      3.708,
+      2,
+      [
+        "pinceau"
+      ],
+      [
+        [
+          "pinceau",
+          "NOM",
+          1.854,
+          2
+        ]
+      ],
+      78.058
+    ],
+    [
+      64,
+      "fuʁmi",
+      1,
+      3.658,
+      2,
+      [
+        "fourmi"
+      ],
+      [
+        [
+          "fourmi",
+          "NOM",
+          1.829,
+          2
+        ]
+      ],
+      77.807
+    ],
+    [
+      65,
+      "tʁaktœʁ",
+      1,
+      4.982,
+      2,
+      [
+        "tracteur"
+      ],
+      [
+        [
+          "tracteur",
+          "NOM",
+          2.491,
+          2
+        ]
+      ],
+      73.763
+    ],
+    [
+      66,
+      "spiʁal",
+      1,
+      4.342,
+      2,
+      [
+        "spirale",
+        "spiral",
+        "spiralent"
+      ],
+      [
+        [
+          "spirale",
+          "NOM",
+          2.171,
+          2
+        ],
+        [
+          "spiral",
+          "ADJ",
+          0.149,
+          2
+        ],
+        [
+          "spiralent",
+          "VER",
+          0.003,
+          2
+        ]
+      ],
+      71.048
+    ],
+    [
+      67,
+      "ɛtʁ",
+      1,
+      8304.702,
+      1,
+      [
+        "être",
+        "hêtre",
+        "estre"
+      ],
+      [
+        [
+          "être",
+          "NOM",
+          79.44,
+          1
+        ],
+        [
+          "hêtre",
+          "NOM",
+          0.152,
+          1
+        ],
+        [
+          "estre",
+          "NOM",
+          0.025,
+          1
+        ]
+      ],
+      125.241
+    ],
+    [
+      68,
+      "bulo",
+      1,
+      1267.404,
+      2,
+      [
+        "boulot",
+        "bouleau"
+      ],
+      [
+        [
+          "boulot",
+          "NOM",
+          211.234,
+          2
+        ],
+        [
+          "bouleau",
+          "NOM",
+          0.408,
+          2
+        ]
+      ],
+      103.1
+    ],
+    [
+      69,
+      "bɑ̃k",
+      1,
+      310.52,
+      1,
+      [
+        "banque",
+        "bque",
+        "banque"
+      ],
+      [
+        [
+          "banque",
+          "NOM",
+          62.104,
+          1
+        ],
+        [
+          "bque",
+          "NOM",
+          0.003,
+          1
+        ],
+        [
+          "banque",
+          "VER",
+          0.161,
+          1
+        ]
+      ],
+      102.414
+    ],
+    [
+      70,
+      "gɔʁʒ",
+      2,
+      124.424,
+      1,
+      [
+        "gorge",
+        "gorge"
+      ],
+      [
+        [
+          "gorge",
+          "NOM",
+          28.652,
+          1
+        ],
+        [
+          "gorge",
+          "VER",
+          0.465,
+          1
+        ]
+      ],
+      97.347
+    ],
+    [
+      71,
+      "spɔʁ",
+      2,
+      133.722,
+      1,
+      [
+        "sport",
+        "spore"
+      ],
+      [
+        [
+          "sport",
+          "NOM",
+          31.263,
+          1
+        ],
+        [
+          "spore",
+          "NOM",
+          0.332,
+          1
+        ]
+      ],
+      95.944
+    ],
+    [
+      72,
+      "pul",
+      2,
+      24.51,
+      1,
+      [
+        "pool",
+        "poule",
+        "poulent"
+      ],
+      [
+        [
+          "pool",
+          "NOM",
+          0.937,
+          1
+        ],
+        [
+          "poule",
+          "NOM",
+          0.453,
+          1
+        ],
+        [
+          "poulent",
+          "NOM",
+          0.009,
+          1
+        ]
+      ],
+      93.034
+    ],
+    [
+      73,
+      "tɛʁm",
+      1,
+      126.684,
+      1,
+      [
+        "terme",
+        "thermes",
+        "therme"
+      ],
+      [
+        [
+          "terme",
+          "NOM",
+          31.671,
+          1
+        ],
+        [
+          "thermes",
+          "NOM",
+          0.323,
+          1
+        ],
+        [
+          "therme",
+          "NOM",
+          0.013,
+          1
+        ]
+      ],
+      91.783
+    ],
+    [
+      74,
+      "epɔ̃ʒ",
+      1,
+      16.044,
+      2,
+      [
+        "éponge",
+        "éponge"
+      ],
+      [
+        [
+          "éponge",
+          "NOM",
+          5.348,
+          2
+        ],
+        [
+          "éponge",
+          "VER",
+          0.228,
+          2
+        ]
+      ],
+      70.197
+    ],
+    [
+      75,
+      "oval",
+      1,
+      3,
+      2,
+      [
+        "ovale"
+      ],
+      [
+        [
+          "ovale",
+          "NOM",
+          0.152,
+          2
+        ]
+      ],
+      58.772
+    ],
+    [
+      76,
+      "kʁwasɑ̃",
+      1,
+      3.196,
+      2,
+      [
+        "croissant",
+        "croissant"
+      ],
+      [
+        [
+          "croissant",
+          "NOM",
+          1.598,
+          2
+        ],
+        [
+          "croissant",
+          "VER",
+          0.177,
+          2
+        ]
+      ],
+      49.537
+    ]
+  ],
+  "representations": [
+    {
+      "ipa": "sɛʁ",
+      "word": "cerf",
+      "type": "pictogram",
+      "semanticCategory": "animal",
+      "brief": "Un cerf seul, corps entier, profil trois-quarts, avec les caractéristiques anatomiques distinctives clairement visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : biche, renne. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "biche",
+        "renne"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 4.949,
+      "selectionCategory": "animal"
+    },
+    {
+      "ipa": "sɛʁ",
+      "word": "serre",
+      "type": "scene",
+      "semanticCategory": "lieu",
+      "brief": "Un serre reconnaissable par ses indices architecturaux ou paysagers les plus typiques, cadrage simple, aucun panneau écrit. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : maison, verrière. Risque éditorial anticipé : medium_high.",
+      "anticipatedNamingRisk": "medium_high",
+      "confusions": [
+        "maison",
+        "verrière"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 3.085,
+      "selectionCategory": "place"
+    },
+    {
+      "ipa": "sɛʁ",
+      "word": "serf",
+      "type": "scene",
+      "semanticCategory": "personne",
+      "brief": "Une personne correspondant clairement à « serf », en pied ou mi-corps selon le besoin, avec seulement les indices visuels indispensables à cette dénomination. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : paysan, soldat. Risque éditorial anticipé : medium_high.",
+      "anticipatedNamingRisk": "medium_high",
+      "confusions": [
+        "paysan",
+        "soldat"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 0.294,
+      "selectionCategory": "person"
+    },
+    {
+      "ipa": "ma",
+      "word": "mât",
+      "type": "pictogram",
+      "semanticCategory": "objet",
+      "brief": "Un mât seul, entier, vue trois-quarts ou face la plus diagnostique, toutes les parties distinctives visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : poteau, antenne. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "poteau",
+        "antenne"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 1.633,
+      "selectionCategory": "object"
+    },
+    {
+      "ipa": "ma",
+      "word": "mas",
+      "type": "scene",
+      "semanticCategory": "lieu",
+      "brief": "Un mas reconnaissable par ses indices architecturaux ou paysagers les plus typiques, cadrage simple, aucun panneau écrit. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : maison, ferme. Risque éditorial anticipé : medium_high.",
+      "anticipatedNamingRisk": "medium_high",
+      "confusions": [
+        "maison",
+        "ferme"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 0.747,
+      "selectionCategory": "place"
+    },
+    {
+      "ipa": "van",
+      "word": "van",
+      "type": "pictogram",
+      "semanticCategory": "objet",
+      "brief": "Un van seul, entier, vue trois-quarts ou face la plus diagnostique, toutes les parties distinctives visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : camionnette, fourgon. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "camionnette",
+        "fourgon"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 17.598,
+      "selectionCategory": "vehicle"
+    },
+    {
+      "ipa": "van",
+      "word": "vanne",
+      "type": "pictogram",
+      "semanticCategory": "objet",
+      "brief": "Un vanne seul, entier, vue trois-quarts ou face la plus diagnostique, toutes les parties distinctives visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : robinet, poignée. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "robinet",
+        "poignée"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 1.301,
+      "selectionCategory": "object"
+    },
+    {
+      "ipa": "pus",
+      "word": "pouce",
+      "type": "pictogram",
+      "semanticCategory": "corps",
+      "brief": "La partie du corps « pouce » cadrée assez serrée pour être dominante, avec juste assez de contexte anatomique pour l’identifier. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : doigt, main. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "doigt",
+        "main"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 11.269,
+      "selectionCategory": "body"
+    },
+    {
+      "ipa": "pus",
+      "word": "pousse",
+      "type": "scene",
+      "semanticCategory": "nature",
+      "brief": "L’élément naturel « pousse » comme sujet principal dans une scène minimale, sans autre élément naturel concurrent. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : plante, bourgeon. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "plante",
+        "bourgeon"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 5.576,
+      "selectionCategory": "nature"
+    },
+    {
+      "ipa": "palɛ",
+      "word": "palais",
+      "type": "scene",
+      "semanticCategory": "lieu",
+      "brief": "Un palais reconnaissable par ses indices architecturaux ou paysagers les plus typiques, cadrage simple, aucun panneau écrit. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : château, mairie. Risque éditorial anticipé : medium_high.",
+      "anticipatedNamingRisk": "medium_high",
+      "confusions": [
+        "château",
+        "mairie"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 17.522,
+      "selectionCategory": "place"
+    },
+    {
+      "ipa": "palɛ",
+      "word": "palet",
+      "type": "pictogram",
+      "semanticCategory": "objet",
+      "brief": "Un palet seul, entier, vue trois-quarts ou face la plus diagnostique, toutes les parties distinctives visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : pion, jeton. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "pion",
+        "jeton"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 1.038,
+      "selectionCategory": "object"
+    },
+    {
+      "ipa": "kan",
+      "word": "canne",
+      "type": "pictogram",
+      "semanticCategory": "objet",
+      "brief": "Un canne seul, entier, vue trois-quarts ou face la plus diagnostique, toutes les parties distinctives visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : bâton, béquille. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "bâton",
+        "béquille"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 6.794,
+      "selectionCategory": "object"
+    },
+    {
+      "ipa": "kan",
+      "word": "khan",
+      "type": "scene",
+      "semanticCategory": "personne",
+      "brief": "Une personne correspondant clairement à « khan », en pied ou mi-corps selon le besoin, avec seulement les indices visuels indispensables à cette dénomination. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : roi, chef. Risque éditorial anticipé : medium_high.",
+      "anticipatedNamingRisk": "medium_high",
+      "confusions": [
+        "roi",
+        "chef"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 1.155,
+      "selectionCategory": "person"
+    },
+    {
+      "ipa": "dɔktœʁ",
+      "word": "docteur",
+      "type": "scene",
+      "semanticCategory": "personne",
+      "brief": "Une personne correspondant clairement à « docteur », en pied ou mi-corps selon le besoin, avec seulement les indices visuels indispensables à cette dénomination. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : médecin. Risque éditorial anticipé : medium_high.",
+      "anticipatedNamingRisk": "medium_high",
+      "confusions": [
+        "médecin"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 212.136,
+      "selectionCategory": "person"
+    },
+    {
+      "ipa": "maʁʃ",
+      "word": "marche",
+      "type": "scene",
+      "semanticCategory": "lieu",
+      "brief": "Un marche reconnaissable par ses indices architecturaux ou paysagers les plus typiques, cadrage simple, aucun panneau écrit. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : escalier, marché. Risque éditorial anticipé : medium_high.",
+      "anticipatedNamingRisk": "medium_high",
+      "confusions": [
+        "escalier",
+        "marché"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 147.187,
+      "selectionCategory": "place"
+    },
+    {
+      "ipa": "lɛtʁ",
+      "word": "lettre",
+      "type": "pictogram",
+      "semanticCategory": "objet",
+      "brief": "Un lettre seul, entier, vue trois-quarts ou face la plus diagnostique, toutes les parties distinctives visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : enveloppe, alphabet. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "enveloppe",
+        "alphabet"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 81.696,
+      "selectionCategory": "object"
+    },
+    {
+      "ipa": "ʁadjo",
+      "word": "radio",
+      "type": "pictogram",
+      "semanticCategory": "objet",
+      "brief": "Un radio seul, entier, vue trois-quarts ou face la plus diagnostique, toutes les parties distinctives visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : enceinte, télévision. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "enceinte",
+        "télévision"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 61.573,
+      "selectionCategory": "object"
+    },
+    {
+      "ipa": "fɑ̃tom",
+      "word": "fantôme",
+      "type": "scene",
+      "semanticCategory": "personne",
+      "brief": "Une personne correspondant clairement à « fantôme », en pied ou mi-corps selon le besoin, avec seulement les indices visuels indispensables à cette dénomination. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : terme générique voisin à contrôler. Risque éditorial anticipé : medium_high.",
+      "anticipatedNamingRisk": "medium_high",
+      "confusions": [],
+      "editorialStatus": "retain",
+      "frequency": 36.241,
+      "selectionCategory": "person"
+    },
+    {
+      "ipa": "gaʁaʒ",
+      "word": "garage",
+      "type": "scene",
+      "semanticCategory": "lieu",
+      "brief": "Un garage reconnaissable par ses indices architecturaux ou paysagers les plus typiques, cadrage simple, aucun panneau écrit. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : hangar, maison. Risque éditorial anticipé : medium_high.",
+      "anticipatedNamingRisk": "medium_high",
+      "confusions": [
+        "hangar",
+        "maison"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 27.478,
+      "selectionCategory": "place"
+    },
+    {
+      "ipa": "dezɛʁ",
+      "word": "désert",
+      "type": "scene",
+      "semanticCategory": "nature",
+      "brief": "L’élément naturel « désert » comme sujet principal dans une scène minimale, sans autre élément naturel concurrent. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : plage, sable. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "plage",
+        "sable"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 21.123,
+      "selectionCategory": "nature"
+    },
+    {
+      "ipa": "sɛʁpɑ̃",
+      "word": "serpent",
+      "type": "pictogram",
+      "semanticCategory": "animal",
+      "brief": "Un serpent seul, corps entier, profil trois-quarts, avec les caractéristiques anatomiques distinctives clairement visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : ver, lézard. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "ver",
+        "lézard"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 19.513,
+      "selectionCategory": "animal"
+    },
+    {
+      "ipa": "eʃɛl",
+      "word": "échelle",
+      "type": "pictogram",
+      "semanticCategory": "objet",
+      "brief": "Un échelle seul, entier, vue trois-quarts ou face la plus diagnostique, toutes les parties distinctives visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : escabeau. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "escabeau"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 16.854,
+      "selectionCategory": "object"
+    },
+    {
+      "ipa": "staty",
+      "word": "statue",
+      "type": "pictogram",
+      "semanticCategory": "objet",
+      "brief": "Un statue seul, entier, vue trois-quarts ou face la plus diagnostique, toutes les parties distinctives visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : terme générique voisin à contrôler. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [],
+      "editorialStatus": "retain",
+      "frequency": 12.266,
+      "selectionCategory": "object"
+    },
+    {
+      "ipa": "pɛ̃dʁ",
+      "word": "peindre",
+      "type": "scene",
+      "semanticCategory": "action",
+      "brief": "Une personne au milieu de l’action « peindre », geste figé au moment le plus diagnostique, objet manipulé visible seulement s’il aide la nomination. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : terme générique voisin à contrôler. Risque éditorial anticipé : high.",
+      "anticipatedNamingRisk": "high",
+      "confusions": [],
+      "editorialStatus": "retain",
+      "frequency": 10.468,
+      "selectionCategory": "action"
+    },
+    {
+      "ipa": "ʁevɛj",
+      "word": "réveil",
+      "type": "pictogram",
+      "semanticCategory": "objet",
+      "brief": "Un réveil seul, entier, vue trois-quarts ou face la plus diagnostique, toutes les parties distinctives visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : horloge, montre. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "horloge",
+        "montre"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 14.285,
+      "selectionCategory": "object"
+    },
+    {
+      "ipa": "an",
+      "word": "âne",
+      "type": "pictogram",
+      "semanticCategory": "animal",
+      "brief": "Un âne seul, corps entier, profil trois-quarts, avec les caractéristiques anatomiques distinctives clairement visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : cheval. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "cheval"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 7.69,
+      "selectionCategory": "animal"
+    },
+    {
+      "ipa": "ʁɔk",
+      "word": "roc",
+      "type": "scene",
+      "semanticCategory": "nature",
+      "brief": "L’élément naturel « roc » comme sujet principal dans une scène minimale, sans autre élément naturel concurrent. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : terme générique voisin à contrôler. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [],
+      "editorialStatus": "retain",
+      "frequency": 3.066,
+      "selectionCategory": "nature"
+    },
+    {
+      "ipa": "kolin",
+      "word": "colline",
+      "type": "scene",
+      "semanticCategory": "nature",
+      "brief": "L’élément naturel « colline » comme sujet principal dans une scène minimale, sans autre élément naturel concurrent. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : montagne. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "montagne"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 11.532,
+      "selectionCategory": "nature"
+    },
+    {
+      "ipa": "talɔ̃",
+      "word": "talon",
+      "type": "pictogram",
+      "semanticCategory": "corps",
+      "brief": "La partie du corps « talon » cadrée assez serrée pour être dominante, avec juste assez de contexte anatomique pour l’identifier. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : pied. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "pied"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 3.63,
+      "selectionCategory": "body"
+    },
+    {
+      "ipa": "dʒin",
+      "word": "jean",
+      "type": "pictogram",
+      "semanticCategory": "objet",
+      "brief": "Un jean seul, entier, vue trois-quarts ou face la plus diagnostique, toutes les parties distinctives visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : terme générique voisin à contrôler. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [],
+      "editorialStatus": "retain",
+      "frequency": 5.12,
+      "selectionCategory": "clothing"
+    },
+    {
+      "ipa": "pɔst",
+      "word": "poste",
+      "type": "scene",
+      "semanticCategory": "lieu",
+      "brief": "Un poste reconnaissable par ses indices architecturaux ou paysagers les plus typiques, cadrage simple, aucun panneau écrit. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : bureau, boîte aux lettres. Risque éditorial anticipé : medium_high.",
+      "anticipatedNamingRisk": "medium_high",
+      "confusions": [
+        "bureau",
+        "boîte aux lettres"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 1.696,
+      "selectionCategory": "place"
+    },
+    {
+      "ipa": "plɑ̃te",
+      "word": "planter",
+      "type": "scene",
+      "semanticCategory": "action",
+      "brief": "Une personne au milieu de l’action « planter », geste figé au moment le plus diagnostique, objet manipulé visible seulement s’il aide la nomination. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : terme générique voisin à contrôler. Risque éditorial anticipé : high.",
+      "anticipatedNamingRisk": "high",
+      "confusions": [],
+      "editorialStatus": "retain",
+      "frequency": 9.348,
+      "selectionCategory": "action"
+    },
+    {
+      "ipa": "maʁɛ̃",
+      "word": "marin",
+      "type": "scene",
+      "semanticCategory": "personne",
+      "brief": "Une personne correspondant clairement à « marin », en pied ou mi-corps selon le besoin, avec seulement les indices visuels indispensables à cette dénomination. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : terme générique voisin à contrôler. Risque éditorial anticipé : medium_high.",
+      "anticipatedNamingRisk": "medium_high",
+      "confusions": [],
+      "editorialStatus": "retain",
+      "frequency": 6.101,
+      "selectionCategory": "person"
+    },
+    {
+      "ipa": "tɔʁty",
+      "word": "tortue",
+      "type": "pictogram",
+      "semanticCategory": "animal",
+      "brief": "Un tortue seul, corps entier, profil trois-quarts, avec les caractéristiques anatomiques distinctives clairement visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : carapace. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "carapace"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 5.763,
+      "selectionCategory": "animal"
+    },
+    {
+      "ipa": "gʁɛ̃pe",
+      "word": "grimper",
+      "type": "scene",
+      "semanticCategory": "action",
+      "brief": "Une personne au milieu de l’action « grimper », geste figé au moment le plus diagnostique, objet manipulé visible seulement s’il aide la nomination. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : terme générique voisin à contrôler. Risque éditorial anticipé : high.",
+      "anticipatedNamingRisk": "high",
+      "confusions": [],
+      "editorialStatus": "retain",
+      "frequency": 7.437,
+      "selectionCategory": "action"
+    },
+    {
+      "ipa": "seʁyʁ",
+      "word": "serrure",
+      "type": "pictogram",
+      "semanticCategory": "objet",
+      "brief": "Un serrure seul, entier, vue trois-quarts ou face la plus diagnostique, toutes les parties distinctives visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : cadenas. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "cadenas"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 7.25,
+      "selectionCategory": "object"
+    },
+    {
+      "ipa": "sufle",
+      "word": "souffler",
+      "type": "scene",
+      "semanticCategory": "action",
+      "brief": "Une personne au milieu de l’action « souffler », geste figé au moment le plus diagnostique, objet manipulé visible seulement s’il aide la nomination. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : terme générique voisin à contrôler. Risque éditorial anticipé : high.",
+      "anticipatedNamingRisk": "high",
+      "confusions": [],
+      "editorialStatus": "retain",
+      "frequency": 5.775,
+      "selectionCategory": "action"
+    },
+    {
+      "ipa": "mustaʃ",
+      "word": "moustache",
+      "type": "pictogram",
+      "semanticCategory": "corps",
+      "brief": "La partie du corps « moustache » cadrée assez serrée pour être dominante, avec juste assez de contexte anatomique pour l’identifier. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : barbe. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "barbe"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 9.418,
+      "selectionCategory": "body"
+    },
+    {
+      "ipa": "pilɔt",
+      "word": "pilote",
+      "type": "scene",
+      "semanticCategory": "personne",
+      "brief": "Une personne correspondant clairement à « pilote », en pied ou mi-corps selon le besoin, avec seulement les indices visuels indispensables à cette dénomination. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : terme générique voisin à contrôler. Risque éditorial anticipé : medium_high.",
+      "anticipatedNamingRisk": "medium_high",
+      "confusions": [],
+      "editorialStatus": "retain",
+      "frequency": 1.949,
+      "selectionCategory": "person"
+    },
+    {
+      "ipa": "ʁənaʁ",
+      "word": "renard",
+      "type": "pictogram",
+      "semanticCategory": "animal",
+      "brief": "Un renard seul, corps entier, profil trois-quarts, avec les caractéristiques anatomiques distinctives clairement visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : chien. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "chien"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 5.358,
+      "selectionCategory": "animal"
+    },
+    {
+      "ipa": "ʃɔʁt",
+      "word": "short",
+      "type": "pictogram",
+      "semanticCategory": "objet",
+      "brief": "Un short seul, entier, vue trois-quarts ou face la plus diagnostique, toutes les parties distinctives visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : terme générique voisin à contrôler. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [],
+      "editorialStatus": "retain",
+      "frequency": 4.478,
+      "selectionCategory": "clothing"
+    },
+    {
+      "ipa": "ʁɛzɛ̃",
+      "word": "raisin",
+      "type": "pictogram",
+      "semanticCategory": "aliment",
+      "brief": "Un raisin seul ou une portion canonique de raisin, centré, sans emballage ni marque, aspect alimentaire immédiatement reconnaissable. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : grappe. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "grappe"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 5.066,
+      "selectionCategory": "food"
+    },
+    {
+      "ipa": "bonɛ",
+      "word": "bonnet",
+      "type": "pictogram",
+      "semanticCategory": "objet",
+      "brief": "Un bonnet seul, entier, vue trois-quarts ou face la plus diagnostique, toutes les parties distinctives visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : chapeau. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "chapeau"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 5.013,
+      "selectionCategory": "clothing"
+    },
+    {
+      "ipa": "ɔ̃gl",
+      "word": "ongle",
+      "type": "pictogram",
+      "semanticCategory": "corps",
+      "brief": "La partie du corps « ongle » cadrée assez serrée pour être dominante, avec juste assez de contexte anatomique pour l’identifier. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : doigt. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "doigt"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 3.079,
+      "selectionCategory": "body"
+    },
+    {
+      "ipa": "vagɔ̃",
+      "word": "wagon",
+      "type": "pictogram",
+      "semanticCategory": "objet",
+      "brief": "Un wagon seul, entier, vue trois-quarts ou face la plus diagnostique, toutes les parties distinctives visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : train. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "train"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 4.506,
+      "selectionCategory": "vehicle"
+    },
+    {
+      "ipa": "pɔ̃pje",
+      "word": "pompier",
+      "type": "scene",
+      "semanticCategory": "personne",
+      "brief": "Une personne correspondant clairement à « pompier », en pied ou mi-corps selon le besoin, avec seulement les indices visuels indispensables à cette dénomination. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : soldat, policier. Risque éditorial anticipé : medium_high.",
+      "anticipatedNamingRisk": "medium_high",
+      "confusions": [
+        "soldat",
+        "policier"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 4.443,
+      "selectionCategory": "person"
+    },
+    {
+      "ipa": "buʃɔ̃",
+      "word": "bouchon",
+      "type": "pictogram",
+      "semanticCategory": "objet",
+      "brief": "Un bouchon seul, entier, vue trois-quarts ou face la plus diagnostique, toutes les parties distinctives visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : couvercle. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "couvercle"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 4.285,
+      "selectionCategory": "object"
+    },
+    {
+      "ipa": "vɔlkɑ̃",
+      "word": "volcan",
+      "type": "scene",
+      "semanticCategory": "nature",
+      "brief": "L’élément naturel « volcan » comme sujet principal dans une scène minimale, sans autre élément naturel concurrent. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : montagne. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "montagne"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 4.278,
+      "selectionCategory": "nature"
+    },
+    {
+      "ipa": "lezaʁ",
+      "word": "lézard",
+      "type": "pictogram",
+      "semanticCategory": "animal",
+      "brief": "Un lézard seul, corps entier, profil trois-quarts, avec les caractéristiques anatomiques distinctives clairement visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : serpent. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "serpent"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 4.244,
+      "selectionCategory": "animal"
+    },
+    {
+      "ipa": "patat",
+      "word": "patate",
+      "type": "pictogram",
+      "semanticCategory": "aliment",
+      "brief": "Un patate seul ou une portion canonique de patate, centré, sans emballage ni marque, aspect alimentaire immédiatement reconnaissable. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : pomme de terre. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "pomme de terre"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 4.244,
+      "selectionCategory": "food"
+    },
+    {
+      "ipa": "ɔɲɔ̃",
+      "word": "oignon",
+      "type": "pictogram",
+      "semanticCategory": "aliment",
+      "brief": "Un oignon seul ou une portion canonique de oignon, centré, sans emballage ni marque, aspect alimentaire immédiatement reconnaissable. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : ail. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "ail"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 3.035,
+      "selectionCategory": "food"
+    },
+    {
+      "ipa": "biskɥi",
+      "word": "biscuit",
+      "type": "pictogram",
+      "semanticCategory": "aliment",
+      "brief": "Un biscuit seul ou une portion canonique de biscuit, centré, sans emballage ni marque, aspect alimentaire immédiatement reconnaissable. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : gâteau. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "gâteau"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 5.37,
+      "selectionCategory": "food"
+    },
+    {
+      "ipa": "ʃosɛt",
+      "word": "chaussette",
+      "type": "pictogram",
+      "semanticCategory": "objet",
+      "brief": "Un chaussette seul, entier, vue trois-quarts ou face la plus diagnostique, toutes les parties distinctives visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : bas. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "bas"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 3.693,
+      "selectionCategory": "clothing"
+    },
+    {
+      "ipa": "jauʁt",
+      "word": "yaourt",
+      "type": "pictogram",
+      "semanticCategory": "aliment",
+      "brief": "Un yaourt seul ou une portion canonique de yaourt, centré, sans emballage ni marque, aspect alimentaire immédiatement reconnaissable. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : pot, dessert. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "pot",
+        "dessert"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 3.68,
+      "selectionCategory": "food"
+    },
+    {
+      "ipa": "kusɛ̃",
+      "word": "coussin",
+      "type": "pictogram",
+      "semanticCategory": "objet",
+      "brief": "Un coussin seul, entier, vue trois-quarts ou face la plus diagnostique, toutes les parties distinctives visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : oreiller. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "oreiller"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 3.671,
+      "selectionCategory": "object"
+    },
+    {
+      "ipa": "fɛʁmje",
+      "word": "fermier",
+      "type": "scene",
+      "semanticCategory": "personne",
+      "brief": "Une personne correspondant clairement à « fermier », en pied ou mi-corps selon le besoin, avec seulement les indices visuels indispensables à cette dénomination. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : paysan. Risque éditorial anticipé : medium_high.",
+      "anticipatedNamingRisk": "medium_high",
+      "confusions": [
+        "paysan"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 5.028,
+      "selectionCategory": "person"
+    },
+    {
+      "ipa": "tapi",
+      "word": "tapis",
+      "type": "pictogram",
+      "semanticCategory": "objet",
+      "brief": "Un tapis seul, entier, vue trois-quarts ou face la plus diagnostique, toutes les parties distinctives visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : moquette. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "moquette"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 0.608,
+      "selectionCategory": "object"
+    },
+    {
+      "ipa": "səʁiz",
+      "word": "cerise",
+      "type": "pictogram",
+      "semanticCategory": "aliment",
+      "brief": "Un cerise seul ou une portion canonique de cerise, centré, sans emballage ni marque, aspect alimentaire immédiatement reconnaissable. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : fruit. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "fruit"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 3.297,
+      "selectionCategory": "food"
+    },
+    {
+      "ipa": "ibu",
+      "word": "hibou",
+      "type": "pictogram",
+      "semanticCategory": "animal",
+      "brief": "Un hibou seul, corps entier, profil trois-quarts, avec les caractéristiques anatomiques distinctives clairement visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : chouette. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "chouette"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 2.313,
+      "selectionCategory": "animal"
+    },
+    {
+      "ipa": "fuʁʃɛt",
+      "word": "fourchette",
+      "type": "pictogram",
+      "semanticCategory": "objet",
+      "brief": "Un fourchette seul, entier, vue trois-quarts ou face la plus diagnostique, toutes les parties distinctives visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : fourche. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "fourche"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 4.766,
+      "selectionCategory": "object"
+    },
+    {
+      "ipa": "vaʃ",
+      "word": "vache",
+      "type": "pictogram",
+      "semanticCategory": "animal",
+      "brief": "Un vache seul, corps entier, profil trois-quarts, avec les caractéristiques anatomiques distinctives clairement visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : taureau. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "taureau"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 1.12,
+      "selectionCategory": "animal"
+    },
+    {
+      "ipa": "tʁijɑ̃gl",
+      "word": "triangle",
+      "type": "pictogram",
+      "semanticCategory": "autre",
+      "brief": "Un triangle seul, entier, vue trois-quarts ou face la plus diagnostique, toutes les parties distinctives visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : pyramide. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "pyramide"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 4.677,
+      "selectionCategory": "shape"
+    },
+    {
+      "ipa": "baʁo",
+      "word": "barreau",
+      "type": "pictogram",
+      "semanticCategory": "objet",
+      "brief": "Un barreau seul, entier, vue trois-quarts ou face la plus diagnostique, toutes les parties distinctives visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : barre. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "barre"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 2.921,
+      "selectionCategory": "object"
+    },
+    {
+      "ipa": "amɑ̃d",
+      "word": "amande",
+      "type": "pictogram",
+      "semanticCategory": "aliment",
+      "brief": "Un amande seul ou une portion canonique de amande, centré, sans emballage ni marque, aspect alimentaire immédiatement reconnaissable. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : noix. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "noix"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 1.092,
+      "selectionCategory": "food"
+    },
+    {
+      "ipa": "dofɛ̃",
+      "word": "dauphin",
+      "type": "pictogram",
+      "semanticCategory": "animal",
+      "brief": "Un dauphin seul, corps entier, profil trois-quarts, avec les caractéristiques anatomiques distinctives clairement visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : poisson. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "poisson"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 2.43,
+      "selectionCategory": "animal"
+    },
+    {
+      "ipa": "pʁeʁi",
+      "word": "prairie",
+      "type": "scene",
+      "semanticCategory": "nature",
+      "brief": "L’élément naturel « prairie » comme sujet principal dans une scène minimale, sans autre élément naturel concurrent. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : champ. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "champ"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 2.332,
+      "selectionCategory": "nature"
+    },
+    {
+      "ipa": "tʁam",
+      "word": "tram",
+      "type": "pictogram",
+      "semanticCategory": "objet",
+      "brief": "Un tram seul, entier, vue trois-quarts ou face la plus diagnostique, toutes les parties distinctives visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : train. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "train"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 1.478,
+      "selectionCategory": "vehicle"
+    },
+    {
+      "ipa": "klavje",
+      "word": "clavier",
+      "type": "pictogram",
+      "semanticCategory": "objet",
+      "brief": "Un clavier seul, entier, vue trois-quarts ou face la plus diagnostique, toutes les parties distinctives visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : piano, ordinateur. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "piano",
+        "ordinateur"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 3.241,
+      "selectionCategory": "object"
+    },
+    {
+      "ipa": "ʒiʁaf",
+      "word": "girafe",
+      "type": "pictogram",
+      "semanticCategory": "animal",
+      "brief": "Un girafe seul, corps entier, profil trois-quarts, avec les caractéristiques anatomiques distinctives clairement visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : animal. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "animal"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 1.921,
+      "selectionCategory": "animal"
+    },
+    {
+      "ipa": "pɛ̃so",
+      "word": "pinceau",
+      "type": "pictogram",
+      "semanticCategory": "objet",
+      "brief": "Un pinceau seul, entier, vue trois-quarts ou face la plus diagnostique, toutes les parties distinctives visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : brosse. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "brosse"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 1.854,
+      "selectionCategory": "object"
+    },
+    {
+      "ipa": "fuʁmi",
+      "word": "fourmi",
+      "type": "pictogram",
+      "semanticCategory": "animal",
+      "brief": "Un fourmi seul, corps entier, profil trois-quarts, avec les caractéristiques anatomiques distinctives clairement visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : insecte. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "insecte"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 1.829,
+      "selectionCategory": "animal"
+    },
+    {
+      "ipa": "tʁaktœʁ",
+      "word": "tracteur",
+      "type": "pictogram",
+      "semanticCategory": "objet",
+      "brief": "Un tracteur seul, entier, vue trois-quarts ou face la plus diagnostique, toutes les parties distinctives visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : camion. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "camion"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 2.491,
+      "selectionCategory": "vehicle"
+    },
+    {
+      "ipa": "spiʁal",
+      "word": "spirale",
+      "type": "pictogram",
+      "semanticCategory": "autre",
+      "brief": "Un spirale seul, entier, vue trois-quarts ou face la plus diagnostique, toutes les parties distinctives visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : escargot. Risque éditorial anticipé : medium.",
+      "anticipatedNamingRisk": "medium",
+      "confusions": [
+        "escargot"
+      ],
+      "editorialStatus": "retain",
+      "frequency": 2.171,
+      "selectionCategory": "shape"
+    },
+    {
+      "ipa": "ɛtʁ",
+      "word": "hêtre",
+      "type": "scene",
+      "semanticCategory": "nature",
+      "brief": "L’élément naturel « hêtre » comme sujet principal dans une scène minimale, sans autre élément naturel concurrent. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : terme générique voisin à contrôler. Risque éditorial anticipé : medium_high.",
+      "anticipatedNamingRisk": "medium_high",
+      "confusions": [],
+      "editorialStatus": "retain",
+      "frequency": 0.152,
+      "selectionCategory": "nature"
+    },
+    {
+      "ipa": "bulo",
+      "word": "bouleau",
+      "type": "scene",
+      "semanticCategory": "nature",
+      "brief": "L’élément naturel « bouleau » comme sujet principal dans une scène minimale, sans autre élément naturel concurrent. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : terme générique voisin à contrôler. Risque éditorial anticipé : medium_high.",
+      "anticipatedNamingRisk": "medium_high",
+      "confusions": [],
+      "editorialStatus": "retain",
+      "frequency": 0.408,
+      "selectionCategory": "nature"
+    },
+    {
+      "ipa": "bɑ̃k",
+      "word": "banque",
+      "type": "scene",
+      "semanticCategory": "lieu",
+      "brief": "Un banque reconnaissable par ses indices architecturaux ou paysagers les plus typiques, cadrage simple, aucun panneau écrit. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : terme générique voisin à contrôler. Risque éditorial anticipé : medium_high.",
+      "anticipatedNamingRisk": "medium_high",
+      "confusions": [],
+      "editorialStatus": "retain",
+      "frequency": 0.161,
+      "selectionCategory": "place"
+    },
+    {
+      "ipa": "gɔʁʒ",
+      "word": "gorge",
+      "type": "pictogram",
+      "semanticCategory": "corps",
+      "brief": "La partie du corps « gorge » cadrée assez serrée pour être dominante, avec juste assez de contexte anatomique pour l’identifier. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : terme générique voisin à contrôler. Risque éditorial anticipé : medium_high.",
+      "anticipatedNamingRisk": "medium_high",
+      "confusions": [],
+      "editorialStatus": "retain",
+      "frequency": 0.465,
+      "selectionCategory": "body"
+    },
+    {
+      "ipa": "spɔʁ",
+      "word": "spore",
+      "type": "scene",
+      "semanticCategory": "nature",
+      "brief": "L’élément naturel « spore » comme sujet principal dans une scène minimale, sans autre élément naturel concurrent. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : terme générique voisin à contrôler. Risque éditorial anticipé : medium_high.",
+      "anticipatedNamingRisk": "medium_high",
+      "confusions": [],
+      "editorialStatus": "retain",
+      "frequency": 0.332,
+      "selectionCategory": "nature"
+    },
+    {
+      "ipa": "pul",
+      "word": "poule",
+      "type": "pictogram",
+      "semanticCategory": "animal",
+      "brief": "Un poule seul, corps entier, profil trois-quarts, avec les caractéristiques anatomiques distinctives clairement visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : terme générique voisin à contrôler. Risque éditorial anticipé : medium_high.",
+      "anticipatedNamingRisk": "medium_high",
+      "confusions": [],
+      "editorialStatus": "retain",
+      "frequency": 0.453,
+      "selectionCategory": "animal"
+    },
+    {
+      "ipa": "tɛʁm",
+      "word": "thermes",
+      "type": "scene",
+      "semanticCategory": "lieu",
+      "brief": "Un thermes reconnaissable par ses indices architecturaux ou paysagers les plus typiques, cadrage simple, aucun panneau écrit. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : terme générique voisin à contrôler. Risque éditorial anticipé : medium_high.",
+      "anticipatedNamingRisk": "medium_high",
+      "confusions": [],
+      "editorialStatus": "retain",
+      "frequency": 0.323,
+      "selectionCategory": "place"
+    },
+    {
+      "ipa": "epɔ̃ʒ",
+      "word": "éponge",
+      "type": "pictogram",
+      "semanticCategory": "objet",
+      "brief": "Un éponge seul, entier, vue trois-quarts ou face la plus diagnostique, toutes les parties distinctives visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : terme générique voisin à contrôler. Risque éditorial anticipé : medium_high.",
+      "anticipatedNamingRisk": "medium_high",
+      "confusions": [],
+      "editorialStatus": "retain",
+      "frequency": 0.228,
+      "selectionCategory": "object"
+    },
+    {
+      "ipa": "oval",
+      "word": "ovale",
+      "type": "pictogram",
+      "semanticCategory": "autre",
+      "brief": "Un ovale seul, entier, vue trois-quarts ou face la plus diagnostique, toutes les parties distinctives visibles. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : terme générique voisin à contrôler. Risque éditorial anticipé : medium_high.",
+      "anticipatedNamingRisk": "medium_high",
+      "confusions": [],
+      "editorialStatus": "retain",
+      "frequency": 0.152,
+      "selectionCategory": "shape"
+    },
+    {
+      "ipa": "kʁwasɑ̃",
+      "word": "croissant",
+      "type": "pictogram",
+      "semanticCategory": "aliment",
+      "brief": "Un croissant seul ou une portion canonique de croissant, centré, sans emballage ni marque, aspect alimentaire immédiatement reconnaissable. Cadrage : sujet dominant occupant l’essentiel de l’image, fond uni ou décor strictement minimal. Éléments indispensables : silhouette complète ou partie diagnostique, attribut distinctif principal. À éviter : texte lisible, lettres, chiffres, logos, légendes, accessoires narratifs inutiles et second sujet plus saillant. Confusions probables : terme générique voisin à contrôler. Risque éditorial anticipé : medium_high.",
+      "anticipatedNamingRisk": "medium_high",
+      "confusions": [],
+      "editorialStatus": "retain",
+      "frequency": 0.177,
+      "selectionCategory": "food"
+    }
+  ],
+  "explicitDeferrals": [],
+  "explicitRejections": [
+    [
+      "ma",
+      "ma",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "van",
+      "wan",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "pus",
+      "poucent",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "kan",
+      "kan",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "dɔktœʁ",
+      "docteure",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "dɔktœʁ",
+      "docteures",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "ʁadjo",
+      "radiaux",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "fɑ̃tom",
+      "phantôme",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "fɑ̃tom",
+      "phantômes",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "sɛʁpɑ̃",
+      "serpant",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "eʃɛl",
+      "échèle",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "staty",
+      "statut",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "staty",
+      "statu",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "ʁevɛj",
+      "réveille",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "an",
+      "hane",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "ʁɔk",
+      "rock",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "ʁɔk",
+      "roque",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "talɔ̃",
+      "talons",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "talɔ̃",
+      "tallons",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "dʒin",
+      "gin",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "dʒin",
+      "djinn",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "pɔst",
+      "posts",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "plɑ̃te",
+      "planté",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "tɔʁty",
+      "tortu",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "gʁɛ̃pe",
+      "grimpée",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "sufle",
+      "soufflé",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "ʃɔʁt",
+      "shorte",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "ʃɔʁt",
+      "shortent",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "vagɔ̃",
+      "vagon",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "pɔ̃pje",
+      "pompiez",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "buʃɔ̃",
+      "bouchons",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "ɔɲɔ̃",
+      "ognon",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "ɔɲɔ̃",
+      "oignons",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "jauʁt",
+      "yahourt",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "fɛʁmje",
+      "fermiez",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "baʁo",
+      "barrot",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "amɑ̃d",
+      "amende",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "amɑ̃d",
+      "amende",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "tʁam",
+      "trame",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "tʁam",
+      "trame",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "spiʁal",
+      "spiral",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "spiʁal",
+      "spiralent",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "ɛtʁ",
+      "être",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "ɛtʁ",
+      "estre",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "bulo",
+      "boulot",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "bɑ̃k",
+      "bque",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "spɔʁ",
+      "sport",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "pul",
+      "pool",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "pul",
+      "poulent",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "tɛʁm",
+      "terme",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ],
+    [
+      "tɛʁm",
+      "therme",
+      "Exact lexical relation preserved; no sufficiently controlled concrete visual route in wave 5."
+    ]
+  ],
+  "visibleConventionReferences": {},
+  "preselection": {
+    "preselectedSoundCount": 76,
+    "examinedSoundCount": 76,
+    "source": "data/rebus-productive-bank-wave5-preselection.json"
+  }
+}

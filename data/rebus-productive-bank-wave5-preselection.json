@@ -1,0 +1,5325 @@
+{
+  "version": "5.1-preselection",
+  "status": "editorial_preselection_not_runtime",
+  "method": "word-first explicit concrete lexicon; frequency + sound usefulness + shortness + strong bonus for several distinct concrete homophones; historical/control phrase benchmarks excluded",
+  "usefulExactSoundDenominator": 5741,
+  "currentIndexedSoundCount": 1289,
+  "currentExactRelationCount": 2252,
+  "currentUsefulSeriousSoundCount": 407,
+  "currentSeriousShortTotals": {
+    "oneSyllable": 248,
+    "twoSyllable": 159,
+    "shortUnits": 396
+  },
+  "netNewImageableCandidateSoundCount": 81,
+  "strongResidualCandidateSoundCount": 66,
+  "controlledExtendedCandidateSoundCount": 10,
+  "preselectedSoundCount": 76,
+  "rows": [
+    {
+      "ipa": "sɛʁ",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 41,
+      "usefulWeightedGain": 4087.141,
+      "exactWords": [
+        {
+          "word": "cerf",
+          "pos": "NOM",
+          "frequency": 4.949,
+          "syllableCount": 1,
+          "category": "animal"
+        },
+        {
+          "word": "serre",
+          "pos": "NOM",
+          "frequency": 3.085,
+          "syllableCount": 1,
+          "category": "place"
+        },
+        {
+          "word": "serf",
+          "pos": "NOM",
+          "frequency": 0.294,
+          "syllableCount": 1,
+          "category": "person"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "cerf",
+          "pos": "NOM",
+          "frequency": 4.949,
+          "syllableCount": 1,
+          "category": "animal"
+        },
+        {
+          "word": "serre",
+          "pos": "NOM",
+          "frequency": 3.085,
+          "syllableCount": 1,
+          "category": "place"
+        },
+        {
+          "word": "serf",
+          "pos": "NOM",
+          "frequency": 0.294,
+          "syllableCount": 1,
+          "category": "person"
+        }
+      ],
+      "distinctVisualCandidateCount": 3,
+      "selectionScore": 270.514
+    },
+    {
+      "ipa": "ma",
+      "unitCount": 2,
+      "syllableSpan": 1,
+      "usefulTargetCount": 181,
+      "usefulWeightedGain": 15008.327,
+      "exactWords": [
+        {
+          "word": "mât",
+          "pos": "NOM",
+          "frequency": 1.633,
+          "syllableCount": 1,
+          "category": "object"
+        },
+        {
+          "word": "mas",
+          "pos": "NOM",
+          "frequency": 0.747,
+          "syllableCount": 1,
+          "category": "place"
+        },
+        {
+          "word": "ma",
+          "pos": "NOM",
+          "frequency": 0.12,
+          "syllableCount": 1,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "mât",
+          "pos": "NOM",
+          "frequency": 1.633,
+          "syllableCount": 1,
+          "category": "object"
+        },
+        {
+          "word": "mas",
+          "pos": "NOM",
+          "frequency": 0.747,
+          "syllableCount": 1,
+          "category": "place"
+        }
+      ],
+      "distinctVisualCandidateCount": 2,
+      "selectionScore": 231.514
+    },
+    {
+      "ipa": "van",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 96.537,
+      "exactWords": [
+        {
+          "word": "van",
+          "pos": "NOM",
+          "frequency": 17.598,
+          "syllableCount": 1,
+          "category": "vehicle"
+        },
+        {
+          "word": "vanne",
+          "pos": "NOM",
+          "frequency": 1.301,
+          "syllableCount": 1,
+          "category": "object"
+        },
+        {
+          "word": "wan",
+          "pos": "NOM",
+          "frequency": 0.057,
+          "syllableCount": 1,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "van",
+          "pos": "NOM",
+          "frequency": 17.598,
+          "syllableCount": 1,
+          "category": "vehicle"
+        },
+        {
+          "word": "vanne",
+          "pos": "NOM",
+          "frequency": 1.301,
+          "syllableCount": 1,
+          "category": "object"
+        }
+      ],
+      "distinctVisualCandidateCount": 2,
+      "selectionScore": 198.41
+    },
+    {
+      "ipa": "pus",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 50.535,
+      "exactWords": [
+        {
+          "word": "pouce",
+          "pos": "NOM",
+          "frequency": 11.269,
+          "syllableCount": 1,
+          "category": "body"
+        },
+        {
+          "word": "pousse",
+          "pos": "NOM",
+          "frequency": 5.576,
+          "syllableCount": 1,
+          "category": "nature"
+        },
+        {
+          "word": "poucent",
+          "pos": "NOM",
+          "frequency": 0.009,
+          "syllableCount": 1,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "pouce",
+          "pos": "NOM",
+          "frequency": 11.269,
+          "syllableCount": 1,
+          "category": "body"
+        },
+        {
+          "word": "pousse",
+          "pos": "NOM",
+          "frequency": 5.576,
+          "syllableCount": 1,
+          "category": "nature"
+        }
+      ],
+      "distinctVisualCandidateCount": 2,
+      "selectionScore": 185.625
+    },
+    {
+      "ipa": "palɛ",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 70.088,
+      "exactWords": [
+        {
+          "word": "palais",
+          "pos": "NOM",
+          "frequency": 17.522,
+          "syllableCount": 2,
+          "category": "place"
+        },
+        {
+          "word": "palet",
+          "pos": "NOM",
+          "frequency": 1.038,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "palais",
+          "pos": "NOM",
+          "frequency": 17.522,
+          "syllableCount": 2,
+          "category": "place"
+        },
+        {
+          "word": "palet",
+          "pos": "NOM",
+          "frequency": 1.038,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "distinctVisualCandidateCount": 2,
+      "selectionScore": 179.465
+    },
+    {
+      "ipa": "kan",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 26.25,
+      "exactWords": [
+        {
+          "word": "canne",
+          "pos": "NOM",
+          "frequency": 6.794,
+          "syllableCount": 1,
+          "category": "object"
+        },
+        {
+          "word": "khan",
+          "pos": "NOM",
+          "frequency": 1.155,
+          "syllableCount": 1,
+          "category": "person"
+        },
+        {
+          "word": "kan",
+          "pos": "NOM",
+          "frequency": 0.557,
+          "syllableCount": 1,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "canne",
+          "pos": "NOM",
+          "frequency": 6.794,
+          "syllableCount": 1,
+          "category": "object"
+        },
+        {
+          "word": "khan",
+          "pos": "NOM",
+          "frequency": 1.155,
+          "syllableCount": 1,
+          "category": "person"
+        }
+      ],
+      "distinctVisualCandidateCount": 2,
+      "selectionScore": 172.09
+    },
+    {
+      "ipa": "dɔktœʁ",
+      "unitCount": 6,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 1272.816,
+      "exactWords": [
+        {
+          "word": "docteur",
+          "pos": "NOM",
+          "frequency": 212.136,
+          "syllableCount": 2,
+          "category": "person"
+        },
+        {
+          "word": "docteure",
+          "pos": "NOM",
+          "frequency": 0.196,
+          "syllableCount": 2,
+          "category": null
+        },
+        {
+          "word": "docteures",
+          "pos": "NOM",
+          "frequency": 0.013,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "docteur",
+          "pos": "NOM",
+          "frequency": 212.136,
+          "syllableCount": 2,
+          "category": "person"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 193.525
+    },
+    {
+      "ipa": "maʁʃ",
+      "unitCount": 4,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 158.734,
+      "exactWords": [
+        {
+          "word": "marche",
+          "pos": "NOM",
+          "frequency": 37.889,
+          "syllableCount": 1,
+          "category": "place"
+        },
+        {
+          "word": "marche",
+          "pos": "VER",
+          "frequency": 147.187,
+          "syllableCount": 1,
+          "category": "place"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "marche",
+          "pos": "VER",
+          "frequency": 147.187,
+          "syllableCount": 1,
+          "category": "place"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 191.372
+    },
+    {
+      "ipa": "lɛtʁ",
+      "unitCount": 4,
+      "syllableSpan": 1,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 408.48,
+      "exactWords": [
+        {
+          "word": "lettre",
+          "pos": "NOM",
+          "frequency": 81.696,
+          "syllableCount": 1,
+          "category": "object"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "lettre",
+          "pos": "NOM",
+          "frequency": 81.696,
+          "syllableCount": 1,
+          "category": "object"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 182.646
+    },
+    {
+      "ipa": "ʁadjo",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 3,
+      "usefulWeightedGain": 314.131,
+      "exactWords": [
+        {
+          "word": "radio",
+          "pos": "NOM",
+          "frequency": 61.573,
+          "syllableCount": 2,
+          "category": "object"
+        },
+        {
+          "word": "radiaux",
+          "pos": "ADJ",
+          "frequency": 0.022,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "radio",
+          "pos": "NOM",
+          "frequency": 61.573,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 175.474
+    },
+    {
+      "ipa": "fɑ̃tom",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 144.964,
+      "exactWords": [
+        {
+          "word": "fantôme",
+          "pos": "NOM",
+          "frequency": 36.241,
+          "syllableCount": 2,
+          "category": "person"
+        },
+        {
+          "word": "phantôme",
+          "pos": "NOM",
+          "frequency": 0.006,
+          "syllableCount": 2,
+          "category": null
+        },
+        {
+          "word": "phantômes",
+          "pos": "NOM",
+          "frequency": 0.006,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "fantôme",
+          "pos": "NOM",
+          "frequency": 36.241,
+          "syllableCount": 2,
+          "category": "person"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 153.47
+    },
+    {
+      "ipa": "gaʁaʒ",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 109.912,
+      "exactWords": [
+        {
+          "word": "garage",
+          "pos": "NOM",
+          "frequency": 27.478,
+          "syllableCount": 2,
+          "category": "place"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "garage",
+          "pos": "NOM",
+          "frequency": 27.478,
+          "syllableCount": 2,
+          "category": "place"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 146.182
+    },
+    {
+      "ipa": "dezɛʁ",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 87.776,
+      "exactWords": [
+        {
+          "word": "désert",
+          "pos": "NOM",
+          "frequency": 21.123,
+          "syllableCount": 2,
+          "category": "nature"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "désert",
+          "pos": "NOM",
+          "frequency": 21.123,
+          "syllableCount": 2,
+          "category": "nature"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 143.223
+    },
+    {
+      "ipa": "sɛʁpɑ̃",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 78.052,
+      "exactWords": [
+        {
+          "word": "serpent",
+          "pos": "NOM",
+          "frequency": 19.513,
+          "syllableCount": 2,
+          "category": "animal"
+        },
+        {
+          "word": "serpant",
+          "pos": "VER",
+          "frequency": 0.003,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "serpent",
+          "pos": "NOM",
+          "frequency": 19.513,
+          "syllableCount": 2,
+          "category": "animal"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 137.25
+    },
+    {
+      "ipa": "eʃɛl",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 67.416,
+      "exactWords": [
+        {
+          "word": "échelle",
+          "pos": "NOM",
+          "frequency": 16.854,
+          "syllableCount": 2,
+          "category": "object"
+        },
+        {
+          "word": "échèle",
+          "pos": "NOM",
+          "frequency": 0.006,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "échelle",
+          "pos": "NOM",
+          "frequency": 16.854,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 133.462
+    },
+    {
+      "ipa": "staty",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 64.842,
+      "exactWords": [
+        {
+          "word": "statue",
+          "pos": "NOM",
+          "frequency": 12.266,
+          "syllableCount": 2,
+          "category": "object"
+        },
+        {
+          "word": "statut",
+          "pos": "NOM",
+          "frequency": 9.348,
+          "syllableCount": 2,
+          "category": null
+        },
+        {
+          "word": "statu",
+          "pos": "NOM",
+          "frequency": 0.038,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "statue",
+          "pos": "NOM",
+          "frequency": 12.266,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 130.902
+    },
+    {
+      "ipa": "pɛ̃dʁ",
+      "unitCount": 4,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 35.1,
+      "exactWords": [
+        {
+          "word": "peindre",
+          "pos": "VER",
+          "frequency": 10.468,
+          "syllableCount": 1,
+          "category": "action"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "peindre",
+          "pos": "VER",
+          "frequency": 10.468,
+          "syllableCount": 1,
+          "category": "action"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 129.783
+    },
+    {
+      "ipa": "ʁevɛj",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 42.855,
+      "exactWords": [
+        {
+          "word": "réveil",
+          "pos": "NOM",
+          "frequency": 14.285,
+          "syllableCount": 2,
+          "category": "object"
+        },
+        {
+          "word": "réveille",
+          "pos": "VER",
+          "frequency": 46.693,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "réveil",
+          "pos": "NOM",
+          "frequency": 14.285,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 127.242
+    },
+    {
+      "ipa": "an",
+      "unitCount": 2,
+      "syllableSpan": 1,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 23.07,
+      "exactWords": [
+        {
+          "word": "âne",
+          "pos": "NOM",
+          "frequency": 7.69,
+          "syllableCount": 1,
+          "category": "animal"
+        },
+        {
+          "word": "hane",
+          "pos": "NOM",
+          "frequency": 0.032,
+          "syllableCount": 1,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "âne",
+          "pos": "NOM",
+          "frequency": 7.69,
+          "syllableCount": 1,
+          "category": "animal"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 124.749
+    },
+    {
+      "ipa": "ʁɔk",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 111.056,
+      "exactWords": [
+        {
+          "word": "rock",
+          "pos": "NOM",
+          "frequency": 26.231,
+          "syllableCount": 1,
+          "category": null
+        },
+        {
+          "word": "roc",
+          "pos": "NOM",
+          "frequency": 3.066,
+          "syllableCount": 1,
+          "category": "nature"
+        },
+        {
+          "word": "roque",
+          "pos": "NOM",
+          "frequency": 0.339,
+          "syllableCount": 1,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "roc",
+          "pos": "NOM",
+          "frequency": 3.066,
+          "syllableCount": 1,
+          "category": "nature"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 123.974
+    },
+    {
+      "ipa": "kolin",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 46.128,
+      "exactWords": [
+        {
+          "word": "colline",
+          "pos": "NOM",
+          "frequency": 11.532,
+          "syllableCount": 2,
+          "category": "nature"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "colline",
+          "pos": "NOM",
+          "frequency": 11.532,
+          "syllableCount": 2,
+          "category": "nature"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 123.774
+    },
+    {
+      "ipa": "talɔ̃",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 3,
+      "usefulWeightedGain": 150.742,
+      "exactWords": [
+        {
+          "word": "talon",
+          "pos": "NOM",
+          "frequency": 3.63,
+          "syllableCount": 2,
+          "category": "body"
+        },
+        {
+          "word": "talons",
+          "pos": "VER",
+          "frequency": 0.047,
+          "syllableCount": 2,
+          "category": null
+        },
+        {
+          "word": "tallons",
+          "pos": "VER",
+          "frequency": 0.006,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "talon",
+          "pos": "NOM",
+          "frequency": 3.63,
+          "syllableCount": 2,
+          "category": "body"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 118.283
+    },
+    {
+      "ipa": "dʒin",
+      "unitCount": 4,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 37.68,
+      "exactWords": [
+        {
+          "word": "gin",
+          "pos": "NOM",
+          "frequency": 7.44,
+          "syllableCount": 1,
+          "category": null
+        },
+        {
+          "word": "jean",
+          "pos": "NOM",
+          "frequency": 5.12,
+          "syllableCount": 1,
+          "category": "clothing"
+        },
+        {
+          "word": "djinn",
+          "pos": "NOM",
+          "frequency": 0.579,
+          "syllableCount": 1,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "jean",
+          "pos": "NOM",
+          "frequency": 5.12,
+          "syllableCount": 1,
+          "category": "clothing"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 117.706
+    },
+    {
+      "ipa": "pɔst",
+      "unitCount": 4,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 390.784,
+      "exactWords": [
+        {
+          "word": "poste",
+          "pos": "NOM",
+          "frequency": 77.544,
+          "syllableCount": 1,
+          "category": "place"
+        },
+        {
+          "word": "posts",
+          "pos": "NOM",
+          "frequency": 0.247,
+          "syllableCount": 1,
+          "category": null
+        },
+        {
+          "word": "poste",
+          "pos": "VER",
+          "frequency": 1.696,
+          "syllableCount": 1,
+          "category": "place"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "poste",
+          "pos": "VER",
+          "frequency": 1.696,
+          "syllableCount": 1,
+          "category": "place"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 117.518
+    },
+    {
+      "ipa": "plɑ̃te",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 28.044,
+      "exactWords": [
+        {
+          "word": "planté",
+          "pos": "ADJ",
+          "frequency": 1.424,
+          "syllableCount": 2,
+          "category": null
+        },
+        {
+          "word": "planter",
+          "pos": "VER",
+          "frequency": 9.348,
+          "syllableCount": 2,
+          "category": "action"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "planter",
+          "pos": "VER",
+          "frequency": 9.348,
+          "syllableCount": 2,
+          "category": "action"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 116.556
+    },
+    {
+      "ipa": "maʁɛ̃",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 39.426,
+      "exactWords": [
+        {
+          "word": "marin",
+          "pos": "NOM",
+          "frequency": 6.101,
+          "syllableCount": 2,
+          "category": "person"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "marin",
+          "pos": "NOM",
+          "frequency": 6.101,
+          "syllableCount": 2,
+          "category": "person"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 114.989
+    },
+    {
+      "ipa": "tɔʁty",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 40.737,
+      "exactWords": [
+        {
+          "word": "tortue",
+          "pos": "NOM",
+          "frequency": 5.763,
+          "syllableCount": 2,
+          "category": "animal"
+        },
+        {
+          "word": "tortu",
+          "pos": "ADJ",
+          "frequency": 0.003,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "tortue",
+          "pos": "NOM",
+          "frequency": 5.763,
+          "syllableCount": 2,
+          "category": "animal"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 114.237
+    },
+    {
+      "ipa": "gʁɛ̃pe",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 22.311,
+      "exactWords": [
+        {
+          "word": "grimpée",
+          "pos": "NOM",
+          "frequency": 0.006,
+          "syllableCount": 2,
+          "category": null
+        },
+        {
+          "word": "grimper",
+          "pos": "VER",
+          "frequency": 7.437,
+          "syllableCount": 2,
+          "category": "action"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "grimper",
+          "pos": "VER",
+          "frequency": 7.437,
+          "syllableCount": 2,
+          "category": "action"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 110.933
+    },
+    {
+      "ipa": "seʁyʁ",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 21.75,
+      "exactWords": [
+        {
+          "word": "serrure",
+          "pos": "NOM",
+          "frequency": 7.25,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "serrure",
+          "pos": "NOM",
+          "frequency": 7.25,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 110.315
+    },
+    {
+      "ipa": "sufle",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 23.1,
+      "exactWords": [
+        {
+          "word": "soufflé",
+          "pos": "NOM",
+          "frequency": 1.19,
+          "syllableCount": 2,
+          "category": null
+        },
+        {
+          "word": "souffler",
+          "pos": "VER",
+          "frequency": 5.775,
+          "syllableCount": 2,
+          "category": "action"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "souffler",
+          "pos": "VER",
+          "frequency": 5.775,
+          "syllableCount": 2,
+          "category": "action"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 106.779
+    },
+    {
+      "ipa": "mustaʃ",
+      "unitCount": 6,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 28.254,
+      "exactWords": [
+        {
+          "word": "moustache",
+          "pos": "NOM",
+          "frequency": 9.418,
+          "syllableCount": 2,
+          "category": "body"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "moustache",
+          "pos": "NOM",
+          "frequency": 9.418,
+          "syllableCount": 2,
+          "category": "body"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 106.741
+    },
+    {
+      "ipa": "pilɔt",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 95.07,
+      "exactWords": [
+        {
+          "word": "pilote",
+          "pos": "NOM",
+          "frequency": 22.905,
+          "syllableCount": 2,
+          "category": "person"
+        },
+        {
+          "word": "pilote",
+          "pos": "VER",
+          "frequency": 1.949,
+          "syllableCount": 2,
+          "category": "person"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "pilote",
+          "pos": "VER",
+          "frequency": 1.949,
+          "syllableCount": 2,
+          "category": "person"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 103.472
+    },
+    {
+      "ipa": "ʁənaʁ",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 16.074,
+      "exactWords": [
+        {
+          "word": "renard",
+          "pos": "NOM",
+          "frequency": 5.358,
+          "syllableCount": 2,
+          "category": "animal"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "renard",
+          "pos": "NOM",
+          "frequency": 5.358,
+          "syllableCount": 2,
+          "category": "animal"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 103.095
+    },
+    {
+      "ipa": "ʃɔʁt",
+      "unitCount": 4,
+      "syllableSpan": 1,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 8.956,
+      "exactWords": [
+        {
+          "word": "short",
+          "pos": "NOM",
+          "frequency": 4.478,
+          "syllableCount": 1,
+          "category": "clothing"
+        },
+        {
+          "word": "shorte",
+          "pos": "NOM",
+          "frequency": 0.006,
+          "syllableCount": 1,
+          "category": null
+        },
+        {
+          "word": "shortent",
+          "pos": "NOM",
+          "frequency": 0.003,
+          "syllableCount": 1,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "short",
+          "pos": "NOM",
+          "frequency": 4.478,
+          "syllableCount": 1,
+          "category": "clothing"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 102.34
+    },
+    {
+      "ipa": "ʁɛzɛ̃",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 15.198,
+      "exactWords": [
+        {
+          "word": "raisin",
+          "pos": "NOM",
+          "frequency": 5.066,
+          "syllableCount": 2,
+          "category": "food"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "raisin",
+          "pos": "NOM",
+          "frequency": 5.066,
+          "syllableCount": 2,
+          "category": "food"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 101.787
+    },
+    {
+      "ipa": "bonɛ",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 15.039,
+      "exactWords": [
+        {
+          "word": "bonnet",
+          "pos": "NOM",
+          "frequency": 5.013,
+          "syllableCount": 2,
+          "category": "clothing"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "bonnet",
+          "pos": "NOM",
+          "frequency": 5.013,
+          "syllableCount": 2,
+          "category": "clothing"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 101.542
+    },
+    {
+      "ipa": "ɔ̃gl",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 6.158,
+      "exactWords": [
+        {
+          "word": "ongle",
+          "pos": "NOM",
+          "frequency": 3.079,
+          "syllableCount": 1,
+          "category": "body"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "ongle",
+          "pos": "NOM",
+          "frequency": 3.079,
+          "syllableCount": 1,
+          "category": "body"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 101.133
+    },
+    {
+      "ipa": "vagɔ̃",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 9.012,
+      "exactWords": [
+        {
+          "word": "wagon",
+          "pos": "NOM",
+          "frequency": 4.506,
+          "syllableCount": 2,
+          "category": "vehicle"
+        },
+        {
+          "word": "vagon",
+          "pos": "NOM",
+          "frequency": 0.016,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "wagon",
+          "pos": "NOM",
+          "frequency": 4.506,
+          "syllableCount": 2,
+          "category": "vehicle"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 96.482
+    },
+    {
+      "ipa": "pɔ̃pje",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 8.886,
+      "exactWords": [
+        {
+          "word": "pompier",
+          "pos": "NOM",
+          "frequency": 4.443,
+          "syllableCount": 2,
+          "category": "person"
+        },
+        {
+          "word": "pompiez",
+          "pos": "VER",
+          "frequency": 0.003,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "pompier",
+          "pos": "NOM",
+          "frequency": 4.443,
+          "syllableCount": 2,
+          "category": "person"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 96.163
+    },
+    {
+      "ipa": "buʃɔ̃",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 8.57,
+      "exactWords": [
+        {
+          "word": "bouchon",
+          "pos": "NOM",
+          "frequency": 4.285,
+          "syllableCount": 2,
+          "category": "object"
+        },
+        {
+          "word": "bouchons",
+          "pos": "VER",
+          "frequency": 0.028,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "bouchon",
+          "pos": "NOM",
+          "frequency": 4.285,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 95.346
+    },
+    {
+      "ipa": "vɔlkɑ̃",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 8.556,
+      "exactWords": [
+        {
+          "word": "volcan",
+          "pos": "NOM",
+          "frequency": 4.278,
+          "syllableCount": 2,
+          "category": "nature"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "volcan",
+          "pos": "NOM",
+          "frequency": 4.278,
+          "syllableCount": 2,
+          "category": "nature"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 95.309
+    },
+    {
+      "ipa": "lezaʁ",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 8.488,
+      "exactWords": [
+        {
+          "word": "lézard",
+          "pos": "NOM",
+          "frequency": 4.244,
+          "syllableCount": 2,
+          "category": "animal"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "lézard",
+          "pos": "NOM",
+          "frequency": 4.244,
+          "syllableCount": 2,
+          "category": "animal"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 95.13
+    },
+    {
+      "ipa": "patat",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 8.488,
+      "exactWords": [
+        {
+          "word": "patate",
+          "pos": "NOM",
+          "frequency": 4.244,
+          "syllableCount": 2,
+          "category": "food"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "patate",
+          "pos": "NOM",
+          "frequency": 4.244,
+          "syllableCount": 2,
+          "category": "food"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 95.13
+    },
+    {
+      "ipa": "ɔɲɔ̃",
+      "unitCount": 3,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 6.07,
+      "exactWords": [
+        {
+          "word": "oignon",
+          "pos": "NOM",
+          "frequency": 3.035,
+          "syllableCount": 2,
+          "category": "food"
+        },
+        {
+          "word": "ognon",
+          "pos": "NOM",
+          "frequency": 0.009,
+          "syllableCount": 2,
+          "category": null
+        },
+        {
+          "word": "oignons",
+          "pos": "VER",
+          "frequency": 0.051,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "oignon",
+          "pos": "NOM",
+          "frequency": 3.035,
+          "syllableCount": 2,
+          "category": "food"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 94.829
+    },
+    {
+      "ipa": "biskɥi",
+      "unitCount": 6,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 16.11,
+      "exactWords": [
+        {
+          "word": "biscuit",
+          "pos": "NOM",
+          "frequency": 5.37,
+          "syllableCount": 2,
+          "category": "food"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "biscuit",
+          "pos": "NOM",
+          "frequency": 5.37,
+          "syllableCount": 2,
+          "category": "food"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 93.148
+    },
+    {
+      "ipa": "ʃosɛt",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 7.386,
+      "exactWords": [
+        {
+          "word": "chaussette",
+          "pos": "NOM",
+          "frequency": 3.693,
+          "syllableCount": 2,
+          "category": "clothing"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "chaussette",
+          "pos": "NOM",
+          "frequency": 3.693,
+          "syllableCount": 2,
+          "category": "clothing"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 92.046
+    },
+    {
+      "ipa": "jauʁt",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 7.36,
+      "exactWords": [
+        {
+          "word": "yaourt",
+          "pos": "NOM",
+          "frequency": 3.68,
+          "syllableCount": 2,
+          "category": "food"
+        },
+        {
+          "word": "yahourt",
+          "pos": "NOM",
+          "frequency": 0.206,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "yaourt",
+          "pos": "NOM",
+          "frequency": 3.68,
+          "syllableCount": 2,
+          "category": "food"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 91.968
+    },
+    {
+      "ipa": "kusɛ̃",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 7.342,
+      "exactWords": [
+        {
+          "word": "coussin",
+          "pos": "NOM",
+          "frequency": 3.671,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "coussin",
+          "pos": "NOM",
+          "frequency": 3.671,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 91.915
+    },
+    {
+      "ipa": "fɛʁmje",
+      "unitCount": 6,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 15.084,
+      "exactWords": [
+        {
+          "word": "fermier",
+          "pos": "NOM",
+          "frequency": 5.028,
+          "syllableCount": 2,
+          "category": "person"
+        },
+        {
+          "word": "fermiez",
+          "pos": "VER",
+          "frequency": 0.516,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "fermier",
+          "pos": "NOM",
+          "frequency": 5.028,
+          "syllableCount": 2,
+          "category": "person"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 91.611
+    },
+    {
+      "ipa": "tapi",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 90.128,
+      "exactWords": [
+        {
+          "word": "tapis",
+          "pos": "NOM",
+          "frequency": 21.924,
+          "syllableCount": 2,
+          "category": "object"
+        },
+        {
+          "word": "tapis",
+          "pos": "VER",
+          "frequency": 0.608,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "tapis",
+          "pos": "VER",
+          "frequency": 0.608,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 90.973
+    },
+    {
+      "ipa": "səʁiz",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 6.594,
+      "exactWords": [
+        {
+          "word": "cerise",
+          "pos": "NOM",
+          "frequency": 3.297,
+          "syllableCount": 2,
+          "category": "food"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "cerise",
+          "pos": "NOM",
+          "frequency": 3.297,
+          "syllableCount": 2,
+          "category": "food"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 89.588
+    },
+    {
+      "ipa": "ibu",
+      "unitCount": 3,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 4.626,
+      "exactWords": [
+        {
+          "word": "hibou",
+          "pos": "NOM",
+          "frequency": 2.313,
+          "syllableCount": 2,
+          "category": "animal"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "hibou",
+          "pos": "NOM",
+          "frequency": 2.313,
+          "syllableCount": 2,
+          "category": "animal"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 89.287
+    },
+    {
+      "ipa": "fuʁʃɛt",
+      "unitCount": 6,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 9.532,
+      "exactWords": [
+        {
+          "word": "fourchette",
+          "pos": "NOM",
+          "frequency": 4.766,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "fourchette",
+          "pos": "NOM",
+          "frequency": 4.766,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 87.759
+    },
+    {
+      "ipa": "vaʃ",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 5.526,
+      "exactWords": [
+        {
+          "word": "vache",
+          "pos": "NOM",
+          "frequency": 1.12,
+          "syllableCount": 1,
+          "category": "animal"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "vache",
+          "pos": "NOM",
+          "frequency": 1.12,
+          "syllableCount": 1,
+          "category": "animal"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 87.397
+    },
+    {
+      "ipa": "tʁijɑ̃gl",
+      "unitCount": 7,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 9.354,
+      "exactWords": [
+        {
+          "word": "triangle",
+          "pos": "NOM",
+          "frequency": 4.677,
+          "syllableCount": 2,
+          "category": "shape"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "triangle",
+          "pos": "NOM",
+          "frequency": 4.677,
+          "syllableCount": 2,
+          "category": "shape"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 87.328
+    },
+    {
+      "ipa": "baʁo",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 5.842,
+      "exactWords": [
+        {
+          "word": "barreau",
+          "pos": "NOM",
+          "frequency": 2.921,
+          "syllableCount": 2,
+          "category": "object"
+        },
+        {
+          "word": "barrot",
+          "pos": "NOM",
+          "frequency": 0.003,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "barreau",
+          "pos": "NOM",
+          "frequency": 2.921,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 87.027
+    },
+    {
+      "ipa": "amɑ̃d",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 24,
+      "exactWords": [
+        {
+          "word": "amende",
+          "pos": "NOM",
+          "frequency": 8,
+          "syllableCount": 2,
+          "category": null
+        },
+        {
+          "word": "amande",
+          "pos": "NOM",
+          "frequency": 1.092,
+          "syllableCount": 2,
+          "category": "food"
+        },
+        {
+          "word": "amende",
+          "pos": "VER",
+          "frequency": 0.111,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "amande",
+          "pos": "NOM",
+          "frequency": 1.092,
+          "syllableCount": 2,
+          "category": "food"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 83.533
+    },
+    {
+      "ipa": "dofɛ̃",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 4.86,
+      "exactWords": [
+        {
+          "word": "dauphin",
+          "pos": "NOM",
+          "frequency": 2.43,
+          "syllableCount": 2,
+          "category": "animal"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "dauphin",
+          "pos": "NOM",
+          "frequency": 2.43,
+          "syllableCount": 2,
+          "category": "animal"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 83.267
+    },
+    {
+      "ipa": "pʁeʁi",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 4.664,
+      "exactWords": [
+        {
+          "word": "prairie",
+          "pos": "NOM",
+          "frequency": 2.332,
+          "syllableCount": 2,
+          "category": "nature"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "prairie",
+          "pos": "NOM",
+          "frequency": 2.332,
+          "syllableCount": 2,
+          "category": "nature"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 82.449
+    },
+    {
+      "ipa": "tʁam",
+      "unitCount": 4,
+      "syllableSpan": 1,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 3.792,
+      "exactWords": [
+        {
+          "word": "tram",
+          "pos": "NOM",
+          "frequency": 1.478,
+          "syllableCount": 1,
+          "category": "vehicle"
+        },
+        {
+          "word": "trame",
+          "pos": "NOM",
+          "frequency": 0.652,
+          "syllableCount": 1,
+          "category": null
+        },
+        {
+          "word": "trame",
+          "pos": "VER",
+          "frequency": 1.896,
+          "syllableCount": 1,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "tram",
+          "pos": "NOM",
+          "frequency": 1.478,
+          "syllableCount": 1,
+          "category": "vehicle"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 81.356
+    },
+    {
+      "ipa": "klavje",
+      "unitCount": 6,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 6.482,
+      "exactWords": [
+        {
+          "word": "clavier",
+          "pos": "NOM",
+          "frequency": 3.241,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "clavier",
+          "pos": "NOM",
+          "frequency": 3.241,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 79.222
+    },
+    {
+      "ipa": "ʒiʁaf",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 3.842,
+      "exactWords": [
+        {
+          "word": "girafe",
+          "pos": "NOM",
+          "frequency": 1.921,
+          "syllableCount": 2,
+          "category": "animal"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "girafe",
+          "pos": "NOM",
+          "frequency": 1.921,
+          "syllableCount": 2,
+          "category": "animal"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 78.718
+    },
+    {
+      "ipa": "pɛ̃so",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 3.708,
+      "exactWords": [
+        {
+          "word": "pinceau",
+          "pos": "NOM",
+          "frequency": 1.854,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "pinceau",
+          "pos": "NOM",
+          "frequency": 1.854,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 78.058
+    },
+    {
+      "ipa": "fuʁmi",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 3.658,
+      "exactWords": [
+        {
+          "word": "fourmi",
+          "pos": "NOM",
+          "frequency": 1.829,
+          "syllableCount": 2,
+          "category": "animal"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "fourmi",
+          "pos": "NOM",
+          "frequency": 1.829,
+          "syllableCount": 2,
+          "category": "animal"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 77.807
+    },
+    {
+      "ipa": "tʁaktœʁ",
+      "unitCount": 7,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 4.982,
+      "exactWords": [
+        {
+          "word": "tracteur",
+          "pos": "NOM",
+          "frequency": 2.491,
+          "syllableCount": 2,
+          "category": "vehicle"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "tracteur",
+          "pos": "NOM",
+          "frequency": 2.491,
+          "syllableCount": 2,
+          "category": "vehicle"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 73.763
+    },
+    {
+      "ipa": "spiʁal",
+      "unitCount": 6,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 4.342,
+      "exactWords": [
+        {
+          "word": "spirale",
+          "pos": "NOM",
+          "frequency": 2.171,
+          "syllableCount": 2,
+          "category": "shape"
+        },
+        {
+          "word": "spiral",
+          "pos": "ADJ",
+          "frequency": 0.149,
+          "syllableCount": 2,
+          "category": null
+        },
+        {
+          "word": "spiralent",
+          "pos": "VER",
+          "frequency": 0.003,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "spirale",
+          "pos": "NOM",
+          "frequency": 2.171,
+          "syllableCount": 2,
+          "category": "shape"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 71.048
+    },
+    {
+      "ipa": "ɛtʁ",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 8304.702,
+      "exactWords": [
+        {
+          "word": "être",
+          "pos": "NOM",
+          "frequency": 79.44,
+          "syllableCount": 1,
+          "category": null
+        },
+        {
+          "word": "hêtre",
+          "pos": "NOM",
+          "frequency": 0.152,
+          "syllableCount": 1,
+          "category": "nature"
+        },
+        {
+          "word": "estre",
+          "pos": "NOM",
+          "frequency": 0.025,
+          "syllableCount": 1,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "hêtre",
+          "pos": "NOM",
+          "frequency": 0.152,
+          "syllableCount": 1,
+          "category": "nature"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 125.241
+    },
+    {
+      "ipa": "bulo",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 1267.404,
+      "exactWords": [
+        {
+          "word": "boulot",
+          "pos": "NOM",
+          "frequency": 211.234,
+          "syllableCount": 2,
+          "category": null
+        },
+        {
+          "word": "bouleau",
+          "pos": "NOM",
+          "frequency": 0.408,
+          "syllableCount": 2,
+          "category": "nature"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "bouleau",
+          "pos": "NOM",
+          "frequency": 0.408,
+          "syllableCount": 2,
+          "category": "nature"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 103.1
+    },
+    {
+      "ipa": "bɑ̃k",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 310.52,
+      "exactWords": [
+        {
+          "word": "banque",
+          "pos": "NOM",
+          "frequency": 62.104,
+          "syllableCount": 1,
+          "category": "place"
+        },
+        {
+          "word": "bque",
+          "pos": "NOM",
+          "frequency": 0.003,
+          "syllableCount": 1,
+          "category": null
+        },
+        {
+          "word": "banque",
+          "pos": "VER",
+          "frequency": 0.161,
+          "syllableCount": 1,
+          "category": "place"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "banque",
+          "pos": "VER",
+          "frequency": 0.161,
+          "syllableCount": 1,
+          "category": "place"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 102.414
+    },
+    {
+      "ipa": "gɔʁʒ",
+      "unitCount": 4,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 124.424,
+      "exactWords": [
+        {
+          "word": "gorge",
+          "pos": "NOM",
+          "frequency": 28.652,
+          "syllableCount": 1,
+          "category": "body"
+        },
+        {
+          "word": "gorge",
+          "pos": "VER",
+          "frequency": 0.465,
+          "syllableCount": 1,
+          "category": "body"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "gorge",
+          "pos": "VER",
+          "frequency": 0.465,
+          "syllableCount": 1,
+          "category": "body"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 97.347
+    },
+    {
+      "ipa": "spɔʁ",
+      "unitCount": 4,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 133.722,
+      "exactWords": [
+        {
+          "word": "sport",
+          "pos": "NOM",
+          "frequency": 31.263,
+          "syllableCount": 1,
+          "category": null
+        },
+        {
+          "word": "spore",
+          "pos": "NOM",
+          "frequency": 0.332,
+          "syllableCount": 1,
+          "category": "nature"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "spore",
+          "pos": "NOM",
+          "frequency": 0.332,
+          "syllableCount": 1,
+          "category": "nature"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 95.944
+    },
+    {
+      "ipa": "pul",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 24.51,
+      "exactWords": [
+        {
+          "word": "pool",
+          "pos": "NOM",
+          "frequency": 0.937,
+          "syllableCount": 1,
+          "category": null
+        },
+        {
+          "word": "poule",
+          "pos": "NOM",
+          "frequency": 0.453,
+          "syllableCount": 1,
+          "category": "animal"
+        },
+        {
+          "word": "poulent",
+          "pos": "NOM",
+          "frequency": 0.009,
+          "syllableCount": 1,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "poule",
+          "pos": "NOM",
+          "frequency": 0.453,
+          "syllableCount": 1,
+          "category": "animal"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 93.034
+    },
+    {
+      "ipa": "tɛʁm",
+      "unitCount": 4,
+      "syllableSpan": 1,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 126.684,
+      "exactWords": [
+        {
+          "word": "terme",
+          "pos": "NOM",
+          "frequency": 31.671,
+          "syllableCount": 1,
+          "category": null
+        },
+        {
+          "word": "thermes",
+          "pos": "NOM",
+          "frequency": 0.323,
+          "syllableCount": 1,
+          "category": "place"
+        },
+        {
+          "word": "therme",
+          "pos": "NOM",
+          "frequency": 0.013,
+          "syllableCount": 1,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "thermes",
+          "pos": "NOM",
+          "frequency": 0.323,
+          "syllableCount": 1,
+          "category": "place"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 91.783
+    },
+    {
+      "ipa": "epɔ̃ʒ",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 16.044,
+      "exactWords": [
+        {
+          "word": "éponge",
+          "pos": "NOM",
+          "frequency": 5.348,
+          "syllableCount": 2,
+          "category": "object"
+        },
+        {
+          "word": "éponge",
+          "pos": "VER",
+          "frequency": 0.228,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "éponge",
+          "pos": "VER",
+          "frequency": 0.228,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 70.197
+    },
+    {
+      "ipa": "oval",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 3,
+      "exactWords": [
+        {
+          "word": "ovale",
+          "pos": "NOM",
+          "frequency": 0.152,
+          "syllableCount": 2,
+          "category": "shape"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "ovale",
+          "pos": "NOM",
+          "frequency": 0.152,
+          "syllableCount": 2,
+          "category": "shape"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 58.772
+    },
+    {
+      "ipa": "kʁwasɑ̃",
+      "unitCount": 6,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 3.196,
+      "exactWords": [
+        {
+          "word": "croissant",
+          "pos": "NOM",
+          "frequency": 1.598,
+          "syllableCount": 2,
+          "category": "food"
+        },
+        {
+          "word": "croissant",
+          "pos": "VER",
+          "frequency": 0.177,
+          "syllableCount": 2,
+          "category": "food"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "croissant",
+          "pos": "VER",
+          "frequency": 0.177,
+          "syllableCount": 2,
+          "category": "food"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 49.537
+    }
+  ],
+  "reservoirTop": [
+    {
+      "ipa": "sɛʁ",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 41,
+      "usefulWeightedGain": 4087.141,
+      "exactWords": [
+        {
+          "word": "cerf",
+          "pos": "NOM",
+          "frequency": 4.949,
+          "syllableCount": 1,
+          "category": "animal"
+        },
+        {
+          "word": "serre",
+          "pos": "NOM",
+          "frequency": 3.085,
+          "syllableCount": 1,
+          "category": "place"
+        },
+        {
+          "word": "serf",
+          "pos": "NOM",
+          "frequency": 0.294,
+          "syllableCount": 1,
+          "category": "person"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "cerf",
+          "pos": "NOM",
+          "frequency": 4.949,
+          "syllableCount": 1,
+          "category": "animal"
+        },
+        {
+          "word": "serre",
+          "pos": "NOM",
+          "frequency": 3.085,
+          "syllableCount": 1,
+          "category": "place"
+        },
+        {
+          "word": "serf",
+          "pos": "NOM",
+          "frequency": 0.294,
+          "syllableCount": 1,
+          "category": "person"
+        }
+      ],
+      "distinctVisualCandidateCount": 3,
+      "selectionScore": 270.514
+    },
+    {
+      "ipa": "ma",
+      "unitCount": 2,
+      "syllableSpan": 1,
+      "usefulTargetCount": 181,
+      "usefulWeightedGain": 15008.327,
+      "exactWords": [
+        {
+          "word": "mât",
+          "pos": "NOM",
+          "frequency": 1.633,
+          "syllableCount": 1,
+          "category": "object"
+        },
+        {
+          "word": "mas",
+          "pos": "NOM",
+          "frequency": 0.747,
+          "syllableCount": 1,
+          "category": "place"
+        },
+        {
+          "word": "ma",
+          "pos": "NOM",
+          "frequency": 0.12,
+          "syllableCount": 1,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "mât",
+          "pos": "NOM",
+          "frequency": 1.633,
+          "syllableCount": 1,
+          "category": "object"
+        },
+        {
+          "word": "mas",
+          "pos": "NOM",
+          "frequency": 0.747,
+          "syllableCount": 1,
+          "category": "place"
+        }
+      ],
+      "distinctVisualCandidateCount": 2,
+      "selectionScore": 231.514
+    },
+    {
+      "ipa": "van",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 96.537,
+      "exactWords": [
+        {
+          "word": "van",
+          "pos": "NOM",
+          "frequency": 17.598,
+          "syllableCount": 1,
+          "category": "vehicle"
+        },
+        {
+          "word": "vanne",
+          "pos": "NOM",
+          "frequency": 1.301,
+          "syllableCount": 1,
+          "category": "object"
+        },
+        {
+          "word": "wan",
+          "pos": "NOM",
+          "frequency": 0.057,
+          "syllableCount": 1,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "van",
+          "pos": "NOM",
+          "frequency": 17.598,
+          "syllableCount": 1,
+          "category": "vehicle"
+        },
+        {
+          "word": "vanne",
+          "pos": "NOM",
+          "frequency": 1.301,
+          "syllableCount": 1,
+          "category": "object"
+        }
+      ],
+      "distinctVisualCandidateCount": 2,
+      "selectionScore": 198.41
+    },
+    {
+      "ipa": "pus",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 50.535,
+      "exactWords": [
+        {
+          "word": "pouce",
+          "pos": "NOM",
+          "frequency": 11.269,
+          "syllableCount": 1,
+          "category": "body"
+        },
+        {
+          "word": "pousse",
+          "pos": "NOM",
+          "frequency": 5.576,
+          "syllableCount": 1,
+          "category": "nature"
+        },
+        {
+          "word": "poucent",
+          "pos": "NOM",
+          "frequency": 0.009,
+          "syllableCount": 1,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "pouce",
+          "pos": "NOM",
+          "frequency": 11.269,
+          "syllableCount": 1,
+          "category": "body"
+        },
+        {
+          "word": "pousse",
+          "pos": "NOM",
+          "frequency": 5.576,
+          "syllableCount": 1,
+          "category": "nature"
+        }
+      ],
+      "distinctVisualCandidateCount": 2,
+      "selectionScore": 185.625
+    },
+    {
+      "ipa": "palɛ",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 70.088,
+      "exactWords": [
+        {
+          "word": "palais",
+          "pos": "NOM",
+          "frequency": 17.522,
+          "syllableCount": 2,
+          "category": "place"
+        },
+        {
+          "word": "palet",
+          "pos": "NOM",
+          "frequency": 1.038,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "palais",
+          "pos": "NOM",
+          "frequency": 17.522,
+          "syllableCount": 2,
+          "category": "place"
+        },
+        {
+          "word": "palet",
+          "pos": "NOM",
+          "frequency": 1.038,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "distinctVisualCandidateCount": 2,
+      "selectionScore": 179.465
+    },
+    {
+      "ipa": "kan",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 26.25,
+      "exactWords": [
+        {
+          "word": "canne",
+          "pos": "NOM",
+          "frequency": 6.794,
+          "syllableCount": 1,
+          "category": "object"
+        },
+        {
+          "word": "khan",
+          "pos": "NOM",
+          "frequency": 1.155,
+          "syllableCount": 1,
+          "category": "person"
+        },
+        {
+          "word": "kan",
+          "pos": "NOM",
+          "frequency": 0.557,
+          "syllableCount": 1,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "canne",
+          "pos": "NOM",
+          "frequency": 6.794,
+          "syllableCount": 1,
+          "category": "object"
+        },
+        {
+          "word": "khan",
+          "pos": "NOM",
+          "frequency": 1.155,
+          "syllableCount": 1,
+          "category": "person"
+        }
+      ],
+      "distinctVisualCandidateCount": 2,
+      "selectionScore": 172.09
+    },
+    {
+      "ipa": "dɔktœʁ",
+      "unitCount": 6,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 1272.816,
+      "exactWords": [
+        {
+          "word": "docteur",
+          "pos": "NOM",
+          "frequency": 212.136,
+          "syllableCount": 2,
+          "category": "person"
+        },
+        {
+          "word": "docteure",
+          "pos": "NOM",
+          "frequency": 0.196,
+          "syllableCount": 2,
+          "category": null
+        },
+        {
+          "word": "docteures",
+          "pos": "NOM",
+          "frequency": 0.013,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "docteur",
+          "pos": "NOM",
+          "frequency": 212.136,
+          "syllableCount": 2,
+          "category": "person"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 193.525
+    },
+    {
+      "ipa": "maʁʃ",
+      "unitCount": 4,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 158.734,
+      "exactWords": [
+        {
+          "word": "marche",
+          "pos": "NOM",
+          "frequency": 37.889,
+          "syllableCount": 1,
+          "category": "place"
+        },
+        {
+          "word": "marche",
+          "pos": "VER",
+          "frequency": 147.187,
+          "syllableCount": 1,
+          "category": "place"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "marche",
+          "pos": "VER",
+          "frequency": 147.187,
+          "syllableCount": 1,
+          "category": "place"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 191.372
+    },
+    {
+      "ipa": "lɛtʁ",
+      "unitCount": 4,
+      "syllableSpan": 1,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 408.48,
+      "exactWords": [
+        {
+          "word": "lettre",
+          "pos": "NOM",
+          "frequency": 81.696,
+          "syllableCount": 1,
+          "category": "object"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "lettre",
+          "pos": "NOM",
+          "frequency": 81.696,
+          "syllableCount": 1,
+          "category": "object"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 182.646
+    },
+    {
+      "ipa": "ʁadjo",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 3,
+      "usefulWeightedGain": 314.131,
+      "exactWords": [
+        {
+          "word": "radio",
+          "pos": "NOM",
+          "frequency": 61.573,
+          "syllableCount": 2,
+          "category": "object"
+        },
+        {
+          "word": "radiaux",
+          "pos": "ADJ",
+          "frequency": 0.022,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "radio",
+          "pos": "NOM",
+          "frequency": 61.573,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 175.474
+    },
+    {
+      "ipa": "fɑ̃tom",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 144.964,
+      "exactWords": [
+        {
+          "word": "fantôme",
+          "pos": "NOM",
+          "frequency": 36.241,
+          "syllableCount": 2,
+          "category": "person"
+        },
+        {
+          "word": "phantôme",
+          "pos": "NOM",
+          "frequency": 0.006,
+          "syllableCount": 2,
+          "category": null
+        },
+        {
+          "word": "phantômes",
+          "pos": "NOM",
+          "frequency": 0.006,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "fantôme",
+          "pos": "NOM",
+          "frequency": 36.241,
+          "syllableCount": 2,
+          "category": "person"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 153.47
+    },
+    {
+      "ipa": "gaʁaʒ",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 109.912,
+      "exactWords": [
+        {
+          "word": "garage",
+          "pos": "NOM",
+          "frequency": 27.478,
+          "syllableCount": 2,
+          "category": "place"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "garage",
+          "pos": "NOM",
+          "frequency": 27.478,
+          "syllableCount": 2,
+          "category": "place"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 146.182
+    },
+    {
+      "ipa": "dezɛʁ",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 87.776,
+      "exactWords": [
+        {
+          "word": "désert",
+          "pos": "NOM",
+          "frequency": 21.123,
+          "syllableCount": 2,
+          "category": "nature"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "désert",
+          "pos": "NOM",
+          "frequency": 21.123,
+          "syllableCount": 2,
+          "category": "nature"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 143.223
+    },
+    {
+      "ipa": "sɛʁpɑ̃",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 78.052,
+      "exactWords": [
+        {
+          "word": "serpent",
+          "pos": "NOM",
+          "frequency": 19.513,
+          "syllableCount": 2,
+          "category": "animal"
+        },
+        {
+          "word": "serpant",
+          "pos": "VER",
+          "frequency": 0.003,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "serpent",
+          "pos": "NOM",
+          "frequency": 19.513,
+          "syllableCount": 2,
+          "category": "animal"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 137.25
+    },
+    {
+      "ipa": "eʃɛl",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 67.416,
+      "exactWords": [
+        {
+          "word": "échelle",
+          "pos": "NOM",
+          "frequency": 16.854,
+          "syllableCount": 2,
+          "category": "object"
+        },
+        {
+          "word": "échèle",
+          "pos": "NOM",
+          "frequency": 0.006,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "échelle",
+          "pos": "NOM",
+          "frequency": 16.854,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 133.462
+    },
+    {
+      "ipa": "staty",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 64.842,
+      "exactWords": [
+        {
+          "word": "statue",
+          "pos": "NOM",
+          "frequency": 12.266,
+          "syllableCount": 2,
+          "category": "object"
+        },
+        {
+          "word": "statut",
+          "pos": "NOM",
+          "frequency": 9.348,
+          "syllableCount": 2,
+          "category": null
+        },
+        {
+          "word": "statu",
+          "pos": "NOM",
+          "frequency": 0.038,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "statue",
+          "pos": "NOM",
+          "frequency": 12.266,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 130.902
+    },
+    {
+      "ipa": "pɛ̃dʁ",
+      "unitCount": 4,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 35.1,
+      "exactWords": [
+        {
+          "word": "peindre",
+          "pos": "VER",
+          "frequency": 10.468,
+          "syllableCount": 1,
+          "category": "action"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "peindre",
+          "pos": "VER",
+          "frequency": 10.468,
+          "syllableCount": 1,
+          "category": "action"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 129.783
+    },
+    {
+      "ipa": "ʁevɛj",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 42.855,
+      "exactWords": [
+        {
+          "word": "réveil",
+          "pos": "NOM",
+          "frequency": 14.285,
+          "syllableCount": 2,
+          "category": "object"
+        },
+        {
+          "word": "réveille",
+          "pos": "VER",
+          "frequency": 46.693,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "réveil",
+          "pos": "NOM",
+          "frequency": 14.285,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 127.242
+    },
+    {
+      "ipa": "ɛtʁ",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 8304.702,
+      "exactWords": [
+        {
+          "word": "être",
+          "pos": "NOM",
+          "frequency": 79.44,
+          "syllableCount": 1,
+          "category": null
+        },
+        {
+          "word": "hêtre",
+          "pos": "NOM",
+          "frequency": 0.152,
+          "syllableCount": 1,
+          "category": "nature"
+        },
+        {
+          "word": "estre",
+          "pos": "NOM",
+          "frequency": 0.025,
+          "syllableCount": 1,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "hêtre",
+          "pos": "NOM",
+          "frequency": 0.152,
+          "syllableCount": 1,
+          "category": "nature"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 125.241
+    },
+    {
+      "ipa": "an",
+      "unitCount": 2,
+      "syllableSpan": 1,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 23.07,
+      "exactWords": [
+        {
+          "word": "âne",
+          "pos": "NOM",
+          "frequency": 7.69,
+          "syllableCount": 1,
+          "category": "animal"
+        },
+        {
+          "word": "hane",
+          "pos": "NOM",
+          "frequency": 0.032,
+          "syllableCount": 1,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "âne",
+          "pos": "NOM",
+          "frequency": 7.69,
+          "syllableCount": 1,
+          "category": "animal"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 124.749
+    },
+    {
+      "ipa": "ʁɔk",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 111.056,
+      "exactWords": [
+        {
+          "word": "rock",
+          "pos": "NOM",
+          "frequency": 26.231,
+          "syllableCount": 1,
+          "category": null
+        },
+        {
+          "word": "roc",
+          "pos": "NOM",
+          "frequency": 3.066,
+          "syllableCount": 1,
+          "category": "nature"
+        },
+        {
+          "word": "roque",
+          "pos": "NOM",
+          "frequency": 0.339,
+          "syllableCount": 1,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "roc",
+          "pos": "NOM",
+          "frequency": 3.066,
+          "syllableCount": 1,
+          "category": "nature"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 123.974
+    },
+    {
+      "ipa": "kolin",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 46.128,
+      "exactWords": [
+        {
+          "word": "colline",
+          "pos": "NOM",
+          "frequency": 11.532,
+          "syllableCount": 2,
+          "category": "nature"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "colline",
+          "pos": "NOM",
+          "frequency": 11.532,
+          "syllableCount": 2,
+          "category": "nature"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 123.774
+    },
+    {
+      "ipa": "talɔ̃",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 3,
+      "usefulWeightedGain": 150.742,
+      "exactWords": [
+        {
+          "word": "talon",
+          "pos": "NOM",
+          "frequency": 3.63,
+          "syllableCount": 2,
+          "category": "body"
+        },
+        {
+          "word": "talons",
+          "pos": "VER",
+          "frequency": 0.047,
+          "syllableCount": 2,
+          "category": null
+        },
+        {
+          "word": "tallons",
+          "pos": "VER",
+          "frequency": 0.006,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "talon",
+          "pos": "NOM",
+          "frequency": 3.63,
+          "syllableCount": 2,
+          "category": "body"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 118.283
+    },
+    {
+      "ipa": "dʒin",
+      "unitCount": 4,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 37.68,
+      "exactWords": [
+        {
+          "word": "gin",
+          "pos": "NOM",
+          "frequency": 7.44,
+          "syllableCount": 1,
+          "category": null
+        },
+        {
+          "word": "jean",
+          "pos": "NOM",
+          "frequency": 5.12,
+          "syllableCount": 1,
+          "category": "clothing"
+        },
+        {
+          "word": "djinn",
+          "pos": "NOM",
+          "frequency": 0.579,
+          "syllableCount": 1,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "jean",
+          "pos": "NOM",
+          "frequency": 5.12,
+          "syllableCount": 1,
+          "category": "clothing"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 117.706
+    },
+    {
+      "ipa": "pɔst",
+      "unitCount": 4,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 390.784,
+      "exactWords": [
+        {
+          "word": "poste",
+          "pos": "NOM",
+          "frequency": 77.544,
+          "syllableCount": 1,
+          "category": "place"
+        },
+        {
+          "word": "posts",
+          "pos": "NOM",
+          "frequency": 0.247,
+          "syllableCount": 1,
+          "category": null
+        },
+        {
+          "word": "poste",
+          "pos": "VER",
+          "frequency": 1.696,
+          "syllableCount": 1,
+          "category": "place"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "poste",
+          "pos": "VER",
+          "frequency": 1.696,
+          "syllableCount": 1,
+          "category": "place"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 117.518
+    },
+    {
+      "ipa": "plɑ̃te",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 28.044,
+      "exactWords": [
+        {
+          "word": "planté",
+          "pos": "ADJ",
+          "frequency": 1.424,
+          "syllableCount": 2,
+          "category": null
+        },
+        {
+          "word": "planter",
+          "pos": "VER",
+          "frequency": 9.348,
+          "syllableCount": 2,
+          "category": "action"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "planter",
+          "pos": "VER",
+          "frequency": 9.348,
+          "syllableCount": 2,
+          "category": "action"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 116.556
+    },
+    {
+      "ipa": "maʁɛ̃",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 39.426,
+      "exactWords": [
+        {
+          "word": "marin",
+          "pos": "NOM",
+          "frequency": 6.101,
+          "syllableCount": 2,
+          "category": "person"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "marin",
+          "pos": "NOM",
+          "frequency": 6.101,
+          "syllableCount": 2,
+          "category": "person"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 114.989
+    },
+    {
+      "ipa": "tɔʁty",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 40.737,
+      "exactWords": [
+        {
+          "word": "tortue",
+          "pos": "NOM",
+          "frequency": 5.763,
+          "syllableCount": 2,
+          "category": "animal"
+        },
+        {
+          "word": "tortu",
+          "pos": "ADJ",
+          "frequency": 0.003,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "tortue",
+          "pos": "NOM",
+          "frequency": 5.763,
+          "syllableCount": 2,
+          "category": "animal"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 114.237
+    },
+    {
+      "ipa": "gʁɛ̃pe",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 22.311,
+      "exactWords": [
+        {
+          "word": "grimpée",
+          "pos": "NOM",
+          "frequency": 0.006,
+          "syllableCount": 2,
+          "category": null
+        },
+        {
+          "word": "grimper",
+          "pos": "VER",
+          "frequency": 7.437,
+          "syllableCount": 2,
+          "category": "action"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "grimper",
+          "pos": "VER",
+          "frequency": 7.437,
+          "syllableCount": 2,
+          "category": "action"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 110.933
+    },
+    {
+      "ipa": "seʁyʁ",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 21.75,
+      "exactWords": [
+        {
+          "word": "serrure",
+          "pos": "NOM",
+          "frequency": 7.25,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "serrure",
+          "pos": "NOM",
+          "frequency": 7.25,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 110.315
+    },
+    {
+      "ipa": "sufle",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 23.1,
+      "exactWords": [
+        {
+          "word": "soufflé",
+          "pos": "NOM",
+          "frequency": 1.19,
+          "syllableCount": 2,
+          "category": null
+        },
+        {
+          "word": "souffler",
+          "pos": "VER",
+          "frequency": 5.775,
+          "syllableCount": 2,
+          "category": "action"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "souffler",
+          "pos": "VER",
+          "frequency": 5.775,
+          "syllableCount": 2,
+          "category": "action"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 106.779
+    },
+    {
+      "ipa": "mustaʃ",
+      "unitCount": 6,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 28.254,
+      "exactWords": [
+        {
+          "word": "moustache",
+          "pos": "NOM",
+          "frequency": 9.418,
+          "syllableCount": 2,
+          "category": "body"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "moustache",
+          "pos": "NOM",
+          "frequency": 9.418,
+          "syllableCount": 2,
+          "category": "body"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 106.741
+    },
+    {
+      "ipa": "pilɔt",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 95.07,
+      "exactWords": [
+        {
+          "word": "pilote",
+          "pos": "NOM",
+          "frequency": 22.905,
+          "syllableCount": 2,
+          "category": "person"
+        },
+        {
+          "word": "pilote",
+          "pos": "VER",
+          "frequency": 1.949,
+          "syllableCount": 2,
+          "category": "person"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "pilote",
+          "pos": "VER",
+          "frequency": 1.949,
+          "syllableCount": 2,
+          "category": "person"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 103.472
+    },
+    {
+      "ipa": "bulo",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 1267.404,
+      "exactWords": [
+        {
+          "word": "boulot",
+          "pos": "NOM",
+          "frequency": 211.234,
+          "syllableCount": 2,
+          "category": null
+        },
+        {
+          "word": "bouleau",
+          "pos": "NOM",
+          "frequency": 0.408,
+          "syllableCount": 2,
+          "category": "nature"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "bouleau",
+          "pos": "NOM",
+          "frequency": 0.408,
+          "syllableCount": 2,
+          "category": "nature"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 103.1
+    },
+    {
+      "ipa": "ʁənaʁ",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 16.074,
+      "exactWords": [
+        {
+          "word": "renard",
+          "pos": "NOM",
+          "frequency": 5.358,
+          "syllableCount": 2,
+          "category": "animal"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "renard",
+          "pos": "NOM",
+          "frequency": 5.358,
+          "syllableCount": 2,
+          "category": "animal"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 103.095
+    },
+    {
+      "ipa": "bɑ̃k",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 310.52,
+      "exactWords": [
+        {
+          "word": "banque",
+          "pos": "NOM",
+          "frequency": 62.104,
+          "syllableCount": 1,
+          "category": "place"
+        },
+        {
+          "word": "bque",
+          "pos": "NOM",
+          "frequency": 0.003,
+          "syllableCount": 1,
+          "category": null
+        },
+        {
+          "word": "banque",
+          "pos": "VER",
+          "frequency": 0.161,
+          "syllableCount": 1,
+          "category": "place"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "banque",
+          "pos": "VER",
+          "frequency": 0.161,
+          "syllableCount": 1,
+          "category": "place"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 102.414
+    },
+    {
+      "ipa": "ʃɔʁt",
+      "unitCount": 4,
+      "syllableSpan": 1,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 8.956,
+      "exactWords": [
+        {
+          "word": "short",
+          "pos": "NOM",
+          "frequency": 4.478,
+          "syllableCount": 1,
+          "category": "clothing"
+        },
+        {
+          "word": "shorte",
+          "pos": "NOM",
+          "frequency": 0.006,
+          "syllableCount": 1,
+          "category": null
+        },
+        {
+          "word": "shortent",
+          "pos": "NOM",
+          "frequency": 0.003,
+          "syllableCount": 1,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "short",
+          "pos": "NOM",
+          "frequency": 4.478,
+          "syllableCount": 1,
+          "category": "clothing"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 102.34
+    },
+    {
+      "ipa": "ʁɛzɛ̃",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 15.198,
+      "exactWords": [
+        {
+          "word": "raisin",
+          "pos": "NOM",
+          "frequency": 5.066,
+          "syllableCount": 2,
+          "category": "food"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "raisin",
+          "pos": "NOM",
+          "frequency": 5.066,
+          "syllableCount": 2,
+          "category": "food"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 101.787
+    },
+    {
+      "ipa": "bonɛ",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 15.039,
+      "exactWords": [
+        {
+          "word": "bonnet",
+          "pos": "NOM",
+          "frequency": 5.013,
+          "syllableCount": 2,
+          "category": "clothing"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "bonnet",
+          "pos": "NOM",
+          "frequency": 5.013,
+          "syllableCount": 2,
+          "category": "clothing"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 101.542
+    },
+    {
+      "ipa": "ɔ̃gl",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 6.158,
+      "exactWords": [
+        {
+          "word": "ongle",
+          "pos": "NOM",
+          "frequency": 3.079,
+          "syllableCount": 1,
+          "category": "body"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "ongle",
+          "pos": "NOM",
+          "frequency": 3.079,
+          "syllableCount": 1,
+          "category": "body"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 101.133
+    },
+    {
+      "ipa": "gɔʁʒ",
+      "unitCount": 4,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 124.424,
+      "exactWords": [
+        {
+          "word": "gorge",
+          "pos": "NOM",
+          "frequency": 28.652,
+          "syllableCount": 1,
+          "category": "body"
+        },
+        {
+          "word": "gorge",
+          "pos": "VER",
+          "frequency": 0.465,
+          "syllableCount": 1,
+          "category": "body"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "gorge",
+          "pos": "VER",
+          "frequency": 0.465,
+          "syllableCount": 1,
+          "category": "body"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 97.347
+    },
+    {
+      "ipa": "vagɔ̃",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 9.012,
+      "exactWords": [
+        {
+          "word": "wagon",
+          "pos": "NOM",
+          "frequency": 4.506,
+          "syllableCount": 2,
+          "category": "vehicle"
+        },
+        {
+          "word": "vagon",
+          "pos": "NOM",
+          "frequency": 0.016,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "wagon",
+          "pos": "NOM",
+          "frequency": 4.506,
+          "syllableCount": 2,
+          "category": "vehicle"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 96.482
+    },
+    {
+      "ipa": "pɔ̃pje",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 8.886,
+      "exactWords": [
+        {
+          "word": "pompier",
+          "pos": "NOM",
+          "frequency": 4.443,
+          "syllableCount": 2,
+          "category": "person"
+        },
+        {
+          "word": "pompiez",
+          "pos": "VER",
+          "frequency": 0.003,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "pompier",
+          "pos": "NOM",
+          "frequency": 4.443,
+          "syllableCount": 2,
+          "category": "person"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 96.163
+    },
+    {
+      "ipa": "spɔʁ",
+      "unitCount": 4,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 133.722,
+      "exactWords": [
+        {
+          "word": "sport",
+          "pos": "NOM",
+          "frequency": 31.263,
+          "syllableCount": 1,
+          "category": null
+        },
+        {
+          "word": "spore",
+          "pos": "NOM",
+          "frequency": 0.332,
+          "syllableCount": 1,
+          "category": "nature"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "spore",
+          "pos": "NOM",
+          "frequency": 0.332,
+          "syllableCount": 1,
+          "category": "nature"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 95.944
+    },
+    {
+      "ipa": "buʃɔ̃",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 8.57,
+      "exactWords": [
+        {
+          "word": "bouchon",
+          "pos": "NOM",
+          "frequency": 4.285,
+          "syllableCount": 2,
+          "category": "object"
+        },
+        {
+          "word": "bouchons",
+          "pos": "VER",
+          "frequency": 0.028,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "bouchon",
+          "pos": "NOM",
+          "frequency": 4.285,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 95.346
+    },
+    {
+      "ipa": "vɔlkɑ̃",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 8.556,
+      "exactWords": [
+        {
+          "word": "volcan",
+          "pos": "NOM",
+          "frequency": 4.278,
+          "syllableCount": 2,
+          "category": "nature"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "volcan",
+          "pos": "NOM",
+          "frequency": 4.278,
+          "syllableCount": 2,
+          "category": "nature"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 95.309
+    },
+    {
+      "ipa": "lezaʁ",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 8.488,
+      "exactWords": [
+        {
+          "word": "lézard",
+          "pos": "NOM",
+          "frequency": 4.244,
+          "syllableCount": 2,
+          "category": "animal"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "lézard",
+          "pos": "NOM",
+          "frequency": 4.244,
+          "syllableCount": 2,
+          "category": "animal"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 95.13
+    },
+    {
+      "ipa": "patat",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 8.488,
+      "exactWords": [
+        {
+          "word": "patate",
+          "pos": "NOM",
+          "frequency": 4.244,
+          "syllableCount": 2,
+          "category": "food"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "patate",
+          "pos": "NOM",
+          "frequency": 4.244,
+          "syllableCount": 2,
+          "category": "food"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 95.13
+    },
+    {
+      "ipa": "ɔɲɔ̃",
+      "unitCount": 3,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 6.07,
+      "exactWords": [
+        {
+          "word": "oignon",
+          "pos": "NOM",
+          "frequency": 3.035,
+          "syllableCount": 2,
+          "category": "food"
+        },
+        {
+          "word": "ognon",
+          "pos": "NOM",
+          "frequency": 0.009,
+          "syllableCount": 2,
+          "category": null
+        },
+        {
+          "word": "oignons",
+          "pos": "VER",
+          "frequency": 0.051,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "oignon",
+          "pos": "NOM",
+          "frequency": 3.035,
+          "syllableCount": 2,
+          "category": "food"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 94.829
+    },
+    {
+      "ipa": "biskɥi",
+      "unitCount": 6,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 16.11,
+      "exactWords": [
+        {
+          "word": "biscuit",
+          "pos": "NOM",
+          "frequency": 5.37,
+          "syllableCount": 2,
+          "category": "food"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "biscuit",
+          "pos": "NOM",
+          "frequency": 5.37,
+          "syllableCount": 2,
+          "category": "food"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 93.148
+    },
+    {
+      "ipa": "pul",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 24.51,
+      "exactWords": [
+        {
+          "word": "pool",
+          "pos": "NOM",
+          "frequency": 0.937,
+          "syllableCount": 1,
+          "category": null
+        },
+        {
+          "word": "poule",
+          "pos": "NOM",
+          "frequency": 0.453,
+          "syllableCount": 1,
+          "category": "animal"
+        },
+        {
+          "word": "poulent",
+          "pos": "NOM",
+          "frequency": 0.009,
+          "syllableCount": 1,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "poule",
+          "pos": "NOM",
+          "frequency": 0.453,
+          "syllableCount": 1,
+          "category": "animal"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 93.034
+    },
+    {
+      "ipa": "ʃosɛt",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 7.386,
+      "exactWords": [
+        {
+          "word": "chaussette",
+          "pos": "NOM",
+          "frequency": 3.693,
+          "syllableCount": 2,
+          "category": "clothing"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "chaussette",
+          "pos": "NOM",
+          "frequency": 3.693,
+          "syllableCount": 2,
+          "category": "clothing"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 92.046
+    },
+    {
+      "ipa": "jauʁt",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 7.36,
+      "exactWords": [
+        {
+          "word": "yaourt",
+          "pos": "NOM",
+          "frequency": 3.68,
+          "syllableCount": 2,
+          "category": "food"
+        },
+        {
+          "word": "yahourt",
+          "pos": "NOM",
+          "frequency": 0.206,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "yaourt",
+          "pos": "NOM",
+          "frequency": 3.68,
+          "syllableCount": 2,
+          "category": "food"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 91.968
+    },
+    {
+      "ipa": "kusɛ̃",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 7.342,
+      "exactWords": [
+        {
+          "word": "coussin",
+          "pos": "NOM",
+          "frequency": 3.671,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "coussin",
+          "pos": "NOM",
+          "frequency": 3.671,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 91.915
+    },
+    {
+      "ipa": "tɛʁm",
+      "unitCount": 4,
+      "syllableSpan": 1,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 126.684,
+      "exactWords": [
+        {
+          "word": "terme",
+          "pos": "NOM",
+          "frequency": 31.671,
+          "syllableCount": 1,
+          "category": null
+        },
+        {
+          "word": "thermes",
+          "pos": "NOM",
+          "frequency": 0.323,
+          "syllableCount": 1,
+          "category": "place"
+        },
+        {
+          "word": "therme",
+          "pos": "NOM",
+          "frequency": 0.013,
+          "syllableCount": 1,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "thermes",
+          "pos": "NOM",
+          "frequency": 0.323,
+          "syllableCount": 1,
+          "category": "place"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 91.783
+    },
+    {
+      "ipa": "fɛʁmje",
+      "unitCount": 6,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 15.084,
+      "exactWords": [
+        {
+          "word": "fermier",
+          "pos": "NOM",
+          "frequency": 5.028,
+          "syllableCount": 2,
+          "category": "person"
+        },
+        {
+          "word": "fermiez",
+          "pos": "VER",
+          "frequency": 0.516,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "fermier",
+          "pos": "NOM",
+          "frequency": 5.028,
+          "syllableCount": 2,
+          "category": "person"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 91.611
+    },
+    {
+      "ipa": "tapi",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 2,
+      "usefulWeightedGain": 90.128,
+      "exactWords": [
+        {
+          "word": "tapis",
+          "pos": "NOM",
+          "frequency": 21.924,
+          "syllableCount": 2,
+          "category": "object"
+        },
+        {
+          "word": "tapis",
+          "pos": "VER",
+          "frequency": 0.608,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "tapis",
+          "pos": "VER",
+          "frequency": 0.608,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 90.973
+    },
+    {
+      "ipa": "səʁiz",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 6.594,
+      "exactWords": [
+        {
+          "word": "cerise",
+          "pos": "NOM",
+          "frequency": 3.297,
+          "syllableCount": 2,
+          "category": "food"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "cerise",
+          "pos": "NOM",
+          "frequency": 3.297,
+          "syllableCount": 2,
+          "category": "food"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 89.588
+    },
+    {
+      "ipa": "ibu",
+      "unitCount": 3,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 4.626,
+      "exactWords": [
+        {
+          "word": "hibou",
+          "pos": "NOM",
+          "frequency": 2.313,
+          "syllableCount": 2,
+          "category": "animal"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "hibou",
+          "pos": "NOM",
+          "frequency": 2.313,
+          "syllableCount": 2,
+          "category": "animal"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 89.287
+    },
+    {
+      "ipa": "fuʁʃɛt",
+      "unitCount": 6,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 9.532,
+      "exactWords": [
+        {
+          "word": "fourchette",
+          "pos": "NOM",
+          "frequency": 4.766,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "fourchette",
+          "pos": "NOM",
+          "frequency": 4.766,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 87.759
+    },
+    {
+      "ipa": "vaʃ",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 5.526,
+      "exactWords": [
+        {
+          "word": "vache",
+          "pos": "NOM",
+          "frequency": 1.12,
+          "syllableCount": 1,
+          "category": "animal"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "vache",
+          "pos": "NOM",
+          "frequency": 1.12,
+          "syllableCount": 1,
+          "category": "animal"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 87.397
+    },
+    {
+      "ipa": "tʁijɑ̃gl",
+      "unitCount": 7,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 9.354,
+      "exactWords": [
+        {
+          "word": "triangle",
+          "pos": "NOM",
+          "frequency": 4.677,
+          "syllableCount": 2,
+          "category": "shape"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "triangle",
+          "pos": "NOM",
+          "frequency": 4.677,
+          "syllableCount": 2,
+          "category": "shape"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 87.328
+    },
+    {
+      "ipa": "baʁo",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 5.842,
+      "exactWords": [
+        {
+          "word": "barreau",
+          "pos": "NOM",
+          "frequency": 2.921,
+          "syllableCount": 2,
+          "category": "object"
+        },
+        {
+          "word": "barrot",
+          "pos": "NOM",
+          "frequency": 0.003,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "barreau",
+          "pos": "NOM",
+          "frequency": 2.921,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 87.027
+    },
+    {
+      "ipa": "kʁɛm",
+      "unitCount": 4,
+      "syllableSpan": 1,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 88.292,
+      "exactWords": [
+        {
+          "word": "crème",
+          "pos": "NOM",
+          "frequency": 22.073,
+          "syllableCount": 1,
+          "category": "food"
+        },
+        {
+          "word": "chrême",
+          "pos": "NOM",
+          "frequency": 0.006,
+          "syllableCount": 1,
+          "category": null
+        },
+        {
+          "word": "crème",
+          "pos": "VER",
+          "frequency": 0.051,
+          "syllableCount": 1,
+          "category": "food"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "crème",
+          "pos": "VER",
+          "frequency": 0.051,
+          "syllableCount": 1,
+          "category": "food"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 84.677
+    },
+    {
+      "ipa": "amɑ̃d",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 24,
+      "exactWords": [
+        {
+          "word": "amende",
+          "pos": "NOM",
+          "frequency": 8,
+          "syllableCount": 2,
+          "category": null
+        },
+        {
+          "word": "amande",
+          "pos": "NOM",
+          "frequency": 1.092,
+          "syllableCount": 2,
+          "category": "food"
+        },
+        {
+          "word": "amende",
+          "pos": "VER",
+          "frequency": 0.111,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "amande",
+          "pos": "NOM",
+          "frequency": 1.092,
+          "syllableCount": 2,
+          "category": "food"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 83.533
+    },
+    {
+      "ipa": "dofɛ̃",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 4.86,
+      "exactWords": [
+        {
+          "word": "dauphin",
+          "pos": "NOM",
+          "frequency": 2.43,
+          "syllableCount": 2,
+          "category": "animal"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "dauphin",
+          "pos": "NOM",
+          "frequency": 2.43,
+          "syllableCount": 2,
+          "category": "animal"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 83.267
+    },
+    {
+      "ipa": "pʁeʁi",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 4.664,
+      "exactWords": [
+        {
+          "word": "prairie",
+          "pos": "NOM",
+          "frequency": 2.332,
+          "syllableCount": 2,
+          "category": "nature"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "prairie",
+          "pos": "NOM",
+          "frequency": 2.332,
+          "syllableCount": 2,
+          "category": "nature"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 82.449
+    },
+    {
+      "ipa": "tʁam",
+      "unitCount": 4,
+      "syllableSpan": 1,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 3.792,
+      "exactWords": [
+        {
+          "word": "tram",
+          "pos": "NOM",
+          "frequency": 1.478,
+          "syllableCount": 1,
+          "category": "vehicle"
+        },
+        {
+          "word": "trame",
+          "pos": "NOM",
+          "frequency": 0.652,
+          "syllableCount": 1,
+          "category": null
+        },
+        {
+          "word": "trame",
+          "pos": "VER",
+          "frequency": 1.896,
+          "syllableCount": 1,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "tram",
+          "pos": "NOM",
+          "frequency": 1.478,
+          "syllableCount": 1,
+          "category": "vehicle"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 81.356
+    },
+    {
+      "ipa": "kud",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 18.873,
+      "exactWords": [
+        {
+          "word": "coude",
+          "pos": "NOM",
+          "frequency": 6.291,
+          "syllableCount": 1,
+          "category": "body"
+        },
+        {
+          "word": "coude",
+          "pos": "VER",
+          "frequency": 0.047,
+          "syllableCount": 1,
+          "category": "body"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "coude",
+          "pos": "VER",
+          "frequency": 0.047,
+          "syllableCount": 1,
+          "category": "body"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 81.082
+    },
+    {
+      "ipa": "klavje",
+      "unitCount": 6,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 6.482,
+      "exactWords": [
+        {
+          "word": "clavier",
+          "pos": "NOM",
+          "frequency": 3.241,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "clavier",
+          "pos": "NOM",
+          "frequency": 3.241,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 79.222
+    },
+    {
+      "ipa": "ʒiʁaf",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 3.842,
+      "exactWords": [
+        {
+          "word": "girafe",
+          "pos": "NOM",
+          "frequency": 1.921,
+          "syllableCount": 2,
+          "category": "animal"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "girafe",
+          "pos": "NOM",
+          "frequency": 1.921,
+          "syllableCount": 2,
+          "category": "animal"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 78.718
+    },
+    {
+      "ipa": "pɛ̃so",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 3.708,
+      "exactWords": [
+        {
+          "word": "pinceau",
+          "pos": "NOM",
+          "frequency": 1.854,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "pinceau",
+          "pos": "NOM",
+          "frequency": 1.854,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 78.058
+    },
+    {
+      "ipa": "fuʁmi",
+      "unitCount": 5,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 3.658,
+      "exactWords": [
+        {
+          "word": "fourmi",
+          "pos": "NOM",
+          "frequency": 1.829,
+          "syllableCount": 2,
+          "category": "animal"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "fourmi",
+          "pos": "NOM",
+          "frequency": 1.829,
+          "syllableCount": 2,
+          "category": "animal"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 77.807
+    },
+    {
+      "ipa": "tʁaktœʁ",
+      "unitCount": 7,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 4.982,
+      "exactWords": [
+        {
+          "word": "tracteur",
+          "pos": "NOM",
+          "frequency": 2.491,
+          "syllableCount": 2,
+          "category": "vehicle"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "tracteur",
+          "pos": "NOM",
+          "frequency": 2.491,
+          "syllableCount": 2,
+          "category": "vehicle"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 73.763
+    },
+    {
+      "ipa": "biʃ",
+      "unitCount": 3,
+      "syllableSpan": 1,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 3.43,
+      "exactWords": [
+        {
+          "word": "biche",
+          "pos": "NOM",
+          "frequency": 1.715,
+          "syllableCount": 1,
+          "category": "animal"
+        },
+        {
+          "word": "biche",
+          "pos": "VER",
+          "frequency": 0.095,
+          "syllableCount": 1,
+          "category": "animal"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "biche",
+          "pos": "VER",
+          "frequency": 0.095,
+          "syllableCount": 1,
+          "category": "animal"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 71.472
+    },
+    {
+      "ipa": "spiʁal",
+      "unitCount": 6,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 4.342,
+      "exactWords": [
+        {
+          "word": "spirale",
+          "pos": "NOM",
+          "frequency": 2.171,
+          "syllableCount": 2,
+          "category": "shape"
+        },
+        {
+          "word": "spiral",
+          "pos": "ADJ",
+          "frequency": 0.149,
+          "syllableCount": 2,
+          "category": null
+        },
+        {
+          "word": "spiralent",
+          "pos": "VER",
+          "frequency": 0.003,
+          "syllableCount": 2,
+          "category": null
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "spirale",
+          "pos": "NOM",
+          "frequency": 2.171,
+          "syllableCount": 2,
+          "category": "shape"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 71.048
+    },
+    {
+      "ipa": "epɔ̃ʒ",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 16.044,
+      "exactWords": [
+        {
+          "word": "éponge",
+          "pos": "NOM",
+          "frequency": 5.348,
+          "syllableCount": 2,
+          "category": "object"
+        },
+        {
+          "word": "éponge",
+          "pos": "VER",
+          "frequency": 0.228,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "éponge",
+          "pos": "VER",
+          "frequency": 0.228,
+          "syllableCount": 2,
+          "category": "object"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 70.197
+    },
+    {
+      "ipa": "gʁənuj",
+      "unitCount": 6,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 21.324,
+      "exactWords": [
+        {
+          "word": "grenouille",
+          "pos": "NOM",
+          "frequency": 7.108,
+          "syllableCount": 2,
+          "category": "animal"
+        },
+        {
+          "word": "grenouille",
+          "pos": "VER",
+          "frequency": 0.057,
+          "syllableCount": 2,
+          "category": "animal"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "grenouille",
+          "pos": "VER",
+          "frequency": 0.057,
+          "syllableCount": 2,
+          "category": "animal"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 59.087
+    },
+    {
+      "ipa": "oval",
+      "unitCount": 4,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 3,
+      "exactWords": [
+        {
+          "word": "ovale",
+          "pos": "NOM",
+          "frequency": 0.152,
+          "syllableCount": 2,
+          "category": "shape"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "ovale",
+          "pos": "NOM",
+          "frequency": 0.152,
+          "syllableCount": 2,
+          "category": "shape"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 58.772
+    },
+    {
+      "ipa": "kaskad",
+      "unitCount": 6,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 6.936,
+      "exactWords": [
+        {
+          "word": "cascade",
+          "pos": "NOM",
+          "frequency": 3.468,
+          "syllableCount": 2,
+          "category": "nature"
+        },
+        {
+          "word": "cascade",
+          "pos": "VER",
+          "frequency": 0.019,
+          "syllableCount": 2,
+          "category": "nature"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "cascade",
+          "pos": "VER",
+          "frequency": 0.019,
+          "syllableCount": 2,
+          "category": "nature"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 51.115
+    },
+    {
+      "ipa": "kʁwasɑ̃",
+      "unitCount": 6,
+      "syllableSpan": 2,
+      "usefulTargetCount": 1,
+      "usefulWeightedGain": 3.196,
+      "exactWords": [
+        {
+          "word": "croissant",
+          "pos": "NOM",
+          "frequency": 1.598,
+          "syllableCount": 2,
+          "category": "food"
+        },
+        {
+          "word": "croissant",
+          "pos": "VER",
+          "frequency": 0.177,
+          "syllableCount": 2,
+          "category": "food"
+        }
+      ],
+      "visualCandidates": [
+        {
+          "word": "croissant",
+          "pos": "VER",
+          "frequency": 0.177,
+          "syllableCount": 2,
+          "category": "food"
+        }
+      ],
+      "distinctVisualCandidateCount": 1,
+      "selectionScore": 49.537
+    }
+  ]
+}

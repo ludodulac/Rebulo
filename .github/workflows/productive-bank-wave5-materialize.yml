@@ -1,0 +1,45 @@
+name: Productive bank wave 5
+
+on:
+  push:
+    branches: [productive-bank-wave5-imageability]
+    paths:
+      - 'scripts/build-rebus-productive-bank-wave5-preselection.mjs'
+      - 'scripts/build-rebus-productive-bank-wave5.mjs'
+      - 'tests/rebus-productive-bank-wave5.test.mjs'
+      - '.github/workflows/productive-bank-wave5-materialize.yml'
+  pull_request:
+    paths:
+      - 'scripts/build-rebus-productive-bank-wave5-preselection.mjs'
+      - 'scripts/build-rebus-productive-bank-wave5.mjs'
+      - 'tests/rebus-productive-bank-wave5.test.mjs'
+      - 'data/rebus-productive-bank-wave5*.json'
+      - 'docs/REBUS_PRODUCTIVE_BANK_WAVE5*.md'
+
+permissions:
+  contents: write
+
+jobs:
+  wave5:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || 'productive-bank-wave5-imageability' }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build preselection
+        run: node scripts/build-rebus-productive-bank-wave5-preselection.mjs
+      - name: Build wave 5
+        run: node scripts/build-rebus-productive-bank-wave5.mjs
+      - name: Validate wave 5
+        run: node tests/rebus-productive-bank-wave5.test.mjs
+      - name: Commit generated outputs on branch
+        if: github.event_name == 'push'
+        run: |
+          git config user.name 'rebulo-analysis-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/rebus-productive-bank-wave5-preselection.json docs/REBUS_PRODUCTIVE_BANK_WAVE5_PRESELECTION.md data/rebus-productive-bank-wave5.json data/rebus-productive-bank-wave5-benchmarks.json data/rebus-productive-bank-wave5-metrics.json docs/REBUS_PRODUCTIVE_BANK_WAVE5_REPORT.md
+          git commit -m 'Materialize productive bank wave 5' || exit 0
+          git push origin HEAD:productive-bank-wave5-imageability

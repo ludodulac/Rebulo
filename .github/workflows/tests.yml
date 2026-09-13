@@ -9,6 +9,7 @@ on:
       - 'src/**'
       - 'scripts/build-rebus-productive-bank-wave2.mjs'
       - 'scripts/build-rebus-productive-bank-wave4*.mjs'
+      - 'scripts/build-rebus-productive-bank-wave5*.mjs'
       - 'tests/**'
       - 'data/rebus-fragment-representation-ideas.json'
       - 'data/rebus-productive-bank-wave1.json'
@@ -16,6 +17,7 @@ on:
       - 'data/rebus-productive-bank-wave2-phrase-coverage.json'
       - 'data/rebus-productive-bank-wave3*.json'
       - 'data/rebus-productive-bank-wave4*.json'
+      - 'data/rebus-productive-bank-wave5*.json'
       - 'data/rebus-representation-expansion-queue.json'
       - 'data/rebus-representation-differential-preselection.json'
       - 'data/rebus-sound-visual-curation*.json'
@@ -26,6 +28,7 @@ on:
       - 'src/**'
       - 'scripts/build-rebus-productive-bank-wave2.mjs'
       - 'scripts/build-rebus-productive-bank-wave4*.mjs'
+      - 'scripts/build-rebus-productive-bank-wave5*.mjs'
       - 'tests/**'
       - 'data/rebus-fragment-representation-ideas.json'
       - 'data/rebus-productive-bank-wave1.json'
@@ -33,6 +36,7 @@ on:
       - 'data/rebus-productive-bank-wave2-phrase-coverage.json'
       - 'data/rebus-productive-bank-wave3*.json'
       - 'data/rebus-productive-bank-wave4*.json'
+      - 'data/rebus-productive-bank-wave5*.json'
       - 'data/rebus-representation-expansion-queue.json'
       - 'data/rebus-representation-differential-preselection.json'
       - 'data/rebus-sound-visual-curation*.json'
@@ -64,6 +68,8 @@ jobs:
         run: node tests/rebus-productive-bank-wave2.test.mjs
       - name: Validate productive phonetic bank wave 4
         run: node tests/rebus-productive-bank-wave4.test.mjs
+      - name: Validate productive phonetic bank wave 5
+        run: node tests/rebus-productive-bank-wave5.test.mjs
       - name: Run pictogram research triage regression
         run: node tests/pictogram-research-triage.test.mjs
       - name: Verify jsPDF browser dependency

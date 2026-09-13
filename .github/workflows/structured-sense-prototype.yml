@@ -12,6 +12,8 @@ on:
       - scripts/inspect-kaikki-record.mjs
       - scripts/build-structured-sense-prototype.mjs
       - scripts/diagnose-structured-sense-filter.mjs
+      - scripts/finalize-structured-sense-evaluation.mjs
+      - scripts/lib/structured-sense-visual-filter.mjs
       - tests/structured-sense-source-prototype.test.mjs
       - .github/workflows/structured-sense-prototype.yml
 
@@ -40,6 +42,8 @@ jobs:
         run: node scripts/inspect-kaikki-record.mjs
       - name: Build structured source prototype
         run: node scripts/build-structured-sense-prototype.mjs
+      - name: Final strict evaluation
+        run: node scripts/finalize-structured-sense-evaluation.mjs
       - name: Diagnose filter
         run: node scripts/diagnose-structured-sense-filter.mjs
       - name: Validate

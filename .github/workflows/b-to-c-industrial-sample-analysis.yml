@@ -1,0 +1,40 @@
+name: B to C industrial sample analysis
+
+on:
+  push:
+    branches:
+      - analysis/b-to-c-industrial-sample-2000
+    paths:
+      - scripts/build-b-to-c-industrial-sample.mjs
+      - tests/b-to-c-industrial-sample.test.mjs
+      - .github/workflows/b-to-c-industrial-sample-analysis.yml
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: analysis/b-to-c-industrial-sample-2000
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build industrial B-to-C sample
+        run: node scripts/build-b-to-c-industrial-sample.mjs
+      - name: Validate sample and calibration guards
+        run: node tests/b-to-c-industrial-sample.test.mjs
+      - name: Commit generated analysis artifacts
+        run: |
+          git config user.name "rebulo-analysis-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/b-to-c-industrial-sample-2000.jsonl data/b-to-c-industrial-sample-2000-metrics.json docs/B_TO_C_INDUSTRIAL_SAMPLE_REPORT.md
+          if git diff --cached --quiet; then
+            echo "No generated changes"
+          else
+            git commit -m "Materialize B-to-C industrial sample"
+            git push origin HEAD:analysis/b-to-c-industrial-sample-2000
+          fi

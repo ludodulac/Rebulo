@@ -1,0 +1,715 @@
+{
+  "schemaVersion": "1.0",
+  "status": "sealed_holdout_final_no_further_tuning",
+  "partition": "holdout",
+  "baseSha": "3ae27afa68d46922c1c18d0f0ae10908c3de02c0",
+  "modelVersion": "structured-hypernym-inheritance-pos-v2",
+  "taxonomy": [
+    "physical_object",
+    "animal",
+    "plant",
+    "food",
+    "body_part",
+    "person_role",
+    "vehicle",
+    "place",
+    "clothing",
+    "tool",
+    "material",
+    "event",
+    "action",
+    "abstract",
+    "relation",
+    "symbol",
+    "text",
+    "quantity",
+    "other"
+  ],
+  "source": {
+    "sourceId": "frwiktionary-kaikki-2026-09-08",
+    "sourceName": "French Wiktionary via Wiktextract/Kaikki",
+    "sourceVersion": "frwiktionary dump 2026-09-01; Kaikki extraction 2026-09-08; wiktextract ccec6f1 + 4deed51",
+    "license": "CC-BY-SA + GFDL",
+    "sourceRoot": "https://kaikki.org/frwiktionary/Fran%C3%A7ais/meaning/"
+  },
+  "n": 60,
+  "positive": 20,
+  "negative": 40,
+  "coverage": {
+    "relationsObserved": 59,
+    "percent": 98.3,
+    "averageSenseAmbiguity": 12.25,
+    "relationsWithInheritedSense": 31,
+    "hypernymTypedSenses": 49
+  },
+  "senseAligned": {
+    "tp": 1,
+    "fp": 0,
+    "tn": 40,
+    "fn": 19,
+    "precision": 100,
+    "recall": 5,
+    "f1": 9.5
+  },
+  "relationLevel": {
+    "tp": 1,
+    "fp": 3,
+    "tn": 37,
+    "fn": 19,
+    "precision": 25,
+    "recall": 5,
+    "f1": 8.3
+  },
+  "ranking": {
+    "top1": {
+      "count": 15,
+      "denominator": 20,
+      "percent": 75
+    },
+    "top2": {
+      "count": 16,
+      "denominator": 20,
+      "percent": 80
+    },
+    "top3": {
+      "count": 16,
+      "denominator": 20,
+      "percent": 80
+    }
+  },
+  "semanticTypeAccuracy": {
+    "evaluated": 59,
+    "correct": 36,
+    "percent": 61
+  },
+  "automaticGreens": [
+    {
+      "goldId": "HIS-H-005",
+      "word": "fouetter",
+      "goldPositive": false,
+      "senseAligned": false,
+      "selectedDefinition": "Frapper à l’aide d’un fouet.",
+      "type": "action",
+      "provenance": "exact_graphy:fouetter",
+      "reason": "passes_structured_guards"
+    },
+    {
+      "goldId": "HIS-H-024",
+      "word": "rouvrir",
+      "goldPositive": false,
+      "senseAligned": false,
+      "selectedDefinition": "Ouvrir de nouveau, ouvrir ce qui avait été fermé.",
+      "type": "action",
+      "provenance": "exact_graphy:rouvrir",
+      "reason": "passes_structured_guards"
+    },
+    {
+      "goldId": "HIS-H-030",
+      "word": "voir",
+      "goldPositive": true,
+      "senseAligned": true,
+      "selectedDefinition": "Donner en vis-à-vis, avoir une vue.",
+      "type": "action",
+      "provenance": "exact_graphy:voir",
+      "reason": "passes_structured_guards"
+    },
+    {
+      "goldId": "HIS-H-051",
+      "word": "bagnole",
+      "goldPositive": false,
+      "senseAligned": false,
+      "selectedDefinition": "Voiture ; automobile.",
+      "type": "vehicle",
+      "provenance": "exact_graphy:bagnole",
+      "reason": "passes_structured_guards"
+    }
+  ],
+  "wrongSenseGreens": 0,
+  "falseGreens": 3,
+  "falseNegatives": [
+    {
+      "goldId": "HIS-H-001",
+      "word": "finis",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "finir",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 32,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Première personne du singulier de l’indicatif présent de finir.",
+        "type": "action",
+        "provenance": "exact_graphy:finis",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-H-003",
+      "word": "comprendre",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "comprendre",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 10,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Saisir le sens d’un mot, d’une langue, etc.",
+        "type": "action",
+        "provenance": "exact_graphy:comprendre",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "rank_score_below_threshold"
+    },
+    {
+      "goldId": "HIS-H-012",
+      "word": "monté",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "monter",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 44,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Participe passé masculin singulier du verbe monter.",
+        "type": "action",
+        "provenance": "exact_graphy:monté",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-H-015",
+      "word": "vont",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "aller",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 23,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Troisième personne du pluriel de l’indicatif présent de aller.",
+        "type": "action",
+        "provenance": "exact_graphy:vont",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-H-018",
+      "word": "dû",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "devoir",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 19,
+      "compatibleRank": 4,
+      "selected": {
+        "definition": "Indique la cause, l’agent déclencheur, responsable ou déterminant.",
+        "type": "abstract",
+        "provenance": "exact_graphy:dû",
+        "pos": {
+          "class": "exact_graphy_cross_pos",
+          "penalty": 8,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-H-020",
+      "word": "pince",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "pince",
+          "semanticType": "tool",
+          "description": "Sens pré-source de type tool, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 45,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Instrument de chauffage analogue à une grosse tenaille à large prise pour saisir, déplacer et remuer les bûches dans la cheminée.",
+        "type": "tool",
+        "provenance": "exact_graphy:pince",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "rank_score_below_threshold"
+    },
+    {
+      "goldId": "HIS-H-021",
+      "word": "suis",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "être",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 38,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Première personne du singulier de l’indicatif présent de être.",
+        "type": "action",
+        "provenance": "exact_graphy:suis",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-H-022",
+      "word": "conduire",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "conduire",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 11,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Mener, guider, diriger vers un lieu déterminé.",
+        "type": "action",
+        "provenance": "exact_graphy:conduire",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-H-023",
+      "word": "souffrir",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "souffrir",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 11,
+      "compatibleRank": 2,
+      "selected": {
+        "definition": "Action de souffrir.",
+        "type": "event",
+        "provenance": "exact_graphy:souffrir",
+        "pos": {
+          "class": "exact_graphy_cross_pos",
+          "penalty": 8,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-H-026",
+      "word": "rentrée",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "rentrer",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 23,
+      "compatibleRank": 6,
+      "selected": {
+        "definition": "Action de rentrer.",
+        "type": "event",
+        "provenance": "exact_graphy:rentrée",
+        "pos": {
+          "class": "exact_graphy_cross_pos",
+          "penalty": 8,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-H-028",
+      "word": "peux",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "pouvoir",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 21,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Première personne du singulier de l’indicatif présent de pouvoir.",
+        "type": "action",
+        "provenance": "exact_graphy:peux",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-H-036",
+      "word": "crois",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "croire",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 15,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Première personne du singulier de l’indicatif présent de croire.",
+        "type": "action",
+        "provenance": "exact_graphy:crois",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-H-045",
+      "word": "approche",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "approcher",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 27,
+      "compatibleRank": 7,
+      "selected": {
+        "definition": "Action de s’approcher.",
+        "type": "event",
+        "provenance": "exact_graphy:approche",
+        "pos": {
+          "class": "exact_graphy_cross_pos",
+          "penalty": 8,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-H-047",
+      "word": "servir",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "servir",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 21,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Rendre à quelqu’un les mêmes services qu’un domestique rend à son maître.",
+        "type": "action",
+        "provenance": "exact_graphy:servir",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "rank_score_below_threshold"
+    },
+    {
+      "goldId": "HIS-H-050",
+      "word": "dors",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "dormir",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 8,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Première personne du singulier de l’indicatif présent de dormir.",
+        "type": "action",
+        "provenance": "exact_graphy:dors",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-H-052",
+      "word": "vendre",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "vendre",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 3,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Aliéner une chose, transporter, céder à quelqu’un la propriété d’une chose pour un certain prix, contre une somme d'argent.",
+        "type": "action",
+        "provenance": "exact_graphy:vendre",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-H-054",
+      "word": "paraît",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "paraître",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 7,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Troisième personne du singulier de l’indicatif présent du verbe paraître.",
+        "type": "action",
+        "provenance": "exact_graphy:paraît",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-H-056",
+      "word": "arrière",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "arrière",
+          "semanticType": "person_role",
+          "description": "Sens pré-source de type person_role, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 18,
+      "compatibleRank": null,
+      "selected": {
+        "definition": "Zone épargnée par les combats, lors d’une guerre.",
+        "type": "place",
+        "provenance": "exact_graphy:arrière",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "competitive_type_requires_primary_strong_hypernym"
+    },
+    {
+      "goldId": "HIS-H-059",
+      "word": "excuse",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "excuser",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 12,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Première personne du singulier du présent de l’indicatif de excuser.",
+        "type": "action",
+        "provenance": "exact_graphy:excuse",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    }
+  ],
+  "falsePositives": [
+    {
+      "goldId": "HIS-H-005",
+      "word": "fouetter",
+      "selectedDefinition": "Frapper à l’aide d’un fouet.",
+      "type": "action",
+      "reason": "passes_structured_guards"
+    },
+    {
+      "goldId": "HIS-H-024",
+      "word": "rouvrir",
+      "selectedDefinition": "Ouvrir de nouveau, ouvrir ce qui avait été fermé.",
+      "type": "action",
+      "reason": "passes_structured_guards"
+    },
+    {
+      "goldId": "HIS-H-051",
+      "word": "bagnole",
+      "selectedDefinition": "Voiture ; automobile.",
+      "type": "vehicle",
+      "reason": "passes_structured_guards"
+    }
+  ],
+  "posPolicyTopSenseClasses": {
+    "compatible": 47,
+    "exact_graphy_cross_pos": 8,
+    "contradictory_marked_form": 4,
+    "none": 1
+  },
+  "ablations": {
+    "withoutHypernym": {
+      "senseAligned": {
+        "tp": 1,
+        "fp": 0,
+        "tn": 40,
+        "fn": 19,
+        "precision": 100,
+        "recall": 5,
+        "f1": 9.5
+      },
+      "relationLevel": {
+        "tp": 1,
+        "fp": 2,
+        "tn": 38,
+        "fn": 19,
+        "precision": 33.3,
+        "recall": 5,
+        "f1": 8.7
+      },
+      "contribution": {
+        "correctedSenseAligned": 0,
+        "deterioratedSenseAligned": 0,
+        "correctedRelationLevel": 0,
+        "deterioratedRelationLevel": 1
+      }
+    },
+    "withoutInheritance": {
+      "senseAligned": {
+        "tp": 1,
+        "fp": 0,
+        "tn": 40,
+        "fn": 19,
+        "precision": 100,
+        "recall": 5,
+        "f1": 9.5
+      },
+      "relationLevel": {
+        "tp": 1,
+        "fp": 3,
+        "tn": 37,
+        "fn": 19,
+        "precision": 25,
+        "recall": 5,
+        "f1": 8.3
+      },
+      "contribution": {
+        "correctedSenseAligned": 0,
+        "deterioratedSenseAligned": 0,
+        "correctedRelationLevel": 0,
+        "deterioratedRelationLevel": 0
+      }
+    },
+    "withoutPosResolution": {
+      "senseAligned": {
+        "tp": 1,
+        "fp": 0,
+        "tn": 40,
+        "fn": 19,
+        "precision": 100,
+        "recall": 5,
+        "f1": 9.5
+      },
+      "relationLevel": {
+        "tp": 1,
+        "fp": 3,
+        "tn": 37,
+        "fn": 19,
+        "precision": 25,
+        "recall": 5,
+        "f1": 8.3
+      },
+      "contribution": {
+        "correctedSenseAligned": 0,
+        "deterioratedSenseAligned": 0,
+        "correctedRelationLevel": 0,
+        "deterioratedRelationLevel": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,3861 @@
+{
+  "schemaVersion": "1.0",
+  "status": "sealed_balanced_gold_before_any_source_lookup",
+  "baseSha": "3ae27afa68d46922c1c18d0f0ae10908c3de02c0",
+  "selectionSeed": "rebulo-hypernym-inheritance-sealed-gold-v4",
+  "sourceLookedAt": false,
+  "reservoir": "derived_representation_landscape_only_no_full_B_scan",
+  "developmentCount": 120,
+  "holdoutCount": 60,
+  "totalCount": 180,
+  "developmentPositive": 40,
+  "holdoutPositive": 20,
+  "abandonedPreflightRelationsExcluded": 410,
+  "priorRelationsExcluded": 1469,
+  "poolCounts": {
+    "positive": 317,
+    "negative": 6070
+  },
+  "rows": [
+    {
+      "goldId": "HIS-D-001",
+      "partition": "development",
+      "ipa": "fɛʁme",
+      "exactWord": "fermer",
+      "lemma": "fermer",
+      "pos": "VER",
+      "frequency": 46.405,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "fermer",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-002",
+      "partition": "development",
+      "ipa": "kɔʁtɛks",
+      "exactWord": "cortex",
+      "lemma": "cortex",
+      "pos": "NOM",
+      "frequency": 8.06,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-003",
+      "partition": "development",
+      "ipa": "maʁtiʁ",
+      "exactWord": "martyre",
+      "lemma": "martyre",
+      "pos": "NOM",
+      "frequency": 1.715,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-004",
+      "partition": "development",
+      "ipa": "kʁwaʁ",
+      "exactWord": "croire",
+      "lemma": "croire",
+      "pos": "VER",
+      "frequency": 228.538,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "croire",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-005",
+      "partition": "development",
+      "ipa": "lajt",
+      "exactWord": "light",
+      "lemma": "light",
+      "pos": "ADJ",
+      "frequency": 6.516,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-006",
+      "partition": "development",
+      "ipa": "beze",
+      "exactWord": "baiser",
+      "lemma": "baiser",
+      "pos": "VER",
+      "frequency": 32.566,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "baiser",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-007",
+      "partition": "development",
+      "ipa": "mɔ̃te",
+      "exactWord": "monter",
+      "lemma": "monter",
+      "pos": "VER",
+      "frequency": 71.699,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "monter",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-008",
+      "partition": "development",
+      "ipa": "kal",
+      "exactWord": "call",
+      "lemma": "call",
+      "pos": "NOM",
+      "frequency": 1.598,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-009",
+      "partition": "development",
+      "ipa": "kɛt",
+      "exactWord": "ket",
+      "lemma": "ket",
+      "pos": "NOM",
+      "frequency": 0.016,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-010",
+      "partition": "development",
+      "ipa": "kabl",
+      "exactWord": "câble",
+      "lemma": "câble",
+      "pos": "NOM",
+      "frequency": 14.37,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-011",
+      "partition": "development",
+      "ipa": "paʁlɑ̃",
+      "exactWord": "parlant",
+      "lemma": "parler",
+      "pos": "VER",
+      "frequency": 26.674,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "parler",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-012",
+      "partition": "development",
+      "ipa": "sɔ̃daʒ",
+      "exactWord": "sondage",
+      "lemma": "sondage",
+      "pos": "NOM",
+      "frequency": 2.665,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-013",
+      "partition": "development",
+      "ipa": "ɛ",
+      "exactWord": "es",
+      "lemma": "être",
+      "pos": "VER",
+      "frequency": 1725.427,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "être",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-014",
+      "partition": "development",
+      "ipa": "muje",
+      "exactWord": "mouillé",
+      "lemma": "mouiller",
+      "pos": "VER",
+      "frequency": 4.161,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-015",
+      "partition": "development",
+      "ipa": "atʁap",
+      "exactWord": "attrape",
+      "lemma": "attraper",
+      "pos": "VER",
+      "frequency": 24.633,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "attraper",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-016",
+      "partition": "development",
+      "ipa": "vis",
+      "exactWord": "vice",
+      "lemma": "vice",
+      "pos": "NOM",
+      "frequency": 8.171,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-017",
+      "partition": "development",
+      "ipa": "təniʁ",
+      "exactWord": "tenir",
+      "lemma": "tenir",
+      "pos": "VER",
+      "frequency": 86.535,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "tenir",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-018",
+      "partition": "development",
+      "ipa": "kwafe",
+      "exactWord": "coiffer",
+      "lemma": "coiffer",
+      "pos": "VER",
+      "frequency": 2.377,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-019",
+      "partition": "development",
+      "ipa": "luʁ",
+      "exactWord": "lourd",
+      "lemma": "lourd",
+      "pos": "ADV",
+      "frequency": 11.509,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-020",
+      "partition": "development",
+      "ipa": "ʁɑ̃dʁ",
+      "exactWord": "rendre",
+      "lemma": "rendre",
+      "pos": "VER",
+      "frequency": 150.196,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "rendre",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-021",
+      "partition": "development",
+      "ipa": "ʃofmɑ̃",
+      "exactWord": "chauffement",
+      "lemma": "chauffement",
+      "pos": "NOM",
+      "frequency": 0.003,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-022",
+      "partition": "development",
+      "ipa": "novɑ̃bʁ",
+      "exactWord": "novembre",
+      "lemma": "novembre",
+      "pos": "NOM",
+      "frequency": 8.62,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-023",
+      "partition": "development",
+      "ipa": "bʁɑ̃ʃe",
+      "exactWord": "brancher",
+      "lemma": "brancher",
+      "pos": "VER",
+      "frequency": 3.87,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-024",
+      "partition": "development",
+      "ipa": "sote",
+      "exactWord": "sauté",
+      "lemma": "sauter",
+      "pos": "VER",
+      "frequency": 20.316,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "sauter",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-025",
+      "partition": "development",
+      "ipa": "ʁepɔ̃dʁ",
+      "exactWord": "répondre",
+      "lemma": "répondre",
+      "pos": "VER",
+      "frequency": 65.734,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "répondre",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-026",
+      "partition": "development",
+      "ipa": "dʁage",
+      "exactWord": "draguer",
+      "lemma": "draguer",
+      "pos": "VER",
+      "frequency": 7.446,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-027",
+      "partition": "development",
+      "ipa": "detɑ̃t",
+      "exactWord": "détente",
+      "lemma": "détente",
+      "pos": "NOM",
+      "frequency": 7.076,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-028",
+      "partition": "development",
+      "ipa": "bʁake",
+      "exactWord": "braquer",
+      "lemma": "braquer",
+      "pos": "VER",
+      "frequency": 3.706,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-029",
+      "partition": "development",
+      "ipa": "tʁɑ̃sfɛʁ",
+      "exactWord": "transfère",
+      "lemma": "transférer",
+      "pos": "VER",
+      "frequency": 2.472,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-030",
+      "partition": "development",
+      "ipa": "mine",
+      "exactWord": "minè",
+      "lemma": "minè",
+      "pos": "NOM",
+      "frequency": 0.006,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-031",
+      "partition": "development",
+      "ipa": "mɔl",
+      "exactWord": "mollés",
+      "lemma": "mollés",
+      "pos": "NOM",
+      "frequency": 0.003,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-032",
+      "partition": "development",
+      "ipa": "pome",
+      "exactWord": "paumer",
+      "lemma": "paumer",
+      "pos": "VER",
+      "frequency": 0.187,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-033",
+      "partition": "development",
+      "ipa": "maksi",
+      "exactWord": "maxi",
+      "lemma": "maxi",
+      "pos": "ADJ",
+      "frequency": 1.516,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-034",
+      "partition": "development",
+      "ipa": "buʒe",
+      "exactWord": "bouger",
+      "lemma": "bouger",
+      "pos": "VER",
+      "frequency": 45.785,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "bouger",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-035",
+      "partition": "development",
+      "ipa": "pʁomɛs",
+      "exactWord": "promesse",
+      "lemma": "promesse",
+      "pos": "NOM",
+      "frequency": 26.038,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-036",
+      "partition": "development",
+      "ipa": "ʁɑ̃pliʁ",
+      "exactWord": "remplir",
+      "lemma": "remplir",
+      "pos": "VER",
+      "frequency": 20.589,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "remplir",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-037",
+      "partition": "development",
+      "ipa": "pjɛtʁ",
+      "exactWord": "piètre",
+      "lemma": "piètre",
+      "pos": "ADJ",
+      "frequency": 2.222,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-038",
+      "partition": "development",
+      "ipa": "ɥil",
+      "exactWord": "huile",
+      "lemma": "huile",
+      "pos": "NOM",
+      "frequency": 17.712,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-039",
+      "partition": "development",
+      "ipa": "ʒwe",
+      "exactWord": "jouer",
+      "lemma": "jouer",
+      "pos": "VER",
+      "frequency": 214.873,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "jouer",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-040",
+      "partition": "development",
+      "ipa": "id",
+      "exactWord": "ides",
+      "lemma": "ides",
+      "pos": "NOM",
+      "frequency": 0.066,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-041",
+      "partition": "development",
+      "ipa": "ʃwazi",
+      "exactWord": "choisi",
+      "lemma": "choisir",
+      "pos": "VER",
+      "frequency": 67.408,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "choisir",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-042",
+      "partition": "development",
+      "ipa": "blese",
+      "exactWord": "blesser",
+      "lemma": "blesser",
+      "pos": "VER",
+      "frequency": 32.203,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "blesser",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-043",
+      "partition": "development",
+      "ipa": "tenɛbʁ",
+      "exactWord": "ténèbre",
+      "lemma": "ténèbre",
+      "pos": "NOM",
+      "frequency": 0.051,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-044",
+      "partition": "development",
+      "ipa": "tɑ̃te",
+      "exactWord": "tenté",
+      "lemma": "tenter",
+      "pos": "VER",
+      "frequency": 24.911,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "tenter",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-045",
+      "partition": "development",
+      "ipa": "pusjɛʁ",
+      "exactWord": "poussière",
+      "lemma": "poussière",
+      "pos": "NOM",
+      "frequency": 19.117,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "poussière",
+            "semanticType": "person_role",
+            "description": "Sens pré-source de type person_role, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "person_role",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-046",
+      "partition": "development",
+      "ipa": "amɛn",
+      "exactWord": "amen",
+      "lemma": "amen",
+      "pos": "ONO",
+      "frequency": 16.408,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-047",
+      "partition": "development",
+      "ipa": "pys",
+      "exactWord": "pusse",
+      "lemma": "pouvoir",
+      "pos": "VER",
+      "frequency": 0.013,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-048",
+      "partition": "development",
+      "ipa": "vɛʁni",
+      "exactWord": "vernis",
+      "lemma": "vernis",
+      "pos": "NOM",
+      "frequency": 2.867,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-049",
+      "partition": "development",
+      "ipa": "nɔ̃s",
+      "exactWord": "nonce",
+      "lemma": "nonce",
+      "pos": "NOM",
+      "frequency": 0.054,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-050",
+      "partition": "development",
+      "ipa": "kɔ̃t",
+      "exactWord": "comte",
+      "lemma": "comte",
+      "pos": "NOM",
+      "frequency": 9.845,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-051",
+      "partition": "development",
+      "ipa": "vəniʁ",
+      "exactWord": "venir",
+      "lemma": "venir",
+      "pos": "VER",
+      "frequency": 363.706,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "venir",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-052",
+      "partition": "development",
+      "ipa": "kaʃ",
+      "exactWord": "cache",
+      "lemma": "cacher",
+      "pos": "VER",
+      "frequency": 38.975,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "cacher",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-053",
+      "partition": "development",
+      "ipa": "kaʃe",
+      "exactWord": "cacher",
+      "lemma": "cacher",
+      "pos": "VER",
+      "frequency": 69.016,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "cacher",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-054",
+      "partition": "development",
+      "ipa": "admɛtʁ",
+      "exactWord": "admettre",
+      "lemma": "admettre",
+      "pos": "VER",
+      "frequency": 25.522,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "admettre",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-055",
+      "partition": "development",
+      "ipa": "ʁəmɛd",
+      "exactWord": "remède",
+      "lemma": "remède",
+      "pos": "NOM",
+      "frequency": 15.443,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-056",
+      "partition": "development",
+      "ipa": "biŋ",
+      "exactWord": "bing",
+      "lemma": "bing",
+      "pos": "ONO",
+      "frequency": 2.155,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-057",
+      "partition": "development",
+      "ipa": "ky",
+      "exactWord": "qus",
+      "lemma": "qus",
+      "pos": "NOM",
+      "frequency": 0.006,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-058",
+      "partition": "development",
+      "ipa": "pʁovɛ̃s",
+      "exactWord": "province",
+      "lemma": "province",
+      "pos": "NOM",
+      "frequency": 5.848,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-059",
+      "partition": "development",
+      "ipa": "vəny",
+      "exactWord": "venu",
+      "lemma": "venir",
+      "pos": "VER",
+      "frequency": 229.82,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "venir",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-060",
+      "partition": "development",
+      "ipa": "sɔn",
+      "exactWord": "sonne",
+      "lemma": "sonner",
+      "pos": "VER",
+      "frequency": 34.975,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "sonner",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-061",
+      "partition": "development",
+      "ipa": "finiʁ",
+      "exactWord": "finir",
+      "lemma": "finir",
+      "pos": "VER",
+      "frequency": 98.57,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "finir",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-062",
+      "partition": "development",
+      "ipa": "kʁije",
+      "exactWord": "crier",
+      "lemma": "crier",
+      "pos": "VER",
+      "frequency": 28.358,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "crier",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-063",
+      "partition": "development",
+      "ipa": "fe",
+      "exactWord": "fée",
+      "lemma": "fée",
+      "pos": "NOM",
+      "frequency": 9.351,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-064",
+      "partition": "development",
+      "ipa": "aʒe",
+      "exactWord": "ager",
+      "lemma": "ager",
+      "pos": "NOM",
+      "frequency": 0.025,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-065",
+      "partition": "development",
+      "ipa": "tɛk",
+      "exactWord": "teck",
+      "lemma": "teck",
+      "pos": "NOM",
+      "frequency": 0.297,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-066",
+      "partition": "development",
+      "ipa": "seɲɔʁ",
+      "exactWord": "señor",
+      "lemma": "señor",
+      "pos": "NOM",
+      "frequency": 7.345,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-067",
+      "partition": "development",
+      "ipa": "dɔʁmi",
+      "exactWord": "dormi",
+      "lemma": "dormir",
+      "pos": "VER",
+      "frequency": 32.601,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "dormir",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-068",
+      "partition": "development",
+      "ipa": "ʁul",
+      "exactWord": "roule",
+      "lemma": "rouler",
+      "pos": "VER",
+      "frequency": 17.747,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-069",
+      "partition": "development",
+      "ipa": "bʁav",
+      "exactWord": "brave",
+      "lemma": "brave",
+      "pos": "ADJ",
+      "frequency": 15.168,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-070",
+      "partition": "development",
+      "ipa": "latɑ̃",
+      "exactWord": "lattant",
+      "lemma": "latter",
+      "pos": "VER",
+      "frequency": 0.003,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-071",
+      "partition": "development",
+      "ipa": "vipɛʁ",
+      "exactWord": "vipère",
+      "lemma": "vipère",
+      "pos": "NOM",
+      "frequency": 2.491,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-072",
+      "partition": "development",
+      "ipa": "aga",
+      "exactWord": "agha",
+      "lemma": "agha",
+      "pos": "NOM",
+      "frequency": 0.044,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-073",
+      "partition": "development",
+      "ipa": "kɔ̃kɛt",
+      "exactWord": "conquête",
+      "lemma": "conquête",
+      "pos": "NOM",
+      "frequency": 3.203,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-074",
+      "partition": "development",
+      "ipa": "smaʃ",
+      "exactWord": "smash",
+      "lemma": "smash",
+      "pos": "NOM",
+      "frequency": 1.753,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-075",
+      "partition": "development",
+      "ipa": "baʁɔ̃",
+      "exactWord": "baron",
+      "lemma": "baron",
+      "pos": "NOM",
+      "frequency": 5.829,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-076",
+      "partition": "development",
+      "ipa": "bu",
+      "exactWord": "boue",
+      "lemma": "boue",
+      "pos": "NOM",
+      "frequency": 12.959,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-077",
+      "partition": "development",
+      "ipa": "lite",
+      "exactWord": "lité",
+      "lemma": "liter",
+      "pos": "VER",
+      "frequency": 0.013,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-078",
+      "partition": "development",
+      "ipa": "odjo",
+      "exactWord": "audio",
+      "lemma": "audio",
+      "pos": "ADJ",
+      "frequency": 3.468,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-079",
+      "partition": "development",
+      "ipa": "sitœʁ",
+      "exactWord": "sitter",
+      "lemma": "sitter",
+      "pos": "NOM",
+      "frequency": 0.253,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-080",
+      "partition": "development",
+      "ipa": "kapa",
+      "exactWord": "kappa",
+      "lemma": "kappa",
+      "pos": "NOM",
+      "frequency": 2.794,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-081",
+      "partition": "development",
+      "ipa": "gʁɑ̃ʒ",
+      "exactWord": "grange",
+      "lemma": "grange",
+      "pos": "NOM",
+      "frequency": 9.019,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-082",
+      "partition": "development",
+      "ipa": "mɑ̃ʒe",
+      "exactWord": "manger",
+      "lemma": "manger",
+      "pos": "VER",
+      "frequency": 184.532,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "manger",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-083",
+      "partition": "development",
+      "ipa": "ge",
+      "exactWord": "guée",
+      "lemma": "guéer",
+      "pos": "VER",
+      "frequency": 0.013,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-084",
+      "partition": "development",
+      "ipa": "lese",
+      "exactWord": "laissé",
+      "lemma": "laisser",
+      "pos": "VER",
+      "frequency": 168.446,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "laisser",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-085",
+      "partition": "development",
+      "ipa": "maʃɛt",
+      "exactWord": "machette",
+      "lemma": "machette",
+      "pos": "NOM",
+      "frequency": 1.627,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-086",
+      "partition": "development",
+      "ipa": "bytœʁ",
+      "exactWord": "buteur",
+      "lemma": "buteur",
+      "pos": "NOM",
+      "frequency": 0.294,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "person_role",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-087",
+      "partition": "development",
+      "ipa": "biŋo",
+      "exactWord": "bingo",
+      "lemma": "bingo",
+      "pos": "NOM",
+      "frequency": 10.149,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-088",
+      "partition": "development",
+      "ipa": "vɑ̃ʒe",
+      "exactWord": "vengés",
+      "lemma": "venger",
+      "pos": "VER",
+      "frequency": 0.32,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-089",
+      "partition": "development",
+      "ipa": "ɛ",
+      "exactWord": "aie",
+      "lemma": "avoir",
+      "pos": "VER",
+      "frequency": 32.813,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "avoir",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-090",
+      "partition": "development",
+      "ipa": "pʁəne",
+      "exactWord": "prenez",
+      "lemma": "prendre",
+      "pos": "VER",
+      "frequency": 157.652,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "prendre",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-091",
+      "partition": "development",
+      "ipa": "oka",
+      "exactWord": "oka",
+      "lemma": "oka",
+      "pos": "NOM",
+      "frequency": 0.035,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-092",
+      "partition": "development",
+      "ipa": "koʁal",
+      "exactWord": "corral",
+      "lemma": "corral",
+      "pos": "NOM",
+      "frequency": 0.987,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-093",
+      "partition": "development",
+      "ipa": "vi",
+      "exactWord": "vit",
+      "lemma": "vivre",
+      "pos": "VER",
+      "frequency": 63.073,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "vivre",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-094",
+      "partition": "development",
+      "ipa": "kase",
+      "exactWord": "cassè",
+      "lemma": "cassè",
+      "pos": "NOM",
+      "frequency": 0.003,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-095",
+      "partition": "development",
+      "ipa": "kɔ̃batʁ",
+      "exactWord": "combattre",
+      "lemma": "combattre",
+      "pos": "VER",
+      "frequency": 24.538,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "combattre",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-096",
+      "partition": "development",
+      "ipa": "uvɛʁ",
+      "exactWord": "ouvert",
+      "lemma": "ouvrir",
+      "pos": "VER",
+      "frequency": 50.541,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "ouvrir",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-097",
+      "partition": "development",
+      "ipa": "tsaʁ",
+      "exactWord": "tsar",
+      "lemma": "tsar",
+      "pos": "NOM",
+      "frequency": 3.487,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-098",
+      "partition": "development",
+      "ipa": "njɛs",
+      "exactWord": "nièce",
+      "lemma": "nièce",
+      "pos": "NOM",
+      "frequency": 7.209,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-099",
+      "partition": "development",
+      "ipa": "lɛksi",
+      "exactWord": "lexie",
+      "lemma": "lexie",
+      "pos": "NOM",
+      "frequency": 1.905,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-100",
+      "partition": "development",
+      "ipa": "kadɑ̃s",
+      "exactWord": "cadence",
+      "lemma": "cadence",
+      "pos": "NOM",
+      "frequency": 1.886,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-101",
+      "partition": "development",
+      "ipa": "kalaʒ",
+      "exactWord": "calage",
+      "lemma": "calage",
+      "pos": "NOM",
+      "frequency": 0.041,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-102",
+      "partition": "development",
+      "ipa": "dəvɑ̃",
+      "exactWord": "devans",
+      "lemma": "devans",
+      "pos": "NOM",
+      "frequency": 0.032,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-103",
+      "partition": "development",
+      "ipa": "distɑ̃",
+      "exactWord": "distant",
+      "lemma": "distant",
+      "pos": "ADJ",
+      "frequency": 2.449,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-104",
+      "partition": "development",
+      "ipa": "tjɛʁ",
+      "exactWord": "thiers",
+      "lemma": "thiers",
+      "pos": "NOM",
+      "frequency": 0.003,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-105",
+      "partition": "development",
+      "ipa": "kʁwaze",
+      "exactWord": "croisé",
+      "lemma": "croiser",
+      "pos": "VER",
+      "frequency": 8.089,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-106",
+      "partition": "development",
+      "ipa": "oʁe",
+      "exactWord": "orée",
+      "lemma": "orée",
+      "pos": "NOM",
+      "frequency": 0.396,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-107",
+      "partition": "development",
+      "ipa": "aswaʁ",
+      "exactWord": "asseoir",
+      "lemma": "asseoir",
+      "pos": "VER",
+      "frequency": 57.63,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "asseoir",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-108",
+      "partition": "development",
+      "ipa": "ʃɑ̃ʒ",
+      "exactWord": "change",
+      "lemma": "changer",
+      "pos": "VER",
+      "frequency": 66.437,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "changer",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-109",
+      "partition": "development",
+      "ipa": "dʒin",
+      "exactWord": "djinn",
+      "lemma": "djinn",
+      "pos": "NOM",
+      "frequency": 0.579,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-110",
+      "partition": "development",
+      "ipa": "tipi",
+      "exactWord": "tipi",
+      "lemma": "tipi",
+      "pos": "NOM",
+      "frequency": 0.589,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-111",
+      "partition": "development",
+      "ipa": "ɛ̃djɛ̃",
+      "exactWord": "indien",
+      "lemma": "indien",
+      "pos": "ADJ",
+      "frequency": 6.272,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-112",
+      "partition": "development",
+      "ipa": "dɛ̃d",
+      "exactWord": "dinde",
+      "lemma": "dinde",
+      "pos": "NOM",
+      "frequency": 11.93,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-113",
+      "partition": "development",
+      "ipa": "mɔ̃tʁe",
+      "exactWord": "montrer",
+      "lemma": "montrer",
+      "pos": "VER",
+      "frequency": 136.908,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "montrer",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-114",
+      "partition": "development",
+      "ipa": "dɑ̃se",
+      "exactWord": "danser",
+      "lemma": "danser",
+      "pos": "VER",
+      "frequency": 55.927,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "danser",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-115",
+      "partition": "development",
+      "ipa": "sosjabl",
+      "exactWord": "sociable",
+      "lemma": "sociable",
+      "pos": "ADJ",
+      "frequency": 1.68,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-116",
+      "partition": "development",
+      "ipa": "mɑ̃ʒ",
+      "exactWord": "mange",
+      "lemma": "manger",
+      "pos": "VER",
+      "frequency": 75.437,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "manger",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-117",
+      "partition": "development",
+      "ipa": "pu",
+      "exactWord": "pouh",
+      "lemma": "pouh",
+      "pos": "ONO",
+      "frequency": 0.066,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-118",
+      "partition": "development",
+      "ipa": "gʁɛk",
+      "exactWord": "grec",
+      "lemma": "grec",
+      "pos": "ADJ",
+      "frequency": 3.627,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-119",
+      "partition": "development",
+      "ipa": "ʁɑ̃kaʁ",
+      "exactWord": "rencard",
+      "lemma": "rencard",
+      "pos": "NOM",
+      "frequency": 22.304,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-D-120",
+      "partition": "development",
+      "ipa": "amne",
+      "exactWord": "amené",
+      "lemma": "amener",
+      "pos": "VER",
+      "frequency": 43.921,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "amener",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-001",
+      "partition": "holdout",
+      "ipa": "fini",
+      "exactWord": "finis",
+      "lemma": "finir",
+      "pos": "VER",
+      "frequency": 21.585,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "finir",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-002",
+      "partition": "holdout",
+      "ipa": "gʁimas",
+      "exactWord": "grimace",
+      "lemma": "grimace",
+      "pos": "NOM",
+      "frequency": 1.589,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-003",
+      "partition": "holdout",
+      "ipa": "kɔ̃pʁɑ̃dʁ",
+      "exactWord": "comprendre",
+      "lemma": "comprendre",
+      "pos": "VER",
+      "frequency": 133.364,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "comprendre",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-004",
+      "partition": "holdout",
+      "ipa": "tʁɛtʁ",
+      "exactWord": "traitres",
+      "lemma": "traitres",
+      "pos": "NOM",
+      "frequency": 0.544,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-005",
+      "partition": "holdout",
+      "ipa": "fwete",
+      "exactWord": "fouetter",
+      "lemma": "fouetter",
+      "pos": "VER",
+      "frequency": 2.547,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-006",
+      "partition": "holdout",
+      "ipa": "bjɛ",
+      "exactWord": "biais",
+      "lemma": "biais",
+      "pos": "NOM",
+      "frequency": 1.984,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-007",
+      "partition": "holdout",
+      "ipa": "ol",
+      "exactWord": "hall",
+      "lemma": "hall",
+      "pos": "NOM",
+      "frequency": 12.092,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-008",
+      "partition": "holdout",
+      "ipa": "ʁəkɛt",
+      "exactWord": "requête",
+      "lemma": "requête",
+      "pos": "NOM",
+      "frequency": 9.256,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-009",
+      "partition": "holdout",
+      "ipa": "tɑ̃pl",
+      "exactWord": "temple",
+      "lemma": "temple",
+      "pos": "NOM",
+      "frequency": 15.56,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-010",
+      "partition": "holdout",
+      "ipa": "kɔ̃twaʁ",
+      "exactWord": "comptoir",
+      "lemma": "comptoir",
+      "pos": "NOM",
+      "frequency": 7.063,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-011",
+      "partition": "holdout",
+      "ipa": "kʁɛt",
+      "exactWord": "crètes",
+      "lemma": "crètes",
+      "pos": "NOM",
+      "frequency": 0.003,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-012",
+      "partition": "holdout",
+      "ipa": "mɔ̃te",
+      "exactWord": "monté",
+      "lemma": "monter",
+      "pos": "VER",
+      "frequency": 20.579,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "monter",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-013",
+      "partition": "holdout",
+      "ipa": "toste",
+      "exactWord": "toasté",
+      "lemma": "toaster",
+      "pos": "VER",
+      "frequency": 0.07,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-014",
+      "partition": "holdout",
+      "ipa": "vɛʁdikt",
+      "exactWord": "verdict",
+      "lemma": "verdict",
+      "pos": "NOM",
+      "frequency": 10.057,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-015",
+      "partition": "holdout",
+      "ipa": "vɔ̃",
+      "exactWord": "vont",
+      "lemma": "aller",
+      "pos": "VER",
+      "frequency": 285.984,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "aller",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-016",
+      "partition": "holdout",
+      "ipa": "vjɛʁ",
+      "exactWord": "viaire",
+      "lemma": "viaire",
+      "pos": "ADJ",
+      "frequency": 0.003,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-017",
+      "partition": "holdout",
+      "ipa": "kaʒ",
+      "exactWord": "cage",
+      "lemma": "cage",
+      "pos": "NOM",
+      "frequency": 21.544,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-018",
+      "partition": "holdout",
+      "ipa": "dy",
+      "exactWord": "dû",
+      "lemma": "devoir",
+      "pos": "VER",
+      "frequency": 393.63,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "devoir",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-019",
+      "partition": "holdout",
+      "ipa": "sys",
+      "exactWord": "susse",
+      "lemma": "savoir",
+      "pos": "VER",
+      "frequency": 0.006,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-020",
+      "partition": "holdout",
+      "ipa": "pɛ̃s",
+      "exactWord": "pince",
+      "lemma": "pince",
+      "pos": "NOM",
+      "frequency": 5.127,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "pince",
+            "semanticType": "tool",
+            "description": "Sens pré-source de type tool, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "tool",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-021",
+      "partition": "holdout",
+      "ipa": "sɥi",
+      "exactWord": "suis",
+      "lemma": "être",
+      "pos": "VER",
+      "frequency": 2648.307,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "être",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-022",
+      "partition": "holdout",
+      "ipa": "kɔ̃dɥiʁ",
+      "exactWord": "conduire",
+      "lemma": "conduire",
+      "pos": "VER",
+      "frequency": 60.275,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "conduire",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-023",
+      "partition": "holdout",
+      "ipa": "sufʁiʁ",
+      "exactWord": "souffrir",
+      "lemma": "souffrir",
+      "pos": "VER",
+      "frequency": 26.022,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "souffrir",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-024",
+      "partition": "holdout",
+      "ipa": "ʁuvʁiʁ",
+      "exactWord": "rouvrir",
+      "lemma": "rouvrir",
+      "pos": "VER",
+      "frequency": 2.703,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-025",
+      "partition": "holdout",
+      "ipa": "ɔbi",
+      "exactWord": "hobbit",
+      "lemma": "hobbit",
+      "pos": "NOM",
+      "frequency": 0.475,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-026",
+      "partition": "holdout",
+      "ipa": "ʁɑ̃tʁe",
+      "exactWord": "rentrée",
+      "lemma": "rentrer",
+      "pos": "VER",
+      "frequency": 23.851,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "rentrer",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-027",
+      "partition": "holdout",
+      "ipa": "kɔ̃sɛʁv",
+      "exactWord": "conserve",
+      "lemma": "conserve",
+      "pos": "NOM",
+      "frequency": 2.497,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-028",
+      "partition": "holdout",
+      "ipa": "pø",
+      "exactWord": "peux",
+      "lemma": "pouvoir",
+      "pos": "VER",
+      "frequency": 1930.589,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "pouvoir",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-029",
+      "partition": "holdout",
+      "ipa": "kʁetjɛ̃",
+      "exactWord": "chrétien",
+      "lemma": "chrétien",
+      "pos": "ADJ",
+      "frequency": 3.522,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-030",
+      "partition": "holdout",
+      "ipa": "vwaʁ",
+      "exactWord": "voir",
+      "lemma": "voir",
+      "pos": "VER",
+      "frequency": 1302.389,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "voir",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-031",
+      "partition": "holdout",
+      "ipa": "kana",
+      "exactWord": "kana",
+      "lemma": "kana",
+      "pos": "NOM",
+      "frequency": 0.639,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-032",
+      "partition": "holdout",
+      "ipa": "siʁe",
+      "exactWord": "ciré",
+      "lemma": "cirer",
+      "pos": "VER",
+      "frequency": 0.307,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-033",
+      "partition": "holdout",
+      "ipa": "vwaju",
+      "exactWord": "voyou",
+      "lemma": "voyou",
+      "pos": "NOM",
+      "frequency": 8.639,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-034",
+      "partition": "holdout",
+      "ipa": "dag",
+      "exactWord": "dag",
+      "lemma": "dag",
+      "pos": "NOM",
+      "frequency": 0.038,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-035",
+      "partition": "holdout",
+      "ipa": "ɔ̃d",
+      "exactWord": "onde",
+      "lemma": "onde",
+      "pos": "NOM",
+      "frequency": 5.234,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-036",
+      "partition": "holdout",
+      "ipa": "kʁwa",
+      "exactWord": "crois",
+      "lemma": "croire",
+      "pos": "VER",
+      "frequency": 833.079,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "croire",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-037",
+      "partition": "holdout",
+      "ipa": "valɑ̃",
+      "exactWord": "valant",
+      "lemma": "valoir",
+      "pos": "VER",
+      "frequency": 0.747,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-038",
+      "partition": "holdout",
+      "ipa": "goʃe",
+      "exactWord": "gauchés",
+      "lemma": "gauchés",
+      "pos": "NOM",
+      "frequency": 0.006,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-039",
+      "partition": "holdout",
+      "ipa": "klotyʁ",
+      "exactWord": "clôture",
+      "lemma": "clôture",
+      "pos": "NOM",
+      "frequency": 6.288,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-040",
+      "partition": "holdout",
+      "ipa": "sɛʁt",
+      "exactWord": "certes",
+      "lemma": "certes",
+      "pos": "ADV",
+      "frequency": 9.269,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-041",
+      "partition": "holdout",
+      "ipa": "melɑ̃ʒ",
+      "exactWord": "mélange",
+      "lemma": "mélange",
+      "pos": "NOM",
+      "frequency": 10.247,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-042",
+      "partition": "holdout",
+      "ipa": "ʃɑ̃te",
+      "exactWord": "chantè",
+      "lemma": "chantè",
+      "pos": "NOM",
+      "frequency": 0.006,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-043",
+      "partition": "holdout",
+      "ipa": "dʁol",
+      "exactWord": "drôle",
+      "lemma": "drôle",
+      "pos": "ADJ",
+      "frequency": 133.541,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-044",
+      "partition": "holdout",
+      "ipa": "pite",
+      "exactWord": "pité",
+      "lemma": "pité",
+      "pos": "NOM",
+      "frequency": 0.041,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-045",
+      "partition": "holdout",
+      "ipa": "apʁɔʃ",
+      "exactWord": "approche",
+      "lemma": "approcher",
+      "pos": "VER",
+      "frequency": 37.503,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "approcher",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-046",
+      "partition": "holdout",
+      "ipa": "gaz",
+      "exactWord": "gaz",
+      "lemma": "gaz",
+      "pos": "NOM",
+      "frequency": 34.025,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-047",
+      "partition": "holdout",
+      "ipa": "sɛʁviʁ",
+      "exactWord": "servir",
+      "lemma": "servir",
+      "pos": "VER",
+      "frequency": 66.12,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "servir",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-048",
+      "partition": "holdout",
+      "ipa": "komɛtʁ",
+      "exactWord": "commettre",
+      "lemma": "commettre",
+      "pos": "VER",
+      "frequency": 8.972,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-049",
+      "partition": "holdout",
+      "ipa": "faj",
+      "exactWord": "faille",
+      "lemma": "faille",
+      "pos": "NOM",
+      "frequency": 6.377,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-050",
+      "partition": "holdout",
+      "ipa": "dɔʁ",
+      "exactWord": "dors",
+      "lemma": "dormir",
+      "pos": "VER",
+      "frequency": 32.222,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "dormir",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-051",
+      "partition": "holdout",
+      "ipa": "baɲɔl",
+      "exactWord": "bagnole",
+      "lemma": "bagnole",
+      "pos": "NOM",
+      "frequency": 11.959,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-052",
+      "partition": "holdout",
+      "ipa": "vɑ̃dʁ",
+      "exactWord": "vendre",
+      "lemma": "vendre",
+      "pos": "VER",
+      "frequency": 72.646,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "vendre",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-053",
+      "partition": "holdout",
+      "ipa": "klɑ̃ʃe",
+      "exactWord": "clenché",
+      "lemma": "clenché",
+      "pos": "NOM",
+      "frequency": 0.006,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-054",
+      "partition": "holdout",
+      "ipa": "paʁɛ",
+      "exactWord": "paraît",
+      "lemma": "paraître",
+      "pos": "VER",
+      "frequency": 58.244,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "paraître",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-055",
+      "partition": "holdout",
+      "ipa": "eky",
+      "exactWord": "écu",
+      "lemma": "écu",
+      "pos": "NOM",
+      "frequency": 0.184,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-056",
+      "partition": "holdout",
+      "ipa": "aʁjɛʁ",
+      "exactWord": "arrière",
+      "lemma": "arrière",
+      "pos": "NOM",
+      "frequency": 60.522,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "arrière",
+            "semanticType": "person_role",
+            "description": "Sens pré-source de type person_role, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "person_role",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-057",
+      "partition": "holdout",
+      "ipa": "bataʁ",
+      "exactWord": "bâtard",
+      "lemma": "bâtard",
+      "pos": "NOM",
+      "frequency": 12.123,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-058",
+      "partition": "holdout",
+      "ipa": "iʁ",
+      "exactWord": "ire",
+      "lemma": "ire",
+      "pos": "NOM",
+      "frequency": 0.184,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-059",
+      "partition": "holdout",
+      "ipa": "ɛkskyz",
+      "exactWord": "excuse",
+      "lemma": "excuser",
+      "pos": "VER",
+      "frequency": 82.965,
+      "selectionStratum": "pre_source_positive",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": true,
+        "expectedVisualSenses": [
+          {
+            "goldSenseId": "S1",
+            "conceptLabel": "excuser",
+            "semanticType": "action",
+            "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+          }
+        ],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Positif pré-source: type général explicite, fréquence/compacité suffisantes et aucun risque de nommage élevé connu."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIS-H-060",
+      "partition": "holdout",
+      "ipa": "iʁe",
+      "exactWord": "irez",
+      "lemma": "aller",
+      "pos": "VER",
+      "frequency": 13.057,
+      "selectionStratum": "pre_source_negative",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "low",
+        "rationale": "Négatif pré-source: type non visuel/non explicite, fréquence/compacité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    }
+  ]
+}

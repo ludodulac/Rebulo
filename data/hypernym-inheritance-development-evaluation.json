@@ -1,0 +1,582 @@
+{
+  "schemaVersion": "1.0",
+  "status": "development_only_tuning_allowed",
+  "partition": "development",
+  "baseSha": "3ae27afa68d46922c1c18d0f0ae10908c3de02c0",
+  "modelVersion": "structured-hypernym-inheritance-pos-v1",
+  "taxonomy": [
+    "physical_object",
+    "animal",
+    "plant",
+    "food",
+    "body_part",
+    "person_role",
+    "vehicle",
+    "place",
+    "clothing",
+    "tool",
+    "material",
+    "event",
+    "action",
+    "abstract",
+    "relation",
+    "symbol",
+    "text",
+    "quantity",
+    "other"
+  ],
+  "source": {
+    "sourceId": "frwiktionary-kaikki-2026-09-08",
+    "sourceName": "French Wiktionary via Wiktextract/Kaikki",
+    "sourceVersion": "frwiktionary dump 2026-09-01; Kaikki extraction 2026-09-08; wiktextract ccec6f1 + 4deed51",
+    "license": "CC-BY-SA + GFDL",
+    "sourceRoot": "https://kaikki.org/frwiktionary/Fran%C3%A7ais/meaning/"
+  },
+  "n": 135,
+  "positive": 10,
+  "negative": 125,
+  "coverage": {
+    "relationsObserved": 133,
+    "percent": 98.5,
+    "averageSenseAmbiguity": 10.3,
+    "relationsWithInheritedSense": 55,
+    "hypernymTypedSenses": 111
+  },
+  "senseAligned": {
+    "tp": 0,
+    "fp": 0,
+    "tn": 125,
+    "fn": 10,
+    "precision": 100,
+    "recall": 0,
+    "f1": 0
+  },
+  "relationLevel": {
+    "tp": 0,
+    "fp": 9,
+    "tn": 116,
+    "fn": 10,
+    "precision": 0,
+    "recall": 0,
+    "f1": 0
+  },
+  "ranking": {
+    "top1": {
+      "count": 5,
+      "denominator": 10,
+      "percent": 50
+    },
+    "top2": {
+      "count": 8,
+      "denominator": 10,
+      "percent": 80
+    },
+    "top3": {
+      "count": 9,
+      "denominator": 10,
+      "percent": 90
+    }
+  },
+  "semanticTypeAccuracy": {
+    "evaluated": 133,
+    "correct": 86,
+    "percent": 64.7
+  },
+  "automaticGreens": [
+    {
+      "goldId": "HIG-D-002",
+      "word": "acteur",
+      "goldPositive": false,
+      "senseAligned": false,
+      "selectedDefinition": "Personne qui représente un personnage dans une pièce de théâtre, un film…",
+      "type": "person_role",
+      "provenance": "exact_graphy:acteur",
+      "reason": "passes_structured_guards"
+    },
+    {
+      "goldId": "HIG-D-017",
+      "word": "joueur",
+      "goldPositive": false,
+      "senseAligned": false,
+      "selectedDefinition": "Celui qui joue ou qui a le goût de jouer.",
+      "type": "person_role",
+      "provenance": "exact_graphy:joueur",
+      "reason": "passes_structured_guards"
+    },
+    {
+      "goldId": "HIG-D-027",
+      "word": "porteur",
+      "goldPositive": false,
+      "senseAligned": false,
+      "selectedDefinition": "Personne dont le métier ordinaire est de porter quelque chose.",
+      "type": "person_role",
+      "provenance": "exact_graphy:porteur",
+      "reason": "passes_structured_guards"
+    },
+    {
+      "goldId": "HIG-D-038",
+      "word": "serveur",
+      "goldPositive": false,
+      "senseAligned": false,
+      "selectedDefinition": "Celui qui a pour activité professionnelle de servir à table ou au buffet.",
+      "type": "person_role",
+      "provenance": "exact_graphy:serveur",
+      "reason": "passes_structured_guards"
+    },
+    {
+      "goldId": "HIG-D-044",
+      "word": "portier",
+      "goldPositive": false,
+      "senseAligned": false,
+      "selectedDefinition": "Homme dont la profession est de garder une porte d’entrée.",
+      "type": "person_role",
+      "provenance": "exact_graphy:portier",
+      "reason": "passes_structured_guards"
+    },
+    {
+      "goldId": "HIG-D-099",
+      "word": "devin",
+      "goldPositive": false,
+      "senseAligned": false,
+      "selectedDefinition": "Homme qui prétend prédire les évènements qui arriveront et découvrir les choses cachées.",
+      "type": "person_role",
+      "provenance": "exact_graphy:devin",
+      "reason": "passes_structured_guards"
+    },
+    {
+      "goldId": "HIG-D-111",
+      "word": "parleur",
+      "goldPositive": false,
+      "senseAligned": false,
+      "selectedDefinition": "Celui qui parle beaucoup, qui parle trop.",
+      "type": "person_role",
+      "provenance": "exact_graphy:parleur",
+      "reason": "passes_structured_guards"
+    },
+    {
+      "goldId": "HIG-D-115",
+      "word": "masseur",
+      "goldPositive": false,
+      "senseAligned": false,
+      "selectedDefinition": "Celui qui masse les membres du corps pour les assouplir.",
+      "type": "person_role",
+      "provenance": "exact_graphy:masseur",
+      "reason": "passes_structured_guards"
+    },
+    {
+      "goldId": "HIG-D-131",
+      "word": "batte",
+      "goldPositive": false,
+      "senseAligned": false,
+      "selectedDefinition": "Instrument qui sert à battre, à tasser, à fouler et dont la forme varie suivant les métiers.",
+      "type": "tool",
+      "provenance": "exact_graphy:batte",
+      "reason": "passes_structured_guards"
+    }
+  ],
+  "wrongSenseGreens": 0,
+  "falseGreens": 9,
+  "falseNegatives": [
+    {
+      "goldId": "HIG-D-016",
+      "word": "bout",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "bout",
+          "semanticType": "other",
+          "description": "Concept candidat « bout » traité comme entité visuelle potentielle, sans preuve humaine de dénomination."
+        }
+      ],
+      "observedSenseCount": 16,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Partie extrême d’une chose.",
+        "type": "other",
+        "provenance": "exact_graphy:bout",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIG-D-019",
+      "word": "test",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "test",
+          "semanticType": "other",
+          "description": "Concept candidat « test » traité comme entité visuelle potentielle, sans preuve humaine de dénomination."
+        }
+      ],
+      "observedSenseCount": 6,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Coquille externe dure, calcaire ou chitineuse, de certains invertébrés.",
+        "type": "other",
+        "provenance": "exact_graphy:test",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIG-D-022",
+      "word": "message",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "message",
+          "semanticType": "other",
+          "description": "Concept candidat « message » traité comme entité visuelle potentielle, sans preuve humaine de dénomination."
+        }
+      ],
+      "observedSenseCount": 5,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Charge ou commission de dire ou de porter quelque chose.",
+        "type": "other",
+        "provenance": "exact_graphy:message",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIG-D-030",
+      "word": "pute",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "pute",
+          "semanticType": "other",
+          "description": "Concept candidat « pute » traité comme entité visuelle potentielle, sans preuve humaine de dénomination."
+        }
+      ],
+      "observedSenseCount": 15,
+      "compatibleRank": 2,
+      "selected": {
+        "definition": "Personne de mauvaise vie ou prête à tout pour réussir, avec une référence explicite à la sexualité.",
+        "type": "person_role",
+        "provenance": "exact_graphy:pute",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "rank_score_below_66"
+    },
+    {
+      "goldId": "HIG-D-054",
+      "word": "retard",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "retard",
+          "semanticType": "other",
+          "description": "Concept candidat « retard » traité comme entité visuelle potentielle, sans preuve humaine de dénomination."
+        }
+      ],
+      "observedSenseCount": 3,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Fait d’arriver, de se produire plus tard que prévu, d’agir trop tard ; délai, remise, ralentissement.",
+        "type": "other",
+        "provenance": "exact_graphy:retard",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIG-D-082",
+      "word": "madame",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "madame",
+          "semanticType": "other",
+          "description": "Concept candidat « madame » traité comme entité visuelle potentielle, sans preuve humaine de dénomination."
+        }
+      ],
+      "observedSenseCount": 8,
+      "compatibleRank": 5,
+      "selected": {
+        "definition": "Femme adulte, par opposition aux petites filles.",
+        "type": "person_role",
+        "provenance": "exact_graphy:madame",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "rank_score_below_66"
+    },
+    {
+      "goldId": "HIG-D-084",
+      "word": "théâtre",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "théâtre",
+          "semanticType": "other",
+          "description": "Concept candidat « théâtre » traité comme entité visuelle potentielle, sans preuve humaine de dénomination."
+        }
+      ],
+      "observedSenseCount": 25,
+      "compatibleRank": 3,
+      "selected": {
+        "definition": "Lieu où l’on donne des spectacles (œuvres dramatiques, lyriques, musicales, chorégraphiques, etc.), comprenant diverses installations destinées aux spectacles ou au public.",
+        "type": "place",
+        "provenance": "exact_graphy:théâtre",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "rank_score_below_66"
+    },
+    {
+      "goldId": "HIG-D-092",
+      "word": "vol",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "vol",
+          "semanticType": "other",
+          "description": "Concept candidat « vol » traité comme entité visuelle potentielle, sans preuve humaine de dénomination."
+        }
+      ],
+      "observedSenseCount": 11,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Mouvement des oiseaux et de divers animaux, qui se soutiennent et avancent dans l’air au moyen de leurs ailes.",
+        "type": "other",
+        "provenance": "exact_graphy:vol",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIG-D-118",
+      "word": "dîner",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "dîner",
+          "semanticType": "other",
+          "description": "Concept candidat « dîner » traité comme entité visuelle potentielle, sans preuve humaine de dénomination."
+        }
+      ],
+      "observedSenseCount": 4,
+      "compatibleRank": 2,
+      "selected": {
+        "definition": "Prendre le repas du soir.",
+        "type": "action",
+        "provenance": "exact_graphy:dîner",
+        "pos": {
+          "class": "exact_graphy_cross_pos",
+          "penalty": 11,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIG-D-132",
+      "word": "fil",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "fil",
+          "semanticType": "other",
+          "description": "Concept candidat « fil » traité comme entité visuelle potentielle, sans preuve humaine de dénomination."
+        }
+      ],
+      "observedSenseCount": 19,
+      "compatibleRank": 2,
+      "selected": {
+        "definition": "Substance flexible et très déliée que les chenilles et les araignées tirent de leur corps.",
+        "type": "material",
+        "provenance": "exact_graphy:fil",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    }
+  ],
+  "falsePositives": [
+    {
+      "goldId": "HIG-D-002",
+      "word": "acteur",
+      "selectedDefinition": "Personne qui représente un personnage dans une pièce de théâtre, un film…",
+      "type": "person_role",
+      "reason": "passes_structured_guards"
+    },
+    {
+      "goldId": "HIG-D-017",
+      "word": "joueur",
+      "selectedDefinition": "Celui qui joue ou qui a le goût de jouer.",
+      "type": "person_role",
+      "reason": "passes_structured_guards"
+    },
+    {
+      "goldId": "HIG-D-027",
+      "word": "porteur",
+      "selectedDefinition": "Personne dont le métier ordinaire est de porter quelque chose.",
+      "type": "person_role",
+      "reason": "passes_structured_guards"
+    },
+    {
+      "goldId": "HIG-D-038",
+      "word": "serveur",
+      "selectedDefinition": "Celui qui a pour activité professionnelle de servir à table ou au buffet.",
+      "type": "person_role",
+      "reason": "passes_structured_guards"
+    },
+    {
+      "goldId": "HIG-D-044",
+      "word": "portier",
+      "selectedDefinition": "Homme dont la profession est de garder une porte d’entrée.",
+      "type": "person_role",
+      "reason": "passes_structured_guards"
+    },
+    {
+      "goldId": "HIG-D-099",
+      "word": "devin",
+      "selectedDefinition": "Homme qui prétend prédire les évènements qui arriveront et découvrir les choses cachées.",
+      "type": "person_role",
+      "reason": "passes_structured_guards"
+    },
+    {
+      "goldId": "HIG-D-111",
+      "word": "parleur",
+      "selectedDefinition": "Celui qui parle beaucoup, qui parle trop.",
+      "type": "person_role",
+      "reason": "passes_structured_guards"
+    },
+    {
+      "goldId": "HIG-D-115",
+      "word": "masseur",
+      "selectedDefinition": "Celui qui masse les membres du corps pour les assouplir.",
+      "type": "person_role",
+      "reason": "passes_structured_guards"
+    },
+    {
+      "goldId": "HIG-D-131",
+      "word": "batte",
+      "selectedDefinition": "Instrument qui sert à battre, à tasser, à fouler et dont la forme varie suivant les métiers.",
+      "type": "tool",
+      "reason": "passes_structured_guards"
+    }
+  ],
+  "posPolicyTopSenseClasses": {
+    "contradictory": 3,
+    "compatible": 122,
+    "none": 2,
+    "exact_graphy_cross_pos": 8
+  },
+  "ablations": {
+    "withoutHypernym": {
+      "senseAligned": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 125,
+        "fn": 10,
+        "precision": 100,
+        "recall": 0,
+        "f1": 0
+      },
+      "relationLevel": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 125,
+        "fn": 10,
+        "precision": 100,
+        "recall": 0,
+        "f1": 0
+      },
+      "contribution": {
+        "correctedSenseAligned": 0,
+        "deterioratedSenseAligned": 0,
+        "correctedRelationLevel": 0,
+        "deterioratedRelationLevel": 9
+      }
+    },
+    "withoutInheritance": {
+      "senseAligned": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 125,
+        "fn": 10,
+        "precision": 100,
+        "recall": 0,
+        "f1": 0
+      },
+      "relationLevel": {
+        "tp": 0,
+        "fp": 9,
+        "tn": 116,
+        "fn": 10,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      "contribution": {
+        "correctedSenseAligned": 0,
+        "deterioratedSenseAligned": 0,
+        "correctedRelationLevel": 0,
+        "deterioratedRelationLevel": 0
+      }
+    },
+    "withoutPosResolution": {
+      "senseAligned": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 125,
+        "fn": 10,
+        "precision": 100,
+        "recall": 0,
+        "f1": 0
+      },
+      "relationLevel": {
+        "tp": 0,
+        "fp": 10,
+        "tn": 115,
+        "fn": 10,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      "contribution": {
+        "correctedSenseAligned": 0,
+        "deterioratedSenseAligned": 0,
+        "correctedRelationLevel": 1,
+        "deterioratedRelationLevel": 0
+      }
+    }
+  }
+}

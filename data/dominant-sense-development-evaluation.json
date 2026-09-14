@@ -1,0 +1,235 @@
+{
+  "schemaVersion": "1.0",
+  "status": "development_only_tuning_allowed",
+  "baseSha": "b45854e82f85d8028075d7809d99c30212225ea9",
+  "modelVersion": "dominant-sense-semantic-v4",
+  "taxonomy": [
+    "physical_object",
+    "animal",
+    "plant",
+    "food",
+    "body_part",
+    "person_role",
+    "vehicle",
+    "place",
+    "clothing",
+    "tool",
+    "material",
+    "event",
+    "action",
+    "abstract",
+    "relation",
+    "symbol",
+    "text",
+    "quantity",
+    "other"
+  ],
+  "source": {
+    "sourceId": "frwiktionary-kaikki-2026-09-08",
+    "sourceName": "French Wiktionary via Wiktextract/Kaikki",
+    "sourceVersion": "frwiktionary dump 2026-09-01; Kaikki extraction 2026-09-08; wiktextract ccec6f1 + 4deed51",
+    "license": "CC-BY-SA + GFDL",
+    "sourceRoot": "https://kaikki.org/frwiktionary/Fran%C3%A7ais/meaning/"
+  },
+  "n": 135,
+  "positive": 31,
+  "negative": 104,
+  "coverage": {
+    "relationsObserved": 132,
+    "percent": 97.8,
+    "averageSenseAmbiguity": 6.24,
+    "positiveWithObservedSense": 31,
+    "positiveWithObservedSensePercent": 100
+  },
+  "metrics": {
+    "n": 135,
+    "tp": 12,
+    "fp": 0,
+    "tn": 104,
+    "fn": 19,
+    "precision": 100,
+    "recall": 38.7,
+    "f1": 55.8
+  },
+  "semanticTypeAccuracy": {
+    "evaluated": 132,
+    "correct": 81,
+    "percent": 61.4
+  },
+  "senseRankingOperationalization": "A gold-compatible observed sense is one whose deterministic semanticType matches one of the pre-source expected visual semantic types; this is a type-compatible operationalization, not a claim that dictionary order equals real-world frequency.",
+  "senseRanking": {
+    "top1": {
+      "count": 16,
+      "percent": 51.6
+    },
+    "top2": {
+      "count": 16,
+      "percent": 51.6
+    },
+    "top3": {
+      "count": 17,
+      "percent": 54.8
+    }
+  },
+  "greens": [
+    {
+      "goldId": "DSG-D-008",
+      "word": "essence",
+      "gold": true,
+      "decision": "ranked_observed_sense_passes_general_guards",
+      "top": {
+        "definition": "Espèce apte à produire du bois.",
+        "type": "plant",
+        "score": 76,
+        "sourceOrder": 2
+      }
+    },
+    {
+      "goldId": "DSG-D-021",
+      "word": "danseur",
+      "gold": true,
+      "decision": "ranked_observed_sense_passes_general_guards",
+      "top": {
+        "definition": "Celui qui aime à danser, qui danse souvent, ou qui fait profession de danser.",
+        "type": "person_role",
+        "score": 74,
+        "sourceOrder": 2
+      }
+    },
+    {
+      "goldId": "DSG-D-025",
+      "word": "broyeur",
+      "gold": true,
+      "decision": "ranked_observed_sense_passes_general_guards",
+      "top": {
+        "definition": "Ouvrier qui fait le métier de broyer.",
+        "type": "person_role",
+        "score": 76,
+        "sourceOrder": 2
+      }
+    },
+    {
+      "goldId": "DSG-D-029",
+      "word": "coiffeur",
+      "gold": true,
+      "decision": "ranked_observed_sense_passes_general_guards",
+      "top": {
+        "definition": "Personne dont le métier est de couper et coiffer les cheveux, et éventuellement la barbe.",
+        "type": "person_role",
+        "score": 78,
+        "sourceOrder": 1
+      }
+    },
+    {
+      "goldId": "DSG-D-030",
+      "word": "collier",
+      "gold": true,
+      "decision": "ranked_observed_sense_passes_general_guards",
+      "top": {
+        "definition": "Ornement, bijou qui fait le tour du cou.",
+        "type": "physical_object",
+        "score": 78,
+        "sourceOrder": 1
+      }
+    },
+    {
+      "goldId": "DSG-D-032",
+      "word": "tanière",
+      "gold": true,
+      "decision": "ranked_observed_sense_passes_general_guards",
+      "top": {
+        "definition": "Habitation sommaire rappelant le gîte d’un animal.",
+        "type": "place",
+        "score": 74,
+        "sourceOrder": 2
+      }
+    },
+    {
+      "goldId": "DSG-D-056",
+      "word": "foin",
+      "gold": true,
+      "decision": "ranked_observed_sense_passes_general_guards",
+      "top": {
+        "definition": "Herbe fauchée et séchée qui sert principalement à la nourriture des chevaux et des bestiaux.",
+        "type": "plant",
+        "score": 78,
+        "sourceOrder": 1
+      }
+    },
+    {
+      "goldId": "DSG-D-059",
+      "word": "index",
+      "gold": true,
+      "decision": "ranked_observed_sense_passes_general_guards",
+      "top": {
+        "definition": "Doigt le plus proche du pouce, parce que c’est celui-là dont on se sert ordinairement pour indiquer, pour montrer quelque chose.",
+        "type": "body_part",
+        "score": 80,
+        "sourceOrder": 1
+      }
+    },
+    {
+      "goldId": "DSG-D-062",
+      "word": "choc",
+      "gold": true,
+      "decision": "ranked_observed_sense_passes_general_guards",
+      "top": {
+        "definition": "Collision brusque, impact d’un corps avec un autre corps.",
+        "type": "event",
+        "score": 78,
+        "sourceOrder": 1
+      }
+    },
+    {
+      "goldId": "DSG-D-097",
+      "word": "cheveu",
+      "gold": true,
+      "decision": "ranked_observed_sense_passes_general_guards",
+      "top": {
+        "definition": "Filament organique synthétisé par l’épiderme du crâne humain.",
+        "type": "body_part",
+        "score": 80,
+        "sourceOrder": 1
+      }
+    },
+    {
+      "goldId": "DSG-D-098",
+      "word": "shérif",
+      "gold": true,
+      "decision": "ranked_observed_sense_passes_general_guards",
+      "top": {
+        "definition": "Officier municipal en Angleterre, chargé de différentes fonctions de police et de justice.",
+        "type": "person_role",
+        "score": 76,
+        "sourceOrder": 2
+      }
+    },
+    {
+      "goldId": "DSG-D-100",
+      "word": "volant",
+      "gold": true,
+      "decision": "ranked_observed_sense_passes_general_guards",
+      "top": {
+        "definition": "Organe en forme de roue par le moyen duquel on donne la direction à un véhicule automobile.",
+        "type": "physical_object",
+        "score": 64,
+        "sourceOrder": 5
+      }
+    }
+  ],
+  "rejections": {
+    "semantic_type_not_safely_visual": 89,
+    "usage_or_form_penalty": 24,
+    "source_order_above_1_for_tool": 2,
+    "source_order_above_2_for_food": 1,
+    "no_observed_sense": 3,
+    "B_POS_mismatch": 2,
+    "rank_score_below_62": 1,
+    "low_frequency_for_competitive_name_class": 1
+  },
+  "notes": [
+    "Development partition only. Rules may be changed after inspecting these results. Holdout has not been fetched by this script.",
+    "senseObserved, semanticType, and visualEligibility are separate fields/stages.",
+    "Project B POS and Lexique frequency are general ranking/guard signals; frequency never independently proves visual eligibility."
+  ]
+}

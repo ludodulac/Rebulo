@@ -1,0 +1,4014 @@
+{
+  "schemaVersion": "1.0",
+  "status": "final_gold_annotated_and_sealed_before_source_lookup",
+  "baseSha": "3ae27afa68d46922c1c18d0f0ae10908c3de02c0",
+  "selectionSeed": "rebulo-hypernym-inheritance-final-gold-v2",
+  "sourceLookedAt": false,
+  "developmentCount": 125,
+  "holdoutCount": 75,
+  "totalCount": 200,
+  "abandonedPreflightExcluded": 210,
+  "priorRelationsExcluded": 1269,
+  "rows": [
+    {
+      "goldId": "HIF-D-001",
+      "partition": "development",
+      "ipa": "ʃati",
+      "exactWord": "châtie",
+      "lemma": "châtier",
+      "pos": "VER",
+      "frequency": 0.427,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-0826",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-002",
+      "partition": "development",
+      "ipa": "vɛʁsjɔ̃",
+      "exactWord": "versions",
+      "lemma": "version",
+      "pos": "NOM",
+      "frequency": 2.38,
+      "selectionStratum": "negative_abstract",
+      "sourceSampleId": "B2C-I1-1595",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-003",
+      "partition": "development",
+      "ipa": "e",
+      "exactWord": "ais",
+      "lemma": "ais",
+      "pos": "NOM",
+      "frequency": 11.953,
+      "selectionStratum": "polysemy",
+      "sourceSampleId": "B2C-I1-1521",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-004",
+      "partition": "development",
+      "ipa": "deɛs",
+      "exactWord": "déesse",
+      "lemma": "déesse",
+      "pos": "NOM",
+      "frequency": 9.269,
+      "selectionStratum": "negative_abstract",
+      "sourceSampleId": "B2C-I1-1647",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-005",
+      "partition": "development",
+      "ipa": "ʃje",
+      "exactWord": "chier",
+      "lemma": "chier",
+      "pos": "VER",
+      "frequency": 43.07,
+      "selectionStratum": "actions",
+      "sourceSampleId": "B2C-I2-1823",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-006",
+      "partition": "development",
+      "ipa": "nivo",
+      "exactWord": "nivaux",
+      "lemma": "nival",
+      "pos": "ADJ",
+      "frequency": 0.006,
+      "selectionStratum": "negative_abstract",
+      "sourceSampleId": "B2C-I1-1898",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-007",
+      "partition": "development",
+      "ipa": "ɛl",
+      "exactWord": "elle",
+      "lemma": "elle",
+      "pos": "PRO",
+      "frequency": 4591.655,
+      "selectionStratum": "negative_abstract",
+      "sourceSampleId": "B2C-I1-1663",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-008",
+      "partition": "development",
+      "ipa": "maʒik",
+      "exactWord": "magique",
+      "lemma": "magique",
+      "pos": "ADJ",
+      "frequency": 26.209,
+      "selectionStratum": "negative_abstract",
+      "sourceSampleId": "B2C-I2-1772",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-009",
+      "partition": "development",
+      "ipa": "byte",
+      "exactWord": "butée",
+      "lemma": "buter",
+      "pos": "VER",
+      "frequency": 0.278,
+      "selectionStratum": "low_frequency",
+      "sourceSampleId": "B2C-I2-1466",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-010",
+      "partition": "development",
+      "ipa": "ʒœnɛs",
+      "exactWord": "jeunesse",
+      "lemma": "jeunesse",
+      "pos": "NOM",
+      "frequency": 17.016,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I1-1683",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-011",
+      "partition": "development",
+      "ipa": "kʁaʃ",
+      "exactWord": "crache",
+      "lemma": "cracher",
+      "pos": "VER",
+      "frequency": 8.335,
+      "selectionStratum": "actions",
+      "sourceSampleId": "B2C-I2-1854",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-012",
+      "partition": "development",
+      "ipa": "vjolœʁ",
+      "exactWord": "violeur",
+      "lemma": "violeur",
+      "pos": "NOM",
+      "frequency": 6.089,
+      "selectionStratum": "roles",
+      "sourceSampleId": "B2C-I1-1544",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-013",
+      "partition": "development",
+      "ipa": "kupe",
+      "exactWord": "coupée",
+      "lemma": "couper",
+      "pos": "VER",
+      "frequency": 6.101,
+      "selectionStratum": "polysemy",
+      "sourceSampleId": "B2C-I1-1543",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-014",
+      "partition": "development",
+      "ipa": "aʁa",
+      "exactWord": "ara",
+      "lemma": "ara",
+      "pos": "NOM",
+      "frequency": 0.411,
+      "selectionStratum": "polysemy",
+      "sourceSampleId": "B2C-I2-1492",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-015",
+      "partition": "development",
+      "ipa": "pudʁ",
+      "exactWord": "poudre",
+      "lemma": "poudre",
+      "pos": "NOM",
+      "frequency": 16.538,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-0395",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-016",
+      "partition": "development",
+      "ipa": "aʁtist",
+      "exactWord": "artiste",
+      "lemma": "artiste",
+      "pos": "NOM",
+      "frequency": 23.032,
+      "selectionStratum": "roles",
+      "sourceSampleId": "B2C-I1-1090",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-017",
+      "partition": "development",
+      "ipa": "kaʁte",
+      "exactWord": "quarter",
+      "lemma": "quarter",
+      "pos": "VER",
+      "frequency": 0.396,
+      "selectionStratum": "low_frequency",
+      "sourceSampleId": "B2C-I2-1407",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-018",
+      "partition": "development",
+      "ipa": "papa",
+      "exactWord": "papas",
+      "lemma": "papas",
+      "pos": "NOM",
+      "frequency": 2.006,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I1-0728",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-019",
+      "partition": "development",
+      "ipa": "ʁite",
+      "exactWord": "ritter",
+      "lemma": "ritter",
+      "pos": "NOM",
+      "frequency": 0.003,
+      "selectionStratum": "low_frequency",
+      "sourceSampleId": "B2C-I2-0768",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-020",
+      "partition": "development",
+      "ipa": "nɔʁme",
+      "exactWord": "normé",
+      "lemma": "normé",
+      "pos": "ADJ",
+      "frequency": 0.003,
+      "selectionStratum": "polysemy",
+      "sourceSampleId": "B2C-I1-1813",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-021",
+      "partition": "development",
+      "ipa": "tʁete",
+      "exactWord": "traité",
+      "lemma": "traiter",
+      "pos": "VER",
+      "frequency": 16.383,
+      "selectionStratum": "polysemy",
+      "sourceSampleId": "B2C-I2-1838",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-022",
+      "partition": "development",
+      "ipa": "ʁif",
+      "exactWord": "riff",
+      "lemma": "riff",
+      "pos": "NOM",
+      "frequency": 0.535,
+      "selectionStratum": "low_frequency",
+      "sourceSampleId": "B2C-I1-1315",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-023",
+      "partition": "development",
+      "ipa": "peʁiʁ",
+      "exactWord": "périr",
+      "lemma": "périr",
+      "pos": "VER",
+      "frequency": 1.623,
+      "selectionStratum": "low_frequency",
+      "sourceSampleId": "B2C-I2-0996",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-024",
+      "partition": "development",
+      "ipa": "elɑ̃",
+      "exactWord": "élan",
+      "lemma": "élan",
+      "pos": "NOM",
+      "frequency": 4.494,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I1-1419",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-025",
+      "partition": "development",
+      "ipa": "kʁwajabl",
+      "exactWord": "croyable",
+      "lemma": "croyable",
+      "pos": "ADJ",
+      "frequency": 4.614,
+      "selectionStratum": "negative_abstract",
+      "sourceSampleId": "B2C-I1-1885",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-026",
+      "partition": "development",
+      "ipa": "sypstɑ̃s",
+      "exactWord": "substance",
+      "lemma": "substance",
+      "pos": "NOM",
+      "frequency": 6.709,
+      "selectionStratum": "negative_abstract",
+      "sourceSampleId": "B2C-I1-1704",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-027",
+      "partition": "development",
+      "ipa": "ʁyʃ",
+      "exactWord": "ruche",
+      "lemma": "ruche",
+      "pos": "NOM",
+      "frequency": 2.835,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-0265",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-028",
+      "partition": "development",
+      "ipa": "gaʁdjɛ̃",
+      "exactWord": "gardien",
+      "lemma": "gardien",
+      "pos": "NOM",
+      "frequency": 19.892,
+      "selectionStratum": "roles",
+      "sourceSampleId": "B2C-I1-1509",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-029",
+      "partition": "development",
+      "ipa": "pimɑ̃",
+      "exactWord": "piment",
+      "lemma": "piment",
+      "pos": "NOM",
+      "frequency": 2.604,
+      "selectionStratum": "negative_abstract",
+      "sourceSampleId": "B2C-I1-1656",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-030",
+      "partition": "development",
+      "ipa": "tɛ̃dʁ",
+      "exactWord": "teindre",
+      "lemma": "teindre",
+      "pos": "VER",
+      "frequency": 0.892,
+      "selectionStratum": "actions",
+      "sourceSampleId": "B2C-I2-1851",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-031",
+      "partition": "development",
+      "ipa": "bagɛl",
+      "exactWord": "baguel",
+      "lemma": "baguel",
+      "pos": "NOM",
+      "frequency": 0.006,
+      "selectionStratum": "polysemy",
+      "sourceSampleId": "B2C-I2-1462",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-032",
+      "partition": "development",
+      "ipa": "alje",
+      "exactWord": "hallier",
+      "lemma": "hallier",
+      "pos": "NOM",
+      "frequency": 0.013,
+      "selectionStratum": "roles",
+      "sourceSampleId": "B2C-I2-1844",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-033",
+      "partition": "development",
+      "ipa": "motœʁ",
+      "exactWord": "moteur",
+      "lemma": "moteur",
+      "pos": "NOM",
+      "frequency": 25.323,
+      "selectionStratum": "roles",
+      "sourceSampleId": "B2C-I1-1070",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-034",
+      "partition": "development",
+      "ipa": "eta",
+      "exactWord": "état",
+      "lemma": "état",
+      "pos": "NOM",
+      "frequency": 142.633,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I1-0335",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-035",
+      "partition": "development",
+      "ipa": "ʁy",
+      "exactWord": "reus",
+      "lemma": "reus",
+      "pos": "NOM",
+      "frequency": 0.025,
+      "selectionStratum": "polysemy",
+      "sourceSampleId": "B2C-I1-1262",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-036",
+      "partition": "development",
+      "ipa": "bo",
+      "exactWord": "beau",
+      "lemma": "beau",
+      "pos": "ADJ",
+      "frequency": 185.472,
+      "selectionStratum": "negative_abstract",
+      "sourceSampleId": "B2C-I1-1581",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-037",
+      "partition": "development",
+      "ipa": "tuʃabl",
+      "exactWord": "touchable",
+      "lemma": "touchable",
+      "pos": "ADJ",
+      "frequency": 0.013,
+      "selectionStratum": "negative_abstract",
+      "sourceSampleId": "B2C-I2-0951",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-038",
+      "partition": "development",
+      "ipa": "anɥɛl",
+      "exactWord": "annuel",
+      "lemma": "annuel",
+      "pos": "ADJ",
+      "frequency": 3.737,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-1692",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-039",
+      "partition": "development",
+      "ipa": "wɛ",
+      "exactWord": "ouais",
+      "lemma": "ouais",
+      "pos": "ADV",
+      "frequency": 816.085,
+      "selectionStratum": "negative_abstract",
+      "sourceSampleId": "B2C-I2-1124",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-040",
+      "partition": "development",
+      "ipa": "mobil",
+      "exactWord": "mobile",
+      "lemma": "mobile",
+      "pos": "NOM",
+      "frequency": 12.763,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I1-1122",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-041",
+      "partition": "development",
+      "ipa": "gaɲe",
+      "exactWord": "gagné",
+      "lemma": "gagner",
+      "pos": "VER",
+      "frequency": 86.345,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I1-0829",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-042",
+      "partition": "development",
+      "ipa": "okœ̃",
+      "exactWord": "aucuns",
+      "lemma": "aucuns",
+      "pos": "ADJ",
+      "frequency": 1.908,
+      "selectionStratum": "negative_abstract",
+      "sourceSampleId": "B2C-I2-0973",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-043",
+      "partition": "development",
+      "ipa": "pepe",
+      "exactWord": "pp",
+      "lemma": "pp",
+      "pos": "ADV",
+      "frequency": 0.044,
+      "selectionStratum": "negative_abstract",
+      "sourceSampleId": "B2C-I2-1244",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-044",
+      "partition": "development",
+      "ipa": "bɑ̃d",
+      "exactWord": "bande",
+      "lemma": "bande",
+      "pos": "NOM",
+      "frequency": 57.541,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I1-0350",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-045",
+      "partition": "development",
+      "ipa": "ɛmabl",
+      "exactWord": "aimable",
+      "lemma": "aimable",
+      "pos": "ADJ",
+      "frequency": 12.674,
+      "selectionStratum": "negative_abstract",
+      "sourceSampleId": "B2C-I2-0899",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-046",
+      "partition": "development",
+      "ipa": "lym",
+      "exactWord": "lûmes",
+      "lemma": "lire",
+      "pos": "VER",
+      "frequency": 0.006,
+      "selectionStratum": "low_frequency",
+      "sourceSampleId": "B2C-I2-1319",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-047",
+      "partition": "development",
+      "ipa": "ləvje",
+      "exactWord": "levier",
+      "lemma": "levier",
+      "pos": "NOM",
+      "frequency": 3.968,
+      "selectionStratum": "roles",
+      "sourceSampleId": "B2C-I1-1433",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-048",
+      "partition": "development",
+      "ipa": "vo",
+      "exactWord": "vau",
+      "lemma": "vau",
+      "pos": "NOM",
+      "frequency": 0.028,
+      "selectionStratum": "low_frequency",
+      "sourceSampleId": "B2C-I1-0784",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-049",
+      "partition": "development",
+      "ipa": "spiʁal",
+      "exactWord": "spiralent",
+      "lemma": "spiraler",
+      "pos": "VER",
+      "frequency": 0.003,
+      "selectionStratum": "actions",
+      "sourceSampleId": "B2C-I1-1815",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-050",
+      "partition": "development",
+      "ipa": "œm",
+      "exactWord": "hum",
+      "lemma": "hum",
+      "pos": "ONO",
+      "frequency": 70.19,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I1-1966",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-051",
+      "partition": "development",
+      "ipa": "aby",
+      "exactWord": "abus",
+      "lemma": "abus",
+      "pos": "NOM",
+      "frequency": 7.152,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I1-1170",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-052",
+      "partition": "development",
+      "ipa": "favœʁ",
+      "exactWord": "faveur",
+      "lemma": "faveur",
+      "pos": "NOM",
+      "frequency": 40.794,
+      "selectionStratum": "roles",
+      "sourceSampleId": "B2C-I1-1013",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-053",
+      "partition": "development",
+      "ipa": "kɔ̃tʁɛʁ",
+      "exactWord": "contraire",
+      "lemma": "contraire",
+      "pos": "NOM",
+      "frequency": 43.829,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I1-0498",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-054",
+      "partition": "development",
+      "ipa": "amuʁ",
+      "exactWord": "amoure",
+      "lemma": "amourer",
+      "pos": "VER",
+      "frequency": 0.006,
+      "selectionStratum": "actions",
+      "sourceSampleId": "B2C-I2-1959",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-055",
+      "partition": "development",
+      "ipa": "ʒadis",
+      "exactWord": "jadis",
+      "lemma": "jadis",
+      "pos": "ADV",
+      "frequency": 4.801,
+      "selectionStratum": "negative_abstract",
+      "sourceSampleId": "B2C-I1-1822",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-056",
+      "partition": "development",
+      "ipa": "libɛʁ",
+      "exactWord": "liber",
+      "lemma": "liber",
+      "pos": "NOM",
+      "frequency": 0.051,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-1962",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-057",
+      "partition": "development",
+      "ipa": "in",
+      "exactWord": "hin",
+      "lemma": "hin",
+      "pos": "NOM",
+      "frequency": 0.218,
+      "selectionStratum": "polysemy",
+      "sourceSampleId": "B2C-I1-1352",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-058",
+      "partition": "development",
+      "ipa": "ɑ̃ti",
+      "exactWord": "antireflet",
+      "lemma": "antireflet",
+      "pos": "ADJ",
+      "frequency": 0.003,
+      "selectionStratum": "negative_abstract",
+      "sourceSampleId": "B2C-I1-1837",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-059",
+      "partition": "development",
+      "ipa": "boku",
+      "exactWord": "beaucoup",
+      "lemma": "beaucoup",
+      "pos": "ADV",
+      "frequency": 665.247,
+      "selectionStratum": "polysemy",
+      "sourceSampleId": "B2C-I2-1908",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-060",
+      "partition": "development",
+      "ipa": "oʁœʁ",
+      "exactWord": "horreur",
+      "lemma": "horreur",
+      "pos": "NOM",
+      "frequency": 23.937,
+      "selectionStratum": "roles",
+      "sourceSampleId": "B2C-I1-1074",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-061",
+      "partition": "development",
+      "ipa": "plɔ̃bje",
+      "exactWord": "plombier",
+      "lemma": "plombier",
+      "pos": "NOM",
+      "frequency": 4.934,
+      "selectionStratum": "roles",
+      "sourceSampleId": "B2C-I1-1556",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-062",
+      "partition": "development",
+      "ipa": "ve",
+      "exactWord": "v",
+      "lemma": "v",
+      "pos": "NOM",
+      "frequency": 11.908,
+      "selectionStratum": "polysemy",
+      "sourceSampleId": "B2C-I1-0152",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-063",
+      "partition": "development",
+      "ipa": "bɛʁ",
+      "exactWord": "bers",
+      "lemma": "ber",
+      "pos": "NOM",
+      "frequency": 0.003,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-0771",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-064",
+      "partition": "development",
+      "ipa": "myni",
+      "exactWord": "muni",
+      "lemma": "munir",
+      "pos": "VER",
+      "frequency": 0.554,
+      "selectionStratum": "actions",
+      "sourceSampleId": "B2C-I2-1054",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-065",
+      "partition": "development",
+      "ipa": "pwaɲɛ",
+      "exactWord": "poignait",
+      "lemma": "poindre",
+      "pos": "VER",
+      "frequency": 0.006,
+      "selectionStratum": "actions",
+      "sourceSampleId": "B2C-I2-0888",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-066",
+      "partition": "development",
+      "ipa": "as",
+      "exactWord": "asse",
+      "lemma": "asse",
+      "pos": "NOM",
+      "frequency": 0.152,
+      "selectionStratum": "low_frequency",
+      "sourceSampleId": "B2C-I1-1230",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-067",
+      "partition": "development",
+      "ipa": "fiʃje",
+      "exactWord": "fichier",
+      "lemma": "fichier",
+      "pos": "NOM",
+      "frequency": 10.611,
+      "selectionStratum": "roles",
+      "sourceSampleId": "B2C-I1-1126",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-068",
+      "partition": "development",
+      "ipa": "ʁali",
+      "exactWord": "rally",
+      "lemma": "rally",
+      "pos": "NOM",
+      "frequency": 0.282,
+      "selectionStratum": "polysemy",
+      "sourceSampleId": "B2C-I2-1660",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-069",
+      "partition": "development",
+      "ipa": "tufe",
+      "exactWord": "touffez",
+      "lemma": "touffer",
+      "pos": "VER",
+      "frequency": 0.003,
+      "selectionStratum": "actions",
+      "sourceSampleId": "B2C-I2-0871",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-070",
+      "partition": "development",
+      "ipa": "ʁapɛl",
+      "exactWord": "rappelle",
+      "lemma": "rappeler",
+      "pos": "VER",
+      "frequency": 120.155,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I1-0824",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-071",
+      "partition": "development",
+      "ipa": "paʁkuʁ",
+      "exactWord": "parcours",
+      "lemma": "parcours",
+      "pos": "NOM",
+      "frequency": 7.051,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I1-1174",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-072",
+      "partition": "development",
+      "ipa": "ʒi",
+      "exactWord": "git",
+      "lemma": "git",
+      "pos": "NOM",
+      "frequency": 0.085,
+      "selectionStratum": "low_frequency",
+      "sourceSampleId": "B2C-I2-0011",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-073",
+      "partition": "development",
+      "ipa": "maska",
+      "exactWord": "masqua",
+      "lemma": "masquer",
+      "pos": "VER",
+      "frequency": 0.003,
+      "selectionStratum": "actions",
+      "sourceSampleId": "B2C-I1-1743",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-074",
+      "partition": "development",
+      "ipa": "ʁoze",
+      "exactWord": "roser",
+      "lemma": "roser",
+      "pos": "VER",
+      "frequency": 0.082,
+      "selectionStratum": "low_frequency",
+      "sourceSampleId": "B2C-I2-1419",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-075",
+      "partition": "development",
+      "ipa": "sele",
+      "exactWord": "célée",
+      "lemma": "célée",
+      "pos": "NOM",
+      "frequency": 0.003,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-0765",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-076",
+      "partition": "development",
+      "ipa": "pat",
+      "exactWord": "pâte",
+      "lemma": "pâte",
+      "pos": "NOM",
+      "frequency": 5.987,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I1-0602",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-077",
+      "partition": "development",
+      "ipa": "klav",
+      "exactWord": "claves",
+      "lemma": "claver",
+      "pos": "VER",
+      "frequency": 0.015,
+      "selectionStratum": "actions",
+      "sourceSampleId": "B2C-I2-1662",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-078",
+      "partition": "development",
+      "ipa": "vo",
+      "exactWord": "vaux",
+      "lemma": "valoir",
+      "pos": "VER",
+      "frequency": 9.741,
+      "selectionStratum": "polysemy",
+      "sourceSampleId": "B2C-I1-0691",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-079",
+      "partition": "development",
+      "ipa": "gʁaf",
+      "exactWord": "graffs",
+      "lemma": "graffs",
+      "pos": "NOM",
+      "frequency": 0.022,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-0690",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-080",
+      "partition": "development",
+      "ipa": "fyme",
+      "exactWord": "fumer",
+      "lemma": "fumer",
+      "pos": "VER",
+      "frequency": 25.962,
+      "selectionStratum": "actions",
+      "sourceSampleId": "B2C-I1-1504",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-081",
+      "partition": "development",
+      "ipa": "kʁe",
+      "exactWord": "crée",
+      "lemma": "créer",
+      "pos": "VER",
+      "frequency": 14.835,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I1-0690",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-082",
+      "partition": "development",
+      "ipa": "fastfud",
+      "exactWord": "fastfood",
+      "lemma": "fastfood",
+      "pos": "NOM",
+      "frequency": 0.082,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-1618",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-083",
+      "partition": "development",
+      "ipa": "zɔd",
+      "exactWord": "zode",
+      "lemma": "zode",
+      "pos": "NOM",
+      "frequency": 0.009,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I1-1900",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-084",
+      "partition": "development",
+      "ipa": "likɔʁn",
+      "exactWord": "licorne",
+      "lemma": "licorne",
+      "pos": "NOM",
+      "frequency": 2.734,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-1900",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-085",
+      "partition": "development",
+      "ipa": "vɛ",
+      "exactWord": "vais",
+      "lemma": "aller",
+      "pos": "VER",
+      "frequency": 1713.085,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I1-0631",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-086",
+      "partition": "development",
+      "ipa": "vapœʁ",
+      "exactWord": "vapeur",
+      "lemma": "vapeur",
+      "pos": "NOM",
+      "frequency": 6.68,
+      "selectionStratum": "roles",
+      "sourceSampleId": "B2C-I1-1541",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-087",
+      "partition": "development",
+      "ipa": "ljɛ̃",
+      "exactWord": "lien",
+      "lemma": "lien",
+      "pos": "NOM",
+      "frequency": 42.389,
+      "selectionStratum": "roles",
+      "sourceSampleId": "B2C-I1-1381",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-088",
+      "partition": "development",
+      "ipa": "bɔk",
+      "exactWord": "bock",
+      "lemma": "bock",
+      "pos": "NOM",
+      "frequency": 0.108,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-1160",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-089",
+      "partition": "development",
+      "ipa": "spɔt",
+      "exactWord": "spot",
+      "lemma": "spot",
+      "pos": "NOM",
+      "frequency": 1.687,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-0515",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-090",
+      "partition": "development",
+      "ipa": "vine",
+      "exactWord": "viner",
+      "lemma": "viner",
+      "pos": "VER",
+      "frequency": 0.013,
+      "selectionStratum": "actions",
+      "sourceSampleId": "B2C-I2-0940",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-091",
+      "partition": "development",
+      "ipa": "vizɔ̃",
+      "exactWord": "visons",
+      "lemma": "viser",
+      "pos": "VER",
+      "frequency": 0.269,
+      "selectionStratum": "low_frequency",
+      "sourceSampleId": "B2C-I2-1398",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-092",
+      "partition": "development",
+      "ipa": "ɛ̃sy",
+      "exactWord": "insus",
+      "lemma": "insus",
+      "pos": "NOM",
+      "frequency": 0.003,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-0763",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-093",
+      "partition": "development",
+      "ipa": "lo",
+      "exactWord": "lot",
+      "lemma": "lot",
+      "pos": "NOM",
+      "frequency": 13.326,
+      "selectionStratum": "polysemy",
+      "sourceSampleId": "B2C-I1-0269",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-094",
+      "partition": "development",
+      "ipa": "sudɛ̃",
+      "exactWord": "soudain",
+      "lemma": "soudain",
+      "pos": "ADV",
+      "frequency": 14.044,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-1724",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-095",
+      "partition": "development",
+      "ipa": "flœʁte",
+      "exactWord": "flirter",
+      "lemma": "flirter",
+      "pos": "VER",
+      "frequency": 4.424,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-1409",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-096",
+      "partition": "development",
+      "ipa": "fymje",
+      "exactWord": "fumier",
+      "lemma": "fumier",
+      "pos": "NOM",
+      "frequency": 7.104,
+      "selectionStratum": "roles",
+      "sourceSampleId": "B2C-I1-1171",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-097",
+      "partition": "development",
+      "ipa": "sy",
+      "exactWord": "sue",
+      "lemma": "savoir",
+      "pos": "VER",
+      "frequency": 1.038,
+      "selectionStratum": "actions",
+      "sourceSampleId": "B2C-I2-1784",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-098",
+      "partition": "development",
+      "ipa": "plozibl",
+      "exactWord": "plausible",
+      "lemma": "plausible",
+      "pos": "ADJ",
+      "frequency": 2.665,
+      "selectionStratum": "negative_abstract",
+      "sourceSampleId": "B2C-I2-1785",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-099",
+      "partition": "development",
+      "ipa": "pus",
+      "exactWord": "pousse",
+      "lemma": "pousser",
+      "pos": "VER",
+      "frequency": 22.557,
+      "selectionStratum": "actions",
+      "sourceSampleId": "B2C-I1-1505",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-100",
+      "partition": "development",
+      "ipa": "nɛʁvɑ̃",
+      "exactWord": "nervant",
+      "lemma": "nerver",
+      "pos": "VER",
+      "frequency": 0.006,
+      "selectionStratum": "actions",
+      "sourceSampleId": "B2C-I2-1348",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-101",
+      "partition": "development",
+      "ipa": "gɛt",
+      "exactWord": "guète",
+      "lemma": "guète",
+      "pos": "NOM",
+      "frequency": 0.016,
+      "selectionStratum": "low_frequency",
+      "sourceSampleId": "B2C-I2-1624",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-102",
+      "partition": "development",
+      "ipa": "ʁəlɛ",
+      "exactWord": "relais",
+      "lemma": "relais",
+      "pos": "NOM",
+      "frequency": 9.797,
+      "selectionStratum": "polysemy",
+      "sourceSampleId": "B2C-I1-1130",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-103",
+      "partition": "development",
+      "ipa": "ku",
+      "exactWord": "cou",
+      "lemma": "cou",
+      "pos": "NOM",
+      "frequency": 41.595,
+      "selectionStratum": "polysemy",
+      "sourceSampleId": "B2C-I1-0141",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-104",
+      "partition": "development",
+      "ipa": "ʒite",
+      "exactWord": "giter",
+      "lemma": "gîter",
+      "pos": "VER",
+      "frequency": 0.016,
+      "selectionStratum": "actions",
+      "sourceSampleId": "B2C-I1-1771",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-105",
+      "partition": "development",
+      "ipa": "kʁɔs",
+      "exactWord": "crosse",
+      "lemma": "crosse",
+      "pos": "NOM",
+      "frequency": 2.81,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-0266",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-106",
+      "partition": "development",
+      "ipa": "dedi",
+      "exactWord": "dédie",
+      "lemma": "dédier",
+      "pos": "VER",
+      "frequency": 0.782,
+      "selectionStratum": "actions",
+      "sourceSampleId": "B2C-I2-1839",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-107",
+      "partition": "development",
+      "ipa": "sɔʁ",
+      "exactWord": "sort",
+      "lemma": "sortir",
+      "pos": "VER",
+      "frequency": 75.111,
+      "selectionStratum": "polysemy",
+      "sourceSampleId": "B2C-I1-0676",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-108",
+      "partition": "development",
+      "ipa": "kɔ̃vɛ̃",
+      "exactWord": "convint",
+      "lemma": "convenir",
+      "pos": "VER",
+      "frequency": 0.019,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-1290",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-109",
+      "partition": "development",
+      "ipa": "pʁim",
+      "exactWord": "prime",
+      "lemma": "prime",
+      "pos": "NOM",
+      "frequency": 9.614,
+      "selectionStratum": "polysemy",
+      "sourceSampleId": "B2C-I2-0099",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-110",
+      "partition": "development",
+      "ipa": "ʁepɛʁ",
+      "exactWord": "repaire",
+      "lemma": "repairer",
+      "pos": "VER",
+      "frequency": 0.022,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-1079",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-111",
+      "partition": "development",
+      "ipa": "pʁɛ",
+      "exactWord": "près",
+      "lemma": "près",
+      "pos": "PRE",
+      "frequency": 113.149,
+      "selectionStratum": "negative_abstract",
+      "sourceSampleId": "B2C-I1-1621",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-112",
+      "partition": "development",
+      "ipa": "dwa",
+      "exactWord": "dois",
+      "lemma": "devoir",
+      "pos": "VER",
+      "frequency": 1018.804,
+      "selectionStratum": "actions",
+      "sourceSampleId": "B2C-I1-0650",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-113",
+      "partition": "development",
+      "ipa": "leʒist",
+      "exactWord": "légiste",
+      "lemma": "légiste",
+      "pos": "NOM",
+      "frequency": 13.288,
+      "selectionStratum": "roles",
+      "sourceSampleId": "B2C-I1-1518",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-114",
+      "partition": "development",
+      "ipa": "myta",
+      "exactWord": "muta",
+      "lemma": "muter",
+      "pos": "VER",
+      "frequency": 0.104,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I1-1908",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-115",
+      "partition": "development",
+      "ipa": "da",
+      "exactWord": "da",
+      "lemma": "da",
+      "pos": "ONO",
+      "frequency": 6.12,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I1-1707",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-116",
+      "partition": "development",
+      "ipa": "pɛʁse",
+      "exactWord": "percée",
+      "lemma": "percée",
+      "pos": "NOM",
+      "frequency": 1.206,
+      "selectionStratum": "polysemy",
+      "sourceSampleId": "B2C-I2-0582",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-117",
+      "partition": "development",
+      "ipa": "kliʃe",
+      "exactWord": "clicher",
+      "lemma": "clicher",
+      "pos": "VER",
+      "frequency": 0.003,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I1-1923",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-118",
+      "partition": "development",
+      "ipa": "pat",
+      "exactWord": "patte",
+      "lemma": "patte",
+      "pos": "NOM",
+      "frequency": 5.665,
+      "selectionStratum": "polysemy",
+      "sourceSampleId": "B2C-I1-0608",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-119",
+      "partition": "development",
+      "ipa": "mɑ̃s",
+      "exactWord": "menses",
+      "lemma": "mense",
+      "pos": "NOM",
+      "frequency": 0.009,
+      "selectionStratum": "low_frequency",
+      "sourceSampleId": "B2C-I2-0729",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-120",
+      "partition": "development",
+      "ipa": "apʁe",
+      "exactWord": "aprés",
+      "lemma": "aprés",
+      "pos": "NOM",
+      "frequency": 6.778,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I1-1178",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-121",
+      "partition": "development",
+      "ipa": "ɑ̃kɛt",
+      "exactWord": "enquête",
+      "lemma": "enquête",
+      "pos": "NOM",
+      "frequency": 70.149,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I1-0961",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-122",
+      "partition": "development",
+      "ipa": "atɑ̃",
+      "exactWord": "hâtant",
+      "lemma": "hâter",
+      "pos": "VER",
+      "frequency": 0.019,
+      "selectionStratum": "actions",
+      "sourceSampleId": "B2C-I2-1707",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-123",
+      "partition": "development",
+      "ipa": "tʁɛ",
+      "exactWord": "trait",
+      "lemma": "trait",
+      "pos": "NOM",
+      "frequency": 4.845,
+      "selectionStratum": "polysemy",
+      "sourceSampleId": "B2C-I1-0393",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-124",
+      "partition": "development",
+      "ipa": "papi",
+      "exactWord": "papi",
+      "lemma": "papi",
+      "pos": "NOM",
+      "frequency": 7.532,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I1-0112",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-D-125",
+      "partition": "development",
+      "ipa": "ɑ̃se",
+      "exactWord": "ansée",
+      "lemma": "ansé",
+      "pos": "ADJ",
+      "frequency": 0.009,
+      "selectionStratum": "negative_abstract",
+      "sourceSampleId": "B2C-I2-1266",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-001",
+      "partition": "holdout",
+      "ipa": "dag",
+      "exactWord": "dague",
+      "lemma": "dague",
+      "pos": "NOM",
+      "frequency": 3.082,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-0245",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-002",
+      "partition": "holdout",
+      "ipa": "bɑ̃kje",
+      "exactWord": "banquier",
+      "lemma": "banquier",
+      "pos": "NOM",
+      "frequency": 5.003,
+      "selectionStratum": "roles",
+      "sourceSampleId": "B2C-I1-1555",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-003",
+      "partition": "holdout",
+      "ipa": "lize",
+      "exactWord": "lisez",
+      "lemma": "lire",
+      "pos": "VER",
+      "frequency": 15.136,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I1-0903",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-004",
+      "partition": "holdout",
+      "ipa": "kaʁe",
+      "exactWord": "carai",
+      "lemma": "carai",
+      "pos": "NOM",
+      "frequency": 0.013,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-0720",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-005",
+      "partition": "holdout",
+      "ipa": "sɔʁdid",
+      "exactWord": "sordide",
+      "lemma": "sordide",
+      "pos": "ADJ",
+      "frequency": 2.984,
+      "selectionStratum": "negative_abstract",
+      "sourceSampleId": "B2C-I2-0988",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-006",
+      "partition": "holdout",
+      "ipa": "beniʁ",
+      "exactWord": "bénir",
+      "lemma": "bénir",
+      "pos": "VER",
+      "frequency": 1.918,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I1-1718",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-007",
+      "partition": "holdout",
+      "ipa": "obɛz",
+      "exactWord": "obèse",
+      "lemma": "obèse",
+      "pos": "ADJ",
+      "frequency": 1.794,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-1162",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-008",
+      "partition": "holdout",
+      "ipa": "debaʁ",
+      "exactWord": "débarre",
+      "lemma": "débarrer",
+      "pos": "VER",
+      "frequency": 0.028,
+      "selectionStratum": "low_frequency",
+      "sourceSampleId": "B2C-I2-1044",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-009",
+      "partition": "holdout",
+      "ipa": "tip",
+      "exactWord": "type",
+      "lemma": "type",
+      "pos": "NOM",
+      "frequency": 249.699,
+      "selectionStratum": "polysemy",
+      "sourceSampleId": "B2C-I1-0233",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-010",
+      "partition": "holdout",
+      "ipa": "vu",
+      "exactWord": "vous",
+      "lemma": "vous",
+      "pos": "PRO",
+      "frequency": 14039.193,
+      "selectionStratum": "negative_abstract",
+      "sourceSampleId": "B2C-I1-1660",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-011",
+      "partition": "holdout",
+      "ipa": "sɛʁkl",
+      "exactWord": "cercle",
+      "lemma": "cercle",
+      "pos": "NOM",
+      "frequency": 18.614,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I1-1995",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-012",
+      "partition": "holdout",
+      "ipa": "pozœʁ",
+      "exactWord": "poseur",
+      "lemma": "poseur",
+      "pos": "NOM",
+      "frequency": 1.519,
+      "selectionStratum": "roles",
+      "sourceSampleId": "B2C-I2-1860",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-013",
+      "partition": "holdout",
+      "ipa": "ɑ̃piʁ",
+      "exactWord": "empire",
+      "lemma": "empire",
+      "pos": "NOM",
+      "frequency": 19.551,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-0349",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-014",
+      "partition": "holdout",
+      "ipa": "skɑ̃da",
+      "exactWord": "scanda",
+      "lemma": "scander",
+      "pos": "VER",
+      "frequency": 0.006,
+      "selectionStratum": "low_frequency",
+      "sourceSampleId": "B2C-I2-1220",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-015",
+      "partition": "holdout",
+      "ipa": "nego",
+      "exactWord": "négos",
+      "lemma": "négos",
+      "pos": "NOM",
+      "frequency": 0.019,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-0696",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-016",
+      "partition": "holdout",
+      "ipa": "tymœʁ",
+      "exactWord": "tumeur",
+      "lemma": "tumeur",
+      "pos": "NOM",
+      "frequency": 11.864,
+      "selectionStratum": "roles",
+      "sourceSampleId": "B2C-I1-1522",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-017",
+      "partition": "holdout",
+      "ipa": "ak",
+      "exactWord": "aque",
+      "lemma": "aque",
+      "pos": "NOM",
+      "frequency": 0.051,
+      "selectionStratum": "low_frequency",
+      "sourceSampleId": "B2C-I1-0777",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-018",
+      "partition": "holdout",
+      "ipa": "momɑ̃",
+      "exactWord": "moment",
+      "lemma": "moment",
+      "pos": "NOM",
+      "frequency": 487.911,
+      "selectionStratum": "polysemy",
+      "sourceSampleId": "B2C-I1-1560",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-019",
+      "partition": "holdout",
+      "ipa": "vɛ̃sibl",
+      "exactWord": "vincible",
+      "lemma": "vincible",
+      "pos": "NOM",
+      "frequency": 0.016,
+      "selectionStratum": "low_frequency",
+      "sourceSampleId": "B2C-I1-1756",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-020",
+      "partition": "holdout",
+      "ipa": "bɔksœʁ",
+      "exactWord": "boxeur",
+      "lemma": "boxeur",
+      "pos": "NOM",
+      "frequency": 4.699,
+      "selectionStratum": "roles",
+      "sourceSampleId": "B2C-I1-1416",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-021",
+      "partition": "holdout",
+      "ipa": "kesje",
+      "exactWord": "caissier",
+      "lemma": "caissier",
+      "pos": "NOM",
+      "frequency": 1.598,
+      "selectionStratum": "roles",
+      "sourceSampleId": "B2C-I1-1994",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-022",
+      "partition": "holdout",
+      "ipa": "batɑ̃",
+      "exactWord": "battant",
+      "lemma": "battre",
+      "pos": "VER",
+      "frequency": 2.652,
+      "selectionStratum": "actions",
+      "sourceSampleId": "B2C-I2-1984",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-023",
+      "partition": "holdout",
+      "ipa": "tʁɛs",
+      "exactWord": "tresse",
+      "lemma": "tresse",
+      "pos": "NOM",
+      "frequency": 0.541,
+      "selectionStratum": "negative_abstract",
+      "sourceSampleId": "B2C-I2-1852",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-024",
+      "partition": "holdout",
+      "ipa": "kɛstjɔ̃",
+      "exactWord": "question",
+      "lemma": "question",
+      "pos": "NOM",
+      "frequency": 302.858,
+      "selectionStratum": "negative_abstract",
+      "sourceSampleId": "B2C-I1-1579",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-025",
+      "partition": "holdout",
+      "ipa": "bʁœnʃ",
+      "exactWord": "brunch",
+      "lemma": "brunch",
+      "pos": "NOM",
+      "frequency": 3.146,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I1-1453",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-026",
+      "partition": "holdout",
+      "ipa": "tɔk",
+      "exactWord": "toc",
+      "lemma": "toc",
+      "pos": "NOM",
+      "frequency": 4.013,
+      "selectionStratum": "polysemy",
+      "sourceSampleId": "B2C-I1-0703",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-027",
+      "partition": "holdout",
+      "ipa": "spɔt",
+      "exactWord": "spottent",
+      "lemma": "spottent",
+      "pos": "NOM",
+      "frequency": 0.009,
+      "selectionStratum": "low_frequency",
+      "sourceSampleId": "B2C-I2-1503",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-028",
+      "partition": "holdout",
+      "ipa": "maʁʃe",
+      "exactWord": "marchers",
+      "lemma": "marchers",
+      "pos": "NOM",
+      "frequency": 0.003,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-0762",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-029",
+      "partition": "holdout",
+      "ipa": "tona",
+      "exactWord": "tonna",
+      "lemma": "tonner",
+      "pos": "VER",
+      "frequency": 0.009,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-1183",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-030",
+      "partition": "holdout",
+      "ipa": "pʁɛsjɔ̃",
+      "exactWord": "pression",
+      "lemma": "pression",
+      "pos": "NOM",
+      "frequency": 54.294,
+      "selectionStratum": "negative_abstract",
+      "sourceSampleId": "B2C-I1-1626",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-031",
+      "partition": "holdout",
+      "ipa": "sɛ",
+      "exactWord": "saie",
+      "lemma": "saie",
+      "pos": "NOM",
+      "frequency": 0.003,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I1-0809",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-032",
+      "partition": "holdout",
+      "ipa": "maʁa",
+      "exactWord": "marra",
+      "lemma": "marrer",
+      "pos": "VER",
+      "frequency": 0.032,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-1868",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-033",
+      "partition": "holdout",
+      "ipa": "lɛs",
+      "exactWord": "lesse",
+      "lemma": "lesse",
+      "pos": "NOM",
+      "frequency": 0.006,
+      "selectionStratum": "low_frequency",
+      "sourceSampleId": "B2C-I1-1971",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-034",
+      "partition": "holdout",
+      "ipa": "dis",
+      "exactWord": "dix",
+      "lemma": "dix",
+      "pos": "ADJ",
+      "frequency": 89.633,
+      "selectionStratum": "negative_abstract",
+      "sourceSampleId": "B2C-I1-0086",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-035",
+      "partition": "holdout",
+      "ipa": "buʃe",
+      "exactWord": "bouchée",
+      "lemma": "bouchée",
+      "pos": "NOM",
+      "frequency": 4.481,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I1-1420",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-036",
+      "partition": "holdout",
+      "ipa": "ɛs",
+      "exactWord": "esse",
+      "lemma": "esse",
+      "pos": "NOM",
+      "frequency": 0.051,
+      "selectionStratum": "negative_abstract",
+      "sourceSampleId": "B2C-I1-1598",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-037",
+      "partition": "holdout",
+      "ipa": "glas",
+      "exactWord": "glass",
+      "lemma": "glass",
+      "pos": "NOM",
+      "frequency": 1.139,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-0591",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-038",
+      "partition": "holdout",
+      "ipa": "pwɛ̃",
+      "exactWord": "point",
+      "lemma": "point",
+      "pos": "NOM",
+      "frequency": 232.013,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I1-0198",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-039",
+      "partition": "holdout",
+      "ipa": "gɔl",
+      "exactWord": "gaulent",
+      "lemma": "gauler",
+      "pos": "VER",
+      "frequency": 0.003,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-1075",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-040",
+      "partition": "holdout",
+      "ipa": "otœʁ",
+      "exactWord": "hauteur",
+      "lemma": "hauteur",
+      "pos": "NOM",
+      "frequency": 16.709,
+      "selectionStratum": "roles",
+      "sourceSampleId": "B2C-I1-0896",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-041",
+      "partition": "holdout",
+      "ipa": "pap",
+      "exactWord": "pape",
+      "lemma": "pape",
+      "pos": "NOM",
+      "frequency": 6.472,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-0118",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-042",
+      "partition": "holdout",
+      "ipa": "tost",
+      "exactWord": "toast",
+      "lemma": "toast",
+      "pos": "NOM",
+      "frequency": 14.424,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-0437",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-043",
+      "partition": "holdout",
+      "ipa": "tatwaʒ",
+      "exactWord": "tatouage",
+      "lemma": "tatouage",
+      "pos": "NOM",
+      "frequency": 14.174,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-0441",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-044",
+      "partition": "holdout",
+      "ipa": "ʁɑ̃d",
+      "exactWord": "rand",
+      "lemma": "rand",
+      "pos": "NOM",
+      "frequency": 2.579,
+      "selectionStratum": "polysemy",
+      "sourceSampleId": "B2C-I2-0279",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-045",
+      "partition": "holdout",
+      "ipa": "ʃaʁ",
+      "exactWord": "charre",
+      "lemma": "charre",
+      "pos": "NOM",
+      "frequency": 0.035,
+      "selectionStratum": "polysemy",
+      "sourceSampleId": "B2C-I1-1254",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-046",
+      "partition": "holdout",
+      "ipa": "ʃofœʁ",
+      "exactWord": "chauffeur",
+      "lemma": "chauffeur",
+      "pos": "NOM",
+      "frequency": 27.532,
+      "selectionStratum": "roles",
+      "sourceSampleId": "B2C-I1-1054",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-047",
+      "partition": "holdout",
+      "ipa": "tɥœʁ",
+      "exactWord": "tueur",
+      "lemma": "tueur",
+      "pos": "NOM",
+      "frequency": 82.674,
+      "selectionStratum": "roles",
+      "sourceSampleId": "B2C-I1-1379",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-048",
+      "partition": "holdout",
+      "ipa": "pwal",
+      "exactWord": "poil",
+      "lemma": "poil",
+      "pos": "NOM",
+      "frequency": 17.459,
+      "selectionStratum": "polysemy",
+      "sourceSampleId": "B2C-I1-0892",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-049",
+      "partition": "holdout",
+      "ipa": "ipi",
+      "exactWord": "hippie",
+      "lemma": "hippie",
+      "pos": "NOM",
+      "frequency": 1.883,
+      "selectionStratum": "polysemy",
+      "sourceSampleId": "B2C-I2-0480",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-050",
+      "partition": "holdout",
+      "ipa": "bʁijɛ",
+      "exactWord": "brillait",
+      "lemma": "briller",
+      "pos": "VER",
+      "frequency": 1.022,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-0861",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-051",
+      "partition": "holdout",
+      "ipa": "stʁɛs",
+      "exactWord": "stresse",
+      "lemma": "stresser",
+      "pos": "VER",
+      "frequency": 2.335,
+      "selectionStratum": "polysemy",
+      "sourceSampleId": "B2C-I2-1141",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-052",
+      "partition": "holdout",
+      "ipa": "gʁas",
+      "exactWord": "grâce",
+      "lemma": "grâce",
+      "pos": "PRE",
+      "frequency": 85.339,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-0803",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-053",
+      "partition": "holdout",
+      "ipa": "komɔd",
+      "exactWord": "commode",
+      "lemma": "commode",
+      "pos": "ADJ",
+      "frequency": 2.547,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-1739",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-054",
+      "partition": "holdout",
+      "ipa": "vɛs",
+      "exactWord": "vesce",
+      "lemma": "vesce",
+      "pos": "NOM",
+      "frequency": 0.006,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-0740",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-055",
+      "partition": "holdout",
+      "ipa": "tənas",
+      "exactWord": "tenace",
+      "lemma": "tenace",
+      "pos": "ADJ",
+      "frequency": 2.009,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-1897",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-056",
+      "partition": "holdout",
+      "ipa": "silɑ̃s",
+      "exactWord": "silence",
+      "lemma": "silence",
+      "pos": "NOM",
+      "frequency": 68.405,
+      "selectionStratum": "negative_abstract",
+      "sourceSampleId": "B2C-I1-1623",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-057",
+      "partition": "holdout",
+      "ipa": "bœʁk",
+      "exactWord": "beurk",
+      "lemma": "beurk",
+      "pos": "ONO",
+      "frequency": 6.108,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-0866",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-058",
+      "partition": "holdout",
+      "ipa": "seziʁ",
+      "exactWord": "saisir",
+      "lemma": "saisir",
+      "pos": "VER",
+      "frequency": 10.367,
+      "selectionStratum": "actions",
+      "sourceSampleId": "B2C-I2-1397",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-059",
+      "partition": "holdout",
+      "ipa": "ʁota",
+      "exactWord": "rota",
+      "lemma": "roter",
+      "pos": "VER",
+      "frequency": 0.117,
+      "selectionStratum": "actions",
+      "sourceSampleId": "B2C-I2-0812",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-060",
+      "partition": "holdout",
+      "ipa": "livʁœʁ",
+      "exactWord": "livreur",
+      "lemma": "livreur",
+      "pos": "NOM",
+      "frequency": 5.446,
+      "selectionStratum": "roles",
+      "sourceSampleId": "B2C-I1-1550",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-061",
+      "partition": "holdout",
+      "ipa": "popjɛʁ",
+      "exactWord": "paupière",
+      "lemma": "paupière",
+      "pos": "NOM",
+      "frequency": 0.544,
+      "selectionStratum": "roles",
+      "sourceSampleId": "B2C-I2-1886",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-062",
+      "partition": "holdout",
+      "ipa": "bilɑ̃",
+      "exactWord": "bilant",
+      "lemma": "biler",
+      "pos": "VER",
+      "frequency": 0.003,
+      "selectionStratum": "actions",
+      "sourceSampleId": "B2C-I2-0893",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-063",
+      "partition": "holdout",
+      "ipa": "spesjal",
+      "exactWord": "spéciale",
+      "lemma": "spécial",
+      "pos": "ADJ",
+      "frequency": 27.636,
+      "selectionStratum": "negative_abstract",
+      "sourceSampleId": "B2C-I2-1718",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-064",
+      "partition": "holdout",
+      "ipa": "otœʁ",
+      "exactWord": "auteur",
+      "lemma": "auteur",
+      "pos": "NOM",
+      "frequency": 15.848,
+      "selectionStratum": "roles",
+      "sourceSampleId": "B2C-I2-0789",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "person_role",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-065",
+      "partition": "holdout",
+      "ipa": "talɑ̃",
+      "exactWord": "talant",
+      "lemma": "taler",
+      "pos": "VER",
+      "frequency": 0.003,
+      "selectionStratum": "actions",
+      "sourceSampleId": "B2C-I2-1291",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-066",
+      "partition": "holdout",
+      "ipa": "lɔ̃",
+      "exactWord": "long",
+      "lemma": "long",
+      "pos": "ADJ",
+      "frequency": 80.263,
+      "selectionStratum": "negative_abstract",
+      "sourceSampleId": "B2C-I1-1676",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-067",
+      "partition": "holdout",
+      "ipa": "kɔ̃tʁɛ",
+      "exactWord": "contrait",
+      "lemma": "contrer",
+      "pos": "VER",
+      "frequency": 0.016,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I2-1043",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-068",
+      "partition": "holdout",
+      "ipa": "tɛʁibl",
+      "exactWord": "terrible",
+      "lemma": "terrible",
+      "pos": "ADJ",
+      "frequency": 63.345,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I1-1801",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-069",
+      "partition": "holdout",
+      "ipa": "pei",
+      "exactWord": "pays",
+      "lemma": "pays",
+      "pos": "NOM",
+      "frequency": 171.263,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I1-0328",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-070",
+      "partition": "holdout",
+      "ipa": "lezjɔ̃",
+      "exactWord": "lésions",
+      "lemma": "lésion",
+      "pos": "NOM",
+      "frequency": 3.832,
+      "selectionStratum": "negative_abstract",
+      "sourceSampleId": "B2C-I1-1652",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "abstract",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-071",
+      "partition": "holdout",
+      "ipa": "syspɑ̃",
+      "exactWord": "suspens",
+      "lemma": "suspens",
+      "pos": "NOM",
+      "frequency": 1.921,
+      "selectionStratum": "low_frequency",
+      "sourceSampleId": "B2C-I2-0469",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-072",
+      "partition": "holdout",
+      "ipa": "yma",
+      "exactWord": "huma",
+      "lemma": "humer",
+      "pos": "VER",
+      "frequency": 0.133,
+      "selectionStratum": "polysemy",
+      "sourceSampleId": "B2C-I2-1464",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-073",
+      "partition": "holdout",
+      "ipa": "fɔʁtyn",
+      "exactWord": "fortune",
+      "lemma": "fortune",
+      "pos": "NOM",
+      "frequency": 27.389,
+      "selectionStratum": "fill",
+      "sourceSampleId": "B2C-I1-1058",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "low",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-074",
+      "partition": "holdout",
+      "ipa": "bɔ̃",
+      "exactWord": "bond",
+      "lemma": "bond",
+      "pos": "NOM",
+      "frequency": 3.345,
+      "selectionStratum": "polysemy",
+      "sourceSampleId": "B2C-I1-0397",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "other",
+        "risk": "medium",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    },
+    {
+      "goldId": "HIF-H-075",
+      "partition": "holdout",
+      "ipa": "pʁive",
+      "exactWord": "priver",
+      "lemma": "priver",
+      "pos": "VER",
+      "frequency": 3.519,
+      "selectionStratum": "actions",
+      "sourceSampleId": "B2C-I2-1344",
+      "goldReview": {
+        "status": "sealed_pre_source",
+        "seriousVisualConcept": false,
+        "expectedVisualSenses": [],
+        "primarySemanticType": "action",
+        "risk": "high",
+        "rationale": "Négatif pré-source: classe abstraite/non explicite, nommabilité insuffisante ou risque élevé."
+      },
+      "humanNamingEvidence": "none"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+const BASE='3ae27afa68d46922c1c18d0f0ae10908c3de02c0',SEED='rebulo-hypernym-inheritance-gold-v1';
+const j=p=>JSON.parse(fs.readFileSync(p,'utf8')),jl=p=>fs.readFileSync(p,'utf8').trim().split('\n').filter(Boolean).map(JSON.parse);
+const key=r=>`${r.ipa}|${r.exactWord}`,h=s=>crypto.createHash('sha256').update(`${SEED}|${s}`).digest('hex');
+const samples=[...jl('data/b-to-c-industrial-sample-2000.jsonl'),...jl('data/b-to-c-industrial-sample-2-2000.jsonl')];
+const prior=[...jl('data/sense-candidates-calibration-400.jsonl'),...jl('data/sense-coverage-recall-650.jsonl'),...j('data/independent-sense-gold-150.json').rows,...j('data/structured-sense-holdout-75.json').rows,...j('data/dominant-sense-gold-225.json').rows];
+const used=new Set(prior.filter(r=>r?.ipa&&r?.exactWord).map(key));
+const hist=new Set(['club','oeuvre','star','drogue','mu','course','perte','chasse','pub','rêve','lettre','chose','droite','vote','geste']);
+const pool=samples.filter(r=>!used.has(key(r))&&!hist.has(String(r.exactWord).toLowerCase()));
+const strata=[
+ ['concrete',60,r=>['animal','aliment','corps','nature','objet','outil','vêtement','véhicule','lieu','personne'].includes(r.conceptCategory)],
+ ['role_place',30,r=>['personne_rôle_candidat','lieu'].includes(r.conceptCategory)],
+ ['action_event',30,r=>r.conceptCategory==='action'],
+ ['polysemy',35,r=>(r.exactHomophoneCount||0)>=2||['pos_sense_risk','multi_concept_ipa','ambiguous_control'].includes(r.selectionStratum)],
+ ['low_frequency',25,r=>(Number(r.frequency)||0)<2],
+ ['abstract_negative',30,r=>['abstrait','fonction_ou_qualité'].includes(r.conceptCategory)]
+];
+const picked=[],seen=new Set();for(const [s,n,p] of strata){for(const r of pool.filter(p).sort((a,b)=>h(`${s}|${key(a)}`).localeCompare(h(`${s}|${key(b)}`)))){if(seen.has(key(r)))continue;seen.add(key(r));picked.push({r,s});if(picked.filter(x=>x.s===s).length>=n)break;}}
+for(const r of pool.sort((a,b)=>h(`fill|${key(a)}`).localeCompare(h(`fill|${key(b)}`)))){if(picked.length>=210)break;if(seen.has(key(r)))continue;seen.add(key(r));picked.push({r,s:'fill'});}if(picked.length!==210)throw new Error('need 210');
+const ordered=picked.sort((a,b)=>h(`split|${key(a.r)}`).localeCompare(h(`split|${key(b.r)}`)));const dev=ordered.slice(0,135),hold=ordered.slice(135);
+const typeMap={animal:'animal',aliment:'food',corps:'body_part',nature:'plant',objet:'physical_object',outil:'tool','vêtement':'clothing','véhicule':'vehicle',lieu:'place',personne:'person_role','personne_rôle_candidat':'person_role',action:'action',abstrait:'abstract','fonction_ou_qualité':'abstract','nom_concret_à_vérifier':'other'};
+function annotate(r){const cat=r.conceptCategory,t=typeMap[cat]||'other',risk=r.anticipatedNamingRisk||'unknown';const sc=r.scores||{};const visual=['animal','aliment','corps','nature','objet','outil','vêtement','véhicule','lieu','personne'].includes(cat);const role=cat==='personne_rôle_candidat'&&(sc.drawability||0)>=3&&(sc.expectedNameability||0)>=3;const action=cat==='action'&&(sc.drawability||0)>=3&&(sc.expectedNameability||0)>=3&&(sc.visualSimplicity||0)>=3;const uncertain=cat==='nom_concret_à_vérifier'&&(sc.drawability||0)>=3&&(sc.expectedNameability||0)>=3&&risk!=='high';const yes=Boolean((visual||role||action||uncertain)&&risk!=='high');return {seriousVisualConcept:yes,expectedVisualSenses:yes?[{goldSenseId:'S1',conceptLabel:r.conceptLabel||r.exactWord,semanticType:t,description:r.conceptDescription||`concept visuel attendu pour ${r.exactWord}`}]:[],primarySemanticType:yes?t:(t==='other'?'other':t),risk:risk==='unknown'?'medium':risk,rationale:yes?'Concept pré-source suffisamment concret/dessinable/nommable selon les métadonnées éditoriales B; aucune source sémantique consultée.':'Cas pré-source abstrait, trop ambigu ou trop risqué pour un concept visuel sérieux.'};}
+function mat(x,part,i){const r=x.r;return {goldId:`HIG-${part==='development'?'D':'H'}-${String(i+1).padStart(3,'0')}`,partition:part,ipa:r.ipa,exactWord:r.exactWord,lemma:r.lemma??null,pos:r.pos??null,frequency:r.frequency??null,selectionStratum:x.s,sourceSampleId:r.sampleId??null,proxyContext:{conceptCategory:r.conceptCategory,conceptLabel:r.conceptLabel,conceptDescription:r.conceptDescription,anticipatedNamingRisk:r.anticipatedNamingRisk,scores:r.scores},goldReview:{status:'sealed_pre_source',...annotate(r)},humanNamingEvidence:'none'};}
+const rows=[...dev.map((x,i)=>mat(x,'development',i)),...hold.map((x,i)=>mat(x,'holdout',i))];const out={schemaVersion:'1.0',status:'annotated_and_sealed_before_semantic_source_lookup',baseSha:BASE,selectionSeed:SEED,sourceLookedAt:false,developmentCount:135,holdoutCount:75,totalCount:210,excludedPriorRelations:used.size,rows};fs.writeFileSync('data/hypernym-inheritance-gold-210.json',JSON.stringify(out,null,2)+'\n');
+console.log(JSON.stringify({development:135,holdout:75,positiveDev:rows.filter(r=>r.partition==='development'&&r.goldReview.seriousVisualConcept).length,positiveHoldout:rows.filter(r=>r.partition==='holdout'&&r.goldReview.seriousVisualConcept).length},null,2));

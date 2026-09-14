@@ -1,0 +1,19 @@
+name: Hypernym inheritance final verify
+on:
+  push:
+    branches: [analysis/structured-hypernym-inheritance-pos-holdout]
+    paths:
+      - .github/workflows/hypernym-inheritance-final-verify.yml
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: analysis/structured-hypernym-inheritance-pos-holdout
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - name: Run sealed holdout integrity and anti-leak test
+        run: node tests/hypernym-inheritance-pos-holdout.test.mjs

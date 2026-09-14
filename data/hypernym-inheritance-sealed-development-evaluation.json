@@ -3,7 +3,7 @@
   "status": "development_only_tuning_allowed",
   "partition": "development",
   "baseSha": "3ae27afa68d46922c1c18d0f0ae10908c3de02c0",
-  "modelVersion": "structured-hypernym-inheritance-pos-v1",
+  "modelVersion": "structured-hypernym-inheritance-pos-v2",
   "taxonomy": [
     "physical_object",
     "animal",
@@ -36,76 +36,136 @@
   "positive": 40,
   "negative": 80,
   "coverage": {
-    "relationsObserved": 108,
-    "percent": 90,
-    "averageSenseAmbiguity": 9.93,
-    "relationsWithInheritedSense": 48,
-    "hypernymTypedSenses": 48
+    "relationsObserved": 116,
+    "percent": 96.7,
+    "averageSenseAmbiguity": 10.64,
+    "relationsWithInheritedSense": 49,
+    "hypernymTypedSenses": 52
   },
   "senseAligned": {
-    "tp": 0,
+    "tp": 7,
     "fp": 0,
     "tn": 80,
-    "fn": 40,
+    "fn": 33,
     "precision": 100,
-    "recall": 0,
-    "f1": 0
+    "recall": 17.5,
+    "f1": 29.8
   },
   "relationLevel": {
-    "tp": 0,
-    "fp": 2,
-    "tn": 78,
-    "fn": 40,
-    "precision": 0,
-    "recall": 0,
-    "f1": 0
+    "tp": 7,
+    "fp": 1,
+    "tn": 79,
+    "fn": 33,
+    "precision": 87.5,
+    "recall": 17.5,
+    "f1": 29.2
   },
   "ranking": {
     "top1": {
-      "count": 31,
+      "count": 33,
       "denominator": 40,
-      "percent": 77.5
+      "percent": 82.5
     },
     "top2": {
-      "count": 31,
+      "count": 34,
       "denominator": 40,
-      "percent": 77.5
+      "percent": 85
     },
     "top3": {
-      "count": 31,
+      "count": 34,
       "denominator": 40,
-      "percent": 77.5
+      "percent": 85
     }
   },
   "semanticTypeAccuracy": {
-    "evaluated": 108,
-    "correct": 78,
-    "percent": 72.2
+    "evaluated": 116,
+    "correct": 83,
+    "percent": 71.6
   },
   "automaticGreens": [
     {
-      "goldId": "HIS-D-081",
-      "word": "grange",
-      "goldPositive": false,
-      "senseAligned": false,
-      "selectedDefinition": "Bâtiment attenant à la ferme, entrepôt pour le foin, la paille ou le matériel agricole.",
-      "type": "place",
-      "provenance": "exact_graphy:grange",
+      "goldId": "HIS-D-004",
+      "word": "croire",
+      "goldPositive": true,
+      "senseAligned": true,
+      "selectedDefinition": "Tenir pour véritable.",
+      "type": "action",
+      "provenance": "exact_graphy:croire",
       "reason": "passes_structured_guards"
     },
     {
-      "goldId": "HIS-D-086",
-      "word": "buteur",
+      "goldId": "HIS-D-025",
+      "word": "répondre",
+      "goldPositive": true,
+      "senseAligned": true,
+      "selectedDefinition": "Donner une réponse à ce qui a été dit ou demandé.",
+      "type": "action",
+      "provenance": "exact_graphy:répondre",
+      "reason": "passes_structured_guards"
+    },
+    {
+      "goldId": "HIS-D-028",
+      "word": "braquer",
       "goldPositive": false,
       "senseAligned": false,
-      "selectedDefinition": "Personne qui marque un but, ou a l’habitude de marquer des buts.",
-      "type": "person_role",
-      "provenance": "exact_graphy:buteur",
+      "selectedDefinition": "Tourner de façon à placer (une arme à feu, un instrument d'optique) dans une direction déterminée, pointer.",
+      "type": "action",
+      "provenance": "exact_graphy:braquer",
+      "reason": "passes_structured_guards"
+    },
+    {
+      "goldId": "HIS-D-042",
+      "word": "blesser",
+      "goldPositive": true,
+      "senseAligned": true,
+      "selectedDefinition": "Frapper d’un coup qui fait une contusion, une plaie, une fracture.",
+      "type": "action",
+      "provenance": "exact_graphy:blesser",
+      "reason": "passes_structured_guards"
+    },
+    {
+      "goldId": "HIS-D-053",
+      "word": "cacher",
+      "goldPositive": true,
+      "senseAligned": true,
+      "selectedDefinition": "Mettre (une personne ou une chose) en un lieu où on ne peut pas la voir, la recouvrir.",
+      "type": "action",
+      "provenance": "exact_graphy:cacher",
+      "reason": "passes_structured_guards"
+    },
+    {
+      "goldId": "HIS-D-062",
+      "word": "crier",
+      "goldPositive": true,
+      "senseAligned": true,
+      "selectedDefinition": "Jeter un ou plusieurs cris.",
+      "type": "action",
+      "provenance": "exact_graphy:crier",
+      "reason": "passes_structured_guards"
+    },
+    {
+      "goldId": "HIS-D-082",
+      "word": "manger",
+      "goldPositive": true,
+      "senseAligned": true,
+      "selectedDefinition": "Prendre un repas.",
+      "type": "action",
+      "provenance": "exact_graphy:manger",
+      "reason": "passes_structured_guards"
+    },
+    {
+      "goldId": "HIS-D-107",
+      "word": "asseoir",
+      "goldPositive": true,
+      "senseAligned": true,
+      "selectedDefinition": "Mettre quelqu’un sur un siège ou sur quelque chose qui tient lieu de siège.",
+      "type": "action",
+      "provenance": "exact_graphy:asseoir",
       "reason": "passes_structured_guards"
     }
   ],
   "wrongSenseGreens": 0,
-  "falseGreens": 2,
+  "falseGreens": 1,
   "falseNegatives": [
     {
       "goldId": "HIS-D-001",
@@ -118,28 +178,12 @@
           "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
         }
       ],
-      "observedSenseCount": 0,
-      "compatibleRank": null,
-      "selected": null,
-      "reason": "no_observed_sense"
-    },
-    {
-      "goldId": "HIS-D-004",
-      "word": "croire",
-      "expected": [
-        {
-          "goldSenseId": "S1",
-          "conceptLabel": "croire",
-          "semanticType": "action",
-          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
-        }
-      ],
-      "observedSenseCount": 12,
+      "observedSenseCount": 13,
       "compatibleRank": 1,
       "selected": {
-        "definition": "Tenir pour véritable.",
+        "definition": "Clore ce qui était ouvert, par une porte, un couvercle, une trappe, etc.",
         "type": "action",
-        "provenance": "exact_graphy:croire",
+        "provenance": "exact_graphy:fermer",
         "pos": {
           "class": "compatible",
           "penalty": 0,
@@ -159,10 +203,19 @@
           "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
         }
       ],
-      "observedSenseCount": 0,
-      "compatibleRank": null,
-      "selected": null,
-      "reason": "no_observed_sense"
+      "observedSenseCount": 9,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Mettre vit au con, piner, tringler, troncher. Tirer un coup de trique.",
+        "type": "action",
+        "provenance": "exact_graphy:baiser",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "rank_score_below_threshold"
     },
     {
       "goldId": "HIS-D-007",
@@ -175,10 +228,19 @@
           "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
         }
       ],
-      "observedSenseCount": 0,
-      "compatibleRank": null,
-      "selected": null,
-      "reason": "no_observed_sense"
+      "observedSenseCount": 32,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Se déplacer vers le haut, se transporter dans un lieu plus élevé, s’élever, gravir, grimper.",
+        "type": "action",
+        "provenance": "exact_graphy:monter",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
     },
     {
       "goldId": "HIS-D-011",
@@ -192,14 +254,14 @@
         }
       ],
       "observedSenseCount": 25,
-      "compatibleRank": 4,
+      "compatibleRank": 5,
       "selected": {
         "definition": "Qui parle.",
         "type": "abstract",
         "provenance": "exact_graphy:parlant",
         "pos": {
           "class": "exact_graphy_cross_pos",
-          "penalty": 11,
+          "penalty": 8,
           "hardBlock": false
         }
       },
@@ -294,7 +356,7 @@
       "observedSenseCount": 24,
       "compatibleRank": 1,
       "selected": {
-        "definition": "Remettre une chose entre les mains de celui à qui elle appartient, de quelque manière qu’on l’ait eue.",
+        "definition": "Porter, faire voiturer, conduire, un paquet, des marchandises en un lieu.",
         "type": "action",
         "provenance": "exact_graphy:rendre",
         "pos": {
@@ -303,7 +365,7 @@
           "hardBlock": false
         }
       },
-      "reason": "not_high_confidence_safe_type"
+      "reason": "rank_score_below_threshold"
     },
     {
       "goldId": "HIS-D-024",
@@ -324,36 +386,11 @@
         "provenance": "exact_graphy:sauté",
         "pos": {
           "class": "exact_graphy_cross_pos",
-          "penalty": 11,
+          "penalty": 8,
           "hardBlock": false
         }
       },
-      "reason": "rank_score_below_66"
-    },
-    {
-      "goldId": "HIS-D-025",
-      "word": "répondre",
-      "expected": [
-        {
-          "goldSenseId": "S1",
-          "conceptLabel": "répondre",
-          "semanticType": "action",
-          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
-        }
-      ],
-      "observedSenseCount": 24,
-      "compatibleRank": 1,
-      "selected": {
-        "definition": "Donner une réponse à ce qui a été dit ou demandé.",
-        "type": "action",
-        "provenance": "exact_graphy:répondre",
-        "pos": {
-          "class": "compatible",
-          "penalty": 0,
-          "hardBlock": false
-        }
-      },
-      "reason": "not_high_confidence_safe_type"
+      "reason": "rank_score_below_threshold"
     },
     {
       "goldId": "HIS-D-034",
@@ -442,39 +479,14 @@
         }
       ],
       "observedSenseCount": 4,
-      "compatibleRank": 1,
+      "compatibleRank": 2,
       "selected": {
-        "definition": "Participe passé masculin singulier de choisir.",
-        "type": "action",
+        "definition": "Qui a fait l’objet d’un choix.",
+        "type": "abstract",
         "provenance": "exact_graphy:choisi",
         "pos": {
-          "class": "compatible",
-          "penalty": 0,
-          "hardBlock": false
-        }
-      },
-      "reason": "not_high_confidence_safe_type"
-    },
-    {
-      "goldId": "HIS-D-042",
-      "word": "blesser",
-      "expected": [
-        {
-          "goldSenseId": "S1",
-          "conceptLabel": "blesser",
-          "semanticType": "action",
-          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
-        }
-      ],
-      "observedSenseCount": 10,
-      "compatibleRank": 1,
-      "selected": {
-        "definition": "Frapper d’un coup qui fait une contusion, une plaie, une fracture.",
-        "type": "action",
-        "provenance": "exact_graphy:blesser",
-        "pos": {
-          "class": "compatible",
-          "penalty": 0,
+          "class": "exact_graphy_cross_pos",
+          "penalty": 8,
           "hardBlock": false
         }
       },
@@ -567,43 +579,18 @@
         }
       ],
       "observedSenseCount": 19,
-      "compatibleRank": 5,
+      "compatibleRank": 6,
       "selected": {
         "definition": "Lieu propre à cacher ou à se cacher.",
         "type": "place",
         "provenance": "exact_graphy:cache",
         "pos": {
           "class": "exact_graphy_cross_pos",
-          "penalty": 11,
+          "penalty": 8,
           "hardBlock": false
         }
       },
-      "reason": "rank_score_below_66"
-    },
-    {
-      "goldId": "HIS-D-053",
-      "word": "cacher",
-      "expected": [
-        {
-          "goldSenseId": "S1",
-          "conceptLabel": "cacher",
-          "semanticType": "action",
-          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
-        }
-      ],
-      "observedSenseCount": 10,
-      "compatibleRank": 1,
-      "selected": {
-        "definition": "Mettre (une personne ou une chose) en un lieu où on ne peut pas la voir, la recouvrir.",
-        "type": "action",
-        "provenance": "exact_graphy:cacher",
-        "pos": {
-          "class": "compatible",
-          "penalty": 0,
-          "hardBlock": false
-        }
-      },
-      "reason": "not_high_confidence_safe_type"
+      "reason": "rank_score_below_threshold"
     },
     {
       "goldId": "HIS-D-054",
@@ -706,31 +693,6 @@
       "reason": "not_high_confidence_safe_type"
     },
     {
-      "goldId": "HIS-D-062",
-      "word": "crier",
-      "expected": [
-        {
-          "goldSenseId": "S1",
-          "conceptLabel": "crier",
-          "semanticType": "action",
-          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
-        }
-      ],
-      "observedSenseCount": 11,
-      "compatibleRank": 1,
-      "selected": {
-        "definition": "Jeter un ou plusieurs cris.",
-        "type": "action",
-        "provenance": "exact_graphy:crier",
-        "pos": {
-          "class": "compatible",
-          "penalty": 0,
-          "hardBlock": false
-        }
-      },
-      "reason": "not_high_confidence_safe_type"
-    },
-    {
       "goldId": "HIS-D-067",
       "word": "dormi",
       "expected": [
@@ -747,31 +709,6 @@
         "definition": "Participe passé masculin singulier de dormir.",
         "type": "action",
         "provenance": "exact_graphy:dormi",
-        "pos": {
-          "class": "compatible",
-          "penalty": 0,
-          "hardBlock": false
-        }
-      },
-      "reason": "not_high_confidence_safe_type"
-    },
-    {
-      "goldId": "HIS-D-082",
-      "word": "manger",
-      "expected": [
-        {
-          "goldSenseId": "S1",
-          "conceptLabel": "manger",
-          "semanticType": "action",
-          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
-        }
-      ],
-      "observedSenseCount": 13,
-      "compatibleRank": 1,
-      "selected": {
-        "definition": "Mâcher et avaler un aliment dans le but de se nourrir.",
-        "type": "action",
-        "provenance": "exact_graphy:manger",
         "pos": {
           "class": "compatible",
           "penalty": 0,
@@ -924,32 +861,7 @@
         "provenance": "exact_graphy:ouvert",
         "pos": {
           "class": "exact_graphy_cross_pos",
-          "penalty": 11,
-          "hardBlock": false
-        }
-      },
-      "reason": "not_high_confidence_safe_type"
-    },
-    {
-      "goldId": "HIS-D-107",
-      "word": "asseoir",
-      "expected": [
-        {
-          "goldSenseId": "S1",
-          "conceptLabel": "asseoir",
-          "semanticType": "action",
-          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
-        }
-      ],
-      "observedSenseCount": 12,
-      "compatibleRank": 1,
-      "selected": {
-        "definition": "Mettre quelqu’un sur un siège ou sur quelque chose qui tient lieu de siège.",
-        "type": "action",
-        "provenance": "exact_graphy:asseoir",
-        "pos": {
-          "class": "compatible",
-          "penalty": 0,
+          "penalty": 8,
           "hardBlock": false
         }
       },
@@ -974,7 +886,7 @@
         "provenance": "exact_graphy:change",
         "pos": {
           "class": "exact_graphy_cross_pos",
-          "penalty": 11,
+          "penalty": 8,
           "hardBlock": false
         }
       },
@@ -994,7 +906,7 @@
       "observedSenseCount": 9,
       "compatibleRank": 1,
       "selected": {
-        "definition": "Faire voir ; exposer aux regards.",
+        "definition": "Donner des marques, des preuves de quelque qualité bonne ou mauvaise.",
         "type": "action",
         "provenance": "exact_graphy:montrer",
         "pos": {
@@ -1003,7 +915,7 @@
           "hardBlock": false
         }
       },
-      "reason": "not_high_confidence_safe_type"
+      "reason": "rank_score_below_threshold"
     },
     {
       "goldId": "HIS-D-114",
@@ -1083,72 +995,65 @@
   ],
   "falsePositives": [
     {
-      "goldId": "HIS-D-081",
-      "word": "grange",
-      "selectedDefinition": "Bâtiment attenant à la ferme, entrepôt pour le foin, la paille ou le matériel agricole.",
-      "type": "place",
-      "reason": "passes_structured_guards"
-    },
-    {
-      "goldId": "HIS-D-086",
-      "word": "buteur",
-      "selectedDefinition": "Personne qui marque un but, ou a l’habitude de marquer des buts.",
-      "type": "person_role",
+      "goldId": "HIS-D-028",
+      "word": "braquer",
+      "selectedDefinition": "Tourner de façon à placer (une arme à feu, un instrument d'optique) dans une direction déterminée, pointer.",
+      "type": "action",
       "reason": "passes_structured_guards"
     }
   ],
   "posPolicyTopSenseClasses": {
-    "none": 12,
-    "compatible": 94,
-    "exact_graphy_cross_pos": 8,
+    "compatible": 101,
+    "exact_graphy_cross_pos": 9,
     "contradictory": 4,
+    "none": 4,
     "contradictory_marked_form": 2
   },
   "ablations": {
     "withoutHypernym": {
       "senseAligned": {
-        "tp": 0,
+        "tp": 7,
         "fp": 0,
         "tn": 80,
-        "fn": 40,
+        "fn": 33,
         "precision": 100,
-        "recall": 0,
-        "f1": 0
+        "recall": 17.5,
+        "f1": 29.8
       },
       "relationLevel": {
-        "tp": 0,
-        "fp": 0,
-        "tn": 80,
-        "fn": 40,
-        "precision": 100,
-        "recall": 0,
-        "f1": 0
+        "tp": 7,
+        "fp": 1,
+        "tn": 79,
+        "fn": 33,
+        "precision": 87.5,
+        "recall": 17.5,
+        "f1": 29.2
       },
       "contribution": {
         "correctedSenseAligned": 0,
         "deterioratedSenseAligned": 0,
         "correctedRelationLevel": 0,
-        "deterioratedRelationLevel": 2
+        "deterioratedRelationLevel": 0
       }
     },
     "withoutInheritance": {
       "senseAligned": {
-        "tp": 0,
+        "tp": 7,
         "fp": 0,
         "tn": 80,
-        "fn": 40,
+        "fn": 33,
         "precision": 100,
-        "recall": 0,
-        "f1": 0
+        "recall": 17.5,
+        "f1": 29.8
       },
       "relationLevel": {
-        "tp": 0,
-        "fp": 2,
-        "tn": 78,
-        "fn": 40,
-        "precision": 0,
-        "recall": 0,
-        "f1": 0
+        "tp": 7,
+        "fp": 1,
+        "tn": 79,
+        "fn": 33,
+        "precision": 87.5,
+        "recall": 17.5,
+        "f1": 29.2
       },
       "contribution": {
         "correctedSenseAligned": 0,
@@ -1159,28 +1064,28 @@
     },
     "withoutPosResolution": {
       "senseAligned": {
-        "tp": 0,
+        "tp": 7,
         "fp": 0,
         "tn": 80,
-        "fn": 40,
+        "fn": 33,
         "precision": 100,
-        "recall": 0,
-        "f1": 0
+        "recall": 17.5,
+        "f1": 29.8
       },
       "relationLevel": {
-        "tp": 1,
-        "fp": 2,
-        "tn": 78,
-        "fn": 39,
-        "precision": 33.3,
-        "recall": 2.5,
-        "f1": 4.7
+        "tp": 7,
+        "fp": 1,
+        "tn": 79,
+        "fn": 33,
+        "precision": 87.5,
+        "recall": 17.5,
+        "f1": 29.2
       },
       "contribution": {
         "correctedSenseAligned": 0,
         "deterioratedSenseAligned": 0,
         "correctedRelationLevel": 0,
-        "deterioratedRelationLevel": 1
+        "deterioratedRelationLevel": 0
       }
     }
   }

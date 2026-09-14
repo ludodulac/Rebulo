@@ -1,0 +1,1187 @@
+{
+  "schemaVersion": "1.0",
+  "status": "development_only_tuning_allowed",
+  "partition": "development",
+  "baseSha": "3ae27afa68d46922c1c18d0f0ae10908c3de02c0",
+  "modelVersion": "structured-hypernym-inheritance-pos-v1",
+  "taxonomy": [
+    "physical_object",
+    "animal",
+    "plant",
+    "food",
+    "body_part",
+    "person_role",
+    "vehicle",
+    "place",
+    "clothing",
+    "tool",
+    "material",
+    "event",
+    "action",
+    "abstract",
+    "relation",
+    "symbol",
+    "text",
+    "quantity",
+    "other"
+  ],
+  "source": {
+    "sourceId": "frwiktionary-kaikki-2026-09-08",
+    "sourceName": "French Wiktionary via Wiktextract/Kaikki",
+    "sourceVersion": "frwiktionary dump 2026-09-01; Kaikki extraction 2026-09-08; wiktextract ccec6f1 + 4deed51",
+    "license": "CC-BY-SA + GFDL",
+    "sourceRoot": "https://kaikki.org/frwiktionary/Fran%C3%A7ais/meaning/"
+  },
+  "n": 120,
+  "positive": 40,
+  "negative": 80,
+  "coverage": {
+    "relationsObserved": 108,
+    "percent": 90,
+    "averageSenseAmbiguity": 9.93,
+    "relationsWithInheritedSense": 48,
+    "hypernymTypedSenses": 48
+  },
+  "senseAligned": {
+    "tp": 0,
+    "fp": 0,
+    "tn": 80,
+    "fn": 40,
+    "precision": 100,
+    "recall": 0,
+    "f1": 0
+  },
+  "relationLevel": {
+    "tp": 0,
+    "fp": 2,
+    "tn": 78,
+    "fn": 40,
+    "precision": 0,
+    "recall": 0,
+    "f1": 0
+  },
+  "ranking": {
+    "top1": {
+      "count": 31,
+      "denominator": 40,
+      "percent": 77.5
+    },
+    "top2": {
+      "count": 31,
+      "denominator": 40,
+      "percent": 77.5
+    },
+    "top3": {
+      "count": 31,
+      "denominator": 40,
+      "percent": 77.5
+    }
+  },
+  "semanticTypeAccuracy": {
+    "evaluated": 108,
+    "correct": 78,
+    "percent": 72.2
+  },
+  "automaticGreens": [
+    {
+      "goldId": "HIS-D-081",
+      "word": "grange",
+      "goldPositive": false,
+      "senseAligned": false,
+      "selectedDefinition": "Bâtiment attenant à la ferme, entrepôt pour le foin, la paille ou le matériel agricole.",
+      "type": "place",
+      "provenance": "exact_graphy:grange",
+      "reason": "passes_structured_guards"
+    },
+    {
+      "goldId": "HIS-D-086",
+      "word": "buteur",
+      "goldPositive": false,
+      "senseAligned": false,
+      "selectedDefinition": "Personne qui marque un but, ou a l’habitude de marquer des buts.",
+      "type": "person_role",
+      "provenance": "exact_graphy:buteur",
+      "reason": "passes_structured_guards"
+    }
+  ],
+  "wrongSenseGreens": 0,
+  "falseGreens": 2,
+  "falseNegatives": [
+    {
+      "goldId": "HIS-D-001",
+      "word": "fermer",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "fermer",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 0,
+      "compatibleRank": null,
+      "selected": null,
+      "reason": "no_observed_sense"
+    },
+    {
+      "goldId": "HIS-D-004",
+      "word": "croire",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "croire",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 12,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Tenir pour véritable.",
+        "type": "action",
+        "provenance": "exact_graphy:croire",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-D-006",
+      "word": "baiser",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "baiser",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 0,
+      "compatibleRank": null,
+      "selected": null,
+      "reason": "no_observed_sense"
+    },
+    {
+      "goldId": "HIS-D-007",
+      "word": "monter",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "monter",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 0,
+      "compatibleRank": null,
+      "selected": null,
+      "reason": "no_observed_sense"
+    },
+    {
+      "goldId": "HIS-D-011",
+      "word": "parlant",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "parler",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 25,
+      "compatibleRank": 4,
+      "selected": {
+        "definition": "Qui parle.",
+        "type": "abstract",
+        "provenance": "exact_graphy:parlant",
+        "pos": {
+          "class": "exact_graphy_cross_pos",
+          "penalty": 11,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-D-013",
+      "word": "es",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "être",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 18,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Deuxième personne du singulier de l’indicatif présent du verbe être.",
+        "type": "action",
+        "provenance": "exact_graphy:es",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-D-015",
+      "word": "attrape",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "attraper",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 26,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Première personne du singulier de l’indicatif présent de attraper.",
+        "type": "action",
+        "provenance": "exact_graphy:attrape",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-D-017",
+      "word": "tenir",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "tenir",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 23,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Garder fermement dans la main ou dans les mains.",
+        "type": "action",
+        "provenance": "exact_graphy:tenir",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-D-020",
+      "word": "rendre",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "rendre",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 24,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Remettre une chose entre les mains de celui à qui elle appartient, de quelque manière qu’on l’ait eue.",
+        "type": "action",
+        "provenance": "exact_graphy:rendre",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-D-024",
+      "word": "sauté",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "sauter",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 25,
+      "compatibleRank": 4,
+      "selected": {
+        "definition": "Plat consistant en morceaux (de viande, etc.) cuisinés à la poêle.",
+        "type": "food",
+        "provenance": "exact_graphy:sauté",
+        "pos": {
+          "class": "exact_graphy_cross_pos",
+          "penalty": 11,
+          "hardBlock": false
+        }
+      },
+      "reason": "rank_score_below_66"
+    },
+    {
+      "goldId": "HIS-D-025",
+      "word": "répondre",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "répondre",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 24,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Donner une réponse à ce qui a été dit ou demandé.",
+        "type": "action",
+        "provenance": "exact_graphy:répondre",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-D-034",
+      "word": "bouger",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "bouger",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 8,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Se déplacer d’un endroit vers un autre.",
+        "type": "action",
+        "provenance": "exact_graphy:bouger",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-D-036",
+      "word": "remplir",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "remplir",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 13,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Emplir de nouveau.",
+        "type": "action",
+        "provenance": "exact_graphy:remplir",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-D-039",
+      "word": "jouer",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "jouer",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 32,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "En parlant d'un enfant, se plonger dans un monde imaginé appuyé par des éléments de la réalité dans un but de divertissement, de développement ou d'apprentissage.",
+        "type": "action",
+        "provenance": "exact_graphy:jouer",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-D-041",
+      "word": "choisi",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "choisir",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 4,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Participe passé masculin singulier de choisir.",
+        "type": "action",
+        "provenance": "exact_graphy:choisi",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-D-042",
+      "word": "blesser",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "blesser",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 10,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Frapper d’un coup qui fait une contusion, une plaie, une fracture.",
+        "type": "action",
+        "provenance": "exact_graphy:blesser",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-D-044",
+      "word": "tenté",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "tenter",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 5,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Participe passé masculin singulier du verbe tenter.",
+        "type": "action",
+        "provenance": "exact_graphy:tenté",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-D-045",
+      "word": "poussière",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "poussière",
+          "semanticType": "person_role",
+          "description": "Sens pré-source de type person_role, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 8,
+      "compatibleRank": null,
+      "selected": {
+        "definition": "Particules très fines de terre ou de toute autre matière réduite en poudre.",
+        "type": "other",
+        "provenance": "exact_graphy:poussière",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-D-051",
+      "word": "venir",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "venir",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 14,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Se rendre sur le lieu où se trouve celui qui parle ou dont on parle.",
+        "type": "action",
+        "provenance": "exact_graphy:venir",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-D-052",
+      "word": "cache",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "cacher",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 19,
+      "compatibleRank": 5,
+      "selected": {
+        "definition": "Lieu propre à cacher ou à se cacher.",
+        "type": "place",
+        "provenance": "exact_graphy:cache",
+        "pos": {
+          "class": "exact_graphy_cross_pos",
+          "penalty": 11,
+          "hardBlock": false
+        }
+      },
+      "reason": "rank_score_below_66"
+    },
+    {
+      "goldId": "HIS-D-053",
+      "word": "cacher",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "cacher",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 10,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Mettre (une personne ou une chose) en un lieu où on ne peut pas la voir, la recouvrir.",
+        "type": "action",
+        "provenance": "exact_graphy:cacher",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-D-054",
+      "word": "admettre",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "admettre",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 4,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Recevoir par choix, faveur ou condescendance.",
+        "type": "action",
+        "provenance": "exact_graphy:admettre",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-D-059",
+      "word": "venu",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "venir",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 16,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Participe passé masculin singulier de venir.",
+        "type": "action",
+        "provenance": "exact_graphy:venu",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-D-060",
+      "word": "sonne",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "sonner",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 19,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Première personne du singulier du présent de l’indicatif de sonner.",
+        "type": "action",
+        "provenance": "exact_graphy:sonne",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-D-061",
+      "word": "finir",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "finir",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 12,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Achever, terminer, arriver à échéance, cesser, finaliser.",
+        "type": "action",
+        "provenance": "exact_graphy:finir",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-D-062",
+      "word": "crier",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "crier",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 11,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Jeter un ou plusieurs cris.",
+        "type": "action",
+        "provenance": "exact_graphy:crier",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-D-067",
+      "word": "dormi",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "dormir",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 6,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Participe passé masculin singulier de dormir.",
+        "type": "action",
+        "provenance": "exact_graphy:dormi",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-D-082",
+      "word": "manger",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "manger",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 13,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Mâcher et avaler un aliment dans le but de se nourrir.",
+        "type": "action",
+        "provenance": "exact_graphy:manger",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-D-084",
+      "word": "laissé",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "laisser",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 26,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Participe passé masculin singulier du verbe laisser.",
+        "type": "action",
+        "provenance": "exact_graphy:laissé",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-D-089",
+      "word": "aie",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "avoir",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 13,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Première personne du singulier du subjonctif présent du verbe avoir.",
+        "type": "action",
+        "provenance": "exact_graphy:aie",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-D-090",
+      "word": "prenez",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "prendre",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 72,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Deuxième personne du pluriel de l’indicatif présent du verbe prendre.",
+        "type": "action",
+        "provenance": "exact_graphy:prenez",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-D-093",
+      "word": "vit",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "vivre",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 58,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Troisième personne du singulier du présent de vivre.",
+        "type": "action",
+        "provenance": "exact_graphy:vit",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-D-095",
+      "word": "combattre",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "combattre",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 3,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Attaquer son ennemi, ou en soutenir l’attaque.",
+        "type": "action",
+        "provenance": "exact_graphy:combattre",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-D-096",
+      "word": "ouvert",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "ouvrir",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 32,
+      "compatibleRank": 8,
+      "selected": {
+        "definition": "Qui n’est pas fermé.",
+        "type": "abstract",
+        "provenance": "exact_graphy:ouvert",
+        "pos": {
+          "class": "exact_graphy_cross_pos",
+          "penalty": 11,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-D-107",
+      "word": "asseoir",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "asseoir",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 12,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Mettre quelqu’un sur un siège ou sur quelque chose qui tient lieu de siège.",
+        "type": "action",
+        "provenance": "exact_graphy:asseoir",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-D-108",
+      "word": "change",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "changer",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 27,
+      "compatibleRank": 9,
+      "selected": {
+        "definition": "Action de changer, troc d’une chose contre une autre.",
+        "type": "event",
+        "provenance": "exact_graphy:change",
+        "pos": {
+          "class": "exact_graphy_cross_pos",
+          "penalty": 11,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-D-113",
+      "word": "montrer",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "montrer",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 9,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Faire voir ; exposer aux regards.",
+        "type": "action",
+        "provenance": "exact_graphy:montrer",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-D-114",
+      "word": "danser",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "danser",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 4,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Exécuter une danse.",
+        "type": "action",
+        "provenance": "exact_graphy:danser",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-D-116",
+      "word": "mange",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "manger",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 18,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Première personne du singulier du présent de l’indicatif de manger.",
+        "type": "action",
+        "provenance": "exact_graphy:mange",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    },
+    {
+      "goldId": "HIS-D-120",
+      "word": "amené",
+      "expected": [
+        {
+          "goldSenseId": "S1",
+          "conceptLabel": "amener",
+          "semanticType": "action",
+          "description": "Sens pré-source de type action, retenu comme concept visuel sérieux."
+        }
+      ],
+      "observedSenseCount": 14,
+      "compatibleRank": 1,
+      "selected": {
+        "definition": "Participe passé masculin singulier du verbe amener.",
+        "type": "action",
+        "provenance": "exact_graphy:amené",
+        "pos": {
+          "class": "compatible",
+          "penalty": 0,
+          "hardBlock": false
+        }
+      },
+      "reason": "not_high_confidence_safe_type"
+    }
+  ],
+  "falsePositives": [
+    {
+      "goldId": "HIS-D-081",
+      "word": "grange",
+      "selectedDefinition": "Bâtiment attenant à la ferme, entrepôt pour le foin, la paille ou le matériel agricole.",
+      "type": "place",
+      "reason": "passes_structured_guards"
+    },
+    {
+      "goldId": "HIS-D-086",
+      "word": "buteur",
+      "selectedDefinition": "Personne qui marque un but, ou a l’habitude de marquer des buts.",
+      "type": "person_role",
+      "reason": "passes_structured_guards"
+    }
+  ],
+  "posPolicyTopSenseClasses": {
+    "none": 12,
+    "compatible": 94,
+    "exact_graphy_cross_pos": 8,
+    "contradictory": 4,
+    "contradictory_marked_form": 2
+  },
+  "ablations": {
+    "withoutHypernym": {
+      "senseAligned": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 80,
+        "fn": 40,
+        "precision": 100,
+        "recall": 0,
+        "f1": 0
+      },
+      "relationLevel": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 80,
+        "fn": 40,
+        "precision": 100,
+        "recall": 0,
+        "f1": 0
+      },
+      "contribution": {
+        "correctedSenseAligned": 0,
+        "deterioratedSenseAligned": 0,
+        "correctedRelationLevel": 0,
+        "deterioratedRelationLevel": 2
+      }
+    },
+    "withoutInheritance": {
+      "senseAligned": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 80,
+        "fn": 40,
+        "precision": 100,
+        "recall": 0,
+        "f1": 0
+      },
+      "relationLevel": {
+        "tp": 0,
+        "fp": 2,
+        "tn": 78,
+        "fn": 40,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      "contribution": {
+        "correctedSenseAligned": 0,
+        "deterioratedSenseAligned": 0,
+        "correctedRelationLevel": 0,
+        "deterioratedRelationLevel": 0
+      }
+    },
+    "withoutPosResolution": {
+      "senseAligned": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 80,
+        "fn": 40,
+        "precision": 100,
+        "recall": 0,
+        "f1": 0
+      },
+      "relationLevel": {
+        "tp": 1,
+        "fp": 2,
+        "tn": 78,
+        "fn": 39,
+        "precision": 33.3,
+        "recall": 2.5,
+        "f1": 4.7
+      },
+      "contribution": {
+        "correctedSenseAligned": 0,
+        "deterioratedSenseAligned": 0,
+        "correctedRelationLevel": 0,
+        "deterioratedRelationLevel": 1
+      }
+    }
+  }
+}

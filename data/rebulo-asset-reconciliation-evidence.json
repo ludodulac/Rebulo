@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "1.0",
+  "referenceMain": "c3a9ca824be7815dd67605086fb446c831bd5b19",
+  "rules": {
+    "match": "stableId first; otherwise exact normalized concept only; never IPA-only",
+    "statuses": ["RÉCUPÉRÉ", "À_EXTRAIRE", "À_VÉRIFIER", "À_PRODUIRE"]
+  },
+  "sources": {
+    "pilotRegistrySnapshot": "data/rebulo-visual-asset-evidence-72.json",
+    "driveRegistryFileId": "1k8682-GhTQj6ejucLwtc31yImxvKb4H_",
+    "driveReferencePanel": {"fileId":"1Jca8Twuv9EYhEDxSIACTqPrte7DnoBdg","filename":"REBULO_PIXEL_v1_reference_panel_8.png"},
+    "driveComposites": [
+      {"fileId":"1OP5b4kxCczS5tmG_2-lS1ftS6iLzjpY4","filename":"RECUP_composite_sucre_olive_os_doigt_2026-09-15.png","concepts":["sucre","olive","os","doigt"]},
+      {"fileId":"1Wex57ebNT8DYFjWFEnoIqAbQlR89rV1Q","filename":"RECUP_composite_pie_chou_cafe_2026-09-15.png","concepts":["pie","chou","café"]},
+      {"fileId":"1Dq5VDSIkCTb1cmfZEbr26aHd52lyHbdy","filename":"RECUP_composite_crane_lance_louche_piege_2026-09-15.png","concepts":["crâne","lance","louche","piège"]},
+      {"fileId":"1gJd6O6SWjp_lpwerFLnJ_zCl1Evjt6pJ","filename":"RECUP_composite_aiguille_char_mer_champ_2026-09-15.png","concepts":["aiguille","char","mer","champ"]},
+      {"fileId":"1LKLvO4bv2JmaLRtqgaetogjx7P6W73Q3","filename":"RECUP_composite_loup_radis_pelle_source.png","concepts":["loup","radis","pelle"]},
+      {"fileId":"10VmxwUYNSXwzhVRtPrMQUE1DqQwQ3U84","filename":"RECUP_original_composite_balle_photo_four.png","concepts":["balle","photo","four"]}
+    ],
+    "repositoryAssets": [
+      ["chat","assets/rebus/chat.svg"],["clé","assets/rebus/cle.svg"],["corps","assets/rebus/corps.svg"],["dé","assets/rebus/de.svg"],["dos","assets/rebus/dos-comic.svg"],["eau","assets/rebus/eau.svg"],["lit","assets/rebus/lit.svg"],["mer","assets/rebus/mer.svg"],["mie","assets/rebus/mie.svg"],["nez","assets/rebus/nez.svg"],["pas","assets/rebus/pas.svg"],["pie","assets/rebus/pie.svg"],["pluie","assets/rebus/pluie.svg"],["pot","assets/rebus/pot-comic.svg"],["raie","assets/rebus/raie-comic.svg"],["rat","assets/rebus/rat.svg"],["riz","assets/rebus/riz.svg"],["scie","assets/rebus/scie.svg"],["sol","assets/rebus/sol.svg"],["tas","assets/rebus/tas.svg"],["terre","assets/rebus/terre-comic.svg"],["thé","assets/rebus/the.svg"],["tour","assets/rebus/tour.svg"]
+    ]
+  }
+}

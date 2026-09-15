@@ -1,0 +1,23 @@
+name: Asset reconciliation 407 refresh
+on:
+  push:
+    branches: [reconcile-existing-assets-407]
+    paths: ['.github/workflows/asset-reconciliation-407-refresh.yml']
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: 20}
+      - run: node scripts/reconcile-existing-assets-407.mjs
+      - run: node -e "const x=require('./data/rebulo-image-asset-reconciliation-407.json'); if(x.entries.length!==407||Object.values(x.counts).reduce((a,b)=>a+b,0)!==407) process.exit(1)"
+      - run: |
+          git config user.name rebulo-analysis-bot
+          git config user.email actions@users.noreply.github.com
+          git add data/rebulo-image-asset-reconciliation-407.json docs/REBULO_ASSET_RECONCILIATION_407.md
+          git diff --cached --quiet && exit 0
+          git commit -m 'Refresh 407 asset reconciliation'
+          git push

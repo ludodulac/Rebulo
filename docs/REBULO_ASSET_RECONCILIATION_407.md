@@ -1,15 +1,20 @@
 # REBULO — Réconciliation des assets existants sur la file 407
 
 Main de référence : `c3a9ca824be7815dd67605086fb446c831bd5b19`.
-Total : **407** — RÉCUPÉRÉ=0, À_EXTRAIRE=3, À_VÉRIFIER=0, À_PRODUIRE=404.
+Total : **407** — RÉCUPÉRÉ=0, À_EXTRAIRE=8, À_VÉRIFIER=0, À_PRODUIRE=399.
 
 Règle : correspondance par stableId lorsqu’il existe, sinon par concept exact normalisé. Jamais par IPA seule.
 
 ## Assets existants/récupérables recroisés avec la file 407
 
 - #080 — **doigt / doigt** — À_EXTRAIRE — RECUP_composite_sucre_olive_os_doigt_2026-09-15.png
+- #122 — **bébé / bébé** — À_EXTRAIRE — RECUP_planche_historique_18_source.png
+- #195 — **fromage / fromage** — À_EXTRAIRE — RECUP_planche_historique_18_source.png
 - #229 — **sucre / sucre** — À_EXTRAIRE — RECUP_composite_sucre_olive_os_doigt_2026-09-15.png
+- #245 — **tomate / tomate** — À_EXTRAIRE — RECUP_planche_historique_18_source.png
+- #319 — **carotte / carotte** — À_EXTRAIRE — RECUP_planche_historique_18_source.png
 - #351 — **olive / olive** — À_EXTRAIRE — RECUP_composite_sucre_olive_os_doigt_2026-09-15.png
+- #358 — **pain / pain** — À_EXTRAIRE — RECUP_planche_historique_18_source.png
 
 ## Reliquat exact à dessiner
 
@@ -133,7 +138,6 @@ Règle : correspondance par stableId lorsqu’il existe, sinon par concept exact
 - #119 — garde — garde — `119_garde_garde.png`
 - #120 — jonc — jonc — `120_jonc_jonc.png`
 - #121 — étang — étang — `121_etang_etang.png`
-- #122 — bébé — bébé — `122_bebe_bebe.png`
 - #123 — docteur — docteur — `123_docteur_docteur.png`
 - #124 — niveau — niveau — `124_niveau_niveau.png`
 - #125 — pilote — pilote — `125_pilote_pilote.png`
@@ -206,7 +210,6 @@ Règle : correspondance par stableId lorsqu’il existe, sinon par concept exact
 - #192 — rivière — rivière — `192_riviere_riviere.png`
 - #193 — ceinture — ceinture — `193_ceinture_ceinture.png`
 - #194 — garage — garage — `194_garage_garage.png`
-- #195 — fromage — fromage — `195_fromage_fromage.png`
 - #196 — cahier — cahier — `196_cahier_cahier.png`
 - #197 — amande — amande — `197_amande_amande.png`
 - #198 — miroir — miroir — `198_miroir_miroir.png`
@@ -255,7 +258,6 @@ Règle : correspondance par stableId lorsqu’il existe, sinon par concept exact
 - #242 — chaton — chaton — `242_chaton_chaton.png`
 - #243 — yaourt — yaourt — `243_yaourt_yaourt.png`
 - #244 — danser — danser — `244_danser_danser.png`
-- #245 — tomate — tomate — `245_tomate_tomate.png`
 - #246 — veste — veste — `246_veste_veste.png`
 - #247 — obus — obus — `247_obus_obus.png`
 - #248 — homard — homard — `248_homard_homard.png`
@@ -329,7 +331,6 @@ Règle : correspondance par stableId lorsqu’il existe, sinon par concept exact
 - #316 — cadeau — cadeau — `316_cadeau_cadeau.png`
 - #317 — camion — camion — `317_camion_camion.png`
 - #318 — canard — canard — `318_canard_canard.png`
-- #319 — carotte — carotte — `319_carotte_carotte.png`
 - #320 — cloche — cloche — `320_cloche_cloche.png`
 - #321 — cœur — cœur — `321_coeur_coeur.png`
 - #322 — cor — cor — `322_cor_cor.png`
@@ -367,7 +368,6 @@ Règle : correspondance par stableId lorsqu’il existe, sinon par concept exact
 - #355 — parc — parc — `355_parc_parc.png`
 - #356 — patate — patate — `356_patate_patate.png`
 - #357 — paon — paon — `357_paon_paon.png`
-- #358 — pain — pain — `358_pain_pain.png`
 - #359 — pin — pin — `359_pin_pin.png`
 - #360 — peau — peau — `360_peau_peau.png`
 - #361 — pont — pont — `361_pont_pont.png`

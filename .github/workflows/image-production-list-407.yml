@@ -1,0 +1,39 @@
+name: Image production list 407
+on:
+  push:
+    branches: [image-production-list-407]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: image-production-list-407
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Build handoff
+        run: node scripts/build-rebulo-image-production-list.mjs
+      - name: Verify handoff
+        run: |
+          node - <<'NODE'
+          const fs=require('fs'); const x=JSON.parse(fs.readFileSync('data/rebulo-image-production-list-407.json','utf8'));
+          if(x.entries.length!==407) throw new Error('not 407');
+          if(x.entries.some(e=>!e.source.length)) throw new Error('source missing');
+          if(x.entries.some(e=>!['P0','P1','P2','P3'].includes(e.priority))) throw new Error('priority missing');
+          if(x.entries.some(e=>!e.visualBrief)) throw new Error('brief marker missing');
+          if(x.entries.some(e=>!e.targetFilename)) throw new Error('filename missing');
+          if(!fs.readFileSync('docs/REBULO_IMAGE_PRODUCTION_LIST_407.md','utf8').includes('## 407 —')) throw new Error('markdown incomplete');
+          console.log(x.counts);
+          NODE
+      - name: Commit generated handoff
+        run: |
+          git config user.name rebulo-analysis-bot
+          git config user.email actions@users.noreply.github.com
+          git add docs/REBULO_IMAGE_PRODUCTION_LIST_407.md data/rebulo-image-production-list-407.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Materialize 407-image production handoff"
+          git push origin HEAD:image-production-list-407

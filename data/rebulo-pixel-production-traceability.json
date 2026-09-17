@@ -3,82 +3,22 @@
   "status": "production_traceability_not_runtime_active",
   "humanNamingEvidence": "none",
   "runtimeActivated": false,
+  "blockedNamingProductionNumbers": [19, 20, 21],
   "entries": [
-    {
-      "productionNumber": 9,
-      "word": "malle",
-      "concept": "malle",
-      "preferredVersion": "v02",
-      "versions": [
-        {"version": "v01", "status": "VERSION_REJETÉE_NOMMABILITÉ", "source": "REBULO_PIXEL_v1_P0_009_010_011_013_SOURCE_DO_NOT_REGENERATE.png", "durableSourceUpload": "pending_connector_block"},
-        {"version": "v02", "status": "VALIDÉ_VISUELLEMENT", "source": "REBULO_PIXEL_v1_P0_009_013_MALLE_v02_BRAS_v02_SOURCE_DO_NOT_REGENERATE.png", "driveFileId": "1y5d1c0Hk8Cthq8I4huutluGMDOqYvOiG"}
-      ]
-    },
-    {
-      "productionNumber": 10,
-      "word": "trou",
-      "concept": "trou",
-      "preferredVersion": "v01",
-      "versions": [
-        {"version": "v01", "status": "VALIDÉ_VISUELLEMENT", "source": "REBULO_PIXEL_v1_P0_009_010_011_013_SOURCE_DO_NOT_REGENERATE.png", "durableSourceUpload": "pending_connector_block"}
-      ]
-    },
-    {
-      "productionNumber": 11,
-      "word": "lis",
-      "concept": "lis",
-      "preferredVersion": "v01",
-      "versions": [
-        {"version": "v01", "status": "VALIDÉ_VISUELLEMENT", "source": "REBULO_PIXEL_v1_P0_009_010_011_013_SOURCE_DO_NOT_REGENERATE.png", "durableSourceUpload": "pending_connector_block"}
-      ]
-    },
-    {
-      "productionNumber": 13,
-      "word": "bras",
-      "concept": "bras",
-      "preferredVersion": "v02",
-      "versions": [
-        {"version": "v01", "status": "VERSION_REJETÉE_NOMMABILITÉ", "source": "REBULO_PIXEL_v1_P0_009_010_011_013_SOURCE_DO_NOT_REGENERATE.png", "durableSourceUpload": "pending_connector_block"},
-        {"version": "v02", "status": "VALIDÉ_VISUELLEMENT", "source": "REBULO_PIXEL_v1_P0_009_013_MALLE_v02_BRAS_v02_SOURCE_DO_NOT_REGENERATE.png", "driveFileId": "1y5d1c0Hk8Cthq8I4huutluGMDOqYvOiG"}
-      ]
-    },
-    {
-      "productionNumber": 14,
-      "word": "compas",
-      "concept": "compas",
-      "preferredVersion": "v01",
-      "versions": [
-        {"version": "v01", "status": "VALIDÉ_VISUELLEMENT", "source": "REBULO_PIXEL_v1_P0_014_015_016_017_SOURCE_DO_NOT_REGENERATE.png", "driveFileId": "1O71bKdNU055yo1K4PKCouBm31BuGuo-w"}
-      ]
-    },
-    {
-      "productionNumber": 15,
-      "word": "allée",
-      "concept": "allée",
-      "preferredVersion": "v01",
-      "versions": [
-        {"version": "v01", "status": "VALIDÉ_VISUELLEMENT", "source": "REBULO_PIXEL_v1_P0_014_015_016_017_SOURCE_DO_NOT_REGENERATE.png", "driveFileId": "1O71bKdNU055yo1K4PKCouBm31BuGuo-w"}
-      ]
-    },
-    {
-      "productionNumber": 16,
-      "word": "fou",
-      "concept": "fou",
-      "preferredVersion": "v01",
-      "visualRepresentationProduced": "bouffon / fou du roi",
-      "knownLexicalRisk": "bouffon peut être donné à la place de fou",
-      "versions": [
-        {"version": "v01", "status": "VALIDÉ_VISUELLEMENT", "source": "REBULO_PIXEL_v1_P0_014_015_016_017_SOURCE_DO_NOT_REGENERATE.png", "driveFileId": "1O71bKdNU055yo1K4PKCouBm31BuGuo-w"}
-      ]
-    },
-    {
-      "productionNumber": 17,
-      "word": "blé",
-      "concept": "blé",
-      "preferredVersion": "v01",
-      "versions": [
-        {"version": "v01", "status": "VALIDÉ_VISUELLEMENT", "source": "REBULO_PIXEL_v1_P0_014_015_016_017_SOURCE_DO_NOT_REGENERATE.png", "driveFileId": "1O71bKdNU055yo1K4PKCouBm31BuGuo-w"}
-      ]
-    }
+    {"productionNumber":9,"word":"malle","concept":"malle","preferredVersion":"v02","versions":[{"version":"v01","status":"VERSION_REJETÉE_NOMMABILITÉ","source":"REBULO_PIXEL_v1_P0_009_010_011_013_SOURCE_DO_NOT_REGENERATE.png","durableSourceUpload":"pending_connector_block"},{"version":"v02","status":"VALIDÉ_VISUELLEMENT","source":"REBULO_PIXEL_v1_P0_009_013_MALLE_v02_BRAS_v02_SOURCE_DO_NOT_REGENERATE.png","driveFileId":"1y5d1c0Hk8Cthq8I4huutluGMDOqYvOiG"}]},
+    {"productionNumber":10,"word":"trou","concept":"trou","preferredVersion":"v01","versions":[{"version":"v01","status":"VALIDÉ_VISUELLEMENT","source":"REBULO_PIXEL_v1_P0_009_010_011_013_SOURCE_DO_NOT_REGENERATE.png","durableSourceUpload":"pending_connector_block"}]},
+    {"productionNumber":11,"word":"lis","concept":"lis","preferredVersion":"v01","versions":[{"version":"v01","status":"VALIDÉ_VISUELLEMENT","source":"REBULO_PIXEL_v1_P0_009_010_011_013_SOURCE_DO_NOT_REGENERATE.png","durableSourceUpload":"pending_connector_block"}]},
+    {"productionNumber":13,"word":"bras","concept":"bras","preferredVersion":"v02","versions":[{"version":"v01","status":"VERSION_REJETÉE_NOMMABILITÉ","source":"REBULO_PIXEL_v1_P0_009_010_011_013_SOURCE_DO_NOT_REGENERATE.png","durableSourceUpload":"pending_connector_block"},{"version":"v02","status":"VALIDÉ_VISUELLEMENT","source":"REBULO_PIXEL_v1_P0_009_013_MALLE_v02_BRAS_v02_SOURCE_DO_NOT_REGENERATE.png","driveFileId":"1y5d1c0Hk8Cthq8I4huutluGMDOqYvOiG"}]},
+    {"productionNumber":14,"word":"compas","concept":"compas","preferredVersion":"v01","versions":[{"version":"v01","status":"VALIDÉ_VISUELLEMENT","source":"REBULO_PIXEL_v1_P0_014_015_016_017_SOURCE_DO_NOT_REGENERATE.png","driveFileId":"1O71bKdNU055yo1K4PKCouBm31BuGuo-w"}]},
+    {"productionNumber":15,"word":"allée","concept":"allée","preferredVersion":"v01","versions":[{"version":"v01","status":"VALIDÉ_VISUELLEMENT","source":"REBULO_PIXEL_v1_P0_014_015_016_017_SOURCE_DO_NOT_REGENERATE.png","driveFileId":"1O71bKdNU055yo1K4PKCouBm31BuGuo-w"}]},
+    {"productionNumber":16,"word":"fou","concept":"fou","preferredVersion":"v01","visualRepresentationProduced":"bouffon / fou du roi","knownLexicalRisk":"bouffon peut être donné à la place de fou","versions":[{"version":"v01","status":"VALIDÉ_VISUELLEMENT","source":"REBULO_PIXEL_v1_P0_014_015_016_017_SOURCE_DO_NOT_REGENERATE.png","driveFileId":"1O71bKdNU055yo1K4PKCouBm31BuGuo-w"}]},
+    {"productionNumber":17,"word":"blé","concept":"blé","preferredVersion":"v01","versions":[{"version":"v01","status":"VALIDÉ_VISUELLEMENT","source":"REBULO_PIXEL_v1_P0_014_015_016_017_SOURCE_DO_NOT_REGENERATE.png","driveFileId":"1O71bKdNU055yo1K4PKCouBm31BuGuo-w"}]},
+    {"productionNumber":18,"word":"roi","concept":"roi","preferredVersion":"v01","versions":[{"version":"v01","status":"VALIDÉ_VISUELLEMENT","source":"REBULO_PIXEL_v1_P0_018_022_023_024_SOURCE_DO_NOT_REGENERATE.png","driveFileId":"10kfeVc-AyRtxfRQHqydgN6YSyvzjAjwH"}]},
+    {"productionNumber":19,"word":"heure","concept":"heure","status":"BLOCKED_NOMMABILITÉ"},
+    {"productionNumber":20,"word":"curry","concept":"curry","status":"BLOCKED_NOMMABILITÉ"},
+    {"productionNumber":21,"word":"fils","concept":"fils","status":"BLOCKED_NOMMABILITÉ"},
+    {"productionNumber":22,"word":"rue","concept":"rue","preferredVersion":"v01","versions":[{"version":"v01","status":"VALIDÉ_VISUELLEMENT","source":"REBULO_PIXEL_v1_P0_018_022_023_024_SOURCE_DO_NOT_REGENERATE.png","driveFileId":"10kfeVc-AyRtxfRQHqydgN6YSyvzjAjwH"}]},
+    {"productionNumber":23,"word":"toit","concept":"toit","preferredVersion":"v01","versions":[{"version":"v01","status":"VALIDÉ_VISUELLEMENT","source":"REBULO_PIXEL_v1_P0_018_022_023_024_SOURCE_DO_NOT_REGENERATE.png","driveFileId":"10kfeVc-AyRtxfRQHqydgN6YSyvzjAjwH"}]},
+    {"productionNumber":24,"word":"rein","concept":"rein","preferredVersion":"v01","versions":[{"version":"v01","status":"VALIDÉ_VISUELLEMENT","source":"REBULO_PIXEL_v1_P0_018_022_023_024_SOURCE_DO_NOT_REGENERATE.png","driveFileId":"10kfeVc-AyRtxfRQHqydgN6YSyvzjAjwH"}]}
   ]
 }

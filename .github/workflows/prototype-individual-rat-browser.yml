@@ -41,5 +41,6 @@ jobs:
           name: individual-rat-browser-proof
           path: |
             individual-rat-mobile-proof.png
+            individual-chat-mobile-proof.png
             individual-rat-browser-report.json
           if-no-files-found: ignore

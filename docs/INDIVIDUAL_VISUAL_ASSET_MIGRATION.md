@@ -18,11 +18,12 @@ Cela permet une migration pictogramme par pictogramme.
 
 ## Prototype de référence
 
-`rat` utilise :
+`rat` et `chat` utilisent désormais leurs PNG individuels :
 
-`assets/visible-batch1/individual/rat.png`
+- `assets/visible-batch1/individual/rat.png`
+- `assets/visible-batch1/individual/chat.png`
 
-Les 22 autres éléments du batch visible continuent d'utiliser le sprite.
+Les 21 autres éléments du batch visible continuent d'utiliser le sprite. Le deuxième asset CHAT a servi à prouver que la migration est pilotée par le registre et n'est pas un cas spécial RAT.
 
 ## Conditions techniques avant activation d'un dessin
 
@@ -49,8 +50,8 @@ Pour un fichier individuel, le runtime impose `object-fit: contain`, fond transp
 - Ne pas promouvoir une planche composite comme original individuel.
 - Ne pas remplacer plusieurs visuels simultanément avant validation du pipeline pilote.
 
-## Extension après validation du pilote RAT
+## Extension après validation du pilote RAT + CHAT
 
-Une migration supplémentaire doit se réduire à deux opérations fonctionnelles : ajouter le PNG individuel et ajouter l'association `concept -> chemin`. Les tests doivent ensuite prouver que les autres concepts conservent leur fallback sprite.
+Une migration supplémentaire se réduit maintenant à deux opérations fonctionnelles : ajouter le PNG individuel et ajouter l'association `concept -> chemin`. Les tests doivent ensuite prouver que les autres concepts conservent leur fallback sprite.
 
 Le registre pourra être extrait ultérieurement dans un fichier de données dédié lorsque le nombre d'assets individuels justifiera cette séparation. Le prototype évite volontairement une refonte prématurée.

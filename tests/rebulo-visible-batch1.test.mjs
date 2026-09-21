@@ -23,7 +23,14 @@ for(const item of REBULO_VISIBLE_BATCH1){
   assert.equal(item.spontaneousNamingRisk,'unknown');
   assert.equal(item.humanNamingEvidence,'none');
   assert.equal(item.clinicalEvidence,'none');
-  assert.match(item.image,/^assets\/visible-batch1\/sprite\.svg\?asset=/);
+  if(item.id==='rat'){
+    assert.equal(item.image,'assets/visible-batch1/individual/rat.png');
+    assert.equal(item.individualImage,item.image);
+    assert.ok(fs.existsSync(item.image));
+  }else{
+    assert.match(item.image,/^assets\/visible-batch1\/sprite\.svg\?asset=/);
+    assert.equal(item.individualImage,null);
+  }
   assert.ok(item.sourceCuration);
 }
 

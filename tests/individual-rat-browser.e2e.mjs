@@ -63,6 +63,34 @@ try{
   const probe=page.locator('#individual-rat-probe');
   await probe.scrollIntoViewIfNeeded();
   await probe.screenshot({path:'individual-rat-mobile-proof.png'});
+
+  await page.evaluate(()=>{
+    const host=document.createElement('div');
+    host.id='individual-chat-probe';
+    host.className='piece';
+    const img=document.createElement('img');
+    img.alt='chat';
+    img.src='assets/rebus/chat.svg';
+    host.appendChild(img);
+    document.body.appendChild(host);
+  });
+  await page.waitForFunction(()=>{
+    const img=document.querySelector('#individual-chat-probe img');
+    return img?.dataset?.rebuloVisibleBatch1==='chat' && String(img.getAttribute('src')||'').endsWith('assets/visible-batch1/individual/chat.png') && img.complete && img.naturalWidth===256 && img.naturalHeight===256;
+  },null,{timeout:10000});
+  report.chat=await page.evaluate(()=>{
+    const img=document.querySelector('#individual-chat-probe img');
+    const cs=getComputedStyle(img); const r=img.getBoundingClientRect();
+    return {src:img.getAttribute('src'),id:img.dataset.rebuloVisibleBatch1,naturalWidth:img.naturalWidth,naturalHeight:img.naturalHeight,renderedWidth:r.width,renderedHeight:r.height,objectFit:cs.objectFit,backgroundImage:cs.backgroundImage,backgroundColor:cs.backgroundColor,boxShadow:cs.boxShadow,borderRadius:cs.borderRadius};
+  });
+  assert.equal(report.chat.src,'assets/visible-batch1/individual/chat.png');
+  assert.equal(report.chat.objectFit,'contain');
+  assert.equal(report.chat.backgroundImage,'none');
+  assert.equal(report.chat.boxShadow,'none');
+  const chatProbe=page.locator('#individual-chat-probe');
+  await chatProbe.scrollIntoViewIfNeeded();
+  await chatProbe.screenshot({path:'individual-chat-mobile-proof.png'});
+
   await writeFile('individual-rat-browser-report.json',JSON.stringify(report,null,2));
   await context.close();
   console.log(JSON.stringify(report));

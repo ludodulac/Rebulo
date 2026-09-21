@@ -56,9 +56,13 @@ function paintSprite(img,asset){
     img.style.backgroundImage='none';
     img.style.backgroundColor='transparent';
     img.style.objectFit='contain';
+    img.style.boxShadow='none';
+    img.style.borderRadius='0';
     return;
   }
   img.src=TRANSPARENT_PIXEL;
+  img.style.objectFit='';
+  img.style.boxShadow='';
   img.style.backgroundImage=`url("${asset.spriteUrl}")`;
   img.style.backgroundSize='500% 500%';
   img.style.backgroundPosition=`${asset.spriteColumn*25}% ${asset.spriteRow*25}%`;

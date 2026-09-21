@@ -60,7 +60,9 @@ try{
   assert.ok(report.rat.renderedWidth>=70);
   assert.ok(report.rat.renderedHeight>=70);
 
-  await page.screenshot({path:'individual-rat-mobile-proof.png',fullPage:false});
+  const probe=page.locator('#individual-rat-probe');
+  await probe.scrollIntoViewIfNeeded();
+  await probe.screenshot({path:'individual-rat-mobile-proof.png'});
   await writeFile('individual-rat-browser-report.json',JSON.stringify(report,null,2));
   await context.close();
   console.log(JSON.stringify(report));

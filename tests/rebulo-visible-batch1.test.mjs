@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import {REBULO_INDIVIDUAL_VISUALS} from '../src/rebulo-individual-visuals.js';
 import {normalizeIPA} from '../src/phonetic-engine.js';
 import {
   REBULO_VISIBLE_BATCH1,
@@ -23,13 +24,14 @@ for(const item of REBULO_VISIBLE_BATCH1){
   assert.equal(item.spontaneousNamingRisk,'unknown');
   assert.equal(item.humanNamingEvidence,'none');
   assert.equal(item.clinicalEvidence,'none');
-  if(item.id==='rat'){
-    assert.equal(item.image,'assets/visible-batch1/individual/rat.png');
-    assert.equal(item.individualImage,item.image);
-    assert.ok(fs.existsSync(item.image));
-    const png=fs.readFileSync(item.image);
+  const individualPath=REBULO_INDIVIDUAL_VISUALS[item.id]||null;
+  if(individualPath){
+    assert.equal(item.image,individualPath);
+    assert.equal(item.individualImage,individualPath);
+    assert.ok(fs.existsSync(individualPath));
+    const png=fs.readFileSync(individualPath);
     assert.deepEqual([...png.subarray(0,8)],[137,80,78,71,13,10,26,10]);
-    assert.equal(png[25],6,'individual RAT must be PNG RGBA (colour type 6)');
+    assert.equal(png[25],6,'individual visual must be PNG RGBA (colour type 6)');
   }else{
     assert.match(item.image,/^assets\/visible-batch1\/sprite\.svg\?asset=/);
     assert.equal(item.individualImage,null);

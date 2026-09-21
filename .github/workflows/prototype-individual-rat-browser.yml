@@ -1,0 +1,44 @@
+name: Prototype individual RAT browser proof
+
+on:
+  push:
+    branches:
+      - prototype/individual-rat-pixel
+    paths:
+      - 'assets/visible-batch1/**'
+      - 'src/rebulo-visible-batch1-*.js'
+      - 'tests/individual-rat-browser.e2e.mjs'
+      - '.github/workflows/prototype-individual-rat-browser.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  browser-proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install temporary browser test dependency
+        run: npm install --no-save playwright@1.55.0
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Start static Rebulo
+        run: |
+          python3 -m http.server 4173 > /tmp/rebulo-http.log 2>&1 &
+          echo $! > /tmp/rebulo-http.pid
+      - name: Verify individual RAT in a real mobile browser
+        run: node tests/individual-rat-browser.e2e.mjs
+      - name: Upload browser proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: individual-rat-browser-proof
+          path: |
+            individual-rat-mobile-proof.png
+            individual-rat-browser-report.json
+          if-no-files-found: ignore

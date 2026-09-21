@@ -27,6 +27,9 @@ for(const item of REBULO_VISIBLE_BATCH1){
     assert.equal(item.image,'assets/visible-batch1/individual/rat.png');
     assert.equal(item.individualImage,item.image);
     assert.ok(fs.existsSync(item.image));
+    const png=fs.readFileSync(item.image);
+    assert.deepEqual([...png.subarray(0,8)],[137,80,78,71,13,10,26,10]);
+    assert.equal(png[25],6,'individual RAT must be PNG RGBA (colour type 6)');
   }else{
     assert.match(item.image,/^assets\/visible-batch1\/sprite\.svg\?asset=/);
     assert.equal(item.individualImage,null);

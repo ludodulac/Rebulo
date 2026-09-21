@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import {chromium} from 'playwright';
 import {writeFile} from 'node:fs/promises';
 
+// Browser proof intentionally exercises the DOM decoration path used by Rebulo.
 const baseUrl=process.env.BASE_URL||'http://127.0.0.1:4173/';
 const browser=await chromium.launch({headless:true});
 const report={baseUrl,rat:null};

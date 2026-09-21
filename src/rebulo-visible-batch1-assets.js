@@ -29,11 +29,13 @@ const ROWS=Object.freeze([
 ]);
 
 const SPRITE_URL='assets/visible-batch1/sprite.svg';
+const INDIVIDUAL_IMAGES=Object.freeze({rat:'assets/visible-batch1/individual/rat.png'});
 const key=value=>String(value||'').toLocaleLowerCase('fr').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'');
 
 export const REBULO_VISIBLE_BATCH1=Object.freeze(ROWS.map(([id,label,ipa,syllableSpan,sourceCuration],index)=>Object.freeze({
   id,label,ipa,syllableSpan,sourceCuration,
-  image:`${SPRITE_URL}?asset=${id}`,
+  image:INDIVIDUAL_IMAGES[id]||`${SPRITE_URL}?asset=${id}`,
+  individualImage:INDIVIDUAL_IMAGES[id]||null,
   spriteUrl:SPRITE_URL,
   spriteColumn:index%5,
   spriteRow:Math.floor(index/5),

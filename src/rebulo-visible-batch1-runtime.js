@@ -51,6 +51,13 @@ function assetFromImage(img){
 
 function paintSprite(img,asset){
   img.dataset.rebuloVisibleBatch1=asset.id;
+  if(asset.individualImage){
+    img.src=asset.individualImage;
+    img.style.backgroundImage='none';
+    img.style.backgroundColor='transparent';
+    img.style.objectFit='contain';
+    return;
+  }
   img.src=TRANSPARENT_PIXEL;
   img.style.backgroundImage=`url("${asset.spriteUrl}")`;
   img.style.backgroundSize='500% 500%';
@@ -64,7 +71,7 @@ function applyBatchImage(img){
   if(!(img instanceof HTMLImageElement))return;
   const asset=assetFromImage(img);
   if(!asset)return;
-  if(img.dataset.rebuloVisibleBatch1===asset.id&&img.style.backgroundImage)return;
+  if(img.dataset.rebuloVisibleBatch1===asset.id&&(asset.individualImage?String(img.getAttribute('src')||'').split(/[?#]/,1)[0].endsWith(asset.individualImage):img.style.backgroundImage))return;
   paintSprite(img,asset);
 }
 

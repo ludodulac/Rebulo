@@ -72,3 +72,20 @@ Provenance connue des blocages :
 - nez : une planche historique contenant le concept a été retrouvée, mais aucun original individuel sûr n'est disponible ; la planche n'est pas découpée pour simuler un original.
 
 BANC est une récupération historique prouvée par la passation et reste distingué des fichiers déjà présents dans le dossier canonique actuel.
+
+
+## Critères de fusion vers main
+
+La branche prototype ne doit être fusionnée qu'après vérification simultanée des points suivants :
+
+1. tests produit verts ;
+2. preuve Chromium du registre individuel verte ;
+3. parcours réels du créateur verts en mobile et desktop ;
+4. coexistence démontrée entre PNG individuels et fallback sprite ;
+5. aucun changement dans les fichiers phonétiques/corpus `data/*`, ni dans `app.js` ou `index.html` pour cette migration ;
+6. provenance documentée de chaque PNG individuel ;
+7. les concepts sans original individuel sûr restent sur le sprite ;
+8. revue visuelle des captures de preuve ;
+9. fusion explicite seulement après accord humain.
+
+État actuel : 18/23 concepts du batch visible utilisent un PNG individuel ; bébé, œil, mer, scie et nez restent volontairement sur le sprite.

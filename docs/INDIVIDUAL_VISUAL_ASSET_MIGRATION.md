@@ -9,21 +9,16 @@ Remplacer progressivement les anciens visuels de REBULO sans modifier le moteur 
 L'identité phonétique reste portée par le concept (par exemple `rat`, `/ʁa/`).
 Le visuel est une ressource interchangeable.
 
-La table `INDIVIDUAL_IMAGES` dans `src/rebulo-visible-batch1-assets.js` est le point de routage temporaire :
+Le registre `REBULO_INDIVIDUAL_VISUALS` dans `src/rebulo-individual-visuals.js` est le point de routage graphique dédié :
 
 - si un concept possède un fichier individuel, REBULO utilise ce fichier ;
 - sinon il conserve automatiquement la case correspondante de `assets/visible-batch1/sprite.svg`.
 
 Cela permet une migration pictogramme par pictogramme.
 
-## Prototype de référence
+## Pilote historique
 
-`rat` et `chat` utilisent désormais leurs PNG individuels :
-
-- `assets/visible-batch1/individual/rat.png`
-- `assets/visible-batch1/individual/chat.png`
-
-Les 21 autres éléments du batch visible continuent d'utiliser le sprite. Le deuxième asset CHAT a servi à prouver que la migration est pilotée par le registre et n'est pas un cas spécial RAT.
+La migration a d'abord été prouvée avec RAT puis CHAT afin de vérifier que le mécanisme était générique et non un cas spécial. Le registre a ensuite été étendu progressivement. L'état courant fait foi dans la section « État du batch visible » ci-dessous.
 
 ## Conditions techniques avant activation d'un dessin
 
@@ -34,7 +29,7 @@ Les 21 autres éléments du batch visible continuent d'utiliser le sprite. Le de
 5. cadrage lisible à petite taille ;
 6. absence de texte/décor parasite sauf cas explicitement prévu ;
 7. fichier ajouté dans `assets/visible-batch1/individual/` ;
-8. concept ajouté à `INDIVIDUAL_IMAGES` ;
+8. concept ajouté à `REBULO_INDIVIDUAL_VISUALS` ;
 9. tests unitaires verts ;
 10. contrôle navigateur mobile réel vert.
 
@@ -52,9 +47,7 @@ Pour un fichier individuel, le runtime impose `object-fit: contain`, fond transp
 
 ## Extension après validation du pilote RAT + CHAT
 
-Une migration supplémentaire se réduit maintenant à deux opérations fonctionnelles : ajouter le PNG individuel et ajouter l'association `concept -> chemin`. Les tests doivent ensuite prouver que les autres concepts conservent leur fallback sprite.
-
-Le registre pourra être extrait ultérieurement dans un fichier de données dédié lorsque le nombre d'assets individuels justifiera cette séparation. Le prototype évite volontairement une refonte prématurée.
+Une migration supplémentaire se réduit maintenant à deux opérations fonctionnelles : ajouter le PNG individuel et ajouter l'association `concept -> chemin` dans le registre graphique dédié. Les tests doivent ensuite prouver que les autres concepts conservent leur fallback sprite.
 
 
 ## État du batch visible — 2026-09-22

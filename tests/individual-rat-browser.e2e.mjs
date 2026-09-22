@@ -50,9 +50,25 @@ try{
     report.assets[id]=row;
   }
 
-  // All registry entries have already been asserted above. Capture the document directly;
-  // do not re-query a broad locator that can be unstable while Rebulo mutates the DOM.
-  await page.screenshot({path:'individual-visuals-mobile-proof.png',fullPage:true});
+  // Build a deterministic proof board from the already-validated probes.
+  // This is browser presentation only; it does not create or alter any source artwork.
+  await page.evaluate((entries)=>{
+    const board=document.createElement('section');
+    board.id='individual-visual-proof-board';
+    Object.assign(board.style,{position:'absolute',left:'0',top:'0',zIndex:'2147483647',width:'390px',boxSizing:'border-box',padding:'12px',background:'#fff',display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:'8px'});
+    for(const [id] of entries){
+      const source=document.querySelector('#individual-'+id+'-probe img');
+      const card=document.createElement('div');
+      Object.assign(card.style,{display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',minHeight:'118px',border:'1px solid #ddd',borderRadius:'12px',background:'#fff',fontFamily:'sans-serif',fontWeight:'700'});
+      const clone=source.cloneNode(true);
+      Object.assign(clone.style,{width:'82px',height:'82px',objectFit:'contain',background:'transparent',boxShadow:'none',borderRadius:'0'});
+      const label=document.createElement('span'); label.textContent=id;
+      card.append(clone,label); board.appendChild(card);
+    }
+    document.body.appendChild(board);
+  },entries);
+  const board=page.locator('#individual-visual-proof-board');
+  await board.screenshot({path:'individual-visuals-mobile-proof.png'});
   await writeFile('individual-visuals-browser-report.json',JSON.stringify(report,null,2));
   await context.close();
   console.log(JSON.stringify(report));

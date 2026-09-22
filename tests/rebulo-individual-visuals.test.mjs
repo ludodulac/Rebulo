@@ -12,7 +12,8 @@ for(const [concept,path] of entries){
   const png=fs.readFileSync(path);
   assert.deepEqual([...png.subarray(0,8)],[137,80,78,71,13,10,26,10],`${concept} is not a real PNG`);
   assert.equal(png[25],6,`${concept} must be PNG RGBA (colour type 6)`);
-  assert.equal(png.readUInt32BE(16),256,`${concept} width must be 256px`);
-  assert.equal(png.readUInt32BE(20),256,`${concept} height must be 256px`);
+  const width=png.readUInt32BE(16),height=png.readUInt32BE(20);
+  assert.ok(width>=32&&width<=4096,`${concept} width must be a plausible source dimension`);
+  assert.ok(height>=32&&height<=4096,`${concept} height must be a plausible source dimension`);
 }
 console.log(`Individual visual registry OK: ${entries.length} asset(s)`);

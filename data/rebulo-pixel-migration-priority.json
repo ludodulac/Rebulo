@@ -48,6 +48,16 @@
       "id": "couteau",
       "impact": 1,
       "kind": "individual_png"
+    },
+    {
+      "id": "cle",
+      "impact": 21,
+      "kind": "individual_png"
+    },
+    {
+      "id": "olive",
+      "impact": 0,
+      "kind": "individual_png"
     }
   ],
   "replacementQueue": [
@@ -147,7 +157,7 @@
       "id": "cle",
       "label": "clé",
       "impact": 21,
-      "status": "replacement_asset_required_or_recovery_to_verify"
+      "status": "recovered_canonical_png_routed"
     },
     {
       "priority": 15,
@@ -189,7 +199,7 @@
       "id": "olive",
       "label": "olive",
       "impact": 0,
-      "status": "replacement_asset_required_or_recovery_to_verify"
+      "status": "recovered_canonical_png_routed"
     }
   ],
   "source": "data/active-dependency-report.json",

@@ -55,3 +55,20 @@ Pour un fichier individuel, le runtime impose `object-fit: contain`, fond transp
 Une migration supplémentaire se réduit maintenant à deux opérations fonctionnelles : ajouter le PNG individuel et ajouter l'association `concept -> chemin`. Les tests doivent ensuite prouver que les autres concepts conservent leur fallback sprite.
 
 Le registre pourra être extrait ultérieurement dans un fichier de données dédié lorsque le nombre d'assets individuels justifiera cette séparation. Le prototype évite volontairement une refonte prématurée.
+
+
+## État du batch visible — 2026-09-22
+
+Le registre individuel couvre désormais 18 concepts sur 23 : banc, chat, cheval, chien, couteau, lit, livre, nid, pie, pied, pomme, porte, rat, route, soleil, table, train, voiture.
+
+Le navigateur mobile contrôle maintenant automatiquement toutes les entrées du registre, et non plus seulement RAT/CHAT.
+
+Cinq concepts restent volontairement sur le sprite tant qu'un original individuel de provenance sûre n'est pas disponible : bébé, œil, mer, scie, nez.
+
+Provenance connue des blocages :
+- œil et scie : source existante, extraction individuelle bloquée ;
+- mer : individuel historique prouvé mais actuellement inaccessible ;
+- bébé : identifié historiquement comme à extraire depuis une source ;
+- nez : aucun original individuel sûr retrouvé dans le dossier canonique lors de cette passe.
+
+BANC est une récupération historique prouvée par la passation et reste distingué des fichiers déjà présents dans le dossier canonique actuel.

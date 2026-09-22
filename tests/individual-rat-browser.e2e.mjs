@@ -50,8 +50,8 @@ try{
     report.assets[id]=row;
   }
 
-  const gallery=page.locator('.piece').filter({has:page.locator('img[data-rebulo-visible-batch1]')});
-  await gallery.first().scrollIntoViewIfNeeded();
+  // All registry entries have already been asserted above. Capture the document directly;
+  // do not re-query a broad locator that can be unstable while Rebulo mutates the DOM.
   await page.screenshot({path:'individual-visuals-mobile-proof.png',fullPage:true});
   await writeFile('individual-visuals-browser-report.json',JSON.stringify(report,null,2));
   await context.close();

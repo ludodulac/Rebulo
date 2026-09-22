@@ -37,6 +37,11 @@ assert.ok(modern.some(item=>item.source==='visible-convention'));
 assert.ok(modern.every(item=>item.pieces.length>=1&&item.pieces.length<=6));
 assert.ok(modern.every(item=>item.pieces.every(piece=>piece.kind==='image'?Boolean(piece.image):Boolean(piece.symbol))));
 assert.ok(modern.every(item=>Array.isArray(item.acceptedAnswers)&&item.acceptedAnswers.includes(item.answer)));
+const imagePreferredO=modern.find(item=>item.pieces?.some(piece=>piece.ipa==='/o/'||piece.ipa==='o'));
+if(imagePreferredO){
+  const oPieces=imagePreferredO.pieces.filter(piece=>piece.ipa==='/o/'||piece.ipa==='o');
+  assert.ok(oPieces.every(piece=>piece.kind==='image'&&piece.reading==='eau'),'when /o/ has the exact EAU image, Play must prefer it over the letter O convention');
+}
 const modernPili=modern.find(item=>item.answer==='pili');
 assert.ok(modernPili,'pili must use the same exact bank planning path as Play');
 assert.equal(modernPili.targetIpa,'pili');

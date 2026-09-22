@@ -89,3 +89,18 @@ La branche prototype ne doit être fusionnée qu'après vérification simultané
 9. fusion explicite seulement après accord humain.
 
 État actuel : 18/23 concepts du batch visible utilisent un PNG individuel ; bébé, œil, mer, scie et nez restent volontairement sur le sprite.
+
+
+## Preuve de parcours utilisateur
+
+Le workflow navigateur dédié exécute désormais deux niveaux de preuve :
+- contrôle exhaustif de toutes les entrées du registre individuel dans Chromium mobile ;
+- scénarios réels du créateur REBULO en mobile et desktop.
+
+Scénarios mixtes explicitement couverts :
+- `pili` : PIE + LIT en PNG individuels ;
+- `Le chien regarde le train` : CHIEN + TRAIN en PNG individuels ;
+- `Le bébé ouvre la porte` : BÉBÉ reste sur le sprite tandis que PORTE utilise son PNG individuel ;
+- `merci` : MER + SCIE restent tous deux sur le sprite.
+
+Cette matrice démontre que la migration est progressive et que l'absence d'un PNG individuel ne casse pas le rendu existant.

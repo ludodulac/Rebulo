@@ -111,3 +111,16 @@ Conséquence :
 - BANC reste autorisé comme migration fonctionnelle, car sa provenance est prouvée et son rendu est correct ;
 - BANC porte une dette graphique explicite : remplacer ultérieurement cette source par un meilleur original individuel sûr, sans modifier son identité phonétique ;
 - une migration techniquement verte ne doit pas être confondue avec une homogénéité graphique parfaite.
+
+
+## Preuve finale de transparence et parcours — 2026-09-22
+
+La preuve Chromium finale de la PR #302 confirme pour les 18 PNG individuels :
+- chargement réel de chaque fichier dans le navigateur ;
+- dimensions naturelles non nulles et rendu à 88 × 88 px dans la sonde mobile ;
+- `object-fit: contain`, aucun fond sprite, aucune ombre de boîte, rayon de boîte nul ;
+- présence effective de pixels totalement transparents (`alphaMin = 0`) et de pixels visibles (`alphaMax > 0`).
+
+Les parcours réels mobile et desktop restent verts après ce durcissement, notamment les scénarios mixtes BÉBÉ+PORTE et MER+SCIE. Les tests produit, phrases, catalogue de sons et file d'expansion de représentations sont également verts sur la même révision de PR.
+
+Cette preuve clôt la phase de validation technique du pilote. Toute évolution suivante doit répondre à un besoin produit ou à une dette graphique documentée, et non ajouter une nouvelle couche expérimentale.

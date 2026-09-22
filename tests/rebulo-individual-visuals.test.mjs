@@ -15,5 +15,6 @@ for(const [concept,path] of entries){
   const width=png.readUInt32BE(16),height=png.readUInt32BE(20);
   assert.ok(width>=32&&width<=4096,`${concept} width must be a plausible source dimension`);
   assert.ok(height>=32&&height<=4096,`${concept} height must be a plausible source dimension`);
+  if(width<96||height<96)assert.equal(concept,'banc',`${concept} is unexpectedly low resolution; only documented historical BANC is temporarily exempt`);
 }
 console.log(`Individual visual registry OK: ${entries.length} asset(s)`);

@@ -1,14 +1,14 @@
-name: Prototype individual visual browser proof
+name: Individual visual browser proof
 
 on:
   push:
     branches:
-      - prototype/individual-rat-pixel
+      - main
     paths:
       - 'assets/visible-batch1/**'
       - 'src/rebulo-visible-batch1-*.js'
       - 'src/rebulo-individual-visuals.js'
-      - 'tests/individual-rat-browser.e2e.mjs'
+      - 'tests/individual-visual-browser.e2e.mjs'
       - 'tests/rebulo-visible-batch1.e2e.mjs'
       - '.github/workflows/prototype-individual-rat-browser.yml'
   workflow_dispatch:
@@ -34,7 +34,7 @@ jobs:
           python3 -m http.server 4173 > /tmp/rebulo-http.log 2>&1 &
           echo $! > /tmp/rebulo-http.pid
       - name: Verify individual registry in a real mobile browser
-        run: node tests/individual-rat-browser.e2e.mjs
+        run: node tests/individual-visual-browser.e2e.mjs
       - name: Verify mixed visuals in real creator flows
         run: node tests/rebulo-visible-batch1.e2e.mjs
       - name: Upload browser proof

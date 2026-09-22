@@ -11,6 +11,16 @@ on:
       - 'tests/individual-visual-browser.e2e.mjs'
       - 'tests/rebulo-visible-batch1.e2e.mjs'
       - '.github/workflows/individual-visual-browser.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'assets/visible-batch1/**'
+      - 'src/rebulo-visible-batch1-*.js'
+      - 'src/rebulo-individual-visuals.js'
+      - 'tests/individual-visual-browser.e2e.mjs'
+      - 'tests/rebulo-visible-batch1.e2e.mjs'
+      - '.github/workflows/individual-visual-browser.yml'
   workflow_dispatch:
 
 permissions:

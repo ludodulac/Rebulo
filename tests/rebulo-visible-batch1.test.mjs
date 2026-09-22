@@ -72,11 +72,16 @@ for(const item of REBULO_VISIBLE_BATCH1){
 }
 
 const bank=applyVisibleBatch1ToBankRows([]);
-assert.equal(bank.length,23);
+assert.equal(bank.length,25,'runtime bank should expose the locked 23-concept batch plus recovered clé and olive');
 for(const item of REBULO_VISIBLE_BATCH1){
   const row=bank.find(entry=>normalizeIPA(entry.ipa)===normalizeIPA(item.ipa));
   assert.ok(row);
   assert.ok(row.exactImageRepresentations.some(rep=>rep.label===item.label&&rep.image===item.image&&rep.tier==='exact_image_ready'));
 }
+for(const id of ['cle','olive']){
+  const path=REBULO_INDIVIDUAL_VISUALS[id];
+  assert.ok(path&&fs.existsSync(path),`recovered ${id} individual PNG must exist`);
+  assert.ok(bank.some(row=>row.exactImageRepresentations?.some(rep=>rep.image===path&&rep.tier==='exact_image_ready')),`runtime bank must route recovered ${id} image`);
+}
 
-console.log(JSON.stringify({visibleBatch1:visibleBatch1Stats(),canonicalSources:true,runtimeActivation:true}));
+console.log(JSON.stringify({visibleBatch1:visibleBatch1Stats(),routedRecoveredIndividuals:2,canonicalSources:true,runtimeActivation:true}));

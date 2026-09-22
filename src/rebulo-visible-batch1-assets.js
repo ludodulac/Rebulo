@@ -26,7 +26,9 @@ const ROWS=Object.freeze([
   ['table','table','/tabl/',1,'data/rebus-productive-bank-wave1.json'],
   ['banc','banc','/bɑ̃/',1,'data/rebus-productive-bank-wave1.json'],
   ['rat','rat','/ʁa/',1,'data/lexicon-seed.json'],
-  ['nez','nez','/ne/',1,'data/lexicon-seed.json']
+  ['nez','nez','/ne/',1,'data/lexicon-seed.json'],
+  ['cle','clé','/kle/',1,'data/lexicon-seed.json'],
+  ['olive','olive','/oliv/',2,'data/lexicon-seed.json']
 ]);
 
 const SPRITE_URL='assets/visible-batch1/sprite.svg';

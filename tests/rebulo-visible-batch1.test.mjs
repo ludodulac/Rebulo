@@ -17,6 +17,8 @@ assert.deepEqual(visibleBatch1Stats(),{count:23,oneSyllable:18,twoSyllable:5});
 assert.equal(new Set(REBULO_VISIBLE_BATCH1.map(item=>item.id)).size,23);
 assert.equal(new Set(REBULO_VISIBLE_BATCH1.map(item=>normalizeIPA(item.ipa))).size,23);
 assert.ok(fs.existsSync('assets/visible-batch1/sprite.svg'));
+assert.equal(Object.keys(REBULO_INDIVIDUAL_VISUALS).length,18,'visible batch migration should expose exactly the 18 reviewed individual assets');
+assert.deepEqual(REBULO_VISIBLE_BATCH1.filter(item=>!item.individualImage).map(item=>item.id),['bebe','oeil','mer','scie','nez'],'unresolved concepts must keep the reviewed sprite fallback set');
 
 for(const item of REBULO_VISIBLE_BATCH1){
   assert.equal(item.active,true);

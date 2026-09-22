@@ -40,7 +40,6 @@ jobs:
         with:
           name: individual-rat-browser-proof
           path: |
-            individual-rat-mobile-proof.png
-            individual-chat-mobile-proof.png
-            individual-rat-browser-report.json
+            individual-visuals-mobile-proof.png
+            individual-visuals-browser-report.json
           if-no-files-found: ignore

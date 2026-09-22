@@ -37,7 +37,12 @@ try{
     const row=await page.evaluate((id)=>{
       const img=document.querySelector('#individual-'+id+'-probe img');
       const cs=getComputedStyle(img); const r=img.getBoundingClientRect();
-      return {src:img.getAttribute('src'),id:img.dataset.rebuloVisibleBatch1,naturalWidth:img.naturalWidth,naturalHeight:img.naturalHeight,renderedWidth:r.width,renderedHeight:r.height,objectFit:cs.objectFit,backgroundImage:cs.backgroundImage,backgroundColor:cs.backgroundColor,boxShadow:cs.boxShadow,borderRadius:cs.borderRadius};
+      const canvas=document.createElement('canvas'); canvas.width=img.naturalWidth; canvas.height=img.naturalHeight;
+      const ctx=canvas.getContext('2d',{willReadFrequently:true}); ctx.drawImage(img,0,0);
+      const pixels=ctx.getImageData(0,0,canvas.width,canvas.height).data;
+      let alphaMin=255,alphaMax=0;
+      for(let i=3;i<pixels.length;i+=4){const a=pixels[i];if(a<alphaMin)alphaMin=a;if(a>alphaMax)alphaMax=a;}
+      return {src:img.getAttribute('src'),id:img.dataset.rebuloVisibleBatch1,naturalWidth:img.naturalWidth,naturalHeight:img.naturalHeight,renderedWidth:r.width,renderedHeight:r.height,objectFit:cs.objectFit,backgroundImage:cs.backgroundImage,backgroundColor:cs.backgroundColor,boxShadow:cs.boxShadow,borderRadius:cs.borderRadius,alphaMin,alphaMax};
     },id);
     assert.equal(row.id,id);
     assert.equal(row.src,path);
@@ -45,6 +50,8 @@ try{
     assert.equal(row.backgroundImage,'none');
     assert.equal(row.boxShadow,'none');
     assert.equal(row.borderRadius,'0px');
+    assert.ok(row.alphaMin<255,`${id} must contain real transparent pixels`);
+    assert.ok(row.alphaMax>0,`${id} must contain visible non-transparent pixels`);
     assert.ok(row.renderedWidth>=70);
     assert.ok(row.renderedHeight>=70);
     report.assets[id]=row;

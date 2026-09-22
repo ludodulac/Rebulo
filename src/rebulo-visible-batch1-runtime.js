@@ -63,6 +63,7 @@ function paintSprite(img,asset){
   img.src=TRANSPARENT_PIXEL;
   img.style.objectFit='';
   img.style.boxShadow='';
+  img.style.borderRadius='';
   img.style.backgroundImage=`url("${asset.spriteUrl}")`;
   img.style.backgroundSize='500% 500%';
   img.style.backgroundPosition=`${asset.spriteColumn*25}% ${asset.spriteRow*25}%`;

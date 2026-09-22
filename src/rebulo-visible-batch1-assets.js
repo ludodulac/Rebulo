@@ -26,9 +26,7 @@ const ROWS=Object.freeze([
   ['table','table','/tabl/',1,'data/rebus-productive-bank-wave1.json'],
   ['banc','banc','/bɑ̃/',1,'data/rebus-productive-bank-wave1.json'],
   ['rat','rat','/ʁa/',1,'data/lexicon-seed.json'],
-  ['nez','nez','/ne/',1,'data/lexicon-seed.json'],
-  ['cle','clé','/kle/',1,'data/lexicon-seed.json'],
-  ['olive','olive','/oliv/',2,'data/lexicon-seed.json']
+  ['nez','nez','/ne/',1,'data/lexicon-seed.json']
 ]);
 
 const SPRITE_URL='assets/visible-batch1/sprite.svg';
@@ -52,9 +50,18 @@ export const REBULO_VISIBLE_BATCH1=Object.freeze(ROWS.map(([id,label,ipa,syllabl
   artRevision:`visible-batch1-${id}-v1`
 })));
 
-const BY_IPA=new Map(REBULO_VISIBLE_BATCH1.map(item=>[normalizeIPA(item.ipa),item]));
-const BY_ID=new Map(REBULO_VISIBLE_BATCH1.map(item=>[key(item.id),item]));
-const BY_LABEL=new Map(REBULO_VISIBLE_BATCH1.map(item=>[key(item.label),item]));
+const ROUTED_INDIVIDUALS=Object.freeze([
+  ['cle','clé','/kle/',1,'data/lexicon-seed.json'],
+  ['olive','olive','/oliv/',2,'data/lexicon-seed.json']
+]);
+export const REBULO_ROUTED_INDIVIDUALS=Object.freeze(ROUTED_INDIVIDUALS.map(([id,label,ipa,syllableSpan,sourceCuration])=>Object.freeze({
+  id,label,ipa,syllableSpan,sourceCuration,image:REBULO_INDIVIDUAL_VISUALS[id],individualImage:REBULO_INDIVIDUAL_VISUALS[id],active:true,strictEligible:true,clinicalStatus:'naming_test_required',spontaneousNamingRisk:'unknown',humanNamingEvidence:'none',clinicalEvidence:'none',assetSource:'rebulo_original:recovered-individual',artRevision:`recovered-${id}-v1`
+})));
+const ROUTABLE_ASSETS=Object.freeze([...REBULO_VISIBLE_BATCH1,...REBULO_ROUTED_INDIVIDUALS]);
+
+const BY_IPA=new Map(ROUTABLE_ASSETS.map(item=>[normalizeIPA(item.ipa),item]));
+const BY_ID=new Map(ROUTABLE_ASSETS.map(item=>[key(item.id),item]));
+const BY_LABEL=new Map(ROUTABLE_ASSETS.map(item=>[key(item.label),item]));
 
 export function visibleBatch1AssetForPiece(piece={}){
   const byId=BY_ID.get(key(piece.id));
@@ -67,7 +74,7 @@ export function visibleBatch1AssetForPiece(piece={}){
 
 export function mergeVisibleBatch1Lexicon(lexicon=[]){
   const out=(lexicon||[]).map(item=>({...item}));
-  for(const asset of REBULO_VISIBLE_BATCH1){
+  for(const asset of ROUTABLE_ASSETS){
     const index=out.findIndex(item=>key(item?.id)===key(asset.id)||key(item?.label)===key(asset.label));
     const existing=index>=0?out[index]:{};
     const merged={...existing,...asset,ipa:asset.ipa,image:asset.image,active:true};
@@ -102,7 +109,7 @@ export function applyVisibleBatch1ToBankRows(rows=[]){
     ...row,
     exactImageRepresentations:[...(row?.exactImageRepresentations||[])]
   }]));
-  for(const asset of REBULO_VISIBLE_BATCH1){
+  for(const asset of ROUTABLE_ASSETS){
     const ipa=normalizeIPA(asset.ipa);
     const row=byIpa.get(ipa)||{ipa,syllableSpans:[asset.syllableSpan],exactImageRepresentations:[],letters:[],numbers:[],musicNotes:[]};
     row.syllableSpans=[...new Set([...(row.syllableSpans||[]),asset.syllableSpan])];

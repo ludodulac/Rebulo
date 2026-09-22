@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import {REBULO_INDIVIDUAL_VISUALS} from '../src/rebulo-individual-visuals.js';
 import {normalizeIPA} from '../src/phonetic-engine.js';
 import {
   REBULO_VISIBLE_BATCH1,
@@ -16,6 +17,8 @@ assert.deepEqual(visibleBatch1Stats(),{count:23,oneSyllable:18,twoSyllable:5});
 assert.equal(new Set(REBULO_VISIBLE_BATCH1.map(item=>item.id)).size,23);
 assert.equal(new Set(REBULO_VISIBLE_BATCH1.map(item=>normalizeIPA(item.ipa))).size,23);
 assert.ok(fs.existsSync('assets/visible-batch1/sprite.svg'));
+assert.equal(Object.keys(REBULO_INDIVIDUAL_VISUALS).length,18,'visible batch migration should expose exactly the 18 reviewed individual assets');
+assert.deepEqual(REBULO_VISIBLE_BATCH1.filter(item=>!item.individualImage).map(item=>item.id),['bebe','oeil','mer','scie','nez'],'unresolved concepts must keep the reviewed sprite fallback set');
 
 for(const item of REBULO_VISIBLE_BATCH1){
   assert.equal(item.active,true);
@@ -23,7 +26,18 @@ for(const item of REBULO_VISIBLE_BATCH1){
   assert.equal(item.spontaneousNamingRisk,'unknown');
   assert.equal(item.humanNamingEvidence,'none');
   assert.equal(item.clinicalEvidence,'none');
-  assert.match(item.image,/^assets\/visible-batch1\/sprite\.svg\?asset=/);
+  const individualPath=REBULO_INDIVIDUAL_VISUALS[item.id]||null;
+  if(individualPath){
+    assert.equal(item.image,individualPath);
+    assert.equal(item.individualImage,individualPath);
+    assert.ok(fs.existsSync(individualPath));
+    const png=fs.readFileSync(individualPath);
+    assert.deepEqual([...png.subarray(0,8)],[137,80,78,71,13,10,26,10]);
+    assert.equal(png[25],6,'individual visual must be PNG RGBA (colour type 6)');
+  }else{
+    assert.match(item.image,/^assets\/visible-batch1\/sprite\.svg\?asset=/);
+    assert.equal(item.individualImage,null);
+  }
   assert.ok(item.sourceCuration);
 }
 

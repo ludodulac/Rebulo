@@ -1,11 +1,13 @@
 import assert from 'node:assert/strict';
 import {chromium} from 'playwright';
 import {writeFile} from 'node:fs/promises';
+import {REBULO_INDIVIDUAL_VISUALS} from '../src/rebulo-individual-visuals.js';
 
 const baseUrl=process.env.BASE_URL||'http://127.0.0.1:4173/';
 const output=process.env.OUTPUT_JSON||'visible-batch1-browser.json';
 const browser=await chromium.launch({headless:true});
 const report={baseUrl,cases:{},errors:[]};
+const individualVisuals=REBULO_INDIVIDUAL_VISUALS;
 const save=()=>writeFile(output,JSON.stringify(report,null,2));
 
 async function prepare(viewport,isMobile=false){
@@ -38,7 +40,7 @@ async function snapshot(page){
     const pieces=[...document.querySelectorAll('#creatorRebus .piece')];
     const images=[...document.querySelectorAll('#creatorRebus .piece img')];
     const imageDiagnostics=images.map(img=>({src:img.getAttribute('src')||'',alt:img.alt||'',dataset:img.dataset.rebuloVisibleBatch1||'',background:img.style.backgroundImage||'',parentText:img.closest('.piece')?.textContent?.trim()||''}));
-    const batch=images.filter(img=>img.dataset.rebuloVisibleBatch1).map(img=>{const r=img.getBoundingClientRect();return{id:img.dataset.rebuloVisibleBatch1,width:r.width,height:r.height,left:r.left,right:r.right,top:r.top,bottom:r.bottom,background:img.style.backgroundImage,position:img.style.backgroundPosition};});
+    const batch=images.filter(img=>img.dataset.rebuloVisibleBatch1).map(img=>{const r=img.getBoundingClientRect();return{id:img.dataset.rebuloVisibleBatch1,src:img.getAttribute('src')||'',width:r.width,height:r.height,left:r.left,right:r.right,top:r.top,bottom:r.bottom,background:img.style.backgroundImage,position:img.style.backgroundPosition};});
     const rebus=document.querySelector('#creatorRebus')?.getBoundingClientRect();
     const session=document.querySelector('.session-dock');
     return {pieceCount:pieces.length,pieceTexts:pieces.map(node=>node.textContent?.trim()||''),imageDiagnostics,batch,viewport,rebus:rebus?{left:rebus.left,right:rebus.right,top:rebus.top,bottom:rebus.bottom,width:rebus.width,height:rebus.height}:null,sessionDisplay:session?getComputedStyle(session).display:'missing',feedback:document.querySelector('#creatorFeedback')?.textContent?.trim()||'',proof:document.querySelector('#phoneticProof')?.textContent?.trim()||''};
@@ -51,7 +53,13 @@ function assertVisibleBatch(data,expected=[]){
     assert.ok(row.width>=70&&row.height>=70,`${row.id} should be large enough; got ${row.width}x${row.height}`);
     assert.ok(row.left>=0&&row.right<=data.viewport.width+1,`${row.id} should remain inside viewport horizontally`);
     assert.ok(row.top>=0&&row.bottom<=data.viewport.height+1,`${row.id} should remain inside viewport vertically`);
-    assert.match(row.background,/sprite\.svg/);
+    const individual=individualVisuals[row.id];
+    if(individual){
+      assert.equal(row.src,individual,`${row.id} should use its individual visual`);
+      assert.ok(!row.background||row.background==='none',`${row.id} individual visual should not retain sprite background`);
+    }else{
+      assert.match(row.background,/sprite\.svg/,`${row.id} should keep sprite fallback`);
+    }
   }
   assert.equal(data.sessionDisplay,'none','session dock should not compete with a visible created rebus');
   assert.ok(data.rebus&&data.rebus.left>=0&&data.rebus.right<=data.viewport.width+1,'rebus surface must fit viewport width');

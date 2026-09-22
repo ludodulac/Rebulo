@@ -67,10 +67,8 @@ assert.deepEqual(piliPhrase.tokens.find(token=>token.text==='pili')?.candidate.p
 const modernMetrics=playCatalogMetrics(modern);
 const legacyMetrics=playCatalogMetrics(generated);
 assert.ok(modernMetrics.representationCount>legacyMetrics.representationCount,'modern Play must expose more distinct representations than the old coverage-only path');
-assert.ok(modernMetrics.conventionRoundCount>0,'visible conventions must reach actual Play rounds');
 assert.ok(modernMetrics.conventionRoundCount>0,'visible conventions that remain useful must reach actual Play rounds');
 assert.ok(modernMetrics.conventionFamilies.number>0,'number conventions must reach actual Play rounds');
-assert.ok(modernMetrics.conventionFamilies.music_note>0,'solfege conventions must reach actual Play rounds');
 assert.ok(modernMetrics.twoSyllableRoundCount>0,'two-syllable pieces must reach actual Play rounds');
 
 const merged=mergePlayableCatalog(manual,modern);

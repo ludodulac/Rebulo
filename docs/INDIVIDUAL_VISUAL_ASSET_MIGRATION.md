@@ -67,8 +67,8 @@ Cinq concepts restent volontairement sur le sprite tant qu'un original individue
 
 Provenance connue des blocages :
 - œil et scie : source existante, extraction individuelle bloquée ;
-- mer : individuel historique prouvé mais actuellement inaccessible ;
+- mer : individuel historique prouvé mais actuellement inaccessible ; un composite historique de récupération a été retrouvé, mais il reste une preuve de provenance et ne doit pas être traité comme original individuel ;
 - bébé : identifié historiquement comme à extraire depuis une source ;
-- nez : aucun original individuel sûr retrouvé dans le dossier canonique lors de cette passe.
+- nez : une planche historique contenant le concept a été retrouvée, mais aucun original individuel sûr n'est disponible ; la planche n'est pas découpée pour simuler un original.
 
 BANC est une récupération historique prouvée par la passation et reste distingué des fichiers déjà présents dans le dossier canonique actuel.

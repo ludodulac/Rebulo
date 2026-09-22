@@ -104,3 +104,17 @@ Scénarios mixtes explicitement couverts :
 - `merci` : MER + SCIE restent tous deux sur le sprite.
 
 Cette matrice démontre que la migration est progressive et que l'absence d'un PNG individuel ne casse pas le rendu existant.
+
+
+## Revue visuelle de la planche exhaustive
+
+La planche Chromium exhaustive des 18 entrées du registre a été contrôlée visuellement après exécution verte.
+
+Résultat :
+- 17 assets présentent une lisibilité cohérente à l'échelle de contrôle ;
+- BANC fonctionne correctement dans le pipeline, mais sa source historique n'est que de 60 × 46 px et apparaît sensiblement plus floue que le reste du lot.
+
+Conséquence :
+- BANC reste autorisé comme migration fonctionnelle, car sa provenance est prouvée et son rendu est correct ;
+- BANC porte une dette graphique explicite : remplacer ultérieurement cette source par un meilleur original individuel sûr, sans modifier son identité phonétique ;
+- une migration techniquement verte ne doit pas être confondue avec une homogénéité graphique parfaite.

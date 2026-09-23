@@ -18,6 +18,7 @@ on:
       - 'tests/phrase-browser-product.e2e.mjs'
       - 'tests/compact-runtime-browser.e2e.mjs'
       - 'tests/phrase-mobile-readability.e2e.mjs'
+      - 'tests/play-mobile-composition.e2e.mjs'
       - 'tests/word-lifecycle-trace.e2e.mjs'
       - 'tests/phrase-runtime-diagnostic.mjs'
       - 'tests/rebulo-visible-batch1.e2e.mjs'
@@ -40,6 +41,7 @@ on:
       - 'tests/phrase-browser-product.e2e.mjs'
       - 'tests/compact-runtime-browser.e2e.mjs'
       - 'tests/phrase-mobile-readability.e2e.mjs'
+      - 'tests/play-mobile-composition.e2e.mjs'
       - 'tests/word-lifecycle-trace.e2e.mjs'
       - 'tests/phrase-runtime-diagnostic.mjs'
       - 'tests/rebulo-visible-batch1.e2e.mjs'
@@ -95,6 +97,10 @@ jobs:
         env:
           BASE_URL: http://127.0.0.1:4173/
         run: node tests/phrase-mobile-readability.e2e.mjs
+      - name: Verify complete Play rebus composition on mobile
+        env:
+          BASE_URL: http://127.0.0.1:4173/
+        run: node tests/play-mobile-composition.e2e.mjs
       - name: Verify visible Rebulo batch on mobile and desktop
         env:
           BASE_URL: http://127.0.0.1:4173/

@@ -10,7 +10,7 @@ await page.goto(baseUrl,{waitUntil:'domcontentloaded',timeout:30000});
 await page.waitForSelector('#playArena:not([hidden])',{state:'visible'});
 await page.waitForFunction(()=>document.querySelectorAll('#playRebus .play-piece').length>0,{timeout:15000});
 
-const advanced=page.locator('#difficultyProfiles [data-profile="advanced"]');
+const advanced=page.locator('#difficultyProfiles [data-profile="expert"]');
 if(await advanced.count())await advanced.click();
 for(let attempt=0;attempt<80;attempt++){
   const count=await page.locator('#playRebus .play-piece').count();

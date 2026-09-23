@@ -25,6 +25,7 @@ assert.match(mobileCss,/\.creator-row\{grid-template-columns:1fr 1fr/,'mobile cr
 assert.match(mobileCss,/\.creator-row input\{grid-column:1\/-1\}/,'mobile creator input must occupy its own row');
 assert.match(mobileCss,/keyboard-open[^}]*#playArena\.play-arena\{[^}]*overflow-y:auto!important/,'keyboard-open play must stay scrollable inside the visible phone viewport');
 assert.match(mobileCss,/#creatorRebus\.phrase-continuous-flow\{[^}]*overflow-x:hidden!important[^}]*flex-wrap:wrap!important/,'mobile phrase creator must show the complete rebus as a wrapped composition, never a horizontal carousel');
+assert.match(playCss,/@media\(max-width:520px\)[\s\S]*\.play-rebus\{[^}]*overflow-x:hidden[^}]*flex-wrap:wrap/,'mobile Play must keep the complete rebus visible instead of requiring horizontal scrolling');
 assert.doesNotMatch(mobileCss,/#creatorRebus\.phrase-continuous-flow\{[^}]*overflow-x:auto!important/,'mobile phrase creator must not reintroduce horizontal scrolling');
 assert.match(mobileCss,/keyboard-open[^}]*#playAnswerForm\{[^}]*position:sticky[^}]*bottom:0/,'the play answer field must stay reachable immediately above the mobile keyboard');
 assert.match(phraseCss,/\.phrase-rebus-token[^}]*max-width:100%[^}]*overflow-x:auto/,'long rebus groups must scroll inside their own width instead of overlapping');

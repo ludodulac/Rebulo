@@ -13,6 +13,6 @@ const play=fs.readFileSync(new URL('../src/play-mode.js',import.meta.url),'utf8'
 const css=fs.readFileSync(new URL('../play-mode.css',import.meta.url),'utf8');
 assert.match(play,/Joue avec les sons et les mots grâce aux rébus/);
 assert.match(play,/setMode\('play'\)/,'Jouer must be the default experience');
-assert.match(css,/\.play-rebus\{[^}]*flex-wrap:nowrap/,'multi-piece play rebuses must keep one reading line');
-assert.match(css,/overflow-x:auto/,'long mobile rebuses must remain readable via horizontal overflow');
+assert.match(css,/\.play-rebus\{[^}]*flex-wrap:nowrap/,'desktop Play may keep a compact single reading line');
+assert.match(css,/@media\(max-width:520px\)[\s\S]*\.play-rebus\{[^}]*overflow-x:hidden[^}]*flex-wrap:wrap/,'mobile Play must show the complete rebus as a wrapped composition without horizontal scrolling');
 console.log('difficulty profile UX: ok');

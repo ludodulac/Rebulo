@@ -1,5 +1,6 @@
 import {
   REBULO_VISIBLE_BATCH1,
+  REBULO_ROUTED_INDIVIDUALS,
   mergeVisibleBatch1Lexicon,
   applyVisibleBatch1ToBankRows,
   applyVisibleBatch1ToPlayCatalog,
@@ -8,8 +9,9 @@ import {
 
 const previousFetch=window.fetch.bind(window);
 const key=value=>String(value||'').toLocaleLowerCase('fr').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'');
-const BY_ID=new Map(REBULO_VISIBLE_BATCH1.map(item=>[key(item.id),item]));
-const BY_LABEL=new Map(REBULO_VISIBLE_BATCH1.map(item=>[key(item.label),item]));
+const ROUTABLE_ASSETS=Object.freeze([...REBULO_VISIBLE_BATCH1,...REBULO_ROUTED_INDIVIDUALS]);
+const BY_ID=new Map(ROUTABLE_ASSETS.map(item=>[key(item.id),item]));
+const BY_LABEL=new Map(ROUTABLE_ASSETS.map(item=>[key(item.label),item]));
 const TRANSPARENT_PIXEL='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="1" height="1"/%3E';
 
 function responseFor(value){

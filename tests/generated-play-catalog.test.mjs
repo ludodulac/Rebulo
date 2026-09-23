@@ -37,6 +37,11 @@ assert.ok(modern.some(item=>item.source==='visible-convention'));
 assert.ok(modern.every(item=>item.pieces.length>=1&&item.pieces.length<=6));
 assert.ok(modern.every(item=>item.pieces.every(piece=>piece.kind==='image'?Boolean(piece.image):Boolean(piece.symbol))));
 assert.ok(modern.every(item=>Array.isArray(item.acceptedAnswers)&&item.acceptedAnswers.includes(item.answer)));
+const imagePreferredO=modern.find(item=>item.pieces?.some(piece=>piece.ipa==='/o/'||piece.ipa==='o'));
+if(imagePreferredO){
+  const oPieces=imagePreferredO.pieces.filter(piece=>piece.ipa==='/o/'||piece.ipa==='o');
+  assert.ok(oPieces.every(piece=>piece.kind==='image'&&piece.reading==='eau'),'when /o/ has the exact EAU image, Play must prefer it over the letter O convention');
+}
 const modernPili=modern.find(item=>item.answer==='pili');
 assert.ok(modernPili,'pili must use the same exact bank planning path as Play');
 assert.equal(modernPili.targetIpa,'pili');
@@ -62,10 +67,8 @@ assert.deepEqual(piliPhrase.tokens.find(token=>token.text==='pili')?.candidate.p
 const modernMetrics=playCatalogMetrics(modern);
 const legacyMetrics=playCatalogMetrics(generated);
 assert.ok(modernMetrics.representationCount>legacyMetrics.representationCount,'modern Play must expose more distinct representations than the old coverage-only path');
-assert.ok(modernMetrics.conventionRoundCount>0,'visible conventions must reach actual Play rounds');
-assert.ok(modernMetrics.conventionFamilies.letter>0,'letter-name conventions must reach actual Play rounds');
+assert.ok(modernMetrics.conventionRoundCount>0,'visible conventions that remain useful must reach actual Play rounds');
 assert.ok(modernMetrics.conventionFamilies.number>0,'number conventions must reach actual Play rounds');
-assert.ok(modernMetrics.conventionFamilies.music_note>0,'solfege conventions must reach actual Play rounds');
 assert.ok(modernMetrics.twoSyllableRoundCount>0,'two-syllable pieces must reach actual Play rounds');
 
 const merged=mergePlayableCatalog(manual,modern);

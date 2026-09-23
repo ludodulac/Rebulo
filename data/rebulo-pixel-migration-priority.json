@@ -1,0 +1,218 @@
+{
+  "schemaVersion": "1.0.0",
+  "purpose": "Prioritize removal of legacy/external visuals from the active strict dependency core without changing phonetic semantics.",
+  "policy": {
+    "destination": "REBULO_PIXEL_ONLY",
+    "legacyAndOpenMojiAreTransitional": true,
+    "doNotGenerateAssetsAutomatically": true,
+    "doNotDeactivateMissingAssetsUntilReplacementExists": true,
+    "rankingMetric": "strictUniqueLossIfUnavailable"
+  },
+  "alreadyCoveredByRebuloVisibleLayer": [
+    {
+      "id": "rat",
+      "impact": 146,
+      "kind": "individual_png"
+    },
+    {
+      "id": "nez",
+      "impact": 139,
+      "kind": "sprite_fallback"
+    },
+    {
+      "id": "lit",
+      "impact": 115,
+      "kind": "individual_png"
+    },
+    {
+      "id": "scie",
+      "impact": 78,
+      "kind": "sprite_fallback"
+    },
+    {
+      "id": "pie",
+      "impact": 63,
+      "kind": "individual_png"
+    },
+    {
+      "id": "chat",
+      "impact": 41,
+      "kind": "individual_png"
+    },
+    {
+      "id": "mer",
+      "impact": 21,
+      "kind": "sprite_fallback"
+    },
+    {
+      "id": "couteau",
+      "impact": 1,
+      "kind": "individual_png"
+    },
+    {
+      "id": "cle",
+      "impact": 21,
+      "kind": "individual_png"
+    },
+    {
+      "id": "olive",
+      "impact": 0,
+      "kind": "individual_png"
+    }
+  ],
+  "replacementQueue": [
+    {
+      "priority": 1,
+      "id": "de",
+      "label": "dé",
+      "impact": 170,
+      "status": "replacement_asset_required_or_recovery_to_verify"
+    },
+    {
+      "priority": 2,
+      "id": "the",
+      "label": "thé",
+      "impact": 150,
+      "status": "replacement_asset_required_or_recovery_to_verify"
+    },
+    {
+      "priority": 3,
+      "id": "pas",
+      "label": "pas",
+      "impact": 116,
+      "status": "replacement_asset_required_or_recovery_to_verify"
+    },
+    {
+      "priority": 4,
+      "id": "mat",
+      "label": "mât",
+      "impact": 110,
+      "status": "replacement_asset_required_or_recovery_to_verify"
+    },
+    {
+      "priority": 5,
+      "id": "tas",
+      "label": "tas",
+      "impact": 100,
+      "status": "replacement_asset_required_or_recovery_to_verify"
+    },
+    {
+      "priority": 6,
+      "id": "mie",
+      "label": "mie",
+      "impact": 92,
+      "status": "replacement_asset_required_or_recovery_to_verify"
+    },
+    {
+      "priority": 7,
+      "id": "riz",
+      "label": "riz",
+      "impact": 88,
+      "status": "replacement_asset_required_or_recovery_to_verify"
+    },
+    {
+      "priority": 8,
+      "id": "raie",
+      "label": "raie",
+      "impact": 81,
+      "status": "replacement_asset_required_or_recovery_to_verify"
+    },
+    {
+      "priority": 9,
+      "id": "eau",
+      "label": "eau",
+      "impact": 55,
+      "status": "replacement_asset_required_or_recovery_to_verify"
+    },
+    {
+      "priority": 10,
+      "id": "pot",
+      "label": "pot",
+      "impact": 54,
+      "status": "replacement_asset_required_or_recovery_to_verify"
+    },
+    {
+      "priority": 11,
+      "id": "dos",
+      "label": "dos",
+      "impact": 40,
+      "status": "replacement_asset_required_or_recovery_to_verify"
+    },
+    {
+      "priority": 12,
+      "id": "terre",
+      "label": "terre",
+      "impact": 38,
+      "status": "replacement_asset_required_or_recovery_to_verify"
+    },
+    {
+      "priority": 13,
+      "id": "corps",
+      "label": "corps",
+      "impact": 37,
+      "status": "replacement_asset_required_or_recovery_to_verify"
+    },
+    {
+      "priority": 14,
+      "id": "cle",
+      "label": "clé",
+      "impact": 21,
+      "status": "recovered_canonical_png_routed"
+    },
+    {
+      "priority": 15,
+      "id": "tour",
+      "label": "tour",
+      "impact": 18,
+      "status": "pixel_source_recovered_individual_required",
+      "sourceDriveId": "1wMCneOEFl-zquat8pJaap1jhMhKnaqYQ",
+      "sourceTitle": "RECUP_planche_lot03_historique_source.png",
+      "note": "REBULO PIXEL v1 source sheet visibly contains hvv72-010 tour; source is JPEG/control sheet, not promoted as an individual asset."
+    },
+    {
+      "priority": 16,
+      "id": "sol",
+      "label": "sol",
+      "impact": 10,
+      "status": "replacement_asset_required_or_recovery_to_verify"
+    },
+    {
+      "priority": 17,
+      "id": "aiguille",
+      "label": "aiguille",
+      "impact": 4,
+      "status": "pixel_source_recovered_individual_required",
+      "sourceDriveId": "1gJd6O6SWjp_lpwerFLnJ_zCl1Evjt6pJ",
+      "sourceTitle": "RECUP_composite_aiguille_char_mer_champ_2026-09-15.png",
+      "note": "REBULO PIXEL composite visibly contains aiguille; composite is protected provenance, not promoted as an individual asset."
+    },
+    {
+      "priority": 18,
+      "id": "noeud",
+      "label": "nœud",
+      "impact": 4,
+      "status": "replacement_asset_required_or_recovery_to_verify"
+    },
+    {
+      "priority": 19,
+      "id": "pluie",
+      "label": "pluie",
+      "impact": 2,
+      "status": "replacement_asset_required_or_recovery_to_verify"
+    },
+    {
+      "priority": 20,
+      "id": "olive",
+      "label": "olive",
+      "impact": 0,
+      "status": "recovered_canonical_png_routed"
+    }
+  ],
+  "source": "data/active-dependency-report.json",
+  "note": "Impact counts are dependency sensitivity, not clinical validity or naming evidence.",
+  "audit": {
+    "canonicalFolderCountVerified": 93,
+    "directNamedIndividualSearch": "Only clé and olive from this replacement queue were found as directly named individual canonical files.",
+    "historicalSourceSearch": "Tour and aiguille have protected REBULO PIXEL source/composite evidence but still lack safe individual originals."
+  }
+}

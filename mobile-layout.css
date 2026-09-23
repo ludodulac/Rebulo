@@ -13,7 +13,10 @@ button,.dock-panel>summary,.queue-mini{touch-action:manipulation;-webkit-tap-hig
   .creator-row{grid-template-columns:1fr 1fr;gap:6px}.creator-row input{grid-column:1/-1}.creator-row input,.creator-row button{min-height:48px}.creator-row button{min-width:0;width:100%}.creator-start-hint{font-size:.7rem}
   .arena{min-height:0;overflow:hidden}
   #creatorRebus.rebus-row{min-height:0;align-content:center;overflow:hidden}
-  #creatorRebus.phrase-continuous-flow{overflow-x:auto!important;overflow-y:hidden!important;align-content:normal}
+  #creatorRebus.phrase-continuous-flow{overflow-x:hidden!important;overflow-y:auto!important;align-content:flex-start;flex-wrap:wrap!important}
+/* A complete rebus is a composition, not a horizontal carousel. */
+#creatorRebus.phrase-continuous-flow>.piece{flex:0 1 82px!important;width:min(22vw,82px)!important;min-width:64px!important}
+#creatorRebus.phrase-continuous-flow>.piece img{width:min(19vw,72px)!important;height:min(19vw,72px)!important}
   .arena-actions button,.mini-mode,.session-pdf{min-height:46px}
   .session-dock{min-height:48px;grid-template-columns:auto minmax(0,1fr) auto;gap:6px;padding:6px}
   .session-pdf{grid-column:auto;min-width:58px;padding:0 9px}

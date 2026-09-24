@@ -10,7 +10,7 @@ await page.goto(baseUrl,{waitUntil:'domcontentloaded',timeout:30000});
 await page.waitForSelector('#playMode',{state:'visible'});
 await page.evaluate(()=>document.querySelector('#createMode')?.click());
 await page.evaluate(()=>document.querySelector('[data-creator-kind="phrase"]')?.click());
-const phrase='L abeille tourne autour de la rose';
+const phrase='Le chien regarde le train';
 await page.locator('#target').fill(phrase);
 await page.evaluate(()=>document.querySelector('#creatorForm')?.requestSubmit());
 await page.waitForFunction(value=>!document.querySelector('#result')?.hidden&&document.querySelector('#resultWord')?.textContent===value,phrase,{timeout:15000});
@@ -25,7 +25,8 @@ const snapshot=await page.evaluate(()=>{
     wordDisplay:getComputedStyle(node.querySelector('strong')).display,
     tagDisplay:getComputedStyle(node.querySelector('small')).display
   }));
-  return{viewport:innerWidth,row:{left:rr.left,right:rr.right,width:rr.width,clientWidth:row.clientWidth,scrollWidth:row.scrollWidth},children,descendants,gaps,bodyScrollWidth:document.documentElement.scrollWidth};
+  const arena=row.closest('.arena');const ar=arena.getBoundingClientRect();
+  return{viewport:innerWidth,row:{left:rr.left,right:rr.right,top:rr.top,bottom:rr.bottom,width:rr.width,height:rr.height,clientWidth:row.clientWidth,scrollWidth:row.scrollWidth,clientHeight:row.clientHeight,scrollHeight:row.scrollHeight,overflowY:getComputedStyle(row).overflowY},arena:{top:ar.top,bottom:ar.bottom,overflowY:getComputedStyle(arena).overflowY},children,descendants,gaps,bodyScrollWidth:document.documentElement.scrollWidth,bodyScrollHeight:document.documentElement.scrollHeight};
 });
 console.log(JSON.stringify({phrase,...snapshot}));
 assert.equal(errors.length,0,errors.join('\n'));
@@ -34,6 +35,13 @@ assert.ok(snapshot.children.every(item=>item.visible),'every phrase operation mu
 assert.ok(snapshot.children.every(item=>item.left>=snapshot.row.left-1&&item.right<=snapshot.row.right+1),'mobile phrase operations must wrap inside the result instead of being clipped horizontally');
 assert.ok(snapshot.row.scrollWidth<=snapshot.row.clientWidth+1,'continuous phrase row must not require a hidden horizontal scrollbar on mobile');
 assert.ok(snapshot.bodyScrollWidth<=snapshot.viewport+1,'phrase result must not create page-level horizontal overflow');
+const lastBottom=Math.max(...snapshot.children.map(item=>item.bottom));
+assert.ok(lastBottom<=snapshot.row.bottom+1||snapshot.row.scrollHeight>snapshot.row.clientHeight+1&&snapshot.row.overflowY!=='hidden','every phrase operation must remain vertically accessible instead of being clipped by the phrase container');
+const scrolled=await page.evaluate(()=>{const row=document.querySelector('#creatorRebus');row.scrollTop=row.scrollHeight;const last=row.lastElementChild.getBoundingClientRect();const rr=row.getBoundingClientRect();const ar=row.closest('.arena').getBoundingClientRect();return{scrollTop:row.scrollTop,lastTop:last.top,lastBottom:last.bottom,rowTop:rr.top,rowBottom:rr.bottom,arenaTop:ar.top,arenaBottom:ar.bottom};});
+console.log(JSON.stringify({phrase,scrolled}));
+assert.ok(scrolled.scrollTop>0,'overflowing mobile phrase must be vertically scrollable');
+assert.ok(scrolled.lastTop>=scrolled.rowTop-1&&scrolled.lastBottom<=scrolled.rowBottom+1,'scrolling the phrase must reveal the final operation inside its container');
+assert.ok(scrolled.lastTop>=scrolled.arenaTop-1&&scrolled.lastBottom<=scrolled.arenaBottom+1,'scrolling the phrase must reveal the final operation inside the visible arena');
 for(const gap of snapshot.gaps){
   assert.match(gap.title,/\/[^^/]*\//,'gap must retain its exact uncovered IPA span');
   assert.match(gap.pseudo,/\//,'visible mobile gap must expose IPA rather than an orthographic word label');

@@ -37,7 +37,11 @@ assert.ok(snapshot.row.scrollWidth<=snapshot.row.clientWidth+1,'continuous phras
 assert.ok(snapshot.bodyScrollWidth<=snapshot.viewport+1,'phrase result must not create page-level horizontal overflow');
 const lastBottom=Math.max(...snapshot.children.map(item=>item.bottom));
 assert.ok(lastBottom<=snapshot.row.bottom+1||snapshot.row.scrollHeight>snapshot.row.clientHeight+1&&snapshot.row.overflowY!=='hidden','every phrase operation must remain vertically accessible instead of being clipped by the phrase container');
-assert.ok(lastBottom<=snapshot.arena.bottom+1||snapshot.arena.overflowY!=='hidden','every phrase operation must remain vertically accessible instead of being clipped by the arena');
+const scrolled=await page.evaluate(()=>{const row=document.querySelector('#creatorRebus');row.scrollTop=row.scrollHeight;const last=row.lastElementChild.getBoundingClientRect();const rr=row.getBoundingClientRect();const ar=row.closest('.arena').getBoundingClientRect();return{scrollTop:row.scrollTop,lastTop:last.top,lastBottom:last.bottom,rowTop:rr.top,rowBottom:rr.bottom,arenaTop:ar.top,arenaBottom:ar.bottom};});
+console.log(JSON.stringify({phrase,scrolled}));
+assert.ok(scrolled.scrollTop>0,'overflowing mobile phrase must be vertically scrollable');
+assert.ok(scrolled.lastTop>=scrolled.rowTop-1&&scrolled.lastBottom<=scrolled.rowBottom+1,'scrolling the phrase must reveal the final operation inside its container');
+assert.ok(scrolled.lastTop>=scrolled.arenaTop-1&&scrolled.lastBottom<=scrolled.arenaBottom+1,'scrolling the phrase must reveal the final operation inside the visible arena');
 for(const gap of snapshot.gaps){
   assert.match(gap.title,/\/[^^/]*\//,'gap must retain its exact uncovered IPA span');
   assert.match(gap.pseudo,/\//,'visible mobile gap must expose IPA rather than an orthographic word label');

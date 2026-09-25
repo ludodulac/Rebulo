@@ -30,7 +30,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Install Chromium
-        run: npx --yes playwright@1.55.0 install --with-deps chromium
+      - name: Install Playwright and Chromium
+        run: |
+          npm install --no-save --ignore-scripts playwright@1.55.0
+          npx playwright install --with-deps chromium
       - name: Run mobile validation browser proof
-        run: npx --yes -p playwright@1.55.0 node tests/graphic-validation-browser.e2e.mjs
+        run: node tests/graphic-validation-browser.e2e.mjs

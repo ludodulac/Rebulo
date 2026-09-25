@@ -1,0 +1,38 @@
+name: Graphic validation browser
+
+on:
+  push:
+    paths:
+      - 'validation-graphiques.html'
+      - 'validation-graphiques.css'
+      - 'validation-graphiques.js'
+      - 'data/graphic-validation-candidates.json'
+      - 'tests/graphic-validation-browser.e2e.mjs'
+      - '.github/workflows/graphic-validation-browser.yml'
+  pull_request:
+    paths:
+      - 'validation-graphiques.html'
+      - 'validation-graphiques.css'
+      - 'validation-graphiques.js'
+      - 'data/graphic-validation-candidates.json'
+      - 'tests/graphic-validation-browser.e2e.mjs'
+      - '.github/workflows/graphic-validation-browser.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright and Chromium
+        run: |
+          npm install --no-save --ignore-scripts playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Run mobile validation browser proof
+        run: node tests/graphic-validation-browser.e2e.mjs

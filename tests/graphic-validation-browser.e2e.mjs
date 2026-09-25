@@ -1,0 +1,41 @@
+import { chromium } from 'playwright';
+import assert from 'node:assert/strict';
+import {spawn} from 'node:child_process';
+
+const server=spawn('python3',['-m','http.server','4173','--bind','127.0.0.1'],{stdio:'ignore'});
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+try{
+  await sleep(800);
+  const browser=await chromium.launch({headless:true});
+  const context=await browser.newContext({viewport:{width:390,height:844},acceptDownloads:true});
+  const page=await context.newPage();
+  const fakePng='data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><rect width="20" height="20" fill="none"/></svg>');
+  await page.route('**/data/graphic-validation-candidates.json',route=>route.fulfill({contentType:'application/json',body:JSON.stringify({schema_version:1,candidates:[{id:'browser-proof-v1',concept:'TEST UNIQUEMENT',asset:fakePng}]})}));
+  await page.goto('http://127.0.0.1:4173/validation-graphiques.html');
+  await page.waitForSelector('.candidate-card');
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),390);
+  assert.equal(await page.locator('.candidate-card').count(),1);
+  const redo=page.getByRole('button',{name:/À REFAIRE/}), valid=page.getByRole('button',{name:/VALIDÉ/});
+  await redo.click();
+  assert.equal(await redo.getAttribute('aria-pressed'),'true');
+  assert.equal(await valid.getAttribute('aria-pressed'),'false');
+  const comment=page.getByLabel("Qu'est-ce qu'il faut changer ?");
+  await comment.fill('preuve mobile');
+  await page.reload();await page.waitForSelector('.candidate-card');
+  assert.equal(await page.getByRole('button',{name:/À REFAIRE/}).getAttribute('aria-pressed'),'true');
+  assert.equal(await page.getByLabel("Qu'est-ce qu'il faut changer ?").inputValue(),'preuve mobile');
+  const downloadPromise=page.waitForEvent('download');
+  await page.getByRole('button',{name:'EXPORTER MES VALIDATIONS'}).click();
+  const download=await downloadPromise;
+  assert.equal(download.suggestedFilename(),'rebulo-validations-graphiques.json');
+  const path=await download.path();
+  const fs=await import('node:fs');
+  const payload=JSON.parse(fs.readFileSync(path,'utf8'));
+  assert.equal(payload.schema_version,1);
+  assert.equal(payload.candidates[0].concept,'TEST UNIQUEMENT');
+  assert.equal(payload.candidates[0].decision,'redo');
+  assert.equal(payload.candidates[0].comment,'preuve mobile');
+  assert.ok(payload.candidates[0].decided_at);
+  console.log(JSON.stringify({viewport:await page.evaluate(()=>[innerWidth,innerHeight]),scrollWidth:await page.evaluate(()=>document.documentElement.scrollWidth),decision:payload.candidates[0].decision,comment:payload.candidates[0].comment,exportFields:Object.keys(payload.candidates[0])}));
+  await browser.close();
+}finally{server.kill();}

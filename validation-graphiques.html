@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Validation des dessins REBULO</title>
+  <link rel="stylesheet" href="validation-graphiques.css">
+</head>
+<body>
+  <main class="validation-shell">
+    <header>
+      <p class="eyebrow">REBULO · contrôle graphique</p>
+      <h1>Validation des dessins REBULO</h1>
+      <p class="lede">Valide les nouveaux dessins ou indique simplement ce qu'il faut refaire. Tes choix restent enregistrés sur ce téléphone.</p>
+    </header>
+    <section id="candidateList" class="candidate-list" aria-live="polite"></section>
+    <p id="emptyState" class="empty-state" hidden>Aucun nouveau dessin à valider pour le moment.</p>
+    <p id="status" class="status" aria-live="polite"></p>
+    <button id="exportValidations" class="export-button" type="button">EXPORTER MES VALIDATIONS</button>
+  </main>
+  <script type="module" src="validation-graphiques.js"></script>
+</body>
+</html>

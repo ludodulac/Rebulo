@@ -1,0 +1,190 @@
+name: REBULO controlled derived artifact publisher 021
+
+on:
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: write
+
+concurrency:
+  group: rebulo-derived-artifact-publisher-021
+  cancel-in-progress: false
+
+jobs:
+  publish-certified-derived-artifact:
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/feat/promote-human-validated-assets-006' && github.ref != 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      SOURCE_HEAD: 0fffea67b92a231a5a4de871fd16e5707c5a1ebd
+      TARGET_BRANCH: feat/promote-human-validated-assets-006
+      ARTIFACT_RUN_ID: '36229810275'
+      ARTIFACT_NAME: rebus-sound-catalog
+      ARTIFACT_DIR: ${{ runner.temp }}/rebulo-certified-artifact-021
+    steps:
+      - name: Checkout controlled publisher branch
+        uses: actions/checkout@v4
+        with:
+          ref: feat/promote-human-validated-assets-006
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Verify publisher provenance and initial remote head
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "${GITHUB_EVENT_NAME}" = "workflow_dispatch"
+          test "${GITHUB_REF}" = "refs/heads/${TARGET_BRANCH}"
+          test "${GITHUB_REF}" != "refs/heads/main"
+
+          PUBLISHER_HEAD="$(git rev-parse HEAD)"
+          git merge-base --is-ancestor "${SOURCE_HEAD}" "${PUBLISHER_HEAD}"
+
+          mapfile -t publisher_diff < <(git diff --name-only "${SOURCE_HEAD}..${PUBLISHER_HEAD}")
+          test "${#publisher_diff[@]}" -eq 1
+          test "${publisher_diff[0]}" = ".github/workflows/derived-artifact-publisher-021.yml"
+
+          git fetch --no-tags origin "refs/heads/${TARGET_BRANCH}:refs/remotes/origin/${TARGET_BRANCH}"
+          REMOTE_HEAD="$(git rev-parse "refs/remotes/origin/${TARGET_BRANCH}")"
+          test "${REMOTE_HEAD}" = "${PUBLISHER_HEAD}"
+
+          echo "SOURCE_HEAD=${SOURCE_HEAD}"
+          echo "PUBLISHER_HEAD=${PUBLISHER_HEAD}"
+          echo "EXPECTED_REMOTE_HEAD=${PUBLISHER_HEAD}" >> "${GITHUB_ENV}"
+          echo "PUBLISHER_HEAD=${PUBLISHER_HEAD}" >> "${GITHUB_ENV}"
+
+      - name: Download certified artifact from source run
+        uses: actions/download-artifact@v4
+        with:
+          name: rebus-sound-catalog
+          run-id: 36229810275
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          path: ${{ runner.temp }}/rebulo-certified-artifact-021
+
+      - name: Verify exact artifact inventory and certified hashes
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "${ARTIFACT_DIR}"
+
+          cat > "${RUNNER_TEMP}/expected-artifact-files-021.txt" <<'EOF'
+          .cache/rebus-approximation-research.json
+          data/rebus-representation-bank-audit.json
+          data/rebus-sound-catalog.json
+          docs/REBUS_APPROXIMATION_RESEARCH.md
+          docs/REBUS_REPRESENTATION_BANK_AUDIT.md
+          docs/REBUS_SOUND_CATALOG_REPORT.md
+          docs/REBUS_SOUND_VISUAL_CURATION_REPORT.md
+          EOF
+
+          find . -type f -printf '%P\n' | LC_ALL=C sort > "${RUNNER_TEMP}/actual-artifact-files-021.txt"
+          diff -u "${RUNNER_TEMP}/expected-artifact-files-021.txt" "${RUNNER_TEMP}/actual-artifact-files-021.txt"
+          test "$(wc -l < "${RUNNER_TEMP}/actual-artifact-files-021.txt")" -eq 7
+
+          cat > "${RUNNER_TEMP}/expected-sha256-021.txt" <<'EOF'
+          bf049a8d1c7a3ddba94f7fdf78616b05d8824ded905b8e92aea9e9c46bd8d21d  data/rebus-sound-catalog.json
+          b6d53734b88c6115e828937d109d3cef6771a4ac70a8da8efda2cab9869abe03  data/rebus-representation-bank-audit.json
+          6f8c85eccc87e23c07b67e7902e1b3688ee135ad1e6648d32cd7bbc48825c59b  docs/REBUS_REPRESENTATION_BANK_AUDIT.md
+          2fe9b57f1270c470e95014e9507c5140de5d42b839f2cdfb81c396e0ba811889  docs/REBUS_SOUND_CATALOG_REPORT.md
+          e7383854550de55fcc7c7ac96dbfe938a52ea8f98be3529cb5e10abae0f3f81d  docs/REBUS_SOUND_VISUAL_CURATION_REPORT.md
+          75d99e1b43b7d604328df603b224b5117a73b795d118048fd1957448b1c8c358  docs/REBUS_APPROXIMATION_RESEARCH.md
+          EOF
+
+          sha256sum --check "${RUNNER_TEMP}/expected-sha256-021.txt"
+
+      - name: Copy only versioned outputs and verify exact working diff
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          outputs=(
+            data/rebus-sound-catalog.json
+            data/rebus-representation-bank-audit.json
+            docs/REBUS_SOUND_CATALOG_REPORT.md
+            docs/REBUS_SOUND_VISUAL_CURATION_REPORT.md
+            docs/REBUS_APPROXIMATION_RESEARCH.md
+            docs/REBUS_REPRESENTATION_BANK_AUDIT.md
+          )
+
+          for path in "${outputs[@]}"; do
+            mkdir -p "$(dirname "${path}")"
+            cp -- "${ARTIFACT_DIR}/${path}" "${path}"
+          done
+
+          test -f "${ARTIFACT_DIR}/.cache/rebus-approximation-research.json"
+
+          cat > "${RUNNER_TEMP}/expected-changed-files-021.txt" <<'EOF'
+          data/rebus-representation-bank-audit.json
+          data/rebus-sound-catalog.json
+          docs/REBUS_REPRESENTATION_BANK_AUDIT.md
+          EOF
+
+          git diff --name-only | LC_ALL=C sort > "${RUNNER_TEMP}/actual-working-diff-021.txt"
+          diff -u "${RUNNER_TEMP}/expected-changed-files-021.txt" "${RUNNER_TEMP}/actual-working-diff-021.txt"
+
+          git add -- "${outputs[@]}"
+          git diff --cached --name-only | LC_ALL=C sort > "${RUNNER_TEMP}/actual-staged-diff-021.txt"
+          diff -u "${RUNNER_TEMP}/expected-changed-files-021.txt" "${RUNNER_TEMP}/actual-staged-diff-021.txt"
+
+          if git diff --cached --name-only | grep -E '(^|/)\.cache(/|$)|\.github/workflows/|\.(png|svg)$|^src/|^tests/' ; then
+            echo "Forbidden staged path detected."
+            exit 1
+          fi
+
+      - name: Verify final remote race gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch --no-tags origin "refs/heads/${TARGET_BRANCH}:refs/remotes/origin/${TARGET_BRANCH}"
+          REMOTE_HEAD="$(git rev-parse "refs/remotes/origin/${TARGET_BRANCH}")"
+          test "${REMOTE_HEAD}" = "${EXPECTED_REMOTE_HEAD}"
+
+      - name: Commit and protected push to feature branch only
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "${TARGET_BRANCH}" = "feat/promote-human-validated-assets-006"
+          test "${TARGET_BRANCH}" != "main"
+          test "$(git rev-parse HEAD)" = "${PUBLISHER_HEAD}"
+
+          git config user.name 'rebulo-analysis-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git commit -m 'Refresh rebus sound catalog and representation bank audit'
+
+          DERIVED_HEAD="$(git rev-parse HEAD)"
+          test "$(git rev-parse "${DERIVED_HEAD}^")" = "${PUBLISHER_HEAD}"
+
+          git push             --force-with-lease="refs/heads/${TARGET_BRANCH}:${EXPECTED_REMOTE_HEAD}"             origin             "HEAD:refs/heads/${TARGET_BRANCH}"
+
+          echo "DERIVED_HEAD=${DERIVED_HEAD}" >> "${GITHUB_ENV}"
+          echo "DERIVED_HEAD=${DERIVED_HEAD}"
+
+      - name: Verify published derived commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch --no-tags origin "refs/heads/${TARGET_BRANCH}:refs/remotes/origin/${TARGET_BRANCH}"
+          test "$(git rev-parse "refs/remotes/origin/${TARGET_BRANCH}")" = "${DERIVED_HEAD}"
+          test "$(git rev-parse "${DERIVED_HEAD}^")" = "${PUBLISHER_HEAD}"
+
+          cat > "${RUNNER_TEMP}/expected-changed-files-021.txt" <<'EOF'
+          data/rebus-representation-bank-audit.json
+          data/rebus-sound-catalog.json
+          docs/REBUS_REPRESENTATION_BANK_AUDIT.md
+          EOF
+
+          git diff-tree --no-commit-id --name-only -r "${DERIVED_HEAD}" | LC_ALL=C sort > "${RUNNER_TEMP}/actual-derived-files-021.txt"
+          diff -u "${RUNNER_TEMP}/expected-changed-files-021.txt" "${RUNNER_TEMP}/actual-derived-files-021.txt"
+
+          cat > "${RUNNER_TEMP}/expected-derived-sha256-021.txt" <<'EOF'
+          bf049a8d1c7a3ddba94f7fdf78616b05d8824ded905b8e92aea9e9c46bd8d21d  data/rebus-sound-catalog.json
+          b6d53734b88c6115e828937d109d3cef6771a4ac70a8da8efda2cab9869abe03  data/rebus-representation-bank-audit.json
+          6f8c85eccc87e23c07b67e7902e1b3688ee135ad1e6648d32cd7bbc48825c59b  docs/REBUS_REPRESENTATION_BANK_AUDIT.md
+          EOF
+          sha256sum --check "${RUNNER_TEMP}/expected-derived-sha256-021.txt"
+
+          echo "SOURCE_HEAD=${SOURCE_HEAD}"
+          echo "PUBLISHER_HEAD=${PUBLISHER_HEAD}"
+          echo "DERIVED_HEAD=${DERIVED_HEAD}"

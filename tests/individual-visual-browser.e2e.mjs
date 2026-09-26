@@ -9,6 +9,12 @@ const report={baseUrl,assets:{}};
 try{
   const context=await browser.newContext({viewport:{width:390,height:844},deviceScaleFactor:2,isMobile:true,hasTouch:true,locale:'fr-FR'});
   const page=await context.newPage();
+  page.on('console',msg=>console.log('BROWSER CONSOLE',msg.type(),msg.text()));
+  page.on('pageerror',error=>console.log('BROWSER PAGEERROR',error?.stack||error?.message||String(error)));
+  page.on('requestfailed',request=>console.log('BROWSER REQUESTFAILED',request.method(),request.url(),request.failure()?.errorText||'unknown'));
+  page.on('response',response=>{
+    if(response.status()>=400)console.log('BROWSER HTTP',response.status(),response.request().method(),response.url());
+  });
   await page.goto(baseUrl,{waitUntil:'domcontentloaded',timeout:30000});
   await page.waitForFunction(()=>document.documentElement.dataset.rebuloVisibleBatch1==='23');
 
@@ -27,12 +33,47 @@ try{
   },entries);
 
   for(const [id,path] of entries){
-    await page.waitForFunction(({id,path})=>{
+    const initial=await page.evaluate((id)=>{
       const img=document.querySelector('#individual-'+id+'-probe img');
-      return img?.dataset?.rebuloVisibleBatch1===id &&
-        String(img.getAttribute('src')||'').endsWith(path) &&
-        img.complete && img.naturalWidth>0 && img.naturalHeight>0;
-    },{id,path},{timeout:10000});
+      return {src:img?.getAttribute('src')||null};
+    },id);
+    console.log('BEGIN PROBE',id,'expectedPath='+path,'initialSrc='+initial.src);
+    try{
+      await page.waitForFunction(({id,path})=>{
+        const img=document.querySelector('#individual-'+id+'-probe img');
+        return img?.dataset?.rebuloVisibleBatch1===id &&
+          String(img.getAttribute('src')||'').endsWith(path) &&
+          img.complete && img.naturalWidth>0 && img.naturalHeight>0;
+      },{id,path},{timeout:10000});
+      console.log('PASS PROBE',id);
+    }catch(error){
+      const state=await page.evaluate(({id,path})=>{
+        const img=document.querySelector('#individual-'+id+'-probe img');
+        const dataset=img?.dataset?.rebuloVisibleBatch1;
+        const src=img?.getAttribute('src')||null;
+        const complete=Boolean(img?.complete);
+        const naturalWidth=img?.naturalWidth||0;
+        const naturalHeight=img?.naturalHeight||0;
+        return {
+          id,expectedPath,
+          dataset:dataset??null,
+          src,
+          absoluteSrc:img?.src||null,
+          complete,naturalWidth,naturalHeight,
+          alt:img?.alt??null,
+          isConnected:Boolean(img?.isConnected),
+          predicates:{
+            datasetMatches:dataset===id,
+            srcMatches:String(src||'').endsWith(path),
+            complete,
+            naturalWidthPositive:naturalWidth>0,
+            naturalHeightPositive:naturalHeight>0
+          }
+        };
+      },{id,path});
+      console.log('FAIL PROBE STATE',JSON.stringify(state));
+      throw error;
+    }
 
     const row=await page.evaluate((id)=>{
       const img=document.querySelector('#individual-'+id+'-probe img');

@@ -55,7 +55,7 @@ try{
         const naturalWidth=img?.naturalWidth||0;
         const naturalHeight=img?.naturalHeight||0;
         return {
-          id,expectedPath,
+          id,expectedPath:path,
           dataset:dataset??null,
           src,
           absoluteSrc:img?.src||null,

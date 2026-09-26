@@ -18,5 +18,10 @@ export const REBULO_INDIVIDUAL_VISUALS=Object.freeze({
   lit:'assets/visible-batch1/individual/lit.png',
   pie:'assets/visible-batch1/individual/pie.png',
   chat:'assets/visible-batch1/individual/chat.png',
-  rat:'assets/visible-batch1/individual/rat.png'
+  rat:'assets/visible-batch1/individual/rat.png',
+  de:'assets/visible-batch1/individual/de.png',
+  scie:'assets/visible-batch1/individual/scie.png',
+  nez:'assets/visible-batch1/individual/nez.png',
+  oeil:'assets/visible-batch1/individual/oeil.png',
+  riz:'assets/visible-batch1/individual/riz.png'
 });

@@ -1,4 +1,5 @@
 import {normalizeIPA} from './phonetic-engine.js';
+import {REBULO_INDIVIDUAL_VISUALS} from './rebulo-individual-visuals.js';
 
 export const OPENMOJI_SOURCE=Object.freeze({
   id:'openmoji',
@@ -16,8 +17,8 @@ const ROWS=Object.freeze([
 
 export const OPEN_PICTOGRAMS=Object.freeze(ROWS.map(([id,label,ipa,code])=>Object.freeze({
   id,label,ipa,
-  image:`${OPENMOJI_SOURCE.assetBase}${code}.svg`,
-  assetSource:`openmoji:${code}`,
+  image:REBULO_INDIVIDUAL_VISUALS[id]||`${OPENMOJI_SOURCE.assetBase}${code}.svg`,
+  assetSource:REBULO_INDIVIDUAL_VISUALS[id]?'rebulo:human-validated-graphic':`openmoji:${code}`,
   sourceFile:`color/svg/${code}.svg`,
   sourceCommit:OPENMOJI_SOURCE.sourceCommit,
   sourceLicense:OPENMOJI_SOURCE.license,

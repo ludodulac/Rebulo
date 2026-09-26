@@ -8,7 +8,9 @@ on:
       - 'assets/visible-batch1/**'
       - 'src/rebulo-visible-batch1-*.js'
       - 'src/rebulo-individual-visuals.js'
+      - 'src/syllable-print-library.js'
       - 'tests/individual-visual-browser.e2e.mjs'
+      - 'tests/syllable-print-individual-browser.e2e.mjs'
       - 'tests/rebulo-visible-batch1.e2e.mjs'
       - '.github/workflows/individual-visual-browser.yml'
   pull_request:
@@ -18,7 +20,9 @@ on:
       - 'assets/visible-batch1/**'
       - 'src/rebulo-visible-batch1-*.js'
       - 'src/rebulo-individual-visuals.js'
+      - 'src/syllable-print-library.js'
       - 'tests/individual-visual-browser.e2e.mjs'
+      - 'tests/syllable-print-individual-browser.e2e.mjs'
       - 'tests/rebulo-visible-batch1.e2e.mjs'
       - '.github/workflows/individual-visual-browser.yml'
   workflow_dispatch:
@@ -45,6 +49,8 @@ jobs:
           echo $! > /tmp/rebulo-http.pid
       - name: Verify individual registry in a real mobile browser
         run: node tests/individual-visual-browser.e2e.mjs
+      - name: Verify out-of-visible-batch individual visuals through syllable print
+        run: node tests/syllable-print-individual-browser.e2e.mjs
       - name: Verify mixed visuals in real creator flows
         run: node tests/rebulo-visible-batch1.e2e.mjs
       - name: Upload browser proof
@@ -55,6 +61,7 @@ jobs:
           path: |
             individual-visuals-mobile-proof.png
             individual-visuals-browser-report.json
+            syllable-print-individual-browser-report.json
             visible-batch1-browser.json
             visible-batch1-*.png
           if-no-files-found: ignore

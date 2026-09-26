@@ -20,7 +20,7 @@ try{
       host.className='piece';
       const img=document.createElement('img');
       img.alt=id;
-      img.src='assets/rebus/'+id+'.svg';
+      img.src='assets/rebus/'+id+'.svg?asset='+encodeURIComponent(id);
       host.appendChild(img);
       document.body.appendChild(host);
     }

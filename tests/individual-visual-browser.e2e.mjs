@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import {chromium} from 'playwright';
 import {writeFile} from 'node:fs/promises';
 import {REBULO_INDIVIDUAL_VISUALS} from '../src/rebulo-individual-visuals.js';
+import {REBULO_VISIBLE_BATCH1} from '../src/rebulo-visible-batch1-assets.js';
 
 const baseUrl=process.env.BASE_URL||'http://127.0.0.1:4173/';
 const browser=await chromium.launch({headless:true});
@@ -18,7 +19,12 @@ try{
   await page.goto(baseUrl,{waitUntil:'domcontentloaded',timeout:30000});
   await page.waitForFunction(()=>document.documentElement.dataset.rebuloVisibleBatch1==='23');
 
-  const entries=Object.entries(REBULO_INDIVIDUAL_VISUALS);
+  const visibleIds=new Set(REBULO_VISIBLE_BATCH1.map(item=>item.id));
+  const entries=Object.entries(REBULO_INDIVIDUAL_VISUALS).filter(([id])=>visibleIds.has(id));
+  const outOfVisibleBatch=Object.keys(REBULO_INDIVIDUAL_VISUALS).filter(id=>!visibleIds.has(id));
+  assert.equal(entries.length,21,'visible-batch browser domain must contain exactly 21 individual visuals');
+  assert.deepEqual(outOfVisibleBatch,['de','riz'],'out-of-visible-batch individual visuals must remain explicit');
+  report.domain={visibleBatchIndividualCount:entries.length,outOfVisibleBatch};
   await page.evaluate((entries)=>{
     for(const [id] of entries){
       const host=document.createElement('div');

@@ -21,7 +21,6 @@ jobs:
       TARGET_BRANCH: feat/promote-human-validated-assets-006
       ARTIFACT_RUN_ID: '36229810275'
       ARTIFACT_NAME: rebus-sound-catalog
-      ARTIFACT_DIR: ${{ runner.temp }}/rebulo-certified-artifact-021
     steps:
       - name: Checkout controlled publisher branch
         uses: actions/checkout@v4
@@ -67,7 +66,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          cd "${ARTIFACT_DIR}"
+          cd "${RUNNER_TEMP}/rebulo-certified-artifact-021"
 
           cat > "${RUNNER_TEMP}/expected-artifact-files-021.txt" <<'EOF'
           .cache/rebus-approximation-research.json
@@ -110,10 +109,10 @@ jobs:
 
           for path in "${outputs[@]}"; do
             mkdir -p "$(dirname "${path}")"
-            cp -- "${ARTIFACT_DIR}/${path}" "${path}"
+            cp -- "${RUNNER_TEMP}/rebulo-certified-artifact-021/${path}" "${path}"
           done
 
-          test -f "${ARTIFACT_DIR}/.cache/rebus-approximation-research.json"
+          test -f "${RUNNER_TEMP}/rebulo-certified-artifact-021/.cache/rebus-approximation-research.json"
 
           cat > "${RUNNER_TEMP}/expected-changed-files-021.txt" <<'EOF'
           data/rebus-representation-bank-audit.json

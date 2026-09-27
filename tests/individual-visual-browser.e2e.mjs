@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import {chromium} from 'playwright';
 import {writeFile} from 'node:fs/promises';
 import {REBULO_INDIVIDUAL_VISUALS} from '../src/rebulo-individual-visuals.js';
+import {REBULO_VISIBLE_BATCH1} from '../src/rebulo-visible-batch1-assets.js';
 
 const baseUrl=process.env.BASE_URL||'http://127.0.0.1:4173/';
 const browser=await chromium.launch({headless:true});
@@ -9,10 +10,21 @@ const report={baseUrl,assets:{}};
 try{
   const context=await browser.newContext({viewport:{width:390,height:844},deviceScaleFactor:2,isMobile:true,hasTouch:true,locale:'fr-FR'});
   const page=await context.newPage();
+  page.on('console',msg=>console.log('BROWSER CONSOLE',msg.type(),msg.text()));
+  page.on('pageerror',error=>console.log('BROWSER PAGEERROR',error?.stack||error?.message||String(error)));
+  page.on('requestfailed',request=>console.log('BROWSER REQUESTFAILED',request.method(),request.url(),request.failure()?.errorText||'unknown'));
+  page.on('response',response=>{
+    if(response.status()>=400)console.log('BROWSER HTTP',response.status(),response.request().method(),response.url());
+  });
   await page.goto(baseUrl,{waitUntil:'domcontentloaded',timeout:30000});
   await page.waitForFunction(()=>document.documentElement.dataset.rebuloVisibleBatch1==='23');
 
-  const entries=Object.entries(REBULO_INDIVIDUAL_VISUALS);
+  const visibleIds=new Set(REBULO_VISIBLE_BATCH1.map(item=>item.id));
+  const entries=Object.entries(REBULO_INDIVIDUAL_VISUALS).filter(([id])=>visibleIds.has(id));
+  const outOfVisibleBatch=Object.keys(REBULO_INDIVIDUAL_VISUALS).filter(id=>!visibleIds.has(id));
+  assert.equal(entries.length,21,'visible-batch browser domain must contain exactly 21 individual visuals');
+  assert.deepEqual(outOfVisibleBatch,['de','riz'],'out-of-visible-batch individual visuals must remain explicit');
+  report.domain={visibleBatchIndividualCount:entries.length,outOfVisibleBatch};
   await page.evaluate((entries)=>{
     for(const [id] of entries){
       const host=document.createElement('div');
@@ -20,19 +32,54 @@ try{
       host.className='piece';
       const img=document.createElement('img');
       img.alt=id;
-      img.src='assets/rebus/'+id+'.svg';
+      img.src='assets/rebus/'+id+'.svg?asset='+encodeURIComponent(id);
       host.appendChild(img);
       document.body.appendChild(host);
     }
   },entries);
 
   for(const [id,path] of entries){
-    await page.waitForFunction(({id,path})=>{
+    const initial=await page.evaluate((id)=>{
       const img=document.querySelector('#individual-'+id+'-probe img');
-      return img?.dataset?.rebuloVisibleBatch1===id &&
-        String(img.getAttribute('src')||'').endsWith(path) &&
-        img.complete && img.naturalWidth>0 && img.naturalHeight>0;
-    },{id,path},{timeout:10000});
+      return {src:img?.getAttribute('src')||null};
+    },id);
+    console.log('BEGIN PROBE',id,'expectedPath='+path,'initialSrc='+initial.src);
+    try{
+      await page.waitForFunction(({id,path})=>{
+        const img=document.querySelector('#individual-'+id+'-probe img');
+        return img?.dataset?.rebuloVisibleBatch1===id &&
+          String(img.getAttribute('src')||'').endsWith(path) &&
+          img.complete && img.naturalWidth>0 && img.naturalHeight>0;
+      },{id,path},{timeout:10000});
+      console.log('PASS PROBE',id);
+    }catch(error){
+      const state=await page.evaluate(({id,path})=>{
+        const img=document.querySelector('#individual-'+id+'-probe img');
+        const dataset=img?.dataset?.rebuloVisibleBatch1;
+        const src=img?.getAttribute('src')||null;
+        const complete=Boolean(img?.complete);
+        const naturalWidth=img?.naturalWidth||0;
+        const naturalHeight=img?.naturalHeight||0;
+        return {
+          id,expectedPath:path,
+          dataset:dataset??null,
+          src,
+          absoluteSrc:img?.src||null,
+          complete,naturalWidth,naturalHeight,
+          alt:img?.alt??null,
+          isConnected:Boolean(img?.isConnected),
+          predicates:{
+            datasetMatches:dataset===id,
+            srcMatches:String(src||'').endsWith(path),
+            complete,
+            naturalWidthPositive:naturalWidth>0,
+            naturalHeightPositive:naturalHeight>0
+          }
+        };
+      },{id,path});
+      console.log('FAIL PROBE STATE',JSON.stringify(state));
+      throw error;
+    }
 
     const row=await page.evaluate((id)=>{
       const img=document.querySelector('#individual-'+id+'-probe img');

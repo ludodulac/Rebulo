@@ -28,8 +28,8 @@ Les catégories se chevauchent volontairement : un son peut avoir plusieurs mots
 ## Nommabilité : ce qui est réellement connu
 
 - Images exactes utiles recensées dans cette vue : 226.
-- Images avec métadonnées visuelles retrouvées : 222.
-- Images avec métadonnées de design élevées (confiance et stabilité ≥ 0,85) : 11.
+- Images avec métadonnées visuelles retrouvées : 226.
+- Images avec métadonnées de design élevées (confiance et stabilité ≥ 0,85) : 15.
 - Images dont le test de dénomination est explicitement encore à faire : 226.
 - Images disposant d’une validation humaine explicite de dénomination : 0.
 

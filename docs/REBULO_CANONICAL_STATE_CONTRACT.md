@@ -6,7 +6,8 @@ This contract defines the future machine-readable source of truth for REBULO rep
 
 - `graphic_status` is the graphic lifecycle only: `SOURCE_ONLY`, `CANDIDATE`, `HUMAN_VALIDATED`, `CANONICAL`, `BLOCKED`, `MISSING`.
 - `visual_validation.status` and `naming_validation.status` are independent human-validation dimensions. File existence never implies either validation.
-- `runtime_active` + `runtime_status` are operational runtime state. `RUNTIME_ACTIVE` exists only in `runtime_status`; validation or canonical storage never implies runtime activation.\n- `runtime_piece_id` + `runtime_asset_ref` identify the exact runtime binding (piece ID plus path/URL). They are mandatory when `runtime_active == true` and null when inactive, preventing an active legacy/OpenMoji asset from being confused with a separate Drive candidate or canonical file.
+- `runtime_active` + `runtime_status` are operational runtime state. `RUNTIME_ACTIVE` exists only in `runtime_status`; validation or canonical storage never implies runtime activation.
+- `runtime_piece_id` + `runtime_asset_ref` identify the exact runtime binding (piece ID plus path/URL). They are mandatory when `runtime_active == true` and null when inactive, preventing an active legacy/OpenMoji asset from being confused with a separate Drive candidate or canonical file.
 - `drive_source_id`, `drive_candidate_id`, `drive_canonical_asset_id`, and `github_asset_path` are explicit locations. Null means no authoritative location is recorded for that field.
 - `provenance` records all supporting observations, including duplicate or historical Drive IDs; a single location field must not erase conflicting evidence.
 - `latest_proof` is the newest observed proof and may be automated.

@@ -1,0 +1,484 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rebulo.local/schema/rebulo-canonical-state.schema.json",
+  "title": "REBULO canonical state registry",
+  "description": "Machine-readable contract for REBULO representation state. This schema defines state dimensions and evidence; it does not contain derived counters.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "registry_type",
+    "representations"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "registry_type": {
+      "const": "REBULO_CANONICAL_STATE"
+    },
+    "representations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/representation"
+      }
+    }
+  },
+  "$defs": {
+    "nullableString": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "decision_id",
+        "decided_at"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "NOT_EVALUATED",
+            "PENDING",
+            "PASS",
+            "FAIL",
+            "BLOCKED"
+          ]
+        },
+        "decision_id": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "decided_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "note": {
+          "$ref": "#/$defs/nullableString"
+        }
+      }
+    },
+    "proof": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "proof_type",
+        "proof_id",
+        "authority",
+        "observed_at"
+      ],
+      "properties": {
+        "proof_type": {
+          "enum": [
+            "GITHUB_COMMIT",
+            "GITHUB_PR",
+            "DRIVE_FILE",
+            "HUMAN_VALIDATION",
+            "CERTIFIED_REPORT"
+          ]
+        },
+        "proof_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "authority": {
+          "enum": [
+            "OBSERVATION",
+            "AUTOMATED_DERIVATION",
+            "HUMAN_DECISION",
+            "CANONICAL_DECISION"
+          ]
+        },
+        "observed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "repository": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "commit_sha": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "pr_number": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "drive_file_id": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "human_validation_id": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "report_id": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "note": {
+          "$ref": "#/$defs/nullableString"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "proof_type": {
+                "const": "GITHUB_COMMIT"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "commit_sha"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "proof_type": {
+                "const": "GITHUB_PR"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "pr_number"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "proof_type": {
+                "const": "DRIVE_FILE"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "drive_file_id"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "proof_type": {
+                "const": "HUMAN_VALIDATION"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "human_validation_id"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "proof_type": {
+                "const": "CERTIFIED_REPORT"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "report_id"
+            ]
+          }
+        }
+      ]
+    },
+    "canonicalDecision": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/proof"
+            },
+            {
+              "properties": {
+                "authority": {
+                  "enum": [
+                    "HUMAN_DECISION",
+                    "CANONICAL_DECISION"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "provenanceEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_type",
+        "source_id",
+        "observed_at",
+        "authority"
+      ],
+      "properties": {
+        "source_type": {
+          "enum": [
+            "GITHUB",
+            "DRIVE_SOURCE",
+            "DRIVE_CANDIDATE",
+            "DRIVE_CANONICAL",
+            "HUMAN_VALIDATION",
+            "CERTIFIED_REPORT",
+            "OTHER"
+          ]
+        },
+        "source_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "observed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "authority": {
+          "enum": [
+            "OBSERVATION",
+            "AUTOMATED_DERIVATION",
+            "HUMAN_DECISION",
+            "CANONICAL_DECISION"
+          ]
+        },
+        "sha256": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "note": {
+          "$ref": "#/$defs/nullableString"
+        }
+      }
+    },
+    "nextAction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "action",
+        "note"
+      ],
+      "properties": {
+        "action": {
+          "enum": [
+            "NONE",
+            "REVIEW_SOURCE",
+            "PRODUCE_ASSET",
+            "HUMAN_VISUAL_VALIDATION",
+            "HUMAN_NAMING_VALIDATION",
+            "PROMOTE_TO_CANONICAL",
+            "ACTIVATE_RUNTIME",
+            "INVESTIGATE_DUPLICATE",
+            "UNBLOCK",
+            "OTHER"
+          ]
+        },
+        "note": {
+          "$ref": "#/$defs/nullableString"
+        }
+      }
+    },
+    "representation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "concept_id",
+        "label",
+        "ipa",
+        "representation_type",
+        "graphic_status",
+        "drive_source_id",
+        "drive_canonical_asset_id",
+        "drive_candidate_id",
+        "github_asset_path",
+        "visual_validation",
+        "naming_validation",
+        "runtime_active",
+        "runtime_status",
+        "provenance",
+        "latest_proof",
+        "canonical_decision",
+        "next_action",
+        "updated_at"
+      ],
+      "properties": {
+        "concept_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z0-9][a-z0-9._-]*$"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ipa": {
+          "type": "string",
+          "minLength": 1
+        },
+        "representation_type": {
+          "enum": [
+            "IMAGE",
+            "LETTRE",
+            "CHIFFRE",
+            "CONVENTION_VISUELLE",
+            "REVIEW",
+            "NON_REPRESENTABLE_ACTUELLEMENT"
+          ]
+        },
+        "graphic_status": {
+          "enum": [
+            "SOURCE_ONLY",
+            "CANDIDATE",
+            "HUMAN_VALIDATED",
+            "CANONICAL",
+            "BLOCKED",
+            "MISSING"
+          ]
+        },
+        "drive_source_id": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "drive_canonical_asset_id": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "drive_candidate_id": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "github_asset_path": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "visual_validation": {
+          "$ref": "#/$defs/validation"
+        },
+        "naming_validation": {
+          "$ref": "#/$defs/validation"
+        },
+        "runtime_active": {
+          "type": "boolean"
+        },
+        "runtime_status": {
+          "enum": [
+            "INACTIVE",
+            "RUNTIME_ACTIVE",
+            "BLOCKED"
+          ]
+        },
+        "provenance": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/provenanceEntry"
+          }
+        },
+        "latest_proof": {
+          "$ref": "#/$defs/proof"
+        },
+        "canonical_decision": {
+          "$ref": "#/$defs/canonicalDecision"
+        },
+        "next_action": {
+          "$ref": "#/$defs/nextAction"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "graphic_status": {
+                "const": "HUMAN_VALIDATED"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "visual_validation": {
+                "properties": {
+                  "status": {
+                    "const": "PASS"
+                  }
+                }
+              },
+              "naming_validation": {
+                "properties": {
+                  "status": {
+                    "const": "PASS"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "runtime_active": {
+                "const": true
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "runtime_status": {
+                "const": "RUNTIME_ACTIVE"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "runtime_status": {
+                "const": "RUNTIME_ACTIVE"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "runtime_active": {
+                "const": true
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "runtime_status": {
+                "enum": [
+                  "INACTIVE",
+                  "BLOCKED"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "runtime_active": {
+                "const": false
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -311,6 +311,8 @@
         "naming_validation",
         "runtime_active",
         "runtime_status",
+        "runtime_piece_id",
+        "runtime_asset_ref",
         "provenance",
         "latest_proof",
         "canonical_decision",
@@ -397,6 +399,20 @@
         "updated_at": {
           "type": "string",
           "format": "date-time"
+        },
+        "runtime_piece_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Exact runtime piece identifier when this representation is active; null when inactive."
+        },
+        "runtime_asset_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Exact asset path or URL used by the runtime for this representation; null when inactive."
         }
       },
       "allOf": [
@@ -474,6 +490,46 @@
             "properties": {
               "runtime_active": {
                 "const": false
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "runtime_active": {
+                "const": true
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "runtime_piece_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "runtime_asset_ref": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "runtime_active": {
+                "const": false
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "runtime_piece_id": {
+                "type": "null"
+              },
+              "runtime_asset_ref": {
+                "type": "null"
               }
             }
           }

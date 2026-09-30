@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f4ef">
+  <title>REBULO — Validation d’un lot</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f4ef;
+      --card: #ffffff;
+      --ink: #171717;
+      --muted: #66645f;
+      --line: #dedbd2;
+      --ok: #137333;
+      --ok-bg: #e7f4ea;
+      --no: #b3261e;
+      --no-bg: #fce8e6;
+      --accent: #232323;
+      --radius: 18px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      min-height: 100vh;
+    }
+
+    .shell {
+      width: min(100%, 720px);
+      margin: 0 auto;
+      padding: 16px 14px calc(32px + env(safe-area-inset-bottom));
+    }
+
+    .top {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      margin: -16px -14px 14px;
+      padding: calc(14px + env(safe-area-inset-top)) 14px 12px;
+      background: color-mix(in srgb, var(--bg) 94%, transparent);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.2rem, 5vw, 1.65rem);
+      line-height: 1.15;
+    }
+
+    .progress {
+      margin-top: 8px;
+      font-weight: 800;
+      font-size: 1rem;
+    }
+
+    .hint {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: .86rem;
+      line-height: 1.35;
+    }
+
+    .cards {
+      display: grid;
+      gap: 14px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,.04);
+    }
+
+    .image-wrap {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      display: grid;
+      place-items: center;
+      background:
+        linear-gradient(45deg, #f1f1f1 25%, transparent 25%),
+        linear-gradient(-45deg, #f1f1f1 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #f1f1f1 75%),
+        linear-gradient(-45deg, transparent 75%, #f1f1f1 75%);
+      background-size: 20px 20px;
+      background-position: 0 0, 0 10px, 10px -10px, -10px 0;
+    }
+
+    .image-wrap img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      image-rendering: auto;
+    }
+
+    .card-body {
+      padding: 14px;
+    }
+
+    .name {
+      margin: 0 0 12px;
+      font-size: 1.28rem;
+      line-height: 1.1;
+      font-weight: 900;
+      letter-spacing: .02em;
+    }
+
+    .actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    button {
+      min-height: 52px;
+      border-radius: 13px;
+      border: 2px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      font: inherit;
+      font-weight: 850;
+      cursor: pointer;
+      touch-action: manipulation;
+    }
+
+    button:focus-visible, textarea:focus-visible {
+      outline: 3px solid #6b6b6b;
+      outline-offset: 2px;
+    }
+
+    .decision[data-choice="accept"][aria-pressed="true"] {
+      border-color: var(--ok);
+      background: var(--ok-bg);
+      color: var(--ok);
+    }
+
+    .decision[data-choice="refuse"][aria-pressed="true"] {
+      border-color: var(--no);
+      background: var(--no-bg);
+      color: var(--no);
+    }
+
+    label.note-label {
+      display: block;
+      margin-top: 12px;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: .9rem;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 78px;
+      margin-top: 6px;
+      resize: vertical;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 11px 12px;
+      background: #fff;
+      color: var(--ink);
+      font: inherit;
+    }
+
+    .footer {
+      position: sticky;
+      bottom: 0;
+      margin: 18px -14px -32px;
+      padding: 12px 14px calc(14px + env(safe-area-inset-bottom));
+      background: color-mix(in srgb, var(--bg) 96%, transparent);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid var(--line);
+    }
+
+    #validate-lot {
+      width: 100%;
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+      min-height: 56px;
+      font-size: 1rem;
+    }
+
+    #validate-lot:disabled {
+      background: #c8c5bd;
+      border-color: #c8c5bd;
+      color: #77736d;
+      cursor: not-allowed;
+    }
+
+    #final-status {
+      margin: 9px 0 0;
+      min-height: 1.3em;
+      text-align: center;
+      color: var(--muted);
+      font-size: .86rem;
+      font-weight: 700;
+    }
+
+    .error {
+      padding: 18px;
+      border: 1px solid var(--no);
+      background: var(--no-bg);
+      border-radius: 14px;
+      color: var(--no);
+      font-weight: 800;
+    }
+
+    @media (min-width: 640px) {
+      .shell { padding-left: 20px; padding-right: 20px; }
+      .top, .footer { margin-left: -20px; margin-right: -20px; padding-left: 20px; padding-right: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="top">
+      <h1 id="page-title">REBULO — Validation</h1>
+      <div class="progress" id="progress" aria-live="polite">0 / 10 examinées</div>
+      <p class="hint">Les décisions restent modifiables jusqu’à « VALIDER LE LOT ». Aucune donnée n’est enregistrée sur un serveur dans cette version.</p>
+    </header>
+
+    <section class="cards" id="cards" aria-label="Images à examiner"></section>
+
+    <footer class="footer">
+      <button id="validate-lot" type="button" disabled>VALIDER LE LOT</button>
+      <p id="final-status" aria-live="polite"></p>
+    </footer>
+  </main>
+
+  <script src="./images/bas.js"></script>
+  <script src="./images/boue.js"></script>
+  <script src="./images/saut.js"></script>
+  <script src="./images/cou.js"></script>
+  <script src="./images/sang.js"></script>
+  <script src="./images/mer.js"></script>
+  <script src="./images/the.js"></script>
+  <script src="./images/veau.js"></script>
+  <script src="./images/fee.js"></script>
+  <script src="./images/compas.js"></script>
+  <script src="./lot-data.js"></script>
+  <script>
+    (() => {
+      const lot = window.REBULO_VALIDATION_LOT;
+      const images = window.REBULO_053A_IMAGES || {};
+      const cards = document.getElementById("cards");
+      const progress = document.getElementById("progress");
+      const validateLot = document.getElementById("validate-lot");
+      const finalStatus = document.getElementById("final-status");
+      const pageTitle = document.getElementById("page-title");
+
+      if (!lot || !Array.isArray(lot.items) || lot.items.length !== 10) {
+        cards.innerHTML = '<div class="error">Données du lot invalides : exactement 10 éléments sont requis.</div>';
+        return;
+      }
+
+      const missing = lot.items.filter(item => !images[item.imageKey]);
+      if (missing.length) {
+        cards.innerHTML = '<div class="error">Image manquante pour : ' +
+          missing.map(item => item.label).join(", ") + '.</div>';
+        return;
+      }
+
+      pageTitle.textContent = lot.title;
+      const state = new Map(lot.items.map(item => [item.id, { decision: null, note: "" }]));
+      let finalized = false;
+
+      function examinedCount() {
+        return [...state.values()].filter(value => value.decision !== null).length;
+      }
+
+      function updateProgress() {
+        const count = examinedCount();
+        progress.textContent = count + " / " + lot.items.length + " examinées";
+        validateLot.disabled = finalized || count !== lot.items.length;
+      }
+
+      function setDecision(itemId, decision, card) {
+        if (finalized) return;
+        state.get(itemId).decision = decision;
+        card.querySelectorAll(".decision").forEach(button => {
+          button.setAttribute("aria-pressed", String(button.dataset.choice === decision));
+        });
+        updateProgress();
+      }
+
+      lot.items.forEach((item, index) => {
+        const card = document.createElement("article");
+        card.className = "card";
+        card.dataset.itemId = item.id;
+
+        const imageWrap = document.createElement("div");
+        imageWrap.className = "image-wrap";
+
+        const img = document.createElement("img");
+        img.src = images[item.imageKey];
+        img.alt = item.label;
+        img.loading = index < 2 ? "eager" : "lazy";
+        img.decoding = "async";
+        imageWrap.appendChild(img);
+
+        const body = document.createElement("div");
+        body.className = "card-body";
+
+        const name = document.createElement("h2");
+        name.className = "name";
+        name.textContent = (index + 1) + ". " + item.label;
+
+        const actions = document.createElement("div");
+        actions.className = "actions";
+
+        const accept = document.createElement("button");
+        accept.type = "button";
+        accept.className = "decision";
+        accept.dataset.choice = "accept";
+        accept.setAttribute("aria-pressed", "false");
+        accept.textContent = "✓ VALIDER";
+        accept.addEventListener("click", () => setDecision(item.id, "accept", card));
+
+        const refuse = document.createElement("button");
+        refuse.type = "button";
+        refuse.className = "decision";
+        refuse.dataset.choice = "refuse";
+        refuse.setAttribute("aria-pressed", "false");
+        refuse.textContent = "✕ REFUSER";
+        refuse.addEventListener("click", () => setDecision(item.id, "refuse", card));
+
+        actions.append(accept, refuse);
+
+        const noteLabel = document.createElement("label");
+        noteLabel.className = "note-label";
+        noteLabel.textContent = "Remarque facultative";
+
+        const note = document.createElement("textarea");
+        note.placeholder = "Ajouter une remarque…";
+        note.setAttribute("aria-label", "Remarque pour " + item.label);
+        note.addEventListener("input", event => {
+          if (!finalized) state.get(item.id).note = event.target.value;
+        });
+
+        noteLabel.appendChild(note);
+        body.append(name, actions, noteLabel);
+        card.append(imageWrap, body);
+        cards.appendChild(card);
+      });
+
+      validateLot.addEventListener("click", () => {
+        if (finalized || examinedCount() !== lot.items.length) return;
+        finalized = true;
+        document.querySelectorAll("button.decision, textarea").forEach(control => {
+          control.disabled = true;
+        });
+        validateLot.disabled = true;
+        finalStatus.textContent = "Lot validé dans cette session uniquement — aucune donnée n’a été enregistrée.";
+      });
+
+      updateProgress();
+    })();
+  </script>
+</body>
+</html>

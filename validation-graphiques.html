@@ -2,21 +2,32 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Validation des dessins REBULO</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f5f1e8">
+  <title>REBULO — Validation graphique</title>
   <link rel="stylesheet" href="validation-graphiques.css">
 </head>
 <body>
   <main class="validation-shell">
-    <header>
-      <p class="eyebrow">REBULO · contrôle graphique</p>
-      <h1>Validation des dessins REBULO</h1>
-      <p class="lede">Valide les nouveaux dessins ou indique simplement ce qu'il faut refaire. Tes choix restent enregistrés sur ce téléphone.</p>
+    <header class="hero">
+      <p class="eyebrow">REBULO · validation humaine</p>
+      <h1>Valider un lot d’images</h1>
+      <p id="batchLabel" class="batch-label">Chargement du lot…</p>
+      <p class="lede">Regarde chaque dessin, puis choisis ✓ VALIDER ou ✕ REFUSER. Une remarque est facultative. Tes choix restent enregistrés sur ce téléphone.</p>
     </header>
+
+    <section class="progress-panel" aria-live="polite">
+      <strong id="progressText">0 / 10 examinées</strong>
+      <div class="progress-track" aria-hidden="true"><span id="progressBar"></span></div>
+    </section>
+
     <section id="candidateList" class="candidate-list" aria-live="polite"></section>
-    <p id="emptyState" class="empty-state" hidden>Aucun nouveau dessin à valider pour le moment.</p>
-    <p id="status" class="status" aria-live="polite"></p>
-    <button id="exportValidations" class="export-button" type="button">EXPORTER MES VALIDATIONS</button>
+    <p id="emptyState" class="empty-state" hidden>Aucune image à valider dans ce lot.</p>
+
+    <section class="final-panel">
+      <button id="finalizeBatch" class="final-button" type="button" disabled>VALIDER LE LOT</button>
+      <p id="status" class="status" aria-live="polite">Le bouton s’active quand les 10 images ont reçu une décision.</p>
+    </section>
   </main>
   <script type="module" src="validation-graphiques.js"></script>
 </body>

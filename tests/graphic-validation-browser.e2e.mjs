@@ -3,29 +3,64 @@ import assert from 'node:assert/strict';
 import {spawn} from 'node:child_process';
 import fs from 'node:fs';
 
-const server=spawn('python3',['-m','http.server','4173','--bind','127.0.0.1'],{stdio:'ignore'});
+const EXPECTED_CONCEPTS=['BAS','BOUE','SAUT','COU','SANG','MER','THÉ','VEAU','FÉE','COMPAS'];
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+
+async function waitForRealImage(image){
+  await image.scrollIntoViewIfNeeded();
+  await image.evaluate(img=>new Promise((resolve,reject)=>{
+    if(img.complete){
+      if(img.naturalWidth>0)return resolve();
+      return reject(new Error('image complete but unreadable: '+img.src));
+    }
+    const timer=setTimeout(()=>reject(new Error('image load timeout: '+img.src)),15000);
+    img.addEventListener('load',()=>{clearTimeout(timer);resolve();},{once:true});
+    img.addEventListener('error',()=>{clearTimeout(timer);reject(new Error('image load error: '+img.src));},{once:true});
+  }));
+  assert.ok(await image.evaluate(img=>img.naturalWidth>0&&img.naturalHeight>0));
+}
+
+async function verifyRealLot(page,url){
+  await page.goto(url,{waitUntil:'domcontentloaded',timeout:45000});
+  await page.waitForSelector('.candidate-card',{timeout:30000});
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),390);
+  assert.equal(await page.locator('.candidate-card').count(),10);
+  assert.deepEqual(await page.locator('.candidate-name').allTextContents(),EXPECTED_CONCEPTS);
+  const images=page.locator('.candidate-image');
+  assert.equal(await images.count(),10);
+  for(let i=0;i<10;i++)await waitForRealImage(images.nth(i));
+  assert.equal(await page.locator('#progressText').textContent(),'0 / 10 examinées');
+  assert.equal(await page.locator('#finalizeBatch').isDisabled(),true);
+}
+
+const server=spawn('python3',['-m','http.server','4173','--bind','127.0.0.1'],{stdio:'ignore'});
 try{
   await sleep(800);
   const browser=await chromium.launch({headless:true});
 
-  // Proof 1: the real LOT 001 is wired to the ten real repository PNGs.
   const realContext=await browser.newContext({viewport:{width:390,height:844}});
   const realPage=await realContext.newPage();
-  await realPage.goto('http://127.0.0.1:4173/validation-graphiques.html');
-  await realPage.waitForSelector('.candidate-card');
-  assert.equal(await realPage.evaluate(()=>document.documentElement.scrollWidth),390);
-  assert.equal(await realPage.locator('.candidate-card').count(),10);
-  assert.deepEqual(
-    await realPage.locator('.candidate-name').allTextContents(),
-    ['BAS','BOUE','SAUT','COU','SANG','MER','THÉ','VEAU','FÉE','COMPAS']
-  );
-  await realPage.waitForFunction(()=>Array.from(document.images).length===10&&Array.from(document.images).every(img=>img.complete&&img.naturalWidth>0));
-  assert.equal(await realPage.locator('#progressText').textContent(),'0 / 10 examinées');
-  assert.equal(await realPage.locator('#finalizeBatch').isDisabled(),true);
+  await verifyRealLot(realPage,'http://127.0.0.1:4173/validation-graphiques.html');
   await realContext.close();
 
-  // Proof 2: decision switching, persistence, final gate and structured export.
+  if(process.env.REBULO_PUBLIC_PREVIEW_URL){
+    const publicContext=await browser.newContext({viewport:{width:390,height:844}});
+    const publicPage=await publicContext.newPage();
+    let lastError;
+    for(let attempt=1;attempt<=4;attempt++){
+      try{
+        await verifyRealLot(publicPage,process.env.REBULO_PUBLIC_PREVIEW_URL);
+        lastError=null;
+        break;
+      }catch(error){
+        lastError=error;
+        if(attempt<4)await sleep(3000);
+      }
+    }
+    if(lastError)throw lastError;
+    await publicContext.close();
+  }
+
   const context=await browser.newContext({viewport:{width:390,height:844},acceptDownloads:true});
   const page=await context.newPage();
   const fakePng='data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><rect width="40" height="40" fill="none"/></svg>');
@@ -68,7 +103,8 @@ try{
   console.log(JSON.stringify({
     viewport:[390,844],
     realLotImages:'10/10 LOADED',
-    realLotConcepts:['BAS','BOUE','SAUT','COU','SANG','MER','THÉ','VEAU','FÉE','COMPAS'],
+    realLotConcepts:EXPECTED_CONCEPTS,
+    publicPreview:process.env.REBULO_PUBLIC_PREVIEW_URL||null,
     persistence:'PASS',
     finalGate:'PASS',
     batchId:exported.batch_id

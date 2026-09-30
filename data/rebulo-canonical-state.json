@@ -1,0 +1,1221 @@
+{
+  "schema_version": "1.0",
+  "registry_type": "REBULO_CANONICAL_STATE",
+  "representations": [
+    {
+      "concept_id": "bas",
+      "label": "bas",
+      "ipa": "ba",
+      "representation_type": "IMAGE",
+      "graphic_status": "CANDIDATE",
+      "drive_source_id": null,
+      "drive_canonical_asset_id": null,
+      "drive_candidate_id": "1hQWeeudJrf4wS5DCVWgjzryk9Gv_AUpP",
+      "github_asset_path": null,
+      "visual_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human visual validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "naming_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human naming validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "runtime_active": false,
+      "runtime_status": "INACTIVE",
+      "runtime_piece_id": null,
+      "runtime_asset_ref": null,
+      "provenance": [
+        {
+          "source_type": "DRIVE_CANDIDATE",
+          "source_id": "1hQWeeudJrf4wS5DCVWgjzryk9Gv_AUpP",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "OBSERVATION",
+          "note": "Observed in /Google Drive/REBULO/REBULO_CANDIDATS_A_VALIDER/ as bas_en_dentelle_pixelisé.png."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-visual-production-queue.csv@a41d777b3ca25032903a5fad75af1509f3ef70e9#bas",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "REBULO production queue records concept bas as IMAGE with IPA ba and historical state NO_PROVEN_ASSET."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-compact-runtime.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#ipa=ba",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "No runtime bank row for IPA ba was verified in the compact runtime snapshot."
+        }
+      ],
+      "latest_proof": {
+        "proof_type": "DRIVE_FILE",
+        "proof_id": "drive-candidate:bas:1hQWeeudJrf4wS5DCVWgjzryk9Gv_AUpP",
+        "authority": "OBSERVATION",
+        "observed_at": "2026-09-30T06:35:58Z",
+        "drive_file_id": "1hQWeeudJrf4wS5DCVWgjzryk9Gv_AUpP",
+        "note": "Current candidate-folder observation for bas_en_dentelle_pixelisé.png."
+      },
+      "canonical_decision": null,
+      "next_action": {
+        "action": "HUMAN_VISUAL_VALIDATION",
+        "note": "Obtain explicit human visual validation for this candidate before any promotion."
+      },
+      "updated_at": "2026-09-30T06:35:58Z"
+    },
+    {
+      "concept_id": "boue",
+      "label": "boue",
+      "ipa": "bu",
+      "representation_type": "IMAGE",
+      "graphic_status": "CANDIDATE",
+      "drive_source_id": null,
+      "drive_canonical_asset_id": null,
+      "drive_candidate_id": "1ou2bOJDTC8DKmoXp8ToQCB8tKvZlyyCM",
+      "github_asset_path": null,
+      "visual_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human visual validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "naming_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human naming validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "runtime_active": false,
+      "runtime_status": "INACTIVE",
+      "runtime_piece_id": null,
+      "runtime_asset_ref": null,
+      "provenance": [
+        {
+          "source_type": "DRIVE_CANDIDATE",
+          "source_id": "1ou2bOJDTC8DKmoXp8ToQCB8tKvZlyyCM",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "OBSERVATION",
+          "note": "Observed in /Google Drive/REBULO/REBULO_CANDIDATS_A_VALIDER/ as éclaboussure_de_boue_pixel_art.png."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-visual-production-queue.csv@a41d777b3ca25032903a5fad75af1509f3ef70e9#boue",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "REBULO production queue records concept boue as IMAGE with IPA bu and historical state NO_PROVEN_ASSET."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-compact-runtime.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#ipa=bu",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "No runtime bank row for IPA bu was verified in the compact runtime snapshot."
+        }
+      ],
+      "latest_proof": {
+        "proof_type": "DRIVE_FILE",
+        "proof_id": "drive-candidate:boue:1ou2bOJDTC8DKmoXp8ToQCB8tKvZlyyCM",
+        "authority": "OBSERVATION",
+        "observed_at": "2026-09-30T06:35:58Z",
+        "drive_file_id": "1ou2bOJDTC8DKmoXp8ToQCB8tKvZlyyCM",
+        "note": "Current candidate-folder observation for éclaboussure_de_boue_pixel_art.png."
+      },
+      "canonical_decision": null,
+      "next_action": {
+        "action": "HUMAN_VISUAL_VALIDATION",
+        "note": "Obtain explicit human visual validation for this candidate before any promotion."
+      },
+      "updated_at": "2026-09-30T06:35:58Z"
+    },
+    {
+      "concept_id": "saut",
+      "label": "saut",
+      "ipa": "so",
+      "representation_type": "IMAGE",
+      "graphic_status": "CANDIDATE",
+      "drive_source_id": null,
+      "drive_canonical_asset_id": null,
+      "drive_candidate_id": "1-6jgCnPHZ44cAqDxKLGJDoY9UyaNdEIS",
+      "github_asset_path": null,
+      "visual_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human visual validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "naming_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human naming validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "runtime_active": false,
+      "runtime_status": "INACTIVE",
+      "runtime_piece_id": null,
+      "runtime_asset_ref": null,
+      "provenance": [
+        {
+          "source_type": "DRIVE_CANDIDATE",
+          "source_id": "1-6jgCnPHZ44cAqDxKLGJDoY9UyaNdEIS",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "OBSERVATION",
+          "note": "Observed in /Google Drive/REBULO/REBULO_CANDIDATS_A_VALIDER/ as jeune_héroïne_pixel_art_en_plein_saut.png."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-visual-production-queue.csv@a41d777b3ca25032903a5fad75af1509f3ef70e9#saut",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "REBULO production queue records concept saut as IMAGE with IPA so and historical state NO_PROVEN_ASSET."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-compact-runtime.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#ipa=so",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "IPA so has an active exact image for the homophone seau, not for concept saut; therefore this SAUT candidate is not marked runtime-active."
+        }
+      ],
+      "latest_proof": {
+        "proof_type": "DRIVE_FILE",
+        "proof_id": "drive-candidate:saut:1-6jgCnPHZ44cAqDxKLGJDoY9UyaNdEIS",
+        "authority": "OBSERVATION",
+        "observed_at": "2026-09-30T06:35:58Z",
+        "drive_file_id": "1-6jgCnPHZ44cAqDxKLGJDoY9UyaNdEIS",
+        "note": "Current candidate-folder observation for jeune_héroïne_pixel_art_en_plein_saut.png."
+      },
+      "canonical_decision": null,
+      "next_action": {
+        "action": "HUMAN_VISUAL_VALIDATION",
+        "note": "Obtain explicit human visual validation for this candidate before any promotion."
+      },
+      "updated_at": "2026-09-30T06:35:58Z"
+    },
+    {
+      "concept_id": "cou",
+      "label": "cou",
+      "ipa": "ku",
+      "representation_type": "IMAGE",
+      "graphic_status": "CANDIDATE",
+      "drive_source_id": null,
+      "drive_canonical_asset_id": null,
+      "drive_candidate_id": "1D5OVrUbsBbRxbWiMh1o37sxhcLC32GRM",
+      "github_asset_path": null,
+      "visual_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human visual validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "naming_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human naming validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "runtime_active": false,
+      "runtime_status": "INACTIVE",
+      "runtime_piece_id": null,
+      "runtime_asset_ref": null,
+      "provenance": [
+        {
+          "source_type": "DRIVE_CANDIDATE",
+          "source_id": "1D5OVrUbsBbRxbWiMh1o37sxhcLC32GRM",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "OBSERVATION",
+          "note": "Observed in /Google Drive/REBULO/REBULO_CANDIDATS_A_VALIDER/ as portrait_pixel_art_d_un_cou_et_visage_inférieur.png."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-visual-production-queue.csv@a41d777b3ca25032903a5fad75af1509f3ef70e9#cou",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "REBULO production queue records concept cou as IMAGE with IPA ku and historical state NO_PROVEN_ASSET."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-compact-runtime.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#ipa=ku",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "No runtime bank row for IPA ku was verified in the compact runtime snapshot."
+        }
+      ],
+      "latest_proof": {
+        "proof_type": "DRIVE_FILE",
+        "proof_id": "drive-candidate:cou:1D5OVrUbsBbRxbWiMh1o37sxhcLC32GRM",
+        "authority": "OBSERVATION",
+        "observed_at": "2026-09-30T06:35:58Z",
+        "drive_file_id": "1D5OVrUbsBbRxbWiMh1o37sxhcLC32GRM",
+        "note": "Current candidate-folder observation for portrait_pixel_art_d_un_cou_et_visage_inférieur.png."
+      },
+      "canonical_decision": null,
+      "next_action": {
+        "action": "HUMAN_VISUAL_VALIDATION",
+        "note": "Obtain explicit human visual validation for this candidate before any promotion."
+      },
+      "updated_at": "2026-09-30T06:35:58Z"
+    },
+    {
+      "concept_id": "sang",
+      "label": "sang",
+      "ipa": "sɑ̃",
+      "representation_type": "IMAGE",
+      "graphic_status": "CANDIDATE",
+      "drive_source_id": null,
+      "drive_canonical_asset_id": null,
+      "drive_candidate_id": "1dG8JX4xliwHdVvaYK3z9UDdaPZ9cM5LO",
+      "github_asset_path": null,
+      "visual_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human visual validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "naming_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human naming validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "runtime_active": false,
+      "runtime_status": "INACTIVE",
+      "runtime_piece_id": null,
+      "runtime_asset_ref": null,
+      "provenance": [
+        {
+          "source_type": "DRIVE_CANDIDATE",
+          "source_id": "1dG8JX4xliwHdVvaYK3z9UDdaPZ9cM5LO",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "OBSERVATION",
+          "note": "Observed in /Google Drive/REBULO/REBULO_CANDIDATS_A_VALIDER/ as goutte_de_sang_pixel_art_éclatante.png."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-visual-production-queue.csv@a41d777b3ca25032903a5fad75af1509f3ef70e9#sang",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "REBULO production queue records concept sang as IMAGE with IPA sɑ̃ and historical state NO_PROVEN_ASSET."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-compact-runtime.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#ipa=sɑ̃",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "A bank row for IPA sɑ̃ exists, but no exact image representation for concept sang was verified."
+        }
+      ],
+      "latest_proof": {
+        "proof_type": "DRIVE_FILE",
+        "proof_id": "drive-candidate:sang:1dG8JX4xliwHdVvaYK3z9UDdaPZ9cM5LO",
+        "authority": "OBSERVATION",
+        "observed_at": "2026-09-30T06:35:58Z",
+        "drive_file_id": "1dG8JX4xliwHdVvaYK3z9UDdaPZ9cM5LO",
+        "note": "Current candidate-folder observation for goutte_de_sang_pixel_art_éclatante.png."
+      },
+      "canonical_decision": null,
+      "next_action": {
+        "action": "HUMAN_VISUAL_VALIDATION",
+        "note": "Obtain explicit human visual validation for this candidate before any promotion."
+      },
+      "updated_at": "2026-09-30T06:35:58Z"
+    },
+    {
+      "concept_id": "hvv72-059-mer",
+      "label": "mer",
+      "ipa": "mɛʁ",
+      "representation_type": "IMAGE",
+      "graphic_status": "CANDIDATE",
+      "drive_source_id": null,
+      "drive_canonical_asset_id": null,
+      "drive_candidate_id": "1i6w_ooJ2KDABx42gzNHzvxASnDMQrREY",
+      "github_asset_path": null,
+      "visual_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human visual validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "naming_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human naming validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "runtime_active": true,
+      "runtime_status": "RUNTIME_ACTIVE",
+      "runtime_piece_id": "syllable-print:mer",
+      "runtime_asset_ref": "assets/rebus/mer.svg",
+      "provenance": [
+        {
+          "source_type": "DRIVE_CANDIDATE",
+          "source_id": "1i6w_ooJ2KDABx42gzNHzvxASnDMQrREY",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "OBSERVATION",
+          "note": "Observed in /Google Drive/REBULO/REBULO_CANDIDATS_A_VALIDER/ as vagues_océaniques_pixel_art_isolées.png."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/human-visual-validation-manifest-72.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#hvv72-059-mer",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "HVV72 manifest identifies stable concept hvv72-059-mer with IPA mɛʁ and humanNamingEvidence=none."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-visual-production-queue.csv@a41d777b3ca25032903a5fad75af1509f3ef70e9#mer",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Production queue historically records MER as EXISTE_NON_VALIDÉ; current Drive candidate is newer evidence, not a validation."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-compact-runtime.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#ipa=mɛʁ",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Exact active image representation verified for concept mer: syllable-print:mer -> assets/rebus/mer.svg."
+        }
+      ],
+      "latest_proof": {
+        "proof_type": "DRIVE_FILE",
+        "proof_id": "drive-candidate:hvv72-059-mer:1i6w_ooJ2KDABx42gzNHzvxASnDMQrREY",
+        "authority": "OBSERVATION",
+        "observed_at": "2026-09-30T06:35:58Z",
+        "drive_file_id": "1i6w_ooJ2KDABx42gzNHzvxASnDMQrREY",
+        "note": "Current candidate-folder observation for vagues_océaniques_pixel_art_isolées.png."
+      },
+      "canonical_decision": null,
+      "next_action": {
+        "action": "HUMAN_VISUAL_VALIDATION",
+        "note": "Obtain explicit human visual validation for this candidate before any promotion."
+      },
+      "updated_at": "2026-09-30T06:35:58Z"
+    },
+    {
+      "concept_id": "the",
+      "label": "thé",
+      "ipa": "te",
+      "representation_type": "IMAGE",
+      "graphic_status": "CANDIDATE",
+      "drive_source_id": null,
+      "drive_canonical_asset_id": null,
+      "drive_candidate_id": "1IE01HyFO8uio8wauEmlj_HmCQL4oDtfC",
+      "github_asset_path": null,
+      "visual_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human visual validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "naming_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human naming validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "runtime_active": true,
+      "runtime_status": "RUNTIME_ACTIVE",
+      "runtime_piece_id": "syllable-print:the",
+      "runtime_asset_ref": "assets/rebus/the.svg",
+      "provenance": [
+        {
+          "source_type": "DRIVE_CANDIDATE",
+          "source_id": "1IE01HyFO8uio8wauEmlj_HmCQL4oDtfC",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "OBSERVATION",
+          "note": "Observed in /Google Drive/REBULO/REBULO_CANDIDATS_A_VALIDER/ as tasse_de_thé_pixel_art_traditionnelle.png."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/lexicon-seed.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#the",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Lexicon seed records id the, label thé, IPA /te/, with a legacy active image."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-visual-production-queue.csv@a41d777b3ca25032903a5fad75af1509f3ef70e9#thé",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Production queue records THÉ as LEGACY_RUNTIME_ASSET; the new Drive candidate remains separate and unvalidated."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-compact-runtime.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#ipa=te",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Exact active image representation verified for concept thé: syllable-print:the -> assets/rebus/the.svg."
+        }
+      ],
+      "latest_proof": {
+        "proof_type": "DRIVE_FILE",
+        "proof_id": "drive-candidate:the:1IE01HyFO8uio8wauEmlj_HmCQL4oDtfC",
+        "authority": "OBSERVATION",
+        "observed_at": "2026-09-30T06:35:58Z",
+        "drive_file_id": "1IE01HyFO8uio8wauEmlj_HmCQL4oDtfC",
+        "note": "Current candidate-folder observation for tasse_de_thé_pixel_art_traditionnelle.png."
+      },
+      "canonical_decision": null,
+      "next_action": {
+        "action": "HUMAN_VISUAL_VALIDATION",
+        "note": "Obtain explicit human visual validation for this candidate before any promotion."
+      },
+      "updated_at": "2026-09-30T06:35:58Z"
+    },
+    {
+      "concept_id": "veau",
+      "label": "veau",
+      "ipa": "vo",
+      "representation_type": "IMAGE",
+      "graphic_status": "CANDIDATE",
+      "drive_source_id": null,
+      "drive_canonical_asset_id": null,
+      "drive_candidate_id": "1CXrttNNvhvqREYpTWlVbl7t8qwxdMao_",
+      "github_asset_path": null,
+      "visual_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human visual validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "naming_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human naming validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "runtime_active": false,
+      "runtime_status": "INACTIVE",
+      "runtime_piece_id": null,
+      "runtime_asset_ref": null,
+      "provenance": [
+        {
+          "source_type": "DRIVE_CANDIDATE",
+          "source_id": "1CXrttNNvhvqREYpTWlVbl7t8qwxdMao_",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "OBSERVATION",
+          "note": "Observed in /Google Drive/REBULO/REBULO_CANDIDATS_A_VALIDER/ as veau_pixel_art_brun_et_blanc.png."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebus-sound-visual-curation.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#vo:veau",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "REBULO sound visual curation records exact candidate veau for IPA vo as prototype_candidate requiring a naming test."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-compact-runtime.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#ipa=vo",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "No runtime bank row for IPA vo was verified in the compact runtime snapshot."
+        }
+      ],
+      "latest_proof": {
+        "proof_type": "DRIVE_FILE",
+        "proof_id": "drive-candidate:veau:1CXrttNNvhvqREYpTWlVbl7t8qwxdMao_",
+        "authority": "OBSERVATION",
+        "observed_at": "2026-09-30T06:35:58Z",
+        "drive_file_id": "1CXrttNNvhvqREYpTWlVbl7t8qwxdMao_",
+        "note": "Current candidate-folder observation for veau_pixel_art_brun_et_blanc.png."
+      },
+      "canonical_decision": null,
+      "next_action": {
+        "action": "HUMAN_VISUAL_VALIDATION",
+        "note": "Obtain explicit human visual validation for this candidate before any promotion."
+      },
+      "updated_at": "2026-09-30T06:35:58Z"
+    },
+    {
+      "concept_id": "fee",
+      "label": "fée",
+      "ipa": "fe",
+      "representation_type": "IMAGE",
+      "graphic_status": "CANDIDATE",
+      "drive_source_id": null,
+      "drive_canonical_asset_id": null,
+      "drive_candidate_id": "1IZkdev7muSfX85azNILY0kubSaNqt4lc",
+      "github_asset_path": null,
+      "visual_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human visual validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "naming_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human naming validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "runtime_active": false,
+      "runtime_status": "INACTIVE",
+      "runtime_piece_id": null,
+      "runtime_asset_ref": null,
+      "provenance": [
+        {
+          "source_type": "DRIVE_CANDIDATE",
+          "source_id": "1IZkdev7muSfX85azNILY0kubSaNqt4lc",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "OBSERVATION",
+          "note": "Observed in /Google Drive/REBULO/REBULO_CANDIDATS_A_VALIDER/ as fée_pixel_art_aux_ailes_verdoyantes.png."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebus-sound-visual-curation.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#fe:fée",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "REBULO sound visual curation records exact candidate fée for IPA fe as prototype_candidate requiring a naming test."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-compact-runtime.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#ipa=fe",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "No runtime bank row for IPA fe was verified in the compact runtime snapshot."
+        }
+      ],
+      "latest_proof": {
+        "proof_type": "DRIVE_FILE",
+        "proof_id": "drive-candidate:fee:1IZkdev7muSfX85azNILY0kubSaNqt4lc",
+        "authority": "OBSERVATION",
+        "observed_at": "2026-09-30T06:35:58Z",
+        "drive_file_id": "1IZkdev7muSfX85azNILY0kubSaNqt4lc",
+        "note": "Current candidate-folder observation for fée_pixel_art_aux_ailes_verdoyantes.png."
+      },
+      "canonical_decision": null,
+      "next_action": {
+        "action": "HUMAN_VISUAL_VALIDATION",
+        "note": "Obtain explicit human visual validation for this candidate before any promotion."
+      },
+      "updated_at": "2026-09-30T06:35:58Z"
+    },
+    {
+      "concept_id": "compas",
+      "label": "compas",
+      "ipa": "kɔ̃pa",
+      "representation_type": "IMAGE",
+      "graphic_status": "CANDIDATE",
+      "drive_source_id": null,
+      "drive_canonical_asset_id": null,
+      "drive_candidate_id": "1EUqx0E1Rubqh1IN4C4aCFiEtIjaB2YD5",
+      "github_asset_path": null,
+      "visual_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human visual validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "naming_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human naming validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "runtime_active": false,
+      "runtime_status": "INACTIVE",
+      "runtime_piece_id": null,
+      "runtime_asset_ref": null,
+      "provenance": [
+        {
+          "source_type": "DRIVE_CANDIDATE",
+          "source_id": "1EUqx0E1Rubqh1IN4C4aCFiEtIjaB2YD5",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "OBSERVATION",
+          "note": "Observed in /Google Drive/REBULO/REBULO_CANDIDATS_A_VALIDER/ as compas_de_géométrie_pixel_art.png."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebus-sound-visual-curation.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#kɔ̃pa:compas",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "REBULO sound visual curation records exact candidate compas for IPA kɔ̃pa as prototype_candidate; naming remains unverified."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-visual-production-queue.csv@a41d777b3ca25032903a5fad75af1509f3ef70e9#compas",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Production queue historically records COMPAS as NO_PROVEN_ASSET; the current Drive candidate supersedes that file-existence observation but not the validation gate."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-compact-runtime.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#ipa=kɔ̃pa",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "No runtime bank row for IPA kɔ̃pa was verified in the compact runtime snapshot."
+        }
+      ],
+      "latest_proof": {
+        "proof_type": "DRIVE_FILE",
+        "proof_id": "drive-candidate:compas:1EUqx0E1Rubqh1IN4C4aCFiEtIjaB2YD5",
+        "authority": "OBSERVATION",
+        "observed_at": "2026-09-30T06:35:58Z",
+        "drive_file_id": "1EUqx0E1Rubqh1IN4C4aCFiEtIjaB2YD5",
+        "note": "Current candidate-folder observation for compas_de_géométrie_pixel_art.png."
+      },
+      "canonical_decision": null,
+      "next_action": {
+        "action": "HUMAN_VISUAL_VALIDATION",
+        "note": "Obtain explicit human visual validation for this candidate before any promotion."
+      },
+      "updated_at": "2026-09-30T06:35:58Z"
+    },
+    {
+      "concept_id": "mie",
+      "label": "mie",
+      "ipa": "mi",
+      "representation_type": "IMAGE",
+      "graphic_status": "CANDIDATE",
+      "drive_source_id": null,
+      "drive_canonical_asset_id": null,
+      "drive_candidate_id": "1mhBveJNTRE4Go8UMQXu0VrHdqQuy6387",
+      "github_asset_path": null,
+      "visual_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human visual validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "naming_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human naming validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "runtime_active": true,
+      "runtime_status": "RUNTIME_ACTIVE",
+      "runtime_piece_id": "syllable-print:mie",
+      "runtime_asset_ref": "assets/rebus/mie.svg",
+      "provenance": [
+        {
+          "source_type": "DRIVE_CANDIDATE",
+          "source_id": "1mhBveJNTRE4Go8UMQXu0VrHdqQuy6387",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "OBSERVATION",
+          "note": "Observed in /Google Drive/REBULO/REBULO_CANDIDATS_A_VALIDER/ as rebulo-pixel-mie.png."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/lexicon-seed.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#mie",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Lexicon seed records id mie, label mie, IPA /mi/, active with assets/rebus/mie.svg."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-compact-runtime.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#ipa=mi",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Exact active image representation verified for concept mie: syllable-print:mie -> assets/rebus/mie.svg."
+        }
+      ],
+      "latest_proof": {
+        "proof_type": "DRIVE_FILE",
+        "proof_id": "drive-candidate:mie:1mhBveJNTRE4Go8UMQXu0VrHdqQuy6387",
+        "authority": "OBSERVATION",
+        "observed_at": "2026-09-30T06:35:58Z",
+        "drive_file_id": "1mhBveJNTRE4Go8UMQXu0VrHdqQuy6387",
+        "note": "Current candidate-folder observation for rebulo-pixel-mie.png."
+      },
+      "canonical_decision": null,
+      "next_action": {
+        "action": "HUMAN_VISUAL_VALIDATION",
+        "note": "Obtain explicit human visual validation for this candidate before any promotion."
+      },
+      "updated_at": "2026-09-30T06:35:58Z"
+    },
+    {
+      "concept_id": "riz",
+      "label": "riz",
+      "ipa": "ʁi",
+      "representation_type": "IMAGE",
+      "graphic_status": "CANDIDATE",
+      "drive_source_id": null,
+      "drive_canonical_asset_id": null,
+      "drive_candidate_id": "16MhejkMsidz31lWnUAdyo-X3h0Y04gno",
+      "github_asset_path": null,
+      "visual_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human visual validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "naming_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human naming validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "runtime_active": true,
+      "runtime_status": "RUNTIME_ACTIVE",
+      "runtime_piece_id": "syllable-print:riz",
+      "runtime_asset_ref": "assets/visible-batch1/individual/riz.png",
+      "provenance": [
+        {
+          "source_type": "DRIVE_CANDIDATE",
+          "source_id": "16MhejkMsidz31lWnUAdyo-X3h0Y04gno",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "OBSERVATION",
+          "note": "Observed in /Google Drive/REBULO/REBULO_CANDIDATS_A_VALIDER/ as rebulo-pixel-riz.png."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/lexicon-seed.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#riz",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Lexicon seed records id riz, label riz, IPA /ʁi/, active with an existing runtime visual."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-compact-runtime.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#ipa=ʁi",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Exact active image representation verified for concept riz: syllable-print:riz -> assets/visible-batch1/individual/riz.png."
+        }
+      ],
+      "latest_proof": {
+        "proof_type": "DRIVE_FILE",
+        "proof_id": "drive-candidate:riz:16MhejkMsidz31lWnUAdyo-X3h0Y04gno",
+        "authority": "OBSERVATION",
+        "observed_at": "2026-09-30T06:35:58Z",
+        "drive_file_id": "16MhejkMsidz31lWnUAdyo-X3h0Y04gno",
+        "note": "Current candidate-folder observation for rebulo-pixel-riz.png."
+      },
+      "canonical_decision": null,
+      "next_action": {
+        "action": "HUMAN_VISUAL_VALIDATION",
+        "note": "Obtain explicit human visual validation for this candidate before any promotion."
+      },
+      "updated_at": "2026-09-30T06:35:58Z"
+    },
+    {
+      "concept_id": "hvv72-037-oeil",
+      "label": "œil",
+      "ipa": "œj",
+      "representation_type": "IMAGE",
+      "graphic_status": "CANDIDATE",
+      "drive_source_id": null,
+      "drive_canonical_asset_id": null,
+      "drive_candidate_id": "1Cl8DOnf0wZNjyQnUgvu5XIirzugmMS78",
+      "github_asset_path": null,
+      "visual_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human visual validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "naming_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human naming validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "runtime_active": true,
+      "runtime_status": "RUNTIME_ACTIVE",
+      "runtime_piece_id": "open-pictogram:oeil",
+      "runtime_asset_ref": "assets/visible-batch1/individual/oeil.png",
+      "provenance": [
+        {
+          "source_type": "DRIVE_CANDIDATE",
+          "source_id": "1Cl8DOnf0wZNjyQnUgvu5XIirzugmMS78",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "OBSERVATION",
+          "note": "Observed in /Google Drive/REBULO/REBULO_CANDIDATS_A_VALIDER/ as rebulo-pixel-oeil.png."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/human-visual-validation-manifest-72.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#hvv72-037-oeil",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "HVV72 manifest identifies stable concept hvv72-037-oeil with IPA œj and humanNamingEvidence=none."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-visual-asset-evidence-72.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#hvv72-037-oeil",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Historical evidence predates the current Drive candidate observation and is retained to preserve contradictory provenance."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-compact-runtime.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#ipa=œj",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Exact active image representation verified for concept œil: open-pictogram:oeil -> assets/visible-batch1/individual/oeil.png."
+        }
+      ],
+      "latest_proof": {
+        "proof_type": "DRIVE_FILE",
+        "proof_id": "drive-candidate:hvv72-037-oeil:1Cl8DOnf0wZNjyQnUgvu5XIirzugmMS78",
+        "authority": "OBSERVATION",
+        "observed_at": "2026-09-30T06:35:58Z",
+        "drive_file_id": "1Cl8DOnf0wZNjyQnUgvu5XIirzugmMS78",
+        "note": "Current candidate-folder observation for rebulo-pixel-oeil.png."
+      },
+      "canonical_decision": null,
+      "next_action": {
+        "action": "HUMAN_VISUAL_VALIDATION",
+        "note": "Obtain explicit human visual validation for this candidate before any promotion."
+      },
+      "updated_at": "2026-09-30T06:35:58Z"
+    },
+    {
+      "concept_id": "nez",
+      "label": "nez",
+      "ipa": "ne",
+      "representation_type": "IMAGE",
+      "graphic_status": "CANDIDATE",
+      "drive_source_id": null,
+      "drive_canonical_asset_id": null,
+      "drive_candidate_id": "1jTTbR_lgVI9ed8JTNYKSZBgC2CPiRrBi",
+      "github_asset_path": null,
+      "visual_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human visual validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "naming_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human naming validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "runtime_active": true,
+      "runtime_status": "RUNTIME_ACTIVE",
+      "runtime_piece_id": "syllable-print:nez",
+      "runtime_asset_ref": "assets/visible-batch1/individual/nez.png",
+      "provenance": [
+        {
+          "source_type": "DRIVE_CANDIDATE",
+          "source_id": "1jTTbR_lgVI9ed8JTNYKSZBgC2CPiRrBi",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "OBSERVATION",
+          "note": "Observed in /Google Drive/REBULO/REBULO_CANDIDATS_A_VALIDER/ as rebulo-pixel-nez.png."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/lexicon-seed.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#nez",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Lexicon seed records id nez, label nez, IPA /ne/, active with an existing runtime visual."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-compact-runtime.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#ipa=ne",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Exact active image representation verified for concept nez: syllable-print:nez -> assets/visible-batch1/individual/nez.png."
+        }
+      ],
+      "latest_proof": {
+        "proof_type": "DRIVE_FILE",
+        "proof_id": "drive-candidate:nez:1jTTbR_lgVI9ed8JTNYKSZBgC2CPiRrBi",
+        "authority": "OBSERVATION",
+        "observed_at": "2026-09-30T06:35:58Z",
+        "drive_file_id": "1jTTbR_lgVI9ed8JTNYKSZBgC2CPiRrBi",
+        "note": "Current candidate-folder observation for rebulo-pixel-nez.png."
+      },
+      "canonical_decision": null,
+      "next_action": {
+        "action": "HUMAN_VISUAL_VALIDATION",
+        "note": "Obtain explicit human visual validation for this candidate before any promotion."
+      },
+      "updated_at": "2026-09-30T06:35:58Z"
+    },
+    {
+      "concept_id": "hvv72-045-scie",
+      "label": "scie",
+      "ipa": "si",
+      "representation_type": "IMAGE",
+      "graphic_status": "CANDIDATE",
+      "drive_source_id": null,
+      "drive_canonical_asset_id": null,
+      "drive_candidate_id": "104h43iBsPc2k82z_E_i42n7f5z7aiTwN",
+      "github_asset_path": null,
+      "visual_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human visual validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "naming_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human naming validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "runtime_active": true,
+      "runtime_status": "RUNTIME_ACTIVE",
+      "runtime_piece_id": "syllable-print:scie",
+      "runtime_asset_ref": "assets/visible-batch1/individual/scie.png",
+      "provenance": [
+        {
+          "source_type": "DRIVE_CANDIDATE",
+          "source_id": "104h43iBsPc2k82z_E_i42n7f5z7aiTwN",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "OBSERVATION",
+          "note": "Observed in /Google Drive/REBULO/REBULO_CANDIDATS_A_VALIDER/ as rebulo-pixel-scie.png."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/human-visual-validation-manifest-72.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#hvv72-045-scie",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "HVV72 manifest identifies stable concept hvv72-045-scie with IPA si and humanNamingEvidence=none."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-visual-asset-evidence-72.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#hvv72-045-scie",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Historical evidence predates the current Drive candidate observation and is retained to preserve contradictory provenance."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-compact-runtime.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#ipa=si",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Exact active image representation verified for concept scie: syllable-print:scie -> assets/visible-batch1/individual/scie.png."
+        }
+      ],
+      "latest_proof": {
+        "proof_type": "DRIVE_FILE",
+        "proof_id": "drive-candidate:hvv72-045-scie:104h43iBsPc2k82z_E_i42n7f5z7aiTwN",
+        "authority": "OBSERVATION",
+        "observed_at": "2026-09-30T06:35:58Z",
+        "drive_file_id": "104h43iBsPc2k82z_E_i42n7f5z7aiTwN",
+        "note": "Current candidate-folder observation for rebulo-pixel-scie.png."
+      },
+      "canonical_decision": null,
+      "next_action": {
+        "action": "HUMAN_VISUAL_VALIDATION",
+        "note": "Obtain explicit human visual validation for this candidate before any promotion."
+      },
+      "updated_at": "2026-09-30T06:35:58Z"
+    },
+    {
+      "concept_id": "de",
+      "label": "dé",
+      "ipa": "de",
+      "representation_type": "IMAGE",
+      "graphic_status": "CANDIDATE",
+      "drive_source_id": null,
+      "drive_canonical_asset_id": null,
+      "drive_candidate_id": "1_RDlYBoGK-1mzEC3AvnsKGfmgFEnrBfb",
+      "github_asset_path": null,
+      "visual_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human visual validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "naming_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human naming validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "runtime_active": true,
+      "runtime_status": "RUNTIME_ACTIVE",
+      "runtime_piece_id": "syllable-print:de",
+      "runtime_asset_ref": "assets/visible-batch1/individual/de.png",
+      "provenance": [
+        {
+          "source_type": "DRIVE_CANDIDATE",
+          "source_id": "1_RDlYBoGK-1mzEC3AvnsKGfmgFEnrBfb",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "OBSERVATION",
+          "note": "Observed in /Google Drive/REBULO/REBULO_CANDIDATS_A_VALIDER/ as rebulo-pixel-de.png."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/lexicon-seed.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#de",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Lexicon seed records id de, label dé, IPA /de/, active with an existing runtime visual."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-compact-runtime.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#ipa=de",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Exact active image representation verified for concept dé: syllable-print:de -> assets/visible-batch1/individual/de.png."
+        }
+      ],
+      "latest_proof": {
+        "proof_type": "DRIVE_FILE",
+        "proof_id": "drive-candidate:de:1_RDlYBoGK-1mzEC3AvnsKGfmgFEnrBfb",
+        "authority": "OBSERVATION",
+        "observed_at": "2026-09-30T06:35:58Z",
+        "drive_file_id": "1_RDlYBoGK-1mzEC3AvnsKGfmgFEnrBfb",
+        "note": "Current candidate-folder observation for rebulo-pixel-de.png."
+      },
+      "canonical_decision": null,
+      "next_action": {
+        "action": "HUMAN_VISUAL_VALIDATION",
+        "note": "Obtain explicit human visual validation for this candidate before any promotion."
+      },
+      "updated_at": "2026-09-30T06:35:58Z"
+    },
+    {
+      "concept_id": "hvv72-067-manteau",
+      "label": "manteau",
+      "ipa": "mɑ̃to",
+      "representation_type": "IMAGE",
+      "graphic_status": "CANDIDATE",
+      "drive_source_id": null,
+      "drive_canonical_asset_id": null,
+      "drive_candidate_id": null,
+      "github_asset_path": null,
+      "visual_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human visual validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "naming_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human naming validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "runtime_active": true,
+      "runtime_status": "RUNTIME_ACTIVE",
+      "runtime_piece_id": "open-pictogram:manteau",
+      "runtime_asset_ref": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F9E5.svg",
+      "provenance": [
+        {
+          "source_type": "DRIVE_CANDIDATE",
+          "source_id": "1DRCVMTUq5nHXDszlXk3AhDRv2I3u8laf",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "OBSERVATION",
+          "note": "Observed in /Google Drive/REBULO/REBULO_CANDIDATS_A_VALIDER/ as hvv72-067-manteau_CANDIDAT_A_VALIDER.png."
+        },
+        {
+          "source_type": "DRIVE_CANDIDATE",
+          "source_id": "1VEHjDbS9XO25ccWaRZJ5TZmMcTfcyI-E",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "OBSERVATION",
+          "note": "Observed in /Google Drive/REBULO/REBULO_CANDIDATS_A_VALIDER/ as hvv72-067-manteau_CANDIDAT_A_VALIDER.png."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/human-visual-validation-manifest-72.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#hvv72-067-manteau",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "HVV72 manifest identifies stable concept hvv72-067-manteau with IPA mɑ̃to and humanNamingEvidence=none."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-visual-asset-evidence-72.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#hvv72-067-manteau",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Historical evidence predates the current Drive candidate observation and is retained to preserve contradictory provenance."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-compact-runtime.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#ipa=mɑ̃to",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Exact active image representation verified for concept manteau: open-pictogram:manteau -> https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F9E5.svg."
+        }
+      ],
+      "latest_proof": {
+        "proof_type": "DRIVE_FILE",
+        "proof_id": "drive-candidate:hvv72-067-manteau:1DRCVMTUq5nHXDszlXk3AhDRv2I3u8laf",
+        "authority": "OBSERVATION",
+        "observed_at": "2026-09-30T06:35:58Z",
+        "drive_file_id": "1DRCVMTUq5nHXDszlXk3AhDRv2I3u8laf",
+        "note": "One of 2 concurrently observed same-name candidate files. All IDs are preserved in provenance; no preferred file is inferred."
+      },
+      "canonical_decision": null,
+      "next_action": {
+        "action": "INVESTIGATE_DUPLICATE",
+        "note": "Preserve all candidate IDs until a human/canonical decision resolves whether either file should be preferred."
+      },
+      "updated_at": "2026-09-30T06:35:58Z"
+    },
+    {
+      "concept_id": "hvv72-068-carre",
+      "label": "carré",
+      "ipa": "kaʁe",
+      "representation_type": "IMAGE",
+      "graphic_status": "CANDIDATE",
+      "drive_source_id": null,
+      "drive_canonical_asset_id": null,
+      "drive_candidate_id": null,
+      "github_asset_path": null,
+      "visual_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human visual validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "naming_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human naming validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+      },
+      "runtime_active": false,
+      "runtime_status": "INACTIVE",
+      "runtime_piece_id": null,
+      "runtime_asset_ref": null,
+      "provenance": [
+        {
+          "source_type": "DRIVE_CANDIDATE",
+          "source_id": "1r4eXwo_8hqqTF19h9b5mjIOn3BB030Vz",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "OBSERVATION",
+          "note": "Observed in /Google Drive/REBULO/REBULO_CANDIDATS_A_VALIDER/ as hvv72-068-carre_CANDIDAT_A_VALIDER.png."
+        },
+        {
+          "source_type": "DRIVE_CANDIDATE",
+          "source_id": "1mlTSG-RU5YH8xXHo1oPO4sSXQSjlIGFu",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "OBSERVATION",
+          "note": "Observed in /Google Drive/REBULO/REBULO_CANDIDATS_A_VALIDER/ as hvv72-068-carre_CANDIDAT_A_VALIDER.png."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/human-visual-validation-manifest-72.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#hvv72-068-carre",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "HVV72 manifest identifies stable concept hvv72-068-carre with IPA kaʁe and humanNamingEvidence=none."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-visual-asset-evidence-72.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#hvv72-068-carre",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Historical evidence predates the current Drive candidate observation and is retained to preserve contradictory provenance."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-compact-runtime.json@a41d777b3ca25032903a5fad75af1509f3ef70e9#ipa=kaʁe",
+          "observed_at": "2026-09-30T06:35:58Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "No runtime bank row for IPA kaʁe was verified in the compact runtime snapshot."
+        }
+      ],
+      "latest_proof": {
+        "proof_type": "DRIVE_FILE",
+        "proof_id": "drive-candidate:hvv72-068-carre:1r4eXwo_8hqqTF19h9b5mjIOn3BB030Vz",
+        "authority": "OBSERVATION",
+        "observed_at": "2026-09-30T06:35:58Z",
+        "drive_file_id": "1r4eXwo_8hqqTF19h9b5mjIOn3BB030Vz",
+        "note": "One of 2 concurrently observed same-name candidate files. All IDs are preserved in provenance; no preferred file is inferred."
+      },
+      "canonical_decision": null,
+      "next_action": {
+        "action": "INVESTIGATE_DUPLICATE",
+        "note": "Preserve all candidate IDs until a human/canonical decision resolves whether either file should be preferred."
+      },
+      "updated_at": "2026-09-30T06:35:58Z"
+    }
+  ]
+}

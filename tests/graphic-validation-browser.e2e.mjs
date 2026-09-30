@@ -43,22 +43,29 @@ try{
   await verifyRealLot(realPage,'http://127.0.0.1:4173/validation-graphiques.html');
   await realContext.close();
 
-  if(process.env.REBULO_PUBLIC_PREVIEW_URL){
-    const publicContext=await browser.newContext({viewport:{width:390,height:844}});
-    const publicPage=await publicContext.newPage();
-    let lastError;
-    for(let attempt=1;attempt<=4;attempt++){
+  let publicPreview=null;
+  if(process.env.REBULO_PUBLIC_PREVIEW_SHA){
+    const sha=process.env.REBULO_PUBLIC_PREVIEW_SHA;
+    const previewCandidates=[
+      `https://htmlpreview.github.io/?https://github.com/ludodulac/Rebulo/blob/${sha}/validation-graphiques.html`,
+      `https://raw.githack.com/ludodulac/Rebulo/${sha}/validation-graphiques.html`,
+      `https://cdn.jsdelivr.net/gh/ludodulac/Rebulo@${sha}/validation-graphiques.html`
+    ];
+    let lastError=null;
+    for(const candidateUrl of previewCandidates){
+      const publicContext=await browser.newContext({viewport:{width:390,height:844}});
+      const publicPage=await publicContext.newPage();
       try{
-        await verifyRealLot(publicPage,process.env.REBULO_PUBLIC_PREVIEW_URL);
-        lastError=null;
+        await verifyRealLot(publicPage,candidateUrl);
+        publicPreview=candidateUrl;
+        await publicContext.close();
         break;
       }catch(error){
         lastError=error;
-        if(attempt<4)await sleep(3000);
+        await publicContext.close();
       }
     }
-    if(lastError)throw lastError;
-    await publicContext.close();
+    if(!publicPreview)throw lastError||new Error('No public preview candidate rendered the real lot');
   }
 
   const context=await browser.newContext({viewport:{width:390,height:844},acceptDownloads:true});
@@ -104,7 +111,7 @@ try{
     viewport:[390,844],
     realLotImages:'10/10 LOADED',
     realLotConcepts:EXPECTED_CONCEPTS,
-    publicPreview:process.env.REBULO_PUBLIC_PREVIEW_URL||null,
+    publicPreview,
     persistence:'PASS',
     finalGate:'PASS',
     batchId:exported.batch_id

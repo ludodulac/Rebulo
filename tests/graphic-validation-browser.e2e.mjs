@@ -8,6 +8,24 @@ const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 try{
   await sleep(800);
   const browser=await chromium.launch({headless:true});
+
+  // Proof 1: the real LOT 001 is wired to the ten real repository PNGs.
+  const realContext=await browser.newContext({viewport:{width:390,height:844}});
+  const realPage=await realContext.newPage();
+  await realPage.goto('http://127.0.0.1:4173/validation-graphiques.html');
+  await realPage.waitForSelector('.candidate-card');
+  assert.equal(await realPage.evaluate(()=>document.documentElement.scrollWidth),390);
+  assert.equal(await realPage.locator('.candidate-card').count(),10);
+  assert.deepEqual(
+    await realPage.locator('.candidate-name').allTextContents(),
+    ['BAS','BOUE','SAUT','COU','SANG','MER','THÉ','VEAU','FÉE','COMPAS']
+  );
+  await realPage.waitForFunction(()=>Array.from(document.images).length===10&&Array.from(document.images).every(img=>img.complete&&img.naturalWidth>0));
+  assert.equal(await realPage.locator('#progressText').textContent(),'0 / 10 examinées');
+  assert.equal(await realPage.locator('#finalizeBatch').isDisabled(),true);
+  await realContext.close();
+
+  // Proof 2: decision switching, persistence, final gate and structured export.
   const context=await browser.newContext({viewport:{width:390,height:844},acceptDownloads:true});
   const page=await context.newPage();
   const fakePng='data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><rect width="40" height="40" fill="none"/></svg>');
@@ -15,10 +33,6 @@ try{
   await page.route('**/data/validation-batches/lot-001.json',route=>route.fulfill({contentType:'application/json',body:JSON.stringify({schema_version:1,batch_id:'lot-001',title:'Lot 001 · 10 candidats',candidates})}));
   await page.goto('http://127.0.0.1:4173/validation-graphiques.html');
   await page.waitForSelector('.candidate-card');
-  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),390);
-  assert.equal(await page.locator('.candidate-card').count(),10);
-  assert.equal(await page.locator('#progressText').textContent(),'0 / 10 examinées');
-  assert.equal(await page.locator('#finalizeBatch').isDisabled(),true);
 
   const first=page.locator('.candidate-card').first();
   await first.getByRole('button',{name:'✓ VALIDER'}).click();
@@ -50,6 +64,14 @@ try{
   assert.equal(exported.decisions[0].source_drive_id,'drive-1');
   assert.ok(exported.decisions[0].decided_at);
   assert.ok(exported.finalized_at);
-  console.log(JSON.stringify({viewport:[390,844],count:10,persistence:'PASS',finalGate:'PASS',batchId:exported.batch_id}));
+
+  console.log(JSON.stringify({
+    viewport:[390,844],
+    realLotImages:'10/10 LOADED',
+    realLotConcepts:['BAS','BOUE','SAUT','COU','SANG','MER','THÉ','VEAU','FÉE','COMPAS'],
+    persistence:'PASS',
+    finalGate:'PASS',
+    batchId:exported.batch_id
+  }));
   await browser.close();
 }finally{server.kill();}

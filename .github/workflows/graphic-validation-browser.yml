@@ -6,17 +6,22 @@ on:
       - 'validation-graphiques.html'
       - 'validation-graphiques.css'
       - 'validation-graphiques.js'
-      - 'data/graphic-validation-candidates.json'
+      - 'data/validation-batches/**'
+      - 'assets/validation-batches/**'
       - 'tests/graphic-validation-browser.e2e.mjs'
       - '.github/workflows/graphic-validation-browser.yml'
   pull_request:
+    branches:
+      - main
     paths:
       - 'validation-graphiques.html'
       - 'validation-graphiques.css'
       - 'validation-graphiques.js'
-      - 'data/graphic-validation-candidates.json'
+      - 'data/validation-batches/**'
+      - 'assets/validation-batches/**'
       - 'tests/graphic-validation-browser.e2e.mjs'
       - '.github/workflows/graphic-validation-browser.yml'
+  workflow_dispatch:
 
 permissions:
   contents: read

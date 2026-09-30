@@ -1,0 +1,453 @@
+{
+  "schema_version": "1.0",
+  "registry_type": "REBULO_CANONICAL_STATE",
+  "representations": [
+    {
+      "concept_id": "hvv72-008-dossier",
+      "label": "dossier",
+      "ipa": "dosje",
+      "representation_type": "IMAGE",
+      "graphic_status": "CANONICAL",
+      "drive_source_id": null,
+      "drive_canonical_asset_id": "1RiDrET2a_lkCF3maQFbKnfvT-OS6CA3q",
+      "drive_candidate_id": null,
+      "github_asset_path": null,
+      "visual_validation": {
+        "status": "PASS",
+        "decision_id": "rebulo-visual-asset-evidence-72:hvv72-008-dossier:VALIDE_EXPLICITEMENT",
+        "decided_at": null,
+        "note": "Historical asset-evidence snapshot marks this concept VALIDÉ_EXPLICITEMENT; the exact decision timestamp is not present in the source."
+      },
+      "naming_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "humanNamingEvidence=none in data/human-visual-validation-manifest-72.json."
+      },
+      "runtime_active": true,
+      "runtime_status": "RUNTIME_ACTIVE",
+      "runtime_piece_id": "open-pictogram:dossier",
+      "runtime_asset_ref": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F4C1.svg",
+      "provenance": [
+        {
+          "source_type": "HUMAN_VALIDATION",
+          "source_id": "rebulo-visual-asset-evidence-72:hvv72-008-dossier:VALIDE_EXPLICITEMENT",
+          "observed_at": "2026-09-15T13:36:21.230Z",
+          "authority": "HUMAN_DECISION",
+          "note": "The persisted evidence snapshot records VALIDÉ_EXPLICITEMENT; this is visual evidence only and does not establish naming validation."
+        },
+        {
+          "source_type": "DRIVE_CANONICAL",
+          "source_id": "1RiDrET2a_lkCF3maQFbKnfvT-OS6CA3q",
+          "observed_at": "2026-09-29T12:34:20.742602+00:00",
+          "authority": "OBSERVATION",
+          "note": "hvv72-008-dossier_v01.png currently observed in REBULO_ASSETS_GRAPHIQUES_CANONIQUES."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-compact-runtime.json@cd52ad4972d4bf64d3a5174418a085425de6079d#ipa=dosje",
+          "observed_at": "2026-09-28T13:30:57Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Runtime bank row exposes open-pictogram:dossier using OpenMoji 1F4C1."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/human-visual-validation-manifest-72.json@cd52ad4972d4bf64d3a5174418a085425de6079d#hvv72-008-dossier",
+          "observed_at": "2026-09-28T13:30:57Z",
+          "authority": "OBSERVATION",
+          "note": "Manifest gives IPA dosje and humanNamingEvidence=none."
+        }
+      ],
+      "latest_proof": {
+        "proof_type": "DRIVE_FILE",
+        "proof_id": "drive-canonical:hvv72-008-dossier",
+        "authority": "OBSERVATION",
+        "observed_at": "2026-09-29T12:34:20.742602+00:00",
+        "drive_file_id": "1RiDrET2a_lkCF3maQFbKnfvT-OS6CA3q",
+        "note": "Current canonical-folder observation."
+      },
+      "canonical_decision": null,
+      "next_action": {
+        "action": "HUMAN_NAMING_VALIDATION",
+        "note": "Visual validation is evidenced; naming validation remains unverified."
+      },
+      "updated_at": "2026-09-29T12:34:20.746840+00:00"
+    },
+    {
+      "concept_id": "hvv72-024-coq",
+      "label": "coq",
+      "ipa": "kɔk",
+      "representation_type": "IMAGE",
+      "graphic_status": "CANONICAL",
+      "drive_source_id": null,
+      "drive_canonical_asset_id": "1M-QpC8hnaLa8YHQkqodkn4SLkUAWXtI6",
+      "drive_candidate_id": null,
+      "github_asset_path": null,
+      "visual_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No human visual-validation decision was verified for this exact current asset."
+      },
+      "naming_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "humanNamingEvidence=none in data/human-visual-validation-manifest-72.json."
+      },
+      "runtime_active": false,
+      "runtime_status": "INACTIVE",
+      "runtime_piece_id": null,
+      "runtime_asset_ref": null,
+      "provenance": [
+        {
+          "source_type": "CERTIFIED_REPORT",
+          "source_id": "data/rebulo-visual-asset-evidence-72.json#hvv72-024-coq",
+          "observed_at": "2026-09-15T13:36:21.230Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Historical snapshot said DESSIN_RÉELLEMENT_MANQUANT."
+        },
+        {
+          "source_type": "DRIVE_CANONICAL",
+          "source_id": "1M-QpC8hnaLa8YHQkqodkn4SLkUAWXtI6",
+          "observed_at": "2026-09-29T12:34:20.742602+00:00",
+          "authority": "OBSERVATION",
+          "note": "hvv72-024-coq_v01.png is now present in the canonical Drive folder; this supersedes the older missing observation as current file existence."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-compact-runtime.json@cd52ad4972d4bf64d3a5174418a085425de6079d#ipa=kɔk",
+          "observed_at": "2026-09-28T13:30:57Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "No runtime bank row for IPA kɔk was found in the compact runtime snapshot."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/human-visual-validation-manifest-72.json@cd52ad4972d4bf64d3a5174418a085425de6079d#hvv72-024-coq",
+          "observed_at": "2026-09-28T13:30:57Z",
+          "authority": "OBSERVATION",
+          "note": "Manifest gives IPA kɔk and humanNamingEvidence=none."
+        }
+      ],
+      "latest_proof": {
+        "proof_type": "DRIVE_FILE",
+        "proof_id": "drive-canonical:hvv72-024-coq",
+        "authority": "OBSERVATION",
+        "observed_at": "2026-09-29T12:34:20.742602+00:00",
+        "drive_file_id": "1M-QpC8hnaLa8YHQkqodkn4SLkUAWXtI6",
+        "note": "Current canonical-folder observation, newer than the historical missing snapshot."
+      },
+      "canonical_decision": null,
+      "next_action": {
+        "action": "HUMAN_VISUAL_VALIDATION",
+        "note": "Canonical file existence is verified, but no human visual or naming validation was inferred from folder placement."
+      },
+      "updated_at": "2026-09-29T12:34:20.746840+00:00"
+    },
+    {
+      "concept_id": "hvv72-045-scie",
+      "label": "scie",
+      "ipa": "si",
+      "representation_type": "IMAGE",
+      "graphic_status": "CANDIDATE",
+      "drive_source_id": null,
+      "drive_canonical_asset_id": null,
+      "drive_candidate_id": "104h43iBsPc2k82z_E_i42n7f5z7aiTwN",
+      "github_asset_path": "assets/visible-batch1/individual/scie.png",
+      "visual_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No human visual-validation decision was verified for this exact current asset."
+      },
+      "naming_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "humanNamingEvidence=none in data/human-visual-validation-manifest-72.json."
+      },
+      "runtime_active": true,
+      "runtime_status": "RUNTIME_ACTIVE",
+      "runtime_piece_id": "syllable-print:scie",
+      "runtime_asset_ref": "assets/visible-batch1/individual/scie.png",
+      "provenance": [
+        {
+          "source_type": "CERTIFIED_REPORT",
+          "source_id": "data/rebulo-visual-asset-evidence-72.json#hvv72-045-scie",
+          "observed_at": "2026-09-15T13:36:21.230Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Historical snapshot recorded only a reference-panel source to recover."
+        },
+        {
+          "source_type": "DRIVE_CANDIDATE",
+          "source_id": "104h43iBsPc2k82z_E_i42n7f5z7aiTwN",
+          "observed_at": "2026-09-29T12:34:20.746840+00:00",
+          "authority": "OBSERVATION",
+          "note": "rebulo-pixel-scie.png currently exists in REBULO_CANDIDATS_A_VALIDER."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-compact-runtime.json@cd52ad4972d4bf64d3a5174418a085425de6079d#ipa=si",
+          "observed_at": "2026-09-28T13:30:57Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Runtime bank row exposes syllable-print:scie at assets/visible-batch1/individual/scie.png."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "src/rebulo-visible-batch1-assets.js@cd52ad4972d4bf64d3a5174418a085425de6079d#scie",
+          "observed_at": "2026-09-28T13:30:57Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Visible batch declares scie active:true; humanNamingEvidence=none."
+        }
+      ],
+      "latest_proof": {
+        "proof_type": "DRIVE_FILE",
+        "proof_id": "drive-candidate:hvv72-045-scie",
+        "authority": "OBSERVATION",
+        "observed_at": "2026-09-29T12:34:20.746840+00:00",
+        "drive_file_id": "104h43iBsPc2k82z_E_i42n7f5z7aiTwN",
+        "note": "Current candidate-folder observation; runtime binding is separately evidenced in GitHub provenance."
+      },
+      "canonical_decision": null,
+      "next_action": {
+        "action": "HUMAN_VISUAL_VALIDATION",
+        "note": "Drive candidate is not treated as validated even though a runtime asset is already active."
+      },
+      "updated_at": "2026-09-29T12:34:20.746840+00:00"
+    },
+    {
+      "concept_id": "hvv72-067-manteau",
+      "label": "manteau",
+      "ipa": "mɑ̃to",
+      "representation_type": "IMAGE",
+      "graphic_status": "CANDIDATE",
+      "drive_source_id": null,
+      "drive_canonical_asset_id": null,
+      "drive_candidate_id": null,
+      "github_asset_path": null,
+      "visual_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No human visual-validation decision was verified for this exact current asset."
+      },
+      "naming_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "humanNamingEvidence=none in data/human-visual-validation-manifest-72.json."
+      },
+      "runtime_active": true,
+      "runtime_status": "RUNTIME_ACTIVE",
+      "runtime_piece_id": "open-pictogram:manteau",
+      "runtime_asset_ref": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/aeb8bb3a59e2de39c754ac79180c8131c906acea/color/svg/1F9E5.svg",
+      "provenance": [
+        {
+          "source_type": "CERTIFIED_REPORT",
+          "source_id": "data/rebulo-visual-asset-evidence-72.json#hvv72-067-manteau",
+          "observed_at": "2026-09-15T13:36:21.230Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Historical snapshot said DESSIN_RÉELLEMENT_MANQUANT."
+        },
+        {
+          "source_type": "DRIVE_CANDIDATE",
+          "source_id": "1DRCVMTUq5nHXDszlXk3AhDRv2I3u8laf",
+          "observed_at": "2026-09-29T12:34:20.746840+00:00",
+          "authority": "OBSERVATION",
+          "note": "First current Drive candidate with the duplicated name hvv72-067-manteau_CANDIDAT_A_VALIDER.png."
+        },
+        {
+          "source_type": "DRIVE_CANDIDATE",
+          "source_id": "1VEHjDbS9XO25ccWaRZJ5TZmMcTfcyI-E",
+          "observed_at": "2026-09-29T12:34:20.746840+00:00",
+          "authority": "OBSERVATION",
+          "note": "Second current Drive candidate with the same name; no preferred ID is selected."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-compact-runtime.json@cd52ad4972d4bf64d3a5174418a085425de6079d#ipa=mɑ̃to",
+          "observed_at": "2026-09-28T13:30:57Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Runtime bank row exposes open-pictogram:manteau using OpenMoji 1F9E5."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/human-visual-validation-manifest-72.json@cd52ad4972d4bf64d3a5174418a085425de6079d#hvv72-067-manteau",
+          "observed_at": "2026-09-28T13:30:57Z",
+          "authority": "OBSERVATION",
+          "note": "Manifest gives IPA mɑ̃to and humanNamingEvidence=none."
+        }
+      ],
+      "latest_proof": {
+        "proof_type": "DRIVE_FILE",
+        "proof_id": "drive-candidate:hvv72-067-manteau:latest-created",
+        "authority": "OBSERVATION",
+        "observed_at": "2026-09-29T12:34:20.746840+00:00",
+        "drive_file_id": "1DRCVMTUq5nHXDszlXk3AhDRv2I3u8laf",
+        "note": "One of two simultaneously observed same-name candidates; both IDs remain in provenance and no winner is inferred."
+      },
+      "canonical_decision": null,
+      "next_action": {
+        "action": "INVESTIGATE_DUPLICATE",
+        "note": "Keep both Drive IDs until a human or canonical decision identifies whether either candidate should be preferred."
+      },
+      "updated_at": "2026-09-29T12:34:20.746840+00:00"
+    },
+    {
+      "concept_id": "hvv72-068-carre",
+      "label": "carré",
+      "ipa": "kaʁe",
+      "representation_type": "IMAGE",
+      "graphic_status": "CANDIDATE",
+      "drive_source_id": null,
+      "drive_canonical_asset_id": null,
+      "drive_candidate_id": null,
+      "github_asset_path": null,
+      "visual_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No human visual-validation decision was verified for this exact current asset."
+      },
+      "naming_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "humanNamingEvidence=none in data/human-visual-validation-manifest-72.json."
+      },
+      "runtime_active": false,
+      "runtime_status": "INACTIVE",
+      "runtime_piece_id": null,
+      "runtime_asset_ref": null,
+      "provenance": [
+        {
+          "source_type": "CERTIFIED_REPORT",
+          "source_id": "data/rebulo-visual-asset-evidence-72.json#hvv72-068-carre",
+          "observed_at": "2026-09-15T13:36:21.230Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Historical snapshot said DESSIN_RÉELLEMENT_MANQUANT."
+        },
+        {
+          "source_type": "DRIVE_CANDIDATE",
+          "source_id": "1r4eXwo_8hqqTF19h9b5mjIOn3BB030Vz",
+          "observed_at": "2026-09-29T12:34:20.746840+00:00",
+          "authority": "OBSERVATION",
+          "note": "First current Drive candidate with the duplicated name hvv72-068-carre_CANDIDAT_A_VALIDER.png."
+        },
+        {
+          "source_type": "DRIVE_CANDIDATE",
+          "source_id": "1mlTSG-RU5YH8xXHo1oPO4sSXQSjlIGFu",
+          "observed_at": "2026-09-29T12:34:20.746840+00:00",
+          "authority": "OBSERVATION",
+          "note": "Second current Drive candidate with the same name; no preferred ID is selected."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-compact-runtime.json@cd52ad4972d4bf64d3a5174418a085425de6079d#ipa=kaʁe",
+          "observed_at": "2026-09-28T13:30:57Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "No runtime bank row for IPA kaʁe was found in the compact runtime snapshot."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/human-visual-validation-manifest-72.json@cd52ad4972d4bf64d3a5174418a085425de6079d#hvv72-068-carre",
+          "observed_at": "2026-09-28T13:30:57Z",
+          "authority": "OBSERVATION",
+          "note": "Manifest gives IPA kaʁe and humanNamingEvidence=none."
+        }
+      ],
+      "latest_proof": {
+        "proof_type": "DRIVE_FILE",
+        "proof_id": "drive-candidate:hvv72-068-carre:latest-created",
+        "authority": "OBSERVATION",
+        "observed_at": "2026-09-29T12:34:20.746840+00:00",
+        "drive_file_id": "1r4eXwo_8hqqTF19h9b5mjIOn3BB030Vz",
+        "note": "One of two simultaneously observed same-name candidates; both IDs remain in provenance and no winner is inferred."
+      },
+      "canonical_decision": null,
+      "next_action": {
+        "action": "INVESTIGATE_DUPLICATE",
+        "note": "Keep both Drive IDs until a human or canonical decision identifies whether either candidate should be preferred."
+      },
+      "updated_at": "2026-09-29T12:34:20.746840+00:00"
+    },
+    {
+      "concept_id": "hvv72-069-planete",
+      "label": "planète",
+      "ipa": "planɛt",
+      "representation_type": "IMAGE",
+      "graphic_status": "MISSING",
+      "drive_source_id": null,
+      "drive_canonical_asset_id": null,
+      "drive_candidate_id": null,
+      "github_asset_path": null,
+      "visual_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No human visual-validation decision was verified for this exact current asset."
+      },
+      "naming_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "humanNamingEvidence=none in data/human-visual-validation-manifest-72.json."
+      },
+      "runtime_active": false,
+      "runtime_status": "INACTIVE",
+      "runtime_piece_id": null,
+      "runtime_asset_ref": null,
+      "provenance": [
+        {
+          "source_type": "CERTIFIED_REPORT",
+          "source_id": "data/rebulo-visual-asset-evidence-72.json#hvv72-069-planete",
+          "observed_at": "2026-09-15T13:36:21.230Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Persisted evidence snapshot classifies the drawing as DESSIN_RÉELLEMENT_MANQUANT."
+        },
+        {
+          "source_type": "OTHER",
+          "source_id": "drive-folder:13kd4_KjsaAUE5gGq7Z3GpLM45zphkwaf#no-match:hvv72-069-planete",
+          "observed_at": "2026-09-29T12:34:20.742602+00:00",
+          "authority": "OBSERVATION",
+          "note": "Current canonical-folder listing contained no matching planète asset."
+        },
+        {
+          "source_type": "OTHER",
+          "source_id": "drive-folder:1cP5chUWhVZU7Wzr6NZNt6eEpSQma2EIh#no-match:hvv72-069-planete",
+          "observed_at": "2026-09-29T12:34:20.746840+00:00",
+          "authority": "OBSERVATION",
+          "note": "Current candidate-folder listing contained no matching planète asset."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/rebulo-compact-runtime.json@cd52ad4972d4bf64d3a5174418a085425de6079d#ipa=planɛt",
+          "observed_at": "2026-09-28T13:30:57Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "No runtime bank row for IPA planɛt was found in the compact runtime snapshot."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "data/human-visual-validation-manifest-72.json@cd52ad4972d4bf64d3a5174418a085425de6079d#hvv72-069-planete",
+          "observed_at": "2026-09-28T13:30:57Z",
+          "authority": "OBSERVATION",
+          "note": "Manifest gives IPA planɛt and humanNamingEvidence=none."
+        }
+      ],
+      "latest_proof": {
+        "proof_type": "CERTIFIED_REPORT",
+        "proof_id": "asset-evidence-72:hvv72-069-planete",
+        "authority": "AUTOMATED_DERIVATION",
+        "observed_at": "2026-09-15T13:36:21.230Z",
+        "report_id": "data/rebulo-visual-asset-evidence-72.json#hvv72-069-planete",
+        "note": "Persisted positive statement of MISSING; newer Drive no-match observations are retained in provenance but are not represented as a Drive-file proof."
+      },
+      "canonical_decision": null,
+      "next_action": {
+        "action": "PRODUCE_ASSET",
+        "note": "No source, candidate, canonical asset, or runtime representation was verified in this pilot."
+      },
+      "updated_at": "2026-09-29T12:34:20.746840+00:00"
+    }
+  ]
+}

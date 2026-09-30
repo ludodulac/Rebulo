@@ -41,5 +41,5 @@ jobs:
           npx playwright install --with-deps chromium
       - name: Run mobile validation browser proof
         env:
-          REBULO_PUBLIC_PREVIEW_URL: https://cdn.jsdelivr.net/gh/ludodulac/Rebulo@${{ github.event.pull_request.head.sha || github.sha }}/validation-graphiques.html
+          REBULO_PUBLIC_PREVIEW_URL: https://raw.githack.com/ludodulac/Rebulo/${{ github.event.pull_request.head.sha || github.sha }}/validation-graphiques.html
         run: node tests/graphic-validation-browser.e2e.mjs

@@ -1286,6 +1286,291 @@
         "note": "Preserve all candidate IDs until a human/canonical decision resolves whether either file should be preferred."
       },
       "updated_at": "2026-09-30T06:35:58Z"
+    },
+    {
+      "concept_id": "ordi",
+      "label": "ordi",
+      "ipa": "ɔʁdi",
+      "representation_type": "IMAGE",
+      "graphic_status": "CANDIDATE",
+      "drive_source_id": null,
+      "drive_canonical_asset_id": null,
+      "drive_candidate_id": "1fUBXIFay17lBYhBiBDLuZo33j1AOyV60",
+      "github_asset_path": null,
+      "visual_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "New REBULO-054A candidate. No human visual validation has been recorded."
+      },
+      "naming_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human naming validation has been recorded for this exact candidate."
+      },
+      "runtime_active": false,
+      "runtime_status": "INACTIVE",
+      "runtime_piece_id": null,
+      "runtime_asset_ref": null,
+      "provenance": [
+        {
+          "source_type": "DRIVE_CANDIDATE",
+          "source_id": "1fUBXIFay17lBYhBiBDLuZo33j1AOyV60",
+          "observed_at": "2026-09-30T13:54:00Z",
+          "authority": "OBSERVATION",
+          "note": "Saved in /Google Drive/REBULO/REBULO_CANDIDATS_A_VALIDER/ as rebulo-pixel-ordi_CANDIDAT_A_VALIDER.png."
+        },
+        {
+          "source_type": "OTHER",
+          "source_id": "REBULO-054A:generated:ordi",
+          "observed_at": "2026-09-30T13:54:00Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Generated for REBULO-054A after no satisfactory exact-concept candidate was found in the canonical registry, REBULO candidate folder, or current GitHub runtime/assets checks."
+        }
+      ],
+      "latest_proof": {
+        "proof_type": "DRIVE_FILE",
+        "proof_id": "drive-candidate:ordi:1fUBXIFay17lBYhBiBDLuZo33j1AOyV60",
+        "authority": "OBSERVATION",
+        "observed_at": "2026-09-30T13:54:00Z",
+        "drive_file_id": "1fUBXIFay17lBYhBiBDLuZo33j1AOyV60",
+        "note": "Current candidate-folder observation for rebulo-pixel-ordi_CANDIDAT_A_VALIDER.png."
+      },
+      "canonical_decision": null,
+      "next_action": {
+        "action": "HUMAN_VISUAL_VALIDATION",
+        "note": "Obtain explicit human visual validation for this candidate before any promotion."
+      },
+      "updated_at": "2026-09-30T13:54:00Z"
+    },
+    {
+      "concept_id": "tele",
+      "label": "télé",
+      "ipa": "tele",
+      "representation_type": "IMAGE",
+      "graphic_status": "CANDIDATE",
+      "drive_source_id": null,
+      "drive_canonical_asset_id": null,
+      "drive_candidate_id": "1Qp2EZF7iSCEMTez4XQbdfTYLKium8Fu7",
+      "github_asset_path": null,
+      "visual_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "New REBULO-054A candidate. No human visual validation has been recorded."
+      },
+      "naming_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human naming validation has been recorded for this exact candidate."
+      },
+      "runtime_active": false,
+      "runtime_status": "INACTIVE",
+      "runtime_piece_id": null,
+      "runtime_asset_ref": null,
+      "provenance": [
+        {
+          "source_type": "DRIVE_CANDIDATE",
+          "source_id": "1Qp2EZF7iSCEMTez4XQbdfTYLKium8Fu7",
+          "observed_at": "2026-09-30T13:54:00Z",
+          "authority": "OBSERVATION",
+          "note": "Saved in /Google Drive/REBULO/REBULO_CANDIDATS_A_VALIDER/ as rebulo-pixel-tele_CANDIDAT_A_VALIDER.png."
+        },
+        {
+          "source_type": "OTHER",
+          "source_id": "REBULO-054A:generated:tele",
+          "observed_at": "2026-09-30T13:54:00Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Generated for REBULO-054A after no satisfactory exact-concept candidate was found in the canonical registry, REBULO candidate folder, or current GitHub runtime/assets checks."
+        }
+      ],
+      "latest_proof": {
+        "proof_type": "DRIVE_FILE",
+        "proof_id": "drive-candidate:tele:1Qp2EZF7iSCEMTez4XQbdfTYLKium8Fu7",
+        "authority": "OBSERVATION",
+        "observed_at": "2026-09-30T13:54:00Z",
+        "drive_file_id": "1Qp2EZF7iSCEMTez4XQbdfTYLKium8Fu7",
+        "note": "Current candidate-folder observation for rebulo-pixel-tele_CANDIDAT_A_VALIDER.png."
+      },
+      "canonical_decision": null,
+      "next_action": {
+        "action": "HUMAN_VISUAL_VALIDATION",
+        "note": "Obtain explicit human visual validation for this candidate before any promotion."
+      },
+      "updated_at": "2026-09-30T13:54:00Z"
+    },
+    {
+      "concept_id": "porc",
+      "label": "porc",
+      "ipa": "pɔʁ",
+      "representation_type": "IMAGE",
+      "graphic_status": "CANDIDATE",
+      "drive_source_id": null,
+      "drive_canonical_asset_id": null,
+      "drive_candidate_id": "17jaKhsTLLyAUBTK7zaQexdPCmR9tqWrz",
+      "github_asset_path": null,
+      "visual_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "New REBULO-054A candidate. No human visual validation has been recorded."
+      },
+      "naming_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human naming validation has been recorded for this exact candidate."
+      },
+      "runtime_active": false,
+      "runtime_status": "INACTIVE",
+      "runtime_piece_id": null,
+      "runtime_asset_ref": null,
+      "provenance": [
+        {
+          "source_type": "DRIVE_CANDIDATE",
+          "source_id": "17jaKhsTLLyAUBTK7zaQexdPCmR9tqWrz",
+          "observed_at": "2026-09-30T13:54:00Z",
+          "authority": "OBSERVATION",
+          "note": "Saved in /Google Drive/REBULO/REBULO_CANDIDATS_A_VALIDER/ as rebulo-pixel-porc_CANDIDAT_A_VALIDER.png."
+        },
+        {
+          "source_type": "OTHER",
+          "source_id": "REBULO-054A:generated:porc",
+          "observed_at": "2026-09-30T13:54:00Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Generated for REBULO-054A after no satisfactory exact-concept candidate was found in the canonical registry, REBULO candidate folder, or current GitHub runtime/assets checks."
+        }
+      ],
+      "latest_proof": {
+        "proof_type": "DRIVE_FILE",
+        "proof_id": "drive-candidate:porc:17jaKhsTLLyAUBTK7zaQexdPCmR9tqWrz",
+        "authority": "OBSERVATION",
+        "observed_at": "2026-09-30T13:54:00Z",
+        "drive_file_id": "17jaKhsTLLyAUBTK7zaQexdPCmR9tqWrz",
+        "note": "Current candidate-folder observation for rebulo-pixel-porc_CANDIDAT_A_VALIDER.png."
+      },
+      "canonical_decision": null,
+      "next_action": {
+        "action": "HUMAN_VISUAL_VALIDATION",
+        "note": "Obtain explicit human visual validation for this candidate before any promotion."
+      },
+      "updated_at": "2026-09-30T13:54:00Z"
+    },
+    {
+      "concept_id": "epi",
+      "label": "épi",
+      "ipa": "epi",
+      "representation_type": "IMAGE",
+      "graphic_status": "CANDIDATE",
+      "drive_source_id": null,
+      "drive_canonical_asset_id": null,
+      "drive_candidate_id": "1oMBCvug3vNt6rhMzuN4ZAAqa_6Q-Pmq6",
+      "github_asset_path": null,
+      "visual_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "New REBULO-054A candidate. No human visual validation has been recorded."
+      },
+      "naming_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human naming validation has been recorded for this exact candidate."
+      },
+      "runtime_active": false,
+      "runtime_status": "INACTIVE",
+      "runtime_piece_id": null,
+      "runtime_asset_ref": null,
+      "provenance": [
+        {
+          "source_type": "DRIVE_CANDIDATE",
+          "source_id": "1oMBCvug3vNt6rhMzuN4ZAAqa_6Q-Pmq6",
+          "observed_at": "2026-09-30T13:54:00Z",
+          "authority": "OBSERVATION",
+          "note": "Saved in /Google Drive/REBULO/REBULO_CANDIDATS_A_VALIDER/ as rebulo-pixel-epi_CANDIDAT_A_VALIDER.png."
+        },
+        {
+          "source_type": "OTHER",
+          "source_id": "REBULO-054A:generated:epi",
+          "observed_at": "2026-09-30T13:54:00Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Generated for REBULO-054A after no satisfactory exact-concept candidate was found in the canonical registry, REBULO candidate folder, or current GitHub runtime/assets checks."
+        }
+      ],
+      "latest_proof": {
+        "proof_type": "DRIVE_FILE",
+        "proof_id": "drive-candidate:epi:1oMBCvug3vNt6rhMzuN4ZAAqa_6Q-Pmq6",
+        "authority": "OBSERVATION",
+        "observed_at": "2026-09-30T13:54:00Z",
+        "drive_file_id": "1oMBCvug3vNt6rhMzuN4ZAAqa_6Q-Pmq6",
+        "note": "Current candidate-folder observation for rebulo-pixel-epi_CANDIDAT_A_VALIDER.png."
+      },
+      "canonical_decision": null,
+      "next_action": {
+        "action": "HUMAN_VISUAL_VALIDATION",
+        "note": "Obtain explicit human visual validation for this candidate before any promotion."
+      },
+      "updated_at": "2026-09-30T13:54:00Z"
+    },
+    {
+      "concept_id": "papa",
+      "label": "papa",
+      "ipa": "papa",
+      "representation_type": "IMAGE",
+      "graphic_status": "CANDIDATE",
+      "drive_source_id": null,
+      "drive_canonical_asset_id": null,
+      "drive_candidate_id": "1Ey5ZFoVK9Mq_UkA_gelnn7035_Ud1G92",
+      "github_asset_path": null,
+      "visual_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "New REBULO-054A candidate. No human visual validation has been recorded."
+      },
+      "naming_validation": {
+        "status": "NOT_EVALUATED",
+        "decision_id": null,
+        "decided_at": null,
+        "note": "No explicit human naming validation has been recorded for this exact candidate."
+      },
+      "runtime_active": false,
+      "runtime_status": "INACTIVE",
+      "runtime_piece_id": null,
+      "runtime_asset_ref": null,
+      "provenance": [
+        {
+          "source_type": "DRIVE_CANDIDATE",
+          "source_id": "1Ey5ZFoVK9Mq_UkA_gelnn7035_Ud1G92",
+          "observed_at": "2026-09-30T13:54:00Z",
+          "authority": "OBSERVATION",
+          "note": "Saved in /Google Drive/REBULO/REBULO_CANDIDATS_A_VALIDER/ as rebulo-pixel-papa_CANDIDAT_A_VALIDER.png."
+        },
+        {
+          "source_type": "OTHER",
+          "source_id": "REBULO-054A:generated:papa",
+          "observed_at": "2026-09-30T13:54:00Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Generated for REBULO-054A after no satisfactory exact-concept candidate was found in the canonical registry, REBULO candidate folder, or current GitHub runtime/assets checks."
+        }
+      ],
+      "latest_proof": {
+        "proof_type": "DRIVE_FILE",
+        "proof_id": "drive-candidate:papa:1Ey5ZFoVK9Mq_UkA_gelnn7035_Ud1G92",
+        "authority": "OBSERVATION",
+        "observed_at": "2026-09-30T13:54:00Z",
+        "drive_file_id": "1Ey5ZFoVK9Mq_UkA_gelnn7035_Ud1G92",
+        "note": "Current candidate-folder observation for rebulo-pixel-papa_CANDIDAT_A_VALIDER.png."
+      },
+      "canonical_decision": null,
+      "next_action": {
+        "action": "HUMAN_VISUAL_VALIDATION",
+        "note": "Obtain explicit human visual validation for this candidate before any promotion."
+      },
+      "updated_at": "2026-09-30T13:54:00Z"
     }
   ]
 }

@@ -2,7 +2,7 @@ name: Deploy Rebulo demo
 
 on:
   push:
-    branches: [main, feat/rebulo-053a-validation-page]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -25,7 +25,6 @@ jobs:
       - name: Check browser entry syntax
         run: node --check app.js
       - name: Run project tests
-        if: github.ref != 'refs/heads/feat/rebulo-053a-validation-page'
         run: npm test
 
   deploy:

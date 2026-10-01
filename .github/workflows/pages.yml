@@ -2,7 +2,7 @@ name: Deploy Rebulo demo
 
 on:
   push:
-    branches: [main]
+    branches: [main, feat/rebulo-053a-validation-page]
   workflow_dispatch:
 
 permissions:

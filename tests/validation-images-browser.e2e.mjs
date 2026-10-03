@@ -30,6 +30,20 @@ try{
   assert.ok(await lastImage.evaluate(img=>img.naturalWidth>0));
   await realContext.close();
 
+  if(process.env.REBULO_PUBLIC_PREVIEW_URL){
+    const publicContext=await browser.newContext({viewport:{width:390,height:844}});
+    const publicPage=await publicContext.newPage();
+    await publicPage.goto(process.env.REBULO_PUBLIC_PREVIEW_URL,{waitUntil:'domcontentloaded',timeout:45000});
+    await publicPage.waitForSelector('.candidate-card',{timeout:30000});
+    assert.equal(await publicPage.locator('.candidate-card').count(),50);
+    assert.equal(await publicPage.locator('#totalCount').textContent(),'50');
+    assert.equal(await publicPage.evaluate(()=>document.documentElement.scrollWidth),390);
+    const publicFirst=publicPage.locator('.candidate-image').first();
+    await publicFirst.waitFor();
+    assert.ok(await publicFirst.evaluate(img=>img.complete&&img.naturalWidth>0));
+    await publicContext.close();
+  }
+
   const context=await browser.newContext({viewport:{width:390,height:844}});
   await context.addInitScript(()=>{
     Object.defineProperty(navigator,'clipboard',{

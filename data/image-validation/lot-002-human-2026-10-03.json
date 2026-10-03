@@ -1,0 +1,378 @@
+{
+  "schema_version": 1,
+  "report_id": "REBULO-059-LOT-002-HUMAN-2026-10-03",
+  "lot_id": "lot-002",
+  "authority": "Ludovic — contrôle humain réel transmis à Grand-père",
+  "recorded_at": "2026-10-03",
+  "ui_report": {
+    "total": 50,
+    "validated": 11,
+    "refused": 37,
+    "untreated": 2
+  },
+  "authoritative_report": {
+    "total": 50,
+    "validated": 11,
+    "refused": 38,
+    "untreated": 1
+  },
+  "textual_override": {
+    "candidate_id": "lot002-pot-pixel-v1",
+    "concept": "POT",
+    "ui_state": "UNTREATED",
+    "authoritative_decision": "FAIL",
+    "human_reason": "Dégueu, c'est pas la charte ne me repropose plus jamais ça"
+  },
+  "scope": "GRAPHIC_VALIDATION_ONLY",
+  "naming_validation": "NOT_EVALUATED",
+  "clinical_validation": "NOT_EVALUATED",
+  "decisions": [
+    {
+      "candidate_id": "lot002-banc-pixel-v1",
+      "concept": "BANC",
+      "graphic_decision": "FAIL",
+      "reason": "PROGRAMMATIC_DRAWING_REJECTED"
+    },
+    {
+      "candidate_id": "lot002-carre-blue-transparent-v2",
+      "concept": "CARRÉ",
+      "graphic_decision": "PASS",
+      "reason": null
+    },
+    {
+      "candidate_id": "lot002-lit-pixel-v1",
+      "concept": "LIT",
+      "graphic_decision": "FAIL",
+      "reason": "PROGRAMMATIC_DRAWING_REJECTED"
+    },
+    {
+      "candidate_id": "lot002-corps-pixel-v1",
+      "concept": "CORPS",
+      "graphic_decision": "FAIL",
+      "reason": "PROGRAMMATIC_DRAWING_REJECTED"
+    },
+    {
+      "candidate_id": "lot002-eau-pixel-v1",
+      "concept": "EAU",
+      "graphic_decision": "FAIL",
+      "reason": "PROGRAMMATIC_DRAWING_REJECTED"
+    },
+    {
+      "candidate_id": "lot002-mat-pixel-v1",
+      "concept": "MÂT",
+      "graphic_decision": "FAIL",
+      "reason": "PROGRAMMATIC_DRAWING_REJECTED"
+    },
+    {
+      "candidate_id": "lot002-pas-pixel-v1",
+      "concept": "PAS",
+      "graphic_decision": "PASS",
+      "reason": null
+    },
+    {
+      "candidate_id": "lot002-mie-pixel-v1",
+      "concept": "MIE",
+      "graphic_decision": "FAIL",
+      "reason": "PROGRAMMATIC_DRAWING_REJECTED"
+    },
+    {
+      "candidate_id": "lot002-pot-pixel-v1",
+      "concept": "POT",
+      "graphic_decision": "FAIL",
+      "reason": "HUMAN_EXPLICIT_REJECT_BAD_STYLE"
+    },
+    {
+      "candidate_id": "lot002-raie-poisson-pixel-v1",
+      "concept": "RAIE",
+      "graphic_decision": "FAIL",
+      "reason": "PROGRAMMATIC_DRAWING_REJECTED"
+    },
+    {
+      "candidate_id": "lot002-sol-pixel-v1",
+      "concept": "SOL",
+      "graphic_decision": "FAIL",
+      "reason": "PROGRAMMATIC_DRAWING_REJECTED"
+    },
+    {
+      "candidate_id": "lot002-tas-pixel-v1",
+      "concept": "TAS",
+      "graphic_decision": "FAIL",
+      "reason": "PROGRAMMATIC_DRAWING_REJECTED"
+    },
+    {
+      "candidate_id": "lot002-terre-pixel-v1",
+      "concept": "TERRE",
+      "graphic_decision": "FAIL",
+      "reason": "PROGRAMMATIC_DRAWING_REJECTED"
+    },
+    {
+      "candidate_id": "lot002-tour-pixel-v1",
+      "concept": "TOUR",
+      "graphic_decision": "FAIL",
+      "reason": "PROGRAMMATIC_DRAWING_REJECTED"
+    },
+    {
+      "candidate_id": "lot002-cor-pixel-v1",
+      "concept": "COR",
+      "graphic_decision": "FAIL",
+      "reason": "PROGRAMMATIC_DRAWING_REJECTED"
+    },
+    {
+      "candidate_id": "lot002-do-note-v1",
+      "concept": "DO",
+      "graphic_decision": "FAIL",
+      "reason": "PROGRAMMATIC_DRAWING_REJECTED"
+    },
+    {
+      "candidate_id": "lot002-bas-drive-v1",
+      "concept": "BAS",
+      "graphic_decision": "PASS",
+      "reason": null
+    },
+    {
+      "candidate_id": "lot002-boue-drive-v1",
+      "concept": "BOUE",
+      "graphic_decision": "PASS",
+      "reason": null
+    },
+    {
+      "candidate_id": "lot002-saut-drive-v1",
+      "concept": "SAUT",
+      "graphic_decision": "PASS",
+      "reason": null
+    },
+    {
+      "candidate_id": "lot002-cou-drive-v1",
+      "concept": "COU",
+      "graphic_decision": "PASS",
+      "reason": null
+    },
+    {
+      "candidate_id": "lot002-sang-drive-v1",
+      "concept": "SANG",
+      "graphic_decision": "PASS",
+      "reason": null
+    },
+    {
+      "candidate_id": "lot002-veau-drive-v1",
+      "concept": "VEAU",
+      "graphic_decision": "PASS",
+      "reason": null
+    },
+    {
+      "candidate_id": "lot002-fee-drive-v1",
+      "concept": "FÉE",
+      "graphic_decision": "PASS",
+      "reason": null
+    },
+    {
+      "candidate_id": "lot002-fourchette-source-v1",
+      "concept": "FOURCHETTE",
+      "graphic_decision": "FAIL",
+      "reason": "EXTRACTION_TRUNCATED_PARTS_MISSING"
+    },
+    {
+      "candidate_id": "lot002-tigre-source-v1",
+      "concept": "TIGRE",
+      "graphic_decision": "FAIL",
+      "reason": "EXTRACTION_TRUNCATED_PARTS_MISSING"
+    },
+    {
+      "candidate_id": "lot002-abeille-source-v1",
+      "concept": "ABEILLE",
+      "graphic_decision": "FAIL",
+      "reason": "EXTRACTION_TRUNCATED_PARTS_MISSING"
+    },
+    {
+      "candidate_id": "lot002-casque-source-v1",
+      "concept": "CASQUE",
+      "graphic_decision": "FAIL",
+      "reason": "EXTRACTION_TRUNCATED_PARTS_MISSING"
+    },
+    {
+      "candidate_id": "lot002-valise-source-v1",
+      "concept": "VALISE",
+      "graphic_decision": "FAIL",
+      "reason": "EXTRACTION_TRUNCATED_PARTS_MISSING"
+    },
+    {
+      "candidate_id": "lot002-oreille-source-v1",
+      "concept": "OREILLE",
+      "graphic_decision": "PASS",
+      "reason": null
+    },
+    {
+      "candidate_id": "lot002-cochon-source-v1",
+      "concept": "COCHON",
+      "graphic_decision": "FAIL",
+      "reason": "EXTRACTION_TRUNCATED_PARTS_MISSING"
+    },
+    {
+      "candidate_id": "lot002-homard-source-v1",
+      "concept": "HOMARD",
+      "graphic_decision": "FAIL",
+      "reason": "EXTRACTION_TRUNCATED_PARTS_MISSING"
+    },
+    {
+      "candidate_id": "lot002-bouteille-source-v1",
+      "concept": "BOUTEILLE",
+      "graphic_decision": "FAIL",
+      "reason": "EXTRACTION_TRUNCATED_PARTS_MISSING"
+    },
+    {
+      "candidate_id": "lot002-gateau-source-v1",
+      "concept": "GÂTEAU",
+      "graphic_decision": "FAIL",
+      "reason": "EXTRACTION_TRUNCATED_PARTS_MISSING"
+    },
+    {
+      "candidate_id": "lot002-vent-source-v1",
+      "concept": "VENT",
+      "graphic_decision": "FAIL",
+      "reason": "EXTRACTION_TRUNCATED_PARTS_MISSING"
+    },
+    {
+      "candidate_id": "lot002-doigt-source-v1",
+      "concept": "DOIGT",
+      "graphic_decision": "NOT_EVALUATED",
+      "reason": null
+    },
+    {
+      "candidate_id": "lot002-ballon-source-v1",
+      "concept": "BALLON",
+      "graphic_decision": "PASS",
+      "reason": null
+    },
+    {
+      "candidate_id": "lot002-beurre-source-v1",
+      "concept": "BEURRE",
+      "graphic_decision": "FAIL",
+      "reason": "EXTRACTION_TRUNCATED_PARTS_MISSING"
+    },
+    {
+      "candidate_id": "lot002-botte-source-v1",
+      "concept": "BOTTE",
+      "graphic_decision": "FAIL",
+      "reason": "EXTRACTION_TRUNCATED_PARTS_MISSING"
+    },
+    {
+      "candidate_id": "lot002-oignon-source-v1",
+      "concept": "OIGNON",
+      "graphic_decision": "FAIL",
+      "reason": "EXTRACTION_TRUNCATED_PARTS_MISSING"
+    },
+    {
+      "candidate_id": "lot002-cerf-source-v1",
+      "concept": "CERF",
+      "graphic_decision": "FAIL",
+      "reason": "EXTRACTION_TRUNCATED_PARTS_MISSING"
+    },
+    {
+      "candidate_id": "lot002-carte-source-v1",
+      "concept": "CARTE",
+      "graphic_decision": "FAIL",
+      "reason": "NOT_SPECIFIED"
+    },
+    {
+      "candidate_id": "lot002-roc-source-v1",
+      "concept": "ROC",
+      "graphic_decision": "FAIL",
+      "reason": "EXTRACTION_TRUNCATED_PARTS_MISSING"
+    },
+    {
+      "candidate_id": "lot002-gomme-source-v1",
+      "concept": "GOMME",
+      "graphic_decision": "FAIL",
+      "reason": "EXTRACTION_TRUNCATED_PARTS_MISSING"
+    },
+    {
+      "candidate_id": "lot002-pouce-source-v1",
+      "concept": "POUCE",
+      "graphic_decision": "FAIL",
+      "reason": "EXTRACTION_TRUNCATED_PARTS_MISSING"
+    },
+    {
+      "candidate_id": "lot002-sac-source-v1",
+      "concept": "SAC",
+      "graphic_decision": "FAIL",
+      "reason": "EXTRACTION_TRUNCATED_PARTS_MISSING"
+    },
+    {
+      "candidate_id": "lot002-poule-source-v1",
+      "concept": "POULE",
+      "graphic_decision": "FAIL",
+      "reason": "EXTRACTION_TRUNCATED_PARTS_MISSING"
+    },
+    {
+      "candidate_id": "lot002-ail-source-v1",
+      "concept": "AIL",
+      "graphic_decision": "FAIL",
+      "reason": "EXTRACTION_TRUNCATED_PARTS_MISSING"
+    },
+    {
+      "candidate_id": "lot002-lac-source-v1",
+      "concept": "LAC",
+      "graphic_decision": "FAIL",
+      "reason": "EXTRACTION_TRUNCATED_PARTS_MISSING"
+    },
+    {
+      "candidate_id": "lot002-drap-source-v1",
+      "concept": "DRAP",
+      "graphic_decision": "FAIL",
+      "reason": "EXTRACTION_TRUNCATED_PARTS_MISSING"
+    },
+    {
+      "candidate_id": "lot002-sable-source-v1",
+      "concept": "SABLE",
+      "graphic_decision": "FAIL",
+      "reason": "EXTRACTION_TRUNCATED_PARTS_MISSING"
+    }
+  ],
+  "programmatic_drawing_rejects": [
+    "lot002-banc-pixel-v1",
+    "lot002-lit-pixel-v1",
+    "lot002-corps-pixel-v1",
+    "lot002-eau-pixel-v1",
+    "lot002-mat-pixel-v1",
+    "lot002-mie-pixel-v1",
+    "lot002-pot-pixel-v1",
+    "lot002-raie-poisson-pixel-v1",
+    "lot002-sol-pixel-v1",
+    "lot002-tas-pixel-v1",
+    "lot002-terre-pixel-v1",
+    "lot002-tour-pixel-v1",
+    "lot002-cor-pixel-v1",
+    "lot002-do-note-v1"
+  ],
+  "extraction_repair_required": [
+    "lot002-fourchette-source-v1",
+    "lot002-tigre-source-v1",
+    "lot002-abeille-source-v1",
+    "lot002-casque-source-v1",
+    "lot002-valise-source-v1",
+    "lot002-cochon-source-v1",
+    "lot002-homard-source-v1",
+    "lot002-bouteille-source-v1",
+    "lot002-gateau-source-v1",
+    "lot002-vent-source-v1",
+    "lot002-beurre-source-v1",
+    "lot002-botte-source-v1",
+    "lot002-oignon-source-v1",
+    "lot002-cerf-source-v1",
+    "lot002-roc-source-v1",
+    "lot002-gomme-source-v1",
+    "lot002-pouce-source-v1",
+    "lot002-sac-source-v1",
+    "lot002-poule-source-v1",
+    "lot002-ail-source-v1",
+    "lot002-lac-source-v1",
+    "lot002-drap-source-v1",
+    "lot002-sable-source-v1"
+  ],
+  "untreated_unique": "lot002-doigt-source-v1",
+  "carte": {
+    "candidate_id": "lot002-carte-source-v1",
+    "graphic_decision": "FAIL",
+    "reason": "NOT_SPECIFIED"
+  }
+}

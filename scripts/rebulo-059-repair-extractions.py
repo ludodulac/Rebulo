@@ -1,25 +1,18 @@
-from PIL import Image
-from collections import Counter, deque
 from pathlib import Path
-import json, math
+from PIL import Image
+import cv2
+import numpy as np
+import json
+import re
+import unicodedata
 
 SRC = Path("ops/rebulo-058-sources")
 OLD = Path("assets/validation-candidates/lot-002")
 OUT = Path("assets/validation-candidates/lot-002-extraction-repair")
 OUT.mkdir(parents=True, exist_ok=True)
 
-# Exact quadrant boxes used by REBULO-058.
-# REBULO-058 discarded a 48 px separator strip around the board centre
-# (x=744..791, y=488..535). REBULO-059 deliberately restores the full
-# four half-board cells so detached pieces extending into that strip survive.
-Q = {
-    "TL": (0, 0, 768, 512),
-    "TR": (768, 0, 1536, 512),
-    "BL": (0, 512, 768, 1024),
-    "BR": (768, 512, 1536, 1024),
-}
-
-# 23 human-rejected extractions + DOIGT, which remains NOT_EVALUATED.
+# Human-rejected extraction candidates plus DOIGT, which stays NOT_EVALUATED.
+# Position is the visual cell in the protected 2x2 source board.
 JOBS = [
     ("FOURCHETTE","lot002-fourchette-source-v1","boardA.png","TL","additional-252-fourchette.png",True),
     ("TIGRE","lot002-tigre-source-v1","boardA.png","TR","additional-262-tigre.png",True),
@@ -47,236 +40,140 @@ JOBS = [
     ("SABLE","lot002-sable-source-v1","boardJ.png","TL","additional-059-sable.png",True),
 ]
 
-def component_count(mask, w, h):
-    seen = bytearray(w*h)
-    count = 0
-    sizes = []
-    for y in range(h):
-        for x in range(w):
-            idx=y*w+x
-            if not mask[idx] or seen[idx]:
-                continue
-            count += 1
-            q=deque([(x,y)])
-            seen[idx]=1
-            n=0
-            while q:
-                xx,yy=q.popleft(); n+=1
-                for nx,ny in ((xx-1,yy),(xx+1,yy),(xx,yy-1),(xx,yy+1)):
-                    if 0<=nx<w and 0<=ny<h:
-                        ni=ny*w+nx
-                        if mask[ni] and not seen[ni]:
-                            seen[ni]=1
-                            q.append((nx,ny))
-            sizes.append(n)
-    return count, sorted(sizes, reverse=True)
+ORDER = ["TL","TR","BL","BR"]
+STRONG_ALPHA = 16
+RETAIN_ALPHA = 8
 
-def dist(a,b):
-    return math.sqrt(sum((int(a[i])-int(b[i]))**2 for i in range(3)))
+def safe_name(label):
+    value=unicodedata.normalize("NFKD",label).encode("ascii","ignore").decode("ascii").lower()
+    return re.sub(r"[^a-z0-9]+","-",value).strip("-")
 
-def source_foreground(crop):
-    rgba = crop.convert("RGBA")
-    w,h=rgba.size
-    px=list(rgba.getdata())
-    alpha=[p[3] for p in px]
-    transparent=sum(1 for a in alpha if a==0)
+def bbox(mask):
+    ys,xs=np.where(mask)
+    if xs.size==0:
+        raise RuntimeError("empty source object")
+    return (int(xs.min()),int(ys.min()),int(xs.max()+1),int(ys.max()+1))
 
-    # If the protected source already carries real alpha, it is authoritative:
-    # preserve every non-transparent source pixel, including detached pieces.
-    if transparent > (w*h)//100:
-        # The protected PNGs already contain transparency, but the generation
-        # export also carries a sparse halo of near-zero-alpha noise across
-        # the otherwise transparent board. Use the lowest alpha threshold that
-        # clears the quadrant border, then preserve every source pixel at or
-        # above that threshold exactly. No component-size filtering occurs.
-        chosen=None
-        for threshold in (1,2,4,8,12,16,24,32,48,64,96,128):
-            candidate=bytearray(1 if a>=threshold else 0 for a in alpha)
-            bb=bbox_from_mask(candidate,w,h)
-            if bb is None:
-                continue
-            l,t,r,b=bb
-            if min(l,t,w-r,h-b)>=4:
-                chosen=(threshold,candidate,bb)
-                break
-        if chosen is None:
-            mask=bytearray(1 if a>0 else 0 for a in alpha)
-            return rgba, mask, "SOURCE_ALPHA_UNRESOLVED_BORDER"
-        threshold,mask,_=chosen
-        out=[]
-        for i,p in enumerate(px):
-            out.append((p[0],p[1],p[2],p[3] if mask[i] else 0))
-        rgba.putdata(out)
-        return rgba, mask, f"SOURCE_ALPHA_PRESERVED_THRESHOLD_{threshold}"
+def components(mask):
+    n, labels, stats, cents=cv2.connectedComponentsWithStats(mask.astype(np.uint8),8)
+    sizes=sorted([int(stats[i,cv2.CC_STAT_AREA]) for i in range(1,n)],reverse=True)
+    return n-1,sizes
 
-    # Otherwise remove only border-connected pixels that match the actual
-    # background palette. No component-size or proximity filtering is allowed.
-    border=[]
-    band=8
-    for y in range(h):
-        for x in range(w):
-            if x<band or y<band or x>=w-band or y>=h-band:
-                border.append(px[y*w+x][:3])
-    common=Counter(border).most_common(12)
-    bg_palette=[rgb for rgb,n in common if n>=max(8,len(border)//200)]
-    if not bg_palette:
-        bg_palette=[common[0][0]]
+def segment_board(path):
+    rgba=np.array(Image.open(path).convert("RGBA"))
+    h,w=rgba.shape[:2]
+    alpha=rgba[:,:,3]
 
-    def looks_bg(i):
-        p=px[i]
-        if p[3]==0:
-            return True
-        rgb=p[:3]
-        # Keep threshold deliberately tight: only the actual flat/light board
-        # background may disappear. Detached subject components are never
-        # filtered by size, area, or distance from the largest component.
-        chroma=max(rgb)-min(rgb)
-        # Protected boards use a light neutral backdrop with small tonal
-        # variation. Remove that neutral field only when it is connected to
-        # the crop border; colored/dark subject pixels and detached details
-        # remain foreground regardless of component size.
-        return (
-            min(dist(rgb,bg) for bg in bg_palette) <= 48
-            or (min(rgb) >= 170 and chroma <= 38)
-        )
+    # Strong visible pixels define the geometry of each of the four drawings.
+    strong=(alpha>=STRONG_ALPHA).astype(np.uint8)
+    n,labels,stats,cents=cv2.connectedComponentsWithStats(strong,8)
+    seeds={q:np.zeros((h,w),np.uint8) for q in ORDER}
 
-    bg=bytearray(w*h)
-    q=deque()
-    for x in range(w):
-        for y in (0,h-1):
-            i=y*w+x
-            if looks_bg(i) and not bg[i]:
-                bg[i]=1;q.append((x,y))
-    for y in range(h):
-        for x in (0,w-1):
-            i=y*w+x
-            if looks_bg(i) and not bg[i]:
-                bg[i]=1;q.append((x,y))
-    while q:
-        x,y=q.popleft()
-        for nx,ny in ((x-1,y),(x+1,y),(x,y-1),(x,y+1)):
-            if 0<=nx<w and 0<=ny<h:
-                i=ny*w+nx
-                if not bg[i] and looks_bg(i):
-                    bg[i]=1;q.append((nx,ny))
+    # Crucial REBULO-059 change:
+    # keep EVERY strong connected component. Components are never filtered by
+    # area or proximity to the largest component. Each complete component is
+    # assigned to its visual 2x2 cell by centroid.
+    for i in range(1,n):
+        cx,cy=cents[i]
+        q=("T" if cy < h/2 else "B")+("L" if cx < w/2 else "R")
+        seeds[q][labels==i]=1
 
-    mask=bytearray(0 if bg[i] else 1 for i in range(w*h))
-    out=[]
-    for i,p in enumerate(px):
-        out.append((p[0],p[1],p[2],p[3] if mask[i] else 0))
-    rgba.putdata(out)
-    return rgba, mask, "BORDER_CONNECTED_BACKGROUND_ONLY"
+    for q in ORDER:
+        if not np.any(seeds[q]):
+            raise RuntimeError(f"{path}: no strong seed for {q}")
 
-def bbox_from_mask(mask,w,h):
-    xs=[];ys=[]
-    for y in range(h):
-        row=y*w
-        for x in range(w):
-            if mask[row+x]:
-                xs.append(x);ys.append(y)
-    if not xs:
-        return None
-    return (min(xs),min(ys),max(xs)+1,max(ys)+1)
+    # Assign every retained source pixel to the nearest complete strong seed.
+    # This recovers main shapes that cross the old quadrant cuts as well as
+    # detached pieces, without discarding any component.
+    distances=[]
+    for q in ORDER:
+        distances.append(cv2.distanceTransform((1-seeds[q]).astype(np.uint8),cv2.DIST_L2,5))
+    assignment=np.argmin(np.stack(distances,axis=0),axis=0)
+    retained=alpha>=RETAIN_ALPHA
 
-def old_alpha_components(path):
-    im=Image.open(path).convert("RGBA")
-    w,h=im.size
-    mask=bytearray(1 if a>0 else 0 for a in im.getchannel("A").getdata())
-    c,s=component_count(mask,w,h)
-    return c,s,sum(mask)
+    groups={}
+    for idx,q in enumerate(ORDER):
+        mask=retained & (assignment==idx)
+        groups[q]=mask
+    return rgba,groups
 
+def old_stats(path):
+    rgba=np.array(Image.open(path).convert("RGBA"))
+    mask=rgba[:,:,3]>=RETAIN_ALPHA
+    count,sizes=components(mask)
+    return {
+        "alpha_pixels":int(mask.sum()),
+        "components":count,
+        "component_sizes":sizes[:20],
+        "dimensions":[int(rgba.shape[1]),int(rgba.shape[0])]
+    }
+
+board_cache={}
 audit_rows=[]
 manifest=[]
 source_incomplete=[]
+
 for concept,candidate_id,board_name,pos,old_name,repair_required in JOBS:
     board_path=SRC/board_name
-    board=Image.open(board_path).convert("RGBA")
-    crop=board.crop(Q[pos])
-    if concept=="FOURCHETTE":
-        dbg=crop.convert("RGBA")
-        dw,dh=dbg.size
-        dpx=list(dbg.getdata())
-        def edge_stats(side):
-            vals=[]
-            if side=="right":
-                coords=[(dw-1,y) for y in range(dh)]
-            elif side=="bottom":
-                coords=[(x,dh-1) for x in range(dw)]
-            elif side=="left":
-                coords=[(0,y) for y in range(dh)]
-            else:
-                coords=[(x,0) for x in range(dw)]
-            for x,y in coords:
-                vals.append(dpx[y*dw+x])
-            return {
-                "alpha_ge_32":sum(1 for p in vals if p[3]>=32),
-                "alpha_ge_64":sum(1 for p in vals if p[3]>=64),
-                "alpha_ge_128":sum(1 for p in vals if p[3]>=128),
-                "alpha_ge_192":sum(1 for p in vals if p[3]>=192),
-                "alpha_ge_224":sum(1 for p in vals if p[3]>=224),
-                "common_ge_128":Counter(p for p in vals if p[3]>=128).most_common(10)
-            }
-        print("REBULO059_EDGE_DEBUG",json.dumps({
-            "left":edge_stats("left"),"right":edge_stats("right"),
-            "top":edge_stats("top"),"bottom":edge_stats("bottom")
-        }))
-    w,h=crop.size
-    cut,mask,method=source_foreground(crop)
-    bbox=bbox_from_mask(mask,w,h)
-    if bbox is None:
-        raise RuntimeError(f"{concept}: no foreground detected")
-    left,top,right,bottom=bbox
+    if board_name not in board_cache:
+        board_cache[board_name]=segment_board(board_path)
+    source_rgba,groups=board_cache[board_name]
+    mask=groups[pos]
+    h,w=mask.shape
+    left,top,right,bottom=bbox(mask)
     margins=[left,top,w-right,h-bottom]
     source_complete=min(margins)>=4
     if not source_complete:
         source_incomplete.append(concept)
 
-    # Preserve the exact foreground pixels selected from the protected source.
-    obj=cut.crop(bbox)
+    # Exact source-preserving extraction. No redraw, no reconstruction,
+    # no resampling. Pixels below RETAIN_ALPHA are transparent export halo.
+    isolated=np.zeros_like(source_rgba)
+    isolated[mask]=source_rgba[mask]
+    obj=Image.fromarray(isolated,"RGBA").crop((left,top,right,bottom))
+
     canvas=Image.new("RGBA",(1024,1024),(0,0,0,0))
     x=(1024-obj.width)//2
     y=(1024-obj.height)//2
     canvas.alpha_composite(obj,(x,y))
-    out_name=f"repair-{concept.lower().replace('â','a').replace('é','e').replace('è','e').replace('ê','e').replace('ï','i').replace('ô','o').replace('ù','u')}.png"
+
+    out_name=f"repair-{safe_name(concept)}.png"
     out_path=OUT/out_name
     canvas.save(out_path,optimize=True)
 
-    source_pixels=sum(mask)
-    repaired_pixels=sum(1 for a in canvas.getchannel("A").getdata() if a>0)
-    # Exact no-loss check before/after translation: no scaling or creative edit.
-    if repaired_pixels != source_pixels:
-        raise RuntimeError(f"{concept}: pixel count changed {source_pixels}->{repaired_pixels}")
+    source_pixels=int(mask.sum())
+    source_components,source_sizes=components(mask)
+    repaired_rgba=np.array(canvas)
+    repaired_mask=repaired_rgba[:,:,3]>=RETAIN_ALPHA
+    repaired_pixels=int(repaired_mask.sum())
+    repaired_components,repaired_sizes=components(repaired_mask)
 
-    src_components,src_sizes=component_count(mask,w,h)
-    rep_mask=bytearray(1 if a>0 else 0 for a in canvas.getchannel("A").getdata())
-    rep_components,rep_sizes=component_count(rep_mask,1024,1024)
-    if rep_components != src_components or rep_sizes != src_sizes:
+    if repaired_pixels!=source_pixels:
+        raise RuntimeError(f"{concept}: pixel count changed {source_pixels}->{repaired_pixels}")
+    if repaired_components!=source_components or repaired_sizes!=source_sizes:
         raise RuntimeError(f"{concept}: component integrity changed")
 
-    old_path=OLD/old_name
-    old_components,old_sizes,old_pixels=old_alpha_components(old_path)
-
+    old=old_stats(OLD/old_name)
     audit_rows.append({
         "concept":concept,
         "candidate_id":candidate_id,
         "repair_required":repair_required,
         "source_board":str(board_path),
-        "quadrant":pos,
-        "background_method":method,
-        "source_crop_dimensions":[w,h],
-        "source_foreground_bbox":[left,top,right,bottom],
-        "source_margins":margins,
+        "source_position":pos,
         "source_complete":source_complete,
-        "source_foreground_pixels":source_pixels,
-        "source_components":src_components,
-        "old_extraction_asset":str(old_path),
-        "old_alpha_pixels":old_pixels,
-        "old_alpha_components":old_components,
+        "source_bbox":[left,top,right,bottom],
+        "source_margins":margins,
+        "source_alpha_threshold":RETAIN_ALPHA,
+        "source_pixels_retained":source_pixels,
+        "source_components_retained":source_components,
+        "old_extraction_asset":str(OLD/old_name),
+        "old_extraction":old,
         "repaired_asset":str(out_path),
-        "repaired_alpha_pixels":repaired_pixels,
-        "repaired_components":rep_components,
+        "repaired_pixels":repaired_pixels,
+        "repaired_components":repaired_components,
         "pixel_loss_count":source_pixels-repaired_pixels,
-        "component_loss_count":src_components-rep_components,
+        "component_loss_count":source_components-repaired_components,
+        "resampled":False,
         "creative_change":False
     })
     manifest.append({
@@ -291,34 +188,37 @@ repair_rows=[r for r in audit_rows if r["repair_required"]]
 if len(repair_rows)!=23:
     raise RuntimeError(f"expected 23 repair rows, got {len(repair_rows)}")
 if source_incomplete:
-    print("REBULO059_SOURCE_EDGE_DETAILS", json.dumps([
-        {"concept":r["concept"],"margins":r["source_margins"],"method":r["background_method"]}
-        for r in audit_rows if not r["source_complete"]
-    ], ensure_ascii=False))
     raise RuntimeError("SOURCE_ALREADY_TRUNCATED: "+", ".join(source_incomplete))
 if any(r["pixel_loss_count"]!=0 or r["component_loss_count"]!=0 for r in audit_rows):
-    raise RuntimeError("integrity loss detected")
+    raise RuntimeError("source-pixel integrity loss detected")
 
 audit={
     "schema_version":1,
     "mission":"REBULO-059",
     "root_cause":{
         "confirmed":True,
-        "old_algorithm":"REBULO-058 remove_bg used GrabCut then connectedComponentsWithStats and kept only components above an area threshold and spatially near the largest component.",
-        "failure_mode":"Legitimate detached drawing components could be discarded even though the remaining object no longer touched the canvas edge.",
-        "repair_algorithm":"Use exact protected-source quadrant; preserve source alpha when present, otherwise remove only border-connected true background; never filter foreground components by size/proximity; copy all retained source pixels without resampling to a transparent 1024x1024 canvas."
+        "fixed_crop_loss":"REBULO-058 cropped fixed rectangles TL=(0,0,744,488), TR=(792,0,1536,488), BL=(0,536,744,1024), BR=(792,536,1536,1024). Protected-source drawings visibly cross those artificial gaps, so legitimate source pixels were cut before segmentation.",
+        "component_filter_loss":"REBULO-058 then used GrabCut + connectedComponentsWithStats and retained only sufficiently large/spatially-near components. Legitimate detached pieces could therefore be removed.",
+        "repair":"Segment the complete protected board. Keep every strong component, group components by visual-cell centroid, assign every retained source pixel to the nearest complete strong seed, and copy the exact original RGBA pixels to an individual transparent canvas without resampling."
     },
+    "strong_alpha_threshold":STRONG_ALPHA,
+    "retained_alpha_threshold":RETAIN_ALPHA,
+    "retained_alpha_note":"Source PNGs include near-zero-alpha export halo. Pixels with alpha < 8 are treated as transparent halo; every source pixel with alpha >= 8 is assigned and preserved.",
     "source_images_checked":23,
     "technical_images_checked_including_doigt":24,
     "source_actually_complete":[r["concept"] for r in repair_rows if r["source_complete"]],
     "source_already_truncated":[r["concept"] for r in repair_rows if not r["source_complete"]],
     "repaired_extractions":[r["concept"] for r in repair_rows],
-    "doigt_complete":next(r for r in audit_rows if r["concept"]=="DOIGT")["source_complete"],
-    "pixel_loss_comparison_method":"For each quadrant, derive one authoritative foreground mask from the protected source. The repaired file is a pure translation of that exact cropped RGBA object onto a transparent canvas, with no resampling. Foreground pixel count and 4-connected component-size multiset must match source exactly; required loss is 0.",
+    "doigt_status":"NOT_EVALUATED",
+    "doigt_source_complete":next(r for r in audit_rows if r["concept"]=="DOIGT")["source_complete"],
+    "pixel_loss_comparison_method":"For each protected board, every source pixel with alpha >= 8 is assigned to exactly one of the four complete source drawings using nearest strong-component geometry. The repaired candidate is a pure translation of those exact RGBA pixels onto a transparent 1024x1024 canvas. Foreground pixel count and connected-component size multiset must be identical before and after extraction; required loss is zero.",
+    "no_new_drawing_generated":True,
     "rows":audit_rows
 }
 Path("data/image-validation").mkdir(parents=True,exist_ok=True)
-Path("data/image-validation/lot-002-extraction-repair-audit.json").write_text(json.dumps(audit,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+Path("data/image-validation/lot-002-extraction-repair-audit.json").write_text(
+    json.dumps(audit,ensure_ascii=False,indent=2)+"\n",encoding="utf-8"
+)
 
 repair_manifest={
     "schema_version":1,
@@ -328,14 +228,17 @@ repair_manifest={
     "candidate_status":"AWAITING_HUMAN_GRAPHIC_VALIDATION",
     "candidates":manifest
 }
-Path("validation-images/lots/lot-002-extraction-repair.json").write_text(json.dumps(repair_manifest,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+Path("validation-images/lots/lot-002-extraction-repair.json").write_text(
+    json.dumps(repair_manifest,ensure_ascii=False,indent=2)+"\n",encoding="utf-8"
+)
 
 print(json.dumps({
     "SOURCE_IMAGES_CHECKED":"23/23",
     "SOURCE_ACTUALLY_COMPLETE":len(audit["source_actually_complete"]),
     "REPAIRED_EXTRACTIONS":len(audit["repaired_extractions"]),
     "SOURCE_ALREADY_TRUNCATED":audit["source_already_truncated"],
-    "DOIGT_COMPLETE":audit["doigt_complete"],
+    "DOIGT_COMPLETE":audit["doigt_source_complete"],
     "REPAIR_LOT_COUNT":len(manifest),
-    "PIXEL_LOSS_TOTAL":sum(r["pixel_loss_count"] for r in audit_rows)
+    "PIXEL_LOSS_TOTAL":sum(r["pixel_loss_count"] for r in audit_rows),
+    "COMPONENT_LOSS_TOTAL":sum(r["component_loss_count"] for r in audit_rows)
 },ensure_ascii=False))

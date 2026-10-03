@@ -1,0 +1,35 @@
+*{box-sizing:border-box}
+html{overflow-x:hidden}
+body{margin:0;overflow-x:hidden;background:#f5f1e8;color:#1c1d1a;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.validation-shell{width:min(100% - 20px,1120px);margin:0 auto;padding:18px 0 calc(48px + env(safe-area-inset-bottom))}
+.hero{max-width:760px;padding:4px 2px 8px}
+.eyebrow{margin:0 0 7px;font-size:.76rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase;color:#676a62}
+h1{margin:0;font-size:clamp(2rem,8vw,3.5rem);line-height:1}
+.lot-label{display:inline-block;margin:14px 0 0;padding:7px 11px;border:2px solid #20221e;border-radius:999px;background:#fff;font-weight:900}
+.lede{margin:14px 0 18px;font-size:1rem;line-height:1.5;color:#535750}
+.summary-panel{position:sticky;top:0;z-index:8;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:0 0 20px;padding:10px;background:rgba(245,241,232,.96);backdrop-filter:blur(8px);border:2px solid #20221e;border-radius:15px;box-shadow:0 4px 0 #20221e}
+.summary-panel div{min-width:0;padding:7px 5px;background:#fff;border:1px solid #d4d1c7;border-radius:10px;text-align:center}
+.summary-panel strong{display:block;font-size:1.25rem;line-height:1.1}
+.summary-panel span{display:block;margin-top:3px;font-size:.72rem;font-weight:800;color:#62665f}
+.candidate-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.candidate-card{min-width:0;padding:13px;background:#fff;border:2px solid #20221e;border-radius:18px;box-shadow:0 4px 0 #20221e}
+.candidate-card[data-decision="VALIDATED"]{box-shadow:0 4px 0 #20221e,0 0 0 4px #d8efd2 inset}
+.candidate-card[data-decision="REJECTED"]{box-shadow:0 4px 0 #20221e,0 0 0 4px #f3d5d1 inset}
+.candidate-name{margin:0;font-size:1.35rem;line-height:1.1}
+.candidate-id{margin:5px 0 11px;color:#6a6d65;font-size:.78rem;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;overflow-wrap:anywhere}
+.candidate-image-wrap{display:grid;place-items:center;width:100%;aspect-ratio:1/1;padding:10px;background:linear-gradient(45deg,#eee 25%,transparent 25%),linear-gradient(-45deg,#eee 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#eee 75%),linear-gradient(-45deg,transparent 75%,#eee 75%);background-size:20px 20px;background-position:0 0,0 10px,10px -10px,-10px 0;background-color:#fff;border:1px solid #d4d5cf;border-radius:14px;overflow:hidden}
+.candidate-image{display:block;width:100%;height:100%;object-fit:contain}
+.decision-group{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:12px}
+.decision-button{min-height:54px;padding:9px 7px;border:2px solid #252824;border-radius:12px;background:#fff;color:#191b18;font:inherit;font-weight:900;cursor:pointer;touch-action:manipulation}
+.decision-button[aria-pressed="true"]{background:#252824;color:#fff}
+.remark-label{display:block;margin-top:12px;font-weight:800;font-size:.9rem}
+.remark-label textarea{display:block;width:100%;min-height:74px;margin-top:6px;padding:10px;border:2px solid #777c74;border-radius:11px;font:inherit;line-height:1.35;resize:vertical}
+.empty-state{padding:26px 18px;background:#fff;border:2px dashed #9b9e96;border-radius:16px;text-align:center;font-weight:750}
+.report-panel{margin-top:26px;padding:17px;background:#fff;border:2px solid #20221e;border-radius:18px;box-shadow:0 4px 0 #20221e}
+.report-panel h2{margin:0 0 14px;font-size:1.5rem}
+.report-panel label{display:block;font-weight:900}
+#grandpaMessage{display:block;width:100%;min-height:118px;margin-top:7px;padding:12px;border:2px solid #777c74;border-radius:12px;font:inherit;line-height:1.4;resize:vertical}
+.copy-button{width:100%;min-height:60px;margin-top:14px;padding:12px;border:2px solid #20221e;border-radius:12px;background:#ffd84d;color:#171915;font:inherit;font-size:1rem;font-weight:950;cursor:pointer;touch-action:manipulation}
+.copy-status{min-height:1.4em;margin:9px 2px 0;color:#5e635b;font-weight:700}
+button:focus-visible,textarea:focus-visible{outline:3px solid #5e5e5e;outline-offset:2px}
+@media(max-width:700px){.candidate-list{grid-template-columns:1fr}.validation-shell{width:min(100% - 16px,720px)}.summary-panel{gap:5px;padding:7px}.summary-panel span{font-size:.66rem}.candidate-card{padding:11px}.decision-button{min-height:58px}}

@@ -75,29 +75,36 @@ def source_foreground(crop):
     rgba = crop.convert("RGBA")
     w,h=rgba.size
     px=list(rgba.getdata())
-    if not hasattr(source_foreground, "_debug_printed"):
-        source_foreground._debug_printed=True
-        border_debug=[]
-        band_debug=8
-        for yy in range(h):
-            for xx in range(w):
-                if xx<band_debug or yy<band_debug or xx>=w-band_debug or yy>=h-band_debug:
-                    border_debug.append(px[yy*w+xx][:3])
-        print("REBULO059_BG_DEBUG", json.dumps({
-            "corners":[px[0],px[w-1],px[(h-1)*w],px[h*w-1]],
-            "alpha_min":min(p[3] for p in px),
-            "alpha_max":max(p[3] for p in px),
-            "alpha_zero":sum(1 for p in px if p[3]==0),
-            "border_common":Counter(border_debug).most_common(12)
-        }))
     alpha=[p[3] for p in px]
     transparent=sum(1 for a in alpha if a==0)
 
     # If the protected source already carries real alpha, it is authoritative:
     # preserve every non-transparent source pixel, including detached pieces.
     if transparent > (w*h)//100:
-        mask=bytearray(1 if a>0 else 0 for a in alpha)
-        return rgba, mask, "SOURCE_ALPHA_PRESERVED"
+        # The protected PNGs already contain transparency, but the generation
+        # export also carries a sparse halo of near-zero-alpha noise across
+        # the otherwise transparent board. Use the lowest alpha threshold that
+        # clears the quadrant border, then preserve every source pixel at or
+        # above that threshold exactly. No component-size filtering occurs.
+        chosen=None
+        for threshold in (1,2,4,8,12,16,24,32,48,64):
+            candidate=bytearray(1 if a>=threshold else 0 for a in alpha)
+            bb=bbox_from_mask(candidate,w,h)
+            if bb is None:
+                continue
+            l,t,r,b=bb
+            if min(l,t,w-r,h-b)>=4:
+                chosen=(threshold,candidate,bb)
+                break
+        if chosen is None:
+            mask=bytearray(1 if a>0 else 0 for a in alpha)
+            return rgba, mask, "SOURCE_ALPHA_UNRESOLVED_BORDER"
+        threshold,mask,_=chosen
+        out=[]
+        for i,p in enumerate(px):
+            out.append((p[0],p[1],p[2],p[3] if mask[i] else 0))
+        rgba.putdata(out)
+        return rgba, mask, f"SOURCE_ALPHA_PRESERVED_THRESHOLD_{threshold}"
 
     # Otherwise remove only border-connected pixels that match the actual
     # background palette. No component-size or proximity filtering is allowed.

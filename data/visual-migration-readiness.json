@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": "2026-09-28T13:30:48.013Z",
+  "generatedAt": "2026-10-03T10:41:34.776Z",
   "baseline": {
     "activePictogramCount": 28,
     "strictMultiPieceEntries": 922,
@@ -279,10 +279,10 @@
       "source": "rebulo_original",
       "revisionStamped": true,
       "artRevision": "scie-rebulo-pixel-human-validated-v1",
-      "namingReviewAvailable": false,
+      "namingReviewAvailable": true,
       "clinicalStatus": "unreviewed",
-      "readinessScore": 2,
-      "nextGate": "add_revision_bound_naming_review"
+      "readinessScore": 3,
+      "nextGate": "collect_human_naming_observations"
     },
     {
       "id": "raie",
@@ -311,10 +311,10 @@
       "source": "rebulo_original",
       "revisionStamped": true,
       "artRevision": "riz-rebulo-pixel-human-validated-v1",
-      "namingReviewAvailable": false,
+      "namingReviewAvailable": true,
       "clinicalStatus": "unreviewed",
-      "readinessScore": 2,
-      "nextGate": "add_revision_bound_naming_review"
+      "readinessScore": 3,
+      "nextGate": "collect_human_naming_observations"
     },
     {
       "id": "mie",
@@ -407,10 +407,10 @@
       "source": "rebulo_original",
       "revisionStamped": true,
       "artRevision": "nez-rebulo-pixel-human-validated-v1",
-      "namingReviewAvailable": false,
+      "namingReviewAvailable": true,
       "clinicalStatus": "unreviewed",
-      "readinessScore": 2,
-      "nextGate": "add_revision_bound_naming_review"
+      "readinessScore": 3,
+      "nextGate": "collect_human_naming_observations"
     },
     {
       "id": "rat",
@@ -455,10 +455,10 @@
       "source": "rebulo_original",
       "revisionStamped": true,
       "artRevision": "de-rebulo-pixel-human-validated-v1",
-      "namingReviewAvailable": false,
+      "namingReviewAvailable": true,
       "clinicalStatus": "unreviewed",
-      "readinessScore": 2,
-      "nextGate": "add_revision_bound_naming_review"
+      "readinessScore": 3,
+      "nextGate": "collect_human_naming_observations"
     }
   ],
   "provenance": {

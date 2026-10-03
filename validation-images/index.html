@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f5f1e8">
+  <title>REBULO — Validation d’images</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="validation-shell">
+    <header class="hero">
+      <p class="eyebrow">REBULO · validation humaine</p>
+      <h1>Validation d’images</h1>
+      <p id="lotLabel" class="lot-label">Chargement du lot…</p>
+      <p class="lede">Valide ou refuse chaque image. La remarque est facultative et les choix restent enregistrés dans ce navigateur.</p>
+    </header>
+
+    <section class="summary-panel" aria-label="Résumé du lot">
+      <div><strong id="totalCount">0</strong><span>Total</span></div>
+      <div><strong id="validatedCount">0</strong><span>Validées</span></div>
+      <div><strong id="refusedCount">0</strong><span>Refusées</span></div>
+      <div><strong id="untreatedCount">0</strong><span>Non traitées</span></div>
+    </section>
+
+    <section id="candidateList" class="candidate-list" aria-live="polite"></section>
+    <p id="emptyState" class="empty-state" hidden>Aucune image dans ce lot.</p>
+
+    <section class="report-panel">
+      <h2>Compte rendu</h2>
+      <label for="grandpaMessage">Message pour Grand-père</label>
+      <textarea id="grandpaMessage" placeholder="Message libre facultatif…"></textarea>
+      <button id="copyReport" class="copy-button" type="button">COPIER LE COMPTE RENDU</button>
+      <p id="copyStatus" class="copy-status" aria-live="polite"></p>
+    </section>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

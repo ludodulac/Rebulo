@@ -75,6 +75,21 @@ def source_foreground(crop):
     rgba = crop.convert("RGBA")
     w,h=rgba.size
     px=list(rgba.getdata())
+    if not hasattr(source_foreground, "_debug_printed"):
+        source_foreground._debug_printed=True
+        border_debug=[]
+        band_debug=8
+        for yy in range(h):
+            for xx in range(w):
+                if xx<band_debug or yy<band_debug or xx>=w-band_debug or yy>=h-band_debug:
+                    border_debug.append(px[yy*w+xx][:3])
+        print("REBULO059_BG_DEBUG", json.dumps({
+            "corners":[px[0],px[w-1],px[(h-1)*w],px[h*w-1]],
+            "alpha_min":min(p[3] for p in px),
+            "alpha_max":max(p[3] for p in px),
+            "alpha_zero":sum(1 for p in px if p[3]==0),
+            "border_common":Counter(border_debug).most_common(12)
+        }))
     alpha=[p[3] for p in px]
     transparent=sum(1 for a in alpha if a==0)
 

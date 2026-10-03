@@ -1,6 +1,15 @@
 from PIL import Image, ImageDraw
 import cv2, numpy as np, os, glob, shutil
 
+# REBULO-059 canonical rule:
+# This historical builder is retained only to reproduce the already-recorded REBULO-058 lot.
+# It must never be used as a production method for new REBULO PIXEL v1 candidates.
+if os.environ.get('REBULO_ALLOW_HISTORICAL_058_REPRODUCTION') != '1':
+    raise SystemExit(
+        'DEPRECATED BY REBULO-059: programmatic PIL/SVG-style drawing is forbidden '
+        'for new REBULO PIXEL v1 candidates. See docs/REBULO_GRAPHIC_PRODUCTION_RULES.md'
+    )
+
 OUT='assets/validation-candidates/lot-002'
 SRC='/tmp/rebulo058'
 os.makedirs(OUT,exist_ok=True)

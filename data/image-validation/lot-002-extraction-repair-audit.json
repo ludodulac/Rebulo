@@ -1,0 +1,1107 @@
+{
+  "schema_version": 1,
+  "mission": "REBULO-059",
+  "root_cause": {
+    "confirmed": true,
+    "fixed_crop_loss": "REBULO-058 cropped fixed rectangles TL=(0,0,744,488), TR=(792,0,1536,488), BL=(0,536,744,1024), BR=(792,536,1536,1024). Protected-source drawings visibly cross those artificial gaps, so legitimate source pixels were cut before segmentation.",
+    "component_filter_loss": "REBULO-058 then used GrabCut + connectedComponentsWithStats and retained only sufficiently large/spatially-near components. Legitimate detached pieces could therefore be removed.",
+    "repair": "Segment the complete protected board. Keep every strong component, group components by visual-cell centroid, assign every retained source pixel to the nearest complete strong seed, and copy the exact original RGBA pixels to an individual transparent canvas without resampling."
+  },
+  "strong_alpha_threshold": 16,
+  "retained_alpha_threshold": 8,
+  "retained_alpha_note": "Source PNGs include near-zero-alpha export halo. Pixels with alpha < 8 are treated as transparent halo; every source pixel with alpha >= 8 is assigned and preserved.",
+  "source_images_checked": 23,
+  "technical_images_checked_including_doigt": 24,
+  "source_actually_complete": [
+    "FOURCHETTE",
+    "TIGRE",
+    "ABEILLE",
+    "CASQUE",
+    "VALISE",
+    "COCHON",
+    "HOMARD",
+    "BOUTEILLE",
+    "GÂTEAU",
+    "VENT",
+    "BEURRE",
+    "BOTTE",
+    "OIGNON",
+    "CERF",
+    "ROC",
+    "GOMME",
+    "POUCE",
+    "SAC",
+    "POULE",
+    "AIL",
+    "LAC",
+    "DRAP",
+    "SABLE"
+  ],
+  "source_already_truncated": [],
+  "repaired_extractions": [
+    "FOURCHETTE",
+    "TIGRE",
+    "ABEILLE",
+    "CASQUE",
+    "VALISE",
+    "COCHON",
+    "HOMARD",
+    "BOUTEILLE",
+    "GÂTEAU",
+    "VENT",
+    "BEURRE",
+    "BOTTE",
+    "OIGNON",
+    "CERF",
+    "ROC",
+    "GOMME",
+    "POUCE",
+    "SAC",
+    "POULE",
+    "AIL",
+    "LAC",
+    "DRAP",
+    "SABLE"
+  ],
+  "doigt_status": "NOT_EVALUATED",
+  "doigt_source_complete": true,
+  "pixel_loss_comparison_method": "For each protected board, every source pixel with alpha >= 8 is assigned to exactly one of the four complete source drawings using nearest strong-component geometry. The repaired candidate is a pure translation of those exact RGBA pixels onto a transparent 1024x1024 canvas. Foreground pixel count and connected-component size multiset must be identical before and after extraction; required loss is zero.",
+  "no_new_drawing_generated": true,
+  "rows": [
+    {
+      "concept": "FOURCHETTE",
+      "candidate_id": "lot002-fourchette-source-v1",
+      "repair_required": true,
+      "source_board": "ops/rebulo-058-sources/boardA.png",
+      "source_position": "TL",
+      "source_complete": true,
+      "source_bbox": [
+        95,
+        14,
+        685,
+        529
+      ],
+      "source_margins": [
+        95,
+        14,
+        851,
+        495
+      ],
+      "source_alpha_threshold": 8,
+      "source_pixels_retained": 64483,
+      "source_components_retained": 11,
+      "old_extraction_asset": "assets/validation-candidates/lot-002/additional-252-fourchette.png",
+      "old_extraction": {
+        "alpha_pixels": 20372,
+        "components": 1,
+        "component_sizes": [
+          20372
+        ],
+        "dimensions": [
+          512,
+          512
+        ]
+      },
+      "repaired_asset": "assets/validation-candidates/lot-002-extraction-repair/repair-fourchette.png",
+      "repaired_pixels": 64483,
+      "repaired_components": 11,
+      "pixel_loss_count": 0,
+      "component_loss_count": 0,
+      "resampled": false,
+      "creative_change": false
+    },
+    {
+      "concept": "TIGRE",
+      "candidate_id": "lot002-tigre-source-v1",
+      "repair_required": true,
+      "source_board": "ops/rebulo-058-sources/boardA.png",
+      "source_position": "TR",
+      "source_complete": true,
+      "source_bbox": [
+        734,
+        47,
+        1479,
+        493
+      ],
+      "source_margins": [
+        734,
+        47,
+        57,
+        531
+      ],
+      "source_alpha_threshold": 8,
+      "source_pixels_retained": 206151,
+      "source_components_retained": 12,
+      "old_extraction_asset": "assets/validation-candidates/lot-002/additional-262-tigre.png",
+      "old_extraction": {
+        "alpha_pixels": 35524,
+        "components": 2,
+        "component_sizes": [
+          35096,
+          428
+        ],
+        "dimensions": [
+          512,
+          512
+        ]
+      },
+      "repaired_asset": "assets/validation-candidates/lot-002-extraction-repair/repair-tigre.png",
+      "repaired_pixels": 206151,
+      "repaired_components": 12,
+      "pixel_loss_count": 0,
+      "component_loss_count": 0,
+      "resampled": false,
+      "creative_change": false
+    },
+    {
+      "concept": "ABEILLE",
+      "candidate_id": "lot002-abeille-source-v1",
+      "repair_required": true,
+      "source_board": "ops/rebulo-058-sources/boardA.png",
+      "source_position": "BL",
+      "source_complete": true,
+      "source_bbox": [
+        146,
+        515,
+        782,
+        999
+      ],
+      "source_margins": [
+        146,
+        515,
+        754,
+        25
+      ],
+      "source_alpha_threshold": 8,
+      "source_pixels_retained": 137133,
+      "source_components_retained": 11,
+      "old_extraction_asset": "assets/validation-candidates/lot-002/additional-281-abeille.png",
+      "old_extraction": {
+        "alpha_pixels": 35706,
+        "components": 3,
+        "component_sizes": [
+          17999,
+          17314,
+          393
+        ],
+        "dimensions": [
+          512,
+          512
+        ]
+      },
+      "repaired_asset": "assets/validation-candidates/lot-002-extraction-repair/repair-abeille.png",
+      "repaired_pixels": 137133,
+      "repaired_components": 11,
+      "pixel_loss_count": 0,
+      "component_loss_count": 0,
+      "resampled": false,
+      "creative_change": false
+    },
+    {
+      "concept": "CASQUE",
+      "candidate_id": "lot002-casque-source-v1",
+      "repair_required": true,
+      "source_board": "ops/rebulo-058-sources/boardA.png",
+      "source_position": "BR",
+      "source_complete": true,
+      "source_bbox": [
+        885,
+        514,
+        1401,
+        999
+      ],
+      "source_margins": [
+        885,
+        514,
+        135,
+        25
+      ],
+      "source_alpha_threshold": 8,
+      "source_pixels_retained": 196901,
+      "source_components_retained": 3,
+      "old_extraction_asset": "assets/validation-candidates/lot-002/additional-254-casque.png",
+      "old_extraction": {
+        "alpha_pixels": 49054,
+        "components": 1,
+        "component_sizes": [
+          49054
+        ],
+        "dimensions": [
+          512,
+          512
+        ]
+      },
+      "repaired_asset": "assets/validation-candidates/lot-002-extraction-repair/repair-casque.png",
+      "repaired_pixels": 196901,
+      "repaired_components": 3,
+      "pixel_loss_count": 0,
+      "component_loss_count": 0,
+      "resampled": false,
+      "creative_change": false
+    },
+    {
+      "concept": "VALISE",
+      "candidate_id": "lot002-valise-source-v1",
+      "repair_required": true,
+      "source_board": "ops/rebulo-058-sources/boardB.png",
+      "source_position": "TL",
+      "source_complete": true,
+      "source_bbox": [
+        321,
+        5,
+        638,
+        518
+      ],
+      "source_margins": [
+        321,
+        5,
+        898,
+        506
+      ],
+      "source_alpha_threshold": 8,
+      "source_pixels_retained": 120245,
+      "source_components_retained": 6,
+      "old_extraction_asset": "assets/validation-candidates/lot-002/additional-172-valise.png",
+      "old_extraction": {
+        "alpha_pixels": 33511,
+        "components": 4,
+        "component_sizes": [
+          31776,
+          717,
+          584,
+          434
+        ],
+        "dimensions": [
+          512,
+          512
+        ]
+      },
+      "repaired_asset": "assets/validation-candidates/lot-002-extraction-repair/repair-valise.png",
+      "repaired_pixels": 120245,
+      "repaired_components": 6,
+      "pixel_loss_count": 0,
+      "component_loss_count": 0,
+      "resampled": false,
+      "creative_change": false
+    },
+    {
+      "concept": "COCHON",
+      "candidate_id": "lot002-cochon-source-v1",
+      "repair_required": true,
+      "source_board": "ops/rebulo-058-sources/boardB.png",
+      "source_position": "BL",
+      "source_complete": true,
+      "source_bbox": [
+        217,
+        528,
+        807,
+        983
+      ],
+      "source_margins": [
+        217,
+        528,
+        729,
+        41
+      ],
+      "source_alpha_threshold": 8,
+      "source_pixels_retained": 169558,
+      "source_components_retained": 9,
+      "old_extraction_asset": "assets/validation-candidates/lot-002/additional-185-cochon.png",
+      "old_extraction": {
+        "alpha_pixels": 60949,
+        "components": 2,
+        "component_sizes": [
+          59551,
+          1398
+        ],
+        "dimensions": [
+          512,
+          512
+        ]
+      },
+      "repaired_asset": "assets/validation-candidates/lot-002-extraction-repair/repair-cochon.png",
+      "repaired_pixels": 169558,
+      "repaired_components": 9,
+      "pixel_loss_count": 0,
+      "component_loss_count": 0,
+      "resampled": false,
+      "creative_change": false
+    },
+    {
+      "concept": "HOMARD",
+      "candidate_id": "lot002-homard-source-v1",
+      "repair_required": true,
+      "source_board": "ops/rebulo-058-sources/boardB.png",
+      "source_position": "BR",
+      "source_complete": true,
+      "source_bbox": [
+        915,
+        498,
+        1319,
+        1004
+      ],
+      "source_margins": [
+        915,
+        498,
+        217,
+        20
+      ],
+      "source_alpha_threshold": 8,
+      "source_pixels_retained": 131016,
+      "source_components_retained": 20,
+      "old_extraction_asset": "assets/validation-candidates/lot-002/additional-248-homard.png",
+      "old_extraction": {
+        "alpha_pixels": 40506,
+        "components": 9,
+        "component_sizes": [
+          19588,
+          7697,
+          7595,
+          1113,
+          1074,
+          887,
+          879,
+          857,
+          816
+        ],
+        "dimensions": [
+          512,
+          512
+        ]
+      },
+      "repaired_asset": "assets/validation-candidates/lot-002-extraction-repair/repair-homard.png",
+      "repaired_pixels": 131016,
+      "repaired_components": 20,
+      "pixel_loss_count": 0,
+      "component_loss_count": 0,
+      "resampled": false,
+      "creative_change": false
+    },
+    {
+      "concept": "BOUTEILLE",
+      "candidate_id": "lot002-bouteille-source-v1",
+      "repair_required": true,
+      "source_board": "ops/rebulo-058-sources/boardC.png",
+      "source_position": "TR",
+      "source_complete": true,
+      "source_bbox": [
+        989,
+        6,
+        1396,
+        533
+      ],
+      "source_margins": [
+        989,
+        6,
+        140,
+        491
+      ],
+      "source_alpha_threshold": 8,
+      "source_pixels_retained": 113805,
+      "source_components_retained": 9,
+      "old_extraction_asset": "assets/validation-candidates/lot-002/additional-149-bouteille.png",
+      "old_extraction": {
+        "alpha_pixels": 35354,
+        "components": 1,
+        "component_sizes": [
+          35354
+        ],
+        "dimensions": [
+          512,
+          512
+        ]
+      },
+      "repaired_asset": "assets/validation-candidates/lot-002-extraction-repair/repair-bouteille.png",
+      "repaired_pixels": 113805,
+      "repaired_components": 9,
+      "pixel_loss_count": 0,
+      "component_loss_count": 0,
+      "resampled": false,
+      "creative_change": false
+    },
+    {
+      "concept": "GÂTEAU",
+      "candidate_id": "lot002-gateau-source-v1",
+      "repair_required": true,
+      "source_board": "ops/rebulo-058-sources/boardC.png",
+      "source_position": "BR",
+      "source_complete": true,
+      "source_bbox": [
+        812,
+        549,
+        1421,
+        995
+      ],
+      "source_margins": [
+        812,
+        549,
+        115,
+        29
+      ],
+      "source_alpha_threshold": 8,
+      "source_pixels_retained": 198960,
+      "source_components_retained": 6,
+      "old_extraction_asset": "assets/validation-candidates/lot-002/additional-173-gateau.png",
+      "old_extraction": {
+        "alpha_pixels": 77746,
+        "components": 1,
+        "component_sizes": [
+          77746
+        ],
+        "dimensions": [
+          512,
+          512
+        ]
+      },
+      "repaired_asset": "assets/validation-candidates/lot-002-extraction-repair/repair-gateau.png",
+      "repaired_pixels": 198960,
+      "repaired_components": 6,
+      "pixel_loss_count": 0,
+      "component_loss_count": 0,
+      "resampled": false,
+      "creative_change": false
+    },
+    {
+      "concept": "VENT",
+      "candidate_id": "lot002-vent-source-v1",
+      "repair_required": true,
+      "source_board": "ops/rebulo-058-sources/boardD.png",
+      "source_position": "TL",
+      "source_complete": true,
+      "source_bbox": [
+        140,
+        43,
+        781,
+        534
+      ],
+      "source_margins": [
+        140,
+        43,
+        755,
+        490
+      ],
+      "source_alpha_threshold": 8,
+      "source_pixels_retained": 135187,
+      "source_components_retained": 31,
+      "old_extraction_asset": "assets/validation-candidates/lot-002/additional-002-vent.png",
+      "old_extraction": {
+        "alpha_pixels": 26220,
+        "components": 3,
+        "component_sizes": [
+          23347,
+          1809,
+          1064
+        ],
+        "dimensions": [
+          512,
+          512
+        ]
+      },
+      "repaired_asset": "assets/validation-candidates/lot-002-extraction-repair/repair-vent.png",
+      "repaired_pixels": 135187,
+      "repaired_components": 31,
+      "pixel_loss_count": 0,
+      "component_loss_count": 0,
+      "resampled": false,
+      "creative_change": false
+    },
+    {
+      "concept": "DOIGT",
+      "candidate_id": "lot002-doigt-source-v1",
+      "repair_required": false,
+      "source_board": "ops/rebulo-058-sources/boardD.png",
+      "source_position": "BL",
+      "source_complete": true,
+      "source_bbox": [
+        257,
+        508,
+        596,
+        999
+      ],
+      "source_margins": [
+        257,
+        508,
+        940,
+        25
+      ],
+      "source_alpha_threshold": 8,
+      "source_pixels_retained": 88153,
+      "source_components_retained": 8,
+      "old_extraction_asset": "assets/validation-candidates/lot-002/additional-080-doigt.png",
+      "old_extraction": {
+        "alpha_pixels": 30814,
+        "components": 4,
+        "component_sizes": [
+          26568,
+          3266,
+          687,
+          293
+        ],
+        "dimensions": [
+          512,
+          512
+        ]
+      },
+      "repaired_asset": "assets/validation-candidates/lot-002-extraction-repair/repair-doigt.png",
+      "repaired_pixels": 88153,
+      "repaired_components": 8,
+      "pixel_loss_count": 0,
+      "component_loss_count": 0,
+      "resampled": false,
+      "creative_change": false
+    },
+    {
+      "concept": "BEURRE",
+      "candidate_id": "lot002-beurre-source-v1",
+      "repair_required": true,
+      "source_board": "ops/rebulo-058-sources/boardE.png",
+      "source_position": "TL",
+      "source_complete": true,
+      "source_bbox": [
+        119,
+        111,
+        753,
+        495
+      ],
+      "source_margins": [
+        119,
+        111,
+        783,
+        529
+      ],
+      "source_alpha_threshold": 8,
+      "source_pixels_retained": 148029,
+      "source_components_retained": 4,
+      "old_extraction_asset": "assets/validation-candidates/lot-002/additional-290-beurre.png",
+      "old_extraction": {
+        "alpha_pixels": 59093,
+        "components": 1,
+        "component_sizes": [
+          59093
+        ],
+        "dimensions": [
+          512,
+          512
+        ]
+      },
+      "repaired_asset": "assets/validation-candidates/lot-002-extraction-repair/repair-beurre.png",
+      "repaired_pixels": 148029,
+      "repaired_components": 4,
+      "pixel_loss_count": 0,
+      "component_loss_count": 0,
+      "resampled": false,
+      "creative_change": false
+    },
+    {
+      "concept": "BOTTE",
+      "candidate_id": "lot002-botte-source-v1",
+      "repair_required": true,
+      "source_board": "ops/rebulo-058-sources/boardE.png",
+      "source_position": "TR",
+      "source_complete": true,
+      "source_bbox": [
+        926,
+        14,
+        1313,
+        478
+      ],
+      "source_margins": [
+        926,
+        14,
+        223,
+        546
+      ],
+      "source_alpha_threshold": 8,
+      "source_pixels_retained": 109141,
+      "source_components_retained": 6,
+      "old_extraction_asset": "assets/validation-candidates/lot-002/additional-292-botte.png",
+      "old_extraction": {
+        "alpha_pixels": 14114,
+        "components": 2,
+        "component_sizes": [
+          9048,
+          5066
+        ],
+        "dimensions": [
+          512,
+          512
+        ]
+      },
+      "repaired_asset": "assets/validation-candidates/lot-002-extraction-repair/repair-botte.png",
+      "repaired_pixels": 109141,
+      "repaired_components": 6,
+      "pixel_loss_count": 0,
+      "component_loss_count": 0,
+      "resampled": false,
+      "creative_change": false
+    },
+    {
+      "concept": "OIGNON",
+      "candidate_id": "lot002-oignon-source-v1",
+      "repair_required": true,
+      "source_board": "ops/rebulo-058-sources/boardE.png",
+      "source_position": "BL",
+      "source_complete": true,
+      "source_bbox": [
+        223,
+        522,
+        643,
+        1013
+      ],
+      "source_margins": [
+        223,
+        522,
+        893,
+        11
+      ],
+      "source_alpha_threshold": 8,
+      "source_pixels_retained": 136357,
+      "source_components_retained": 5,
+      "old_extraction_asset": "assets/validation-candidates/lot-002/additional-353-oignon.png",
+      "old_extraction": {
+        "alpha_pixels": 52803,
+        "components": 1,
+        "component_sizes": [
+          52803
+        ],
+        "dimensions": [
+          512,
+          512
+        ]
+      },
+      "repaired_asset": "assets/validation-candidates/lot-002-extraction-repair/repair-oignon.png",
+      "repaired_pixels": 136357,
+      "repaired_components": 5,
+      "pixel_loss_count": 0,
+      "component_loss_count": 0,
+      "resampled": false,
+      "creative_change": false
+    },
+    {
+      "concept": "CERF",
+      "candidate_id": "lot002-cerf-source-v1",
+      "repair_required": true,
+      "source_board": "ops/rebulo-058-sources/boardE.png",
+      "source_position": "BR",
+      "source_complete": true,
+      "source_bbox": [
+        875,
+        450,
+        1393,
+        1014
+      ],
+      "source_margins": [
+        875,
+        450,
+        143,
+        10
+      ],
+      "source_alpha_threshold": 8,
+      "source_pixels_retained": 122703,
+      "source_components_retained": 14,
+      "old_extraction_asset": "assets/validation-candidates/lot-002/additional-377-cerf.png",
+      "old_extraction": {
+        "alpha_pixels": 36919,
+        "components": 3,
+        "component_sizes": [
+          32854,
+          2421,
+          1644
+        ],
+        "dimensions": [
+          512,
+          512
+        ]
+      },
+      "repaired_asset": "assets/validation-candidates/lot-002-extraction-repair/repair-cerf.png",
+      "repaired_pixels": 122703,
+      "repaired_components": 14,
+      "pixel_loss_count": 0,
+      "component_loss_count": 0,
+      "resampled": false,
+      "creative_change": false
+    },
+    {
+      "concept": "ROC",
+      "candidate_id": "lot002-roc-source-v1",
+      "repair_required": true,
+      "source_board": "ops/rebulo-058-sources/boardF.png",
+      "source_position": "BL",
+      "source_complete": true,
+      "source_bbox": [
+        77,
+        522,
+        752,
+        1007
+      ],
+      "source_margins": [
+        77,
+        522,
+        784,
+        17
+      ],
+      "source_alpha_threshold": 8,
+      "source_pixels_retained": 199809,
+      "source_components_retained": 4,
+      "old_extraction_asset": "assets/validation-candidates/lot-002/additional-118-roc.png",
+      "old_extraction": {
+        "alpha_pixels": 61801,
+        "components": 3,
+        "component_sizes": [
+          56351,
+          2879,
+          2571
+        ],
+        "dimensions": [
+          512,
+          512
+        ]
+      },
+      "repaired_asset": "assets/validation-candidates/lot-002-extraction-repair/repair-roc.png",
+      "repaired_pixels": 199809,
+      "repaired_components": 4,
+      "pixel_loss_count": 0,
+      "component_loss_count": 0,
+      "resampled": false,
+      "creative_change": false
+    },
+    {
+      "concept": "GOMME",
+      "candidate_id": "lot002-gomme-source-v1",
+      "repair_required": true,
+      "source_board": "ops/rebulo-058-sources/boardF.png",
+      "source_position": "BR",
+      "source_complete": true,
+      "source_bbox": [
+        866,
+        575,
+        1417,
+        979
+      ],
+      "source_margins": [
+        866,
+        575,
+        119,
+        45
+      ],
+      "source_alpha_threshold": 8,
+      "source_pixels_retained": 129764,
+      "source_components_retained": 3,
+      "old_extraction_asset": "assets/validation-candidates/lot-002/additional-163-gomme.png",
+      "old_extraction": {
+        "alpha_pixels": 51207,
+        "components": 1,
+        "component_sizes": [
+          51207
+        ],
+        "dimensions": [
+          512,
+          512
+        ]
+      },
+      "repaired_asset": "assets/validation-candidates/lot-002-extraction-repair/repair-gomme.png",
+      "repaired_pixels": 129764,
+      "repaired_components": 3,
+      "pixel_loss_count": 0,
+      "component_loss_count": 0,
+      "resampled": false,
+      "creative_change": false
+    },
+    {
+      "concept": "POUCE",
+      "candidate_id": "lot002-pouce-source-v1",
+      "repair_required": true,
+      "source_board": "ops/rebulo-058-sources/boardG.png",
+      "source_position": "TL",
+      "source_complete": true,
+      "source_bbox": [
+        193,
+        8,
+        623,
+        499
+      ],
+      "source_margins": [
+        193,
+        8,
+        913,
+        525
+      ],
+      "source_alpha_threshold": 8,
+      "source_pixels_retained": 121711,
+      "source_components_retained": 2,
+      "old_extraction_asset": "assets/validation-candidates/lot-002/additional-081-pouce.png",
+      "old_extraction": {
+        "alpha_pixels": 46789,
+        "components": 1,
+        "component_sizes": [
+          46789
+        ],
+        "dimensions": [
+          512,
+          512
+        ]
+      },
+      "repaired_asset": "assets/validation-candidates/lot-002-extraction-repair/repair-pouce.png",
+      "repaired_pixels": 121711,
+      "repaired_components": 2,
+      "pixel_loss_count": 0,
+      "component_loss_count": 0,
+      "resampled": false,
+      "creative_change": false
+    },
+    {
+      "concept": "SAC",
+      "candidate_id": "lot002-sac-source-v1",
+      "repair_required": true,
+      "source_board": "ops/rebulo-058-sources/boardG.png",
+      "source_position": "TR",
+      "source_complete": true,
+      "source_bbox": [
+        811,
+        16,
+        1407,
+        520
+      ],
+      "source_margins": [
+        811,
+        16,
+        129,
+        504
+      ],
+      "source_alpha_threshold": 8,
+      "source_pixels_retained": 203412,
+      "source_components_retained": 10,
+      "old_extraction_asset": "assets/validation-candidates/lot-002/additional-088-sac.png",
+      "old_extraction": {
+        "alpha_pixels": 56441,
+        "components": 1,
+        "component_sizes": [
+          56441
+        ],
+        "dimensions": [
+          512,
+          512
+        ]
+      },
+      "repaired_asset": "assets/validation-candidates/lot-002-extraction-repair/repair-sac.png",
+      "repaired_pixels": 203412,
+      "repaired_components": 10,
+      "pixel_loss_count": 0,
+      "component_loss_count": 0,
+      "resampled": false,
+      "creative_change": false
+    },
+    {
+      "concept": "POULE",
+      "candidate_id": "lot002-poule-source-v1",
+      "repair_required": true,
+      "source_board": "ops/rebulo-058-sources/boardG.png",
+      "source_position": "BL",
+      "source_complete": true,
+      "source_bbox": [
+        186,
+        488,
+        675,
+        1015
+      ],
+      "source_margins": [
+        186,
+        488,
+        861,
+        9
+      ],
+      "source_alpha_threshold": 8,
+      "source_pixels_retained": 140003,
+      "source_components_retained": 8,
+      "old_extraction_asset": "assets/validation-candidates/lot-002/additional-098-poule.png",
+      "old_extraction": {
+        "alpha_pixels": 46705,
+        "components": 1,
+        "component_sizes": [
+          46705
+        ],
+        "dimensions": [
+          512,
+          512
+        ]
+      },
+      "repaired_asset": "assets/validation-candidates/lot-002-extraction-repair/repair-poule.png",
+      "repaired_pixels": 140003,
+      "repaired_components": 8,
+      "pixel_loss_count": 0,
+      "component_loss_count": 0,
+      "resampled": false,
+      "creative_change": false
+    },
+    {
+      "concept": "AIL",
+      "candidate_id": "lot002-ail-source-v1",
+      "repair_required": true,
+      "source_board": "ops/rebulo-058-sources/boardG.png",
+      "source_position": "BR",
+      "source_complete": true,
+      "source_bbox": [
+        864,
+        538,
+        1382,
+        989
+      ],
+      "source_margins": [
+        864,
+        538,
+        154,
+        35
+      ],
+      "source_alpha_threshold": 8,
+      "source_pixels_retained": 139471,
+      "source_components_retained": 3,
+      "old_extraction_asset": "assets/validation-candidates/lot-002/additional-282-ail.png",
+      "old_extraction": {
+        "alpha_pixels": 53671,
+        "components": 1,
+        "component_sizes": [
+          53671
+        ],
+        "dimensions": [
+          512,
+          512
+        ]
+      },
+      "repaired_asset": "assets/validation-candidates/lot-002-extraction-repair/repair-ail.png",
+      "repaired_pixels": 139471,
+      "repaired_components": 3,
+      "pixel_loss_count": 0,
+      "component_loss_count": 0,
+      "resampled": false,
+      "creative_change": false
+    },
+    {
+      "concept": "LAC",
+      "candidate_id": "lot002-lac-source-v1",
+      "repair_required": true,
+      "source_board": "ops/rebulo-058-sources/boardI.png",
+      "source_position": "BL",
+      "source_complete": true,
+      "source_bbox": [
+        41,
+        547,
+        786,
+        983
+      ],
+      "source_margins": [
+        41,
+        547,
+        750,
+        41
+      ],
+      "source_alpha_threshold": 8,
+      "source_pixels_retained": 252006,
+      "source_components_retained": 2,
+      "old_extraction_asset": "assets/validation-candidates/lot-002/additional-057-lac.png",
+      "old_extraction": {
+        "alpha_pixels": 63226,
+        "components": 3,
+        "component_sizes": [
+          61879,
+          692,
+          655
+        ],
+        "dimensions": [
+          512,
+          512
+        ]
+      },
+      "repaired_asset": "assets/validation-candidates/lot-002-extraction-repair/repair-lac.png",
+      "repaired_pixels": 252006,
+      "repaired_components": 2,
+      "pixel_loss_count": 0,
+      "component_loss_count": 0,
+      "resampled": false,
+      "creative_change": false
+    },
+    {
+      "concept": "DRAP",
+      "candidate_id": "lot002-drap-source-v1",
+      "repair_required": true,
+      "source_board": "ops/rebulo-058-sources/boardI.png",
+      "source_position": "BR",
+      "source_complete": true,
+      "source_bbox": [
+        822,
+        572,
+        1505,
+        990
+      ],
+      "source_margins": [
+        822,
+        572,
+        31,
+        34
+      ],
+      "source_alpha_threshold": 8,
+      "source_pixels_retained": 210499,
+      "source_components_retained": 8,
+      "old_extraction_asset": "assets/validation-candidates/lot-002/additional-058-drap.png",
+      "old_extraction": {
+        "alpha_pixels": 74286,
+        "components": 1,
+        "component_sizes": [
+          74286
+        ],
+        "dimensions": [
+          512,
+          512
+        ]
+      },
+      "repaired_asset": "assets/validation-candidates/lot-002-extraction-repair/repair-drap.png",
+      "repaired_pixels": 210499,
+      "repaired_components": 8,
+      "pixel_loss_count": 0,
+      "component_loss_count": 0,
+      "resampled": false,
+      "creative_change": false
+    },
+    {
+      "concept": "SABLE",
+      "candidate_id": "lot002-sable-source-v1",
+      "repair_required": true,
+      "source_board": "ops/rebulo-058-sources/boardJ.png",
+      "source_position": "TL",
+      "source_complete": true,
+      "source_bbox": [
+        40,
+        11,
+        733,
+        521
+      ],
+      "source_margins": [
+        40,
+        11,
+        803,
+        503
+      ],
+      "source_alpha_threshold": 8,
+      "source_pixels_retained": 159482,
+      "source_components_retained": 22,
+      "old_extraction_asset": "assets/validation-candidates/lot-002/additional-059-sable.png",
+      "old_extraction": {
+        "alpha_pixels": 58611,
+        "components": 1,
+        "component_sizes": [
+          58611
+        ],
+        "dimensions": [
+          512,
+          512
+        ]
+      },
+      "repaired_asset": "assets/validation-candidates/lot-002-extraction-repair/repair-sable.png",
+      "repaired_pixels": 159482,
+      "repaired_components": 22,
+      "pixel_loss_count": 0,
+      "component_loss_count": 0,
+      "resampled": false,
+      "creative_change": false
+    }
+  ]
+}

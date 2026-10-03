@@ -7,22 +7,22 @@
       "label": "bas",
       "ipa": "ba",
       "representation_type": "IMAGE",
-      "graphic_status": "CANDIDATE",
+      "graphic_status": "CANONICAL",
       "drive_source_id": null,
       "drive_canonical_asset_id": null,
       "drive_candidate_id": "1hQWeeudJrf4wS5DCVWgjzryk9Gv_AUpP",
-      "github_asset_path": null,
+      "github_asset_path": "assets/validation-candidates/lot-002/additional-bas-drive.png",
       "visual_validation": {
-        "status": "NOT_EVALUATED",
-        "decision_id": null,
-        "decided_at": null,
-        "note": "No explicit human visual validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+        "status": "PASS",
+        "decision_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-bas-drive-v1",
+        "decided_at": "2026-10-03T20:45:00Z",
+        "note": "Human graphic PASS only. Naming and clinical validation remain separate and are not inferred."
       },
       "naming_validation": {
         "status": "NOT_EVALUATED",
         "decision_id": null,
         "decided_at": null,
-        "note": "No explicit human naming validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+        "note": "No naming validation is inferred from lot-002 graphic review."
       },
       "runtime_active": false,
       "runtime_status": "INACTIVE",
@@ -49,44 +49,58 @@
           "observed_at": "2026-09-30T06:35:58Z",
           "authority": "AUTOMATED_DERIVATION",
           "note": "No runtime bank row for IPA ba was verified in the compact runtime snapshot."
+        },
+        {
+          "source_type": "HUMAN_VALIDATION",
+          "source_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-bas-drive-v1",
+          "observed_at": "2026-10-03T20:45:00Z",
+          "authority": "HUMAN_DECISION",
+          "note": "Ludovic accepted this exact graphic in lot-002. Scope: graphic only."
         }
       ],
       "latest_proof": {
-        "proof_type": "DRIVE_FILE",
-        "proof_id": "drive-candidate:bas:1hQWeeudJrf4wS5DCVWgjzryk9Gv_AUpP",
-        "authority": "OBSERVATION",
-        "observed_at": "2026-09-30T06:35:58Z",
-        "drive_file_id": "1hQWeeudJrf4wS5DCVWgjzryk9Gv_AUpP",
-        "note": "Current candidate-folder observation for bas_en_dentelle_pixelisé.png."
+        "proof_type": "HUMAN_VALIDATION",
+        "proof_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-bas-drive-v1",
+        "authority": "HUMAN_DECISION",
+        "observed_at": "2026-10-03T20:45:00Z",
+        "human_validation_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-bas-drive-v1",
+        "note": "Exact lot-002 graphic accepted; no naming or clinical validation inferred."
       },
-      "canonical_decision": null,
+      "canonical_decision": {
+        "proof_type": "HUMAN_VALIDATION",
+        "proof_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-bas-drive-v1",
+        "authority": "CANONICAL_DECISION",
+        "observed_at": "2026-10-03T20:45:00Z",
+        "human_validation_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-bas-drive-v1",
+        "note": "Retained as graphic representation only; no runtime activation is added by REBULO-059."
+      },
       "next_action": {
-        "action": "HUMAN_VISUAL_VALIDATION",
-        "note": "Obtain explicit human visual validation for this candidate before any promotion."
+        "action": "HUMAN_NAMING_VALIDATION",
+        "note": "Graphic PASS recorded. Naming remains NOT_EVALUATED."
       },
-      "updated_at": "2026-09-30T06:35:58Z"
+      "updated_at": "2026-10-03T20:45:00Z"
     },
     {
       "concept_id": "boue",
       "label": "boue",
       "ipa": "bu",
       "representation_type": "IMAGE",
-      "graphic_status": "CANDIDATE",
+      "graphic_status": "CANONICAL",
       "drive_source_id": null,
       "drive_canonical_asset_id": null,
       "drive_candidate_id": "1ou2bOJDTC8DKmoXp8ToQCB8tKvZlyyCM",
-      "github_asset_path": null,
+      "github_asset_path": "assets/validation-candidates/lot-002/additional-boue-drive.png",
       "visual_validation": {
-        "status": "NOT_EVALUATED",
-        "decision_id": null,
-        "decided_at": null,
-        "note": "No explicit human visual validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+        "status": "PASS",
+        "decision_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-boue-drive-v1",
+        "decided_at": "2026-10-03T20:45:00Z",
+        "note": "Human graphic PASS only. Naming and clinical validation remain separate and are not inferred."
       },
       "naming_validation": {
         "status": "NOT_EVALUATED",
         "decision_id": null,
         "decided_at": null,
-        "note": "No explicit human naming validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+        "note": "No naming validation is inferred from lot-002 graphic review."
       },
       "runtime_active": false,
       "runtime_status": "INACTIVE",
@@ -113,44 +127,58 @@
           "observed_at": "2026-09-30T06:35:58Z",
           "authority": "AUTOMATED_DERIVATION",
           "note": "No runtime bank row for IPA bu was verified in the compact runtime snapshot."
+        },
+        {
+          "source_type": "HUMAN_VALIDATION",
+          "source_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-boue-drive-v1",
+          "observed_at": "2026-10-03T20:45:00Z",
+          "authority": "HUMAN_DECISION",
+          "note": "Ludovic accepted this exact graphic in lot-002. Scope: graphic only."
         }
       ],
       "latest_proof": {
-        "proof_type": "DRIVE_FILE",
-        "proof_id": "drive-candidate:boue:1ou2bOJDTC8DKmoXp8ToQCB8tKvZlyyCM",
-        "authority": "OBSERVATION",
-        "observed_at": "2026-09-30T06:35:58Z",
-        "drive_file_id": "1ou2bOJDTC8DKmoXp8ToQCB8tKvZlyyCM",
-        "note": "Current candidate-folder observation for éclaboussure_de_boue_pixel_art.png."
+        "proof_type": "HUMAN_VALIDATION",
+        "proof_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-boue-drive-v1",
+        "authority": "HUMAN_DECISION",
+        "observed_at": "2026-10-03T20:45:00Z",
+        "human_validation_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-boue-drive-v1",
+        "note": "Exact lot-002 graphic accepted; no naming or clinical validation inferred."
       },
-      "canonical_decision": null,
+      "canonical_decision": {
+        "proof_type": "HUMAN_VALIDATION",
+        "proof_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-boue-drive-v1",
+        "authority": "CANONICAL_DECISION",
+        "observed_at": "2026-10-03T20:45:00Z",
+        "human_validation_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-boue-drive-v1",
+        "note": "Retained as graphic representation only; no runtime activation is added by REBULO-059."
+      },
       "next_action": {
-        "action": "HUMAN_VISUAL_VALIDATION",
-        "note": "Obtain explicit human visual validation for this candidate before any promotion."
+        "action": "HUMAN_NAMING_VALIDATION",
+        "note": "Graphic PASS recorded. Naming remains NOT_EVALUATED."
       },
-      "updated_at": "2026-09-30T06:35:58Z"
+      "updated_at": "2026-10-03T20:45:00Z"
     },
     {
       "concept_id": "saut",
       "label": "saut",
       "ipa": "so",
       "representation_type": "IMAGE",
-      "graphic_status": "CANDIDATE",
+      "graphic_status": "CANONICAL",
       "drive_source_id": null,
       "drive_canonical_asset_id": null,
       "drive_candidate_id": "1-6jgCnPHZ44cAqDxKLGJDoY9UyaNdEIS",
-      "github_asset_path": null,
+      "github_asset_path": "assets/validation-candidates/lot-002/additional-saut-drive.png",
       "visual_validation": {
-        "status": "NOT_EVALUATED",
-        "decision_id": null,
-        "decided_at": null,
-        "note": "No explicit human visual validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+        "status": "PASS",
+        "decision_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-saut-drive-v1",
+        "decided_at": "2026-10-03T20:45:00Z",
+        "note": "Human graphic PASS only. Naming and clinical validation remain separate and are not inferred."
       },
       "naming_validation": {
         "status": "NOT_EVALUATED",
         "decision_id": null,
         "decided_at": null,
-        "note": "No explicit human naming validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+        "note": "No naming validation is inferred from lot-002 graphic review."
       },
       "runtime_active": false,
       "runtime_status": "INACTIVE",
@@ -177,44 +205,58 @@
           "observed_at": "2026-09-30T06:35:58Z",
           "authority": "AUTOMATED_DERIVATION",
           "note": "IPA so has an active exact image for the homophone seau, not for concept saut; therefore this SAUT candidate is not marked runtime-active."
+        },
+        {
+          "source_type": "HUMAN_VALIDATION",
+          "source_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-saut-drive-v1",
+          "observed_at": "2026-10-03T20:45:00Z",
+          "authority": "HUMAN_DECISION",
+          "note": "Ludovic accepted this exact graphic in lot-002. Scope: graphic only."
         }
       ],
       "latest_proof": {
-        "proof_type": "DRIVE_FILE",
-        "proof_id": "drive-candidate:saut:1-6jgCnPHZ44cAqDxKLGJDoY9UyaNdEIS",
-        "authority": "OBSERVATION",
-        "observed_at": "2026-09-30T06:35:58Z",
-        "drive_file_id": "1-6jgCnPHZ44cAqDxKLGJDoY9UyaNdEIS",
-        "note": "Current candidate-folder observation for jeune_héroïne_pixel_art_en_plein_saut.png."
+        "proof_type": "HUMAN_VALIDATION",
+        "proof_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-saut-drive-v1",
+        "authority": "HUMAN_DECISION",
+        "observed_at": "2026-10-03T20:45:00Z",
+        "human_validation_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-saut-drive-v1",
+        "note": "Exact lot-002 graphic accepted; no naming or clinical validation inferred."
       },
-      "canonical_decision": null,
+      "canonical_decision": {
+        "proof_type": "HUMAN_VALIDATION",
+        "proof_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-saut-drive-v1",
+        "authority": "CANONICAL_DECISION",
+        "observed_at": "2026-10-03T20:45:00Z",
+        "human_validation_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-saut-drive-v1",
+        "note": "Retained as graphic representation only; no runtime activation is added by REBULO-059."
+      },
       "next_action": {
-        "action": "HUMAN_VISUAL_VALIDATION",
-        "note": "Obtain explicit human visual validation for this candidate before any promotion."
+        "action": "HUMAN_NAMING_VALIDATION",
+        "note": "Graphic PASS recorded. Naming remains NOT_EVALUATED."
       },
-      "updated_at": "2026-09-30T06:35:58Z"
+      "updated_at": "2026-10-03T20:45:00Z"
     },
     {
       "concept_id": "cou",
       "label": "cou",
       "ipa": "ku",
       "representation_type": "IMAGE",
-      "graphic_status": "CANDIDATE",
+      "graphic_status": "CANONICAL",
       "drive_source_id": null,
       "drive_canonical_asset_id": null,
       "drive_candidate_id": "1D5OVrUbsBbRxbWiMh1o37sxhcLC32GRM",
-      "github_asset_path": null,
+      "github_asset_path": "assets/validation-candidates/lot-002/additional-cou-drive.png",
       "visual_validation": {
-        "status": "NOT_EVALUATED",
-        "decision_id": null,
-        "decided_at": null,
-        "note": "No explicit human visual validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+        "status": "PASS",
+        "decision_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-cou-drive-v1",
+        "decided_at": "2026-10-03T20:45:00Z",
+        "note": "Human graphic PASS only. Naming and clinical validation remain separate and are not inferred."
       },
       "naming_validation": {
         "status": "NOT_EVALUATED",
         "decision_id": null,
         "decided_at": null,
-        "note": "No explicit human naming validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+        "note": "No naming validation is inferred from lot-002 graphic review."
       },
       "runtime_active": false,
       "runtime_status": "INACTIVE",
@@ -241,44 +283,58 @@
           "observed_at": "2026-09-30T06:35:58Z",
           "authority": "AUTOMATED_DERIVATION",
           "note": "No runtime bank row for IPA ku was verified in the compact runtime snapshot."
+        },
+        {
+          "source_type": "HUMAN_VALIDATION",
+          "source_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-cou-drive-v1",
+          "observed_at": "2026-10-03T20:45:00Z",
+          "authority": "HUMAN_DECISION",
+          "note": "Ludovic accepted this exact graphic in lot-002. Scope: graphic only."
         }
       ],
       "latest_proof": {
-        "proof_type": "DRIVE_FILE",
-        "proof_id": "drive-candidate:cou:1D5OVrUbsBbRxbWiMh1o37sxhcLC32GRM",
-        "authority": "OBSERVATION",
-        "observed_at": "2026-09-30T06:35:58Z",
-        "drive_file_id": "1D5OVrUbsBbRxbWiMh1o37sxhcLC32GRM",
-        "note": "Current candidate-folder observation for portrait_pixel_art_d_un_cou_et_visage_inférieur.png."
+        "proof_type": "HUMAN_VALIDATION",
+        "proof_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-cou-drive-v1",
+        "authority": "HUMAN_DECISION",
+        "observed_at": "2026-10-03T20:45:00Z",
+        "human_validation_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-cou-drive-v1",
+        "note": "Exact lot-002 graphic accepted; no naming or clinical validation inferred."
       },
-      "canonical_decision": null,
+      "canonical_decision": {
+        "proof_type": "HUMAN_VALIDATION",
+        "proof_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-cou-drive-v1",
+        "authority": "CANONICAL_DECISION",
+        "observed_at": "2026-10-03T20:45:00Z",
+        "human_validation_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-cou-drive-v1",
+        "note": "Retained as graphic representation only; no runtime activation is added by REBULO-059."
+      },
       "next_action": {
-        "action": "HUMAN_VISUAL_VALIDATION",
-        "note": "Obtain explicit human visual validation for this candidate before any promotion."
+        "action": "HUMAN_NAMING_VALIDATION",
+        "note": "Graphic PASS recorded. Naming remains NOT_EVALUATED."
       },
-      "updated_at": "2026-09-30T06:35:58Z"
+      "updated_at": "2026-10-03T20:45:00Z"
     },
     {
       "concept_id": "sang",
       "label": "sang",
       "ipa": "sɑ̃",
       "representation_type": "IMAGE",
-      "graphic_status": "CANDIDATE",
+      "graphic_status": "CANONICAL",
       "drive_source_id": null,
       "drive_canonical_asset_id": null,
       "drive_candidate_id": "1dG8JX4xliwHdVvaYK3z9UDdaPZ9cM5LO",
-      "github_asset_path": null,
+      "github_asset_path": "assets/validation-candidates/lot-002/additional-sang-drive.png",
       "visual_validation": {
-        "status": "NOT_EVALUATED",
-        "decision_id": null,
-        "decided_at": null,
-        "note": "No explicit human visual validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+        "status": "PASS",
+        "decision_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-sang-drive-v1",
+        "decided_at": "2026-10-03T20:45:00Z",
+        "note": "Human graphic PASS only. Naming and clinical validation remain separate and are not inferred."
       },
       "naming_validation": {
         "status": "NOT_EVALUATED",
         "decision_id": null,
         "decided_at": null,
-        "note": "No explicit human naming validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+        "note": "No naming validation is inferred from lot-002 graphic review."
       },
       "runtime_active": false,
       "runtime_status": "INACTIVE",
@@ -305,22 +361,36 @@
           "observed_at": "2026-09-30T06:35:58Z",
           "authority": "AUTOMATED_DERIVATION",
           "note": "A bank row for IPA sɑ̃ exists, but no exact image representation for concept sang was verified."
+        },
+        {
+          "source_type": "HUMAN_VALIDATION",
+          "source_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-sang-drive-v1",
+          "observed_at": "2026-10-03T20:45:00Z",
+          "authority": "HUMAN_DECISION",
+          "note": "Ludovic accepted this exact graphic in lot-002. Scope: graphic only."
         }
       ],
       "latest_proof": {
-        "proof_type": "DRIVE_FILE",
-        "proof_id": "drive-candidate:sang:1dG8JX4xliwHdVvaYK3z9UDdaPZ9cM5LO",
-        "authority": "OBSERVATION",
-        "observed_at": "2026-09-30T06:35:58Z",
-        "drive_file_id": "1dG8JX4xliwHdVvaYK3z9UDdaPZ9cM5LO",
-        "note": "Current candidate-folder observation for goutte_de_sang_pixel_art_éclatante.png."
+        "proof_type": "HUMAN_VALIDATION",
+        "proof_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-sang-drive-v1",
+        "authority": "HUMAN_DECISION",
+        "observed_at": "2026-10-03T20:45:00Z",
+        "human_validation_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-sang-drive-v1",
+        "note": "Exact lot-002 graphic accepted; no naming or clinical validation inferred."
       },
-      "canonical_decision": null,
+      "canonical_decision": {
+        "proof_type": "HUMAN_VALIDATION",
+        "proof_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-sang-drive-v1",
+        "authority": "CANONICAL_DECISION",
+        "observed_at": "2026-10-03T20:45:00Z",
+        "human_validation_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-sang-drive-v1",
+        "note": "Retained as graphic representation only; no runtime activation is added by REBULO-059."
+      },
       "next_action": {
-        "action": "HUMAN_VISUAL_VALIDATION",
-        "note": "Obtain explicit human visual validation for this candidate before any promotion."
+        "action": "HUMAN_NAMING_VALIDATION",
+        "note": "Graphic PASS recorded. Naming remains NOT_EVALUATED."
       },
-      "updated_at": "2026-09-30T06:35:58Z"
+      "updated_at": "2026-10-03T20:45:00Z"
     },
     {
       "concept_id": "hvv72-059-mer",
@@ -497,22 +567,22 @@
       "label": "veau",
       "ipa": "vo",
       "representation_type": "IMAGE",
-      "graphic_status": "CANDIDATE",
+      "graphic_status": "CANONICAL",
       "drive_source_id": null,
       "drive_canonical_asset_id": null,
       "drive_candidate_id": "1CXrttNNvhvqREYpTWlVbl7t8qwxdMao_",
-      "github_asset_path": null,
+      "github_asset_path": "assets/validation-candidates/lot-002/additional-veau-drive.png",
       "visual_validation": {
-        "status": "NOT_EVALUATED",
-        "decision_id": null,
-        "decided_at": null,
-        "note": "No explicit human visual validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+        "status": "PASS",
+        "decision_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-veau-drive-v1",
+        "decided_at": "2026-10-03T20:45:00Z",
+        "note": "Human graphic PASS only. Naming and clinical validation remain separate and are not inferred."
       },
       "naming_validation": {
         "status": "NOT_EVALUATED",
         "decision_id": null,
         "decided_at": null,
-        "note": "No explicit human naming validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+        "note": "No naming validation is inferred from lot-002 graphic review."
       },
       "runtime_active": false,
       "runtime_status": "INACTIVE",
@@ -539,44 +609,58 @@
           "observed_at": "2026-09-30T06:35:58Z",
           "authority": "AUTOMATED_DERIVATION",
           "note": "No runtime bank row for IPA vo was verified in the compact runtime snapshot."
+        },
+        {
+          "source_type": "HUMAN_VALIDATION",
+          "source_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-veau-drive-v1",
+          "observed_at": "2026-10-03T20:45:00Z",
+          "authority": "HUMAN_DECISION",
+          "note": "Ludovic accepted this exact graphic in lot-002. Scope: graphic only."
         }
       ],
       "latest_proof": {
-        "proof_type": "DRIVE_FILE",
-        "proof_id": "drive-candidate:veau:1CXrttNNvhvqREYpTWlVbl7t8qwxdMao_",
-        "authority": "OBSERVATION",
-        "observed_at": "2026-09-30T06:35:58Z",
-        "drive_file_id": "1CXrttNNvhvqREYpTWlVbl7t8qwxdMao_",
-        "note": "Current candidate-folder observation for veau_pixel_art_brun_et_blanc.png."
+        "proof_type": "HUMAN_VALIDATION",
+        "proof_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-veau-drive-v1",
+        "authority": "HUMAN_DECISION",
+        "observed_at": "2026-10-03T20:45:00Z",
+        "human_validation_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-veau-drive-v1",
+        "note": "Exact lot-002 graphic accepted; no naming or clinical validation inferred."
       },
-      "canonical_decision": null,
+      "canonical_decision": {
+        "proof_type": "HUMAN_VALIDATION",
+        "proof_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-veau-drive-v1",
+        "authority": "CANONICAL_DECISION",
+        "observed_at": "2026-10-03T20:45:00Z",
+        "human_validation_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-veau-drive-v1",
+        "note": "Retained as graphic representation only; no runtime activation is added by REBULO-059."
+      },
       "next_action": {
-        "action": "HUMAN_VISUAL_VALIDATION",
-        "note": "Obtain explicit human visual validation for this candidate before any promotion."
+        "action": "HUMAN_NAMING_VALIDATION",
+        "note": "Graphic PASS recorded. Naming remains NOT_EVALUATED."
       },
-      "updated_at": "2026-09-30T06:35:58Z"
+      "updated_at": "2026-10-03T20:45:00Z"
     },
     {
       "concept_id": "fee",
       "label": "fée",
       "ipa": "fe",
       "representation_type": "IMAGE",
-      "graphic_status": "CANDIDATE",
+      "graphic_status": "CANONICAL",
       "drive_source_id": null,
       "drive_canonical_asset_id": null,
       "drive_candidate_id": "1IZkdev7muSfX85azNILY0kubSaNqt4lc",
-      "github_asset_path": null,
+      "github_asset_path": "assets/validation-candidates/lot-002/additional-fee-drive.png",
       "visual_validation": {
-        "status": "NOT_EVALUATED",
-        "decision_id": null,
-        "decided_at": null,
-        "note": "No explicit human visual validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+        "status": "PASS",
+        "decision_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-fee-drive-v1",
+        "decided_at": "2026-10-03T20:45:00Z",
+        "note": "Human graphic PASS only. Naming and clinical validation remain separate and are not inferred."
       },
       "naming_validation": {
         "status": "NOT_EVALUATED",
         "decision_id": null,
         "decided_at": null,
-        "note": "No explicit human naming validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+        "note": "No naming validation is inferred from lot-002 graphic review."
       },
       "runtime_active": false,
       "runtime_status": "INACTIVE",
@@ -603,22 +687,36 @@
           "observed_at": "2026-09-30T06:35:58Z",
           "authority": "AUTOMATED_DERIVATION",
           "note": "No runtime bank row for IPA fe was verified in the compact runtime snapshot."
+        },
+        {
+          "source_type": "HUMAN_VALIDATION",
+          "source_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-fee-drive-v1",
+          "observed_at": "2026-10-03T20:45:00Z",
+          "authority": "HUMAN_DECISION",
+          "note": "Ludovic accepted this exact graphic in lot-002. Scope: graphic only."
         }
       ],
       "latest_proof": {
-        "proof_type": "DRIVE_FILE",
-        "proof_id": "drive-candidate:fee:1IZkdev7muSfX85azNILY0kubSaNqt4lc",
-        "authority": "OBSERVATION",
-        "observed_at": "2026-09-30T06:35:58Z",
-        "drive_file_id": "1IZkdev7muSfX85azNILY0kubSaNqt4lc",
-        "note": "Current candidate-folder observation for fée_pixel_art_aux_ailes_verdoyantes.png."
+        "proof_type": "HUMAN_VALIDATION",
+        "proof_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-fee-drive-v1",
+        "authority": "HUMAN_DECISION",
+        "observed_at": "2026-10-03T20:45:00Z",
+        "human_validation_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-fee-drive-v1",
+        "note": "Exact lot-002 graphic accepted; no naming or clinical validation inferred."
       },
-      "canonical_decision": null,
+      "canonical_decision": {
+        "proof_type": "HUMAN_VALIDATION",
+        "proof_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-fee-drive-v1",
+        "authority": "CANONICAL_DECISION",
+        "observed_at": "2026-10-03T20:45:00Z",
+        "human_validation_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-fee-drive-v1",
+        "note": "Retained as graphic representation only; no runtime activation is added by REBULO-059."
+      },
       "next_action": {
-        "action": "HUMAN_VISUAL_VALIDATION",
-        "note": "Obtain explicit human visual validation for this candidate before any promotion."
+        "action": "HUMAN_NAMING_VALIDATION",
+        "note": "Graphic PASS recorded. Naming remains NOT_EVALUATED."
       },
-      "updated_at": "2026-09-30T06:35:58Z"
+      "updated_at": "2026-10-03T20:45:00Z"
     },
     {
       "concept_id": "compas",
@@ -1172,22 +1270,22 @@
       "label": "carré",
       "ipa": "kaʁe",
       "representation_type": "IMAGE",
-      "graphic_status": "CANDIDATE",
+      "graphic_status": "CANONICAL",
       "drive_source_id": null,
       "drive_canonical_asset_id": null,
       "drive_candidate_id": null,
       "github_asset_path": "assets/validation-candidates/lot-002/mandatory-carre-transparent.png",
       "visual_validation": {
-        "status": "PENDING",
-        "decision_id": "REBULO-058-CARRE-TRANSPARENT-V2",
-        "decided_at": null,
-        "note": "Human requested deterministic removal of the black background from the same blue-square candidate. The transformed candidate still requires human graphic validation."
+        "status": "PASS",
+        "decision_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-carre-blue-transparent-v2",
+        "decided_at": "2026-10-03T20:45:00Z",
+        "note": "Human graphic PASS only. Naming and clinical validation remain separate and are not inferred."
       },
       "naming_validation": {
         "status": "NOT_EVALUATED",
         "decision_id": null,
         "decided_at": null,
-        "note": "No naming validation is inferred from the background-removal request."
+        "note": "No naming validation is inferred from lot-002 graphic review."
       },
       "runtime_active": false,
       "runtime_status": "INACTIVE",
@@ -1235,22 +1333,36 @@
           "observed_at": "2026-10-03T13:17:00Z",
           "authority": "AUTOMATED_DERIVATION",
           "note": "Deterministic alpha-only transformation of catchup-carre-drive-blue-v1; RGB channels and dimensions preserved."
+        },
+        {
+          "source_type": "HUMAN_VALIDATION",
+          "source_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-carre-blue-transparent-v2",
+          "observed_at": "2026-10-03T20:45:00Z",
+          "authority": "HUMAN_DECISION",
+          "note": "Ludovic accepted this exact graphic in lot-002. Scope: graphic only."
         }
       ],
       "latest_proof": {
-        "proof_type": "CERTIFIED_REPORT",
-        "proof_id": "REBULO-058-CARRE-TRANSPARENT-V2",
-        "authority": "AUTOMATED_DERIVATION",
-        "observed_at": "2026-10-03T13:17:00Z",
-        "report_id": "REBULO-058-CARRE-TRANSPARENT-V2",
-        "note": "Background removal verified deterministic; human validation still pending."
+        "proof_type": "HUMAN_VALIDATION",
+        "proof_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-carre-blue-transparent-v2",
+        "authority": "HUMAN_DECISION",
+        "observed_at": "2026-10-03T20:45:00Z",
+        "human_validation_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-carre-blue-transparent-v2",
+        "note": "Exact lot-002 graphic accepted; no naming or clinical validation inferred."
       },
-      "canonical_decision": null,
+      "canonical_decision": {
+        "proof_type": "HUMAN_VALIDATION",
+        "proof_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-carre-blue-transparent-v2",
+        "authority": "CANONICAL_DECISION",
+        "observed_at": "2026-10-03T20:45:00Z",
+        "human_validation_id": "REBULO-059-LOT-002-HUMAN-2026-10-03#lot002-carre-blue-transparent-v2",
+        "note": "Retained as graphic representation only; no runtime activation is added by REBULO-059."
+      },
       "next_action": {
-        "action": "HUMAN_VISUAL_VALIDATION",
-        "note": "Validate the transparent version in lot-002."
+        "action": "HUMAN_NAMING_VALIDATION",
+        "note": "Graphic PASS recorded. Naming remains NOT_EVALUATED."
       },
-      "updated_at": "2026-10-03T13:17:00Z"
+      "updated_at": "2026-10-03T20:45:00Z"
     }
   ]
 }

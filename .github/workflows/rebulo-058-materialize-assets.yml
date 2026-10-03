@@ -1,0 +1,40 @@
+name: REBULO-058 materialize lot-002 binary assets
+
+on:
+  push:
+    branches:
+      - feat/rebulo-058-lot002
+    paths:
+      - 'ops/rebulo-058-assets.ready'
+
+permissions:
+  contents: write
+
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/rebulo-058-lot002
+      - name: Decode and unpack assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat ops/rebulo-058-assets.part-* | base64 -d > /tmp/rebulo058-assets.tar.gz
+          tar -xzf /tmp/rebulo058-assets.tar.gz
+          count="$(find assets/validation-candidates/lot-002 -maxdepth 1 -type f -name '*.png' | wc -l | tr -d ' ')"
+          test "$count" = "50"
+          test -s assets/validation-candidates/lot-002/mandatory-carre-transparent.png
+          test -s assets/validation-candidates/lot-002/mandatory-do.png
+      - name: Commit materialized binary assets and remove transport files
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "rebulo-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add assets/validation-candidates/lot-002
+          git rm -f ops/rebulo-058-assets.part-* ops/rebulo-058-assets.ready .github/workflows/rebulo-058-materialize-assets.yml
+          git commit -m "REBULO-058: materialize lot-002 binary assets [skip ci]"
+          git push origin HEAD:feat/rebulo-058-lot002

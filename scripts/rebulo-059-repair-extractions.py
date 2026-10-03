@@ -9,11 +9,14 @@ OUT = Path("assets/validation-candidates/lot-002-extraction-repair")
 OUT.mkdir(parents=True, exist_ok=True)
 
 # Exact quadrant boxes used by REBULO-058.
+# REBULO-058 discarded a 48 px separator strip around the board centre
+# (x=744..791, y=488..535). REBULO-059 deliberately restores the full
+# four half-board cells so detached pieces extending into that strip survive.
 Q = {
-    "TL": (0, 0, 744, 488),
-    "TR": (792, 0, 1536, 488),
-    "BL": (0, 536, 744, 1024),
-    "BR": (792, 536, 1536, 1024),
+    "TL": (0, 0, 768, 512),
+    "TR": (768, 0, 1536, 512),
+    "BL": (0, 512, 768, 1024),
+    "BR": (768, 512, 1536, 1024),
 }
 
 # 23 human-rejected extractions + DOIGT, which remains NOT_EVALUATED.
@@ -87,7 +90,7 @@ def source_foreground(crop):
         # clears the quadrant border, then preserve every source pixel at or
         # above that threshold exactly. No component-size filtering occurs.
         chosen=None
-        for threshold in (1,2,4,8,12,16,24,32,48,64):
+        for threshold in (1,2,4,8,12,16,24,32,48,64,96,128):
             candidate=bytearray(1 if a>=threshold else 0 for a in alpha)
             bb=bbox_from_mask(candidate,w,h)
             if bb is None:
@@ -260,6 +263,10 @@ repair_rows=[r for r in audit_rows if r["repair_required"]]
 if len(repair_rows)!=23:
     raise RuntimeError(f"expected 23 repair rows, got {len(repair_rows)}")
 if source_incomplete:
+    print("REBULO059_SOURCE_EDGE_DETAILS", json.dumps([
+        {"concept":r["concept"],"margins":r["source_margins"],"method":r["background_method"]}
+        for r in audit_rows if not r["source_complete"]
+    ], ensure_ascii=False))
     raise RuntimeError("SOURCE_ALREADY_TRUNCATED: "+", ".join(source_incomplete))
 if any(r["pixel_loss_count"]!=0 or r["component_loss_count"]!=0 for r in audit_rows):
     raise RuntimeError("integrity loss detected")

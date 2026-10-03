@@ -1,0 +1,76 @@
+name: REBULO-056A Pages mobile smoke
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/rebulo-056a-pages-smoke.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  pages-mobile-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save --ignore-scripts playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Verify deployed validation page on mobile
+        env:
+          TARGET_URL: https://ludodulac.github.io/Rebulo/validation-images/
+        run: |
+          node <<'NODE'
+          const { chromium } = require('playwright');
+          const assert = require('node:assert/strict');
+          const sleep = ms => new Promise(r => setTimeout(r, ms));
+          (async()=>{
+            const browser=await chromium.launch({headless:true});
+            let lastError;
+            try{
+              for(let attempt=1;attempt<=5;attempt++){
+                const context=await browser.newContext({viewport:{width:390,height:844}});
+                const page=await context.newPage();
+                try{
+                  await page.goto(process.env.TARGET_URL,{waitUntil:'domcontentloaded',timeout:45000});
+                  await page.waitForSelector('.candidate-card',{timeout:30000});
+                  assert.equal(await page.locator('.candidate-card').count(),50);
+                  assert.equal(await page.locator('#totalCount').textContent(),'50');
+                  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),390);
+                  const images=page.locator('.candidate-image');
+                  assert.equal(await images.count(),50);
+                  let loaded=0;
+                  for(let i=0;i<50;i++){
+                    const img=images.nth(i);
+                    await img.scrollIntoViewIfNeeded();
+                    await img.evaluate(el=>new Promise((resolve,reject)=>{
+                      if(el.complete)return el.naturalWidth>0?resolve():reject(new Error('unreadable '+el.src));
+                      const timer=setTimeout(()=>reject(new Error('timeout '+el.src)),15000);
+                      el.addEventListener('load',()=>{clearTimeout(timer);resolve();},{once:true});
+                      el.addEventListener('error',()=>{clearTimeout(timer);reject(new Error('load error '+el.src));},{once:true});
+                    }));
+                    if(await img.evaluate(el=>el.complete&&el.naturalWidth>0&&el.naturalHeight>0))loaded++;
+                  }
+                  assert.equal(loaded,50);
+                  console.log(JSON.stringify({url:process.env.TARGET_URL,viewport:[390,844],cards:50,images:50,loaded,scrollWidth:390}));
+                  await context.close();
+                  lastError=null;
+                  break;
+                }catch(error){
+                  lastError=error;
+                  await context.close();
+                  if(attempt<5)await sleep(5000);
+                }
+              }
+              if(lastError)throw lastError;
+            }finally{
+              await browser.close();
+            }
+          })().catch(error=>{console.error(error);process.exit(1);});
+          NODE

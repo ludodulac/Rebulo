@@ -105,7 +105,15 @@ def source_foreground(crop):
         # Keep threshold deliberately tight: only the actual flat/light board
         # background may disappear. Detached subject components are never
         # filtered by size, area, or distance from the largest component.
-        return min(dist(rgb,bg) for bg in bg_palette) <= 12
+        chroma=max(rgb)-min(rgb)
+        # Protected boards use a light neutral backdrop with small tonal
+        # variation. Remove that neutral field only when it is connected to
+        # the crop border; colored/dark subject pixels and detached details
+        # remain foreground regardless of component size.
+        return (
+            min(dist(rgb,bg) for bg in bg_palette) <= 48
+            or (min(rgb) >= 170 and chroma <= 38)
+        )
 
     bg=bytearray(w*h)
     q=deque()

@@ -37,35 +37,5 @@ jobs:
         run: |
           npm install --no-save --ignore-scripts playwright@1.55.0
           npx playwright install --with-deps chromium
-      - name: Build isolated preview bundle
-        run: |
-          rm -rf .rebulo-preview
-          mkdir -p .rebulo-preview/validation-images .rebulo-preview/assets/visible-batch1 .rebulo-preview/assets/rebus .rebulo-preview/assets/research
-          cp -R validation-images/* .rebulo-preview/validation-images/
-          cp -R assets/visible-batch1/individual .rebulo-preview/assets/visible-batch1/
-          cp -R assets/rebus/* .rebulo-preview/assets/rebus/
-          cp assets/research/nid-comic-v1.svg assets/research/carre-stimulus-v1.svg assets/research/cor-horn-comic-v1.svg .rebulo-preview/assets/research/
-
-      - name: Deploy isolated temporary Netlify preview
-        if: github.event_name == 'pull_request'
-        id: preview
-        run: |
-          npx --yes netlify-cli@27.10.2 deploy --allow-anonymous --dir .rebulo-preview --no-build --json > /tmp/rebulo-056-preview.json
-          node <<'NODE' >> "$GITHUB_OUTPUT"
-          const fs=require('fs');
-          const deploy=JSON.parse(fs.readFileSync('/tmp/rebulo-056-preview.json','utf8'));
-          const base=(deploy.deploy_url||deploy.url||'').replace(/\/$/,'');
-          if(!base)throw new Error('Netlify anonymous deploy returned no URL');
-          console.log('url='+base+'/validation-images/');
-          NODE
-          node <<'NODE'
-          const fs=require('fs');
-          const deploy=JSON.parse(fs.readFileSync('/tmp/rebulo-056-preview.json','utf8'));
-          const base=(deploy.deploy_url||deploy.url||'').replace(/\/$/,'');
-          console.log('REBULO_056_PREVIEW_URL='+base+'/validation-images/');
-          NODE
-
       - name: Run mobile browser proof
-        env:
-          REBULO_PUBLIC_PREVIEW_URL: ${{ steps.preview.outputs.url }}
         run: node tests/validation-images-browser.e2e.mjs

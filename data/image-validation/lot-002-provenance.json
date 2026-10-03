@@ -1,0 +1,851 @@
+{
+  "schema_version": 1,
+  "lot_id": "lot-002",
+  "recorded_at": "2026-10-03T13:17:00Z",
+  "policy": {
+    "no_runtime_promotion": true,
+    "no_human_validation_inferred": true,
+    "no_naming_validation_inferred": true,
+    "no_clinical_validation_inferred": true
+  },
+  "counts": {
+    "total": 50,
+    "mandatory": 16,
+    "additional": 34,
+    "new_designs": 15,
+    "deterministic_transformations": 1,
+    "drive_candidates_reused": 7,
+    "protected_source_extractions": 27
+  },
+  "entries": [
+    {
+      "candidate_id": "lot002-banc-pixel-v1",
+      "concept": "BANC",
+      "asset": "assets/validation-candidates/lot-002/mandatory-banc.png",
+      "role": "MANDATORY_16",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "NEW_DESIGN",
+        "method": "programmatic raster pixel-art drawing at low resolution, nearest-neighbor upscale; transparent RGBA",
+        "design_contract": "REBULO PIXEL v1",
+        "canonical_reference": "rebulo-image-012-banc-banc"
+      }
+    },
+    {
+      "candidate_id": "lot002-carre-blue-transparent-v2",
+      "concept": "CARRÉ",
+      "asset": "assets/validation-candidates/lot-002/mandatory-carre-transparent.png",
+      "role": "MANDATORY_16",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "DETERMINISTIC_TRANSFORM",
+        "source_file": "assets/validation-candidates/lot-001-rattrapage/carre.jpg",
+        "source_drive_file_id": "1r4eXwo_8hqqTF19h9b5mjIOn3BB030Vz",
+        "operation": "Set alpha=0 only for near-black neutral background pixels; RGB channels and pixel dimensions unchanged.",
+        "rgb_max_difference": 0,
+        "dimensions_preserved": "1536x1272"
+      }
+    },
+    {
+      "candidate_id": "lot002-lit-pixel-v1",
+      "concept": "LIT",
+      "asset": "assets/validation-candidates/lot-002/mandatory-lit.png",
+      "role": "MANDATORY_16",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "NEW_DESIGN",
+        "method": "programmatic raster pixel-art drawing at low resolution, nearest-neighbor upscale; transparent RGBA",
+        "design_contract": "REBULO PIXEL v1",
+        "canonical_reference": "hvv72-003-lit"
+      }
+    },
+    {
+      "candidate_id": "lot002-corps-pixel-v1",
+      "concept": "CORPS",
+      "asset": "assets/validation-candidates/lot-002/mandatory-corps.png",
+      "role": "MANDATORY_16",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "NEW_DESIGN",
+        "method": "programmatic raster pixel-art drawing at low resolution, nearest-neighbor upscale; transparent RGBA",
+        "design_contract": "REBULO PIXEL v1",
+        "canonical_reference": "corps"
+      }
+    },
+    {
+      "candidate_id": "lot002-eau-pixel-v1",
+      "concept": "EAU",
+      "asset": "assets/validation-candidates/lot-002/mandatory-eau.png",
+      "role": "MANDATORY_16",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "NEW_DESIGN",
+        "method": "programmatic raster pixel-art drawing at low resolution, nearest-neighbor upscale; transparent RGBA",
+        "design_contract": "REBULO PIXEL v1",
+        "canonical_reference": "eau"
+      }
+    },
+    {
+      "candidate_id": "lot002-mat-pixel-v1",
+      "concept": "MÂT",
+      "asset": "assets/validation-candidates/lot-002/mandatory-mat.png",
+      "role": "MANDATORY_16",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "NEW_DESIGN",
+        "method": "programmatic raster pixel-art drawing at low resolution, nearest-neighbor upscale; transparent RGBA",
+        "design_contract": "REBULO PIXEL v1",
+        "canonical_reference": "mat"
+      }
+    },
+    {
+      "candidate_id": "lot002-pas-pixel-v1",
+      "concept": "PAS",
+      "asset": "assets/validation-candidates/lot-002/mandatory-pas.png",
+      "role": "MANDATORY_16",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "NEW_DESIGN",
+        "method": "programmatic raster pixel-art drawing at low resolution, nearest-neighbor upscale; transparent RGBA",
+        "design_contract": "REBULO PIXEL v1",
+        "canonical_reference": "pas"
+      }
+    },
+    {
+      "candidate_id": "lot002-mie-pixel-v1",
+      "concept": "MIE",
+      "asset": "assets/validation-candidates/lot-002/mandatory-mie.png",
+      "role": "MANDATORY_16",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "NEW_DESIGN",
+        "method": "programmatic raster pixel-art drawing at low resolution, nearest-neighbor upscale; transparent RGBA",
+        "design_contract": "REBULO PIXEL v1",
+        "canonical_reference": "mie"
+      }
+    },
+    {
+      "candidate_id": "lot002-pot-pixel-v1",
+      "concept": "POT",
+      "asset": "assets/validation-candidates/lot-002/mandatory-pot.png",
+      "role": "MANDATORY_16",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "NEW_DESIGN",
+        "method": "programmatic raster pixel-art drawing at low resolution, nearest-neighbor upscale; transparent RGBA",
+        "design_contract": "REBULO PIXEL v1",
+        "canonical_reference": "pot"
+      }
+    },
+    {
+      "candidate_id": "lot002-raie-poisson-pixel-v1",
+      "concept": "RAIE",
+      "asset": "assets/validation-candidates/lot-002/mandatory-raie.png",
+      "role": "MANDATORY_16",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "NEW_DESIGN",
+        "method": "programmatic raster pixel-art drawing at low resolution, nearest-neighbor upscale; transparent RGBA",
+        "design_contract": "REBULO PIXEL v1",
+        "canonical_reference": "raie-animal"
+      }
+    },
+    {
+      "candidate_id": "lot002-sol-pixel-v1",
+      "concept": "SOL",
+      "asset": "assets/validation-candidates/lot-002/mandatory-sol.png",
+      "role": "MANDATORY_16",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "NEW_DESIGN",
+        "method": "programmatic raster pixel-art drawing at low resolution, nearest-neighbor upscale; transparent RGBA",
+        "design_contract": "REBULO PIXEL v1",
+        "canonical_reference": "sol"
+      }
+    },
+    {
+      "candidate_id": "lot002-tas-pixel-v1",
+      "concept": "TAS",
+      "asset": "assets/validation-candidates/lot-002/mandatory-tas.png",
+      "role": "MANDATORY_16",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "NEW_DESIGN",
+        "method": "programmatic raster pixel-art drawing at low resolution, nearest-neighbor upscale; transparent RGBA",
+        "design_contract": "REBULO PIXEL v1",
+        "canonical_reference": "tas"
+      }
+    },
+    {
+      "candidate_id": "lot002-terre-pixel-v1",
+      "concept": "TERRE",
+      "asset": "assets/validation-candidates/lot-002/mandatory-terre.png",
+      "role": "MANDATORY_16",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "NEW_DESIGN",
+        "method": "programmatic raster pixel-art drawing at low resolution, nearest-neighbor upscale; transparent RGBA",
+        "design_contract": "REBULO PIXEL v1",
+        "canonical_reference": "terre"
+      }
+    },
+    {
+      "candidate_id": "lot002-tour-pixel-v1",
+      "concept": "TOUR",
+      "asset": "assets/validation-candidates/lot-002/mandatory-tour.png",
+      "role": "MANDATORY_16",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "NEW_DESIGN",
+        "method": "programmatic raster pixel-art drawing at low resolution, nearest-neighbor upscale; transparent RGBA",
+        "design_contract": "REBULO PIXEL v1",
+        "canonical_reference": "tour"
+      }
+    },
+    {
+      "candidate_id": "lot002-cor-pixel-v1",
+      "concept": "COR",
+      "asset": "assets/validation-candidates/lot-002/mandatory-cor.png",
+      "role": "MANDATORY_16",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "NEW_DESIGN",
+        "method": "programmatic raster pixel-art drawing at low resolution, nearest-neighbor upscale; transparent RGBA",
+        "design_contract": "REBULO PIXEL v1",
+        "canonical_reference": "cor"
+      }
+    },
+    {
+      "candidate_id": "lot002-do-note-v1",
+      "concept": "DO",
+      "asset": "assets/validation-candidates/lot-002/mandatory-do.png",
+      "role": "MANDATORY_16",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "NEW_DESIGN",
+        "method": "programmatic raster pixel-art drawing at low resolution, nearest-neighbor upscale; transparent RGBA",
+        "design_contract": "REBULO PIXEL v1",
+        "canonical_reference": "note-do"
+      }
+    },
+    {
+      "candidate_id": "lot002-bas-drive-v1",
+      "concept": "BAS",
+      "asset": "assets/validation-candidates/lot-002/additional-bas-drive.png",
+      "role": "ADDITIONAL_34",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "DRIVE_CANDIDATE",
+        "drive_file_id": "1hQWeeudJrf4wS5DCVWgjzryk9Gv_AUpP",
+        "source_title": "bas_en_dentelle_pixelisé.png",
+        "presentation_copy": "deterministic nearest-neighbor resize/palette optimization for lot-002; no human validation transferred"
+      }
+    },
+    {
+      "candidate_id": "lot002-boue-drive-v1",
+      "concept": "BOUE",
+      "asset": "assets/validation-candidates/lot-002/additional-boue-drive.png",
+      "role": "ADDITIONAL_34",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "DRIVE_CANDIDATE",
+        "drive_file_id": "1ou2bOJDTC8DKmoXp8ToQCB8tKvZlyyCM",
+        "source_title": "éclaboussure_de_boue_pixel_art.png",
+        "presentation_copy": "deterministic nearest-neighbor resize/palette optimization for lot-002; no human validation transferred"
+      }
+    },
+    {
+      "candidate_id": "lot002-saut-drive-v1",
+      "concept": "SAUT",
+      "asset": "assets/validation-candidates/lot-002/additional-saut-drive.png",
+      "role": "ADDITIONAL_34",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "DRIVE_CANDIDATE",
+        "drive_file_id": "1-6jgCnPHZ44cAqDxKLGJDoY9UyaNdEIS",
+        "source_title": "jeune_héroïne_pixel_art_en_plein_saut.png",
+        "presentation_copy": "deterministic nearest-neighbor resize/palette optimization for lot-002; no human validation transferred"
+      }
+    },
+    {
+      "candidate_id": "lot002-cou-drive-v1",
+      "concept": "COU",
+      "asset": "assets/validation-candidates/lot-002/additional-cou-drive.png",
+      "role": "ADDITIONAL_34",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "DRIVE_CANDIDATE",
+        "drive_file_id": "1D5OVrUbsBbRxbWiMh1o37sxhcLC32GRM",
+        "source_title": "portrait_pixel_art_d_un_cou_et_visage_inférieur.png",
+        "presentation_copy": "deterministic nearest-neighbor resize/palette optimization for lot-002; no human validation transferred"
+      }
+    },
+    {
+      "candidate_id": "lot002-sang-drive-v1",
+      "concept": "SANG",
+      "asset": "assets/validation-candidates/lot-002/additional-sang-drive.png",
+      "role": "ADDITIONAL_34",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "DRIVE_CANDIDATE",
+        "drive_file_id": "1dG8JX4xliwHdVvaYK3z9UDdaPZ9cM5LO",
+        "source_title": "goutte_de_sang_pixel_art_éclatante.png",
+        "presentation_copy": "deterministic nearest-neighbor resize/palette optimization for lot-002; no human validation transferred"
+      }
+    },
+    {
+      "candidate_id": "lot002-veau-drive-v1",
+      "concept": "VEAU",
+      "asset": "assets/validation-candidates/lot-002/additional-veau-drive.png",
+      "role": "ADDITIONAL_34",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "DRIVE_CANDIDATE",
+        "drive_file_id": "1CXrttNNvhvqREYpTWlVbl7t8qwxdMao_",
+        "source_title": "veau_pixel_art_brun_et_blanc.png",
+        "presentation_copy": "deterministic nearest-neighbor resize/palette optimization for lot-002; no human validation transferred"
+      }
+    },
+    {
+      "candidate_id": "lot002-fee-drive-v1",
+      "concept": "FÉE",
+      "asset": "assets/validation-candidates/lot-002/additional-fee-drive.png",
+      "role": "ADDITIONAL_34",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "DRIVE_CANDIDATE",
+        "drive_file_id": "1IZkdev7muSfX85azNILY0kubSaNqt4lc",
+        "source_title": "fée_pixel_art_aux_ailes_verdoyantes.png",
+        "presentation_copy": "deterministic nearest-neighbor resize/palette optimization for lot-002; no human validation transferred"
+      }
+    },
+    {
+      "candidate_id": "lot002-fourchette-source-v1",
+      "concept": "FOURCHETTE",
+      "asset": "assets/validation-candidates/lot-002/additional-252-fourchette.png",
+      "role": "ADDITIONAL_34",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "PROTECTED_SOURCE_EXTRACTION",
+        "drive_file_id": "1SR0Z1TzGxn4NuJPiu87CkJSR98bPNuBh",
+        "source_title": "REBULO_PIXEL_v1_252_262_281_254_SOURCE_DO_NOT_REGENERATE.png",
+        "production_number": 252,
+        "extraction": "deterministic quadrant extraction + background segmentation + transparent canvas; source not modified"
+      }
+    },
+    {
+      "candidate_id": "lot002-tigre-source-v1",
+      "concept": "TIGRE",
+      "asset": "assets/validation-candidates/lot-002/additional-262-tigre.png",
+      "role": "ADDITIONAL_34",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "PROTECTED_SOURCE_EXTRACTION",
+        "drive_file_id": "1SR0Z1TzGxn4NuJPiu87CkJSR98bPNuBh",
+        "source_title": "REBULO_PIXEL_v1_252_262_281_254_SOURCE_DO_NOT_REGENERATE.png",
+        "production_number": 262,
+        "extraction": "deterministic quadrant extraction + background segmentation + transparent canvas; source not modified"
+      }
+    },
+    {
+      "candidate_id": "lot002-abeille-source-v1",
+      "concept": "ABEILLE",
+      "asset": "assets/validation-candidates/lot-002/additional-281-abeille.png",
+      "role": "ADDITIONAL_34",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "PROTECTED_SOURCE_EXTRACTION",
+        "drive_file_id": "1SR0Z1TzGxn4NuJPiu87CkJSR98bPNuBh",
+        "source_title": "REBULO_PIXEL_v1_252_262_281_254_SOURCE_DO_NOT_REGENERATE.png",
+        "production_number": 281,
+        "extraction": "deterministic quadrant extraction + background segmentation + transparent canvas; source not modified"
+      }
+    },
+    {
+      "candidate_id": "lot002-casque-source-v1",
+      "concept": "CASQUE",
+      "asset": "assets/validation-candidates/lot-002/additional-254-casque.png",
+      "role": "ADDITIONAL_34",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "PROTECTED_SOURCE_EXTRACTION",
+        "drive_file_id": "1SR0Z1TzGxn4NuJPiu87CkJSR98bPNuBh",
+        "source_title": "REBULO_PIXEL_v1_252_262_281_254_SOURCE_DO_NOT_REGENERATE.png",
+        "production_number": 254,
+        "extraction": "deterministic quadrant extraction + background segmentation + transparent canvas; source not modified"
+      }
+    },
+    {
+      "candidate_id": "lot002-valise-source-v1",
+      "concept": "VALISE",
+      "asset": "assets/validation-candidates/lot-002/additional-172-valise.png",
+      "role": "ADDITIONAL_34",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "PROTECTED_SOURCE_EXTRACTION",
+        "drive_file_id": "1_Sd_svjYqWd2QwzKn5d_edEBjb4nbaLc",
+        "source_title": "REBULO_PIXEL_v1_172_178_185_248_SOURCE_DO_NOT_REGENERATE.png",
+        "production_number": 172,
+        "extraction": "deterministic quadrant extraction + background segmentation + transparent canvas; source not modified"
+      }
+    },
+    {
+      "candidate_id": "lot002-oreille-source-v1",
+      "concept": "OREILLE",
+      "asset": "assets/validation-candidates/lot-002/additional-178-oreille.png",
+      "role": "ADDITIONAL_34",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "PROTECTED_SOURCE_EXTRACTION",
+        "drive_file_id": "1_Sd_svjYqWd2QwzKn5d_edEBjb4nbaLc",
+        "source_title": "REBULO_PIXEL_v1_172_178_185_248_SOURCE_DO_NOT_REGENERATE.png",
+        "production_number": 178,
+        "extraction": "deterministic quadrant extraction + background segmentation + transparent canvas; source not modified"
+      }
+    },
+    {
+      "candidate_id": "lot002-cochon-source-v1",
+      "concept": "COCHON",
+      "asset": "assets/validation-candidates/lot-002/additional-185-cochon.png",
+      "role": "ADDITIONAL_34",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "PROTECTED_SOURCE_EXTRACTION",
+        "drive_file_id": "1_Sd_svjYqWd2QwzKn5d_edEBjb4nbaLc",
+        "source_title": "REBULO_PIXEL_v1_172_178_185_248_SOURCE_DO_NOT_REGENERATE.png",
+        "production_number": 185,
+        "extraction": "deterministic quadrant extraction + background segmentation + transparent canvas; source not modified"
+      }
+    },
+    {
+      "candidate_id": "lot002-homard-source-v1",
+      "concept": "HOMARD",
+      "asset": "assets/validation-candidates/lot-002/additional-248-homard.png",
+      "role": "ADDITIONAL_34",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "PROTECTED_SOURCE_EXTRACTION",
+        "drive_file_id": "1_Sd_svjYqWd2QwzKn5d_edEBjb4nbaLc",
+        "source_title": "REBULO_PIXEL_v1_172_178_185_248_SOURCE_DO_NOT_REGENERATE.png",
+        "production_number": 248,
+        "extraction": "deterministic quadrant extraction + background segmentation + transparent canvas; source not modified"
+      }
+    },
+    {
+      "candidate_id": "lot002-bouteille-source-v1",
+      "concept": "BOUTEILLE",
+      "asset": "assets/validation-candidates/lot-002/additional-149-bouteille.png",
+      "role": "ADDITIONAL_34",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "PROTECTED_SOURCE_EXTRACTION",
+        "drive_file_id": "1SRbuhsJk15BpHA7jgC8Qf8zFyop-2Zxn",
+        "source_title": "REBULO_PIXEL_v1_109_149_166_173_SOURCE_DO_NOT_REGENERATE.png",
+        "production_number": 149,
+        "extraction": "deterministic quadrant extraction + background segmentation + transparent canvas; source not modified"
+      }
+    },
+    {
+      "candidate_id": "lot002-gateau-source-v1",
+      "concept": "GÂTEAU",
+      "asset": "assets/validation-candidates/lot-002/additional-173-gateau.png",
+      "role": "ADDITIONAL_34",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "PROTECTED_SOURCE_EXTRACTION",
+        "drive_file_id": "1SRbuhsJk15BpHA7jgC8Qf8zFyop-2Zxn",
+        "source_title": "REBULO_PIXEL_v1_109_149_166_173_SOURCE_DO_NOT_REGENERATE.png",
+        "production_number": 173,
+        "extraction": "deterministic quadrant extraction + background segmentation + transparent canvas; source not modified"
+      }
+    },
+    {
+      "candidate_id": "lot002-vent-source-v1",
+      "concept": "VENT",
+      "asset": "assets/validation-candidates/lot-002/additional-002-vent.png",
+      "role": "ADDITIONAL_34",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "PROTECTED_SOURCE_EXTRACTION",
+        "drive_file_id": "1H7aXQmAakjWJoiYFCxYOuV5ooWKwaY2Z",
+        "source_title": "REBULO_PIXEL_v1_002_004_080_093_SOURCE_DO_NOT_REGENERATE.png",
+        "production_number": 2,
+        "extraction": "deterministic quadrant extraction + background segmentation + transparent canvas; source not modified"
+      }
+    },
+    {
+      "candidate_id": "lot002-doigt-source-v1",
+      "concept": "DOIGT",
+      "asset": "assets/validation-candidates/lot-002/additional-080-doigt.png",
+      "role": "ADDITIONAL_34",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "PROTECTED_SOURCE_EXTRACTION",
+        "drive_file_id": "1H7aXQmAakjWJoiYFCxYOuV5ooWKwaY2Z",
+        "source_title": "REBULO_PIXEL_v1_002_004_080_093_SOURCE_DO_NOT_REGENERATE.png",
+        "production_number": 80,
+        "extraction": "deterministic quadrant extraction + background segmentation + transparent canvas; source not modified"
+      }
+    },
+    {
+      "candidate_id": "lot002-ballon-source-v1",
+      "concept": "BALLON",
+      "asset": "assets/validation-candidates/lot-002/additional-093-ballon.png",
+      "role": "ADDITIONAL_34",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "PROTECTED_SOURCE_EXTRACTION",
+        "drive_file_id": "1H7aXQmAakjWJoiYFCxYOuV5ooWKwaY2Z",
+        "source_title": "REBULO_PIXEL_v1_002_004_080_093_SOURCE_DO_NOT_REGENERATE.png",
+        "production_number": 93,
+        "extraction": "deterministic quadrant extraction + background segmentation + transparent canvas; source not modified"
+      }
+    },
+    {
+      "candidate_id": "lot002-beurre-source-v1",
+      "concept": "BEURRE",
+      "asset": "assets/validation-candidates/lot-002/additional-290-beurre.png",
+      "role": "ADDITIONAL_34",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "PROTECTED_SOURCE_EXTRACTION",
+        "drive_file_id": "16iqnx4U31wr7VvnpfPqEPfkWs2XW-PIx",
+        "source_title": "REBULO_PIXEL_v1_290_292_353_377_SOURCE_DO_NOT_REGENERATE.png",
+        "production_number": 290,
+        "extraction": "deterministic quadrant extraction + background segmentation + transparent canvas; source not modified"
+      }
+    },
+    {
+      "candidate_id": "lot002-botte-source-v1",
+      "concept": "BOTTE",
+      "asset": "assets/validation-candidates/lot-002/additional-292-botte.png",
+      "role": "ADDITIONAL_34",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "PROTECTED_SOURCE_EXTRACTION",
+        "drive_file_id": "16iqnx4U31wr7VvnpfPqEPfkWs2XW-PIx",
+        "source_title": "REBULO_PIXEL_v1_290_292_353_377_SOURCE_DO_NOT_REGENERATE.png",
+        "production_number": 292,
+        "extraction": "deterministic quadrant extraction + background segmentation + transparent canvas; source not modified"
+      }
+    },
+    {
+      "candidate_id": "lot002-oignon-source-v1",
+      "concept": "OIGNON",
+      "asset": "assets/validation-candidates/lot-002/additional-353-oignon.png",
+      "role": "ADDITIONAL_34",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "PROTECTED_SOURCE_EXTRACTION",
+        "drive_file_id": "16iqnx4U31wr7VvnpfPqEPfkWs2XW-PIx",
+        "source_title": "REBULO_PIXEL_v1_290_292_353_377_SOURCE_DO_NOT_REGENERATE.png",
+        "production_number": 353,
+        "extraction": "deterministic quadrant extraction + background segmentation + transparent canvas; source not modified"
+      }
+    },
+    {
+      "candidate_id": "lot002-cerf-source-v1",
+      "concept": "CERF",
+      "asset": "assets/validation-candidates/lot-002/additional-377-cerf.png",
+      "role": "ADDITIONAL_34",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "PROTECTED_SOURCE_EXTRACTION",
+        "drive_file_id": "16iqnx4U31wr7VvnpfPqEPfkWs2XW-PIx",
+        "source_title": "REBULO_PIXEL_v1_290_292_353_377_SOURCE_DO_NOT_REGENERATE.png",
+        "production_number": 377,
+        "extraction": "deterministic quadrant extraction + background segmentation + transparent canvas; source not modified"
+      }
+    },
+    {
+      "candidate_id": "lot002-carte-source-v1",
+      "concept": "CARTE",
+      "asset": "assets/validation-candidates/lot-002/additional-110-carte.png",
+      "role": "ADDITIONAL_34",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "PROTECTED_SOURCE_EXTRACTION",
+        "drive_file_id": "1Zcvj0PaIA1IVa1tUU5R7owXKhncPBS8j",
+        "source_title": "REBULO_PIXEL_v1_102_110_118_163_SOURCE_DO_NOT_REGENERATE.png",
+        "production_number": 110,
+        "extraction": "deterministic quadrant extraction + background segmentation + transparent canvas; source not modified"
+      }
+    },
+    {
+      "candidate_id": "lot002-roc-source-v1",
+      "concept": "ROC",
+      "asset": "assets/validation-candidates/lot-002/additional-118-roc.png",
+      "role": "ADDITIONAL_34",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "PROTECTED_SOURCE_EXTRACTION",
+        "drive_file_id": "1Zcvj0PaIA1IVa1tUU5R7owXKhncPBS8j",
+        "source_title": "REBULO_PIXEL_v1_102_110_118_163_SOURCE_DO_NOT_REGENERATE.png",
+        "production_number": 118,
+        "extraction": "deterministic quadrant extraction + background segmentation + transparent canvas; source not modified"
+      }
+    },
+    {
+      "candidate_id": "lot002-gomme-source-v1",
+      "concept": "GOMME",
+      "asset": "assets/validation-candidates/lot-002/additional-163-gomme.png",
+      "role": "ADDITIONAL_34",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "PROTECTED_SOURCE_EXTRACTION",
+        "drive_file_id": "1Zcvj0PaIA1IVa1tUU5R7owXKhncPBS8j",
+        "source_title": "REBULO_PIXEL_v1_102_110_118_163_SOURCE_DO_NOT_REGENERATE.png",
+        "production_number": 163,
+        "extraction": "deterministic quadrant extraction + background segmentation + transparent canvas; source not modified"
+      }
+    },
+    {
+      "candidate_id": "lot002-pouce-source-v1",
+      "concept": "POUCE",
+      "asset": "assets/validation-candidates/lot-002/additional-081-pouce.png",
+      "role": "ADDITIONAL_34",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "PROTECTED_SOURCE_EXTRACTION",
+        "drive_file_id": "1OjEG5MLtPIKSGaC5ek6Sg3p5nesHUqlH",
+        "source_title": "REBULO_PIXEL_v1_081_088_098_282_SOURCE_DO_NOT_REGENERATE.png",
+        "production_number": 81,
+        "extraction": "deterministic quadrant extraction + background segmentation + transparent canvas; source not modified"
+      }
+    },
+    {
+      "candidate_id": "lot002-sac-source-v1",
+      "concept": "SAC",
+      "asset": "assets/validation-candidates/lot-002/additional-088-sac.png",
+      "role": "ADDITIONAL_34",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "PROTECTED_SOURCE_EXTRACTION",
+        "drive_file_id": "1OjEG5MLtPIKSGaC5ek6Sg3p5nesHUqlH",
+        "source_title": "REBULO_PIXEL_v1_081_088_098_282_SOURCE_DO_NOT_REGENERATE.png",
+        "production_number": 88,
+        "extraction": "deterministic quadrant extraction + background segmentation + transparent canvas; source not modified"
+      }
+    },
+    {
+      "candidate_id": "lot002-poule-source-v1",
+      "concept": "POULE",
+      "asset": "assets/validation-candidates/lot-002/additional-098-poule.png",
+      "role": "ADDITIONAL_34",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "PROTECTED_SOURCE_EXTRACTION",
+        "drive_file_id": "1OjEG5MLtPIKSGaC5ek6Sg3p5nesHUqlH",
+        "source_title": "REBULO_PIXEL_v1_081_088_098_282_SOURCE_DO_NOT_REGENERATE.png",
+        "production_number": 98,
+        "extraction": "deterministic quadrant extraction + background segmentation + transparent canvas; source not modified"
+      }
+    },
+    {
+      "candidate_id": "lot002-ail-source-v1",
+      "concept": "AIL",
+      "asset": "assets/validation-candidates/lot-002/additional-282-ail.png",
+      "role": "ADDITIONAL_34",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "PROTECTED_SOURCE_EXTRACTION",
+        "drive_file_id": "1OjEG5MLtPIKSGaC5ek6Sg3p5nesHUqlH",
+        "source_title": "REBULO_PIXEL_v1_081_088_098_282_SOURCE_DO_NOT_REGENERATE.png",
+        "production_number": 282,
+        "extraction": "deterministic quadrant extraction + background segmentation + transparent canvas; source not modified"
+      }
+    },
+    {
+      "candidate_id": "lot002-lac-source-v1",
+      "concept": "LAC",
+      "asset": "assets/validation-candidates/lot-002/additional-057-lac.png",
+      "role": "ADDITIONAL_34",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "PROTECTED_SOURCE_EXTRACTION",
+        "drive_file_id": "1q9auDGwNf9KZOj5pTUU5oXpvbLGgHyCv",
+        "source_title": "REBULO_PIXEL_v1_P0_055_056_057_058_SOURCE_DO_NOT_REGENERATE.png",
+        "production_number": 57,
+        "extraction": "deterministic quadrant extraction + background segmentation + transparent canvas; source not modified"
+      }
+    },
+    {
+      "candidate_id": "lot002-drap-source-v1",
+      "concept": "DRAP",
+      "asset": "assets/validation-candidates/lot-002/additional-058-drap.png",
+      "role": "ADDITIONAL_34",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "PROTECTED_SOURCE_EXTRACTION",
+        "drive_file_id": "1q9auDGwNf9KZOj5pTUU5oXpvbLGgHyCv",
+        "source_title": "REBULO_PIXEL_v1_P0_055_056_057_058_SOURCE_DO_NOT_REGENERATE.png",
+        "production_number": 58,
+        "extraction": "deterministic quadrant extraction + background segmentation + transparent canvas; source not modified"
+      }
+    },
+    {
+      "candidate_id": "lot002-sable-source-v1",
+      "concept": "SABLE",
+      "asset": "assets/validation-candidates/lot-002/additional-059-sable.png",
+      "role": "ADDITIONAL_34",
+      "status": "AWAITING_HUMAN_GRAPHIC_VALIDATION",
+      "human_naming_evidence": "none",
+      "clinical_validation": "none",
+      "runtime_active": false,
+      "provenance": {
+        "source_type": "PROTECTED_SOURCE_EXTRACTION",
+        "drive_file_id": "1MRDRjpx-NHnjT3Vz4fmj1xmt52mCrY84",
+        "source_title": "REBULO_PIXEL_v1_P0_059_060_061_062_SOURCE_DO_NOT_REGENERATE.png",
+        "production_number": 59,
+        "extraction": "deterministic quadrant extraction + background segmentation + transparent canvas; source not modified"
+      }
+    }
+  ]
+}

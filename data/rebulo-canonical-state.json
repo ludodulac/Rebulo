@@ -327,16 +327,16 @@
       "label": "mer",
       "ipa": "mɛʁ",
       "representation_type": "IMAGE",
-      "graphic_status": "CANDIDATE",
+      "graphic_status": "CANONICAL",
       "drive_source_id": null,
       "drive_canonical_asset_id": null,
       "drive_candidate_id": "1i6w_ooJ2KDABx42gzNHzvxASnDMQrREY",
-      "github_asset_path": null,
+      "github_asset_path": "assets/validation-candidates/lot-001-rattrapage/mer.png",
       "visual_validation": {
-        "status": "NOT_EVALUATED",
-        "decision_id": null,
-        "decided_at": null,
-        "note": "No explicit human visual validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+        "status": "PASS",
+        "decision_id": "REBULO-058-CATCHUP-HUMAN-2026-10-03#catchup-mer-drive-v1",
+        "decided_at": "2026-10-03T13:17:00Z",
+        "note": "Human graphic validation only. No naming or clinical validation is inferred."
       },
       "naming_validation": {
         "status": "NOT_EVALUATED",
@@ -376,38 +376,52 @@
           "observed_at": "2026-09-30T06:35:58Z",
           "authority": "AUTOMATED_DERIVATION",
           "note": "Exact active image representation verified for concept mer: syllable-print:mer -> assets/rebus/mer.svg."
+        },
+        {
+          "source_type": "HUMAN_VALIDATION",
+          "source_id": "REBULO-058-CATCHUP-HUMAN-2026-10-03#catchup-mer-drive-v1",
+          "observed_at": "2026-10-03T13:17:00Z",
+          "authority": "HUMAN_DECISION",
+          "note": "Ludovic accepted this exact graphic in lot-001-rattrapage. Scope is graphic validation only."
         }
       ],
       "latest_proof": {
-        "proof_type": "DRIVE_FILE",
-        "proof_id": "drive-candidate:hvv72-059-mer:1i6w_ooJ2KDABx42gzNHzvxASnDMQrREY",
-        "authority": "OBSERVATION",
-        "observed_at": "2026-09-30T06:35:58Z",
-        "drive_file_id": "1i6w_ooJ2KDABx42gzNHzvxASnDMQrREY",
-        "note": "Current candidate-folder observation for vagues_océaniques_pixel_art_isolées.png."
+        "proof_type": "HUMAN_VALIDATION",
+        "proof_id": "REBULO-058-CATCHUP-HUMAN-2026-10-03#catchup-mer-drive-v1",
+        "authority": "HUMAN_DECISION",
+        "observed_at": "2026-10-03T13:17:00Z",
+        "human_validation_id": "REBULO-058-CATCHUP-HUMAN-2026-10-03#catchup-mer-drive-v1",
+        "note": "Exact candidate accepted graphically; naming and clinical gates remain separate."
       },
-      "canonical_decision": null,
+      "canonical_decision": {
+        "proof_type": "HUMAN_VALIDATION",
+        "proof_id": "REBULO-058-CATCHUP-HUMAN-2026-10-03#catchup-mer-drive-v1",
+        "authority": "CANONICAL_DECISION",
+        "observed_at": "2026-10-03T13:17:00Z",
+        "human_validation_id": "REBULO-058-CATCHUP-HUMAN-2026-10-03#catchup-mer-drive-v1",
+        "note": "Promoted as retained graphic representation only. Runtime legacy asset is not changed by REBULO-058."
+      },
       "next_action": {
-        "action": "HUMAN_VISUAL_VALIDATION",
-        "note": "Obtain explicit human visual validation for this candidate before any promotion."
+        "action": "HUMAN_NAMING_VALIDATION",
+        "note": "Graphic accepted. Naming remains NOT_EVALUATED; runtime asset remains unchanged until a separate decision."
       },
-      "updated_at": "2026-09-30T06:35:58Z"
+      "updated_at": "2026-10-03T13:17:00Z"
     },
     {
       "concept_id": "the",
       "label": "thé",
       "ipa": "te",
       "representation_type": "IMAGE",
-      "graphic_status": "CANDIDATE",
+      "graphic_status": "CANONICAL",
       "drive_source_id": null,
       "drive_canonical_asset_id": null,
       "drive_candidate_id": "1IE01HyFO8uio8wauEmlj_HmCQL4oDtfC",
-      "github_asset_path": null,
+      "github_asset_path": "assets/validation-candidates/lot-001-rattrapage/the.png",
       "visual_validation": {
-        "status": "NOT_EVALUATED",
-        "decision_id": null,
-        "decided_at": null,
-        "note": "No explicit human visual validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+        "status": "PASS",
+        "decision_id": "REBULO-058-CATCHUP-HUMAN-2026-10-03#catchup-the-drive-v1",
+        "decided_at": "2026-10-03T13:17:00Z",
+        "note": "Human graphic validation only. No naming or clinical validation is inferred."
       },
       "naming_validation": {
         "status": "NOT_EVALUATED",
@@ -447,22 +461,36 @@
           "observed_at": "2026-09-30T06:35:58Z",
           "authority": "AUTOMATED_DERIVATION",
           "note": "Exact active image representation verified for concept thé: syllable-print:the -> assets/rebus/the.svg."
+        },
+        {
+          "source_type": "HUMAN_VALIDATION",
+          "source_id": "REBULO-058-CATCHUP-HUMAN-2026-10-03#catchup-the-drive-v1",
+          "observed_at": "2026-10-03T13:17:00Z",
+          "authority": "HUMAN_DECISION",
+          "note": "Ludovic accepted this exact graphic in lot-001-rattrapage. Scope is graphic validation only."
         }
       ],
       "latest_proof": {
-        "proof_type": "DRIVE_FILE",
-        "proof_id": "drive-candidate:the:1IE01HyFO8uio8wauEmlj_HmCQL4oDtfC",
-        "authority": "OBSERVATION",
-        "observed_at": "2026-09-30T06:35:58Z",
-        "drive_file_id": "1IE01HyFO8uio8wauEmlj_HmCQL4oDtfC",
-        "note": "Current candidate-folder observation for tasse_de_thé_pixel_art_traditionnelle.png."
+        "proof_type": "HUMAN_VALIDATION",
+        "proof_id": "REBULO-058-CATCHUP-HUMAN-2026-10-03#catchup-the-drive-v1",
+        "authority": "HUMAN_DECISION",
+        "observed_at": "2026-10-03T13:17:00Z",
+        "human_validation_id": "REBULO-058-CATCHUP-HUMAN-2026-10-03#catchup-the-drive-v1",
+        "note": "Exact candidate accepted graphically; naming and clinical gates remain separate."
       },
-      "canonical_decision": null,
+      "canonical_decision": {
+        "proof_type": "HUMAN_VALIDATION",
+        "proof_id": "REBULO-058-CATCHUP-HUMAN-2026-10-03#catchup-the-drive-v1",
+        "authority": "CANONICAL_DECISION",
+        "observed_at": "2026-10-03T13:17:00Z",
+        "human_validation_id": "REBULO-058-CATCHUP-HUMAN-2026-10-03#catchup-the-drive-v1",
+        "note": "Promoted as retained graphic representation only. Runtime legacy asset is not changed by REBULO-058."
+      },
       "next_action": {
-        "action": "HUMAN_VISUAL_VALIDATION",
-        "note": "Obtain explicit human visual validation for this candidate before any promotion."
+        "action": "HUMAN_NAMING_VALIDATION",
+        "note": "Graphic accepted. Naming remains NOT_EVALUATED; runtime asset remains unchanged until a separate decision."
       },
-      "updated_at": "2026-09-30T06:35:58Z"
+      "updated_at": "2026-10-03T13:17:00Z"
     },
     {
       "concept_id": "veau",
@@ -1148,18 +1176,18 @@
       "drive_source_id": null,
       "drive_canonical_asset_id": null,
       "drive_candidate_id": null,
-      "github_asset_path": null,
+      "github_asset_path": "assets/validation-candidates/lot-002/mandatory-carre-transparent.png",
       "visual_validation": {
-        "status": "NOT_EVALUATED",
-        "decision_id": null,
+        "status": "PENDING",
+        "decision_id": "REBULO-058-CARRE-TRANSPARENT-V2",
         "decided_at": null,
-        "note": "No explicit human visual validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+        "note": "Human requested deterministic removal of the black background from the same blue-square candidate. The transformed candidate still requires human graphic validation."
       },
       "naming_validation": {
         "status": "NOT_EVALUATED",
         "decision_id": null,
         "decided_at": null,
-        "note": "No explicit human naming validation was verified for this exact Drive candidate. Candidate-file existence is not validation."
+        "note": "No naming validation is inferred from the background-removal request."
       },
       "runtime_active": false,
       "runtime_status": "INACTIVE",
@@ -1200,22 +1228,29 @@
           "observed_at": "2026-09-30T06:35:58Z",
           "authority": "AUTOMATED_DERIVATION",
           "note": "No runtime bank row for IPA kaʁe was verified in the compact runtime snapshot."
+        },
+        {
+          "source_type": "GITHUB",
+          "source_id": "REBULO-058:assets/validation-candidates/lot-002/mandatory-carre-transparent.png",
+          "observed_at": "2026-10-03T13:17:00Z",
+          "authority": "AUTOMATED_DERIVATION",
+          "note": "Deterministic alpha-only transformation of catchup-carre-drive-blue-v1; RGB channels and dimensions preserved."
         }
       ],
       "latest_proof": {
-        "proof_type": "DRIVE_FILE",
-        "proof_id": "drive-candidate:hvv72-068-carre:1r4eXwo_8hqqTF19h9b5mjIOn3BB030Vz",
-        "authority": "OBSERVATION",
-        "observed_at": "2026-09-30T06:35:58Z",
-        "drive_file_id": "1r4eXwo_8hqqTF19h9b5mjIOn3BB030Vz",
-        "note": "One of 2 concurrently observed same-name candidate files. All IDs are preserved in provenance; no preferred file is inferred."
+        "proof_type": "CERTIFIED_REPORT",
+        "proof_id": "REBULO-058-CARRE-TRANSPARENT-V2",
+        "authority": "AUTOMATED_DERIVATION",
+        "observed_at": "2026-10-03T13:17:00Z",
+        "report_id": "REBULO-058-CARRE-TRANSPARENT-V2",
+        "note": "Background removal verified deterministic; human validation still pending."
       },
       "canonical_decision": null,
       "next_action": {
-        "action": "INVESTIGATE_DUPLICATE",
-        "note": "Preserve all candidate IDs until a human/canonical decision resolves whether either file should be preferred."
+        "action": "HUMAN_VISUAL_VALIDATION",
+        "note": "Validate the transparent version in lot-002."
       },
-      "updated_at": "2026-09-30T06:35:58Z"
+      "updated_at": "2026-10-03T13:17:00Z"
     }
   ]
 }

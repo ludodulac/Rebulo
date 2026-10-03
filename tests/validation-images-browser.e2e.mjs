@@ -30,6 +30,28 @@ try{
   assert.ok(await lastImage.evaluate(img=>img.naturalWidth>0));
   await realContext.close();
 
+  const catchupContext=await browser.newContext({viewport:{width:390,height:844}});
+  const catchupPage=await catchupContext.newPage();
+  await catchupPage.goto('http://127.0.0.1:4173/validation-images/?lot=lot-001-rattrapage',{waitUntil:'domcontentloaded'});
+  await catchupPage.waitForSelector('.candidate-card');
+  assert.equal(await catchupPage.locator('.candidate-card').count(),4);
+  assert.equal(await catchupPage.locator('#totalCount').textContent(),'4');
+  assert.equal(await catchupPage.locator('#untreatedCount').textContent(),'4');
+  assert.equal(await catchupPage.evaluate(()=>document.documentElement.scrollWidth),390);
+  const catchupImages=catchupPage.locator('.candidate-image');
+  assert.equal(await catchupImages.count(),4);
+  for(let i=0;i<4;i++){
+    const img=catchupImages.nth(i);
+    await img.scrollIntoViewIfNeeded();
+    await img.evaluate(el=>new Promise((resolve,reject)=>{
+      if(el.complete)return el.naturalWidth>0?resolve():reject(new Error('catch-up image unreadable'));
+      el.addEventListener('load',resolve,{once:true});
+      el.addEventListener('error',()=>reject(new Error('catch-up image failed')),{once:true});
+    }));
+    assert.ok(await img.evaluate(el=>el.complete&&el.naturalWidth>0));
+  }
+  await catchupContext.close();
+
   if(process.env.REBULO_PUBLIC_PREVIEW_URL){
     const publicContext=await browser.newContext({viewport:{width:390,height:844}});
     const publicPage=await publicContext.newPage();

@@ -1,0 +1,27 @@
+name: REBULO-058 Drive raw access probe
+on:
+  push:
+    branches: [feat/rebulo-058-lot002]
+    paths: ['ops/rebulo-058-drive-probe.ready']
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Probe Drive image
+        shell: bash
+        run: |
+          set -euxo pipefail
+          id='1hQWeeudJrf4wS5DCVWgjzryk9Gv_AUpP'
+          url="https://drive.usercontent.google.com/download?id=$id&export=download&confirm=t"
+          curl -L --fail --retry 2 -o /tmp/probe "$url"
+          file /tmp/probe
+          wc -c /tmp/probe
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('/tmp/probe').read_bytes()
+          assert p[:8] == b'\x89PNG\r\n\x1a\n', p[:32]
+          print('PNG_OK')
+          PY

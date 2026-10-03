@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "lot_id": "lot-001-rattrapage",
+  "title": "Lot 001 · rattrapage · 4 remplacements existants",
+  "source_report": "data/image-validation/lot-001-human-2026-10-03.json",
+  "candidates": [
+    {
+      "id": "catchup-banc-drive-v1",
+      "concept": "BANC",
+      "asset": "../assets/validation-candidates/lot-001-rattrapage/banc.png",
+      "source_drive_file_id": "1OA4_vTe1k-hjA84muU2uAxD8Rr2PbUdP"
+    },
+    {
+      "id": "catchup-mer-drive-v1",
+      "concept": "MER",
+      "asset": "../assets/validation-candidates/lot-001-rattrapage/mer.png",
+      "source_drive_file_id": "1i6w_ooJ2KDABx42gzNHzvxASnDMQrREY"
+    },
+    {
+      "id": "catchup-the-drive-v1",
+      "concept": "THÉ",
+      "asset": "../assets/validation-candidates/lot-001-rattrapage/the.png",
+      "source_drive_file_id": "1IE01HyFO8uio8wauEmlj_HmCQL4oDtfC"
+    },
+    {
+      "id": "catchup-carre-drive-blue-v1",
+      "concept": "CARRÉ",
+      "asset": "../assets/validation-candidates/lot-001-rattrapage/carre.jpg",
+      "source_drive_file_id": "1r4eXwo_8hqqTF19h9b5mjIOn3BB030Vz"
+    }
+  ]
+}

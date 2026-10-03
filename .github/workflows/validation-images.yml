@@ -1,0 +1,41 @@
+name: Validate REBULO image-validation page
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'validation-images/**'
+      - 'tests/validation-images-page.test.mjs'
+      - 'tests/validation-images-browser.e2e.mjs'
+      - '.github/workflows/validation-images.yml'
+      - 'package.json'
+  push:
+    branches: [main]
+    paths:
+      - 'validation-images/**'
+      - 'tests/validation-images-page.test.mjs'
+      - 'tests/validation-images-browser.e2e.mjs'
+      - '.github/workflows/validation-images.yml'
+      - 'package.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validation-images:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Run static validation-page contract
+        run: node tests/validation-images-page.test.mjs
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save --ignore-scripts playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Run mobile browser proof
+        run: node tests/validation-images-browser.e2e.mjs

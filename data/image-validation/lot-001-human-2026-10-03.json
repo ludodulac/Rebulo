@@ -1,0 +1,266 @@
+{
+  "schema_version": 1,
+  "report_id": "REBULO-057-LOT-001-HUMAN-2026-10-03",
+  "lot_id": "lot-001",
+  "authority": "Ludovic — contrôle humain réel transmis à Grand-père",
+  "recorded_at": "2026-10-03",
+  "ui_report": {
+    "total": 50,
+    "validated": 26,
+    "refused": 24,
+    "untreated": 0
+  },
+  "interpretation_policy": "Les remarques humaines font foi sur les boutons UI. Les validations conditionnelles POMME et PORTE ne deviennent acceptées qu'après contrôle objectif du fichier exact.",
+  "final_report": {
+    "total": 50,
+    "accepted": 26,
+    "refused": 24,
+    "untreated": 0
+  },
+  "accepted_ids": [
+    "visible-chat",
+    "visible-cheval",
+    "visible-chien",
+    "visible-couteau",
+    "visible-de",
+    "visible-livre",
+    "visible-nez",
+    "visible-nid",
+    "visible-oeil",
+    "visible-pie",
+    "visible-pied",
+    "visible-pomme",
+    "visible-porte",
+    "visible-rat",
+    "visible-riz",
+    "visible-route",
+    "visible-scie",
+    "visible-soleil",
+    "visible-table",
+    "visible-train",
+    "visible-voiture",
+    "rebus-chat",
+    "rebus-cle",
+    "rebus-lit",
+    "rebus-pluie",
+    "rebus-rat"
+  ],
+  "old_style_exceptions_preserved": [
+    "rebus-chat",
+    "rebus-cle",
+    "rebus-lit",
+    "rebus-pluie",
+    "rebus-rat"
+  ],
+  "conditional_checks": {
+    "visible-pomme": {
+      "result": "FULL_OBJECT_VISIBLE",
+      "full_object_visible": true,
+      "github_asset": "assets/visible-batch1/individual/pomme.png",
+      "github_blob_sha": "945fd67fad26b49087abae21b5b7aec7cffd790c",
+      "drive_source": "hvv72-029-pomme_v01.png",
+      "drive_file_id": "19n2g8Yfb6F9Sb7RBagCdTiANIfvuedLI",
+      "byte_identity": "Git blob SHA matches the downloaded Drive source; source dimensions 307x368; non-transparent content bbox leaves margins on all four sides."
+    },
+    "visible-porte": {
+      "result": "FULL_OBJECT_VISIBLE",
+      "full_object_visible": true,
+      "github_asset": "assets/visible-batch1/individual/porte.png",
+      "github_blob_sha": "d985f52bb93305300039304ac440d477a12aa65e",
+      "drive_source": "hvv72-001-porte_v01.png",
+      "drive_file_id": "1pB1XubVWnp7tEWF_KGmB8o5d_YXKl50U",
+      "byte_identity": "Git blob SHA matches the downloaded Drive source; source dimensions 281x419; non-transparent content bbox leaves margins on all four sides."
+    }
+  },
+  "refused_ids": [
+    "visible-banc",
+    "visible-lit",
+    "rebus-corps",
+    "rebus-de",
+    "rebus-dos-comic",
+    "rebus-eau",
+    "rebus-mat",
+    "rebus-mer",
+    "rebus-mie",
+    "rebus-nez",
+    "rebus-pas",
+    "rebus-pie",
+    "rebus-pot-comic",
+    "rebus-raie-comic",
+    "rebus-riz",
+    "rebus-scie",
+    "rebus-sol",
+    "rebus-tas",
+    "rebus-terre-comic",
+    "rebus-the",
+    "rebus-tour",
+    "research-nid-comic-v1",
+    "research-carre-stimulus-v1",
+    "research-cor-horn-comic-v1"
+  ],
+  "retired_from_future_validation": [
+    "visible-banc",
+    "visible-lit",
+    "rebus-corps",
+    "rebus-de",
+    "rebus-dos-comic",
+    "rebus-eau",
+    "rebus-mat",
+    "rebus-mer",
+    "rebus-mie",
+    "rebus-nez",
+    "rebus-pas",
+    "rebus-pie",
+    "rebus-pot-comic",
+    "rebus-raie-comic",
+    "rebus-riz",
+    "rebus-scie",
+    "rebus-sol",
+    "rebus-tas",
+    "rebus-terre-comic",
+    "rebus-the",
+    "rebus-tour",
+    "research-nid-comic-v1",
+    "research-carre-stimulus-v1",
+    "research-cor-horn-comic-v1"
+  ],
+  "resolved_duplicates": [
+    {
+      "rejected": "rebus-de",
+      "replacement": "visible-de"
+    },
+    {
+      "rejected": "rebus-nez",
+      "replacement": "visible-nez"
+    },
+    {
+      "rejected": "rebus-pie",
+      "replacement": "visible-pie"
+    },
+    {
+      "rejected": "rebus-riz",
+      "replacement": "visible-riz"
+    },
+    {
+      "rejected": "rebus-scie",
+      "replacement": "visible-scie"
+    },
+    {
+      "rejected": "research-nid-comic-v1",
+      "replacement": "visible-nid"
+    }
+  ],
+  "existing_pixel_replacements": [
+    {
+      "concept": "BANC",
+      "source": "Google Drive / REBULO_CANDIDATS_A_VALIDER / rebulo-pixel-banc_CANDIDAT_A_VALIDER.png",
+      "drive_file_id": "1OA4_vTe1k-hjA84muU2uAxD8Rr2PbUdP",
+      "source_sha256": "e2810b0465e6ac314fe623747d09a18744353ca9606c239a4ee7909fe1d11118",
+      "status": "REVIEW_REQUIRED",
+      "evidence": "Drive candidate is byte-different from rejected assets/visible-batch1/individual/banc.png (Git blob dcf417... vs 268bdef...). No automatic promotion."
+    },
+    {
+      "concept": "MER",
+      "source": "Google Drive / REBULO_CANDIDATS_A_VALIDER / vagues_océaniques_pixel_art_isolées.png",
+      "drive_file_id": "1i6w_ooJ2KDABx42gzNHzvxASnDMQrREY",
+      "source_sha256": "472ac617a8eb683f7260fd3bfa0bce96a04355f9c638e0998ba73b44a5e375db",
+      "status": "REVIEW_REQUIRED",
+      "evidence": "Current canonical-state record already identifies this file as the unvalidated replacement candidate for old rebus-mer."
+    },
+    {
+      "concept": "THÉ",
+      "source": "Google Drive / REBULO_CANDIDATS_A_VALIDER / tasse_de_thé_pixel_art_traditionnelle.png",
+      "drive_file_id": "1IE01HyFO8uio8wauEmlj_HmCQL4oDtfC",
+      "source_sha256": "0e6b2565045da58d02e05f9770feee0de2c8ab629f4fddaf4fe88cc1397d8163",
+      "status": "REVIEW_REQUIRED",
+      "evidence": "Current canonical-state record already identifies this file as the unvalidated replacement candidate for old rebus-the."
+    },
+    {
+      "concept": "CARRÉ",
+      "source": "Google Drive / REBULO_CANDIDATS_A_VALIDER / hvv72-068-carre_CANDIDAT_A_VALIDER.png (actual MIME image/jpeg)",
+      "drive_file_id": "1r4eXwo_8hqqTF19h9b5mjIOn3BB030Vz",
+      "source_sha256": "833ce7923ffc458d50c429cdf675c48a6674843839ca7c9a62434af9d32cd599",
+      "status": "REVIEW_REQUIRED_EXISTING_JPEG",
+      "evidence": "Existing blue pixel square candidate retained as-is for human review; copied with .jpg extension without image regeneration or pixel alteration."
+    }
+  ],
+  "rejected_existing_candidates": [
+    {
+      "concept": "LIT",
+      "source": "hvv72-003-lit_v01.png",
+      "status": "SAME_AS_REJECTED_VERSION",
+      "evidence": "Drive canonical PNG Git-blob identity c68e010425a768bdf6c36d719add9726a193494a equals assets/visible-batch1/individual/lit.png."
+    },
+    {
+      "concept": "MIE",
+      "source": "rebulo-pixel-mie.png",
+      "drive_file_id": "1mhBveJNTRE4Go8UMQXu0VrHdqQuy6387",
+      "status": "WRONG_CONCEPT_NOT_A_MIE_REPLACEMENT",
+      "evidence": "Visual inspection shows a cup of tea with tea bag, not a piece of bread crumb/mie. It is excluded from catch-up."
+    }
+  ],
+  "protected_sources": {
+    "mer": {
+      "source": "RECUP_composite_aiguille_char_mer_champ_2026-09-15.png",
+      "drive_file_id": "1gJd6O6SWjp_lpwerFLnJ_zCl1Evjt6pJ",
+      "status": "HISTORICAL_SOURCE_PROVEN",
+      "action": "No extraction needed for catch-up because a newer individual MER pixel candidate already exists."
+    },
+    "carre": {
+      "source": "REBULO_PIXEL_v1_P0_063_064_065_066_SOURCE_DO_NOT_REGENERATE.png",
+      "drive_file_id": "1ss5RyQYFP4UnoO84hhZ6lx0f7homwHzk",
+      "status": "SOURCE_FOUND_NOT_SELECTED",
+      "action": "Board contains the red filled #065 square; prior control history explicitly rejects substituting that flattened board square for the preferred blue candidate, so it is not extracted into catch-up."
+    }
+  },
+  "note_do": {
+    "existing": false,
+    "status": "NOT_FOUND",
+    "evidence": "No dedicated NOTE_DO asset or engine representation was found in GitHub asset tree/code searches; project inventory describes musical-note tiles DO–SI as assets to prepare, not existing assets."
+  },
+  "true_missing_pixel_replacements": [
+    "LIT",
+    "CORPS",
+    "DOS",
+    "EAU",
+    "MÂT",
+    "PAS",
+    "MIE",
+    "POT",
+    "RAIE_POISSON",
+    "SOL",
+    "TAS",
+    "TERRE",
+    "TOUR",
+    "COR"
+  ],
+  "catchup_lot": {
+    "lot_id": "lot-001-rattrapage",
+    "candidate_ids": [
+      "catchup-banc-drive-v1",
+      "catchup-mer-drive-v1",
+      "catchup-the-drive-v1",
+      "catchup-carre-drive-blue-v1"
+    ],
+    "count": 4
+  },
+  "audit_scope": {
+    "github": [
+      "active assets",
+      "research assets",
+      "validation manifests",
+      "canonical-state",
+      "production traceability",
+      "407 production/reconciliation history"
+    ],
+    "drive": [
+      "REBULO_CANDIDATS_A_VALIDER",
+      "REBULO_ASSETS_GRAPHIQUES_CANONIQUES",
+      "SOURCE_DO_NOT_REGENERATE boards",
+      "DESIGN_REBUS production lots",
+      "RECUPERATION_UPLOAD_LUDOVIC_2026-09-15",
+      "master inventory/passation/control journal"
+    ],
+    "image_generation_performed": false
+  }
+}

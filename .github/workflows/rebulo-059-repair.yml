@@ -39,7 +39,7 @@ jobs:
           assert len(audit['source_actually_complete'])==23
           assert audit['source_already_truncated']==[]
           assert len(audit['repaired_extractions'])==23
-          assert audit['doigt_complete'] is True
+          assert audit['doigt_source_complete'] is True
           for p in sorted(Path('assets/validation-candidates/lot-002-extraction-repair').glob('*.png')):
               assert p.stat().st_size>0
               im=Image.open(p)

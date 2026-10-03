@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "report_id": "REBULO-058-CATCHUP-HUMAN-2026-10-03",
+  "lot_id": "lot-001-rattrapage",
+  "recorded_at": "2026-10-03T13:17:00Z",
+  "authority": "Ludovic — contrôle humain réel transmis à Grand-père",
+  "total": 4,
+  "validated": 2,
+  "refused": 2,
+  "untreated": 0,
+  "scope": "GRAPHIC_VALIDATION_ONLY",
+  "decisions": [
+    {
+      "candidate_id": "catchup-mer-drive-v1",
+      "concept": "MER",
+      "graphic_decision": "PASS",
+      "note": null,
+      "naming_validation": "NOT_EVALUATED",
+      "clinical_validation": "NOT_EVALUATED"
+    },
+    {
+      "candidate_id": "catchup-the-drive-v1",
+      "concept": "THÉ",
+      "graphic_decision": "PASS",
+      "note": null,
+      "naming_validation": "NOT_EVALUATED",
+      "clinical_validation": "NOT_EVALUATED"
+    },
+    {
+      "candidate_id": "catchup-banc-drive-v1",
+      "concept": "BANC",
+      "graphic_decision": "FAIL",
+      "note": "Ce n'est pas dans la charte graphique.",
+      "next_action": "PRODUCE_NEW_REBULO_PIXEL_V1",
+      "naming_validation": "NOT_EVALUATED",
+      "clinical_validation": "NOT_EVALUATED"
+    },
+    {
+      "candidate_id": "catchup-carre-drive-blue-v1",
+      "concept": "CARRÉ",
+      "graphic_decision": "FAIL_TRANSFORM_REQUESTED",
+      "note": "Je veux la même image mais sans le fond noir. Il faut que ce soit transparent.",
+      "next_action": "DETERMINISTIC_BACKGROUND_REMOVAL_ONLY",
+      "naming_validation": "NOT_EVALUATED",
+      "clinical_validation": "NOT_EVALUATED"
+    }
+  ],
+  "promotions": [
+    {
+      "concept": "MER",
+      "candidate_id": "catchup-mer-drive-v1",
+      "promote_graphic": true,
+      "promote_naming": false,
+      "promote_clinical": false
+    },
+    {
+      "concept": "THÉ",
+      "candidate_id": "catchup-the-drive-v1",
+      "promote_graphic": true,
+      "promote_naming": false,
+      "promote_clinical": false
+    }
+  ]
+}

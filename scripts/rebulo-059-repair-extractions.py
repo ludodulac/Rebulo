@@ -192,6 +192,34 @@ for concept,candidate_id,board_name,pos,old_name,repair_required in JOBS:
     board_path=SRC/board_name
     board=Image.open(board_path).convert("RGBA")
     crop=board.crop(Q[pos])
+    if concept=="FOURCHETTE":
+        dbg=crop.convert("RGBA")
+        dw,dh=dbg.size
+        dpx=list(dbg.getdata())
+        def edge_stats(side):
+            vals=[]
+            if side=="right":
+                coords=[(dw-1,y) for y in range(dh)]
+            elif side=="bottom":
+                coords=[(x,dh-1) for x in range(dw)]
+            elif side=="left":
+                coords=[(0,y) for y in range(dh)]
+            else:
+                coords=[(x,0) for x in range(dw)]
+            for x,y in coords:
+                vals.append(dpx[y*dw+x])
+            return {
+                "alpha_ge_32":sum(1 for p in vals if p[3]>=32),
+                "alpha_ge_64":sum(1 for p in vals if p[3]>=64),
+                "alpha_ge_128":sum(1 for p in vals if p[3]>=128),
+                "alpha_ge_192":sum(1 for p in vals if p[3]>=192),
+                "alpha_ge_224":sum(1 for p in vals if p[3]>=224),
+                "common_ge_128":Counter(p for p in vals if p[3]>=128).most_common(10)
+            }
+        print("REBULO059_EDGE_DEBUG",json.dumps({
+            "left":edge_stats("left"),"right":edge_stats("right"),
+            "top":edge_stats("top"),"bottom":edge_stats("bottom")
+        }))
     w,h=crop.size
     cut,mask,method=source_foreground(crop)
     bbox=bbox_from_mask(mask,w,h)

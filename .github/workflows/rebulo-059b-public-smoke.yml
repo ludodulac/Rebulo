@@ -1,0 +1,96 @@
+name: REBULO-059B public mobile smoke
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/rebulo-059b-public-smoke.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save --ignore-scripts playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Smoke public repair lot on mobile
+        env:
+          TARGET_URL: https://ludodulac.github.io/Rebulo/validation-images/?lot=lot-002-extraction-repair
+        run: |
+          node <<'NODE'
+          const { chromium } = require('playwright');
+          const assert = require('node:assert/strict');
+          (async()=>{
+            const browser=await chromium.launch({headless:true});
+            const context=await browser.newContext({
+              viewport:{width:390,height:844},
+              permissions:['clipboard-read','clipboard-write']
+            });
+            const page=await context.newPage();
+            await page.goto(process.env.TARGET_URL,{waitUntil:'domcontentloaded',timeout:45000});
+            await page.waitForSelector('.candidate-card',{timeout:30000});
+
+            assert.equal(await page.locator('.candidate-card').count(),24);
+            assert.equal(await page.locator('#totalCount').textContent(),'24');
+            assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),390);
+
+            const images=page.locator('.candidate-image');
+            assert.equal(await images.count(),24);
+            let loaded=0;
+            for(let i=0;i<24;i++){
+              const img=images.nth(i);
+              await img.scrollIntoViewIfNeeded();
+              await img.evaluate(el=>new Promise((resolve,reject)=>{
+                if(el.complete)return el.naturalWidth>0?resolve():reject(new Error('unreadable '+el.src));
+                const timer=setTimeout(()=>reject(new Error('timeout '+el.src)),15000);
+                el.addEventListener('load',()=>{clearTimeout(timer);resolve();},{once:true});
+                el.addEventListener('error',()=>{clearTimeout(timer);reject(new Error('load error '+el.src));},{once:true});
+              }));
+              if(await img.evaluate(el=>el.complete&&el.naturalWidth>0&&el.naturalHeight>0)) loaded++;
+            }
+            assert.equal(loaded,24);
+
+            const first=page.locator('.candidate-card').first();
+            assert.equal(await first.getByRole('button',{name:'✓ VALIDER'}).count(),1);
+            assert.equal(await first.getByRole('button',{name:'✕ REFUSER'}).count(),1);
+            await first.getByRole('button',{name:'✓ VALIDER'}).click();
+
+            const second=page.locator('.candidate-card').nth(1);
+            await second.getByRole('button',{name:'✕ REFUSER'}).click();
+            await second.locator('textarea').fill('Smoke REBULO-059B');
+            assert.equal(await page.locator('#validatedCount').textContent(),'1');
+            assert.equal(await page.locator('#refusedCount').textContent(),'1');
+
+            await page.locator('#grandpaMessage').fill('Smoke public réparation.');
+            await page.locator('#copyReport').click();
+            await page.waitForFunction(()=>document.querySelector('#copyStatus')?.textContent.includes('copié'),null,{timeout:5000});
+            const clip=await page.evaluate(()=>navigator.clipboard.readText());
+            assert.match(clip,/LOT_ID : lot-002-extraction-repair/);
+            assert.match(clip,/Smoke REBULO-059B/);
+            assert.match(clip,/Smoke public réparation\./);
+
+            console.log(JSON.stringify({
+              url:process.env.TARGET_URL,
+              viewport:[390,844],
+              cards:24,
+              images:24,
+              loaded,
+              validateButton:true,
+              refuseButton:true,
+              remark:true,
+              copyReport:true,
+              scrollWidth:390
+            }));
+            await context.close();
+            await browser.close();
+          })().catch(e=>{console.error(e);process.exit(1);});
+          NODE

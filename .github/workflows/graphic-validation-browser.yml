@@ -6,17 +6,22 @@ on:
       - 'validation-graphiques.html'
       - 'validation-graphiques.css'
       - 'validation-graphiques.js'
-      - 'data/graphic-validation-candidates.json'
+      - 'data/validation-batches/**'
+      - 'assets/validation-batches/**'
       - 'tests/graphic-validation-browser.e2e.mjs'
       - '.github/workflows/graphic-validation-browser.yml'
   pull_request:
+    branches:
+      - main
     paths:
       - 'validation-graphiques.html'
       - 'validation-graphiques.css'
       - 'validation-graphiques.js'
-      - 'data/graphic-validation-candidates.json'
+      - 'data/validation-batches/**'
+      - 'assets/validation-batches/**'
       - 'tests/graphic-validation-browser.e2e.mjs'
       - '.github/workflows/graphic-validation-browser.yml'
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -24,7 +29,7 @@ permissions:
 jobs:
   browser:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -34,5 +39,38 @@ jobs:
         run: |
           npm install --no-save --ignore-scripts playwright@1.55.0
           npx playwright install --with-deps chromium
+
+      - name: Build isolated 053 preview bundle
+        if: github.event_name == 'pull_request'
+        run: |
+          rm -rf .rebulo-preview
+          mkdir -p .rebulo-preview/data/validation-batches
+          mkdir -p .rebulo-preview/assets/validation-batches/lot-001
+          cp validation-graphiques.html validation-graphiques.css validation-graphiques.js .rebulo-preview/
+          cp data/validation-batches/lot-001.json .rebulo-preview/data/validation-batches/
+          cp assets/validation-batches/lot-001/*.png .rebulo-preview/assets/validation-batches/lot-001/
+
+      - name: Deploy isolated temporary Netlify preview
+        if: github.event_name == 'pull_request'
+        id: preview
+        run: |
+          npx --yes netlify-cli@27.10.2 deploy --allow-anonymous --dir .rebulo-preview --no-build --json > /tmp/rebulo-netlify-deploy.json
+          node <<'NODE' >> "$GITHUB_OUTPUT"
+          const fs = require('fs');
+          const deploy = JSON.parse(fs.readFileSync('/tmp/rebulo-netlify-deploy.json', 'utf8'));
+          const url = deploy.deploy_url || deploy.url;
+          if (!url) throw new Error('Netlify anonymous deploy returned no URL');
+          console.log('url=' + url.replace(/\/$/, '') + '/validation-graphiques.html');
+          if (deploy.claim_url) console.log('claim_url=' + deploy.claim_url);
+          NODE
+          node <<'NODE'
+          const fs = require('fs');
+          const deploy = JSON.parse(fs.readFileSync('/tmp/rebulo-netlify-deploy.json', 'utf8'));
+          console.log('REBULO_PREVIEW_URL=' + (deploy.deploy_url || deploy.url).replace(/\/$/, '') + '/validation-graphiques.html');
+          if (deploy.claim_url) console.log('REBULO_PREVIEW_CLAIM_URL=' + deploy.claim_url);
+          NODE
+
       - name: Run mobile validation browser proof
+        env:
+          REBULO_PUBLIC_PREVIEW_URL: ${{ steps.preview.outputs.url }}
         run: node tests/graphic-validation-browser.e2e.mjs

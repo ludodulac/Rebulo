@@ -1,0 +1,89 @@
+name: REBULO-061C public mobile smoke
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/rebulo-061c-public-smoke.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save --ignore-scripts playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Smoke public lot-003 on mobile
+        env:
+          TARGET_URL: https://ludodulac.github.io/Rebulo/validation-images/?lot=lot-003
+        run: |
+          node <<'NODE'
+          const { chromium } = require('playwright');
+          const assert = require('node:assert/strict');
+          (async()=>{
+            const browser=await chromium.launch({headless:true});
+            const context=await browser.newContext({
+              viewport:{width:390,height:844},
+              permissions:['clipboard-read','clipboard-write']
+            });
+            const page=await context.newPage();
+            await page.goto(process.env.TARGET_URL,{waitUntil:'domcontentloaded',timeout:45000});
+            await page.waitForSelector('.candidate-card',{timeout:30000});
+
+            assert.equal(await page.locator('.candidate-card').count(),1);
+            assert.equal(await page.locator('#totalCount').textContent(),'1');
+            assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),390);
+
+            const img=page.locator('.candidate-image').first();
+            await img.scrollIntoViewIfNeeded();
+            await img.evaluate(el=>new Promise((resolve,reject)=>{
+              if(el.complete)return el.naturalWidth>0?resolve():reject(new Error('unreadable '+el.src));
+              const timer=setTimeout(()=>reject(new Error('timeout '+el.src)),15000);
+              el.addEventListener('load',()=>{clearTimeout(timer);resolve();},{once:true});
+              el.addEventListener('error',()=>{clearTimeout(timer);reject(new Error('load error '+el.src));},{once:true});
+            }));
+            assert.ok(await img.evaluate(el=>el.complete&&el.naturalWidth>0&&el.naturalHeight>0));
+
+            const card=page.locator('.candidate-card').first();
+            assert.equal(await card.getByRole('button',{name:'✓ VALIDER'}).count(),1);
+            assert.equal(await card.getByRole('button',{name:'✕ REFUSER'}).count(),1);
+
+            await card.getByRole('button',{name:'✕ REFUSER'}).click();
+            await card.locator('textarea').fill('Smoke REBULO-061C');
+            assert.equal(await page.locator('#refusedCount').textContent(),'1');
+
+            await page.locator('#grandpaMessage').fill('Smoke public BANC.');
+            await page.locator('#copyReport').click();
+            await page.waitForFunction(()=>document.querySelector('#copyStatus')?.textContent.includes('copié'),null,{timeout:5000});
+            const clip=await page.evaluate(()=>navigator.clipboard.readText());
+            assert.match(clip,/LOT_ID : lot-003/);
+            assert.match(clip,/BANC/);
+            assert.match(clip,/Smoke REBULO-061C/);
+            assert.match(clip,/Smoke public BANC\./);
+
+            console.log(JSON.stringify({
+              url:process.env.TARGET_URL,
+              viewport:[390,844],
+              cards:1,
+              images:1,
+              loaded:1,
+              validateButton:true,
+              refuseButton:true,
+              remark:true,
+              copyReport:true,
+              scrollWidth:390
+            }));
+
+            await context.close();
+            await browser.close();
+          })().catch(e=>{console.error(e);process.exit(1);});
+          NODE

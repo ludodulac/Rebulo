@@ -1,0 +1,461 @@
+{
+  "lot_id": "lot-003",
+  "selection": [
+    {
+      "position": 1,
+      "concept": "BANC",
+      "source_selection": "PRIORITY_REPLACEMENT",
+      "previous_rejection_if_any": {
+        "candidate_id": "lot002-banc-pixel-v1",
+        "graphic_decision": "FAIL",
+        "reason": "PROGRAMMATIC_DRAWING_REJECTED"
+      },
+      "current_graphic_status": "HUMAN_GRAPHIC_FAIL_PROGRAMMATIC_STYLE",
+      "queue_rank_if_applicable": null
+    },
+    {
+      "position": 2,
+      "concept": "LIT",
+      "source_selection": "PRIORITY_REPLACEMENT",
+      "previous_rejection_if_any": {
+        "candidate_id": "lot002-lit-pixel-v1",
+        "graphic_decision": "FAIL",
+        "reason": "PROGRAMMATIC_DRAWING_REJECTED"
+      },
+      "current_graphic_status": "HUMAN_GRAPHIC_FAIL_PROGRAMMATIC_STYLE",
+      "queue_rank_if_applicable": null
+    },
+    {
+      "position": 3,
+      "concept": "CORPS",
+      "source_selection": "PRIORITY_REPLACEMENT",
+      "previous_rejection_if_any": {
+        "candidate_id": "lot002-corps-pixel-v1",
+        "graphic_decision": "FAIL",
+        "reason": "PROGRAMMATIC_DRAWING_REJECTED"
+      },
+      "current_graphic_status": "HUMAN_GRAPHIC_FAIL_PROGRAMMATIC_STYLE",
+      "queue_rank_if_applicable": null
+    },
+    {
+      "position": 4,
+      "concept": "EAU",
+      "source_selection": "PRIORITY_REPLACEMENT",
+      "previous_rejection_if_any": {
+        "candidate_id": "lot002-eau-pixel-v1",
+        "graphic_decision": "FAIL",
+        "reason": "PROGRAMMATIC_DRAWING_REJECTED"
+      },
+      "current_graphic_status": "HUMAN_GRAPHIC_FAIL_PROGRAMMATIC_STYLE",
+      "queue_rank_if_applicable": null
+    },
+    {
+      "position": 5,
+      "concept": "MÂT",
+      "source_selection": "PRIORITY_REPLACEMENT",
+      "previous_rejection_if_any": {
+        "candidate_id": "lot002-mat-pixel-v1",
+        "graphic_decision": "FAIL",
+        "reason": "PROGRAMMATIC_DRAWING_REJECTED"
+      },
+      "current_graphic_status": "HUMAN_GRAPHIC_FAIL_PROGRAMMATIC_STYLE",
+      "queue_rank_if_applicable": null
+    },
+    {
+      "position": 6,
+      "concept": "MIE",
+      "source_selection": "PRIORITY_REPLACEMENT",
+      "previous_rejection_if_any": {
+        "candidate_id": "lot002-mie-pixel-v1",
+        "graphic_decision": "FAIL",
+        "reason": "PROGRAMMATIC_DRAWING_REJECTED"
+      },
+      "current_graphic_status": "HUMAN_GRAPHIC_FAIL_PROGRAMMATIC_STYLE",
+      "queue_rank_if_applicable": null
+    },
+    {
+      "position": 7,
+      "concept": "POT",
+      "source_selection": "PRIORITY_REPLACEMENT",
+      "previous_rejection_if_any": {
+        "candidate_id": "lot002-pot-pixel-v1",
+        "graphic_decision": "FAIL",
+        "reason": "HUMAN_EXPLICIT_REJECT_BAD_STYLE"
+      },
+      "current_graphic_status": "HUMAN_GRAPHIC_FAIL_PROGRAMMATIC_STYLE",
+      "queue_rank_if_applicable": null
+    },
+    {
+      "position": 8,
+      "concept": "RAIE",
+      "source_selection": "PRIORITY_REPLACEMENT",
+      "previous_rejection_if_any": {
+        "candidate_id": "lot002-raie-poisson-pixel-v1",
+        "graphic_decision": "FAIL",
+        "reason": "PROGRAMMATIC_DRAWING_REJECTED"
+      },
+      "current_graphic_status": "HUMAN_GRAPHIC_FAIL_PROGRAMMATIC_STYLE",
+      "queue_rank_if_applicable": null
+    },
+    {
+      "position": 9,
+      "concept": "SOL",
+      "source_selection": "PRIORITY_REPLACEMENT",
+      "previous_rejection_if_any": {
+        "candidate_id": "lot002-sol-pixel-v1",
+        "graphic_decision": "FAIL",
+        "reason": "PROGRAMMATIC_DRAWING_REJECTED"
+      },
+      "current_graphic_status": "HUMAN_GRAPHIC_FAIL_PROGRAMMATIC_STYLE",
+      "queue_rank_if_applicable": null
+    },
+    {
+      "position": 10,
+      "concept": "TAS",
+      "source_selection": "PRIORITY_REPLACEMENT",
+      "previous_rejection_if_any": {
+        "candidate_id": "lot002-tas-pixel-v1",
+        "graphic_decision": "FAIL",
+        "reason": "PROGRAMMATIC_DRAWING_REJECTED"
+      },
+      "current_graphic_status": "HUMAN_GRAPHIC_FAIL_PROGRAMMATIC_STYLE",
+      "queue_rank_if_applicable": null
+    },
+    {
+      "position": 11,
+      "concept": "TERRE",
+      "source_selection": "PRIORITY_REPLACEMENT",
+      "previous_rejection_if_any": {
+        "candidate_id": "lot002-terre-pixel-v1",
+        "graphic_decision": "FAIL",
+        "reason": "PROGRAMMATIC_DRAWING_REJECTED"
+      },
+      "current_graphic_status": "HUMAN_GRAPHIC_FAIL_PROGRAMMATIC_STYLE",
+      "queue_rank_if_applicable": null
+    },
+    {
+      "position": 12,
+      "concept": "TOUR",
+      "source_selection": "PRIORITY_REPLACEMENT",
+      "previous_rejection_if_any": {
+        "candidate_id": "lot002-tour-pixel-v1",
+        "graphic_decision": "FAIL",
+        "reason": "PROGRAMMATIC_DRAWING_REJECTED"
+      },
+      "current_graphic_status": "HUMAN_GRAPHIC_FAIL_PROGRAMMATIC_STYLE",
+      "queue_rank_if_applicable": null
+    },
+    {
+      "position": 13,
+      "concept": "COR",
+      "source_selection": "PRIORITY_REPLACEMENT",
+      "previous_rejection_if_any": {
+        "candidate_id": "lot002-cor-pixel-v1",
+        "graphic_decision": "FAIL",
+        "reason": "PROGRAMMATIC_DRAWING_REJECTED"
+      },
+      "current_graphic_status": "HUMAN_GRAPHIC_FAIL_PROGRAMMATIC_STYLE",
+      "queue_rank_if_applicable": null
+    },
+    {
+      "position": 14,
+      "concept": "DO",
+      "source_selection": "PRIORITY_REPLACEMENT",
+      "previous_rejection_if_any": {
+        "candidate_id": "lot002-do-note-v1",
+        "graphic_decision": "FAIL",
+        "reason": "PROGRAMMATIC_DRAWING_REJECTED"
+      },
+      "current_graphic_status": "HUMAN_GRAPHIC_FAIL_PROGRAMMATIC_STYLE",
+      "queue_rank_if_applicable": null
+    },
+    {
+      "position": 15,
+      "concept": "pré",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 27
+    },
+    {
+      "position": 16,
+      "concept": "sas",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 34
+    },
+    {
+      "position": 17,
+      "concept": "tique",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 46
+    },
+    {
+      "position": 18,
+      "concept": "porc",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 59
+    },
+    {
+      "position": 19,
+      "concept": "fort",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 66
+    },
+    {
+      "position": 20,
+      "concept": "champ",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 79
+    },
+    {
+      "position": 21,
+      "concept": "camp",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 81
+    },
+    {
+      "position": 22,
+      "concept": "or",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 83
+    },
+    {
+      "position": 23,
+      "concept": "car",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 86
+    },
+    {
+      "position": 24,
+      "concept": "thon",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 87
+    },
+    {
+      "position": 25,
+      "concept": "mare",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 103
+    },
+    {
+      "position": 26,
+      "concept": "mètre",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 106
+    },
+    {
+      "position": 27,
+      "concept": "pou",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 108
+    },
+    {
+      "position": 28,
+      "concept": "plat",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 109
+    },
+    {
+      "position": 29,
+      "concept": "brie",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 110
+    },
+    {
+      "position": 30,
+      "concept": "fer",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 112
+    },
+    {
+      "position": 31,
+      "concept": "cité",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 121
+    },
+    {
+      "position": 32,
+      "concept": "jus",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 133
+    },
+    {
+      "position": 33,
+      "concept": "leurre",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 135
+    },
+    {
+      "position": 34,
+      "concept": "cèpe",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 158
+    },
+    {
+      "position": 35,
+      "concept": "faon",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 164
+    },
+    {
+      "position": 36,
+      "concept": "puits",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 177
+    },
+    {
+      "position": 37,
+      "concept": "danse",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 180
+    },
+    {
+      "position": 38,
+      "concept": "char",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 182
+    },
+    {
+      "position": 39,
+      "concept": "télé",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 189
+    },
+    {
+      "position": 40,
+      "concept": "blé",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 196
+    },
+    {
+      "position": 41,
+      "concept": "trou",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 201
+    },
+    {
+      "position": 42,
+      "concept": "bras",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 204
+    },
+    {
+      "position": 43,
+      "concept": "pois",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 207
+    },
+    {
+      "position": 44,
+      "concept": "malle",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 217
+    },
+    {
+      "position": 45,
+      "concept": "lis",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 220
+    },
+    {
+      "position": 46,
+      "concept": "roi",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 221
+    },
+    {
+      "position": 47,
+      "concept": "ciel",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 228
+    },
+    {
+      "position": 48,
+      "concept": "toit",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 231
+    },
+    {
+      "position": 49,
+      "concept": "rein",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 232
+    },
+    {
+      "position": 50,
+      "concept": "fils",
+      "source_selection": "EXPANSION_QUEUE",
+      "previous_rejection_if_any": null,
+      "current_graphic_status": "NOT_COVERED",
+      "queue_rank_if_applicable": 240
+    }
+  ]
+}

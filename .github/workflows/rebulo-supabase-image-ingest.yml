@@ -1,0 +1,86 @@
+name: REBULO Supabase image ingest
+
+on:
+  workflow_dispatch:
+    inputs:
+      storage_object:
+        description: ZIP object path in private rebulo-image-inbox bucket
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    env:
+      BUCKET: rebulo-image-inbox
+      STORAGE_OBJECT: ${{ inputs.storage_object }}
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install minimum dependency
+        run: python -m pip install --disable-pip-version-check pillow
+
+      - name: Download private ZIP from Supabase Storage
+        run: |
+          python - <<'PY'
+          import os, urllib.parse, urllib.request
+          base=os.environ["SUPABASE_URL"].rstrip("/")
+          obj=urllib.parse.quote(os.environ["STORAGE_OBJECT"].lstrip("/"), safe="/")
+          url=f"{base}/storage/v1/object/authenticated/{os.environ['BUCKET']}/{obj}"
+          req=urllib.request.Request(url, headers={
+              "Authorization": "Bearer "+os.environ["SUPABASE_SERVICE_ROLE_KEY"],
+              "apikey": os.environ["SUPABASE_SERVICE_ROLE_KEY"],
+          })
+          with urllib.request.urlopen(req, timeout=120) as r, open("/tmp/rebulo-ingest.zip","wb") as f:
+              f.write(r.read())
+          PY
+
+      - name: Derive deterministic ingest name
+        run: |
+          base="$(basename "$STORAGE_OBJECT" .zip)"
+          safe="$(printf '%s' "$base" | tr -cs 'A-Za-z0-9._-' '-' | sed 's/^-*//;s/-*$//')"
+          test -n "$safe"
+          echo "INGEST_NAME=$safe" >> "$GITHUB_ENV"
+
+      - name: Ingest and optimize candidates
+        run: |
+          python scripts/ingest_validation_zip.py /tmp/rebulo-ingest.zip             "assets/validation-candidates/ingest-$INGEST_NAME"             --report "data/image-validation/ingest-$INGEST_NAME.json"
+
+      - name: Test ingestion code
+        run: python -m unittest -v tests/test_ingest_validation_zip.py
+
+      - name: Protect canonical assets
+        run: git diff --exit-code HEAD -- assets/rebus/
+
+      - name: Create ingestion branch and commit
+        env:
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          branch="ingest/rebulo-$INGEST_NAME-$RUN_ID"
+          git switch -c "$branch"
+          git config user.name "rebulo-ingest-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -- "assets/validation-candidates/ingest-$INGEST_NAME" "data/image-validation/ingest-$INGEST_NAME.json"
+          test -n "$(git diff --cached --name-only)"
+          if git diff --cached --name-only | grep -q '^assets/rebus/'; then exit 1; fi
+          git commit -m "REBULO: ingest validation candidates from $STORAGE_OBJECT"
+          git push origin "$branch"
+          echo "INGEST_BRANCH=$branch" >> "$GITHUB_ENV"
+
+      - name: Open pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh pr create --base main --head "$INGEST_BRANCH"             --title "REBULO: ingest $INGEST_NAME validation candidates"             --body "Automated private Supabase Storage ZIP ingestion. Candidates only; no canonical promotion."
